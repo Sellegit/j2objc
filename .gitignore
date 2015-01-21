@@ -9,3 +9,7 @@ dist/
 **/project.xcworkspace/
 **/xcuserdata/
 **/Translated/
+
+.DS_Store
+*.iml
+.idea/

@@ -75,15 +75,15 @@ public class JavaToIOSMethodTranslator extends TreeVisitor {
   private final Map<String, IOSMethod> methodMappings;
 
   private static final Function<String, IOSMethod> IOS_METHOD_FROM_STRING =
-      new Function<String, IOSMethod>() {
-    public IOSMethod apply(String value) {
-      return IOSMethod.create(value);
-    }
-  };
+          new Function<String, IOSMethod>() {
+            public IOSMethod apply(String value) {
+              return IOSMethod.create(value);
+            }
+          };
 
   public JavaToIOSMethodTranslator(Map<String, String> methodMappings) {
     this.methodMappings =
-        Maps.newHashMap(Maps.transformValues(methodMappings, IOS_METHOD_FROM_STRING));
+            Maps.newHashMap(Maps.transformValues(methodMappings, IOS_METHOD_FROM_STRING));
     loadTargetMethods(Types.resolveJavaType("java.lang.Object"));
     loadTargetMethods(Types.resolveJavaType("java.lang.Class"));
     loadTargetMethods(Types.resolveJavaType("java.lang.String"));
@@ -142,7 +142,7 @@ public class JavaToIOSMethodTranslator extends TreeVisitor {
     // See if an overrideable superclass method has been mapped.
     for (IMethodBinding overridable : overridableMethods) {
       if (!binding.isConstructor()
-          && (binding.isEqualTo(overridable) || binding.overrides(overridable))) {
+              && (binding.isEqualTo(overridable) || binding.overrides(overridable))) {
         JavaMethod md = getDescription(overridable);
         if (md == null) {
           continue;
@@ -209,7 +209,7 @@ public class JavaToIOSMethodTranslator extends TreeVisitor {
       if (iosMethod != null) {
         IOSMethodBinding methodBinding = IOSMethodBinding.newMappedMethod(iosMethod, binding);
         MethodInvocation newInvocation = new MethodInvocation(methodBinding,
-            new SimpleName(Types.resolveIOSType(iosMethod.getDeclaringClass())));
+                new SimpleName(Types.resolveIOSType(iosMethod.getDeclaringClass())));
 
         // Set parameters.
         copyInvocationArguments(null, node.getArguments(), newInvocation.getArguments());
@@ -241,13 +241,13 @@ public class JavaToIOSMethodTranslator extends TreeVisitor {
     JavaMethod md = getDescription(binding);
     if (md == null && !binding.getName().equals("clone")) { // never map clone()
       IVariableBinding receiver =
-          node.getExpression() != null ? TreeUtil.getVariableBinding(node.getExpression()) : null;
+              node.getExpression() != null ? TreeUtil.getVariableBinding(node.getExpression()) : null;
       ITypeBinding clazz =
-          receiver != null ? receiver.getType() : binding.getDeclaringClass();
+              receiver != null ? receiver.getType() : binding.getDeclaringClass();
       if (clazz != null && !clazz.isArray()) {
         for (IMethodBinding method : descriptions.keySet()) {
           if (binding.isSubsignature(method)
-              && clazz.isAssignmentCompatible(method.getDeclaringClass())) {
+                  && clazz.isAssignmentCompatible(method.getDeclaringClass())) {
             md = descriptions.get(method);
             break;
           }
@@ -267,7 +267,7 @@ public class JavaToIOSMethodTranslator extends TreeVisitor {
       if (node.getExpression() instanceof SimpleName) {
         SimpleName expr = (SimpleName) node.getExpression();
         if (expr.getIdentifier().equals(binding.getDeclaringClass().getName())
-            || expr.getIdentifier().equals(binding.getDeclaringClass().getQualifiedName())) {
+                || expr.getIdentifier().equals(binding.getDeclaringClass().getQualifiedName())) {
           NameTable.rename(binding.getDeclaringClass(), iosMethod.getDeclaringClass());
         }
       }
@@ -291,7 +291,7 @@ public class JavaToIOSMethodTranslator extends TreeVisitor {
   }
 
   private void copyInvocationArguments(Expression receiver, List<Expression> oldArgs,
-      List<Expression> newArgs) {
+                                       List<Expression> newArgs) {
     // set the receiver as the first argument
     if (receiver != null) {
       Expression delegate = receiver.copy();
@@ -360,7 +360,7 @@ public class JavaToIOSMethodTranslator extends TreeVisitor {
       if (objcName != null) {
         try {
           String signature =
-              String.format("%s %s", binding.getDeclaringClass().getName(), objcName);
+                  String.format("%s %s", binding.getDeclaringClass().getName(), objcName);
           IOSMethod method = IOSMethod.create(signature);
           methodMappings.put(desc.getKey(),  method);
         } catch (IllegalArgumentException e) {
@@ -392,17 +392,17 @@ public class JavaToIOSMethodTranslator extends TreeVisitor {
         IMethodBinding superMethod = BindingUtil.getOriginalMethodBinding(method);
         if (superMethod != method.getMethodDeclaration()) {
           IAnnotationBinding superAnnotation  =
-              BindingUtil.getAnnotation(superMethod, ObjectiveCName.class);
+                  BindingUtil.getAnnotation(superMethod, ObjectiveCName.class);
           if (superAnnotation == null) {
             ErrorUtil.warning("ObjectiveCName(" + selector
-                + ") set on overridden method that is not also renamed.");
+                    + ") set on overridden method that is not also renamed.");
             return null;
           } else {
             String superSelector =
-                (String) BindingUtil.getAnnotationValue(superAnnotation, "value");
+                    (String) BindingUtil.getAnnotationValue(superAnnotation, "value");
             if (!selector.equals(superSelector)) {
               ErrorUtil.warning("Conflicting Objective-C names set for " + method
-                  + ", which overrides " + superMethod);
+                      + ", which overrides " + superMethod);
               return null;
             }
           }
@@ -447,7 +447,7 @@ public class JavaToIOSMethodTranslator extends TreeVisitor {
 
   private MethodInvocation makeCloneInvocation(ITypeBinding declaringClass) {
     GeneratedMethodBinding cloneBinding = GeneratedMethodBinding.newMethod(
-        "clone", 0, Types.resolveIOSType("NSObject"), declaringClass);
+            "clone", 0, Types.resolveIOSType("NSObject"), declaringClass);
     return new MethodInvocation(cloneBinding, null);
   }
 
@@ -456,13 +456,13 @@ public class JavaToIOSMethodTranslator extends TreeVisitor {
     ITypeBinding type = node.getTypeBinding().getTypeDeclaration();
     IOSMethod iosMethod = IOSMethod.create("id copyWithZone:(NSZone *)zone");
     IOSMethodBinding binding = IOSMethodBinding.newMethod(
-        iosMethod, Modifier.PUBLIC, Types.resolveIOSType("id"), type);
+            iosMethod, Modifier.PUBLIC, Types.resolveIOSType("id"), type);
     MethodDeclaration cloneMethod = new MethodDeclaration(binding);
 
     // Add NSZone *zone parameter.
     GeneratedVariableBinding zoneBinding = new GeneratedVariableBinding(
-        "zone", 0, Types.resolveIOSType("NSZone"), false, true, binding.getDeclaringClass(),
-        binding);
+            "zone", 0, Types.resolveIOSType("NSZone"), false, true, binding.getDeclaringClass(),
+            binding);
     binding.addParameter(zoneBinding.getType());
     cloneMethod.getParameters().add(new SingleVariableDeclaration(zoneBinding));
 
