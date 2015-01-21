@@ -194,9 +194,9 @@ java.lang.String.getChars(II[CI)V = \
 java.lang.String.hashCode()I = NSObject hash
 java.lang.String.indexOf(I)I = NSString indexOf:(int)ch
 java.lang.String.indexOf(II)I = NSString indexOf:(int)ch fromIndex:(int)index
-java.lang.String.indexOf(Ljava/lang/String;)I = NSString indexOfString:(int)s
+java.lang.String.indexOf(Ljava/lang/String;)I = NSString indexOfString:(NSString *)s
 java.lang.String.indexOf(Ljava/lang/String;I)I = \
-    NSString indexOfString:(int)s fromIndex:(int)index
+    NSString indexOfString:(NSString *)s fromIndex:(int)index
 java.lang.String.intern()Ljava/lang/String; = NSString intern;
 java.lang.String.isEmpty()Z = NSString isEmpty
 java.lang.String.lastIndexOf(I)I = NSString lastIndexOf:(int)ch
