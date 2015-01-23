@@ -84,6 +84,10 @@ public class JavaToIOSMethodTranslator extends TreeVisitor {
   public JavaToIOSMethodTranslator(Map<String, String> methodMappings) {
     this.methodMappings =
             Maps.newHashMap(Maps.transformValues(methodMappings, IOS_METHOD_FROM_STRING));
+
+    for (Map.Entry<String, IOSMethod> entry : this.methodMappings.entrySet()) {
+
+    }
     loadTargetMethods(Types.resolveJavaType("java.lang.Object"));
     loadTargetMethods(Types.resolveJavaType("java.lang.Class"));
     loadTargetMethods(Types.resolveJavaType("java.lang.String"));
@@ -155,6 +159,12 @@ public class JavaToIOSMethodTranslator extends TreeVisitor {
         return true;
       }
     }
+    // Annotation-based logic:
+    IOSMethod mapped = BindingUtil.getMappedMethod(binding);
+    if (mapped != null) {
+      mapMethod(node, binding, mapped);
+      return true;
+    }
     return true;
   }
 
@@ -218,6 +228,19 @@ public class JavaToIOSMethodTranslator extends TreeVisitor {
       } else {
         ErrorUtil.error(node, createMissingMethodMessage(binding));
       }
+    } else {
+      // Annotation-based logic:
+      IOSMethod mapped = BindingUtil.getMappedMethod(binding);
+      if (mapped != null) {
+        IOSMethodBinding methodBinding = IOSMethodBinding.newMappedMethod(mapped, binding);
+        MethodInvocation newInvocation = new MethodInvocation(methodBinding,
+                new SimpleName(Types.resolveOrCreateIOSType(mapped.getDeclaringClass(), binding.getDeclaringClass())));
+
+        // Set parameters.
+        copyInvocationArguments(null, node.getArguments(), newInvocation.getArguments());
+
+        node.replaceWith(newInvocation);
+      }
     }
     return true;
   }
@@ -262,12 +285,20 @@ public class JavaToIOSMethodTranslator extends TreeVisitor {
         return;
       }
       IOSMethodBinding newBinding = IOSMethodBinding.newMappedMethod(iosMethod, binding);
+//      System.out.println("-----new binding-----");
+//      System.out.println(newBinding);
       node.setMethodBinding(newBinding);
+//      System.out.println("-----renaming method-----");
+//      System.out.println(binding);
+//      System.out.println(iosMethod.getName());
       NameTable.rename(binding, iosMethod.getName());
       if (node.getExpression() instanceof SimpleName) {
         SimpleName expr = (SimpleName) node.getExpression();
         if (expr.getIdentifier().equals(binding.getDeclaringClass().getName())
                 || expr.getIdentifier().equals(binding.getDeclaringClass().getQualifiedName())) {
+//          System.out.println("-----renaming class-----");
+//          System.out.println(binding.getDeclaringClass());
+//          System.out.println(iosMethod.getDeclaringClass());
           NameTable.rename(binding.getDeclaringClass(), iosMethod.getDeclaringClass());
         }
       }
@@ -281,13 +312,19 @@ public class JavaToIOSMethodTranslator extends TreeVisitor {
             if (iosMethod != null) {
               IOSMethodBinding newBinding = IOSMethodBinding.newMappedMethod(iosMethod, binding);
               node.setMethodBinding(newBinding);
-              break;
+              return;
             }
           }
         }
       }
     }
-    return;
+
+    // Annotation-based logic:
+    IOSMethod mapped = BindingUtil.getMappedMethod(binding);
+    if (mapped != null) {
+      IOSMethodBinding newBinding = IOSMethodBinding.newMappedMethod(mapped, binding);
+      node.setMethodBinding(newBinding);
+    }
   }
 
   private void copyInvocationArguments(Expression receiver, List<Expression> oldArgs,
@@ -339,6 +376,14 @@ public class JavaToIOSMethodTranslator extends TreeVisitor {
         }
       }
     }
+
+    // Annotation-based logic:
+    IOSMethod mapped = BindingUtil.getMappedMethod(binding);
+    if (mapped != null) {
+      IOSMethodBinding newBinding = IOSMethodBinding.newMappedMethod(mapped, binding);
+      node.setMethodBinding(newBinding);
+    }
+
     return true;
   }
 

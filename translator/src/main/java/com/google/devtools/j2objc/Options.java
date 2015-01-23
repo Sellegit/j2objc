@@ -26,6 +26,8 @@ import com.google.common.collect.Maps;
 import com.google.common.io.Resources;
 import com.google.devtools.j2objc.util.ErrorUtil;
 
+import org.eclipse.jdt.core.dom.IMethodBinding;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -68,6 +70,7 @@ public class Options {
   private static File outputHeaderMappingFile = null;
   private static Map<String, String> classMappings = Maps.newLinkedHashMap();
   private static Map<String, String> methodMappings = Maps.newLinkedHashMap();
+  public static Map<IMethodBinding, String> methodBindingMappings = Maps.newLinkedHashMap();
   private static boolean memoryDebug = false;
   private static boolean stripGwtIncompatible = false;
   private static boolean segmentedHeaders = false;
@@ -549,6 +552,10 @@ public class Options {
 
   public static Map<String, String> getMethodMappings() {
     return methodMappings;
+  }
+
+  public static Map<IMethodBinding, String> getMethodBindingMappings() {
+    return methodBindingMappings;
   }
 
   public static BiMap<String, String> getHeaderMappings() {

@@ -224,6 +224,20 @@ public class Types {
     return instance.iosBindingMap.get(name);
   }
 
+  // Note: the superclass structure for ios type is missing. this is only a kludge
+  public static ITypeBinding resolveOrCreateIOSType(String name, ITypeBinding mappedType) {
+    ITypeBinding out = instance.iosBindingMap.get(name);
+
+    if (out == null) {
+      IOSTypeBinding created = IOSTypeBinding.newClass(name, mappedType, instance.NSObject);
+      instance.mapIOSType(created);
+
+      return created;
+    } else {
+      return out;
+    }
+  }
+
   public static boolean isJavaObjectType(ITypeBinding type) {
     return instance.javaObjectType.equals(type);
   }

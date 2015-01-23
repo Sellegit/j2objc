@@ -255,6 +255,17 @@ class TranslationProcessor extends FileProcessor {
       CompilationUnit unit, DeadCodeMap deadCodeMap, TimeTracker ticker) {
     ticker.push();
 
+    // Make one pass over all types to gather Mapping annotations
+    //  and generate corresponding class/method mapping
+    Map<String, String> methodMappings = Options.getMethodMappings();
+    if (methodMappings.isEmpty()) {
+      // Method maps are loaded here so tests can call translate() directly.
+      loadMappingFiles();
+    }
+    // => have to do this in a global manner. plugin ?
+//    Map<String, String> classMappings = Options.getClassMappings();
+//    new MappingCollector(unit, classMappings, methodMappings).run(unit);
+
     if (deadCodeMap != null) {
       new DeadCodeEliminator(unit, deadCodeMap).run(unit);
       ticker.tick("DeadCodeEliminator");
@@ -340,14 +351,10 @@ class TranslationProcessor extends FileProcessor {
     new Functionizer().run(unit);
     ticker.tick("Functionizer");
 
+
     // After: Functionizer - Changes bindings on MethodDeclaration nodes.
     // Before: StaticVarRewriter, OperatorRewriter - Doesn't know how to handle
     //   the hasRetainedResult flag on ClassInstanceCreation nodes.
-    Map<String, String> methodMappings = Options.getMethodMappings();
-    if (methodMappings.isEmpty()) {
-      // Method maps are loaded here so tests can call translate() directly.
-      loadMappingFiles();
-    }
     new JavaToIOSMethodTranslator(methodMappings).run(unit);
     ticker.tick("JavaToIOSMethodTranslator");
 

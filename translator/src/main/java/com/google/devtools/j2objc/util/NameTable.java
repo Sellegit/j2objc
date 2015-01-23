@@ -28,6 +28,7 @@ import com.google.devtools.j2objc.types.IOSMethodBinding;
 import com.google.devtools.j2objc.types.IOSParameter;
 import com.google.devtools.j2objc.types.PointerTypeBinding;
 import com.google.devtools.j2objc.types.Types;
+import com.google.j2objc.annotations.Mapping;
 import com.google.j2objc.annotations.ObjectiveCName;
 
 import org.eclipse.jdt.core.dom.IAnnotationBinding;
@@ -274,6 +275,13 @@ public class NameTable {
     if (newName != null) {
       return newName;
     }
+
+    // Annotation-based mapping
+    IAnnotationBinding annotation = BindingUtil.getAnnotation(binding, Mapping.class);
+    if (annotation != null) {
+      return (String) BindingUtil.getAnnotationValue(annotation, "value");
+    }
+
     String name = binding.getName();
     if (binding instanceof IVariableBinding) {
       if (isReservedName(name) && !((IVariableBinding) binding).isEnumConstant()) {

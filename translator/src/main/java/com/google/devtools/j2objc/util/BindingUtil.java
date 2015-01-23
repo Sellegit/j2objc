@@ -16,9 +16,13 @@ package com.google.devtools.j2objc.util;
 
 import com.google.common.collect.Lists;
 import com.google.common.collect.Sets;
+import com.google.devtools.j2objc.types.IOSMethod;
+import com.google.devtools.j2objc.types.Types;
+import com.google.j2objc.annotations.Mapping;
 import com.google.j2objc.annotations.Weak;
 import com.google.j2objc.annotations.WeakOuter;
 
+import org.eclipse.jdt.core.IAnnotation;
 import org.eclipse.jdt.core.dom.IAnnotationBinding;
 import org.eclipse.jdt.core.dom.IBinding;
 import org.eclipse.jdt.core.dom.IMemberValuePairBinding;
@@ -364,5 +368,92 @@ public final class BindingUtil {
     String methodName = NameTable.getName(m);
     return methodName.equals(NameTable.FINALIZE_METHOD)
         || methodName.equals(NameTable.DEALLOC_METHOD);
+  }
+
+  public static Iterable<ITypeBinding> flattenInterface(ITypeBinding interfaze) {
+    assert interfaze.isInterface();
+    List<ITypeBinding> out = Lists.newArrayList();
+
+    out.add(interfaze);
+    for (ITypeBinding one : interfaze.getInterfaces()) {
+      for (ITypeBinding more : flattenInterface(one)) {
+        out.add(more);
+      }
+    }
+
+    return out;
+  }
+  public static String extarctMappingName(IMethodBinding binding) {
+    IAnnotationBinding annotation = BindingUtil.getAnnotation(binding, Mapping.class);
+    if (annotation != null) {
+      return (String) BindingUtil.getAnnotationValue(annotation, "value");
+    } else {
+      return null;
+    }
+  }
+
+  /**
+   * NOTE: this helper only analyzes the @Mapping annotation
+   * Attempt to get a mapped method for given method binding by the following logic
+   * 1. Iterate through declaringClass and all its ancestors
+   * 2. For each class, check declared methods that are overrided to see if a mapping exists
+   * 3. For each class, check all interfaces and their ancestors to determine if a mapping exits
+   *
+   * Information is gathered to make sure no conflicting mappings exist and a assembled IOSMethod,
+   *   will return. Otherwise an exception will be thrown. Returns null if no such mapping is found.
+   */
+  public static IOSMethod getMappedMethod(IMethodBinding method) {
+    List<String> candidates = Lists.newArrayList();
+    ITypeBinding currentCls = method.getDeclaringClass();
+
+    if (currentCls.isInterface()) {
+      return null;
+    }
+
+//    while (!currentCls.isEqualTo(Types.resolveJavaType("java.lang.Object"))) {
+    while (currentCls != null) { // jdt's system has been messed up, so one cant do it in usual way
+      for (IMethodBinding binding : currentCls.getDeclaredMethods()) {
+        if (binding.isEqualTo(method) || method.overrides(binding)) {
+          String mappingName = extarctMappingName(binding);
+          if (mappingName != null) {
+            candidates.add(mappingName);
+          }
+        }
+      }
+
+      for (ITypeBinding directInterface : currentCls.getInterfaces()) {
+        for (ITypeBinding interfaze : flattenInterface(directInterface)) {
+          for (IMethodBinding binding : interfaze.getDeclaredMethods()) {
+            // TODO: check if this is the way jdk handles interface implementation
+            if (method.isSubsignature(binding)) {
+              String mappingName = extarctMappingName(binding);
+              if (mappingName != null) {
+                candidates.add(mappingName);
+              }
+            }
+          }
+        }
+      }
+
+//      if (currentCls.getSuperclass() == null) {
+//        ErrorUtil.error(currentCls.getName() + "'s super class is null.");
+//      }
+      currentCls = currentCls.getSuperclass();
+    }
+
+    if (candidates.size() == 0) {
+      // None is found
+      return null;
+    } else {
+      if (candidates.lastIndexOf(candidates.get(0)) != (candidates.size() - 1)) {
+        ErrorUtil.error("ambiguous mapping specified for " + method.getName());
+      }
+
+      String methodName = candidates.get(0);
+      String className = NameTable.getName(method.getDeclaringClass());
+
+      return IOSMethod.create(className + " " + methodName);
+    }
+
   }
 }
