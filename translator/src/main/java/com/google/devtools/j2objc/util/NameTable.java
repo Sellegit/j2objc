@@ -487,7 +487,12 @@ public class NameTable {
         objCType += " " + qualifiers;
       }
     }
-    return objCType;
+
+    if (BindingUtil.isValueType(type)) {
+      return getFullName(type);
+    } else {
+      return objCType;
+    }
   }
 
   private static String constructObjCType(ITypeBinding... types) {
@@ -566,6 +571,12 @@ public class NameTable {
     if (Options.getClassMappings().containsKey(name)) {
       name = Options.getClassMappings().get(name);
       return name + suffix;
+    }
+
+    // Annotation-based mapping
+    IAnnotationBinding anno = BindingUtil.getAnnotation(binding, Mapping.class);
+    if (anno != null) {
+      return (String) BindingUtil.getAnnotationValue(anno, "value");
     }
 
     // Use camel-cased package+class name.

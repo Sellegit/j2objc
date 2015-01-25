@@ -17,12 +17,12 @@ package com.google.devtools.j2objc.util;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Sets;
 import com.google.devtools.j2objc.types.IOSMethod;
-import com.google.devtools.j2objc.types.Types;
+import com.google.j2objc.annotations.DotMapping;
+import com.google.j2objc.annotations.GlobalConstant;
 import com.google.j2objc.annotations.Mapping;
 import com.google.j2objc.annotations.Weak;
 import com.google.j2objc.annotations.WeakOuter;
 
-import org.eclipse.jdt.core.IAnnotation;
 import org.eclipse.jdt.core.dom.IAnnotationBinding;
 import org.eclipse.jdt.core.dom.IBinding;
 import org.eclipse.jdt.core.dom.IMemberValuePairBinding;
@@ -383,13 +383,50 @@ public final class BindingUtil {
 
     return out;
   }
-  public static String extarctMappingName(IMethodBinding binding) {
+
+  public static String extractMappingName(IBinding binding) {
+    if (binding == null) {
+      return null;
+    }
+
     IAnnotationBinding annotation = BindingUtil.getAnnotation(binding, Mapping.class);
     if (annotation != null) {
       return (String) BindingUtil.getAnnotationValue(annotation, "value");
     } else {
       return null;
     }
+  }
+
+  public static String extractDotMappingName(IBinding binding) {
+    if (binding == null) {
+      return null;
+    }
+
+    IAnnotationBinding annotation = BindingUtil.getAnnotation(binding, DotMapping.class);
+    if (annotation != null) {
+      return (String) BindingUtil.getAnnotationValue(annotation, "value");
+    } else {
+      return null;
+    }
+  }
+
+  public static String extractGlobalConstantName(IBinding binding) {
+    if (binding == null) {
+      return null;
+    }
+
+    IAnnotationBinding annotation = BindingUtil.getAnnotation(binding, GlobalConstant.class);
+    if (annotation != null) {
+      return (String) BindingUtil.getAnnotationValue(annotation, "value");
+    } else {
+      return null;
+    }
+  }
+
+  public static boolean isMappedToNative(IBinding binding) {
+    return extractMappingName(binding) != null
+        || extractDotMappingName(binding) != null
+        || extractGlobalConstantName(binding) != null;
   }
 
   /**
@@ -403,6 +440,10 @@ public final class BindingUtil {
    *   will return. Otherwise an exception will be thrown. Returns null if no such mapping is found.
    */
   public static IOSMethod getMappedMethod(IMethodBinding method) {
+    if (method == null) {
+      return null;
+    }
+
     List<String> candidates = Lists.newArrayList();
     ITypeBinding currentCls = method.getDeclaringClass();
 
@@ -414,7 +455,7 @@ public final class BindingUtil {
     while (currentCls != null) { // jdt's system has been messed up, so one cant do it in usual way
       for (IMethodBinding binding : currentCls.getDeclaredMethods()) {
         if (binding.isEqualTo(method) || method.overrides(binding)) {
-          String mappingName = extarctMappingName(binding);
+          String mappingName = extractMappingName(binding);
           if (mappingName != null) {
             candidates.add(mappingName);
           }
@@ -424,9 +465,9 @@ public final class BindingUtil {
       for (ITypeBinding directInterface : currentCls.getInterfaces()) {
         for (ITypeBinding interfaze : flattenInterface(directInterface)) {
           for (IMethodBinding binding : interfaze.getDeclaredMethods()) {
-            // TODO: check if this is the way jdk handles interface implementation
+            // TODO: check if this is the way jdt handles interface implementation
             if (method.isSubsignature(binding)) {
-              String mappingName = extarctMappingName(binding);
+              String mappingName = extractMappingName(binding);
               if (mappingName != null) {
                 candidates.add(mappingName);
               }
@@ -455,5 +496,23 @@ public final class BindingUtil {
       return IOSMethod.create(className + " " + methodName);
     }
 
+  }
+
+  public static boolean isValueType(ITypeBinding type) {
+    ITypeBinding currentCls = type;
+
+    if (currentCls.isInterface()) {
+      return false;
+    }
+
+    while (currentCls != null) { // jdt's system has been messed up, so one cant do it in usual way
+      // TODO: change to qualified name
+      if (currentCls.getName().equals("ValueType")) {
+        return true;
+      }
+      currentCls = currentCls.getSuperclass();
+    }
+
+    return false;
   }
 }

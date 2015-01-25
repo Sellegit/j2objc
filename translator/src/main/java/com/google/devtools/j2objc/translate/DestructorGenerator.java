@@ -42,6 +42,7 @@ import org.eclipse.jdt.core.dom.IMethodBinding;
 import org.eclipse.jdt.core.dom.ITypeBinding;
 import org.eclipse.jdt.core.dom.IVariableBinding;
 import org.eclipse.jdt.core.dom.Modifier;
+import org.eclipse.jdt.internal.compiler.lookup.Binding;
 
 import java.util.List;
 
@@ -181,7 +182,8 @@ public class DestructorGenerator extends TreeVisitor {
     }
     if (Options.useReferenceCounting()) {
       for (IVariableBinding field : fields) {
-        if (!field.getType().isPrimitive() && !BindingUtil.isWeakReference(field)) {
+        if (!field.getType().isPrimitive() && !BindingUtil.isWeakReference(field)
+            && !BindingUtil.isValueType(field.getType())) {
           ITypeBinding idType = Types.resolveIOSType("id");
           FunctionInvocation releaseInvocation = new FunctionInvocation(
               "RELEASE_", idType, idType, idType);

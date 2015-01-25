@@ -44,6 +44,11 @@ import org.eclipse.jdt.core.dom.IVariableBinding;
 public class StaticVarRewriter extends TreeVisitor {
 
   private boolean useAccessor(TreeNode currentNode, IVariableBinding var) {
+    if (BindingUtil.extractMappingName(var.getDeclaringClass()) != null) {
+      // mapped class doesn't have usual java static field
+      return false;
+    }
+
     if (!BindingUtil.isStatic(var) || BindingUtil.isPrimitiveConstant(var)) {
       return false;
     }

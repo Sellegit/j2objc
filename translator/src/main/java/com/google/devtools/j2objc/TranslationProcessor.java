@@ -255,22 +255,16 @@ class TranslationProcessor extends FileProcessor {
       CompilationUnit unit, DeadCodeMap deadCodeMap, TimeTracker ticker) {
     ticker.push();
 
-    // Make one pass over all types to gather Mapping annotations
-    //  and generate corresponding class/method mapping
     Map<String, String> methodMappings = Options.getMethodMappings();
     if (methodMappings.isEmpty()) {
       // Method maps are loaded here so tests can call translate() directly.
       loadMappingFiles();
     }
-    // => have to do this in a global manner. plugin ?
-//    Map<String, String> classMappings = Options.getClassMappings();
-//    new MappingCollector(unit, classMappings, methodMappings).run(unit);
 
     if (deadCodeMap != null) {
       new DeadCodeEliminator(unit, deadCodeMap).run(unit);
       ticker.tick("DeadCodeEliminator");
     }
-
     OuterReferenceResolver.resolve(unit);
     ticker.tick("OuterReferenceResolver");
 
@@ -386,6 +380,7 @@ class TranslationProcessor extends FileProcessor {
     for (Plugin plugin : Options.getPlugins()) {
       plugin.processUnit(unit);
     }
+
 
     // Make sure we still have a valid AST.
     unit.validate();

@@ -94,6 +94,7 @@ import com.google.devtools.j2objc.types.IOSMethodBinding;
 import com.google.devtools.j2objc.types.IOSTypeBinding;
 import com.google.devtools.j2objc.types.Types;
 import com.google.devtools.j2objc.util.BindingUtil;
+import com.google.devtools.j2objc.util.ErrorUtil;
 import com.google.devtools.j2objc.util.NameTable;
 import com.google.devtools.j2objc.util.UnicodeUtils;
 
@@ -105,6 +106,8 @@ import org.eclipse.jdt.core.dom.IVariableBinding;
 import java.util.Iterator;
 import java.util.List;
 import java.util.regex.Pattern;
+
+import javax.naming.Binding;
 
 /**
  * Returns an Objective-C equivalent of a Java AST node.
@@ -416,8 +419,13 @@ public class StatementGenerator extends TreeVisitor {
     boolean addAutorelease = useReferenceCounting && !node.hasRetainedResult();
     buffer.append(addAutorelease ? "[[[" : "[[");
     buffer.append(NameTable.getFullName(type));
-    buffer.append(" alloc] init");
+    // if the method binding is a mapped constructor, use that instead
     IMethodBinding method = node.getMethodBinding();
+    if (method instanceof IOSMethodBinding) {
+      buffer.append(" alloc] " + method.getName());
+    } else {
+      buffer.append(" alloc] init");
+    }
     List<Expression> arguments = node.getArguments();
     printArguments(method, arguments);
     buffer.append(']');
@@ -535,13 +543,21 @@ public class StatementGenerator extends TreeVisitor {
 
   @Override
   public boolean visit(FieldAccess node) {
-    Expression expr = node.getExpression();
-    // self->static_var is invalid Objective-C.
-    if (!(expr instanceof ThisExpression && BindingUtil.isStatic(node.getVariableBinding()))) {
+    final Expression expr = node.getExpression();
+    final IVariableBinding binding = node.getVariableBinding();
+    final String dotAccess = BindingUtil.extractDotMappingName(binding);
+    if (dotAccess != null) {
       expr.accept(this);
-      buffer.append("->");
+      buffer.append("." + dotAccess);
+    } else {
+      // self->static_var is invalid Objective-C.
+      if (!(expr instanceof ThisExpression && BindingUtil.isStatic(node.getVariableBinding()))) {
+        expr.accept(this);
+        buffer.append("->");
+      }
+      node.getName().accept(this);
     }
-    node.getName().accept(this);
+
     return false;
   }
 
@@ -699,6 +715,17 @@ public class StatementGenerator extends TreeVisitor {
     // Object receiving the message, or null if it's a method in this class.
     Expression receiver = node.getExpression();
 
+    String dotAccess = BindingUtil.extractDotMappingName(binding);
+    if (dotAccess != null) {
+      if (receiver != null) {
+        receiver.accept(this);
+      } else {
+        ErrorUtil.error(node, "DotMapped method cannot be called inside the same class");
+      }
+      buffer.append("." + dotAccess);
+      return false;
+    }
+
     if (methodName.equals("isAssignableFrom")
         && binding.getDeclaringClass().equals(Types.getIOSClass())) {
       printIsAssignableFromExpression(node);
@@ -810,6 +837,13 @@ public class StatementGenerator extends TreeVisitor {
     IBinding binding = node.getBinding();
     if (binding instanceof IVariableBinding) {
       IVariableBinding var = (IVariableBinding) binding;
+
+      String constantName = BindingUtil.extractGlobalConstantName(var);
+      if (constantName != null) {
+        buffer.append(constantName);
+        return false;
+      }
+
       if (BindingUtil.isPrimitiveConstant(var)) {
         buffer.append(NameTable.getPrimitiveConstantName(var));
         return false;

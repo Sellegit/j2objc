@@ -137,12 +137,20 @@ public class NilCheckResolver extends TreeVisitor {
   private boolean needsNilCheck(Expression e) {
     IVariableBinding sym = TreeUtil.getVariableBinding(e);
     if (sym != null) {
+      if (BindingUtil.isValueType(sym.getType())) {
+        return false;
+      }
+
       // Outer class references should always be non-nil.
       return !isSafeVar(sym) && !sym.getName().startsWith("this$")
           && !sym.getName().equals("outer$");
     }
     IMethodBinding method = TreeUtil.getMethodBinding(e);
     if (method != null) {
+      if (BindingUtil.isValueType(method.getReturnType())) {
+        return false;
+      }
+
       // Check for some common cases where the result is known not to be null.
       return !method.isConstructor() && !method.getName().equals("getClass")
           && !(Types.isBoxedPrimitive(method.getDeclaringClass())

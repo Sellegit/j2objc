@@ -188,6 +188,11 @@ FOUNDATION_EXPORT NSString *JreStrcat(const char *types, ...);
   }
 #endif
 
+#define J2OBJC_VALTYPE_FIELD_SETTER(CLASS, FIELD, TYPE) \
+__attribute__((unused)) static inline TYPE CLASS##_set_##FIELD(CLASS *instance, TYPE value) { \
+return instance->FIELD = value; \
+}
+
 #define MOD_ASSIGN_DEFN(NAME, TYPE) \
   static inline TYPE ModAssign##NAME(TYPE *pLhs, double rhs) { \
     return *pLhs = (TYPE) fmod(*pLhs, rhs); \

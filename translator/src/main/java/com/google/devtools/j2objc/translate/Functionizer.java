@@ -49,6 +49,7 @@ import org.eclipse.jdt.core.dom.IMethodBinding;
 import org.eclipse.jdt.core.dom.ITypeBinding;
 import org.eclipse.jdt.core.dom.IVariableBinding;
 import org.eclipse.jdt.core.dom.Modifier;
+import org.eclipse.jdt.internal.compiler.lookup.Binding;
 
 import java.util.Collections;
 import java.util.List;
@@ -138,6 +139,11 @@ public class Functionizer extends TreeVisitor {
       return false;
     }
 
+    // Don't functionzie a mapped method
+    if (BindingUtil.isMappedToNative(node.getMethodBinding())) {
+      return false;
+    }
+
     return !hasSuperMethodInvocation(node);
   }
 
@@ -156,6 +162,12 @@ public class Functionizer extends TreeVisitor {
   @Override
   public void endVisit(MethodInvocation node) {
     IMethodBinding binding = node.getMethodBinding().getMethodDeclaration();
+
+    // Don't functionzie a mapped method
+    if (BindingUtil.isMappedToNative(binding)) {
+      return;
+    }
+
     if (!BindingUtil.isStatic(binding) && !functionizableMethods.contains(binding)) {
       return;
     }
@@ -181,6 +193,12 @@ public class Functionizer extends TreeVisitor {
   @Override
   public void endVisit(MethodDeclaration node) {
     IMethodBinding binding = node.getMethodBinding();
+    if (BindingUtil.isMappedToNative(binding)) {
+      // mapped method should not be functionized. they will not
+      //   be called anyways
+      return;
+    }
+
     FunctionDeclaration function = null;
     if (BindingUtil.isStatic(binding)) {
       function = makeStaticFunction(node);
@@ -239,12 +257,17 @@ public class Functionizer extends TreeVisitor {
     }
     function.setBody(TreeUtil.remove(method.getBody()));
 
-    // Add class initialization invocation, since this may be the first use of this class.
-    String initName = String.format("%s_init", NameTable.getFullName(declaringClass));
-    ITypeBinding voidType = Types.resolveJavaType("void");
-    FunctionInvocation initCall =
-        new FunctionInvocation(initName, voidType, voidType, declaringClass);
-    function.getBody().getStatements().add(0, new ExpressionStatement(initCall));
+    if (BindingUtil.extractMappingName(m.getDeclaringClass()) != null) {
+      // if the declaring class is mapped to a native class, no initialization can be performed
+      // nop
+    } else {
+      // Add class initialization invocation, since this may be the first use of this class.
+      String initName = String.format("%s_init", NameTable.getFullName(declaringClass));
+      ITypeBinding voidType = Types.resolveJavaType("void");
+      FunctionInvocation initCall =
+          new FunctionInvocation(initName, voidType, voidType, declaringClass);
+      function.getBody().getStatements().add(0, new ExpressionStatement(initCall));
+    }
     return function;
   }
 

@@ -230,16 +230,15 @@ public class JavaToIOSMethodTranslator extends TreeVisitor {
       }
     } else {
       // Annotation-based logic:
+      // Note: the semantic of mapping here differs from that of the other j2objc model in a sense that
+      //  mapped constructor corresponds to initXX. That's [Class alloc] will still be called
       IOSMethod mapped = BindingUtil.getMappedMethod(binding);
       if (mapped != null) {
         IOSMethodBinding methodBinding = IOSMethodBinding.newMappedMethod(mapped, binding);
-        MethodInvocation newInvocation = new MethodInvocation(methodBinding,
-                new SimpleName(Types.resolveOrCreateIOSType(mapped.getDeclaringClass(), binding.getDeclaringClass())));
+//        MethodInvocation newInvocation = new MethodInvocation(methodBinding,
+//                new SimpleName(Types.resolveOrCreateIOSType(mapped.getDeclaringClass(), binding.getDeclaringClass())));
 
-        // Set parameters.
-        copyInvocationArguments(null, node.getArguments(), newInvocation.getArguments());
-
-        node.replaceWith(newInvocation);
+        node.setMethodBinding(methodBinding);
       }
     }
     return true;
@@ -285,20 +284,12 @@ public class JavaToIOSMethodTranslator extends TreeVisitor {
         return;
       }
       IOSMethodBinding newBinding = IOSMethodBinding.newMappedMethod(iosMethod, binding);
-//      System.out.println("-----new binding-----");
-//      System.out.println(newBinding);
       node.setMethodBinding(newBinding);
-//      System.out.println("-----renaming method-----");
-//      System.out.println(binding);
-//      System.out.println(iosMethod.getName());
       NameTable.rename(binding, iosMethod.getName());
       if (node.getExpression() instanceof SimpleName) {
         SimpleName expr = (SimpleName) node.getExpression();
         if (expr.getIdentifier().equals(binding.getDeclaringClass().getName())
                 || expr.getIdentifier().equals(binding.getDeclaringClass().getQualifiedName())) {
-//          System.out.println("-----renaming class-----");
-//          System.out.println(binding.getDeclaringClass());
-//          System.out.println(iosMethod.getDeclaringClass());
           NameTable.rename(binding.getDeclaringClass(), iosMethod.getDeclaringClass());
         }
       }

@@ -198,6 +198,15 @@ public class ObjectiveCImplementationGenerator extends ObjectiveCSourceFileGener
 
   @Override
   public void generate(TypeDeclaration node) {
+    ITypeBinding binding = node.getTypeBinding();
+    if (BindingUtil.extractMappingName(binding) != null) {
+      // this is a stub type that proxies some native type. don't generate class body
+      //  but generate native function that has OCNI method body so it can be used
+
+      printOcniFunctions(node.getBodyDeclarations());
+      return;
+    }
+
     String typeName = NameTable.getFullName(node.getTypeBinding());
     if (node.isInterface()) {
       printStaticInterface(node, typeName);

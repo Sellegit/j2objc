@@ -28,6 +28,7 @@ import com.google.devtools.j2objc.ast.TreeNode;
 import com.google.devtools.j2objc.ast.TreeVisitor;
 import com.google.devtools.j2objc.ast.Type;
 import com.google.devtools.j2objc.ast.TypeDeclaration;
+import com.google.devtools.j2objc.util.BindingUtil;
 
 import org.eclipse.jdt.core.dom.IMethodBinding;
 import org.eclipse.jdt.core.dom.ITypeBinding;
@@ -69,6 +70,11 @@ public class HeaderImportCollector extends TreeVisitor {
   }
 
   private void addForwardDecl(ITypeBinding type) {
+    // TODO ?no need for it
+    if (BindingUtil.extractMappingName(type) != null) {
+      return;
+    }
+
     forwardDecls.addAll(Sets.difference(Import.getImports(type), declaredTypes));
   }
 

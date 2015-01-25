@@ -23,6 +23,7 @@ import com.google.devtools.j2objc.Options;
 import com.google.devtools.j2objc.ast.AbstractTypeDeclaration;
 import com.google.devtools.j2objc.ast.Annotation;
 import com.google.devtools.j2objc.ast.AnnotationTypeDeclaration;
+import com.google.devtools.j2objc.ast.Block;
 import com.google.devtools.j2objc.ast.BodyDeclaration;
 import com.google.devtools.j2objc.ast.CompilationUnit;
 import com.google.devtools.j2objc.ast.EnumDeclaration;
@@ -32,12 +33,15 @@ import com.google.devtools.j2objc.ast.Javadoc;
 import com.google.devtools.j2objc.ast.MethodDeclaration;
 import com.google.devtools.j2objc.ast.Name;
 import com.google.devtools.j2objc.ast.NativeDeclaration;
+import com.google.devtools.j2objc.ast.NativeStatement;
 import com.google.devtools.j2objc.ast.SingleVariableDeclaration;
+import com.google.devtools.j2objc.ast.Statement;
 import com.google.devtools.j2objc.ast.TagElement;
 import com.google.devtools.j2objc.ast.TextElement;
 import com.google.devtools.j2objc.ast.TreeNode;
 import com.google.devtools.j2objc.ast.TreeNode.Kind;
 import com.google.devtools.j2objc.ast.TreeUtil;
+import com.google.devtools.j2objc.ast.TreeVisitor;
 import com.google.devtools.j2objc.ast.TypeDeclaration;
 import com.google.devtools.j2objc.ast.VariableDeclaration;
 import com.google.devtools.j2objc.ast.VariableDeclarationFragment;
@@ -189,6 +193,27 @@ public abstract class ObjectiveCSourceFileGenerator extends SourceFileGenerator 
     for (BodyDeclaration declaration : declarations) {
       if (declaration.getKind() == Kind.FUNCTION_DECLARATION) {
         printFunction((FunctionDeclaration) declaration);
+      }
+    }
+  }
+
+  // Print only function declarations that are backed by native statements (from ocni)
+  //  so that dummy function from mapped method will not be printed
+  protected void printOcniFunctions(Iterable<BodyDeclaration> declarations) {
+    for (final BodyDeclaration declaration : declarations) {
+      if (declaration.getKind() == Kind.FUNCTION_DECLARATION) {
+        declaration.accept(new TreeVisitor() {
+          @Override
+          public boolean visit(Block block) {
+            for (Statement stmt : block.getStatements()) {
+              if (stmt instanceof NativeStatement) {
+                printFunction((FunctionDeclaration) declaration);
+                return false;
+              }
+            }
+            return false;
+          }
+        });
       }
     }
   }
@@ -488,7 +513,8 @@ public abstract class ObjectiveCSourceFileGenerator extends SourceFileGenerator 
           print("__weak ");
         }
         String objcType = NameTable.getSpecificObjCType(varType);
-        boolean needsAsterisk = !varType.isPrimitive() && !objcType.matches("id|id<.*>|Class");
+        boolean needsAsterisk = !varType.isPrimitive() && !objcType.matches("id|id<.*>|Class")
+            && !BindingUtil.isValueType(varType);
         if (needsAsterisk && objcType.endsWith(" *")) {
           // Strip pointer from type, as it will be added when appending fragment.
           // This is necessary to create "Foo *one, *two;" declarations.
@@ -585,7 +611,11 @@ public abstract class ObjectiveCSourceFileGenerator extends SourceFileGenerator 
           newlinePrinted = true;
           newline();
         }
-        println(String.format("J2OBJC_FIELD_SETTER(%s, %s, %s)",
+        String setterFormat =
+            BindingUtil.isValueType(var.getVariableBinding().getType()) ?
+              "J2OBJC_VALTYPE_FIELD_SETTER(%s, %s, %s)" :
+              "J2OBJC_FIELD_SETTER(%s, %s, %s)";
+        println(String.format(setterFormat,
             declaringClassName, fieldName, typeStr));
       }
     }

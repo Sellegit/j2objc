@@ -108,6 +108,11 @@ public class ObjectiveCHeaderGenerator extends ObjectiveCSourceFileGenerator {
   @Override
   public void generate(TypeDeclaration node) {
     ITypeBinding binding = node.getTypeBinding();
+    if (BindingUtil.extractMappingName(binding) != null) {
+      // this is a stub type that proxies some native type. don't generate
+      return;
+    }
+
     String typeName = NameTable.getFullName(binding);
     String superName = getSuperTypeName(node);
     boolean isInterface = node.isInterface();
@@ -345,6 +350,11 @@ public class ObjectiveCHeaderGenerator extends ObjectiveCSourceFileGenerator {
   }
 
   protected void printStaticField(IVariableBinding var) {
+    if (BindingUtil.extractMappingName(var.getDeclaringClass()) != null) {
+      // mapped class doesn't have usual java static field
+      return;
+    }
+
     String objcType = NameTable.getObjCType(var.getType());
     String typeWithSpace = objcType + (objcType.endsWith("*") ? "" : " ");
     String name = NameTable.getStaticVarName(var);

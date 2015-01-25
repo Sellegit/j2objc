@@ -14,6 +14,8 @@
 
 package com.google.devtools.j2objc.ast;
 
+import com.google.devtools.j2objc.util.ErrorUtil;
+
 /**
  * Base visitor class for the J2ObjC tree.
  */
@@ -27,6 +29,8 @@ public class TreeVisitor {
    */
   public void run(TreeNode node) {
     node.accept(this);
+//    ErrorUtil.warning("After running " + this.getClass().getSimpleName());
+//    ErrorUtil.warning(node.toString());
   }
 
   public boolean preVisit(TreeNode node) {
