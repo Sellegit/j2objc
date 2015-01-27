@@ -26,7 +26,7 @@ import java.security.MessageDigest;
 
 /**
  * Secure hash algorithm (SHA) message digest, which is implemented using
- * the iOS Security Framework.
+ * the iOS Security Library.
  *
  * @author Tom Ball
  */

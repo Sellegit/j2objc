@@ -162,7 +162,7 @@ import java.util.*;
  *
  * <p>This interface is a member of the
  * <a href="{@docRoot}/../technotes/guides/collections/index.html">
- * Java Collections Framework</a>.
+ * Java Collections Library</a>.
  *
  * @since 1.6
  * @author Doug Lea

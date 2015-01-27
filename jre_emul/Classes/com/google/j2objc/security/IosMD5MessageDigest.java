@@ -25,7 +25,7 @@ import java.security.MessageDigest;
 ]-*/
 
 /**
- * MD5 message digest which is implemented using the iOS Security Framework.
+ * MD5 message digest which is implemented using the iOS Security Library.
  *
  * @author Tom Ball
  */

@@ -35,7 +35,7 @@ public class IosSecurityProvider extends Provider {
   private static final String PREFIX = "com.google.j2objc.security.";
 
   public IosSecurityProvider() {
-    super(PROVIDER_NAME, 1.0, "J2ObjC's iOS Security Framework-backed provider");
+    super(PROVIDER_NAME, 1.0, "J2ObjC's iOS Security Library-backed provider");
 
     // Secure random implementation.
     put("SecureRandom.SHA1PRNG", PREFIX + "IosSecureRandomImpl");

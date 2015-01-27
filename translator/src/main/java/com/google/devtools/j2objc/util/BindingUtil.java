@@ -14,15 +14,20 @@
 
 package com.google.devtools.j2objc.util;
 
+import com.google.common.base.Splitter;
+import com.google.common.collect.ImmutableList;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Sets;
 import com.google.devtools.j2objc.types.IOSMethod;
+import com.google.devtools.j2objc.types.IOSParameter;
 import com.google.j2objc.annotations.DotMapping;
 import com.google.j2objc.annotations.GlobalConstant;
 import com.google.j2objc.annotations.Mapping;
+import com.google.j2objc.annotations.Representing;
 import com.google.j2objc.annotations.Weak;
 import com.google.j2objc.annotations.WeakOuter;
 
+import org.eclipse.jdt.core.IAnnotation;
 import org.eclipse.jdt.core.dom.IAnnotationBinding;
 import org.eclipse.jdt.core.dom.IBinding;
 import org.eclipse.jdt.core.dom.IMemberValuePairBinding;
@@ -37,6 +42,7 @@ import java.util.Comparator;
 import java.util.Deque;
 import java.util.List;
 import java.util.Set;
+import java.util.regex.Pattern;
 
 /**
  * Utility methods for working with binding types.
@@ -274,7 +280,11 @@ public final class BindingUtil {
   }
 
   public static IAnnotationBinding getAnnotation(IBinding binding, Class<?> annotationClass) {
-    for (IAnnotationBinding annotation : binding.getAnnotations()) {
+    return getAnnotation(binding.getAnnotations(), annotationClass);
+  }
+
+  public static IAnnotationBinding getAnnotation(IAnnotationBinding[] annotations, Class<?> annotationClass) {
+    for (IAnnotationBinding annotation : annotations) {
       if (typeEqualsClass(annotation.getAnnotationType(), annotationClass)) {
         return annotation;
       }
@@ -429,6 +439,8 @@ public final class BindingUtil {
         || extractGlobalConstantName(binding) != null;
   }
 
+  static final Splitter IOS_METHOD_PART_SPLITTER =
+      Splitter.on(Pattern.compile(":")).omitEmptyStrings().trimResults();
   /**
    * NOTE: this helper only analyzes the @Mapping annotation
    * Attempt to get a mapped method for given method binding by the following logic
@@ -445,6 +457,7 @@ public final class BindingUtil {
     }
 
     List<String> candidates = Lists.newArrayList();
+    List<IMethodBinding> methodCandidates = Lists.newArrayList();
     ITypeBinding currentCls = method.getDeclaringClass();
 
     if (currentCls.isInterface()) {
@@ -458,6 +471,7 @@ public final class BindingUtil {
           String mappingName = extractMappingName(binding);
           if (mappingName != null) {
             candidates.add(mappingName);
+            methodCandidates.add(binding);
           }
         }
       }
@@ -470,6 +484,7 @@ public final class BindingUtil {
               String mappingName = extractMappingName(binding);
               if (mappingName != null) {
                 candidates.add(mappingName);
+                methodCandidates.add(binding);
               }
             }
           }
@@ -482,18 +497,65 @@ public final class BindingUtil {
       currentCls = currentCls.getSuperclass();
     }
 
+    assert candidates.size() == methodCandidates.size();
+
     if (candidates.size() == 0) {
       // None is found
       return null;
     } else {
-      if (candidates.lastIndexOf(candidates.get(0)) != (candidates.size() - 1)) {
-        ErrorUtil.error("ambiguous mapping specified for " + method.getName());
+      String methodName = candidates.get(0);
+      for (String curName : candidates) {
+        if (!curName.equals(methodName)) {
+          ErrorUtil.error(
+              "Ambiguous mapping specified for " + method.getName() + ". Detected " + methodName +
+              " and " + curName);
+          return null;
+        }
       }
 
-      String methodName = candidates.get(0);
-      String className = NameTable.getName(method.getDeclaringClass());
+      IMethodBinding methodBinding = methodCandidates.get(0);
+      for (IMethodBinding curMethod : methodCandidates) {
+        if (!Arrays.equals(curMethod.getParameterTypes(), methodBinding.getParameterTypes())) {
+          ErrorUtil.error(
+              "Ambiguous parameters: " + methodBinding.toString() + ", " + curMethod.toString());
+          return null;
+        }
+        for (int i = 0; i < methodBinding.getParameterTypes().length; i++) {
+          IAnnotationBinding annotation = getAnnotation(
+              methodBinding.getParameterAnnotations(i), Representing.class);
+          IAnnotationBinding otherAnnotation = getAnnotation(
+              curMethod.getParameterAnnotations(i), Representing.class);
+          if ((annotation == null ^ otherAnnotation == null) ||
+              (annotation != null && !(annotation.equals(otherAnnotation)))) {
+            ErrorUtil.error(
+                "Ambiguous representing clause: " + methodBinding.toString() + ", " + curMethod.toString());
+            return null;
+          }
+        }
+      }
 
-      return IOSMethod.create(className + " " + methodName);
+      List<String> methodParts = Lists.newArrayList(IOS_METHOD_PART_SPLITTER.split(methodName));
+      ITypeBinding[] paramTypes = method.getParameterTypes();
+      if (methodParts.size() != paramTypes.length) {
+        ErrorUtil.error(
+            "Illegal selector: " + methodName + " for " + methodBinding.getName());
+        return null;
+      }
+      ImmutableList.Builder<IOSParameter> parameters = ImmutableList.builder();
+      for (int i = 0; i < paramTypes.length; i++) {
+        ITypeBinding typeBinding = paramTypes[i];
+        IAnnotationBinding annotation = getAnnotation(
+            methodBinding.getParameterAnnotations(i), Representing.class);
+        String type =
+            annotation == null ?
+            NameTable.getObjCType(typeBinding) :
+            (String) getAnnotationValue(annotation, "value");
+
+        parameters.add(new IOSParameter(methodParts.get(i), type, i));
+      }
+
+      String className = NameTable.getName(method.getDeclaringClass());
+      return new IOSMethod(methodParts.get(0), className, parameters.build(), false);
     }
 
   }

@@ -18,44 +18,44 @@ import java.util.Map;
 /**
  * Created by xichen on 1/22/15.
  */
-public class MappingPreProcessor extends FileProcessor {
-
-  public MappingPreProcessor(JdtParser parser) {
-    super(parser);
-  }
-
-  @Override
-  protected void processUnit(
-      String path, String source, CompilationUnit unit, TimeTracker ticker) {
-  }
-}
-
-class MappingExtractor extends TreeVisitor {
-
-  Map<IMethodBinding, String> methodBindingMappings;
-
-  MappingExtractor(Map<IMethodBinding, String> mappings) {
-    this.methodBindingMappings = mappings;
-  }
-
-  @Override
-  public boolean visit(TypeDeclaration node) {
-    // TODO: handle mapping of classes & import statement
-
-    return true;
-  }
-
-  @Override
-  public boolean visit(MethodDeclaration node) {
-    IMethodBinding binding = node.getMethodBinding();
-    IAnnotationBinding annotation = BindingUtil.getAnnotation(binding, Mapping.class);
-    if (annotation != null) {
-      String mappedName = (String) BindingUtil.getAnnotationValue(annotation, "value");
-      methodBindingMappings.put(binding, mappedName);
-    }
-
-    // collect anonymous class
-    return true;
-  }
-}
+//public class MappingPreProcessor extends FileProcessor {
+//
+//  public MappingPreProcessor(JdtParser parser) {
+//    super(parser);
+//  }
+//
+//  @Override
+//  protected void processUnit(
+//      String path, String source, CompilationUnit unit, TimeTracker ticker) {
+//  }
+//}
+//
+//class MappingExtractor extends TreeVisitor {
+//
+//  Map<IMethodBinding, String> methodBindingMappings;
+//
+//  MappingExtractor(Map<IMethodBinding, String> mappings) {
+//    this.methodBindingMappings = mappings;
+//  }
+//
+//  @Override
+//  public boolean visit(TypeDeclaration node) {
+//    // TODO: handle mapping of classes & import statement
+//
+//    return true;
+//  }
+//
+//  @Override
+//  public boolean visit(MethodDeclaration node) {
+//    IMethodBinding binding = node.getMethodBinding();
+//    IAnnotationBinding annotation = BindingUtil.getAnnotation(binding, Mapping.class);
+//    if (annotation != null) {
+//      String mappedName = (String) BindingUtil.getAnnotationValue(annotation, "value");
+//      methodBindingMappings.put(binding, mappedName);
+//    }
+//
+//    // collect anonymous class
+//    return true;
+//  }
+//}
 

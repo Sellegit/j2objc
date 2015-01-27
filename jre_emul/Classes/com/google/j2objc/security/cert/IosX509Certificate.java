@@ -43,7 +43,7 @@ import java.util.Set;
 ]-*/
 
 /**
- * An iOS X509 certificate, which wraps a Security Framework-generated
+ * An iOS X509 certificate, which wraps a Security Library-generated
  * certificate reference.
  *
  * @author Tom Ball
@@ -142,7 +142,7 @@ public class IosX509Certificate extends X509Certificate {
   }
 
   // The X509 certificate properties are not available from the iOS Security
-  // Framework API. To get this properties would require an ASN.1 decoder, so
+  // Library API. To get this properties would require an ASN.1 decoder, so
   // only implement these when they are required.
 
   @Override

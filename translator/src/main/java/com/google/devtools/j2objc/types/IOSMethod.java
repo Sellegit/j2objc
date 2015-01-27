@@ -36,7 +36,7 @@ public class IOSMethod {
   private final List<IOSParameter> parameters;
   private boolean varArgs = false;
 
-  private IOSMethod(
+  public IOSMethod(
       String name, String declaringClass, List<IOSParameter> parameters, boolean varArgs) {
     this.name = name;
     this.declaringClass = declaringClass;

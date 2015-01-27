@@ -21,4 +21,9 @@ ANNOTATION_SOURCE_JAVA = \
     com/google/j2objc/annotations/Mapping.java \
     com/google/j2objc/annotations/DotMapping.java \
     com/google/j2objc/annotations/GlobalConstant.java \
-    com/google/j2objc/annotations/Framework.java
+    com/google/j2objc/annotations/GlobalFunction.java \
+    com/google/j2objc/annotations/MachineSizedUInt.java \
+    com/google/j2objc/annotations/MachineSizedSInt.java \
+    com/google/j2objc/annotations/MachineSizedFloat.java \
+    com/google/j2objc/annotations/Representing.java \
+    com/google/j2objc/annotations/Library.java

@@ -39,6 +39,13 @@ public class IOSParameter {
     static final Splitter IOS_PARAMETER_SPLITTER =
       Splitter.on(Pattern.compile("(:|\\(|\\)|\\{|\\})")).omitEmptyStrings().trimResults();
 
+    public IOSParameter(String name, String type, int index) {
+      this.name = name;
+      this.type = type;
+      this.index = index;
+      isVarArgs = false;
+    }
+
     public IOSParameter(String s, int index) {
       if (s.equals("...")) {
         name = "values";

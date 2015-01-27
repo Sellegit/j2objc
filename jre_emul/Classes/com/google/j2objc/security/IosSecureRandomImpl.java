@@ -25,7 +25,7 @@ import java.security.SecureRandomSpi;
 ]-*/
 
 /**
- * Secure random number provider, implemented using the iOS Security Framework.
+ * Secure random number provider, implemented using the iOS Security Library.
  *
  * @author Tom Ball
  */

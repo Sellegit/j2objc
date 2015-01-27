@@ -35,7 +35,7 @@ import java.util.List;
 ]-*/
 
 /**
- * Certificate factory provider, implemented using the iOS Security Framework.
+ * Certificate factory provider, implemented using the iOS Security Library.
  *
  * @author Tom Ball
  */

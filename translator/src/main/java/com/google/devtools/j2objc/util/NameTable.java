@@ -277,9 +277,9 @@ public class NameTable {
     }
 
     // Annotation-based mapping
-    IAnnotationBinding annotation = BindingUtil.getAnnotation(binding, Mapping.class);
-    if (annotation != null) {
-      return (String) BindingUtil.getAnnotationValue(annotation, "value");
+    String annoName = BindingUtil.extractMappingName(binding);
+    if (annoName != null) {
+      return annoName;
     }
 
     String name = binding.getName();
@@ -574,9 +574,9 @@ public class NameTable {
     }
 
     // Annotation-based mapping
-    IAnnotationBinding anno = BindingUtil.getAnnotation(binding, Mapping.class);
-    if (anno != null) {
-      return (String) BindingUtil.getAnnotationValue(anno, "value");
+    String annoName = BindingUtil.extractMappingName(binding);
+    if (annoName != null) {
+      return annoName;
     }
 
     // Use camel-cased package+class name.
