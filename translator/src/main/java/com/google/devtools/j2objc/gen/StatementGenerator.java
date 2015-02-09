@@ -98,6 +98,7 @@ import com.google.devtools.j2objc.util.ErrorUtil;
 import com.google.devtools.j2objc.util.NameTable;
 import com.google.devtools.j2objc.util.UnicodeUtils;
 
+import org.eclipse.jdt.core.dom.IAnnotationBinding;
 import org.eclipse.jdt.core.dom.IBinding;
 import org.eclipse.jdt.core.dom.IMethodBinding;
 import org.eclipse.jdt.core.dom.ITypeBinding;
@@ -159,6 +160,8 @@ public class StatementGenerator extends TreeVisitor {
   }
 
   private void printArgument(IMethodBinding method, Expression arg, int index) {
+//    ErrorUtil.warning(method.toString() + ";" + arg.toString() + ";" + index);
+
     if (method != null) {
       IOSMethod iosMethod = IOSMethodBinding.getIOSMethod(method);
       if (iosMethod != null) {
@@ -179,6 +182,52 @@ public class StatementGenerator extends TreeVisitor {
       }
     }
     buffer.append(':');
+
+
+    if (method != null) {
+      IAnnotationBinding blockAnnotation =
+          BindingUtil.getAnnotation(method.getParameterAnnotations(index), com.google.j2objc.annotations.Block.class);
+      if (blockAnnotation != null) {
+        String blockRet = (String) BindingUtil.getAnnotationValue(blockAnnotation, "ret");
+        Object[] blockParams = (Object[]) BindingUtil.getAnnotationValue(blockAnnotation, "params");
+
+        // TODO: do a proper scope analysis here to prevent accidental name pollution
+        buffer.append("^{");
+        buffer.append(NameTable.getSpecificObjCType(method.getParameterTypes()[index]));
+        if (buffer.charAt(buffer.length() - 1) != '*') {
+          buffer.append(" ");
+        }
+        String localRunnerId = "___$runner";
+        buffer.append(localRunnerId + " = ");
+        arg.accept(this);
+        buffer.append("; ");
+        buffer.append("return ");
+        buffer.append(useReferenceCounting ? "[[" : "[");
+        buffer.append("^" + blockRet + " (");
+        char argId = 'a';
+        for (Object param : blockParams) {
+          buffer.append((String) param);
+          buffer.append("____" + (argId++));
+        }
+        buffer.append(") { ");
+        if (!blockRet.equals("void")) {
+          buffer.append("return ");
+        }
+        buffer.append(localRunnerId + "(");
+        argId = 'a';
+        for (Object _ : blockParams) {
+          buffer.append("____" + (argId++));
+        }
+        buffer.append(");}");
+        buffer.append(" copy]");
+        if (useReferenceCounting) {
+          buffer.append(" autorelease]");
+        }
+        buffer.append(";}()");
+        return;
+      }
+    }
+
     arg.accept(this);
   }
 

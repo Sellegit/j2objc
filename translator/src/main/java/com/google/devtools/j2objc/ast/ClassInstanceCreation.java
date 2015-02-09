@@ -14,6 +14,8 @@
 
 package com.google.devtools.j2objc.ast;
 
+import com.google.common.collect.Iterables;
+
 import org.eclipse.jdt.core.dom.IMethodBinding;
 import org.eclipse.jdt.core.dom.ITypeBinding;
 
@@ -56,6 +58,18 @@ public class ClassInstanceCreation extends Expression {
     anonymousClassDeclaration.copyFrom(other.getAnonymousClassDeclaration());
   }
 
+  public ClassInstanceCreation(
+      IMethodBinding methodBinding, boolean hasRetainedResult, Expression expression, Type type,
+      Iterable<Expression> arguments, AnonymousClassDeclaration anonymousClassDeclaration) {
+    super();
+    this.methodBinding = methodBinding;
+    this.hasRetainedResult = hasRetainedResult;
+    this.expression.copyFrom(expression);
+    this.type.copyFrom(type);
+    this.arguments.copyFrom(arguments);
+    this.anonymousClassDeclaration.copyFrom(anonymousClassDeclaration);
+  }
+
   public ClassInstanceCreation(IMethodBinding methodBinding) {
     this.methodBinding = methodBinding;
     type.set(Type.newType(methodBinding.getDeclaringClass()));
@@ -76,7 +90,10 @@ public class ClassInstanceCreation extends Expression {
 
   @Override
   public ITypeBinding getTypeBinding() {
-    return methodBinding != null ? methodBinding.getDeclaringClass() : null;
+    return methodBinding != null ? methodBinding.getDeclaringClass() :
+           (getAnonymousClassDeclaration() != null
+              ? getAnonymousClassDeclaration().getTypeBinding()
+              : null);
   }
 
   public boolean hasRetainedResult() {

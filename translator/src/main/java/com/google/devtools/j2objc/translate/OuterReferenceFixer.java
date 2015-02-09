@@ -68,6 +68,10 @@ public class OuterReferenceFixer extends TreeVisitor {
 
   @Override
   public boolean visit(ClassInstanceCreation node) {
+    if (node.getTypeBinding() == null) {
+      System.err.println(node + " has no type binding");
+      System.err.println(node.getExpression());
+    }
     ITypeBinding newType = node.getTypeBinding().getTypeDeclaration();
     ITypeBinding declaringClass = newType.getDeclaringClass();
     if (Modifier.isStatic(newType.getModifiers()) || declaringClass == null) {

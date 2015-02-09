@@ -35,7 +35,7 @@ import java.util.Map;
 // TODO(tball): convert to injectable implementation, to allow translator
 // core to be reused for other languages.
 public class Types {
-  private final AST ast;
+  public final AST ast;
   private final Map<ITypeBinding, ITypeBinding> typeMap = Maps.newHashMap();
   private final Map<ITypeBinding, ITypeBinding> renamedTypeMap = Maps.newHashMap();
   private final Map<ITypeBinding, ITypeBinding> primitiveToWrapperTypes =
@@ -54,7 +54,7 @@ public class Types {
   // Lazily load localRefType, since its initialization requires Types to be fully initialized.
   private ITypeBinding localRefType;
 
-  private static Types instance;
+  public static Types instance;
 
   // Non-standard naming pattern is used, since in this case it's more readable.
   private final IOSTypeBinding NSCopying;

@@ -16,11 +16,14 @@
 
 package com.google.devtools.j2objc.types;
 
+import com.google.common.collect.Lists;
+
 import org.eclipse.jdt.core.dom.ITypeBinding;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
+import java.util.List;
 
 /**
  * A dynamic proxy class that replaces name references to a type binding
@@ -70,9 +73,19 @@ public class RenamedTypeBinding implements InvocationHandler {
       ITypeBinding originalBinding, int modifiers) {
     Class<?> delegateClass = originalBinding.getClass();
     newDeclaringClass = Types.getRenamedBinding(newDeclaringClass); // may also be renamed
-    return (ITypeBinding) Proxy.newProxyInstance(delegateClass.getClassLoader(),
-        delegateClass.getInterfaces(),
+
+    Class<?>[] originalInterfaces = delegateClass.getInterfaces();
+    List<Class<?>> interfaces = Lists.newArrayList(originalInterfaces);
+    if (!interfaces.contains(ITypeBinding.class)) {
+      interfaces.add(ITypeBinding.class);
+    }
+    Class<?>[] interfacesParam = interfaces.toArray(new Class[interfaces.size()]);
+
+    Object proxy = Proxy.newProxyInstance(delegateClass.getClassLoader(),
+        interfacesParam,
         new RenamedTypeBinding(newName, newDeclaringClass, originalBinding, modifiers));
+
+    return (ITypeBinding) proxy;
   }
 
   private RenamedTypeBinding(String newName, ITypeBinding declaringClass,
@@ -80,6 +93,7 @@ public class RenamedTypeBinding implements InvocationHandler {
     this.newName = newName;
     this.declaringClass = declaringClass;
     this.delegate = delegate;
+
     this.modifiers = modifiers;
   }
 

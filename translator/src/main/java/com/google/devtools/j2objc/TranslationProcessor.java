@@ -28,6 +28,7 @@ import com.google.devtools.j2objc.translate.AbstractMethodRewriter;
 import com.google.devtools.j2objc.translate.AnonymousClassConverter;
 import com.google.devtools.j2objc.translate.ArrayRewriter;
 import com.google.devtools.j2objc.translate.Autoboxer;
+import com.google.devtools.j2objc.translate.BlockRewriter;
 import com.google.devtools.j2objc.translate.CastResolver;
 import com.google.devtools.j2objc.translate.ComplexExpressionExtractor;
 import com.google.devtools.j2objc.translate.ConstantBranchPruner;
@@ -265,6 +266,11 @@ class TranslationProcessor extends FileProcessor {
       new DeadCodeEliminator(unit, deadCodeMap).run(unit);
       ticker.tick("DeadCodeEliminator");
     }
+
+    // run before anonymous class extraction
+    new BlockRewriter().run(unit);
+    ticker.tick("BlockRewriter");
+
     OuterReferenceResolver.resolve(unit);
     ticker.tick("OuterReferenceResolver");
 
@@ -290,6 +296,7 @@ class TranslationProcessor extends FileProcessor {
     // Add auto-boxing conversions.
     new Autoboxer().run(unit);
     ticker.tick("Autoboxer");
+
 
     // Extract inner and anonymous classes
     new AnonymousClassConverter().run(unit);

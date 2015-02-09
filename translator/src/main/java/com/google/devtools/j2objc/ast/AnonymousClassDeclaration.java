@@ -14,13 +14,14 @@
 
 package com.google.devtools.j2objc.ast;
 
+import org.eclipse.jdt.core.IType;
 import org.eclipse.jdt.core.dom.ITypeBinding;
 
 import java.util.List;
 
 /**
  * Anonymous class declaration node. Must be the child of a
- * ClassInstanceCreation node.
+ * @ClassInstanceCreation node.
  */
 public class AnonymousClassDeclaration extends TreeNode {
 
@@ -40,6 +41,12 @@ public class AnonymousClassDeclaration extends TreeNode {
     super(other);
     typeBinding = other.getTypeBinding();
     bodyDeclarations.copyFrom(other.getBodyDeclarations());
+  }
+
+  public AnonymousClassDeclaration(ITypeBinding tpe, Iterable<BodyDeclaration> bodys) {
+    super();
+    typeBinding = tpe;
+    bodyDeclarations.copyFrom(bodys);
   }
 
   @Override

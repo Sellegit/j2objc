@@ -125,12 +125,13 @@ public abstract class TreeNode {
   public void validateInner() {}
 
   public String toString() {
-    try {
+//    try {
       return DebugASTPrinter.toString(this);
-    } catch (RuntimeException e) {
-      // Debugger may sometimes call toString methods on an instance that is partially initialized.
-      return super.toString();
-    }
+//    } catch (RuntimeException e) {
+//      System.err.println("error while printing:"  + e);
+//      // Debugger may sometimes call toString methods on an instance that is partially initialized.
+//      return super.toString();
+//    }
   }
 
   /**

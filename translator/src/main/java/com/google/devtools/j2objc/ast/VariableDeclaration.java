@@ -42,6 +42,15 @@ public abstract class VariableDeclaration extends TreeNode {
     initializer.copyFrom(other.getInitializer());
   }
 
+  public VariableDeclaration(
+      IVariableBinding varBinding, int extraDim, String name, Expression init) {
+    super();
+    variableBinding = varBinding;
+    extraDimensions = extraDim;
+    this.name.set(new SimpleName(name));
+    initializer.copyFrom(init);
+  }
+
   public VariableDeclaration(IVariableBinding variableBinding, Expression initializer) {
     super();
     this.variableBinding = variableBinding;

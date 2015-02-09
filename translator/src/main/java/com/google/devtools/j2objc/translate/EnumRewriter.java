@@ -41,11 +41,6 @@ import org.eclipse.jdt.core.dom.ITypeBinding;
 
 import java.util.List;
 
-/**
- * Modifies enum types for Objective C.
- *
- * @author Keith Stanger
- */
 public class EnumRewriter extends TreeVisitor {
 
   private GeneratedVariableBinding nameVar = null;

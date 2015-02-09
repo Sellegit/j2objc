@@ -148,7 +148,11 @@ public class GeneratedMethodBinding extends AbstractBinding implements IMethodBi
 
   @Override
   public IAnnotationBinding[] getParameterAnnotations(int paramIndex) {
-    return new IAnnotationBinding[0];
+    if (delegate == null) {
+      return new IAnnotationBinding[0];
+    } else {
+      return delegate.getParameterAnnotations(paramIndex);
+    }
   }
 
   @Override
@@ -168,6 +172,10 @@ public class GeneratedMethodBinding extends AbstractBinding implements IMethodBi
     parameters.addAll(Arrays.asList(method.getParameterTypes()));
   }
 
+  public void setParameter(int index, ITypeBinding param) {
+    parameters.set(index, param);
+  }
+
   @Override
   public ITypeBinding getReturnType() {
     return returnType;
@@ -181,7 +189,11 @@ public class GeneratedMethodBinding extends AbstractBinding implements IMethodBi
 
   @Override
   public ITypeBinding[] getTypeParameters() {
+    if (delegate == null) {
     return new ITypeBinding[0];
+    } else {
+      return delegate.getTypeParameters();
+    }
   }
 
   @Override

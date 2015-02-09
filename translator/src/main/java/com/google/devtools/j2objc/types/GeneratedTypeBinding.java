@@ -41,15 +41,23 @@ public class GeneratedTypeBinding extends AbstractTypeBinding {
   private final ITypeBinding componentType;
   private final Set<IVariableBinding> fields = Sets.newHashSet();
   private final Set<IMethodBinding> methods = Sets.newHashSet();
+  private final ITypeBinding declaringClass;
 
   public GeneratedTypeBinding(
       String name, IPackageBinding packageBinding, ITypeBinding superClass, boolean isInterface,
       ITypeBinding componentType) {
+    this(name, packageBinding, superClass, isInterface, componentType, null);
+  }
+
+  public GeneratedTypeBinding(
+      String name, IPackageBinding packageBinding, ITypeBinding superClass, boolean isInterface,
+      ITypeBinding componentType, ITypeBinding declaringClass) {
     this.name = name;
     this.packageBinding = packageBinding;
     this.superClass = superClass;
     this.isInterface = isInterface;
     this.componentType = componentType;
+    this.declaringClass = declaringClass;
   }
 
   /**
@@ -191,5 +199,10 @@ public class GeneratedTypeBinding extends AbstractTypeBinding {
   @Override
   public String toString() {
     return name;
+  }
+
+  @Override
+  public ITypeBinding getDeclaringClass() {
+    return declaringClass;
   }
 }

@@ -29,8 +29,8 @@ public class TreeVisitor {
    */
   public void run(TreeNode node) {
     node.accept(this);
-//    ErrorUtil.warning("After running " + this.getClass().getSimpleName());
-//    ErrorUtil.warning(node.toString());
+    ErrorUtil.warning("After running " + this.getClass().getSimpleName());
+    ErrorUtil.warning(node.toString());
   }
 
   public boolean preVisit(TreeNode node) {
@@ -55,7 +55,11 @@ public class TreeVisitor {
     return true;
   }
 
-  public void endVisit(AnonymousClassDeclaration node) {}
+  public void endVisit(AnonymousClassDeclaration node) {
+//    System.out.println(node.getTypeBinding());
+//    System.out.println(node.getTypeBinding().getName());
+//    System.out.println(node.getTypeBinding().getPackage());
+  }
 
   public boolean visit(ArrayAccess node) {
     return true;

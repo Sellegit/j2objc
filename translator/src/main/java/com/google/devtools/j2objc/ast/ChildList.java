@@ -72,7 +72,7 @@ class ChildList<T extends TreeNode> extends AbstractList<T> {
   }
 
   @SuppressWarnings("unchecked")
-  public void copyFrom(List<T> other) {
+  public void copyFrom(Iterable<T> other) {
     for (T elem : other) {
       add((T) elem.copy());
     }

@@ -386,6 +386,10 @@ public class OuterReferenceResolver extends TreeVisitor {
   @Override
   public void endVisit(ClassInstanceCreation node) {
     ITypeBinding type = node.getTypeBinding();
+//    if (type == null) {
+//      System.err.println("=============err===");
+//      System.err.println(node + " has no type");
+//    }
     if (node.getExpression() == null && BindingUtil.hasOuterContext(type)) {
       addPath(node, getOuterPathInherited(type.getDeclaringClass()));
     }

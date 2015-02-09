@@ -34,6 +34,7 @@ import com.google.devtools.j2objc.types.IOSMethod;
 import com.google.devtools.j2objc.types.IOSMethodBinding;
 import com.google.devtools.j2objc.types.Types;
 import com.google.devtools.j2objc.util.BindingUtil;
+import com.google.devtools.j2objc.util.ErrorUtil;
 import com.google.devtools.j2objc.util.NameTable;
 
 import org.eclipse.jdt.core.dom.IMethodBinding;
@@ -133,6 +134,10 @@ public class CastResolver extends TreeVisitor {
   private boolean needsCast(Expression expr, boolean shouldCastFromId) {
     ITypeBinding declaredType = getDeclaredType(expr);
     if (declaredType == null) {
+      return false;
+    }
+    if (expr.getTypeBinding() == null) {
+//      System.err.println(expr.toString() + "doesn't have type info");
       return false;
     }
     ITypeBinding exprType = Types.mapType(expr.getTypeBinding().getTypeDeclaration());

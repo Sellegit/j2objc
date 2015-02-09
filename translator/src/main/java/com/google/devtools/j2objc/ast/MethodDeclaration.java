@@ -14,7 +14,10 @@
 
 package com.google.devtools.j2objc.ast;
 
+import com.google.devtools.j2objc.types.GeneratedVariableBinding;
+
 import org.eclipse.jdt.core.dom.IMethodBinding;
+import org.eclipse.jdt.core.dom.ITypeBinding;
 
 import java.util.List;
 
@@ -59,6 +62,13 @@ public class MethodDeclaration extends BodyDeclaration {
     isConstructor = methodBinding.isConstructor();
     returnType.set(Type.newType(methodBinding.getReturnType()));
     name.set(new SimpleName(methodBinding));
+    for (ITypeBinding paramTpe : methodBinding.getParameterTypes()) {
+      GeneratedVariableBinding var = new GeneratedVariableBinding(
+          paramTpe.getName().toLowerCase(), Modifier.Public, paramTpe,
+          false, true, null, methodBinding);
+      SingleVariableDeclaration param = new SingleVariableDeclaration(var);
+      parameters.add(param);
+    }
   }
 
   @Override
