@@ -270,7 +270,6 @@ public abstract class ObjectiveCSourceFileGenerator extends SourceFileGenerator 
       StringBuffer sb) {
     sb.append(":(");
     sb.append(iosParameter.getType());
-    System.out.println("voila!! " + iosParameter.getType());
     sb.append(')');
     sb.append(var.getName().getIdentifier());
   }

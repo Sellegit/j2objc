@@ -46,9 +46,6 @@ public class IOSParameter {
       this.type = type;
       this.index = index;
       isVarArgs = false;
-
-      System.out.println("new ios type!! " + type);
-      Debug.printStackTrace(new Exception());
     }
 
     public IOSParameter(String s, int index) {

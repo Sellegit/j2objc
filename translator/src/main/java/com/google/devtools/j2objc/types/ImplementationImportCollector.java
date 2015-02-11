@@ -99,6 +99,10 @@ public class ImplementationImportCollector extends TreeVisitor {
   }
 
   private void addImports(ITypeBinding type) {
+    if (type instanceof IOSBlockTypeBinding) {
+      return;
+    }
+
     Import.addImports(type, imports);
   }
 

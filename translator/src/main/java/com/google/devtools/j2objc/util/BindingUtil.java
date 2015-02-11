@@ -562,7 +562,6 @@ public final class BindingUtil {
           type = (String) getAnnotationValue(representingAnno, "value");
         } else if (nativeBlockType != null) {
           type = nativeBlockType.getParameterSignature();
-          System.out.println("lala!! " + type);
         } else {
           type = NameTable.getObjCType(typeBinding);
         }

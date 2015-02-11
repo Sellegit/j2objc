@@ -73,6 +73,8 @@ public class HeaderImportCollector extends TreeVisitor {
     // TODO ?no need for it
     if (BindingUtil.extractMappingName(type) != null) {
       return;
+    } else if (type instanceof IOSBlockTypeBinding) {
+      return;
     }
 
     forwardDecls.addAll(Sets.difference(Import.getImports(type), declaredTypes));
