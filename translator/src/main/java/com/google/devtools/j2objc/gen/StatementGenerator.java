@@ -1373,7 +1373,7 @@ public class StatementGenerator extends TreeVisitor {
         initializer.accept(this);
       }
       buffer.append(";\n");
-      
+
       return false;
     } else {
       String objcType = NameTable.getSpecificObjCType(binding);

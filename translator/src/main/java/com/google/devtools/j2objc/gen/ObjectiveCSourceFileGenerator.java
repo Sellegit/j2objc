@@ -511,31 +511,45 @@ public abstract class ObjectiveCSourceFileGenerator extends SourceFileGenerator 
         }
         printDocComment(field.getJavadoc());
         printIndent();
-        if (BindingUtil.isWeakReference(varBinding)) {
-          // We must add this even without -use-arc because the header may be
-          // included by a file compiled with ARC.
-          print("__weak ");
-        }
-        String objcType = NameTable.getSpecificObjCType(varType);
-        boolean needsAsterisk = !varType.isPrimitive() && !objcType.matches("id|id<.*>|Class")
-            && !BindingUtil.isValueType(varType);
-        if (needsAsterisk && objcType.endsWith(" *")) {
-          // Strip pointer from type, as it will be added when appending fragment.
-          // This is necessary to create "Foo *one, *two;" declarations.
-          objcType = objcType.substring(0, objcType.length() - 2);
-        }
-        print(objcType);
-        print(' ');
-        for (Iterator<VariableDeclarationFragment> it = field.getFragments().iterator();
-             it.hasNext(); ) {
-          VariableDeclarationFragment f = it.next();
-          if (needsAsterisk) {
-            print('*');
-          }
+        if (varType instanceof IOSBlockTypeBinding) {
+          IOSBlockTypeBinding blockTypeBinding = (IOSBlockTypeBinding) varType;
+          assert field.getFragments().size() == 1 : "TODO: can only suport one fragment for field";
+          VariableDeclarationFragment f = field.getFragments().get(0);
           String name = NameTable.getName(f.getName().getBinding());
-          print(NameTable.javaFieldToObjC(name));
-          if (it.hasNext()) {
-            print(", ");
+          String fieldName = (NameTable.javaFieldToObjC(name));
+          if (BindingUtil.isWeakReference(varBinding)) {
+            // We must add this even without -use-arc because the header may be
+            // included by a file compiled with ARC.
+            fieldName = "__weak " + fieldName;
+          }
+          print(blockTypeBinding.getNamedDeclaration(fieldName));
+        } else {
+          if (BindingUtil.isWeakReference(varBinding)) {
+            // We must add this even without -use-arc because the header may be
+            // included by a file compiled with ARC.
+            print("__weak ");
+          }
+          String objcType = NameTable.getSpecificObjCType(varType);
+          boolean needsAsterisk = !varType.isPrimitive() && !objcType.matches("id|id<.*>|Class")
+                                  && !BindingUtil.isValueType(varType);
+          if (needsAsterisk && objcType.endsWith(" *")) {
+            // Strip pointer from type, as it will be added when appending fragment.
+            // This is necessary to create "Foo *one, *two;" declarations.
+            objcType = objcType.substring(0, objcType.length() - 2);
+          }
+          print(objcType);
+          print(' ');
+          for (Iterator<VariableDeclarationFragment> it = field.getFragments().iterator();
+               it.hasNext(); ) {
+            VariableDeclarationFragment f = it.next();
+            if (needsAsterisk) {
+              print('*');
+            }
+            String name = NameTable.getName(f.getName().getBinding());
+            print(NameTable.javaFieldToObjC(name));
+            if (it.hasNext()) {
+              print(", ");
+            }
           }
         }
         println(";");
@@ -615,12 +629,23 @@ public abstract class ObjectiveCSourceFileGenerator extends SourceFileGenerator 
           newlinePrinted = true;
           newline();
         }
-        String setterFormat =
-            BindingUtil.isValueType(var.getVariableBinding().getType()) ?
+        ITypeBinding typeBinding = var.getVariableBinding().getType();
+        if (typeBinding instanceof IOSBlockTypeBinding) {
+          IOSBlockTypeBinding blockTypeBinding = (IOSBlockTypeBinding) typeBinding;
+          String setterFormat =
+              "J2OBJC_BLOCK_FIELD_SETTER(%s, %s, %s, %s)";
+          println(String.format(
+              setterFormat, declaringClassName, fieldName,
+              blockTypeBinding.getNamedDeclarationFirstPart(),
+              blockTypeBinding.getNamedDeclarationLastPart()));
+        } else {
+          String setterFormat =
+              BindingUtil.isValueType(typeBinding) ?
               "J2OBJC_VALTYPE_FIELD_SETTER(%s, %s, %s)" :
               "J2OBJC_FIELD_SETTER(%s, %s, %s)";
-        println(String.format(setterFormat,
-            declaringClassName, fieldName, typeStr));
+          println(String.format(setterFormat,
+                                declaringClassName, fieldName, typeStr));
+        }
       }
     }
   }
