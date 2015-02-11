@@ -389,7 +389,6 @@ public class NameTable {
     } else if (type.isArray()) {
       return getArrayTypeParameterKeyword(type.getElementType(), type.getDimensions());
     } else if (type instanceof IOSBlockTypeBinding) {
-      Debug.printStackTrace(new Exception());
       return "block";
     }
 

@@ -131,6 +131,7 @@ public class OuterReferenceResolver extends TreeVisitor {
 
   public static List<IVariableBinding> getPath(TreeNode node) {
     assert instance != null;
+    assert node.getKey() != null;
     return instance.outerPaths.get(node.getKey());
   }
 

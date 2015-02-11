@@ -162,10 +162,10 @@ public class JavaToIOSMethodTranslator extends TreeVisitor {
     }
     // Annotation-based logic:
     IOSMethod mapped = BindingUtil.getMappedMethod(binding);
-    System.out.println("processing 22");
-    System.out.println(binding);
-    System.out.println(Arrays.toString(binding.getAnnotations()));
-    System.out.println(mapped);
+//    System.out.println("processing 22");
+//    System.out.println(binding);
+//    System.out.println(Arrays.toString(binding.getAnnotations()));
+//    System.out.println(mapped);
     if (mapped != null) {
       mapMethod(node, binding, mapped);
       return true;

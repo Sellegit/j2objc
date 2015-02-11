@@ -19,6 +19,8 @@ package com.google.devtools.j2objc.types;
 import com.google.common.base.Splitter;
 import com.google.common.collect.Lists;
 
+import org.eclipse.osgi.framework.debug.Debug;
+
 import java.util.List;
 import java.util.regex.Pattern;
 
@@ -44,6 +46,9 @@ public class IOSParameter {
       this.type = type;
       this.index = index;
       isVarArgs = false;
+
+      System.out.println("new ios type!! " + type);
+      Debug.printStackTrace(new Exception());
     }
 
     public IOSParameter(String s, int index) {

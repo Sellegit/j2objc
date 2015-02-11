@@ -61,11 +61,6 @@ public class BlockRewriter extends TreeVisitor {
   private void insertBlockWrappingStatement(
       Block body, MethodDeclaration node, IAnnotationBinding annotation, int i) {
     IMethodBinding binding = node.getMethodBinding();
-//    IAnnotationBinding representing = BindingUtil.getAnnotation(binding.getParameterAnnotations(i),
-//                                                Representing.class);
-//    IOSTypeBinding nativeBlockType = IOSTypeBinding.newUnmappedClass(
-//        (String) BindingUtil.getAnnotationValue(representing, "value")
-//    );
     IAnnotationBinding blockAnno = BindingUtil.getAnnotation(
         binding.getParameterAnnotations(i),
         com.google.j2objc.annotations.Block.class
@@ -75,10 +70,10 @@ public class BlockRewriter extends TreeVisitor {
     for (Object argObj : argObjs) {
       args.add((String) argObj);
     }
-    IOSBlockTypeBinding nativeBlockType = new IOSBlockTypeBinding(
-        (String) BindingUtil.getAnnotationValue(blockAnno, "ret"),
-        args
+    IOSBlockTypeBinding nativeBlockType = BindingUtil.getBlockType(
+        binding.getParameterAnnotations(i)
     );
+    assert nativeBlockType != null;
 
     ITypeBinding blockType = binding.getParameterTypes()[i];
     assert blockType.getDeclaredMethods().length == 1 : "Block interface should only has one method";
@@ -89,7 +84,8 @@ public class BlockRewriter extends TreeVisitor {
     // TODO: this approach here has a problem, it messes up the binding info, the new method's
     //  declaring class doesn't contain this new method
     GeneratedMethodBinding newMethodBinding = new GeneratedMethodBinding(binding);
-    System.out.println("new method mapping anno:" + Arrays.toString(newMethodBinding.getAnnotations()));
+    System.out.println("new method mapping anno:" + Arrays.toString(
+        newMethodBinding.getAnnotations()));
     System.out.println("original method mapping anno:" + Arrays.toString(binding.getAnnotations()));
     newMethodBinding.setParameter(i, nativeBlockType);
     node.setMethodBinding(newMethodBinding);

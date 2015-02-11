@@ -40,6 +40,7 @@ public class GeneratedMethodBinding extends AbstractBinding implements IMethodBi
   private final String name;
   private int modifiers;
   private final List<ITypeBinding> parameters = Lists.newArrayList();
+  private List<IAnnotationBinding[]> parameterAnnotations = Lists.newArrayList();
   private final ITypeBinding returnType;
   private final IMethodBinding methodDeclaration;
   private ITypeBinding declaringClass;
@@ -65,7 +66,7 @@ public class GeneratedMethodBinding extends AbstractBinding implements IMethodBi
    */
   public GeneratedMethodBinding(IMethodBinding m) {
     this(null, m.getName(), m.getModifiers(), m.getReturnType(), null, m.getDeclaringClass(),
-        m.isConstructor(), m.isVarargs(), m.isSynthetic());
+         m.isConstructor(), m.isVarargs(), m.isSynthetic());
     addParameters(m);
     addAnnotations(m);
   }
@@ -150,7 +151,7 @@ public class GeneratedMethodBinding extends AbstractBinding implements IMethodBi
   @Override
   public IAnnotationBinding[] getParameterAnnotations(int paramIndex) {
     if (delegate == null) {
-      return new IAnnotationBinding[0];
+      return parameterAnnotations.get(paramIndex);
     } else {
       return delegate.getParameterAnnotations(paramIndex);
     }
@@ -163,14 +164,19 @@ public class GeneratedMethodBinding extends AbstractBinding implements IMethodBi
 
   public void addParameter(ITypeBinding param) {
     parameters.add(param);
+    parameterAnnotations.add(new IAnnotationBinding[0]);
   }
 
   public void addParameter(int index, ITypeBinding param) {
     parameters.add(index, param);
+    parameterAnnotations.add(new IAnnotationBinding[0]);
   }
 
   public void addParameters(IMethodBinding method) {
     parameters.addAll(Arrays.asList(method.getParameterTypes()));
+    for (int i = 0; i < method.getParameterTypes().length; i++) {
+     parameterAnnotations.add(method.getParameterAnnotations(i));
+    }
   }
 
   public void setParameter(int index, ITypeBinding param) {

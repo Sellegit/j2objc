@@ -146,8 +146,20 @@ public class OuterReferenceFixer extends TreeVisitor {
     }
   }
 
+  // For some reason this fixier would like to think that the generated parameters that
+  //    an anonymous class referecen should be fixed as well. this is a hack to prevent this
+  //    from visiting parameters. specific reasons TODO
+  @Override
+  public boolean visit(SingleVariableDeclaration node) {
+    return false;
+  }
+
   @Override
   public boolean visit(SimpleName node) {
+//    if (true) {
+//      return true;
+//    }
+
     List<IVariableBinding> path = OuterReferenceResolver.getPath(node);
     if (path != null) {
       if (path.size() == 1 && path.get(0).getConstantValue() != null) {

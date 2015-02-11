@@ -158,9 +158,9 @@ public abstract class ObjectiveCSourceFileGenerator extends SourceFileGenerator 
   protected void printMethod(MethodDeclaration m) {
     IMethodBinding binding = m.getMethodBinding();
     IOSMethod iosMethod = IOSMethodBinding.getIOSMethod(binding);
-    System.out.println(binding);
-    System.out.println(binding.getClass());
-    System.out.println(iosMethod);
+//    System.out.println(binding);
+//    System.out.println(binding.getClass());
+//    System.out.println(iosMethod);
     if (iosMethod != null) {
       printMappedMethodDeclaration(m, iosMethod);
     } else if (m.isConstructor()) {
@@ -262,7 +262,7 @@ public abstract class ObjectiveCSourceFileGenerator extends SourceFileGenerator 
         addTypeAndName(next, var, sb);
       }
     }
-    System.out.println("mapped method decel ==== " + sb.toString());
+//    System.out.println("mapped method decel ==== " + sb.toString());
     return sb.toString();
   }
 
@@ -270,6 +270,7 @@ public abstract class ObjectiveCSourceFileGenerator extends SourceFileGenerator 
       StringBuffer sb) {
     sb.append(":(");
     sb.append(iosParameter.getType());
+    System.out.println("voila!! " + iosParameter.getType());
     sb.append(')');
     sb.append(var.getName().getIdentifier());
   }

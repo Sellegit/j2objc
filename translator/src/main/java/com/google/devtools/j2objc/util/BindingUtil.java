@@ -18,6 +18,7 @@ import com.google.common.base.Splitter;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Sets;
+import com.google.devtools.j2objc.types.IOSBlockTypeBinding;
 import com.google.devtools.j2objc.types.IOSMethod;
 import com.google.devtools.j2objc.types.IOSParameter;
 import com.google.j2objc.annotations.DotMapping;
@@ -551,21 +552,50 @@ public final class BindingUtil {
       ImmutableList.Builder<IOSParameter> parameters = ImmutableList.builder();
       for (int i = 0; i < paramTypes.length; i++) {
         ITypeBinding typeBinding = paramTypes[i];
-        IAnnotationBinding annotation = getAnnotation(
+        IAnnotationBinding representingAnno = getAnnotation(
             methodBinding.getParameterAnnotations(i), Representing.class);
-        String type =
-            annotation == null ?
-            NameTable.getObjCType(typeBinding) :
-            (String) getAnnotationValue(annotation, "value");
+        IOSBlockTypeBinding nativeBlockType = getBlockType(
+            methodBinding.getParameterAnnotations(i)
+        );
+        String type;
+        if (representingAnno != null) {
+          type = (String) getAnnotationValue(representingAnno, "value");
+        } else if (nativeBlockType != null) {
+          type = nativeBlockType.getParameterSignature();
+          System.out.println("lala!! " + type);
+        } else {
+          type = NameTable.getObjCType(typeBinding);
+        }
 
         parameters.add(new IOSParameter(methodParts.get(i), type, i));
       }
 
       String className = NameTable.getName(method.getDeclaringClass());
-//      Debug.printStackTrace(new Exception());
       return new IOSMethod(methodParts.get(0), className, parameters.build(), false);
     }
 
+  }
+
+  public static IOSBlockTypeBinding getBlockType(IAnnotationBinding[] annotations) {
+    IAnnotationBinding blockAnno = BindingUtil.getAnnotation(
+        annotations,
+        com.google.j2objc.annotations.Block.class
+    );
+    if (blockAnno == null) {
+      return null;
+    }
+
+    Object[] argObjs = (Object[]) BindingUtil.getAnnotationValue(blockAnno, "params");
+    List<String> args = Lists.newArrayList();
+    for (Object argObj : argObjs) {
+      args.add((String) argObj);
+    }
+    IOSBlockTypeBinding nativeBlockType = new IOSBlockTypeBinding(
+        (String) BindingUtil.getAnnotationValue(blockAnno, "ret"),
+        args
+    );
+
+    return nativeBlockType;
   }
 
   public static boolean isValueType(ITypeBinding type) {
