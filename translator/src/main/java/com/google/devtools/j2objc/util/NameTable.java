@@ -39,6 +39,7 @@ import org.eclipse.jdt.core.dom.IPackageBinding;
 import org.eclipse.jdt.core.dom.ITypeBinding;
 import org.eclipse.jdt.core.dom.IVariableBinding;
 import org.eclipse.jdt.core.dom.VariableDeclarationFragment;
+import org.eclipse.osgi.framework.debug.Debug;
 
 import java.io.IOException;
 import java.util.Iterator;
@@ -388,6 +389,7 @@ public class NameTable {
     } else if (type.isArray()) {
       return getArrayTypeParameterKeyword(type.getElementType(), type.getDimensions());
     } else if (type instanceof IOSBlockTypeBinding) {
+      Debug.printStackTrace(new Exception());
       return "block";
     }
 

@@ -35,6 +35,7 @@ import org.eclipse.jdt.core.dom.IMethodBinding;
 import org.eclipse.jdt.core.dom.ITypeBinding;
 import org.eclipse.jdt.core.dom.IVariableBinding;
 import org.eclipse.jdt.core.dom.Modifier;
+import org.eclipse.osgi.framework.debug.Debug;
 
 import java.lang.annotation.RetentionPolicy;
 import java.util.Arrays;
@@ -464,11 +465,17 @@ public final class BindingUtil {
       return null;
     }
 
+    // this is a hack to work around binding info being inconsistent
+    String mappingName = extractMappingName(method);
+    if (mappingName != null) {
+      candidates.add(mappingName);
+      methodCandidates.add(method);
+    }
 //    while (!currentCls.isEqualTo(Types.resolveJavaType("java.lang.Object"))) {
     while (currentCls != null) { // jdt's system has been messed up, so one cant do it in usual way
       for (IMethodBinding binding : currentCls.getDeclaredMethods()) {
         if (binding.isEqualTo(method) || method.overrides(binding)) {
-          String mappingName = extractMappingName(binding);
+          mappingName = extractMappingName(binding);
           if (mappingName != null) {
             candidates.add(mappingName);
             methodCandidates.add(binding);
@@ -481,7 +488,7 @@ public final class BindingUtil {
           for (IMethodBinding binding : interfaze.getDeclaredMethods()) {
             // TODO: check if this is the way jdt handles interface implementation
             if (method.isSubsignature(binding)) {
-              String mappingName = extractMappingName(binding);
+              mappingName = extractMappingName(binding);
               if (mappingName != null) {
                 candidates.add(mappingName);
                 methodCandidates.add(binding);
@@ -555,6 +562,7 @@ public final class BindingUtil {
       }
 
       String className = NameTable.getName(method.getDeclaringClass());
+//      Debug.printStackTrace(new Exception());
       return new IOSMethod(methodParts.get(0), className, parameters.build(), false);
     }
 

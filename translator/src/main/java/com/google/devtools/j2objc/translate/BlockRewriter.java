@@ -26,11 +26,13 @@ import com.google.devtools.j2objc.util.BindingUtil;
 import com.google.j2objc.annotations.Representing;
 
 import org.eclipse.jdt.core.dom.IAnnotationBinding;
+import org.eclipse.jdt.core.dom.IBinding;
 import org.eclipse.jdt.core.dom.IMethodBinding;
 import org.eclipse.jdt.core.dom.ITypeBinding;
 import org.eclipse.jdt.core.dom.IVariableBinding;
 
 import java.lang.reflect.Modifier;
+import java.util.Arrays;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
@@ -84,7 +86,11 @@ public class BlockRewriter extends TreeVisitor {
     assert runMethod.getName().equals("run") : "Block interface's invoke method should be named run";
 
     // rewrite the parameter's type to be the native block type
+    // TODO: this approach here has a problem, it messes up the binding info, the new method's
+    //  declaring class doesn't contain this new method
     GeneratedMethodBinding newMethodBinding = new GeneratedMethodBinding(binding);
+    System.out.println("new method mapping anno:" + Arrays.toString(newMethodBinding.getAnnotations()));
+    System.out.println("original method mapping anno:" + Arrays.toString(binding.getAnnotations()));
     newMethodBinding.setParameter(i, nativeBlockType);
     node.setMethodBinding(newMethodBinding);
     SingleVariableDeclaration oldVarDecl = node.getParameters().get(i);
@@ -102,6 +108,7 @@ public class BlockRewriter extends TreeVisitor {
     // ignore generic version for now
 
     GeneratedMethodBinding methodBinding = new GeneratedMethodBinding(runMethod);
+
     methodBinding.setModifiers(0);
     MethodDeclaration method = new MethodDeclaration(methodBinding);
 
@@ -125,13 +132,14 @@ public class BlockRewriter extends TreeVisitor {
     }
     blockCall.append(");");
 
+    final IVariableBinding originalVarBinding = node.getParameters().get(i).getVariableBinding();
     NativeStatement nativeInvoke = new NativeStatement(blockCall.toString());
     method.setBody(new Block());
     method.getBody().getStatements().add(
       new VariableDeclarationStatement(
         new GeneratedVariableBinding(blockLocalId, 0, nativeBlockType, false, false, null,
                                      method.getMethodBinding()),
-        new SimpleName(node.getParameters().get(i).getVariableBinding())
+        new SimpleName(originalVarBinding)
     ));
     method.getBody().getStatements().add(nativeInvoke);
 
@@ -147,15 +155,29 @@ public class BlockRewriter extends TreeVisitor {
             false /* think about it*/, null,
             new SimpleType(blockType), new LinkedList<Expression>(), anon);
 
-    String wrappedBlockIdent = "__wrapped_" + node.getParameters().get(i).getName();
-    GeneratedVariableBinding wrappedBlockBinding =
+    final String wrappedBlockIdent = "__wrapped_" + node.getParameters().get(i).getName();
+    final GeneratedVariableBinding wrappedBlockBinding =
         new GeneratedVariableBinding(wrappedBlockIdent, 0, blockType, false, false, null, binding);
     VariableDeclarationFragment varDecl =
         new VariableDeclarationFragment(wrappedBlockBinding, newObj);
     List<Statement> stmts = body.getStatements();
+
+    // rewrite all the references to original parameter
+    TreeVisitor bindingRewriter = new TreeVisitor() {
+      @Override
+      public void endVisit(SimpleName node) {
+        IBinding thisType = node.getBinding();
+        if (thisType.getName().equals(originalVarBinding.getName())) {
+          node.setBinding(wrappedBlockBinding);
+          node.setIdentifier(wrappedBlockIdent);
+        }
+      }
+    };
+
+    for (Statement stmt : stmts) {
+      stmt.accept(bindingRewriter);
+    }
+
     stmts.add(0, new VariableDeclarationStatement(varDecl));
-
-    // todo: rewrite all the references to original parameter
-
   }
 }

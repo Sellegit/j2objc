@@ -52,6 +52,7 @@ import org.eclipse.jdt.core.dom.ITypeBinding;
 import org.eclipse.jdt.core.dom.IVariableBinding;
 import org.eclipse.jdt.core.dom.Modifier;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 
@@ -161,6 +162,10 @@ public class JavaToIOSMethodTranslator extends TreeVisitor {
     }
     // Annotation-based logic:
     IOSMethod mapped = BindingUtil.getMappedMethod(binding);
+    System.out.println("processing 22");
+    System.out.println(binding);
+    System.out.println(Arrays.toString(binding.getAnnotations()));
+    System.out.println(mapped);
     if (mapped != null) {
       mapMethod(node, binding, mapped);
       return true;

@@ -193,7 +193,7 @@ public class StatementGenerator extends TreeVisitor {
         Object[] blockParams = (Object[]) BindingUtil.getAnnotationValue(blockAnnotation, "params");
 
         // TODO: do a proper scope analysis here to prevent accidental name pollution
-        buffer.append("^{");
+        buffer.append("(^{");
         buffer.append(NameTable.getSpecificObjCType(method.getParameterTypes()[index]));
         if (buffer.charAt(buffer.length() - 1) != '*') {
           buffer.append(" ");
@@ -201,7 +201,7 @@ public class StatementGenerator extends TreeVisitor {
         String localRunnerId = "___$runner";
         buffer.append(localRunnerId + " = ");
         arg.accept(this);
-        buffer.append("; ");
+        buffer.append(";");
         buffer.append("return ");
         buffer.append(useReferenceCounting ? "[[" : "[");
         buffer.append("^" + blockRet + " (");
@@ -224,7 +224,7 @@ public class StatementGenerator extends TreeVisitor {
         if (useReferenceCounting) {
           buffer.append(" autorelease]");
         }
-        buffer.append(";}()");
+        buffer.append(";})()");
         return;
       }
     }
