@@ -57,17 +57,24 @@ public class MethodDeclaration extends BodyDeclaration {
   }
 
   public MethodDeclaration(IMethodBinding methodBinding) {
+    // preserve semantics of existing code
+    this(methodBinding, false);
+  }
+
+  public MethodDeclaration(IMethodBinding methodBinding, boolean copyParam) {
     super(methodBinding);
     this.methodBinding = methodBinding;
     isConstructor = methodBinding.isConstructor();
     returnType.set(Type.newType(methodBinding.getReturnType()));
     name.set(new SimpleName(methodBinding));
-    for (ITypeBinding paramTpe : methodBinding.getParameterTypes()) {
-      GeneratedVariableBinding var = new GeneratedVariableBinding(
-          paramTpe.getName().toLowerCase(), Modifier.Public, paramTpe,
-          false, true, null, methodBinding);
-      SingleVariableDeclaration param = new SingleVariableDeclaration(var);
-      parameters.add(param);
+    if (copyParam) {
+      for (ITypeBinding paramTpe : methodBinding.getParameterTypes()) {
+        GeneratedVariableBinding var = new GeneratedVariableBinding(
+            paramTpe.getName().toLowerCase(), Modifier.Public, paramTpe,
+            false, true, null, methodBinding);
+        SingleVariableDeclaration param = new SingleVariableDeclaration(var);
+        parameters.add(param);
+      }
     }
   }
 

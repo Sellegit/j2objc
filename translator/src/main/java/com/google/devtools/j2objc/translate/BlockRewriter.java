@@ -103,7 +103,7 @@ public class BlockRewriter extends TreeVisitor {
     GeneratedMethodBinding methodBinding = new GeneratedMethodBinding(runMethod);
 
     methodBinding.setModifiers(0);
-    MethodDeclaration method = new MethodDeclaration(methodBinding);
+    MethodDeclaration method = new MethodDeclaration(methodBinding, /*copyParam*/ true);
 
     final String blockLocalId = "__$block";
     StringBuilder blockCall = new StringBuilder();

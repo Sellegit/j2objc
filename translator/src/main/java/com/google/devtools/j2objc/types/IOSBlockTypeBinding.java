@@ -1,5 +1,6 @@
 package com.google.devtools.j2objc.types;
 
+import com.google.common.collect.Iterables;
 import com.google.common.collect.Lists;
 
 import java.util.List;
@@ -17,6 +18,14 @@ public class IOSBlockTypeBinding extends IOSTypeBinding {
 
     returnType = retType;
     argumentTypes = Lists.newArrayList(argTypes);
+  }
+
+  public String getReturnType() {
+    return returnType;
+  }
+
+  public Iterable<String> getArgumentTypes() {
+    return argumentTypes;
   }
 
   public String getParameterSignature() {
@@ -53,9 +62,9 @@ public class IOSBlockTypeBinding extends IOSTypeBinding {
     return sb.toString();
   }
 
-  public static String getBlockSignature(String retType, Iterable<String> args) {
+  public static String getParameterList(Iterable<String> args) {
     StringBuilder sb = new StringBuilder();
-    sb.append(retType + " (^)");
+
     sb.append("(");
     boolean first = true;
     for (String arg : args) {
@@ -67,6 +76,15 @@ public class IOSBlockTypeBinding extends IOSTypeBinding {
       sb.append(arg);
     }
     sb.append(")");
+
+    return sb.toString();
+  }
+
+  public static String getBlockSignature(String retType, Iterable<String> args) {
+    StringBuilder sb = new StringBuilder();
+
+    sb.append(retType + " (^)");
+    sb.append(getParameterList(args));
 
     return sb.toString();
   }
