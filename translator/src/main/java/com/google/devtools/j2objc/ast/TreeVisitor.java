@@ -29,8 +29,8 @@ public class TreeVisitor {
    */
   public void run(TreeNode node) {
     node.accept(this);
-//    ErrorUtil.warning("After running " + this.getClass().getSimpleName());
-//    ErrorUtil.warning(node.toString());
+    System.out.println("After running " + this.getClass().getSimpleName());
+    System.out.println(node.toString());
   }
 
   public boolean preVisit(TreeNode node) {
