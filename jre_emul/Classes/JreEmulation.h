@@ -172,8 +172,6 @@ FOUNDATION_EXPORT NSString *JreStrcat(const char *types, ...);
   OSMemoryBarrier(); \
   CLASS##_initialized = YES;
 
-// note this setter for block types are hard coded in ObjectiveCSourceFileGenerator
-//   since macro is too clumsy to handle the syntax
 #if __has_feature(objc_arc)
 #define J2OBJC_FIELD_SETTER(CLASS, FIELD, TYPE) \
   __attribute__((unused)) static inline TYPE CLASS##_set_##FIELD(CLASS *instance, TYPE value) { \

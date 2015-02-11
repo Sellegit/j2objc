@@ -214,12 +214,18 @@ public class StatementGenerator extends TreeVisitor {
         if (!blockRet.equals("void")) {
           buffer.append("return ");
         }
-        buffer.append(localRunnerId + "(");
+        buffer.append("[" + localRunnerId + " run");
         argId = 'a';
+        boolean first = true;
         for (Object _ : blockParams) {
-          buffer.append("____" + (argId++));
+          if (first) {
+            first = false;
+          } else {
+            buffer.append(" param");
+          }
+          buffer.append(":____" + (argId++));
         }
-        buffer.append(");}");
+        buffer.append("];}");
         buffer.append(" copy]");
         if (useReferenceCounting) {
           buffer.append(" autorelease]");

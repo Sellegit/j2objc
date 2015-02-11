@@ -636,34 +636,20 @@ public abstract class ObjectiveCSourceFileGenerator extends SourceFileGenerator 
         ITypeBinding typeBinding = var.getVariableBinding().getType();
         if (typeBinding instanceof IOSBlockTypeBinding) {
           IOSBlockTypeBinding block = (IOSBlockTypeBinding) typeBinding;
-          String args = IOSBlockTypeBinding.getParameterList(block.getArgumentTypes());
-          String method1 = declaringClassName + "_set_" + fieldName;
-          String method2 = declaringClassName + "_setAndConsume_" + fieldName;
-          String setter =
-              "#if __has_feature(objc_arc)\n"
-              + "  __attribute__((unused)) static " + block.getNamedDeclaration(method1) + " \n"
-              + "      = ^" + args + " { \n"
-              + "    return instance->" + fieldName + " = value; \n"
-              + "  };\n"
-              + "#else\n"
-              + "  __attribute__((unused)) static " + block.getNamedDeclaration(method1) + " \n"
-              + "      = ^" + args + " { \n"
-              + "    return JreStrongAssign(&instance->" + fieldName + ", instance, value); \n"
-              + "  };\n"
-              + "  __attribute__((unused)) static " + block.getNamedDeclaration(method2) + " \n"
-              + "    = ^" + args + "{ \n"
-              + "      return JreStrongAssignAndConsume(&instance->" + fieldName + ", instance, value); \n"
-              + "    };\n"
-              + "#endif";
-          println(setter);
-        } else {
-          String setterFormat =
-              BindingUtil.isValueType(typeBinding) ?
-              "J2OBJC_VALTYPE_FIELD_SETTER(%s, %s, %s)" :
-              "J2OBJC_FIELD_SETTER(%s, %s, %s)";
-          println(String.format(setterFormat,
-                                declaringClassName, fieldName, typeStr));
+          typeStr = "TempBlock" + block.hashCode();
+          print("typedef ");
+          print(block.getReturnType());
+          print("(^" + typeStr + ")");
+          print(block.getParametersWithParen());
+          println(";");
         }
+
+        String setterFormat =
+            BindingUtil.isValueType(typeBinding) ?
+            "J2OBJC_VALTYPE_FIELD_SETTER(%s, %s, %s)" :
+            "J2OBJC_FIELD_SETTER(%s, %s, %s)";
+        println(String.format(setterFormat,
+                              declaringClassName, fieldName, typeStr));
       }
     }
   }

@@ -88,4 +88,8 @@ public class IOSBlockTypeBinding extends IOSTypeBinding {
 
     return sb.toString();
   }
+
+  public String getParametersWithParen() {
+    return getParameterList(argumentTypes);
+  }
 }
