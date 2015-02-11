@@ -177,6 +177,10 @@ FOUNDATION_EXPORT NSString *JreStrcat(const char *types, ...);
   __attribute__((unused)) static inline TYPE CLASS##_set_##FIELD(CLASS *instance, TYPE value) { \
     return instance->FIELD = value; \
   }
+#define J2OBJC_BLOCK_FIELD_SETTER(CLASS, FIELD, TYPE1, TYPE2) \
+  __attribute__((unused)) static inline TYPE CLASS##_set_##FIELD(CLASS *instance, TYPE1 value TYPE2) { \
+    return instance->FIELD = value; \
+  }
 #else
 #define J2OBJC_FIELD_SETTER(CLASS, FIELD, TYPE) \
   __attribute__((unused)) static inline TYPE CLASS##_set_##FIELD(CLASS *instance, TYPE value) { \
@@ -186,12 +190,20 @@ FOUNDATION_EXPORT NSString *JreStrcat(const char *types, ...);
         CLASS *instance, NS_RELEASES_ARGUMENT TYPE value) { \
     return JreStrongAssignAndConsume(&instance->FIELD, instance, value); \
   }
+#define J2OBJC_BLOCK_FIELD_SETTER(CLASS, FIELD, TYPE1, TYPE2) \
+  __attribute__((unused)) static inline TYPE CLASS##_set_##FIELD(CLASS *instance, TYPE1 value TYPE2) { \
+    return JreStrongAssign(&instance->FIELD, instance, value); \
+  }\
+  __attribute__((unused)) static inline TYPE CLASS##_setAndConsume_##FIELD( \
+        CLASS *instance, TYPE1 NS_RELEASES_ARGUMENT value TYPE2) { \
+    return JreStrongAssignAndConsume(&instance->FIELD, instance, value); \
+  }
 #endif
 
 #define J2OBJC_VALTYPE_FIELD_SETTER(CLASS, FIELD, TYPE) \
 __attribute__((unused)) static inline TYPE CLASS##_set_##FIELD(CLASS *instance, TYPE value) { \
-return instance->FIELD = value; \
-}
+    return instance->FIELD = value; \
+  }
 
 #define MOD_ASSIGN_DEFN(NAME, TYPE) \
   static inline TYPE ModAssign##NAME(TYPE *pLhs, double rhs) { \

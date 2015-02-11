@@ -26,4 +26,6 @@ ANNOTATION_SOURCE_JAVA = \
     com/google/j2objc/annotations/MachineSizedSInt.java \
     com/google/j2objc/annotations/MachineSizedFloat.java \
     com/google/j2objc/annotations/Representing.java \
+    com/google/j2objc/annotations/NotImplemented.java \
+    com/google/j2objc/annotations/Block.java \
     com/google/j2objc/annotations/Library.java
