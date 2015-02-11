@@ -16,8 +16,12 @@
 
 package com.google.devtools.j2objc.types;
 
+import com.google.common.collect.Lists;
+
 import org.eclipse.jdt.core.dom.IBinding;
 import org.eclipse.jdt.core.dom.ITypeBinding;
+
+import java.util.List;
 
 /**
  * IOSTypeBinding: synthetic binding for an iOS type
@@ -83,3 +87,4 @@ public class IOSTypeBinding extends GeneratedTypeBinding {
     return isEqualTo(type) || mappedType.isCastCompatible(type);
   }
 }
+

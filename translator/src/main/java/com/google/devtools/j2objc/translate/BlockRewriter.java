@@ -19,6 +19,7 @@ import com.google.devtools.j2objc.ast.VariableDeclarationStatement;
 import com.google.devtools.j2objc.types.GeneratedMethodBinding;
 import com.google.devtools.j2objc.types.GeneratedTypeBinding;
 import com.google.devtools.j2objc.types.GeneratedVariableBinding;
+import com.google.devtools.j2objc.types.IOSBlockTypeBinding;
 import com.google.devtools.j2objc.types.IOSTypeBinding;
 import com.google.devtools.j2objc.types.Types;
 import com.google.devtools.j2objc.util.BindingUtil;
@@ -30,10 +31,12 @@ import org.eclipse.jdt.core.dom.ITypeBinding;
 import org.eclipse.jdt.core.dom.IVariableBinding;
 
 import java.lang.reflect.Modifier;
+import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 
 import javax.annotation.Generated;
+import javax.naming.Binding;
 
 /**
  * This class only handles the rewriting of block parameter into corresponding Java class
@@ -56,10 +59,23 @@ public class BlockRewriter extends TreeVisitor {
   private void insertBlockWrappingStatement(
       Block body, MethodDeclaration node, IAnnotationBinding annotation, int i) {
     IMethodBinding binding = node.getMethodBinding();
-    IAnnotationBinding representing = BindingUtil.getAnnotation(binding.getParameterAnnotations(i),
-                                                Representing.class);
-    IOSTypeBinding nativeBlockType = IOSTypeBinding.newUnmappedClass(
-        (String) BindingUtil.getAnnotationValue(representing, "value")
+//    IAnnotationBinding representing = BindingUtil.getAnnotation(binding.getParameterAnnotations(i),
+//                                                Representing.class);
+//    IOSTypeBinding nativeBlockType = IOSTypeBinding.newUnmappedClass(
+//        (String) BindingUtil.getAnnotationValue(representing, "value")
+//    );
+    IAnnotationBinding blockAnno = BindingUtil.getAnnotation(
+        binding.getParameterAnnotations(i),
+        com.google.j2objc.annotations.Block.class
+    );
+    Object[] argObjs = (Object[]) BindingUtil.getAnnotationValue(blockAnno, "params");
+    List<String> args = Lists.newArrayList();
+    for (Object argObj : argObjs) {
+      args.add((String) argObj);
+    }
+    IOSBlockTypeBinding nativeBlockType = new IOSBlockTypeBinding(
+        (String) BindingUtil.getAnnotationValue(blockAnno, "ret"),
+        args
     );
 
     ITypeBinding blockType = binding.getParameterTypes()[i];

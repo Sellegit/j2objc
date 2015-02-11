@@ -45,6 +45,7 @@ import com.google.devtools.j2objc.ast.TreeVisitor;
 import com.google.devtools.j2objc.ast.TypeDeclaration;
 import com.google.devtools.j2objc.ast.VariableDeclaration;
 import com.google.devtools.j2objc.ast.VariableDeclarationFragment;
+import com.google.devtools.j2objc.types.IOSBlockTypeBinding;
 import com.google.devtools.j2objc.types.IOSMethod;
 import com.google.devtools.j2objc.types.IOSMethodBinding;
 import com.google.devtools.j2objc.types.IOSParameter;
@@ -350,8 +351,11 @@ public abstract class ObjectiveCSourceFileGenerator extends SourceFileGenerator 
           sb.append(keyword);
         }
         IVariableBinding var = param.getVariableBinding();
-        sb.append(String.format(":(%s)%s",
-            NameTable.getSpecificObjCType(var.getType()), NameTable.getName(var)));
+        String parameterSignature =
+            var.getType() instanceof IOSBlockTypeBinding ?
+            ((IOSBlockTypeBinding) var.getType()).getParameterSignature() :
+                NameTable.getSpecificObjCType(var.getType());
+        sb.append(String.format(":(%s)%s", parameterSignature, NameTable.getName(var)));
         if (i + 1 < nParams) {
           sb.append('\n');
         }

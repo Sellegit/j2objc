@@ -89,6 +89,7 @@ import com.google.devtools.j2objc.ast.VariableDeclarationExpression;
 import com.google.devtools.j2objc.ast.VariableDeclarationFragment;
 import com.google.devtools.j2objc.ast.VariableDeclarationStatement;
 import com.google.devtools.j2objc.ast.WhileStatement;
+import com.google.devtools.j2objc.types.IOSBlockTypeBinding;
 import com.google.devtools.j2objc.types.IOSMethod;
 import com.google.devtools.j2objc.types.IOSMethodBinding;
 import com.google.devtools.j2objc.types.IOSTypeBinding;
@@ -1359,26 +1360,43 @@ public class StatementGenerator extends TreeVisitor {
     List<VariableDeclarationFragment> vars = node.getFragments();
     assert !vars.isEmpty();
     IVariableBinding binding = vars.get(0).getVariableBinding();
-    String objcType = NameTable.getSpecificObjCType(binding);
-    String objcTypePointers = " ";
-    int idx = objcType.indexOf(" *");
-    if (idx != -1) {
-      // Split the type at the first pointer. The second part of the type is
-      // applied to each fragment. (eg. Foo *one, *two)
-      objcTypePointers = objcType.substring(idx);
-      objcType = objcType.substring(0, idx);
-    }
-    buffer.append(objcType);
-    for (Iterator<VariableDeclarationFragment> it = vars.iterator(); it.hasNext(); ) {
-      VariableDeclarationFragment f = it.next();
-      buffer.append(objcTypePointers);
-      f.accept(this);
-      if (it.hasNext()) {
-        buffer.append(",");
+    if (binding.getType() instanceof IOSBlockTypeBinding) {
+      assert vars.size() == 1 : "TODO: cannot handle multiple fragments for block";
+      IOSBlockTypeBinding blockBinding = (IOSBlockTypeBinding) binding.getType();
+      buffer.append(blockBinding.getNamedDeclarationFirstPart());
+      VariableDeclarationFragment frag = vars.get(0);
+      frag.getName().accept(this);
+      buffer.append(blockBinding.getNamedDeclarationLastPart());
+      Expression initializer = frag.getInitializer();
+      if (initializer != null) {
+        buffer.append(" = ");
+        initializer.accept(this);
       }
+      buffer.append(";\n");
+      
+      return false;
+    } else {
+      String objcType = NameTable.getSpecificObjCType(binding);
+      String objcTypePointers = " ";
+      int idx = objcType.indexOf(" *");
+      if (idx != -1) {
+        // Split the type at the first pointer. The second part of the type is
+        // applied to each fragment. (eg. Foo *one, *two)
+        objcTypePointers = objcType.substring(idx);
+        objcType = objcType.substring(0, idx);
+      }
+      buffer.append(objcType);
+      for (Iterator<VariableDeclarationFragment> it = vars.iterator(); it.hasNext(); ) {
+        VariableDeclarationFragment f = it.next();
+        buffer.append(objcTypePointers);
+        f.accept(this);
+        if (it.hasNext()) {
+          buffer.append(",");
+        }
+      }
+      buffer.append(";\n");
+      return false;
     }
-    buffer.append(";\n");
-    return false;
   }
 
   @Override

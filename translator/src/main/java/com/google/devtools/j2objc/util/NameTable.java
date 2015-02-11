@@ -23,6 +23,7 @@ import com.google.devtools.j2objc.Options;
 import com.google.devtools.j2objc.ast.CompilationUnit;
 import com.google.devtools.j2objc.ast.PackageDeclaration;
 import com.google.devtools.j2objc.types.GeneratedVariableBinding;
+import com.google.devtools.j2objc.types.IOSBlockTypeBinding;
 import com.google.devtools.j2objc.types.IOSMethod;
 import com.google.devtools.j2objc.types.IOSMethodBinding;
 import com.google.devtools.j2objc.types.IOSParameter;
@@ -386,7 +387,10 @@ public class NameTable {
       return type.getName();
     } else if (type.isArray()) {
       return getArrayTypeParameterKeyword(type.getElementType(), type.getDimensions());
+    } else if (type instanceof IOSBlockTypeBinding) {
+      return "block";
     }
+
     return getFullName(type);
   }
 
@@ -452,6 +456,11 @@ public class NameTable {
 
   private static String getObjCTypeInner(
       ITypeBinding type, String qualifiers, boolean expandTypeVariables) {
+    if (BindingUtil.isValueType(type)) {
+      return getFullName(type);
+    } else if (type instanceof IOSBlockTypeBinding){
+    }
+
     String objCType;
     if (type instanceof PointerTypeBinding) {
       String pointeeQualifiers = null;
@@ -488,11 +497,7 @@ public class NameTable {
       }
     }
 
-    if (BindingUtil.isValueType(type)) {
-      return getFullName(type);
-    } else {
-      return objCType;
-    }
+    return objCType;
   }
 
   private static String constructObjCType(ITypeBinding... types) {
