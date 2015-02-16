@@ -16,6 +16,7 @@
 
 package com.google.devtools.j2objc.types;
 
+import com.google.common.collect.Lists;
 import com.google.common.collect.Sets;
 
 import org.eclipse.jdt.core.dom.IBinding;
@@ -25,6 +26,7 @@ import org.eclipse.jdt.core.dom.ITypeBinding;
 import org.eclipse.jdt.core.dom.IVariableBinding;
 import org.eclipse.jdt.core.dom.Modifier;
 
+import java.util.List;
 import java.util.Set;
 
 /**
@@ -42,6 +44,7 @@ public class GeneratedTypeBinding extends AbstractTypeBinding {
   private final Set<IVariableBinding> fields = Sets.newHashSet();
   private final Set<IMethodBinding> methods = Sets.newHashSet();
   private final ITypeBinding declaringClass;
+  private final List<ITypeBinding> interfaces = Lists.newArrayList();
 
   public GeneratedTypeBinding(
       String name, IPackageBinding packageBinding, ITypeBinding superClass, boolean isInterface,
@@ -204,5 +207,20 @@ public class GeneratedTypeBinding extends AbstractTypeBinding {
   @Override
   public ITypeBinding getDeclaringClass() {
     return declaringClass;
+  }
+
+  @Override
+  public ITypeBinding[] getInterfaces() {
+    return interfaces.toArray(new ITypeBinding[interfaces.size()]);
+  }
+
+  public void addInterfaces(Iterable<ITypeBinding> faces) {
+    for(ITypeBinding interfaze : faces) {
+      interfaces.add(interfaze);
+    }
+  }
+
+  public void addInterface(ITypeBinding face) {
+    interfaces.add(face);
   }
 }

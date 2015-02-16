@@ -75,9 +75,9 @@ public class BlockRewriter extends TreeVisitor {
     );
     assert nativeBlockType != null;
 
-    ITypeBinding blockType = binding.getParameterTypes()[i];
-    assert blockType.getDeclaredMethods().length == 1 : "Block interface should only has one method";
-    IMethodBinding runMethod = blockType.getDeclaredMethods()[0];
+    ITypeBinding blockInterfaceType = binding.getParameterTypes()[i];
+    assert blockInterfaceType.getDeclaredMethods().length == 1 : "Block interface should only has one method";
+    IMethodBinding runMethod = blockInterfaceType.getDeclaredMethods()[0];
     assert runMethod.getName().equals("run") : "Block interface's invoke method should be named run";
 
     // rewrite the parameter's type to be the native block type
@@ -137,7 +137,11 @@ public class BlockRewriter extends TreeVisitor {
     method.getBody().getStatements().add(nativeInvoke);
 
     GeneratedTypeBinding blockTypeBinding =
-        new GeneratedTypeBinding("$block" + i, binding.getDeclaringClass().getPackage(), blockType, false, null, binding.getDeclaringClass());
+        new GeneratedTypeBinding(
+            "$block" + i, binding.getDeclaringClass().getPackage(), Types.getNSObject(),
+            false, null, binding.getDeclaringClass()
+        );
+    blockTypeBinding.addInterface(blockInterfaceType);
     blockTypeBinding.addMethod(method.getMethodBinding());
 
     AnonymousClassDeclaration anon =
@@ -146,11 +150,11 @@ public class BlockRewriter extends TreeVisitor {
         new ClassInstanceCreation(
             new GeneratedMethodBinding(null, "<init>", 0, Types.instance.ast.resolveWellKnownType("java.lang.Void"), null, blockTypeBinding, true, false, true),
             false /* think about it*/, null,
-            new SimpleType(blockType), new LinkedList<Expression>(), anon);
+            new SimpleType(blockInterfaceType), new LinkedList<Expression>(), anon);
 
     final String wrappedBlockIdent = "__wrapped_" + node.getParameters().get(i).getName();
     final GeneratedVariableBinding wrappedBlockBinding =
-        new GeneratedVariableBinding(wrappedBlockIdent, 0, blockType, false, false, null, binding);
+        new GeneratedVariableBinding(wrappedBlockIdent, 0, blockInterfaceType, false, false, null, binding);
     VariableDeclarationFragment varDecl =
         new VariableDeclarationFragment(wrappedBlockBinding, newObj);
     List<Statement> stmts = body.getStatements();
