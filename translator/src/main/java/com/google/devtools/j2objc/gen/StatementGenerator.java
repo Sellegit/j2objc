@@ -206,7 +206,13 @@ public class StatementGenerator extends TreeVisitor {
         buffer.append(useReferenceCounting ? "[[" : "[");
         buffer.append("^" + blockRet + " (");
         char argId = 'a';
+        boolean first = true;
         for (Object param : blockParams) {
+          if (first) {
+            first = false;
+          } else {
+            buffer.append(", ");
+          }
           buffer.append((String) param);
           buffer.append("____" + (argId++));
         }
@@ -216,7 +222,7 @@ public class StatementGenerator extends TreeVisitor {
         }
         buffer.append("[" + localRunnerId + " run");
         argId = 'a';
-        boolean first = true;
+        first = true;
         for (Object _ : blockParams) {
           if (first) {
             first = false;

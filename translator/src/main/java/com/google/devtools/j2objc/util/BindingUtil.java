@@ -462,10 +462,6 @@ public final class BindingUtil {
     List<IMethodBinding> methodCandidates = Lists.newArrayList();
     ITypeBinding currentCls = method.getDeclaringClass();
 
-    if (currentCls.isInterface()) {
-      return null;
-    }
-
     // this is a hack to work around binding info being inconsistent
     String mappingName = extractMappingName(method);
     if (mappingName != null) {
