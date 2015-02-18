@@ -180,11 +180,11 @@ FOUNDATION_EXPORT NSString *JreStrcat(const char *types, ...);
 #else
 #define J2OBJC_FIELD_SETTER(CLASS, FIELD, TYPE) \
   __attribute__((unused)) static inline TYPE CLASS##_set_##FIELD(CLASS *instance, TYPE value) { \
-    return JreStrongAssign(&instance->FIELD, instance, value); \
+    return JreStrongAssign((id *) &instance->FIELD, instance, value); \
   }\
   __attribute__((unused)) static inline TYPE CLASS##_setAndConsume_##FIELD( \
-        CLASS *instance, NS_RELEASES_ARGUMENT TYPE value) { \
-    return JreStrongAssignAndConsume(&instance->FIELD, instance, value); \
+        CLASS *instance, NS_RELEASES_ARGUMENT id value) { \
+    return JreStrongAssignAndConsume((id *) &instance->FIELD, instance, value); \
   }
 #endif
 
