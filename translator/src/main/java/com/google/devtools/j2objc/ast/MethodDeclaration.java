@@ -68,9 +68,10 @@ public class MethodDeclaration extends BodyDeclaration {
     returnType.set(Type.newType(methodBinding.getReturnType()));
     name.set(new SimpleName(methodBinding));
     if (copyParam) {
-      for (ITypeBinding paramTpe : methodBinding.getParameterTypes()) {
+      for (int i = 0; i < methodBinding.getParameterTypes().length; i++) {
+        ITypeBinding paramTpe = methodBinding.getParameterTypes()[i];
         GeneratedVariableBinding var = new GeneratedVariableBinding(
-            paramTpe.getName().toLowerCase(), Modifier.Public, paramTpe,
+            paramTpe.getName().toLowerCase() + "_" + i, Modifier.Public, paramTpe,
             false, true, null, methodBinding);
         SingleVariableDeclaration param = new SingleVariableDeclaration(var);
         parameters.add(param);
