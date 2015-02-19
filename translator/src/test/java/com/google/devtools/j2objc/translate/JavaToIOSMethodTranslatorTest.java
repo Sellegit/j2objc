@@ -242,4 +242,79 @@ public class JavaToIOSMethodTranslatorTest extends GenerationTest {
         + "} }",
         "Example", "Example.m");
   }
+
+  public void testMappingAnnotation() throws IOException {
+    String translation = translateSourceFile(
+        "import com.google.j2objc.annotations.Mapping;\n"
+        + "\n"
+        + "public class Hello {\n"
+        + "}\n"
+        + "\n"
+        + "@Mapping(\"NSDate\")\n"
+        + "class FakeNSDate {\n"
+        + "    @Mapping(\"initWithEmpty\")\n"
+        + "    public FakeNSDate() {\n"
+        + "        super();\n"
+        + "    }\n"
+        + "\n"
+        + "    @Mapping(\"initWithInt:\")\n"
+        + "    public FakeNSDate(int haha) {\n"
+        + "        this();\n"
+        + "    }\n"
+        + "\n"
+        + "    @Mapping(\"initWithInt:andString:\")\n"
+        + "    public FakeNSDate(int haha, String bull) {\n"
+        + "        this();\n"
+        + "    }\n"
+        + "\n"
+        + "    @Mapping(\"description\")\n"
+        + "    public String descriptionMa() {\n"
+        + "        return null;\n"
+        + "    }\n"
+        + "}\n"
+        + "\n"
+        + "@Mapping(\"NSDelegate\")\n"
+        + "interface XXDelegate {\n"
+        + "    @Mapping(\"haha\")\n"
+        + "    void hehe();\n"
+        + "}"
+        + "class HeheDate extends FakeNSDate implements XXDelegate {\n"
+        + "    public HeheDate() {\n"
+        + "        super();\n"
+        + "    }\n"
+        + "\n"
+        + "    public HeheDate(String haha) {\n"
+        + "        super(2);\n"
+        + "    }\n"
+        + "\n"
+        + "    public String descriptionMa() {\n"
+        + "        return \"h\";\n"
+        + "    }\n"
+        + "    public void hehe() {\n"
+        + "    }\n"
+        + "\n"
+        + "    @Mapping(\"mapme\")\n"
+        + "    public void okok() {\n"
+        + "    }"
+        + "}",
+        "Hello", "Hello.m");
+    String header = getTranslatedFile("Hello.h");
+    // shouldn't generate a mapped class
+    assertNotInTranslation(translation, "@implementation FakeNSDate");
+    assertNotInTranslation(translation, "@implementation NSDate");
+    // shouldn't generate a mapped interface
+    assertNotInTranslation(header, "@protocol XXDelegate");
+    assertNotInTranslation(header, "@protocol NSDelegate");
+    // should generate class that inherits from a mapped class
+    assertTranslation(translation, "@implementation HeheDate");
+    // should map inherited constructors
+    assertTranslation(translation, "- (instancetype)initWithEmpty");
+    assertTranslation(translation, "- (instancetype)initWithNSString:(NSString *)haha");
+    // should map inherited method
+    assertTranslation(translation, "- (NSString *)description");
+    // should map methods that correspond to mapped interface methods
+    assertTranslation(translation, "- (void)haha {");
+    // should map methods that directly have Mapping binding
+    assertTranslation(translation, "- (void)mapme {");
+  }
 }

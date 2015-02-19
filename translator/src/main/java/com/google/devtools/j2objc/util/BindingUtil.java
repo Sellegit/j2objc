@@ -540,10 +540,20 @@ public final class BindingUtil {
 
       List<String> methodParts = Lists.newArrayList(IOS_METHOD_PART_SPLITTER.split(methodName));
       ITypeBinding[] paramTypes = method.getParameterTypes();
-      if (methodParts.size() != paramTypes.length) {
-        ErrorUtil.error(
-            "Illegal selector: " + methodName + " for " + methodBinding.getName());
-        return null;
+      if (methodName.endsWith(":")) {
+        // has arguments
+        if (methodParts.size() != paramTypes.length) {
+          ErrorUtil.error(
+              "Illegal selector: " + methodName + " for " + methodBinding.getName());
+          return null;
+        }
+      } else {
+        if (paramTypes.length != 0) {
+          ErrorUtil.error(
+              "Illegal selector: " + methodName + " for " + methodBinding.getName() +
+              ". Don't expect parameters");
+          return null;
+        }
       }
       ImmutableList.Builder<IOSParameter> parameters = ImmutableList.builder();
       for (int i = 0; i < paramTypes.length; i++) {
