@@ -483,7 +483,9 @@ public class ObjectiveCImplementationGenerator extends ObjectiveCSourceFileGener
 
   @Override
   protected void printMappedMethodDeclaration(MethodDeclaration m, IOSMethod mappedMethod) {
-    String methodBody = generateMethodBody(m);
+    String methodBody =
+        m.isConstructor() ? generateConstructorMethodBody(m) : generateMethodBody(m);
+
     if (methodBody != null) {
       newline();
       println(super.mappedMethodDeclaration(m, mappedMethod) + " " + reindent(methodBody));
@@ -509,10 +511,7 @@ public class ObjectiveCImplementationGenerator extends ObjectiveCSourceFileGener
     return -1;
   }
 
-  @Override
-  protected void printConstructor(MethodDeclaration m) {
-    String methodBody;
-    IMethodBinding binding = m.getMethodBinding();
+  protected String generateConstructorMethodBody(MethodDeclaration m) {
     boolean memDebug = Options.memoryDebug();
     List<Statement> statements = m.getBody().getStatements();
     StringBuffer sb = new StringBuffer("{\n");
@@ -539,7 +538,16 @@ public class ObjectiveCImplementationGenerator extends ObjectiveCSourceFileGener
       }
       sb.append("}\nreturn self;\n}");
     }
-    methodBody = sb.toString();
+    return sb.toString();
+  }
+
+  @Override
+  protected void printConstructor(MethodDeclaration m) {
+    String methodBody = generateConstructorMethodBody(m);
+    IMethodBinding binding = m.getMethodBinding();
+
+    System.out.println("method name: " + binding.getName());
+    System.out.println("method body: " + methodBody);
     newline();
     syncLineNumbers(m.getName());  // avoid doc-comment
     if (invokedConstructors.contains(methodKey(binding))) {

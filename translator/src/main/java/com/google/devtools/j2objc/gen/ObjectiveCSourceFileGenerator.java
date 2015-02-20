@@ -158,14 +158,15 @@ public abstract class ObjectiveCSourceFileGenerator extends SourceFileGenerator 
   protected void printMethod(MethodDeclaration m) {
     IMethodBinding binding = m.getMethodBinding();
     IOSMethod iosMethod = IOSMethodBinding.getIOSMethod(binding);
-//    System.out.println(binding);
-//    System.out.println(binding.getClass());
-//    System.out.println(iosMethod);
+    System.out.println("Deciding method type for: " + m.getName() + "; clazz: " + binding.getDeclaringClass().getClass());
     if (iosMethod != null) {
+      System.out.println("mapped method: " + iosMethod);
       printMappedMethodDeclaration(m, iosMethod);
     } else if (m.isConstructor()) {
+      System.out.println("constructor");
       printConstructor(m);
     } else {
+      System.out.println("normal method");
       printNormalMethod(m);
     }
   }
