@@ -546,8 +546,6 @@ public class ObjectiveCImplementationGenerator extends ObjectiveCSourceFileGener
     String methodBody = generateConstructorMethodBody(m);
     IMethodBinding binding = m.getMethodBinding();
 
-    System.out.println("method name: " + binding.getName());
-    System.out.println("method body: " + methodBody);
     newline();
     syncLineNumbers(m.getName());  // avoid doc-comment
     if (invokedConstructors.contains(methodKey(binding))) {
