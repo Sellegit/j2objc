@@ -537,7 +537,7 @@ public final class BindingUtil {
           }
         }
       }
-
+jj
       List<String> methodParts = Lists.newArrayList(IOS_METHOD_PART_SPLITTER.split(methodName));
       ITypeBinding[] paramTypes = method.getParameterTypes();
       if (methodName.endsWith(":")) {
