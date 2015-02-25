@@ -42,6 +42,7 @@ public class Import implements Comparable<Import> {
   private final String typeName;
   private final String mainTypeName;
   private final String importFileName;
+  private final boolean isFoundation;
 
   /**
    * Public packages included by the j2objc libraries. This list is necessary so
@@ -84,6 +85,10 @@ public class Import implements Comparable<Import> {
   });
 
   private Import(ITypeBinding type) {
+    this(type, false);
+  }
+
+  private Import(ITypeBinding type, boolean isFoundation) {
     this.type = type;
     this.typeName = NameTable.getFullName(type);
     ITypeBinding mainType = type;
@@ -92,6 +97,7 @@ public class Import implements Comparable<Import> {
     }
     this.mainTypeName = NameTable.getFullName(mainType);
     this.importFileName = getImportFileName(mainType);
+    this.isFoundation = isFoundation;
   }
 
   public ITypeBinding getType() {
@@ -157,12 +163,20 @@ public class Import implements Comparable<Import> {
 
   @Override
   public int compareTo(Import other) {
-    return typeName.compareTo(other.typeName);
+    if (isFoundation) {
+      return importFileName.compareTo(other.importFileName);
+    } else {
+      return typeName.compareTo(other.typeName);
+    }
   }
 
   @Override
   public int hashCode() {
-    return typeName.hashCode();
+    if (isFoundation) {
+      return importFileName.hashCode();
+    } else {
+      return typeName.hashCode();
+    }
   }
 
   @Override
@@ -174,7 +188,12 @@ public class Import implements Comparable<Import> {
       return false;
     }
     Import other = (Import) obj;
-    return typeName.equals(other.typeName);
+
+    if (isFoundation) {
+      return importFileName.equals(other.importFileName);
+    } else {
+      return typeName.equals(other.typeName);
+    }
   }
 
   @Override
@@ -189,6 +208,9 @@ public class Import implements Comparable<Import> {
   }
 
   public static void addImports(ITypeBinding binding, Collection<Import> imports) {
+    if (binding instanceof IOSBlockTypeBinding) {
+      return;
+    }
     if (binding == null || binding.isPrimitive()) {
       return;
     }

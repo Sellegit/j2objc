@@ -23,6 +23,7 @@ import com.google.devtools.j2objc.types.IOSMethod;
 import com.google.devtools.j2objc.types.IOSParameter;
 import com.google.j2objc.annotations.DotMapping;
 import com.google.j2objc.annotations.GlobalConstant;
+import com.google.j2objc.annotations.Library;
 import com.google.j2objc.annotations.Mapping;
 import com.google.j2objc.annotations.Representing;
 import com.google.j2objc.annotations.Weak;
@@ -435,6 +436,19 @@ public final class BindingUtil {
     }
   }
 
+  public static String extractLibraryName(ITypeBinding binding) {
+    if (binding == null) {
+      return null;
+    } else {
+      IAnnotationBinding annotation = BindingUtil.getAnnotation(binding, Library.class);
+      if (annotation != null) {
+        return (String) BindingUtil.getAnnotationValue(annotation, "value");
+      } else {
+        return null;
+      }
+    }
+  }
+
   public static boolean isMappedToNative(IBinding binding) {
     return extractMappingName(binding) != null
         || extractDotMappingName(binding) != null
@@ -537,7 +551,6 @@ public final class BindingUtil {
           }
         }
       }
-jj
       List<String> methodParts = Lists.newArrayList(IOS_METHOD_PART_SPLITTER.split(methodName));
       ITypeBinding[] paramTypes = method.getParameterTypes();
       if (methodName.endsWith(":")) {
