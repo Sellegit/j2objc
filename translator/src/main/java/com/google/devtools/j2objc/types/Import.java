@@ -19,6 +19,7 @@ package com.google.devtools.j2objc.types;
 import com.google.common.collect.ImmutableSet;
 import com.google.common.collect.Sets;
 import com.google.devtools.j2objc.Options;
+import com.google.devtools.j2objc.util.BindingUtil;
 import com.google.devtools.j2objc.util.ErrorUtil;
 import com.google.devtools.j2objc.util.NameTable;
 
@@ -85,10 +86,10 @@ public class Import implements Comparable<Import> {
   });
 
   private Import(ITypeBinding type) {
-    this(type, false);
+    this(type, false, null);
   }
 
-  private Import(ITypeBinding type, boolean isFoundation) {
+  private Import(ITypeBinding type, boolean isFoundation, String foundationName) {
     this.type = type;
     this.typeName = NameTable.getFullName(type);
     ITypeBinding mainType = type;
@@ -96,7 +97,7 @@ public class Import implements Comparable<Import> {
       mainType = mainType.getDeclaringClass();
     }
     this.mainTypeName = NameTable.getFullName(mainType);
-    this.importFileName = getImportFileName(mainType);
+    this.importFileName = foundationName;
     this.isFoundation = isFoundation;
   }
 
@@ -201,6 +202,14 @@ public class Import implements Comparable<Import> {
     return typeName;
   }
 
+  public String getIncludeStatement() {
+    if (isFoundation) {
+     return String.format("#import <%s>", importFileName);
+    } else {
+      return String.format("#include \"%s.h\"", getImportFileName());
+    }
+  }
+
   public static Set<Import> getImports(ITypeBinding binding) {
     Set<Import> result = Sets.newLinkedHashSet();
     addImports(binding, result);
@@ -216,6 +225,11 @@ public class Import implements Comparable<Import> {
     }
     if (binding instanceof PointerTypeBinding) {
       addImports(((PointerTypeBinding) binding).getPointeeType(), imports);
+      return;
+    }
+    String libName = BindingUtil.extractLibraryName(binding);
+    if (libName != null) {
+      imports.add(new Import(binding, true, libName));
       return;
     }
     if (binding.isTypeVariable()) {

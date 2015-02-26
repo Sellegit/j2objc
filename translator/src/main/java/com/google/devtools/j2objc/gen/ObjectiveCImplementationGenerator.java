@@ -597,7 +597,7 @@ public class ObjectiveCImplementationGenerator extends ObjectiveCSourceFileGener
     if (!imports.isEmpty()) {
       Set<String> includeStmts = Sets.newTreeSet();
       for (Import imp : imports) {
-        includeStmts.add(String.format("#include \"%s.h\"", imp.getImportFileName()));
+        includeStmts.add(imp.getIncludeStatement());
       }
       for (String stmt : includeStmts) {
         println(stmt);
