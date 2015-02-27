@@ -23,6 +23,7 @@ import com.google.devtools.j2objc.types.IOSMethod;
 import com.google.devtools.j2objc.types.IOSParameter;
 import com.google.j2objc.annotations.DotMapping;
 import com.google.j2objc.annotations.GlobalConstant;
+import com.google.j2objc.annotations.GlobalFunction;
 import com.google.j2objc.annotations.Library;
 import com.google.j2objc.annotations.Mapping;
 import com.google.j2objc.annotations.Representing;
@@ -46,6 +47,8 @@ import java.util.Deque;
 import java.util.List;
 import java.util.Set;
 import java.util.regex.Pattern;
+
+import jdk.nashorn.internal.runtime.GlobalFunctions;
 
 /**
  * Utility methods for working with binding types.
@@ -436,6 +439,19 @@ public final class BindingUtil {
     }
   }
 
+  public static String extractGlobalFunctionName(IBinding binding) {
+    if (binding == null) {
+      return null;
+    }
+
+    IAnnotationBinding annotation = BindingUtil.getAnnotation(binding, GlobalFunction.class);
+    if (annotation != null) {
+      return (String) BindingUtil.getAnnotationValue(annotation, "value");
+    } else {
+      return null;
+    }
+  }
+
   public static String extractLibraryName(ITypeBinding binding) {
     if (binding == null) {
       return null;
@@ -452,7 +468,8 @@ public final class BindingUtil {
   public static boolean isMappedToNative(IBinding binding) {
     return extractMappingName(binding) != null
         || extractDotMappingName(binding) != null
-        || extractGlobalConstantName(binding) != null;
+        || extractGlobalConstantName(binding) != null
+        || extractGlobalFunctionName(binding) != null;
   }
 
   static final Splitter IOS_METHOD_PART_SPLITTER =

@@ -186,6 +186,7 @@ public class StatementGenerator extends TreeVisitor {
 
 
     if (method != null) {
+      // wrap @Block argument
       IAnnotationBinding blockAnnotation =
           BindingUtil.getAnnotation(method.getParameterAnnotations(index), com.google.j2objc.annotations.Block.class);
       if (blockAnnotation != null) {
@@ -785,6 +786,26 @@ public class StatementGenerator extends TreeVisitor {
         ErrorUtil.error(node, "DotMapped method cannot be called inside the same class");
       }
       buffer.append("." + dotAccess);
+      return false;
+    }
+
+    String fnName = BindingUtil.extractGlobalFunctionName(binding);
+    if (fnName != null) {
+      buffer.append(fnName);
+      buffer.append('(');
+      for (Iterator<Expression> iter = node.getArguments().iterator(); iter.hasNext(); ) {
+        iter.next().accept(this);
+        if (iter.hasNext()) {
+          buffer.append(", ");
+        }
+      }
+      buffer.append(')');
+      return false;
+    }
+
+    String constName = BindingUtil.extractGlobalConstantName(binding);
+    if (constName != null) {
+      buffer.append(constName);
       return false;
     }
 
