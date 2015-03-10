@@ -11,21 +11,4 @@
 # limitations under the License.
 
 ANNOTATION_SOURCE_JAVA = \
-    com/google/j2objc/annotations/AutoreleasePool.java \
-    com/google/j2objc/annotations/LoopTranslation.java \
-    com/google/j2objc/annotations/ObjectiveCName.java \
-    com/google/j2objc/annotations/ReflectionSupport.java \
-    com/google/j2objc/annotations/RetainedLocalRef.java \
-    com/google/j2objc/annotations/Weak.java \
-    com/google/j2objc/annotations/WeakOuter.java \
-    com/google/j2objc/annotations/Mapping.java \
-    com/google/j2objc/annotations/DotMapping.java \
-    com/google/j2objc/annotations/GlobalConstant.java \
-    com/google/j2objc/annotations/GlobalFunction.java \
-    com/google/j2objc/annotations/MachineSizedUInt.java \
-    com/google/j2objc/annotations/MachineSizedSInt.java \
-    com/google/j2objc/annotations/MachineSizedFloat.java \
-    com/google/j2objc/annotations/Representing.java \
-    com/google/j2objc/annotations/NotImplemented.java \
-    com/google/j2objc/annotations/Block.java \
-    com/google/j2objc/annotations/Library.java
+    com/google/j2objc/annotations/*.java
