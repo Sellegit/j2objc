@@ -25,6 +25,7 @@ import com.google.devtools.j2objc.gen.ObjectiveCHeaderGenerator;
 import com.google.devtools.j2objc.gen.ObjectiveCImplementationGenerator;
 import com.google.devtools.j2objc.gen.ObjectiveCSegmentedHeaderGenerator;
 import com.google.devtools.j2objc.translate.AbstractMethodRewriter;
+import com.google.devtools.j2objc.translate.AdapterRewriter;
 import com.google.devtools.j2objc.translate.AnonymousClassConverter;
 import com.google.devtools.j2objc.translate.ArrayRewriter;
 import com.google.devtools.j2objc.translate.Autoboxer;
@@ -270,6 +271,9 @@ class TranslationProcessor extends FileProcessor {
     // run before anonymous class extraction
     new BlockRewriter().run(unit);
     ticker.tick("BlockRewriter");
+
+    new AdapterRewriter().run(unit);
+    ticker.tick("AdapterRewriter");
 
     OuterReferenceResolver.resolve(unit);
     ticker.tick("OuterReferenceResolver");

@@ -21,6 +21,7 @@ import com.google.common.collect.Sets;
 import com.google.devtools.j2objc.types.IOSBlockTypeBinding;
 import com.google.devtools.j2objc.types.IOSMethod;
 import com.google.devtools.j2objc.types.IOSParameter;
+import com.google.j2objc.annotations.Adapter;
 import com.google.j2objc.annotations.DotMapping;
 import com.google.j2objc.annotations.GlobalConstant;
 import com.google.j2objc.annotations.GlobalFunction;
@@ -462,6 +463,14 @@ public final class BindingUtil {
       } else {
         return null;
       }
+    }
+  }
+
+  public static boolean isAdapter(ITypeBinding binding) {
+    if (binding == null) {
+      return false;
+    } else {
+      return BindingUtil.getAnnotation(binding, Adapter.class) != null;
     }
   }
 

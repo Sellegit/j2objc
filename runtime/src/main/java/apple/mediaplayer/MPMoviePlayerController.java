@@ -1,0 +1,260 @@
+package apple.mediaplayer;
+
+
+import java.io.*;
+import java.nio.*;
+import java.util.*;
+import com.google.j2objc.annotations.*;
+import com.google.j2objc.runtime.*;
+import com.google.j2objc.runtime.block.*;
+import apple.audiotoolbox.*;
+import apple.corefoundation.*;
+import apple.coregraphics.*;
+import apple.coreservices.*;
+import apple.foundation.*;
+import apple.uikit.*;
+
+
+
+/**
+ * @since Available in iOS 2.0 and later.
+ */
+
+@Library("MediaPlayer") @Mapping("MPMoviePlayerController")
+public class MPMoviePlayerController 
+    extends NSObject 
+    implements MPMediaPlayback {
+
+    
+    
+    public MPMoviePlayerController() {}
+    @Mapping("initWithContentURL:")
+    public MPMoviePlayerController(NSURL url) { }
+    
+    
+    @Mapping("contentURL")
+    public native NSURL getContentURL();
+    public native void setContentURL(NSURL v);
+    @Mapping("view")
+    public native UIView getView();
+    @Mapping("backgroundView")
+    public native UIView getBackgroundView();
+    @Mapping("playbackState")
+    public native @Representing("MPMoviePlaybackState") @MachineSizedSInt long getPlaybackState();
+    @Mapping("loadState")
+    public native @Representing("MPMovieLoadState") @MachineSizedUInt long getLoadState();
+    @Mapping("controlStyle")
+    public native @Representing("MPMovieControlStyle") @MachineSizedSInt long getControlStyle();
+    public native void setControlStyle(@Representing("MPMovieControlStyle") @MachineSizedSInt long v);
+    @Mapping("repeatMode")
+    public native @Representing("MPMovieRepeatMode") @MachineSizedSInt long getRepeatMode();
+    public native void setRepeatMode(@Representing("MPMovieRepeatMode") @MachineSizedSInt long v);
+    @Mapping("shouldAutoplay")
+    public native boolean shouldAutoplay();
+    public native void setShouldAutoplay(boolean v);
+    @Mapping("isFullscreen")
+    public native boolean isFullscreen();
+    public native void setFullscreen(boolean v);
+    @Mapping("scalingMode")
+    public native @Representing("MPMovieScalingMode") @MachineSizedSInt long getScalingMode();
+    public native void setScalingMode(@Representing("MPMovieScalingMode") @MachineSizedSInt long v);
+    /**
+     * @since Available in iOS 6.0 and later.
+     */
+    @Mapping("readyForDisplay")
+    public native boolean isReadyForDisplay();
+    @Mapping("movieMediaTypes")
+    public native @Representing("MPMovieMediaTypeMask") @MachineSizedUInt long getMovieMediaTypes();
+    @Mapping("movieSourceType")
+    public native @Representing("MPMovieSourceType") @MachineSizedSInt long getMovieSourceType();
+    public native void setMovieSourceType(@Representing("MPMovieSourceType") @MachineSizedSInt long v);
+    @Mapping("duration")
+    public native double getDuration();
+    @Mapping("playableDuration")
+    public native double getPlayableDuration();
+    @Mapping("naturalSize")
+    public native CGSize getNaturalSize();
+    @Mapping("initialPlaybackTime")
+    public native double getInitialPlaybackTime();
+    public native void setInitialPlaybackTime(double v);
+    @Mapping("endPlaybackTime")
+    public native double getEndPlaybackTime();
+    public native void setEndPlaybackTime(double v);
+    /**
+     * @since Available in iOS 4.3 and later.
+     */
+    @Mapping("allowsAirPlay")
+    public native boolean allowsAirPlay();
+    /**
+     * @since Available in iOS 4.3 and later.
+     */
+    public native void setAllowsAirPlay(boolean v);
+    /**
+     * @since Available in iOS 5.0 and later.
+     */
+    @Mapping("isAirPlayVideoActive")
+    public native boolean isAirPlayVideoActive();
+    /**
+     * @since Available in iOS 4.0 and later.
+     */
+    @Mapping("timedMetadata")
+    public native NSArray<MPTimedMetadata> getTimedMetadata();
+    /**
+     * @since Available in iOS 4.3 and later.
+     */
+    @Mapping("accessLog")
+    public native MPMovieAccessLog getAccessLog();
+    /**
+     * @since Available in iOS 4.3 and later.
+     */
+    @Mapping("errorLog")
+    public native MPMovieErrorLog getErrorLog();
+    /**
+     * @since Available in iOS 3.2 and later.
+     * @deprecated Deprecated in iOS 6.0.
+     */
+    @Deprecated
+    @Mapping("useApplicationAudioSession")
+    public native boolean usesApplicationAudioSession();
+    /**
+     * @since Available in iOS 3.2 and later.
+     * @deprecated Deprecated in iOS 6.0.
+     */
+    @Deprecated
+    public native void setUsesApplicationAudioSession(boolean v);
+    @Mapping("isPreparedToPlay")
+    public native boolean isPreparedToPlay();
+    @Mapping("currentPlaybackTime")
+    public native double getCurrentPlaybackTime();
+    public native void setCurrentPlaybackTime(double v);
+    @Mapping("currentPlaybackRate")
+    public native float getCurrentPlaybackRate();
+    public native void setCurrentPlaybackRate(float v);
+    
+    
+    
+    @GlobalConstant("MPMoviePlayerScalingModeDidChangeNotification")
+    public static native NSString ScalingModeDidChangeNotification();
+    @GlobalConstant("MPMoviePlayerPlaybackDidFinishNotification")
+    public static native NSString PlaybackDidFinishNotification();
+    /**
+     * @since Available in iOS 3.2 and later.
+     */
+    @GlobalConstant("MPMoviePlayerPlaybackDidFinishReasonUserInfoKey")
+    protected static native NSString PlaybackDidFinishReasonUserInfoKey();
+    /**
+     * @since Available in iOS 3.2 and later.
+     */
+    @GlobalConstant("MPMoviePlayerPlaybackStateDidChangeNotification")
+    public static native NSString PlaybackStateDidChangeNotification();
+    /**
+     * @since Available in iOS 3.2 and later.
+     */
+    @GlobalConstant("MPMoviePlayerLoadStateDidChangeNotification")
+    public static native NSString LoadStateDidChangeNotification();
+    /**
+     * @since Available in iOS 3.2 and later.
+     */
+    @GlobalConstant("MPMoviePlayerNowPlayingMovieDidChangeNotification")
+    public static native NSString NowPlayingMovieDidChangeNotification();
+    /**
+     * @since Available in iOS 3.2 and later.
+     */
+    @GlobalConstant("MPMoviePlayerWillEnterFullscreenNotification")
+    public static native NSString WillEnterFullscreenNotification();
+    /**
+     * @since Available in iOS 3.2 and later.
+     */
+    @GlobalConstant("MPMoviePlayerDidEnterFullscreenNotification")
+    public static native NSString DidEnterFullscreenNotification();
+    /**
+     * @since Available in iOS 3.2 and later.
+     */
+    @GlobalConstant("MPMoviePlayerWillExitFullscreenNotification")
+    public static native NSString WillExitFullscreenNotification();
+    /**
+     * @since Available in iOS 3.2 and later.
+     */
+    @GlobalConstant("MPMoviePlayerDidExitFullscreenNotification")
+    public static native NSString DidExitFullscreenNotification();
+    /**
+     * @since Available in iOS 5.0 and later.
+     */
+    @GlobalConstant("MPMoviePlayerIsAirPlayVideoActiveDidChangeNotification")
+    public static native NSString IsAirPlayVideoActiveDidChangeNotification();
+    /**
+     * @since Available in iOS 6.0 and later.
+     */
+    @GlobalConstant("MPMoviePlayerReadyForDisplayDidChangeNotification")
+    public static native NSString ReadyForDisplayDidChangeNotification();
+    /**
+     * @since Available in iOS 3.2 and later.
+     */
+    @GlobalConstant("MPMovieMediaTypesAvailableNotification")
+    public static native NSString MediaTypesAvailableNotification();
+    /**
+     * @since Available in iOS 3.2 and later.
+     */
+    @GlobalConstant("MPMovieSourceTypeAvailableNotification")
+    public static native NSString SourceTypeAvailableNotification();
+    /**
+     * @since Available in iOS 3.2 and later.
+     */
+    @GlobalConstant("MPMovieDurationAvailableNotification")
+    public static native NSString DurationAvailableNotification();
+    /**
+     * @since Available in iOS 3.2 and later.
+     */
+    @GlobalConstant("MPMovieNaturalSizeAvailableNotification")
+    public static native NSString NaturalSizeAvailableNotification();
+    /**
+     * @since Available in iOS 3.2 and later.
+     */
+    @GlobalConstant("MPMoviePlayerThumbnailImageRequestDidFinishNotification")
+    public static native NSString ThumbnailImageRequestDidFinishNotification();
+    /**
+     * @since Available in iOS 4.0 and later.
+     */
+    @GlobalConstant("MPMoviePlayerTimedMetadataUpdatedNotification")
+    public static native NSString TimedMetadataUpdatedNotification();
+    /**
+     * @since Available in iOS 4.0 and later.
+     */
+    @GlobalConstant("MPMoviePlayerTimedMetadataUserInfoKey")
+    protected static native NSString TimedMetadataUserInfoKey();
+    
+    @Mapping("setFullscreen:animated:")
+    public native void setFullscreen(boolean fullscreen, boolean animated);
+    /**
+     * @since Available in iOS 3.2 and later.
+     * @deprecated Deprecated in iOS 7.0.
+     */
+    @Deprecated
+    @Mapping("thumbnailImageAtTime:timeOption:")
+    public native UIImage getThumbnailImage(double playbackTime, @Representing("MPMovieTimeOption") @MachineSizedSInt long option);
+    /**
+     * @since Available in iOS 3.2 and later.
+     */
+    @Mapping("requestThumbnailImagesAtTimes:timeOption:")
+    public native void requestThumbnailImages(NSArray<NSNumber> playbackTimes, @Representing("MPMovieTimeOption") @MachineSizedSInt long option);
+    /**
+     * @since Available in iOS 3.2 and later.
+     */
+    @Mapping("cancelAllThumbnailImageRequests")
+    public native void cancelAllThumbnailImageRequests();
+    @Mapping("prepareToPlay")
+    public native void prepareToPlay();
+    @Mapping("play")
+    public native void play();
+    @Mapping("pause")
+    public native void pause();
+    @Mapping("stop")
+    public native void stop();
+    @Mapping("beginSeekingForward")
+    public native void beginSeekingForward();
+    @Mapping("beginSeekingBackward")
+    public native void beginSeekingBackward();
+    @Mapping("endSeeking")
+    public native void endSeeking();
+    
+}
