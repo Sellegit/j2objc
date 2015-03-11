@@ -24,7 +24,7 @@ import apple.corelocation.*;
  * @since Available in iOS 8.0 and later.
  */
 
-
+@Library("UIKit")
 @Mapping("UITableViewRowActionStyle")
 public final class UITableViewRowActionStyle extends ObjCEnum {
     

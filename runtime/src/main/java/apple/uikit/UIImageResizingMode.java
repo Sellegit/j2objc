@@ -22,7 +22,7 @@ import apple.corelocation.*;
 
 
 
-
+@Library("UIKit")
 @Mapping("UIImageResizingMode")
 public final class UIImageResizingMode extends ObjCEnum {
     

@@ -22,7 +22,7 @@ import apple.corelocation.*;
 
 
 
-
+@Library("UIKit")
 @Mapping("UIImagePickerControllerQualityType")
 public final class UIImagePickerControllerQualityType extends ObjCEnum {
     

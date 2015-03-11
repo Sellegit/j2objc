@@ -22,7 +22,7 @@ import apple.corelocation.*;
 
 
 
-
+@Library("UIKit")
 @Mapping("UIStatusBarAnimation")
 public final class UIStatusBarAnimation extends ObjCEnum {
     

@@ -22,7 +22,7 @@ import apple.corelocation.*;
 
 
 
-
+@Library("UIKit")
 @Mapping("UIDocumentState")
 public final class UIDocumentState extends ObjCEnum {
     

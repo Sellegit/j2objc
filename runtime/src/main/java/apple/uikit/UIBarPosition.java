@@ -24,7 +24,7 @@ import apple.corelocation.*;
  * @since Available in iOS 7.0 and later.
  */
 
-
+@Library("UIKit")
 @Mapping("UIBarPosition")
 public final class UIBarPosition extends ObjCEnum {
     

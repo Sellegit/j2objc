@@ -22,7 +22,7 @@ import apple.corelocation.*;
 
 
 
-
+@Library("UIKit")
 @Mapping("UIActionSheetStyle")
 public final class UIActionSheetStyle extends ObjCEnum {
     

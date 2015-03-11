@@ -22,7 +22,7 @@ import apple.corelocation.*;
 
 
 
-
+@Library("UIKit")
 @Mapping("UITableViewCellAccessoryType")
 public final class UITableViewCellAccessoryType extends ObjCEnum {
     

@@ -22,7 +22,7 @@ import apple.corelocation.*;
 
 
 
-
+@Library("UIKit")
 @Mapping("UIButtonType")
 public final class UIButtonType extends ObjCEnum {
     

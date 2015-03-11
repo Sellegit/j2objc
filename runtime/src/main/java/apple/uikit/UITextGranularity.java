@@ -22,7 +22,7 @@ import apple.corelocation.*;
 
 
 
-
+@Library("UIKit")
 @Mapping("UITextGranularity")
 public final class UITextGranularity extends ObjCEnum {
     

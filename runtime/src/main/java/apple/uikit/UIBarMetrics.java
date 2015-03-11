@@ -22,7 +22,7 @@ import apple.corelocation.*;
 
 
 
-
+@Library("UIKit")
 @Mapping("UIBarMetrics")
 public final class UIBarMetrics extends ObjCEnum {
     

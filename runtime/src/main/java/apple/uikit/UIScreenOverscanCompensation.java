@@ -22,7 +22,7 @@ import apple.corelocation.*;
 
 
 
-
+@Library("UIKit")
 @Mapping("UIScreenOverscanCompensation")
 public final class UIScreenOverscanCompensation extends ObjCEnum {
     

@@ -22,7 +22,7 @@ import apple.corelocation.*;
 
 
 
-
+@Library("UIKit")
 @Mapping("UIPageViewControllerSpineLocation")
 public final class UIPageViewControllerSpineLocation extends ObjCEnum {
     

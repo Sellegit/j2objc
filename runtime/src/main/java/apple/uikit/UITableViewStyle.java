@@ -22,7 +22,7 @@ import apple.corelocation.*;
 
 
 
-
+@Library("UIKit")
 @Mapping("UITableViewStyle")
 public final class UITableViewStyle extends ObjCEnum {
     

@@ -22,7 +22,7 @@ import apple.corelocation.*;
 
 
 
-
+@Library("UIKit")
 @Mapping("UIBaselineAdjustment")
 public final class UIBaselineAdjustment extends ObjCEnum {
     

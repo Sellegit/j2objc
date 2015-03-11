@@ -22,7 +22,7 @@ import apple.corelocation.*;
 
 
 
-
+@Library("UIKit")
 @Mapping("UIEventType")
 public final class UIEventType extends ObjCEnum {
     

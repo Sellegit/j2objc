@@ -22,7 +22,7 @@ import apple.corelocation.*;
 
 
 
-
+@Library("UIKit")
 @Mapping("NSLayoutAttribute")
 public final class NSLayoutAttribute extends ObjCEnum {
     

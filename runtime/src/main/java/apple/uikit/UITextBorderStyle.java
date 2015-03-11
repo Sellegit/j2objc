@@ -22,7 +22,7 @@ import apple.corelocation.*;
 
 
 
-
+@Library("UIKit")
 @Mapping("UITextBorderStyle")
 public final class UITextBorderStyle extends ObjCEnum {
     

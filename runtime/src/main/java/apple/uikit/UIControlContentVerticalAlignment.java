@@ -22,7 +22,7 @@ import apple.corelocation.*;
 
 
 
-
+@Library("UIKit")
 @Mapping("UIControlContentVerticalAlignment")
 public final class UIControlContentVerticalAlignment extends ObjCEnum {
     

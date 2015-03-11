@@ -22,7 +22,7 @@ import apple.corelocation.*;
 
 
 
-
+@Library("UIKit")
 @Mapping("UITableViewScrollPosition")
 public final class UITableViewScrollPosition extends ObjCEnum {
     

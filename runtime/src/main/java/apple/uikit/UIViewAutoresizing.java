@@ -22,7 +22,7 @@ import apple.corelocation.*;
 
 
 
-
+@Library("UIKit")
 @Mapping("UIViewAutoresizing")
 public final class UIViewAutoresizing extends ObjCEnum {
     

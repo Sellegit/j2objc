@@ -22,7 +22,7 @@ import apple.corelocation.*;
 
 
 
-
+@Library("UIKit")
 @Mapping("UIActivityIndicatorViewStyle")
 public final class UIActivityIndicatorViewStyle extends ObjCEnum {
     

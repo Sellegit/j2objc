@@ -24,7 +24,7 @@ import apple.corelocation.*;
  * @since Available in iOS 7.0 and later.
  */
 
-
+@Library("UIKit")
 @Mapping("UITabBarItemPositioning")
 public final class UITabBarItemPositioning extends ObjCEnum {
     

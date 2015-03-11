@@ -22,7 +22,7 @@ import apple.corelocation.*;
 
 
 
-
+@Library("UIKit")
 @Mapping("UIGestureRecognizerState")
 public final class UIGestureRecognizerState extends ObjCEnum {
     

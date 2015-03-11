@@ -22,7 +22,7 @@ import apple.corelocation.*;
 
 
 
-
+@Library("UIKit")
 @Mapping("UITouchPhase")
 public final class UITouchPhase extends ObjCEnum {
     

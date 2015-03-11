@@ -22,7 +22,7 @@ import apple.corelocation.*;
 
 
 
-
+@Library("UIKit")
 @Mapping("UIKeyboardAppearance")
 public final class UIKeyboardAppearance extends ObjCEnum {
     

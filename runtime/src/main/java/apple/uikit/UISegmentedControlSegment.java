@@ -22,7 +22,7 @@ import apple.corelocation.*;
 
 
 
-
+@Library("UIKit")
 @Mapping("UISegmentedControlSegment")
 public final class UISegmentedControlSegment extends ObjCEnum {
     

@@ -22,7 +22,7 @@ import apple.corelocation.*;
 
 
 
-
+@Library("UIKit")
 @Mapping("UITextStorageDirection")
 public final class UITextStorageDirection extends ObjCEnum {
     

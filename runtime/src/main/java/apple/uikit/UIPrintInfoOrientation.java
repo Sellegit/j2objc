@@ -22,7 +22,7 @@ import apple.corelocation.*;
 
 
 
-
+@Library("UIKit")
 @Mapping("UIPrintInfoOrientation")
 public final class UIPrintInfoOrientation extends ObjCEnum {
     

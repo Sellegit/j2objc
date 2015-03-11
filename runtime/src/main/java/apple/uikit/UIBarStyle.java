@@ -22,7 +22,7 @@ import apple.corelocation.*;
 
 
 
-
+@Library("UIKit")
 @Mapping("UIBarStyle")
 public final class UIBarStyle extends ObjCEnum {
     

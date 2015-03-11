@@ -22,7 +22,7 @@ import apple.corelocation.*;
 
 
 
-
+@Library("UIKit")
 @Mapping("UIImagePickerControllerCameraDevice")
 public final class UIImagePickerControllerCameraDevice extends ObjCEnum {
     

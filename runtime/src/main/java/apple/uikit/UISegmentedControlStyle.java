@@ -26,7 +26,7 @@ import apple.corelocation.*;
  */
 @Deprecated
 
-
+@Library("UIKit")
 @Mapping("UISegmentedControlStyle")
 public final class UISegmentedControlStyle extends ObjCEnum {
     

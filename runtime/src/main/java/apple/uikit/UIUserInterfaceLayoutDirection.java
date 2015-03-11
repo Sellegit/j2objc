@@ -24,7 +24,7 @@ import apple.corelocation.*;
  * @since Available in iOS 5.0 and later.
  */
 
-
+@Library("UIKit")
 @Mapping("UIUserInterfaceLayoutDirection")
 public final class UIUserInterfaceLayoutDirection extends ObjCEnum {
     

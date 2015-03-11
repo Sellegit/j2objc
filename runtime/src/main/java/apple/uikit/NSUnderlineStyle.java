@@ -24,7 +24,7 @@ import apple.corelocation.*;
  * @since Available in iOS 6.0 and later.
  */
 
-
+@Library("UIKit")
 @Mapping("NSUnderlineStyle")
 public final class NSUnderlineStyle extends ObjCEnum {
     

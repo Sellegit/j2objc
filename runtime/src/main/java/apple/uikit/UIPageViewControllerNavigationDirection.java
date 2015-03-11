@@ -22,7 +22,7 @@ import apple.corelocation.*;
 
 
 
-
+@Library("UIKit")
 @Mapping("UIPageViewControllerNavigationDirection")
 public final class UIPageViewControllerNavigationDirection extends ObjCEnum {
     

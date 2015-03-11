@@ -24,7 +24,7 @@ import apple.corelocation.*;
  * @since Available in iOS 4.0 and later.
  */
 
-
+@Library("UIKit")
 @Mapping("UIViewAnimationOptions")
 public final class UIViewAnimationOptions extends ObjCEnum {
     

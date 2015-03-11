@@ -22,7 +22,7 @@ import apple.corelocation.*;
 
 
 
-
+@Library("UIKit")
 @Mapping("UICollectionViewScrollDirection")
 public final class UICollectionViewScrollDirection extends ObjCEnum {
     

@@ -22,7 +22,7 @@ import apple.corelocation.*;
 
 
 
-
+@Library("UIKit")
 @Mapping("UISwipeGestureRecognizerDirection")
 public final class UISwipeGestureRecognizerDirection extends ObjCEnum {
     

@@ -24,7 +24,7 @@ import apple.corelocation.*;
  * @since Available in iOS 4.0 and later.
  */
 
-
+@Library("UIKit")
 @Mapping("UIApplicationState")
 public final class UIApplicationState extends ObjCEnum {
     

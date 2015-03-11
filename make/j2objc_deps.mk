@@ -29,6 +29,9 @@ ifeq ("$(J2OBJC_CALL_RECURSIVE_DEPS)", "YES")
 annotations_dist:
 	@$(MAKE) -C $(J2OBJC_ROOT)/annotations dist
 
+runtime_dist:
+	@$(MAKE) -C $(J2OBJC_ROOT)/runtime dist
+
 java_deps_dist:
 	@$(MAKE) -C $(J2OBJC_ROOT)/java_deps dist
 

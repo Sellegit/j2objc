@@ -440,6 +440,7 @@ public class ObjectiveCHeaderGenerator extends ObjectiveCSourceFileGenerator {
     pushIgnoreDeprecatedDeclarationsPragma();
     newline();
 
+    System.out.println("begins header import collector");
     HeaderImportCollector collector = new HeaderImportCollector();
     collector.collect(getUnit());
 

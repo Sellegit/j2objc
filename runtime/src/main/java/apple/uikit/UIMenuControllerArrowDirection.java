@@ -22,7 +22,7 @@ import apple.corelocation.*;
 
 
 
-
+@Library("UIKit")
 @Mapping("UIMenuControllerArrowDirection")
 public final class UIMenuControllerArrowDirection extends ObjCEnum {
     

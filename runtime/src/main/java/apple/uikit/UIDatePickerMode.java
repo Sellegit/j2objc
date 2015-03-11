@@ -22,7 +22,7 @@ import apple.corelocation.*;
 
 
 
-
+@Library("UIKit")
 @Mapping("UIDatePickerMode")
 public final class UIDatePickerMode extends ObjCEnum {
     

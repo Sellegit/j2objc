@@ -41,6 +41,7 @@ $(BUILD_DIR) $(CLASSES_DIR) $(DIST_JAR_DIR):
 $(JAR): $(SOURCE_JAVA_FULL) | $(BUILD_DIR) $(CLASSES_DIR) annotations_dist
 	@echo Building j2objc runtime
 	@javac -classpath $(CLASSPATH) -d $(CLASSES_DIR) -source 1.6 -target 1.6 -nowarn $^
+	@echo Jaring j2objc runtime
 	@jar cf $(JAR) -C $(CLASSES_DIR) .
 
 $(DIST_JAR): $(JAR) | $(DIST_JAR_DIR)

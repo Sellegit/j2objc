@@ -22,7 +22,7 @@ import apple.corelocation.*;
 
 
 
-
+@Library("UIKit")
 @Mapping("UIPopoverArrowDirection")
 public final class UIPopoverArrowDirection extends ObjCEnum {
     

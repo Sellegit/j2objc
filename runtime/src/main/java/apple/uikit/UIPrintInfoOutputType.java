@@ -22,7 +22,7 @@ import apple.corelocation.*;
 
 
 
-
+@Library("UIKit")
 @Mapping("UIPrintInfoOutputType")
 public final class UIPrintInfoOutputType extends ObjCEnum {
     

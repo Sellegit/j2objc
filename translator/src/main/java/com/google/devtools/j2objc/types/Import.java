@@ -25,8 +25,11 @@ import com.google.devtools.j2objc.util.NameTable;
 
 import org.eclipse.jdt.core.dom.ITypeBinding;
 
+import java.util.Arrays;
 import java.util.Collection;
 import java.util.Set;
+
+import javax.naming.Binding;
 
 /**
  * Description of an imported type. Imports are equal if their fully qualified
@@ -107,6 +110,11 @@ public class Import implements Comparable<Import> {
       this.importFileName = getImportFileName(mainType);
     }
     this.isFoundation = isFoundation;
+
+    System.out.println("Adding " + this.getIncludeStatement());
+    System.out.println("-- due to " + type.getQualifiedName());
+    System.out.println("-- due to " + type.getClass());
+    System.out.println("-- due to " + Arrays.toString(type.getAnnotations()));
   }
 
   public ITypeBinding getType() {
@@ -238,6 +246,9 @@ public class Import implements Comparable<Import> {
     String libName = BindingUtil.extractLibraryName(binding);
     if (libName != null) {
       imports.add(new Import(binding, true, libName));
+      return;
+    }
+    if (BindingUtil.isAdapter(binding)) {
       return;
     }
     if (binding.isTypeVariable()) {

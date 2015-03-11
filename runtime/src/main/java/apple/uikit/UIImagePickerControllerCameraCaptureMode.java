@@ -22,7 +22,7 @@ import apple.corelocation.*;
 
 
 
-
+@Library("UIKit")
 @Mapping("UIImagePickerControllerCameraCaptureMode")
 public final class UIImagePickerControllerCameraCaptureMode extends ObjCEnum {
     

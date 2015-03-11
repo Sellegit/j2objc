@@ -22,7 +22,7 @@ import apple.corelocation.*;
 
 
 
-
+@Library("UIKit")
 @Mapping("UITextLayoutDirection")
 public final class UITextLayoutDirection extends ObjCEnum {
     

@@ -22,7 +22,7 @@ import apple.corelocation.*;
 
 
 
-
+@Library("UIKit")
 @Mapping("UIInterfaceOrientationMask")
 public final class UIInterfaceOrientationMask extends ObjCEnum {
     

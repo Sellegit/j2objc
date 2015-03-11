@@ -22,7 +22,7 @@ import apple.corelocation.*;
 
 
 
-
+@Library("UIKit")
 @Mapping("NSLayoutFormatOptions")
 public final class NSLayoutFormatOptions extends ObjCEnum {
     

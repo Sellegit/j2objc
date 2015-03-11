@@ -22,7 +22,7 @@ import apple.corelocation.*;
 
 
 
-
+@Library("UIKit")
 @Mapping("UIImagePickerControllerCameraFlashMode")
 public final class UIImagePickerControllerCameraFlashMode extends ObjCEnum {
     

@@ -22,7 +22,7 @@ import apple.corelocation.*;
 
 
 
-
+@Library("UIKit")
 @Mapping("UIWebPaginationBreakingMode")
 public final class UIWebPaginationBreakingMode extends ObjCEnum {
     

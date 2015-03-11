@@ -22,7 +22,7 @@ import apple.corelocation.*;
 
 
 
-
+@Library("UIKit")
 @Mapping("UIRectCorner")
 public final class UIRectCorner extends ObjCEnum {
     

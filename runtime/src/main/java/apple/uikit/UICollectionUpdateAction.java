@@ -22,7 +22,7 @@ import apple.corelocation.*;
 
 
 
-
+@Library("UIKit")
 @Mapping("UICollectionUpdateAction")
 public final class UICollectionUpdateAction extends ObjCEnum {
     

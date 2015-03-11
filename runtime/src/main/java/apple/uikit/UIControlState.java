@@ -22,7 +22,7 @@ import apple.corelocation.*;
 
 
 
-
+@Library("UIKit")
 @Mapping("UIControlState")
 public final class UIControlState extends ObjCEnum {
     

@@ -22,7 +22,7 @@ import apple.corelocation.*;
 
 
 
-
+@Library("UIKit")
 @Mapping("UIControlEvents")
 public final class UIControlEvents extends ObjCEnum {
     

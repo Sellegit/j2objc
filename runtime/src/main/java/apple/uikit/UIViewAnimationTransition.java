@@ -22,7 +22,7 @@ import apple.corelocation.*;
 
 
 
-
+@Library("UIKit")
 @Mapping("UIViewAnimationTransition")
 public final class UIViewAnimationTransition extends ObjCEnum {
     

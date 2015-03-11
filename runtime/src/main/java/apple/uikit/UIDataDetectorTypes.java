@@ -22,7 +22,7 @@ import apple.corelocation.*;
 
 
 
-
+@Library("UIKit")
 @Mapping("UIDataDetectorTypes")
 public final class UIDataDetectorTypes extends ObjCEnum {
     

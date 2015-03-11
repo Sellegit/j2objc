@@ -24,7 +24,7 @@ import apple.corelocation.*;
  * @since Available in iOS 7.0 and later.
  */
 
-
+@Library("UIKit")
 @Mapping("UIFontDescriptorSymbolicTraits")
 public final class UIFontDescriptorSymbolicTraits extends ObjCEnum {
     
