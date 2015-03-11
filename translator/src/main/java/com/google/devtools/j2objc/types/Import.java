@@ -215,7 +215,7 @@ public class Import implements Comparable<Import> {
 
   public String getIncludeStatement() {
     if (isFoundation) {
-     return String.format("#import <%s>", importFileName);
+     return String.format("#import <%s/%s.h>", importFileName, importFileName);
     } else {
       return String.format("#include \"%s.h\"", getImportFileName());
     }
