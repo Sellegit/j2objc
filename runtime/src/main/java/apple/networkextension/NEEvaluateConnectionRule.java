@@ -1,0 +1,71 @@
+package apple.networkextension;
+
+
+import java.io.*;
+import java.nio.*;
+import java.util.*;
+import com.google.j2objc.annotations.*;
+import com.google.j2objc.runtime.*;
+import com.google.j2objc.runtime.block.*;
+import apple.audiotoolbox.*;
+import apple.corefoundation.*;
+import apple.coregraphics.*;
+import apple.coreservices.*;
+import apple.foundation.*;
+
+
+
+/**
+ * @since Available in iOS 8.0 and later.
+ */
+
+@Library("NetworkExtension") @Mapping("NEEvaluateConnectionRule")
+public class NEEvaluateConnectionRule 
+    extends NSObject 
+    implements NSCopying {
+
+    
+    
+    public NEEvaluateConnectionRule() {}
+    /**
+     * @since Available in iOS 8.0 and later.
+     */
+    @Mapping("initWithMatchDomains:andAction:")
+    public NEEvaluateConnectionRule(List<String> domains, @Representing("NEEvaluateConnectionRuleAction") @MachineSizedSInt long action) { }
+    
+    
+    /**
+     * @since Available in iOS 8.0 and later.
+     */
+    @Mapping("action")
+    public native @Representing("NEEvaluateConnectionRuleAction") @MachineSizedSInt long getAction();
+    /**
+     * @since Available in iOS 8.0 and later.
+     */
+    @Mapping("matchDomains")
+    public native List<String> getMatchDomains();
+    /**
+     * @since Available in iOS 8.0 and later.
+     */
+    @Mapping("useDNSServers")
+    public native List<String> getDNSServers();
+    /**
+     * @since Available in iOS 8.0 and later.
+     */
+    public native void setDNSServers(List<String> v);
+    /**
+     * @since Available in iOS 8.0 and later.
+     */
+    @Mapping("probeURL")
+    public native NSURL getProbeURL();
+    /**
+     * @since Available in iOS 8.0 and later.
+     */
+    public native void setProbeURL(NSURL v);
+    
+    
+    
+    @Mapping("copyWithZone:")
+    public native Object copyWithZone$(NSZone zone);
+    
+}

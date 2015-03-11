@@ -1,0 +1,79 @@
+package apple.mapkit;
+
+
+import java.io.*;
+import java.nio.*;
+import java.util.*;
+import com.google.j2objc.annotations.*;
+import com.google.j2objc.runtime.*;
+import com.google.j2objc.runtime.block.*;
+import apple.audiotoolbox.*;
+import apple.corefoundation.*;
+import apple.coregraphics.*;
+import apple.coreservices.*;
+import apple.foundation.*;
+import apple.corelocation.*;
+import apple.uikit.*;
+import apple.dispatch.*;
+
+
+
+
+
+@Mapping("MKMapPoint") @Library("MapKit")
+public class MKMapPoint 
+    extends Struct 
+     {
+
+    
+    protected MKMapPoint() {}
+    
+    
+    @DotMapping("x")
+    public native double getX();
+    @DotMapping("y")
+    public native double getY();
+    
+    public static native MKMapPoint create(double x, double y) /*-[
+        MKMapPoint __new = { .x = x, .y = y };
+        return __new;
+    ]-*/;
+    public static native MKMapPoint copyWithx(MKMapPoint original, double x) /*-[
+        original.x = x;
+        return __new;
+    ]-*/;
+
+    
+    public static native MKMapPoint copyWithy(MKMapPoint original, double y) /*-[
+        original.y = y;
+        return __new;
+    ]-*/;
+
+    
+    /**
+     * @since Available in iOS 4.0 and later.
+     */
+    @GlobalFunction("MKMapPointForCoordinate")
+    public static native MKMapPoint create(CLLocationCoordinate2D coordinate);
+    /**
+     * @since Available in iOS 4.0 and later.
+     */
+    @GlobalFunction("MKCoordinateForMapPoint")
+    public native CLLocationCoordinate2D toCoordinate();
+    /**
+     * @since Available in iOS 4.0 and later.
+     */
+    @GlobalFunction("MKMetersPerMapPointAtLatitude")
+    public static native double getMetersPerMapPoint(double latitude);
+    /**
+     * @since Available in iOS 4.0 and later.
+     */
+    @GlobalFunction("MKMapPointsPerMeterAtLatitude")
+    public static native double getMapPointsPerMeter(double latitude);
+    /**
+     * @since Available in iOS 4.0 and later.
+     */
+    @GlobalFunction("MKMetersBetweenMapPoints")
+    public static native double getMetersBetween(MKMapPoint a, MKMapPoint b);
+    
+}

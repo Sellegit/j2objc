@@ -11,4 +11,6 @@
 # limitations under the License.
 
 ANNOTATION_SOURCE_JAVA = \
-    com/google/j2objc/runtime/**/*.java
+    com/google/j2objc/runtime/*.java \
+    com/google/j2objc/runtime/**/*.java \
+	apple/**/*.java

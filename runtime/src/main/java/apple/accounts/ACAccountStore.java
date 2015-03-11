@@ -1,0 +1,65 @@
+package apple.accounts;
+
+
+import java.io.*;
+import java.nio.*;
+import java.util.*;
+import com.google.j2objc.annotations.*;
+import com.google.j2objc.runtime.*;
+import com.google.j2objc.runtime.block.*;
+import apple.audiotoolbox.*;
+import apple.corefoundation.*;
+import apple.coregraphics.*;
+import apple.coreservices.*;
+import apple.foundation.*;
+
+
+
+/**
+ * @since Available in iOS 5.0 and later.
+ */
+
+@Library("Accounts") @Mapping("ACAccountStore")
+public class ACAccountStore 
+    extends NSObject 
+     {
+
+    
+    
+    public ACAccountStore() {}
+    
+    
+    @Mapping("accounts")
+    public native NSArray<ACAccount> getAccounts();
+    
+    
+    
+    /**
+     * @since Available in iOS 5.0 and later.
+     */
+    @GlobalConstant("ACAccountStoreDidChangeNotification")
+    public static native NSString DidChangeNotification();
+    
+    @Mapping("accountWithIdentifier:")
+    public native ACAccount getAccount(String identifier);
+    @Mapping("accountTypeWithAccountTypeIdentifier:")
+    public native ACAccountType getAccountType(ACAccountTypeIdentifier typeIdentifier);
+    @Mapping("accountsWithAccountType:")
+    public native NSArray<ACAccount> getAccounts(ACAccountType accountType);
+    @Mapping("saveAccount:withCompletionHandler:")
+    public native void saveAccount(ACAccount account, @Block VoidBlock2<Boolean, NSError> completionHandler);
+    /**
+     * @since Available in iOS 5.0 and later.
+     * @deprecated Deprecated in iOS 6.0.
+     */
+    @Deprecated
+    @Mapping("requestAccessToAccountsWithType:withCompletionHandler:")
+    public native void requestAccessToAccounts(ACAccountType accountType, @Block VoidBlock2<Boolean, NSError> handler);
+    @Mapping("requestAccessToAccountsWithType:options:completion:")
+    protected native void requestAccessToAccounts(ACAccountType accountType, NSDictionary<NSString, ?> options, @Block VoidBlock2<Boolean, NSError> completion);
+    @Mapping("renewCredentialsForAccount:completion:")
+    public native void renewCredentials(ACAccount account, @Block VoidBlock2<ACAccountCredentialRenewResult, NSError> completionHandler);
+    @Mapping("removeAccount:withCompletionHandler:")
+    public native void removeAccount(ACAccount account, @Block VoidBlock2<Boolean, NSError> completionHandler);
+    
+}

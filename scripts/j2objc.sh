@@ -39,7 +39,7 @@ fi
 PARSING_JAVA_ARGS=0
 JAVA_ARGS=$()
 J2OBJC_ARGS=$()
-CLASSPATH=${LIB_DIR}/j2objc_annotations.jar
+CLASSPATH="${LIB_DIR}/j2objc_annotations.jar:${LIB_DIR}/runtime.jar"
 CLASSPATH_SET=0
 SOURCEPATH=
 SOURCEPATH_SET=0
