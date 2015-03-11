@@ -41,6 +41,7 @@ public class AVAudioPCMBuffer
     public native int getFrameCapacity();
     @Mapping("frameLength")
     public native int getFrameLength();
+    @Mapping("setFrameLength:")
     public native void setFrameLength(int v);
     @Mapping("stride")
     public native @MachineSizedUInt long getStride();

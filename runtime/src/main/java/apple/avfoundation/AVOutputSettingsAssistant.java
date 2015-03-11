@@ -43,12 +43,15 @@ public class AVOutputSettingsAssistant
     public native String getOutputFileType();
     @Mapping("sourceAudioFormat")
     public native CMAudioFormatDescription getSourceAudioFormat();
+    @Mapping("setSourceAudioFormat:")
     public native void setSourceAudioFormat(CMAudioFormatDescription v);
     @Mapping("sourceVideoFormat")
     public native CMVideoFormatDescription getSourceVideoFormat();
+    @Mapping("setSourceVideoFormat:")
     public native void setSourceVideoFormat(CMVideoFormatDescription v);
     @Mapping("sourceVideoAverageFrameDuration")
     public native CMTime getSourceVideoAverageFrameDuration();
+    @Mapping("setSourceVideoAverageFrameDuration:")
     public native void setSourceVideoAverageFrameDuration(CMTime v);
     /**
      * @since Available in iOS 7.0 and later.
@@ -58,6 +61,7 @@ public class AVOutputSettingsAssistant
     /**
      * @since Available in iOS 7.0 and later.
      */
+    @Mapping("setSourceVideoMinFrameDuration:")
     public native void setSourceVideoMinFrameDuration(CMTime v);
     
     

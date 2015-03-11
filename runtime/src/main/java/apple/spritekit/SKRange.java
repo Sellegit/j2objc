@@ -40,9 +40,11 @@ public class SKRange
     
     @Mapping("lowerLimit")
     public native @MachineSizedFloat double getLowerLimit();
+    @Mapping("setLowerLimit:")
     public native void setLowerLimit(@MachineSizedFloat double v);
     @Mapping("upperLimit")
     public native @MachineSizedFloat double getUpperLimit();
+    @Mapping("setUpperLimit:")
     public native void setUpperLimit(@MachineSizedFloat double v);
     
     

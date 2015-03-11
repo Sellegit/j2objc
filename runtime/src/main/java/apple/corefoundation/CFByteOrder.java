@@ -18,7 +18,7 @@ import apple.foundation.*;
 
 
 
-
+@Library("CoreFoundation")
 @Mapping("CFByteOrder")
 public final class CFByteOrder extends ObjCEnum {
     

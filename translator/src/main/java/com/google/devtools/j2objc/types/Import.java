@@ -110,11 +110,6 @@ public class Import implements Comparable<Import> {
       this.importFileName = getImportFileName(mainType);
     }
     this.isFoundation = isFoundation;
-
-    System.out.println("Adding " + this.getIncludeStatement());
-    System.out.println("-- due to " + type.getQualifiedName());
-    System.out.println("-- due to " + type.getClass());
-    System.out.println("-- due to " + Arrays.toString(type.getAnnotations()));
   }
 
   public ITypeBinding getType() {

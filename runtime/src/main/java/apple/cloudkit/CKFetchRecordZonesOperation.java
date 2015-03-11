@@ -34,9 +34,11 @@ public class CKFetchRecordZonesOperation
     
     @Mapping("recordZoneIDs")
     public native NSArray<CKRecordZoneID> getRecordZoneIDs();
+    @Mapping("setRecordZoneIDs:")
     public native void setRecordZoneIDs(NSArray<CKRecordZoneID> v);
     @Mapping("fetchRecordZonesCompletionBlock")
     public native @Block VoidBlock2<NSDictionary<CKRecordZoneID, CKRecordZone>, NSError> getFetchRecordZonesCompletionBlock();
+    @Mapping("setFetchRecordZonesCompletionBlock:")
     public native void setFetchRecordZonesCompletionBlock(@Block VoidBlock2<NSDictionary<CKRecordZoneID, CKRecordZone>, NSError> v);
     
     

@@ -28,6 +28,7 @@ public interface MKAnnotation
     
     @Mapping("coordinate")
     CLLocationCoordinate2D getCoordinate();
+    @Mapping("setCoordinate:")
     void setCoordinate(CLLocationCoordinate2D v);
     @Mapping("title")
     String getTitle();

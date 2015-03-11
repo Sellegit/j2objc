@@ -17,7 +17,7 @@ import apple.uikit.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-
+@Adapter
 public abstract class MPMediaPlaybackAdapter 
     extends Object 
     implements MPMediaPlayback {
@@ -29,9 +29,11 @@ public abstract class MPMediaPlaybackAdapter
     public boolean isPreparedToPlay() { throw new UnsupportedOperationException(); }
     @NotImplemented("currentPlaybackTime")
     public double getCurrentPlaybackTime() { throw new UnsupportedOperationException(); }
+    @Mapping("setCurrentPlaybackTime:")
     public void setCurrentPlaybackTime(double v) { throw new UnsupportedOperationException(); }
     @NotImplemented("currentPlaybackRate")
     public float getCurrentPlaybackRate() { throw new UnsupportedOperationException(); }
+    @Mapping("setCurrentPlaybackRate:")
     public void setCurrentPlaybackRate(float v) { throw new UnsupportedOperationException(); }
     
     

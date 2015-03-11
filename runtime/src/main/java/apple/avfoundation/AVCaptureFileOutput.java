@@ -45,12 +45,15 @@ public class AVCaptureFileOutput
     public native long getRecordedFileSize();
     @Mapping("maxRecordedDuration")
     public native CMTime getMaxRecordedDuration();
+    @Mapping("setMaxRecordedDuration:")
     public native void setMaxRecordedDuration(CMTime v);
     @Mapping("maxRecordedFileSize")
     public native long getMaxRecordedFileSize();
+    @Mapping("setMaxRecordedFileSize:")
     public native void setMaxRecordedFileSize(long v);
     @Mapping("minFreeDiskSpaceLimit")
     public native long getMinFreeDiskSpaceLimit();
+    @Mapping("setMinFreeDiskSpaceLimit:")
     public native void setMinFreeDiskSpaceLimit(long v);
     
     

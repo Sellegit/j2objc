@@ -32,33 +32,43 @@ public class MTLRenderPassAttachmentDescriptor
     
     @Mapping("texture")
     public native MTLTexture getTexture();
+    @Mapping("setTexture:")
     public native void setTexture(MTLTexture v);
     @Mapping("level")
     public native @MachineSizedUInt long getLevel();
+    @Mapping("setLevel:")
     public native void setLevel(@MachineSizedUInt long v);
     @Mapping("slice")
     public native @MachineSizedUInt long getSlice();
+    @Mapping("setSlice:")
     public native void setSlice(@MachineSizedUInt long v);
     @Mapping("depthPlane")
     public native @MachineSizedUInt long getDepthPlane();
+    @Mapping("setDepthPlane:")
     public native void setDepthPlane(@MachineSizedUInt long v);
     @Mapping("resolveTexture")
     public native MTLTexture getResolveTexture();
+    @Mapping("setResolveTexture:")
     public native void setResolveTexture(MTLTexture v);
     @Mapping("resolveLevel")
     public native @MachineSizedUInt long getResolveLevel();
+    @Mapping("setResolveLevel:")
     public native void setResolveLevel(@MachineSizedUInt long v);
     @Mapping("resolveSlice")
     public native @MachineSizedUInt long getResolveSlice();
+    @Mapping("setResolveSlice:")
     public native void setResolveSlice(@MachineSizedUInt long v);
     @Mapping("resolveDepthPlane")
     public native @MachineSizedUInt long getResolveDepthPlane();
+    @Mapping("setResolveDepthPlane:")
     public native void setResolveDepthPlane(@MachineSizedUInt long v);
     @Mapping("loadAction")
     public native @Representing("MTLLoadAction") @MachineSizedUInt long getLoadAction();
+    @Mapping("setLoadAction:")
     public native void setLoadAction(@Representing("MTLLoadAction") @MachineSizedUInt long v);
     @Mapping("storeAction")
     public native @Representing("MTLStoreAction") @MachineSizedUInt long getStoreAction();
+    @Mapping("setStoreAction:")
     public native void setStoreAction(@Representing("MTLStoreAction") @MachineSizedUInt long v);
     
     

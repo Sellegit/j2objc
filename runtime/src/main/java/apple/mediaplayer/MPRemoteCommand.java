@@ -32,6 +32,7 @@ public class MPRemoteCommand
     
     @Mapping("isEnabled")
     public native boolean isEnabled();
+    @Mapping("setEnabled:")
     public native void setEnabled(boolean v);
     
     

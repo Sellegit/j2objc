@@ -23,7 +23,7 @@ import apple.opengles.*;
 
 
 
-
+@Library("SceneKit")
 @Mapping("SCNParticleBirthDirection")
 public final class SCNParticleBirthDirection extends ObjCEnum {
     

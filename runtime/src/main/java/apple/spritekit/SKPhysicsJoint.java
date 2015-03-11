@@ -36,9 +36,11 @@ public class SKPhysicsJoint
     
     @Mapping("bodyA")
     public native SKPhysicsBody getBodyA();
+    @Mapping("setBodyA:")
     public native void setBodyA(SKPhysicsBody v);
     @Mapping("bodyB")
     public native SKPhysicsBody getBodyB();
+    @Mapping("setBodyB:")
     public native void setBodyB(SKPhysicsBody v);
     @Mapping("reactionForce")
     public native CGVector getReactionForce();

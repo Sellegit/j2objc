@@ -22,7 +22,7 @@ import apple.dispatch.*;
 
 
 
-
+@Library("Foundation")
 @Mapping("NSRoundingMode")
 public final class NSRoundingMode extends ObjCEnum {
     

@@ -37,9 +37,11 @@ public class MPMediaPickerController
     public native @Representing("MPMediaType") @MachineSizedUInt long getMediaTypes();
     @Mapping("delegate")
     public native MPMediaPickerControllerDelegate getDelegate();
+    @Mapping("setDelegate:")
     public native void setDelegate(MPMediaPickerControllerDelegate v);
     @Mapping("allowsPickingMultipleItems")
     public native boolean allowsPickingMultipleItems();
+    @Mapping("setAllowsPickingMultipleItems:")
     public native void setAllowsPickingMultipleItems(boolean v);
     /**
      * @since Available in iOS 6.0 and later.
@@ -49,9 +51,11 @@ public class MPMediaPickerController
     /**
      * @since Available in iOS 6.0 and later.
      */
+    @Mapping("setShowsCloudItems:")
     public native void setShowsCloudItems(boolean v);
     @Mapping("prompt")
     public native String getPrompt();
+    @Mapping("setPrompt:")
     public native void setPrompt(String v);
     
     

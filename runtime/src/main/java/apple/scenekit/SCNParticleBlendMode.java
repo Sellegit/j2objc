@@ -23,7 +23,7 @@ import apple.opengles.*;
 
 
 
-
+@Library("SceneKit")
 @Mapping("SCNParticleBlendMode")
 public final class SCNParticleBlendMode extends ObjCEnum {
     

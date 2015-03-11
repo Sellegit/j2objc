@@ -23,7 +23,7 @@ import apple.scenekit.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-
+@Adapter
 public abstract class SKPhysicsContactDelegateAdapter 
     extends Object 
     implements SKPhysicsContactDelegate {

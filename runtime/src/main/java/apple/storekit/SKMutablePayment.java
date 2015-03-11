@@ -39,6 +39,7 @@ public class SKMutablePayment
     /**
      * @since Available in iOS 7.0 and later.
      */
+    @Mapping("setApplicationUsername:")
     public native void setApplicationUsername(String v);
     /**
      * @since Available in iOS 3.0 and later.
@@ -48,6 +49,7 @@ public class SKMutablePayment
     /**
      * @since Available in iOS 3.0 and later.
      */
+    @Mapping("setProductIdentifier:")
     public native void setProductIdentifier(String v);
     /**
      * @since Available in iOS 3.0 and later.
@@ -57,6 +59,7 @@ public class SKMutablePayment
     /**
      * @since Available in iOS 3.0 and later.
      */
+    @Mapping("setQuantity:")
     public native void setQuantity(@MachineSizedSInt long v);
     /**
      * @since Available in iOS 3.0 and later.
@@ -66,6 +69,7 @@ public class SKMutablePayment
     /**
      * @since Available in iOS 3.0 and later.
      */
+    @Mapping("setRequestData:")
     public native void setRequestData(NSData v);
     
     

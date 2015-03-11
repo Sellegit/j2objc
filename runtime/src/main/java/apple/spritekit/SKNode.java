@@ -40,33 +40,43 @@ public class SKNode
     public native CGRect getFrame();
     @Mapping("position")
     public native CGPoint getPosition();
+    @Mapping("setPosition:")
     public native void setPosition(CGPoint v);
     @Mapping("zPosition")
     public native @MachineSizedFloat double getZPosition();
+    @Mapping("setZPosition:")
     public native void setZPosition(@MachineSizedFloat double v);
     @Mapping("zRotation")
     public native @MachineSizedFloat double getZRotation();
+    @Mapping("setZRotation:")
     public native void setZRotation(@MachineSizedFloat double v);
     @Mapping("xScale")
     public native @MachineSizedFloat double getXScale();
+    @Mapping("setXScale:")
     public native void setXScale(@MachineSizedFloat double v);
     @Mapping("yScale")
     public native @MachineSizedFloat double getYScale();
+    @Mapping("setYScale:")
     public native void setYScale(@MachineSizedFloat double v);
     @Mapping("speed")
     public native @MachineSizedFloat double getSpeed();
+    @Mapping("setSpeed:")
     public native void setSpeed(@MachineSizedFloat double v);
     @Mapping("alpha")
     public native @MachineSizedFloat double getAlpha();
+    @Mapping("setAlpha:")
     public native void setAlpha(@MachineSizedFloat double v);
     @Mapping("isPaused")
     public native boolean isPaused();
+    @Mapping("setPaused:")
     public native void setPaused(boolean v);
     @Mapping("isHidden")
     public native boolean isHidden();
+    @Mapping("setHidden:")
     public native void setHidden(boolean v);
     @Mapping("isUserInteractionEnabled")
     public native boolean isUserInteractionEnabled();
+    @Mapping("setUserInteractionEnabled:")
     public native void setUserInteractionEnabled(boolean v);
     @Mapping("parent")
     public native SKNode getParent();
@@ -74,20 +84,25 @@ public class SKNode
     public native NSArray<SKNode> getChildren();
     @Mapping("name")
     public native String getName();
+    @Mapping("setName:")
     public native void setName(String v);
     @Mapping("scene")
     public native SKScene getScene();
     @Mapping("physicsBody")
     public native SKPhysicsBody getPhysicsBody();
+    @Mapping("setPhysicsBody:")
     public native void setPhysicsBody(SKPhysicsBody v);
     @Mapping("userData")
     public native NSMutableDictionary<?, ?> getUserData();
+    @Mapping("setUserData:")
     public native void setUserData(NSMutableDictionary<?, ?> v);
     @Mapping("reachConstraints")
     public native SKReachConstraints getReachConstraints();
+    @Mapping("setReachConstraints:")
     public native void setReachConstraints(SKReachConstraints v);
     @Mapping("constraints")
     public native NSArray<SKConstraint> getConstraints();
+    @Mapping("setConstraints:")
     public native void setConstraints(NSArray<SKConstraint> v);
     
     

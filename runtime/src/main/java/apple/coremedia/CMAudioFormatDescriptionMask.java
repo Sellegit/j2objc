@@ -21,7 +21,7 @@ import apple.corevideo.*;
 
 
 
-
+@Library("CoreMedia")
 @Mapping("CMAudioFormatDescriptionMask")
 public final class CMAudioFormatDescriptionMask extends ObjCEnum {
     

@@ -43,6 +43,7 @@ public class AVAudioPlayer
     public native double getDuration();
     @Mapping("delegate")
     public native AVAudioPlayerDelegate getDelegate();
+    @Mapping("setDelegate:")
     public native void setDelegate(AVAudioPlayerDelegate v);
     @Mapping("url")
     public native NSURL getUrl();
@@ -56,9 +57,11 @@ public class AVAudioPlayer
     /**
      * @since Available in iOS 4.0 and later.
      */
+    @Mapping("setPan:")
     public native void setPan(float v);
     @Mapping("volume")
     public native float getVolume();
+    @Mapping("setVolume:")
     public native void setVolume(float v);
     /**
      * @since Available in iOS 5.0 and later.
@@ -68,6 +71,7 @@ public class AVAudioPlayer
     /**
      * @since Available in iOS 5.0 and later.
      */
+    @Mapping("setEnableRate:")
     public native void setRateEnabled(boolean v);
     /**
      * @since Available in iOS 5.0 and later.
@@ -77,9 +81,11 @@ public class AVAudioPlayer
     /**
      * @since Available in iOS 5.0 and later.
      */
+    @Mapping("setRate:")
     public native void setRate(float v);
     @Mapping("currentTime")
     public native double getCurrentTime();
+    @Mapping("setCurrentTime:")
     public native void setCurrentTime(double v);
     /**
      * @since Available in iOS 4.0 and later.
@@ -88,6 +94,7 @@ public class AVAudioPlayer
     public native double getDeviceCurrentTime();
     @Mapping("numberOfLoops")
     public native @MachineSizedSInt long getNumberOfLoops();
+    @Mapping("setNumberOfLoops:")
     public native void setNumberOfLoops(@MachineSizedSInt long v);
     /**
      * @since Available in iOS 4.0 and later.
@@ -96,6 +103,7 @@ public class AVAudioPlayer
     public native AVAudioSettings getSettings();
     @Mapping("isMeteringEnabled")
     public native boolean isMeteringEnabled();
+    @Mapping("setMeteringEnabled:")
     public native void setMeteringEnabled(boolean v);
     /**
      * @since Available in iOS 7.0 and later.
@@ -105,6 +113,7 @@ public class AVAudioPlayer
     /**
      * @since Available in iOS 7.0 and later.
      */
+    @Mapping("setChannelAssignments:")
     public native void setChannelAssignments(NSArray<AVAudioSessionChannelDescription> v);
     
     

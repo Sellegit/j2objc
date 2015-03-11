@@ -21,7 +21,7 @@ import apple.corevideo.*;
 
 
 
-
+@Library("CoreMedia")
 @Mapping("CMClosedCaptionFormatType")
 public final class CMClosedCaptionFormatType extends ObjCEnum {
     

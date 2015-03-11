@@ -52,6 +52,7 @@ public class NEEvaluateConnectionRule
     /**
      * @since Available in iOS 8.0 and later.
      */
+    @Mapping("setUseDNSServers:")
     public native void setDNSServers(List<String> v);
     /**
      * @since Available in iOS 8.0 and later.
@@ -61,6 +62,7 @@ public class NEEvaluateConnectionRule
     /**
      * @since Available in iOS 8.0 and later.
      */
+    @Mapping("setProbeURL:")
     public native void setProbeURL(NSURL v);
     
     

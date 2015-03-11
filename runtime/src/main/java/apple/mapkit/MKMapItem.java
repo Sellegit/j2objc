@@ -40,12 +40,15 @@ public class MKMapItem
     public native boolean isCurrentLocation();
     @Mapping("name")
     public native String getName();
+    @Mapping("setName:")
     public native void setName(String v);
     @Mapping("phoneNumber")
     public native String getPhoneNumber();
+    @Mapping("setPhoneNumber:")
     public native void setPhoneNumber(String v);
     @Mapping("url")
     public native NSURL getUrl();
+    @Mapping("setUrl:")
     public native void setUrl(NSURL v);
     
     

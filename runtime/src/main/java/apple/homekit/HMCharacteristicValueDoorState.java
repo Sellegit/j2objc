@@ -19,7 +19,7 @@ import apple.foundation.*;
  * @since Available in iOS 8.0 and later.
  */
 
-
+@Library("HomeKit")
 @Mapping("HMCharacteristicValueDoorState")
 public final class HMCharacteristicValueDoorState extends ObjCEnum {
     

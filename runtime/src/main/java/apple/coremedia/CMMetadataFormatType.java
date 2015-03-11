@@ -21,7 +21,7 @@ import apple.corevideo.*;
 
 
 
-
+@Library("CoreMedia")
 @Mapping("CMMetadataFormatType")
 public final class CMMetadataFormatType extends ObjCEnum {
     

@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 
 
-
+@Library("CoreAudio")
 @Mapping("AudioError")
 public final class AudioError extends ObjCEnum {
     

@@ -35,6 +35,7 @@ public class CAScrollLayer
     
     @Mapping("scrollMode")
     public native CAScrollMode getScrollMode();
+    @Mapping("setScrollMode:")
     public native void setScrollMode(CAScrollMode v);
     
     

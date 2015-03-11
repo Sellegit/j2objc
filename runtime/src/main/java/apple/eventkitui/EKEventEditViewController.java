@@ -37,12 +37,15 @@ public class EKEventEditViewController
     
     @Mapping("editViewDelegate")
     public native EKEventEditViewDelegate getEditViewDelegate();
+    @Mapping("setEditViewDelegate:")
     public native void setEditViewDelegate(EKEventEditViewDelegate v);
     @Mapping("eventStore")
     public native EKEventStore getEventStore();
+    @Mapping("setEventStore:")
     public native void setEventStore(EKEventStore v);
     @Mapping("event")
     public native EKEvent getEvent();
+    @Mapping("setEvent:")
     public native void setEvent(EKEvent v);
     
     

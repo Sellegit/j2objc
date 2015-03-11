@@ -20,7 +20,7 @@ import apple.coremedia.*;
 
 
 
-
+@Library("AudioToolbox")
 @Mapping("AudioConverterSampleRateConverterComplexity")
 public final class AudioConverterSampleRateConverterComplexity extends ObjCEnum {
     

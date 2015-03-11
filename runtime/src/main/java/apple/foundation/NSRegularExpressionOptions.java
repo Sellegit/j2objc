@@ -22,7 +22,7 @@ import apple.dispatch.*;
 
 
 
-
+@Library("Foundation")
 @Mapping("NSRegularExpressionOptions")
 public final class NSRegularExpressionOptions extends ObjCEnum {
     

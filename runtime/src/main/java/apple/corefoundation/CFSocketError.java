@@ -18,7 +18,7 @@ import apple.foundation.*;
 
 
 
-
+@Library("CoreFoundation")
 @Mapping("CFSocketError")
 public final class CFSocketError extends ObjCEnum {
     

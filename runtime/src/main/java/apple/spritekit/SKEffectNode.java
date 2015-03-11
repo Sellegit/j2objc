@@ -38,21 +38,27 @@ public class SKEffectNode
     
     @Mapping("filter")
     public native CIFilter getFilter();
+    @Mapping("setFilter:")
     public native void setFilter(CIFilter v);
     @Mapping("shouldCenterFilter")
     public native boolean shouldCenterFilter();
+    @Mapping("setShouldCenterFilter:")
     public native void setShouldCenterFilter(boolean v);
     @Mapping("shouldEnableEffects")
     public native boolean shouldEnableEffects();
+    @Mapping("setShouldEnableEffects:")
     public native void setShouldEnableEffects(boolean v);
     @Mapping("shouldRasterize")
     public native boolean shouldRasterize();
+    @Mapping("setShouldRasterize:")
     public native void setShouldRasterize(boolean v);
     @Mapping("blendMode")
     public native @Representing("SKBlendMode") @MachineSizedSInt long getBlendMode();
+    @Mapping("setBlendMode:")
     public native void setBlendMode(@Representing("SKBlendMode") @MachineSizedSInt long v);
     @Mapping("shader")
     public native SKShader getShader();
+    @Mapping("setShader:")
     public native void setShader(SKShader v);
     
     

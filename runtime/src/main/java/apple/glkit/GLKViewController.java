@@ -36,14 +36,17 @@ public class GLKViewController
     
     @Mapping("delegate")
     public native GLKViewControllerDelegate getDelegate();
+    @Mapping("setDelegate:")
     public native void setDelegate(GLKViewControllerDelegate v);
     @Mapping("preferredFramesPerSecond")
     public native @MachineSizedSInt long getPreferredFramesPerSecond();
+    @Mapping("setPreferredFramesPerSecond:")
     public native void setPreferredFramesPerSecond(@MachineSizedSInt long v);
     @Mapping("framesPerSecond")
     public native @MachineSizedSInt long getFramesPerSecond();
     @Mapping("isPaused")
     public native boolean isPaused();
+    @Mapping("setPaused:")
     public native void setPaused(boolean v);
     @Mapping("framesDisplayed")
     public native @MachineSizedSInt long getFramesDisplayed();
@@ -57,9 +60,11 @@ public class GLKViewController
     public native double getTimeSinceLastDraw();
     @Mapping("pauseOnWillResignActive")
     public native boolean pausesOnWillResignActive();
+    @Mapping("setPauseOnWillResignActive:")
     public native void setPausesOnWillResignActive(boolean v);
     @Mapping("resumeOnDidBecomeActive")
     public native boolean resumesOnDidBecomeActive();
+    @Mapping("setResumeOnDidBecomeActive:")
     public native void setResumesOnDidBecomeActive(boolean v);
     
     

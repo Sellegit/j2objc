@@ -37,21 +37,27 @@ public class AVMutableCompositionTrack
     
     @Mapping("naturalTimeScale")
     public native int getNaturalTimeScale();
+    @Mapping("setNaturalTimeScale:")
     public native void setNaturalTimeScale(int v);
     @Mapping("languageCode")
     public native String getLanguageCode();
+    @Mapping("setLanguageCode:")
     public native void setLanguageCode(String v);
     @Mapping("extendedLanguageTag")
     public native String getExtendedLanguageTag();
+    @Mapping("setExtendedLanguageTag:")
     public native void setExtendedLanguageTag(String v);
     @Mapping("preferredTransform")
     public native CGAffineTransform getPreferredTransform();
+    @Mapping("setPreferredTransform:")
     public native void setPreferredTransform(CGAffineTransform v);
     @Mapping("preferredVolume")
     public native float getPreferredVolume();
+    @Mapping("setPreferredVolume:")
     public native void setPreferredVolume(float v);
     @Mapping("segments")
     public native NSArray<AVAssetTrackSegment> getSegments();
+    @Mapping("setSegments:")
     public native void setSegments(NSArray<AVAssetTrackSegment> v);
     
     

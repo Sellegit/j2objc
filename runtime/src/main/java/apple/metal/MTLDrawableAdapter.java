@@ -17,7 +17,7 @@ import apple.dispatch.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-
+@Adapter
 public abstract class MTLDrawableAdapter 
     extends Object 
     implements MTLDrawable {

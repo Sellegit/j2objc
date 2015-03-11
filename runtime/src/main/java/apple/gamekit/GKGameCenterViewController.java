@@ -36,9 +36,11 @@ public class GKGameCenterViewController
     
     @Mapping("gameCenterDelegate")
     public native GKGameCenterControllerDelegate getGameCenterDelegate();
+    @Mapping("setGameCenterDelegate:")
     public native void setGameCenterDelegate(GKGameCenterControllerDelegate v);
     @Mapping("viewState")
     public native @Representing("GKGameCenterViewControllerState") @MachineSizedSInt long getViewState();
+    @Mapping("setViewState:")
     public native void setViewState(@Representing("GKGameCenterViewControllerState") @MachineSizedSInt long v);
     /**
      * @since Available in iOS 4.1 and later.
@@ -52,6 +54,7 @@ public class GKGameCenterViewController
      * @deprecated Deprecated in iOS 7.0.
      */
     @Deprecated
+    @Mapping("setLeaderboardTimeScope:")
     public native void setLeaderboardTimeScope(@Representing("GKLeaderboardTimeScope") @MachineSizedSInt long v);
     /**
      * @since Available in iOS 7.0 and later.
@@ -61,6 +64,7 @@ public class GKGameCenterViewController
     /**
      * @since Available in iOS 7.0 and later.
      */
+    @Mapping("setLeaderboardIdentifier:")
     public native void setLeaderboardIdentifier(String v);
     /**
      * @since Available in iOS 4.1 and later.
@@ -74,6 +78,7 @@ public class GKGameCenterViewController
      * @deprecated Deprecated in iOS 7.0.
      */
     @Deprecated
+    @Mapping("setLeaderboardCategory:")
     public native void setLeaderboardCategory(String v);
     
     

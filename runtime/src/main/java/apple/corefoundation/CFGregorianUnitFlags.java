@@ -18,7 +18,7 @@ import apple.foundation.*;
 
 
 
-
+@Library("CoreFoundation")
 @Mapping("CFGregorianUnitFlags")
 public final class CFGregorianUnitFlags extends ObjCEnum {
     

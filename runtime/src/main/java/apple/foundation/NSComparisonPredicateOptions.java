@@ -22,7 +22,7 @@ import apple.dispatch.*;
 
 
 
-
+@Library("Foundation")
 @Mapping("NSComparisonPredicateOptions")
 public final class NSComparisonPredicateOptions extends ObjCEnum {
     

@@ -34,9 +34,11 @@ public class MKLocalSearchRequest
     
     @Mapping("naturalLanguageQuery")
     public native String getNaturalLanguageQuery();
+    @Mapping("setNaturalLanguageQuery:")
     public native void setNaturalLanguageQuery(String v);
     @Mapping("region")
     public native MKCoordinateRegion getRegion();
+    @Mapping("setRegion:")
     public native void setRegion(MKCoordinateRegion v);
     
     

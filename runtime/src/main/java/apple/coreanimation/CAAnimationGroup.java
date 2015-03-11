@@ -33,6 +33,7 @@ public class CAAnimationGroup
     
     @Mapping("animations")
     public native NSArray<CAAnimation> getAnimations();
+    @Mapping("setAnimations:")
     public native void setAnimations(NSArray<CAAnimation> v);
     
     

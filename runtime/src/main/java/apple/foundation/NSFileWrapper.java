@@ -58,12 +58,15 @@ public class NSFileWrapper
     public native boolean isSymbolicLink();
     @Mapping("preferredFilename")
     public native String getPreferredFilename();
+    @Mapping("setPreferredFilename:")
     public native void setPreferredFilename(String v);
     @Mapping("filename")
     public native String getFilename();
+    @Mapping("setFilename:")
     public native void setFilename(String v);
     @Mapping("fileAttributes")
     public native NSDictionary<?, ?> getFileAttributes();
+    @Mapping("setFileAttributes:")
     public native void setFileAttributes(NSDictionary<?, ?> v);
     @Mapping("serializedRepresentation")
     public native NSData getSerializedRepresentation();

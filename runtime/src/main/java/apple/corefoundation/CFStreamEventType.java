@@ -18,7 +18,7 @@ import apple.foundation.*;
 
 
 
-
+@Library("CoreFoundation")
 @Mapping("CFStreamEventType")
 public final class CFStreamEventType extends ObjCEnum {
     

@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 
 
-
+@Library("CoreText")
 @Mapping("CTFontFormat")
 public final class CTFontFormat extends ObjCEnum {
     

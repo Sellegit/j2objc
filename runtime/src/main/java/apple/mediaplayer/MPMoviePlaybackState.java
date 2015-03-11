@@ -18,7 +18,7 @@ import apple.uikit.*;
 
 
 
-
+@Library("MediaPlayer")
 @Mapping("MPMoviePlaybackState")
 public final class MPMoviePlaybackState extends ObjCEnum {
     

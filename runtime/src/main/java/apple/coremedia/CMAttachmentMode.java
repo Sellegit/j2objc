@@ -21,7 +21,7 @@ import apple.corevideo.*;
 
 
 
-
+@Library("CoreMedia")
 @Mapping("CMAttachmentMode")
 public final class CMAttachmentMode extends ObjCEnum {
     

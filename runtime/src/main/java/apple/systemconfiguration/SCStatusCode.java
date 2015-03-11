@@ -18,7 +18,7 @@ import apple.dispatch.*;
 
 
 
-
+@Library("SystemConfiguration")
 @Mapping("SCStatusCode")
 public final class SCStatusCode extends ObjCEnum {
     

@@ -20,7 +20,7 @@ import apple.coremedia.*;
 
 
 
-
+@Library("AudioToolbox")
 @Mapping("CAFMarkerType")
 public final class CAFMarkerType extends ObjCEnum {
     

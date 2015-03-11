@@ -24,7 +24,7 @@ import apple.dispatch.*;
  * @since Available in iOS 4.0 and later.
  */
 
-
+@Library("Foundation")
 @Mapping("NSURLBookmarkResolutionOptions")
 public final class NSURLBookmarkResolutionOptions extends ObjCEnum {
     

@@ -48,9 +48,11 @@ public class AVAssetExportSession
     public native List<String> getSupportedFileTypes();
     @Mapping("outputFileType")
     public native String getOutputFileType();
+    @Mapping("setOutputFileType:")
     public native void setOutputFileType(String v);
     @Mapping("outputURL")
     public native NSURL getOutputURL();
+    @Mapping("setOutputURL:")
     public native void setOutputURL(NSURL v);
     @Mapping("status")
     public native @Representing("AVAssetExportSessionStatus") @MachineSizedSInt long getStatus();
@@ -67,9 +69,11 @@ public class AVAssetExportSession
     public native long getEstimatedOutputFileLength();
     @Mapping("timeRange")
     public native CMTimeRange getTimeRange();
+    @Mapping("setTimeRange:")
     public native void setTimeRange(CMTimeRange v);
     @Mapping("metadata")
     public native NSArray<AVMetadataItem> getMetadata();
+    @Mapping("setMetadata:")
     public native void setMetadata(NSArray<AVMetadataItem> v);
     /**
      * @since Available in iOS 7.0 and later.
@@ -79,9 +83,11 @@ public class AVAssetExportSession
     /**
      * @since Available in iOS 7.0 and later.
      */
+    @Mapping("setMetadataItemFilter:")
     public native void setMetadataItemFilter(AVMetadataItemFilter v);
     @Mapping("fileLengthLimit")
     public native long getFileLengthLimit();
+    @Mapping("setFileLengthLimit:")
     public native void setFileLengthLimit(long v);
     /**
      * @since Available in iOS 7.0 and later.
@@ -91,12 +97,15 @@ public class AVAssetExportSession
     /**
      * @since Available in iOS 7.0 and later.
      */
+    @Mapping("setAudioTimePitchAlgorithm:")
     public native void setAudioTimePitchAlgorithm(AVAudioTimePitchAlgorithm v);
     @Mapping("audioMix")
     public native AVAudioMix getAudioMix();
+    @Mapping("setAudioMix:")
     public native void setAudioMix(AVAudioMix v);
     @Mapping("videoComposition")
     public native AVVideoComposition getVideoComposition();
+    @Mapping("setVideoComposition:")
     public native void setVideoComposition(AVVideoComposition v);
     /**
      * @since Available in iOS 7.0 and later.
@@ -105,6 +114,7 @@ public class AVAssetExportSession
     public native AVVideoCompositing getCustomVideoCompositor();
     @Mapping("shouldOptimizeForNetworkUse")
     public native boolean shouldOptimizeForNetworkUse();
+    @Mapping("setShouldOptimizeForNetworkUse:")
     public native void setShouldOptimizeForNetworkUse(boolean v);
     /**
      * @since Available in iOS 8.0 and later.
@@ -114,6 +124,7 @@ public class AVAssetExportSession
     /**
      * @since Available in iOS 8.0 and later.
      */
+    @Mapping("setCanPerformMultiplePassesOverSourceMediaData:")
     public native void setCanPerformMultiplePassesOverSourceMediaData(boolean v);
     /**
      * @since Available in iOS 8.0 and later.
@@ -123,6 +134,7 @@ public class AVAssetExportSession
     /**
      * @since Available in iOS 8.0 and later.
      */
+    @Mapping("setDirectoryForTemporaryFiles:")
     public native void setDirectoryForTemporaryFiles(NSURL v);
     
     

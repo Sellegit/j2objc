@@ -39,15 +39,19 @@ public class AVAudioUnitDelay
     
     @Mapping("delayTime")
     public native double getDelayTime();
+    @Mapping("setDelayTime:")
     public native void setDelayTime(double v);
     @Mapping("feedback")
     public native float getFeedback();
+    @Mapping("setFeedback:")
     public native void setFeedback(float v);
     @Mapping("lowPassCutoff")
     public native float getLowPassCutoff();
+    @Mapping("setLowPassCutoff:")
     public native void setLowPassCutoff(float v);
     @Mapping("wetDryMix")
     public native float getWetDryMix();
+    @Mapping("setWetDryMix:")
     public native void setWetDryMix(float v);
     
     

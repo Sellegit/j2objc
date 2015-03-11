@@ -38,9 +38,11 @@ public class SKConstraint
     
     @Mapping("enabled")
     public native boolean isEnabled();
+    @Mapping("setEnabled:")
     public native void setEnabled(boolean v);
     @Mapping("referenceNode")
     public native SKNode getReferenceNode();
+    @Mapping("setReferenceNode:")
     public native void setReferenceNode(SKNode v);
     
     

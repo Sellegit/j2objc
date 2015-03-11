@@ -32,9 +32,11 @@ public class MTLCompileOptions
     
     @Mapping("preprocessorMacros")
     public native Map<String, String> getPreprocessorMacros();
+    @Mapping("setPreprocessorMacros:")
     public native void setPreprocessorMacros(Map<String, String> v);
     @Mapping("fastMathEnabled")
     public native boolean isFastMathEnabled();
+    @Mapping("setFastMathEnabled:")
     public native void setFastMathEnabled(boolean v);
     
     

@@ -31,6 +31,7 @@ public class CMMotionManager
     
     @Mapping("accelerometerUpdateInterval")
     public native double getAccelerometerUpdateInterval();
+    @Mapping("setAccelerometerUpdateInterval:")
     public native void setAccelerometerUpdateInterval(double v);
     @Mapping("isAccelerometerAvailable")
     public native boolean isAccelerometerAvailable();
@@ -40,6 +41,7 @@ public class CMMotionManager
     public native CMAccelerometerData getAccelerometerData();
     @Mapping("gyroUpdateInterval")
     public native double getGyroUpdateInterval();
+    @Mapping("setGyroUpdateInterval:")
     public native void setGyroUpdateInterval(double v);
     @Mapping("isGyroAvailable")
     public native boolean isGyroAvailable();
@@ -55,6 +57,7 @@ public class CMMotionManager
     /**
      * @since Available in iOS 5.0 and later.
      */
+    @Mapping("setMagnetometerUpdateInterval:")
     public native void setMagnetometerUpdateInterval(double v);
     /**
      * @since Available in iOS 5.0 and later.
@@ -73,6 +76,7 @@ public class CMMotionManager
     public native CMMagnetometerData getMagnetometerData();
     @Mapping("deviceMotionUpdateInterval")
     public native double getDeviceMotionUpdateInterval();
+    @Mapping("setDeviceMotionUpdateInterval:")
     public native void setDeviceMotionUpdateInterval(double v);
     /**
      * @since Available in iOS 5.0 and later.
@@ -93,6 +97,7 @@ public class CMMotionManager
     /**
      * @since Available in iOS 5.0 and later.
      */
+    @Mapping("setShowsDeviceMovementDisplay:")
     public native void setShowsDeviceMovementDisplay(boolean v);
     
     

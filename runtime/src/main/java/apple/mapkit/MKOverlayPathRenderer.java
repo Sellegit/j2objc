@@ -36,30 +36,39 @@ public class MKOverlayPathRenderer
     
     @Mapping("fillColor")
     public native UIColor getFillColor();
+    @Mapping("setFillColor:")
     public native void setFillColor(UIColor v);
     @Mapping("strokeColor")
     public native UIColor getStrokeColor();
+    @Mapping("setStrokeColor:")
     public native void setStrokeColor(UIColor v);
     @Mapping("lineWidth")
     public native @MachineSizedFloat double getLineWidth();
+    @Mapping("setLineWidth:")
     public native void setLineWidth(@MachineSizedFloat double v);
     @Mapping("lineJoin")
     public native @Representing("CGLineJoin") int getLineJoin();
+    @Mapping("setLineJoin:")
     public native void setLineJoin(@Representing("CGLineJoin") int v);
     @Mapping("lineCap")
     public native @Representing("CGLineCap") int getLineCap();
+    @Mapping("setLineCap:")
     public native void setLineCap(@Representing("CGLineCap") int v);
     @Mapping("miterLimit")
     public native @MachineSizedFloat double getMiterLimit();
+    @Mapping("setMiterLimit:")
     public native void setMiterLimit(@MachineSizedFloat double v);
     @Mapping("lineDashPhase")
     public native @MachineSizedFloat double getLineDashPhase();
+    @Mapping("setLineDashPhase:")
     public native void setLineDashPhase(@MachineSizedFloat double v);
     @Mapping("lineDashPattern")
     public native NSArray<NSNumber> getLineDashPattern();
+    @Mapping("setLineDashPattern:")
     public native void setLineDashPattern(NSArray<NSNumber> v);
     @Mapping("path")
     public native CGPath getPath();
+    @Mapping("setPath:")
     public native void setPath(CGPath v);
     
     

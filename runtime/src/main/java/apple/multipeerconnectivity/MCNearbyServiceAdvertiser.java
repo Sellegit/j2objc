@@ -35,6 +35,7 @@ public class MCNearbyServiceAdvertiser
     
     @Mapping("delegate")
     public native MCNearbyServiceAdvertiserDelegate getDelegate();
+    @Mapping("setDelegate:")
     public native void setDelegate(MCNearbyServiceAdvertiserDelegate v);
     @Mapping("myPeerID")
     public native MCPeerID getMyPeerID();

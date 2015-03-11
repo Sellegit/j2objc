@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 
 
-
+@Library("CoreText")
 @Mapping("CTRunStatus")
 public final class CTRunStatus extends ObjCEnum {
     

@@ -18,7 +18,7 @@ import apple.foundation.*;
 
 
 
-
+@Library("CoreFoundation")
 @Mapping("CFNumberFormatterRoundingMode")
 public final class CFNumberFormatterRoundingMode extends ObjCEnum {
     

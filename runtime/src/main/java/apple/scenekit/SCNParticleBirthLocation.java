@@ -23,7 +23,7 @@ import apple.opengles.*;
 
 
 
-
+@Library("SceneKit")
 @Mapping("SCNParticleBirthLocation")
 public final class SCNParticleBirthLocation extends ObjCEnum {
     

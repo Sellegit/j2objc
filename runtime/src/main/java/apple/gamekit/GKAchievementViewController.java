@@ -38,6 +38,7 @@ public class GKAchievementViewController
     
     @Mapping("achievementDelegate")
     public native GKAchievementViewControllerDelegate getAchievementDelegate();
+    @Mapping("setAchievementDelegate:")
     public native void setAchievementDelegate(GKAchievementViewControllerDelegate v);
     
     

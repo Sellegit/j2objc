@@ -35,15 +35,19 @@ public class SCNFloor
     
     @Mapping("reflectivity")
     public native @MachineSizedFloat double getReflectivity();
+    @Mapping("setReflectivity:")
     public native void setReflectivity(@MachineSizedFloat double v);
     @Mapping("reflectionFalloffStart")
     public native @MachineSizedFloat double getReflectionFalloffStart();
+    @Mapping("setReflectionFalloffStart:")
     public native void setReflectionFalloffStart(@MachineSizedFloat double v);
     @Mapping("reflectionFalloffEnd")
     public native @MachineSizedFloat double getReflectionFalloffEnd();
+    @Mapping("setReflectionFalloffEnd:")
     public native void setReflectionFalloffEnd(@MachineSizedFloat double v);
     @Mapping("reflectionResolutionScaleFactor")
     public native @MachineSizedFloat double getReflectionResolutionScaleFactor();
+    @Mapping("setReflectionResolutionScaleFactor:")
     public native void setReflectionResolutionScaleFactor(@MachineSizedFloat double v);
     
     

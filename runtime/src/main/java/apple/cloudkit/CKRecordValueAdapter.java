@@ -17,7 +17,7 @@ import apple.corelocation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-
+@Adapter
 public abstract class CKRecordValueAdapter 
     extends Object 
     implements CKRecordValue {

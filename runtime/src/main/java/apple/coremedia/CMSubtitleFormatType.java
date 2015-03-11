@@ -21,7 +21,7 @@ import apple.corevideo.*;
 
 
 
-
+@Library("CoreMedia")
 @Mapping("CMSubtitleFormatType")
 public final class CMSubtitleFormatType extends ObjCEnum {
     

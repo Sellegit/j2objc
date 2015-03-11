@@ -39,12 +39,15 @@ public class AVAudioUnitSampler
     
     @Mapping("stereoPan")
     public native float getStereoPan();
+    @Mapping("setStereoPan:")
     public native void setStereoPan(float v);
     @Mapping("masterGain")
     public native float getMasterGain();
+    @Mapping("setMasterGain:")
     public native void setMasterGain(float v);
     @Mapping("globalTuning")
     public native float getGlobalTuning();
+    @Mapping("setGlobalTuning:")
     public native void setGlobalTuning(float v);
     
     

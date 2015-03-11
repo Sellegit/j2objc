@@ -34,6 +34,7 @@ public class MKPointAnnotation
     
     @Mapping("coordinate")
     public native CLLocationCoordinate2D getCoordinate();
+    @Mapping("setCoordinate:")
     public native void setCoordinate(CLLocationCoordinate2D v);
     
     

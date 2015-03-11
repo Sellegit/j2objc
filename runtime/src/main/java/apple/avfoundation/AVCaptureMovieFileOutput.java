@@ -37,9 +37,11 @@ public class AVCaptureMovieFileOutput
     
     @Mapping("movieFragmentInterval")
     public native CMTime getMovieFragmentInterval();
+    @Mapping("setMovieFragmentInterval:")
     public native void setMovieFragmentInterval(CMTime v);
     @Mapping("metadata")
     public native NSArray<AVMetadataItem> getMetadata();
+    @Mapping("setMetadata:")
     public native void setMetadata(NSArray<AVMetadataItem> v);
     
     

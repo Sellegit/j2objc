@@ -18,7 +18,7 @@ import apple.foundation.*;
 
 
 
-
+@Library("CoreFoundation")
 @Mapping("CFNumberType")
 public final class CFNumberType extends ObjCEnum {
     

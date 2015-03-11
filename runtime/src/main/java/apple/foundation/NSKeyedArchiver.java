@@ -36,9 +36,11 @@ public class NSKeyedArchiver
     
     @Mapping("delegate")
     public native NSKeyedArchiverDelegate getDelegate();
+    @Mapping("setDelegate:")
     public native void setDelegate(NSKeyedArchiverDelegate v);
     @Mapping("outputFormat")
     public native @Representing("NSPropertyListFormat") @MachineSizedUInt long getOutputFormat();
+    @Mapping("setOutputFormat:")
     public native void setOutputFormat(@Representing("NSPropertyListFormat") @MachineSizedUInt long v);
     
     

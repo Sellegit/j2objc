@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 
 
-
+@Library("CFNetwork")
 @Mapping("CFNetServiceOptions")
 public final class CFNetServiceOptions extends ObjCEnum {
     

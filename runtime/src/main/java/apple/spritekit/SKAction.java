@@ -36,9 +36,11 @@ public class SKAction
     
     @Mapping("duration")
     public native double getDuration();
+    @Mapping("setDuration:")
     public native void setDuration(double v);
     @Mapping("timingMode")
     public native @Representing("SKActionTimingMode") @MachineSizedSInt long getTimingMode();
+    @Mapping("setTimingMode:")
     public native void setTimingMode(@Representing("SKActionTimingMode") @MachineSizedSInt long v);
     /**
      * @since Available in iOS 8.0 and later.
@@ -48,9 +50,11 @@ public class SKAction
     /**
      * @since Available in iOS 8.0 and later.
      */
+    @Mapping("setTimingFunction:")
     public native void setTimingFunction(@Block Block1<Float, Float> v);
     @Mapping("speed")
     public native @MachineSizedFloat double getSpeed();
+    @Mapping("setSpeed:")
     public native void setSpeed(@MachineSizedFloat double v);
     
     

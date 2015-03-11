@@ -20,7 +20,7 @@ import apple.coremedia.*;
 
 
 
-
+@Library("AudioToolbox")
 @Mapping("AudioConverterPrimeMethod")
 public final class AudioConverterPrimeMethod extends ObjCEnum {
     

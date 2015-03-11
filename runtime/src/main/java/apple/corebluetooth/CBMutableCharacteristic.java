@@ -34,6 +34,7 @@ public class CBMutableCharacteristic
     
     @Mapping("permissions")
     public native @Representing("CBAttributePermissions") @MachineSizedUInt long getPermissions();
+    @Mapping("setPermissions:")
     public native void setPermissions(@Representing("CBAttributePermissions") @MachineSizedUInt long v);
     /**
      * @since Available in iOS 7.0 and later.
@@ -42,15 +43,19 @@ public class CBMutableCharacteristic
     public native NSArray<CBCentral> getSubscribedCentrals();
     @Mapping("UUID")
     public native CBUUID getUUID();
+    @Mapping("setUUID:")
     public native void setUUID(CBUUID v);
     @Mapping("properties")
     public native @Representing("CBCharacteristicProperties") @MachineSizedUInt long getProperties();
+    @Mapping("setProperties:")
     public native void setProperties(@Representing("CBCharacteristicProperties") @MachineSizedUInt long v);
     @Mapping("value")
     public native NSData getValue();
+    @Mapping("setValue:")
     public native void setValue(NSData v);
     @Mapping("descriptors")
     public native NSArray<CBDescriptor> getDescriptors();
+    @Mapping("setDescriptors:")
     public native void setDescriptors(NSArray<CBDescriptor> v);
     
     

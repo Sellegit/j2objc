@@ -40,30 +40,39 @@ public class SKLabelNode
     
     @Mapping("verticalAlignmentMode")
     public native @Representing("SKLabelVerticalAlignmentMode") @MachineSizedSInt long getVerticalAlignmentMode();
+    @Mapping("setVerticalAlignmentMode:")
     public native void setVerticalAlignmentMode(@Representing("SKLabelVerticalAlignmentMode") @MachineSizedSInt long v);
     @Mapping("horizontalAlignmentMode")
     public native @Representing("SKLabelHorizontalAlignmentMode") @MachineSizedSInt long getHorizontalAlignmentMode();
+    @Mapping("setHorizontalAlignmentMode:")
     public native void setHorizontalAlignmentMode(@Representing("SKLabelHorizontalAlignmentMode") @MachineSizedSInt long v);
     @Mapping("fontName")
     public native String getFontName();
+    @Mapping("setFontName:")
     public native void setFontName(String v);
     @Mapping("text")
     public native String getText();
+    @Mapping("setText:")
     public native void setText(String v);
     @Mapping("fontSize")
     public native @MachineSizedFloat double getFontSize();
+    @Mapping("setFontSize:")
     public native void setFontSize(@MachineSizedFloat double v);
     @Mapping("fontColor")
     public native UIColor getFontColor();
+    @Mapping("setFontColor:")
     public native void setFontColor(UIColor v);
     @Mapping("colorBlendFactor")
     public native @MachineSizedFloat double getColorBlendFactor();
+    @Mapping("setColorBlendFactor:")
     public native void setColorBlendFactor(@MachineSizedFloat double v);
     @Mapping("color")
     public native UIColor getColor();
+    @Mapping("setColor:")
     public native void setColor(UIColor v);
     @Mapping("blendMode")
     public native @Representing("SKBlendMode") @MachineSizedSInt long getBlendMode();
+    @Mapping("setBlendMode:")
     public native void setBlendMode(@Representing("SKBlendMode") @MachineSizedSInt long v);
     
     

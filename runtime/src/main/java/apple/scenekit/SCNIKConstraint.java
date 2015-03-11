@@ -37,6 +37,7 @@ public class SCNIKConstraint
     public native SCNNode getChainRootNode();
     @Mapping("targetPosition")
     public native SCNVector3 getTargetPosition();
+    @Mapping("setTargetPosition:")
     public native void setTargetPosition(SCNVector3 v);
     
     

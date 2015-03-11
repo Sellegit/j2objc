@@ -20,7 +20,7 @@ import apple.coremedia.*;
 
 
 
-
+@Library("AudioToolbox")
 @Mapping("AudioFileLoopDirection")
 public final class AudioFileLoopDirection extends ObjCEnum {
     

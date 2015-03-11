@@ -23,7 +23,7 @@ import apple.opengles.*;
 
 
 
-
+@Library("SceneKit")
 @Mapping("SCNShadowMode")
 public final class SCNShadowMode extends ObjCEnum {
     

@@ -23,7 +23,7 @@ import apple.opengles.*;
 
 
 
-
+@Library("SceneKit")
 @Mapping("SCNConsistencyErrorCode")
 public final class SCNConsistencyErrorCode extends ObjCEnum {
     

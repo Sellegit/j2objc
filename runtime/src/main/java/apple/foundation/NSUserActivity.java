@@ -40,21 +40,27 @@ public class NSUserActivity
     public native String getActivityType();
     @Mapping("title")
     public native String getTitle();
+    @Mapping("setTitle:")
     public native void setTitle(String v);
     @Mapping("userInfo")
     public native NSDictionary<?, ?> getUserInfo();
+    @Mapping("setUserInfo:")
     public native void setUserInfo(NSDictionary<?, ?> v);
     @Mapping("needsSave")
     public native boolean needsSave();
+    @Mapping("setNeedsSave:")
     public native void setNeedsSave(boolean v);
     @Mapping("webpageURL")
     public native NSURL getWebpageURL();
+    @Mapping("setWebpageURL:")
     public native void setWebpageURL(NSURL v);
     @Mapping("supportsContinuationStreams")
     public native boolean supportsContinuationStreams();
+    @Mapping("setSupportsContinuationStreams:")
     public native void setSupportsContinuationStreams(boolean v);
     @Mapping("delegate")
     public native NSUserActivityDelegate getDelegate();
+    @Mapping("setDelegate:")
     public native void setDelegate(NSUserActivityDelegate v);
     
     

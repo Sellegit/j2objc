@@ -34,27 +34,35 @@ public class MKMapSnapshotOptions
     
     @Mapping("camera")
     public native MKMapCamera getCamera();
+    @Mapping("setCamera:")
     public native void setCamera(MKMapCamera v);
     @Mapping("mapRect")
     public native MKMapRect getMapRect();
+    @Mapping("setMapRect:")
     public native void setMapRect(MKMapRect v);
     @Mapping("region")
     public native MKCoordinateRegion getRegion();
+    @Mapping("setRegion:")
     public native void setRegion(MKCoordinateRegion v);
     @Mapping("mapType")
     public native @Representing("MKMapType") @MachineSizedUInt long getMapType();
+    @Mapping("setMapType:")
     public native void setMapType(@Representing("MKMapType") @MachineSizedUInt long v);
     @Mapping("showsPointsOfInterest")
     public native boolean showsPointsOfInterest();
+    @Mapping("setShowsPointsOfInterest:")
     public native void setShowsPointsOfInterest(boolean v);
     @Mapping("showsBuildings")
     public native boolean showsBuildings();
+    @Mapping("setShowsBuildings:")
     public native void setShowsBuildings(boolean v);
     @Mapping("size")
     public native CGSize getSize();
+    @Mapping("setSize:")
     public native void setSize(CGSize v);
     @Mapping("scale")
     public native @MachineSizedFloat double getScale();
+    @Mapping("setScale:")
     public native void setScale(@MachineSizedFloat double v);
     
     

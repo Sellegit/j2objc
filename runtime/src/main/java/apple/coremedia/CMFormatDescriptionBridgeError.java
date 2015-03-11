@@ -21,7 +21,7 @@ import apple.corevideo.*;
 
 
 
-
+@Library("CoreMedia")
 @Mapping("CMFormatDescriptionBridgeError")
 public final class CMFormatDescriptionBridgeError extends ObjCEnum {
     

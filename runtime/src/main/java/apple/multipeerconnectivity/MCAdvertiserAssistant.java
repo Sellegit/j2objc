@@ -35,6 +35,7 @@ public class MCAdvertiserAssistant
     
     @Mapping("delegate")
     public native MCAdvertiserAssistantDelegate getDelegate();
+    @Mapping("setDelegate:")
     public native void setDelegate(MCAdvertiserAssistantDelegate v);
     @Mapping("session")
     public native MCSession getSession();

@@ -20,7 +20,7 @@ import apple.coremedia.*;
 
 
 
-
+@Library("AudioToolbox")
 @Mapping("AUNodeInteraction")
 public final class AUNodeInteraction extends ObjCEnum {
     

@@ -28,6 +28,7 @@ public interface MTLResource
     
     @Mapping("label")
     String getLabel();
+    @Mapping("setLabel:")
     void setLabel(String v);
     @Mapping("device")
     MTLDevice getDevice();

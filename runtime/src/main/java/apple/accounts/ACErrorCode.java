@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 
 
-
+@Library("Accounts")
 @Mapping("ACErrorCode")
 public final class ACErrorCode extends ObjCEnum {
     

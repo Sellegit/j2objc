@@ -32,9 +32,11 @@ public class MPRatingCommand
     
     @Mapping("minimumRating")
     public native float getMinimumRating();
+    @Mapping("setMinimumRating:")
     public native void setMinimumRating(float v);
     @Mapping("maximumRating")
     public native float getMaximumRating();
+    @Mapping("setMaximumRating:")
     public native void setMaximumRating(float v);
     
     

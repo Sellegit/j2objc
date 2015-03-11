@@ -50,6 +50,7 @@ public class NSFileHandle
     /**
      * @since Available in iOS 5.0 and later.
      */
+    @Mapping("setReadabilityHandler:")
     public native void setReadabilityHandler(@Block VoidBlock1<NSFileHandle> v);
     /**
      * @since Available in iOS 5.0 and later.
@@ -59,6 +60,7 @@ public class NSFileHandle
     /**
      * @since Available in iOS 5.0 and later.
      */
+    @Mapping("setWriteabilityHandler:")
     public native void setWriteabilityHandler(@Block VoidBlock1<NSFileHandle> v);
     @Mapping("fileDescriptor")
     public native int getFileDescriptor();

@@ -39,6 +39,7 @@ public class AVAudioUnitReverb
     
     @Mapping("wetDryMix")
     public native float getWetDryMix();
+    @Mapping("setWetDryMix:")
     public native void setWetDryMix(float v);
     
     

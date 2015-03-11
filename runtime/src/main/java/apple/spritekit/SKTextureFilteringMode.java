@@ -26,7 +26,7 @@ import apple.scenekit.*;
  * @since Available in iOS 7.0 and later.
  */
 
-
+@Library("SpriteKit")
 @Mapping("SKTextureFilteringMode")
 public final class SKTextureFilteringMode extends ObjCEnum {
     

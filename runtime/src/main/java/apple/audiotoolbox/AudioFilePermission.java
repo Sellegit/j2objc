@@ -20,7 +20,7 @@ import apple.coremedia.*;
 
 
 
-
+@Library("AudioToolbox")
 @Mapping("AudioFilePermission")
 public final class AudioFilePermission extends ObjCEnum {
     

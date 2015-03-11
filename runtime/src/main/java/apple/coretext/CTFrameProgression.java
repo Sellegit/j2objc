@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 
 
-
+@Library("CoreText")
 @Mapping("CTFrameProgression")
 public final class CTFrameProgression extends ObjCEnum {
     

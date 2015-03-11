@@ -23,7 +23,7 @@ import apple.scenekit.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-
+@Adapter
 public abstract class SKSceneDelegateAdapter 
     extends Object 
     implements SKSceneDelegate {

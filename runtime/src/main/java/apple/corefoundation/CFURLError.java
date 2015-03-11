@@ -22,7 +22,7 @@ import apple.foundation.*;
  */
 @Deprecated
 
-
+@Library("CoreFoundation")
 @Mapping("CFURLError")
 public final class CFURLError extends ObjCEnum {
     

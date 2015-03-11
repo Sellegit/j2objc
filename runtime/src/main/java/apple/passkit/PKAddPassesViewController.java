@@ -42,6 +42,7 @@ public class PKAddPassesViewController
     
     @Mapping("delegate")
     public native PKAddPassesViewControllerDelegate getDelegate();
+    @Mapping("setDelegate:")
     public native void setDelegate(PKAddPassesViewControllerDelegate v);
     
     

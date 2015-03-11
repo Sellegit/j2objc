@@ -21,7 +21,7 @@ import apple.dispatch.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-
+@Adapter
 public abstract class NSURLConnectionDelegateAdapter 
     extends Object 
     implements NSURLConnectionDelegate {

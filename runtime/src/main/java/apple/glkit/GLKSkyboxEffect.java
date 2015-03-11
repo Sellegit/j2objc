@@ -34,15 +34,19 @@ public class GLKSkyboxEffect
     
     @Mapping("center")
     public native GLKVector3 getCenter();
+    @Mapping("setCenter:")
     public native void setCenter(GLKVector3 v);
     @Mapping("xSize")
     public native float getXSize();
+    @Mapping("setXSize:")
     public native void setXSize(float v);
     @Mapping("ySize")
     public native float getYSize();
+    @Mapping("setYSize:")
     public native void setYSize(float v);
     @Mapping("zSize")
     public native float getZSize();
+    @Mapping("setZSize:")
     public native void setZSize(float v);
     @Mapping("textureCubeMap")
     public native GLKEffectPropertyTexture getTextureCubeMap();
@@ -50,6 +54,7 @@ public class GLKSkyboxEffect
     public native GLKEffectPropertyTransform getTransform();
     @Mapping("label")
     public native String getLabel();
+    @Mapping("setLabel:")
     public native void setLabel(String v);
     
     

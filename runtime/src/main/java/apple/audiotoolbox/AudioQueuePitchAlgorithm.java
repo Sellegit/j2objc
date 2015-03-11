@@ -20,7 +20,7 @@ import apple.coremedia.*;
 
 
 
-
+@Library("AudioToolbox")
 @Mapping("AudioQueuePitchAlgorithm")
 public final class AudioQueuePitchAlgorithm extends ObjCEnum {
     

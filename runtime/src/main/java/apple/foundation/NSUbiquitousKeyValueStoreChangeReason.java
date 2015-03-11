@@ -22,7 +22,7 @@ import apple.dispatch.*;
 
 
 
-
+@Library("Foundation")
 @Mapping("NSUbiquitousKeyValueStoreChangeReason")
 public final class NSUbiquitousKeyValueStoreChangeReason extends ObjCEnum {
     

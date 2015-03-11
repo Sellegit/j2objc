@@ -34,12 +34,15 @@ public class GLKBaseEffect
     
     @Mapping("colorMaterialEnabled")
     public native boolean isColorMaterialEnabled();
+    @Mapping("setColorMaterialEnabled:")
     public native void setColorMaterialEnabled(boolean v);
     @Mapping("lightModelTwoSided")
     public native boolean isLightModelTwoSided();
+    @Mapping("setLightModelTwoSided:")
     public native void setLightModelTwoSided(boolean v);
     @Mapping("useConstantColor")
     public native boolean usesConstantColor();
+    @Mapping("setUseConstantColor:")
     public native void setUsesConstantColor(boolean v);
     @Mapping("transform")
     public native GLKEffectPropertyTransform getTransform();
@@ -51,9 +54,11 @@ public class GLKBaseEffect
     public native GLKEffectPropertyLight getLight2();
     @Mapping("lightingType")
     public native @Representing("GLKLightingType") int getLightingType();
+    @Mapping("setLightingType:")
     public native void setLightingType(@Representing("GLKLightingType") int v);
     @Mapping("lightModelAmbientColor")
     public native GLKVector4 getLightModelAmbientColor();
+    @Mapping("setLightModelAmbientColor:")
     public native void setLightModelAmbientColor(GLKVector4 v);
     @Mapping("material")
     public native GLKEffectPropertyMaterial getMaterial();
@@ -63,14 +68,17 @@ public class GLKBaseEffect
     public native GLKEffectPropertyTexture getTexture2d1();
     @Mapping("textureOrder")
     public native NSArray<GLKEffectPropertyTexture> getTextureOrder();
+    @Mapping("setTextureOrder:")
     public native void setTextureOrder(NSArray<GLKEffectPropertyTexture> v);
     @Mapping("constantColor")
     public native GLKVector4 getConstantColor();
+    @Mapping("setConstantColor:")
     public native void setConstantColor(GLKVector4 v);
     @Mapping("fog")
     public native GLKEffectPropertyFog getFog();
     @Mapping("label")
     public native String getLabel();
+    @Mapping("setLabel:")
     public native void setLabel(String v);
     
     

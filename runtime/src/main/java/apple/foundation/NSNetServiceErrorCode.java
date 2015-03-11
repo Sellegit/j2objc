@@ -22,7 +22,7 @@ import apple.dispatch.*;
 
 
 
-
+@Library("Foundation")
 @Mapping("NSNetServiceErrorCode")
 public final class NSNetServiceErrorCode extends ObjCEnum {
     

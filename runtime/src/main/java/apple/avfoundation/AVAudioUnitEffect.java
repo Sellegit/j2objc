@@ -39,6 +39,7 @@ public class AVAudioUnitEffect
     
     @Mapping("bypass")
     public native boolean isBypass();
+    @Mapping("setBypass:")
     public native void setBypass(boolean v);
     
     

@@ -31,6 +31,7 @@ public class NSPersistentStoreRequest
     
     @Mapping("affectedStores")
     public native List<String> getAffectedStores();
+    @Mapping("setAffectedStores:")
     public native void setAffectedStores(List<String> v);
     @Mapping("requestType")
     public native @Representing("NSPersistentStoreRequestType") @MachineSizedUInt long getRequestType();

@@ -31,6 +31,7 @@ public class HMHomeManager
     
     @Mapping("delegate")
     public native HMHomeManagerDelegate getDelegate();
+    @Mapping("setDelegate:")
     public native void setDelegate(HMHomeManagerDelegate v);
     @Mapping("primaryHome")
     public native HMHome getPrimaryHome();

@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 
 
-
+@Library("Accounts")
 @Mapping("ACAccountCredentialRenewResult")
 public final class ACAccountCredentialRenewResult extends ObjCEnum {
     

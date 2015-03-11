@@ -41,18 +41,23 @@ public class SCNScene
     public native SCNMaterialProperty getBackground();
     @Mapping("fogStartDistance")
     public native @MachineSizedFloat double getFogStartDistance();
+    @Mapping("setFogStartDistance:")
     public native void setFogStartDistance(@MachineSizedFloat double v);
     @Mapping("fogEndDistance")
     public native @MachineSizedFloat double getFogEndDistance();
+    @Mapping("setFogEndDistance:")
     public native void setFogEndDistance(@MachineSizedFloat double v);
     @Mapping("fogDensityExponent")
     public native @MachineSizedFloat double getFogDensityExponent();
+    @Mapping("setFogDensityExponent:")
     public native void setFogDensityExponent(@MachineSizedFloat double v);
     @Mapping("fogColor")
     public native UIColor getFogColor();
+    @Mapping("setFogColor:")
     public native void setFogColor(UIColor v);
     @Mapping("isPaused")
     public native boolean isPaused();
+    @Mapping("setPaused:")
     public native void setPaused(boolean v);
     @Mapping("particleSystems")
     public native NSArray<SCNParticleSystem> getParticleSystems();

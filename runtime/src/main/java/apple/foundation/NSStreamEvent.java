@@ -22,7 +22,7 @@ import apple.dispatch.*;
 
 
 
-
+@Library("Foundation")
 @Mapping("NSStreamEvent")
 public final class NSStreamEvent extends ObjCEnum {
     

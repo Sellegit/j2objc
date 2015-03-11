@@ -17,7 +17,7 @@ import apple.dispatch.*;
 
 
 
-
+@Library("Security")
 @Mapping("SSLClientCertificateState")
 public final class SSLClientCertificateState extends ObjCEnum {
     

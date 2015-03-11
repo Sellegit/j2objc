@@ -34,6 +34,7 @@ public class NSStream
     
     @Mapping("delegate")
     public native NSStreamDelegate getDelegate();
+    @Mapping("setDelegate:")
     public native void setDelegate(NSStreamDelegate v);
     @Mapping("streamStatus")
     public native @Representing("NSStreamStatus") @MachineSizedUInt long getStreamStatus();

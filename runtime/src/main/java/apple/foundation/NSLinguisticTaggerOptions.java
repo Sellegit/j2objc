@@ -22,7 +22,7 @@ import apple.dispatch.*;
 
 
 
-
+@Library("Foundation")
 @Mapping("NSLinguisticTaggerOptions")
 public final class NSLinguisticTaggerOptions extends ObjCEnum {
     

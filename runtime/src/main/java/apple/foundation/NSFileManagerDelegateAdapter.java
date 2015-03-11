@@ -21,7 +21,7 @@ import apple.dispatch.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-
+@Adapter
 public abstract class NSFileManagerDelegateAdapter 
     extends Object 
     implements NSFileManagerDelegate {

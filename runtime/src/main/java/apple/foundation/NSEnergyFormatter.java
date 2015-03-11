@@ -36,12 +36,15 @@ public class NSEnergyFormatter
     
     @Mapping("numberFormatter")
     public native NSNumberFormatter getNumberFormatter();
+    @Mapping("setNumberFormatter:")
     public native void setNumberFormatter(NSNumberFormatter v);
     @Mapping("unitStyle")
     public native @Representing("NSFormattingUnitStyle") @MachineSizedSInt long getUnitStyle();
+    @Mapping("setUnitStyle:")
     public native void setUnitStyle(@Representing("NSFormattingUnitStyle") @MachineSizedSInt long v);
     @Mapping("isForFoodEnergyUse")
     public native boolean isForFoodEnergyUse();
+    @Mapping("setForFoodEnergyUse:")
     public native void setForFoodEnergyUse(boolean v);
     
     

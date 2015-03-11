@@ -36,9 +36,11 @@ public class SKPhysicsJointSpring
     
     @Mapping("damping")
     public native @MachineSizedFloat double getDamping();
+    @Mapping("setDamping:")
     public native void setDamping(@MachineSizedFloat double v);
     @Mapping("frequency")
     public native @MachineSizedFloat double getFrequency();
+    @Mapping("setFrequency:")
     public native void setFrequency(@MachineSizedFloat double v);
     
     

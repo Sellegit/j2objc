@@ -31,12 +31,15 @@ public class NSPropertyMapping
     
     @Mapping("name")
     public native String getName();
+    @Mapping("setName:")
     public native void setName(String v);
     @Mapping("valueExpression")
     public native NSExpression getValueExpression();
+    @Mapping("setValueExpression:")
     public native void setValueExpression(NSExpression v);
     @Mapping("userInfo")
     public native NSDictionary<?, ?> getUserInfo();
+    @Mapping("setUserInfo:")
     public native void setUserInfo(NSDictionary<?, ?> v);
     
     

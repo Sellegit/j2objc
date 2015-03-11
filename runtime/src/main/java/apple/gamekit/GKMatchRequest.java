@@ -32,15 +32,19 @@ public class GKMatchRequest
     
     @Mapping("minPlayers")
     public native @MachineSizedUInt long getMinPlayers();
+    @Mapping("setMinPlayers:")
     public native void setMinPlayers(@MachineSizedUInt long v);
     @Mapping("maxPlayers")
     public native @MachineSizedUInt long getMaxPlayers();
+    @Mapping("setMaxPlayers:")
     public native void setMaxPlayers(@MachineSizedUInt long v);
     @Mapping("playerGroup")
     public native @MachineSizedUInt long getPlayerGroup();
+    @Mapping("setPlayerGroup:")
     public native void setPlayerGroup(@MachineSizedUInt long v);
     @Mapping("playerAttributes")
     public native int getPlayerAttributes();
+    @Mapping("setPlayerAttributes:")
     public native void setPlayerAttributes(int v);
     /**
      * @since Available in iOS 8.0 and later.
@@ -50,6 +54,7 @@ public class GKMatchRequest
     /**
      * @since Available in iOS 8.0 and later.
      */
+    @Mapping("setRecipients:")
     public native void setRecipients(NSArray<GKPlayer> v);
     /**
      * @since Available in iOS 4.1 and later.
@@ -63,6 +68,7 @@ public class GKMatchRequest
      * @deprecated Deprecated in iOS 8.0.
      */
     @Deprecated
+    @Mapping("setPlayersToInvite:")
     public native void setPlayersToInvite(List<String> v);
     /**
      * @since Available in iOS 6.0 and later.
@@ -72,6 +78,7 @@ public class GKMatchRequest
     /**
      * @since Available in iOS 6.0 and later.
      */
+    @Mapping("setInviteMessage:")
     public native void setInviteMessage(String v);
     /**
      * @since Available in iOS 6.0 and later.
@@ -81,6 +88,7 @@ public class GKMatchRequest
     /**
      * @since Available in iOS 6.0 and later.
      */
+    @Mapping("setDefaultNumberOfPlayers:")
     public native void setDefaultNumberOfPlayers(@MachineSizedUInt long v);
     /**
      * @since Available in iOS 8.0 and later.
@@ -90,6 +98,7 @@ public class GKMatchRequest
     /**
      * @since Available in iOS 8.0 and later.
      */
+    @Mapping("setRecipientResponseHandler:")
     public native void setRecipientResponseHandler(@Block VoidBlock2<GKPlayer, GKInviteRecipientResponse> v);
     /**
      * @since Available in iOS 6.0 and later.
@@ -103,6 +112,7 @@ public class GKMatchRequest
      * @deprecated Deprecated in iOS 8.0.
      */
     @Deprecated
+    @Mapping("setInviteeResponseHandler:")
     public native void setInviteeResponseHandler(@Block VoidBlock2<String, GKInviteeResponse> v);
     
     

@@ -17,7 +17,7 @@ import apple.uikit.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-
+@Adapter
 public abstract class GKTurnBasedMatchmakerViewControllerDelegateAdapter 
     extends Object 
     implements GKTurnBasedMatchmakerViewControllerDelegate {

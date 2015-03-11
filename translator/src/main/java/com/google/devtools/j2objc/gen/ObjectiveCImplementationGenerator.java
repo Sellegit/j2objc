@@ -590,7 +590,6 @@ public class ObjectiveCImplementationGenerator extends ObjectiveCSourceFileGener
   }
 
   private void printImports(CompilationUnit node) {
-    System.out.println("Begins implementation import collect");
     ImplementationImportCollector collector = new ImplementationImportCollector();
     collector.collect(node);
     Set<Import> imports = collector.getImports();

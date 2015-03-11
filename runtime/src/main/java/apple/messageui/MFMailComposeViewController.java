@@ -34,6 +34,7 @@ public class MFMailComposeViewController
     
     @Mapping("mailComposeDelegate")
     public native MFMailComposeViewControllerDelegate getMailComposeDelegate();
+    @Mapping("setMailComposeDelegate:")
     public native void setMailComposeDelegate(MFMailComposeViewControllerDelegate v);
     
     

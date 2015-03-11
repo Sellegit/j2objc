@@ -36,21 +36,27 @@ public class NSDateIntervalFormatter
     
     @Mapping("locale")
     public native NSLocale getLocale();
+    @Mapping("setLocale:")
     public native void setLocale(NSLocale v);
     @Mapping("calendar")
     public native NSCalendar getCalendar();
+    @Mapping("setCalendar:")
     public native void setCalendar(NSCalendar v);
     @Mapping("timeZone")
     public native NSTimeZone getTimeZone();
+    @Mapping("setTimeZone:")
     public native void setTimeZone(NSTimeZone v);
     @Mapping("dateTemplate")
     public native String getDateTemplate();
+    @Mapping("setDateTemplate:")
     public native void setDateTemplate(String v);
     @Mapping("dateStyle")
     public native @Representing("NSDateIntervalFormatterStyle") @MachineSizedUInt long getDateStyle();
+    @Mapping("setDateStyle:")
     public native void setDateStyle(@Representing("NSDateIntervalFormatterStyle") @MachineSizedUInt long v);
     @Mapping("timeStyle")
     public native @Representing("NSDateIntervalFormatterStyle") @MachineSizedUInt long getTimeStyle();
+    @Mapping("setTimeStyle:")
     public native void setTimeStyle(@Representing("NSDateIntervalFormatterStyle") @MachineSizedUInt long v);
     
     

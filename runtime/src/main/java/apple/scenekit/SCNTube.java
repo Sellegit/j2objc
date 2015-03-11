@@ -35,18 +35,23 @@ public class SCNTube
     
     @Mapping("innerRadius")
     public native @MachineSizedFloat double getInnerRadius();
+    @Mapping("setInnerRadius:")
     public native void setInnerRadius(@MachineSizedFloat double v);
     @Mapping("outerRadius")
     public native @MachineSizedFloat double getOuterRadius();
+    @Mapping("setOuterRadius:")
     public native void setOuterRadius(@MachineSizedFloat double v);
     @Mapping("height")
     public native @MachineSizedFloat double getHeight();
+    @Mapping("setHeight:")
     public native void setHeight(@MachineSizedFloat double v);
     @Mapping("radialSegmentCount")
     public native @MachineSizedSInt long getRadialSegmentCount();
+    @Mapping("setRadialSegmentCount:")
     public native void setRadialSegmentCount(@MachineSizedSInt long v);
     @Mapping("heightSegmentCount")
     public native @MachineSizedSInt long getHeightSegmentCount();
+    @Mapping("setHeightSegmentCount:")
     public native void setHeightSegmentCount(@MachineSizedSInt long v);
     
     

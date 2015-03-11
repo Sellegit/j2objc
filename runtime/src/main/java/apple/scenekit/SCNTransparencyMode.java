@@ -23,7 +23,7 @@ import apple.opengles.*;
 
 
 
-
+@Library("SceneKit")
 @Mapping("SCNTransparencyMode")
 public final class SCNTransparencyMode extends ObjCEnum {
     

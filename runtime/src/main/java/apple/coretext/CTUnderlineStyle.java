@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 
 
-
+@Library("CoreText")
 @Mapping("CTUnderlineStyle")
 public final class CTUnderlineStyle extends ObjCEnum {
     

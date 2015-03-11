@@ -22,7 +22,7 @@ import apple.dispatch.*;
 
 
 
-
+@Library("Foundation")
 @Mapping("NSNumberFormatterStyle")
 public final class NSNumberFormatterStyle extends ObjCEnum {
     

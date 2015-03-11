@@ -43,9 +43,11 @@ public class AVPlayerItemLegibleOutput
     public native DispatchQueue getDelegateQueue();
     @Mapping("advanceIntervalForDelegateInvocation")
     public native double getAdvanceIntervalForDelegateInvocation();
+    @Mapping("setAdvanceIntervalForDelegateInvocation:")
     public native void setAdvanceIntervalForDelegateInvocation(double v);
     @Mapping("textStylingResolution")
     public native AVPlayerItemLegibleOutputTextStylingResolution getTextStylingResolution();
+    @Mapping("setTextStylingResolution:")
     public native void setTextStylingResolution(AVPlayerItemLegibleOutputTextStylingResolution v);
     
     

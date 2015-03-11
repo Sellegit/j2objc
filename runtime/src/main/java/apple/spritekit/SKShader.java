@@ -42,9 +42,11 @@ public class SKShader
     
     @Mapping("source")
     public native String getSource();
+    @Mapping("setSource:")
     public native void setSource(String v);
     @Mapping("uniforms")
     public native NSArray<SKUniform> getUniforms();
+    @Mapping("setUniforms:")
     public native void setUniforms(NSArray<SKUniform> v);
     
     

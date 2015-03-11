@@ -23,7 +23,7 @@ import apple.mediatoolbox.*;
 
 
 
-
+@Library("AVFoundation")
 @Mapping("AVPlayerStatus")
 public final class AVPlayerStatus extends ObjCEnum {
     

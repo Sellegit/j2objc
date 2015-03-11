@@ -52,6 +52,7 @@ public class CLBeaconRegion
     public native NSNumber getMinor();
     @Mapping("notifyEntryStateOnDisplay")
     public native boolean notifiesEntryStateOnDisplay();
+    @Mapping("setNotifyEntryStateOnDisplay:")
     public native void setNotifiesEntryStateOnDisplay(boolean v);
     
     

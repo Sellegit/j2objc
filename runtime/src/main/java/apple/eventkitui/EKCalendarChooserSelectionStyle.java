@@ -19,7 +19,7 @@ import apple.uikit.*;
 
 
 
-
+@Library("EventKitUI")
 @Mapping("EKCalendarChooserSelectionStyle")
 public final class EKCalendarChooserSelectionStyle extends ObjCEnum {
     

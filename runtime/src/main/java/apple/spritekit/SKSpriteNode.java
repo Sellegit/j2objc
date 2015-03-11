@@ -46,6 +46,7 @@ public class SKSpriteNode
     
     @Mapping("texture")
     public native SKTexture getTexture();
+    @Mapping("setTexture:")
     public native void setTexture(SKTexture v);
     /**
      * @since Available in iOS 8.0 and later.
@@ -55,6 +56,7 @@ public class SKSpriteNode
     /**
      * @since Available in iOS 8.0 and later.
      */
+    @Mapping("setNormalTexture:")
     public native void setNormalTexture(SKTexture v);
     /**
      * @since Available in iOS 8.0 and later.
@@ -64,6 +66,7 @@ public class SKSpriteNode
     /**
      * @since Available in iOS 8.0 and later.
      */
+    @Mapping("setLightingBitMask:")
     public native void setLightingBitMask(int v);
     /**
      * @since Available in iOS 8.0 and later.
@@ -73,6 +76,7 @@ public class SKSpriteNode
     /**
      * @since Available in iOS 8.0 and later.
      */
+    @Mapping("setShadowCastBitMask:")
     public native void setShadowCastBitMask(int v);
     /**
      * @since Available in iOS 8.0 and later.
@@ -82,24 +86,31 @@ public class SKSpriteNode
     /**
      * @since Available in iOS 8.0 and later.
      */
+    @Mapping("setShadowedBitMask:")
     public native void setShadowedBitMask(int v);
     @Mapping("centerRect")
     public native CGRect getCenterRect();
+    @Mapping("setCenterRect:")
     public native void setCenterRect(CGRect v);
     @Mapping("colorBlendFactor")
     public native @MachineSizedFloat double getColorBlendFactor();
+    @Mapping("setColorBlendFactor:")
     public native void setColorBlendFactor(@MachineSizedFloat double v);
     @Mapping("color")
     public native UIColor getColor();
+    @Mapping("setColor:")
     public native void setColor(UIColor v);
     @Mapping("blendMode")
     public native @Representing("SKBlendMode") @MachineSizedSInt long getBlendMode();
+    @Mapping("setBlendMode:")
     public native void setBlendMode(@Representing("SKBlendMode") @MachineSizedSInt long v);
     @Mapping("anchorPoint")
     public native CGPoint getAnchorPoint();
+    @Mapping("setAnchorPoint:")
     public native void setAnchorPoint(CGPoint v);
     @Mapping("size")
     public native CGSize getSize();
+    @Mapping("setSize:")
     public native void setSize(CGSize v);
     /**
      * @since Available in iOS 8.0 and later.
@@ -109,6 +120,7 @@ public class SKSpriteNode
     /**
      * @since Available in iOS 8.0 and later.
      */
+    @Mapping("setShader:")
     public native void setShader(SKShader v);
     
     

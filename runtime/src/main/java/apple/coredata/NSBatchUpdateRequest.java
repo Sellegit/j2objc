@@ -39,15 +39,19 @@ public class NSBatchUpdateRequest
     public native NSEntityDescription getEntity();
     @Mapping("predicate")
     public native NSPredicate getPredicate();
+    @Mapping("setPredicate:")
     public native void setPredicate(NSPredicate v);
     @Mapping("includesSubentities")
     public native boolean includesSubentities();
+    @Mapping("setIncludesSubentities:")
     public native void setIncludesSubentities(boolean v);
     @Mapping("resultType")
     public native @Representing("NSBatchUpdateRequestResultType") @MachineSizedUInt long getResultType();
+    @Mapping("setResultType:")
     public native void setResultType(@Representing("NSBatchUpdateRequestResultType") @MachineSizedUInt long v);
     @Mapping("propertiesToUpdate")
     public native Map<String, NSExpression> getPropertiesToUpdate();
+    @Mapping("setPropertiesToUpdate:")
     public native void setPropertiesToUpdate(Map<String, NSExpression> v);
     
     

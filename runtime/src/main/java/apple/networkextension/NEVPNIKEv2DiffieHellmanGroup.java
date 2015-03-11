@@ -19,7 +19,7 @@ import apple.foundation.*;
  * @since Available in iOS 8.0 and later.
  */
 
-
+@Library("NetworkExtension")
 @Mapping("NEVPNIKEv2DiffieHellmanGroup")
 public final class NEVPNIKEv2DiffieHellmanGroup extends ObjCEnum {
     

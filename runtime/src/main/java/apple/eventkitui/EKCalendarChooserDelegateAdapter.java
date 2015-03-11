@@ -18,7 +18,7 @@ import apple.uikit.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-
+@Adapter
 public abstract class EKCalendarChooserDelegateAdapter 
     extends Object 
     implements EKCalendarChooserDelegate {

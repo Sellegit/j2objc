@@ -20,7 +20,7 @@ import apple.metal.*;
 
 
 
-
+@Library("CoreVideo")
 @Mapping("CVSMPTETimeType")
 public final class CVSMPTETimeType extends ObjCEnum {
     

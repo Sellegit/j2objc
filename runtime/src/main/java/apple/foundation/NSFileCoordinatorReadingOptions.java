@@ -22,7 +22,7 @@ import apple.dispatch.*;
 
 
 
-
+@Library("Foundation")
 @Mapping("NSFileCoordinatorReadingOptions")
 public final class NSFileCoordinatorReadingOptions extends ObjCEnum {
     

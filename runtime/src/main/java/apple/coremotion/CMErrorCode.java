@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 
 
-
+@Library("CoreMotion")
 @Mapping("CMErrorCode")
 public final class CMErrorCode extends ObjCEnum {
     

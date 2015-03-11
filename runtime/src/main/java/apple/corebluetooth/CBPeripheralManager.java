@@ -39,6 +39,7 @@ public class CBPeripheralManager
     
     @Mapping("delegate")
     public native CBPeripheralManagerDelegate getDelegate();
+    @Mapping("setDelegate:")
     public native void setDelegate(CBPeripheralManagerDelegate v);
     @Mapping("state")
     public native @Representing("CBPeripheralManagerState") @MachineSizedSInt long getState();

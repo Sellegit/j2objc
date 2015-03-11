@@ -35,11 +35,13 @@ public class NSManagedObjectModel
     public native Map<String, NSEntityDescription> getEntitiesByName();
     @Mapping("entities")
     public native NSArray<NSEntityDescription> getEntities();
+    @Mapping("setEntities:")
     public native void setEntities(NSArray<NSEntityDescription> v);
     @Mapping("configurations")
     public native List<String> getConfigurations();
     @Mapping("localizationDictionary")
     public native Map<String, String> getLocalizationDictionary();
+    @Mapping("setLocalizationDictionary:")
     public native void setLocalizationDictionary(Map<String, String> v);
     /**
      * @since Available in iOS 3.0 and later.
@@ -54,6 +56,7 @@ public class NSManagedObjectModel
     /**
      * @since Available in iOS 3.0 and later.
      */
+    @Mapping("setVersionIdentifiers:")
     public native void setVersionIdentifiers(NSSet<?> v);
     /**
      * @since Available in iOS 3.0 and later.

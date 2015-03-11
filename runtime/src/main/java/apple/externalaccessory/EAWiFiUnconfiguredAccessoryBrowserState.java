@@ -19,7 +19,7 @@ import apple.dispatch.*;
 
 
 
-
+@Library("ExternalAccessory")
 @Mapping("EAWiFiUnconfiguredAccessoryBrowserState")
 public final class EAWiFiUnconfiguredAccessoryBrowserState extends ObjCEnum {
     

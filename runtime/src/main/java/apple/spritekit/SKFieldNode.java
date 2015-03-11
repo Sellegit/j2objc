@@ -40,36 +40,47 @@ public class SKFieldNode
     
     @Mapping("region")
     public native SKRegion getRegion();
+    @Mapping("setRegion:")
     public native void setRegion(SKRegion v);
     @Mapping("strength")
     public native float getStrength();
+    @Mapping("setStrength:")
     public native void setStrength(float v);
     @Mapping("falloff")
     public native float getFalloff();
+    @Mapping("setFalloff:")
     public native void setFalloff(float v);
     @Mapping("minimumRadius")
     public native float getMinimumRadius();
+    @Mapping("setMinimumRadius:")
     public native void setMinimumRadius(float v);
     @Mapping("isEnabled")
     public native boolean isEnabled();
+    @Mapping("setEnabled:")
     public native void setEnabled(boolean v);
     @Mapping("isExclusive")
     public native boolean isExclusive();
+    @Mapping("setExclusive:")
     public native void setExclusive(boolean v);
     @Mapping("categoryBitMask")
     public native int getCategoryBitMask();
+    @Mapping("setCategoryBitMask:")
     public native void setCategoryBitMask(int v);
     @Mapping("direction")
     public native SKVector3 getDirection();
+    @Mapping("setDirection:")
     public native void setDirection(SKVector3 v);
     @Mapping("smoothness")
     public native float getSmoothness();
+    @Mapping("setSmoothness:")
     public native void setSmoothness(float v);
     @Mapping("animationSpeed")
     public native float getAnimationSpeed();
+    @Mapping("setAnimationSpeed:")
     public native void setAnimationSpeed(float v);
     @Mapping("texture")
     public native SKTexture getTexture();
+    @Mapping("setTexture:")
     public native void setTexture(SKTexture v);
     
     

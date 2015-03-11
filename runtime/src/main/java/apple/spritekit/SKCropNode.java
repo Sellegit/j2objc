@@ -38,6 +38,7 @@ public class SKCropNode
     
     @Mapping("maskNode")
     public native SKNode getMaskNode();
+    @Mapping("setMaskNode:")
     public native void setMaskNode(SKNode v);
     
     

@@ -23,7 +23,7 @@ import apple.opengles.*;
 
 
 
-
+@Library("SceneKit")
 @Mapping("SCNParticleOrientationMode")
 public final class SCNParticleOrientationMode extends ObjCEnum {
     

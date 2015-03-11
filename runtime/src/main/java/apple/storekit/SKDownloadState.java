@@ -21,7 +21,7 @@ import apple.accounts.*;
  * @since Available in iOS 6.0 and later.
  */
 
-
+@Library("StoreKit")
 @Mapping("SKDownloadState")
 public final class SKDownloadState extends ObjCEnum {
     

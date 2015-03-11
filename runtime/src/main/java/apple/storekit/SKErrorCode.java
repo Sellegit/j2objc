@@ -19,7 +19,7 @@ import apple.accounts.*;
 
 
 
-
+@Library("StoreKit")
 @Mapping("SKErrorCode")
 public final class SKErrorCode extends ObjCEnum {
     

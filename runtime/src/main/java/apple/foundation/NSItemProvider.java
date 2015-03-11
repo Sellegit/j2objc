@@ -48,6 +48,7 @@ public class NSItemProvider
     /**
      * @since Available in iOS 8.0 and later.
      */
+    @Mapping("setPreviewImageHandler:")
     public native void setPreviewImageHandler(@Block("(@Block,,)") VoidBlock3<VoidBlock2<NSObject, NSError>, ObjCClass, NSDictionary<NSString, NSObject>> v);
     
     

@@ -21,7 +21,7 @@ import apple.corevideo.*;
 
 
 
-
+@Library("CoreMedia")
 @Mapping("CMMPEG2VideoProfile")
 public final class CMMPEG2VideoProfile extends ObjCEnum {
     

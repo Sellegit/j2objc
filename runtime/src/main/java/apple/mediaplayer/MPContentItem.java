@@ -36,21 +36,27 @@ public class MPContentItem
     public native String getIdentifier();
     @Mapping("title")
     public native String getTitle();
+    @Mapping("setTitle:")
     public native void setTitle(String v);
     @Mapping("subtitle")
     public native String getSubtitle();
+    @Mapping("setSubtitle:")
     public native void setSubtitle(String v);
     @Mapping("artwork")
     public native MPMediaItemArtwork getArtwork();
+    @Mapping("setArtwork:")
     public native void setArtwork(MPMediaItemArtwork v);
     @Mapping("isContainer")
     public native boolean isContainer();
+    @Mapping("setContainer:")
     public native void setContainer(boolean v);
     @Mapping("isPlayable")
     public native boolean isPlayable();
+    @Mapping("setPlayable:")
     public native void setPlayable(boolean v);
     @Mapping("playbackProgress")
     public native float getPlaybackProgress();
+    @Mapping("setPlaybackProgress:")
     public native void setPlaybackProgress(float v);
     
     

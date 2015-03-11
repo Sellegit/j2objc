@@ -20,7 +20,7 @@ import apple.accounts.*;
 
 
 
-
+@Library("Twitter")
 @Mapping("TWRequestMethod")
 public final class TWRequestMethod extends ObjCEnum {
     

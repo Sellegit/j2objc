@@ -41,6 +41,7 @@ public class AVCaptureVideoDataOutput
     public native DispatchQueue getSampleBufferCallbackQueue();
     @Mapping("videoSettings")
     public native NSDictionary<NSString, NSObject> getVideoSettings0();
+    @Mapping("setVideoSettings:")
     public native void setVideoSettings0(NSDictionary<NSString, NSObject> v);
     /**
      * @since Available in iOS 5.0 and later.
@@ -54,6 +55,7 @@ public class AVCaptureVideoDataOutput
     public native List<CMVideoCodecType> getAvailableVideoCodecTypes();
     @Mapping("alwaysDiscardsLateVideoFrames")
     public native boolean alwaysDiscardsLateVideoFrames();
+    @Mapping("setAlwaysDiscardsLateVideoFrames:")
     public native void setAlwaysDiscardsLateVideoFrames(boolean v);
     
     

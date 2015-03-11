@@ -20,7 +20,7 @@ import apple.coremedia.*;
 
 
 
-
+@Library("AudioToolbox")
 @Mapping("AudioSessionError")
 public final class AudioSessionError extends ObjCEnum {
     

@@ -18,7 +18,7 @@ import apple.uikit.*;
 
 
 
-
+@Library("GameKit")
 @Mapping("GKMatchType")
 public final class GKMatchType extends ObjCEnum {
     

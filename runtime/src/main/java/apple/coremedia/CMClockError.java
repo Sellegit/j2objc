@@ -21,7 +21,7 @@ import apple.corevideo.*;
 
 
 
-
+@Library("CoreMedia")
 @Mapping("CMClockError")
 public final class CMClockError extends ObjCEnum {
     

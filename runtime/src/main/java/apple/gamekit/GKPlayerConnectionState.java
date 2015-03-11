@@ -18,7 +18,7 @@ import apple.uikit.*;
 
 
 
-
+@Library("GameKit")
 @Mapping("GKPlayerConnectionState")
 public final class GKPlayerConnectionState extends ObjCEnum {
     

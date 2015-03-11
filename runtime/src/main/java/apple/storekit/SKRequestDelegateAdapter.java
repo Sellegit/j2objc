@@ -18,7 +18,7 @@ import apple.accounts.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-
+@Adapter
 public abstract class SKRequestDelegateAdapter 
     extends Object 
     implements SKRequestDelegate {

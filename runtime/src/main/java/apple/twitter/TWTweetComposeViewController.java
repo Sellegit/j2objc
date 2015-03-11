@@ -38,6 +38,7 @@ public class TWTweetComposeViewController
     
     @Mapping("completionHandler")
     public native @Block VoidBlock1<TWTweetComposeViewControllerResult> getCompletionHandler();
+    @Mapping("setCompletionHandler:")
     public native void setCompletionHandler(@Block VoidBlock1<TWTweetComposeViewControllerResult> v);
     
     

@@ -41,6 +41,7 @@ public class SKStoreProductViewController
     /**
      * @since Available in iOS 6.0 and later.
      */
+    @Mapping("setDelegate:")
     public native void setDelegate(SKStoreProductViewControllerDelegate v);
     
     

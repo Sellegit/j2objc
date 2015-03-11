@@ -33,6 +33,7 @@ public class GCGamepadSnapshot
     
     @Mapping("snapshotData")
     public native NSData getSnapshotData();
+    @Mapping("setSnapshotData:")
     public native void setSnapshotData(NSData v);
     
     

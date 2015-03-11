@@ -29,6 +29,7 @@ public class GCControllerDirectionPad
     
     @Mapping("valueChangedHandler")
     public native @Block VoidBlock3<GCControllerDirectionPad, Float, Float> getValueChangedHandler();
+    @Mapping("setValueChangedHandler:")
     public native void setValueChangedHandler(@Block VoidBlock3<GCControllerDirectionPad, Float, Float> v);
     @Mapping("xAxis")
     public native GCControllerAxisInput getXAxis();

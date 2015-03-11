@@ -56,6 +56,7 @@ public class AVCaptureConnection
     public native AVCaptureVideoPreviewLayer getVideoPreviewLayer();
     @Mapping("isEnabled")
     public native boolean isEnabled();
+    @Mapping("setEnabled:")
     public native void setEnabled(boolean v);
     @Mapping("isActive")
     public native boolean isActive();
@@ -65,6 +66,7 @@ public class AVCaptureConnection
     public native boolean supportsVideoMirroring();
     @Mapping("isVideoMirrored")
     public native boolean isVideoMirrored();
+    @Mapping("setVideoMirrored:")
     public native void setVideoMirrored(boolean v);
     /**
      * @since Available in iOS 6.0 and later.
@@ -74,11 +76,13 @@ public class AVCaptureConnection
     /**
      * @since Available in iOS 6.0 and later.
      */
+    @Mapping("setAutomaticallyAdjustsVideoMirroring:")
     public native void setAutomaticallyAdjustsVideoMirroring(boolean v);
     @Mapping("isVideoOrientationSupported")
     public native boolean supportsVideoOrientation();
     @Mapping("videoOrientation")
     public native @Representing("AVCaptureVideoOrientation") @MachineSizedSInt long getVideoOrientation();
+    @Mapping("setVideoOrientation:")
     public native void setVideoOrientation(@Representing("AVCaptureVideoOrientation") @MachineSizedSInt long v);
     /**
      * @since Available in iOS 5.0 and later.
@@ -99,6 +103,7 @@ public class AVCaptureConnection
      * @deprecated Deprecated in iOS 7.0.
      */
     @Deprecated
+    @Mapping("setVideoMinFrameDuration:")
     public native void setVideoMinFrameDuration(CMTime v);
     /**
      * @since Available in iOS 5.0 and later.
@@ -119,6 +124,7 @@ public class AVCaptureConnection
      * @deprecated Deprecated in iOS 7.0.
      */
     @Deprecated
+    @Mapping("setVideoMaxFrameDuration:")
     public native void setVideoMaxFrameDuration(CMTime v);
     /**
      * @since Available in iOS 5.0 and later.
@@ -133,6 +139,7 @@ public class AVCaptureConnection
     /**
      * @since Available in iOS 5.0 and later.
      */
+    @Mapping("setVideoScaleAndCropFactor:")
     public native void setVideoScaleAndCropFactor(@MachineSizedFloat double v);
     /**
      * @since Available in iOS 8.0 and later.
@@ -142,6 +149,7 @@ public class AVCaptureConnection
     /**
      * @since Available in iOS 8.0 and later.
      */
+    @Mapping("setPreferredVideoStabilizationMode:")
     public native void setPreferredVideoStabilizationMode(@Representing("AVCaptureVideoStabilizationMode") @MachineSizedSInt long v);
     /**
      * @since Available in iOS 8.0 and later.
@@ -172,6 +180,7 @@ public class AVCaptureConnection
      * @deprecated Deprecated in iOS 8.0.
      */
     @Deprecated
+    @Mapping("setEnablesVideoStabilizationWhenAvailable:")
     public native void setEnablesVideoStabilizationWhenAvailable(boolean v);
     
     

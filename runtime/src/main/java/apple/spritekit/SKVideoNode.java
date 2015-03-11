@@ -44,9 +44,11 @@ public class SKVideoNode
     
     @Mapping("size")
     public native CGSize getSize();
+    @Mapping("setSize:")
     public native void setSize(CGSize v);
     @Mapping("anchorPoint")
     public native CGPoint getAnchorPoint();
+    @Mapping("setAnchorPoint:")
     public native void setAnchorPoint(CGPoint v);
     
     

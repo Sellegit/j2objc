@@ -17,7 +17,7 @@ import apple.dispatch.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-
+@Adapter
 public abstract class PKPushRegistryDelegateAdapter 
     extends Object 
     implements PKPushRegistryDelegate {

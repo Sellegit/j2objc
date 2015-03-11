@@ -36,9 +36,11 @@ public class SKTransition
     
     @Mapping("pausesIncomingScene")
     public native boolean pausesIncomingScene();
+    @Mapping("setPausesIncomingScene:")
     public native void setPausesIncomingScene(boolean v);
     @Mapping("pausesOutgoingScene")
     public native boolean pausesOutgoingScene();
+    @Mapping("setPausesOutgoingScene:")
     public native void setPausesOutgoingScene(boolean v);
     
     

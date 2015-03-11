@@ -39,50 +39,65 @@ public class SCNView
     
     @Mapping("scene")
     public native SCNScene getScene();
+    @Mapping("setScene:")
     public native void setScene(SCNScene v);
     @Mapping("allowsCameraControl")
     public native boolean allowsCameraControl();
+    @Mapping("setAllowsCameraControl:")
     public native void setAllowsCameraControl(boolean v);
     @Mapping("eaglContext")
     public native EAGLContext getEaglContext();
+    @Mapping("setEaglContext:")
     public native void setEaglContext(EAGLContext v);
     @Mapping("preferredFramesPerSecond")
     public native @MachineSizedSInt long getPreferredFramesPerSecond();
+    @Mapping("setPreferredFramesPerSecond:")
     public native void setPreferredFramesPerSecond(@MachineSizedSInt long v);
     @Mapping("antialiasingMode")
     public native @Representing("SCNAntialiasingMode") @MachineSizedUInt long getAntialiasingMode();
+    @Mapping("setAntialiasingMode:")
     public native void setAntialiasingMode(@Representing("SCNAntialiasingMode") @MachineSizedUInt long v);
     @Mapping("sceneTime")
     public native double getSceneTime();
+    @Mapping("setSceneTime:")
     public native void setSceneTime(double v);
     @Mapping("delegate")
     public native SCNSceneRendererDelegate getDelegate();
+    @Mapping("setDelegate:")
     public native void setDelegate(SCNSceneRendererDelegate v);
     @Mapping("isPlaying")
     public native boolean isPlaying();
+    @Mapping("setPlaying:")
     public native void setPlaying(boolean v);
     @Mapping("loops")
     public native boolean loops();
+    @Mapping("setLoops:")
     public native void setLoops(boolean v);
     @Mapping("pointOfView")
     public native SCNNode getPointOfView();
+    @Mapping("setPointOfView:")
     public native void setPointOfView(SCNNode v);
     @Mapping("autoenablesDefaultLighting")
     public native boolean autoenablesDefaultLighting();
+    @Mapping("setAutoenablesDefaultLighting:")
     public native void setAutoenablesDefaultLighting(boolean v);
     @Mapping("isJitteringEnabled")
     public native boolean isJitteringEnabled();
+    @Mapping("setJitteringEnabled:")
     public native void setJitteringEnabled(boolean v);
     @Mapping("showsStatistics")
     public native boolean showsStatistics();
+    @Mapping("setShowsStatistics:")
     public native void setShowsStatistics(boolean v);
     @Mapping("overlaySKScene")
     public native SKScene getOverlaySKScene();
+    @Mapping("setOverlaySKScene:")
     public native void setOverlaySKScene(SKScene v);
     @Mapping("context")
     public native EAGLContext getContext();
     @Mapping("technique")
     public native SCNTechnique getTechnique();
+    @Mapping("setTechnique:")
     public native void setTechnique(SCNTechnique v);
     
     

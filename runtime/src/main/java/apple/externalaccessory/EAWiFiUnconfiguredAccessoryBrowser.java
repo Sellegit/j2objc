@@ -38,6 +38,7 @@ public class EAWiFiUnconfiguredAccessoryBrowser
     
     @Mapping("delegate")
     public native EAWiFiUnconfiguredAccessoryBrowserDelegate getDelegate();
+    @Mapping("setDelegate:")
     public native void setDelegate(EAWiFiUnconfiguredAccessoryBrowserDelegate v);
     @Mapping("unconfiguredAccessories")
     public native NSSet<EAWiFiUnconfiguredAccessory> getUnconfiguredAccessories();

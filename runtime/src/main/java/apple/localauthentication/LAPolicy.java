@@ -19,7 +19,7 @@ import apple.foundation.*;
  * @since Available in iOS 8.0 and later.
  */
 
-
+@Library("LocalAuthentication")
 @Mapping("LAPolicy")
 public final class LAPolicy extends ObjCEnum {
     

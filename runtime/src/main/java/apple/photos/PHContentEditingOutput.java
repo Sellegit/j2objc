@@ -38,6 +38,7 @@ public class PHContentEditingOutput
     
     @Mapping("adjustmentData")
     public native PHAdjustmentData getAdjustmentData();
+    @Mapping("setAdjustmentData:")
     public native void setAdjustmentData(PHAdjustmentData v);
     @Mapping("renderedContentURL")
     public native NSURL getRenderedContentURL();

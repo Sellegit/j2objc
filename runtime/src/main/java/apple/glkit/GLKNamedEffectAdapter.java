@@ -19,7 +19,7 @@ import apple.dispatch.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-
+@Adapter
 public abstract class GLKNamedEffectAdapter 
     extends Object 
     implements GLKNamedEffect {

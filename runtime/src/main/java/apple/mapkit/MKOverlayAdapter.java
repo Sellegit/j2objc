@@ -19,7 +19,7 @@ import apple.dispatch.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-
+@Adapter
 public abstract class MKOverlayAdapter 
     extends MKAnnotationAdapter 
     implements MKOverlay {

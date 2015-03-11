@@ -32,6 +32,7 @@ public class MTLRenderPassDepthAttachmentDescriptor
     
     @Mapping("clearDepth")
     public native double getClearDepth();
+    @Mapping("setClearDepth:")
     public native void setClearDepth(double v);
     
     

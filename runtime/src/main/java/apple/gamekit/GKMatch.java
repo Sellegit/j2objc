@@ -37,6 +37,7 @@ public class GKMatch
     public native NSArray<GKPlayer> getPlayers();
     @Mapping("delegate")
     public native GKMatchDelegate getDelegate();
+    @Mapping("setDelegate:")
     public native void setDelegate(GKMatchDelegate v);
     @Mapping("expectedPlayerCount")
     public native @MachineSizedUInt long getExpectedPlayerCount();

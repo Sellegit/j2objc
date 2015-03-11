@@ -44,9 +44,11 @@ public class GKLeaderboard
     
     @Mapping("timeScope")
     public native @Representing("GKLeaderboardTimeScope") @MachineSizedSInt long getTimeScope();
+    @Mapping("setTimeScope:")
     public native void setTimeScope(@Representing("GKLeaderboardTimeScope") @MachineSizedSInt long v);
     @Mapping("playerScope")
     public native @Representing("GKLeaderboardPlayerScope") @MachineSizedSInt long getPlayerScope();
+    @Mapping("setPlayerScope:")
     public native void setPlayerScope(@Representing("GKLeaderboardPlayerScope") @MachineSizedSInt long v);
     /**
      * @since Available in iOS 7.0 and later.
@@ -56,11 +58,13 @@ public class GKLeaderboard
     /**
      * @since Available in iOS 7.0 and later.
      */
+    @Mapping("setIdentifier:")
     public native void setIdentifier(String v);
     @Mapping("title")
     public native String getTitle();
     @Mapping("range")
     public native NSRange getRange();
+    @Mapping("setRange:")
     public native void setRange(NSRange v);
     @Mapping("scores")
     public native NSArray<GKScore> getScores();
@@ -87,6 +91,7 @@ public class GKLeaderboard
      * @deprecated Deprecated in iOS 7.0.
      */
     @Deprecated
+    @Mapping("setCategory:")
     public native void setCategory(String v);
     
     

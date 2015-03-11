@@ -43,6 +43,7 @@ public class AVAssetReader
     public native NSError getError();
     @Mapping("timeRange")
     public native CMTimeRange getTimeRange();
+    @Mapping("setTimeRange:")
     public native void setTimeRange(CMTimeRange v);
     @Mapping("outputs")
     public native NSArray<AVAssetReaderOutput> getOutputs();

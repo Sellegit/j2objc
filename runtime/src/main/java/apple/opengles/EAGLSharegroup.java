@@ -35,6 +35,7 @@ public class EAGLSharegroup
     /**
      * @since Available in iOS 6.0 and later.
      */
+    @Mapping("setDebugLabel:")
     public native void setDebugLabel(String v);
     
     

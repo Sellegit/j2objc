@@ -41,15 +41,19 @@ public class EKCalendarChooser
     public native EKCalendarChooserSelectionStyle getSelectionStyle();
     @Mapping("delegate")
     public native EKCalendarChooserDelegate getDelegate();
+    @Mapping("setDelegate:")
     public native void setDelegate(EKCalendarChooserDelegate v);
     @Mapping("showsDoneButton")
     public native boolean showsDoneButton();
+    @Mapping("setShowsDoneButton:")
     public native void setShowsDoneButton(boolean v);
     @Mapping("showsCancelButton")
     public native boolean showsCancelButton();
+    @Mapping("setShowsCancelButton:")
     public native void setShowsCancelButton(boolean v);
     @Mapping("selectedCalendars")
     public native NSSet<EKCalendar> getSelectedCalendars();
+    @Mapping("setSelectedCalendars:")
     public native void setSelectedCalendars(NSSet<EKCalendar> v);
     
     

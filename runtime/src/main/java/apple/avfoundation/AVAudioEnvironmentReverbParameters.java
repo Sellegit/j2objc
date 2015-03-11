@@ -37,9 +37,11 @@ public class AVAudioEnvironmentReverbParameters
     
     @Mapping("enable")
     public native boolean isEnable();
+    @Mapping("setEnable:")
     public native void setEnable(boolean v);
     @Mapping("level")
     public native float getLevel();
+    @Mapping("setLevel:")
     public native void setLevel(float v);
     @Mapping("filterParameters")
     public native AVAudioUnitEQFilterParameters getFilterParameters();

@@ -33,6 +33,7 @@ public class SLRequest
     
     @Mapping("account")
     public native ACAccount getAccount();
+    @Mapping("setAccount:")
     public native void setAccount(ACAccount v);
     @Mapping("requestMethod")
     public native @Representing("SLRequestMethod") @MachineSizedSInt long getRequestMethod();

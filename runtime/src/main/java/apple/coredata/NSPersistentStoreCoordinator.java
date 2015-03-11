@@ -43,6 +43,7 @@ public class NSPersistentStoreCoordinator
     /**
      * @since Available in iOS 8.0 and later.
      */
+    @Mapping("setName:")
     public native void setName(String v);
     
     

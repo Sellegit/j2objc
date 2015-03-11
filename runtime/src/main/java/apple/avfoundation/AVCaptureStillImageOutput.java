@@ -37,6 +37,7 @@ public class AVCaptureStillImageOutput
     
     @Mapping("outputSettings")
     public native NSDictionary<NSString, NSObject> getOutputSettings0();
+    @Mapping("setOutputSettings:")
     public native void setOutputSettings0(NSDictionary<NSString, NSObject> v);
     @Mapping("availableImageDataCVPixelFormatTypes")
     public native List<CVPixelFormatType> getAvailableImageDataCVPixelFormatTypes();
@@ -55,6 +56,7 @@ public class AVCaptureStillImageOutput
     /**
      * @since Available in iOS 7.0 and later.
      */
+    @Mapping("setAutomaticallyEnablesStillImageStabilizationWhenAvailable:")
     public native void setAutomaticallyEnablesStillImageStabilizationWhenAvailable(boolean v);
     /**
      * @since Available in iOS 7.0 and later.
@@ -69,6 +71,7 @@ public class AVCaptureStillImageOutput
     /**
      * @since Available in iOS 8.0 and later.
      */
+    @Mapping("setHighResolutionStillImageOutputEnabled:")
     public native void setHighResolutionStillImageOutputEnabled(boolean v);
     /**
      * @since Available in iOS 5.0 and later.

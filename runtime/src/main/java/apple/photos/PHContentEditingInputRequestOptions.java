@@ -34,12 +34,15 @@ public class PHContentEditingInputRequestOptions
     
     @Mapping("canHandleAdjustmentData")
     public native @Block Block1<PHAdjustmentData, Boolean> getCanHandleAdjustmentData();
+    @Mapping("setCanHandleAdjustmentData:")
     public native void setCanHandleAdjustmentData(@Block Block1<PHAdjustmentData, Boolean> v);
     @Mapping("isNetworkAccessAllowed")
     public native boolean isNetworkAccessAllowed();
+    @Mapping("setNetworkAccessAllowed:")
     public native void setNetworkAccessAllowed(boolean v);
     @Mapping("progressHandler")
     public native @Block VoidBlock2<Double, Todo> getProgressHandler();
+    @Mapping("setProgressHandler:")
     public native void setProgressHandler(@Block VoidBlock2<Double, Todo> v);
     
     

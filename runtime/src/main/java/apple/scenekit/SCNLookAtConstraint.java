@@ -37,6 +37,7 @@ public class SCNLookAtConstraint
     public native SCNNode getTarget();
     @Mapping("gimbalLockEnabled")
     public native boolean isGimbalLockEnabled();
+    @Mapping("setGimbalLockEnabled:")
     public native void setGimbalLockEnabled(boolean v);
     
     

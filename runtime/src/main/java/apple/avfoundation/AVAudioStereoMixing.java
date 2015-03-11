@@ -33,6 +33,7 @@ public interface AVAudioStereoMixing
     
     @Mapping("pan")
     float getPan();
+    @Mapping("setPan:")
     void setPan(float v);
     
     

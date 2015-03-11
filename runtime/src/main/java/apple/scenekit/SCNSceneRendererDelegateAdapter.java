@@ -22,7 +22,7 @@ import apple.opengles.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-
+@Adapter
 public abstract class SCNSceneRendererDelegateAdapter 
     extends Object 
     implements SCNSceneRendererDelegate {

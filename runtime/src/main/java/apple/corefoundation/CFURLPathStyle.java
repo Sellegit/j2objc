@@ -18,7 +18,7 @@ import apple.foundation.*;
 
 
 
-
+@Library("CoreFoundation")
 @Mapping("CFURLPathStyle")
 public final class CFURLPathStyle extends ObjCEnum {
     

@@ -18,7 +18,7 @@ import apple.uikit.*;
 
 
 
-
+@Library("MessageUI")
 @Mapping("MessageComposeResult")
 public final class MessageComposeResult extends ObjCEnum {
     

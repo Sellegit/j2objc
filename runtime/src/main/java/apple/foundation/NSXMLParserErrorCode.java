@@ -22,7 +22,7 @@ import apple.dispatch.*;
 
 
 
-
+@Library("Foundation")
 @Mapping("NSXMLParserErrorCode")
 public final class NSXMLParserErrorCode extends ObjCEnum {
     

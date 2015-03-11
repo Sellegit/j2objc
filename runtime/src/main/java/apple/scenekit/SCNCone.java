@@ -35,18 +35,23 @@ public class SCNCone
     
     @Mapping("topRadius")
     public native @MachineSizedFloat double getTopRadius();
+    @Mapping("setTopRadius:")
     public native void setTopRadius(@MachineSizedFloat double v);
     @Mapping("bottomRadius")
     public native @MachineSizedFloat double getBottomRadius();
+    @Mapping("setBottomRadius:")
     public native void setBottomRadius(@MachineSizedFloat double v);
     @Mapping("height")
     public native @MachineSizedFloat double getHeight();
+    @Mapping("setHeight:")
     public native void setHeight(@MachineSizedFloat double v);
     @Mapping("radialSegmentCount")
     public native @MachineSizedSInt long getRadialSegmentCount();
+    @Mapping("setRadialSegmentCount:")
     public native void setRadialSegmentCount(@MachineSizedSInt long v);
     @Mapping("heightSegmentCount")
     public native @MachineSizedSInt long getHeightSegmentCount();
+    @Mapping("setHeightSegmentCount:")
     public native void setHeightSegmentCount(@MachineSizedSInt long v);
     
     

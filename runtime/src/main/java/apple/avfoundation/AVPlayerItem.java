@@ -103,9 +103,11 @@ public class AVPlayerItem
     public native boolean canStepBackward();
     @Mapping("forwardPlaybackEndTime")
     public native CMTime getForwardPlaybackEndTime();
+    @Mapping("setForwardPlaybackEndTime:")
     public native void setForwardPlaybackEndTime(CMTime v);
     @Mapping("reversePlaybackEndTime")
     public native CMTime getReversePlaybackEndTime();
+    @Mapping("setReversePlaybackEndTime:")
     public native void setReversePlaybackEndTime(CMTime v);
     @Mapping("seekableTimeRanges")
     public native List<CMTimeRange> getSeekableTimeRanges();
@@ -116,6 +118,7 @@ public class AVPlayerItem
     public native CMTimebase getTimebase();
     @Mapping("videoComposition")
     public native AVVideoComposition getVideoComposition();
+    @Mapping("setVideoComposition:")
     public native void setVideoComposition(AVVideoComposition v);
     /**
      * @since Available in iOS 7.0 and later.
@@ -130,6 +133,7 @@ public class AVPlayerItem
     /**
      * @since Available in iOS 6.0 and later.
      */
+    @Mapping("setSeekingWaitsForVideoCompositionRendering:")
     public native void seekingWaitsForVideoCompositionRendering(boolean v);
     /**
      * @since Available in iOS 6.0 and later.
@@ -139,6 +143,7 @@ public class AVPlayerItem
     /**
      * @since Available in iOS 6.0 and later.
      */
+    @Mapping("setTextStyleRules:")
     public native void setTextStyleRules(NSArray<AVTextStyleRule> v);
     /**
      * @since Available in iOS 7.0 and later.
@@ -148,9 +153,11 @@ public class AVPlayerItem
     /**
      * @since Available in iOS 7.0 and later.
      */
+    @Mapping("setAudioTimePitchAlgorithm:")
     public native void setAudioTimePitchAlgorithm(String v);
     @Mapping("audioMix")
     public native AVAudioMix getAudioMix();
+    @Mapping("setAudioMix:")
     public native void setAudioMix(AVAudioMix v);
     @Mapping("loadedTimeRanges")
     public native List<CMTimeRange> getLoadedTimeRanges();
@@ -168,6 +175,7 @@ public class AVPlayerItem
     /**
      * @since Available in iOS 8.0 and later.
      */
+    @Mapping("setPreferredPeakBitRate:")
     public native void setPreferredPeakBitRate(double v);
     /**
      * @since Available in iOS 6.0 and later.

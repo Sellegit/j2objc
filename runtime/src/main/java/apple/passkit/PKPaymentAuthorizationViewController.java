@@ -37,6 +37,7 @@ public class PKPaymentAuthorizationViewController
     
     @Mapping("delegate")
     public native PKPaymentAuthorizationViewControllerDelegate getDelegate();
+    @Mapping("setDelegate:")
     public native void setDelegate(PKPaymentAuthorizationViewControllerDelegate v);
     
     

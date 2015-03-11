@@ -24,7 +24,7 @@ import apple.dispatch.*;
  * @since Available in iOS 7.0 and later.
  */
 
-
+@Library("Foundation")
 @Mapping("NSActivityOptions")
 public final class NSActivityOptions extends ObjCEnum {
     

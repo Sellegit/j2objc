@@ -18,7 +18,7 @@ import apple.dispatch.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-
+@Adapter
 public abstract class EAWiFiUnconfiguredAccessoryBrowserDelegateAdapter 
     extends Object 
     implements EAWiFiUnconfiguredAccessoryBrowserDelegate {

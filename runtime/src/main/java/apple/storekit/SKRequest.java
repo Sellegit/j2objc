@@ -39,6 +39,7 @@ public class SKRequest
     /**
      * @since Available in iOS 3.0 and later.
      */
+    @Mapping("setDelegate:")
     public native void setDelegate(SKRequestDelegate v);
     
     

@@ -31,21 +31,27 @@ public interface AVAudio3DMixing
     
     @Mapping("renderingAlgorithm")
     @Representing("AVAudio3DMixingRenderingAlgorithm") @MachineSizedSInt long getRenderingAlgorithm();
+    @Mapping("setRenderingAlgorithm:")
     void setRenderingAlgorithm(@Representing("AVAudio3DMixingRenderingAlgorithm") @MachineSizedSInt long v);
     @Mapping("rate")
     float getRate();
+    @Mapping("setRate:")
     void setRate(float v);
     @Mapping("reverbBlend")
     float getReverbBlend();
+    @Mapping("setReverbBlend:")
     void setReverbBlend(float v);
     @Mapping("obstruction")
     float getObstruction();
+    @Mapping("setObstruction:")
     void setObstruction(float v);
     @Mapping("occlusion")
     float getOcclusion();
+    @Mapping("setOcclusion:")
     void setOcclusion(float v);
     @Mapping("position")
     AVAudio3DPoint getPosition();
+    @Mapping("setPosition:")
     void setPosition(AVAudio3DPoint v);
     
     

@@ -40,9 +40,11 @@ public class WKWebView
     public native WKWebViewConfiguration getConfiguration();
     @Mapping("navigationDelegate")
     public native WKNavigationDelegate getNavigationDelegate();
+    @Mapping("setNavigationDelegate:")
     public native void setNavigationDelegate(WKNavigationDelegate v);
     @Mapping("UIDelegate")
     public native WKUIDelegate getUIDelegate();
+    @Mapping("setUIDelegate:")
     public native void setUIDelegate(WKUIDelegate v);
     @Mapping("backForwardList")
     public native WKBackForwardList getBackForwardList();
@@ -62,6 +64,7 @@ public class WKWebView
     public native boolean canGoForward();
     @Mapping("allowsBackForwardNavigationGestures")
     public native boolean allowsBackForwardNavigationGestures();
+    @Mapping("setAllowsBackForwardNavigationGestures:")
     public native void setAllowsBackForwardNavigationGestures(boolean v);
     @Mapping("scrollView")
     public native UIScrollView getScrollView();

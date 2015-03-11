@@ -181,6 +181,7 @@ public class AVAudioSession
      * @deprecated Deprecated in iOS 6.0.
      */
     @Deprecated
+    @Mapping("setDelegate:")
     public native void setDelegate(AVAudioSessionDelegate v);
     /**
      * @since Available in iOS 3.0 and later.

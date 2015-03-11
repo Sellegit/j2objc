@@ -18,7 +18,7 @@ import apple.security.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-
+@Adapter
 public abstract class MCSessionDelegateAdapter 
     extends Object 
     implements MCSessionDelegate {

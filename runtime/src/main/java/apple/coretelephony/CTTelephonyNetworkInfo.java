@@ -42,6 +42,7 @@ public class CTTelephonyNetworkInfo
     /**
      * @since Available in iOS 4.0 and later.
      */
+    @Mapping("setSubscriberCellularProviderDidUpdateNotifier:")
     public native void setSubscriberCellularProviderDidUpdateNotifier(@Block VoidBlock1<CTCarrier> v);
     /**
      * @since Available in iOS 7.0 and later.

@@ -33,12 +33,15 @@ public class NSPropertyDescription
     public native NSEntityDescription getEntity();
     @Mapping("name")
     public native String getName();
+    @Mapping("setName:")
     public native void setName(String v);
     @Mapping("isOptional")
     public native boolean isOptional();
+    @Mapping("setOptional:")
     public native void setOptional(boolean v);
     @Mapping("isTransient")
     public native boolean isTransient();
+    @Mapping("setTransient:")
     public native void setTransient(boolean v);
     @Mapping("validationPredicates")
     public native NSArray<NSPredicate> getValidationPredicates();
@@ -46,6 +49,7 @@ public class NSPropertyDescription
     public native List<String> getValidationWarnings();
     @Mapping("userInfo")
     public native NSDictionary<?, ?> getUserInfo();
+    @Mapping("setUserInfo:")
     public native void setUserInfo(NSDictionary<?, ?> v);
     /**
      * @since Available in iOS 3.0 and later.
@@ -55,6 +59,7 @@ public class NSPropertyDescription
     /**
      * @since Available in iOS 3.0 and later.
      */
+    @Mapping("setIndexed:")
     public native void setIndexed(boolean v);
     /**
      * @since Available in iOS 3.0 and later.
@@ -69,6 +74,7 @@ public class NSPropertyDescription
     /**
      * @since Available in iOS 3.0 and later.
      */
+    @Mapping("setVersionHashModifier:")
     public native void setVersionHashModifier(String v);
     /**
      * @since Available in iOS 3.0 and later.
@@ -78,6 +84,7 @@ public class NSPropertyDescription
     /**
      * @since Available in iOS 3.0 and later.
      */
+    @Mapping("setIndexedBySpotlight:")
     public native void setIndexedBySpotlight(boolean v);
     /**
      * @since Available in iOS 3.0 and later.
@@ -87,6 +94,7 @@ public class NSPropertyDescription
     /**
      * @since Available in iOS 3.0 and later.
      */
+    @Mapping("setStoredInExternalRecord:")
     public native void setStoredInExternalRecord(boolean v);
     /**
      * @since Available in iOS 3.0 and later.
@@ -96,6 +104,7 @@ public class NSPropertyDescription
     /**
      * @since Available in iOS 3.0 and later.
      */
+    @Mapping("setRenamingIdentifier:")
     public native void setRenamingIdentifier(String v);
     
     

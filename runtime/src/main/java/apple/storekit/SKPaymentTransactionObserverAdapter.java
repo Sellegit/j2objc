@@ -18,7 +18,7 @@ import apple.accounts.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-
+@Adapter
 public abstract class SKPaymentTransactionObserverAdapter 
     extends Object 
     implements SKPaymentTransactionObserver {

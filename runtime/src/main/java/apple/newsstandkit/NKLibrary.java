@@ -33,9 +33,11 @@ public class NKLibrary
     public native NSArray<NKIssue> getIssues();
     @Mapping("downloadingAssets")
     public native NSArray<NKAssetDownload> getDownloadingAssets();
+    @Mapping("setDownloadingAssets:")
     public native void setDownloadingAssets(NSArray<NKAssetDownload> v);
     @Mapping("currentlyReadingIssue")
     public native NKIssue getCurrentlyReadingIssue();
+    @Mapping("setCurrentlyReadingIssue:")
     public native void setCurrentlyReadingIssue(NKIssue v);
     
     

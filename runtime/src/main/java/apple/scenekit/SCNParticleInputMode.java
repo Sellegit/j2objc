@@ -23,7 +23,7 @@ import apple.opengles.*;
 
 
 
-
+@Library("SceneKit")
 @Mapping("SCNParticleInputMode")
 public final class SCNParticleInputMode extends ObjCEnum {
     

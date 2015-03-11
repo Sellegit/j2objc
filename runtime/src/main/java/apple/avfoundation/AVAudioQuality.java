@@ -23,7 +23,7 @@ import apple.mediatoolbox.*;
 
 
 
-
+@Library("AVFoundation")
 @Mapping("AVAudioQuality")
 public final class AVAudioQuality extends ObjCEnum {
     

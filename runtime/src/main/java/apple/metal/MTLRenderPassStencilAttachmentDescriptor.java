@@ -32,6 +32,7 @@ public class MTLRenderPassStencilAttachmentDescriptor
     
     @Mapping("clearStencil")
     public native int getClearStencil();
+    @Mapping("setClearStencil:")
     public native void setClearStencil(int v);
     
     

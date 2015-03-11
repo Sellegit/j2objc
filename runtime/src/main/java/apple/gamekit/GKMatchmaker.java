@@ -42,6 +42,7 @@ public class GKMatchmaker
      * @deprecated Deprecated in iOS 7.0.
      */
     @Deprecated
+    @Mapping("setInviteHandler:")
     public native void setInviteHandler(@Block VoidBlock2<GKInvite, NSArray<NSString>> v);
     
     

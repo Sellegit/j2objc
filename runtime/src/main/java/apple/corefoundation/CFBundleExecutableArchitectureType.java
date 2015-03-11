@@ -20,7 +20,7 @@ import apple.foundation.*;
  * @since Available in iOS 2.0 and later.
  */
 
-
+@Library("CoreFoundation")
 @Mapping("CFBundleExecutableArchitectureType")
 public final class CFBundleExecutableArchitectureType extends ObjCEnum {
     

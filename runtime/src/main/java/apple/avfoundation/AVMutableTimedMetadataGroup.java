@@ -44,9 +44,11 @@ public class AVMutableTimedMetadataGroup
     
     @Mapping("timeRange")
     public native CMTimeRange getTimeRange();
+    @Mapping("setTimeRange:")
     public native void setTimeRange(CMTimeRange v);
     @Mapping("items")
     public native NSArray<AVMetadataItem> getItems();
+    @Mapping("setItems:")
     public native void setItems(NSArray<AVMetadataItem> v);
     
     

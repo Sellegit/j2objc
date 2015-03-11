@@ -39,23 +39,29 @@ public class AVSpeechUtterance
     
     @Mapping("voice")
     public native AVSpeechSynthesisVoice getVoice();
+    @Mapping("setVoice:")
     public native void setVoice(AVSpeechSynthesisVoice v);
     @Mapping("speechString")
     public native String getSpeechString();
     @Mapping("rate")
     public native float getRate();
+    @Mapping("setRate:")
     public native void setRate(float v);
     @Mapping("pitchMultiplier")
     public native float getPitchMultiplier();
+    @Mapping("setPitchMultiplier:")
     public native void setPitchMultiplier(float v);
     @Mapping("volume")
     public native float getVolume();
+    @Mapping("setVolume:")
     public native void setVolume(float v);
     @Mapping("preUtteranceDelay")
     public native double getPreUtteranceDelay();
+    @Mapping("setPreUtteranceDelay:")
     public native void setPreUtteranceDelay(double v);
     @Mapping("postUtteranceDelay")
     public native double getPostUtteranceDelay();
+    @Mapping("setPostUtteranceDelay:")
     public native void setPostUtteranceDelay(double v);
     
     

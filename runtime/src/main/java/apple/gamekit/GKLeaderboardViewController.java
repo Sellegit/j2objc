@@ -38,12 +38,15 @@ public class GKLeaderboardViewController
     
     @Mapping("timeScope")
     public native @Representing("GKLeaderboardTimeScope") @MachineSizedSInt long getTimeScope();
+    @Mapping("setTimeScope:")
     public native void setTimeScope(@Representing("GKLeaderboardTimeScope") @MachineSizedSInt long v);
     @Mapping("category")
     public native String getCategory();
+    @Mapping("setCategory:")
     public native void setCategory(String v);
     @Mapping("leaderboardDelegate")
     public native GKLeaderboardViewControllerDelegate getLeaderboardDelegate();
+    @Mapping("setLeaderboardDelegate:")
     public native void setLeaderboardDelegate(GKLeaderboardViewControllerDelegate v);
     
     

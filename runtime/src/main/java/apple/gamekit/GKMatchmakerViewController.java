@@ -40,11 +40,13 @@ public class GKMatchmakerViewController
     
     @Mapping("matchmakerDelegate")
     public native GKMatchmakerViewControllerDelegate getMatchmakerDelegate();
+    @Mapping("setMatchmakerDelegate:")
     public native void setMatchmakerDelegate(GKMatchmakerViewControllerDelegate v);
     @Mapping("matchRequest")
     public native GKMatchRequest getMatchRequest();
     @Mapping("isHosted")
     public native boolean isHosted();
+    @Mapping("setHosted:")
     public native void setHosted(boolean v);
     /**
      * @since Available in iOS 5.0 and later.
@@ -58,6 +60,7 @@ public class GKMatchmakerViewController
      * @deprecated Deprecated in iOS 7.0.
      */
     @Deprecated
+    @Mapping("setDefaultInvitationMessage:")
     public native void setDefaultInvitationMessage(String v);
     
     

@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 
 
-
+@Library("AddressBook")
 @Mapping("ABPersonImageFormat")
 public final class ABPersonImageFormat extends ObjCEnum {
     

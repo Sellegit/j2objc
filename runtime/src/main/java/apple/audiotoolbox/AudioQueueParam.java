@@ -20,7 +20,7 @@ import apple.coremedia.*;
 
 
 
-
+@Library("AudioToolbox")
 @Mapping("AudioQueueParam")
 public final class AudioQueueParam extends ObjCEnum {
     

@@ -22,7 +22,7 @@ import apple.dispatch.*;
 
 
 
-
+@Library("Foundation")
 @Mapping("NSExpressionType")
 public final class NSExpressionType extends ObjCEnum {
     

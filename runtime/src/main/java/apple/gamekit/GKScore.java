@@ -46,6 +46,7 @@ public class GKScore
     
     @Mapping("value")
     public native long getValue();
+    @Mapping("setValue:")
     public native void setValue(long v);
     @Mapping("formattedValue")
     public native String getFormattedValue();
@@ -57,6 +58,7 @@ public class GKScore
     /**
      * @since Available in iOS 7.0 and later.
      */
+    @Mapping("setLeaderboardIdentifier:")
     public native void setLeaderboardIdentifier(String v);
     /**
      * @since Available in iOS 5.0 and later.
@@ -66,6 +68,7 @@ public class GKScore
     /**
      * @since Available in iOS 5.0 and later.
      */
+    @Mapping("setContext:")
     public native void setContext(long v);
     @Mapping("date")
     public native NSDate getDate();
@@ -84,6 +87,7 @@ public class GKScore
     /**
      * @since Available in iOS 5.0 and later.
      */
+    @Mapping("setShouldSetDefaultLeaderboard:")
     public native void setShouldSetDefaultLeaderboard(boolean v);
     /**
      * @since Available in iOS 4.1 and later.
@@ -104,6 +108,7 @@ public class GKScore
      * @deprecated Deprecated in iOS 7.0.
      */
     @Deprecated
+    @Mapping("setCategory:")
     public native void setCategory(String v);
     
     

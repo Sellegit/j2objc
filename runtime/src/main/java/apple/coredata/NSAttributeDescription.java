@@ -31,12 +31,15 @@ public class NSAttributeDescription
     
     @Mapping("attributeType")
     public native @Representing("NSAttributeType") @MachineSizedUInt long getAttributeType();
+    @Mapping("setAttributeType:")
     public native void setAttributeType(@Representing("NSAttributeType") @MachineSizedUInt long v);
     @Mapping("attributeValueClassName")
     public native String getAttributeValueClassName();
+    @Mapping("setAttributeValueClassName:")
     public native void setAttributeValueClassName(String v);
     @Mapping("defaultValue")
     public native Object getDefaultValue();
+    @Mapping("setDefaultValue:")
     public native void setDefaultValue(Object v);
     /**
      * @since Available in iOS 3.0 and later.
@@ -51,6 +54,7 @@ public class NSAttributeDescription
     /**
      * @since Available in iOS 3.0 and later.
      */
+    @Mapping("setValueTransformerName:")
     public native void setValueTransformerName(String v);
     /**
      * @since Available in iOS 5.0 and later.
@@ -60,6 +64,7 @@ public class NSAttributeDescription
     /**
      * @since Available in iOS 5.0 and later.
      */
+    @Mapping("setAllowsExternalBinaryDataStorage:")
     public native void setAllowsExternalBinaryDataStorage(boolean v);
     
     

@@ -18,7 +18,7 @@ import apple.foundation.*;
 
 
 
-
+@Library("CoreFoundation")
 @Mapping("CFCalendarComponentsOptionFlags")
 public final class CFCalendarComponentsOptionFlags extends ObjCEnum {
     

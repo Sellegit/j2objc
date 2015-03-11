@@ -47,9 +47,11 @@ public class AVAssetWriter
     public native NSError getError();
     @Mapping("metadata")
     public native NSArray<AVMetadataItem> getMetadata();
+    @Mapping("setMetadata:")
     public native void setMetadata(NSArray<AVMetadataItem> v);
     @Mapping("shouldOptimizeForNetworkUse")
     public native boolean shouldOptimizeForNetworkUse();
+    @Mapping("setShouldOptimizeForNetworkUse:")
     public native void setShouldOptimizeForNetworkUse(boolean v);
     /**
      * @since Available in iOS 8.0 and later.
@@ -59,11 +61,13 @@ public class AVAssetWriter
     /**
      * @since Available in iOS 8.0 and later.
      */
+    @Mapping("setDirectoryForTemporaryFiles:")
     public native void setDirectoryForTemporaryFiles(NSURL v);
     @Mapping("inputs")
     public native NSArray<AVAssetWriterInput> getInputs();
     @Mapping("movieFragmentInterval")
     public native CMTime getMovieFragmentInterval();
+    @Mapping("setMovieFragmentInterval:")
     public native void setMovieFragmentInterval(CMTime v);
     /**
      * @since Available in iOS 4.3 and later.
@@ -73,6 +77,7 @@ public class AVAssetWriter
     /**
      * @since Available in iOS 4.3 and later.
      */
+    @Mapping("setMovieTimeScale:")
     public native void setMovieTimeScale(int v);
     /**
      * @since Available in iOS 7.0 and later.

@@ -20,7 +20,7 @@ import apple.coremedia.*;
 
 
 
-
+@Library("AudioToolbox")
 @Mapping("ExtAudioFileError")
 public final class ExtAudioFileError extends ObjCEnum {
     

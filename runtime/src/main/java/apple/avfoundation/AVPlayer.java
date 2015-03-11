@@ -45,11 +45,13 @@ public class AVPlayer
     public native NSError getError();
     @Mapping("rate")
     public native float getRate();
+    @Mapping("setRate:")
     public native void setRate(float v);
     @Mapping("currentItem")
     public native AVPlayerItem getCurrentItem();
     @Mapping("actionAtItemEnd")
     public native @Representing("AVPlayerActionAtItemEnd") @MachineSizedSInt long getActionAtItemEnd();
+    @Mapping("setActionAtItemEnd:")
     public native void setActionAtItemEnd(@Representing("AVPlayerActionAtItemEnd") @MachineSizedSInt long v);
     /**
      * @since Available in iOS 6.0 and later.
@@ -59,6 +61,7 @@ public class AVPlayer
     /**
      * @since Available in iOS 6.0 and later.
      */
+    @Mapping("setMasterClock:")
     public native void setMasterClock(CMClock v);
     /**
      * @since Available in iOS 7.0 and later.
@@ -68,6 +71,7 @@ public class AVPlayer
     /**
      * @since Available in iOS 7.0 and later.
      */
+    @Mapping("setVolume:")
     public native void setVolume(float v);
     /**
      * @since Available in iOS 7.0 and later.
@@ -77,9 +81,11 @@ public class AVPlayer
     /**
      * @since Available in iOS 7.0 and later.
      */
+    @Mapping("setMuted:")
     public native void setMuted(boolean v);
     @Mapping("isClosedCaptionDisplayEnabled")
     public native boolean isClosedCaptionDisplayEnabled();
+    @Mapping("setClosedCaptionDisplayEnabled:")
     public native void setClosedCaptionDisplayEnabled(boolean v);
     /**
      * @since Available in iOS 7.0 and later.
@@ -89,6 +95,7 @@ public class AVPlayer
     /**
      * @since Available in iOS 7.0 and later.
      */
+    @Mapping("setAppliesMediaSelectionCriteriaAutomatically:")
     public native void setAppliesMediaSelectionCriteriaAutomatically(boolean v);
     /**
      * @since Available in iOS 6.0 and later.
@@ -98,6 +105,7 @@ public class AVPlayer
     /**
      * @since Available in iOS 6.0 and later.
      */
+    @Mapping("setAllowsExternalPlayback:")
     public native void setAllowsExternalPlayback(boolean v);
     /**
      * @since Available in iOS 6.0 and later.
@@ -112,6 +120,7 @@ public class AVPlayer
     /**
      * @since Available in iOS 6.0 and later.
      */
+    @Mapping("setUsesExternalPlaybackWhileExternalScreenIsActive:")
     public native void setUsesExternalPlaybackWhileExternalScreenIsActive(boolean v);
     /**
      * @since Available in iOS 6.0 and later.
@@ -121,6 +130,7 @@ public class AVPlayer
     /**
      * @since Available in iOS 6.0 and later.
      */
+    @Mapping("setExternalPlaybackVideoGravity:")
     public native void setExternalPlaybackVideoGravity(String v);
     /**
      * @since Available in iOS 5.0 and later.
@@ -134,6 +144,7 @@ public class AVPlayer
      * @deprecated Deprecated in iOS 6.0.
      */
     @Deprecated
+    @Mapping("setAllowsAirPlayVideo:")
     public native void setAllowsAirPlayVideo(boolean v);
     /**
      * @since Available in iOS 5.0 and later.
@@ -154,6 +165,7 @@ public class AVPlayer
      * @deprecated Deprecated in iOS 6.0.
      */
     @Deprecated
+    @Mapping("setUsesAirPlayVideoWhileAirPlayScreenIsActive:")
     public native void setUsesAirPlayVideoWhileAirPlayScreenIsActive(boolean v);
     /**
      * @since Available in iOS 6.0 and later.

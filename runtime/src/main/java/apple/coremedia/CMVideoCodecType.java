@@ -21,7 +21,7 @@ import apple.corevideo.*;
 
 
 
-
+@Library("CoreMedia")
 @Mapping("CMVideoCodecType")
 public final class CMVideoCodecType extends ObjCEnum {
     

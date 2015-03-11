@@ -17,7 +17,7 @@ import apple.dispatch.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-
+@Adapter
 public abstract class MTLResourceAdapter 
     extends Object 
     implements MTLResource {
@@ -27,6 +27,7 @@ public abstract class MTLResourceAdapter
     
     @NotImplemented("label")
     public String getLabel() { throw new UnsupportedOperationException(); }
+    @Mapping("setLabel:")
     public void setLabel(String v) { throw new UnsupportedOperationException(); }
     @NotImplemented("device")
     public MTLDevice getDevice() { throw new UnsupportedOperationException(); }

@@ -35,18 +35,23 @@ public class CAGradientLayer
     
     @Mapping("colors")
     public native List<CGColor> getColors();
+    @Mapping("setColors:")
     public native void setColors(List<CGColor> v);
     @Mapping("locations")
     public native NSArray<NSNumber> getLocations();
+    @Mapping("setLocations:")
     public native void setLocations(NSArray<NSNumber> v);
     @Mapping("startPoint")
     public native CGPoint getStartPoint();
+    @Mapping("setStartPoint:")
     public native void setStartPoint(CGPoint v);
     @Mapping("endPoint")
     public native CGPoint getEndPoint();
+    @Mapping("setEndPoint:")
     public native void setEndPoint(CGPoint v);
     @Mapping("type")
     public native CAGradientType getType();
+    @Mapping("setType:")
     public native void setType(CAGradientType v);
     
     

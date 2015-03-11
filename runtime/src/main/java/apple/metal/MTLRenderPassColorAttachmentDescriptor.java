@@ -32,6 +32,7 @@ public class MTLRenderPassColorAttachmentDescriptor
     
     @Mapping("clearColor")
     public native MTLClearColor getClearColor();
+    @Mapping("setClearColor:")
     public native void setClearColor(MTLClearColor v);
     
     

@@ -22,7 +22,7 @@ import apple.dispatch.*;
 
 
 
-
+@Library("Foundation")
 @Mapping("NSCalendarUnit")
 public final class NSCalendarUnit extends ObjCEnum {
     

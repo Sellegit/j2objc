@@ -20,7 +20,7 @@ import apple.coremedia.*;
 
 
 
-
+@Library("AudioToolbox")
 @Mapping("AudioSessionInterruptionState")
 public final class AudioSessionInterruptionState extends ObjCEnum {
     

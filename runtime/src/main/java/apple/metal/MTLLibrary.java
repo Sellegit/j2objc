@@ -32,6 +32,7 @@ public final class MTLLibrary
     
     @Mapping("label")
     public native String getLabel();
+    @Mapping("setLabel:")
     public native void setLabel(String v);
     @Mapping("device")
     public native MTLDevice getDevice();

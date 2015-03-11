@@ -18,7 +18,7 @@ import apple.foundation.*;
 
 
 
-
+@Library("CoreFoundation")
 @Mapping("CFNotificationPostingOptions")
 public final class CFNotificationPostingOptions extends ObjCEnum {
     

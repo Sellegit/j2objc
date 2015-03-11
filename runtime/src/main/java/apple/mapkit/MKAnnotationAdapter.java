@@ -19,7 +19,7 @@ import apple.dispatch.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-
+@Adapter
 public abstract class MKAnnotationAdapter 
     extends Object 
     implements MKAnnotation {
@@ -29,6 +29,7 @@ public abstract class MKAnnotationAdapter
     
     @NotImplemented("coordinate")
     public CLLocationCoordinate2D getCoordinate() { throw new UnsupportedOperationException(); }
+    @Mapping("setCoordinate:")
     public void setCoordinate(CLLocationCoordinate2D v) { throw new UnsupportedOperationException(); }
     @NotImplemented("title")
     public String getTitle() { throw new UnsupportedOperationException(); }

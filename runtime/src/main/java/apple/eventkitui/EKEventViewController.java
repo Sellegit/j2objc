@@ -41,15 +41,19 @@ public class EKEventViewController
     /**
      * @since Available in iOS 4.2 and later.
      */
+    @Mapping("setDelegate:")
     public native void setDelegate(EKEventViewDelegate v);
     @Mapping("event")
     public native EKEvent getEvent();
+    @Mapping("setEvent:")
     public native void setEvent(EKEvent v);
     @Mapping("allowsEditing")
     public native boolean allowsEditing();
+    @Mapping("setAllowsEditing:")
     public native void setAllowsEditing(boolean v);
     @Mapping("allowsCalendarPreview")
     public native boolean allowsCalendarPreview();
+    @Mapping("setAllowsCalendarPreview:")
     public native void setAllowsCalendarPreview(boolean v);
     
     

@@ -18,7 +18,7 @@ import apple.uikit.*;
 
 
 
-
+@Library("CoreGraphics")
 @Mapping("CGImageAlphaInfo")
 public final class CGImageAlphaInfo extends ObjCEnum {
     

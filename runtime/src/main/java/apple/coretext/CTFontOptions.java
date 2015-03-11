@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 
 
-
+@Library("CoreText")
 @Mapping("CTFontOptions")
 public final class CTFontOptions extends ObjCEnum {
     

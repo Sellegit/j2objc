@@ -16,7 +16,7 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-
+@Adapter
 public abstract class NSFetchedResultsControllerDelegateAdapter 
     extends Object 
     implements NSFetchedResultsControllerDelegate {

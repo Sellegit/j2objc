@@ -52,9 +52,11 @@ public class CKSubscription
     public native @Representing("CKSubscriptionOptions") @MachineSizedUInt long getSubscriptionOptions();
     @Mapping("notificationInfo")
     public native CKNotificationInfo getNotificationInfo();
+    @Mapping("setNotificationInfo:")
     public native void setNotificationInfo(CKNotificationInfo v);
     @Mapping("zoneID")
     public native CKRecordZoneID getZoneID();
+    @Mapping("setZoneID:")
     public native void setZoneID(CKRecordZoneID v);
     
     

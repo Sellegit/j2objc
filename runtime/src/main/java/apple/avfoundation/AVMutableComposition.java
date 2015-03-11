@@ -39,6 +39,7 @@ public class AVMutableComposition
     public native NSArray<AVAssetTrack> getTracks();
     @Mapping("naturalSize")
     public native CGSize getNaturalSize();
+    @Mapping("setNaturalSize:")
     public native void setNaturalSize(CGSize v);
     
     

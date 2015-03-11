@@ -22,7 +22,7 @@ import apple.dispatch.*;
 
 
 
-
+@Library("Foundation")
 @Mapping("NSByteCountFormatterCountStyle")
 public final class NSByteCountFormatterCountStyle extends ObjCEnum {
     

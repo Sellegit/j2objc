@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 
 
-
+@Library("AddressBook")
 @Mapping("ABAddressBookErrorCode")
 public final class ABAddressBookErrorCode extends ObjCEnum {
     

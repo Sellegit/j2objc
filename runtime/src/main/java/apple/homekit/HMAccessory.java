@@ -35,6 +35,7 @@ public class HMAccessory
     public native NSUUID getIdentifier();
     @Mapping("delegate")
     public native HMAccessoryDelegate getDelegate();
+    @Mapping("setDelegate:")
     public native void setDelegate(HMAccessoryDelegate v);
     @Mapping("isReachable")
     public native boolean isReachable();

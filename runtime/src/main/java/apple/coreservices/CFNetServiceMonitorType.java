@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 
 
-
+@Library("CFNetwork")
 @Mapping("CFNetServiceMonitorType")
 public final class CFNetServiceMonitorType extends ObjCEnum {
     

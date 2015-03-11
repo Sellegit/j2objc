@@ -18,7 +18,7 @@ import apple.uikit.*;
 
 
 
-
+@Library("CoreGraphics")
 @Mapping("CGLineCap")
 public final class CGLineCap extends ObjCEnum {
     

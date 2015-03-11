@@ -36,12 +36,15 @@ public class NSLengthFormatter
     
     @Mapping("numberFormatter")
     public native NSNumberFormatter getNumberFormatter();
+    @Mapping("setNumberFormatter:")
     public native void setNumberFormatter(NSNumberFormatter v);
     @Mapping("unitStyle")
     public native @Representing("NSFormattingUnitStyle") @MachineSizedSInt long getUnitStyle();
+    @Mapping("setUnitStyle:")
     public native void setUnitStyle(@Representing("NSFormattingUnitStyle") @MachineSizedSInt long v);
     @Mapping("isForPersonHeightUse")
     public native boolean isForPersonHeightUse();
+    @Mapping("setForPersonHeightUse:")
     public native void setForPersonHeightUse(boolean v);
     
     

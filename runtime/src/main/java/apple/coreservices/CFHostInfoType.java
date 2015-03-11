@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 
 
-
+@Library("CFNetwork")
 @Mapping("CFHostInfoType")
 public final class CFHostInfoType extends ObjCEnum {
     

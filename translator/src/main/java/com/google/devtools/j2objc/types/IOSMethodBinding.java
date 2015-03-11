@@ -16,6 +16,8 @@
 
 package com.google.devtools.j2objc.types;
 
+import com.google.devtools.j2objc.util.BindingUtil;
+
 import org.eclipse.jdt.core.dom.IMethodBinding;
 import org.eclipse.jdt.core.dom.ITypeBinding;
 
@@ -46,7 +48,12 @@ public class IOSMethodBinding extends GeneratedMethodBinding {
         original.isConstructor() ? original.getDeclaringClass() : original.getReturnType();
     ITypeBinding declaringClass = Types.resolveIOSType(iosMethod.getDeclaringClass());
     if (declaringClass == null) {
-      declaringClass = IOSTypeBinding.newUnmappedClass(iosMethod.getDeclaringClass());
+      String mappingName = BindingUtil.extractMappingName(original.getDeclaringClass());
+      if (mappingName != null) {
+        declaringClass = original.getDeclaringClass();
+      } else {
+        declaringClass = IOSTypeBinding.newUnmappedClass(iosMethod.getDeclaringClass());
+      }
     }
     IOSMethodBinding binding = new IOSMethodBinding(
         iosMethod, original, original.getModifiers(), returnType, null, declaringClass,

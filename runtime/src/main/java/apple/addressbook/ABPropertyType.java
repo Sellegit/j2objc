@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 
 
-
+@Library("AddressBook")
 @Mapping("ABPropertyType")
 public final class ABPropertyType extends ObjCEnum {
     

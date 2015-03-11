@@ -30,6 +30,7 @@ public interface MTLCommandEncoder
     MTLDevice getDevice();
     @Mapping("label")
     String getLabel();
+    @Mapping("setLabel:")
     void setLabel(String v);
     
     

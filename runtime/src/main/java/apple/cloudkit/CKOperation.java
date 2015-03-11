@@ -32,12 +32,15 @@ public class CKOperation
     
     @Mapping("container")
     public native CKContainer getContainer();
+    @Mapping("setContainer:")
     public native void setContainer(CKContainer v);
     @Mapping("usesBackgroundSession")
     public native boolean usesBackgroundSession();
+    @Mapping("setUsesBackgroundSession:")
     public native void setUsesBackgroundSession(boolean v);
     @Mapping("allowsCellularAccess")
     public native boolean allowsCellularAccess();
+    @Mapping("setAllowsCellularAccess:")
     public native void setAllowsCellularAccess(boolean v);
     
     

@@ -18,7 +18,7 @@ import apple.accounts.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-
+@Adapter
 public abstract class SKStoreProductViewControllerDelegateAdapter 
     extends Object 
     implements SKStoreProductViewControllerDelegate {

@@ -37,11 +37,13 @@ public class SCNPhysicsBallSocketJoint
     public native SCNPhysicsBody getBodyA();
     @Mapping("anchorA")
     public native SCNVector3 getAnchorA();
+    @Mapping("setAnchorA:")
     public native void setAnchorA(SCNVector3 v);
     @Mapping("bodyB")
     public native SCNPhysicsBody getBodyB();
     @Mapping("anchorB")
     public native SCNVector3 getAnchorB();
+    @Mapping("setAnchorB:")
     public native void setAnchorB(SCNVector3 v);
     
     

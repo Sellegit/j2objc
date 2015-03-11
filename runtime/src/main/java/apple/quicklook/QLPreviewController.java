@@ -34,14 +34,17 @@ public class QLPreviewController
     
     @Mapping("dataSource")
     public native QLPreviewControllerDataSource getDataSource();
+    @Mapping("setDataSource:")
     public native void setDataSource(QLPreviewControllerDataSource v);
     @Mapping("currentPreviewItemIndex")
     public native @MachineSizedSInt long getCurrentPreviewItemIndex();
+    @Mapping("setCurrentPreviewItemIndex:")
     public native void setCurrentPreviewItemIndex(@MachineSizedSInt long v);
     @Mapping("currentPreviewItem")
     public native QLPreviewItem getCurrentPreviewItem();
     @Mapping("delegate")
     public native QLPreviewControllerDelegate getDelegate();
+    @Mapping("setDelegate:")
     public native void setDelegate(QLPreviewControllerDelegate v);
     
     

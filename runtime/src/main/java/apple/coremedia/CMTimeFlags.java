@@ -21,7 +21,7 @@ import apple.corevideo.*;
 
 
 
-
+@Library("CoreMedia")
 @Mapping("CMTimeFlags")
 public final class CMTimeFlags extends ObjCEnum {
     

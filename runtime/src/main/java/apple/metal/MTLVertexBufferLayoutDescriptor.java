@@ -32,12 +32,15 @@ public class MTLVertexBufferLayoutDescriptor
     
     @Mapping("stride")
     public native @MachineSizedUInt long getStride();
+    @Mapping("setStride:")
     public native void setStride(@MachineSizedUInt long v);
     @Mapping("stepFunction")
     public native @Representing("MTLVertexStepFunction") @MachineSizedUInt long getStepFunction();
+    @Mapping("setStepFunction:")
     public native void setStepFunction(@Representing("MTLVertexStepFunction") @MachineSizedUInt long v);
     @Mapping("stepRate")
     public native @MachineSizedUInt long getStepRate();
+    @Mapping("setStepRate:")
     public native void setStepRate(@MachineSizedUInt long v);
     
     

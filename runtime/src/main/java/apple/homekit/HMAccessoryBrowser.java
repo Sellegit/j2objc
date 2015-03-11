@@ -31,6 +31,7 @@ public class HMAccessoryBrowser
     
     @Mapping("delegate")
     public native HMAccessoryBrowserDelegate getDelegate();
+    @Mapping("setDelegate:")
     public native void setDelegate(HMAccessoryBrowserDelegate v);
     @Mapping("discoveredAccessories")
     public native NSArray<HMAccessory> getDiscoveredAccessories();

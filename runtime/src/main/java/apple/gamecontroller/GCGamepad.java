@@ -31,6 +31,7 @@ public class GCGamepad
     public native GCController getController();
     @Mapping("valueChangedHandler")
     public native @Block VoidBlock2<GCGamepad, GCControllerElement> getValueChangedHandler();
+    @Mapping("setValueChangedHandler:")
     public native void setValueChangedHandler(@Block VoidBlock2<GCGamepad, GCControllerElement> v);
     @Mapping("dpad")
     public native GCControllerDirectionPad getDpad();

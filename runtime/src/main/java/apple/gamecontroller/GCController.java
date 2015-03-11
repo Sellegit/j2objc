@@ -29,6 +29,7 @@ public class GCController
     
     @Mapping("controllerPausedHandler")
     public native @Block VoidBlock1<GCController> getControllerPausedHandler();
+    @Mapping("setControllerPausedHandler:")
     public native void setControllerPausedHandler(@Block VoidBlock1<GCController> v);
     @Mapping("vendorName")
     public native String getVendorName();
@@ -36,6 +37,7 @@ public class GCController
     public native boolean isAttachedToDevice();
     @Mapping("playerIndex")
     public native @MachineSizedSInt long getPlayerIndex();
+    @Mapping("setPlayerIndex:")
     public native void setPlayerIndex(@MachineSizedSInt long v);
     @Mapping("gamepad")
     public native GCGamepad getGamepad();

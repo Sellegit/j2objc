@@ -16,7 +16,7 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-
+@Adapter
 public abstract class HMAccessoryDelegateAdapter 
     extends Object 
     implements HMAccessoryDelegate {

@@ -38,33 +38,43 @@ public class SKShapeNode
     
     @Mapping("path")
     public native CGPath getPath();
+    @Mapping("setPath:")
     public native void setPath(CGPath v);
     @Mapping("strokeColor")
     public native UIColor getStrokeColor();
+    @Mapping("setStrokeColor:")
     public native void setStrokeColor(UIColor v);
     @Mapping("fillColor")
     public native UIColor getFillColor();
+    @Mapping("setFillColor:")
     public native void setFillColor(UIColor v);
     @Mapping("blendMode")
     public native @Representing("SKBlendMode") @MachineSizedSInt long getBlendMode();
+    @Mapping("setBlendMode:")
     public native void setBlendMode(@Representing("SKBlendMode") @MachineSizedSInt long v);
     @Mapping("isAntialiased")
     public native boolean isAntialiased();
+    @Mapping("setAntialiased:")
     public native void setAntialiased(boolean v);
     @Mapping("lineWidth")
     public native @MachineSizedFloat double getLineWidth();
+    @Mapping("setLineWidth:")
     public native void setLineWidth(@MachineSizedFloat double v);
     @Mapping("glowWidth")
     public native @MachineSizedFloat double getGlowWidth();
+    @Mapping("setGlowWidth:")
     public native void setGlowWidth(@MachineSizedFloat double v);
     @Mapping("lineCap")
     public native @Representing("CGLineCap") int getLineCap();
+    @Mapping("setLineCap:")
     public native void setLineCap(@Representing("CGLineCap") int v);
     @Mapping("lineJoin")
     public native @Representing("CGLineJoin") int getLineJoin();
+    @Mapping("setLineJoin:")
     public native void setLineJoin(@Representing("CGLineJoin") int v);
     @Mapping("miterLimit")
     public native @MachineSizedFloat double getMiterLimit();
+    @Mapping("setMiterLimit:")
     public native void setMiterLimit(@MachineSizedFloat double v);
     @Mapping("lineLength")
     public native @MachineSizedFloat double getLineLength();
@@ -76,6 +86,7 @@ public class SKShapeNode
     /**
      * @since Available in iOS 8.0 and later.
      */
+    @Mapping("setFillTexture:")
     public native void setFillTexture(SKTexture v);
     /**
      * @since Available in iOS 8.0 and later.
@@ -85,6 +96,7 @@ public class SKShapeNode
     /**
      * @since Available in iOS 8.0 and later.
      */
+    @Mapping("setFillShader:")
     public native void setFillShader(SKShader v);
     /**
      * @since Available in iOS 8.0 and later.
@@ -94,6 +106,7 @@ public class SKShapeNode
     /**
      * @since Available in iOS 8.0 and later.
      */
+    @Mapping("setStrokeTexture:")
     public native void setStrokeTexture(SKTexture v);
     /**
      * @since Available in iOS 8.0 and later.
@@ -103,6 +116,7 @@ public class SKShapeNode
     /**
      * @since Available in iOS 8.0 and later.
      */
+    @Mapping("setStrokeShader:")
     public native void setStrokeShader(SKShader v);
     
     

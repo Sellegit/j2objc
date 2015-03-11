@@ -33,17 +33,21 @@ public class NSEntityDescription
     public native NSManagedObjectModel getManagedObjectModel();
     @Mapping("managedObjectClassName")
     public native String getManagedObjectClassName();
+    @Mapping("setManagedObjectClassName:")
     public native void setManagedObjectClassName(String v);
     @Mapping("name")
     public native String getName();
+    @Mapping("setName:")
     public native void setName(String v);
     @Mapping("isAbstract")
     public native boolean isAbstract();
+    @Mapping("setAbstract:")
     public native void setAbstract(boolean v);
     @Mapping("subentitiesByName")
     public native Map<String, NSEntityDescription> getSubentitiesByName();
     @Mapping("subentities")
     public native NSArray<NSEntityDescription> getSubentities();
+    @Mapping("setSubentities:")
     public native void setSubentities(NSArray<NSEntityDescription> v);
     @Mapping("superentity")
     public native NSEntityDescription getSuperentity();
@@ -51,9 +55,11 @@ public class NSEntityDescription
     public native Map<String, NSPropertyDescription> getPropertiesByName();
     @Mapping("properties")
     public native NSArray<NSPropertyDescription> getProperties();
+    @Mapping("setProperties:")
     public native void setProperties(NSArray<NSPropertyDescription> v);
     @Mapping("userInfo")
     public native NSDictionary<?, ?> getUserInfo();
+    @Mapping("setUserInfo:")
     public native void setUserInfo(NSDictionary<?, ?> v);
     @Mapping("attributesByName")
     public native Map<String, NSAttributeDescription> getAttributesByName();
@@ -72,6 +78,7 @@ public class NSEntityDescription
     /**
      * @since Available in iOS 3.0 and later.
      */
+    @Mapping("setVersionHashModifier:")
     public native void setVersionHashModifier(String v);
     /**
      * @since Available in iOS 3.0 and later.
@@ -81,6 +88,7 @@ public class NSEntityDescription
     /**
      * @since Available in iOS 3.0 and later.
      */
+    @Mapping("setRenamingIdentifier:")
     public native void setRenamingIdentifier(String v);
     /**
      * @since Available in iOS 5.0 and later.
@@ -90,6 +98,7 @@ public class NSEntityDescription
     /**
      * @since Available in iOS 5.0 and later.
      */
+    @Mapping("setCompoundIndexes:")
     public native void setCompoundIndexes(NSArray<?> v);
     
     

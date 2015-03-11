@@ -20,7 +20,7 @@ import apple.coremedia.*;
 
 
 
-
+@Library("AudioToolbox")
 @Mapping("AudioPanningMode")
 public final class AudioPanningMode extends ObjCEnum {
     

@@ -18,7 +18,7 @@ import apple.uikit.*;
 
 
 
-
+@Library("MediaPlayer")
 @Mapping("MPMovieSourceType")
 public final class MPMovieSourceType extends ObjCEnum {
     

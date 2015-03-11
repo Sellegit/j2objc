@@ -33,6 +33,7 @@ public class GCMotion
     public native GCController getController();
     @Mapping("valueChangedHandler")
     public native @Block VoidBlock2<GCGamepad, GCControllerElement> getValueChangedHandler();
+    @Mapping("setValueChangedHandler:")
     public native void setValueChangedHandler(@Block VoidBlock2<GCGamepad, GCControllerElement> v);
     @Mapping("gravity")
     public native GCAcceleration getGravity();

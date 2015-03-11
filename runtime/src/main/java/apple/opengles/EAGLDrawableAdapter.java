@@ -16,7 +16,7 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-
+@Adapter
 public abstract class EAGLDrawableAdapter 
     extends Object 
     implements EAGLDrawable {
@@ -26,6 +26,7 @@ public abstract class EAGLDrawableAdapter
     
     @NotImplemented("drawableProperties")
     public EAGLDrawableProperties getDrawableProperties() { throw new UnsupportedOperationException(); }
+    @Mapping("setDrawableProperties:")
     public void setDrawableProperties(EAGLDrawableProperties v) { throw new UnsupportedOperationException(); }
     
     

@@ -22,7 +22,7 @@ import apple.dispatch.*;
 
 
 
-
+@Library("Foundation")
 @Mapping("NSNetServiceOptions")
 public final class NSNetServiceOptions extends ObjCEnum {
     

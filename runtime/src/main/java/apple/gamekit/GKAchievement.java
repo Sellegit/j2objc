@@ -46,9 +46,11 @@ public class GKAchievement
     
     @Mapping("identifier")
     public native String getIdentifier();
+    @Mapping("setIdentifier:")
     public native void setIdentifier(String v);
     @Mapping("percentComplete")
     public native double getPercentComplete();
+    @Mapping("setPercentComplete:")
     public native void setPercentComplete(double v);
     @Mapping("isCompleted")
     public native boolean isCompleted();
@@ -62,6 +64,7 @@ public class GKAchievement
     /**
      * @since Available in iOS 5.0 and later.
      */
+    @Mapping("setShowsCompletionBanner:")
     public native void setShowsCompletionBanner(boolean v);
     /**
      * @since Available in iOS 8.0 and later.

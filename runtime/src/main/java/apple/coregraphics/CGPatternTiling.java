@@ -18,7 +18,7 @@ import apple.uikit.*;
 
 
 
-
+@Library("CoreGraphics")
 @Mapping("CGPatternTiling")
 public final class CGPatternTiling extends ObjCEnum {
     

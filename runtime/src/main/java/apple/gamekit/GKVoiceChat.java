@@ -38,14 +38,17 @@ public class GKVoiceChat
     /**
      * @since Available in iOS 8.0 and later.
      */
+    @Mapping("setPlayerVoiceChatStateDidChangeHandler:")
     public native void setPlayerVoiceChatStateDidChangeHandler(@Block VoidBlock2<GKPlayer, GKInviteRecipientResponse> v);
     @Mapping("name")
     public native String getName();
     @Mapping("isActive")
     public native boolean isActive();
+    @Mapping("setActive:")
     public native void setActive(boolean v);
     @Mapping("volume")
     public native float getVolume();
+    @Mapping("setVolume:")
     public native void setVolume(float v);
     /**
      * @since Available in iOS 8.0 and later.
@@ -71,6 +74,7 @@ public class GKVoiceChat
      * @deprecated Deprecated in iOS 8.0.
      */
     @Deprecated
+    @Mapping("setPlayerStateUpdateHandler:")
     public native void setPlayerStateUpdateHandler(@Block VoidBlock2<String, GKVoiceChatPlayerState> v);
     
     

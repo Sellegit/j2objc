@@ -37,9 +37,11 @@ public class CADisplayLink
     public native double getDuration();
     @Mapping("isPaused")
     public native boolean isPaused();
+    @Mapping("setPaused:")
     public native void setPaused(boolean v);
     @Mapping("frameInterval")
     public native @MachineSizedSInt long getFrameInterval();
+    @Mapping("setFrameInterval:")
     public native void setFrameInterval(@MachineSizedSInt long v);
     
     

@@ -38,18 +38,23 @@ public class NSURLSessionConfiguration
     public native String getIdentifier();
     @Mapping("requestCachePolicy")
     public native @Representing("NSURLRequestCachePolicy") @MachineSizedUInt long getRequestCachePolicy();
+    @Mapping("setRequestCachePolicy:")
     public native void setRequestCachePolicy(@Representing("NSURLRequestCachePolicy") @MachineSizedUInt long v);
     @Mapping("timeoutIntervalForRequest")
     public native double getTimeoutIntervalForRequest();
+    @Mapping("setTimeoutIntervalForRequest:")
     public native void setTimeoutIntervalForRequest(double v);
     @Mapping("timeoutIntervalForResource")
     public native double getTimeoutIntervalForResource();
+    @Mapping("setTimeoutIntervalForResource:")
     public native void setTimeoutIntervalForResource(double v);
     @Mapping("networkServiceType")
     public native @Representing("NSURLRequestNetworkServiceType") @MachineSizedUInt long getNetworkServiceType();
+    @Mapping("setNetworkServiceType:")
     public native void setNetworkServiceType(@Representing("NSURLRequestNetworkServiceType") @MachineSizedUInt long v);
     @Mapping("allowsCellularAccess")
     public native boolean allowsCellularAccess();
+    @Mapping("setAllowsCellularAccess:")
     public native void setAllowsCellularAccess(boolean v);
     /**
      * @since Available in iOS 7.0 and later.
@@ -59,6 +64,7 @@ public class NSURLSessionConfiguration
     /**
      * @since Available in iOS 7.0 and later.
      */
+    @Mapping("setDiscretionary:")
     public native void setDiscretionary(boolean v);
     /**
      * @since Available in iOS 8.0 and later.
@@ -68,6 +74,7 @@ public class NSURLSessionConfiguration
     /**
      * @since Available in iOS 8.0 and later.
      */
+    @Mapping("setSharedContainerIdentifier:")
     public native void setSharedContainerIdentifier(String v);
     /**
      * @since Available in iOS 7.0 and later.
@@ -77,42 +84,55 @@ public class NSURLSessionConfiguration
     /**
      * @since Available in iOS 7.0 and later.
      */
+    @Mapping("setSessionSendsLaunchEvents:")
     public native void setSendsLaunchEvents(boolean v);
     @Mapping("connectionProxyDictionary")
     public native CFProxy getConnectionProxy();
+    @Mapping("setConnectionProxyDictionary:")
     public native void setConnectionProxy(CFProxy v);
     @Mapping("TLSMinimumSupportedProtocol")
     public native SSLProtocol getTLSMinimumSupportedProtocol();
+    @Mapping("setTLSMinimumSupportedProtocol:")
     public native void setTLSMinimumSupportedProtocol(SSLProtocol v);
     @Mapping("TLSMaximumSupportedProtocol")
     public native SSLProtocol getTLSMaximumSupportedProtocol();
+    @Mapping("setTLSMaximumSupportedProtocol:")
     public native void setTLSMaximumSupportedProtocol(SSLProtocol v);
     @Mapping("HTTPShouldUsePipelining")
     public native boolean shouldUseHTTPPipelining();
+    @Mapping("setHTTPShouldUsePipelining:")
     public native void setShouldUseHTTPPipelining(boolean v);
     @Mapping("HTTPShouldSetCookies")
     public native boolean shouldSetHTTPCookies();
+    @Mapping("setHTTPShouldSetCookies:")
     public native void setShouldSetHTTPCookies(boolean v);
     @Mapping("HTTPCookieAcceptPolicy")
     public native @Representing("NSHTTPCookieAcceptPolicy") @MachineSizedUInt long getHTTPCookieAcceptPolicy();
+    @Mapping("setHTTPCookieAcceptPolicy:")
     public native void setHTTPCookieAcceptPolicy(@Representing("NSHTTPCookieAcceptPolicy") @MachineSizedUInt long v);
     @Mapping("HTTPAdditionalHeaders")
     public native Map<String, String> getGetAdditionalHTTPHeaders();
+    @Mapping("setHTTPAdditionalHeaders:")
     public native void setGetAdditionalHTTPHeaders(Map<String, String> v);
     @Mapping("HTTPMaximumConnectionsPerHost")
     public native @MachineSizedSInt long getMaximumHTTPConnectionsPerHost();
+    @Mapping("setHTTPMaximumConnectionsPerHost:")
     public native void setMaximumHTTPConnectionsPerHost(@MachineSizedSInt long v);
     @Mapping("HTTPCookieStorage")
     public native NSHTTPCookieStorage getHTTPCookieStorage();
+    @Mapping("setHTTPCookieStorage:")
     public native void setHTTPCookieStorage(NSHTTPCookieStorage v);
     @Mapping("URLCredentialStorage")
     public native NSURLCredentialStorage getURLCredentialStorage();
+    @Mapping("setURLCredentialStorage:")
     public native void setURLCredentialStorage(NSURLCredentialStorage v);
     @Mapping("URLCache")
     public native NSURLCache getURLCache();
+    @Mapping("setURLCache:")
     public native void setURLCache(NSURLCache v);
     @Mapping("protocolClasses")
     public native List<ObjCClass> getProtocolClasses();
+    @Mapping("setProtocolClasses:")
     public native void setProtocolClasses(List<ObjCClass> v);
     
     

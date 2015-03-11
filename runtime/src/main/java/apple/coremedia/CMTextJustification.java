@@ -21,7 +21,7 @@ import apple.corevideo.*;
 
 
 
-
+@Library("CoreMedia")
 @Mapping("CMTextJustification")
 public final class CMTextJustification extends ObjCEnum {
     

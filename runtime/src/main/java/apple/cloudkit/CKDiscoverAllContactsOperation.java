@@ -32,6 +32,7 @@ public class CKDiscoverAllContactsOperation
     
     @Mapping("discoverAllContactsCompletionBlock")
     public native @Block VoidBlock2<NSArray<CKDiscoveredUserInfo>, NSError> getDiscoverAllContactsCompletionBlock();
+    @Mapping("setDiscoverAllContactsCompletionBlock:")
     public native void setDiscoverAllContactsCompletionBlock(@Block VoidBlock2<NSArray<CKDiscoveredUserInfo>, NSError> v);
     
     

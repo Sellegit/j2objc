@@ -32,18 +32,23 @@ public class MTLDepthStencilDescriptor
     
     @Mapping("depthCompareFunction")
     public native @Representing("MTLCompareFunction") @MachineSizedUInt long getDepthCompareFunction();
+    @Mapping("setDepthCompareFunction:")
     public native void setDepthCompareFunction(@Representing("MTLCompareFunction") @MachineSizedUInt long v);
     @Mapping("isDepthWriteEnabled")
     public native boolean isDepthWriteEnabled();
+    @Mapping("setDepthWriteEnabled:")
     public native void setDepthWriteEnabled(boolean v);
     @Mapping("frontFaceStencil")
     public native MTLStencilDescriptor getFrontFaceStencil();
+    @Mapping("setFrontFaceStencil:")
     public native void setFrontFaceStencil(MTLStencilDescriptor v);
     @Mapping("backFaceStencil")
     public native MTLStencilDescriptor getBackFaceStencil();
+    @Mapping("setBackFaceStencil:")
     public native void setBackFaceStencil(MTLStencilDescriptor v);
     @Mapping("label")
     public native String getLabel();
+    @Mapping("setLabel:")
     public native void setLabel(String v);
     
     

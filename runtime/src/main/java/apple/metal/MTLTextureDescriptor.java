@@ -32,30 +32,39 @@ public class MTLTextureDescriptor
     
     @Mapping("textureType")
     public native @Representing("MTLTextureType") @MachineSizedUInt long getTextureType();
+    @Mapping("setTextureType:")
     public native void setTextureType(@Representing("MTLTextureType") @MachineSizedUInt long v);
     @Mapping("pixelFormat")
     public native @Representing("MTLPixelFormat") @MachineSizedUInt long getPixelFormat();
+    @Mapping("setPixelFormat:")
     public native void setPixelFormat(@Representing("MTLPixelFormat") @MachineSizedUInt long v);
     @Mapping("width")
     public native @MachineSizedUInt long getWidth();
+    @Mapping("setWidth:")
     public native void setWidth(@MachineSizedUInt long v);
     @Mapping("height")
     public native @MachineSizedUInt long getHeight();
+    @Mapping("setHeight:")
     public native void setHeight(@MachineSizedUInt long v);
     @Mapping("depth")
     public native @MachineSizedUInt long getDepth();
+    @Mapping("setDepth:")
     public native void setDepth(@MachineSizedUInt long v);
     @Mapping("mipmapLevelCount")
     public native @MachineSizedUInt long getMipmapLevelCount();
+    @Mapping("setMipmapLevelCount:")
     public native void setMipmapLevelCount(@MachineSizedUInt long v);
     @Mapping("sampleCount")
     public native @MachineSizedUInt long getSampleCount();
+    @Mapping("setSampleCount:")
     public native void setSampleCount(@MachineSizedUInt long v);
     @Mapping("arrayLength")
     public native @MachineSizedUInt long getArrayLength();
+    @Mapping("setArrayLength:")
     public native void setArrayLength(@MachineSizedUInt long v);
     @Mapping("resourceOptions")
     public native @Representing("MTLResourceOptions") @MachineSizedUInt long getResourceOptions();
+    @Mapping("setResourceOptions:")
     public native void setResourceOptions(@Representing("MTLResourceOptions") @MachineSizedUInt long v);
     
     

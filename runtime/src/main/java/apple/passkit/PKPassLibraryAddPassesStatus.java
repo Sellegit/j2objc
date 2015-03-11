@@ -21,7 +21,7 @@ import apple.addressbook.*;
  * @since Available in iOS 7.0 and later.
  */
 
-
+@Library("PassKit")
 @Mapping("PKPassLibraryAddPassesStatus")
 public final class PKPassLibraryAddPassesStatus extends ObjCEnum {
     

@@ -22,7 +22,7 @@ import apple.dispatch.*;
 
 
 
-
+@Library("Foundation")
 @Mapping("NSTimeZoneNameStyle")
 public final class NSTimeZoneNameStyle extends ObjCEnum {
     

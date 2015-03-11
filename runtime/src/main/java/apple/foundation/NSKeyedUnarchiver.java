@@ -36,6 +36,7 @@ public class NSKeyedUnarchiver
     
     @Mapping("delegate")
     public native NSKeyedUnarchiverDelegate getDelegate();
+    @Mapping("setDelegate:")
     public native void setDelegate(NSKeyedUnarchiverDelegate v);
     
     

@@ -37,12 +37,15 @@ public class ABPeoplePickerNavigationController
     
     @Mapping("peoplePickerDelegate")
     public native ABPeoplePickerNavigationControllerDelegate getPeoplePickerDelegate();
+    @Mapping("setPeoplePickerDelegate:")
     public native void setPeoplePickerDelegate(ABPeoplePickerNavigationControllerDelegate v);
     @Mapping("displayedProperties")
     public native List<? extends ABProperty> getDisplayedProperties();
+    @Mapping("setDisplayedProperties:")
     public native void setDisplayedProperties(List<? extends ABProperty> v);
     @Mapping("addressBook")
     public native ABAddressBook getAddressBook();
+    @Mapping("setAddressBook:")
     public native void setAddressBook(ABAddressBook v);
     /**
      * @since Available in iOS 8.0 and later.
@@ -52,6 +55,7 @@ public class ABPeoplePickerNavigationController
     /**
      * @since Available in iOS 8.0 and later.
      */
+    @Mapping("setPredicateForEnablingPerson:")
     public native void setPredicateForEnablingPerson(NSPredicate v);
     /**
      * @since Available in iOS 8.0 and later.
@@ -61,6 +65,7 @@ public class ABPeoplePickerNavigationController
     /**
      * @since Available in iOS 8.0 and later.
      */
+    @Mapping("setPredicateForSelectionOfPerson:")
     public native void setPredicateForSelectionOfPerson(NSPredicate v);
     /**
      * @since Available in iOS 8.0 and later.
@@ -70,6 +75,7 @@ public class ABPeoplePickerNavigationController
     /**
      * @since Available in iOS 8.0 and later.
      */
+    @Mapping("setPredicateForSelectionOfProperty:")
     public native void setPredicateForSelectionOfProperty(NSPredicate v);
     
     

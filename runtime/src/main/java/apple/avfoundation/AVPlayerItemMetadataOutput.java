@@ -43,6 +43,7 @@ public class AVPlayerItemMetadataOutput
     public native DispatchQueue getDelegateQueue();
     @Mapping("advanceIntervalForDelegateInvocation")
     public native double getAdvanceIntervalForDelegateInvocation();
+    @Mapping("setAdvanceIntervalForDelegateInvocation:")
     public native void setAdvanceIntervalForDelegateInvocation(double v);
     
     

@@ -44,6 +44,7 @@ public class GKChallengeEventHandler
      * @deprecated Deprecated in iOS 7.0.
      */
     @Deprecated
+    @Mapping("setDelegate:")
     public native void setDelegate(GKChallengeEventHandlerDelegate v);
     
     

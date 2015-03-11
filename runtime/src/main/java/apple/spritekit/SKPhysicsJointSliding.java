@@ -36,12 +36,15 @@ public class SKPhysicsJointSliding
     
     @Mapping("shouldEnableLimits")
     public native boolean shouldEnableLimits();
+    @Mapping("setShouldEnableLimits:")
     public native void setShouldEnableLimits(boolean v);
     @Mapping("lowerDistanceLimit")
     public native @MachineSizedFloat double getLowerDistanceLimit();
+    @Mapping("setLowerDistanceLimit:")
     public native void setLowerDistanceLimit(@MachineSizedFloat double v);
     @Mapping("upperDistanceLimit")
     public native @MachineSizedFloat double getUpperDistanceLimit();
+    @Mapping("setUpperDistanceLimit:")
     public native void setUpperDistanceLimit(@MachineSizedFloat double v);
     
     

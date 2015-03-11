@@ -42,24 +42,31 @@ public class SK3DNode
     
     @Mapping("viewportSize")
     public native CGSize getViewportSize();
+    @Mapping("setViewportSize:")
     public native void setViewportSize(CGSize v);
     @Mapping("scnScene")
     public native SCNScene getSceneKitScene();
+    @Mapping("setScnScene:")
     public native void setSceneKitScene(SCNScene v);
     @Mapping("sceneTime")
     public native double getSceneTime();
+    @Mapping("setSceneTime:")
     public native void setSceneTime(double v);
     @Mapping("isPlaying")
     public native boolean isPlaying();
+    @Mapping("setPlaying:")
     public native void setPlaying(boolean v);
     @Mapping("loops")
     public native boolean loops();
+    @Mapping("setLoops:")
     public native void setLoops(boolean v);
     @Mapping("pointOfView")
     public native SCNNode getPointOfView();
+    @Mapping("setPointOfView:")
     public native void setPointOfView(SCNNode v);
     @Mapping("autoenablesDefaultLighting")
     public native boolean autoenablesDefaultLighting();
+    @Mapping("setAutoenablesDefaultLighting:")
     public native void setAutoenablesDefaultLighting(boolean v);
     
     

@@ -31,6 +31,7 @@ public class HMHome
     
     @Mapping("delegate")
     public native HMHomeDelegate getDelegate();
+    @Mapping("setDelegate:")
     public native void setDelegate(HMHomeDelegate v);
     @Mapping("name")
     public native String getName();

@@ -43,6 +43,7 @@ public class AVAudioUnitEQ
     public native AVAudioUnitEQFilterParameters getBands();
     @Mapping("globalGain")
     public native float getGlobalGain();
+    @Mapping("setGlobalGain:")
     public native void setGlobalGain(float v);
     
     

@@ -35,36 +35,47 @@ public class SCNMaterialProperty
     
     @Mapping("contents")
     public native Object getContents();
+    @Mapping("setContents:")
     public native void setContents(Object v);
     @Mapping("intensity")
     public native @MachineSizedFloat double getIntensity();
+    @Mapping("setIntensity:")
     public native void setIntensity(@MachineSizedFloat double v);
     @Mapping("minificationFilter")
     public native @Representing("SCNFilterMode") @MachineSizedSInt long getMinificationFilter();
+    @Mapping("setMinificationFilter:")
     public native void setMinificationFilter(@Representing("SCNFilterMode") @MachineSizedSInt long v);
     @Mapping("magnificationFilter")
     public native @Representing("SCNFilterMode") @MachineSizedSInt long getMagnificationFilter();
+    @Mapping("setMagnificationFilter:")
     public native void setMagnificationFilter(@Representing("SCNFilterMode") @MachineSizedSInt long v);
     @Mapping("mipFilter")
     public native @Representing("SCNFilterMode") @MachineSizedSInt long getMipFilter();
+    @Mapping("setMipFilter:")
     public native void setMipFilter(@Representing("SCNFilterMode") @MachineSizedSInt long v);
     @Mapping("contentsTransform")
     public native SCNMatrix4 getContentsTransform();
+    @Mapping("setContentsTransform:")
     public native void setContentsTransform(SCNMatrix4 v);
     @Mapping("wrapS")
     public native @Representing("SCNWrapMode") @MachineSizedSInt long getWrapS();
+    @Mapping("setWrapS:")
     public native void setWrapS(@Representing("SCNWrapMode") @MachineSizedSInt long v);
     @Mapping("wrapT")
     public native @Representing("SCNWrapMode") @MachineSizedSInt long getWrapT();
+    @Mapping("setWrapT:")
     public native void setWrapT(@Representing("SCNWrapMode") @MachineSizedSInt long v);
     @Mapping("borderColor")
     public native Object getBorderColor();
+    @Mapping("setBorderColor:")
     public native void setBorderColor(Object v);
     @Mapping("mappingChannel")
     public native @MachineSizedSInt long getMappingChannel();
+    @Mapping("setMappingChannel:")
     public native void setMappingChannel(@MachineSizedSInt long v);
     @Mapping("maxAnisotropy")
     public native @MachineSizedFloat double getMaxAnisotropy();
+    @Mapping("setMaxAnisotropy:")
     public native void setMaxAnisotropy(@MachineSizedFloat double v);
     
     

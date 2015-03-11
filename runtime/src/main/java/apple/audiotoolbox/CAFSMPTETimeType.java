@@ -20,7 +20,7 @@ import apple.coremedia.*;
 
 
 
-
+@Library("AudioToolbox")
 @Mapping("CAFSMPTETimeType")
 public final class CAFSMPTETimeType extends ObjCEnum {
     

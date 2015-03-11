@@ -18,7 +18,7 @@ import apple.uikit.*;
 
 
 
-
+@Library("CoreGraphics")
 @Mapping("CGPathElementType")
 public final class CGPathElementType extends ObjCEnum {
     

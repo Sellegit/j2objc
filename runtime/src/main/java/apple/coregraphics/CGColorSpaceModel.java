@@ -18,7 +18,7 @@ import apple.uikit.*;
 
 
 
-
+@Library("CoreGraphics")
 @Mapping("CGColorSpaceModel")
 public final class CGColorSpaceModel extends ObjCEnum {
     

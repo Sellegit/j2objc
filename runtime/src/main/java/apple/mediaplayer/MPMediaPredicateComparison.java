@@ -20,7 +20,7 @@ import apple.uikit.*;
  * @since Available in iOS 3.0 and later.
  */
 
-
+@Library("MediaPlayer")
 @Mapping("MPMediaPredicateComparison")
 public final class MPMediaPredicateComparison extends ObjCEnum {
     

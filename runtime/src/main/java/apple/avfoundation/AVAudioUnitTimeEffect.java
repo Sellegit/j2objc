@@ -39,6 +39,7 @@ public class AVAudioUnitTimeEffect
     
     @Mapping("bypass")
     public native boolean isBypass();
+    @Mapping("setBypass:")
     public native void setBypass(boolean v);
     
     

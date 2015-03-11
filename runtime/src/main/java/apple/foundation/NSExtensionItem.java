@@ -36,15 +36,19 @@ public class NSExtensionItem
     
     @Mapping("attributedTitle")
     public native NSAttributedString getAttributedTitle();
+    @Mapping("setAttributedTitle:")
     public native void setAttributedTitle(NSAttributedString v);
     @Mapping("attributedContentText")
     public native NSAttributedString getAttributedContentText();
+    @Mapping("setAttributedContentText:")
     public native void setAttributedContentText(NSAttributedString v);
     @Mapping("attachments")
     public native NSArray<?> getAttachments();
+    @Mapping("setAttachments:")
     public native void setAttachments(NSArray<?> v);
     @Mapping("userInfo")
     public native NSDictionary<?, ?> getUserInfo();
+    @Mapping("setUserInfo:")
     public native void setUserInfo(NSDictionary<?, ?> v);
     
     

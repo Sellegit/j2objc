@@ -36,12 +36,15 @@ public class AVPlayerViewController
     
     @Mapping("player")
     public native AVPlayer getPlayer();
+    @Mapping("setPlayer:")
     public native void setPlayer(AVPlayer v);
     @Mapping("showsPlaybackControls")
     public native boolean showsPlaybackControls();
+    @Mapping("setShowsPlaybackControls:")
     public native void setShowsPlaybackControls(boolean v);
     @Mapping("videoGravity")
     public native AVLayerVideoGravity getVideoGravity();
+    @Mapping("setVideoGravity:")
     public native void setVideoGravity(AVLayerVideoGravity v);
     @Mapping("isReadyForDisplay")
     public native boolean isReadyForDisplay();

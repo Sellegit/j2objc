@@ -37,6 +37,7 @@ public class AVMutableVideoCompositionLayerInstruction
     
     @Mapping("trackID")
     public native int getTrackID();
+    @Mapping("setTrackID:")
     public native void setTrackID(int v);
     
     

@@ -18,7 +18,7 @@ import apple.foundation.*;
 
 
 
-
+@Library("CoreFoundation")
 @Mapping("CFCalendarUnit")
 public final class CFCalendarUnit extends ObjCEnum {
     

@@ -34,6 +34,7 @@ public class NSNetServiceBrowser
     
     @Mapping("delegate")
     public native NSNetServiceBrowserDelegate getDelegate();
+    @Mapping("setDelegate:")
     public native void setDelegate(NSNetServiceBrowserDelegate v);
     /**
      * @since Available in iOS 7.0 and later.
@@ -43,6 +44,7 @@ public class NSNetServiceBrowser
     /**
      * @since Available in iOS 7.0 and later.
      */
+    @Mapping("setIncludesPeerToPeer:")
     public native void setIncludesPeerToPeer(boolean v);
     
     

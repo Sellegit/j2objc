@@ -22,7 +22,7 @@ import apple.opengles.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-
+@Adapter
 public abstract class SCNTechniqueSupportAdapter 
     extends Object 
     implements SCNTechniqueSupport {
@@ -32,6 +32,7 @@ public abstract class SCNTechniqueSupportAdapter
     
     @NotImplemented("technique")
     public SCNTechnique getTechnique() { throw new UnsupportedOperationException(); }
+    @Mapping("setTechnique:")
     public void setTechnique(SCNTechnique v) { throw new UnsupportedOperationException(); }
     
     

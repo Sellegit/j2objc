@@ -37,6 +37,7 @@ public class AVSpeechSynthesizer
     
     @Mapping("delegate")
     public native AVSpeechSynthesizerDelegate getDelegate();
+    @Mapping("setDelegate:")
     public native void setDelegate(AVSpeechSynthesizerDelegate v);
     @Mapping("isSpeaking")
     public native boolean isSpeaking();

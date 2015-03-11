@@ -18,7 +18,7 @@ import apple.uikit.*;
 
 
 
-
+@Library("CoreGraphics")
 @Mapping("CGTextDrawingMode")
 public final class CGTextDrawingMode extends ObjCEnum {
     

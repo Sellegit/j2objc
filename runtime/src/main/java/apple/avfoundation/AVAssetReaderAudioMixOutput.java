@@ -43,6 +43,7 @@ public class AVAssetReaderAudioMixOutput
     public native AVAudioSettings getAudioSettings();
     @Mapping("audioMix")
     public native AVAudioMix getAudioMix();
+    @Mapping("setAudioMix:")
     public native void setAudioMix(AVAudioMix v);
     /**
      * @since Available in iOS 7.0 and later.
@@ -52,6 +53,7 @@ public class AVAssetReaderAudioMixOutput
     /**
      * @since Available in iOS 7.0 and later.
      */
+    @Mapping("setAudioTimePitchAlgorithm:")
     public native void setAudioTimePitchAlgorithm(AVAudioTimePitchAlgorithm v);
     
     

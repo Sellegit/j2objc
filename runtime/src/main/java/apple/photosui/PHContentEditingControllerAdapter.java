@@ -18,7 +18,7 @@ import apple.uikit.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-
+@Adapter
 public abstract class PHContentEditingControllerAdapter 
     extends Object 
     implements PHContentEditingController {

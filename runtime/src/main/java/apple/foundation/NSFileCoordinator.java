@@ -44,6 +44,7 @@ public class NSFileCoordinator
     /**
      * @since Available in iOS 5.0 and later.
      */
+    @Mapping("setPurposeIdentifier:")
     public native void setPurposeIdentifier(String v);
     
     

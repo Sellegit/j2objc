@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 
 
-
+@Library("CoreMotion")
 @Mapping("CMMotionActivityConfidence")
 public final class CMMotionActivityConfidence extends ObjCEnum {
     

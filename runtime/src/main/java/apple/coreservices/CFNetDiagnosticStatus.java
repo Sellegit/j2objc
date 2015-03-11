@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 
 
-
+@Library("CFNetwork")
 @Mapping("CFNetDiagnosticStatus")
 public final class CFNetDiagnosticStatus extends ObjCEnum {
     

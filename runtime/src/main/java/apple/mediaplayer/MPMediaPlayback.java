@@ -28,9 +28,11 @@ public interface MPMediaPlayback
     boolean isPreparedToPlay();
     @Mapping("currentPlaybackTime")
     double getCurrentPlaybackTime();
+    @Mapping("setCurrentPlaybackTime:")
     void setCurrentPlaybackTime(double v);
     @Mapping("currentPlaybackRate")
     float getCurrentPlaybackRate();
+    @Mapping("setCurrentPlaybackRate:")
     void setCurrentPlaybackRate(float v);
     
     

@@ -35,6 +35,7 @@ public class SCNConstraint
     
     @Mapping("influenceFactor")
     public native @MachineSizedFloat double getInfluenceFactor();
+    @Mapping("setInfluenceFactor:")
     public native void setInfluenceFactor(@MachineSizedFloat double v);
     
     

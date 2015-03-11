@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 
 
-
+@Library("CoreAudio")
 @Mapping("SMPTEStateFlags")
 public final class SMPTEStateFlags extends ObjCEnum {
     

@@ -17,7 +17,7 @@ import apple.dispatch.*;
 
 
 
-
+@Library("Security")
 @Mapping("SSLSessionOption")
 public final class SSLSessionOption extends ObjCEnum {
     

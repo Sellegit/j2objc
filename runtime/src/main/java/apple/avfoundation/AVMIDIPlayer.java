@@ -41,9 +41,11 @@ public class AVMIDIPlayer
     public native boolean isPlaying();
     @Mapping("rate")
     public native float getRate();
+    @Mapping("setRate:")
     public native void setRate(float v);
     @Mapping("currentPosition")
     public native double getCurrentPosition();
+    @Mapping("setCurrentPosition:")
     public native void setCurrentPosition(double v);
     
     

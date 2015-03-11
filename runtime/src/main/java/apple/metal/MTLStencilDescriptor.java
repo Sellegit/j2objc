@@ -32,21 +32,27 @@ public class MTLStencilDescriptor
     
     @Mapping("stencilCompareFunction")
     public native @Representing("MTLCompareFunction") @MachineSizedUInt long getStencilCompareFunction();
+    @Mapping("setStencilCompareFunction:")
     public native void setStencilCompareFunction(@Representing("MTLCompareFunction") @MachineSizedUInt long v);
     @Mapping("stencilFailureOperation")
     public native @Representing("MTLStencilOperation") @MachineSizedUInt long getStencilFailureOperation();
+    @Mapping("setStencilFailureOperation:")
     public native void setStencilFailureOperation(@Representing("MTLStencilOperation") @MachineSizedUInt long v);
     @Mapping("depthFailureOperation")
     public native @Representing("MTLStencilOperation") @MachineSizedUInt long getDepthFailureOperation();
+    @Mapping("setDepthFailureOperation:")
     public native void setDepthFailureOperation(@Representing("MTLStencilOperation") @MachineSizedUInt long v);
     @Mapping("depthStencilPassOperation")
     public native @Representing("MTLStencilOperation") @MachineSizedUInt long getDepthStencilPassOperation();
+    @Mapping("setDepthStencilPassOperation:")
     public native void setDepthStencilPassOperation(@Representing("MTLStencilOperation") @MachineSizedUInt long v);
     @Mapping("readMask")
     public native int getReadMask();
+    @Mapping("setReadMask:")
     public native void setReadMask(int v);
     @Mapping("writeMask")
     public native int getWriteMask();
+    @Mapping("setWriteMask:")
     public native void setWriteMask(int v);
     
     

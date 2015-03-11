@@ -23,7 +23,7 @@ import apple.avkit.*;
  * @since Available in iOS 6.0 and later.
  */
 
-
+@Library("iAd")
 @Mapping("ADAdType")
 public final class ADAdType extends ObjCEnum {
     

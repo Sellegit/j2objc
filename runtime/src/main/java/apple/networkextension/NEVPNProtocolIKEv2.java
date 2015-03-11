@@ -37,6 +37,7 @@ public class NEVPNProtocolIKEv2
     /**
      * @since Available in iOS 8.0 and later.
      */
+    @Mapping("setDeadPeerDetectionRate:")
     public native void setDeadPeerDetectionRate(@Representing("NEVPNIKEv2DeadPeerDetectionRate") @MachineSizedSInt long v);
     /**
      * @since Available in iOS 8.0 and later.
@@ -46,6 +47,7 @@ public class NEVPNProtocolIKEv2
     /**
      * @since Available in iOS 8.0 and later.
      */
+    @Mapping("setServerCertificateIssuerCommonName:")
     public native void setServerCertificateIssuerCommonName(String v);
     /**
      * @since Available in iOS 8.0 and later.
@@ -55,6 +57,7 @@ public class NEVPNProtocolIKEv2
     /**
      * @since Available in iOS 8.0 and later.
      */
+    @Mapping("setServerCertificateCommonName:")
     public native void setServerCertificateCommonName(String v);
     /**
      * @since Available in iOS 8.0 and later.

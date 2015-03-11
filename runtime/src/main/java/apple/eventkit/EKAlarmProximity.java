@@ -19,7 +19,7 @@ import apple.corelocation.*;
 
 
 
-
+@Library("EventKit")
 @Mapping("EKAlarmProximity")
 public final class EKAlarmProximity extends ObjCEnum {
     

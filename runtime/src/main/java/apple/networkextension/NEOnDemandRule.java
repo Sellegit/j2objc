@@ -42,6 +42,7 @@ public class NEOnDemandRule
     /**
      * @since Available in iOS 8.0 and later.
      */
+    @Mapping("setDNSSearchDomainMatch:")
     public native void setDNSSearchDomainMatch(List<String> v);
     /**
      * @since Available in iOS 8.0 and later.
@@ -51,6 +52,7 @@ public class NEOnDemandRule
     /**
      * @since Available in iOS 8.0 and later.
      */
+    @Mapping("setDNSServerAddressMatch:")
     public native void setDNSServerAddressMatch(List<String> v);
     /**
      * @since Available in iOS 8.0 and later.
@@ -60,6 +62,7 @@ public class NEOnDemandRule
     /**
      * @since Available in iOS 8.0 and later.
      */
+    @Mapping("setInterfaceTypeMatch:")
     public native void setInterfaceTypeMatch(@Representing("NEOnDemandRuleInterfaceType") @MachineSizedSInt long v);
     /**
      * @since Available in iOS 8.0 and later.
@@ -69,6 +72,7 @@ public class NEOnDemandRule
     /**
      * @since Available in iOS 8.0 and later.
      */
+    @Mapping("setSSIDMatch:")
     public native void setSSIDMatch(List<String> v);
     /**
      * @since Available in iOS 8.0 and later.
@@ -78,6 +82,7 @@ public class NEOnDemandRule
     /**
      * @since Available in iOS 8.0 and later.
      */
+    @Mapping("setProbeURL:")
     public native void setProbeURL(NSURL v);
     
     

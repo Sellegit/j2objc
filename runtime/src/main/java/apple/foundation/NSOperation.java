@@ -53,6 +53,7 @@ public class NSOperation
     public native NSArray<NSOperation> getDependencies();
     @Mapping("queuePriority")
     public native @Representing("NSOperationQueuePriority") @MachineSizedSInt long getQueuePriority();
+    @Mapping("setQueuePriority:")
     public native void setQueuePriority(@Representing("NSOperationQueuePriority") @MachineSizedSInt long v);
     /**
      * @since Available in iOS 4.0 and later.
@@ -62,6 +63,7 @@ public class NSOperation
     /**
      * @since Available in iOS 4.0 and later.
      */
+    @Mapping("setCompletionBlock:")
     public native void setCompletionBlock(@Block Runnable v);
     /**
      * @since Available in iOS 4.0 and later.
@@ -75,6 +77,7 @@ public class NSOperation
      * @deprecated Deprecated in iOS 8.0.
      */
     @Deprecated
+    @Mapping("setThreadPriority:")
     public native void setThreadPriority(double v);
     /**
      * @since Available in iOS 8.0 and later.
@@ -84,6 +87,7 @@ public class NSOperation
     /**
      * @since Available in iOS 8.0 and later.
      */
+    @Mapping("setQualityOfService:")
     public native void setQualityOfService(@Representing("NSQualityOfService") @MachineSizedSInt long v);
     /**
      * @since Available in iOS 8.0 and later.
@@ -93,6 +97,7 @@ public class NSOperation
     /**
      * @since Available in iOS 8.0 and later.
      */
+    @Mapping("setName:")
     public native void setName(String v);
     
     

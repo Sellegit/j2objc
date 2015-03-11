@@ -20,7 +20,7 @@ import apple.uikit.*;
  * @since Available in iOS 2.0 and later.
  */
 
-
+@Library("CoreGraphics")
 @Mapping("CGBitmapInfo")
 public final class CGBitmapInfo extends ObjCEnum {
     

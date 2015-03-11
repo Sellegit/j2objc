@@ -34,9 +34,11 @@ public class MPMusicPlayerController
     public native @Representing("MPMusicPlaybackState") @MachineSizedSInt long getPlaybackState();
     @Mapping("repeatMode")
     public native @Representing("MPMusicRepeatMode") @MachineSizedSInt long getRepeatMode();
+    @Mapping("setRepeatMode:")
     public native void setRepeatMode(@Representing("MPMusicRepeatMode") @MachineSizedSInt long v);
     @Mapping("shuffleMode")
     public native @Representing("MPMusicShuffleMode") @MachineSizedSInt long getShuffleMode();
+    @Mapping("setShuffleMode:")
     public native void setShuffleMode(@Representing("MPMusicShuffleMode") @MachineSizedSInt long v);
     /**
      * @since Available in iOS 3.0 and later.
@@ -50,9 +52,11 @@ public class MPMusicPlayerController
      * @deprecated Deprecated in iOS 7.0.
      */
     @Deprecated
+    @Mapping("setVolume:")
     public native void setVolume(float v);
     @Mapping("nowPlayingItem")
     public native MPMediaItem getNowPlayingItem();
+    @Mapping("setNowPlayingItem:")
     public native void setNowPlayingItem(MPMediaItem v);
     /**
      * @since Available in iOS 5.0 and later.
@@ -63,9 +67,11 @@ public class MPMusicPlayerController
     public native boolean isPreparedToPlay();
     @Mapping("currentPlaybackTime")
     public native double getCurrentPlaybackTime();
+    @Mapping("setCurrentPlaybackTime:")
     public native void setCurrentPlaybackTime(double v);
     @Mapping("currentPlaybackRate")
     public native float getCurrentPlaybackRate();
+    @Mapping("setCurrentPlaybackRate:")
     public native void setCurrentPlaybackRate(float v);
     
     

@@ -43,21 +43,27 @@ public class AVMutableVideoComposition
     /**
      * @since Available in iOS 7.0 and later.
      */
+    @Mapping("setCustomVideoCompositorClass:")
     public native void setCustomVideoCompositorClass(Class<? extends AVVideoCompositing> v);
     @Mapping("frameDuration")
     public native CMTime getFrameDuration();
+    @Mapping("setFrameDuration:")
     public native void setFrameDuration(CMTime v);
     @Mapping("renderSize")
     public native CGSize getRenderSize();
+    @Mapping("setRenderSize:")
     public native void setRenderSize(CGSize v);
     @Mapping("renderScale")
     public native float getRenderScale();
+    @Mapping("setRenderScale:")
     public native void setRenderScale(float v);
     @Mapping("instructions")
     public native NSArray<AVVideoCompositionInstruction> getInstructions();
+    @Mapping("setInstructions:")
     public native void setInstructions(NSArray<AVVideoCompositionInstruction> v);
     @Mapping("animationTool")
     public native AVVideoCompositionCoreAnimationTool getAnimationTool();
+    @Mapping("setAnimationTool:")
     public native void setAnimationTool(AVVideoCompositionCoreAnimationTool v);
     
     

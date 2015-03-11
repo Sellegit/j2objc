@@ -36,12 +36,15 @@ public class SKPhysicsBody
     
     @Mapping("isDynamic")
     public native boolean isDynamic();
+    @Mapping("setDynamic:")
     public native void setDynamic(boolean v);
     @Mapping("usesPreciseCollisionDetection")
     public native boolean usesPreciseCollisionDetection();
+    @Mapping("setUsesPreciseCollisionDetection:")
     public native void setUsesPreciseCollisionDetection(boolean v);
     @Mapping("allowsRotation")
     public native boolean allowsRotation();
+    @Mapping("setAllowsRotation:")
     public native void setAllowsRotation(boolean v);
     /**
      * @since Available in iOS 8.0 and later.
@@ -51,12 +54,15 @@ public class SKPhysicsBody
     /**
      * @since Available in iOS 8.0 and later.
      */
+    @Mapping("setPinned:")
     public native void setPinned(boolean v);
     @Mapping("isResting")
     public native boolean isResting();
+    @Mapping("setResting:")
     public native void setResting(boolean v);
     @Mapping("friction")
     public native @MachineSizedFloat double getFriction();
+    @Mapping("setFriction:")
     public native void setFriction(@MachineSizedFloat double v);
     /**
      * @since Available in iOS 8.0 and later.
@@ -66,26 +72,33 @@ public class SKPhysicsBody
     /**
      * @since Available in iOS 8.0 and later.
      */
+    @Mapping("setCharge:")
     public native void setCharge(@MachineSizedFloat double v);
     @Mapping("restitution")
     public native @MachineSizedFloat double getRestitution();
+    @Mapping("setRestitution:")
     public native void setRestitution(@MachineSizedFloat double v);
     @Mapping("linearDamping")
     public native @MachineSizedFloat double getLinearDamping();
+    @Mapping("setLinearDamping:")
     public native void setLinearDamping(@MachineSizedFloat double v);
     @Mapping("angularDamping")
     public native @MachineSizedFloat double getAngularDamping();
+    @Mapping("setAngularDamping:")
     public native void setAngularDamping(@MachineSizedFloat double v);
     @Mapping("density")
     public native @MachineSizedFloat double getDensity();
+    @Mapping("setDensity:")
     public native void setDensity(@MachineSizedFloat double v);
     @Mapping("mass")
     public native @MachineSizedFloat double getMass();
+    @Mapping("setMass:")
     public native void setMass(@MachineSizedFloat double v);
     @Mapping("area")
     public native @MachineSizedFloat double getArea();
     @Mapping("affectedByGravity")
     public native boolean isAffectedByGravity();
+    @Mapping("setAffectedByGravity:")
     public native void setAffectedByGravity(boolean v);
     /**
      * @since Available in iOS 8.0 and later.
@@ -95,15 +108,19 @@ public class SKPhysicsBody
     /**
      * @since Available in iOS 8.0 and later.
      */
+    @Mapping("setFieldBitMask:")
     public native void setFieldBitMask(int v);
     @Mapping("categoryBitMask")
     public native int getCategoryBitMask();
+    @Mapping("setCategoryBitMask:")
     public native void setCategoryBitMask(int v);
     @Mapping("collisionBitMask")
     public native int getCollisionBitMask();
+    @Mapping("setCollisionBitMask:")
     public native void setCollisionBitMask(int v);
     @Mapping("contactTestBitMask")
     public native int getContactTestBitMask();
+    @Mapping("setContactTestBitMask:")
     public native void setContactTestBitMask(int v);
     @Mapping("joints")
     public native NSArray<SKPhysicsJoint> getJoints();
@@ -111,9 +128,11 @@ public class SKPhysicsBody
     public native SKNode getNode();
     @Mapping("velocity")
     public native CGVector getVelocity();
+    @Mapping("setVelocity:")
     public native void setVelocity(CGVector v);
     @Mapping("angularVelocity")
     public native @MachineSizedFloat double getAngularVelocity();
+    @Mapping("setAngularVelocity:")
     public native void setAngularVelocity(@MachineSizedFloat double v);
     
     

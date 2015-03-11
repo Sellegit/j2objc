@@ -47,6 +47,7 @@ public class NSThread
     /**
      * @since Available in iOS 8.0 and later.
      */
+    @Mapping("setQualityOfService:")
     public native void setQualityOfService(@Representing("NSQualityOfService") @MachineSizedSInt long v);
     /**
      * @since Available in iOS 2.0 and later.
@@ -56,6 +57,7 @@ public class NSThread
     /**
      * @since Available in iOS 2.0 and later.
      */
+    @Mapping("setName:")
     public native void setName(String v);
     /**
      * @since Available in iOS 2.0 and later.
@@ -65,6 +67,7 @@ public class NSThread
     /**
      * @since Available in iOS 2.0 and later.
      */
+    @Mapping("setStackSize:")
     public native void setStackSize(@MachineSizedUInt long v);
     /**
      * @since Available in iOS 2.0 and later.

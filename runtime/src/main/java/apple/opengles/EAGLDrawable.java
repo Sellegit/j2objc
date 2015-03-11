@@ -25,6 +25,7 @@ public interface EAGLDrawable
     
     @Mapping("drawableProperties")
     EAGLDrawableProperties getDrawableProperties();
+    @Mapping("setDrawableProperties:")
     void setDrawableProperties(EAGLDrawableProperties v);
     
     

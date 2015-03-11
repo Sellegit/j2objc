@@ -33,6 +33,7 @@ public class NSMappingModel
     
     @Mapping("entityMappings")
     public native NSArray<NSEntityMapping> getEntityMappings();
+    @Mapping("setEntityMappings:")
     public native void setEntityMappings(NSArray<NSEntityMapping> v);
     @Mapping("entityMappingsByName")
     public native Map<String, NSEntityMapping> getEntityMappingsByName();

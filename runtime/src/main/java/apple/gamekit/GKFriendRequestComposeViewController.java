@@ -36,6 +36,7 @@ public class GKFriendRequestComposeViewController
     
     @Mapping("composeViewDelegate")
     public native GKFriendRequestComposeViewControllerDelegate getComposeViewDelegate();
+    @Mapping("setComposeViewDelegate:")
     public native void setComposeViewDelegate(GKFriendRequestComposeViewControllerDelegate v);
     
     

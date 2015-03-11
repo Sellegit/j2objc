@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 
 
-
+@Library("CoreText")
 @Mapping("CTTextAlignment")
 public final class CTTextAlignment extends ObjCEnum {
     

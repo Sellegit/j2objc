@@ -35,56 +35,73 @@ public class SCNNode
     
     @Mapping("name")
     public native String getName();
+    @Mapping("setName:")
     public native void setName(String v);
     @Mapping("light")
     public native SCNLight getLight();
+    @Mapping("setLight:")
     public native void setLight(SCNLight v);
     @Mapping("camera")
     public native SCNCamera getCamera();
+    @Mapping("setCamera:")
     public native void setCamera(SCNCamera v);
     @Mapping("geometry")
     public native SCNGeometry getGeometry();
+    @Mapping("setGeometry:")
     public native void setGeometry(SCNGeometry v);
     @Mapping("skinner")
     public native SCNSkinner getSkinner();
+    @Mapping("setSkinner:")
     public native void setSkinner(SCNSkinner v);
     @Mapping("morpher")
     public native SCNMorpher getMorpher();
+    @Mapping("setMorpher:")
     public native void setMorpher(SCNMorpher v);
     @Mapping("transform")
     public native SCNMatrix4 getTransform();
+    @Mapping("setTransform:")
     public native void setTransform(SCNMatrix4 v);
     @Mapping("position")
     public native SCNVector3 getPosition();
+    @Mapping("setPosition:")
     public native void setPosition(SCNVector3 v);
     @Mapping("rotation")
     public native SCNVector4 getRotation();
+    @Mapping("setRotation:")
     public native void setRotation(SCNVector4 v);
     @Mapping("orientation")
     public native SCNVector4 getOrientation();
+    @Mapping("setOrientation:")
     public native void setOrientation(SCNVector4 v);
     @Mapping("eulerAngles")
     public native SCNVector3 getEulerAngles();
+    @Mapping("setEulerAngles:")
     public native void setEulerAngles(SCNVector3 v);
     @Mapping("scale")
     public native SCNVector3 getScale();
+    @Mapping("setScale:")
     public native void setScale(SCNVector3 v);
     @Mapping("pivot")
     public native SCNMatrix4 getPivot();
+    @Mapping("setPivot:")
     public native void setPivot(SCNMatrix4 v);
     @Mapping("worldTransform")
     public native SCNMatrix4 getWorldTransform();
     @Mapping("isHidden")
     public native boolean isHidden();
+    @Mapping("setHidden:")
     public native void setHidden(boolean v);
     @Mapping("opacity")
     public native @MachineSizedFloat double getOpacity();
+    @Mapping("setOpacity:")
     public native void setOpacity(@MachineSizedFloat double v);
     @Mapping("renderingOrder")
     public native @MachineSizedSInt long getRenderingOrder();
+    @Mapping("setRenderingOrder:")
     public native void setRenderingOrder(@MachineSizedSInt long v);
     @Mapping("castsShadow")
     public native boolean castsShadow();
+    @Mapping("setCastsShadow:")
     public native void setCastsShadow(boolean v);
     @Mapping("parentNode")
     public native SCNNode getParentNode();
@@ -92,24 +109,31 @@ public class SCNNode
     public native NSArray<SCNNode> getChildNodes();
     @Mapping("physicsBody")
     public native SCNPhysicsBody getPhysicsBody();
+    @Mapping("setPhysicsBody:")
     public native void setPhysicsBody(SCNPhysicsBody v);
     @Mapping("physicsField")
     public native SCNPhysicsField getPhysicsField();
+    @Mapping("setPhysicsField:")
     public native void setPhysicsField(SCNPhysicsField v);
     @Mapping("constraints")
     public native NSArray<SCNConstraint> getConstraints();
+    @Mapping("setConstraints:")
     public native void setConstraints(NSArray<SCNConstraint> v);
     @Mapping("filters")
     public native NSArray<apple.coreimage.CIFilter> getFilters();
+    @Mapping("setFilters:")
     public native void setFilters(NSArray<apple.coreimage.CIFilter> v);
     @Mapping("isPaused")
     public native boolean isPaused();
+    @Mapping("setPaused:")
     public native void setPaused(boolean v);
     @Mapping("rendererDelegate")
     public native SCNNodeRendererDelegate getRendererDelegate();
+    @Mapping("setRendererDelegate:")
     public native void setRendererDelegate(SCNNodeRendererDelegate v);
     @Mapping("categoryBitMask")
     public native @MachineSizedUInt long getCategoryBitMask();
+    @Mapping("setCategoryBitMask:")
     public native void setCategoryBitMask(@MachineSizedUInt long v);
     @Mapping("particleSystems")
     public native NSArray<SCNParticleSystem> getParticleSystems();

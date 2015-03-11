@@ -33,12 +33,15 @@ public class CABasicAnimation
     
     @Mapping("fromValue")
     public native Object getFromValue();
+    @Mapping("setFromValue:")
     public native void setFromValue(Object v);
     @Mapping("toValue")
     public native Object getToValue();
+    @Mapping("setToValue:")
     public native void setToValue(Object v);
     @Mapping("byValue")
     public native Object getByValue();
+    @Mapping("setByValue:")
     public native void setByValue(Object v);
     
     

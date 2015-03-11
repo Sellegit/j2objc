@@ -20,7 +20,7 @@ import apple.metal.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-
+@Adapter
 public abstract class CAActionAdapter 
     extends Object 
     implements CAAction {

@@ -38,9 +38,11 @@ public class GLKView
     
     @Mapping("delegate")
     public native GLKViewDelegate getDelegate();
+    @Mapping("setDelegate:")
     public native void setDelegate(GLKViewDelegate v);
     @Mapping("context")
     public native EAGLContext getContext();
+    @Mapping("setContext:")
     public native void setContext(EAGLContext v);
     @Mapping("drawableWidth")
     public native @MachineSizedSInt long getDrawableWidth();
@@ -48,20 +50,25 @@ public class GLKView
     public native @MachineSizedSInt long getDrawableHeight();
     @Mapping("drawableColorFormat")
     public native @Representing("GLKViewDrawableColorFormat") int getDrawableColorFormat();
+    @Mapping("setDrawableColorFormat:")
     public native void setDrawableColorFormat(@Representing("GLKViewDrawableColorFormat") int v);
     @Mapping("drawableDepthFormat")
     public native @Representing("GLKViewDrawableDepthFormat") int getDrawableDepthFormat();
+    @Mapping("setDrawableDepthFormat:")
     public native void setDrawableDepthFormat(@Representing("GLKViewDrawableDepthFormat") int v);
     @Mapping("drawableStencilFormat")
     public native @Representing("GLKViewDrawableStencilFormat") int getDrawableStencilFormat();
+    @Mapping("setDrawableStencilFormat:")
     public native void setDrawableStencilFormat(@Representing("GLKViewDrawableStencilFormat") int v);
     @Mapping("drawableMultisample")
     public native @Representing("GLKViewDrawableMultisample") int getDrawableMultisample();
+    @Mapping("setDrawableMultisample:")
     public native void setDrawableMultisample(@Representing("GLKViewDrawableMultisample") int v);
     @Mapping("snapshot")
     public native UIImage getSnapshot();
     @Mapping("enableSetNeedsDisplay")
     public native boolean enablesSetNeedsDisplay();
+    @Mapping("setEnableSetNeedsDisplay:")
     public native void setEnablesSetNeedsDisplay(boolean v);
     
     

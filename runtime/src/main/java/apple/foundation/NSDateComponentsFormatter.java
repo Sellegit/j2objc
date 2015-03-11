@@ -36,33 +36,43 @@ public class NSDateComponentsFormatter
     
     @Mapping("unitsStyle")
     public native @Representing("NSDateComponentsFormatterUnitsStyle") @MachineSizedSInt long getUnitsStyle();
+    @Mapping("setUnitsStyle:")
     public native void setUnitsStyle(@Representing("NSDateComponentsFormatterUnitsStyle") @MachineSizedSInt long v);
     @Mapping("allowedUnits")
     public native @Representing("NSCalendarUnit") @MachineSizedUInt long getAllowedUnits();
+    @Mapping("setAllowedUnits:")
     public native void setAllowedUnits(@Representing("NSCalendarUnit") @MachineSizedUInt long v);
     @Mapping("zeroFormattingBehavior")
     public native @Representing("NSDateComponentsFormatterZeroFormattingBehavior") @MachineSizedUInt long getZeroFormattingBehavior();
+    @Mapping("setZeroFormattingBehavior:")
     public native void setZeroFormattingBehavior(@Representing("NSDateComponentsFormatterZeroFormattingBehavior") @MachineSizedUInt long v);
     @Mapping("calendar")
     public native NSCalendar getCalendar();
+    @Mapping("setCalendar:")
     public native void setCalendar(NSCalendar v);
     @Mapping("allowsFractionalUnits")
     public native boolean allowsFractionalUnits();
+    @Mapping("setAllowsFractionalUnits:")
     public native void setAllowsFractionalUnits(boolean v);
     @Mapping("maximumUnitCount")
     public native @MachineSizedSInt long getMaximumUnitCount();
+    @Mapping("setMaximumUnitCount:")
     public native void setMaximumUnitCount(@MachineSizedSInt long v);
     @Mapping("collapsesLargestUnit")
     public native boolean collapsesLargestUnit();
+    @Mapping("setCollapsesLargestUnit:")
     public native void setCollapsesLargestUnit(boolean v);
     @Mapping("includesApproximationPhrase")
     public native boolean includesApproximationPhrase();
+    @Mapping("setIncludesApproximationPhrase:")
     public native void setIncludesApproximationPhrase(boolean v);
     @Mapping("includesTimeRemainingPhrase")
     public native boolean includesTimeRemainingPhrase();
+    @Mapping("setIncludesTimeRemainingPhrase:")
     public native void setIncludesTimeRemainingPhrase(boolean v);
     @Mapping("formattingContext")
     public native @Representing("NSFormattingContext") @MachineSizedSInt long getFormattingContext();
+    @Mapping("setFormattingContext:")
     public native void setFormattingContext(@Representing("NSFormattingContext") @MachineSizedSInt long v);
     
     

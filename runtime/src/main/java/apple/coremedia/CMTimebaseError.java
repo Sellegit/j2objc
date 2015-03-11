@@ -21,7 +21,7 @@ import apple.corevideo.*;
 
 
 
-
+@Library("CoreMedia")
 @Mapping("CMTimebaseError")
 public final class CMTimebaseError extends ObjCEnum {
     

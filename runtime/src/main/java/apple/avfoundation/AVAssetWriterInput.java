@@ -46,11 +46,13 @@ public class AVAssetWriterInput
     public native CMFormatDescription getSourceFormatHint();
     @Mapping("metadata")
     public native NSArray<AVMetadataItem> getMetadata();
+    @Mapping("setMetadata:")
     public native void setMetadata(NSArray<AVMetadataItem> v);
     @Mapping("isReadyForMoreMediaData")
     public native boolean isReadyForMoreMediaData();
     @Mapping("expectsMediaDataInRealTime")
     public native boolean expectsMediaDataInRealTime();
+    @Mapping("setExpectsMediaDataInRealTime:")
     public native void setExpectsMediaDataInRealTime(boolean v);
     /**
      * @since Available in iOS 7.0 and later.
@@ -60,6 +62,7 @@ public class AVAssetWriterInput
     /**
      * @since Available in iOS 7.0 and later.
      */
+    @Mapping("setLanguageCode:")
     public native void setLanguageCode(String v);
     /**
      * @since Available in iOS 7.0 and later.
@@ -69,6 +72,7 @@ public class AVAssetWriterInput
     /**
      * @since Available in iOS 7.0 and later.
      */
+    @Mapping("setExtendedLanguageTag:")
     public native void setExtendedLanguageTag(String v);
     /**
      * @since Available in iOS 7.0 and later.
@@ -78,9 +82,11 @@ public class AVAssetWriterInput
     /**
      * @since Available in iOS 7.0 and later.
      */
+    @Mapping("setNaturalSize:")
     public native void setNaturalSize(CGSize v);
     @Mapping("transform")
     public native CGAffineTransform getTransform();
+    @Mapping("setTransform:")
     public native void setTransform(CGAffineTransform v);
     /**
      * @since Available in iOS 7.0 and later.
@@ -90,6 +96,7 @@ public class AVAssetWriterInput
     /**
      * @since Available in iOS 7.0 and later.
      */
+    @Mapping("setPreferredVolume:")
     public native void setPreferredVolume(float v);
     /**
      * @since Available in iOS 7.0 and later.
@@ -99,6 +106,7 @@ public class AVAssetWriterInput
     /**
      * @since Available in iOS 7.0 and later.
      */
+    @Mapping("setMarksOutputTrackAsEnabled:")
     public native void setMarksOutputTrackAsEnabled(boolean v);
     /**
      * @since Available in iOS 4.3 and later.
@@ -108,6 +116,7 @@ public class AVAssetWriterInput
     /**
      * @since Available in iOS 4.3 and later.
      */
+    @Mapping("setMediaTimeScale:")
     public native void setMediaTimeScale(int v);
     /**
      * @since Available in iOS 8.0 and later.
@@ -117,6 +126,7 @@ public class AVAssetWriterInput
     /**
      * @since Available in iOS 8.0 and later.
      */
+    @Mapping("setPreferredMediaChunkDuration:")
     public native void setPreferredMediaChunkDuration(CMTime v);
     /**
      * @since Available in iOS 8.0 and later.
@@ -126,6 +136,7 @@ public class AVAssetWriterInput
     /**
      * @since Available in iOS 8.0 and later.
      */
+    @Mapping("setPreferredMediaChunkAlignment:")
     public native void setPreferredMediaChunkAlignment(@MachineSizedSInt long v);
     /**
      * @since Available in iOS 8.0 and later.
@@ -135,6 +146,7 @@ public class AVAssetWriterInput
     /**
      * @since Available in iOS 8.0 and later.
      */
+    @Mapping("setSampleReferenceBaseURL:")
     public native void setSampleReferenceBaseURL(NSURL v);
     /**
      * @since Available in iOS 8.0 and later.
@@ -144,6 +156,7 @@ public class AVAssetWriterInput
     /**
      * @since Available in iOS 8.0 and later.
      */
+    @Mapping("setPerformsMultiPassEncodingIfSupported:")
     public native void setPerformsMultiPassEncodingIfSupported(boolean v);
     /**
      * @since Available in iOS 8.0 and later.

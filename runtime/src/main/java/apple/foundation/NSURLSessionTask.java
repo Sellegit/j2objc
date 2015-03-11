@@ -52,6 +52,7 @@ public class NSURLSessionTask
     public native long getCountOfBytesExpectedToReceive();
     @Mapping("taskDescription")
     public native String getTaskDescription();
+    @Mapping("setTaskDescription:")
     public native void setTaskDescription(String v);
     @Mapping("state")
     public native @Representing("NSURLSessionTaskState") @MachineSizedSInt long getState();
@@ -65,6 +66,7 @@ public class NSURLSessionTask
     /**
      * @since Available in iOS 8.0 and later.
      */
+    @Mapping("setPriority:")
     public native void setPriority(float v);
     
     

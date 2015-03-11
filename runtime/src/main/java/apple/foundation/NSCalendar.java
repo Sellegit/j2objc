@@ -38,15 +38,19 @@ public class NSCalendar
     public native NSCalendarIdentifier getCalendarIdentifier();
     @Mapping("locale")
     public native NSLocale getLocale();
+    @Mapping("setLocale:")
     public native void setLocale(NSLocale v);
     @Mapping("timeZone")
     public native NSTimeZone getTimeZone();
+    @Mapping("setTimeZone:")
     public native void setTimeZone(NSTimeZone v);
     @Mapping("firstWeekday")
     public native @MachineSizedUInt long getFirstWeekday();
+    @Mapping("setFirstWeekday:")
     public native void setFirstWeekday(@MachineSizedUInt long v);
     @Mapping("minimumDaysInFirstWeek")
     public native @MachineSizedUInt long getMinimumDaysInFirstWeek();
+    @Mapping("setMinimumDaysInFirstWeek:")
     public native void setMinimumDaysInFirstWeek(@MachineSizedUInt long v);
     /**
      * @since Available in iOS 5.0 and later.

@@ -22,7 +22,7 @@ import apple.dispatch.*;
 
 
 
-
+@Library("Foundation")
 @Mapping("NSPredicateOperatorType")
 public final class NSPredicateOperatorType extends ObjCEnum {
     

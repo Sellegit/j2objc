@@ -37,12 +37,15 @@ public class AVAssetResourceLoadingContentInformationRequest
     
     @Mapping("contentType")
     public native String getContentType();
+    @Mapping("setContentType:")
     public native void setContentType(String v);
     @Mapping("contentLength")
     public native long getContentLength();
+    @Mapping("setContentLength:")
     public native void setContentLength(long v);
     @Mapping("isByteRangeAccessSupported")
     public native boolean isByteRangeAccessSupported();
+    @Mapping("setByteRangeAccessSupported:")
     public native void setByteRangeAccessSupported(boolean v);
     /**
      * @since Available in iOS 8.0 and later.
@@ -52,6 +55,7 @@ public class AVAssetResourceLoadingContentInformationRequest
     /**
      * @since Available in iOS 8.0 and later.
      */
+    @Mapping("setRenewalDate:")
     public native void setRenewalDate(NSDate v);
     
     

@@ -17,7 +17,7 @@ import apple.uikit.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-
+@Adapter
 public abstract class GKFriendRequestComposeViewControllerDelegateAdapter 
     extends Object 
     implements GKFriendRequestComposeViewControllerDelegate {

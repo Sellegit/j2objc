@@ -22,7 +22,7 @@ import apple.dispatch.*;
 
 
 
-
+@Library("Foundation")
 @Mapping("NSURLCacheStoragePolicy")
 public final class NSURLCacheStoragePolicy extends ObjCEnum {
     

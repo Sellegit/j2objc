@@ -36,18 +36,23 @@ public class MKMapView
     
     @Mapping("delegate")
     public native MKMapViewDelegate getDelegate();
+    @Mapping("setDelegate:")
     public native void setDelegate(MKMapViewDelegate v);
     @Mapping("mapType")
     public native @Representing("MKMapType") @MachineSizedUInt long getMapType();
+    @Mapping("setMapType:")
     public native void setMapType(@Representing("MKMapType") @MachineSizedUInt long v);
     @Mapping("region")
     public native MKCoordinateRegion getRegion();
+    @Mapping("setRegion:")
     public native void setRegion(MKCoordinateRegion v);
     @Mapping("centerCoordinate")
     public native CLLocationCoordinate2D getCenterCoordinate();
+    @Mapping("setCenterCoordinate:")
     public native void setCenterCoordinate(CLLocationCoordinate2D v);
     @Mapping("visibleMapRect")
     public native MKMapRect getVisibleMapRect();
+    @Mapping("setVisibleMapRect:")
     public native void setVisibleMapRect(MKMapRect v);
     /**
      * @since Available in iOS 7.0 and later.
@@ -57,12 +62,15 @@ public class MKMapView
     /**
      * @since Available in iOS 7.0 and later.
      */
+    @Mapping("setCamera:")
     public native void setCamera(MKMapCamera v);
     @Mapping("isZoomEnabled")
     public native boolean isZoomEnabled();
+    @Mapping("setZoomEnabled:")
     public native void setZoomEnabled(boolean v);
     @Mapping("isScrollEnabled")
     public native boolean isScrollEnabled();
+    @Mapping("setScrollEnabled:")
     public native void setScrollEnabled(boolean v);
     /**
      * @since Available in iOS 7.0 and later.
@@ -72,6 +80,7 @@ public class MKMapView
     /**
      * @since Available in iOS 7.0 and later.
      */
+    @Mapping("setRotateEnabled:")
     public native void setRotateEnabled(boolean v);
     /**
      * @since Available in iOS 7.0 and later.
@@ -81,6 +90,7 @@ public class MKMapView
     /**
      * @since Available in iOS 7.0 and later.
      */
+    @Mapping("setPitchEnabled:")
     public native void setPitchEnabled(boolean v);
     /**
      * @since Available in iOS 7.0 and later.
@@ -90,6 +100,7 @@ public class MKMapView
     /**
      * @since Available in iOS 7.0 and later.
      */
+    @Mapping("setShowsPointsOfInterest:")
     public native void setShowsPointsOfInterest(boolean v);
     /**
      * @since Available in iOS 7.0 and later.
@@ -99,9 +110,11 @@ public class MKMapView
     /**
      * @since Available in iOS 7.0 and later.
      */
+    @Mapping("setShowsBuildings:")
     public native void setShowsBuildings(boolean v);
     @Mapping("showsUserLocation")
     public native boolean showsUserLocation();
+    @Mapping("setShowsUserLocation:")
     public native void setShowsUserLocation(boolean v);
     @Mapping("userLocation")
     public native MKUserLocation getUserLocation();
@@ -113,6 +126,7 @@ public class MKMapView
     /**
      * @since Available in iOS 5.0 and later.
      */
+    @Mapping("setUserTrackingMode:")
     public native void setUserTrackingMode(@Representing("MKUserTrackingMode") @MachineSizedSInt long v);
     @Mapping("isUserLocationVisible")
     public native boolean isUserLocationVisible();
@@ -120,6 +134,7 @@ public class MKMapView
     public native List<? extends MKAnnotation> getAnnotations();
     @Mapping("selectedAnnotations")
     public native List<? extends MKAnnotation> getSelectedAnnotations();
+    @Mapping("setSelectedAnnotations:")
     public native void setSelectedAnnotations(List<? extends MKAnnotation> v);
     @Mapping("annotationVisibleRect")
     public native CGRect getAnnotationVisibleRect();

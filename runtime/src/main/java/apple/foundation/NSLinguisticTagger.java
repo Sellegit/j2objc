@@ -52,6 +52,7 @@ public class NSLinguisticTagger
     /**
      * @since Available in iOS 5.0 and later.
      */
+    @Mapping("setString:")
     public native void setString(String v);
     
     

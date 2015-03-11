@@ -37,18 +37,23 @@ public class AVAudioUnitEQFilterParameters
     
     @Mapping("filterType")
     public native @Representing("AVAudioUnitEQFilterType") @MachineSizedSInt long getFilterType();
+    @Mapping("setFilterType:")
     public native void setFilterType(@Representing("AVAudioUnitEQFilterType") @MachineSizedSInt long v);
     @Mapping("frequency")
     public native float getFrequency();
+    @Mapping("setFrequency:")
     public native void setFrequency(float v);
     @Mapping("bandwidth")
     public native float getBandwidth();
+    @Mapping("setBandwidth:")
     public native void setBandwidth(float v);
     @Mapping("gain")
     public native float getGain();
+    @Mapping("setGain:")
     public native void setGain(float v);
     @Mapping("bypass")
     public native boolean isBypass();
+    @Mapping("setBypass:")
     public native void setBypass(boolean v);
     
     

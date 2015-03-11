@@ -18,7 +18,7 @@ import apple.foundation.*;
 
 
 
-
+@Library("CoreFoundation")
 @Mapping("CFRunLoopExitReason")
 public final class CFRunLoopExitReason extends ObjCEnum {
     

@@ -19,7 +19,7 @@ import apple.corelocation.*;
 
 
 
-
+@Library("EventKit")
 @Mapping("EKSourceType")
 public final class EKSourceType extends ObjCEnum {
     

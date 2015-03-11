@@ -34,12 +34,15 @@ public class CKModifyRecordZonesOperation
     
     @Mapping("recordZonesToSave")
     public native NSArray<CKRecordZone> getRecordZonesToSave();
+    @Mapping("setRecordZonesToSave:")
     public native void setRecordZonesToSave(NSArray<CKRecordZone> v);
     @Mapping("recordZoneIDsToDelete")
     public native NSArray<CKRecordZoneID> getRecordZoneIDsToDelete();
+    @Mapping("setRecordZoneIDsToDelete:")
     public native void setRecordZoneIDsToDelete(NSArray<CKRecordZoneID> v);
     @Mapping("modifyRecordZonesCompletionBlock")
     public native @Block VoidBlock3<NSArray<CKRecordZone>, NSArray<CKRecordZoneID>, NSError> getModifyRecordZonesCompletionBlock();
+    @Mapping("setModifyRecordZonesCompletionBlock:")
     public native void setModifyRecordZonesCompletionBlock(@Block VoidBlock3<NSArray<CKRecordZone>, NSArray<CKRecordZoneID>, NSError> v);
     
     

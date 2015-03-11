@@ -22,7 +22,7 @@ import apple.dispatch.*;
 
 
 
-
+@Library("Foundation")
 @Mapping("NSBinarySearchingOptions")
 public final class NSBinarySearchingOptions extends ObjCEnum {
     

@@ -35,32 +35,41 @@ public class SCNGeometry
     
     @Mapping("name")
     public native String getName();
+    @Mapping("setName:")
     public native void setName(String v);
     @Mapping("materials")
     public native NSArray<SCNMaterial> getMaterials();
+    @Mapping("setMaterials:")
     public native void setMaterials(NSArray<SCNMaterial> v);
     @Mapping("firstMaterial")
     public native SCNMaterial getFirstMaterial();
+    @Mapping("setFirstMaterial:")
     public native void setFirstMaterial(SCNMaterial v);
     @Mapping("geometryElementCount")
     public native @MachineSizedSInt long getGeometryElementCount();
     @Mapping("levelsOfDetail")
     public native NSArray<SCNLevelOfDetail> getLevelsOfDetail();
+    @Mapping("setLevelsOfDetail:")
     public native void setLevelsOfDetail(NSArray<SCNLevelOfDetail> v);
     @Mapping("subdivisionLevel")
     public native @MachineSizedUInt long getSubdivisionLevel();
+    @Mapping("setSubdivisionLevel:")
     public native void setSubdivisionLevel(@MachineSizedUInt long v);
     @Mapping("edgeCreasesElement")
     public native SCNGeometryElement getEdgeCreasesElement();
+    @Mapping("setEdgeCreasesElement:")
     public native void setEdgeCreasesElement(SCNGeometryElement v);
     @Mapping("edgeCreasesSource")
     public native SCNGeometrySource getEdgeCreasesSource();
+    @Mapping("setEdgeCreasesSource:")
     public native void setEdgeCreasesSource(SCNGeometrySource v);
     @Mapping("shaderModifiers")
     public native Map<SCNShaderModifierEntryPoint, String> getShaderModifiers();
+    @Mapping("setShaderModifiers:")
     public native void setShaderModifiers(Map<SCNShaderModifierEntryPoint, String> v);
     @Mapping("program")
     public native SCNProgram getProgram();
+    @Mapping("setProgram:")
     public native void setProgram(SCNProgram v);
     
     

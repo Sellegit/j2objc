@@ -34,12 +34,15 @@ public class MKShape
     
     @Mapping("title")
     public native String getTitle();
+    @Mapping("setTitle:")
     public native void setTitle(String v);
     @Mapping("subtitle")
     public native String getSubtitle();
+    @Mapping("setSubtitle:")
     public native void setSubtitle(String v);
     @Mapping("coordinate")
     public native CLLocationCoordinate2D getCoordinate();
+    @Mapping("setCoordinate:")
     public native void setCoordinate(CLLocationCoordinate2D v);
     
     

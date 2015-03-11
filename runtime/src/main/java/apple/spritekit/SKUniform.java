@@ -60,27 +60,35 @@ public class SKUniform
     public native @Representing("SKUniformType") @MachineSizedSInt long getUniformType();
     @Mapping("textureValue")
     public native SKTexture getTextureValue();
+    @Mapping("setTextureValue:")
     public native void setTextureValue(SKTexture v);
     @Mapping("floatValue")
     public native float getFloatValue();
+    @Mapping("setFloatValue:")
     public native void setFloatValue(float v);
     @Mapping("floatVector2Value")
     public native GLKVector2 getFloatVector2Value();
+    @Mapping("setFloatVector2Value:")
     public native void setFloatVector2Value(GLKVector2 v);
     @Mapping("floatVector3Value")
     public native GLKVector3 getFloatVector3Value();
+    @Mapping("setFloatVector3Value:")
     public native void setFloatVector3Value(GLKVector3 v);
     @Mapping("floatVector4Value")
     public native GLKVector4 getFloatVector4Value();
+    @Mapping("setFloatVector4Value:")
     public native void setFloatVector4Value(GLKVector4 v);
     @Mapping("floatMatrix2Value")
     public native GLKMatrix2 getFloatMatrix2Value();
+    @Mapping("setFloatMatrix2Value:")
     public native void setFloatMatrix2Value(GLKMatrix2 v);
     @Mapping("floatMatrix3Value")
     public native GLKMatrix3 getFloatMatrix3Value();
+    @Mapping("setFloatMatrix3Value:")
     public native void setFloatMatrix3Value(GLKMatrix3 v);
     @Mapping("floatMatrix4Value")
     public native GLKMatrix4 getFloatMatrix4Value();
+    @Mapping("setFloatMatrix4Value:")
     public native void setFloatMatrix4Value(GLKMatrix4 v);
     
     

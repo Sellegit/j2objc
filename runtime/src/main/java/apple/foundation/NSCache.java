@@ -36,18 +36,23 @@ public class NSCache
     
     @Mapping("name")
     public native String getName();
+    @Mapping("setName:")
     public native void setName(String v);
     @Mapping("delegate")
     public native NSCacheDelegate getDelegate();
+    @Mapping("setDelegate:")
     public native void setDelegate(NSCacheDelegate v);
     @Mapping("totalCostLimit")
     public native @MachineSizedUInt long getTotalCostLimit();
+    @Mapping("setTotalCostLimit:")
     public native void setTotalCostLimit(@MachineSizedUInt long v);
     @Mapping("countLimit")
     public native @MachineSizedUInt long getCountLimit();
+    @Mapping("setCountLimit:")
     public native void setCountLimit(@MachineSizedUInt long v);
     @Mapping("evictsObjectsWithDiscardedContent")
     public native boolean evictsObjectsWithDiscardedContent();
+    @Mapping("setEvictsObjectsWithDiscardedContent:")
     public native void setEvictsObjectsWithDiscardedContent(boolean v);
     
     

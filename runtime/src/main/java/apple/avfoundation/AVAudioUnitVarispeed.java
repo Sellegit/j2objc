@@ -39,6 +39,7 @@ public class AVAudioUnitVarispeed
     
     @Mapping("rate")
     public native float getRate();
+    @Mapping("setRate:")
     public native void setRate(float v);
     
     

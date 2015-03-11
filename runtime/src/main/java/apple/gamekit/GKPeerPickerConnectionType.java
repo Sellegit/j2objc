@@ -22,7 +22,7 @@ import apple.uikit.*;
  */
 @Deprecated
 
-
+@Library("GameKit")
 @Mapping("GKPeerPickerConnectionType")
 public final class GKPeerPickerConnectionType extends ObjCEnum {
     

@@ -33,6 +33,7 @@ public class CLLocationManager
     
     @Mapping("delegate")
     public native CLLocationManagerDelegate getDelegate();
+    @Mapping("setDelegate:")
     public native void setDelegate(CLLocationManagerDelegate v);
     /**
      * @since Available in iOS 3.2 and later.
@@ -46,6 +47,7 @@ public class CLLocationManager
      * @deprecated Deprecated in iOS 6.0.
      */
     @Deprecated
+    @Mapping("setPurpose:")
     public native void setPurpose(String v);
     /**
      * @since Available in iOS 6.0 and later.
@@ -55,12 +57,15 @@ public class CLLocationManager
     /**
      * @since Available in iOS 6.0 and later.
      */
+    @Mapping("setActivityType:")
     public native void setActivityType(@Representing("CLActivityType") @MachineSizedSInt long v);
     @Mapping("distanceFilter")
     public native double getDistanceFilter();
+    @Mapping("setDistanceFilter:")
     public native void setDistanceFilter(double v);
     @Mapping("desiredAccuracy")
     public native double getDesiredAccuracy();
+    @Mapping("setDesiredAccuracy:")
     public native void setDesiredAccuracy(double v);
     /**
      * @since Available in iOS 6.0 and later.
@@ -70,6 +75,7 @@ public class CLLocationManager
     /**
      * @since Available in iOS 6.0 and later.
      */
+    @Mapping("setPausesLocationUpdatesAutomatically:")
     public native void setPausesLocationUpdatesAutomatically(boolean v);
     @Mapping("location")
     public native CLLocation getLocation();
@@ -81,6 +87,7 @@ public class CLLocationManager
     /**
      * @since Available in iOS 3.0 and later.
      */
+    @Mapping("setHeadingFilter:")
     public native void setHeadingFilter(double v);
     /**
      * @since Available in iOS 4.0 and later.
@@ -90,6 +97,7 @@ public class CLLocationManager
     /**
      * @since Available in iOS 4.0 and later.
      */
+    @Mapping("setHeadingOrientation:")
     public native void setHeadingOrientation(@Representing("CLDeviceOrientation") int v);
     /**
      * @since Available in iOS 4.0 and later.

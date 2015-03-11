@@ -34,6 +34,7 @@ public final class MTLParallelRenderCommandEncoder
     public native MTLDevice getDevice();
     @Mapping("label")
     public native String getLabel();
+    @Mapping("setLabel:")
     public native void setLabel(String v);
     
     

@@ -36,6 +36,7 @@ public class GLKReflectionMapEffect
     public native GLKEffectPropertyTexture getTextureCubeMap();
     @Mapping("matrix")
     public native GLKMatrix3 getMatrix();
+    @Mapping("setMatrix:")
     public native void setMatrix(GLKMatrix3 v);
     
     

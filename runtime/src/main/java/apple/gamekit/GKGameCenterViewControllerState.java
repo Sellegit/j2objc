@@ -18,7 +18,7 @@ import apple.uikit.*;
 
 
 
-
+@Library("GameKit")
 @Mapping("GKGameCenterViewControllerState")
 public final class GKGameCenterViewControllerState extends ObjCEnum {
     

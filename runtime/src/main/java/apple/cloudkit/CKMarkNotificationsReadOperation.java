@@ -34,9 +34,11 @@ public class CKMarkNotificationsReadOperation
     
     @Mapping("notificationIDs")
     public native NSArray<CKNotificationID> getNotificationIDs();
+    @Mapping("setNotificationIDs:")
     public native void setNotificationIDs(NSArray<CKNotificationID> v);
     @Mapping("markNotificationsReadCompletionBlock")
     public native @Block VoidBlock2<NSArray<CKNotificationID>, NSError> getMarkNotificationsReadCompletionBlock();
+    @Mapping("setMarkNotificationsReadCompletionBlock:")
     public native void setMarkNotificationsReadCompletionBlock(@Block VoidBlock2<NSArray<CKNotificationID>, NSError> v);
     
     

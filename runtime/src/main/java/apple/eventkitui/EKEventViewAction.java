@@ -19,7 +19,7 @@ import apple.uikit.*;
 
 
 
-
+@Library("EventKitUI")
 @Mapping("EKEventViewAction")
 public final class EKEventViewAction extends ObjCEnum {
     

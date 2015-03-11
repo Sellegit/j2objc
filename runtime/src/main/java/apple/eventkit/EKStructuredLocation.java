@@ -33,12 +33,15 @@ public class EKStructuredLocation
     
     @Mapping("title")
     public native String getTitle();
+    @Mapping("setTitle:")
     public native void setTitle(String v);
     @Mapping("geoLocation")
     public native CLLocation getGeoLocation();
+    @Mapping("setGeoLocation:")
     public native void setGeoLocation(CLLocation v);
     @Mapping("radius")
     public native double getRadius();
+    @Mapping("setRadius:")
     public native void setRadius(double v);
     
     

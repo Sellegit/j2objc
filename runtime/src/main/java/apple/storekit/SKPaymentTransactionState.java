@@ -21,7 +21,7 @@ import apple.accounts.*;
  * @since Available in iOS 3.0 and later.
  */
 
-
+@Library("StoreKit")
 @Mapping("SKPaymentTransactionState")
 public final class SKPaymentTransactionState extends ObjCEnum {
     

@@ -38,21 +38,27 @@ public class NSProgress
     
     @Mapping("totalUnitCount")
     public native long getTotalUnitCount();
+    @Mapping("setTotalUnitCount:")
     public native void setTotalUnitCount(long v);
     @Mapping("completedUnitCount")
     public native long getCompletedUnitCount();
+    @Mapping("setCompletedUnitCount:")
     public native void setCompletedUnitCount(long v);
     @Mapping("localizedDescription")
     public native String getLocalizedDescription();
+    @Mapping("setLocalizedDescription:")
     public native void setLocalizedDescription(String v);
     @Mapping("localizedAdditionalDescription")
     public native String getLocalizedAdditionalDescription();
+    @Mapping("setLocalizedAdditionalDescription:")
     public native void setLocalizedAdditionalDescription(String v);
     @Mapping("isCancellable")
     public native boolean isCancellable();
+    @Mapping("setCancellable:")
     public native void setCancellable(boolean v);
     @Mapping("isPausable")
     public native boolean isPausable();
+    @Mapping("setPausable:")
     public native void setPausable(boolean v);
     @Mapping("isCancelled")
     public native boolean isCancelled();
@@ -60,9 +66,11 @@ public class NSProgress
     public native boolean isPaused();
     @Mapping("cancellationHandler")
     public native @Block Runnable getCancellationHandler();
+    @Mapping("setCancellationHandler:")
     public native void setCancellationHandler(@Block Runnable v);
     @Mapping("pausingHandler")
     public native @Block Runnable getPausingHandler();
+    @Mapping("setPausingHandler:")
     public native void setPausingHandler(@Block Runnable v);
     @Mapping("isIndeterminate")
     public native boolean isIndeterminate();
@@ -72,6 +80,7 @@ public class NSProgress
     public native NSDictionary<?, ?> getUserInfo();
     @Mapping("kind")
     public native NSProgressKind getKind();
+    @Mapping("setKind:")
     public native void setKind(NSProgressKind v);
     
     

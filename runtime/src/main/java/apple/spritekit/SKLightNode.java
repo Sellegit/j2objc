@@ -40,21 +40,27 @@ public class SKLightNode
     
     @Mapping("isEnabled")
     public native boolean isEnabled();
+    @Mapping("setEnabled:")
     public native void setEnabled(boolean v);
     @Mapping("lightColor")
     public native UIColor getLightColor();
+    @Mapping("setLightColor:")
     public native void setLightColor(UIColor v);
     @Mapping("ambientColor")
     public native UIColor getAmbientColor();
+    @Mapping("setAmbientColor:")
     public native void setAmbientColor(UIColor v);
     @Mapping("shadowColor")
     public native UIColor getShadowColor();
+    @Mapping("setShadowColor:")
     public native void setShadowColor(UIColor v);
     @Mapping("falloff")
     public native @MachineSizedFloat double getFalloff();
+    @Mapping("setFalloff:")
     public native void setFalloff(@MachineSizedFloat double v);
     @Mapping("categoryBitMask")
     public native int getCategoryBitMask();
+    @Mapping("setCategoryBitMask:")
     public native void setCategoryBitMask(int v);
     
     

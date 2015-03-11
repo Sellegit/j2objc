@@ -35,45 +35,59 @@ public class SCNCamera
     
     @Mapping("name")
     public native String getName();
+    @Mapping("setName:")
     public native void setName(String v);
     @Mapping("xFov")
     public native double getXFov();
+    @Mapping("setXFov:")
     public native void setXFov(double v);
     @Mapping("yFov")
     public native double getYFov();
+    @Mapping("setYFov:")
     public native void setYFov(double v);
     @Mapping("zNear")
     public native double getZNear();
+    @Mapping("setZNear:")
     public native void setZNear(double v);
     @Mapping("zFar")
     public native double getZFar();
+    @Mapping("setZFar:")
     public native void setZFar(double v);
     @Mapping("automaticallyAdjustsZRange")
     public native boolean automaticallyAdjustsZRange();
+    @Mapping("setAutomaticallyAdjustsZRange:")
     public native void setAutomaticallyAdjustsZRange(boolean v);
     @Mapping("usesOrthographicProjection")
     public native boolean usesOrthographicProjection();
+    @Mapping("setUsesOrthographicProjection:")
     public native void setUsesOrthographicProjection(boolean v);
     @Mapping("orthographicScale")
     public native double getOrthographicScale();
+    @Mapping("setOrthographicScale:")
     public native void setOrthographicScale(double v);
     @Mapping("focalDistance")
     public native @MachineSizedFloat double getFocalDistance();
+    @Mapping("setFocalDistance:")
     public native void setFocalDistance(@MachineSizedFloat double v);
     @Mapping("focalSize")
     public native @MachineSizedFloat double getFocalSize();
+    @Mapping("setFocalSize:")
     public native void setFocalSize(@MachineSizedFloat double v);
     @Mapping("focalBlurRadius")
     public native @MachineSizedFloat double getFocalBlurRadius();
+    @Mapping("setFocalBlurRadius:")
     public native void setFocalBlurRadius(@MachineSizedFloat double v);
     @Mapping("aperture")
     public native @MachineSizedFloat double getAperture();
+    @Mapping("setAperture:")
     public native void setAperture(@MachineSizedFloat double v);
     @Mapping("categoryBitMask")
     public native @MachineSizedUInt long getCategoryBitMask();
+    @Mapping("setCategoryBitMask:")
     public native void setCategoryBitMask(@MachineSizedUInt long v);
     @Mapping("technique")
     public native SCNTechnique getTechnique();
+    @Mapping("setTechnique:")
     public native void setTechnique(SCNTechnique v);
     
     

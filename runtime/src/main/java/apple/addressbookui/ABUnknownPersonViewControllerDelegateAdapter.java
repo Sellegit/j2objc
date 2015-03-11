@@ -18,7 +18,7 @@ import apple.addressbook.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-
+@Adapter
 public abstract class ABUnknownPersonViewControllerDelegateAdapter 
     extends Object 
     implements ABUnknownPersonViewControllerDelegate {

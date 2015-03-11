@@ -34,6 +34,7 @@ public class PHAssetCollectionChangeRequest
     public native PHObjectPlaceholder getPlaceholderForCreatedAssetCollection();
     @Mapping("title")
     public native String getTitle();
+    @Mapping("setTitle:")
     public native void setTitle(String v);
     
     

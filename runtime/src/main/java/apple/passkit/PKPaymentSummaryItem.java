@@ -33,9 +33,11 @@ public class PKPaymentSummaryItem
     
     @Mapping("label")
     public native String getLabel();
+    @Mapping("setLabel:")
     public native void setLabel(String v);
     @Mapping("amount")
     public native NSDecimalNumber getAmount();
+    @Mapping("setAmount:")
     public native void setAmount(NSDecimalNumber v);
     
     

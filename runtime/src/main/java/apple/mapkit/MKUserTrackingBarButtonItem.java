@@ -49,6 +49,7 @@ public class MKUserTrackingBarButtonItem
     
     @Mapping("mapView")
     public native MKMapView getMapView();
+    @Mapping("setMapView:")
     public native void setMapView(MKMapView v);
     
     

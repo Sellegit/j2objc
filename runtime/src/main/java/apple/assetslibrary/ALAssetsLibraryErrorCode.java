@@ -18,7 +18,7 @@ import apple.imageio.*;
 
 
 
-
+@Library("AssetsLibrary")
 @Mapping("ALAssetsLibraryErrorCode")
 public final class ALAssetsLibraryErrorCode extends ObjCEnum {
     

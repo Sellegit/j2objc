@@ -44,15 +44,19 @@ public class AVAssetImageGenerator
     public native AVAsset getAsset();
     @Mapping("appliesPreferredTrackTransform")
     public native boolean appliesPreferredTrackTransform();
+    @Mapping("setAppliesPreferredTrackTransform:")
     public native void setAppliesPreferredTrackTransform(boolean v);
     @Mapping("maximumSize")
     public native CGSize getMaximumSize();
+    @Mapping("setMaximumSize:")
     public native void setMaximumSize(CGSize v);
     @Mapping("apertureMode")
     public native AVAssetImageGeneratorApertureMode getApertureMode();
+    @Mapping("setApertureMode:")
     public native void setApertureMode(AVAssetImageGeneratorApertureMode v);
     @Mapping("videoComposition")
     public native AVVideoComposition getVideoComposition();
+    @Mapping("setVideoComposition:")
     public native void setVideoComposition(AVVideoComposition v);
     /**
      * @since Available in iOS 7.0 and later.
@@ -67,6 +71,7 @@ public class AVAssetImageGenerator
     /**
      * @since Available in iOS 5.0 and later.
      */
+    @Mapping("setRequestedTimeToleranceBefore:")
     public native void setRequestedTimeToleranceBefore(CMTime v);
     /**
      * @since Available in iOS 5.0 and later.
@@ -76,6 +81,7 @@ public class AVAssetImageGenerator
     /**
      * @since Available in iOS 5.0 and later.
      */
+    @Mapping("setRequestedTimeToleranceAfter:")
     public native void setRequestedTimeToleranceAfter(CMTime v);
     
     

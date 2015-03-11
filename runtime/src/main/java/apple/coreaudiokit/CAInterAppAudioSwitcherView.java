@@ -35,6 +35,7 @@ public class CAInterAppAudioSwitcherView
     
     @Mapping("isShowingAppNames")
     public native boolean isShowingAppNames();
+    @Mapping("setShowingAppNames:")
     public native void setShowingAppNames(boolean v);
     
     

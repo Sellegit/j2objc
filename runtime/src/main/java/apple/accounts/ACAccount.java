@@ -35,12 +35,15 @@ public class ACAccount
     public native String getIdentifier();
     @Mapping("accountType")
     public native ACAccountType getAccountType();
+    @Mapping("setAccountType:")
     public native void setAccountType(ACAccountType v);
     @Mapping("accountDescription")
     public native String getAccountDescription();
+    @Mapping("setAccountDescription:")
     public native void setAccountDescription(String v);
     @Mapping("username")
     public native String getUsername();
+    @Mapping("setUsername:")
     public native void setUsername(String v);
     /**
      * @since Available in iOS 7.0 and later.
@@ -49,6 +52,7 @@ public class ACAccount
     public native String getUserFullName();
     @Mapping("credential")
     public native ACAccountCredential getCredential();
+    @Mapping("setCredential:")
     public native void setCredential(ACAccountCredential v);
     
     

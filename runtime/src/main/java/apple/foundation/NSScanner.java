@@ -38,15 +38,19 @@ public class NSScanner
     public native String getString();
     @Mapping("scanLocation")
     public native @MachineSizedUInt long getScanLocation();
+    @Mapping("setScanLocation:")
     public native void setScanLocation(@MachineSizedUInt long v);
     @Mapping("charactersToBeSkipped")
     public native NSCharacterSet getCharactersToBeSkipped();
+    @Mapping("setCharactersToBeSkipped:")
     public native void setCharactersToBeSkipped(NSCharacterSet v);
     @Mapping("caseSensitive")
     public native boolean isCaseSensitive();
+    @Mapping("setCaseSensitive:")
     public native void setCaseSensitive(boolean v);
     @Mapping("locale")
     public native NSLocale getLocale();
+    @Mapping("setLocale:")
     public native void setLocale(NSLocale v);
     @Mapping("isAtEnd")
     public native boolean isAtEnd();

@@ -36,24 +36,31 @@ public class NSMetadataQuery
     
     @Mapping("delegate")
     public native NSMetadataQueryDelegate getDelegate();
+    @Mapping("setDelegate:")
     public native void setDelegate(NSMetadataQueryDelegate v);
     @Mapping("predicate")
     public native NSPredicate getPredicate();
+    @Mapping("setPredicate:")
     public native void setPredicate(NSPredicate v);
     @Mapping("sortDescriptors")
     public native NSArray<NSSortDescriptor> getSortDescriptors();
+    @Mapping("setSortDescriptors:")
     public native void setSortDescriptors(NSArray<NSSortDescriptor> v);
     @Mapping("valueListAttributes")
     public native List<NSMetadataItemAttribute> getValueListAttributes();
+    @Mapping("setValueListAttributes:")
     public native void setValueListAttributes(List<NSMetadataItemAttribute> v);
     @Mapping("groupingAttributes")
     public native List<NSMetadataItemAttribute> getGroupingAttributes();
+    @Mapping("setGroupingAttributes:")
     public native void setGroupingAttributes(List<NSMetadataItemAttribute> v);
     @Mapping("notificationBatchingInterval")
     public native double getNotificationBatchingInterval();
+    @Mapping("setNotificationBatchingInterval:")
     public native void setNotificationBatchingInterval(double v);
     @Mapping("searchScopes")
     protected native NSArray<?> getSearchScopes0();
+    @Mapping("setSearchScopes:")
     protected native void setSearchScopes0(NSArray<?> v);
     /**
      * @since Available in iOS 7.0 and later.
@@ -63,6 +70,7 @@ public class NSMetadataQuery
     /**
      * @since Available in iOS 7.0 and later.
      */
+    @Mapping("setSearchItems:")
     protected native void setSearchItems0(NSArray<?> v);
     /**
      * @since Available in iOS 7.0 and later.
@@ -72,6 +80,7 @@ public class NSMetadataQuery
     /**
      * @since Available in iOS 7.0 and later.
      */
+    @Mapping("setOperationQueue:")
     public native void setOperationQueue(NSOperationQueue v);
     @Mapping("isStarted")
     public native boolean isStarted();

@@ -18,7 +18,7 @@ import apple.foundation.*;
 
 
 
-
+@Library("CoreFoundation")
 @Mapping("CFFileDescriptorCallBackType")
 public final class CFFileDescriptorCallBackType extends ObjCEnum {
     

@@ -20,7 +20,7 @@ import apple.coremedia.*;
 
 
 
-
+@Library("AudioToolbox")
 @Mapping("MusicEventType")
 public final class MusicEventType extends ObjCEnum {
     

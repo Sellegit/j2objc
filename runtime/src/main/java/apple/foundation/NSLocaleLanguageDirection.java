@@ -22,7 +22,7 @@ import apple.dispatch.*;
 
 
 
-
+@Library("Foundation")
 @Mapping("NSLocaleLanguageDirection")
 public final class NSLocaleLanguageDirection extends ObjCEnum {
     

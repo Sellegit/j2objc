@@ -20,7 +20,7 @@ import apple.uikit.*;
  * @since Available in iOS 3.0 and later.
  */
 
-
+@Library("MediaPlayer")
 @Mapping("MPMediaType")
 public final class MPMediaType extends ObjCEnum {
     

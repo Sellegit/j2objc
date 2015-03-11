@@ -18,7 +18,7 @@ import apple.foundation.*;
 
 
 
-
+@Library("CoreFoundation")
 @Mapping("CFStringEncodings")
 public final class CFStringEncodings extends ObjCEnum {
     

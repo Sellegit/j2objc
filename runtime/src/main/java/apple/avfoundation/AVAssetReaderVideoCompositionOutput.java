@@ -41,6 +41,7 @@ public class AVAssetReaderVideoCompositionOutput
     public native NSDictionary<NSString, NSObject> getVideoSettings0();
     @Mapping("videoComposition")
     public native AVVideoComposition getVideoComposition();
+    @Mapping("setVideoComposition:")
     public native void setVideoComposition(AVVideoComposition v);
     /**
      * @since Available in iOS 7.0 and later.

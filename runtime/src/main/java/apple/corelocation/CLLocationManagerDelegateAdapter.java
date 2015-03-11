@@ -18,7 +18,7 @@ import apple.corebluetooth.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-
+@Adapter
 public abstract class CLLocationManagerDelegateAdapter 
     extends Object 
     implements CLLocationManagerDelegate {

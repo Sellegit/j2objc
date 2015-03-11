@@ -48,6 +48,7 @@ public class NSFileVersion
     public native boolean isConflict();
     @Mapping("isResolved")
     public native boolean isResolved();
+    @Mapping("setResolved:")
     public native void setResolved(boolean v);
     /**
      * @since Available in iOS 8.0 and later.

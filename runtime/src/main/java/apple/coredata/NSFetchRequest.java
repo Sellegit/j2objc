@@ -36,6 +36,7 @@ public class NSFetchRequest
     
     @Mapping("entity")
     public native NSEntityDescription getEntity();
+    @Mapping("setEntity:")
     public native void setEntity(NSEntityDescription v);
     /**
      * @since Available in iOS 4.0 and later.
@@ -44,15 +45,19 @@ public class NSFetchRequest
     public native String getEntityName();
     @Mapping("predicate")
     public native NSPredicate getPredicate();
+    @Mapping("setPredicate:")
     public native void setPredicate(NSPredicate v);
     @Mapping("sortDescriptors")
     public native NSArray<NSSortDescriptor> getSortDescriptors();
+    @Mapping("setSortDescriptors:")
     public native void setSortDescriptors(NSArray<NSSortDescriptor> v);
     @Mapping("fetchLimit")
     public native @MachineSizedUInt long getFetchLimit();
+    @Mapping("setFetchLimit:")
     public native void setFetchLimit(@MachineSizedUInt long v);
     @Mapping("affectedStores")
     public native List<String> getAffectedStores();
+    @Mapping("setAffectedStores:")
     public native void setAffectedStores(List<String> v);
     /**
      * @since Available in iOS 3.0 and later.
@@ -62,6 +67,7 @@ public class NSFetchRequest
     /**
      * @since Available in iOS 3.0 and later.
      */
+    @Mapping("setResultType:")
     public native void setResultType(@Representing("NSFetchRequestResultType") @MachineSizedUInt long v);
     /**
      * @since Available in iOS 3.0 and later.
@@ -71,6 +77,7 @@ public class NSFetchRequest
     /**
      * @since Available in iOS 3.0 and later.
      */
+    @Mapping("setIncludesSubentities:")
     public native void setIncludesSubentities(boolean v);
     /**
      * @since Available in iOS 3.0 and later.
@@ -80,6 +87,7 @@ public class NSFetchRequest
     /**
      * @since Available in iOS 3.0 and later.
      */
+    @Mapping("setIncludesPropertyValues:")
     public native void setIncludesPropertyValues(boolean v);
     /**
      * @since Available in iOS 3.0 and later.
@@ -89,6 +97,7 @@ public class NSFetchRequest
     /**
      * @since Available in iOS 3.0 and later.
      */
+    @Mapping("setReturnsObjectsAsFaults:")
     public native void setReturnsObjectsAsFaults(boolean v);
     /**
      * @since Available in iOS 3.0 and later.
@@ -98,6 +107,7 @@ public class NSFetchRequest
     /**
      * @since Available in iOS 3.0 and later.
      */
+    @Mapping("setRelationshipKeyPathsForPrefetching:")
     public native void setRelationshipKeyPathsForPrefetching(List<String> v);
     /**
      * @since Available in iOS 3.0 and later.
@@ -107,6 +117,7 @@ public class NSFetchRequest
     /**
      * @since Available in iOS 3.0 and later.
      */
+    @Mapping("setIncludesPendingChanges:")
     public native void setIncludesPendingChanges(boolean v);
     /**
      * @since Available in iOS 3.0 and later.
@@ -116,6 +127,7 @@ public class NSFetchRequest
     /**
      * @since Available in iOS 3.0 and later.
      */
+    @Mapping("setReturnsDistinctResults:")
     public native void setReturnsDistinctResults(boolean v);
     /**
      * @since Available in iOS 3.0 and later.
@@ -125,6 +137,7 @@ public class NSFetchRequest
     /**
      * @since Available in iOS 3.0 and later.
      */
+    @Mapping("setPropertiesToFetch:")
     public native void setPropertiesToFetch(NSArray<NSPropertyDescription> v);
     /**
      * @since Available in iOS 3.0 and later.
@@ -134,6 +147,7 @@ public class NSFetchRequest
     /**
      * @since Available in iOS 3.0 and later.
      */
+    @Mapping("setFetchOffset:")
     public native void setFetchOffset(@MachineSizedUInt long v);
     /**
      * @since Available in iOS 3.0 and later.
@@ -143,6 +157,7 @@ public class NSFetchRequest
     /**
      * @since Available in iOS 3.0 and later.
      */
+    @Mapping("setFetchBatchSize:")
     public native void setFetchBatchSize(@MachineSizedUInt long v);
     /**
      * @since Available in iOS 5.0 and later.
@@ -152,6 +167,7 @@ public class NSFetchRequest
     /**
      * @since Available in iOS 5.0 and later.
      */
+    @Mapping("setShouldRefreshRefetchedObjects:")
     public native void setShouldRefreshRefetchedObjects(boolean v);
     /**
      * @since Available in iOS 5.0 and later.
@@ -161,6 +177,7 @@ public class NSFetchRequest
     /**
      * @since Available in iOS 5.0 and later.
      */
+    @Mapping("setPropertiesToGroupBy:")
     public native void setPropertiesToGroupBy(NSArray<NSPropertyDescription> v);
     /**
      * @since Available in iOS 5.0 and later.
@@ -170,6 +187,7 @@ public class NSFetchRequest
     /**
      * @since Available in iOS 5.0 and later.
      */
+    @Mapping("setHavingPredicate:")
     public native void setHavingPredicate(NSPredicate v);
     
     

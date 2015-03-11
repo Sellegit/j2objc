@@ -20,7 +20,7 @@ import apple.dispatch.*;
  * @since Available in iOS 7.0 and later.
  */
 
-
+@Library("CoreBluetooth")
 @Mapping("CBPeripheralManagerAuthorizationStatus")
 public final class CBPeripheralManagerAuthorizationStatus extends ObjCEnum {
     

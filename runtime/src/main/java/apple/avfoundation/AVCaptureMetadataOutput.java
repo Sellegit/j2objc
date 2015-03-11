@@ -43,6 +43,7 @@ public class AVCaptureMetadataOutput
     public native List<AVMetadataObjectType> getAvailableMetadataObjectTypes();
     @Mapping("metadataObjectTypes")
     public native List<AVMetadataObjectType> getMetadataObjectTypes();
+    @Mapping("setMetadataObjectTypes:")
     public native void setMetadataObjectTypes(List<AVMetadataObjectType> v);
     /**
      * @since Available in iOS 7.0 and later.
@@ -52,6 +53,7 @@ public class AVCaptureMetadataOutput
     /**
      * @since Available in iOS 7.0 and later.
      */
+    @Mapping("setRectOfInterest:")
     public native void setRectOfInterest(CGRect v);
     
     

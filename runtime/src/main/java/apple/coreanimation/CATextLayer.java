@@ -35,18 +35,23 @@ public class CATextLayer
     
     @Mapping("fontSize")
     public native @MachineSizedFloat double getFontSize();
+    @Mapping("setFontSize:")
     public native void setFontSize(@MachineSizedFloat double v);
     @Mapping("foregroundColor")
     public native CGColor getForegroundColor();
+    @Mapping("setForegroundColor:")
     public native void setForegroundColor(CGColor v);
     @Mapping("isWrapped")
     public native boolean isWrapped();
+    @Mapping("setWrapped:")
     public native void setWrapped(boolean v);
     @Mapping("truncationMode")
     public native CATextTruncationMode getTruncationMode();
+    @Mapping("setTruncationMode:")
     public native void setTruncationMode(CATextTruncationMode v);
     @Mapping("alignmentMode")
     public native CATextAlignmentMode getAlignmentMode();
+    @Mapping("setAlignmentMode:")
     public native void setAlignmentMode(CATextAlignmentMode v);
     
     

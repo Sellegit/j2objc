@@ -20,7 +20,7 @@ import apple.coremedia.*;
 
 
 
-
+@Library("AudioToolbox")
 @Mapping("CAFChunkType")
 public final class CAFChunkType extends ObjCEnum {
     

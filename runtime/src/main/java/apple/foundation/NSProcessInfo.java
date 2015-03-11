@@ -40,6 +40,7 @@ public class NSProcessInfo
     public native String getHostName();
     @Mapping("processName")
     public native String getProcessName();
+    @Mapping("setProcessName:")
     public native void setProcessName(String v);
     @Mapping("processIdentifier")
     public native int getProcessIdentifier();

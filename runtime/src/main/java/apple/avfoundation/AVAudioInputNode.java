@@ -37,27 +37,35 @@ public class AVAudioInputNode
     
     @Mapping("volume")
     public native float getVolume();
+    @Mapping("setVolume:")
     public native void setVolume(float v);
     @Mapping("pan")
     public native float getPan();
+    @Mapping("setPan:")
     public native void setPan(float v);
     @Mapping("renderingAlgorithm")
     public native @Representing("AVAudio3DMixingRenderingAlgorithm") @MachineSizedSInt long getRenderingAlgorithm();
+    @Mapping("setRenderingAlgorithm:")
     public native void setRenderingAlgorithm(@Representing("AVAudio3DMixingRenderingAlgorithm") @MachineSizedSInt long v);
     @Mapping("rate")
     public native float getRate();
+    @Mapping("setRate:")
     public native void setRate(float v);
     @Mapping("reverbBlend")
     public native float getReverbBlend();
+    @Mapping("setReverbBlend:")
     public native void setReverbBlend(float v);
     @Mapping("obstruction")
     public native float getObstruction();
+    @Mapping("setObstruction:")
     public native void setObstruction(float v);
     @Mapping("occlusion")
     public native float getOcclusion();
+    @Mapping("setOcclusion:")
     public native void setOcclusion(float v);
     @Mapping("position")
     public native AVAudio3DPoint getPosition();
+    @Mapping("setPosition:")
     public native void setPosition(AVAudio3DPoint v);
     
     

@@ -19,7 +19,7 @@ import apple.avfoundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-
+@Adapter
 public abstract class PHPhotoLibraryChangeObserverAdapter 
     extends Object 
     implements PHPhotoLibraryChangeObserver {

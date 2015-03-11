@@ -20,7 +20,7 @@ import apple.dispatch.*;
  * @since Available in iOS 8.0 and later.
  */
 
-
+@Library("Metal")
 @Mapping("MTLSamplerMinMagFilter")
 public final class MTLSamplerMinMagFilter extends ObjCEnum {
     

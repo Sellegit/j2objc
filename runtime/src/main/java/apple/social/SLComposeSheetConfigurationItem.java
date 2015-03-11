@@ -33,15 +33,19 @@ public class SLComposeSheetConfigurationItem
     
     @Mapping("title")
     public native String getTitle();
+    @Mapping("setTitle:")
     public native void setTitle(String v);
     @Mapping("value")
     public native String getValue();
+    @Mapping("setValue:")
     public native void setValue(String v);
     @Mapping("valuePending")
     public native boolean isValuePending();
+    @Mapping("setValuePending:")
     public native void setValuePending(boolean v);
     @Mapping("tapHandler")
     public native @Block Runnable getTapHandler();
+    @Mapping("setTapHandler:")
     public native void setTapHandler(@Block Runnable v);
     
     

@@ -35,27 +35,35 @@ public class SCNBox
     
     @Mapping("width")
     public native @MachineSizedFloat double getWidth();
+    @Mapping("setWidth:")
     public native void setWidth(@MachineSizedFloat double v);
     @Mapping("height")
     public native @MachineSizedFloat double getHeight();
+    @Mapping("setHeight:")
     public native void setHeight(@MachineSizedFloat double v);
     @Mapping("length")
     public native @MachineSizedFloat double getLength();
+    @Mapping("setLength:")
     public native void setLength(@MachineSizedFloat double v);
     @Mapping("chamferRadius")
     public native @MachineSizedFloat double getChamferRadius();
+    @Mapping("setChamferRadius:")
     public native void setChamferRadius(@MachineSizedFloat double v);
     @Mapping("widthSegmentCount")
     public native @MachineSizedSInt long getWidthSegmentCount();
+    @Mapping("setWidthSegmentCount:")
     public native void setWidthSegmentCount(@MachineSizedSInt long v);
     @Mapping("heightSegmentCount")
     public native @MachineSizedSInt long getHeightSegmentCount();
+    @Mapping("setHeightSegmentCount:")
     public native void setHeightSegmentCount(@MachineSizedSInt long v);
     @Mapping("lengthSegmentCount")
     public native @MachineSizedSInt long getLengthSegmentCount();
+    @Mapping("setLengthSegmentCount:")
     public native void setLengthSegmentCount(@MachineSizedSInt long v);
     @Mapping("chamferSegmentCount")
     public native @MachineSizedSInt long getChamferSegmentCount();
+    @Mapping("setChamferSegmentCount:")
     public native void setChamferSegmentCount(@MachineSizedSInt long v);
     
     

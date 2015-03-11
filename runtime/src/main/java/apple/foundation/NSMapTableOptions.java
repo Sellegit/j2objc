@@ -22,7 +22,7 @@ import apple.dispatch.*;
 
 
 
-
+@Library("Foundation")
 @Mapping("NSMapTableOptions")
 public final class NSMapTableOptions extends ObjCEnum {
     

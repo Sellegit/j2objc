@@ -22,7 +22,7 @@ import apple.dispatch.*;
 
 
 
-
+@Library("Foundation")
 @Mapping("NSStringEncodingConversionOptions")
 public final class NSStringEncodingConversionOptions extends ObjCEnum {
     

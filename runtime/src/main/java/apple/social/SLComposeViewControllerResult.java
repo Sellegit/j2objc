@@ -19,7 +19,7 @@ import apple.accounts.*;
 
 
 
-
+@Library("Social")
 @Mapping("SLComposeViewControllerResult")
 public final class SLComposeViewControllerResult extends ObjCEnum {
     

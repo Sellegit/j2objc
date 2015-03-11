@@ -40,6 +40,7 @@ public class NSFileManager
     /**
      * @since Available in iOS 2.0 and later.
      */
+    @Mapping("setDelegate:")
     public native void setDelegate(NSFileManagerDelegate v);
     @Mapping("currentDirectoryPath")
     public native String getCurrentDirectoryPath();

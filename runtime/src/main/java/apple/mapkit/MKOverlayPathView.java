@@ -53,6 +53,7 @@ public class MKOverlayPathView
      * @deprecated Deprecated in iOS 7.0.
      */
     @Deprecated
+    @Mapping("setFillColor:")
     public native void setFillColor(UIColor v);
     /**
      * @since Available in iOS 4.0 and later.
@@ -66,6 +67,7 @@ public class MKOverlayPathView
      * @deprecated Deprecated in iOS 7.0.
      */
     @Deprecated
+    @Mapping("setStrokeColor:")
     public native void setStrokeColor(UIColor v);
     /**
      * @since Available in iOS 4.0 and later.
@@ -79,6 +81,7 @@ public class MKOverlayPathView
      * @deprecated Deprecated in iOS 7.0.
      */
     @Deprecated
+    @Mapping("setLineWidth:")
     public native void setLineWidth(@MachineSizedFloat double v);
     /**
      * @since Available in iOS 4.0 and later.
@@ -92,6 +95,7 @@ public class MKOverlayPathView
      * @deprecated Deprecated in iOS 7.0.
      */
     @Deprecated
+    @Mapping("setLineJoin:")
     public native void setLineJoin(@Representing("CGLineJoin") int v);
     /**
      * @since Available in iOS 4.0 and later.
@@ -105,6 +109,7 @@ public class MKOverlayPathView
      * @deprecated Deprecated in iOS 7.0.
      */
     @Deprecated
+    @Mapping("setLineCap:")
     public native void setLineCap(@Representing("CGLineCap") int v);
     /**
      * @since Available in iOS 4.0 and later.
@@ -118,6 +123,7 @@ public class MKOverlayPathView
      * @deprecated Deprecated in iOS 7.0.
      */
     @Deprecated
+    @Mapping("setMiterLimit:")
     public native void setMiterLimit(@MachineSizedFloat double v);
     /**
      * @since Available in iOS 4.0 and later.
@@ -131,6 +137,7 @@ public class MKOverlayPathView
      * @deprecated Deprecated in iOS 7.0.
      */
     @Deprecated
+    @Mapping("setLineDashPhase:")
     public native void setLineDashPhase(@MachineSizedFloat double v);
     /**
      * @since Available in iOS 4.0 and later.
@@ -144,6 +151,7 @@ public class MKOverlayPathView
      * @deprecated Deprecated in iOS 7.0.
      */
     @Deprecated
+    @Mapping("setLineDashPattern:")
     public native void setLineDashPattern(NSArray<NSNumber> v);
     /**
      * @since Available in iOS 4.0 and later.
@@ -157,6 +165,7 @@ public class MKOverlayPathView
      * @deprecated Deprecated in iOS 7.0.
      */
     @Deprecated
+    @Mapping("setPath:")
     public native void setPath(CGPath v);
     
     

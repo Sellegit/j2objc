@@ -52,6 +52,7 @@ public final class MTLTexture
     public native boolean isFramebufferOnly();
     @Mapping("label")
     public native String getLabel();
+    @Mapping("setLabel:")
     public native void setLabel(String v);
     @Mapping("device")
     public native MTLDevice getDevice();

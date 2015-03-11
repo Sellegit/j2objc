@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 
 
-
+@Library("CoreText")
 @Mapping("CTFontPriority")
 public final class CTFontPriority extends ObjCEnum {
     

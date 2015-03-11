@@ -18,7 +18,7 @@ import apple.uikit.*;
 
 
 
-
+@Library("GameKit")
 @Mapping("GKChallengeState")
 public final class GKChallengeState extends ObjCEnum {
     

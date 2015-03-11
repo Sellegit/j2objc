@@ -35,6 +35,7 @@ public class CAEAGLLayer
     
     @Mapping("drawableProperties")
     public native EAGLDrawableProperties getDrawableProperties();
+    @Mapping("setDrawableProperties:")
     public native void setDrawableProperties(EAGLDrawableProperties v);
     
     

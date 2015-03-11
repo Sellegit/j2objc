@@ -35,18 +35,23 @@ public class SCNShape
     
     @Mapping("path")
     public native UIBezierPath getPath();
+    @Mapping("setPath:")
     public native void setPath(UIBezierPath v);
     @Mapping("extrusionDepth")
     public native @MachineSizedFloat double getExtrusionDepth();
+    @Mapping("setExtrusionDepth:")
     public native void setExtrusionDepth(@MachineSizedFloat double v);
     @Mapping("chamferMode")
     public native @Representing("SCNChamferMode") @MachineSizedSInt long getChamferMode();
+    @Mapping("setChamferMode:")
     public native void setChamferMode(@Representing("SCNChamferMode") @MachineSizedSInt long v);
     @Mapping("chamferRadius")
     public native @MachineSizedFloat double getChamferRadius();
+    @Mapping("setChamferRadius:")
     public native void setChamferRadius(@MachineSizedFloat double v);
     @Mapping("chamferProfile")
     public native UIBezierPath getChamferProfile();
+    @Mapping("setChamferProfile:")
     public native void setChamferProfile(UIBezierPath v);
     
     

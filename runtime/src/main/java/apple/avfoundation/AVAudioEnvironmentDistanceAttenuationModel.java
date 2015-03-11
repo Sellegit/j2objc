@@ -25,7 +25,7 @@ import apple.mediatoolbox.*;
  * @since Available in iOS 8.0 and later.
  */
 
-
+@Library("AVFoundation")
 @Mapping("AVAudioEnvironmentDistanceAttenuationModel")
 public final class AVAudioEnvironmentDistanceAttenuationModel extends ObjCEnum {
     

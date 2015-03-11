@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 
 
-
+@Library("CoreText")
 @Mapping("CTFontStylisticClass")
 public final class CTFontStylisticClass extends ObjCEnum {
     

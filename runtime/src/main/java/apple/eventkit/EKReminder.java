@@ -33,18 +33,23 @@ public class EKReminder
     
     @Mapping("startDateComponents")
     public native NSDateComponents getStartDateComponents();
+    @Mapping("setStartDateComponents:")
     public native void setStartDateComponents(NSDateComponents v);
     @Mapping("dueDateComponents")
     public native NSDateComponents getDueDateComponents();
+    @Mapping("setDueDateComponents:")
     public native void setDueDateComponents(NSDateComponents v);
     @Mapping("isCompleted")
     public native boolean isCompleted();
+    @Mapping("setCompleted:")
     public native void setCompleted(boolean v);
     @Mapping("completionDate")
     public native NSDate getCompletionDate();
+    @Mapping("setCompletionDate:")
     public native void setCompletionDate(NSDate v);
     @Mapping("priority")
     public native @MachineSizedSInt long getPriority();
+    @Mapping("setPriority:")
     public native void setPriority(@MachineSizedSInt long v);
     
     

@@ -23,7 +23,7 @@ import apple.mediatoolbox.*;
 
 
 
-
+@Library("AVFoundation")
 @Mapping("AVVideoFieldMode")
 public final class AVVideoFieldMode extends ObjCEnum {
     

@@ -35,15 +35,19 @@ public class SCNCylinder
     
     @Mapping("radius")
     public native @MachineSizedFloat double getRadius();
+    @Mapping("setRadius:")
     public native void setRadius(@MachineSizedFloat double v);
     @Mapping("height")
     public native @MachineSizedFloat double getHeight();
+    @Mapping("setHeight:")
     public native void setHeight(@MachineSizedFloat double v);
     @Mapping("radialSegmentCount")
     public native @MachineSizedSInt long getRadialSegmentCount();
+    @Mapping("setRadialSegmentCount:")
     public native void setRadialSegmentCount(@MachineSizedSInt long v);
     @Mapping("heightSegmentCount")
     public native @MachineSizedSInt long getHeightSegmentCount();
+    @Mapping("setHeightSegmentCount:")
     public native void setHeightSegmentCount(@MachineSizedSInt long v);
     
     

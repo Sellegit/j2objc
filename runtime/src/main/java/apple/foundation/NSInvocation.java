@@ -38,9 +38,11 @@ public class NSInvocation
     public native boolean argumentsRetained();
     @Mapping("target")
     public native Object getTarget();
+    @Mapping("setTarget:")
     public native void setTarget(Object v);
     @Mapping("selector")
     public native Selector getSelector();
+    @Mapping("setSelector:")
     public native void setSelector(Selector v);
     
     

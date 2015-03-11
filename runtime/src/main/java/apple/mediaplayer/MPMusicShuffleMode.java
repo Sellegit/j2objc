@@ -18,7 +18,7 @@ import apple.uikit.*;
 
 
 
-
+@Library("MediaPlayer")
 @Mapping("MPMusicShuffleMode")
 public final class MPMusicShuffleMode extends ObjCEnum {
     

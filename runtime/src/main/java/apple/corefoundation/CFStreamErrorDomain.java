@@ -18,7 +18,7 @@ import apple.foundation.*;
 
 
 
-
+@Library("CoreFoundation")
 @Mapping("CFStreamErrorDomain")
 public final class CFStreamErrorDomain extends ObjCEnum {
     

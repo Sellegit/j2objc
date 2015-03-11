@@ -20,7 +20,7 @@ import apple.coremedia.*;
 
 
 
-
+@Library("AudioToolbox")
 @Mapping("AUGraphError")
 public final class AUGraphError extends ObjCEnum {
     

@@ -18,7 +18,7 @@ import apple.foundation.*;
 
 
 
-
+@Library("CoreFoundation")
 @Mapping("CFURLComponentType")
 public final class CFURLComponentType extends ObjCEnum {
     

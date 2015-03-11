@@ -18,7 +18,7 @@ import apple.uikit.*;
 
 
 
-
+@Library("MediaPlayer")
 @Mapping("MPMovieFinishReason")
 public final class MPMovieFinishReason extends ObjCEnum {
     

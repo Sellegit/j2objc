@@ -38,15 +38,19 @@ public class SKView
     
     @Mapping("isPaused")
     public native boolean isPaused();
+    @Mapping("setPaused:")
     public native void setPaused(boolean v);
     @Mapping("showsFPS")
     public native boolean showsFPS();
+    @Mapping("setShowsFPS:")
     public native void setShowsFPS(boolean v);
     @Mapping("showsDrawCount")
     public native boolean showsDrawCount();
+    @Mapping("setShowsDrawCount:")
     public native void setShowsDrawCount(boolean v);
     @Mapping("showsNodeCount")
     public native boolean showsNodeCount();
+    @Mapping("setShowsNodeCount:")
     public native void setShowsNodeCount(boolean v);
     /**
      * @since Available in iOS 8.0 and later.
@@ -56,6 +60,7 @@ public class SKView
     /**
      * @since Available in iOS 8.0 and later.
      */
+    @Mapping("setShowsQuadCount:")
     public native void setShowsQuadCount(boolean v);
     /**
      * @since Available in iOS 8.0 and later.
@@ -65,6 +70,7 @@ public class SKView
     /**
      * @since Available in iOS 8.0 and later.
      */
+    @Mapping("setShowsPhysics:")
     public native void setShowsPhysics(boolean v);
     /**
      * @since Available in iOS 8.0 and later.
@@ -74,9 +80,11 @@ public class SKView
     /**
      * @since Available in iOS 8.0 and later.
      */
+    @Mapping("setShowsFields:")
     public native void setShowsFields(boolean v);
     @Mapping("isAsynchronous")
     public native boolean isAsynchronous();
+    @Mapping("setAsynchronous:")
     public native void setAsynchronous(boolean v);
     /**
      * @since Available in iOS 8.0 and later.
@@ -86,9 +94,11 @@ public class SKView
     /**
      * @since Available in iOS 8.0 and later.
      */
+    @Mapping("setAllowsTransparency:")
     public native void setAllowsTransparency(boolean v);
     @Mapping("ignoresSiblingOrder")
     public native boolean ignoresSiblingOrder();
+    @Mapping("setIgnoresSiblingOrder:")
     public native void setIgnoresSiblingOrder(boolean v);
     /**
      * @since Available in iOS 8.0 and later.
@@ -98,9 +108,11 @@ public class SKView
     /**
      * @since Available in iOS 8.0 and later.
      */
+    @Mapping("setShouldCullNonVisibleNodes:")
     public native void setShouldCullNonVisibleNodes(boolean v);
     @Mapping("frameInterval")
     public native @MachineSizedSInt long getFrameInterval();
+    @Mapping("setFrameInterval:")
     public native void setFrameInterval(@MachineSizedSInt long v);
     @Mapping("scene")
     public native SKScene getScene();

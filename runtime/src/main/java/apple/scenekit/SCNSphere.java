@@ -35,12 +35,15 @@ public class SCNSphere
     
     @Mapping("radius")
     public native @MachineSizedFloat double getRadius();
+    @Mapping("setRadius:")
     public native void setRadius(@MachineSizedFloat double v);
     @Mapping("isGeodesic")
     public native boolean isGeodesic();
+    @Mapping("setGeodesic:")
     public native void setGeodesic(boolean v);
     @Mapping("segmentCount")
     public native @MachineSizedSInt long getSegmentCount();
+    @Mapping("setSegmentCount:")
     public native void setSegmentCount(@MachineSizedSInt long v);
     
     

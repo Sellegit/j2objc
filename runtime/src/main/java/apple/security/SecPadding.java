@@ -17,7 +17,7 @@ import apple.dispatch.*;
 
 
 
-
+@Library("Security")
 @Mapping("SecPadding")
 public final class SecPadding extends ObjCEnum {
     

@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 
 
-
+@Library("CoreData")
 @Mapping("NSDeleteRule")
 public final class NSDeleteRule extends ObjCEnum {
     

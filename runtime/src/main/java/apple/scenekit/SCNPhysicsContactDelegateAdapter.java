@@ -22,7 +22,7 @@ import apple.opengles.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-
+@Adapter
 public abstract class SCNPhysicsContactDelegateAdapter 
     extends Object 
     implements SCNPhysicsContactDelegate {

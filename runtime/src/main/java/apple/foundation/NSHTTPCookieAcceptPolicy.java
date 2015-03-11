@@ -22,7 +22,7 @@ import apple.dispatch.*;
 
 
 
-
+@Library("Foundation")
 @Mapping("NSHTTPCookieAcceptPolicy")
 public final class NSHTTPCookieAcceptPolicy extends ObjCEnum {
     

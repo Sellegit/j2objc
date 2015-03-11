@@ -34,9 +34,11 @@ public class CKFetchSubscriptionsOperation
     
     @Mapping("subscriptionIDs")
     public native List<String> getSubscriptionIDs();
+    @Mapping("setSubscriptionIDs:")
     public native void setSubscriptionIDs(List<String> v);
     @Mapping("fetchSubscriptionCompletionBlock")
     public native @Block VoidBlock2<NSDictionary<NSString, CKSubscription>, NSError> getFetchSubscriptionCompletionBlock();
+    @Mapping("setFetchSubscriptionCompletionBlock:")
     public native void setFetchSubscriptionCompletionBlock(@Block VoidBlock2<NSDictionary<NSString, CKSubscription>, NSError> v);
     
     

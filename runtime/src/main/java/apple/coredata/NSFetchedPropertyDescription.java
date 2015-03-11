@@ -31,6 +31,7 @@ public class NSFetchedPropertyDescription
     
     @Mapping("fetchRequest")
     public native NSFetchRequest getFetchRequest();
+    @Mapping("setFetchRequest:")
     public native void setFetchRequest(NSFetchRequest v);
     
     

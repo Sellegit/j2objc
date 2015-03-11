@@ -35,21 +35,27 @@ public class SCNParticlePropertyController
     
     @Mapping("animation")
     public native CAAnimation getAnimation();
+    @Mapping("setAnimation:")
     public native void setAnimation(CAAnimation v);
     @Mapping("inputMode")
     public native @Representing("SCNParticleInputMode") @MachineSizedSInt long getInputMode();
+    @Mapping("setInputMode:")
     public native void setInputMode(@Representing("SCNParticleInputMode") @MachineSizedSInt long v);
     @Mapping("inputScale")
     public native @MachineSizedFloat double getInputScale();
+    @Mapping("setInputScale:")
     public native void setInputScale(@MachineSizedFloat double v);
     @Mapping("inputBias")
     public native @MachineSizedFloat double getInputBias();
+    @Mapping("setInputBias:")
     public native void setInputBias(@MachineSizedFloat double v);
     @Mapping("inputOrigin")
     public native SCNNode getInputOrigin();
+    @Mapping("setInputOrigin:")
     public native void setInputOrigin(SCNNode v);
     @Mapping("inputProperty")
     public native SCNParticleProperty getInputProperty();
+    @Mapping("setInputProperty:")
     public native void setInputProperty(SCNParticleProperty v);
     
     

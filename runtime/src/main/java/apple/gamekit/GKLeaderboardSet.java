@@ -36,6 +36,7 @@ public class GKLeaderboardSet
     public native String getGroupIdentifier();
     @Mapping("identifier")
     public native String getIdentifier();
+    @Mapping("setIdentifier:")
     public native void setIdentifier(String v);
     
     

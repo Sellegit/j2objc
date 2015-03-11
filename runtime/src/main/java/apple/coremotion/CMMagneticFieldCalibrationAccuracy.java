@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 
 
-
+@Library("CoreMotion")
 @Mapping("CMMagneticFieldCalibrationAccuracy")
 public final class CMMagneticFieldCalibrationAccuracy extends ObjCEnum {
     

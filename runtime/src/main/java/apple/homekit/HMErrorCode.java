@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 
 
-
+@Library("HomeKit")
 @Mapping("HMErrorCode")
 public final class HMErrorCode extends ObjCEnum {
     

@@ -37,6 +37,7 @@ public class AVCaptureSession
     
     @Mapping("sessionPreset")
     public native AVCaptureSessionPreset getSessionPreset();
+    @Mapping("setSessionPreset:")
     public native void setSessionPreset(AVCaptureSessionPreset v);
     @Mapping("inputs")
     public native NSArray<AVCaptureInput> getInputs();
@@ -57,6 +58,7 @@ public class AVCaptureSession
     /**
      * @since Available in iOS 7.0 and later.
      */
+    @Mapping("setUsesApplicationAudioSession:")
     public native void setUsesApplicationAudioSession(boolean v);
     /**
      * @since Available in iOS 7.0 and later.
@@ -66,6 +68,7 @@ public class AVCaptureSession
     /**
      * @since Available in iOS 7.0 and later.
      */
+    @Mapping("setAutomaticallyConfiguresApplicationAudioSession:")
     public native void setAutomaticallyConfiguresApplicationAudioSession(boolean v);
     /**
      * @since Available in iOS 7.0 and later.

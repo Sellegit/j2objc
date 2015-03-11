@@ -38,6 +38,7 @@ public class NSNetService
     
     @Mapping("delegate")
     public native NSNetServiceDelegate getDelegate();
+    @Mapping("setDelegate:")
     public native void setDelegate(NSNetServiceDelegate v);
     /**
      * @since Available in iOS 7.0 and later.
@@ -47,6 +48,7 @@ public class NSNetService
     /**
      * @since Available in iOS 7.0 and later.
      */
+    @Mapping("setIncludesPeerToPeer:")
     public native void setIncludesPeerToPeer(boolean v);
     @Mapping("name")
     public native String getName();

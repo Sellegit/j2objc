@@ -17,7 +17,7 @@ import apple.uikit.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-
+@Adapter
 public abstract class GKAchievementViewControllerDelegateAdapter 
     extends Object 
     implements GKAchievementViewControllerDelegate {

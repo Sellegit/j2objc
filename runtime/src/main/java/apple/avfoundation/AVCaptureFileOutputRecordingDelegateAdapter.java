@@ -22,7 +22,7 @@ import apple.mediatoolbox.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-
+@Adapter
 public abstract class AVCaptureFileOutputRecordingDelegateAdapter 
     extends Object 
     implements AVCaptureFileOutputRecordingDelegate {

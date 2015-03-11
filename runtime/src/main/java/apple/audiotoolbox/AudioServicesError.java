@@ -20,7 +20,7 @@ import apple.coremedia.*;
 
 
 
-
+@Library("AudioToolbox")
 @Mapping("AudioServicesError")
 public final class AudioServicesError extends ObjCEnum {
     

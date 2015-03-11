@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 
 
-
+@Library("CoreText")
 @Mapping("CTLineTruncationType")
 public final class CTLineTruncationType extends ObjCEnum {
     

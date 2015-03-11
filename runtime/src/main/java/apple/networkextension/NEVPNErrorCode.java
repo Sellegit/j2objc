@@ -19,7 +19,7 @@ import apple.foundation.*;
  * @since Available in iOS 8.0 and later.
  */
 
-
+@Library("NetworkExtension")
 @Mapping("NEVPNErrorCode")
 public final class NEVPNErrorCode extends ObjCEnum {
     

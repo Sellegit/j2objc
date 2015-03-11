@@ -31,6 +31,7 @@ public interface SCNTechniqueSupport
     
     @Mapping("technique")
     SCNTechnique getTechnique();
+    @Mapping("setTechnique:")
     void setTechnique(SCNTechnique v);
     
     

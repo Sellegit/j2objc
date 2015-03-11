@@ -33,18 +33,23 @@ public class CATransition
     
     @Mapping("type")
     public native CATransitionType getType();
+    @Mapping("setType:")
     public native void setType(CATransitionType v);
     @Mapping("subtype")
     public native CATransitionSubType getSubtype();
+    @Mapping("setSubtype:")
     public native void setSubtype(CATransitionSubType v);
     @Mapping("startProgress")
     public native float getStartProgress();
+    @Mapping("setStartProgress:")
     public native void setStartProgress(float v);
     @Mapping("endProgress")
     public native float getEndProgress();
+    @Mapping("setEndProgress:")
     public native void setEndProgress(float v);
     @Mapping("filter")
     public native CIFilter getFilter();
+    @Mapping("setFilter:")
     public native void setFilter(CIFilter v);
     
     

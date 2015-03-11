@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 
 
-
+@Library("CoreMIDI")
 @Mapping("MIDITransformControlType")
 public final class MIDITransformControlType extends ObjCEnum {
     

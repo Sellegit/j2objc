@@ -23,7 +23,7 @@ import apple.opengles.*;
 
 
 
-
+@Library("SceneKit")
 @Mapping("SCNWrapMode")
 public final class SCNWrapMode extends ObjCEnum {
     

@@ -24,7 +24,7 @@ import apple.dispatch.*;
  * @since Available in iOS 4.0 and later.
  */
 
-
+@Library("Foundation")
 @Mapping("NSFileManagerItemReplacementOptions")
 public final class NSFileManagerItemReplacementOptions extends ObjCEnum {
     

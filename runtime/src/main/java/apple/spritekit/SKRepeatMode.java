@@ -24,7 +24,7 @@ import apple.scenekit.*;
 
 
 
-
+@Library("SpriteKit")
 @Mapping("SKRepeatMode")
 public final class SKRepeatMode extends ObjCEnum {
     

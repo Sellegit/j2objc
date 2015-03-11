@@ -21,7 +21,7 @@ import apple.corevideo.*;
 
 
 
-
+@Library("CoreMedia")
 @Mapping("CMTimeCodeFormatType")
 public final class CMTimeCodeFormatType extends ObjCEnum {
     

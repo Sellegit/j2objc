@@ -18,7 +18,7 @@ import apple.foundation.*;
 
 
 
-
+@Library("CoreFoundation")
 @Mapping("CFComparisonResult")
 public final class CFComparisonResult extends ObjCEnum {
     

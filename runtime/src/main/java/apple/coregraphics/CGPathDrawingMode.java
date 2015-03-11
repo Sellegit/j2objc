@@ -18,7 +18,7 @@ import apple.uikit.*;
 
 
 
-
+@Library("CoreGraphics")
 @Mapping("CGPathDrawingMode")
 public final class CGPathDrawingMode extends ObjCEnum {
     

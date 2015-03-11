@@ -37,6 +37,7 @@ public class NEVPNProtocolIPSec
     /**
      * @since Available in iOS 8.0 and later.
      */
+    @Mapping("setAuthenticationMethod:")
     public native void setAuthenticationMethod(@Representing("NEVPNIKEAuthenticationMethod") @MachineSizedSInt long v);
     /**
      * @since Available in iOS 8.0 and later.
@@ -46,6 +47,7 @@ public class NEVPNProtocolIPSec
     /**
      * @since Available in iOS 8.0 and later.
      */
+    @Mapping("setUseExtendedAuthentication:")
     public native void setUsesExtendedAuthentication(boolean v);
     /**
      * @since Available in iOS 8.0 and later.
@@ -55,6 +57,7 @@ public class NEVPNProtocolIPSec
     /**
      * @since Available in iOS 8.0 and later.
      */
+    @Mapping("setSharedSecretReference:")
     public native void setSharedSecretReference(NSData v);
     /**
      * @since Available in iOS 8.0 and later.
@@ -64,6 +67,7 @@ public class NEVPNProtocolIPSec
     /**
      * @since Available in iOS 8.0 and later.
      */
+    @Mapping("setLocalIdentifier:")
     public native void setLocalIdentifier(String v);
     /**
      * @since Available in iOS 8.0 and later.
@@ -73,6 +77,7 @@ public class NEVPNProtocolIPSec
     /**
      * @since Available in iOS 8.0 and later.
      */
+    @Mapping("setRemoteIdentifier:")
     public native void setRemoteIdentifier(String v);
     
     

@@ -22,7 +22,7 @@ import apple.dispatch.*;
 
 
 
-
+@Library("Foundation")
 @Mapping("NSDataWritingOptions")
 public final class NSDataWritingOptions extends ObjCEnum {
     

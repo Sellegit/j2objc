@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 
 
-
+@Library("CoreAudio")
 @Mapping("SMPTETimeType")
 public final class SMPTETimeType extends ObjCEnum {
     

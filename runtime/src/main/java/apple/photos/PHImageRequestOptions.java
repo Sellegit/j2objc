@@ -34,24 +34,31 @@ public class PHImageRequestOptions
     
     @Mapping("version")
     public native @Representing("PHImageRequestOptionsVersion") @MachineSizedSInt long getVersion();
+    @Mapping("setVersion:")
     public native void setVersion(@Representing("PHImageRequestOptionsVersion") @MachineSizedSInt long v);
     @Mapping("deliveryMode")
     public native @Representing("PHImageRequestOptionsDeliveryMode") @MachineSizedSInt long getDeliveryMode();
+    @Mapping("setDeliveryMode:")
     public native void setDeliveryMode(@Representing("PHImageRequestOptionsDeliveryMode") @MachineSizedSInt long v);
     @Mapping("resizeMode")
     public native @Representing("PHImageRequestOptionsResizeMode") @MachineSizedSInt long getResizeMode();
+    @Mapping("setResizeMode:")
     public native void setResizeMode(@Representing("PHImageRequestOptionsResizeMode") @MachineSizedSInt long v);
     @Mapping("normalizedCropRect")
     public native CGRect getNormalizedCropRect();
+    @Mapping("setNormalizedCropRect:")
     public native void setNormalizedCropRect(CGRect v);
     @Mapping("isNetworkAccessAllowed")
     public native boolean isNetworkAccessAllowed();
+    @Mapping("setNetworkAccessAllowed:")
     public native void setNetworkAccessAllowed(boolean v);
     @Mapping("isSynchronous")
     public native boolean isSynchronous();
+    @Mapping("setSynchronous:")
     public native void setSynchronous(boolean v);
     @Mapping("progressHandler")
     public native @Block VoidBlock4<Double, NSError, Todo, NSDictionary<NSString, NSObject>> getProgressHandler();
+    @Mapping("setProgressHandler:")
     public native void setProgressHandler(@Block VoidBlock4<Double, NSError, Todo, NSDictionary<NSString, NSObject>> v);
     
     

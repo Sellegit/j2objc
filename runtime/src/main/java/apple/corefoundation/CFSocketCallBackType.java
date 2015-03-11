@@ -18,7 +18,7 @@ import apple.foundation.*;
 
 
 
-
+@Library("CoreFoundation")
 @Mapping("CFSocketCallBackType")
 public final class CFSocketCallBackType extends ObjCEnum {
     

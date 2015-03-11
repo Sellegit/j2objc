@@ -38,6 +38,7 @@ public final class UIViewControllerExtensions
     /**
      * @since Available in iOS 7.0 and later.
      */
+    @Mapping("setInterstitialPresentationPolicy:")
     public static native void setInterstitialPresentationPolicy(UIViewController thiz, @Representing("ADInterstitialPresentationPolicy") @MachineSizedSInt long v);
     /**
      * @since Available in iOS 7.0 and later.
@@ -47,6 +48,7 @@ public final class UIViewControllerExtensions
     /**
      * @since Available in iOS 7.0 and later.
      */
+    @Mapping("setCanDisplayBannerAds:")
     public static native void setCanDisplayBannerAds(UIViewController thiz, boolean v);
     /**
      * @since Available in iOS 7.0 and later.

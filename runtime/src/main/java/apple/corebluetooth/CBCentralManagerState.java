@@ -18,7 +18,7 @@ import apple.dispatch.*;
 
 
 
-
+@Library("CoreBluetooth")
 @Mapping("CBCentralManagerState")
 public final class CBCentralManagerState extends ObjCEnum {
     

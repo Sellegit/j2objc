@@ -33,15 +33,19 @@ public class EKAlarm
     
     @Mapping("relativeOffset")
     public native double getRelativeOffset();
+    @Mapping("setRelativeOffset:")
     public native void setRelativeOffset(double v);
     @Mapping("absoluteDate")
     public native NSDate getAbsoluteDate();
+    @Mapping("setAbsoluteDate:")
     public native void setAbsoluteDate(NSDate v);
     @Mapping("structuredLocation")
     public native EKStructuredLocation getStructuredLocation();
+    @Mapping("setStructuredLocation:")
     public native void setStructuredLocation(EKStructuredLocation v);
     @Mapping("proximity")
     public native @Representing("EKAlarmProximity") int getProximity();
+    @Mapping("setProximity:")
     public native void setProximity(@Representing("EKAlarmProximity") int v);
     
     

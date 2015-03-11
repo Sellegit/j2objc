@@ -39,6 +39,7 @@ public class NSMigrationManager
     /**
      * @since Available in iOS 5.0 and later.
      */
+    @Mapping("setUsesStoreSpecificMigrationManager:")
     public native void setUsesStoreSpecificMigrationManager(boolean v);
     @Mapping("mappingModel")
     public native NSMappingModel getMappingModel();
@@ -56,6 +57,7 @@ public class NSMigrationManager
     public native float getMigrationProgress();
     @Mapping("userInfo")
     public native NSDictionary<?, ?> getUserInfo();
+    @Mapping("setUserInfo:")
     public native void setUserInfo(NSDictionary<?, ?> v);
     
     

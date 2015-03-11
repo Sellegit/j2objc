@@ -36,12 +36,15 @@ public class SKPhysicsWorld
     
     @Mapping("gravity")
     public native CGVector getGravity();
+    @Mapping("setGravity:")
     public native void setGravity(CGVector v);
     @Mapping("speed")
     public native @MachineSizedFloat double getSpeed();
+    @Mapping("setSpeed:")
     public native void setSpeed(@MachineSizedFloat double v);
     @Mapping("contactDelegate")
     public native SKPhysicsContactDelegate getContactDelegate();
+    @Mapping("setContactDelegate:")
     public native void setContactDelegate(SKPhysicsContactDelegate v);
     
     

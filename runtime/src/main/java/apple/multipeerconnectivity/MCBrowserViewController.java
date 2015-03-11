@@ -39,6 +39,7 @@ public class MCBrowserViewController
     
     @Mapping("delegate")
     public native MCBrowserViewControllerDelegate getDelegate();
+    @Mapping("setDelegate:")
     public native void setDelegate(MCBrowserViewControllerDelegate v);
     @Mapping("browser")
     public native MCNearbyServiceBrowser getBrowser();
@@ -46,9 +47,11 @@ public class MCBrowserViewController
     public native MCSession getSession();
     @Mapping("minimumNumberOfPeers")
     public native @MachineSizedUInt long getMinimumNumberOfPeers();
+    @Mapping("setMinimumNumberOfPeers:")
     public native void setMinimumNumberOfPeers(@MachineSizedUInt long v);
     @Mapping("maximumNumberOfPeers")
     public native @MachineSizedUInt long getMaximumNumberOfPeers();
+    @Mapping("setMaximumNumberOfPeers:")
     public native void setMaximumNumberOfPeers(@MachineSizedUInt long v);
     
     

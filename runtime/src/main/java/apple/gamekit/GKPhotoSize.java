@@ -18,7 +18,7 @@ import apple.uikit.*;
 
 
 
-
+@Library("GameKit")
 @Mapping("GKPhotoSize")
 public final class GKPhotoSize extends ObjCEnum {
     

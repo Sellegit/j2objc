@@ -20,7 +20,7 @@ import apple.dispatch.*;
  * @since Available in iOS 8.0 and later.
  */
 
-
+@Library("Metal")
 @Mapping("MTLBlendOperation")
 public final class MTLBlendOperation extends ObjCEnum {
     

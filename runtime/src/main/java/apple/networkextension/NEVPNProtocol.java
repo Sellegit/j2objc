@@ -37,6 +37,7 @@ public class NEVPNProtocol
     /**
      * @since Available in iOS 8.0 and later.
      */
+    @Mapping("setServerAddress:")
     public native void setServerAddress(String v);
     /**
      * @since Available in iOS 8.0 and later.
@@ -46,6 +47,7 @@ public class NEVPNProtocol
     /**
      * @since Available in iOS 8.0 and later.
      */
+    @Mapping("setUsername:")
     public native void setUsername(String v);
     /**
      * @since Available in iOS 8.0 and later.
@@ -55,6 +57,7 @@ public class NEVPNProtocol
     /**
      * @since Available in iOS 8.0 and later.
      */
+    @Mapping("setPasswordReference:")
     public native void setPasswordReference(NSData v);
     /**
      * @since Available in iOS 8.0 and later.
@@ -64,6 +67,7 @@ public class NEVPNProtocol
     /**
      * @since Available in iOS 8.0 and later.
      */
+    @Mapping("setIdentityData:")
     public native void setIdentityData(NSData v);
     /**
      * @since Available in iOS 8.0 and later.
@@ -73,6 +77,7 @@ public class NEVPNProtocol
     /**
      * @since Available in iOS 8.0 and later.
      */
+    @Mapping("setIdentityDataPassword:")
     public native void setIdentityDataPassword(String v);
     /**
      * @since Available in iOS 8.0 and later.
@@ -82,6 +87,7 @@ public class NEVPNProtocol
     /**
      * @since Available in iOS 8.0 and later.
      */
+    @Mapping("setDisconnectOnSleep:")
     public native void setDisconnectsOnSleep(boolean v);
     
     

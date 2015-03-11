@@ -33,6 +33,7 @@ public class MPMediaQuery
     
     @Mapping("filterPredicates")
     public native NSSet<MPMediaPredicate> getFilterPredicates();
+    @Mapping("setFilterPredicates:")
     public native void setFilterPredicates(NSSet<MPMediaPredicate> v);
     @Mapping("items")
     public native NSArray<MPMediaItem> getItems();
@@ -40,6 +41,7 @@ public class MPMediaQuery
     public native NSArray<MPMediaItemCollection> getCollections();
     @Mapping("groupingType")
     public native @Representing("MPMediaGrouping") @MachineSizedSInt long getGroupingType();
+    @Mapping("setGroupingType:")
     public native void setGroupingType(@Representing("MPMediaGrouping") @MachineSizedSInt long v);
     /**
      * @since Available in iOS 4.2 and later.

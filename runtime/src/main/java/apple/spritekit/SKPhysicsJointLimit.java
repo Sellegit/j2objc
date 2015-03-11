@@ -36,6 +36,7 @@ public class SKPhysicsJointLimit
     
     @Mapping("maxLength")
     public native @MachineSizedFloat double getMaxLength();
+    @Mapping("setMaxLength:")
     public native void setMaxLength(@MachineSizedFloat double v);
     
     

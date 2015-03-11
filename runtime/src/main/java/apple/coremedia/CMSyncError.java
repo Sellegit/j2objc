@@ -21,7 +21,7 @@ import apple.corevideo.*;
 
 
 
-
+@Library("CoreMedia")
 @Mapping("CMSyncError")
 public final class CMSyncError extends ObjCEnum {
     

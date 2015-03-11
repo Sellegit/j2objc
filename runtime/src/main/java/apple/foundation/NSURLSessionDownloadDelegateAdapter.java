@@ -21,7 +21,7 @@ import apple.dispatch.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-
+@Adapter
 public abstract class NSURLSessionDownloadDelegateAdapter 
     extends NSURLSessionTaskDelegateAdapter 
     implements NSURLSessionDownloadDelegate {

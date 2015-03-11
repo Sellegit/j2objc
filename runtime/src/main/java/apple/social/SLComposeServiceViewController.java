@@ -39,12 +39,15 @@ public class SLComposeServiceViewController
     public native String getContentText();
     @Mapping("placeholder")
     public native String getPlaceholder();
+    @Mapping("setPlaceholder:")
     public native void setPlaceholder(String v);
     @Mapping("charactersRemaining")
     public native NSNumber getCharactersRemaining();
+    @Mapping("setCharactersRemaining:")
     public native void setCharactersRemaining(NSNumber v);
     @Mapping("autoCompletionViewController")
     public native UIViewController getAutoCompletionViewController();
+    @Mapping("setAutoCompletionViewController:")
     public native void setAutoCompletionViewController(UIViewController v);
     
     

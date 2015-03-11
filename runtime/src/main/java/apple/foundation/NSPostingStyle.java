@@ -22,7 +22,7 @@ import apple.dispatch.*;
 
 
 
-
+@Library("Foundation")
 @Mapping("NSPostingStyle")
 public final class NSPostingStyle extends ObjCEnum {
     

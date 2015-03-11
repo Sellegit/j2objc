@@ -37,36 +37,47 @@ public class SCNPhysicsVehicleWheel
     public native SCNNode getNode();
     @Mapping("suspensionStiffness")
     public native @MachineSizedFloat double getSuspensionStiffness();
+    @Mapping("setSuspensionStiffness:")
     public native void setSuspensionStiffness(@MachineSizedFloat double v);
     @Mapping("suspensionCompression")
     public native @MachineSizedFloat double getSuspensionCompression();
+    @Mapping("setSuspensionCompression:")
     public native void setSuspensionCompression(@MachineSizedFloat double v);
     @Mapping("suspensionDamping")
     public native @MachineSizedFloat double getSuspensionDamping();
+    @Mapping("setSuspensionDamping:")
     public native void setSuspensionDamping(@MachineSizedFloat double v);
     @Mapping("maximumSuspensionTravel")
     public native @MachineSizedFloat double getMaximumSuspensionTravel();
+    @Mapping("setMaximumSuspensionTravel:")
     public native void setMaximumSuspensionTravel(@MachineSizedFloat double v);
     @Mapping("frictionSlip")
     public native @MachineSizedFloat double getFrictionSlip();
+    @Mapping("setFrictionSlip:")
     public native void setFrictionSlip(@MachineSizedFloat double v);
     @Mapping("maximumSuspensionForce")
     public native @MachineSizedFloat double getMaximumSuspensionForce();
+    @Mapping("setMaximumSuspensionForce:")
     public native void setMaximumSuspensionForce(@MachineSizedFloat double v);
     @Mapping("connectionPosition")
     public native SCNVector3 getConnectionPosition();
+    @Mapping("setConnectionPosition:")
     public native void setConnectionPosition(SCNVector3 v);
     @Mapping("steeringAxis")
     public native SCNVector3 getSteeringAxis();
+    @Mapping("setSteeringAxis:")
     public native void setSteeringAxis(SCNVector3 v);
     @Mapping("axle")
     public native SCNVector3 getAxle();
+    @Mapping("setAxle:")
     public native void setAxle(SCNVector3 v);
     @Mapping("radius")
     public native @MachineSizedFloat double getRadius();
+    @Mapping("setRadius:")
     public native void setRadius(@MachineSizedFloat double v);
     @Mapping("suspensionRestLength")
     public native @MachineSizedFloat double getSuspensionRestLength();
+    @Mapping("setSuspensionRestLength:")
     public native void setSuspensionRestLength(@MachineSizedFloat double v);
     
     

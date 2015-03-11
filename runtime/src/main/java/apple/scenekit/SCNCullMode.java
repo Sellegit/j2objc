@@ -23,7 +23,7 @@ import apple.opengles.*;
 
 
 
-
+@Library("SceneKit")
 @Mapping("SCNCullMode")
 public final class SCNCullMode extends ObjCEnum {
     

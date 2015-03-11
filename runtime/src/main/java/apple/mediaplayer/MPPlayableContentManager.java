@@ -32,9 +32,11 @@ public class MPPlayableContentManager
     
     @Mapping("dataSource")
     public native MPPlayableContentDataSource getDataSource();
+    @Mapping("setDataSource:")
     public native void setDataSource(MPPlayableContentDataSource v);
     @Mapping("delegate")
     public native MPPlayableContentDelegate getDelegate();
+    @Mapping("setDelegate:")
     public native void setDelegate(MPPlayableContentDelegate v);
     
     

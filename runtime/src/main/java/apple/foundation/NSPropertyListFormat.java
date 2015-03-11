@@ -22,7 +22,7 @@ import apple.dispatch.*;
 
 
 
-
+@Library("Foundation")
 @Mapping("NSPropertyListFormat")
 public final class NSPropertyListFormat extends ObjCEnum {
     

@@ -41,6 +41,7 @@ public class GKTurnBasedParticipant
     public native @Representing("GKTurnBasedParticipantStatus") @MachineSizedSInt long getStatus();
     @Mapping("matchOutcome")
     public native @Representing("GKTurnBasedMatchOutcome") @MachineSizedSInt long getMatchOutcome();
+    @Mapping("setMatchOutcome:")
     public native void setMatchOutcome(@Representing("GKTurnBasedMatchOutcome") @MachineSizedSInt long v);
     /**
      * @since Available in iOS 6.0 and later.

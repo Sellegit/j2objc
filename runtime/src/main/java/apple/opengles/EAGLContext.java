@@ -43,6 +43,7 @@ public class EAGLContext
     /**
      * @since Available in iOS 6.0 and later.
      */
+    @Mapping("setDebugLabel:")
     public native void setDebugLabel(String v);
     /**
      * @since Available in iOS 7.1 and later.
@@ -52,6 +53,7 @@ public class EAGLContext
     /**
      * @since Available in iOS 7.1 and later.
      */
+    @Mapping("setMultiThreaded:")
     public native void setMultiThreaded(boolean v);
     
     

@@ -40,6 +40,7 @@ public class CKQuery
     public native NSPredicate getPredicate();
     @Mapping("sortDescriptors")
     public native NSArray<NSSortDescriptor> getSortDescriptors();
+    @Mapping("setSortDescriptors:")
     public native void setSortDescriptors(NSArray<NSSortDescriptor> v);
     
     

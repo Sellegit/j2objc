@@ -45,6 +45,7 @@ public class AVAudioFile
     public native long getLength();
     @Mapping("framePosition")
     public native long getFramePosition();
+    @Mapping("setFramePosition:")
     public native void setFramePosition(long v);
     
     

@@ -18,7 +18,7 @@ import apple.foundation.*;
 
 
 
-
+@Library("CoreFoundation")
 @Mapping("CFPropertyListFormat")
 public final class CFPropertyListFormat extends ObjCEnum {
     

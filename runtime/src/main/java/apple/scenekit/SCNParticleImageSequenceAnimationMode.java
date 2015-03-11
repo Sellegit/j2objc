@@ -23,7 +23,7 @@ import apple.opengles.*;
 
 
 
-
+@Library("SceneKit")
 @Mapping("SCNParticleImageSequenceAnimationMode")
 public final class SCNParticleImageSequenceAnimationMode extends ObjCEnum {
     

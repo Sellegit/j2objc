@@ -38,9 +38,11 @@ public class MKPinAnnotationView
     
     @Mapping("pinColor")
     public native @Representing("MKPinAnnotationColor") @MachineSizedUInt long getPinColor();
+    @Mapping("setPinColor:")
     public native void setPinColor(@Representing("MKPinAnnotationColor") @MachineSizedUInt long v);
     @Mapping("animatesDrop")
     public native boolean animatesDrop();
+    @Mapping("setAnimatesDrop:")
     public native void setAnimatesDrop(boolean v);
     
     

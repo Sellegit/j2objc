@@ -34,21 +34,27 @@ public class GLKEffectPropertyFog
     
     @Mapping("enabled")
     public native boolean isEnabled();
+    @Mapping("setEnabled:")
     public native void setEnabled(boolean v);
     @Mapping("mode")
     public native GLKFogMode getMode();
+    @Mapping("setMode:")
     public native void setMode(GLKFogMode v);
     @Mapping("color")
     public native GLKVector4 getColor();
+    @Mapping("setColor:")
     public native void setColor(GLKVector4 v);
     @Mapping("density")
     public native float getDensity();
+    @Mapping("setDensity:")
     public native void setDensity(float v);
     @Mapping("start")
     public native float getStart();
+    @Mapping("setStart:")
     public native void setStart(float v);
     @Mapping("end")
     public native float getEnd();
+    @Mapping("setEnd:")
     public native void setEnd(float v);
     
     

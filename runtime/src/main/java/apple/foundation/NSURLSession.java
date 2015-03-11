@@ -42,6 +42,7 @@ public class NSURLSession
     public native NSURLSessionConfiguration getConfiguration();
     @Mapping("sessionDescription")
     public native String getSessionDescription();
+    @Mapping("setSessionDescription:")
     public native void setSessionDescription(String v);
     
     

@@ -16,7 +16,7 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-
+@Adapter
 public abstract class HMAccessoryBrowserDelegateAdapter 
     extends Object 
     implements HMAccessoryBrowserDelegate {

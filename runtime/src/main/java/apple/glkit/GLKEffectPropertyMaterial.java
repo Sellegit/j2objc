@@ -34,18 +34,23 @@ public class GLKEffectPropertyMaterial
     
     @Mapping("ambientColor")
     public native GLKVector4 getAmbientColor();
+    @Mapping("setAmbientColor:")
     public native void setAmbientColor(GLKVector4 v);
     @Mapping("diffuseColor")
     public native GLKVector4 getDiffuseColor();
+    @Mapping("setDiffuseColor:")
     public native void setDiffuseColor(GLKVector4 v);
     @Mapping("specularColor")
     public native GLKVector4 getSpecularColor();
+    @Mapping("setSpecularColor:")
     public native void setSpecularColor(GLKVector4 v);
     @Mapping("emissiveColor")
     public native GLKVector4 getEmissiveColor();
+    @Mapping("setEmissiveColor:")
     public native void setEmissiveColor(GLKVector4 v);
     @Mapping("shininess")
     public native float getShininess();
+    @Mapping("setShininess:")
     public native void setShininess(float v);
     
     

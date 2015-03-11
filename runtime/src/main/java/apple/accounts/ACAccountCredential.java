@@ -35,6 +35,7 @@ public class ACAccountCredential
     
     @Mapping("oauthToken")
     public native String getOauthToken();
+    @Mapping("setOauthToken:")
     public native void setOauthToken(String v);
     
     

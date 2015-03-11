@@ -43,6 +43,7 @@ public class AVCaptureInputPort
     public native CMFormatDescription getFormatDescription();
     @Mapping("isEnabled")
     public native boolean isEnabled();
+    @Mapping("setEnabled:")
     public native void setEnabled(boolean v);
     /**
      * @since Available in iOS 7.0 and later.

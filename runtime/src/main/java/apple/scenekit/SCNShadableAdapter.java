@@ -22,7 +22,7 @@ import apple.opengles.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-
+@Adapter
 public abstract class SCNShadableAdapter 
     extends Object 
     implements SCNShadable {
@@ -32,9 +32,11 @@ public abstract class SCNShadableAdapter
     
     @NotImplemented("shaderModifiers")
     public Map<SCNShaderModifierEntryPoint, String> getShaderModifiers() { throw new UnsupportedOperationException(); }
+    @Mapping("setShaderModifiers:")
     public void setShaderModifiers(Map<SCNShaderModifierEntryPoint, String> v) { throw new UnsupportedOperationException(); }
     @NotImplemented("program")
     public SCNProgram getProgram() { throw new UnsupportedOperationException(); }
+    @Mapping("setProgram:")
     public void setProgram(SCNProgram v) { throw new UnsupportedOperationException(); }
     
     

@@ -26,7 +26,7 @@ import apple.scenekit.*;
  * @since Available in iOS 7.0 and later.
  */
 
-
+@Library("SpriteKit")
 @Mapping("SKLabelVerticalAlignmentMode")
 public final class SKLabelVerticalAlignmentMode extends ObjCEnum {
     

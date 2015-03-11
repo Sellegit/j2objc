@@ -32,12 +32,15 @@ public class WKPreferences
     
     @Mapping("minimumFontSize")
     public native @MachineSizedFloat double getMinimumFontSize();
+    @Mapping("setMinimumFontSize:")
     public native void setMinimumFontSize(@MachineSizedFloat double v);
     @Mapping("javaScriptEnabled")
     public native boolean isJavaScriptEnabled();
+    @Mapping("setJavaScriptEnabled:")
     public native void setJavaScriptEnabled(boolean v);
     @Mapping("javaScriptCanOpenWindowsAutomatically")
     public native boolean javaScriptCanOpenWindowsAutomatically();
+    @Mapping("setJavaScriptCanOpenWindowsAutomatically:")
     public native void setJavaScriptCanOpenWindowsAutomatically(boolean v);
     
     

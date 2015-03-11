@@ -20,7 +20,7 @@ import apple.coremedia.*;
 
 
 
-
+@Library("AudioToolbox")
 @Mapping("AudioFileRegionFlag")
 public final class AudioFileRegionFlag extends ObjCEnum {
     

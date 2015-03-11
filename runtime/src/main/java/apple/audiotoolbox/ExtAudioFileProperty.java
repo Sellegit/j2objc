@@ -20,7 +20,7 @@ import apple.coremedia.*;
 
 
 
-
+@Library("AudioToolbox")
 @Mapping("ExtAudioFileProperty")
 public final class ExtAudioFileProperty extends ObjCEnum {
     

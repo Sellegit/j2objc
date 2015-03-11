@@ -37,17 +37,21 @@ public class SCNPhysicsHingeJoint
     public native SCNPhysicsBody getBodyA();
     @Mapping("axisA")
     public native SCNVector3 getAxisA();
+    @Mapping("setAxisA:")
     public native void setAxisA(SCNVector3 v);
     @Mapping("anchorA")
     public native SCNVector3 getAnchorA();
+    @Mapping("setAnchorA:")
     public native void setAnchorA(SCNVector3 v);
     @Mapping("bodyB")
     public native SCNPhysicsBody getBodyB();
     @Mapping("axisB")
     public native SCNVector3 getAxisB();
+    @Mapping("setAxisB:")
     public native void setAxisB(SCNVector3 v);
     @Mapping("anchorB")
     public native SCNVector3 getAnchorB();
+    @Mapping("setAnchorB:")
     public native void setAnchorB(SCNVector3 v);
     
     

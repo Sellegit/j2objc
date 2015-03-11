@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 
 
-
+@Library("CFNetwork")
 @Mapping("CFNetworkErrors")
 public final class CFNetworkErrors extends ObjCEnum {
     

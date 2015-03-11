@@ -19,7 +19,7 @@ import apple.corelocation.*;
 
 
 
-
+@Library("EventKit")
 @Mapping("EKCalendarEventAvailabilityMask")
 public final class EKCalendarEventAvailabilityMask extends ObjCEnum {
     

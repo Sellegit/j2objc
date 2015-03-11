@@ -23,7 +23,7 @@ import apple.opengles.*;
 
 
 
-
+@Library("SceneKit")
 @Mapping("SCNErrorCode")
 public final class SCNErrorCode extends ObjCEnum {
     

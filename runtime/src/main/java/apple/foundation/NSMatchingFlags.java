@@ -22,7 +22,7 @@ import apple.dispatch.*;
 
 
 
-
+@Library("Foundation")
 @Mapping("NSMatchingFlags")
 public final class NSMatchingFlags extends ObjCEnum {
     

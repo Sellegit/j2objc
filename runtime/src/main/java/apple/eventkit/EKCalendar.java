@@ -33,6 +33,7 @@ public class EKCalendar
     
     @Mapping("source")
     public native EKSource getSource();
+    @Mapping("setSource:")
     public native void setSource(EKSource v);
     /**
      * @since Available in iOS 5.0 and later.
@@ -41,6 +42,7 @@ public class EKCalendar
     public native String getCalendarIdentifier();
     @Mapping("title")
     public native String getTitle();
+    @Mapping("setTitle:")
     public native void setTitle(String v);
     @Mapping("type")
     public native EKCalendarType getType();
@@ -58,6 +60,7 @@ public class EKCalendar
     public native boolean isImmutable();
     @Mapping("CGColor")
     public native CGColor getCGColor();
+    @Mapping("setCGColor:")
     public native void setCGColor(CGColor v);
     @Mapping("supportedEventAvailabilities")
     public native @Representing("EKCalendarEventAvailabilityMask") int getSupportedEventAvailabilities();

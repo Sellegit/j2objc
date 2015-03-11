@@ -18,7 +18,7 @@ import apple.uikit.*;
 
 
 
-
+@Library("MessageUI")
 @Mapping("MFMailComposeErrorCode")
 public final class MFMailComposeErrorCode extends ObjCEnum {
     

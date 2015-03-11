@@ -18,7 +18,7 @@ import apple.uikit.*;
 
 
 
-
+@Library("CoreGraphics")
 @Mapping("CGRectEdge")
 public final class CGRectEdge extends ObjCEnum {
     

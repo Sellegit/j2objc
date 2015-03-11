@@ -23,7 +23,7 @@ import apple.opengles.*;
 
 
 
-
+@Library("SceneKit")
 @Mapping("SCNGeometryPrimitiveType")
 public final class SCNGeometryPrimitiveType extends ObjCEnum {
     

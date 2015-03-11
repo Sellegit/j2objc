@@ -36,18 +36,23 @@ public class SKPhysicsJointPin
     
     @Mapping("shouldEnableLimits")
     public native boolean shouldEnableLimits();
+    @Mapping("setShouldEnableLimits:")
     public native void setShouldEnableLimits(boolean v);
     @Mapping("lowerAngleLimit")
     public native @MachineSizedFloat double getLowerAngleLimit();
+    @Mapping("setLowerAngleLimit:")
     public native void setLowerAngleLimit(@MachineSizedFloat double v);
     @Mapping("upperAngleLimit")
     public native @MachineSizedFloat double getUpperAngleLimit();
+    @Mapping("setUpperAngleLimit:")
     public native void setUpperAngleLimit(@MachineSizedFloat double v);
     @Mapping("frictionTorque")
     public native @MachineSizedFloat double getFrictionTorque();
+    @Mapping("setFrictionTorque:")
     public native void setFrictionTorque(@MachineSizedFloat double v);
     @Mapping("rotationSpeed")
     public native @MachineSizedFloat double getRotationSpeed();
+    @Mapping("setRotationSpeed:")
     public native void setRotationSpeed(@MachineSizedFloat double v);
     
     

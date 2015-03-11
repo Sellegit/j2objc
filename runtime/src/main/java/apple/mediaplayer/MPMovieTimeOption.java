@@ -18,7 +18,7 @@ import apple.uikit.*;
 
 
 
-
+@Library("MediaPlayer")
 @Mapping("MPMovieTimeOption")
 public final class MPMovieTimeOption extends ObjCEnum {
     

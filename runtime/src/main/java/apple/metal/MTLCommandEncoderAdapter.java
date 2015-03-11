@@ -17,7 +17,7 @@ import apple.dispatch.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-
+@Adapter
 public abstract class MTLCommandEncoderAdapter 
     extends Object 
     implements MTLCommandEncoder {
@@ -29,6 +29,7 @@ public abstract class MTLCommandEncoderAdapter
     public MTLDevice getDevice() { throw new UnsupportedOperationException(); }
     @NotImplemented("label")
     public String getLabel() { throw new UnsupportedOperationException(); }
+    @Mapping("setLabel:")
     public void setLabel(String v) { throw new UnsupportedOperationException(); }
     
     

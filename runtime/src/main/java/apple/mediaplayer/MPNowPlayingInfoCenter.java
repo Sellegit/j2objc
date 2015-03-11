@@ -32,6 +32,7 @@ public class MPNowPlayingInfoCenter
     
     @Mapping("nowPlayingInfo")
     public native MPNowPlayingInfo getNowPlayingInfo();
+    @Mapping("setNowPlayingInfo:")
     public native void setNowPlayingInfo(MPNowPlayingInfo v);
     
     

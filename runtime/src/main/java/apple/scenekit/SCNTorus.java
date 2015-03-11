@@ -35,15 +35,19 @@ public class SCNTorus
     
     @Mapping("ringRadius")
     public native @MachineSizedFloat double getRingRadius();
+    @Mapping("setRingRadius:")
     public native void setRingRadius(@MachineSizedFloat double v);
     @Mapping("pipeRadius")
     public native @MachineSizedFloat double getPipeRadius();
+    @Mapping("setPipeRadius:")
     public native void setPipeRadius(@MachineSizedFloat double v);
     @Mapping("ringSegmentCount")
     public native @MachineSizedSInt long getRingSegmentCount();
+    @Mapping("setRingSegmentCount:")
     public native void setRingSegmentCount(@MachineSizedSInt long v);
     @Mapping("pipeSegmentCount")
     public native @MachineSizedSInt long getPipeSegmentCount();
+    @Mapping("setPipeSegmentCount:")
     public native void setPipeSegmentCount(@MachineSizedSInt long v);
     
     

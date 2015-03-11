@@ -20,7 +20,7 @@ import apple.coremedia.*;
 
 
 
-
+@Library("AudioToolbox")
 @Mapping("CAFRegionFlag")
 public final class CAFRegionFlag extends ObjCEnum {
     

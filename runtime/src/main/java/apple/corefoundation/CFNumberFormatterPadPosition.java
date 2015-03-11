@@ -18,7 +18,7 @@ import apple.foundation.*;
 
 
 
-
+@Library("CoreFoundation")
 @Mapping("CFNumberFormatterPadPosition")
 public final class CFNumberFormatterPadPosition extends ObjCEnum {
     

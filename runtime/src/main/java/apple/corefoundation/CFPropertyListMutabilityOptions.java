@@ -18,7 +18,7 @@ import apple.foundation.*;
 
 
 
-
+@Library("CoreFoundation")
 @Mapping("CFPropertyListMutabilityOptions")
 public final class CFPropertyListMutabilityOptions extends ObjCEnum {
     

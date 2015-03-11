@@ -22,7 +22,7 @@ import apple.dispatch.*;
 
 
 
-
+@Library("Foundation")
 @Mapping("NSAttributedStringEnumerationOptions")
 public final class NSAttributedStringEnumerationOptions extends ObjCEnum {
     

@@ -42,6 +42,7 @@ public class GKLocalPlayer
     /**
      * @since Available in iOS 6.0 and later.
      */
+    @Mapping("setAuthenticateHandler:")
     public native void setAuthenticateHandler(@Block VoidBlock2<UIViewController, NSError> v);
     /**
      * @since Available in iOS 4.1 and later.

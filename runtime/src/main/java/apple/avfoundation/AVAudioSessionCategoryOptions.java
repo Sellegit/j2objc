@@ -25,7 +25,7 @@ import apple.mediatoolbox.*;
  * @since Available in iOS 6.0 and later.
  */
 
-
+@Library("AVFoundation")
 @Mapping("AVAudioSessionCategoryOptions")
 public final class AVAudioSessionCategoryOptions extends ObjCEnum {
     

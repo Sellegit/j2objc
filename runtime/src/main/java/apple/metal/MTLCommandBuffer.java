@@ -38,6 +38,7 @@ public final class MTLCommandBuffer
     public native boolean maintainsRetainedReferences();
     @Mapping("label")
     public native String getLabel();
+    @Mapping("setLabel:")
     public native void setLabel(String v);
     @Mapping("status")
     public native @Representing("MTLCommandBufferStatus") @MachineSizedUInt long getStatus();

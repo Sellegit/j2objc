@@ -19,7 +19,7 @@ import apple.corebluetooth.*;
 
 
 
-
+@Library("CoreLocation")
 @Mapping("CLDeviceOrientation")
 public final class CLDeviceOrientation extends ObjCEnum {
     

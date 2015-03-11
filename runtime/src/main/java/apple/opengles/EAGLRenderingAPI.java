@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 
 
-
+@Library("OpenGLES")
 @Mapping("EAGLRenderingAPI")
 public final class EAGLRenderingAPI extends ObjCEnum {
     

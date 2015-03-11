@@ -40,33 +40,43 @@ public class MKAnnotationView
     public native String getReuseIdentifier();
     @Mapping("annotation")
     public native MKAnnotation getAnnotation();
+    @Mapping("setAnnotation:")
     public native void setAnnotation(MKAnnotation v);
     @Mapping("image")
     public native UIImage getImage();
+    @Mapping("setImage:")
     public native void setImage(UIImage v);
     @Mapping("centerOffset")
     public native CGPoint getCenterOffset();
+    @Mapping("setCenterOffset:")
     public native void setCenterOffset(CGPoint v);
     @Mapping("calloutOffset")
     public native CGPoint getCalloutOffset();
+    @Mapping("setCalloutOffset:")
     public native void setCalloutOffset(CGPoint v);
     @Mapping("isEnabled")
     public native boolean isEnabled();
+    @Mapping("setEnabled:")
     public native void setEnabled(boolean v);
     @Mapping("isHighlighted")
     public native boolean isHighlighted();
+    @Mapping("setHighlighted:")
     public native void setHighlighted(boolean v);
     @Mapping("isSelected")
     public native boolean isSelected();
+    @Mapping("setSelected:")
     public native void setSelected(boolean v);
     @Mapping("canShowCallout")
     public native boolean canShowCallout();
+    @Mapping("setCanShowCallout:")
     public native void setCanShowCallout(boolean v);
     @Mapping("leftCalloutAccessoryView")
     public native UIView getLeftCalloutAccessoryView();
+    @Mapping("setLeftCalloutAccessoryView:")
     public native void setLeftCalloutAccessoryView(UIView v);
     @Mapping("rightCalloutAccessoryView")
     public native UIView getRightCalloutAccessoryView();
+    @Mapping("setRightCalloutAccessoryView:")
     public native void setRightCalloutAccessoryView(UIView v);
     /**
      * @since Available in iOS 4.0 and later.
@@ -76,6 +86,7 @@ public class MKAnnotationView
     /**
      * @since Available in iOS 4.0 and later.
      */
+    @Mapping("setDraggable:")
     public native void setDraggable(boolean v);
     /**
      * @since Available in iOS 4.0 and later.
@@ -85,6 +96,7 @@ public class MKAnnotationView
     /**
      * @since Available in iOS 4.0 and later.
      */
+    @Mapping("setDragState:")
     public native void setDragState(@Representing("MKAnnotationViewDragState") @MachineSizedUInt long v);
     
     

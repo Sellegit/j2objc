@@ -37,6 +37,7 @@ public class MCSession
     
     @Mapping("delegate")
     public native MCSessionDelegate getDelegate();
+    @Mapping("setDelegate:")
     public native void setDelegate(MCSessionDelegate v);
     @Mapping("myPeerID")
     public native MCPeerID getMyPeerID();

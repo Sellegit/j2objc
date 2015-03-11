@@ -39,9 +39,11 @@ public class HKStatisticsCollectionQuery
     public native NSDateComponents getIntervalComponents();
     @Mapping("initialResultsHandler")
     public native @Block VoidBlock3<HKStatisticsCollectionQuery, HKStatisticsCollection, NSError> getInitialResultsHandler();
+    @Mapping("setInitialResultsHandler:")
     public native void setInitialResultsHandler(@Block VoidBlock3<HKStatisticsCollectionQuery, HKStatisticsCollection, NSError> v);
     @Mapping("statisticsUpdateHandler")
     public native @Block VoidBlock4<HKStatisticsCollectionQuery, HKStatistics, HKStatisticsCollection, NSError> getStatisticsUpdateHandler();
+    @Mapping("setStatisticsUpdateHandler:")
     public native void setStatisticsUpdateHandler(@Block VoidBlock4<HKStatisticsCollectionQuery, HKStatistics, HKStatisticsCollection, NSError> v);
     
     

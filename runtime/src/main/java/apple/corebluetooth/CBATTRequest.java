@@ -38,6 +38,7 @@ public class CBATTRequest
     public native @MachineSizedUInt long getOffset();
     @Mapping("value")
     public native NSData getValue();
+    @Mapping("setValue:")
     public native void setValue(NSData v);
     
     

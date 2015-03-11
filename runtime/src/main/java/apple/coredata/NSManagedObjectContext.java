@@ -36,6 +36,7 @@ public class NSManagedObjectContext
     
     @Mapping("persistentStoreCoordinator")
     public native NSPersistentStoreCoordinator getPersistentStoreCoordinator();
+    @Mapping("setPersistentStoreCoordinator:")
     public native void setPersistentStoreCoordinator(NSPersistentStoreCoordinator v);
     /**
      * @since Available in iOS 5.0 and later.
@@ -45,6 +46,7 @@ public class NSManagedObjectContext
     /**
      * @since Available in iOS 5.0 and later.
      */
+    @Mapping("setParentContext:")
     public native void setParentContext(NSManagedObjectContext v);
     /**
      * @since Available in iOS 8.0 and later.
@@ -54,9 +56,11 @@ public class NSManagedObjectContext
     /**
      * @since Available in iOS 8.0 and later.
      */
+    @Mapping("setName:")
     public native void setName(String v);
     @Mapping("undoManager")
     public native NSUndoManager getUndoManager();
+    @Mapping("setUndoManager:")
     public native void setUndoManager(NSUndoManager v);
     @Mapping("hasChanges")
     public native boolean hasChanges();
@@ -80,15 +84,19 @@ public class NSManagedObjectContext
     public native NSSet<NSManagedObject> getRegisteredObjects();
     @Mapping("propagatesDeletesAtEndOfEvent")
     public native boolean propagatesDeletesAtEndOfEvent();
+    @Mapping("setPropagatesDeletesAtEndOfEvent:")
     public native void setPropagatesDeletesAtEndOfEvent(boolean v);
     @Mapping("retainsRegisteredObjects")
     public native NSSet<NSManagedObject> getRetainsRegisteredObjects();
+    @Mapping("setRetainsRegisteredObjects:")
     public native void setRetainsRegisteredObjects(NSSet<NSManagedObject> v);
     @Mapping("stalenessInterval")
     public native double getStalenessInterval();
+    @Mapping("setStalenessInterval:")
     public native void setStalenessInterval(double v);
     @Mapping("mergePolicy")
     public native Object getMergePolicy();
+    @Mapping("setMergePolicy:")
     public native void setMergePolicy(Object v);
     
     

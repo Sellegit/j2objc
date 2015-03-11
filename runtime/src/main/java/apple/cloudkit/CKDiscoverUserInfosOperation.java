@@ -34,12 +34,15 @@ public class CKDiscoverUserInfosOperation
     
     @Mapping("emailAddresses")
     public native List<String> getEmailAddresses();
+    @Mapping("setEmailAddresses:")
     public native void setEmailAddresses(List<String> v);
     @Mapping("userRecordIDs")
     public native NSArray<CKRecordID> getUserRecordIDs();
+    @Mapping("setUserRecordIDs:")
     public native void setUserRecordIDs(NSArray<CKRecordID> v);
     @Mapping("discoverUserInfosCompletionBlock")
     public native @Block VoidBlock3<NSDictionary<NSString, CKDiscoveredUserInfo>, NSDictionary<CKRecordID, CKDiscoveredUserInfo>, NSError> getDiscoverUserInfosCompletionBlock();
+    @Mapping("setDiscoverUserInfosCompletionBlock:")
     public native void setDiscoverUserInfosCompletionBlock(@Block VoidBlock3<NSDictionary<NSString, CKDiscoveredUserInfo>, NSDictionary<CKRecordID, CKDiscoveredUserInfo>, NSError> v);
     
     

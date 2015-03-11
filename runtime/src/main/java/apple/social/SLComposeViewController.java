@@ -37,6 +37,7 @@ public class SLComposeViewController
     public native SLServiceType getServiceType();
     @Mapping("completionHandler")
     public native @Block VoidBlock3<String, SLRequestMethod, NSURL> getCompletionHandler();
+    @Mapping("setCompletionHandler:")
     public native void setCompletionHandler(@Block VoidBlock3<String, SLRequestMethod, NSURL> v);
     
     

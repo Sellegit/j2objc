@@ -41,6 +41,7 @@ public class NSFetchedResultsController
     public native String getCacheName();
     @Mapping("delegate")
     public native NSFetchedResultsControllerDelegate getDelegate();
+    @Mapping("setDelegate:")
     public native void setDelegate(NSFetchedResultsControllerDelegate v);
     @Mapping("fetchedObjects")
     public native NSArray<NSManagedObject> getFetchedObjects();

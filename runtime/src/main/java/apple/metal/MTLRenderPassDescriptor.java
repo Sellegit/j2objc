@@ -34,12 +34,15 @@ public class MTLRenderPassDescriptor
     public native MTLRenderPassColorAttachmentDescriptorArray getColorAttachments();
     @Mapping("depthAttachment")
     public native MTLRenderPassDepthAttachmentDescriptor getDepthAttachment();
+    @Mapping("setDepthAttachment:")
     public native void setDepthAttachment(MTLRenderPassDepthAttachmentDescriptor v);
     @Mapping("stencilAttachment")
     public native MTLRenderPassStencilAttachmentDescriptor getStencilAttachment();
+    @Mapping("setStencilAttachment:")
     public native void setStencilAttachment(MTLRenderPassStencilAttachmentDescriptor v);
     @Mapping("visibilityResultBuffer")
     public native MTLBuffer getVisibilityResultBuffer();
+    @Mapping("setVisibilityResultBuffer:")
     public native void setVisibilityResultBuffer(MTLBuffer v);
     
     

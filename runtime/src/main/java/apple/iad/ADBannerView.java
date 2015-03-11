@@ -47,6 +47,7 @@ public class ADBannerView
     public native @Representing("ADAdType") @MachineSizedSInt long getAdType();
     @Mapping("delegate")
     public native ADBannerViewDelegate getDelegate();
+    @Mapping("setDelegate:")
     public native void setDelegate(ADBannerViewDelegate v);
     @Mapping("isBannerLoaded")
     public native boolean isBannerLoaded();
@@ -54,6 +55,7 @@ public class ADBannerView
     public native boolean isBannerViewActionInProgress();
     @Mapping("advertisingSection")
     public native String getAdvertisingSection();
+    @Mapping("setAdvertisingSection:")
     public native void setAdvertisingSection(String v);
     /**
      * @since Available in iOS 4.0 and later.
@@ -67,6 +69,7 @@ public class ADBannerView
      * @deprecated Deprecated in iOS 6.0.
      */
     @Deprecated
+    @Mapping("setRequiredContentSizeIdentifiers:")
     public native void setRequiredContentSizeIdentifiers(List<ADBannerContentSizeIdentifier> v);
     /**
      * @since Available in iOS 4.0 and later.
@@ -80,6 +83,7 @@ public class ADBannerView
      * @deprecated Deprecated in iOS 6.0.
      */
     @Deprecated
+    @Mapping("setCurrentContentSizeIdentifier:")
     public native void setCurrentContentSizeIdentifier(ADBannerContentSizeIdentifier v);
     
     

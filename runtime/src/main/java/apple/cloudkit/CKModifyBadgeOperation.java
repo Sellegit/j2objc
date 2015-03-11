@@ -34,9 +34,11 @@ public class CKModifyBadgeOperation
     
     @Mapping("badgeValue")
     public native @MachineSizedUInt long getBadgeValue();
+    @Mapping("setBadgeValue:")
     public native void setBadgeValue(@MachineSizedUInt long v);
     @Mapping("modifyBadgeCompletionBlock")
     public native @Block VoidBlock1<NSError> getModifyBadgeCompletionBlock();
+    @Mapping("setModifyBadgeCompletionBlock:")
     public native void setModifyBadgeCompletionBlock(@Block VoidBlock1<NSError> v);
     
     

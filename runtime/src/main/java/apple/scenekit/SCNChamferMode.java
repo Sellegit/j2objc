@@ -25,7 +25,7 @@ import apple.opengles.*;
  * @since Available in iOS 8.0 and later.
  */
 
-
+@Library("SceneKit")
 @Mapping("SCNChamferMode")
 public final class SCNChamferMode extends ObjCEnum {
     

@@ -39,9 +39,11 @@ public class AVAudioUnitDistortion
     
     @Mapping("preGain")
     public native float getPreGain();
+    @Mapping("setPreGain:")
     public native void setPreGain(float v);
     @Mapping("wetDryMix")
     public native float getWetDryMix();
+    @Mapping("setWetDryMix:")
     public native void setWetDryMix(float v);
     
     

@@ -35,17 +35,21 @@ public class EKEvent
     public native String getEventIdentifier();
     @Mapping("isAllDay")
     public native boolean isAllDay();
+    @Mapping("setAllDay:")
     public native void setAllDay(boolean v);
     @Mapping("startDate")
     public native NSDate getStartDate();
+    @Mapping("setStartDate:")
     public native void setStartDate(NSDate v);
     @Mapping("endDate")
     public native NSDate getEndDate();
+    @Mapping("setEndDate:")
     public native void setEndDate(NSDate v);
     @Mapping("organizer")
     public native EKParticipant getOrganizer();
     @Mapping("availability")
     public native EKEventAvailability getAvailability();
+    @Mapping("setAvailability:")
     public native void setAvailability(EKEventAvailability v);
     @Mapping("status")
     public native EKEventStatus getStatus();

@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 
 
-
+@Library("CoreMIDI")
 @Mapping("MIDIError")
 public final class MIDIError extends ObjCEnum {
     

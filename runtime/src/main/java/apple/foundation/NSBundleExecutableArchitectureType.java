@@ -22,7 +22,7 @@ import apple.dispatch.*;
 
 
 
-
+@Library("Foundation")
 @Mapping("NSBundleExecutableArchitectureType")
 public final class NSBundleExecutableArchitectureType extends ObjCEnum {
     

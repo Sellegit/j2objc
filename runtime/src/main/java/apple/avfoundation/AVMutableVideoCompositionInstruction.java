@@ -37,15 +37,19 @@ public class AVMutableVideoCompositionInstruction
     
     @Mapping("timeRange")
     public native CMTimeRange getTimeRange();
+    @Mapping("setTimeRange:")
     public native void setTimeRange(CMTimeRange v);
     @Mapping("backgroundColor")
     public native CGColor getBackgroundColor();
+    @Mapping("setBackgroundColor:")
     public native void setBackgroundColor(CGColor v);
     @Mapping("layerInstructions")
     public native NSArray<AVVideoCompositionLayerInstruction> getLayerInstructions();
+    @Mapping("setLayerInstructions:")
     public native void setLayerInstructions(NSArray<AVVideoCompositionLayerInstruction> v);
     @Mapping("enablePostProcessing")
     public native boolean isPostProcessingEnabled();
+    @Mapping("setEnablePostProcessing:")
     public native void setPostProcessingEnabled(boolean v);
     
     

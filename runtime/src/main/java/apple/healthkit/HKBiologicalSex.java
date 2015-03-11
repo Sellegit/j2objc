@@ -19,7 +19,7 @@ import apple.foundation.*;
  * @since Available in iOS 8.0 and later.
  */
 
-
+@Library("HealthKit")
 @Mapping("HKBiologicalSex")
 public final class HKBiologicalSex extends ObjCEnum {
     

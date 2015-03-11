@@ -18,7 +18,7 @@ import apple.foundation.*;
 
 
 
-
+@Library("CoreFoundation")
 @Mapping("CFNumberFormatterOptionFlags")
 public final class CFNumberFormatterOptionFlags extends ObjCEnum {
     

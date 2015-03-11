@@ -42,6 +42,7 @@ public class NSObject
     public native Object getAutoContentAccessingProxy();
     @Mapping("observationInfo")
     public native Todo getObservationInfo();
+    @Mapping("setObservationInfo:")
     public native void setObservationInfo(Todo v);
     
     

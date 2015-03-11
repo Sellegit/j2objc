@@ -34,6 +34,7 @@ public class MPMoviePlayerController
     
     @Mapping("contentURL")
     public native NSURL getContentURL();
+    @Mapping("setContentURL:")
     public native void setContentURL(NSURL v);
     @Mapping("view")
     public native UIView getView();
@@ -45,18 +46,23 @@ public class MPMoviePlayerController
     public native @Representing("MPMovieLoadState") @MachineSizedUInt long getLoadState();
     @Mapping("controlStyle")
     public native @Representing("MPMovieControlStyle") @MachineSizedSInt long getControlStyle();
+    @Mapping("setControlStyle:")
     public native void setControlStyle(@Representing("MPMovieControlStyle") @MachineSizedSInt long v);
     @Mapping("repeatMode")
     public native @Representing("MPMovieRepeatMode") @MachineSizedSInt long getRepeatMode();
+    @Mapping("setRepeatMode:")
     public native void setRepeatMode(@Representing("MPMovieRepeatMode") @MachineSizedSInt long v);
     @Mapping("shouldAutoplay")
     public native boolean shouldAutoplay();
+    @Mapping("setShouldAutoplay:")
     public native void setShouldAutoplay(boolean v);
     @Mapping("isFullscreen")
     public native boolean isFullscreen();
+    @Mapping("setFullscreen:")
     public native void setFullscreen(boolean v);
     @Mapping("scalingMode")
     public native @Representing("MPMovieScalingMode") @MachineSizedSInt long getScalingMode();
+    @Mapping("setScalingMode:")
     public native void setScalingMode(@Representing("MPMovieScalingMode") @MachineSizedSInt long v);
     /**
      * @since Available in iOS 6.0 and later.
@@ -67,6 +73,7 @@ public class MPMoviePlayerController
     public native @Representing("MPMovieMediaTypeMask") @MachineSizedUInt long getMovieMediaTypes();
     @Mapping("movieSourceType")
     public native @Representing("MPMovieSourceType") @MachineSizedSInt long getMovieSourceType();
+    @Mapping("setMovieSourceType:")
     public native void setMovieSourceType(@Representing("MPMovieSourceType") @MachineSizedSInt long v);
     @Mapping("duration")
     public native double getDuration();
@@ -76,9 +83,11 @@ public class MPMoviePlayerController
     public native CGSize getNaturalSize();
     @Mapping("initialPlaybackTime")
     public native double getInitialPlaybackTime();
+    @Mapping("setInitialPlaybackTime:")
     public native void setInitialPlaybackTime(double v);
     @Mapping("endPlaybackTime")
     public native double getEndPlaybackTime();
+    @Mapping("setEndPlaybackTime:")
     public native void setEndPlaybackTime(double v);
     /**
      * @since Available in iOS 4.3 and later.
@@ -88,6 +97,7 @@ public class MPMoviePlayerController
     /**
      * @since Available in iOS 4.3 and later.
      */
+    @Mapping("setAllowsAirPlay:")
     public native void setAllowsAirPlay(boolean v);
     /**
      * @since Available in iOS 5.0 and later.
@@ -121,14 +131,17 @@ public class MPMoviePlayerController
      * @deprecated Deprecated in iOS 6.0.
      */
     @Deprecated
+    @Mapping("setUseApplicationAudioSession:")
     public native void setUsesApplicationAudioSession(boolean v);
     @Mapping("isPreparedToPlay")
     public native boolean isPreparedToPlay();
     @Mapping("currentPlaybackTime")
     public native double getCurrentPlaybackTime();
+    @Mapping("setCurrentPlaybackTime:")
     public native void setCurrentPlaybackTime(double v);
     @Mapping("currentPlaybackRate")
     public native float getCurrentPlaybackRate();
+    @Mapping("setCurrentPlaybackRate:")
     public native void setCurrentPlaybackRate(float v);
     
     

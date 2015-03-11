@@ -18,7 +18,7 @@ import apple.uikit.*;
 
 
 
-
+@Library("CoreGraphics")
 @Mapping("CGTextEncoding")
 public final class CGTextEncoding extends ObjCEnum {
     

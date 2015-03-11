@@ -20,7 +20,7 @@ import apple.coremedia.*;
 
 
 
-
+@Library("AudioToolbox")
 @Mapping("CAFLinearPCMFormatFlag")
 public final class CAFLinearPCMFormatFlag extends ObjCEnum {
     

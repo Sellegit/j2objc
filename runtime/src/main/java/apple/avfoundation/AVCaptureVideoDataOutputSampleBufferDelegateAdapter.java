@@ -22,7 +22,7 @@ import apple.mediatoolbox.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-
+@Adapter
 public abstract class AVCaptureVideoDataOutputSampleBufferDelegateAdapter 
     extends Object 
     implements AVCaptureVideoDataOutputSampleBufferDelegate {

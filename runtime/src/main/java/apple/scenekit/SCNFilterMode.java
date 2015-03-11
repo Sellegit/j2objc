@@ -23,7 +23,7 @@ import apple.opengles.*;
 
 
 
-
+@Library("SceneKit")
 @Mapping("SCNFilterMode")
 public final class SCNFilterMode extends ObjCEnum {
     

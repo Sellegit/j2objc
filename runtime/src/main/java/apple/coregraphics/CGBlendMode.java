@@ -18,7 +18,7 @@ import apple.uikit.*;
 
 
 
-
+@Library("CoreGraphics")
 @Mapping("CGBlendMode")
 public final class CGBlendMode extends ObjCEnum {
     

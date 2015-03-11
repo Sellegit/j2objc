@@ -38,6 +38,7 @@ public class MKOverlayRenderer
     public native MKOverlay getOverlay();
     @Mapping("alpha")
     public native @MachineSizedFloat double getAlpha();
+    @Mapping("setAlpha:")
     public native void setAlpha(@MachineSizedFloat double v);
     @Mapping("contentScaleFactor")
     public native @MachineSizedFloat double getContentScaleFactor();

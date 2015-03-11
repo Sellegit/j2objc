@@ -36,27 +36,35 @@ public class NSByteCountFormatter
     
     @Mapping("allowedUnits")
     public native @Representing("NSByteCountFormatterUnits") @MachineSizedUInt long getAllowedUnits();
+    @Mapping("setAllowedUnits:")
     public native void setAllowedUnits(@Representing("NSByteCountFormatterUnits") @MachineSizedUInt long v);
     @Mapping("countStyle")
     public native @Representing("NSByteCountFormatterCountStyle") @MachineSizedSInt long getCountStyle();
+    @Mapping("setCountStyle:")
     public native void setCountStyle(@Representing("NSByteCountFormatterCountStyle") @MachineSizedSInt long v);
     @Mapping("allowsNonnumericFormatting")
     public native boolean allowsNonnumericFormatting();
+    @Mapping("setAllowsNonnumericFormatting:")
     public native void setAllowsNonnumericFormatting(boolean v);
     @Mapping("includesUnit")
     public native boolean includesUnit();
+    @Mapping("setIncludesUnit:")
     public native void setIncludesUnit(boolean v);
     @Mapping("includesCount")
     public native boolean includesCount();
+    @Mapping("setIncludesCount:")
     public native void setIncludesCount(boolean v);
     @Mapping("includesActualByteCount")
     public native boolean includesActualByteCount();
+    @Mapping("setIncludesActualByteCount:")
     public native void setIncludesActualByteCount(boolean v);
     @Mapping("isAdaptive")
     public native boolean isAdaptive();
+    @Mapping("setAdaptive:")
     public native void setAdaptive(boolean v);
     @Mapping("zeroPadsFractionDigits")
     public native boolean zeroPadsFractionDigits();
+    @Mapping("setZeroPadsFractionDigits:")
     public native void setZeroPadsFractionDigits(boolean v);
     /**
      * @since Available in iOS 8.0 and later.
@@ -66,6 +74,7 @@ public class NSByteCountFormatter
     /**
      * @since Available in iOS 8.0 and later.
      */
+    @Mapping("setFormattingContext:")
     public native void setFormattingContext(@Representing("NSFormattingContext") @MachineSizedSInt long v);
     
     

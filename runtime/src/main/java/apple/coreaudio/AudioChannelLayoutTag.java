@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 
 
-
+@Library("CoreAudio")
 @Mapping("AudioChannelLayoutTag")
 public final class AudioChannelLayoutTag extends ObjCEnum {
     

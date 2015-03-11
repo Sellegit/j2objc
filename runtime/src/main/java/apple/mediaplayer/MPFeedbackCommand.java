@@ -32,9 +32,11 @@ public class MPFeedbackCommand
     
     @Mapping("isActive")
     public native boolean isActive();
+    @Mapping("setActive:")
     public native void setActive(boolean v);
     @Mapping("localizedTitle")
     public native String getLocalizedTitle();
+    @Mapping("setLocalizedTitle:")
     public native void setLocalizedTitle(String v);
     
     

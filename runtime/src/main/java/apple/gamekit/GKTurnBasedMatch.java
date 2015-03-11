@@ -44,6 +44,7 @@ public class GKTurnBasedMatch
     public native NSData getMatchData();
     @Mapping("message")
     public native String getMessage();
+    @Mapping("setMessage:")
     public native void setMessage(String v);
     /**
      * @since Available in iOS 6.0 and later.

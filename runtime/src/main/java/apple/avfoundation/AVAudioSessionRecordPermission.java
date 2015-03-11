@@ -25,7 +25,7 @@ import apple.mediatoolbox.*;
  * @since Available in iOS 8.0 and later.
  */
 
-
+@Library("AVFoundation")
 @Mapping("AVAudioSessionRecordPermission")
 public final class AVAudioSessionRecordPermission extends ObjCEnum {
     

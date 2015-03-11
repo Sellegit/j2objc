@@ -22,7 +22,7 @@ import apple.opengles.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-
+@Adapter
 public abstract class SCNProgramDelegateAdapter 
     extends Object 
     implements SCNProgramDelegate {

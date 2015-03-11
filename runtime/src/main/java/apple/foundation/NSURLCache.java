@@ -36,9 +36,11 @@ public class NSURLCache
     
     @Mapping("memoryCapacity")
     public native @MachineSizedUInt long getMemoryCapacity();
+    @Mapping("setMemoryCapacity:")
     public native void setMemoryCapacity(@MachineSizedUInt long v);
     @Mapping("diskCapacity")
     public native @MachineSizedUInt long getDiskCapacity();
+    @Mapping("setDiskCapacity:")
     public native void setDiskCapacity(@MachineSizedUInt long v);
     @Mapping("currentMemoryUsage")
     public native @MachineSizedUInt long getCurrentMemoryUsage();

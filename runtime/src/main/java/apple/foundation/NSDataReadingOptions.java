@@ -22,7 +22,7 @@ import apple.dispatch.*;
 
 
 
-
+@Library("Foundation")
 @Mapping("NSDataReadingOptions")
 public final class NSDataReadingOptions extends ObjCEnum {
     

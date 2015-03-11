@@ -34,18 +34,23 @@ public class GKVoiceChatService
     
     @Mapping("client")
     public native GKVoiceChatClient getClient();
+    @Mapping("setClient:")
     public native void setClient(GKVoiceChatClient v);
     @Mapping("isMicrophoneMuted")
     public native boolean isMicrophoneMuted();
+    @Mapping("setMicrophoneMuted:")
     public native void setMicrophoneMuted(boolean v);
     @Mapping("remoteParticipantVolume")
     public native float getRemoteParticipantVolume();
+    @Mapping("setRemoteParticipantVolume:")
     public native void setRemoteParticipantVolume(float v);
     @Mapping("isOutputMeteringEnabled")
     public native boolean isOutputMeteringEnabled();
+    @Mapping("setOutputMeteringEnabled:")
     public native void setOutputMeteringEnabled(boolean v);
     @Mapping("isInputMeteringEnabled")
     public native boolean isInputMeteringEnabled();
+    @Mapping("setInputMeteringEnabled:")
     public native void setInputMeteringEnabled(boolean v);
     @Mapping("outputMeterLevel")
     public native float getOutputMeterLevel();

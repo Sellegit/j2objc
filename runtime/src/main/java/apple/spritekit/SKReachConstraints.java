@@ -40,9 +40,11 @@ public class SKReachConstraints
     
     @Mapping("lowerAngleLimit")
     public native @MachineSizedFloat double getLowerAngleLimit();
+    @Mapping("setLowerAngleLimit:")
     public native void setLowerAngleLimit(@MachineSizedFloat double v);
     @Mapping("upperAngleLimit")
     public native @MachineSizedFloat double getUpperAngleLimit();
+    @Mapping("setUpperAngleLimit:")
     public native void setUpperAngleLimit(@MachineSizedFloat double v);
     
     

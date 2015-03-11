@@ -16,7 +16,7 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-
+@Adapter
 public abstract class HMHomeDelegateAdapter 
     extends Object 
     implements HMHomeDelegate {

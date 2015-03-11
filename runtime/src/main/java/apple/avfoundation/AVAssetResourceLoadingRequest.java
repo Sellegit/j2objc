@@ -62,6 +62,7 @@ public class AVAssetResourceLoadingRequest
     /**
      * @since Available in iOS 7.0 and later.
      */
+    @Mapping("setResponse:")
     public native void setResponse(NSURLResponse v);
     /**
      * @since Available in iOS 7.0 and later.
@@ -71,6 +72,7 @@ public class AVAssetResourceLoadingRequest
     /**
      * @since Available in iOS 7.0 and later.
      */
+    @Mapping("setRedirect:")
     public native void setRedirect(NSURLRequest v);
     
     

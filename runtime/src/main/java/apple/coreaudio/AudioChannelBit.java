@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 
 
-
+@Library("CoreAudio")
 @Mapping("AudioChannelBit")
 public final class AudioChannelBit extends ObjCEnum {
     

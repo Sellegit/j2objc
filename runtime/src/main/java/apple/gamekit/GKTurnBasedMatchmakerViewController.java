@@ -38,9 +38,11 @@ public class GKTurnBasedMatchmakerViewController
     
     @Mapping("turnBasedMatchmakerDelegate")
     public native GKTurnBasedMatchmakerViewControllerDelegate getTurnBasedMatchmakerDelegate();
+    @Mapping("setTurnBasedMatchmakerDelegate:")
     public native void setTurnBasedMatchmakerDelegate(GKTurnBasedMatchmakerViewControllerDelegate v);
     @Mapping("showExistingMatches")
     public native boolean showsExistingMatches();
+    @Mapping("setShowExistingMatches:")
     public native void setShowsExistingMatches(boolean v);
     
     

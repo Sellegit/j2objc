@@ -35,6 +35,7 @@ public class MCNearbyServiceBrowser
     
     @Mapping("delegate")
     public native MCNearbyServiceBrowserDelegate getDelegate();
+    @Mapping("setDelegate:")
     public native void setDelegate(MCNearbyServiceBrowserDelegate v);
     @Mapping("myPeerID")
     public native MCPeerID getMyPeerID();

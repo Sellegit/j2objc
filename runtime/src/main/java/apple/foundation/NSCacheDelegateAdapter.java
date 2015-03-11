@@ -21,7 +21,7 @@ import apple.dispatch.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-
+@Adapter
 public abstract class NSCacheDelegateAdapter 
     extends Object 
     implements NSCacheDelegate {

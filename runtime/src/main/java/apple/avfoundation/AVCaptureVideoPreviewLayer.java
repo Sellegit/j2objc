@@ -41,6 +41,7 @@ public class AVCaptureVideoPreviewLayer
     
     @Mapping("session")
     public native AVCaptureSession getSession();
+    @Mapping("setSession:")
     public native void setSession(AVCaptureSession v);
     /**
      * @since Available in iOS 6.0 and later.
@@ -49,6 +50,7 @@ public class AVCaptureVideoPreviewLayer
     public native AVCaptureConnection getConnection();
     @Mapping("videoGravity")
     public native AVLayerVideoGravity getVideoGravity();
+    @Mapping("setVideoGravity:")
     public native void setVideoGravity(AVLayerVideoGravity v);
     /**
      * @since Available in iOS 4.0 and later.
@@ -69,6 +71,7 @@ public class AVCaptureVideoPreviewLayer
      * @deprecated Deprecated in iOS 6.0.
      */
     @Deprecated
+    @Mapping("setOrientation:")
     public native void setOrientation(@Representing("AVCaptureVideoOrientation") @MachineSizedSInt long v);
     /**
      * @since Available in iOS 4.0 and later.
@@ -89,6 +92,7 @@ public class AVCaptureVideoPreviewLayer
      * @deprecated Deprecated in iOS 6.0.
      */
     @Deprecated
+    @Mapping("setAutomaticallyAdjustsMirroring:")
     public native void setAutomaticallyAdjustsMirroring(boolean v);
     /**
      * @since Available in iOS 4.0 and later.
@@ -102,6 +106,7 @@ public class AVCaptureVideoPreviewLayer
      * @deprecated Deprecated in iOS 6.0.
      */
     @Deprecated
+    @Mapping("setMirrored:")
     public native void setMirrored(boolean v);
     
     

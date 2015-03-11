@@ -43,6 +43,7 @@ public class AVPlayerItemOutput
     /**
      * @since Available in iOS 6.0 and later.
      */
+    @Mapping("setSuppressesPlayerRendering:")
     public native void setSuppressesPlayerRendering(boolean v);
     
     

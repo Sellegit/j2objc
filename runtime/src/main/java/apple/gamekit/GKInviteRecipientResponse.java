@@ -18,7 +18,7 @@ import apple.uikit.*;
 
 
 
-
+@Library("GameKit")
 @Mapping("GKInviteRecipientResponse")
 public final class GKInviteRecipientResponse extends ObjCEnum {
     

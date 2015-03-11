@@ -35,15 +35,19 @@ public class SCNPhysicsWorld
     
     @Mapping("gravity")
     public native SCNVector3 getGravity();
+    @Mapping("setGravity:")
     public native void setGravity(SCNVector3 v);
     @Mapping("speed")
     public native @MachineSizedFloat double getSpeed();
+    @Mapping("setSpeed:")
     public native void setSpeed(@MachineSizedFloat double v);
     @Mapping("timeStep")
     public native double getTimeStep();
+    @Mapping("setTimeStep:")
     public native void setTimeStep(double v);
     @Mapping("contactDelegate")
     public native SCNPhysicsContactDelegate getContactDelegate();
+    @Mapping("setContactDelegate:")
     public native void setContactDelegate(SCNPhysicsContactDelegate v);
     
     

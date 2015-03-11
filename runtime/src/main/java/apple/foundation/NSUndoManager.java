@@ -42,12 +42,15 @@ public class NSUndoManager
     public native boolean isUndoRegistrationEnabled();
     @Mapping("groupsByEvent")
     public native boolean groupsByEvent();
+    @Mapping("setGroupsByEvent:")
     public native void setGroupsByEvent(boolean v);
     @Mapping("levelsOfUndo")
     public native @MachineSizedUInt long getLevelsOfUndo();
+    @Mapping("setLevelsOfUndo:")
     public native void setLevelsOfUndo(@MachineSizedUInt long v);
     @Mapping("runLoopModes")
     public native List<String> getRunLoopModes();
+    @Mapping("setRunLoopModes:")
     public native void setRunLoopModes(List<String> v);
     @Mapping("canUndo")
     public native boolean canUndo();

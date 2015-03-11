@@ -19,7 +19,7 @@ import apple.corelocation.*;
 
 
 
-
+@Library("EventKit")
 @Mapping("EKEntityMask")
 public final class EKEntityMask extends ObjCEnum {
     

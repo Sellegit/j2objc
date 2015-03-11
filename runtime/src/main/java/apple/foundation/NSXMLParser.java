@@ -43,12 +43,15 @@ public class NSXMLParser
     
     @Mapping("delegate")
     public native NSXMLParserDelegate getDelegate();
+    @Mapping("setDelegate:")
     public native void setDelegate(NSXMLParserDelegate v);
     @Mapping("shouldProcessNamespaces")
     public native boolean shouldProcessNamespaces();
+    @Mapping("setShouldProcessNamespaces:")
     public native void setShouldProcessNamespaces(boolean v);
     @Mapping("shouldReportNamespacePrefixes")
     public native boolean shouldReportNamespacePrefixes();
+    @Mapping("setShouldReportNamespacePrefixes:")
     public native void setShouldReportNamespacePrefixes(boolean v);
     /**
      * @since Available in iOS 8.0 and later.
@@ -58,6 +61,7 @@ public class NSXMLParser
     /**
      * @since Available in iOS 8.0 and later.
      */
+    @Mapping("setExternalEntityResolvingPolicy:")
     public native void setExternalEntityResolvingPolicy(@Representing("NSXMLParserExternalEntityResolvingPolicy") @MachineSizedUInt long v);
     /**
      * @since Available in iOS 8.0 and later.
@@ -67,11 +71,13 @@ public class NSXMLParser
     /**
      * @since Available in iOS 8.0 and later.
      */
+    @Mapping("setAllowedExternalEntityURLs:")
     public native void setAllowedExternalEntityURLs(NSSet<NSURL> v);
     @Mapping("parserError")
     public native NSError getParserError();
     @Mapping("shouldResolveExternalEntities")
     public native boolean shouldResolveExternalEntities();
+    @Mapping("setShouldResolveExternalEntities:")
     public native void setShouldResolveExternalEntities(boolean v);
     @Mapping("publicID")
     public native String getPublicID();

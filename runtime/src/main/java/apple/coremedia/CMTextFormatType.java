@@ -21,7 +21,7 @@ import apple.corevideo.*;
 
 
 
-
+@Library("CoreMedia")
 @Mapping("CMTextFormatType")
 public final class CMTextFormatType extends ObjCEnum {
     

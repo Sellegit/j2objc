@@ -32,6 +32,7 @@ public class CKDatabaseOperation
     
     @Mapping("database")
     public native CKDatabase getDatabase();
+    @Mapping("setDatabase:")
     public native void setDatabase(CKDatabase v);
     
     

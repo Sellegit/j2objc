@@ -39,9 +39,11 @@ public class AVSampleBufferDisplayLayer
     
     @Mapping("controlTimebase")
     public native CMTimebase getControlTimebase();
+    @Mapping("setControlTimebase:")
     public native void setControlTimebase(CMTimebase v);
     @Mapping("videoGravity")
     public native AVLayerVideoGravity getVideoGravity();
+    @Mapping("setVideoGravity:")
     public native void setVideoGravity(AVLayerVideoGravity v);
     /**
      * @since Available in iOS 8.0 and later.

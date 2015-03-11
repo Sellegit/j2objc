@@ -21,7 +21,7 @@ import apple.security.*;
  * @since Available in iOS 7.0 and later.
  */
 
-
+@Library("MultipeerConnectivity")
 @Mapping("MCEncryptionPreference")
 public final class MCEncryptionPreference extends ObjCEnum {
     

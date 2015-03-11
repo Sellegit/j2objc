@@ -35,15 +35,19 @@ public class ABNewPersonViewController
     
     @Mapping("newPersonViewDelegate")
     public native ABNewPersonViewControllerDelegate getNewPersonViewDelegate();
+    @Mapping("setNewPersonViewDelegate:")
     public native void setNewPersonViewDelegate(ABNewPersonViewControllerDelegate v);
     @Mapping("addressBook")
     public native ABAddressBook getAddressBook();
+    @Mapping("setAddressBook:")
     public native void setAddressBook(ABAddressBook v);
     @Mapping("displayedPerson")
     public native ABPerson getDisplayedPerson();
+    @Mapping("setDisplayedPerson:")
     public native void setDisplayedPerson(ABPerson v);
     @Mapping("parentGroup")
     public native ABGroup getParentGroup();
+    @Mapping("setParentGroup:")
     public native void setParentGroup(ABGroup v);
     
     

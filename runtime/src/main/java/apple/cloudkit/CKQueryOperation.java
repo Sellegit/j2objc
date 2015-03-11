@@ -36,24 +36,31 @@ public class CKQueryOperation
     
     @Mapping("query")
     public native CKQuery getQuery();
+    @Mapping("setQuery:")
     public native void setQuery(CKQuery v);
     @Mapping("cursor")
     public native CKQueryCursor getCursor();
+    @Mapping("setCursor:")
     public native void setCursor(CKQueryCursor v);
     @Mapping("zoneID")
     public native CKRecordZoneID getZoneID();
+    @Mapping("setZoneID:")
     public native void setZoneID(CKRecordZoneID v);
     @Mapping("resultsLimit")
     public native @MachineSizedUInt long getResultsLimit();
+    @Mapping("setResultsLimit:")
     public native void setResultsLimit(@MachineSizedUInt long v);
     @Mapping("desiredKeys")
     public native List<String> getDesiredKeys();
+    @Mapping("setDesiredKeys:")
     public native void setDesiredKeys(List<String> v);
     @Mapping("recordFetchedBlock")
     public native @Block VoidBlock1<CKRecord> getRecordFetchedBlock();
+    @Mapping("setRecordFetchedBlock:")
     public native void setRecordFetchedBlock(@Block VoidBlock1<CKRecord> v);
     @Mapping("queryCompletionBlock")
     public native @Block VoidBlock2<CKQueryCursor, NSError> getQueryCompletionBlock();
+    @Mapping("setQueryCompletionBlock:")
     public native void setQueryCompletionBlock(@Block VoidBlock2<CKQueryCursor, NSError> v);
     
     

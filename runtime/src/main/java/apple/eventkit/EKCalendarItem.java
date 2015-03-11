@@ -40,6 +40,7 @@ public class EKCalendarItem
     public native String getUUID();
     @Mapping("calendar")
     public native EKCalendar getCalendar();
+    @Mapping("setCalendar:")
     public native void setCalendar(EKCalendar v);
     /**
      * @since Available in iOS 6.0 and later.
@@ -53,12 +54,15 @@ public class EKCalendarItem
     public native String getCalendarItemExternalIdentifier();
     @Mapping("title")
     public native String getTitle();
+    @Mapping("setTitle:")
     public native void setTitle(String v);
     @Mapping("location")
     public native String getLocation();
+    @Mapping("setLocation:")
     public native void setLocation(String v);
     @Mapping("notes")
     public native String getNotes();
+    @Mapping("setNotes:")
     public native void setNotes(String v);
     /**
      * @since Available in iOS 5.0 and later.
@@ -68,6 +72,7 @@ public class EKCalendarItem
     /**
      * @since Available in iOS 5.0 and later.
      */
+    @Mapping("setURL:")
     public native void setURL(NSURL v);
     @Mapping("lastModifiedDate")
     public native NSDate getLastModifiedDate();
@@ -84,6 +89,7 @@ public class EKCalendarItem
     /**
      * @since Available in iOS 5.0 and later.
      */
+    @Mapping("setTimeZone:")
     public native void setTimeZone(NSTimeZone v);
     /**
      * @since Available in iOS 5.0 and later.
@@ -109,6 +115,7 @@ public class EKCalendarItem
     public native NSArray<EKParticipant> getAttendees();
     @Mapping("alarms")
     public native NSArray<EKAlarm> getAlarms();
+    @Mapping("setAlarms:")
     public native void setAlarms(NSArray<EKAlarm> v);
     /**
      * @since Available in iOS 5.0 and later.
@@ -118,6 +125,7 @@ public class EKCalendarItem
     /**
      * @since Available in iOS 5.0 and later.
      */
+    @Mapping("setRecurrenceRules:")
     public native void setRecurrenceRules(NSArray<EKRecurrenceRule> v);
     
     

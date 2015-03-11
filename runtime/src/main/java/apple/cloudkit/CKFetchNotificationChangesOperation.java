@@ -34,17 +34,21 @@ public class CKFetchNotificationChangesOperation
     
     @Mapping("previousServerChangeToken")
     public native CKServerChangeToken getPreviousServerChangeToken();
+    @Mapping("setPreviousServerChangeToken:")
     public native void setPreviousServerChangeToken(CKServerChangeToken v);
     @Mapping("resultsLimit")
     public native @MachineSizedUInt long getResultsLimit();
+    @Mapping("setResultsLimit:")
     public native void setResultsLimit(@MachineSizedUInt long v);
     @Mapping("moreComing")
     public native boolean isMoreComing();
     @Mapping("notificationChangedBlock")
     public native @Block VoidBlock1<CKNotification> getNotificationChangedBlock();
+    @Mapping("setNotificationChangedBlock:")
     public native void setNotificationChangedBlock(@Block VoidBlock1<CKNotification> v);
     @Mapping("fetchNotificationChangesCompletionBlock")
     public native @Block VoidBlock2<CKServerChangeToken, NSError> getFetchNotificationChangesCompletionBlock();
+    @Mapping("setFetchNotificationChangesCompletionBlock:")
     public native void setFetchNotificationChangesCompletionBlock(@Block VoidBlock2<CKServerChangeToken, NSError> v);
     
     

@@ -20,7 +20,7 @@ import apple.coremedia.*;
 
 
 
-
+@Library("AudioToolbox")
 @Mapping("AudioBalanceFadeType")
 public final class AudioBalanceFadeType extends ObjCEnum {
     

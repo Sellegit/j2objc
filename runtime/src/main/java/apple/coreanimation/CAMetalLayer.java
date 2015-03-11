@@ -37,18 +37,23 @@ public class CAMetalLayer
     
     @Mapping("device")
     public native MTLDevice getDevice();
+    @Mapping("setDevice:")
     public native void setDevice(MTLDevice v);
     @Mapping("pixelFormat")
     public native @Representing("MTLPixelFormat") @MachineSizedUInt long getPixelFormat();
+    @Mapping("setPixelFormat:")
     public native void setPixelFormat(@Representing("MTLPixelFormat") @MachineSizedUInt long v);
     @Mapping("framebufferOnly")
     public native boolean isFramebufferOnly();
+    @Mapping("setFramebufferOnly:")
     public native void setFramebufferOnly(boolean v);
     @Mapping("drawableSize")
     public native CGSize getDrawableSize();
+    @Mapping("setDrawableSize:")
     public native void setDrawableSize(CGSize v);
     @Mapping("presentsWithTransaction")
     public native boolean presentsWithTransaction();
+    @Mapping("setPresentsWithTransaction:")
     public native void setPresentsWithTransaction(boolean v);
     
     

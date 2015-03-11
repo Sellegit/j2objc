@@ -33,15 +33,19 @@ public class CAPropertyAnimation
     
     @Mapping("keyPath")
     public native String getKeyPath();
+    @Mapping("setKeyPath:")
     public native void setKeyPath(String v);
     @Mapping("isAdditive")
     public native boolean isAdditive();
+    @Mapping("setAdditive:")
     public native void setAdditive(boolean v);
     @Mapping("isCumulative")
     public native boolean isCumulative();
+    @Mapping("setCumulative:")
     public native void setCumulative(boolean v);
     @Mapping("valueFunction")
     public native CAValueFunction getValueFunction();
+    @Mapping("setValueFunction:")
     public native void setValueFunction(CAValueFunction v);
     
     

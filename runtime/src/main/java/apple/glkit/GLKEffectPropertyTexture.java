@@ -34,15 +34,19 @@ public class GLKEffectPropertyTexture
     
     @Mapping("enabled")
     public native boolean isEnabled();
+    @Mapping("setEnabled:")
     public native void setEnabled(boolean v);
     @Mapping("name")
     public native int getName();
+    @Mapping("setName:")
     public native void setName(int v);
     @Mapping("target")
     public native @Representing("GLKTextureTarget") int getTarget();
+    @Mapping("setTarget:")
     public native void setTarget(@Representing("GLKTextureTarget") int v);
     @Mapping("envMode")
     public native @Representing("GLKTextureEnvMode") int getEnvMode();
+    @Mapping("setEnvMode:")
     public native void setEnvMode(@Representing("GLKTextureEnvMode") int v);
     
     

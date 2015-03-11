@@ -35,15 +35,19 @@ public class SCNProgram
     
     @Mapping("vertexShader")
     public native String getVertexShader();
+    @Mapping("setVertexShader:")
     public native void setVertexShader(String v);
     @Mapping("fragmentShader")
     public native String getFragmentShader();
+    @Mapping("setFragmentShader:")
     public native void setFragmentShader(String v);
     @Mapping("isOpaque")
     public native boolean isOpaque();
+    @Mapping("setOpaque:")
     public native void setOpaque(boolean v);
     @Mapping("delegate")
     public native SCNProgramDelegate getDelegate();
+    @Mapping("setDelegate:")
     public native void setDelegate(SCNProgramDelegate v);
     
     

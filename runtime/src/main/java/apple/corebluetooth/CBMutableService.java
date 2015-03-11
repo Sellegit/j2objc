@@ -34,15 +34,19 @@ public class CBMutableService
     
     @Mapping("UUID")
     public native CBUUID getUUID();
+    @Mapping("setUUID:")
     public native void setUUID(CBUUID v);
     @Mapping("isPrimary")
     public native boolean isPrimary();
+    @Mapping("setIsPrimary:")
     public native void setPrimary(boolean v);
     @Mapping("includedServices")
     public native NSArray<CBService> getIncludedServices();
+    @Mapping("setIncludedServices:")
     public native void setIncludedServices(NSArray<CBService> v);
     @Mapping("characteristics")
     public native NSArray<CBCharacteristic> getCharacteristics();
+    @Mapping("setCharacteristics:")
     public native void setCharacteristics(NSArray<CBCharacteristic> v);
     
     

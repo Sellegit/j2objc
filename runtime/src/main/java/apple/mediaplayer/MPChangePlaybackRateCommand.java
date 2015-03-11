@@ -32,6 +32,7 @@ public class MPChangePlaybackRateCommand
     
     @Mapping("supportedPlaybackRates")
     public native List<Double> getSupportedPlaybackRates();
+    @Mapping("setSupportedPlaybackRates:")
     public native void setSupportedPlaybackRates(List<Double> v);
     
     

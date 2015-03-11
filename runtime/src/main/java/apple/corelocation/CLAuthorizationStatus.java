@@ -19,7 +19,7 @@ import apple.corebluetooth.*;
 
 
 
-
+@Library("CoreLocation")
 @Mapping("CLAuthorizationStatus")
 public final class CLAuthorizationStatus extends ObjCEnum {
     

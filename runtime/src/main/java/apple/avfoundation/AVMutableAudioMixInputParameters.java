@@ -37,6 +37,7 @@ public class AVMutableAudioMixInputParameters
     
     @Mapping("trackID")
     public native int getTrackID();
+    @Mapping("setTrackID:")
     public native void setTrackID(int v);
     /**
      * @since Available in iOS 7.0 and later.
@@ -46,6 +47,7 @@ public class AVMutableAudioMixInputParameters
     /**
      * @since Available in iOS 7.0 and later.
      */
+    @Mapping("setAudioTimePitchAlgorithm:")
     public native void setAudioTimePitchAlgorithm(AVAudioTimePitchAlgorithm v);
     /**
      * @since Available in iOS 6.0 and later.
@@ -55,6 +57,7 @@ public class AVMutableAudioMixInputParameters
     /**
      * @since Available in iOS 6.0 and later.
      */
+    @Mapping("setAudioTapProcessor:")
     public native void setAudioTapProcessor(MTAudioProcessingTap v);
     
     

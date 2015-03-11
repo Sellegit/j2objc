@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 
 
-
+@Library("CoreAudio")
 @Mapping("AudioChannelLabel")
 public final class AudioChannelLabel extends ObjCEnum {
     

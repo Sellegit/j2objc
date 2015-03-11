@@ -18,7 +18,7 @@ import apple.uikit.*;
 
 
 
-
+@Library("GameKit")
 @Mapping("GKTurnBasedMatchOutcome")
 public final class GKTurnBasedMatchOutcome extends ObjCEnum {
     

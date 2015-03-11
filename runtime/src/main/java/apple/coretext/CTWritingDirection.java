@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 
 
-
+@Library("CoreText")
 @Mapping("CTWritingDirection")
 public final class CTWritingDirection extends ObjCEnum {
     

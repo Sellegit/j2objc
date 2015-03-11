@@ -39,6 +39,7 @@ public class EKRecurrenceRule
     public native String getCalendarIdentifier();
     @Mapping("recurrenceEnd")
     public native EKRecurrenceEnd getRecurrenceEnd();
+    @Mapping("setRecurrenceEnd:")
     public native void setRecurrenceEnd(EKRecurrenceEnd v);
     @Mapping("frequency")
     public native EKRecurrenceFrequency getFrequency();

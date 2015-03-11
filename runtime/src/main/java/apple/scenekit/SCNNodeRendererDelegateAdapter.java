@@ -22,7 +22,7 @@ import apple.opengles.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-
+@Adapter
 public abstract class SCNNodeRendererDelegateAdapter 
     extends Object 
     implements SCNNodeRendererDelegate {

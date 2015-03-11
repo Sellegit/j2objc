@@ -22,7 +22,7 @@ import apple.opengles.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-
+@Adapter
 public abstract class SCNSceneRendererAdapter 
     extends Object 
     implements SCNSceneRenderer {
@@ -32,33 +32,43 @@ public abstract class SCNSceneRendererAdapter
     
     @NotImplemented("scene")
     public SCNScene getScene() { throw new UnsupportedOperationException(); }
+    @Mapping("setScene:")
     public void setScene(SCNScene v) { throw new UnsupportedOperationException(); }
     @NotImplemented("sceneTime")
     public double getSceneTime() { throw new UnsupportedOperationException(); }
+    @Mapping("setSceneTime:")
     public void setSceneTime(double v) { throw new UnsupportedOperationException(); }
     @NotImplemented("delegate")
     public SCNSceneRendererDelegate getDelegate() { throw new UnsupportedOperationException(); }
+    @Mapping("setDelegate:")
     public void setDelegate(SCNSceneRendererDelegate v) { throw new UnsupportedOperationException(); }
     @NotImplemented("isPlaying")
     public boolean isPlaying() { throw new UnsupportedOperationException(); }
+    @Mapping("setPlaying:")
     public void setPlaying(boolean v) { throw new UnsupportedOperationException(); }
     @NotImplemented("loops")
     public boolean loops() { throw new UnsupportedOperationException(); }
+    @Mapping("setLoops:")
     public void setLoops(boolean v) { throw new UnsupportedOperationException(); }
     @NotImplemented("pointOfView")
     public SCNNode getPointOfView() { throw new UnsupportedOperationException(); }
+    @Mapping("setPointOfView:")
     public void setPointOfView(SCNNode v) { throw new UnsupportedOperationException(); }
     @NotImplemented("autoenablesDefaultLighting")
     public boolean autoenablesDefaultLighting() { throw new UnsupportedOperationException(); }
+    @Mapping("setAutoenablesDefaultLighting:")
     public void setAutoenablesDefaultLighting(boolean v) { throw new UnsupportedOperationException(); }
     @NotImplemented("isJitteringEnabled")
     public boolean isJitteringEnabled() { throw new UnsupportedOperationException(); }
+    @Mapping("setJitteringEnabled:")
     public void setJitteringEnabled(boolean v) { throw new UnsupportedOperationException(); }
     @NotImplemented("showsStatistics")
     public boolean showsStatistics() { throw new UnsupportedOperationException(); }
+    @Mapping("setShowsStatistics:")
     public void setShowsStatistics(boolean v) { throw new UnsupportedOperationException(); }
     @NotImplemented("overlaySKScene")
     public SKScene getOverlaySKScene() { throw new UnsupportedOperationException(); }
+    @Mapping("setOverlaySKScene:")
     public void setOverlaySKScene(SKScene v) { throw new UnsupportedOperationException(); }
     @NotImplemented("context")
     public EAGLContext getContext() { throw new UnsupportedOperationException(); }

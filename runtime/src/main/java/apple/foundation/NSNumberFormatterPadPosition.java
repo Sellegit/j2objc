@@ -22,7 +22,7 @@ import apple.dispatch.*;
 
 
 
-
+@Library("Foundation")
 @Mapping("NSNumberFormatterPadPosition")
 public final class NSNumberFormatterPadPosition extends ObjCEnum {
     

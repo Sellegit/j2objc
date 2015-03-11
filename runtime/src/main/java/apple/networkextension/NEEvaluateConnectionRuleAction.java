@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 
 
-
+@Library("NetworkExtension")
 @Mapping("NEEvaluateConnectionRuleAction")
 public final class NEEvaluateConnectionRuleAction extends ObjCEnum {
     

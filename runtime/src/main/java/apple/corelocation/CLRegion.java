@@ -65,6 +65,7 @@ public class CLRegion
     /**
      * @since Available in iOS 7.0 and later.
      */
+    @Mapping("setNotifyOnEntry:")
     public native void setNotifiesOnEntry(boolean v);
     /**
      * @since Available in iOS 7.0 and later.
@@ -74,6 +75,7 @@ public class CLRegion
     /**
      * @since Available in iOS 7.0 and later.
      */
+    @Mapping("setNotifyOnExit:")
     public native void setNotifiesOnExit(boolean v);
     
     

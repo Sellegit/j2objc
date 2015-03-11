@@ -19,7 +19,7 @@ import apple.dispatch.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-
+@Adapter
 public abstract class GLKViewControllerDelegateAdapter 
     extends Object 
     implements GLKViewControllerDelegate {

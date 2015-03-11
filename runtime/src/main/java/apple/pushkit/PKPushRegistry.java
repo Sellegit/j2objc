@@ -34,9 +34,11 @@ public class PKPushRegistry
     
     @Mapping("delegate")
     public native PKPushRegistryDelegate getDelegate();
+    @Mapping("setDelegate:")
     public native void setDelegate(PKPushRegistryDelegate v);
     @Mapping("desiredPushTypes")
     public native Set<String> getDesiredPushTypes();
+    @Mapping("setDesiredPushTypes:")
     public native void setDesiredPushTypes(Set<String> v);
     
     

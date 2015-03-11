@@ -31,6 +31,7 @@ public class MIDINetworkSession
     
     @Mapping("isEnabled")
     public native boolean isEnabled();
+    @Mapping("setEnabled:")
     public native void setEnabled(boolean v);
     @Mapping("networkPort")
     public native @MachineSizedUInt long getNetworkPort();
@@ -40,6 +41,7 @@ public class MIDINetworkSession
     public native String getLocalName();
     @Mapping("connectionPolicy")
     public native @Representing("MIDINetworkConnectionPolicy") int getConnectionPolicy();
+    @Mapping("setConnectionPolicy:")
     public native void setConnectionPolicy(@Representing("MIDINetworkConnectionPolicy") int v);
     
     

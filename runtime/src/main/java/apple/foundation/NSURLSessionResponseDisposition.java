@@ -24,7 +24,7 @@ import apple.dispatch.*;
  * @since Available in iOS 7.0 and later.
  */
 
-
+@Library("Foundation")
 @Mapping("NSURLSessionResponseDisposition")
 public final class NSURLSessionResponseDisposition extends ObjCEnum {
     

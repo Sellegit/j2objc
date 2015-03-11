@@ -45,6 +45,7 @@ public class AVAssetReaderOutput
     /**
      * @since Available in iOS 5.0 and later.
      */
+    @Mapping("setAlwaysCopiesSampleData:")
     public native void setAlwaysCopiesSampleData(boolean v);
     /**
      * @since Available in iOS 8.0 and later.
@@ -54,6 +55,7 @@ public class AVAssetReaderOutput
     /**
      * @since Available in iOS 8.0 and later.
      */
+    @Mapping("setSupportsRandomAccess:")
     public native void setSupportsRandomAccess(boolean v);
     
     

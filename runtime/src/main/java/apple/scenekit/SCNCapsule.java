@@ -35,18 +35,23 @@ public class SCNCapsule
     
     @Mapping("capRadius")
     public native @MachineSizedFloat double getCapRadius();
+    @Mapping("setCapRadius:")
     public native void setCapRadius(@MachineSizedFloat double v);
     @Mapping("height")
     public native @MachineSizedFloat double getHeight();
+    @Mapping("setHeight:")
     public native void setHeight(@MachineSizedFloat double v);
     @Mapping("radialSegmentCount")
     public native @MachineSizedSInt long getRadialSegmentCount();
+    @Mapping("setRadialSegmentCount:")
     public native void setRadialSegmentCount(@MachineSizedSInt long v);
     @Mapping("heightSegmentCount")
     public native @MachineSizedSInt long getHeightSegmentCount();
+    @Mapping("setHeightSegmentCount:")
     public native void setHeightSegmentCount(@MachineSizedSInt long v);
     @Mapping("capSegmentCount")
     public native @MachineSizedSInt long getCapSegmentCount();
+    @Mapping("setCapSegmentCount:")
     public native void setCapSegmentCount(@MachineSizedSInt long v);
     
     

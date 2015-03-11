@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 
 
-
+@Library("CoreData")
 @Mapping("NSAttributeType")
 public final class NSAttributeType extends ObjCEnum {
     

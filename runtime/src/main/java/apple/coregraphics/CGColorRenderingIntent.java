@@ -18,7 +18,7 @@ import apple.uikit.*;
 
 
 
-
+@Library("CoreGraphics")
 @Mapping("CGColorRenderingIntent")
 public final class CGColorRenderingIntent extends ObjCEnum {
     

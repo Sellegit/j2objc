@@ -39,6 +39,7 @@ public class AVVideoCompositionInstruction
     public native CMTimeRange getTimeRange();
     @Mapping("backgroundColor")
     public native CGColor getBackgroundColor();
+    @Mapping("setBackgroundColor:")
     public native void setBackgroundColor(CGColor v);
     @Mapping("layerInstructions")
     public native NSArray<AVVideoCompositionLayerInstruction> getLayerInstructions();

@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 
 
-
+@Library("AddressBook")
 @Mapping("ABPersonCompositeNameFormat")
 public final class ABPersonCompositeNameFormat extends ObjCEnum {
     

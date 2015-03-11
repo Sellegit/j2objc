@@ -34,6 +34,7 @@ public class PHCachingImageManager
     
     @Mapping("allowsCachingHighQualityImages")
     public native boolean allowsCachingHighQualityImages();
+    @Mapping("setAllowsCachingHighQualityImages:")
     public native void setAllowsCachingHighQualityImages(boolean v);
     
     

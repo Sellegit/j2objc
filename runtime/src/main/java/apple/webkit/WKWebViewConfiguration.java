@@ -32,27 +32,35 @@ public class WKWebViewConfiguration
     
     @Mapping("processPool")
     public native WKProcessPool getProcessPool();
+    @Mapping("setProcessPool:")
     public native void setProcessPool(WKProcessPool v);
     @Mapping("preferences")
     public native WKPreferences getPreferences();
+    @Mapping("setPreferences:")
     public native void setPreferences(WKPreferences v);
     @Mapping("userContentController")
     public native WKUserContentController getUserContentController();
+    @Mapping("setUserContentController:")
     public native void setUserContentController(WKUserContentController v);
     @Mapping("suppressesIncrementalRendering")
     public native boolean suppressesIncrementalRendering();
+    @Mapping("setSuppressesIncrementalRendering:")
     public native void setSuppressesIncrementalRendering(boolean v);
     @Mapping("allowsInlineMediaPlayback")
     public native boolean allowsInlineMediaPlayback();
+    @Mapping("setAllowsInlineMediaPlayback:")
     public native void setAllowsInlineMediaPlayback(boolean v);
     @Mapping("mediaPlaybackRequiresUserAction")
     public native boolean mediaPlaybackRequiresUserAction();
+    @Mapping("setMediaPlaybackRequiresUserAction:")
     public native void setMediaPlaybackRequiresUserAction(boolean v);
     @Mapping("mediaPlaybackAllowsAirPlay")
     public native boolean mediaPlaybackAllowsAirPlay();
+    @Mapping("setMediaPlaybackAllowsAirPlay:")
     public native void setMediaPlaybackAllowsAirPlay(boolean v);
     @Mapping("selectionGranularity")
     public native @Representing("WKSelectionGranularity") @MachineSizedSInt long getSelectionGranularity();
+    @Mapping("setSelectionGranularity:")
     public native void setSelectionGranularity(@Representing("WKSelectionGranularity") @MachineSizedSInt long v);
     
     

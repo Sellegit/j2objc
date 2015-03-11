@@ -34,6 +34,7 @@ public final class MTLBuffer
     public native @MachineSizedUInt long getLength();
     @Mapping("label")
     public native String getLabel();
+    @Mapping("setLabel:")
     public native void setLabel(String v);
     @Mapping("device")
     public native MTLDevice getDevice();

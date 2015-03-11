@@ -21,7 +21,7 @@ import apple.corevideo.*;
 
 
 
-
+@Library("CoreMedia")
 @Mapping("CMBlockBufferFlag")
 public final class CMBlockBufferFlag extends ObjCEnum {
     

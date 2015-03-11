@@ -33,9 +33,11 @@ public class PKShippingMethod
     
     @Mapping("identifier")
     public native String getIdentifier();
+    @Mapping("setIdentifier:")
     public native void setIdentifier(String v);
     @Mapping("detail")
     public native String getDetail();
+    @Mapping("setDetail:")
     public native void setDetail(String v);
     
     

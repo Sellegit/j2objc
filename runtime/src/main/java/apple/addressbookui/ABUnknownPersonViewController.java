@@ -35,24 +35,31 @@ public class ABUnknownPersonViewController
     
     @Mapping("unknownPersonViewDelegate")
     public native ABUnknownPersonViewControllerDelegate getUnknownPersonViewDelegate();
+    @Mapping("setUnknownPersonViewDelegate:")
     public native void setUnknownPersonViewDelegate(ABUnknownPersonViewControllerDelegate v);
     @Mapping("addressBook")
     public native ABAddressBook getAddressBook();
+    @Mapping("setAddressBook:")
     public native void setAddressBook(ABAddressBook v);
     @Mapping("displayedPerson")
     public native ABPerson getDisplayedPerson();
+    @Mapping("setDisplayedPerson:")
     public native void setDisplayedPerson(ABPerson v);
     @Mapping("alternateName")
     public native String getAlternateName();
+    @Mapping("setAlternateName:")
     public native void setAlternateName(String v);
     @Mapping("message")
     public native String getMessage();
+    @Mapping("setMessage:")
     public native void setMessage(String v);
     @Mapping("allowsActions")
     public native boolean allowsActions();
+    @Mapping("setAllowsActions:")
     public native void setAllowsActions(boolean v);
     @Mapping("allowsAddingToAddressBook")
     public native boolean allowsAddingToAddressBook();
+    @Mapping("setAllowsAddingToAddressBook:")
     public native void setAllowsAddingToAddressBook(boolean v);
     
     

@@ -29,6 +29,7 @@ public class GCControllerAxisInput
     
     @Mapping("valueChangedHandler")
     public native @Block VoidBlock2<GCControllerAxisInput, Float> getValueChangedHandler();
+    @Mapping("setValueChangedHandler:")
     public native void setValueChangedHandler(@Block VoidBlock2<GCControllerAxisInput, Float> v);
     @Mapping("value")
     public native float getValue();

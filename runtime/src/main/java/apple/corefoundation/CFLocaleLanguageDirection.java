@@ -18,7 +18,7 @@ import apple.foundation.*;
 
 
 
-
+@Library("CoreFoundation")
 @Mapping("CFLocaleLanguageDirection")
 public final class CFLocaleLanguageDirection extends ObjCEnum {
     

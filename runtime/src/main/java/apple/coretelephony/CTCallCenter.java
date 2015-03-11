@@ -42,6 +42,7 @@ public class CTCallCenter
     /**
      * @since Available in iOS 4.0 and later.
      */
+    @Mapping("setCallEventHandler:")
     public native void setCallEventHandler(@Block VoidBlock1<CTCall> v);
     
     

@@ -27,7 +27,7 @@ import apple.mediatoolbox.*;
  */
 @Deprecated
 
-
+@Library("AVFoundation")
 @Mapping("AVAudioSessionInterruptionFlag")
 public final class AVAudioSessionInterruptionFlag extends ObjCEnum {
     

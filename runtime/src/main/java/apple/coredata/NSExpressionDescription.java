@@ -31,9 +31,11 @@ public class NSExpressionDescription
     
     @Mapping("expression")
     public native NSExpression getExpression();
+    @Mapping("setExpression:")
     public native void setExpression(NSExpression v);
     @Mapping("expressionResultType")
     public native @Representing("NSAttributeType") @MachineSizedUInt long getExpressionResultType();
+    @Mapping("setExpressionResultType:")
     public native void setExpressionResultType(@Representing("NSAttributeType") @MachineSizedUInt long v);
     
     

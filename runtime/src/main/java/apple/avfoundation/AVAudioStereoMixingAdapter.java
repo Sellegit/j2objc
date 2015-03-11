@@ -22,7 +22,7 @@ import apple.mediatoolbox.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-
+@Adapter
 public abstract class AVAudioStereoMixingAdapter 
     extends Object 
     implements AVAudioStereoMixing {
@@ -32,6 +32,7 @@ public abstract class AVAudioStereoMixingAdapter
     
     @NotImplemented("pan")
     public float getPan() { throw new UnsupportedOperationException(); }
+    @Mapping("setPan:")
     public void setPan(float v) { throw new UnsupportedOperationException(); }
     
     

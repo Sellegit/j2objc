@@ -43,6 +43,7 @@ public class AVAudioRecorder
     public native AVAudioSettings getSettings();
     @Mapping("delegate")
     public native AVAudioRecorderDelegate getDelegate();
+    @Mapping("setDelegate:")
     public native void setDelegate(AVAudioRecorderDelegate v);
     @Mapping("currentTime")
     public native double getCurrentTime();
@@ -53,6 +54,7 @@ public class AVAudioRecorder
     public native double getDeviceCurrentTime();
     @Mapping("isMeteringEnabled")
     public native boolean isMeteringEnabled();
+    @Mapping("setMeteringEnabled:")
     public native void setMeteringEnabled(boolean v);
     /**
      * @since Available in iOS 7.0 and later.
@@ -62,6 +64,7 @@ public class AVAudioRecorder
     /**
      * @since Available in iOS 7.0 and later.
      */
+    @Mapping("setChannelAssignments:")
     public native void setChannelAssignments(NSArray<AVAudioSessionChannelDescription> v);
     
     

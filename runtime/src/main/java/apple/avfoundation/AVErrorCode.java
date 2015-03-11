@@ -23,7 +23,7 @@ import apple.mediatoolbox.*;
 
 
 
-
+@Library("AVFoundation")
 @Mapping("AVErrorCode")
 public final class AVErrorCode extends ObjCEnum {
     

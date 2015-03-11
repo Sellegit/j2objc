@@ -47,6 +47,7 @@ public class AVAssetReaderTrackOutput
     /**
      * @since Available in iOS 7.0 and later.
      */
+    @Mapping("setAudioTimePitchAlgorithm:")
     public native void setAudioTimePitchAlgorithm(AVAudioTimePitchAlgorithm v);
     
     

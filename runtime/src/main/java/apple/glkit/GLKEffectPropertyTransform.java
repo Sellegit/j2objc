@@ -34,9 +34,11 @@ public class GLKEffectPropertyTransform
     
     @Mapping("modelviewMatrix")
     public native GLKMatrix4 getModelviewMatrix();
+    @Mapping("setModelviewMatrix:")
     public native void setModelviewMatrix(GLKMatrix4 v);
     @Mapping("projectionMatrix")
     public native GLKMatrix4 getProjectionMatrix();
+    @Mapping("setProjectionMatrix:")
     public native void setProjectionMatrix(GLKMatrix4 v);
     @Mapping("normalMatrix")
     public native GLKMatrix3 getNormalMatrix();

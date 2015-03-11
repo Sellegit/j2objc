@@ -42,6 +42,7 @@ public class NSCondition
     /**
      * @since Available in iOS 2.0 and later.
      */
+    @Mapping("setName:")
     public native void setName(String v);
     
     

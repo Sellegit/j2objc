@@ -20,7 +20,7 @@ import apple.coremedia.*;
 
 
 
-
+@Library("AudioToolbox")
 @Mapping("AudioSessionRouteChangeReason")
 public final class AudioSessionRouteChangeReason extends ObjCEnum {
     

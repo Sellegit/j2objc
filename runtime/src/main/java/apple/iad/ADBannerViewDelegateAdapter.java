@@ -20,7 +20,7 @@ import apple.avkit.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-
+@Adapter
 public abstract class ADBannerViewDelegateAdapter 
     extends Object 
     implements ADBannerViewDelegate {

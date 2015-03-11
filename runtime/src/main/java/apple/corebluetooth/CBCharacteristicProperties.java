@@ -18,7 +18,7 @@ import apple.dispatch.*;
 
 
 
-
+@Library("CoreBluetooth")
 @Mapping("CBCharacteristicProperties")
 public final class CBCharacteristicProperties extends ObjCEnum {
     

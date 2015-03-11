@@ -20,7 +20,7 @@ import apple.avkit.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-
+@Adapter
 public abstract class ADInterstitialAdDelegateAdapter 
     extends Object 
     implements ADInterstitialAdDelegate {

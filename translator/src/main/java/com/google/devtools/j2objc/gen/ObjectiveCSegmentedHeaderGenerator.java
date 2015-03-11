@@ -103,7 +103,7 @@ public class ObjectiveCSegmentedHeaderGenerator extends ObjectiveCHeaderGenerato
       }
       printf("#define %s_RESTRICT 1\n", imp.getMainTypeName());
       printf("#define %s_INCLUDE 1\n", imp.getTypeName());
-      printf("#include \"%s.h\"\n", imp.getImportFileName());
+      println(imp.getIncludeStatement());
       newline();
     }
 

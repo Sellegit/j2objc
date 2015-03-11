@@ -36,6 +36,7 @@ public class PHCollectionListChangeRequest
     public native PHObjectPlaceholder getPlaceholderForCreatedCollectionList();
     @Mapping("title")
     public native String getTitle();
+    @Mapping("setTitle:")
     public native void setTitle(String v);
     
     

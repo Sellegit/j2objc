@@ -33,6 +33,7 @@ public interface AVAudioMixing
     
     @Mapping("volume")
     float getVolume();
+    @Mapping("setVolume:")
     void setVolume(float v);
     
     

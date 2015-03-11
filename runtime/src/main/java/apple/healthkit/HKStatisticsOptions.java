@@ -19,7 +19,7 @@ import apple.foundation.*;
  * @since Available in iOS 8.0 and later.
  */
 
-
+@Library("HealthKit")
 @Mapping("HKStatisticsOptions")
 public final class HKStatisticsOptions extends ObjCEnum {
     

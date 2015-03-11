@@ -37,6 +37,7 @@ public class NEVPNIKEv2SecurityAssociationParameters
     /**
      * @since Available in iOS 8.0 and later.
      */
+    @Mapping("setEncryptionAlgorithm:")
     public native void setEncryptionAlgorithm(@Representing("NEVPNIKEv2EncryptionAlgorithm") @MachineSizedSInt long v);
     /**
      * @since Available in iOS 8.0 and later.
@@ -46,6 +47,7 @@ public class NEVPNIKEv2SecurityAssociationParameters
     /**
      * @since Available in iOS 8.0 and later.
      */
+    @Mapping("setIntegrityAlgorithm:")
     public native void setIntegrityAlgorithm(@Representing("NEVPNIKEv2IntegrityAlgorithm") @MachineSizedSInt long v);
     /**
      * @since Available in iOS 8.0 and later.
@@ -55,6 +57,7 @@ public class NEVPNIKEv2SecurityAssociationParameters
     /**
      * @since Available in iOS 8.0 and later.
      */
+    @Mapping("setDiffieHellmanGroup:")
     public native void setDiffieHellmanGroup(@Representing("NEVPNIKEv2DiffieHellmanGroup") @MachineSizedSInt long v);
     /**
      * @since Available in iOS 8.0 and later.
@@ -64,6 +67,7 @@ public class NEVPNIKEv2SecurityAssociationParameters
     /**
      * @since Available in iOS 8.0 and later.
      */
+    @Mapping("setLifetimeMinutes:")
     public native void setLifetimeMinutes(int v);
     
     

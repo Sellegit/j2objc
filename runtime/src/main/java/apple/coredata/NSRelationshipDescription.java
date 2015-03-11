@@ -31,18 +31,23 @@ public class NSRelationshipDescription
     
     @Mapping("destinationEntity")
     public native NSEntityDescription getDestinationEntity();
+    @Mapping("setDestinationEntity:")
     public native void setDestinationEntity(NSEntityDescription v);
     @Mapping("inverseRelationship")
     public native NSRelationshipDescription getInverseRelationship();
+    @Mapping("setInverseRelationship:")
     public native void setInverseRelationship(NSRelationshipDescription v);
     @Mapping("maxCount")
     public native @MachineSizedUInt long getMaxCount();
+    @Mapping("setMaxCount:")
     public native void setMaxCount(@MachineSizedUInt long v);
     @Mapping("minCount")
     public native @MachineSizedUInt long getMinCount();
+    @Mapping("setMinCount:")
     public native void setMinCount(@MachineSizedUInt long v);
     @Mapping("deleteRule")
     public native @Representing("NSDeleteRule") @MachineSizedUInt long getDeleteRule();
+    @Mapping("setDeleteRule:")
     public native void setDeleteRule(@Representing("NSDeleteRule") @MachineSizedUInt long v);
     @Mapping("isToMany")
     public native boolean isToMany();
@@ -59,6 +64,7 @@ public class NSRelationshipDescription
     /**
      * @since Available in iOS 5.0 and later.
      */
+    @Mapping("setOrdered:")
     public native void setOrdered(boolean v);
     
     

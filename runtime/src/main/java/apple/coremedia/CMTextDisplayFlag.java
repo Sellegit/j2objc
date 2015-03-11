@@ -21,7 +21,7 @@ import apple.corevideo.*;
 
 
 
-
+@Library("CoreMedia")
 @Mapping("CMTextDisplayFlag")
 public final class CMTextDisplayFlag extends ObjCEnum {
     

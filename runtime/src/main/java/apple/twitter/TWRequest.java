@@ -38,6 +38,7 @@ public class TWRequest
     
     @Mapping("account")
     public native ACAccount getAccount();
+    @Mapping("setAccount:")
     public native void setAccount(ACAccount v);
     @Mapping("requestMethod")
     public native @Representing("TWRequestMethod") int getRequestMethod();

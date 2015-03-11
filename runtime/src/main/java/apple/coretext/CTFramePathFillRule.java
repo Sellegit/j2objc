@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 
 
-
+@Library("CoreText")
 @Mapping("CTFramePathFillRule")
 public final class CTFramePathFillRule extends ObjCEnum {
     

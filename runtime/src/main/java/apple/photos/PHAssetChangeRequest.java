@@ -36,18 +36,23 @@ public class PHAssetChangeRequest
     public native PHObjectPlaceholder getPlaceholderForCreatedAsset();
     @Mapping("creationDate")
     public native NSDate getCreationDate();
+    @Mapping("setCreationDate:")
     public native void setCreationDate(NSDate v);
     @Mapping("location")
     public native CLLocation getLocation();
+    @Mapping("setLocation:")
     public native void setLocation(CLLocation v);
     @Mapping("isFavorite")
     public native boolean isFavorite();
+    @Mapping("setFavorite:")
     public native void setFavorite(boolean v);
     @Mapping("isHidden")
     public native boolean isHidden();
+    @Mapping("setHidden:")
     public native void setHidden(boolean v);
     @Mapping("contentEditingOutput")
     public native PHContentEditingOutput getContentEditingOutput();
+    @Mapping("setContentEditingOutput:")
     public native void setContentEditingOutput(PHContentEditingOutput v);
     
     

@@ -22,7 +22,7 @@ import apple.opengles.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-
+@Adapter
 public abstract class SCNBoundingVolumeAdapter 
     extends Object 
     implements SCNBoundingVolume {

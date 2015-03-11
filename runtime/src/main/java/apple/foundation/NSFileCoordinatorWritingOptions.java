@@ -22,7 +22,7 @@ import apple.dispatch.*;
 
 
 
-
+@Library("Foundation")
 @Mapping("NSFileCoordinatorWritingOptions")
 public final class NSFileCoordinatorWritingOptions extends ObjCEnum {
     

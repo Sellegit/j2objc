@@ -39,17 +39,21 @@ public class NSPersistentStore
     public native NSPersistentStoreOptions getOptions();
     @Mapping("URL")
     public native NSURL getURL();
+    @Mapping("setURL:")
     public native void setURL(NSURL v);
     @Mapping("identifier")
     public native String getIdentifier();
+    @Mapping("setIdentifier:")
     public native void setIdentifier(String v);
     @Mapping("type")
     public native String getType();
     @Mapping("isReadOnly")
     public native boolean isReadOnly();
+    @Mapping("setReadOnly:")
     public native void setReadOnly(boolean v);
     @Mapping("metadata")
     public native NSPersistentStoreMetadata getMetadata();
+    @Mapping("setMetadata:")
     public native void setMetadata(NSPersistentStoreMetadata v);
     
     

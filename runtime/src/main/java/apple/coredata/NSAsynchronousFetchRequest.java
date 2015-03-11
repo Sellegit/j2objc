@@ -37,6 +37,7 @@ public class NSAsynchronousFetchRequest
     public native @Block VoidBlock1<NSAsynchronousFetchResult> getCompletionBlock();
     @Mapping("estimatedResultCount")
     public native @MachineSizedSInt long getEstimatedResultCount();
+    @Mapping("setEstimatedResultCount:")
     public native void setEstimatedResultCount(@MachineSizedSInt long v);
     
     

@@ -39,12 +39,15 @@ public class AVAudioUnitTimePitch
     
     @Mapping("rate")
     public native float getRate();
+    @Mapping("setRate:")
     public native void setRate(float v);
     @Mapping("pitch")
     public native float getPitch();
+    @Mapping("setPitch:")
     public native void setPitch(float v);
     @Mapping("overlap")
     public native float getOverlap();
+    @Mapping("setOverlap:")
     public native void setOverlap(float v);
     
     

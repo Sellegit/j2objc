@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 
 
-
+@Library("AddressBook")
 @Mapping("ABPersonSortOrdering")
 public final class ABPersonSortOrdering extends ObjCEnum {
     

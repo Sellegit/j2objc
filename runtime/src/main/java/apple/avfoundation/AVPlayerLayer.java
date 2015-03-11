@@ -39,9 +39,11 @@ public class AVPlayerLayer
     
     @Mapping("player")
     public native AVPlayer getPlayer();
+    @Mapping("setPlayer:")
     public native void setPlayer(AVPlayer v);
     @Mapping("videoGravity")
     public native AVLayerVideoGravity getVideoGravity();
+    @Mapping("setVideoGravity:")
     public native void setVideoGravity(AVLayerVideoGravity v);
     @Mapping("isReadyForDisplay")
     public native boolean isReadyForDisplay();

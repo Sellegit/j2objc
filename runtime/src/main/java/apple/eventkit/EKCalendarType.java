@@ -19,7 +19,7 @@ import apple.corelocation.*;
 
 
 
-
+@Library("EventKit")
 @Mapping("EKCalendarType")
 public final class EKCalendarType extends ObjCEnum {
     

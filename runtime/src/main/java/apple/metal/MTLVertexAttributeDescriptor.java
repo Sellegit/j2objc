@@ -32,12 +32,15 @@ public class MTLVertexAttributeDescriptor
     
     @Mapping("format")
     public native @Representing("MTLVertexFormat") @MachineSizedUInt long getFormat();
+    @Mapping("setFormat:")
     public native void setFormat(@Representing("MTLVertexFormat") @MachineSizedUInt long v);
     @Mapping("offset")
     public native @MachineSizedUInt long getOffset();
+    @Mapping("setOffset:")
     public native void setOffset(@MachineSizedUInt long v);
     @Mapping("bufferIndex")
     public native @MachineSizedUInt long getBufferIndex();
+    @Mapping("setBufferIndex:")
     public native void setBufferIndex(@MachineSizedUInt long v);
     
     

@@ -18,7 +18,7 @@ import apple.foundation.*;
 
 
 
-
+@Library("CoreFoundation")
 @Mapping("CFStringTokenizerTokenType")
 public final class CFStringTokenizerTokenType extends ObjCEnum {
     

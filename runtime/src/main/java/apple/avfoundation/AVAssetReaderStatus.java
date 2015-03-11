@@ -23,7 +23,7 @@ import apple.mediatoolbox.*;
 
 
 
-
+@Library("AVFoundation")
 @Mapping("AVAssetReaderStatus")
 public final class AVAssetReaderStatus extends ObjCEnum {
     

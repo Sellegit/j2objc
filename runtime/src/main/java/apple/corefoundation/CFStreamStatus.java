@@ -18,7 +18,7 @@ import apple.foundation.*;
 
 
 
-
+@Library("CoreFoundation")
 @Mapping("CFStreamStatus")
 public final class CFStreamStatus extends ObjCEnum {
     

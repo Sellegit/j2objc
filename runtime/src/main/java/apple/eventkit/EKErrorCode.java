@@ -19,7 +19,7 @@ import apple.corelocation.*;
 
 
 
-
+@Library("EventKit")
 @Mapping("EKErrorCode")
 public final class EKErrorCode extends ObjCEnum {
     

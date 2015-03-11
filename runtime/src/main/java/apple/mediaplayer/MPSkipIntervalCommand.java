@@ -32,6 +32,7 @@ public class MPSkipIntervalCommand
     
     @Mapping("preferredIntervals")
     public native List<Double> getPreferredIntervals();
+    @Mapping("setPreferredIntervals:")
     public native void setPreferredIntervals(List<Double> v);
     
     

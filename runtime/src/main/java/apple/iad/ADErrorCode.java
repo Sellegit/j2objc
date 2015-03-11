@@ -23,7 +23,7 @@ import apple.avkit.*;
  * @since Available in iOS 4.0 and later.
  */
 
-
+@Library("iAd")
 @Mapping("ADErrorCode")
 public final class ADErrorCode extends ObjCEnum {
     

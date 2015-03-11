@@ -37,6 +37,7 @@ public class AVMutableAudioMix
     
     @Mapping("inputParameters")
     public native NSArray<AVAudioMixInputParameters> getInputParameters();
+    @Mapping("setInputParameters:")
     public native void setInputParameters(NSArray<AVAudioMixInputParameters> v);
     
     

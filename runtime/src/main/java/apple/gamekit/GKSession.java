@@ -41,6 +41,7 @@ public class GKSession
     
     @Mapping("delegate")
     public native GKSessionDelegate getDelegate();
+    @Mapping("setDelegate:")
     public native void setDelegate(GKSessionDelegate v);
     @Mapping("sessionID")
     public native String getSessionID();
@@ -57,9 +58,11 @@ public class GKSession
     public native String getPeerID();
     @Mapping("isAvailable")
     public native boolean isAvailable();
+    @Mapping("setAvailable:")
     public native void setAvailable(boolean v);
     @Mapping("disconnectTimeout")
     public native double getDisconnectTimeout();
+    @Mapping("setDisconnectTimeout:")
     public native void setDisconnectTimeout(double v);
     
     

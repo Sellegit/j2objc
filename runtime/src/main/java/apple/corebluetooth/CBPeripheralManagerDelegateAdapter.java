@@ -17,7 +17,7 @@ import apple.dispatch.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-
+@Adapter
 public abstract class CBPeripheralManagerDelegateAdapter 
     extends Object 
     implements CBPeripheralManagerDelegate {

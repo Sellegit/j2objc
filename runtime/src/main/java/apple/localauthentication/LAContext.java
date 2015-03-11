@@ -31,6 +31,7 @@ public class LAContext
     
     @Mapping("localizedFallbackTitle")
     public native String getLocalizedFallbackTitle();
+    @Mapping("setLocalizedFallbackTitle:")
     public native void setLocalizedFallbackTitle(String v);
     
     

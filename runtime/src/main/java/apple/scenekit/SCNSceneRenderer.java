@@ -31,33 +31,43 @@ public interface SCNSceneRenderer
     
     @Mapping("scene")
     SCNScene getScene();
+    @Mapping("setScene:")
     void setScene(SCNScene v);
     @Mapping("sceneTime")
     double getSceneTime();
+    @Mapping("setSceneTime:")
     void setSceneTime(double v);
     @Mapping("delegate")
     SCNSceneRendererDelegate getDelegate();
+    @Mapping("setDelegate:")
     void setDelegate(SCNSceneRendererDelegate v);
     @Mapping("isPlaying")
     boolean isPlaying();
+    @Mapping("setPlaying:")
     void setPlaying(boolean v);
     @Mapping("loops")
     boolean loops();
+    @Mapping("setLoops:")
     void setLoops(boolean v);
     @Mapping("pointOfView")
     SCNNode getPointOfView();
+    @Mapping("setPointOfView:")
     void setPointOfView(SCNNode v);
     @Mapping("autoenablesDefaultLighting")
     boolean autoenablesDefaultLighting();
+    @Mapping("setAutoenablesDefaultLighting:")
     void setAutoenablesDefaultLighting(boolean v);
     @Mapping("isJitteringEnabled")
     boolean isJitteringEnabled();
+    @Mapping("setJitteringEnabled:")
     void setJitteringEnabled(boolean v);
     @Mapping("showsStatistics")
     boolean showsStatistics();
+    @Mapping("setShowsStatistics:")
     void setShowsStatistics(boolean v);
     @Mapping("overlaySKScene")
     SKScene getOverlaySKScene();
+    @Mapping("setOverlaySKScene:")
     void setOverlaySKScene(SKScene v);
     @Mapping("context")
     EAGLContext getContext();

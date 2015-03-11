@@ -18,7 +18,7 @@ import apple.uikit.*;
 
 
 
-
+@Library("GameKit")
 @Mapping("GKErrorCode")
 public final class GKErrorCode extends ObjCEnum {
     

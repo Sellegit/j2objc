@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 
 
-
+@Library("ImageIO")
 @Mapping("CGImagePropertyOrientation")
 public final class CGImagePropertyOrientation extends ObjCEnum {
     

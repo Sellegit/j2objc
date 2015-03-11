@@ -18,7 +18,7 @@ import apple.imageio.*;
 
 
 
-
+@Library("AssetsLibrary")
 @Mapping("ALAssetOrientation")
 public final class ALAssetOrientation extends ObjCEnum {
     

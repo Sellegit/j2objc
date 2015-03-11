@@ -37,6 +37,7 @@ public class NEVPNManager
     /**
      * @since Available in iOS 8.0 and later.
      */
+    @Mapping("setOnDemandRules:")
     public native void setOnDemandRules(NSArray<NEOnDemandRule> v);
     /**
      * @since Available in iOS 8.0 and later.
@@ -46,6 +47,7 @@ public class NEVPNManager
     /**
      * @since Available in iOS 8.0 and later.
      */
+    @Mapping("setOnDemandEnabled:")
     public native void setOnDemandEnabled(boolean v);
     /**
      * @since Available in iOS 8.0 and later.
@@ -55,6 +57,7 @@ public class NEVPNManager
     /**
      * @since Available in iOS 8.0 and later.
      */
+    @Mapping("setLocalizedDescription:")
     public native void setLocalizedDescription(String v);
     /**
      * @since Available in iOS 8.0 and later.
@@ -64,6 +67,7 @@ public class NEVPNManager
     /**
      * @since Available in iOS 8.0 and later.
      */
+    @Mapping("setProtocol:")
     public native void setProtocol(NEVPNProtocol v);
     /**
      * @since Available in iOS 8.0 and later.
@@ -78,6 +82,7 @@ public class NEVPNManager
     /**
      * @since Available in iOS 8.0 and later.
      */
+    @Mapping("setEnabled:")
     public native void setEnabled(boolean v);
     
     

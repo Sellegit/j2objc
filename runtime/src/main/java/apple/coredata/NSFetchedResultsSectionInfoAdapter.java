@@ -16,7 +16,7 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-
+@Adapter
 public abstract class NSFetchedResultsSectionInfoAdapter 
     extends Object 
     implements NSFetchedResultsSectionInfo {

@@ -36,6 +36,7 @@ public class NSTimer
     
     @Mapping("fireDate")
     public native NSDate getFireDate();
+    @Mapping("setFireDate:")
     public native void setFireDate(NSDate v);
     @Mapping("timeInterval")
     public native double getTimeInterval();
@@ -47,6 +48,7 @@ public class NSTimer
     /**
      * @since Available in iOS 7.0 and later.
      */
+    @Mapping("setTolerance:")
     public native void setTolerance(double v);
     @Mapping("isValid")
     public native boolean isValid();

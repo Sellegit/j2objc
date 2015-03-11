@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 
 
-
+@Library("CoreText")
 @Mapping("CTLineBoundsOptions")
 public final class CTLineBoundsOptions extends ObjCEnum {
     

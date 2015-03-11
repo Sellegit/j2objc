@@ -39,6 +39,7 @@ public class AVSynchronizedLayer
     
     @Mapping("playerItem")
     public native AVPlayerItem getPlayerItem();
+    @Mapping("setPlayerItem:")
     public native void setPlayerItem(AVPlayerItem v);
     
     

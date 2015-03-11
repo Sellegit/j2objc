@@ -21,7 +21,7 @@ import apple.metal.*;
 
 
 
-
+@Library("QuartzCore")
 @Mapping("CAEdgeAntialiasingMask")
 public final class CAEdgeAntialiasingMask extends ObjCEnum {
     

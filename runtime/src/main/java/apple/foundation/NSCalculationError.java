@@ -22,7 +22,7 @@ import apple.dispatch.*;
 
 
 
-
+@Library("Foundation")
 @Mapping("NSCalculationError")
 public final class NSCalculationError extends ObjCEnum {
     

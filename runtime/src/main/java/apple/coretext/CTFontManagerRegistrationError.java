@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 
 
-
+@Library("CoreText")
 @Mapping("CTFontManagerRegistrationError")
 public final class CTFontManagerRegistrationError extends ObjCEnum {
     

@@ -32,6 +32,7 @@ public class CBPeripheral
     
     @Mapping("delegate")
     public native CBPeripheralDelegate getDelegate();
+    @Mapping("setDelegate:")
     public native void setDelegate(CBPeripheralDelegate v);
     @Mapping("name")
     public native String getName();

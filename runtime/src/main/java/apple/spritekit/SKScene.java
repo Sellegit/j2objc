@@ -40,12 +40,15 @@ public class SKScene
     
     @Mapping("size")
     public native CGSize getSize();
+    @Mapping("setSize:")
     public native void setSize(CGSize v);
     @Mapping("scaleMode")
     public native @Representing("SKSceneScaleMode") @MachineSizedSInt long getScaleMode();
+    @Mapping("setScaleMode:")
     public native void setScaleMode(@Representing("SKSceneScaleMode") @MachineSizedSInt long v);
     @Mapping("backgroundColor")
     public native UIColor getBackgroundColor();
+    @Mapping("setBackgroundColor:")
     public native void setBackgroundColor(UIColor v);
     /**
      * @since Available in iOS 8.0 and later.
@@ -55,9 +58,11 @@ public class SKScene
     /**
      * @since Available in iOS 8.0 and later.
      */
+    @Mapping("setDelegate:")
     public native void setDelegate(SKSceneDelegate v);
     @Mapping("anchorPoint")
     public native CGPoint getAnchorPoint();
+    @Mapping("setAnchorPoint:")
     public native void setAnchorPoint(CGPoint v);
     @Mapping("physicsWorld")
     public native SKPhysicsWorld getPhysicsWorld();

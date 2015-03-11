@@ -22,7 +22,7 @@ import apple.dispatch.*;
 
 
 
-
+@Library("Foundation")
 @Mapping("NSEnumerationOptions")
 public final class NSEnumerationOptions extends ObjCEnum {
     

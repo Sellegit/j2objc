@@ -31,9 +31,11 @@ public interface SCNShadable
     
     @Mapping("shaderModifiers")
     Map<SCNShaderModifierEntryPoint, String> getShaderModifiers();
+    @Mapping("setShaderModifiers:")
     void setShaderModifiers(Map<SCNShaderModifierEntryPoint, String> v);
     @Mapping("program")
     SCNProgram getProgram();
+    @Mapping("setProgram:")
     void setProgram(SCNProgram v);
     
     

@@ -35,6 +35,7 @@ public class SCNMaterial
     
     @Mapping("name")
     public native String getName();
+    @Mapping("setName:")
     public native void setName(String v);
     @Mapping("diffuse")
     public native SCNMaterialProperty getDiffuse();
@@ -54,42 +55,55 @@ public class SCNMaterial
     public native SCNMaterialProperty getNormal();
     @Mapping("shininess")
     public native @MachineSizedFloat double getShininess();
+    @Mapping("setShininess:")
     public native void setShininess(@MachineSizedFloat double v);
     @Mapping("transparency")
     public native @MachineSizedFloat double getTransparency();
+    @Mapping("setTransparency:")
     public native void setTransparency(@MachineSizedFloat double v);
     @Mapping("lightingModelName")
     public native String getLightingModelName();
+    @Mapping("setLightingModelName:")
     public native void setLightingModelName(String v);
     @Mapping("isLitPerPixel")
     public native boolean isLitPerPixel();
+    @Mapping("setLitPerPixel:")
     public native void setLitPerPixel(boolean v);
     @Mapping("isDoubleSided")
     public native boolean isDoubleSided();
+    @Mapping("setDoubleSided:")
     public native void setDoubleSided(boolean v);
     @Mapping("cullMode")
     public native @Representing("SCNCullMode") @MachineSizedSInt long getCullMode();
+    @Mapping("setCullMode:")
     public native void setCullMode(@Representing("SCNCullMode") @MachineSizedSInt long v);
     @Mapping("transparencyMode")
     public native @Representing("SCNTransparencyMode") @MachineSizedSInt long getTransparencyMode();
+    @Mapping("setTransparencyMode:")
     public native void setTransparencyMode(@Representing("SCNTransparencyMode") @MachineSizedSInt long v);
     @Mapping("locksAmbientWithDiffuse")
     public native boolean locksAmbientWithDiffuse();
+    @Mapping("setLocksAmbientWithDiffuse:")
     public native void setLocksAmbientWithDiffuse(boolean v);
     @Mapping("writesToDepthBuffer")
     public native boolean writesToDepthBuffer();
+    @Mapping("setWritesToDepthBuffer:")
     public native void setWritesToDepthBuffer(boolean v);
     @Mapping("readsFromDepthBuffer")
     public native boolean readsFromDepthBuffer();
+    @Mapping("setReadsFromDepthBuffer:")
     public native void setReadsFromDepthBuffer(boolean v);
     @Mapping("fresnelExponent")
     public native @MachineSizedFloat double getFresnelExponent();
+    @Mapping("setFresnelExponent:")
     public native void setFresnelExponent(@MachineSizedFloat double v);
     @Mapping("shaderModifiers")
     public native Map<SCNShaderModifierEntryPoint, String> getShaderModifiers();
+    @Mapping("setShaderModifiers:")
     public native void setShaderModifiers(Map<SCNShaderModifierEntryPoint, String> v);
     @Mapping("program")
     public native SCNProgram getProgram();
+    @Mapping("setProgram:")
     public native void setProgram(SCNProgram v);
     
     

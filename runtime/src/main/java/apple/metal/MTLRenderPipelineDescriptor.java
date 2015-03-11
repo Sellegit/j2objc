@@ -32,35 +32,45 @@ public class MTLRenderPipelineDescriptor
     
     @Mapping("label")
     public native String getLabel();
+    @Mapping("setLabel:")
     public native void setLabel(String v);
     @Mapping("vertexFunction")
     public native MTLFunction getVertexFunction();
+    @Mapping("setVertexFunction:")
     public native void setVertexFunction(MTLFunction v);
     @Mapping("fragmentFunction")
     public native MTLFunction getFragmentFunction();
+    @Mapping("setFragmentFunction:")
     public native void setFragmentFunction(MTLFunction v);
     @Mapping("vertexDescriptor")
     public native MTLVertexDescriptor getVertexDescriptor();
+    @Mapping("setVertexDescriptor:")
     public native void setVertexDescriptor(MTLVertexDescriptor v);
     @Mapping("sampleCount")
     public native @MachineSizedUInt long getSampleCount();
+    @Mapping("setSampleCount:")
     public native void setSampleCount(@MachineSizedUInt long v);
     @Mapping("isAlphaToCoverageEnabled")
     public native boolean isAlphaToCoverageEnabled();
+    @Mapping("setAlphaToCoverageEnabled:")
     public native void setAlphaToCoverageEnabled(boolean v);
     @Mapping("isAlphaToOneEnabled")
     public native boolean isAlphaToOneEnabled();
+    @Mapping("setAlphaToOneEnabled:")
     public native void setAlphaToOneEnabled(boolean v);
     @Mapping("isRasterizationEnabled")
     public native boolean isRasterizationEnabled();
+    @Mapping("setRasterizationEnabled:")
     public native void setRasterizationEnabled(boolean v);
     @Mapping("colorAttachments")
     public native MTLRenderPipelineColorAttachmentDescriptorArray getColorAttachments();
     @Mapping("depthAttachmentPixelFormat")
     public native @Representing("MTLPixelFormat") @MachineSizedUInt long getDepthAttachmentPixelFormat();
+    @Mapping("setDepthAttachmentPixelFormat:")
     public native void setDepthAttachmentPixelFormat(@Representing("MTLPixelFormat") @MachineSizedUInt long v);
     @Mapping("stencilAttachmentPixelFormat")
     public native @Representing("MTLPixelFormat") @MachineSizedUInt long getStencilAttachmentPixelFormat();
+    @Mapping("setStencilAttachmentPixelFormat:")
     public native void setStencilAttachmentPixelFormat(@Representing("MTLPixelFormat") @MachineSizedUInt long v);
     
     

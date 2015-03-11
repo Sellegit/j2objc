@@ -37,15 +37,19 @@ public class AVAudioEnvironmentDistanceAttenuationParameters
     
     @Mapping("distanceAttenuationModel")
     public native @Representing("AVAudioEnvironmentDistanceAttenuationModel") @MachineSizedSInt long getDistanceAttenuationModel();
+    @Mapping("setDistanceAttenuationModel:")
     public native void setDistanceAttenuationModel(@Representing("AVAudioEnvironmentDistanceAttenuationModel") @MachineSizedSInt long v);
     @Mapping("referenceDistance")
     public native float getReferenceDistance();
+    @Mapping("setReferenceDistance:")
     public native void setReferenceDistance(float v);
     @Mapping("maximumDistance")
     public native float getMaximumDistance();
+    @Mapping("setMaximumDistance:")
     public native void setMaximumDistance(float v);
     @Mapping("rolloffFactor")
     public native float getRolloffFactor();
+    @Mapping("setRolloffFactor:")
     public native void setRolloffFactor(float v);
     
     

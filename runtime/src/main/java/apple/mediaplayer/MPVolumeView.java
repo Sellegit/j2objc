@@ -40,6 +40,7 @@ public class MPVolumeView
     /**
      * @since Available in iOS 4.2 and later.
      */
+    @Mapping("setShowsVolumeSlider:")
     public native void setShowsVolumeSlider(boolean v);
     /**
      * @since Available in iOS 4.2 and later.
@@ -49,6 +50,7 @@ public class MPVolumeView
     /**
      * @since Available in iOS 4.2 and later.
      */
+    @Mapping("setShowsRouteButton:")
     public native void setShowsRouteButton(boolean v);
     /**
      * @since Available in iOS 7.0 and later.
@@ -68,6 +70,7 @@ public class MPVolumeView
     /**
      * @since Available in iOS 7.0 and later.
      */
+    @Mapping("setVolumeWarningSliderImage:")
     public native void setVolumeWarningSliderImage(UIImage v);
     
     

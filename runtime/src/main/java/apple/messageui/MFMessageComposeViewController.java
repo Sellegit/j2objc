@@ -36,15 +36,19 @@ public class MFMessageComposeViewController
     
     @Mapping("messageComposeDelegate")
     public native MFMessageComposeViewControllerDelegate getMessageComposeDelegate();
+    @Mapping("setMessageComposeDelegate:")
     public native void setMessageComposeDelegate(MFMessageComposeViewControllerDelegate v);
     @Mapping("recipients")
     public native List<String> getRecipients();
+    @Mapping("setRecipients:")
     public native void setRecipients(List<String> v);
     @Mapping("body")
     public native String getBody();
+    @Mapping("setBody:")
     public native void setBody(String v);
     @Mapping("subject")
     public native String getSubject();
+    @Mapping("setSubject:")
     public native void setSubject(String v);
     @Mapping("attachments")
     public native List<MFMessageComposeViewControllerAttachment> getAttachments();

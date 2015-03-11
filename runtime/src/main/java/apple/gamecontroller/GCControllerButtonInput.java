@@ -29,6 +29,7 @@ public class GCControllerButtonInput
     
     @Mapping("valueChangedHandler")
     public native @Block VoidBlock3<GCControllerButtonInput, Float, Boolean> getValueChangedHandler();
+    @Mapping("setValueChangedHandler:")
     public native void setValueChangedHandler(@Block VoidBlock3<GCControllerButtonInput, Float, Boolean> v);
     /**
      * @since Available in iOS 8.0 and later.
@@ -38,6 +39,7 @@ public class GCControllerButtonInput
     /**
      * @since Available in iOS 8.0 and later.
      */
+    @Mapping("setPressedChangedHandler:")
     public native void setPressedChangedHandler(@Block VoidBlock3<GCControllerButtonInput, Float, Boolean> v);
     @Mapping("value")
     public native float getValue();

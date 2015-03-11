@@ -35,6 +35,7 @@ public class NSAtomicStoreCacheNode
     public native NSManagedObjectID getObjectID();
     @Mapping("propertyCache")
     public native Map<String, NSObject> getPropertyCache();
+    @Mapping("setPropertyCache:")
     public native void setPropertyCache(Map<String, NSObject> v);
     
     

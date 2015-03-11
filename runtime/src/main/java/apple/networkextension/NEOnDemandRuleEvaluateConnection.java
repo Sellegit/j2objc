@@ -37,6 +37,7 @@ public class NEOnDemandRuleEvaluateConnection
     /**
      * @since Available in iOS 8.0 and later.
      */
+    @Mapping("setConnectionRules:")
     public native void setConnectionRules(NSArray<NEEvaluateConnectionRule> v);
     
     

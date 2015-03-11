@@ -35,6 +35,7 @@ public final class ADInterstitialAd
     
     @Mapping("delegate")
     public native ADInterstitialAdDelegate getDelegate();
+    @Mapping("setDelegate:")
     public native void setDelegate(ADInterstitialAdDelegate v);
     @Mapping("isLoaded")
     public native boolean isLoaded();

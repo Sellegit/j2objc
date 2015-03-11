@@ -22,7 +22,7 @@ import apple.dispatch.*;
 
 
 
-
+@Library("Foundation")
 @Mapping("NSXMLParserExternalEntityResolvingPolicy")
 public final class NSXMLParserExternalEntityResolvingPolicy extends ObjCEnum {
     

@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 
 
-
+@Library("CoreText")
 @Mapping("CTLineBreakMode")
 public final class CTLineBreakMode extends ObjCEnum {
     

@@ -18,7 +18,7 @@ import apple.foundation.*;
 
 
 
-
+@Library("CoreFoundation")
 @Mapping("CFSocketFlags")
 public final class CFSocketFlags extends ObjCEnum {
     

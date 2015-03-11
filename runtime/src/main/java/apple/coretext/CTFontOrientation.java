@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 
 
-
+@Library("CoreText")
 @Mapping("CTFontOrientation")
 public final class CTFontOrientation extends ObjCEnum {
     

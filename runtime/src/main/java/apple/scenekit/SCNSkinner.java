@@ -35,12 +35,15 @@ public class SCNSkinner
     
     @Mapping("skeleton")
     public native SCNNode getSkeleton();
+    @Mapping("setSkeleton:")
     public native void setSkeleton(SCNNode v);
     @Mapping("baseGeometry")
     public native SCNGeometry getBaseGeometry();
+    @Mapping("setBaseGeometry:")
     public native void setBaseGeometry(SCNGeometry v);
     @Mapping("baseGeometryBindTransform")
     public native SCNMatrix4 getBaseGeometryBindTransform();
+    @Mapping("setBaseGeometryBindTransform:")
     public native void setBaseGeometryBindTransform(SCNMatrix4 v);
     @Mapping("boneInverseBindTransforms")
     public native List<SCNMatrix4> getBoneInverseBindTransforms();

@@ -35,6 +35,7 @@ public class NKAssetDownload
     public native String getIdentifier();
     @Mapping("userInfo")
     public native NSDictionary<?, ?> getUserInfo();
+    @Mapping("setUserInfo:")
     public native void setUserInfo(NSDictionary<?, ?> v);
     @Mapping("URLRequest")
     public native NSURLRequest getURLRequest();

@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 
 
-
+@Library("CoreData")
 @Mapping("NSEntityMappingType")
 public final class NSEntityMappingType extends ObjCEnum {
     

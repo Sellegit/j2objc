@@ -45,6 +45,7 @@ public class MKDirectionsRequest
     /**
      * @since Available in iOS 7.0 and later.
      */
+    @Mapping("setTransportType:")
     public native void setTransportType(@Representing("MKDirectionsTransportType") @MachineSizedUInt long v);
     /**
      * @since Available in iOS 7.0 and later.
@@ -54,6 +55,7 @@ public class MKDirectionsRequest
     /**
      * @since Available in iOS 7.0 and later.
      */
+    @Mapping("setRequestsAlternateRoutes:")
     public native void setRequestsAlternateRoutes(boolean v);
     /**
      * @since Available in iOS 7.0 and later.
@@ -63,6 +65,7 @@ public class MKDirectionsRequest
     /**
      * @since Available in iOS 7.0 and later.
      */
+    @Mapping("setDepartureDate:")
     public native void setDepartureDate(NSDate v);
     /**
      * @since Available in iOS 7.0 and later.
@@ -72,6 +75,7 @@ public class MKDirectionsRequest
     /**
      * @since Available in iOS 7.0 and later.
      */
+    @Mapping("setArrivalDate:")
     public native void setArrivalDate(NSDate v);
     
     

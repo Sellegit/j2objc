@@ -440,7 +440,6 @@ public class ObjectiveCHeaderGenerator extends ObjectiveCSourceFileGenerator {
     pushIgnoreDeprecatedDeclarationsPragma();
     newline();
 
-    System.out.println("begins header import collector");
     HeaderImportCollector collector = new HeaderImportCollector();
     collector.collect(getUnit());
 
@@ -453,7 +452,8 @@ public class ObjectiveCHeaderGenerator extends ObjectiveCSourceFileGenerator {
     if (!superTypes.isEmpty()) {
       Set<String> includeStmts = Sets.newTreeSet();
       for (Import imp : superTypes) {
-        includeStmts.add(String.format("#include \"%s.h\"", imp.getImportFileName()));
+//        includeStmts.add(String.format("#include \"%s.h\"", imp.getImportFileName()));
+        includeStmts.add(imp.getIncludeStatement());
       }
       for (String stmt : includeStmts) {
         println(stmt);

@@ -35,18 +35,23 @@ public class ABPersonViewController
     
     @Mapping("personViewDelegate")
     public native ABPersonViewControllerDelegate getPersonViewDelegate();
+    @Mapping("setPersonViewDelegate:")
     public native void setPersonViewDelegate(ABPersonViewControllerDelegate v);
     @Mapping("addressBook")
     public native ABAddressBook getAddressBook();
+    @Mapping("setAddressBook:")
     public native void setAddressBook(ABAddressBook v);
     @Mapping("displayedPerson")
     public native ABPerson getDisplayedPerson();
+    @Mapping("setDisplayedPerson:")
     public native void setDisplayedPerson(ABPerson v);
     @Mapping("displayedProperties")
     public native List<? extends ABProperty> getDisplayedProperties();
+    @Mapping("setDisplayedProperties:")
     public native void setDisplayedProperties(List<? extends ABProperty> v);
     @Mapping("allowsEditing")
     public native boolean allowsEditing();
+    @Mapping("setAllowsEditing:")
     public native void setAllowsEditing(boolean v);
     /**
      * @since Available in iOS 4.0 and later.
@@ -56,6 +61,7 @@ public class ABPersonViewController
     /**
      * @since Available in iOS 4.0 and later.
      */
+    @Mapping("setAllowsActions:")
     public native void setAllowsActions(boolean v);
     /**
      * @since Available in iOS 4.0 and later.
@@ -65,6 +71,7 @@ public class ABPersonViewController
     /**
      * @since Available in iOS 4.0 and later.
      */
+    @Mapping("setShouldShowLinkedPeople:")
     public native void setShouldShowLinkedPeople(boolean v);
     
     

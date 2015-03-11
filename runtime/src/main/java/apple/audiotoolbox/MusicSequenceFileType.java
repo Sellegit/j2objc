@@ -20,7 +20,7 @@ import apple.coremedia.*;
 
 
 
-
+@Library("AudioToolbox")
 @Mapping("MusicSequenceFileType")
 public final class MusicSequenceFileType extends ObjCEnum {
     

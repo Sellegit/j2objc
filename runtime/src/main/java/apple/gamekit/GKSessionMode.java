@@ -18,7 +18,7 @@ import apple.uikit.*;
 
 
 
-
+@Library("GameKit")
 @Mapping("GKSessionMode")
 public final class GKSessionMode extends ObjCEnum {
     

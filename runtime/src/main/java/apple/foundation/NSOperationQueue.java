@@ -45,9 +45,11 @@ public class NSOperationQueue
     public native @MachineSizedUInt long getOperationCount();
     @Mapping("maxConcurrentOperationCount")
     public native @MachineSizedSInt long getMaxConcurrentOperationCount();
+    @Mapping("setMaxConcurrentOperationCount:")
     public native void setMaxConcurrentOperationCount(@MachineSizedSInt long v);
     @Mapping("isSuspended")
     public native boolean isSuspended();
+    @Mapping("setSuspended:")
     public native void setSuspended(boolean v);
     /**
      * @since Available in iOS 4.0 and later.
@@ -57,6 +59,7 @@ public class NSOperationQueue
     /**
      * @since Available in iOS 4.0 and later.
      */
+    @Mapping("setName:")
     public native void setName(String v);
     /**
      * @since Available in iOS 8.0 and later.
@@ -66,6 +69,7 @@ public class NSOperationQueue
     /**
      * @since Available in iOS 8.0 and later.
      */
+    @Mapping("setQualityOfService:")
     public native void setQualityOfService(@Representing("NSQualityOfService") @MachineSizedSInt long v);
     /**
      * @since Available in iOS 8.0 and later.
@@ -75,6 +79,7 @@ public class NSOperationQueue
     /**
      * @since Available in iOS 8.0 and later.
      */
+    @Mapping("setUnderlyingQueue:")
     public native void setUnderlyingQueue(DispatchQueue v);
     
     

@@ -21,7 +21,7 @@ import apple.corevideo.*;
 
 
 
-
+@Library("CoreMedia")
 @Mapping("CMMetadataIdentifierError")
 public final class CMMetadataIdentifierError extends ObjCEnum {
     

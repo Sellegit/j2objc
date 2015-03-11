@@ -20,7 +20,7 @@ import apple.coremedia.*;
 
 
 
-
+@Library("AudioToolbox")
 @Mapping("AudioQueueProcessingTapFlag")
 public final class AudioQueueProcessingTapFlag extends ObjCEnum {
     

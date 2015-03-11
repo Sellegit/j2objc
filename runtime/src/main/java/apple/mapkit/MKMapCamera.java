@@ -34,15 +34,19 @@ public class MKMapCamera
     
     @Mapping("centerCoordinate")
     public native CLLocationCoordinate2D getCenterCoordinate();
+    @Mapping("setCenterCoordinate:")
     public native void setCenterCoordinate(CLLocationCoordinate2D v);
     @Mapping("heading")
     public native double getHeading();
+    @Mapping("setHeading:")
     public native void setHeading(double v);
     @Mapping("pitch")
     public native @MachineSizedFloat double getPitch();
+    @Mapping("setPitch:")
     public native void setPitch(@MachineSizedFloat double v);
     @Mapping("altitude")
     public native double getAltitude();
+    @Mapping("setAltitude:")
     public native void setAltitude(double v);
     
     

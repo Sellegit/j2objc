@@ -27,7 +27,7 @@ import apple.mediatoolbox.*;
  */
 @Deprecated
 
-
+@Library("AVFoundation")
 @Mapping("AVAudioSessionSetActiveFlag")
 public final class AVAudioSessionSetActiveFlag extends ObjCEnum {
     

@@ -19,7 +19,7 @@ import apple.dispatch.*;
 
 
 
-
+@Library("ExternalAccessory")
 @Mapping("EAWiFiUnconfiguredAccessoryProperties")
 public final class EAWiFiUnconfiguredAccessoryProperties extends ObjCEnum {
     

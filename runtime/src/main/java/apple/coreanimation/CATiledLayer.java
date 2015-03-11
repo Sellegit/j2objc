@@ -35,12 +35,15 @@ public class CATiledLayer
     
     @Mapping("levelsOfDetail")
     public native @MachineSizedUInt long getLevelsOfDetail();
+    @Mapping("setLevelsOfDetail:")
     public native void setLevelsOfDetail(@MachineSizedUInt long v);
     @Mapping("levelsOfDetailBias")
     public native @MachineSizedUInt long getLevelsOfDetailBias();
+    @Mapping("setLevelsOfDetailBias:")
     public native void setLevelsOfDetailBias(@MachineSizedUInt long v);
     @Mapping("tileSize")
     public native CGSize getTileSize();
+    @Mapping("setTileSize:")
     public native void setTileSize(CGSize v);
     
     
