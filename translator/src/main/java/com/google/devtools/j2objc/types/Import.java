@@ -42,6 +42,10 @@ public class Import implements Comparable<Import> {
   private final ITypeBinding type;
   private final String typeName;
   private final String mainTypeName;
+  // this is an overloaded field. when this import corresponds to a
+  //   type in Cocoa framework (ie. isFoundation=true), this field
+  //   is used to refer to the library name. o.w. it's the
+  //   import file name
   private final String importFileName;
   private final boolean isFoundation;
 
@@ -97,7 +101,11 @@ public class Import implements Comparable<Import> {
       mainType = mainType.getDeclaringClass();
     }
     this.mainTypeName = NameTable.getFullName(mainType);
-    this.importFileName = foundationName;
+    if (isFoundation) {
+      this.importFileName = foundationName;
+    } else {
+      this.importFileName = getImportFileName(mainType);
+    }
     this.isFoundation = isFoundation;
   }
 
