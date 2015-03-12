@@ -58,7 +58,7 @@ public class GKMatchmaker
      * @since Available in iOS 8.0 and later.
      */
     @Mapping("findPlayersForHostedRequest:withCompletionHandler:")
-    public native void findPlayersForHostedRequest(GKMatchRequest request, @Block VoidBlock2<NSArray<GKPlayer>, NSError> completionHandler);
+    public native void findPlayersForHostedRequest(GKMatchRequest request, Todo completionHandler);
     @Mapping("addPlayersToMatch:matchRequest:completionHandler:")
     public native void addPlayersToMatch(GKMatch match, GKMatchRequest matchRequest, @Block VoidBlock1<NSError> completionHandler);
     @Mapping("cancel")
@@ -109,6 +109,6 @@ public class GKMatchmaker
      */
     @Deprecated
     @Mapping("findPlayersForHostedMatchRequest:withCompletionHandler:")
-    public native void findPlayers(GKMatchRequest request, @Block VoidBlock2<NSArray<NSString>, NSError> completionHandler);
+    public native void findPlayers(GKMatchRequest request, Todo completionHandler);
     
 }

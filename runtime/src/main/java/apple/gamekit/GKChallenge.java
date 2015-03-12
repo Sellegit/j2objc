@@ -68,7 +68,7 @@ public class GKChallenge
     @Mapping("decline")
     public native void decline();
     @Mapping("loadReceivedChallengesWithCompletionHandler:")
-    public static native void loadReceivedChallenges(@Block VoidBlock2<NSArray<GKChallenge>, NSError> completionHandler);
+    public static native void loadReceivedChallenges(Todo completionHandler);
     @Mapping("encodeWithCoder:")
     public native void encode(NSCoder aCoder);
     

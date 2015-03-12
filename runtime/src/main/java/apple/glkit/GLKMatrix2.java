@@ -40,13 +40,13 @@ public class GLKMatrix2
     ]-*/;
     public static native GLKMatrix2 copyWithm2(GLKMatrix2 original, FloatBuffer m2) /*-[
         original.m2 = m2;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native GLKMatrix2 copyWithm(GLKMatrix2 original, FloatBuffer m) /*-[
         original.m = m;
-        return __new;
+        return original;
     ]-*/;
 
     

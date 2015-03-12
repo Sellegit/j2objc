@@ -79,7 +79,7 @@ public class CGImageMetadata
      * @since Available in iOS 7.0 and later.
      */
     @GlobalFunction("CGImageMetadataEnumerateTagsUsingBlock")
-    public native void enumerateTags(String rootPath, CGImageMetadataEnumerationOptions options, @Block VoidBlock2<String, CGImageMetadataTag> block);
+    public native void enumerateTags(String rootPath, NSDictionary<?, ?> options, FunctionPtr block);
     /**
      * @since Available in iOS 7.0 and later.
      */

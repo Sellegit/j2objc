@@ -38,13 +38,13 @@ public class CFStreamError
     ]-*/;
     public static native CFStreamError copyWithdomain(CFStreamError original, CFStreamErrorDomain domain) /*-[
         original.domain = domain;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native CFStreamError copyWitherror(CFStreamError original, int error) /*-[
         original.error = error;
-        return __new;
+        return original;
     ]-*/;
 
     

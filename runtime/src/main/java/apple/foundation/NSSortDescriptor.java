@@ -34,11 +34,6 @@ public class NSSortDescriptor
     public NSSortDescriptor(String key, boolean ascending) { }
     @Mapping("initWithKey:ascending:selector:")
     public NSSortDescriptor(String key, boolean ascending, Selector selector) { }
-    /**
-     * @since Available in iOS 4.0 and later.
-     */
-    @Mapping("initWithKey:ascending:comparator:")
-    public NSSortDescriptor(String key, boolean ascending, @Block Block2<NSObject, NSObject, NSComparisonResult> cmptr) { }
     
     
     @Mapping("key")

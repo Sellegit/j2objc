@@ -34,9 +34,9 @@ public class AVTextStyleRule
     
     public AVTextStyleRule() {}
     @Mapping("initWithTextMarkupAttributes:")
-    public AVTextStyleRule(NSDictionary<NSString, ?> textMarkupAttributes) { }
+    public AVTextStyleRule(NSDictionary<?, ?> textMarkupAttributes) { }
     @Mapping("initWithTextMarkupAttributes:textSelector:")
-    public AVTextStyleRule(NSDictionary<NSString, ?> textMarkupAttributes, String textSelector) { }
+    public AVTextStyleRule(NSDictionary<?, ?> textMarkupAttributes, String textSelector) { }
     
     
     @Mapping("textMarkupAttributes")
@@ -47,13 +47,13 @@ public class AVTextStyleRule
     
     
     @Mapping("propertyListForTextStyleRules:")
-    public static native Object createPropertyList(NSArray<AVTextStyleRule> textStyleRules);
+    public static native Object createPropertyList(NSArray<?> textStyleRules);
     @Mapping("textStyleRulesFromPropertyList:")
     public static native NSArray<AVTextStyleRule> createTextStyleRulesArray(Object plist);
     @Mapping("textStyleRuleWithTextMarkupAttributes:")
-    public static native AVTextStyleRule create(NSDictionary<NSString, ?> textMarkupAttributes);
+    public static native AVTextStyleRule create(NSDictionary<?, ?> textMarkupAttributes);
     @Mapping("textStyleRuleWithTextMarkupAttributes:textSelector:")
-    public static native AVTextStyleRule create(NSDictionary<NSString, ?> textMarkupAttributes, String textSelector);
+    public static native AVTextStyleRule create(NSDictionary<?, ?> textMarkupAttributes, String textSelector);
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
     

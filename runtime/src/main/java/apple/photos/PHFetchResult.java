@@ -44,11 +44,11 @@ public class PHFetchResult
     @Mapping("objectAtIndex:")
     public native PHObject get(@MachineSizedUInt long index);
     @Mapping("containsObject:")
-    public native boolean contains(PHObject anObject);
+    public native boolean contains(Object anObject);
     @Mapping("indexOfObject:")
-    public native @MachineSizedUInt long indexOf(PHObject anObject);
+    public native @MachineSizedUInt long indexOf(Object anObject);
     @Mapping("indexOfObject:inRange:")
-    public native @MachineSizedUInt long indexOf(PHObject anObject, NSRange range);
+    public native @MachineSizedUInt long indexOf(Object anObject, NSRange range);
     @Mapping("objectsAtIndexes:")
     public native NSArray<PHObject> getAll(NSIndexSet indexes);
     @Mapping("enumerateObjectsUsingBlock:")

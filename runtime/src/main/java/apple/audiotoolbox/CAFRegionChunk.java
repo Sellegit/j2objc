@@ -42,19 +42,19 @@ public class CAFRegionChunk
     ]-*/;
     public static native CAFRegionChunk copyWithmSMPTE_TimeType(CAFRegionChunk original, int mSMPTE_TimeType) /*-[
         original.mSMPTE_TimeType = mSMPTE_TimeType;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native CAFRegionChunk copyWithmNumberRegions(CAFRegionChunk original, int mNumberRegions) /*-[
         original.mNumberRegions = mNumberRegions;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native CAFRegionChunk copyWithmRegions(CAFRegionChunk original, CAFRegion mRegions) /*-[
         original.mRegions = mRegions;
-        return __new;
+        return original;
     ]-*/;
 
     

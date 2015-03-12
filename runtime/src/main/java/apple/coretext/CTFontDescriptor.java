@@ -92,11 +92,11 @@ public class CTFontDescriptor
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTFontDescriptorCopyAttribute")
-    public native CFType getAttribute(CTFontAttribute attribute);
+    public native CFType getAttribute(String attribute);
     /**
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTFontDescriptorCopyLocalizedAttribute")
-    protected native CFType getLocalizedAttribute(CTFontAttribute attribute, Todo language);
+    protected native CFType getLocalizedAttribute(String attribute, Todo language);
     
 }

@@ -60,11 +60,11 @@ public class CTFontManager
      * @since Available in iOS 4.1 and later.
      */
     @GlobalFunction("CTFontManagerRegisterFontsForURLs")
-    protected static native boolean registerFonts(NSArray<NSURL> fontURLs, CTFontManagerScope scope, Todo errors);
+    protected static native boolean registerFonts(CFArray fontURLs, CTFontManagerScope scope, Todo errors);
     /**
      * @since Available in iOS 4.1 and later.
      */
     @GlobalFunction("CTFontManagerUnregisterFontsForURLs")
-    protected static native boolean unregisterFonts(NSArray<NSURL> fontURLs, CTFontManagerScope scope, Todo errors);
+    protected static native boolean unregisterFonts(CFArray fontURLs, CTFontManagerScope scope, Todo errors);
     
 }

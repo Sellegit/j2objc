@@ -66,7 +66,7 @@ public class AVAssetReaderOutput
      * @since Available in iOS 8.0 and later.
      */
     @Mapping("resetForReadingTimeRanges:")
-    public native void resetForReadingTimeRanges(List<CMTimeRange> timeRanges);
+    public native void resetForReadingTimeRanges(NSArray<?> timeRanges);
     /**
      * @since Available in iOS 8.0 and later.
      */

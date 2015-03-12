@@ -42,7 +42,7 @@ public class CTFramesetter
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTFramesetterCreateFrame")
-    public native CTFrame createFrame(CFRange stringRange, CGPath path, CTFrameAttributes frameAttributes);
+    public native CTFrame createFrame(CFRange stringRange, CGPath path, CFDictionary frameAttributes);
     /**
      * @since Available in iOS 3.2 and later.
      */
@@ -52,6 +52,6 @@ public class CTFramesetter
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTFramesetterSuggestFrameSizeWithConstraints")
-    public native CGSize suggestFrameSize(CFRange stringRange, CTFrameAttributes frameAttributes, CGSize constraints, CFRange fitRange);
+    public native CGSize suggestFrameSize(CFRange stringRange, CFDictionary frameAttributes, CGSize constraints, CFRange fitRange);
     
 }

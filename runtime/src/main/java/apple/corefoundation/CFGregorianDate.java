@@ -46,37 +46,37 @@ public class CFGregorianDate
     ]-*/;
     public static native CFGregorianDate copyWithyear(CFGregorianDate original, int year) /*-[
         original.year = year;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native CFGregorianDate copyWithmonth(CFGregorianDate original, byte month) /*-[
         original.month = month;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native CFGregorianDate copyWithday(CFGregorianDate original, byte day) /*-[
         original.day = day;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native CFGregorianDate copyWithhour(CFGregorianDate original, byte hour) /*-[
         original.hour = hour;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native CFGregorianDate copyWithminute(CFGregorianDate original, byte minute) /*-[
         original.minute = minute;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native CFGregorianDate copyWithsecond(CFGregorianDate original, double second) /*-[
         original.second = second;
-        return __new;
+        return original;
     ]-*/;
 
     
@@ -86,7 +86,7 @@ public class CFGregorianDate
      */
     @Deprecated
     @GlobalFunction("CFGregorianDateIsValid")
-    public native boolean isValid(CFGregorianUnitFlags unitFlags);
+    public native boolean isValid(@MachineSizedUInt long unitFlags);
     /**
      * @since Available in iOS 2.0 and later.
      * @deprecated Deprecated in iOS 8.0.

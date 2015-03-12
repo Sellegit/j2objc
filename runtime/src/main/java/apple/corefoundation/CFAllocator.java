@@ -51,14 +51,14 @@ public class CFAllocator
     @GlobalFunction("CFAllocatorCreate")
     public native CFAllocator create(CFAllocatorContext context);
     @GlobalFunction("CFAllocatorAllocate")
-    public native Todo allocate(@MachineSizedSInt long size, @MachineSizedSInt long hint);
+    public native Todo allocate(@MachineSizedSInt long size, @MachineSizedUInt long hint);
     @GlobalFunction("CFAllocatorReallocate")
-    public native Todo reallocate(Todo ptr, @MachineSizedSInt long newsize, @MachineSizedSInt long hint);
+    public native Todo reallocate(Todo ptr, @MachineSizedSInt long newsize, @MachineSizedUInt long hint);
     @GlobalFunction("CFAllocatorDeallocate")
     public native void deallocate(Todo ptr);
     @GlobalFunction("CFAllocatorGetPreferredSizeForSize")
-    public native @MachineSizedSInt long getPreferredSizeForSize(@MachineSizedSInt long size, @MachineSizedSInt long hint);
+    public native @MachineSizedSInt long getPreferredSizeForSize(@MachineSizedSInt long size, @MachineSizedUInt long hint);
     @GlobalFunction("CFAllocatorGetContext")
-    private native void getContext(Todo context);
+    private native void getContext(CFAllocatorContext context);
     
 }

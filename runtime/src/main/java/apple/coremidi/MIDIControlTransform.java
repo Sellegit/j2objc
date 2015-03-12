@@ -43,31 +43,31 @@ public class MIDIControlTransform
     ]-*/;
     public static native MIDIControlTransform copyWithcontrolType(MIDIControlTransform original, MIDITransformControlType controlType) /*-[
         original.controlType = controlType;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native MIDIControlTransform copyWithremappedControlType(MIDIControlTransform original, MIDITransformControlType remappedControlType) /*-[
         original.remappedControlType = remappedControlType;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native MIDIControlTransform copyWithcontrolNumber(MIDIControlTransform original, short controlNumber) /*-[
         original.controlNumber = controlNumber;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native MIDIControlTransform copyWithtransform(MIDIControlTransform original, MIDITransformType transform) /*-[
         original.transform = transform;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native MIDIControlTransform copyWithparam(MIDIControlTransform original, short param) /*-[
         original.param = param;
-        return __new;
+        return original;
     ]-*/;
 
     

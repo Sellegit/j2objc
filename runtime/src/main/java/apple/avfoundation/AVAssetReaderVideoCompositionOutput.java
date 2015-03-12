@@ -52,6 +52,6 @@ public class AVAssetReaderVideoCompositionOutput
     
     
     @Mapping("assetReaderVideoCompositionOutputWithVideoTracks:videoSettings:")
-    public static native AVAssetReaderVideoCompositionOutput create(NSArray<AVAssetTrack> videoTracks, NSDictionary<NSString, NSObject> videoSettings);
+    public static native AVAssetReaderVideoCompositionOutput create(NSArray<?> videoTracks, NSDictionary<?, ?> videoSettings);
     
 }

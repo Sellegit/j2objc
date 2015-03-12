@@ -35,7 +35,7 @@ public class ABAddressBook
      * @since Available in iOS 6.0 and later.
      */
     @GlobalFunction("ABAddressBookCreateWithOptions")
-    protected static native ABAddressBook create(NSDictionary<NSString, ?> options, Todo error);
+    protected static native ABAddressBook create(NSDictionary<?, ?> options, Todo error);
     /**
      * @since Available in iOS 2.0 and later.
      * @deprecated Deprecated in iOS 6.0.
@@ -59,9 +59,9 @@ public class ABAddressBook
     @GlobalFunction("ABAddressBookCopyLocalizedLabel")
     public static native String getLocalizedLabel(String label);
     @GlobalFunction("ABAddressBookRegisterExternalChangeCallback")
-    protected native void registerExternalChangeCallback(FunctionPtr callback, @Pointer long context);
+    protected native void registerExternalChangeCallback(FunctionPtr callback, Todo context);
     @GlobalFunction("ABAddressBookUnregisterExternalChangeCallback")
-    protected native void unregisterExternalChangeCallback(FunctionPtr callback, @Pointer long context);
+    protected native void unregisterExternalChangeCallback(FunctionPtr callback, Todo context);
     @GlobalFunction("ABAddressBookRevert")
     public native void revert();
     /**

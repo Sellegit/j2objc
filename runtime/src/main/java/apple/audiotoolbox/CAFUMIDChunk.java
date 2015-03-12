@@ -38,7 +38,7 @@ public class CAFUMIDChunk
     ]-*/;
     public static native CAFUMIDChunk copyWithmBytes(CAFUMIDChunk original, ByteBuffer mBytes) /*-[
         original.mBytes = mBytes;
-        return __new;
+        return original;
     ]-*/;
 
     

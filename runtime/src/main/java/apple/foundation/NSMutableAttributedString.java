@@ -42,13 +42,13 @@ public class NSMutableAttributedString
     @Mapping("replaceCharactersInRange:withString:")
     public native void replace(NSRange range, String str);
     @Mapping("setAttributes:range:")
-    public native void setAttributes(NSDictionary<NSString, NSObject> attrs, NSRange range);
+    public native void setAttributes(NSDictionary<?, ?> attrs, NSRange range);
     @Mapping("addAttribute:value:range:")
-    public native void addAttribute(NSString name, Object value, NSRange range);
+    public native void addAttribute(String name, Object value, NSRange range);
     @Mapping("addAttributes:range:")
-    public native void addAttributes(NSDictionary<NSString, NSObject> attrs, NSRange range);
+    public native void addAttributes(NSDictionary<?, ?> attrs, NSRange range);
     @Mapping("removeAttribute:range:")
-    public native void removeAttribute(NSString name, NSRange range);
+    public native void removeAttribute(String name, NSRange range);
     @Mapping("replaceCharactersInRange:withAttributedString:")
     public native void replace(NSRange range, NSAttributedString attrString);
     @Mapping("insertAttributedString:atIndex:")

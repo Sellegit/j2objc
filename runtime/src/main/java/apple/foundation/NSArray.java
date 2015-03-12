@@ -30,6 +30,8 @@ public class NSArray <T>
     
     
     public NSArray() {}
+    @Mapping("initWithObjects:count:")
+    public NSArray(Todo objects, @MachineSizedUInt long cnt) { }
     @Mapping("initWithArray:")
     public NSArray(NSArray<?> array) { }
     

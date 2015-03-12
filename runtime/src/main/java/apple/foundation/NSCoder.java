@@ -125,7 +125,7 @@ public class NSCoder
      * @since Available in iOS 6.0 and later.
      */
     @Mapping("decodeObjectOfClasses:forKey:")
-    public native Object decodeObject(List<ObjCClass> classes, String key);
+    public native Object decodeObject(NSSet<?> classes, String key);
     /**
      * @since Available in iOS 6.0 and later.
      */

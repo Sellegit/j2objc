@@ -107,7 +107,5 @@ public class SKFieldNode
     public static native SKFieldNode createElectricField();
     @Mapping("magneticField")
     public static native SKFieldNode createMagneticField();
-    @Mapping("customFieldWithEvaluationBlock:")
-    public static native SKFieldNode createCustomField(@Block Block5<SKVector3, SKVector3, Float, Float, Double, SKVector3> block);
     
 }

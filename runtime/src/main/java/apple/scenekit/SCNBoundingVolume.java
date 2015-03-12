@@ -33,11 +33,11 @@ public interface SCNBoundingVolume
     
     
     @Mapping("getBoundingBoxMin:max:")
-    boolean getBoundingBox(Todo min, Todo max);
+    boolean getBoundingBox(SCNVector3 min, SCNVector3 max);
     @Mapping("getBoundingSphereCenter:radius:")
-    boolean getBoundingSphere(Todo center, Todo radius);
+    boolean getBoundingSphere(SCNVector3 center, Todo radius);
     @Mapping("setBoundingBoxMin:max:")
-    void setBoundingBox(Todo min, Todo max);
+    void setBoundingBox(SCNVector3 min, SCNVector3 max);
     
     /*<adapter>*/
     /*</adapter>*/

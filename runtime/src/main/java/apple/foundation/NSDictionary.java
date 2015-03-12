@@ -48,7 +48,7 @@ public class NSDictionary <K, V>
     
     
     @Mapping("objectForKey:")
-    protected native V getObject(K aKey);
+    protected native V getObject(Object aKey);
     @Mapping("isEqualToDictionary:")
     protected native boolean equalsTo(NSDictionary<?, ?> otherDictionary);
     @Mapping("writeToFile:atomically:")

@@ -37,7 +37,7 @@ public class CAValueFunction
     
     
     @Mapping("functionWithName:")
-    public static native CAValueFunction create(CAValueFunctionName name);
+    public static native CAValueFunction create(String name);
     @Mapping("encodeWithCoder:")
     public native void encode(NSCoder aCoder);
     

@@ -46,31 +46,31 @@ public class AudioFileSMPTETime
     ]-*/;
     public static native AudioFileSMPTETime copyWithmHours(AudioFileSMPTETime original, byte mHours) /*-[
         original.mHours = mHours;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native AudioFileSMPTETime copyWithmMinutes(AudioFileSMPTETime original, byte mMinutes) /*-[
         original.mMinutes = mMinutes;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native AudioFileSMPTETime copyWithmSeconds(AudioFileSMPTETime original, byte mSeconds) /*-[
         original.mSeconds = mSeconds;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native AudioFileSMPTETime copyWithmFrames(AudioFileSMPTETime original, byte mFrames) /*-[
         original.mFrames = mFrames;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native AudioFileSMPTETime copyWithmSubFrameSampleOffset(AudioFileSMPTETime original, int mSubFrameSampleOffset) /*-[
         original.mSubFrameSampleOffset = mSubFrameSampleOffset;
-        return __new;
+        return original;
     ]-*/;
 
     

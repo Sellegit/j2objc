@@ -42,17 +42,17 @@ public class CGImageSource
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CGImageSourceCreateWithDataProvider")
-    public static native CGImageSource create(CGDataProvider provider, CGImageSourceOptions options);
+    public static native CGImageSource create(CGDataProvider provider, NSDictionary<?, ?> options);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CGImageSourceCreateWithData")
-    public static native CGImageSource create(NSData data, CGImageSourceOptions options);
+    public static native CGImageSource create(NSData data, NSDictionary<?, ?> options);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CGImageSourceCreateWithURL")
-    public static native CGImageSource create(NSURL url, CGImageSourceOptions options);
+    public static native CGImageSource create(NSURL url, NSDictionary<?, ?> options);
     /**
      * @since Available in iOS 4.0 and later.
      */
@@ -67,22 +67,22 @@ public class CGImageSource
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CGImageSourceCopyProperties")
-    public native CGImageProperties getProperties(CGImageSourceOptions options);
+    public native CGImageProperties getProperties(NSDictionary<?, ?> options);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CGImageSourceCopyPropertiesAtIndex")
-    public native CGImageProperties getProperties(@MachineSizedUInt long index, CGImageSourceOptions options);
+    public native CGImageProperties getProperties(@MachineSizedUInt long index, NSDictionary<?, ?> options);
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalFunction("CGImageSourceCopyMetadataAtIndex")
-    public native CGImageMetadata getMetadata(@MachineSizedUInt long index, CGImageSourceOptions options);
+    public native CGImageMetadata getMetadata(@MachineSizedUInt long index, NSDictionary<?, ?> options);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CGImageSourceCreateImageAtIndex")
-    public native CGImage createImage(@MachineSizedUInt long index, CGImageSourceOptions options);
+    public native CGImage createImage(@MachineSizedUInt long index, NSDictionary<?, ?> options);
     /**
      * @since Available in iOS 7.0 and later.
      */
@@ -92,12 +92,12 @@ public class CGImageSource
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CGImageSourceCreateThumbnailAtIndex")
-    public native CGImage createThumbnail(@MachineSizedUInt long index, CGImageSourceOptions options);
+    public native CGImage createThumbnail(@MachineSizedUInt long index, NSDictionary<?, ?> options);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CGImageSourceCreateIncremental")
-    public static native CGImageSource createIncremental(CGImageSourceOptions options);
+    public static native CGImageSource createIncremental(NSDictionary<?, ?> options);
     /**
      * @since Available in iOS 4.0 and later.
      */

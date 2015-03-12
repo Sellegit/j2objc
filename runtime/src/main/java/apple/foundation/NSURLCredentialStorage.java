@@ -50,7 +50,7 @@ public class NSURLCredentialStorage
      * @since Available in iOS 7.0 and later.
      */
     @Mapping("removeCredential:forProtectionSpace:options:")
-    public native void removeCredential(NSURLCredential credential, NSURLProtectionSpace space, NSURLCredentialStorageRemovalOptions options);
+    public native void removeCredential(NSURLCredential credential, NSURLProtectionSpace space, NSDictionary<?, ?> options);
     @Mapping("defaultCredentialForProtectionSpace:")
     public native NSURLCredential getDefaultCredential(NSURLProtectionSpace space);
     @Mapping("setDefaultCredential:forProtectionSpace:")
@@ -61,7 +61,7 @@ public class NSURLCredentialStorage
      * @since Available in iOS 8.0 and later.
      */
     @Mapping("getCredentialsForProtectionSpace:task:completionHandler:")
-    public native void getCredentials(NSURLProtectionSpace protectionSpace, NSURLSessionTask task, @Block VoidBlock1<NSDictionary<NSString, NSURLCredential>> completionHandler);
+    public native void getCredentials(NSURLProtectionSpace protectionSpace, NSURLSessionTask task, Todo completionHandler);
     /**
      * @since Available in iOS 8.0 and later.
      */
@@ -71,7 +71,7 @@ public class NSURLCredentialStorage
      * @since Available in iOS 8.0 and later.
      */
     @Mapping("removeCredential:forProtectionSpace:options:task:")
-    public native void removeCredential(NSURLCredential credential, NSURLProtectionSpace protectionSpace, NSURLCredentialStorageRemovalOptions options, NSURLSessionTask task);
+    public native void removeCredential(NSURLCredential credential, NSURLProtectionSpace protectionSpace, NSDictionary<?, ?> options, NSURLSessionTask task);
     /**
      * @since Available in iOS 8.0 and later.
      */

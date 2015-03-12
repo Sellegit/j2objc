@@ -42,25 +42,25 @@ public class CFSocketSignature
     ]-*/;
     public static native CFSocketSignature copyWithprotocolFamily(CFSocketSignature original, int protocolFamily) /*-[
         original.protocolFamily = protocolFamily;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native CFSocketSignature copyWithsocketType(CFSocketSignature original, int socketType) /*-[
         original.socketType = socketType;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native CFSocketSignature copyWithprotocol(CFSocketSignature original, int protocol) /*-[
         original.protocol = protocol;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native CFSocketSignature copyWithaddress(CFSocketSignature original, CFData address) /*-[
         original.address = address;
-        return __new;
+        return original;
     ]-*/;
 
     

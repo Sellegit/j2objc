@@ -29,7 +29,7 @@ public interface ABPersonViewControllerDelegate
     
     
     @Mapping("personViewController:shouldPerformDefaultActionForPerson:property:identifier:")
-    boolean shouldPerformDefaultAction(ABPersonViewController personViewController, ABPerson person, ABProperty property, int identifier);
+    boolean shouldPerformDefaultAction(ABPersonViewController personViewController, ABRecord person, int property, int identifier);
     
     /*<adapter>*/
     /*</adapter>*/

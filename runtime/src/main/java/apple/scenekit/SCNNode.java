@@ -165,7 +165,7 @@ public class SCNNode
     @Mapping("presentationNode")
     public native SCNNode getPresentationNode();
     @Mapping("hitTestWithSegmentFromPoint:toPoint:options:")
-    public native NSArray<SCNHitTestResult> hitTestWithSegment(SCNVector3 pointA, SCNVector3 pointB, SCNHitTestOptions options);
+    public native NSArray<SCNHitTestResult> hitTestWithSegment(SCNVector3 pointA, SCNVector3 pointB, NSDictionary<?, ?> options);
     @Mapping("node")
     public static native SCNNode create();
     @Mapping("nodeWithGeometry:")
@@ -213,10 +213,10 @@ public class SCNNode
     @Mapping("removeAllActions")
     public native void removeAllActions();
     @Mapping("getBoundingBoxMin:max:")
-    public native boolean getBoundingBox(Todo min, Todo max);
+    public native boolean getBoundingBox(SCNVector3 min, SCNVector3 max);
     @Mapping("getBoundingSphereCenter:radius:")
-    public native boolean getBoundingSphere(Todo center, Todo radius);
+    public native boolean getBoundingSphere(SCNVector3 center, Todo radius);
     @Mapping("setBoundingBoxMin:max:")
-    public native void setBoundingBox(Todo min, Todo max);
+    public native void setBoundingBox(SCNVector3 min, SCNVector3 max);
     
 }

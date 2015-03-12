@@ -74,7 +74,7 @@ public interface SCNSceneRenderer
     
     
     @Mapping("hitTest:options:")
-    NSArray<SCNHitTestResult> hitTest(CGPoint thePoint, SCNHitTestOptions options);
+    NSArray<SCNHitTestResult> hitTest(CGPoint thePoint, NSDictionary<?, ?> options);
     @Mapping("isNodeInsideFrustum:withPointOfView:")
     boolean isNodeInsideFrustum(SCNNode node, SCNNode pointOfView);
     @Mapping("projectPoint:")

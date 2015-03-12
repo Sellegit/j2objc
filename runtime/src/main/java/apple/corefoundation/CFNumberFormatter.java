@@ -46,13 +46,13 @@ public class CFNumberFormatter
     @GlobalFunction("CFNumberFormatterCreateStringWithValue")
     protected static native String formatValue(CFAllocator allocator, CFNumberFormatter formatter, CFNumberType numberType, Todo valuePtr);
     @GlobalFunction("CFNumberFormatterCreateNumberFromString")
-    protected static native CFNumber parse(CFAllocator allocator, CFNumberFormatter formatter, String string, CFRange rangep, CFNumberFormatterOptionFlags options);
+    protected static native CFNumber parse(CFAllocator allocator, CFNumberFormatter formatter, String string, CFRange rangep, @MachineSizedUInt long options);
     @GlobalFunction("CFNumberFormatterGetValueFromString")
     protected native boolean parseValue(String string, CFRange rangep, CFNumberType numberType, Todo valuePtr);
     @GlobalFunction("CFNumberFormatterSetProperty")
-    public native void setProperty(CFNumberFormatterProperty key, CFType value);
+    public native void setProperty(String key, CFType value);
     @GlobalFunction("CFNumberFormatterCopyProperty")
-    public native CFType getProperty(CFNumberFormatterProperty key);
+    public native CFType getProperty(String key);
     @GlobalFunction("CFNumberFormatterGetDecimalInfoForCurrencyCode")
     private static native boolean getDecimalInfoForCurrencyCode(String currencyCode, Todo defaultFractionDigits, Todo roundingIncrement);
     

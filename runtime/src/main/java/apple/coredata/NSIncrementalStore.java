@@ -44,11 +44,11 @@ public class NSIncrementalStore
     @Mapping("newValueForRelationship:forObjectWithID:withContext:error:")
     protected native Object newValueForRelationship(NSRelationshipDescription relationship, NSManagedObjectID objectID, NSManagedObjectContext context, Todo error);
     @Mapping("obtainPermanentIDsForObjects:error:")
-    protected native NSArray<NSManagedObjectID> obtainPermanentIDsForObjects(NSArray<NSManagedObject> array, Todo error);
+    protected native NSArray<NSManagedObjectID> obtainPermanentIDsForObjects(NSArray<?> array, Todo error);
     @Mapping("managedObjectContextDidRegisterObjectsWithIDs:")
-    public native void didRegisterObjects(NSArray<NSManagedObjectID> objectIDs);
+    public native void didRegisterObjects(NSArray<?> objectIDs);
     @Mapping("managedObjectContextDidUnregisterObjectsWithIDs:")
-    public native void didUnregisterObjects(NSArray<NSManagedObjectID> objectIDs);
+    public native void didUnregisterObjects(NSArray<?> objectIDs);
     @Mapping("newObjectIDForEntity:referenceObject:")
     public native NSManagedObjectID newObjectIDForEntity(NSEntityDescription entity, Object data);
     @Mapping("referenceObjectForObjectID:")

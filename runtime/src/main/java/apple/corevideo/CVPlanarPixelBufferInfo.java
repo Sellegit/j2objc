@@ -38,7 +38,7 @@ public class CVPlanarPixelBufferInfo
     ]-*/;
     public static native CVPlanarPixelBufferInfo copyWithcomponentInfo(CVPlanarPixelBufferInfo original, CVPlanarComponentInfo componentInfo) /*-[
         original.componentInfo = componentInfo;
-        return __new;
+        return original;
     ]-*/;
 
     

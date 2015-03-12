@@ -40,13 +40,13 @@ public class CAFStringID
     ]-*/;
     public static native CAFStringID copyWithmStringID(CAFStringID original, int mStringID) /*-[
         original.mStringID = mStringID;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native CAFStringID copyWithmStringStartByteOffset(CAFStringID original, long mStringStartByteOffset) /*-[
         original.mStringStartByteOffset = mStringStartByteOffset;
-        return __new;
+        return original;
     ]-*/;
 
     

@@ -88,7 +88,7 @@ public class AVAssetWriter
     
     
     @Mapping("canApplyOutputSettings:forMediaType:")
-    public native boolean canApplyOutputSettings(NSDictionary<NSString, NSObject> outputSettings, AVMediaType mediaType);
+    public native boolean canApplyOutputSettings(NSDictionary<?, ?> outputSettings, String mediaType);
     @Mapping("canAddInput:")
     public native boolean canAddInput(AVAssetWriterInput input);
     @Mapping("addInput:")

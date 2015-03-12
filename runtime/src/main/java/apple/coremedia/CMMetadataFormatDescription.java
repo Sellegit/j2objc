@@ -34,32 +34,32 @@ public class CMMetadataFormatDescription
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMMetadataFormatDescriptionCreateWithKeys")
-    private static native int createWithKeys(CFAllocator allocator, CMMetadataFormatType metadataType, List<CMMetadataFormatDescriptionKey> keys, Todo outDesc);
+    private static native int createWithKeys(CFAllocator allocator, CMMetadataFormatType metadataType, NSArray<?> keys, Todo outDesc);
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalFunction("CMMetadataFormatDescriptionCreateWithMetadataSpecifications")
-    private static native int createWithMetadataSpecifications(CFAllocator allocator, CMMetadataFormatType metadataType, List<CMMetadataFormatDescriptionMetadataSpecification> metadataSpecifications, Todo outDesc);
+    private static native int createWithMetadataSpecifications(CFAllocator allocator, CMMetadataFormatType metadataType, NSArray<?> metadataSpecifications, Todo outDesc);
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalFunction("CMMetadataFormatDescriptionCreateWithMetadataFormatDescriptionAndMetadataSpecifications")
-    private static native int create(CFAllocator allocator, CMMetadataFormatDescription srcDesc, List<CMMetadataFormatDescriptionMetadataSpecification> metadataSpecifications, Todo outDesc);
+    private static native int create(CFAllocator allocator, CMFormatDescription srcDesc, NSArray<?> metadataSpecifications, Todo outDesc);
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalFunction("CMMetadataFormatDescriptionCreateByMergingMetadataFormatDescriptions")
-    private static native int createByMergingFormatDescriptions(CFAllocator allocator, CMMetadataFormatDescription srcDesc1, CMMetadataFormatDescription srcDesc2, Todo outDesc);
+    private static native int createByMergingFormatDescriptions(CFAllocator allocator, CMFormatDescription srcDesc1, CMFormatDescription srcDesc2, Todo outDesc);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMMetadataFormatDescriptionGetKeyWithLocalID")
-    public native CMMetadataFormatDescriptionKey getKey(int localKeyID);
+    public static native CMMetadataFormatDescriptionKey getKey(CMFormatDescription desc, int localKeyID);
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalFunction("CMMetadataFormatDescriptionGetIdentifiers")
-    public native List<String> getIdentifiers();
+    public static native List<String> getIdentifiers(CMFormatDescription desc);
     /**
      * @since Available in iOS 8.0 and later.
      */

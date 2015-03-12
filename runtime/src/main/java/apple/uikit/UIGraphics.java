@@ -62,12 +62,12 @@ public class UIGraphics
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("UIGraphicsBeginPDFContextToFile")
-    public static native boolean beginPDFContextToFile(String path, CGRect bounds, CGPDFContextOptions documentInfo);
+    public static native boolean beginPDFContextToFile(String path, CGRect bounds, NSDictionary<?, ?> documentInfo);
     /**
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("UIGraphicsBeginPDFContextToData")
-    public static native void beginPDFContextToData(NSMutableData data, CGRect bounds, CGPDFContextOptions documentInfo);
+    public static native void beginPDFContextToData(NSMutableData data, CGRect bounds, NSDictionary<?, ?> documentInfo);
     /**
      * @since Available in iOS 3.2 and later.
      */
@@ -82,7 +82,7 @@ public class UIGraphics
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("UIGraphicsBeginPDFPageWithInfo")
-    public static native void beginPDFPage(CGRect bounds, CGPDFBoxOptions pageInfo);
+    public static native void beginPDFPage(CGRect bounds, NSDictionary<?, ?> pageInfo);
     /**
      * @since Available in iOS 3.2 and later.
      */

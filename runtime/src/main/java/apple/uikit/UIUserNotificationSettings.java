@@ -42,6 +42,6 @@ public class UIUserNotificationSettings
     
     
     @Mapping("settingsForTypes:categories:")
-    public static native UIUserNotificationSettings create(@Representing("UIUserNotificationType") @MachineSizedUInt long types, NSSet<UIUserNotificationCategory> categories);
+    public static native UIUserNotificationSettings create(@Representing("UIUserNotificationType") @MachineSizedUInt long types, NSSet<?> categories);
     
 }

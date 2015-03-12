@@ -34,7 +34,7 @@ public class CBPeripheralManager
      * @since Available in iOS 7.0 and later.
      */
     @Mapping("initWithDelegate:queue:options:")
-    public CBPeripheralManager(CBPeripheralManagerDelegate delegate, DispatchQueue queue, CBPeripheralManagerOptions options) { }
+    public CBPeripheralManager(CBPeripheralManagerDelegate delegate, DispatchQueue queue, NSDictionary<?, ?> options) { }
     
     
     @Mapping("delegate")
@@ -49,7 +49,7 @@ public class CBPeripheralManager
     
     
     @Mapping("startAdvertising:")
-    public native void startAdvertising(CBAdvertisementData advertisementData);
+    public native void startAdvertising(NSDictionary<?, ?> advertisementData);
     @Mapping("stopAdvertising")
     public native void stopAdvertising();
     @Mapping("setDesiredConnectionLatency:forCentral:")
@@ -63,7 +63,7 @@ public class CBPeripheralManager
     @Mapping("respondToRequest:withResult:")
     public native void respondToRequest(CBATTRequest request, CBATTError result);
     @Mapping("updateValue:forCharacteristic:onSubscribedCentrals:")
-    public native boolean updateValue(NSData value, CBMutableCharacteristic characteristic, NSArray<CBCentral> centrals);
+    public native boolean updateValue(NSData value, CBMutableCharacteristic characteristic, NSArray<?> centrals);
     /**
      * @since Available in iOS 7.0 and later.
      */

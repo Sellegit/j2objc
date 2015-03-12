@@ -40,13 +40,13 @@ public class MIDIRawData
     ]-*/;
     public static native MIDIRawData copyWithlength(MIDIRawData original, int length) /*-[
         original.length = length;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native MIDIRawData copyWithdata(MIDIRawData original, ByteBuffer data) /*-[
         original.data = data;
-        return __new;
+        return original;
     ]-*/;
 
     

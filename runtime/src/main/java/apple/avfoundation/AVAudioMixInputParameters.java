@@ -51,7 +51,7 @@ public class AVAudioMixInputParameters
     
     
     @Mapping("getVolumeRampForTime:startVolume:endVolume:timeRange:")
-    public native boolean getVolumeRamp(CMTime time, Todo startVolume, Todo endVolume, Todo timeRange);
+    public native boolean getVolumeRamp(CMTime time, Todo startVolume, Todo endVolume, CMTimeRange timeRange);
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
     

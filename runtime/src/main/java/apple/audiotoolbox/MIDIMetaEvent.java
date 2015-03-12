@@ -48,37 +48,37 @@ public class MIDIMetaEvent
     ]-*/;
     public static native MIDIMetaEvent copyWithmetaEventType(MIDIMetaEvent original, byte metaEventType) /*-[
         original.metaEventType = metaEventType;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native MIDIMetaEvent copyWithunused1(MIDIMetaEvent original, byte unused1) /*-[
         original.unused1 = unused1;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native MIDIMetaEvent copyWithunused2(MIDIMetaEvent original, byte unused2) /*-[
         original.unused2 = unused2;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native MIDIMetaEvent copyWithunused3(MIDIMetaEvent original, byte unused3) /*-[
         original.unused3 = unused3;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native MIDIMetaEvent copyWithdataLength(MIDIMetaEvent original, int dataLength) /*-[
         original.dataLength = dataLength;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native MIDIMetaEvent copyWithdata(MIDIMetaEvent original, ByteBuffer data) /*-[
         original.data = data;
-        return __new;
+        return original;
     ]-*/;
 
     

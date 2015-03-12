@@ -65,17 +65,17 @@ public class SCNScene
     
     
     @Mapping("attributeForKey:")
-    public native Object getAttribute(SCNSceneAttribute key);
+    public native Object getAttribute(String key);
     @Mapping("setAttribute:forKey:")
-    protected native void setAttribute(Object attribute, SCNSceneAttribute key);
+    protected native void setAttribute(Object attribute, String key);
     @Mapping("scene")
     public static native SCNScene create();
     @Mapping("sceneNamed:")
     public static native SCNScene create(String name);
     @Mapping("sceneNamed:inDirectory:options:")
-    public static native SCNScene create(String name, String directory, SCNSceneSourceOptions options);
+    public static native SCNScene create(String name, String directory, NSDictionary<?, ?> options);
     @Mapping("sceneWithURL:options:error:")
-    protected static native SCNScene create(NSURL url, SCNSceneSourceOptions options, Todo error);
+    protected static native SCNScene create(NSURL url, NSDictionary<?, ?> options, Todo error);
     @Mapping("addParticleSystem:withTransform:")
     public native void addParticleSystem(SCNParticleSystem system, SCNMatrix4 transform);
     @Mapping("removeAllParticleSystems")

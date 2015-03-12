@@ -45,19 +45,19 @@ public class AVAudio3DPoint
     ]-*/;
     public static native AVAudio3DPoint copyWithx(AVAudio3DPoint original, float x) /*-[
         original.x = x;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native AVAudio3DPoint copyWithy(AVAudio3DPoint original, float y) /*-[
         original.y = y;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native AVAudio3DPoint copyWithz(AVAudio3DPoint original, float z) /*-[
         original.z = z;
-        return __new;
+        return original;
     ]-*/;
 
     

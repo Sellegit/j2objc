@@ -45,19 +45,19 @@ public class SCNVector3
     ]-*/;
     public static native SCNVector3 copyWithx(SCNVector3 original, float x) /*-[
         original.x = x;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native SCNVector3 copyWithy(SCNVector3 original, float y) /*-[
         original.y = y;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native SCNVector3 copyWithz(SCNVector3 original, float z) /*-[
         original.z = z;
-        return __new;
+        return original;
     ]-*/;
 
     

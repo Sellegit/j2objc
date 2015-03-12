@@ -31,9 +31,9 @@ public class NSURLProtectionSpace
     
     public NSURLProtectionSpace() {}
     @Mapping("initWithHost:port:protocol:realm:authenticationMethod:")
-    public NSURLProtectionSpace(String host, @MachineSizedSInt long port, NSURLProtectionSpaceProtocol protocol, String realm, NSURLAuthenticationMethod authenticationMethod) { }
+    public NSURLProtectionSpace(String host, @MachineSizedSInt long port, String protocol, String realm, String authenticationMethod) { }
     @Mapping("initWithProxyHost:port:type:realm:authenticationMethod:")
-    public NSURLProtectionSpace(String host, @MachineSizedSInt long port, NSURLProtectionSpaceProxyType type, String realm, NSURLAuthenticationMethod authenticationMethod) { }
+    public NSURLProtectionSpace(String host, @MachineSizedSInt long port, Todo type, String realm, Todo authenticationMethod) { }
     
     
     @Mapping("realm")

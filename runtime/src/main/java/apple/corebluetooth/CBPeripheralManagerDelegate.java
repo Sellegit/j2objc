@@ -30,7 +30,7 @@ public interface CBPeripheralManagerDelegate
     @Mapping("peripheralManagerDidUpdateState:")
     void didUpdateState(CBPeripheralManager peripheral);
     @Mapping("peripheralManager:willRestoreState:")
-    void willRestoreState(CBPeripheralManager peripheral, CBPeripheralManagerRestoredState dict);
+    void willRestoreState(CBPeripheralManager peripheral, NSDictionary<?, ?> dict);
     @Mapping("peripheralManagerDidStartAdvertising:error:")
     void didStartAdvertising(CBPeripheralManager peripheral, NSError error);
     @Mapping("peripheralManager:didAddService:error:")
@@ -42,7 +42,7 @@ public interface CBPeripheralManagerDelegate
     @Mapping("peripheralManager:didReceiveReadRequest:")
     void didReceiveReadRequest(CBPeripheralManager peripheral, CBATTRequest request);
     @Mapping("peripheralManager:didReceiveWriteRequests:")
-    void didReceiveWriteRequests(CBPeripheralManager peripheral, NSArray<CBATTRequest> requests);
+    void didReceiveWriteRequests(CBPeripheralManager peripheral, NSArray<?> requests);
     @Mapping("peripheralManagerIsReadyToUpdateSubscribers:")
     void readyToUpdateSubscribers(CBPeripheralManager peripheral);
     

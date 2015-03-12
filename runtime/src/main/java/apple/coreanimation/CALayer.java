@@ -30,7 +30,7 @@ public class CALayer
     
     public CALayer() {}
     @Mapping("initWithLayer:")
-    public CALayer(CALayer layer) { }
+    public CALayer(Object layer) { }
     
     
     @Mapping("bounds")

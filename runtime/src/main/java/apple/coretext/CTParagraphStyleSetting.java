@@ -39,19 +39,19 @@ public class CTParagraphStyleSetting
     ]-*/;
     public static native CTParagraphStyleSetting copyWithspec(CTParagraphStyleSetting original, CTParagraphStyleSpecifier spec) /*-[
         original.spec = spec;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native CTParagraphStyleSetting copyWithvalueSize(CTParagraphStyleSetting original, @MachineSizedUInt long valueSize) /*-[
         original.valueSize = valueSize;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native CTParagraphStyleSetting copyWithvalue(CTParagraphStyleSetting original, Todo value) /*-[
         original.value = value;
-        return __new;
+        return original;
     ]-*/;
 
     

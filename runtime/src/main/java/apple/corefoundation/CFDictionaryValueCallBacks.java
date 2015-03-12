@@ -32,7 +32,7 @@ import apple.foundation.*;
     
     public static native CFDictionaryValueCallBacks copyWithversion(CFDictionaryValueCallBacks original, @MachineSizedSInt long version) /*-[
         original.version = version;
-        return __new;
+        return original;
     ]-*/;
 
     

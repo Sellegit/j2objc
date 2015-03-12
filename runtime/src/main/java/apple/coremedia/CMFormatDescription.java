@@ -36,7 +36,7 @@ public class CMFormatDescription
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMFormatDescriptionCreate")
-    protected static native int create(CFAllocator allocator, CMMediaType mediaType, int mediaSubtype, CFDictionary extensions, Todo descOut);
+    protected static native int create(CFAllocator allocator, CMMediaType mediaType, int mediaSubtype, NSDictionary<?, ?> extensions, Todo descOut);
     /**
      * @since Available in iOS 4.0 and later.
      */

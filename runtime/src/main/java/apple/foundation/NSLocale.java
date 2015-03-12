@@ -45,9 +45,9 @@ public class NSLocale
     public static native NSString CurrentLocaleDidChangeNotification();
     
     @Mapping("objectForKey:")
-    public native Object getComponent(NSLocaleComponent key);
+    public native Object getComponent(Object key);
     @Mapping("displayNameForKey:value:")
-    public native String getComponentDisplayName(NSLocaleComponent key, Object value);
+    public native String getComponentDisplayName(Object key, Object value);
     /**
      * @since Available in iOS 2.0 and later.
      */
@@ -78,7 +78,7 @@ public class NSLocale
     @Mapping("componentsFromLocaleIdentifier:")
     public static native Map<NSLocaleComponent, NSObject> getComponentsFromLocaleIdentifier(String string);
     @Mapping("localeIdentifierFromComponents:")
-    public static native String getLocaleIdentifierFromComponents(Map<NSLocaleComponent, NSObject> dict);
+    public static native String getLocaleIdentifierFromComponents(NSDictionary<?, ?> dict);
     @Mapping("canonicalLocaleIdentifierFromString:")
     public static native String getCanonicalLocaleIdentifier(String string);
     @Mapping("canonicalLanguageIdentifierFromString:")

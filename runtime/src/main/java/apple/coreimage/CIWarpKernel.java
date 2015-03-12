@@ -34,10 +34,6 @@ public class CIWarpKernel
     
     
     
-    /**
-     * @since Available in iOS 8.0 and later.
-     */
-    @Mapping("applyWithExtent:roiCallback:inputImage:arguments:")
-    public native CIImage apply(CGRect extent, @Block(" (,)") Block2<Integer, CGRect, CGRect> callback, CIImage image, NSArray<?> args);
+    
     
 }

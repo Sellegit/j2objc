@@ -344,19 +344,19 @@ public class AVCaptureDevice
     public static native AVCaptureWhiteBalanceGains getWhiteBalanceGainsCurrent();
     
     @Mapping("hasMediaType:")
-    public native boolean hasMediaType(AVMediaType mediaType);
+    public native boolean hasMediaType(String mediaType);
     @Mapping("lockForConfiguration:")
     public native boolean lockForConfiguration(Todo outError);
     @Mapping("unlockForConfiguration")
     public native void unlockForConfiguration();
     @Mapping("supportsAVCaptureSessionPreset:")
-    public native boolean supportsAVCaptureSessionPreset(AVCaptureSessionPreset preset);
+    public native boolean supportsAVCaptureSessionPreset(String preset);
     @Mapping("devices")
     public static native NSArray<AVCaptureDevice> getDevices();
     @Mapping("devicesWithMediaType:")
-    public static native NSArray<AVCaptureDevice> getDevicesForMediaType(AVMediaType mediaType);
+    public static native NSArray<AVCaptureDevice> getDevicesForMediaType(String mediaType);
     @Mapping("defaultDeviceWithMediaType:")
-    public static native AVCaptureDevice getDefaultDeviceForMediaType(AVMediaType mediaType);
+    public static native AVCaptureDevice getDefaultDeviceForMediaType(String mediaType);
     @Mapping("deviceWithUniqueID:")
     public static native AVCaptureDevice getDeviceWithUniqueID(String deviceUniqueID);
     @Mapping("isFlashModeSupported:")
@@ -428,11 +428,11 @@ public class AVCaptureDevice
      * @since Available in iOS 7.0 and later.
      */
     @Mapping("authorizationStatusForMediaType:")
-    public static native @Representing("AVAuthorizationStatus") @MachineSizedSInt long getAuthorizationStatusForMediaType(AVMediaType mediaType);
+    public static native @Representing("AVAuthorizationStatus") @MachineSizedSInt long getAuthorizationStatusForMediaType(String mediaType);
     /**
      * @since Available in iOS 7.0 and later.
      */
     @Mapping("requestAccessForMediaType:completionHandler:")
-    public static native void requestAccessForMediaType(AVMediaType mediaType, @Block VoidBooleanBlock handler);
+    public static native void requestAccessForMediaType(String mediaType, @Block VoidBooleanBlock handler);
     
 }

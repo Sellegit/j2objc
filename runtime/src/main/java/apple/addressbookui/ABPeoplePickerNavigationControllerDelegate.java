@@ -32,12 +32,12 @@ public interface ABPeoplePickerNavigationControllerDelegate
      * @since Available in iOS 8.0 and later.
      */
     @Mapping("peoplePickerNavigationController:didSelectPerson:")
-    void didSelectPerson(ABPeoplePickerNavigationController peoplePicker, ABPerson person);
+    void didSelectPerson(ABPeoplePickerNavigationController peoplePicker, ABRecord person);
     /**
      * @since Available in iOS 8.0 and later.
      */
     @Mapping("peoplePickerNavigationController:didSelectPerson:property:identifier:")
-    void didSelectPerson(ABPeoplePickerNavigationController peoplePicker, ABPerson person, ABProperty property, int identifier);
+    void didSelectPerson(ABPeoplePickerNavigationController peoplePicker, ABRecord person, int property, int identifier);
     @Mapping("peoplePickerNavigationControllerDidCancel:")
     void didCancel(ABPeoplePickerNavigationController peoplePicker);
     /**
@@ -46,14 +46,14 @@ public interface ABPeoplePickerNavigationControllerDelegate
      */
     @Deprecated
     @Mapping("peoplePickerNavigationController:shouldContinueAfterSelectingPerson:")
-    boolean shouldContinueAfterSelectingPerson(ABPeoplePickerNavigationController peoplePicker, ABPerson person);
+    boolean shouldContinueAfterSelectingPerson(ABPeoplePickerNavigationController peoplePicker, ABRecord person);
     /**
      * @since Available in iOS 2.0 and later.
      * @deprecated Deprecated in iOS 8.0.
      */
     @Deprecated
     @Mapping("peoplePickerNavigationController:shouldContinueAfterSelectingPerson:property:identifier:")
-    boolean shouldContinueAfterSelectingPerson(ABPeoplePickerNavigationController peoplePicker, ABPerson person, ABProperty property, int identifier);
+    boolean shouldContinueAfterSelectingPerson(ABPeoplePickerNavigationController peoplePicker, ABRecord person, int property, int identifier);
     
     /*<adapter>*/
     /*</adapter>*/

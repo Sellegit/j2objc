@@ -34,7 +34,7 @@ public class CMVideoFormatDescription
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMVideoFormatDescriptionCreate")
-    private static native int create(CFAllocator allocator, CMVideoCodecType codecType, int width, int height, CMVideoFormatDescriptionExtension extensions, Todo outDesc);
+    private static native int create(CFAllocator allocator, CMVideoCodecType codecType, int width, int height, NSDictionary<?, ?> extensions, Todo outDesc);
     /**
      * @since Available in iOS 4.0 and later.
      */

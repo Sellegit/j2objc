@@ -29,7 +29,7 @@ public class CKModifyRecordsOperation
     
     public CKModifyRecordsOperation() {}
     @Mapping("initWithRecordsToSave:recordIDsToDelete:")
-    public CKModifyRecordsOperation(NSArray<CKRecord> records, NSArray<CKRecordID> recordIDs) { }
+    public CKModifyRecordsOperation(NSArray<?> records, NSArray<?> recordIDs) { }
     
     
     @Mapping("recordsToSave")

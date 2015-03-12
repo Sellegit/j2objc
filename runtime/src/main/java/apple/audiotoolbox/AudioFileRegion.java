@@ -46,31 +46,31 @@ public class AudioFileRegion
     ]-*/;
     public static native AudioFileRegion copyWithmRegionID(AudioFileRegion original, int mRegionID) /*-[
         original.mRegionID = mRegionID;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native AudioFileRegion copyWithmName(AudioFileRegion original, CFString mName) /*-[
         original.mName = mName;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native AudioFileRegion copyWithmFlags(AudioFileRegion original, int mFlags) /*-[
         original.mFlags = mFlags;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native AudioFileRegion copyWithmNumberMarkers(AudioFileRegion original, int mNumberMarkers) /*-[
         original.mNumberMarkers = mNumberMarkers;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native AudioFileRegion copyWithmMarkers(AudioFileRegion original, AudioFileMarker mMarkers) /*-[
         original.mMarkers = mMarkers;
-        return __new;
+        return original;
     ]-*/;
 
     

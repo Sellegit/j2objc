@@ -39,19 +39,19 @@ public class MIDIPacket
     ]-*/;
     public static native MIDIPacket copyWithtimeStamp(MIDIPacket original, long timeStamp) /*-[
         original.timeStamp = timeStamp;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native MIDIPacket copyWithlength(MIDIPacket original, short length) /*-[
         original.length = length;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native MIDIPacket copyWithdata(MIDIPacket original, ByteBuffer data) /*-[
         original.data = data;
-        return __new;
+        return original;
     ]-*/;
 
     

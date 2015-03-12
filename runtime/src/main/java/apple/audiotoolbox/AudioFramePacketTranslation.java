@@ -42,19 +42,19 @@ public class AudioFramePacketTranslation
     ]-*/;
     public static native AudioFramePacketTranslation copyWithmFrame(AudioFramePacketTranslation original, long mFrame) /*-[
         original.mFrame = mFrame;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native AudioFramePacketTranslation copyWithmPacket(AudioFramePacketTranslation original, long mPacket) /*-[
         original.mPacket = mPacket;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native AudioFramePacketTranslation copyWithmFrameOffsetInPacket(AudioFramePacketTranslation original, int mFrameOffsetInPacket) /*-[
         original.mFrameOffsetInPacket = mFrameOffsetInPacket;
-        return __new;
+        return original;
     ]-*/;
 
     

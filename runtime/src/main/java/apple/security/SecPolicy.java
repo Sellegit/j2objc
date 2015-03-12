@@ -118,7 +118,7 @@ public class SecPolicy
      * @since Available in iOS 7.0 and later.
      */
     @GlobalFunction("SecPolicyCreateRevocation")
-    public static native SecPolicy createRevocation(SecRevocation revocationFlags);
+    public static native SecPolicy createRevocation(@MachineSizedUInt long revocationFlags);
     /**
      * @since Available in iOS 7.0 and later.
      */

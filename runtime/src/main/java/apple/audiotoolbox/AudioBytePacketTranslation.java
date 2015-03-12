@@ -44,25 +44,25 @@ public class AudioBytePacketTranslation
     ]-*/;
     public static native AudioBytePacketTranslation copyWithmByte(AudioBytePacketTranslation original, long mByte) /*-[
         original.mByte = mByte;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native AudioBytePacketTranslation copyWithmPacket(AudioBytePacketTranslation original, long mPacket) /*-[
         original.mPacket = mPacket;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native AudioBytePacketTranslation copyWithmByteOffsetInPacket(AudioBytePacketTranslation original, int mByteOffsetInPacket) /*-[
         original.mByteOffsetInPacket = mByteOffsetInPacket;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native AudioBytePacketTranslation copyWithmFlags(AudioBytePacketTranslation original, int mFlags) /*-[
         original.mFlags = mFlags;
-        return __new;
+        return original;
     ]-*/;
 
     

@@ -40,13 +40,13 @@ public class MKMapRect
     ]-*/;
     public static native MKMapRect copyWithorigin(MKMapRect original, MKMapPoint origin) /*-[
         original.origin = origin;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native MKMapRect copyWithsize(MKMapRect original, MKMapSize size) /*-[
         original.size = size;
-        return __new;
+        return original;
     ]-*/;
 
     

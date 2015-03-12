@@ -59,7 +59,7 @@ public class CFDate
      */
     @Deprecated
     @GlobalFunction("CFAbsoluteTimeGetDifferenceAsGregorianUnits")
-    public static native CFGregorianUnits getAbsoluteTimeDifferenceAsGregorianUnits(double at1, double at2, CFTimeZone tz, CFGregorianUnitFlags unitFlags);
+    public static native CFGregorianUnits getAbsoluteTimeDifferenceAsGregorianUnits(double at1, double at2, CFTimeZone tz, @MachineSizedUInt long unitFlags);
     /**
      * @since Available in iOS 2.0 and later.
      * @deprecated Deprecated in iOS 8.0.

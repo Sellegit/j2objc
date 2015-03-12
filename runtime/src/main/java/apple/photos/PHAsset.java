@@ -68,7 +68,7 @@ public class PHAsset
     @Mapping("fetchAssetsWithMediaType:options:")
     public static native PHFetchResult fetchAssetsWithMediaType(@Representing("PHAssetMediaType") @MachineSizedSInt long mediaType, PHFetchOptions options);
     @Mapping("fetchAssetsWithLocalIdentifiers:options:")
-    public static native PHFetchResult fetchAssetsWithLocalIdentifiers(List<String> identifiers, PHFetchOptions options);
+    public static native PHFetchResult fetchAssetsWithLocalIdentifiers(NSArray<?> identifiers, PHFetchOptions options);
     @Mapping("fetchKeyAssetsInAssetCollection:options:")
     public static native PHFetchResult fetchKeyAssetsInAssetCollection(PHAssetCollection assetCollection, PHFetchOptions options);
     @Mapping("fetchAssetsWithBurstIdentifier:options:")
@@ -76,7 +76,7 @@ public class PHAsset
     @Mapping("fetchAssetsWithOptions:")
     public static native PHFetchResult fetchAssets(PHFetchOptions options);
     @Mapping("fetchAssetsWithALAssetURLs:options:")
-    public static native PHFetchResult fetchAssetsWithALAssetURLs(NSArray<NSURL> assetURLs, PHFetchOptions options);
+    public static native PHFetchResult fetchAssetsWithALAssetURLs(NSArray<?> assetURLs, PHFetchOptions options);
     /**
      * @since Available in iOS 8.0 and later.
      */

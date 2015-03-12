@@ -42,25 +42,25 @@ public class MTLScissorRect
     ]-*/;
     public static native MTLScissorRect copyWithx(MTLScissorRect original, @MachineSizedUInt long x) /*-[
         original.x = x;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native MTLScissorRect copyWithy(MTLScissorRect original, @MachineSizedUInt long y) /*-[
         original.y = y;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native MTLScissorRect copyWithwidth(MTLScissorRect original, @MachineSizedUInt long width) /*-[
         original.width = width;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native MTLScissorRect copyWithheight(MTLScissorRect original, @MachineSizedUInt long height) /*-[
         original.height = height;
-        return __new;
+        return original;
     ]-*/;
 
     

@@ -35,7 +35,7 @@ public class CFFTPStream
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFFTPCreateParsedResourceListing")
-    protected static native @MachineSizedSInt long createParsedResourceListing(CFAllocator alloc, @Pointer long buffer, @MachineSizedSInt long bufferLength, Todo parsed);
+    protected static native @MachineSizedSInt long createParsedResourceListing(CFAllocator alloc, Todo buffer, @MachineSizedSInt long bufferLength, Todo parsed);
     /**
      * @since Available in iOS 2.0 and later.
      */

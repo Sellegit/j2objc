@@ -55,7 +55,7 @@ public class AVMutableComposition
     @Mapping("scaleTimeRange:toDuration:")
     public native void scaleTimeRange(CMTimeRange timeRange, CMTime duration);
     @Mapping("addMutableTrackWithMediaType:preferredTrackID:")
-    public native AVMutableCompositionTrack addMutableTrack(AVMediaType mediaType, int preferredTrackID);
+    public native AVMutableCompositionTrack addMutableTrack(String mediaType, int preferredTrackID);
     @Mapping("removeTrack:")
     public native void removeTrack(AVCompositionTrack track);
     @Mapping("mutableTrackCompatibleWithTrack:")

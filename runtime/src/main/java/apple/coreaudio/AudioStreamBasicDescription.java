@@ -51,55 +51,55 @@ public class AudioStreamBasicDescription
     ]-*/;
     public static native AudioStreamBasicDescription copyWithmSampleRate(AudioStreamBasicDescription original, double mSampleRate) /*-[
         original.mSampleRate = mSampleRate;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native AudioStreamBasicDescription copyWithmFormatID(AudioStreamBasicDescription original, AudioFormat mFormatID) /*-[
         original.mFormatID = mFormatID;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native AudioStreamBasicDescription copyWithmFormatFlags(AudioStreamBasicDescription original, int mFormatFlags) /*-[
         original.mFormatFlags = mFormatFlags;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native AudioStreamBasicDescription copyWithmBytesPerPacket(AudioStreamBasicDescription original, int mBytesPerPacket) /*-[
         original.mBytesPerPacket = mBytesPerPacket;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native AudioStreamBasicDescription copyWithmFramesPerPacket(AudioStreamBasicDescription original, int mFramesPerPacket) /*-[
         original.mFramesPerPacket = mFramesPerPacket;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native AudioStreamBasicDescription copyWithmBytesPerFrame(AudioStreamBasicDescription original, int mBytesPerFrame) /*-[
         original.mBytesPerFrame = mBytesPerFrame;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native AudioStreamBasicDescription copyWithmChannelsPerFrame(AudioStreamBasicDescription original, int mChannelsPerFrame) /*-[
         original.mChannelsPerFrame = mChannelsPerFrame;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native AudioStreamBasicDescription copyWithmBitsPerChannel(AudioStreamBasicDescription original, int mBitsPerChannel) /*-[
         original.mBitsPerChannel = mBitsPerChannel;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native AudioStreamBasicDescription copyWithmReserved(AudioStreamBasicDescription original, int mReserved) /*-[
         original.mReserved = mReserved;
-        return __new;
+        return original;
     ]-*/;
 
     

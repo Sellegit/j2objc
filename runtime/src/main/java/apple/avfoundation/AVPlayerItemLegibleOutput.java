@@ -34,7 +34,7 @@ public class AVPlayerItemLegibleOutput
     
     public AVPlayerItemLegibleOutput() {}
     @Mapping("initWithMediaSubtypesForNativeRepresentation:")
-    public AVPlayerItemLegibleOutput(NSArray<NSNumber> subtypes) { }
+    public AVPlayerItemLegibleOutput(NSArray<?> subtypes) { }
     
     
     @Mapping("delegate")

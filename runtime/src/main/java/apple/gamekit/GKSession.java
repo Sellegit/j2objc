@@ -75,7 +75,7 @@ public class GKSession
      */
     @Deprecated
     @Mapping("sendData:toPeers:withDataMode:error:")
-    protected native boolean sendData(NSData data, List<String> peers, GKSendDataMode mode, Todo error);
+    protected native boolean sendData(NSData data, NSArray<?> peers, GKSendDataMode mode, Todo error);
     /**
      * @since Available in iOS 3.0 and later.
      * @deprecated Deprecated in iOS 7.0.
@@ -83,6 +83,8 @@ public class GKSession
     @Deprecated
     @Mapping("sendDataToAllPeers:withDataMode:error:")
     protected native boolean sendDataToAllPeers(NSData data, GKSendDataMode mode, Todo error);
+    @Mapping("setDataReceiveHandler:withContext:")
+    protected native void setDataReceiveHandler(Object handler, Todo context);
     @Mapping("connectToPeer:withTimeout:")
     public native void connect(String peerID, double timeout);
     @Mapping("cancelConnectToPeer:")

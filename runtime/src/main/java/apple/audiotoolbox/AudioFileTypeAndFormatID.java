@@ -40,13 +40,13 @@ public class AudioFileTypeAndFormatID
     ]-*/;
     public static native AudioFileTypeAndFormatID copyWithmFileType(AudioFileTypeAndFormatID original, int mFileType) /*-[
         original.mFileType = mFileType;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native AudioFileTypeAndFormatID copyWithmFormatID(AudioFileTypeAndFormatID original, int mFormatID) /*-[
         original.mFormatID = mFormatID;
-        return __new;
+        return original;
     ]-*/;
 
     

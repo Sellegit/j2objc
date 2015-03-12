@@ -32,16 +32,16 @@ public class CFMutableBitVector
     @GlobalFunction("CFBitVectorCreateMutableCopy")
     protected static native CFMutableBitVector createMutableCopy(CFAllocator allocator, @MachineSizedSInt long capacity, CFBitVector bv);
     @GlobalFunction("CFBitVectorSetCount")
-    public native void setCount(@MachineSizedSInt long count);
+    public static native void setCount(CFBitVector bv, @MachineSizedSInt long count);
     @GlobalFunction("CFBitVectorFlipBitAtIndex")
-    public native void flipBitAtIndex(@MachineSizedSInt long idx);
+    public static native void flipBitAtIndex(CFBitVector bv, @MachineSizedSInt long idx);
     @GlobalFunction("CFBitVectorFlipBits")
-    public native void flipBits(CFRange range);
+    public static native void flipBits(CFBitVector bv, CFRange range);
     @GlobalFunction("CFBitVectorSetBitAtIndex")
-    public native void setBitAtIndex(@MachineSizedSInt long idx, int value);
+    public static native void setBitAtIndex(CFBitVector bv, @MachineSizedSInt long idx, int value);
     @GlobalFunction("CFBitVectorSetBits")
-    public native void setBits(CFRange range, int value);
+    public static native void setBits(CFBitVector bv, CFRange range, int value);
     @GlobalFunction("CFBitVectorSetAllBits")
-    public native void setAllBits(int value);
+    public static native void setAllBits(CFBitVector bv, int value);
     
 }

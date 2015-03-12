@@ -37,7 +37,7 @@ import apple.corevideo.*;
     
     public static native CMBufferCallbacksStruct copyWithversion(CMBufferCallbacksStruct original, int version) /*-[
         original.version = version;
-        return __new;
+        return original;
     ]-*/;
 
     
@@ -49,7 +49,7 @@ import apple.corevideo.*;
     
     public static native CMBufferCallbacksStruct copyWithdataBecameReadyNotification(CMBufferCallbacksStruct original, String dataBecameReadyNotification) /*-[
         original.dataBecameReadyNotification = dataBecameReadyNotification;
-        return __new;
+        return original;
     ]-*/;
 
     

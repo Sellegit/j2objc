@@ -41,13 +41,13 @@ public class CMTimeRange
     ]-*/;
     public static native CMTimeRange copyWithstart(CMTimeRange original, CMTime start) /*-[
         original.start = start;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native CMTimeRange copyWithduration(CMTimeRange original, CMTime duration) /*-[
         original.duration = duration;
-        return __new;
+        return original;
     ]-*/;
 
     

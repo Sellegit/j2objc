@@ -64,8 +64,8 @@ public class NSHTTPCookie
     
     
     @Mapping("requestHeaderFieldsWithCookies:")
-    public static native Map<String, String> getRequestHeaderFieldsWithCookies(NSArray<NSHTTPCookie> cookies);
+    public static native Map<String, String> getRequestHeaderFieldsWithCookies(NSArray<?> cookies);
     @Mapping("cookiesWithResponseHeaderFields:forURL:")
-    public static native NSArray<NSHTTPCookie> getCookiesWithResponseHeaderFields(Map<String, String> headerFields, NSURL url);
+    public static native NSArray<NSHTTPCookie> getCookiesWithResponseHeaderFields(NSDictionary<?, ?> headerFields, NSURL URL);
     
 }

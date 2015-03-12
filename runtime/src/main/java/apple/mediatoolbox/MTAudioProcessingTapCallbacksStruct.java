@@ -35,13 +35,13 @@ import apple.coreaudio.*;
     
     public static native MTAudioProcessingTapCallbacksStruct copyWithversion(MTAudioProcessingTapCallbacksStruct original, int version) /*-[
         original.version = version;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native MTAudioProcessingTapCallbacksStruct copyWithclientInfo(MTAudioProcessingTapCallbacksStruct original, Todo clientInfo) /*-[
         original.clientInfo = clientInfo;
-        return __new;
+        return original;
     ]-*/;
 
     

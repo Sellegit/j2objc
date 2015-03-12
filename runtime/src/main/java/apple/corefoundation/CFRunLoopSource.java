@@ -40,7 +40,7 @@ public class CFRunLoopSource
     @GlobalFunction("CFRunLoopSourceIsValid")
     public native boolean isValid();
     @GlobalFunction("CFRunLoopSourceGetContext")
-    private native void getContext(Todo context);
+    private native void getContext(CFRunLoopSourceContext context);
     @GlobalFunction("CFRunLoopSourceSignal")
     public native void signal();
     

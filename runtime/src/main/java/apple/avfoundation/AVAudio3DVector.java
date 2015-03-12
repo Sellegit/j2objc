@@ -45,19 +45,19 @@ public class AVAudio3DVector
     ]-*/;
     public static native AVAudio3DVector copyWithx(AVAudio3DVector original, float x) /*-[
         original.x = x;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native AVAudio3DVector copyWithy(AVAudio3DVector original, float y) /*-[
         original.y = y;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native AVAudio3DVector copyWithz(AVAudio3DVector original, float z) /*-[
         original.z = z;
-        return __new;
+        return original;
     ]-*/;
 
     

@@ -41,6 +41,6 @@ public class SCStatus
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("SCErrorString")
-    protected static native Todo getStatusDescription0(SCStatusCode status);
+    protected static native Todo getStatusDescription0(int status);
     
 }

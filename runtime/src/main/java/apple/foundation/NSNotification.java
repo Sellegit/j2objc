@@ -33,7 +33,7 @@ public class NSNotification
      * @since Available in iOS 4.0 and later.
      */
     @Mapping("initWithName:object:userInfo:")
-    public NSNotification(NSString name, NSObject object, NSDictionary<NSString, NSObject> userInfo) { }
+    public NSNotification(String name, Object object, NSDictionary<?, ?> userInfo) { }
     @Mapping("initWithCoder:")
     public NSNotification(NSCoder aDecoder) { }
     

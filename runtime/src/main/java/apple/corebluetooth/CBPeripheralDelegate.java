@@ -43,7 +43,7 @@ public interface CBPeripheralDelegate
      * @since Available in iOS 7.0 and later.
      */
     @Mapping("peripheral:didModifyServices:")
-    void didModifyServices(CBPeripheral peripheral, NSArray<CBService> invalidatedServices);
+    void didModifyServices(CBPeripheral peripheral, NSArray<?> invalidatedServices);
     /**
      * @since Available in iOS 5.0 and later.
      * @deprecated Deprecated in iOS 8.0.

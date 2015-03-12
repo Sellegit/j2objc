@@ -47,25 +47,25 @@ public class AVEdgeWidths
     ]-*/;
     public static native AVEdgeWidths copyWithleft(AVEdgeWidths original, @MachineSizedFloat double left) /*-[
         original.left = left;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native AVEdgeWidths copyWithtop(AVEdgeWidths original, @MachineSizedFloat double top) /*-[
         original.top = top;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native AVEdgeWidths copyWithright(AVEdgeWidths original, @MachineSizedFloat double right) /*-[
         original.right = right;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native AVEdgeWidths copyWithbottom(AVEdgeWidths original, @MachineSizedFloat double bottom) /*-[
         original.bottom = bottom;
-        return __new;
+        return original;
     ]-*/;
 
     

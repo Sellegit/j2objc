@@ -35,9 +35,9 @@ public interface UIPageViewControllerDelegate
      * @since Available in iOS 6.0 and later.
      */
     @Mapping("pageViewController:willTransitionToViewControllers:")
-    void willTransition(UIPageViewController pageViewController, NSArray<UIViewController> pendingViewControllers);
+    void willTransition(UIPageViewController pageViewController, NSArray<?> pendingViewControllers);
     @Mapping("pageViewController:didFinishAnimating:previousViewControllers:transitionCompleted:")
-    void didFinishAnimating(UIPageViewController pageViewController, boolean finished, NSArray<UIViewController> previousViewControllers, boolean completed);
+    void didFinishAnimating(UIPageViewController pageViewController, boolean finished, NSArray<?> previousViewControllers, boolean completed);
     @Mapping("pageViewController:spineLocationForInterfaceOrientation:")
     @Representing("UIPageViewControllerSpineLocation") @MachineSizedSInt long getSpineLocation(UIPageViewController pageViewController, @Representing("UIInterfaceOrientation") @MachineSizedSInt long orientation);
     /**

@@ -39,10 +39,6 @@ public class MKMapSnapshotter
     
     
     
-    @Mapping("startWithCompletionHandler:")
-    public native void start(@Block VoidBlock2<MKMapSnapshot, NSError> completionHandler);
-    @Mapping("startWithQueue:completionHandler:")
-    public native void start(DispatchQueue queue, @Block VoidBlock2<MKMapSnapshot, NSError> completionHandler);
     @Mapping("cancel")
     public native void cancel();
     

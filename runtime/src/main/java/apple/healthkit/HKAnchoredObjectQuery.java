@@ -30,7 +30,7 @@ public class HKAnchoredObjectQuery
     
     public HKAnchoredObjectQuery() {}
     @Mapping("initWithType:predicate:anchor:limit:completionHandler:")
-    public HKAnchoredObjectQuery(HKSampleType type, NSPredicate predicate, @MachineSizedUInt long anchor, @MachineSizedUInt long limit, @Block("(,,@MachineSizedUInt,)") VoidBlock4<HKAnchoredObjectQuery, NSArray<HKSample>, Long, NSError> handler) { }
+    public HKAnchoredObjectQuery(HKSampleType type, NSPredicate predicate, @MachineSizedUInt long anchor, @MachineSizedUInt long limit, Todo handler) { }
     
     
     

@@ -32,7 +32,7 @@ public class CFStreamClientContext
     
     public static native CFStreamClientContext copyWithversion(CFStreamClientContext original, @MachineSizedSInt long version) /*-[
         original.version = version;
-        return __new;
+        return original;
     ]-*/;
 
     

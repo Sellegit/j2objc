@@ -30,6 +30,10 @@ public class NSData
     
     
     public NSData() {}
+    @Mapping("initWithBytes:length:")
+    public NSData(Todo bytes, @MachineSizedUInt long length) { }
+    @Mapping("initWithBytesNoCopy:length:freeWhenDone:")
+    public NSData(Todo bytes, @MachineSizedUInt long length, boolean b) { }
     @Mapping("initWithData:")
     public NSData(NSData data) { }
     /**
@@ -49,6 +53,8 @@ public class NSData
     
     
     
+    @Mapping("getBytes:length:")
+    protected native void getBytes(Todo buffer, @MachineSizedUInt long length);
     @Mapping("subdataWithRange:")
     public native NSData getSubdata(NSRange range);
     @Mapping("writeToFile:atomically:")

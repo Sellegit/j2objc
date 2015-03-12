@@ -31,13 +31,13 @@ public class CIImage
     @Mapping("initWithCGImage:")
     public CIImage(CGImage image) { }
     @Mapping("initWithCGImage:options:")
-    public CIImage(CGImage image, CIImageOptions d) { }
+    public CIImage(CGImage image, NSDictionary<?, ?> d) { }
     @Mapping("initWithData:")
     public CIImage(NSData data) { }
     @Mapping("initWithData:options:")
-    public CIImage(NSData data, CIImageOptions d) { }
+    public CIImage(NSData data, NSDictionary<?, ?> d) { }
     @Mapping("initWithBitmapData:bytesPerRow:size:format:colorSpace:")
-    public CIImage(CIImageOptions d, @MachineSizedUInt long bpr, CGSize size, int f, CGColorSpace c) { }
+    public CIImage(NSData d, @MachineSizedUInt long bpr, CGSize size, int f, CGColorSpace c) { }
     /**
      * @since Available in iOS 6.0 and later.
      */
@@ -46,7 +46,7 @@ public class CIImage
     @Mapping("initWithContentsOfURL:")
     public CIImage(NSURL url) { }
     @Mapping("initWithContentsOfURL:options:")
-    public CIImage(NSURL url, CIImageOptions d) { }
+    public CIImage(NSURL url, NSDictionary<?, ?> d) { }
     /**
      * @since Available in iOS 5.0 and later.
      */
@@ -56,7 +56,7 @@ public class CIImage
      * @since Available in iOS 5.0 and later.
      */
     @Mapping("initWithCVPixelBuffer:options:")
-    public CIImage(CVPixelBuffer buffer, CIImageOptions dict) { }
+    public CIImage(CVPixelBuffer buffer, NSDictionary<?, ?> dict) { }
     @Mapping("initWithColor:")
     public CIImage(CIColor color) { }
     
@@ -71,12 +71,12 @@ public class CIImage
      * @since Available in iOS 8.0 and later.
      */
     @Mapping("imageByApplyingOrientation:")
-    public native CIImage newImageByApplyingOrientation(CGImagePropertyOrientation orientation);
+    public native CIImage newImageByApplyingOrientation(int orientation);
     /**
      * @since Available in iOS 8.0 and later.
      */
     @Mapping("imageTransformForOrientation:")
-    public native CGAffineTransform getImageTransformForOrientation(CGImagePropertyOrientation orientation);
+    public native CGAffineTransform getImageTransformForOrientation(int orientation);
     /**
      * @since Available in iOS 8.0 and later.
      */
@@ -95,7 +95,7 @@ public class CIImage
      * @since Available in iOS 8.0 and later.
      */
     @Mapping("imageByApplyingFilter:withInputParameters:")
-    public native CIImage newImageByApplyingFilter(String filterName, CIFilterInputParameters params);
+    public native CIImage newImageByApplyingFilter(String filterName, NSDictionary<?, ?> params);
     /**
      * @since Available in iOS 5.0 and later.
      */
@@ -117,7 +117,7 @@ public class CIImage
      * @since Available in iOS 5.0 and later.
      */
     @Mapping("autoAdjustmentFiltersWithOptions:")
-    public native NSArray<CIFilter> getAutoAdjustmentFilters(CIImageAutoAdjustOptions options);
+    public native NSArray<CIFilter> getAutoAdjustmentFilters(NSDictionary<?, ?> dict);
     @Mapping("encodeWithCoder:")
     public native void encode(NSCoder aCoder);
     @Mapping("copyWithZone:")

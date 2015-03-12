@@ -39,19 +39,19 @@ public class GCAcceleration
     ]-*/;
     public static native GCAcceleration copyWithx(GCAcceleration original, double x) /*-[
         original.x = x;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native GCAcceleration copyWithy(GCAcceleration original, double y) /*-[
         original.y = y;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native GCAcceleration copyWithz(GCAcceleration original, double z) /*-[
         original.z = z;
-        return __new;
+        return original;
     ]-*/;
 
     

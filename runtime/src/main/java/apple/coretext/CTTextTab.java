@@ -37,7 +37,7 @@ public class CTTextTab
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTTextTabCreate")
-    public static native CTTextTab create(CTTextAlignment alignment, double location, CTTextTabOptions options);
+    public static native CTTextTab create(CTTextAlignment alignment, double location, CFDictionary options);
     /**
      * @since Available in iOS 3.2 and later.
      */

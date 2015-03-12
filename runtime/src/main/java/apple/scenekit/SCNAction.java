@@ -75,9 +75,9 @@ public class SCNAction
     @Mapping("scaleTo:duration:")
     public static native SCNAction scaleTo(@MachineSizedFloat double scale, double sec);
     @Mapping("sequence:")
-    public static native SCNAction sequence(NSArray<SCNAction> actions);
+    public static native SCNAction sequence(NSArray<?> actions);
     @Mapping("group:")
-    public static native SCNAction group(NSArray<SCNAction> actions);
+    public static native SCNAction group(NSArray<?> actions);
     @Mapping("repeatAction:count:")
     public static native SCNAction repeat(SCNAction action, @MachineSizedUInt long count);
     @Mapping("repeatActionForever:")

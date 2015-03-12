@@ -33,7 +33,7 @@ public class SKKeyframeSequence
     
     public SKKeyframeSequence() {}
     @Mapping("initWithKeyframeValues:times:")
-    public SKKeyframeSequence(NSArray<NSObject> values, NSArray<NSNumber> times) { }
+    public SKKeyframeSequence(NSArray<?> values, NSArray<?> times) { }
     @Mapping("initWithCapacity:")
     public SKKeyframeSequence(@MachineSizedUInt long numItems) { }
     @Mapping("initWithCoder:")

@@ -46,31 +46,31 @@ public class AudioPanningInfo
     ]-*/;
     public static native AudioPanningInfo copyWithmPanningMode(AudioPanningInfo original, int mPanningMode) /*-[
         original.mPanningMode = mPanningMode;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native AudioPanningInfo copyWithmCoordinateFlags(AudioPanningInfo original, int mCoordinateFlags) /*-[
         original.mCoordinateFlags = mCoordinateFlags;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native AudioPanningInfo copyWithmCoordinates(AudioPanningInfo original, FloatBuffer mCoordinates) /*-[
         original.mCoordinates = mCoordinates;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native AudioPanningInfo copyWithmGainScale(AudioPanningInfo original, float mGainScale) /*-[
         original.mGainScale = mGainScale;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native AudioPanningInfo copyWithmOutputChannelMap(AudioPanningInfo original, AudioChannelLayout mOutputChannelMap) /*-[
         original.mOutputChannelMap = mOutputChannelMap;
-        return __new;
+        return original;
     ]-*/;
 
     

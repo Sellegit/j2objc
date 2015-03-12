@@ -57,11 +57,11 @@ public class CFNetServiceMonitor
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFNetServiceMonitorScheduleWithRunLoop")
-    public native void schedule(CFRunLoop runLoop, CFString runLoopMode);
+    public native void schedule(CFRunLoop runLoop, String runLoopMode);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFNetServiceMonitorUnscheduleFromRunLoop")
-    public native void unschedule(CFRunLoop runLoop, CFString runLoopMode);
+    public native void unschedule(CFRunLoop runLoop, String runLoopMode);
     
 }

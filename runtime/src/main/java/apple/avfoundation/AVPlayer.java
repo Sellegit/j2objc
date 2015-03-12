@@ -226,7 +226,7 @@ public class AVPlayer
     @Mapping("addPeriodicTimeObserverForInterval:queue:usingBlock:")
     public native Object addPeriodicTimeObserver(CMTime interval, DispatchQueue queue, @Block VoidBlock1<CMTime> block);
     @Mapping("addBoundaryTimeObserverForTimes:queue:usingBlock:")
-    public native Object addBoundaryTimeObserver(List<CMTime> times, DispatchQueue queue, @Block Runnable block);
+    public native Object addBoundaryTimeObserver(NSArray<?> times, DispatchQueue queue, @Block Runnable block);
     @Mapping("removeTimeObserver:")
     public native void removeTimeObserver(Object observer);
     /**

@@ -48,7 +48,7 @@ public class CGDataProvider
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGDataProviderCreateWithFilename")
-    protected static native CGDataProvider createWithFilename(@Pointer long filename);
+    protected static native CGDataProvider createWithFilename(Todo filename);
     /**
      * @since Available in iOS 2.0 and later.
      */

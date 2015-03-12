@@ -31,7 +31,7 @@ public class NSCalendar
     
     public NSCalendar() {}
     @Mapping("initWithCalendarIdentifier:")
-    public NSCalendar(NSCalendarIdentifier ident) { }
+    public NSCalendar(String ident) { }
     
     
     @Mapping("calendarIdentifier")

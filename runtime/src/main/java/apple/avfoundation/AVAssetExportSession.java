@@ -34,7 +34,7 @@ public class AVAssetExportSession
     
     public AVAssetExportSession() {}
     @Mapping("initWithAsset:presetName:")
-    public AVAssetExportSession(AVAsset asset, AVAssetExportPreset presetName) { }
+    public AVAssetExportSession(AVAsset asset, String presetName) { }
     
     
     @Mapping("presetName")
@@ -143,7 +143,7 @@ public class AVAssetExportSession
      * @since Available in iOS 6.0 and later.
      */
     @Mapping("determineCompatibleFileTypesWithCompletionHandler:")
-    public native void determineCompatibleFileTypes(@Block VoidBlock1<NSArray<NSString>> handler);
+    public native void determineCompatibleFileTypes(Todo handler);
     @Mapping("exportAsynchronouslyWithCompletionHandler:")
     public native void exportAsynchronously(@Block Runnable handler);
     @Mapping("cancelExport")
@@ -156,11 +156,11 @@ public class AVAssetExportSession
      * @since Available in iOS 6.0 and later.
      */
     @Mapping("determineCompatibilityOfExportPreset:withAsset:outputFileType:completionHandler:")
-    public static native void determineCompatibilityOfExportPreset(AVAssetExportPreset presetName, AVAsset asset, String outputFileType, @Block VoidBooleanBlock handler);
+    public static native void determineCompatibilityOfExportPreset(String presetName, AVAsset asset, String outputFileType, @Block VoidBooleanBlock handler);
     /**
      * @since Available in iOS 4.1 and later.
      */
     @Mapping("exportSessionWithAsset:presetName:")
-    public static native AVAssetExportSession create(AVAsset asset, AVAssetExportPreset presetName);
+    public static native AVAssetExportSession create(AVAsset asset, String presetName);
     
 }

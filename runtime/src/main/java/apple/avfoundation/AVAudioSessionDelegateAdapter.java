@@ -40,7 +40,7 @@ public abstract class AVAudioSessionDelegateAdapter
      * @since Available in iOS 4.0 and later.
      */
     @NotImplemented("endInterruptionWithFlags:")
-    public void endInterruption(AVAudioSessionInterruptionFlag flags) { throw new UnsupportedOperationException(); }
+    public void endInterruption(@MachineSizedUInt long flags) { throw new UnsupportedOperationException(); }
     @NotImplemented("endInterruption")
     public void endInterruption() { throw new UnsupportedOperationException(); }
     @NotImplemented("inputIsAvailableChanged:")

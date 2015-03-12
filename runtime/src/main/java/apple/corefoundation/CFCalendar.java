@@ -34,7 +34,7 @@ public class CFCalendar
     @GlobalFunction("CFCalendarCopyCurrent")
     public static native CFCalendar getCurrent();
     @GlobalFunction("CFCalendarCreateWithIdentifier")
-    protected static native CFCalendar create(CFAllocator allocator, CFCalendarIdentifier identifier);
+    protected static native CFCalendar create(CFAllocator allocator, String identifier);
     @GlobalFunction("CFCalendarGetIdentifier")
     public native CFCalendarIdentifier getIdentifier();
     @GlobalFunction("CFCalendarCopyLocale")

@@ -45,11 +45,11 @@ public class HKQuery
     @Mapping("predicateForObjectsFromSource:")
     public static native NSPredicate createPredicateForObjectsFromSource(HKSource source);
     @Mapping("predicateForObjectsFromSources:")
-    public static native NSPredicate createPredicateForObjectsFromSources(NSSet<HKSource> sources);
+    public static native NSPredicate createPredicateForObjectsFromSources(NSSet<?> sources);
     @Mapping("predicateForObjectWithUUID:")
-    public static native NSPredicate createPredicateForObjectsWithUUID(NSUUID uuid);
+    public static native NSPredicate createPredicateForObjectsWithUUID(NSUUID UUID);
     @Mapping("predicateForObjectsWithUUIDs:")
-    public static native NSPredicate createPredicateForObjectsWithUUIDs(NSSet<NSUUID> uuids);
+    public static native NSPredicate createPredicateForObjectsWithUUIDs(NSSet<?> UUIDs);
     @Mapping("predicateForObjectsWithNoCorrelation")
     public static native NSPredicate createPredicateForObjectsWithNoCorrelation();
     @Mapping("predicateForObjectsFromWorkout:")

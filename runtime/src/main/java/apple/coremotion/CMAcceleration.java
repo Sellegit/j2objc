@@ -39,19 +39,19 @@ public class CMAcceleration
     ]-*/;
     public static native CMAcceleration copyWithx(CMAcceleration original, double x) /*-[
         original.x = x;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native CMAcceleration copyWithy(CMAcceleration original, double y) /*-[
         original.y = y;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native CMAcceleration copyWithz(CMAcceleration original, double z) /*-[
         original.z = z;
-        return __new;
+        return original;
     ]-*/;
 
     

@@ -127,6 +127,6 @@ public class CGFont
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGFontCopyGlyphNameForGlyph")
-    public native String getGlyphNameForGlyph(char glyph);
+    public native String getGlyphNameForGlyph(short glyph);
     
 }

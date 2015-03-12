@@ -37,13 +37,13 @@ public class MIDIThruConnectionEndpoint
     ]-*/;
     public static native MIDIThruConnectionEndpoint copyWithendpointRef(MIDIThruConnectionEndpoint original, MIDIEndpoint endpointRef) /*-[
         original.endpointRef = endpointRef;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native MIDIThruConnectionEndpoint copyWithuniqueID(MIDIThruConnectionEndpoint original, int uniqueID) /*-[
         original.uniqueID = uniqueID;
-        return __new;
+        return original;
     ]-*/;
 
     

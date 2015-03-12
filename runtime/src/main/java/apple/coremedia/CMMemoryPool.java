@@ -41,7 +41,7 @@ public class CMMemoryPool
      * @since Available in iOS 6.0 and later.
      */
     @GlobalFunction("CMMemoryPoolCreate")
-    public static native CMMemoryPool create(CMMemoryPoolOptions options);
+    public static native CMMemoryPool create(NSDictionary<?, ?> options);
     /**
      * @since Available in iOS 6.0 and later.
      */

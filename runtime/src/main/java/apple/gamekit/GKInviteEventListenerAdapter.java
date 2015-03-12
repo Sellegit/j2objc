@@ -38,13 +38,13 @@ public abstract class GKInviteEventListenerAdapter
      * @since Available in iOS 8.0 and later.
      */
     @NotImplemented("player:didRequestMatchWithRecipients:")
-    public void didRequestMatch(GKPlayer player, NSArray<GKPlayer> recipientPlayers) { throw new UnsupportedOperationException(); }
+    public void didRequestMatchWithRecipients(GKPlayer player, NSArray<?> recipientPlayers) { throw new UnsupportedOperationException(); }
     /**
      * @since Available in iOS 7.0 and later.
      * @deprecated Deprecated in iOS 8.0.
      */
     @Deprecated
     @NotImplemented("player:didRequestMatchWithPlayers:")
-    public void didRequestMatch(GKPlayer player, List<String> playerIDsToInvite) { throw new UnsupportedOperationException(); }
+    public void didRequestMatchWithPlayers(GKPlayer player, NSArray<?> playerIDsToInvite) { throw new UnsupportedOperationException(); }
     
 }

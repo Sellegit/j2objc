@@ -130,19 +130,9 @@ public class NSMetadataQuery
     public native void enableUpdates();
     @Mapping("resultAtIndex:")
     public native NSMetadataItem getResult(@MachineSizedUInt long idx);
-    /**
-     * @since Available in iOS 7.0 and later.
-     */
-    @Mapping("enumerateResultsUsingBlock:")
-    public native void enumerateResults(@Block("(,@MachineSizedUInt,)") VoidBlock3<NSMetadataItem, Long, Todo> block);
-    /**
-     * @since Available in iOS 7.0 and later.
-     */
-    @Mapping("enumerateResultsWithOptions:usingBlock:")
-    public native void enumerateResults(@Representing("NSEnumerationOptions") @MachineSizedUInt long opts, @Block("(,@MachineSizedUInt,)") VoidBlock3<NSMetadataItem, Long, Todo> block);
     @Mapping("indexOfResult:")
-    public native @MachineSizedUInt long indexOfResult(NSMetadataItem result);
+    public native @MachineSizedUInt long indexOfResult(Object result);
     @Mapping("valueOfAttribute:forResultAtIndex:")
-    public native Object getValueForResult(NSMetadataItemAttribute attrName, @MachineSizedUInt long idx);
+    public native Object getValueForResult(String attrName, @MachineSizedUInt long idx);
     
 }

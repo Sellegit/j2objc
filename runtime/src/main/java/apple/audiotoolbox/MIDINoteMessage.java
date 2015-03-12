@@ -46,31 +46,31 @@ public class MIDINoteMessage
     ]-*/;
     public static native MIDINoteMessage copyWithchannel(MIDINoteMessage original, byte channel) /*-[
         original.channel = channel;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native MIDINoteMessage copyWithnote(MIDINoteMessage original, byte note) /*-[
         original.note = note;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native MIDINoteMessage copyWithvelocity(MIDINoteMessage original, byte velocity) /*-[
         original.velocity = velocity;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native MIDINoteMessage copyWithreleaseVelocity(MIDINoteMessage original, byte releaseVelocity) /*-[
         original.releaseVelocity = releaseVelocity;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native MIDINoteMessage copyWithduration(MIDINoteMessage original, float duration) /*-[
         original.duration = duration;
-        return __new;
+        return original;
     ]-*/;
 
     

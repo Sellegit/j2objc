@@ -41,51 +41,51 @@ public class CGBitmapContext
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGBitmapContextGetData")
-    public native Todo getData();
+    public static native Todo getData(CGContext context);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGBitmapContextGetWidth")
-    public native @MachineSizedUInt long getWidth();
+    public static native @MachineSizedUInt long getWidth(CGContext context);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGBitmapContextGetHeight")
-    public native @MachineSizedUInt long getHeight();
+    public static native @MachineSizedUInt long getHeight(CGContext context);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGBitmapContextGetBitsPerComponent")
-    public native @MachineSizedUInt long getBitsPerComponent();
+    public static native @MachineSizedUInt long getBitsPerComponent(CGContext context);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGBitmapContextGetBitsPerPixel")
-    public native @MachineSizedUInt long getBitsPerPixel();
+    public static native @MachineSizedUInt long getBitsPerPixel(CGContext context);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGBitmapContextGetBytesPerRow")
-    public native @MachineSizedUInt long getBytesPerRow();
+    public static native @MachineSizedUInt long getBytesPerRow(CGContext context);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGBitmapContextGetColorSpace")
-    public native CGColorSpace getColorSpace();
+    public static native CGColorSpace getColorSpace(CGContext context);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGBitmapContextGetAlphaInfo")
-    public native CGImageAlphaInfo getAlphaInfo();
+    public static native CGImageAlphaInfo getAlphaInfo(CGContext context);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGBitmapContextGetBitmapInfo")
-    public native CGBitmapInfo getBitmapInfo();
+    public static native CGBitmapInfo getBitmapInfo(CGContext context);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGBitmapContextCreateImage")
-    public native CGImage toImage();
+    public static native CGImage toImage(CGContext context);
     
 }

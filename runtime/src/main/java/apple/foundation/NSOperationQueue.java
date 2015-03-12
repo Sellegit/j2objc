@@ -90,7 +90,7 @@ public class NSOperationQueue
      * @since Available in iOS 4.0 and later.
      */
     @Mapping("addOperations:waitUntilFinished:")
-    public native void addOperations(NSArray<NSOperation> ops, boolean wait);
+    public native void addOperations(NSArray<?> ops, boolean wait);
     /**
      * @since Available in iOS 4.0 and later.
      */

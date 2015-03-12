@@ -33,6 +33,6 @@ public abstract class CAActionAdapter
     
     
     @NotImplemented("runActionForKey:object:arguments:")
-    public void runAction(String event, Object anObject, Map<String, NSObject> dict) { throw new UnsupportedOperationException(); }
+    public void runAction(String event, Object anObject, NSDictionary<?, ?> dict) { throw new UnsupportedOperationException(); }
     
 }

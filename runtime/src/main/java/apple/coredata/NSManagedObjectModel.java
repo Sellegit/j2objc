@@ -69,32 +69,32 @@ public class NSManagedObjectModel
     @Mapping("entitiesForConfiguration:")
     public native NSArray<NSEntityDescription> getEntitiesForConfiguration(String configuration);
     @Mapping("setEntities:forConfiguration:")
-    public native void setEntitiesForConfiguration(NSArray<NSEntityDescription> entities, String configuration);
+    public native void setEntitiesForConfiguration(NSArray<?> entities, String configuration);
     @Mapping("setFetchRequestTemplate:forName:")
     public native void setFetchRequestTemplate(NSFetchRequest fetchRequestTemplate, String name);
     @Mapping("fetchRequestTemplateForName:")
     public native NSFetchRequest getFetchRequestTemplate(String name);
     @Mapping("fetchRequestFromTemplateWithName:substitutionVariables:")
-    public native NSFetchRequest getFetchRequestTemplate(String name, Map<String, NSObject> variables);
+    public native NSFetchRequest getFetchRequestTemplate(String name, NSDictionary<?, ?> variables);
     /**
      * @since Available in iOS 3.0 and later.
      */
     @Mapping("isConfiguration:compatibleWithStoreMetadata:")
-    public native boolean isConfigurationCompatibleWithStoreMetadata(String configuration, NSPersistentStoreMetadata metadata);
+    public native boolean isConfigurationCompatibleWithStoreMetadata(String configuration, NSDictionary<?, ?> metadata);
     @Mapping("mergedModelFromBundles:")
-    public static native NSManagedObjectModel createFromBundles(NSArray<NSBundle> bundles);
+    public static native NSManagedObjectModel createFromBundles(NSArray<?> bundles);
     @Mapping("modelByMergingModels:")
-    public static native NSManagedObjectModel createByMergingModels(NSArray<NSManagedObjectModel> models);
+    public static native NSManagedObjectModel createByMergingModels(NSArray<?> models);
     /**
      * @since Available in iOS 3.0 and later.
      */
     @Mapping("mergedModelFromBundles:forStoreMetadata:")
-    public static native NSManagedObjectModel createFromBundles(NSArray<NSBundle> bundles, NSPersistentStoreMetadata metadata);
+    public static native NSManagedObjectModel createFromBundles(NSArray<?> bundles, NSDictionary<?, ?> metadata);
     /**
      * @since Available in iOS 3.0 and later.
      */
     @Mapping("modelByMergingModels:forStoreMetadata:")
-    public static native NSManagedObjectModel createByMergingModels(NSArray<NSManagedObjectModel> models, NSPersistentStoreMetadata metadata);
+    public static native NSManagedObjectModel createByMergingModels(NSArray<?> models, NSDictionary<?, ?> metadata);
     @Mapping("encodeWithCoder:")
     public native void encode(NSCoder aCoder);
     @Mapping("copyWithZone:")

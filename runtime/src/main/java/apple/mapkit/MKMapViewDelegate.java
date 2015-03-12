@@ -52,7 +52,7 @@ public interface MKMapViewDelegate
     @Mapping("mapView:viewForAnnotation:")
     MKAnnotationView getAnnotationView(MKMapView mapView, MKAnnotation annotation);
     @Mapping("mapView:didAddAnnotationViews:")
-    void didAddAnnotationViews(MKMapView mapView, NSArray<MKAnnotationView> views);
+    void didAddAnnotationViews(MKMapView mapView, NSArray<?> views);
     @Mapping("mapView:annotationView:calloutAccessoryControlTapped:")
     void calloutAccessoryControlTapped(MKMapView mapView, MKAnnotationView view, UIControl control);
     /**
@@ -104,7 +104,7 @@ public interface MKMapViewDelegate
      * @since Available in iOS 7.0 and later.
      */
     @Mapping("mapView:didAddOverlayRenderers:")
-    void didAddOverlayRenderers(MKMapView mapView, NSArray<MKOverlayRenderer> renderers);
+    void didAddOverlayRenderers(MKMapView mapView, NSArray<?> renderers);
     /**
      * @since Available in iOS 4.0 and later.
      * @deprecated Deprecated in iOS 7.0.
@@ -118,7 +118,7 @@ public interface MKMapViewDelegate
      */
     @Deprecated
     @Mapping("mapView:didAddOverlayViews:")
-    void didAddOverlayViews(MKMapView mapView, NSArray<MKOverlayView> overlayViews);
+    void didAddOverlayViews(MKMapView mapView, NSArray<?> overlayViews);
     
     /*<adapter>*/
     /*</adapter>*/

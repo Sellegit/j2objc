@@ -94,7 +94,7 @@ public class GKTurnBasedMatch
      * @since Available in iOS 7.0 and later.
      */
     @Mapping("setLocalizableMessageWithKey:arguments:")
-    public native void setLocalizableMessage(String key, List<String> arguments);
+    public native void setLocalizableMessage(String key, NSArray<?> arguments);
     /**
      * @since Available in iOS 6.0 and later.
      */
@@ -118,12 +118,12 @@ public class GKTurnBasedMatch
      * @since Available in iOS 6.0 and later.
      */
     @Mapping("endTurnWithNextParticipants:turnTimeout:matchData:completionHandler:")
-    public native void endTurn(NSArray<GKTurnBasedParticipant> nextParticipants, double timeout, NSData matchData, @Block VoidBlock1<NSError> completionHandler);
+    public native void endTurn(NSArray<?> nextParticipants, double timeout, NSData matchData, @Block VoidBlock1<NSError> completionHandler);
     /**
      * @since Available in iOS 6.0 and later.
      */
     @Mapping("participantQuitInTurnWithOutcome:nextParticipants:turnTimeout:matchData:completionHandler:")
-    public native void participantQuitInTurn(@Representing("GKTurnBasedMatchOutcome") @MachineSizedSInt long matchOutcome, NSArray<GKTurnBasedParticipant> nextParticipants, double timeout, NSData matchData, @Block VoidBlock1<NSError> completionHandler);
+    public native void participantQuitInTurn(@Representing("GKTurnBasedMatchOutcome") @MachineSizedSInt long matchOutcome, NSArray<?> nextParticipants, double timeout, NSData matchData, @Block VoidBlock1<NSError> completionHandler);
     @Mapping("participantQuitOutOfTurnWithOutcome:withCompletionHandler:")
     public native void participantQuitOutOfTurn(@Representing("GKTurnBasedMatchOutcome") @MachineSizedSInt long matchOutcome, @Block VoidBlock1<NSError> completionHandler);
     @Mapping("endMatchInTurnWithMatchData:completionHandler:")
@@ -132,7 +132,7 @@ public class GKTurnBasedMatch
      * @since Available in iOS 7.0 and later.
      */
     @Mapping("endMatchInTurnWithMatchData:scores:achievements:completionHandler:")
-    public native void endMatch(NSData matchData, NSArray<GKScore> scores, NSArray<GKAchievement> achievements, @Block VoidBlock1<NSError> completionHandler);
+    public native void endMatch(NSData matchData, NSArray<?> scores, NSArray<?> achievements, @Block VoidBlock1<NSError> completionHandler);
     /**
      * @since Available in iOS 6.0 and later.
      */
@@ -142,17 +142,17 @@ public class GKTurnBasedMatch
      * @since Available in iOS 7.0 and later.
      */
     @Mapping("saveMergedMatchData:withResolvedExchanges:completionHandler:")
-    public native void saveMergedMatchData(NSData matchData, NSArray<GKTurnBasedExchange> exchanges, @Block VoidBlock1<NSError> completionHandler);
+    public native void saveMergedMatchData(NSData matchData, NSArray<?> exchanges, @Block VoidBlock1<NSError> completionHandler);
     /**
      * @since Available in iOS 7.0 and later.
      */
     @Mapping("sendExchangeToParticipants:data:localizableMessageKey:arguments:timeout:completionHandler:")
-    public native void sendExchange(NSArray<GKTurnBasedParticipant> participants, NSData data, String key, List<String> arguments, double timeout, @Block VoidBlock2<GKTurnBasedExchange, NSError> completionHandler);
+    public native void sendExchange(NSArray<?> participants, NSData data, String key, NSArray<?> arguments, double timeout, @Block VoidBlock2<GKTurnBasedExchange, NSError> completionHandler);
     /**
      * @since Available in iOS 7.0 and later.
      */
     @Mapping("sendReminderToParticipants:localizableMessageKey:arguments:completionHandler:")
-    public native void sendReminder(NSArray<GKTurnBasedParticipant> participants, String key, List<String> arguments, @Block VoidBlock1<NSError> completionHandler);
+    public native void sendReminder(NSArray<?> participants, String key, NSArray<?> arguments, @Block VoidBlock1<NSError> completionHandler);
     /**
      * @since Available in iOS 5.0 and later.
      * @deprecated Deprecated in iOS 6.0.
@@ -170,7 +170,7 @@ public class GKTurnBasedMatch
     @Mapping("findMatchForRequest:withCompletionHandler:")
     public static native void findMatch(GKMatchRequest request, @Block VoidBlock2<GKTurnBasedMatch, NSError> completionHandler);
     @Mapping("loadMatchesWithCompletionHandler:")
-    public static native void loadMatches(@Block VoidBlock2<NSArray<GKTurnBasedMatch>, NSError> completionHandler);
+    public static native void loadMatches(Todo completionHandler);
     /**
      * @since Available in iOS 5.0 and later.
      */

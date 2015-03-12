@@ -87,36 +87,6 @@ public class NSIndexSet
      */
     @Mapping("enumerateIndexesInRange:options:usingBlock:")
     public native void enumerateIndexesInRange(NSRange range, @Representing("NSEnumerationOptions") @MachineSizedUInt long opts, @Block("(@MachineSizedUInt,)") VoidBlock2<Long, Todo> block);
-    /**
-     * @since Available in iOS 4.0 and later.
-     */
-    @Mapping("indexPassingTest:")
-    public native @MachineSizedUInt long getIndexPassingTest(@Block("(@MachineSizedUInt,)") Block2<Long, Todo, Boolean> predicate);
-    /**
-     * @since Available in iOS 4.0 and later.
-     */
-    @Mapping("indexWithOptions:passingTest:")
-    public native @MachineSizedUInt long getIndexPassingTest(@Representing("NSEnumerationOptions") @MachineSizedUInt long opts, @Block("(@MachineSizedUInt,)") Block2<Long, Todo, Boolean> predicate);
-    /**
-     * @since Available in iOS 4.0 and later.
-     */
-    @Mapping("indexInRange:options:passingTest:")
-    public native @MachineSizedUInt long getIndexInRangePassingTest(NSRange range, @Representing("NSEnumerationOptions") @MachineSizedUInt long opts, @Block("(@MachineSizedUInt,)") Block2<Long, Todo, Boolean> predicate);
-    /**
-     * @since Available in iOS 4.0 and later.
-     */
-    @Mapping("indexesPassingTest:")
-    public native NSIndexSet getIndexesPassingTest(@Block("(@MachineSizedUInt,)") Block2<Long, Todo, Boolean> predicate);
-    /**
-     * @since Available in iOS 4.0 and later.
-     */
-    @Mapping("indexesWithOptions:passingTest:")
-    public native NSIndexSet getIndexesPassingTest(@Representing("NSEnumerationOptions") @MachineSizedUInt long opts, @Block("(@MachineSizedUInt,)") Block2<Long, Todo, Boolean> predicate);
-    /**
-     * @since Available in iOS 4.0 and later.
-     */
-    @Mapping("indexesInRange:options:passingTest:")
-    public native NSIndexSet getIndexesInRangePassingTest(NSRange range, @Representing("NSEnumerationOptions") @MachineSizedUInt long opts, @Block("(@MachineSizedUInt,)") Block2<Long, Todo, Boolean> predicate);
     @Mapping("indexSet")
     public static native NSIndexSet create();
     @Mapping("indexSetWithIndex:")

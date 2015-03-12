@@ -34,7 +34,7 @@ public class CMTimeCodeFormatDescription
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMTimeCodeFormatDescriptionCreate")
-    private static native int create(CFAllocator allocator, CMTimeCodeFormatType timeCodeFormatType, CMTime frameDuration, int frameQuanta, CMTimeCodeFlag tcFlags, CMTimeCodeFormatDescriptionExtension extensions, Todo descOut);
+    private static native int create(CFAllocator allocator, CMTimeCodeFormatType timeCodeFormatType, CMTime frameDuration, int frameQuanta, int tcFlags, NSDictionary<?, ?> extensions, Todo descOut);
     /**
      * @since Available in iOS 4.0 and later.
      */

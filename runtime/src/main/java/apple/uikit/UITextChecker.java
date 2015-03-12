@@ -49,7 +49,7 @@ public class UITextChecker
     @Mapping("ignoredWords")
     public native List<String> getIgnoredWords();
     @Mapping("setIgnoredWords:")
-    public native void setIgnoredWords(List<String> words);
+    public native void setIgnoredWords(NSArray<?> words);
     @Mapping("learnWord:")
     public static native void learnWord(String word);
     @Mapping("hasLearnedWord:")

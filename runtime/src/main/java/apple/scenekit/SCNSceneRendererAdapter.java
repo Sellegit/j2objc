@@ -76,7 +76,7 @@ public abstract class SCNSceneRendererAdapter
     
     
     @NotImplemented("hitTest:options:")
-    public NSArray<SCNHitTestResult> hitTest(CGPoint thePoint, SCNHitTestOptions options) { throw new UnsupportedOperationException(); }
+    public NSArray<SCNHitTestResult> hitTest(CGPoint thePoint, NSDictionary<?, ?> options) { throw new UnsupportedOperationException(); }
     @NotImplemented("isNodeInsideFrustum:withPointOfView:")
     public boolean isNodeInsideFrustum(SCNNode node, SCNNode pointOfView) { throw new UnsupportedOperationException(); }
     @NotImplemented("projectPoint:")

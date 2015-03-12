@@ -110,7 +110,7 @@ public class AVCaptureSession
     public static native NSString InterruptionEndedNotification();
     
     @Mapping("canSetSessionPreset:")
-    public native boolean canSetSessionPreset(AVCaptureSessionPreset preset);
+    public native boolean canSetSessionPreset(String preset);
     @Mapping("canAddInput:")
     public native boolean canAddInput(AVCaptureInput input);
     @Mapping("addInput:")

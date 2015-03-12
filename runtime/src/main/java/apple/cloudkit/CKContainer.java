@@ -53,14 +53,10 @@ public class CKContainer
     public static native CKContainer create(String containerIdentifier);
     @Mapping("accountStatusWithCompletionHandler:")
     public native void getAccountStatus(@Block VoidBlock2<CKAccountStatus, NSError> completionHandler);
-    @Mapping("statusForApplicationPermission:completionHandler:")
-    public native void getStatusForApplicationPermission(@Representing("CKApplicationPermissions") @MachineSizedUInt long applicationPermission, @Block VoidBlock2<CKApplicationPermissionStatus, NSError> completionHandler);
-    @Mapping("requestApplicationPermission:completionHandler:")
-    public native void requestApplicationPermission(@Representing("CKApplicationPermissions") @MachineSizedUInt long applicationPermission, @Block VoidBlock2<CKApplicationPermissionStatus, NSError> completionHandler);
     @Mapping("fetchUserRecordIDWithCompletionHandler:")
     public native void fetchUserRecordID(@Block VoidBlock2<CKRecordID, NSError> completionHandler);
     @Mapping("discoverAllContactUserInfosWithCompletionHandler:")
-    public native void discoverAllContactUserInfos(@Block VoidBlock2<NSArray<CKDiscoveredUserInfo>, NSError> completionHandler);
+    public native void discoverAllContactUserInfos(Todo completionHandler);
     @Mapping("discoverUserInfoWithEmailAddress:completionHandler:")
     public native void discoverUserInfo(String email, @Block VoidBlock2<CKDiscoveredUserInfo, NSError> completionHandler);
     @Mapping("discoverUserInfoWithUserRecordID:completionHandler:")

@@ -40,8 +40,8 @@ public class MPMediaPropertyPredicate
     
     
     @Mapping("predicateWithValue:forProperty:")
-    protected static native MPMediaPropertyPredicate create(Object value, NSString property);
+    protected static native MPMediaPropertyPredicate create(Object value, String property);
     @Mapping("predicateWithValue:forProperty:comparisonType:")
-    protected static native MPMediaPropertyPredicate create(Object value, NSString property, @Representing("MPMediaPredicateComparison") @MachineSizedSInt long comparisonType);
+    protected static native MPMediaPropertyPredicate create(Object value, String property, @Representing("MPMediaPredicateComparison") @MachineSizedSInt long comparisonType);
     
 }

@@ -61,9 +61,9 @@ public class AVMediaSelectionOption
     
     
     @Mapping("hasMediaCharacteristic:")
-    public native boolean hasMediaCharacteristic(AVMediaCharacteristic mediaCharacteristic);
+    public native boolean hasMediaCharacteristic(String mediaCharacteristic);
     @Mapping("metadataForFormat:")
-    public native NSArray<AVMetadataItem> getMetadata(AVMetadataFormat format);
+    public native NSArray<AVMetadataItem> getMetadata(String format);
     @Mapping("associatedMediaSelectionOptionInMediaSelectionGroup:")
     public native AVMediaSelectionOption getAssociatedMediaSelectionOption(AVMediaSelectionGroup mediaSelectionGroup);
     @Mapping("propertyList")

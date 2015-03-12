@@ -43,19 +43,19 @@ public class CMSampleTimingInfo
     ]-*/;
     public static native CMSampleTimingInfo copyWithduration(CMSampleTimingInfo original, CMTime duration) /*-[
         original.duration = duration;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native CMSampleTimingInfo copyWithpresentationTimeStamp(CMSampleTimingInfo original, CMTime presentationTimeStamp) /*-[
         original.presentationTimeStamp = presentationTimeStamp;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native CMSampleTimingInfo copyWithdecodeTimeStamp(CMSampleTimingInfo original, CMTime decodeTimeStamp) /*-[
         original.decodeTimeStamp = decodeTimeStamp;
-        return __new;
+        return original;
     ]-*/;
 
     

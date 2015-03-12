@@ -39,19 +39,19 @@ public class AudioChannelDescription
     ]-*/;
     public static native AudioChannelDescription copyWithmChannelLabel(AudioChannelDescription original, AudioChannelLabel mChannelLabel) /*-[
         original.mChannelLabel = mChannelLabel;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native AudioChannelDescription copyWithmChannelFlags(AudioChannelDescription original, AudioChannelFlag mChannelFlags) /*-[
         original.mChannelFlags = mChannelFlags;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native AudioChannelDescription copyWithmCoordinates(AudioChannelDescription original, FloatBuffer mCoordinates) /*-[
         original.mCoordinates = mCoordinates;
-        return __new;
+        return original;
     ]-*/;
 
     

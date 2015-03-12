@@ -89,9 +89,9 @@ public class SCNRenderer
     @Mapping("renderAtTime:")
     public native void renderAtTime(double time);
     @Mapping("rendererWithContext:options:")
-    public static native SCNRenderer create(EAGLContext context, NSDictionary<?, ?> options);
+    public static native SCNRenderer create(Todo context, NSDictionary<?, ?> options);
     @Mapping("hitTest:options:")
-    public native NSArray<SCNHitTestResult> hitTest(CGPoint thePoint, SCNHitTestOptions options);
+    public native NSArray<SCNHitTestResult> hitTest(CGPoint thePoint, NSDictionary<?, ?> options);
     @Mapping("isNodeInsideFrustum:withPointOfView:")
     public native boolean isNodeInsideFrustum(SCNNode node, SCNNode pointOfView);
     @Mapping("projectPoint:")

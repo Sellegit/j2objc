@@ -38,7 +38,7 @@ public class GLKVector4
     ]-*/;
     public static native GLKVector4 copyWithv(GLKVector4 original, FloatBuffer v) /*-[
         original.v = v;
-        return __new;
+        return original;
     ]-*/;
 
     

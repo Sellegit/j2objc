@@ -59,6 +59,6 @@ public class CFDictionary
     @GlobalFunction("CFDictionaryGetKeysAndValues")
     protected native void getKeysAndValues(Todo keys, Todo values);
     @GlobalFunction("CFDictionaryApplyFunction")
-    protected native void applyFunction(FunctionPtr applier, @Pointer long context);
+    protected native void applyFunction(FunctionPtr applier, Todo context);
     
 }

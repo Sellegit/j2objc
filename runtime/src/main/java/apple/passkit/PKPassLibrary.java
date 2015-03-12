@@ -60,7 +60,7 @@ public class PKPassLibrary
      * @since Available in iOS 7.0 and later.
      */
     @Mapping("addPasses:withCompletionHandler:")
-    public native void addPasses(NSArray<PKPass> passes, @Block VoidBlock1<PKPassLibraryAddPassesStatus> completion);
+    public native void addPasses(NSArray<?> passes, @Block VoidBlock1<PKPassLibraryAddPassesStatus> completion);
     /**
      * @since Available in iOS 8.0 and later.
      */

@@ -28,7 +28,7 @@ public class HKCorrelationQuery
     
     public HKCorrelationQuery() {}
     @Mapping("initWithType:predicate:samplePredicates:completion:")
-    public HKCorrelationQuery(HKCorrelationType correlationType, NSPredicate predicate, NSDictionary<HKSampleType, NSPredicate> samplePredicates, @Block VoidBlock3<HKCorrelationQuery, NSArray<HKCorrelation>, NSError> completion) { }
+    public HKCorrelationQuery(HKCorrelationType correlationType, NSPredicate predicate, NSDictionary<?, ?> samplePredicates, Todo completion) { }
     
     
     @Mapping("correlationType")

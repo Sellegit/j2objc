@@ -32,7 +32,7 @@ public class CFWriteStream
     @GlobalFunction("CFWriteStreamGetTypeID")
     public static native @MachineSizedUInt long getClassTypeID();
     @GlobalFunction("CFWriteStreamCreateWithBuffer")
-    protected static native CFWriteStream create(CFAllocator alloc, @Pointer long buffer, @MachineSizedSInt long bufferCapacity);
+    protected static native CFWriteStream create(CFAllocator alloc, Todo buffer, @MachineSizedSInt long bufferCapacity);
     @GlobalFunction("CFWriteStreamCreateWithFile")
     protected static native CFWriteStream create(CFAllocator alloc, CFURL fileURL);
     @GlobalFunction("CFWriteStreamGetStatus")
@@ -49,13 +49,13 @@ public class CFWriteStream
     @GlobalFunction("CFWriteStreamCanAcceptBytes")
     public native boolean canAcceptBytes();
     @GlobalFunction("CFWriteStreamWrite")
-    private native @MachineSizedSInt long write(@Pointer long buffer, @MachineSizedSInt long bufferLength);
+    private native @MachineSizedSInt long write(Todo buffer, @MachineSizedSInt long bufferLength);
     @GlobalFunction("CFWriteStreamCopyProperty")
-    public native CFType getProperty(CFStreamProperty propertyName);
+    public native CFType getProperty(String propertyName);
     @GlobalFunction("CFWriteStreamSetProperty")
-    public native boolean setProperty(CFStreamProperty propertyName, CFType propertyValue);
+    public native boolean setProperty(String propertyName, CFType propertyValue);
     @GlobalFunction("CFWriteStreamSetClient")
-    private native boolean setClient(CFStreamEventType streamEvents, FunctionPtr clientCB, CFStreamClientContext clientContext);
+    private native boolean setClient(@MachineSizedUInt long streamEvents, FunctionPtr clientCB, CFStreamClientContext clientContext);
     @GlobalFunction("CFWriteStreamScheduleWithRunLoop")
     public native void scheduleInRunLoop(CFRunLoop runLoop, String runLoopMode);
     @GlobalFunction("CFWriteStreamUnscheduleFromRunLoop")

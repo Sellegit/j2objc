@@ -42,13 +42,13 @@ public class NSRange
     ]-*/;
     public static native NSRange copyWithlocation(NSRange original, @MachineSizedUInt long location) /*-[
         original.location = location;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native NSRange copyWithlength(NSRange original, @MachineSizedUInt long length) /*-[
         original.length = length;
-        return __new;
+        return original;
     ]-*/;
 
     

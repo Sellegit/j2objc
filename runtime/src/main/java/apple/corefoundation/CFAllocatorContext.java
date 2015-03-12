@@ -34,13 +34,13 @@ public class CFAllocatorContext
     
     public static native CFAllocatorContext copyWithversion(CFAllocatorContext original, @MachineSizedSInt long version) /*-[
         original.version = version;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native CFAllocatorContext copyWithinfo(CFAllocatorContext original, Todo info) /*-[
         original.info = info;
-        return __new;
+        return original;
     ]-*/;
 
     

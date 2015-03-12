@@ -74,7 +74,7 @@ public class DispatchQueue
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("dispatch_queue_create")
-    public static native DispatchQueue create(String label, DispatchQueueAttr attr);
+    public static native DispatchQueue create(Todo label, DispatchQueueAttr attr);
     /**
      * @since Available in iOS 4.0 and later.
      */

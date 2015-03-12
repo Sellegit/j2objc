@@ -67,16 +67,16 @@ public class UITabBarController
     
     
     @Mapping("setViewControllers:animated:")
-    public native void setViewControllers(NSArray<UIViewController> viewControllers, boolean animated);
+    public native void setViewControllers(NSArray<?> viewControllers, boolean animated);
     @Mapping("tabBar:didSelectItem:")
     public native void didSelectItem(UITabBar tabBar, UITabBarItem item);
     @Mapping("tabBar:willBeginCustomizingItems:")
-    public native void willBeginCustomizingItems(UITabBar tabBar, NSArray<UITabBarItem> items);
+    public native void willBeginCustomizingItems(UITabBar tabBar, NSArray<?> items);
     @Mapping("tabBar:didBeginCustomizingItems:")
-    public native void didBeginCustomizingItems(UITabBar tabBar, NSArray<UITabBarItem> items);
+    public native void didBeginCustomizingItems(UITabBar tabBar, NSArray<?> items);
     @Mapping("tabBar:willEndCustomizingItems:changed:")
-    public native void willEndCustomizingItems(UITabBar tabBar, NSArray<UITabBarItem> items, boolean changed);
+    public native void willEndCustomizingItems(UITabBar tabBar, NSArray<?> items, boolean changed);
     @Mapping("tabBar:didEndCustomizingItems:changed:")
-    public native void didEndCustomizingItems(UITabBar tabBar, NSArray<UITabBarItem> items, boolean changed);
+    public native void didEndCustomizingItems(UITabBar tabBar, NSArray<?> items, boolean changed);
     
 }

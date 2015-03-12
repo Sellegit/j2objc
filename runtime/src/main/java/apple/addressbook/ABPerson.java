@@ -37,12 +37,12 @@ public class ABPerson
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("ABPersonCopySource")
-    public native ABRecord getSource();
+    public static native ABRecord getSource(ABRecord person);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("ABPersonCopyArrayOfAllLinkedPeople")
-    public native List<ABPerson> getAllLinkedPeople();
+    public static native List<ABPerson> getAllLinkedPeople(ABRecord person);
     @GlobalFunction("ABPersonGetSortOrdering")
     public static native ABPersonSortOrdering getSortOrdering();
     /**
@@ -56,27 +56,27 @@ public class ABPerson
      * @since Available in iOS 7.0 and later.
      */
     @GlobalFunction("ABPersonGetCompositeNameFormatForRecord")
-    public native ABPersonCompositeNameFormat getCompositeNameFormat();
+    public static native ABPersonCompositeNameFormat getCompositeNameFormat(ABRecord record);
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalFunction("ABPersonCopyCompositeNameDelimiterForRecord")
-    public native String getCompositeNameDelimiter();
+    public static native String getCompositeNameDelimiter(ABRecord record);
     @GlobalFunction("ABPersonSetImageData")
-    protected native boolean setImageData(NSData imageData, Todo error);
+    protected static native boolean setImageData(ABRecord person, NSData imageData, Todo error);
     @GlobalFunction("ABPersonCopyImageData")
-    public native NSData getImageData();
+    public static native NSData getImageData(ABRecord person);
     /**
      * @since Available in iOS 4.1 and later.
      */
     @GlobalFunction("ABPersonCopyImageDataWithFormat")
-    public native NSData getImageData(ABPersonImageFormat format);
+    public static native NSData getImageData(ABRecord person, ABPersonImageFormat format);
     @GlobalFunction("ABPersonHasImageData")
-    public native boolean hasImageData();
+    public static native boolean hasImageData(ABRecord person);
     @GlobalFunction("ABPersonRemoveImageData")
-    protected native boolean removeImageData(Todo error);
+    protected static native boolean removeImageData(ABRecord person, Todo error);
     @GlobalFunction("ABPersonComparePeopleByName")
-    public native CFComparisonResult compareTo(ABRecord person2, ABPersonSortOrdering ordering);
+    public static native CFComparisonResult compareTo(ABRecord person1, ABRecord person2, ABPersonSortOrdering ordering);
     /**
      * @since Available in iOS 5.0 and later.
      */
@@ -86,6 +86,6 @@ public class ABPerson
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("ABPersonCreateVCardRepresentationWithPeople")
-    public static native NSData createVCardRepresentation(List<ABPerson> people);
+    public static native NSData createVCardRepresentation(NSArray<?> people);
     
 }

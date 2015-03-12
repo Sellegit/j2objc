@@ -45,37 +45,37 @@ public class MIDIObjectAddRemoveNotification
     ]-*/;
     public static native MIDIObjectAddRemoveNotification copyWithmessageID(MIDIObjectAddRemoveNotification original, MIDINotificationMessageID messageID) /*-[
         original.messageID = messageID;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native MIDIObjectAddRemoveNotification copyWithmessageSize(MIDIObjectAddRemoveNotification original, int messageSize) /*-[
         original.messageSize = messageSize;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native MIDIObjectAddRemoveNotification copyWithparent(MIDIObjectAddRemoveNotification original, MIDIObject parent) /*-[
         original.parent = parent;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native MIDIObjectAddRemoveNotification copyWithparentType(MIDIObjectAddRemoveNotification original, MIDIObjectType parentType) /*-[
         original.parentType = parentType;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native MIDIObjectAddRemoveNotification copyWithchild(MIDIObjectAddRemoveNotification original, MIDIObject child) /*-[
         original.child = child;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native MIDIObjectAddRemoveNotification copyWithchildType(MIDIObjectAddRemoveNotification original, MIDIObjectType childType) /*-[
         original.childType = childType;
-        return __new;
+        return original;
     ]-*/;
 
     

@@ -32,14 +32,14 @@ public class CFMutableDictionary
     @GlobalFunction("CFDictionaryCreateMutableCopy")
     protected static native CFMutableDictionary createMutableCopy(CFAllocator allocator, @MachineSizedSInt long capacity, CFDictionary theDict);
     @GlobalFunction("CFDictionaryAddValue")
-    protected native void addValue(Todo key, Todo value);
+    protected static native void addValue(CFDictionary theDict, Todo key, Todo value);
     @GlobalFunction("CFDictionarySetValue")
-    protected native void setValue(Todo key, Todo value);
+    protected static native void setValue(CFDictionary theDict, Todo key, Todo value);
     @GlobalFunction("CFDictionaryReplaceValue")
-    protected native void replaceValue(Todo key, Todo value);
+    protected static native void replaceValue(CFDictionary theDict, Todo key, Todo value);
     @GlobalFunction("CFDictionaryRemoveValue")
-    protected native void removeValue(Todo key);
+    protected static native void removeValue(CFDictionary theDict, Todo key);
     @GlobalFunction("CFDictionaryRemoveAllValues")
-    protected native void removeAllValues();
+    protected static native void removeAllValues(CFDictionary theDict);
     
 }

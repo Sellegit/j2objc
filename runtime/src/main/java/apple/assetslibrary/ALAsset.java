@@ -50,7 +50,7 @@ public class ALAsset
     public static native NSString getInvalidProperty();
     
     @Mapping("valueForProperty:")
-    public native Object getValue(ALAssetProperty property);
+    public native Object getValue(String property);
     @Mapping("defaultRepresentation")
     public native ALAssetRepresentation getDefaultRepresentation();
     @Mapping("representationForUTI:")
@@ -62,25 +62,5 @@ public class ALAsset
      */
     @Mapping("aspectRatioThumbnail")
     public native CGImage getAspectRatioThumbnail();
-    /**
-     * @since Available in iOS 5.0 and later.
-     */
-    @Mapping("writeModifiedImageDataToSavedPhotosAlbum:metadata:completionBlock:")
-    public native void writeModifiedImageData(NSData imageData, CGImageProperties metadata, @Block VoidBlock2<NSURL, NSError> completionBlock);
-    /**
-     * @since Available in iOS 5.0 and later.
-     */
-    @Mapping("writeModifiedVideoAtPathToSavedPhotosAlbum:completionBlock:")
-    public native void writeModifiedVideoData(NSURL videoPathURL, @Block VoidBlock2<NSURL, NSError> completionBlock);
-    /**
-     * @since Available in iOS 5.0 and later.
-     */
-    @Mapping("setImageData:metadata:completionBlock:")
-    public native void setImageData(NSData imageData, CGImageProperties metadata, @Block VoidBlock2<NSURL, NSError> completionBlock);
-    /**
-     * @since Available in iOS 5.0 and later.
-     */
-    @Mapping("setVideoAtPath:completionBlock:")
-    public native void setVideo(NSURL videoPathURL, @Block VoidBlock2<NSURL, NSError> completionBlock);
     
 }

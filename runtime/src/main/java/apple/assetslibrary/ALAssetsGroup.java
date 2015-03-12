@@ -39,19 +39,13 @@ public class ALAssetsGroup
     
     
     @Mapping("valueForProperty:")
-    public native Object getValue(ALAssetsGroupProperty property);
+    public native Object getValue(String property);
     @Mapping("posterImage")
     public native CGImage getPosterImage();
     @Mapping("setAssetsFilter:")
     public native void setAssetsFilter(ALAssetsFilter filter);
     @Mapping("numberOfAssets")
     public native @MachineSizedSInt long getNumberOfAssets();
-    @Mapping("enumerateAssetsUsingBlock:")
-    public native void enumerateAssets(@Block("(,@MachineSizedUInt,)") VoidBlock3<ALAsset, Long, Todo> enumerationBlock);
-    @Mapping("enumerateAssetsWithOptions:usingBlock:")
-    public native void enumerateAssets(@Representing("NSEnumerationOptions") @MachineSizedUInt long options, @Block("(,@MachineSizedUInt,)") VoidBlock3<ALAsset, Long, Todo> enumerationBlock);
-    @Mapping("enumerateAssetsAtIndexes:options:usingBlock:")
-    public native void enumerateAssets(NSIndexSet indexSet, @Representing("NSEnumerationOptions") @MachineSizedUInt long options, @Block("(,@MachineSizedUInt,)") VoidBlock3<ALAsset, Long, Todo> enumerationBlock);
     /**
      * @since Available in iOS 5.0 and later.
      */

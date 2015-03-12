@@ -30,12 +30,12 @@ public class PKAddPassesViewController
     
     public PKAddPassesViewController() {}
     @Mapping("initWithPass:")
-    public PKAddPassesViewController(PKPass pass) { }
+    public PKAddPassesViewController(Object pass) { }
     /**
      * @since Available in iOS 7.0 and later.
      */
     @Mapping("initWithPasses:")
-    public PKAddPassesViewController(NSArray<PKPass> passes) { }
+    public PKAddPassesViewController(NSArray<?> passes) { }
     @Mapping("initWithNibName:bundle:")
     public PKAddPassesViewController(String nibNameOrNil, NSBundle nibBundleOrNil) { }
     

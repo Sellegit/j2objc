@@ -40,6 +40,6 @@ public class UIVideo
      * @since Available in iOS 3.1 and later.
      */
     @GlobalFunction("UISaveVideoAtPathToSavedPhotosAlbum")
-    public static native void saveToPhotosAlbum(String videoPath, Object completionTarget, Selector completionSelector, @Pointer long contextInfo);
+    public static native void saveToPhotosAlbum(String videoPath, Object completionTarget, Selector completionSelector, Todo contextInfo);
     
 }

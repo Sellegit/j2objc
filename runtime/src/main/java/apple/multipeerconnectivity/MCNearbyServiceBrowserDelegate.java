@@ -29,7 +29,7 @@ public interface MCNearbyServiceBrowserDelegate
     
     
     @Mapping("browser:foundPeer:withDiscoveryInfo:")
-    void foundPeer(MCNearbyServiceBrowser browser, MCPeerID peerID, Map<String, String> info);
+    void foundPeer(MCNearbyServiceBrowser browser, MCPeerID peerID, NSDictionary<?, ?> info);
     @Mapping("browser:lostPeer:")
     void lostPeer(MCNearbyServiceBrowser browser, MCPeerID peerID);
     @Mapping("browser:didNotStartBrowsingForPeers:")

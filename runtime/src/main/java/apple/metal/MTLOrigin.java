@@ -40,19 +40,19 @@ public class MTLOrigin
     ]-*/;
     public static native MTLOrigin copyWithx(MTLOrigin original, @MachineSizedUInt long x) /*-[
         original.x = x;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native MTLOrigin copyWithy(MTLOrigin original, @MachineSizedUInt long y) /*-[
         original.y = y;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native MTLOrigin copyWithz(MTLOrigin original, @MachineSizedUInt long z) /*-[
         original.z = z;
-        return __new;
+        return original;
     ]-*/;
 
     

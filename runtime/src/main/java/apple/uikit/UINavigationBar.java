@@ -126,7 +126,7 @@ public class UINavigationBar
     @Mapping("popNavigationItemAnimated:")
     public native UINavigationItem popNavigationItem(boolean animated);
     @Mapping("setItems:animated:")
-    public native void setItems(NSArray<UINavigationItem> items, boolean animated);
+    public native void setItems(NSArray<?> items, boolean animated);
     /**
      * @since Available in iOS 7.0 and later.
      */

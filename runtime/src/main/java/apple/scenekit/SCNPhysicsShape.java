@@ -38,11 +38,11 @@ public class SCNPhysicsShape
     
     
     @Mapping("shapeWithGeometry:options:")
-    public static native SCNPhysicsShape create(SCNGeometry geometry, SCNPhysicsShapeOptions options);
+    public static native SCNPhysicsShape create(SCNGeometry geometry, NSDictionary<?, ?> options);
     @Mapping("shapeWithNode:options:")
-    public static native SCNPhysicsShape create(SCNNode node, SCNPhysicsShapeOptions options);
+    public static native SCNPhysicsShape create(SCNNode node, NSDictionary<?, ?> options);
     @Mapping("shapeWithShapes:transforms:")
-    public static native SCNPhysicsShape create(NSArray<SCNPhysicsShape> shapes, List<SCNMatrix4> transforms);
+    public static native SCNPhysicsShape create(NSArray<?> shapes, NSArray<?> transforms);
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
     

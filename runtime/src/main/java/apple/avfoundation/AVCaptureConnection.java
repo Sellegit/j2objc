@@ -37,7 +37,7 @@ public class AVCaptureConnection
      * @since Available in iOS 8.0 and later.
      */
     @Mapping("initWithInputPorts:output:")
-    public AVCaptureConnection(NSArray<AVCaptureInputPort> ports, AVCaptureOutput output) { }
+    public AVCaptureConnection(NSArray<?> ports, AVCaptureOutput output) { }
     /**
      * @since Available in iOS 8.0 and later.
      */
@@ -189,7 +189,7 @@ public class AVCaptureConnection
      * @since Available in iOS 8.0 and later.
      */
     @Mapping("connectionWithInputPorts:output:")
-    public static native AVCaptureConnection create(NSArray<AVCaptureInputPort> ports, AVCaptureOutput output);
+    public static native AVCaptureConnection create(NSArray<?> ports, AVCaptureOutput output);
     /**
      * @since Available in iOS 8.0 and later.
      */

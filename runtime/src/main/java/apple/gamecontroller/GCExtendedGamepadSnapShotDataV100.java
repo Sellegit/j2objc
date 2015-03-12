@@ -65,97 +65,97 @@ public class GCExtendedGamepadSnapShotDataV100
     ]-*/;
     public static native GCExtendedGamepadSnapShotDataV100 copyWithversion(GCExtendedGamepadSnapShotDataV100 original, short version) /*-[
         original.version = version;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native GCExtendedGamepadSnapShotDataV100 copyWithsize(GCExtendedGamepadSnapShotDataV100 original, short size) /*-[
         original.size = size;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native GCExtendedGamepadSnapShotDataV100 copyWithdpadX(GCExtendedGamepadSnapShotDataV100 original, float dpadX) /*-[
         original.dpadX = dpadX;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native GCExtendedGamepadSnapShotDataV100 copyWithdpadY(GCExtendedGamepadSnapShotDataV100 original, float dpadY) /*-[
         original.dpadY = dpadY;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native GCExtendedGamepadSnapShotDataV100 copyWithbuttonA(GCExtendedGamepadSnapShotDataV100 original, float buttonA) /*-[
         original.buttonA = buttonA;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native GCExtendedGamepadSnapShotDataV100 copyWithbuttonB(GCExtendedGamepadSnapShotDataV100 original, float buttonB) /*-[
         original.buttonB = buttonB;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native GCExtendedGamepadSnapShotDataV100 copyWithbuttonX(GCExtendedGamepadSnapShotDataV100 original, float buttonX) /*-[
         original.buttonX = buttonX;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native GCExtendedGamepadSnapShotDataV100 copyWithbuttonY(GCExtendedGamepadSnapShotDataV100 original, float buttonY) /*-[
         original.buttonY = buttonY;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native GCExtendedGamepadSnapShotDataV100 copyWithleftShoulder(GCExtendedGamepadSnapShotDataV100 original, float leftShoulder) /*-[
         original.leftShoulder = leftShoulder;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native GCExtendedGamepadSnapShotDataV100 copyWithrightShoulder(GCExtendedGamepadSnapShotDataV100 original, float rightShoulder) /*-[
         original.rightShoulder = rightShoulder;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native GCExtendedGamepadSnapShotDataV100 copyWithleftThumbstickX(GCExtendedGamepadSnapShotDataV100 original, float leftThumbstickX) /*-[
         original.leftThumbstickX = leftThumbstickX;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native GCExtendedGamepadSnapShotDataV100 copyWithleftThumbstickY(GCExtendedGamepadSnapShotDataV100 original, float leftThumbstickY) /*-[
         original.leftThumbstickY = leftThumbstickY;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native GCExtendedGamepadSnapShotDataV100 copyWithrightThumbstickX(GCExtendedGamepadSnapShotDataV100 original, float rightThumbstickX) /*-[
         original.rightThumbstickX = rightThumbstickX;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native GCExtendedGamepadSnapShotDataV100 copyWithrightThumbstickY(GCExtendedGamepadSnapShotDataV100 original, float rightThumbstickY) /*-[
         original.rightThumbstickY = rightThumbstickY;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native GCExtendedGamepadSnapShotDataV100 copyWithleftTrigger(GCExtendedGamepadSnapShotDataV100 original, float leftTrigger) /*-[
         original.leftTrigger = leftTrigger;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native GCExtendedGamepadSnapShotDataV100 copyWithrightTrigger(GCExtendedGamepadSnapShotDataV100 original, float rightTrigger) /*-[
         original.rightTrigger = rightTrigger;
-        return __new;
+        return original;
     ]-*/;
 
     

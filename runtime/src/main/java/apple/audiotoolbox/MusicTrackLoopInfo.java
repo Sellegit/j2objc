@@ -40,13 +40,13 @@ public class MusicTrackLoopInfo
     ]-*/;
     public static native MusicTrackLoopInfo copyWithloopDuration(MusicTrackLoopInfo original, double loopDuration) /*-[
         original.loopDuration = loopDuration;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native MusicTrackLoopInfo copyWithnumberOfLoops(MusicTrackLoopInfo original, int numberOfLoops) /*-[
         original.numberOfLoops = numberOfLoops;
-        return __new;
+        return original;
     ]-*/;
 
     

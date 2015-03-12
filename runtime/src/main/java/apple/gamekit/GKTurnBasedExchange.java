@@ -68,11 +68,11 @@ public class GKTurnBasedExchange
      * @since Available in iOS 7.0 and later.
      */
     @Mapping("cancelWithLocalizableMessageKey:arguments:completionHandler:")
-    public native void cancel(String key, List<String> arguments, @Block VoidBlock1<NSError> completionHandler);
+    public native void cancel(String key, NSArray<?> arguments, @Block VoidBlock1<NSError> completionHandler);
     /**
      * @since Available in iOS 7.0 and later.
      */
     @Mapping("replyWithLocalizableMessageKey:arguments:data:completionHandler:")
-    public native void reply(String key, List<String> arguments, NSData data, @Block VoidBlock1<NSError> completionHandler);
+    public native void reply(String key, NSArray<?> arguments, NSData data, @Block VoidBlock1<NSError> completionHandler);
     
 }

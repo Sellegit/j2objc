@@ -36,11 +36,11 @@ public class HKHealthStore
     @Mapping("authorizationStatusForType:")
     public native @Representing("HKAuthorizationStatus") @MachineSizedSInt long getAuthorizationStatusForType(HKObjectType type);
     @Mapping("requestAuthorizationToShareTypes:readTypes:completion:")
-    public native void requestAuthorizationToTypes(NSSet<HKSampleType> typesToShare, NSSet<HKObjectType> typesToRead, @Block VoidBlock2<Boolean, NSError> completion);
+    public native void requestAuthorizationToTypes(NSSet<?> typesToShare, NSSet<?> typesToRead, @Block VoidBlock2<Boolean, NSError> completion);
     @Mapping("saveObject:withCompletion:")
     public native void saveObject(HKObject object, @Block VoidBlock2<Boolean, NSError> completion);
     @Mapping("saveObjects:withCompletion:")
-    public native void saveObjects(NSArray<HKObject> objects, @Block VoidBlock2<Boolean, NSError> completion);
+    public native void saveObjects(NSArray<?> objects, @Block VoidBlock2<Boolean, NSError> completion);
     @Mapping("deleteObject:withCompletion:")
     public native void deleteObject(HKObject object, @Block VoidBlock2<Boolean, NSError> completion);
     @Mapping("executeQuery:")
@@ -56,7 +56,7 @@ public class HKHealthStore
     @Mapping("isHealthDataAvailable")
     public static native boolean isHealthDataAvailable();
     @Mapping("addSamples:toWorkout:completion:")
-    public native void addSamplesToWorkout(NSArray<HKSample> samples, HKWorkout workout, @Block VoidBlock2<Boolean, NSError> completion);
+    public native void addSamplesToWorkout(NSArray<?> samples, HKWorkout workout, @Block VoidBlock2<Boolean, NSError> completion);
     @Mapping("enableBackgroundDeliveryForType:frequency:withCompletion:")
     public native void enableBackgroundDeliveryForType(HKObjectType type, @Representing("HKUpdateFrequency") @MachineSizedSInt long frequency, @Block VoidBlock2<Boolean, NSError> completion);
     @Mapping("disableBackgroundDeliveryForType:withCompletion:")

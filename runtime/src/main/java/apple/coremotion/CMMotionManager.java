@@ -104,14 +104,10 @@ public class CMMotionManager
     
     @Mapping("startAccelerometerUpdates")
     public native void startAccelerometerUpdates();
-    @Mapping("startAccelerometerUpdatesToQueue:withHandler:")
-    public native void startAccelerometerUpdates(NSOperationQueue queue, @Block VoidBlock2<CMAccelerometerData, NSError> handler);
     @Mapping("stopAccelerometerUpdates")
     public native void stopAccelerometerUpdates();
     @Mapping("startGyroUpdates")
     public native void startGyroUpdates();
-    @Mapping("startGyroUpdatesToQueue:withHandler:")
-    public native void startGyroUpdates(NSOperationQueue queue, @Block VoidBlock2<CMGyroData, NSError> handler);
     @Mapping("stopGyroUpdates")
     public native void stopGyroUpdates();
     /**
@@ -122,27 +118,15 @@ public class CMMotionManager
     /**
      * @since Available in iOS 5.0 and later.
      */
-    @Mapping("startMagnetometerUpdatesToQueue:withHandler:")
-    public native void startMagnetometerUpdates(NSOperationQueue queue, @Block VoidBlock2<CMMagnetometerData, NSError> handler);
-    /**
-     * @since Available in iOS 5.0 and later.
-     */
     @Mapping("stopMagnetometerUpdates")
     public native void stopMagnetometerUpdates();
     @Mapping("startDeviceMotionUpdates")
     public native void startDeviceMotionUpdates();
-    @Mapping("startDeviceMotionUpdatesToQueue:withHandler:")
-    public native void startDeviceMotionUpdates(NSOperationQueue queue, @Block VoidBlock2<CMDeviceMotion, NSError> handler);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @Mapping("startDeviceMotionUpdatesUsingReferenceFrame:")
     public native void startDeviceMotionUpdates(CMAttitudeReferenceFrame referenceFrame);
-    /**
-     * @since Available in iOS 5.0 and later.
-     */
-    @Mapping("startDeviceMotionUpdatesUsingReferenceFrame:toQueue:withHandler:")
-    public native void startDeviceMotionUpdates(CMAttitudeReferenceFrame referenceFrame, NSOperationQueue queue, @Block VoidBlock2<CMDeviceMotion, NSError> handler);
     @Mapping("stopDeviceMotionUpdates")
     public native void stopDeviceMotionUpdates();
     /**

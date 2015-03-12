@@ -110,7 +110,7 @@ public class NSPropertyDescription
     
     
     @Mapping("setValidationPredicates:withValidationWarnings:")
-    public native void setValidationPredicatesAndWarnings(NSArray<NSPredicate> validationPredicates, List<String> validationWarnings);
+    public native void setValidationPredicatesAndWarnings(NSArray<?> validationPredicates, NSArray<?> validationWarnings);
     @Mapping("encodeWithCoder:")
     public native void encode(NSCoder aCoder);
     @Mapping("copyWithZone:")

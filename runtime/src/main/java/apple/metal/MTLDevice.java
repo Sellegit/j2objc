@@ -47,6 +47,8 @@ public final class MTLDevice
     public native MTLCommandQueue newCommandQueue(@MachineSizedUInt long maxCommandBufferCount);
     @Mapping("newBufferWithLength:options:")
     public native MTLBuffer newBuffer(@MachineSizedUInt long length, @Representing("MTLResourceOptions") @MachineSizedUInt long options);
+    @Mapping("newBufferWithBytes:length:options:")
+    protected native MTLBuffer newBuffer(Todo pointer, @MachineSizedUInt long length, @Representing("MTLResourceOptions") @MachineSizedUInt long options);
     @Mapping("newDepthStencilStateWithDescriptor:")
     public native MTLDepthStencilState newDepthStencilState(MTLDepthStencilDescriptor descriptor);
     @Mapping("newTextureWithDescriptor:")
@@ -58,7 +60,7 @@ public final class MTLDevice
     @Mapping("newLibraryWithFile:error:")
     protected native MTLLibrary newLibraryWithFile(String filepath, Todo error);
     @Mapping("newLibraryWithData:error:")
-    protected native MTLLibrary newLibraryWithData(DispatchData data, Todo error);
+    protected native MTLLibrary newLibraryWithData(Todo data, Todo error);
     @Mapping("newLibraryWithSource:options:error:")
     protected native MTLLibrary newLibraryWithSource(String source, MTLCompileOptions options, Todo error);
     @Mapping("newLibraryWithSource:options:completionHandler:")

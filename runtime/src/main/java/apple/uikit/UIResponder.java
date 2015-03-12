@@ -100,13 +100,13 @@ public class UIResponder
     @Mapping("isFirstResponder")
     public native boolean isFirstResponder();
     @Mapping("touchesBegan:withEvent:")
-    public native void touchesBegan(NSSet<UITouch> touches, UIEvent event);
+    public native void touchesBegan(NSSet<?> touches, UIEvent event);
     @Mapping("touchesMoved:withEvent:")
-    public native void touchesMoved(NSSet<UITouch> touches, UIEvent event);
+    public native void touchesMoved(NSSet<?> touches, UIEvent event);
     @Mapping("touchesEnded:withEvent:")
-    public native void touchesEnded(NSSet<UITouch> touches, UIEvent event);
+    public native void touchesEnded(NSSet<?> touches, UIEvent event);
     @Mapping("touchesCancelled:withEvent:")
-    public native void touchesCancelled(NSSet<UITouch> touches, UIEvent event);
+    public native void touchesCancelled(NSSet<?> touches, UIEvent event);
     /**
      * @since Available in iOS 3.0 and later.
      */

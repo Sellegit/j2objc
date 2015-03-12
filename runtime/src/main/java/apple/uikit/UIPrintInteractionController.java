@@ -87,14 +87,6 @@ public class UIPrintInteractionController
     
     
     
-    @Mapping("presentAnimated:completionHandler:")
-    public native boolean present(boolean animated, @Block VoidBlock3<UIPrintInteractionController, Boolean, NSError> completion);
-    @Mapping("presentFromRect:inView:animated:completionHandler:")
-    public native boolean presentFromRectInView(CGRect rect, UIView view, boolean animated, @Block VoidBlock3<UIPrintInteractionController, Boolean, NSError> completion);
-    @Mapping("presentFromBarButtonItem:animated:completionHandler:")
-    public native boolean presentFromBarButtonItem(UIBarButtonItem item, boolean animated, @Block VoidBlock3<UIPrintInteractionController, Boolean, NSError> completion);
-    @Mapping("printToPrinter:completionHandler:")
-    public native boolean print(UIPrinter printer, @Block VoidBlock3<UIPrintInteractionController, Boolean, NSError> completion);
     @Mapping("dismissAnimated:")
     public native void dismiss(boolean animated);
     @Mapping("isPrintingAvailable")

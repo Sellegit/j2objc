@@ -56,7 +56,7 @@ public class CKRecord
     @Mapping("objectForKey:")
     public native Object get(String key);
     @Mapping("setObject:forKey:")
-    protected native void put(NSObject object, String key);
+    protected native void put(CKRecordValue object, String key);
     @Mapping("allKeys")
     public native List<String> getAllKeys();
     @Mapping("allTokens")

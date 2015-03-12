@@ -31,6 +31,8 @@ public class NSOutputStream
     
     @Mapping("initToMemory")
     public NSOutputStream() { }
+    @Mapping("initToBuffer:capacity:")
+    public NSOutputStream(Todo buffer, @MachineSizedUInt long capacity) { }
     /**
      * @since Available in iOS 4.0 and later.
      */
@@ -45,6 +47,7 @@ public class NSOutputStream
     
     
     
-    
+    @Mapping("write:maxLength:")
+    protected native @MachineSizedSInt long write(Todo buffer, @MachineSizedUInt long len);
     
 }

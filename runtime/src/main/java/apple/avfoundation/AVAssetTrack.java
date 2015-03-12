@@ -102,18 +102,18 @@ public class AVAssetTrack
     
     
     @Mapping("hasMediaCharacteristic:")
-    public native boolean hasMediaCharacteristic(AVMediaCharacteristic mediaCharacteristic);
+    public native boolean hasMediaCharacteristic(String mediaCharacteristic);
     @Mapping("segmentForTrackTime:")
     public native AVAssetTrackSegment getSegment(CMTime trackTime);
     @Mapping("samplePresentationTimeForTrackTime:")
     public native CMTime getSamplePresentationTime(CMTime trackTime);
     @Mapping("metadataForFormat:")
-    public native NSArray<AVMetadataItem> getMetadataForFormat(AVMetadataFormat format);
+    public native NSArray<AVMetadataItem> getMetadataForFormat(String format);
     /**
      * @since Available in iOS 7.0 and later.
      */
     @Mapping("associatedTracksOfType:")
-    public native NSArray<AVAssetTrack> getAssociatedTracksOfType(AVTrackAssociationType trackAssociationType);
+    public native NSArray<AVAssetTrack> getAssociatedTracksOfType(String trackAssociationType);
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
     @Mapping("statusOfValueForKey:error:")

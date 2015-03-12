@@ -139,7 +139,7 @@ public class NSExpression
      * @since Available in iOS 4.0 and later.
      */
     @Mapping("expressionForBlock:arguments:")
-    public static native NSExpression createForBlock(@Block Block3<NSObject, NSArray<NSExpression>, NSMutableDictionary<?, ?>, NSObject> block, NSArray<?> arguments);
+    public static native NSExpression createForBlock(Todo block, NSArray<?> arguments);
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
     

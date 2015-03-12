@@ -45,7 +45,7 @@ public abstract class CBPeripheralDelegateAdapter
      * @since Available in iOS 7.0 and later.
      */
     @NotImplemented("peripheral:didModifyServices:")
-    public void didModifyServices(CBPeripheral peripheral, NSArray<CBService> invalidatedServices) { throw new UnsupportedOperationException(); }
+    public void didModifyServices(CBPeripheral peripheral, NSArray<?> invalidatedServices) { throw new UnsupportedOperationException(); }
     /**
      * @since Available in iOS 5.0 and later.
      * @deprecated Deprecated in iOS 8.0.

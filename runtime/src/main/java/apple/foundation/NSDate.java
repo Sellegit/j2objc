@@ -67,7 +67,7 @@ public class NSDate
     @Mapping("isEqualToDate:")
     public native boolean isEqualTo(NSDate otherDate);
     @Mapping("descriptionWithLocale:")
-    public native String toString(NSLocale locale);
+    public native String toString(Object locale);
     @Mapping("date")
     public static native NSDate now();
     @Mapping("dateWithTimeIntervalSinceNow:")

@@ -43,9 +43,9 @@ public class CKDatabase
     @Mapping("deleteRecordWithID:completionHandler:")
     public native void deleteRecord(CKRecordID recordID, @Block VoidBlock2<CKRecordID, NSError> completionHandler);
     @Mapping("performQuery:inZoneWithID:completionHandler:")
-    public native void performQuery(CKQuery query, CKRecordZoneID zoneID, @Block VoidBlock2<NSArray<CKRecord>, NSError> completionHandler);
+    public native void performQuery(CKQuery query, CKRecordZoneID zoneID, Todo completionHandler);
     @Mapping("fetchAllRecordZonesWithCompletionHandler:")
-    public native void fetchAllRecordZones(@Block VoidBlock2<NSArray<CKRecordZone>, NSError> completionHandler);
+    public native void fetchAllRecordZones(Todo completionHandler);
     @Mapping("fetchRecordZoneWithID:completionHandler:")
     public native void fetchRecordZone(CKRecordZoneID zoneID, @Block VoidBlock2<CKRecordZone, NSError> completionHandler);
     @Mapping("saveRecordZone:completionHandler:")
@@ -55,10 +55,10 @@ public class CKDatabase
     @Mapping("fetchSubscriptionWithID:completionHandler:")
     public native void fetchSubscription(String subscriptionID, @Block VoidBlock2<CKSubscription, NSError> completionHandler);
     @Mapping("fetchAllSubscriptionsWithCompletionHandler:")
-    public native void fetchAllSubscriptions(@Block VoidBlock2<NSArray<CKSubscription>, NSError> completionHandler);
+    public native void fetchAllSubscriptions(Todo completionHandler);
     @Mapping("saveSubscription:completionHandler:")
     public native void saveSubscription(CKSubscription subscription, @Block VoidBlock2<CKSubscription, NSError> completionHandler);
     @Mapping("deleteSubscriptionWithID:completionHandler:")
-    public native void deleteSubscription(String subscriptionID, @Block VoidBlock2<String, NSError> completionHandler);
+    public native void deleteSubscription(String subscriptionID, Todo completionHandler);
     
 }

@@ -38,32 +38,32 @@ public class CVPixelBuffer
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CVPixelBufferCreateResolvedAttributesDictionary")
-    protected static native CVReturn createResolvedAttributesDictionary(CFAllocator allocator, NSArray<NSDictionary<NSString, ?>> attributes, Todo resolvedDictionaryOut);
+    protected static native CVReturn createResolvedAttributesDictionary(CFAllocator allocator, CFArray attributes, Todo resolvedDictionaryOut);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CVPixelBufferCreate")
-    protected static native CVReturn create(CFAllocator allocator, @MachineSizedUInt long width, @MachineSizedUInt long height, CVPixelFormatType pixelFormatType, NSDictionary<NSString, ?> pixelBufferAttributes, Todo pixelBufferOut);
+    protected static native CVReturn create(CFAllocator allocator, @MachineSizedUInt long width, @MachineSizedUInt long height, int pixelFormatType, CFDictionary pixelBufferAttributes, Todo pixelBufferOut);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CVPixelBufferCreateWithBytes")
-    protected static native CVReturn create(CFAllocator allocator, @MachineSizedUInt long width, @MachineSizedUInt long height, CVPixelFormatType pixelFormatType, Todo baseAddress, @MachineSizedUInt long bytesPerRow, FunctionPtr releaseCallback, @Pointer long releaseRefCon, NSDictionary<NSString, ?> pixelBufferAttributes, Todo pixelBufferOut);
+    protected static native CVReturn create(CFAllocator allocator, @MachineSizedUInt long width, @MachineSizedUInt long height, int pixelFormatType, Todo baseAddress, @MachineSizedUInt long bytesPerRow, FunctionPtr releaseCallback, Todo releaseRefCon, CFDictionary pixelBufferAttributes, Todo pixelBufferOut);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CVPixelBufferCreateWithPlanarBytes")
-    protected static native CVReturn create(CFAllocator allocator, @MachineSizedUInt long width, @MachineSizedUInt long height, Todo pixelFormatType, Todo dataPtr, @MachineSizedUInt long dataSize, @MachineSizedUInt long numberOfPlanes, Todo planeBaseAddress, Todo planeWidth, Todo planeHeight, Todo planeBytesPerRow, FunctionPtr releaseCallback, Todo releaseRefCon, Todo pixelBufferAttributes, Todo pixelBufferOut);
+    protected static native CVReturn create(CFAllocator allocator, @MachineSizedUInt long width, @MachineSizedUInt long height, int pixelFormatType, Todo dataPtr, @MachineSizedUInt long dataSize, @MachineSizedUInt long numberOfPlanes, Todo planeBaseAddress, Todo planeWidth, Todo planeHeight, Todo planeBytesPerRow, FunctionPtr releaseCallback, Todo releaseRefCon, CFDictionary pixelBufferAttributes, Todo pixelBufferOut);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CVPixelBufferLockBaseAddress")
-    public native CVReturn lockBaseAddress(CVPixelBufferLockFlags lockFlags);
+    public native CVReturn lockBaseAddress(long lockFlags);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CVPixelBufferUnlockBaseAddress")
-    public native CVReturn unlockBaseAddress(CVPixelBufferLockFlags unlockFlags);
+    public native CVReturn unlockBaseAddress(long unlockFlags);
     /**
      * @since Available in iOS 4.0 and later.
      */

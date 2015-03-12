@@ -66,97 +66,97 @@ public class CFUUIDBytes
     ]-*/;
     public static native CFUUIDBytes copyWithbyte0(CFUUIDBytes original, byte byte0) /*-[
         original.byte0 = byte0;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native CFUUIDBytes copyWithbyte1(CFUUIDBytes original, byte byte1) /*-[
         original.byte1 = byte1;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native CFUUIDBytes copyWithbyte2(CFUUIDBytes original, byte byte2) /*-[
         original.byte2 = byte2;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native CFUUIDBytes copyWithbyte3(CFUUIDBytes original, byte byte3) /*-[
         original.byte3 = byte3;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native CFUUIDBytes copyWithbyte4(CFUUIDBytes original, byte byte4) /*-[
         original.byte4 = byte4;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native CFUUIDBytes copyWithbyte5(CFUUIDBytes original, byte byte5) /*-[
         original.byte5 = byte5;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native CFUUIDBytes copyWithbyte6(CFUUIDBytes original, byte byte6) /*-[
         original.byte6 = byte6;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native CFUUIDBytes copyWithbyte7(CFUUIDBytes original, byte byte7) /*-[
         original.byte7 = byte7;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native CFUUIDBytes copyWithbyte8(CFUUIDBytes original, byte byte8) /*-[
         original.byte8 = byte8;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native CFUUIDBytes copyWithbyte9(CFUUIDBytes original, byte byte9) /*-[
         original.byte9 = byte9;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native CFUUIDBytes copyWithbyte10(CFUUIDBytes original, byte byte10) /*-[
         original.byte10 = byte10;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native CFUUIDBytes copyWithbyte11(CFUUIDBytes original, byte byte11) /*-[
         original.byte11 = byte11;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native CFUUIDBytes copyWithbyte12(CFUUIDBytes original, byte byte12) /*-[
         original.byte12 = byte12;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native CFUUIDBytes copyWithbyte13(CFUUIDBytes original, byte byte13) /*-[
         original.byte13 = byte13;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native CFUUIDBytes copyWithbyte14(CFUUIDBytes original, byte byte14) /*-[
         original.byte14 = byte14;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native CFUUIDBytes copyWithbyte15(CFUUIDBytes original, byte byte15) /*-[
         original.byte15 = byte15;
-        return __new;
+        return original;
     ]-*/;
 
     

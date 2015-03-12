@@ -40,7 +40,7 @@ public class NSMutableDictionary <K, V>
     @Mapping("removeObjectForKey:")
     protected native void removeObject(Object aKey);
     @Mapping("setObject:forKey:")
-    protected native void setObject(Object anObject, NSObject aKey);
+    protected native void setObject(Object anObject, Cloneable aKey);
     @Mapping("removeAllObjects")
     protected native void removeAllObjects();
     

@@ -750,22 +750,22 @@ public class UTType
      * @since Available in iOS 3.0 and later.
      */
     @GlobalFunction("UTTypeCreatePreferredIdentifierForTag")
-    public static native String createPreferredIdentifierForTag(UTTagClass inTagClass, String inTag, String inConformingToUTI);
+    public static native String createPreferredIdentifierForTag(String inTagClass, String inTag, String inConformingToUTI);
     /**
      * @since Available in iOS 3.0 and later.
      */
     @GlobalFunction("UTTypeCreateAllIdentifiersForTag")
-    public static native List<String> createAllIdentifiersForTag(UTTagClass inTagClass, String inTag, String inConformingToUTI);
+    public static native List<String> createAllIdentifiersForTag(String inTagClass, String inTag, String inConformingToUTI);
     /**
      * @since Available in iOS 3.0 and later.
      */
     @GlobalFunction("UTTypeCopyPreferredTagWithClass")
-    public static native String getPreferredTagWithClass(String inUTI, UTTagClass inTagClass);
+    public static native String getPreferredTagWithClass(String inUTI, String inTagClass);
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalFunction("UTTypeCopyAllTagsWithClass")
-    public static native List<String> getAllTagsWithClass(String inUTI, UTTagClass inTagClass);
+    public static native List<String> getAllTagsWithClass(String inUTI, String inTagClass);
     /**
      * @since Available in iOS 3.0 and later.
      */

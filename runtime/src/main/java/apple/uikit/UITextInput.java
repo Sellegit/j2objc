@@ -109,7 +109,7 @@ public interface UITextInput
     @Mapping("characterOffsetOfPosition:withinRange:")
     @MachineSizedSInt long getCharacterOffset(UITextPosition position, UITextRange range);
     @Mapping("insertDictationResult:")
-    void insertDictationResult(NSArray<UIDictationPhrase> dictationResult);
+    void insertDictationResult(NSArray<?> dictationResult);
     @Mapping("dictationRecordingDidEnd")
     void dictationRecordingDidEnd();
     @Mapping("dictationRecognitionFailed")

@@ -47,6 +47,6 @@ public class AVVideoCompositionCoreAnimationTool
      * @since Available in iOS 7.0 and later.
      */
     @Mapping("videoCompositionCoreAnimationToolWithPostProcessingAsVideoLayers:inLayer:")
-    public static native AVVideoCompositionCoreAnimationTool create(NSArray<CALayer> videoLayers, CALayer animationLayer);
+    public static native AVVideoCompositionCoreAnimationTool create(NSArray<?> videoLayers, CALayer animationLayer);
     
 }

@@ -38,7 +38,7 @@ public interface AVAudioSessionDelegate
      * @since Available in iOS 4.0 and later.
      */
     @Mapping("endInterruptionWithFlags:")
-    void endInterruption(AVAudioSessionInterruptionFlag flags);
+    void endInterruption(@MachineSizedUInt long flags);
     @Mapping("endInterruption")
     void endInterruption();
     @Mapping("inputIsAvailableChanged:")

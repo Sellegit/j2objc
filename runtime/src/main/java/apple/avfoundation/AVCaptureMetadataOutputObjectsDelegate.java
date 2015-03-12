@@ -33,7 +33,7 @@ public interface AVCaptureMetadataOutputObjectsDelegate
     
     
     @Mapping("captureOutput:didOutputMetadataObjects:fromConnection:")
-    void didOutputMetadataObjects(AVCaptureOutput captureOutput, NSArray<AVMetadataObject> metadataObjects, AVCaptureConnection connection);
+    void didOutputMetadataObjects(AVCaptureOutput captureOutput, NSArray<?> metadataObjects, AVCaptureConnection connection);
     
     /*<adapter>*/
     /*</adapter>*/

@@ -48,14 +48,14 @@ public abstract class GKMatchmakerViewControllerDelegateAdapter
      * @since Available in iOS 8.0 and later.
      */
     @NotImplemented("matchmakerViewController:didFindHostedPlayers:")
-    public void didFindHostedPlayers(GKMatchmakerViewController viewController, NSArray<GKPlayer> players) { throw new UnsupportedOperationException(); }
+    public void didFindHostedPlayers(GKMatchmakerViewController viewController, NSArray<?> players) { throw new UnsupportedOperationException(); }
     /**
      * @since Available in iOS 4.1 and later.
      * @deprecated Deprecated in iOS 8.0.
      */
     @Deprecated
     @NotImplemented("matchmakerViewController:didFindPlayers:")
-    public void didFindPlayers(GKMatchmakerViewController viewController, List<String> playerIDs) { throw new UnsupportedOperationException(); }
+    public void didFindPlayers(GKMatchmakerViewController viewController, NSArray<?> playerIDs) { throw new UnsupportedOperationException(); }
     /**
      * @since Available in iOS 8.0 and later.
      */

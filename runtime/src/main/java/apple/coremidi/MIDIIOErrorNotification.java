@@ -41,25 +41,25 @@ public class MIDIIOErrorNotification
     ]-*/;
     public static native MIDIIOErrorNotification copyWithmessageID(MIDIIOErrorNotification original, MIDINotificationMessageID messageID) /*-[
         original.messageID = messageID;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native MIDIIOErrorNotification copyWithmessageSize(MIDIIOErrorNotification original, int messageSize) /*-[
         original.messageSize = messageSize;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native MIDIIOErrorNotification copyWithdriverDevice(MIDIIOErrorNotification original, MIDIDevice driverDevice) /*-[
         original.driverDevice = driverDevice;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native MIDIIOErrorNotification copyWitherrorCode(MIDIIOErrorNotification original, int errorCode) /*-[
         original.errorCode = errorCode;
-        return __new;
+        return original;
     ]-*/;
 
     

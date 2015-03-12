@@ -37,13 +37,13 @@ public class AudioValueRange
     ]-*/;
     public static native AudioValueRange copyWithmMinimum(AudioValueRange original, double mMinimum) /*-[
         original.mMinimum = mMinimum;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native AudioValueRange copyWithmMaximum(AudioValueRange original, double mMaximum) /*-[
         original.mMaximum = mMaximum;
-        return __new;
+        return original;
     ]-*/;
 
     

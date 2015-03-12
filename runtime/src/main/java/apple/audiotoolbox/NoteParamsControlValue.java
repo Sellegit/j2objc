@@ -40,13 +40,13 @@ public class NoteParamsControlValue
     ]-*/;
     public static native NoteParamsControlValue copyWithmID(NoteParamsControlValue original, int mID) /*-[
         original.mID = mID;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native NoteParamsControlValue copyWithmValue(NoteParamsControlValue original, float mValue) /*-[
         original.mValue = mValue;
-        return __new;
+        return original;
     ]-*/;
 
     

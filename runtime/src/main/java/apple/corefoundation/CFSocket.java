@@ -32,13 +32,13 @@ public class CFSocket
     @GlobalFunction("CFSocketGetTypeID")
     public static native @MachineSizedUInt long getClassTypeID();
     @GlobalFunction("CFSocketCreate")
-    public static native CFSocket create(CFAllocator allocator, int protocolFamily, int socketType, int protocol, CFSocketCallBackType callBackTypes, FunctionPtr callout, CFSocketContext context);
+    public static native CFSocket create(CFAllocator allocator, int protocolFamily, int socketType, int protocol, @MachineSizedUInt long callBackTypes, FunctionPtr callout, CFSocketContext context);
     @GlobalFunction("CFSocketCreateWithNative")
-    public static native CFSocket createWithNative(CFAllocator allocator, int sock, CFSocketCallBackType callBackTypes, FunctionPtr callout, CFSocketContext context);
+    public static native CFSocket createWithNative(CFAllocator allocator, int sock, @MachineSizedUInt long callBackTypes, FunctionPtr callout, CFSocketContext context);
     @GlobalFunction("CFSocketCreateWithSocketSignature")
-    public static native CFSocket createWithSocketSignature(CFAllocator allocator, CFSocketSignature signature, CFSocketCallBackType callBackTypes, FunctionPtr callout, CFSocketContext context);
+    public static native CFSocket createWithSocketSignature(CFAllocator allocator, CFSocketSignature signature, @MachineSizedUInt long callBackTypes, FunctionPtr callout, CFSocketContext context);
     @GlobalFunction("CFSocketCreateConnectedToSocketSignature")
-    public static native CFSocket createConnectedToSocketSignature(CFAllocator allocator, CFSocketSignature signature, CFSocketCallBackType callBackTypes, FunctionPtr callout, CFSocketContext context, double timeout);
+    public static native CFSocket createConnectedToSocketSignature(CFAllocator allocator, CFSocketSignature signature, @MachineSizedUInt long callBackTypes, FunctionPtr callout, CFSocketContext context, double timeout);
     @GlobalFunction("CFSocketSetAddress")
     public native CFSocketError setAddress(CFData address);
     @GlobalFunction("CFSocketConnectToAddress")
@@ -60,11 +60,11 @@ public class CFSocket
     @GlobalFunction("CFSocketGetSocketFlags")
     public native CFSocketFlags getSocketFlags();
     @GlobalFunction("CFSocketSetSocketFlags")
-    public native void setSocketFlags(CFSocketFlags flags);
+    public native void setSocketFlags(@MachineSizedUInt long flags);
     @GlobalFunction("CFSocketDisableCallBacks")
-    public native void disableCallBacks(CFSocketCallBackType callBackTypes);
+    public native void disableCallBacks(@MachineSizedUInt long callBackTypes);
     @GlobalFunction("CFSocketEnableCallBacks")
-    public native void enableCallBacks(CFSocketCallBackType callBackTypes);
+    public native void enableCallBacks(@MachineSizedUInt long callBackTypes);
     @GlobalFunction("CFSocketSendData")
     public native CFSocketError sendData(CFData address, CFData data, double timeout);
     @GlobalFunction("CFSocketRegisterValue")

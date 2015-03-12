@@ -85,7 +85,7 @@ public class AVAssetResourceLoadingRequest
     @Mapping("finishLoadingWithError:")
     public native void finishLoading(NSError error);
     @Mapping("streamingContentKeyRequestDataForApp:contentIdentifier:options:error:")
-    public native NSData getStreamingContentKeyRequestData(NSData appIdentifier, NSData contentIdentifier, NSDictionary<NSString, ?> options, Todo outError);
+    public native NSData getStreamingContentKeyRequestData(NSData appIdentifier, NSData contentIdentifier, NSDictionary<?, ?> options, Todo outError);
     /**
      * @since Available in iOS 6.0 and later.
      * @deprecated Deprecated in iOS 7.0.

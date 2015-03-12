@@ -39,19 +39,19 @@ public class CMRotationRate
     ]-*/;
     public static native CMRotationRate copyWithx(CMRotationRate original, double x) /*-[
         original.x = x;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native CMRotationRate copyWithy(CMRotationRate original, double y) /*-[
         original.y = y;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native CMRotationRate copyWithz(CMRotationRate original, double z) /*-[
         original.z = z;
-        return __new;
+        return original;
     ]-*/;
 
     

@@ -29,7 +29,7 @@ public class CKFetchSubscriptionsOperation
     
     public CKFetchSubscriptionsOperation() {}
     @Mapping("initWithSubscriptionIDs:")
-    public CKFetchSubscriptionsOperation(List<String> subscriptionIDs) { }
+    public CKFetchSubscriptionsOperation(NSArray<?> subscriptionIDs) { }
     
     
     @Mapping("subscriptionIDs")

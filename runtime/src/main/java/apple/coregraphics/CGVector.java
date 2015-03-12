@@ -38,13 +38,13 @@ public class CGVector
     ]-*/;
     public static native CGVector copyWithdx(CGVector original, @MachineSizedFloat double dx) /*-[
         original.dx = dx;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native CGVector copyWithdy(CGVector original, @MachineSizedFloat double dy) /*-[
         original.dy = dy;
-        return __new;
+        return original;
     ]-*/;
 
     

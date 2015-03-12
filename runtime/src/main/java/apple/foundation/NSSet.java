@@ -30,6 +30,8 @@ public class NSSet <T>
     
     
     public NSSet() {}
+    @Mapping("initWithObjects:count:")
+    public NSSet(Todo objects, @MachineSizedUInt long cnt) { }
     @Mapping("initWithSet:")
     public NSSet(NSSet<?> set) { }
     @Mapping("initWithArray:")

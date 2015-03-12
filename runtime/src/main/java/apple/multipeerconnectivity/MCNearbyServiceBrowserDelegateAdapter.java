@@ -31,7 +31,7 @@ public abstract class MCNearbyServiceBrowserDelegateAdapter
     
     
     @NotImplemented("browser:foundPeer:withDiscoveryInfo:")
-    public void foundPeer(MCNearbyServiceBrowser browser, MCPeerID peerID, Map<String, String> info) { throw new UnsupportedOperationException(); }
+    public void foundPeer(MCNearbyServiceBrowser browser, MCPeerID peerID, NSDictionary<?, ?> info) { throw new UnsupportedOperationException(); }
     @NotImplemented("browser:lostPeer:")
     public void lostPeer(MCNearbyServiceBrowser browser, MCPeerID peerID) { throw new UnsupportedOperationException(); }
     @NotImplemented("browser:didNotStartBrowsingForPeers:")

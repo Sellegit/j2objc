@@ -47,16 +47,16 @@ public class GKFriendRequestComposeViewController
      * @since Available in iOS 8.0 and later.
      */
     @Mapping("addRecipientPlayers:")
-    public native void addRecipientPlayers(NSArray<GKPlayer> players);
+    public native void addRecipientPlayers(NSArray<?> players);
     /**
      * @since Available in iOS 4.2 and later.
      * @deprecated Deprecated in iOS 8.0.
      */
     @Deprecated
     @Mapping("addRecipientsWithPlayerIDs:")
-    public native void addRecipientsWithPlayerIDs(List<String> playerIDs);
+    public native void addRecipientsWithPlayerIDs(NSArray<?> playerIDs);
     @Mapping("addRecipientsWithEmailAddresses:")
-    public native void addRecipientsWithEmailAddresses(List<String> emailAddresses);
+    public native void addRecipientsWithEmailAddresses(NSArray<?> emailAddresses);
     @Mapping("maxNumberOfRecipients")
     public static native @MachineSizedUInt long getMaxNumberOfRecipients();
     

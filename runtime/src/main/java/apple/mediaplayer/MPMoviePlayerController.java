@@ -249,7 +249,7 @@ public class MPMoviePlayerController
      * @since Available in iOS 3.2 and later.
      */
     @Mapping("requestThumbnailImagesAtTimes:timeOption:")
-    public native void requestThumbnailImages(NSArray<NSNumber> playbackTimes, @Representing("MPMovieTimeOption") @MachineSizedSInt long option);
+    public native void requestThumbnailImages(NSArray<?> playbackTimes, @Representing("MPMovieTimeOption") @MachineSizedSInt long option);
     /**
      * @since Available in iOS 3.2 and later.
      */

@@ -42,19 +42,19 @@ public class AudioFilePacketTableInfo
     ]-*/;
     public static native AudioFilePacketTableInfo copyWithmNumberValidFrames(AudioFilePacketTableInfo original, long mNumberValidFrames) /*-[
         original.mNumberValidFrames = mNumberValidFrames;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native AudioFilePacketTableInfo copyWithmPrimingFrames(AudioFilePacketTableInfo original, int mPrimingFrames) /*-[
         original.mPrimingFrames = mPrimingFrames;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native AudioFilePacketTableInfo copyWithmRemainderFrames(AudioFilePacketTableInfo original, int mRemainderFrames) /*-[
         original.mRemainderFrames = mRemainderFrames;
-        return __new;
+        return original;
     ]-*/;
 
     

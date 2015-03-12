@@ -41,25 +41,25 @@ public class CMQuaternion
     ]-*/;
     public static native CMQuaternion copyWithx(CMQuaternion original, double x) /*-[
         original.x = x;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native CMQuaternion copyWithy(CMQuaternion original, double y) /*-[
         original.y = y;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native CMQuaternion copyWithz(CMQuaternion original, double z) /*-[
         original.z = z;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native CMQuaternion copyWithw(CMQuaternion original, double w) /*-[
         original.w = w;
-        return __new;
+        return original;
     ]-*/;
 
     

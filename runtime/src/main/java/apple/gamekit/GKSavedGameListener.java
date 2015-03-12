@@ -30,7 +30,7 @@ public interface GKSavedGameListener
     @Mapping("player:didModifySavedGame:")
     void didModifySavedGame(GKPlayer player, GKSavedGame savedGame);
     @Mapping("player:hasConflictingSavedGames:")
-    void hasConflictingSavedGames(GKPlayer player, NSArray<GKSavedGame> savedGames);
+    void hasConflictingSavedGames(GKPlayer player, NSArray<?> savedGames);
     
     /*<adapter>*/
     /*</adapter>*/

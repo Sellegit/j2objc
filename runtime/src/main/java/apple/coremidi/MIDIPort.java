@@ -32,7 +32,7 @@ public class MIDIPort
      * @since Available in iOS 4.2 and later.
      */
     @GlobalFunction("MIDIInputPortCreate")
-    protected static native MIDIError createInputPort(MIDIClient client, String portName, FunctionPtr readProc, @Pointer long refCon, Todo outPort);
+    protected static native MIDIError createInputPort(MIDIClient client, String portName, FunctionPtr readProc, Todo refCon, Todo outPort);
     /**
      * @since Available in iOS 4.2 and later.
      */
@@ -47,7 +47,7 @@ public class MIDIPort
      * @since Available in iOS 4.2 and later.
      */
     @GlobalFunction("MIDIPortConnectSource")
-    protected native MIDIError connectSource(MIDIEndpoint source, @Pointer long connRefCon);
+    protected native MIDIError connectSource(MIDIEndpoint source, Todo connRefCon);
     /**
      * @since Available in iOS 4.2 and later.
      */

@@ -42,19 +42,19 @@ public class CAFFileHeader
     ]-*/;
     public static native CAFFileHeader copyWithmFileType(CAFFileHeader original, int mFileType) /*-[
         original.mFileType = mFileType;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native CAFFileHeader copyWithmFileVersion(CAFFileHeader original, short mFileVersion) /*-[
         original.mFileVersion = mFileVersion;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native CAFFileHeader copyWithmFileFlags(CAFFileHeader original, short mFileFlags) /*-[
         original.mFileFlags = mFileFlags;
-        return __new;
+        return original;
     ]-*/;
 
     

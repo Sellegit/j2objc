@@ -33,7 +33,7 @@ public abstract class GKTurnBasedEventListenerAdapter
      * @since Available in iOS 8.0 and later.
      */
     @NotImplemented("player:didRequestMatchWithOtherPlayers:")
-    public void didRequestMatch(GKPlayer player, NSArray<GKPlayer> playersToInvite) { throw new UnsupportedOperationException(); }
+    public void didRequestMatchWithOtherPlayers(GKPlayer player, NSArray<?> playersToInvite) { throw new UnsupportedOperationException(); }
     /**
      * @since Available in iOS 7.0 and later.
      */
@@ -55,13 +55,13 @@ public abstract class GKTurnBasedEventListenerAdapter
      * @since Available in iOS 7.0 and later.
      */
     @NotImplemented("player:receivedExchangeReplies:forCompletedExchange:forMatch:")
-    public void receivedExchangeReplies(GKPlayer player, NSArray<GKTurnBasedExchange> replies, GKTurnBasedExchange exchange, GKTurnBasedMatch match) { throw new UnsupportedOperationException(); }
+    public void receivedExchangeReplies(GKPlayer player, NSArray<?> replies, GKTurnBasedExchange exchange, GKTurnBasedMatch match) { throw new UnsupportedOperationException(); }
     /**
      * @since Available in iOS 7.0 and later.
      * @deprecated Deprecated in iOS 8.0.
      */
     @Deprecated
     @NotImplemented("player:didRequestMatchWithPlayers:")
-    public void didRequestMatch(GKPlayer player, List<String> playerIDsToInvite) { throw new UnsupportedOperationException(); }
+    public void didRequestMatchWithPlayers(GKPlayer player, NSArray<?> playerIDsToInvite) { throw new UnsupportedOperationException(); }
     
 }

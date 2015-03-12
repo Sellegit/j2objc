@@ -34,7 +34,7 @@ public class AVPlayerItemVideoOutput
     
     public AVPlayerItemVideoOutput() {}
     @Mapping("initWithPixelBufferAttributes:")
-    public AVPlayerItemVideoOutput(CVPixelBufferAttributes pixelBufferAttributes) { }
+    public AVPlayerItemVideoOutput(NSDictionary<?, ?> pixelBufferAttributes) { }
     
     
     @Mapping("delegate")

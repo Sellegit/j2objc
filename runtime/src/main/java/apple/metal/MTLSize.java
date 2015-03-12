@@ -40,19 +40,19 @@ public class MTLSize
     ]-*/;
     public static native MTLSize copyWithwidth(MTLSize original, @MachineSizedUInt long width) /*-[
         original.width = width;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native MTLSize copyWithheight(MTLSize original, @MachineSizedUInt long height) /*-[
         original.height = height;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native MTLSize copyWithdepth(MTLSize original, @MachineSizedUInt long depth) /*-[
         original.depth = depth;
-        return __new;
+        return original;
     ]-*/;
 
     

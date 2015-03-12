@@ -36,14 +36,14 @@ public interface GKInviteEventListener
      * @since Available in iOS 8.0 and later.
      */
     @Mapping("player:didRequestMatchWithRecipients:")
-    void didRequestMatch(GKPlayer player, NSArray<GKPlayer> recipientPlayers);
+    void didRequestMatchWithRecipients(GKPlayer player, NSArray<?> recipientPlayers);
     /**
      * @since Available in iOS 7.0 and later.
      * @deprecated Deprecated in iOS 8.0.
      */
     @Deprecated
     @Mapping("player:didRequestMatchWithPlayers:")
-    void didRequestMatch(GKPlayer player, List<String> playerIDsToInvite);
+    void didRequestMatchWithPlayers(GKPlayer player, NSArray<?> playerIDsToInvite);
     
     /*<adapter>*/
     /*</adapter>*/

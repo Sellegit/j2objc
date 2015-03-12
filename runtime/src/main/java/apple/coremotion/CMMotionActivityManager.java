@@ -33,10 +33,6 @@ public class CMMotionActivityManager
     
     
     
-    @Mapping("queryActivityStartingFromDate:toDate:toQueue:withHandler:")
-    public native void queryActivity(NSDate start, NSDate end, NSOperationQueue queue, @Block VoidBlock2<NSArray<CMMotionActivity>, NSError> handler);
-    @Mapping("startActivityUpdatesToQueue:withHandler:")
-    public native void startActivityUpdates(NSOperationQueue queue, @Block VoidBlock1<CMMotionActivity> handler);
     @Mapping("stopActivityUpdates")
     public native void stopActivityUpdates();
     @Mapping("isActivityAvailable")

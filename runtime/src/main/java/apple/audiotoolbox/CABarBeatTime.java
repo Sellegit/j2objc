@@ -46,31 +46,31 @@ public class CABarBeatTime
     ]-*/;
     public static native CABarBeatTime copyWithbar(CABarBeatTime original, int bar) /*-[
         original.bar = bar;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native CABarBeatTime copyWithbeat(CABarBeatTime original, short beat) /*-[
         original.beat = beat;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native CABarBeatTime copyWithsubbeat(CABarBeatTime original, short subbeat) /*-[
         original.subbeat = subbeat;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native CABarBeatTime copyWithsubbeatDivisor(CABarBeatTime original, short subbeatDivisor) /*-[
         original.subbeatDivisor = subbeatDivisor;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native CABarBeatTime copyWithreserved(CABarBeatTime original, short reserved) /*-[
         original.reserved = reserved;
-        return __new;
+        return original;
     ]-*/;
 
     

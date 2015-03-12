@@ -50,43 +50,43 @@ public class AudioQueueBuffer
     ]-*/;
     public static native AudioQueueBuffer copyWithmAudioDataBytesCapacity(AudioQueueBuffer original, int mAudioDataBytesCapacity) /*-[
         original.mAudioDataBytesCapacity = mAudioDataBytesCapacity;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native AudioQueueBuffer copyWithmAudioData(AudioQueueBuffer original, Todo mAudioData) /*-[
         original.mAudioData = mAudioData;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native AudioQueueBuffer copyWithmAudioDataByteSize(AudioQueueBuffer original, int mAudioDataByteSize) /*-[
         original.mAudioDataByteSize = mAudioDataByteSize;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native AudioQueueBuffer copyWithmUserData(AudioQueueBuffer original, Todo mUserData) /*-[
         original.mUserData = mUserData;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native AudioQueueBuffer copyWithmPacketDescriptionCapacity(AudioQueueBuffer original, int mPacketDescriptionCapacity) /*-[
         original.mPacketDescriptionCapacity = mPacketDescriptionCapacity;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native AudioQueueBuffer copyWithmPacketDescriptions(AudioQueueBuffer original, AudioStreamPacketDescription mPacketDescriptions) /*-[
         original.mPacketDescriptions = mPacketDescriptions;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native AudioQueueBuffer copyWithmPacketDescriptionCount(AudioQueueBuffer original, int mPacketDescriptionCount) /*-[
         original.mPacketDescriptionCount = mPacketDescriptionCount;
-        return __new;
+        return original;
     ]-*/;
 
     

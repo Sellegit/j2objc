@@ -58,23 +58,23 @@ public class NSHTTPCookieStorage
     @Mapping("cookiesForURL:")
     public native NSArray<NSHTTPCookie> getCookiesForURL(NSURL URL);
     @Mapping("setCookies:forURL:mainDocumentURL:")
-    public native void setCookiesForURL(NSArray<NSHTTPCookie> cookies, NSURL URL, NSURL mainDocumentURL);
+    public native void setCookiesForURL(NSArray<?> cookies, NSURL URL, NSURL mainDocumentURL);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @Mapping("sortedCookiesUsingDescriptors:")
-    public native NSArray<NSHTTPCookie> getSortedCookies(NSArray<NSSortDescriptor> sortOrder);
+    public native NSArray<NSHTTPCookie> getSortedCookies(NSArray<?> sortOrder);
     @Mapping("sharedHTTPCookieStorage")
     public static native NSHTTPCookieStorage getSharedHTTPCookieStorage();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @Mapping("storeCookies:forTask:")
-    public native void storeCookiesForTask(NSArray<NSHTTPCookie> cookies, NSURLSessionTask task);
+    public native void storeCookiesForTask(NSArray<?> cookies, NSURLSessionTask task);
     /**
      * @since Available in iOS 8.0 and later.
      */
     @Mapping("getCookiesForTask:completionHandler:")
-    public native void getCookiesForTask(NSURLSessionTask task, @Block VoidBlock1<NSArray<NSHTTPCookie>> completionHandler);
+    public native void getCookiesForTask(NSURLSessionTask task, Todo completionHandler);
     
 }

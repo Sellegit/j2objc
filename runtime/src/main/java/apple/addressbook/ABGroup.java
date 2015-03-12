@@ -37,14 +37,14 @@ public class ABGroup
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("ABGroupCopySource")
-    public native ABRecord source();
+    public static native ABRecord source(ABRecord group);
     @GlobalFunction("ABGroupCopyArrayOfAllMembers")
-    public native List<ABPerson> getAllMembers();
+    public static native List<ABPerson> getAllMembers(ABRecord group);
     @GlobalFunction("ABGroupCopyArrayOfAllMembersWithSortOrdering")
-    public native List<ABPerson> getAllMembers(ABPersonSortOrdering sortOrdering);
+    public static native List<ABPerson> getAllMembers(ABRecord group, ABPersonSortOrdering sortOrdering);
     @GlobalFunction("ABGroupAddMember")
-    protected native boolean addMember(ABPerson person, Todo error);
+    protected static native boolean addMember(ABRecord group, ABRecord person, Todo error);
     @GlobalFunction("ABGroupRemoveMember")
-    protected native boolean removeMember(ABPerson member, Todo error);
+    protected static native boolean removeMember(ABRecord group, ABRecord member, Todo error);
     
 }

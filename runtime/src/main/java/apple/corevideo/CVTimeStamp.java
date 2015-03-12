@@ -54,55 +54,55 @@ public class CVTimeStamp
     ]-*/;
     public static native CVTimeStamp copyWithversion(CVTimeStamp original, int version) /*-[
         original.version = version;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native CVTimeStamp copyWithvideoTimeScale(CVTimeStamp original, int videoTimeScale) /*-[
         original.videoTimeScale = videoTimeScale;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native CVTimeStamp copyWithvideoTime(CVTimeStamp original, long videoTime) /*-[
         original.videoTime = videoTime;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native CVTimeStamp copyWithhostTime(CVTimeStamp original, long hostTime) /*-[
         original.hostTime = hostTime;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native CVTimeStamp copyWithrateScalar(CVTimeStamp original, double rateScalar) /*-[
         original.rateScalar = rateScalar;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native CVTimeStamp copyWithvideoRefreshPeriod(CVTimeStamp original, long videoRefreshPeriod) /*-[
         original.videoRefreshPeriod = videoRefreshPeriod;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native CVTimeStamp copyWithsmpteTime(CVTimeStamp original, CVSMPTETime smpteTime) /*-[
         original.smpteTime = smpteTime;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native CVTimeStamp copyWithflags(CVTimeStamp original, long flags) /*-[
         original.flags = flags;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native CVTimeStamp copyWithreserved(CVTimeStamp original, long reserved) /*-[
         original.reserved = reserved;
-        return __new;
+        return original;
     ]-*/;
 
     

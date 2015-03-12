@@ -61,7 +61,7 @@ public class CMClock
      * @since Available in iOS 6.0 and later.
      */
     @GlobalFunction("CMClockGetAnchorTime")
-    protected native int getAnchorTime(Todo outClockTime, Todo outReferenceClockTime);
+    protected native int getAnchorTime(CMTime outClockTime, CMTime outReferenceClockTime);
     /**
      * @since Available in iOS 6.0 and later.
      */

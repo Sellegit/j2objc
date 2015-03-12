@@ -80,16 +80,16 @@ public class UICollectionViewLayoutInvalidationContext
      * @since Available in iOS 8.0 and later.
      */
     @Mapping("invalidateItemsAtIndexPaths:")
-    public native void invalidateItems(NSArray<NSIndexPath> indexPaths);
+    public native void invalidateItems(NSArray<?> indexPaths);
     /**
      * @since Available in iOS 8.0 and later.
      */
     @Mapping("invalidateSupplementaryElementsOfKind:atIndexPaths:")
-    public native void invalidateSupplementaryElementsOfKind(String elementKind, NSArray<NSIndexPath> indexPaths);
+    public native void invalidateSupplementaryElementsOfKind(String elementKind, NSArray<?> indexPaths);
     /**
      * @since Available in iOS 8.0 and later.
      */
     @Mapping("invalidateDecorationElementsOfKind:atIndexPaths:")
-    public native void invalidateDecorationElementsOfKind(String elementKind, NSArray<NSIndexPath> indexPaths);
+    public native void invalidateDecorationElementsOfKind(String elementKind, NSArray<?> indexPaths);
     
 }

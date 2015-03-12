@@ -48,12 +48,12 @@ public abstract class UIApplicationDelegateAdapter
      * @since Available in iOS 6.0 and later.
      */
     @NotImplemented("application:willFinishLaunchingWithOptions:")
-    public boolean willFinishLaunching(UIApplication application, UIApplicationLaunchOptions launchOptions) { throw new UnsupportedOperationException(); }
+    public boolean willFinishLaunching(UIApplication application, NSDictionary<?, ?> launchOptions) { throw new UnsupportedOperationException(); }
     /**
      * @since Available in iOS 3.0 and later.
      */
     @NotImplemented("application:didFinishLaunchingWithOptions:")
-    public boolean didFinishLaunching(UIApplication application, UIApplicationLaunchOptions launchOptions) { throw new UnsupportedOperationException(); }
+    public boolean didFinishLaunching(UIApplication application, NSDictionary<?, ?> launchOptions) { throw new UnsupportedOperationException(); }
     @NotImplemented("applicationDidBecomeActive:")
     public void didBecomeActive(UIApplication application) { throw new UnsupportedOperationException(); }
     @NotImplemented("applicationWillResignActive:")
@@ -64,7 +64,7 @@ public abstract class UIApplicationDelegateAdapter
      * @since Available in iOS 4.2 and later.
      */
     @NotImplemented("application:openURL:sourceApplication:annotation:")
-    public boolean openURL(UIApplication application, NSURL url, String sourceApplication, NSPropertyList annotation) { throw new UnsupportedOperationException(); }
+    public boolean openURL(UIApplication application, NSURL url, String sourceApplication, Object annotation) { throw new UnsupportedOperationException(); }
     @NotImplemented("applicationDidReceiveMemoryWarning:")
     public void didReceiveMemoryWarning(UIApplication application) { throw new UnsupportedOperationException(); }
     @NotImplemented("applicationWillTerminate:")
@@ -158,12 +158,12 @@ public abstract class UIApplicationDelegateAdapter
      * @since Available in iOS 8.0 and later.
      */
     @NotImplemented("application:shouldAllowExtensionPointIdentifier:")
-    public boolean shouldAllowExtensionPointIdentifier(UIApplication application, UIApplicationExtensionPointIdentifier extensionPointIdentifier) { throw new UnsupportedOperationException(); }
+    public boolean shouldAllowExtensionPointIdentifier(UIApplication application, String extensionPointIdentifier) { throw new UnsupportedOperationException(); }
     /**
      * @since Available in iOS 6.0 and later.
      */
     @NotImplemented("application:viewControllerWithRestorationIdentifierPath:coder:")
-    public UIViewController getViewController(UIApplication application, List<String> identifierComponents, NSCoder coder) { throw new UnsupportedOperationException(); }
+    public UIViewController getViewController(UIApplication application, NSArray<?> identifierComponents, NSCoder coder) { throw new UnsupportedOperationException(); }
     /**
      * @since Available in iOS 6.0 and later.
      */
@@ -193,7 +193,7 @@ public abstract class UIApplicationDelegateAdapter
      * @since Available in iOS 8.0 and later.
      */
     @NotImplemented("application:continueUserActivity:restorationHandler:")
-    public boolean continueUserActivity(UIApplication application, NSUserActivity userActivity, @Block VoidBlock1<NSArray<UIResponder>> restorationHandler) { throw new UnsupportedOperationException(); }
+    public boolean continueUserActivity(UIApplication application, NSUserActivity userActivity, Todo restorationHandler) { throw new UnsupportedOperationException(); }
     /**
      * @since Available in iOS 8.0 and later.
      */

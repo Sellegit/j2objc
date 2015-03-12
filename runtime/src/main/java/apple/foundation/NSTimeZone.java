@@ -106,7 +106,7 @@ public class NSTimeZone
      * @since Available in iOS 4.0 and later.
      */
     @Mapping("setAbbreviationDictionary:")
-    public static native void setAbbreviationDictionary(Map<String, String> dict);
+    public static native void setAbbreviationDictionary(NSDictionary<?, ?> dict);
     /**
      * @since Available in iOS 4.0 and later.
      */

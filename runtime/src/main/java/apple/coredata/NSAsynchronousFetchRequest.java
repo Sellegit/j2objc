@@ -27,8 +27,6 @@ public class NSAsynchronousFetchRequest
     
     
     public NSAsynchronousFetchRequest() {}
-    @Mapping("initWithFetchRequest:completionBlock:")
-    public NSAsynchronousFetchRequest(NSFetchRequest request, @Block VoidBlock1<NSAsynchronousFetchResult> blk) { }
     
     
     @Mapping("fetchRequest")

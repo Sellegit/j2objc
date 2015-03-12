@@ -33,7 +33,7 @@ public class SKReceiptRefreshRequest
      * @since Available in iOS 7.0 and later.
      */
     @Mapping("initWithReceiptProperties:")
-    public SKReceiptRefreshRequest(SKReceiptRefreshRequestOptions properties) { }
+    public SKReceiptRefreshRequest(NSDictionary<?, ?> properties) { }
     
     
     /**

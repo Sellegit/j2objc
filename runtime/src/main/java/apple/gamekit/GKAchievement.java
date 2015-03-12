@@ -89,14 +89,14 @@ public class GKAchievement
     
     
     @Mapping("loadAchievementsWithCompletionHandler:")
-    public static native void loadAchievements(@Block VoidBlock2<NSArray<GKAchievement>, NSError> completionHandler);
+    public static native void loadAchievements(Todo completionHandler);
     @Mapping("resetAchievementsWithCompletionHandler:")
     public static native void resetAchievements(@Block VoidBlock1<NSError> completionHandler);
     /**
      * @since Available in iOS 6.0 and later.
      */
     @Mapping("reportAchievements:withCompletionHandler:")
-    public static native void reportAchievements(NSArray<GKAchievement> achievements, @Block VoidBlock1<NSError> completionHandler);
+    public static native void reportAchievements(NSArray<?> achievements, @Block VoidBlock1<NSError> completionHandler);
     /**
      * @since Available in iOS 4.1 and later.
      * @deprecated Deprecated in iOS 7.0.
@@ -105,41 +105,29 @@ public class GKAchievement
     @Mapping("reportAchievementWithCompletionHandler:")
     public native void reportAchievement(@Block VoidBlock1<NSError> completionHandler);
     /**
-     * @since Available in iOS 8.0 and later.
-     */
-    @Mapping("challengeComposeControllerWithMessage:players:completionHandler:")
-    public native UIViewController getChallengeComposeController(String message, NSArray<GKPlayer> players, @Block VoidBlock3<UIViewController, Boolean, NSArray<GKPlayer>> completionHandler);
-    /**
      * @since Available in iOS 6.0 and later.
      * @deprecated Deprecated in iOS 7.0.
      */
     @Deprecated
     @Mapping("issueChallengeToPlayers:message:")
-    public native void issueChallengeToPlayers(List<String> playerIDs, String message);
+    public native void issueChallengeToPlayers(NSArray<?> playerIDs, String message);
     /**
      * @since Available in iOS 8.0 and later.
      */
     @Mapping("selectChallengeablePlayers:withCompletionHandler:")
-    public native void selectChallengeablePlayers(NSArray<GKPlayer> players, @Block VoidBlock2<NSArray<GKPlayer>, NSError> completionHandler);
+    public native void selectChallengeablePlayers(NSArray<?> players, Todo completionHandler);
     /**
      * @since Available in iOS 7.0 and later.
      */
     @Mapping("reportAchievements:withEligibleChallenges:withCompletionHandler:")
-    public static native void reportAchievements(NSArray<GKAchievement> achievements, NSArray<GKChallenge> challenges, @Block VoidBlock1<NSError> completionHandler);
+    public static native void reportAchievements(NSArray<?> achievements, NSArray<?> challenges, @Block VoidBlock1<NSError> completionHandler);
     /**
      * @since Available in iOS 6.0 and later.
      * @deprecated Deprecated in iOS 8.0.
      */
     @Deprecated
     @Mapping("selectChallengeablePlayerIDs:withCompletionHandler:")
-    public native void selectChallengeablePlayerIDs(List<String> playerIDs, @Block VoidBlock2<NSArray<NSString>, NSError> completionHandler);
-    /**
-     * @since Available in iOS 7.0 and later.
-     * @deprecated Deprecated in iOS 8.0.
-     */
-    @Deprecated
-    @Mapping("challengeComposeControllerWithPlayers:message:completionHandler:")
-    public native UIViewController getChallengeComposeController(List<String> playerIDs, String message, @Block VoidBlock3<UIViewController, Boolean, NSArray<NSString>> completionHandler);
+    public native void selectChallengeablePlayerIDs(NSArray<?> playerIDs, Todo completionHandler);
     @Mapping("encodeWithCoder:")
     public native void encode(NSCoder aCoder);
     

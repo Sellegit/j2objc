@@ -42,19 +42,19 @@ public class AudioFileRegionList
     ]-*/;
     public static native AudioFileRegionList copyWithmSMPTE_TimeType(AudioFileRegionList original, int mSMPTE_TimeType) /*-[
         original.mSMPTE_TimeType = mSMPTE_TimeType;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native AudioFileRegionList copyWithmNumberRegions(AudioFileRegionList original, int mNumberRegions) /*-[
         original.mNumberRegions = mNumberRegions;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native AudioFileRegionList copyWithmRegions(AudioFileRegionList original, AudioFileRegion mRegions) /*-[
         original.mRegions = mRegions;
-        return __new;
+        return original;
     ]-*/;
 
     

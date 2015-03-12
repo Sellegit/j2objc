@@ -43,31 +43,31 @@ public class MIDIObjectPropertyChangeNotification
     ]-*/;
     public static native MIDIObjectPropertyChangeNotification copyWithmessageID(MIDIObjectPropertyChangeNotification original, MIDINotificationMessageID messageID) /*-[
         original.messageID = messageID;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native MIDIObjectPropertyChangeNotification copyWithmessageSize(MIDIObjectPropertyChangeNotification original, int messageSize) /*-[
         original.messageSize = messageSize;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native MIDIObjectPropertyChangeNotification copyWithobject(MIDIObjectPropertyChangeNotification original, MIDIObject object) /*-[
         original.object = object;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native MIDIObjectPropertyChangeNotification copyWithobjectType(MIDIObjectPropertyChangeNotification original, MIDIObjectType objectType) /*-[
         original.objectType = objectType;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native MIDIObjectPropertyChangeNotification copyWithpropertyName(MIDIObjectPropertyChangeNotification original, String propertyName) /*-[
         original.propertyName = propertyName;
-        return __new;
+        return original;
     ]-*/;
 
     

@@ -63,7 +63,7 @@ public class CGPath
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("CGPathCreateCopyByDashingPath")
-    protected static native CGPath createCopyByDashingPath(CGPath path, CGAffineTransform transform, @MachineSizedFloat double phase, @Pointer long lengths, @MachineSizedUInt long count);
+    protected static native CGPath createCopyByDashingPath(CGPath path, CGAffineTransform transform, @MachineSizedFloat double phase, Todo lengths, @MachineSizedUInt long count);
     /**
      * @since Available in iOS 5.0 and later.
      */
@@ -108,6 +108,6 @@ public class CGPath
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGPathApply")
-    protected native void apply(@Pointer long info, @Pointer long function);
+    protected native void apply(Todo info, FunctionPtr function);
     
 }

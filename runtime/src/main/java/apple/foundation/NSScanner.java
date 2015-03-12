@@ -97,7 +97,7 @@ public class NSScanner
     @Mapping("localizedScannerWithString:")
     public static native NSScanner createLocalized(String string);
     @Mapping("scanDecimal:")
-    private native boolean scanDecimal(Todo dcm);
+    private native boolean scanDecimal(NSDecimal dcm);
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
     

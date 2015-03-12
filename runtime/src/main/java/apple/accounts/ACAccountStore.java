@@ -43,23 +43,8 @@ public class ACAccountStore
     @Mapping("accountWithIdentifier:")
     public native ACAccount getAccount(String identifier);
     @Mapping("accountTypeWithAccountTypeIdentifier:")
-    public native ACAccountType getAccountType(ACAccountTypeIdentifier typeIdentifier);
+    public native ACAccountType getAccountType(String typeIdentifier);
     @Mapping("accountsWithAccountType:")
     public native NSArray<ACAccount> getAccounts(ACAccountType accountType);
-    @Mapping("saveAccount:withCompletionHandler:")
-    public native void saveAccount(ACAccount account, @Block VoidBlock2<Boolean, NSError> completionHandler);
-    /**
-     * @since Available in iOS 5.0 and later.
-     * @deprecated Deprecated in iOS 6.0.
-     */
-    @Deprecated
-    @Mapping("requestAccessToAccountsWithType:withCompletionHandler:")
-    public native void requestAccessToAccounts(ACAccountType accountType, @Block VoidBlock2<Boolean, NSError> handler);
-    @Mapping("requestAccessToAccountsWithType:options:completion:")
-    protected native void requestAccessToAccounts(ACAccountType accountType, NSDictionary<NSString, ?> options, @Block VoidBlock2<Boolean, NSError> completion);
-    @Mapping("renewCredentialsForAccount:completion:")
-    public native void renewCredentials(ACAccount account, @Block VoidBlock2<ACAccountCredentialRenewResult, NSError> completionHandler);
-    @Mapping("removeAccount:withCompletionHandler:")
-    public native void removeAccount(ACAccount account, @Block VoidBlock2<Boolean, NSError> completionHandler);
     
 }

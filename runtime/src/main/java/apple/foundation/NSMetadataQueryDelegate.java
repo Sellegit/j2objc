@@ -34,7 +34,7 @@ public interface NSMetadataQueryDelegate
     @Mapping("metadataQuery:replacementObjectForResultObject:")
     Object getReplacementObject(NSMetadataQuery query, NSMetadataItem result);
     @Mapping("metadataQuery:replacementValueForAttribute:value:")
-    Object getReplacementValue(NSMetadataQuery query, NSMetadataItemAttribute attribute, Object attrValue);
+    Object getReplacementValue(NSMetadataQuery query, String attrName, Object attrValue);
     
     /*<adapter>*/
     /*</adapter>*/

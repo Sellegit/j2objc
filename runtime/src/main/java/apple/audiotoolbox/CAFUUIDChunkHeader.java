@@ -40,13 +40,13 @@ public class CAFUUIDChunkHeader
     ]-*/;
     public static native CAFUUIDChunkHeader copyWithmHeader(CAFUUIDChunkHeader original, CAFChunkHeader mHeader) /*-[
         original.mHeader = mHeader;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native CAFUUIDChunkHeader copyWithmUUID(CAFUUIDChunkHeader original, ByteBuffer mUUID) /*-[
         original.mUUID = mUUID;
-        return __new;
+        return original;
     ]-*/;
 
     

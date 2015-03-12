@@ -57,8 +57,8 @@ public class CFDateFormatter
     @GlobalFunction("CFDateFormatterGetAbsoluteTimeFromString")
     protected native boolean getAbsoluteTime(String string, CFRange rangep, Todo atp);
     @GlobalFunction("CFDateFormatterSetProperty")
-    public native void setProperty(CFDateFormatterProperty key, CFType value);
+    public native void setProperty(String key, CFType value);
     @GlobalFunction("CFDateFormatterCopyProperty")
-    public native CFType getProperty(CFDateFormatterProperty key);
+    public native CFType getProperty(String key);
     
 }

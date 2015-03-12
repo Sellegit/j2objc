@@ -45,6 +45,6 @@ public class HMService
     @Mapping("updateName:completionHandler:")
     public native void updateName(String name, @Block VoidBlock1<NSError> completion);
     @Mapping("updateAssociatedServiceType:completionHandler:")
-    public native void updateAssociatedServiceType(HMServiceType serviceType, @Block VoidBlock1<NSError> completion);
+    public native void updateAssociatedServiceType(String serviceType, @Block VoidBlock1<NSError> completion);
     
 }

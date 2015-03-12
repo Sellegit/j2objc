@@ -32,7 +32,7 @@ public abstract class CBPeripheralManagerDelegateAdapter
     @NotImplemented("peripheralManagerDidUpdateState:")
     public void didUpdateState(CBPeripheralManager peripheral) { throw new UnsupportedOperationException(); }
     @NotImplemented("peripheralManager:willRestoreState:")
-    public void willRestoreState(CBPeripheralManager peripheral, CBPeripheralManagerRestoredState dict) { throw new UnsupportedOperationException(); }
+    public void willRestoreState(CBPeripheralManager peripheral, NSDictionary<?, ?> dict) { throw new UnsupportedOperationException(); }
     @NotImplemented("peripheralManagerDidStartAdvertising:error:")
     public void didStartAdvertising(CBPeripheralManager peripheral, NSError error) { throw new UnsupportedOperationException(); }
     @NotImplemented("peripheralManager:didAddService:error:")
@@ -44,7 +44,7 @@ public abstract class CBPeripheralManagerDelegateAdapter
     @NotImplemented("peripheralManager:didReceiveReadRequest:")
     public void didReceiveReadRequest(CBPeripheralManager peripheral, CBATTRequest request) { throw new UnsupportedOperationException(); }
     @NotImplemented("peripheralManager:didReceiveWriteRequests:")
-    public void didReceiveWriteRequests(CBPeripheralManager peripheral, NSArray<CBATTRequest> requests) { throw new UnsupportedOperationException(); }
+    public void didReceiveWriteRequests(CBPeripheralManager peripheral, NSArray<?> requests) { throw new UnsupportedOperationException(); }
     @NotImplemented("peripheralManagerIsReadyToUpdateSubscribers:")
     public void readyToUpdateSubscribers(CBPeripheralManager peripheral) { throw new UnsupportedOperationException(); }
     

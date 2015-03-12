@@ -33,7 +33,7 @@ public interface MCBrowserViewControllerDelegate
     @Mapping("browserViewControllerWasCancelled:")
     void wasCancelled(MCBrowserViewController browserViewController);
     @Mapping("browserViewController:shouldPresentNearbyPeer:withDiscoveryInfo:")
-    boolean shouldPresentNearbyPeer(MCBrowserViewController browserViewController, MCPeerID peerID, Map<String, String> info);
+    boolean shouldPresentNearbyPeer(MCBrowserViewController browserViewController, MCPeerID peerID, NSDictionary<?, ?> info);
     
     /*<adapter>*/
     /*</adapter>*/

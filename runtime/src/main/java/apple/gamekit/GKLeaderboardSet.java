@@ -45,12 +45,12 @@ public class GKLeaderboardSet
      * @since Available in iOS 7.0 and later.
      */
     @Mapping("loadLeaderboardsWithCompletionHandler:")
-    public native void loadLeaderboards(@Block VoidBlock2<GKLeaderboard, NSError> completionHandler);
+    public native void loadLeaderboards(Todo completionHandler);
     /**
      * @since Available in iOS 7.0 and later.
      */
     @Mapping("loadLeaderboardSetsWithCompletionHandler:")
-    public static native void loadLeaderboardSets(@Block VoidBlock2<GKLeaderboardSet, NSError> completionHandler);
+    public static native void loadLeaderboardSets(Todo completionHandler);
     @Mapping("loadImageWithCompletionHandler:")
     public native void loadImage(@Block VoidBlock2<UIImage, NSError> completionHandler);
     @Mapping("encodeWithCoder:")

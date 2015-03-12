@@ -44,14 +44,14 @@ public abstract class UITabBarControllerDelegateAdapter
      * @since Available in iOS 3.0 and later.
      */
     @NotImplemented("tabBarController:willBeginCustomizingViewControllers:")
-    public void willBeginCustomizingViewControllers(UITabBarController tabBarController, NSArray<UIViewController> viewControllers) { throw new UnsupportedOperationException(); }
+    public void willBeginCustomizingViewControllers(UITabBarController tabBarController, NSArray<?> viewControllers) { throw new UnsupportedOperationException(); }
     /**
      * @since Available in iOS 3.0 and later.
      */
     @NotImplemented("tabBarController:willEndCustomizingViewControllers:changed:")
-    public void willEndCustomizingViewControllers(UITabBarController tabBarController, NSArray<UIViewController> viewControllers, boolean changed) { throw new UnsupportedOperationException(); }
+    public void willEndCustomizingViewControllers(UITabBarController tabBarController, NSArray<?> viewControllers, boolean changed) { throw new UnsupportedOperationException(); }
     @NotImplemented("tabBarController:didEndCustomizingViewControllers:changed:")
-    public void didEndCustomizingViewControllers(UITabBarController tabBarController, NSArray<UIViewController> viewControllers, boolean changed) { throw new UnsupportedOperationException(); }
+    public void didEndCustomizingViewControllers(UITabBarController tabBarController, NSArray<?> viewControllers, boolean changed) { throw new UnsupportedOperationException(); }
     /**
      * @since Available in iOS 7.0 and later.
      */

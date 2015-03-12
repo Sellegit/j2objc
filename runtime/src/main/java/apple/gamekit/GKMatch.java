@@ -55,7 +55,7 @@ public class GKMatch
      * @since Available in iOS 8.0 and later.
      */
     @Mapping("sendData:toPlayers:dataMode:error:")
-    protected native boolean sendDataToPlayers(NSData data, NSArray<GKPlayer> players, @Representing("GKMatchSendDataMode") @MachineSizedSInt long mode, Todo error);
+    protected native boolean sendDataToPlayersDataMode(NSData data, NSArray<?> players, @Representing("GKMatchSendDataMode") @MachineSizedSInt long mode, Todo error);
     @Mapping("sendDataToAllPlayers:withDataMode:error:")
     protected native boolean sendDataToAllPlayers(NSData data, @Representing("GKMatchSendDataMode") @MachineSizedSInt long mode, Todo error);
     @Mapping("disconnect")
@@ -85,6 +85,6 @@ public class GKMatch
      */
     @Deprecated
     @Mapping("sendData:toPlayers:withDataMode:error:")
-    protected native boolean sendDataToPlayers(NSData data, List<String> playerIDs, @Representing("GKMatchSendDataMode") @MachineSizedSInt long mode, Todo error);
+    protected native boolean sendDataToPlayersWithDataMod(NSData data, NSArray<?> playerIDs, @Representing("GKMatchSendDataMode") @MachineSizedSInt long mode, Todo error);
     
 }

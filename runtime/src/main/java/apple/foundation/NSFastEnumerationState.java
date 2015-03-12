@@ -40,19 +40,19 @@ public class NSFastEnumerationState
     
     public static native NSFastEnumerationState copyWithstate(NSFastEnumerationState original, @MachineSizedUInt long state) /*-[
         original.state = state;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native NSFastEnumerationState copyWithitemsPtr(NSFastEnumerationState original, Todo itemsPtr) /*-[
         original.itemsPtr = itemsPtr;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native NSFastEnumerationState copyWithmutationsPtr(NSFastEnumerationState original, Todo mutationsPtr) /*-[
         original.mutationsPtr = mutationsPtr;
-        return __new;
+        return original;
     ]-*/;
 
     

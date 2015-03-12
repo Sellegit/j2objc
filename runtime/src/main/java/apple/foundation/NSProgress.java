@@ -90,7 +90,7 @@ public class NSProgress
     @Mapping("resignCurrent")
     public native void resignCurrent();
     @Mapping("setUserInfoObject:forKey:")
-    protected native void setUserInfoObject(Object objectOrNil, NSString key);
+    protected native void setUserInfoObject(Object objectOrNil, String key);
     @Mapping("cancel")
     public native void cancel();
     @Mapping("pause")

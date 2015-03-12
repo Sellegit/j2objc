@@ -58,6 +58,6 @@ public class PHFetchResultChangeDetails
     @Mapping("enumerateMovesWithBlock:")
     public native void enumerateMoves(@Block("(@MachineSizedUInt,@MachineSizedUInt)") VoidBlock2<Long, Long> handler);
     @Mapping("changeDetailsFromFetchResult:toFetchResult:changedObjects:")
-    public static native PHFetchResultChangeDetails create(PHFetchResult fromResult, PHFetchResult toResult, NSArray<PHObject> changedObjects);
+    public static native PHFetchResultChangeDetails create(PHFetchResult fromResult, PHFetchResult toResult, NSArray<?> changedObjects);
     
 }

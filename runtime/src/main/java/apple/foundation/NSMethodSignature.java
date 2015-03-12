@@ -48,6 +48,6 @@ public class NSMethodSignature
     @Mapping("isOneway")
     public native boolean isOneway();
     @Mapping("signatureWithObjCTypes:")
-    public static native NSMethodSignature create(String types);
+    public static native NSMethodSignature create(Todo types);
     
 }

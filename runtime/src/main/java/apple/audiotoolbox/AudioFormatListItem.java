@@ -40,13 +40,13 @@ public class AudioFormatListItem
     ]-*/;
     public static native AudioFormatListItem copyWithmASBD(AudioFormatListItem original, AudioStreamBasicDescription mASBD) /*-[
         original.mASBD = mASBD;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native AudioFormatListItem copyWithmChannelLayoutTag(AudioFormatListItem original, AudioChannelLayoutTag mChannelLayoutTag) /*-[
         original.mChannelLayoutTag = mChannelLayoutTag;
-        return __new;
+        return original;
     ]-*/;
 
     

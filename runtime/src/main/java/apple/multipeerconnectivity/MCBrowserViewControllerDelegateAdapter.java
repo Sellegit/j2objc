@@ -35,6 +35,6 @@ public abstract class MCBrowserViewControllerDelegateAdapter
     @NotImplemented("browserViewControllerWasCancelled:")
     public void wasCancelled(MCBrowserViewController browserViewController) { throw new UnsupportedOperationException(); }
     @NotImplemented("browserViewController:shouldPresentNearbyPeer:withDiscoveryInfo:")
-    public boolean shouldPresentNearbyPeer(MCBrowserViewController browserViewController, MCPeerID peerID, Map<String, String> info) { throw new UnsupportedOperationException(); }
+    public boolean shouldPresentNearbyPeer(MCBrowserViewController browserViewController, MCPeerID peerID, NSDictionary<?, ?> info) { throw new UnsupportedOperationException(); }
     
 }

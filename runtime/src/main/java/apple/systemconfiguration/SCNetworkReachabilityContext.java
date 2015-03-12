@@ -32,7 +32,7 @@ import apple.dispatch.*;
     
     public static native SCNetworkReachabilityContext copyWithversion(SCNetworkReachabilityContext original, @MachineSizedSInt long version) /*-[
         original.version = version;
-        return __new;
+        return original;
     ]-*/;
 
     

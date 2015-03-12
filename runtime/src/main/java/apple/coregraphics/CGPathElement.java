@@ -38,13 +38,13 @@ import apple.uikit.*;
     ]-*/;
     public static native CGPathElement copyWithtype(CGPathElement original, CGPathElementType type) /*-[
         original.type = type;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native CGPathElement copyWithpoints(CGPathElement original, CGPoint points) /*-[
         original.points = points;
-        return __new;
+        return original;
     ]-*/;
 
     

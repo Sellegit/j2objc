@@ -376,7 +376,7 @@ public class UIView
      * @since Available in iOS 7.0 and later.
      */
     @Mapping("performSystemAnimation:onViews:options:animations:completion:")
-    public static native void performSystemAnimation(@Representing("UISystemAnimation") @MachineSizedUInt long animation, NSArray<UIView> views, @Representing("UIViewAnimationOptions") @MachineSizedUInt long options, @Block Runnable parallelAnimations, @Block VoidBooleanBlock completion);
+    public static native void performSystemAnimation(@Representing("UISystemAnimation") @MachineSizedUInt long animation, NSArray<?> views, @Representing("UIViewAnimationOptions") @MachineSizedUInt long options, @Block Runnable parallelAnimations, @Block VoidBooleanBlock completion);
     /**
      * @since Available in iOS 7.0 and later.
      */
@@ -426,7 +426,7 @@ public class UIView
      * @since Available in iOS 6.0 and later.
      */
     @Mapping("addConstraints:")
-    public native void addConstraints(NSArray<NSLayoutConstraint> constraints);
+    public native void addConstraints(NSArray<?> constraints);
     /**
      * @since Available in iOS 6.0 and later.
      */
@@ -436,7 +436,7 @@ public class UIView
      * @since Available in iOS 6.0 and later.
      */
     @Mapping("removeConstraints:")
-    public native void removeConstraints(NSArray<NSLayoutConstraint> constraints);
+    public native void removeConstraints(NSArray<?> constraints);
     /**
      * @since Available in iOS 6.0 and later.
      */
@@ -526,7 +526,7 @@ public class UIView
      * @since Available in iOS 6.0 and later.
      */
     @Mapping("systemLayoutSizeFittingSize:")
-    public native CGSize getSystemLayoutSizeFittingSize(UILayoutFittingSize targetSize);
+    public native CGSize getSystemLayoutSizeFittingSize(CGSize targetSize);
     /**
      * @since Available in iOS 8.0 and later.
      */

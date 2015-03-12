@@ -38,13 +38,13 @@ public class CGPoint
     ]-*/;
     public static native CGPoint copyWithx(CGPoint original, @MachineSizedFloat double x) /*-[
         original.x = x;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native CGPoint copyWithy(CGPoint original, @MachineSizedFloat double y) /*-[
         original.y = y;
-        return __new;
+        return original;
     ]-*/;
 
     
@@ -68,7 +68,7 @@ public class CGPoint
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGPointMakeWithDictionaryRepresentation")
-    private static native boolean fromDictionary(NSDictionary<NSString, NSNumber> dict, CGPoint point);
+    private static native boolean fromDictionary(NSDictionary<?, ?> dict, CGPoint point);
     /**
      * @since Available in iOS 2.0 and later.
      */

@@ -89,7 +89,7 @@ public class SCNGeometry
     @Mapping("geometry")
     public static native SCNGeometry create();
     @Mapping("geometryWithSources:elements:")
-    public static native SCNGeometry create(NSArray<SCNGeometrySource> sources, NSArray<SCNGeometryElement> elements);
+    public static native SCNGeometry create(NSArray<?> sources, NSArray<?> elements);
     @Mapping("addAnimation:forKey:")
     public native void addAnimation(CAAnimation animation, String key);
     @Mapping("removeAllAnimations")
@@ -109,15 +109,11 @@ public class SCNGeometry
     @Mapping("removeAnimationForKey:fadeOutDuration:")
     public native void removeAnimation(String key, @MachineSizedFloat double duration);
     @Mapping("getBoundingBoxMin:max:")
-    public native boolean getBoundingBox(Todo min, Todo max);
+    public native boolean getBoundingBox(SCNVector3 min, SCNVector3 max);
     @Mapping("getBoundingSphereCenter:radius:")
-    public native boolean getBoundingSphere(Todo center, Todo radius);
+    public native boolean getBoundingSphere(SCNVector3 center, Todo radius);
     @Mapping("setBoundingBoxMin:max:")
-    public native void setBoundingBox(Todo min, Todo max);
-    @Mapping("handleBindingOfSymbol:usingBlock:")
-    public native void handleBindingOfSymbol(String symbol, @Block VoidBlock4<Integer, Integer, SCNNode, SCNRenderer> block);
-    @Mapping("handleUnbindingOfSymbol:usingBlock:")
-    public native void handleUnbindingOfSymbol(String symbol, @Block VoidBlock4<Integer, Integer, SCNNode, SCNRenderer> block);
+    public native void setBoundingBox(SCNVector3 min, SCNVector3 max);
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
     

@@ -63,12 +63,12 @@ public class SCNetworkReachability
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("SCNetworkReachabilityScheduleWithRunLoop")
-    public native boolean schedule(CFRunLoop runLoop, CFString runLoopMode);
+    public native boolean schedule(CFRunLoop runLoop, String runLoopMode);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("SCNetworkReachabilityUnscheduleFromRunLoop")
-    public native boolean unschedule(CFRunLoop runLoop, CFString runLoopMode);
+    public native boolean unschedule(CFRunLoop runLoop, String runLoopMode);
     /**
      * @since Available in iOS 4.0 and later.
      */

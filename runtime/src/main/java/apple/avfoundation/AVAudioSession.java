@@ -253,24 +253,19 @@ public class AVAudioSession
     @Mapping("setActive:withOptions:error:")
     public native boolean setActive$withOptions$error$(boolean active, @Representing("AVAudioSessionSetActiveOptions") @MachineSizedUInt long options, Todo outError);
     @Mapping("setCategory:error:")
-    public native boolean setCategory(AVAudioSessionCategory category, Todo outError);
+    public native boolean setCategory(String category, Todo outError);
     /**
      * @since Available in iOS 6.0 and later.
      */
     @Mapping("setCategory:withOptions:error:")
-    public native boolean setCategory(AVAudioSessionCategory category, @Representing("AVAudioSessionCategoryOptions") @MachineSizedUInt long options, Todo outError);
+    public native boolean setCategory(String category, @Representing("AVAudioSessionCategoryOptions") @MachineSizedUInt long options, Todo outError);
     @Mapping("recordPermission")
     public native @Representing("AVAudioSessionRecordPermission") @MachineSizedUInt long getRecordPermission();
-    /**
-     * @since Available in iOS 7.0 and later.
-     */
-    @Mapping("requestRecordPermission:")
-    public native void requestRecordPermission(@Block VoidBooleanBlock response);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @Mapping("setMode:error:")
-    public native boolean setMode(AVAudioSessionMode mode, Todo outError);
+    public native boolean setMode(String mode, Todo outError);
     /**
      * @since Available in iOS 6.0 and later.
      */

@@ -36,6 +36,6 @@ public final class NSBundleExtensions
     
     
     @Mapping("loadNibNamed:owner:options:")
-    public static native NSArray<?> loadNib(NSBundle thiz, String name, Object owner, UINibLoadingOptions options);
+    public static native NSArray<?> loadNib(NSBundle thiz, String name, Object owner, NSDictionary<?, ?> options);
     
 }

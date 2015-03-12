@@ -37,13 +37,13 @@ public class MIDIPacketList
     ]-*/;
     public static native MIDIPacketList copyWithnumPackets(MIDIPacketList original, int numPackets) /*-[
         original.numPackets = numPackets;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native MIDIPacketList copyWithpacket(MIDIPacketList original, MIDIPacket packet) /*-[
         original.packet = packet;
-        return __new;
+        return original;
     ]-*/;
 
     

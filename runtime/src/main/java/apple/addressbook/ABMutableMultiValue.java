@@ -31,14 +31,14 @@ public class ABMutableMultiValue
     @GlobalFunction("ABMultiValueCreateMutableCopy")
     public static native ABMutableMultiValue create(ABMultiValue multiValue);
     @GlobalFunction("ABMultiValueAddValueAndLabel")
-    protected native boolean addValueAndLabel(CFType value, CFString label, Todo outIdentifier);
+    protected native boolean addValueAndLabel(CFType value, String label, Todo outIdentifier);
     @GlobalFunction("ABMultiValueInsertValueAndLabelAtIndex")
-    protected native boolean insertValueAndLabel(CFType value, CFString label, @MachineSizedSInt long index, Todo outIdentifier);
+    protected native boolean insertValueAndLabel(CFType value, String label, @MachineSizedSInt long index, Todo outIdentifier);
     @GlobalFunction("ABMultiValueRemoveValueAndLabelAtIndex")
     public native boolean removeValueAndLabel(@MachineSizedSInt long index);
     @GlobalFunction("ABMultiValueReplaceValueAtIndex")
     public native boolean replaceValue(CFType value, @MachineSizedSInt long index);
     @GlobalFunction("ABMultiValueReplaceLabelAtIndex")
-    protected native boolean replaceLabel(CFString label, @MachineSizedSInt long index);
+    protected native boolean replaceLabel(String label, @MachineSizedSInt long index);
     
 }

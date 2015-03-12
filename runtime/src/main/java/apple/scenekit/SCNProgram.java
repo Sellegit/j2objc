@@ -53,7 +53,7 @@ public class SCNProgram
     
     
     @Mapping("setSemantic:forSymbol:options:")
-    public native void setSemanticForSymbol(String semantic, String symbol, SCNProgramSemanticOptions options);
+    public native void setSemanticForSymbol(String semantic, String symbol, NSDictionary<?, ?> options);
     @Mapping("semanticForSymbol:")
     public native String getSemanticForSymbol(String symbol);
     @Mapping("program")

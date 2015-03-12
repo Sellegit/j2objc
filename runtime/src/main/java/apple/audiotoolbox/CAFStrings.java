@@ -40,13 +40,13 @@ public class CAFStrings
     ]-*/;
     public static native CAFStrings copyWithmNumEntries(CAFStrings original, int mNumEntries) /*-[
         original.mNumEntries = mNumEntries;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native CAFStrings copyWithmStringsIDs(CAFStrings original, CAFStringID mStringsIDs) /*-[
         original.mStringsIDs = mStringsIDs;
-        return __new;
+        return original;
     ]-*/;
 
     

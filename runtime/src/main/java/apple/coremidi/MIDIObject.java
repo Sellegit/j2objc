@@ -50,7 +50,7 @@ public class MIDIObject
      * @since Available in iOS 4.2 and later.
      */
     @GlobalFunction("MIDIObjectGetDataProperty")
-    protected native MIDIError getDataProperty(String propertyID, Todo outData);
+    protected native MIDIError getDataProperty(String propertyID, NSData outData);
     /**
      * @since Available in iOS 4.2 and later.
      */

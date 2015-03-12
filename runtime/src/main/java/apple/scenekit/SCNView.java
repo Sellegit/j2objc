@@ -111,7 +111,7 @@ public class SCNView
     @Mapping("stop:")
     public native void stop(Object sender);
     @Mapping("hitTest:options:")
-    public native NSArray<SCNHitTestResult> hitTest(CGPoint thePoint, SCNHitTestOptions options);
+    public native NSArray<SCNHitTestResult> hitTest(CGPoint thePoint, NSDictionary<?, ?> options);
     @Mapping("isNodeInsideFrustum:withPointOfView:")
     public native boolean isNodeInsideFrustum(SCNNode node, SCNNode pointOfView);
     @Mapping("projectPoint:")

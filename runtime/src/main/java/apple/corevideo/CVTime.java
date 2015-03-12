@@ -42,19 +42,19 @@ public class CVTime
     ]-*/;
     public static native CVTime copyWithtimeValue(CVTime original, long timeValue) /*-[
         original.timeValue = timeValue;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native CVTime copyWithtimeScale(CVTime original, int timeScale) /*-[
         original.timeScale = timeScale;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native CVTime copyWithflags(CVTime original, int flags) /*-[
         original.flags = flags;
-        return __new;
+        return original;
     ]-*/;
 
     

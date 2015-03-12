@@ -132,12 +132,12 @@ public class CTFont
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTFontCopyName")
-    protected native String getName(CFString nameKey);
+    protected native String getName(String nameKey);
     /**
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTFontCopyLocalizedName")
-    protected native String getLocalizedName(CFString nameKey, Todo actualLanguage);
+    protected native String getLocalizedName(String nameKey, Todo actualLanguage);
     /**
      * @since Available in iOS 3.2 and later.
      */
@@ -297,6 +297,6 @@ public class CTFont
      * @since Available in iOS 6.0 and later.
      */
     @GlobalFunction("CTFontCopyDefaultCascadeListForLanguages")
-    public native CFArray getDefaultCascadeList(List<String> languagePrefList);
+    public native CFArray getDefaultCascadeList(CFArray languagePrefList);
     
 }

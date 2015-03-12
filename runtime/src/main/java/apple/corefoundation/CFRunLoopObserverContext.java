@@ -34,13 +34,13 @@ import apple.foundation.*;
     
     public static native CFRunLoopObserverContext copyWithversion(CFRunLoopObserverContext original, @MachineSizedSInt long version) /*-[
         original.version = version;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native CFRunLoopObserverContext copyWithinfo(CFRunLoopObserverContext original, Todo info) /*-[
         original.info = info;
-        return __new;
+        return original;
     ]-*/;
 
     

@@ -39,19 +39,19 @@ public class AudioStreamPacketDescription
     ]-*/;
     public static native AudioStreamPacketDescription copyWithmStartOffset(AudioStreamPacketDescription original, long mStartOffset) /*-[
         original.mStartOffset = mStartOffset;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native AudioStreamPacketDescription copyWithmVariableFramesInPacket(AudioStreamPacketDescription original, int mVariableFramesInPacket) /*-[
         original.mVariableFramesInPacket = mVariableFramesInPacket;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native AudioStreamPacketDescription copyWithmDataByteSize(AudioStreamPacketDescription original, int mDataByteSize) /*-[
         original.mDataByteSize = mDataByteSize;
-        return __new;
+        return original;
     ]-*/;
 
     

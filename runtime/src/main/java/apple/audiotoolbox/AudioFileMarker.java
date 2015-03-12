@@ -50,43 +50,43 @@ public class AudioFileMarker
     ]-*/;
     public static native AudioFileMarker copyWithmFramePosition(AudioFileMarker original, double mFramePosition) /*-[
         original.mFramePosition = mFramePosition;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native AudioFileMarker copyWithmName(AudioFileMarker original, CFString mName) /*-[
         original.mName = mName;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native AudioFileMarker copyWithmMarkerID(AudioFileMarker original, int mMarkerID) /*-[
         original.mMarkerID = mMarkerID;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native AudioFileMarker copyWithmSMPTETime(AudioFileMarker original, AudioFileSMPTETime mSMPTETime) /*-[
         original.mSMPTETime = mSMPTETime;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native AudioFileMarker copyWithmType(AudioFileMarker original, int mType) /*-[
         original.mType = mType;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native AudioFileMarker copyWithmReserved(AudioFileMarker original, short mReserved) /*-[
         original.mReserved = mReserved;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native AudioFileMarker copyWithmChannel(AudioFileMarker original, short mChannel) /*-[
         original.mChannel = mChannel;
-        return __new;
+        return original;
     ]-*/;
 
     

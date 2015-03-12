@@ -79,11 +79,11 @@ public class NSPersistentStoreCoordinator
     @Mapping("setURL:forPersistentStore:")
     public native boolean setURLForPersistentStore(NSURL url, NSPersistentStore store);
     @Mapping("addPersistentStoreWithType:configuration:URL:options:error:")
-    protected native NSPersistentStore addPersistentStore(String storeType, String configuration, NSURL storeURL, NSPersistentStoreOptions options, Todo error);
+    protected native NSPersistentStore addPersistentStore(String storeType, String configuration, NSURL storeURL, NSDictionary<?, ?> options, Todo error);
     @Mapping("removePersistentStore:error:")
     protected native boolean removePersistentStore(NSPersistentStore store, Todo error);
     @Mapping("setMetadata:forPersistentStore:")
-    public native void setMetadataForPersistentStore(NSPersistentStoreMetadata metadata, NSPersistentStore store);
+    public native void setMetadataForPersistentStore(NSDictionary<?, ?> metadata, NSPersistentStore store);
     @Mapping("metadataForPersistentStore:")
     public native NSDictionary<?, ?> getMetadataForPersistentStore(NSPersistentStore store);
     @Mapping("managedObjectIDForURIRepresentation:")
@@ -94,7 +94,7 @@ public class NSPersistentStoreCoordinator
     @Mapping("executeRequest:withContext:error:")
     protected native Object executeRequest(NSPersistentStoreRequest request, NSManagedObjectContext context, Todo error);
     @Mapping("migratePersistentStore:toURL:options:withType:error:")
-    protected native NSPersistentStore migratePersistentStore(NSPersistentStore store, NSURL URL, NSPersistentStoreOptions options, String storeType, Todo error);
+    protected native NSPersistentStore migratePersistentStore(NSPersistentStore store, NSURL URL, NSDictionary<?, ?> options, String storeType, Todo error);
     /**
      * @since Available in iOS 8.0 and later.
      */
@@ -134,22 +134,17 @@ public class NSPersistentStoreCoordinator
     /**
      * @since Available in iOS 3.0 and later.
      */
-    @Mapping("registerStoreClass:forStoreType:")
-    public static native void registerStoreClassForType(Class<? extends NSPersistentStore> storeClass, String storeType);
-    /**
-     * @since Available in iOS 3.0 and later.
-     */
     @Mapping("metadataForPersistentStoreOfType:URL:error:")
     protected static native NSPersistentStoreMetadata getMetadataForPersistentStoreType(String storeType, NSURL url, Todo error);
     /**
      * @since Available in iOS 3.0 and later.
      */
     @Mapping("setMetadata:forPersistentStoreOfType:URL:error:")
-    protected static native boolean setMetadataForPersistentStoreType(NSPersistentStoreMetadata metadata, String storeType, NSURL url, Todo error);
+    protected static native boolean setMetadataForPersistentStoreType(NSDictionary<?, ?> metadata, String storeType, NSURL url, Todo error);
     /**
      * @since Available in iOS 7.0 and later.
      */
     @Mapping("removeUbiquitousContentAndPersistentStoreAtURL:options:error:")
-    protected static native boolean removeUbiquitousContentAndPersistentStore(NSURL storeURL, NSPersistentStoreOptions options, Todo error);
+    protected static native boolean removeUbiquitousContentAndPersistentStore(NSURL storeURL, NSDictionary<?, ?> options, Todo error);
     
 }

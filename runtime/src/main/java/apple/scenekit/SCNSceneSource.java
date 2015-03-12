@@ -32,9 +32,9 @@ public class SCNSceneSource
     
     public SCNSceneSource() {}
     @Mapping("initWithURL:options:")
-    public SCNSceneSource(NSURL url, SCNSceneSourceOptions options) { }
+    public SCNSceneSource(NSURL url, NSDictionary<?, ?> options) { }
     @Mapping("initWithData:options:")
-    public SCNSceneSource(NSData data, SCNSceneSourceOptions options) { }
+    public SCNSceneSource(NSData data, NSDictionary<?, ?> options) { }
     
     
     @Mapping("url")
@@ -44,17 +44,15 @@ public class SCNSceneSource
     
     
     
-    @Mapping("sceneWithOptions:statusHandler:")
-    public native SCNScene newScene(SCNSceneSourceOptions options, @Block VoidBlock4<Float, SCNSceneSourceStatus, NSError, Todo> statusHandler);
     @Mapping("sceneWithOptions:error:")
-    protected native SCNScene newScene(SCNSceneSourceOptions options, Todo error);
+    protected native SCNScene newScene(NSDictionary<?, ?> options, Todo error);
     @Mapping("propertyForKey:")
-    public native Object getProperty(SCNSceneSourceProperty key);
+    public native Object getProperty(String key);
     @Mapping("entriesPassingTest:")
     public native NSArray<?> getEntriesPassingTest(@Block Block3<NSObject, String, Todo, Boolean> predicate);
     @Mapping("sceneSourceWithURL:options:")
-    public static native SCNSceneSource create(NSURL url, SCNSceneSourceOptions options);
+    public static native SCNSceneSource create(NSURL url, NSDictionary<?, ?> options);
     @Mapping("sceneSourceWithData:options:")
-    public static native SCNSceneSource create(NSData data, SCNSceneSourceOptions options);
+    public static native SCNSceneSource create(NSData data, NSDictionary<?, ?> options);
     
 }

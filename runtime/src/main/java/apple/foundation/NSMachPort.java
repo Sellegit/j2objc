@@ -36,7 +36,7 @@ public class NSMachPort
      * @since Available in iOS 2.0 and later.
      */
     @Mapping("initWithMachPort:options:")
-    public NSMachPort(int machPort, NSMachPortRights f) { }
+    public NSMachPort(int machPort, @MachineSizedUInt long f) { }
     
     
     @Mapping("machPort")
@@ -58,6 +58,6 @@ public class NSMachPort
      * @since Available in iOS 2.0 and later.
      */
     @Mapping("portWithMachPort:options:")
-    public static native NSPort create(int machPort, NSMachPortRights f);
+    public static native NSPort create(int machPort, @MachineSizedUInt long f);
     
 }

@@ -32,9 +32,9 @@ public class CFData
     @GlobalFunction("CFDataGetTypeID")
     public static native @MachineSizedUInt long getClassTypeID();
     @GlobalFunction("CFDataCreate")
-    protected static native CFData create(CFAllocator allocator, @Pointer long bytes, @MachineSizedSInt long length);
+    protected static native CFData create(CFAllocator allocator, Todo bytes, @MachineSizedSInt long length);
     @GlobalFunction("CFDataCreateWithBytesNoCopy")
-    protected static native CFData create(CFAllocator allocator, @Pointer long bytes, @MachineSizedSInt long length, CFAllocator bytesDeallocator);
+    protected static native CFData create(CFAllocator allocator, Todo bytes, @MachineSizedSInt long length, CFAllocator bytesDeallocator);
     @GlobalFunction("CFDataCreateCopy")
     protected static native CFData create(CFAllocator allocator, CFData theData);
     @GlobalFunction("CFDataGetLength")
@@ -44,7 +44,7 @@ public class CFData
     @GlobalFunction("CFDataGetMutableBytePtr")
     public native Todo getMutableBytePtr();
     @GlobalFunction("CFDataGetBytes")
-    protected native void getBytes(CFRange range, @Pointer long buffer);
+    protected native void getBytes(CFRange range, Todo buffer);
     /**
      * @since Available in iOS 4.0 and later.
      */

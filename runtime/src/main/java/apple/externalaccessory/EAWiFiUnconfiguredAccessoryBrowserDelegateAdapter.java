@@ -39,12 +39,12 @@ public abstract class EAWiFiUnconfiguredAccessoryBrowserDelegateAdapter
      * @since Available in iOS 8.0 and later.
      */
     @NotImplemented("accessoryBrowser:didFindUnconfiguredAccessories:")
-    public void didFindUnconfiguredAccessories(EAWiFiUnconfiguredAccessoryBrowser browser, NSSet<EAWiFiUnconfiguredAccessory> accessories) { throw new UnsupportedOperationException(); }
+    public void didFindUnconfiguredAccessories(EAWiFiUnconfiguredAccessoryBrowser browser, NSSet<?> accessories) { throw new UnsupportedOperationException(); }
     /**
      * @since Available in iOS 8.0 and later.
      */
     @NotImplemented("accessoryBrowser:didRemoveUnconfiguredAccessories:")
-    public void didRemoveUnconfiguredAccessories(EAWiFiUnconfiguredAccessoryBrowser browser, NSSet<EAWiFiUnconfiguredAccessory> accessories) { throw new UnsupportedOperationException(); }
+    public void didRemoveUnconfiguredAccessories(EAWiFiUnconfiguredAccessoryBrowser browser, NSSet<?> accessories) { throw new UnsupportedOperationException(); }
     /**
      * @since Available in iOS 8.0 and later.
      */

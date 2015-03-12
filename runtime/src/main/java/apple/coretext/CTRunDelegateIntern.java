@@ -37,7 +37,7 @@ import apple.foundation.*;
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTRunDelegateCreate")
-    protected static native CTRunDelegateIntern create(CTRunDelegateCallbacks callbacks, @Pointer long refCon);
+    protected static native CTRunDelegateIntern create(CTRunDelegateCallbacks callbacks, Todo refCon);
     /**
      * @since Available in iOS 3.2 and later.
      */

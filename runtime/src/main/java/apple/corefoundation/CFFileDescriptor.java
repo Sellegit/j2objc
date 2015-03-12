@@ -53,12 +53,12 @@ public class CFFileDescriptor
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFFileDescriptorEnableCallBacks")
-    public native void enableCallBacks(CFFileDescriptorCallBackType callBackTypes);
+    public native void enableCallBacks(@MachineSizedUInt long callBackTypes);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFFileDescriptorDisableCallBacks")
-    public native void disableCallBacks(CFFileDescriptorCallBackType callBackTypes);
+    public native void disableCallBacks(@MachineSizedUInt long callBackTypes);
     /**
      * @since Available in iOS 2.0 and later.
      */

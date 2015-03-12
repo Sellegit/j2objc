@@ -48,7 +48,7 @@ public interface NSXMLParserDelegate
     @Mapping("parser:foundExternalEntityDeclarationWithName:publicID:systemID:")
     void foundExternalEntityDeclaration(NSXMLParser parser, String name, String publicID, String systemID);
     @Mapping("parser:didStartElement:namespaceURI:qualifiedName:attributes:")
-    void didStartElement(NSXMLParser parser, String elementName, String namespaceURI, String qName, Map<String, NSObject> attributeDict);
+    void didStartElement(NSXMLParser parser, String elementName, String namespaceURI, String qName, NSDictionary<?, ?> attributeDict);
     @Mapping("parser:didEndElement:namespaceURI:qualifiedName:")
     void didEndElement(NSXMLParser parser, String elementName, String namespaceURI, String qName);
     @Mapping("parser:didStartMappingPrefix:toURI:")

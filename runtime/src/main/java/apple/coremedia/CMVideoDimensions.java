@@ -41,13 +41,13 @@ public class CMVideoDimensions
     ]-*/;
     public static native CMVideoDimensions copyWithwidth(CMVideoDimensions original, int width) /*-[
         original.width = width;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native CMVideoDimensions copyWithheight(CMVideoDimensions original, int height) /*-[
         original.height = height;
-        return __new;
+        return original;
     ]-*/;
 
     

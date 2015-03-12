@@ -98,9 +98,9 @@ public class SKAction
     @Mapping("scaleYTo:duration:")
     public static native SKAction scaleYTo(@MachineSizedFloat double scale, double sec);
     @Mapping("sequence:")
-    public static native SKAction sequence(NSArray<SKAction> actions);
+    public static native SKAction sequence(NSArray<?> actions);
     @Mapping("group:")
-    public static native SKAction group(NSArray<SKAction> actions);
+    public static native SKAction group(NSArray<?> actions);
     @Mapping("repeatAction:count:")
     public static native SKAction repeat(SKAction action, @MachineSizedUInt long count);
     @Mapping("repeatActionForever:")
@@ -128,9 +128,9 @@ public class SKAction
     @Mapping("setTexture:resize:")
     public static native SKAction setTexture(SKTexture texture, boolean resize);
     @Mapping("animateWithTextures:timePerFrame:")
-    public static native SKAction animate(NSArray<SKTexture> textures, double sec);
+    public static native SKAction animate(NSArray<?> textures, double sec);
     @Mapping("animateWithTextures:timePerFrame:resize:restore:")
-    public static native SKAction animate(NSArray<SKTexture> textures, double sec, boolean resize, boolean restore);
+    public static native SKAction animate(NSArray<?> textures, double sec, boolean resize, boolean restore);
     @Mapping("playSoundFileNamed:waitForCompletion:")
     public static native SKAction playSound(String soundFile, boolean wait);
     @Mapping("colorizeWithColor:colorBlendFactor:duration:")

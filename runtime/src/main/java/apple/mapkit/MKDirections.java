@@ -39,10 +39,6 @@ public class MKDirections
     
     
     
-    @Mapping("calculateDirectionsWithCompletionHandler:")
-    public native void calculateDirections(@Block VoidBlock2<MKDirectionsResponse, NSError> completionHandler);
-    @Mapping("calculateETAWithCompletionHandler:")
-    public native void calculateETA(@Block VoidBlock2<MKETAResponse, NSError> completionHandler);
     @Mapping("cancel")
     public native void cancel();
     

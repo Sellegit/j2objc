@@ -42,7 +42,7 @@ public class MIDIThruConnection
      * @since Available in iOS 4.2 and later.
      */
     @GlobalFunction("MIDIThruConnectionGetParams")
-    protected native MIDIError getParams(Todo outConnectionParams);
+    protected native MIDIError getParams(NSData outConnectionParams);
     /**
      * @since Available in iOS 4.2 and later.
      */
@@ -52,6 +52,6 @@ public class MIDIThruConnection
      * @since Available in iOS 4.2 and later.
      */
     @GlobalFunction("MIDIThruConnectionFind")
-    protected static native MIDIError find(String inPersistentOwnerID, Todo outConnectionList);
+    protected static native MIDIError find(String inPersistentOwnerID, NSData outConnectionList);
     
 }

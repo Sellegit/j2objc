@@ -187,7 +187,7 @@ public class UIScrollView
     @Mapping("flashScrollIndicators")
     public native void flashScrollIndicators();
     @Mapping("touchesShouldBegin:withEvent:inContentView:")
-    public native boolean touchesShouldBegin(NSSet<UITouch> touches, UIEvent event, UIView view);
+    public native boolean touchesShouldBegin(NSSet<?> touches, UIEvent event, UIView view);
     @Mapping("touchesShouldCancelInContentView:")
     public native boolean touchesShouldCancelInContentView(UIView view);
     /**

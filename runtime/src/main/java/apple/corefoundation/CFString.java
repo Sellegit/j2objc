@@ -50,33 +50,33 @@ public class CFString
     @GlobalFunction("CFStringCreateWithSubstring")
     protected static native String createWithSubstring(CFAllocator alloc, String str, CFRange range);
     @GlobalFunction("CFStringCreateCopy")
-    protected static native String createCopy(CFAllocator alloc, CFString theString);
+    protected static native String createCopy(CFAllocator alloc, String theString);
     @GlobalFunction("CFStringGetLength")
-    public native @MachineSizedSInt long length();
+    public static native @MachineSizedSInt long length(String theString);
     @GlobalFunction("CFStringGetCharacterAtIndex")
-    protected native short getCharacterAtIndex(@MachineSizedSInt long idx);
+    protected static native short getCharacterAtIndex(String theString, @MachineSizedSInt long idx);
     @GlobalFunction("CFStringGetCharacters")
-    protected native void getCharacters(CFRange range, Todo buffer);
+    protected static native void getCharacters(String theString, CFRange range, Todo buffer);
     @GlobalFunction("CFStringGetPascalString")
-    protected native boolean getPascalString(Todo buffer, @MachineSizedSInt long bufferSize, int encoding);
+    protected static native boolean getPascalString(String theString, Todo buffer, @MachineSizedSInt long bufferSize, int encoding);
     @GlobalFunction("CFStringGetCString")
-    protected native boolean getCString(Todo buffer, @MachineSizedSInt long bufferSize, int encoding);
+    protected static native boolean getCString(String theString, Todo buffer, @MachineSizedSInt long bufferSize, int encoding);
     @GlobalFunction("CFStringGetPascalStringPtr")
-    protected native Todo getPascalStringPtr(int encoding);
+    protected static native Todo getPascalStringPtr(String theString, int encoding);
     @GlobalFunction("CFStringGetCStringPtr")
-    protected native Todo getCStringPtr(int encoding);
+    protected static native Todo getCStringPtr(String theString, int encoding);
     @GlobalFunction("CFStringGetCharactersPtr")
-    protected native Todo getCharactersPtr();
+    protected static native Todo getCharactersPtr(String theString);
     @GlobalFunction("CFStringGetBytes")
-    protected native @MachineSizedSInt long getBytes(CFRange range, int encoding, byte lossByte, boolean isExternalRepresentation, Todo buffer, @MachineSizedSInt long maxBufLen, Todo usedBufLen);
+    protected static native @MachineSizedSInt long getBytes(String theString, CFRange range, int encoding, byte lossByte, boolean isExternalRepresentation, Todo buffer, @MachineSizedSInt long maxBufLen, Todo usedBufLen);
     @GlobalFunction("CFStringCreateFromExternalRepresentation")
     protected static native String createFromExternalRepresentation(CFAllocator alloc, CFData data, int encoding);
     @GlobalFunction("CFStringCreateExternalRepresentation")
-    protected static native CFData createExternalRepresentation(CFAllocator alloc, CFString theString, int encoding, byte lossByte);
+    protected static native CFData createExternalRepresentation(CFAllocator alloc, String theString, int encoding, byte lossByte);
     @GlobalFunction("CFStringGetSmallestEncoding")
-    protected native int getSmallestEncoding();
+    protected static native int getSmallestEncoding(String theString);
     @GlobalFunction("CFStringGetFastestEncoding")
-    protected native int getFastestEncoding();
+    protected static native int getFastestEncoding(String theString);
     @GlobalFunction("CFStringGetSystemEncoding")
     protected static native int getSystemEncoding();
     @GlobalFunction("CFStringGetMaximumSizeForEncoding")
@@ -100,23 +100,23 @@ public class CFString
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFStringFindWithOptionsAndLocale")
-    protected native boolean findWithOptionsAndLocale(String stringToFind, CFRange rangeToSearch, CFStringCompareFlags searchOptions, CFLocale locale, CFRange result);
+    protected static native boolean findWithOptionsAndLocale(String theString, String stringToFind, CFRange rangeToSearch, CFStringCompareFlags searchOptions, CFLocale locale, CFRange result);
     @GlobalFunction("CFStringFindWithOptions")
-    protected native boolean findWithOptions(String stringToFind, CFRange rangeToSearch, CFStringCompareFlags searchOptions, CFRange result);
+    protected static native boolean findWithOptions(String theString, String stringToFind, CFRange rangeToSearch, CFStringCompareFlags searchOptions, CFRange result);
     @GlobalFunction("CFStringCreateArrayWithFindResults")
-    protected static native CFArray createArrayWithFindResults(CFAllocator alloc, CFString theString, String stringToFind, CFRange rangeToSearch, CFStringCompareFlags compareOptions);
+    protected static native CFArray createArrayWithFindResults(CFAllocator alloc, String theString, String stringToFind, CFRange rangeToSearch, CFStringCompareFlags compareOptions);
     @GlobalFunction("CFStringFind")
-    protected native CFRange find(String stringToFind, CFStringCompareFlags compareOptions);
+    protected static native CFRange find(String theString, String stringToFind, CFStringCompareFlags compareOptions);
     @GlobalFunction("CFStringHasPrefix")
-    protected native boolean hasPrefix(String prefix);
+    protected static native boolean hasPrefix(String theString, String prefix);
     @GlobalFunction("CFStringHasSuffix")
-    protected native boolean hasSuffix(String suffix);
+    protected static native boolean hasSuffix(String theString, String suffix);
     @GlobalFunction("CFStringGetRangeOfComposedCharactersAtIndex")
-    protected native CFRange getRangeOfComposedCharactersAtIndex(@MachineSizedSInt long theIndex);
+    protected static native CFRange getRangeOfComposedCharactersAtIndex(String theString, @MachineSizedSInt long theIndex);
     @GlobalFunction("CFStringFindCharacterFromSet")
-    protected native boolean findCharacterFromSet(CFCharacterSet theSet, CFRange rangeToSearch, CFStringCompareFlags searchOptions, CFRange result);
+    protected static native boolean findCharacterFromSet(String theString, CFCharacterSet theSet, CFRange rangeToSearch, CFStringCompareFlags searchOptions, CFRange result);
     @GlobalFunction("CFStringGetLineBounds")
-    protected native void getLineBounds(CFRange range, Todo lineBeginIndex, Todo lineEndIndex, Todo contentsEndIndex);
+    protected static native void getLineBounds(String theString, CFRange range, Todo lineBeginIndex, Todo lineEndIndex, Todo contentsEndIndex);
     /**
      * @since Available in iOS 2.0 and later.
      */
@@ -126,7 +126,7 @@ public class CFString
      * @since Available in iOS 4.2 and later.
      */
     @GlobalFunction("CFStringGetHyphenationLocationBeforeIndex")
-    protected native @MachineSizedSInt long getHyphenationLocationBeforeIndex(@MachineSizedSInt long location, CFRange limitRange, @MachineSizedUInt long options, CFLocale locale, Todo character);
+    protected static native @MachineSizedSInt long getHyphenationLocationBeforeIndex(String string, @MachineSizedSInt long location, CFRange limitRange, @MachineSizedUInt long options, CFLocale locale, Todo character);
     /**
      * @since Available in iOS 4.3 and later.
      */
@@ -135,7 +135,7 @@ public class CFString
     @GlobalFunction("CFStringCreateByCombiningStrings")
     protected static native String createByCombiningStrings(CFAllocator alloc, CFArray theArray, String separatorString);
     @GlobalFunction("CFStringCreateArrayBySeparatingStrings")
-    protected static native CFArray createArrayBySeparatingStrings(CFAllocator alloc, CFString theString, String separatorString);
+    protected static native CFArray createArrayBySeparatingStrings(CFAllocator alloc, String theString, String separatorString);
     @GlobalFunction("CFStringGetIntValue")
     protected static native int getIntValue(String str);
     @GlobalFunction("CFStringGetDoubleValue")
@@ -155,12 +155,12 @@ public class CFString
     @GlobalFunction("CFStringConvertWindowsCodepageToEncoding")
     protected static native int convertWindowsCodepageToEncoding(int codepage);
     @GlobalFunction("CFStringConvertIANACharSetNameToEncoding")
-    protected native int convertIANACharSetNameToEncoding();
+    protected static native int convertIANACharSetNameToEncoding(String theString);
     @GlobalFunction("CFStringConvertEncodingToIANACharSetName")
     protected static native String convertEncodingToIANACharSetName(int encoding);
     @GlobalFunction("CFStringGetMostCompatibleMacStringEncoding")
     protected static native int getMostCompatibleMacStringEncoding(int encoding);
     @GlobalFunction("CFShowStr")
-    public native void show();
+    public static native void show(String str);
     
 }

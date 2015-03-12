@@ -50,7 +50,7 @@ public abstract class NSXMLParserDelegateAdapter
     @NotImplemented("parser:foundExternalEntityDeclarationWithName:publicID:systemID:")
     public void foundExternalEntityDeclaration(NSXMLParser parser, String name, String publicID, String systemID) { throw new UnsupportedOperationException(); }
     @NotImplemented("parser:didStartElement:namespaceURI:qualifiedName:attributes:")
-    public void didStartElement(NSXMLParser parser, String elementName, String namespaceURI, String qName, Map<String, NSObject> attributeDict) { throw new UnsupportedOperationException(); }
+    public void didStartElement(NSXMLParser parser, String elementName, String namespaceURI, String qName, NSDictionary<?, ?> attributeDict) { throw new UnsupportedOperationException(); }
     @NotImplemented("parser:didEndElement:namespaceURI:qualifiedName:")
     public void didEndElement(NSXMLParser parser, String elementName, String namespaceURI, String qName) { throw new UnsupportedOperationException(); }
     @NotImplemented("parser:didStartMappingPrefix:toURI:")

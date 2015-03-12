@@ -32,14 +32,7 @@ public class GKLeaderboard
      * @since Available in iOS 8.0 and later.
      */
     @Mapping("initWithPlayers:")
-    public GKLeaderboard(NSArray<GKPlayer> players) { }
-    /**
-     * @since Available in iOS 4.1 and later.
-     * @deprecated Deprecated in iOS 8.0.
-     */
-    @Deprecated
-    @Mapping("initWithPlayerIDs:")
-    public GKLeaderboard(List<String> playerIDs) { }
+    public GKLeaderboard(NSArray<?> players) { }
     
     
     @Mapping("timeScope")
@@ -97,12 +90,12 @@ public class GKLeaderboard
     
     
     @Mapping("loadScoresWithCompletionHandler:")
-    public native void loadScores(@Block VoidBlock2<NSArray<GKScore>, NSError> completionHandler);
+    public native void loadScores(Todo completionHandler);
     /**
      * @since Available in iOS 6.0 and later.
      */
     @Mapping("loadLeaderboardsWithCompletionHandler:")
-    public static native void loadLeaderboards(@Block VoidBlock2<NSArray<GKLeaderboard>, NSError> completionHandler);
+    public static native void loadLeaderboards(Todo completionHandler);
     /**
      * @since Available in iOS 4.1 and later.
      * @deprecated Deprecated in iOS 6.0.

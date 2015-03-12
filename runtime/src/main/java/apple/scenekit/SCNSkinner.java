@@ -57,6 +57,6 @@ public class SCNSkinner
     
     
     @Mapping("skinnerWithBaseGeometry:bones:boneInverseBindTransforms:boneWeights:boneIndices:")
-    public static native SCNSkinner create(SCNGeometry baseGeometry, NSArray<SCNNode> bones, List<SCNMatrix4> boneInverseBindTransforms, SCNGeometrySource boneWeights, SCNGeometrySource boneIndices);
+    public static native SCNSkinner create(SCNGeometry baseGeometry, NSArray<?> bones, NSArray<?> boneInverseBindTransforms, SCNGeometrySource boneWeights, SCNGeometrySource boneIndices);
     
 }

@@ -42,14 +42,14 @@ public interface UITabBarControllerDelegate
      * @since Available in iOS 3.0 and later.
      */
     @Mapping("tabBarController:willBeginCustomizingViewControllers:")
-    void willBeginCustomizingViewControllers(UITabBarController tabBarController, NSArray<UIViewController> viewControllers);
+    void willBeginCustomizingViewControllers(UITabBarController tabBarController, NSArray<?> viewControllers);
     /**
      * @since Available in iOS 3.0 and later.
      */
     @Mapping("tabBarController:willEndCustomizingViewControllers:changed:")
-    void willEndCustomizingViewControllers(UITabBarController tabBarController, NSArray<UIViewController> viewControllers, boolean changed);
+    void willEndCustomizingViewControllers(UITabBarController tabBarController, NSArray<?> viewControllers, boolean changed);
     @Mapping("tabBarController:didEndCustomizingViewControllers:changed:")
-    void didEndCustomizingViewControllers(UITabBarController tabBarController, NSArray<UIViewController> viewControllers, boolean changed);
+    void didEndCustomizingViewControllers(UITabBarController tabBarController, NSArray<?> viewControllers, boolean changed);
     /**
      * @since Available in iOS 7.0 and later.
      */

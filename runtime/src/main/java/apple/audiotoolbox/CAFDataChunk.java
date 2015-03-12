@@ -40,13 +40,13 @@ public class CAFDataChunk
     ]-*/;
     public static native CAFDataChunk copyWithmEditCount(CAFDataChunk original, int mEditCount) /*-[
         original.mEditCount = mEditCount;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native CAFDataChunk copyWithmData(CAFDataChunk original, ByteBuffer mData) /*-[
         original.mData = mData;
-        return __new;
+        return original;
     ]-*/;
 
     

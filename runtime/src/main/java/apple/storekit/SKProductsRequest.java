@@ -33,7 +33,7 @@ public class SKProductsRequest
      * @since Available in iOS 3.0 and later.
      */
     @Mapping("initWithProductIdentifiers:")
-    public SKProductsRequest(Set<String> productIdentifiers) { }
+    public SKProductsRequest(NSSet<?> productIdentifiers) { }
     
     
     /**

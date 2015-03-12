@@ -44,25 +44,25 @@ public class MKTileOverlayPath
     ]-*/;
     public static native MKTileOverlayPath copyWithx(MKTileOverlayPath original, @MachineSizedSInt long x) /*-[
         original.x = x;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native MKTileOverlayPath copyWithy(MKTileOverlayPath original, @MachineSizedSInt long y) /*-[
         original.y = y;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native MKTileOverlayPath copyWithz(MKTileOverlayPath original, @MachineSizedSInt long z) /*-[
         original.z = z;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native MKTileOverlayPath copyWithcontentScaleFactor(MKTileOverlayPath original, @MachineSizedFloat double contentScaleFactor) /*-[
         original.contentScaleFactor = contentScaleFactor;
-        return __new;
+        return original;
     ]-*/;
 
     

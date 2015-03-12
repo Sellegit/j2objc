@@ -34,7 +34,7 @@ public class CMMetadataDataType
      * @since Available in iOS 8.0 and later.
      */
     @GlobalFunction("CMMetadataDataTypeRegistryRegisterDataType")
-    public static native CMMetadataDataTypeRegistryError registerDataType(String dataType, String description, List<String> conformingDataTypes);
+    public static native CMMetadataDataTypeRegistryError registerDataType(String dataType, String description, NSArray<?> conformingDataTypes);
     /**
      * @since Available in iOS 8.0 and later.
      */

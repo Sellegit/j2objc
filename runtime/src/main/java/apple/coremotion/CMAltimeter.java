@@ -33,8 +33,6 @@ public class CMAltimeter
     
     
     
-    @Mapping("startRelativeAltitudeUpdatesToQueue:withHandler:")
-    public native void startRelativeAltitudeUpdates(NSOperationQueue queue, @Block VoidBlock2<CMAltitudeData, NSError> handler);
     @Mapping("stopRelativeAltitudeUpdates")
     public native void stopRelativeAltitudeUpdates();
     @Mapping("isRelativeAltitudeAvailable")

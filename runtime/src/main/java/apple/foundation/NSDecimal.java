@@ -50,37 +50,37 @@ public class NSDecimal
     ]-*/;
     public static native NSDecimal copyWith_exponent(NSDecimal original, int _exponent) /*-[
         original._exponent = _exponent;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native NSDecimal copyWith_length(NSDecimal original, int _length) /*-[
         original._length = _length;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native NSDecimal copyWith_isNegative(NSDecimal original, int _isNegative) /*-[
         original._isNegative = _isNegative;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native NSDecimal copyWith_isCompact(NSDecimal original, int _isCompact) /*-[
         original._isCompact = _isCompact;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native NSDecimal copyWith_reserved(NSDecimal original, int _reserved) /*-[
         original._reserved = _reserved;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native NSDecimal copyWith_mantissa(NSDecimal original, ShortBuffer _mantissa) /*-[
         original._mantissa = _mantissa;
-        return __new;
+        return original;
     ]-*/;
 
     

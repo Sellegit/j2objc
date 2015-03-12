@@ -29,7 +29,7 @@ public class CKFetchRecordsOperation
     
     public CKFetchRecordsOperation() {}
     @Mapping("initWithRecordIDs:")
-    public CKFetchRecordsOperation(NSArray<CKRecordID> recordIDs) { }
+    public CKFetchRecordsOperation(NSArray<?> recordIDs) { }
     
     
     @Mapping("recordIDs")

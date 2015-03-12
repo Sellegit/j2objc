@@ -45,7 +45,7 @@ public interface UIAccessibilityContainer
     @Mapping("accessibilityElementAtIndex:")
     UIAccessibilityElement getAccessibilityElement(@MachineSizedSInt long index);
     @Mapping("indexOfAccessibilityElement:")
-    @MachineSizedSInt long indexOfAccessibilityElement(UIAccessibilityElement element);
+    @MachineSizedSInt long indexOfAccessibilityElement(Object element);
     
     /*<adapter>*/
     /*</adapter>*/

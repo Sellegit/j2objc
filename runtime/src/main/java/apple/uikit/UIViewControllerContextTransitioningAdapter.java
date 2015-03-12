@@ -52,12 +52,12 @@ public abstract class UIViewControllerContextTransitioningAdapter
     @NotImplemented("completeTransition:")
     public void completeTransition(boolean didComplete) { throw new UnsupportedOperationException(); }
     @NotImplemented("viewControllerForKey:")
-    public UIViewController getViewController(UITransitionContextViewControllerType key) { throw new UnsupportedOperationException(); }
+    public UIViewController getViewController(String key) { throw new UnsupportedOperationException(); }
     /**
      * @since Available in iOS 8.0 and later.
      */
     @NotImplemented("viewForKey:")
-    public UIView getView(UITransitionContextViewType key) { throw new UnsupportedOperationException(); }
+    public UIView getView(String key) { throw new UnsupportedOperationException(); }
     /**
      * @since Available in iOS 8.0 and later.
      */

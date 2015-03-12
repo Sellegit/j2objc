@@ -32,14 +32,14 @@ public class CFMutableData
     @GlobalFunction("CFDataCreateMutableCopy")
     protected static native CFMutableData createMutableCopy(CFAllocator allocator, @MachineSizedSInt long capacity, CFData theData);
     @GlobalFunction("CFDataSetLength")
-    public native void setLength(@MachineSizedSInt long length);
+    public static native void setLength(CFData theData, @MachineSizedSInt long length);
     @GlobalFunction("CFDataIncreaseLength")
-    public native void increaseLength(@MachineSizedSInt long extraLength);
+    public static native void increaseLength(CFData theData, @MachineSizedSInt long extraLength);
     @GlobalFunction("CFDataAppendBytes")
-    protected native void append(@Pointer long bytes, @MachineSizedSInt long length);
+    protected static native void append(CFData theData, Todo bytes, @MachineSizedSInt long length);
     @GlobalFunction("CFDataReplaceBytes")
-    protected native void replace(CFRange range, @Pointer long newBytes, @MachineSizedSInt long newLength);
+    protected static native void replace(CFData theData, CFRange range, Todo newBytes, @MachineSizedSInt long newLength);
     @GlobalFunction("CFDataDeleteBytes")
-    protected native void deleteBytes(CFRange range);
+    protected static native void deleteBytes(CFData theData, CFRange range);
     
 }

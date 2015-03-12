@@ -1,0 +1,3 @@
+[submodule "runtime/robovm-bro-gen"]
+	path = runtime/robovm-bro-gen
+	url = git@github.com:neocxi/robovm-bro-gen.git

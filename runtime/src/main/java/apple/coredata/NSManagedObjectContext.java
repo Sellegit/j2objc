@@ -195,7 +195,7 @@ public class NSManagedObjectContext
      * @since Available in iOS 3.0 and later.
      */
     @Mapping("obtainPermanentIDsForObjects:error:")
-    protected native boolean obtainPermanentIDsForObjects(NSArray<NSManagedObject> objects, Todo error);
+    protected native boolean obtainPermanentIDsForObjects(NSArray<?> objects, Todo error);
     /**
      * @since Available in iOS 3.0 and later.
      */

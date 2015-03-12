@@ -40,9 +40,9 @@ public class PHCachingImageManager
     
     
     @Mapping("startCachingImagesForAssets:targetSize:contentMode:options:")
-    public native void startCachingImagesForAssets(NSArray<PHAsset> assets, CGSize targetSize, @Representing("PHImageContentMode") @MachineSizedSInt long contentMode, PHImageRequestOptions options);
+    public native void startCachingImagesForAssets(NSArray<?> assets, CGSize targetSize, @Representing("PHImageContentMode") @MachineSizedSInt long contentMode, PHImageRequestOptions options);
     @Mapping("stopCachingImagesForAssets:targetSize:contentMode:options:")
-    public native void stopCachingImagesForAssets(NSArray<PHAsset> assets, CGSize targetSize, @Representing("PHImageContentMode") @MachineSizedSInt long contentMode, PHImageRequestOptions options);
+    public native void stopCachingImagesForAssets(NSArray<?> assets, CGSize targetSize, @Representing("PHImageContentMode") @MachineSizedSInt long contentMode, PHImageRequestOptions options);
     @Mapping("stopCachingImagesForAllAssets")
     public native void stopCachingImagesForAllAssets();
     

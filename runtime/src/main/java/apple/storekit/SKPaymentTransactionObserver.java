@@ -32,12 +32,12 @@ public interface SKPaymentTransactionObserver
      * @since Available in iOS 3.0 and later.
      */
     @Mapping("paymentQueue:updatedTransactions:")
-    void updatedTransactions(SKPaymentQueue queue, NSArray<SKPaymentTransaction> transactions);
+    void updatedTransactions(SKPaymentQueue queue, NSArray<?> transactions);
     /**
      * @since Available in iOS 3.0 and later.
      */
     @Mapping("paymentQueue:removedTransactions:")
-    void removedTransactions(SKPaymentQueue queue, NSArray<SKPaymentTransaction> transactions);
+    void removedTransactions(SKPaymentQueue queue, NSArray<?> transactions);
     /**
      * @since Available in iOS 3.0 and later.
      */
@@ -52,7 +52,7 @@ public interface SKPaymentTransactionObserver
      * @since Available in iOS 6.0 and later.
      */
     @Mapping("paymentQueue:updatedDownloads:")
-    void updatedDownloads(SKPaymentQueue queue, NSArray<SKDownload> downloads);
+    void updatedDownloads(SKPaymentQueue queue, NSArray<?> downloads);
     
     /*<adapter>*/
     /*</adapter>*/

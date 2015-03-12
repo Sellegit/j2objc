@@ -36,13 +36,13 @@ public interface NSNetServiceDelegate
     @Mapping("netServiceDidPublish:")
     void didPublish(NSNetService sender);
     @Mapping("netService:didNotPublish:")
-    void didNotPublish(NSNetService sender, NSNetServiceErrorInfo errorDict);
+    void didNotPublish(NSNetService sender, NSDictionary<?, ?> errorDict);
     @Mapping("netServiceWillResolve:")
     void willResolve(NSNetService sender);
     @Mapping("netServiceDidResolveAddress:")
     void didResolve(NSNetService sender);
     @Mapping("netService:didNotResolve:")
-    void didNotResolve(NSNetService sender, NSNetServiceErrorInfo errorDict);
+    void didNotResolve(NSNetService sender, NSDictionary<?, ?> errorDict);
     @Mapping("netServiceDidStop:")
     void didStop(NSNetService sender);
     @Mapping("netService:didUpdateTXTRecordData:")

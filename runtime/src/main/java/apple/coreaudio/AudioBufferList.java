@@ -37,13 +37,13 @@ public class AudioBufferList
     ]-*/;
     public static native AudioBufferList copyWithmNumberBuffers(AudioBufferList original, int mNumberBuffers) /*-[
         original.mNumberBuffers = mNumberBuffers;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native AudioBufferList copyWithmBuffers(AudioBufferList original, AudioBuffer mBuffers) /*-[
         original.mBuffers = mBuffers;
-        return __new;
+        return original;
     ]-*/;
 
     

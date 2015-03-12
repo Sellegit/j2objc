@@ -41,25 +41,25 @@ public class AudioValueTranslation
     ]-*/;
     public static native AudioValueTranslation copyWithmInputData(AudioValueTranslation original, Todo mInputData) /*-[
         original.mInputData = mInputData;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native AudioValueTranslation copyWithmInputDataSize(AudioValueTranslation original, int mInputDataSize) /*-[
         original.mInputDataSize = mInputDataSize;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native AudioValueTranslation copyWithmOutputData(AudioValueTranslation original, Todo mOutputData) /*-[
         original.mOutputData = mOutputData;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native AudioValueTranslation copyWithmOutputDataSize(AudioValueTranslation original, int mOutputDataSize) /*-[
         original.mOutputDataSize = mOutputDataSize;
-        return __new;
+        return original;
     ]-*/;
 
     

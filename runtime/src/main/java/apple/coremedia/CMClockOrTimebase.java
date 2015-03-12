@@ -34,26 +34,26 @@ public class CMClockOrTimebase
      * @since Available in iOS 6.0 and later.
      */
     @GlobalFunction("CMSyncGetRelativeRate")
-    public native double getRelativeRate(CMClockOrTimebase relativeToClockOrTimebase);
+    public static native double getRelativeRate(CFType ofClockOrTimebase, CFType relativeToClockOrTimebase);
     /**
      * @since Available in iOS 6.0 and later.
      */
     @GlobalFunction("CMSyncGetRelativeRateAndAnchorTime")
-    private native int getRelativeRateAndAnchorTime(CMClockOrTimebase relativeToClockOrTimebase, Todo outRelativeRate, Todo outOfClockOrTimebaseAnchorTime, Todo outRelativeToClockOrTimebaseAnchorTime);
+    private static native int getRelativeRateAndAnchorTime(CFType ofClockOrTimebase, CFType relativeToClockOrTimebase, Todo outRelativeRate, CMTime outOfClockOrTimebaseAnchorTime, CMTime outRelativeToClockOrTimebaseAnchorTime);
     /**
      * @since Available in iOS 6.0 and later.
      */
     @GlobalFunction("CMSyncConvertTime")
-    public static native CMTime convertTime(CMTime time, CMClockOrTimebase fromClockOrTimebase, CMClockOrTimebase toClockOrTimebase);
+    public static native CMTime convertTime(CMTime time, CFType fromClockOrTimebase, CFType toClockOrTimebase);
     /**
      * @since Available in iOS 6.0 and later.
      */
     @GlobalFunction("CMSyncMightDrift")
-    public native boolean mightDrift(CMClockOrTimebase clockOrTimebase2);
+    public static native boolean mightDrift(CFType clockOrTimebase1, CFType clockOrTimebase2);
     /**
      * @since Available in iOS 6.0 and later.
      */
     @GlobalFunction("CMSyncGetTime")
-    public native CMTime getTime();
+    public static native CMTime getTime(CFType clockOrTimebase);
     
 }

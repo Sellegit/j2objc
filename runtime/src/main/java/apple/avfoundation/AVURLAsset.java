@@ -34,7 +34,7 @@ public class AVURLAsset
     
     public AVURLAsset() {}
     @Mapping("initWithURL:options:")
-    public AVURLAsset(NSURL URL, AVURLAssetOptions options) { }
+    public AVURLAsset(NSURL URL, NSDictionary<?, ?> options) { }
     
     
     @Mapping("URL")
@@ -63,7 +63,7 @@ public class AVURLAsset
     @Mapping("isPlayableExtendedMIMEType:")
     public static native boolean isPlayableExtendedMIMEType(String extendedMIMEType);
     @Mapping("URLAssetWithURL:options:")
-    public static native AVURLAsset create(NSURL URL, AVURLAssetOptions options);
+    public static native AVURLAsset create(NSURL URL, NSDictionary<?, ?> options);
     @Mapping("compatibleTrackForCompositionTrack:")
     public native AVAssetTrack getCompatibleTrack(AVCompositionTrack compositionTrack);
     

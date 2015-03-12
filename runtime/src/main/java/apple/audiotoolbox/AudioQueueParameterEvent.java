@@ -40,13 +40,13 @@ public class AudioQueueParameterEvent
     ]-*/;
     public static native AudioQueueParameterEvent copyWithmID(AudioQueueParameterEvent original, int mID) /*-[
         original.mID = mID;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native AudioQueueParameterEvent copyWithmValue(AudioQueueParameterEvent original, float mValue) /*-[
         original.mValue = mValue;
-        return __new;
+        return original;
     ]-*/;
 
     

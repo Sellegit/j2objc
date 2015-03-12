@@ -40,10 +40,12 @@ public class ALAssetRepresentation
     public native CGSize getDimensions();
     @Mapping("size")
     public native long getSize();
+    @Mapping("getBytes:fromOffset:length:error:")
+    protected native @MachineSizedUInt long getBytes(Todo buffer, long offset, @MachineSizedUInt long length, Todo error);
     @Mapping("fullResolutionImage")
     public native CGImage getFullResolutionImage();
     @Mapping("CGImageWithOptions:")
-    public native CGImage getCGImage(CGImageSourceOptions options);
+    public native CGImage getCGImage(NSDictionary<?, ?> options);
     @Mapping("fullScreenImage")
     public native CGImage getFullScreenImage();
     @Mapping("url")

@@ -46,7 +46,7 @@ public class AVAudioFormat
     @Mapping("initWithCommonFormat:sampleRate:interleaved:channelLayout:")
     public AVAudioFormat(@Representing("AVAudioCommonFormat") @MachineSizedUInt long format, double sampleRate, boolean interleaved, AVAudioChannelLayout layout) { }
     @Mapping("initWithSettings:")
-    public AVAudioFormat(AVAudioSettings settings) { }
+    public AVAudioFormat(NSDictionary<?, ?> settings) { }
     
     
     @Mapping("isStandard")
@@ -69,6 +69,6 @@ public class AVAudioFormat
     
     
     @Mapping("isEqual:")
-    public native boolean equalsTo(AVAudioFormat object);
+    public native boolean equalsTo(Object object);
     
 }

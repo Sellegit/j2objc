@@ -40,13 +40,13 @@ public class MKMapSize
     ]-*/;
     public static native MKMapSize copyWithwidth(MKMapSize original, double width) /*-[
         original.width = width;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native MKMapSize copyWithheight(MKMapSize original, double height) /*-[
         original.height = height;
-        return __new;
+        return original;
     ]-*/;
 
     

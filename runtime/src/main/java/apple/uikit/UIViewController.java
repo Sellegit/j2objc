@@ -638,7 +638,7 @@ public class UIViewController
      * @since Available in iOS 3.0 and later.
      */
     @Mapping("setToolbarItems:animated:")
-    public native void setToolbarItems(NSArray<UIBarButtonItem> toolbarItems, boolean animated);
+    public native void setToolbarItems(NSArray<?> toolbarItems, boolean animated);
     /**
      * @since Available in iOS 7.0 and later.
      */

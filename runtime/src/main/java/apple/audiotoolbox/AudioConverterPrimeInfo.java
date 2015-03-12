@@ -40,13 +40,13 @@ public class AudioConverterPrimeInfo
     ]-*/;
     public static native AudioConverterPrimeInfo copyWithleadingFrames(AudioConverterPrimeInfo original, int leadingFrames) /*-[
         original.leadingFrames = leadingFrames;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native AudioConverterPrimeInfo copyWithtrailingFrames(AudioConverterPrimeInfo original, int trailingFrames) /*-[
         original.trailingFrames = trailingFrames;
-        return __new;
+        return original;
     ]-*/;
 
     

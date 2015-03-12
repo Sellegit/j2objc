@@ -38,7 +38,7 @@ public class NSFileWrapper
     @Mapping("initWithURL:options:error:")
     public NSFileWrapper(NSURL url, @Representing("NSFileWrapperReadingOptions") @MachineSizedUInt long options, Todo outError) { }
     @Mapping("initDirectoryWithFileWrappers:")
-    public NSFileWrapper(Map<String, NSFileWrapper> childrenByPreferredName) { }
+    public NSFileWrapper(NSDictionary<?, ?> childrenByPreferredName) { }
     @Mapping("initRegularFileWithContents:")
     public NSFileWrapper(NSData contents) { }
     /**

@@ -32,18 +32,18 @@ public class CFMutableCharacterSet
     @GlobalFunction("CFCharacterSetCreateMutableCopy")
     protected static native CFMutableCharacterSet createMutableCopy(CFAllocator alloc, CFCharacterSet theSet);
     @GlobalFunction("CFCharacterSetAddCharactersInRange")
-    public native void addCharactersInRange(CFRange theRange);
+    public static native void addCharactersInRange(CFCharacterSet theSet, CFRange theRange);
     @GlobalFunction("CFCharacterSetRemoveCharactersInRange")
-    public native void removeCharactersInRange(CFRange theRange);
+    public static native void removeCharactersInRange(CFCharacterSet theSet, CFRange theRange);
     @GlobalFunction("CFCharacterSetAddCharactersInString")
-    public native void addCharactersInString(String theString);
+    public static native void addCharactersInString(CFCharacterSet theSet, String theString);
     @GlobalFunction("CFCharacterSetRemoveCharactersInString")
-    public native void removeCharactersInString(String theString);
+    public static native void removeCharactersInString(CFCharacterSet theSet, String theString);
     @GlobalFunction("CFCharacterSetUnion")
-    public native void union(CFCharacterSet theOtherSet);
+    public static native void union(CFCharacterSet theSet, CFCharacterSet theOtherSet);
     @GlobalFunction("CFCharacterSetIntersect")
-    public native void intersect(CFCharacterSet theOtherSet);
+    public static native void intersect(CFCharacterSet theSet, CFCharacterSet theOtherSet);
     @GlobalFunction("CFCharacterSetInvert")
-    public native void invert();
+    public static native void invert(CFCharacterSet theSet);
     
 }

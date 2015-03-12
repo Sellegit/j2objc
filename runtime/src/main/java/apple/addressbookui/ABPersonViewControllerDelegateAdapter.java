@@ -31,6 +31,6 @@ public abstract class ABPersonViewControllerDelegateAdapter
     
     
     @NotImplemented("personViewController:shouldPerformDefaultActionForPerson:property:identifier:")
-    public boolean shouldPerformDefaultAction(ABPersonViewController personViewController, ABPerson person, ABProperty property, int identifier) { throw new UnsupportedOperationException(); }
+    public boolean shouldPerformDefaultAction(ABPersonViewController personViewController, ABRecord person, int property, int identifier) { throw new UnsupportedOperationException(); }
     
 }

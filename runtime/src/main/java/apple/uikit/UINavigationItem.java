@@ -103,12 +103,12 @@ public class UINavigationItem
      * @since Available in iOS 5.0 and later.
      */
     @Mapping("setLeftBarButtonItems:animated:")
-    public native void setLeftBarButtonItems(NSArray<UIBarButtonItem> items, boolean animated);
+    public native void setLeftBarButtonItems(NSArray<?> items, boolean animated);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @Mapping("setRightBarButtonItems:animated:")
-    public native void setRightBarButtonItems(NSArray<UIBarButtonItem> items, boolean animated);
+    public native void setRightBarButtonItems(NSArray<?> items, boolean animated);
     @Mapping("setLeftBarButtonItem:animated:")
     public native void setLeftBarButtonItem(UIBarButtonItem item, boolean animated);
     @Mapping("setRightBarButtonItem:animated:")

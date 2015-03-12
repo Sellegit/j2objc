@@ -42,19 +42,19 @@ public class AudioFormatInfo
     ]-*/;
     public static native AudioFormatInfo copyWithmASBD(AudioFormatInfo original, AudioStreamBasicDescription mASBD) /*-[
         original.mASBD = mASBD;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native AudioFormatInfo copyWithmMagicCookie(AudioFormatInfo original, Todo mMagicCookie) /*-[
         original.mMagicCookie = mMagicCookie;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native AudioFormatInfo copyWithmMagicCookieSize(AudioFormatInfo original, int mMagicCookieSize) /*-[
         original.mMagicCookieSize = mMagicCookieSize;
-        return __new;
+        return original;
     ]-*/;
 
     

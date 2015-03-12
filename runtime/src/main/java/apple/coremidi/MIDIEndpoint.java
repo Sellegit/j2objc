@@ -37,7 +37,7 @@ public class MIDIEndpoint
      * @since Available in iOS 4.2 and later.
      */
     @GlobalFunction("MIDIDestinationCreate")
-    protected static native MIDIError createDestination(MIDIClient client, String name, FunctionPtr readProc, @Pointer long refCon, Todo outDest);
+    protected static native MIDIError createDestination(MIDIClient client, String name, FunctionPtr readProc, Todo refCon, Todo outDest);
     /**
      * @since Available in iOS 4.2 and later.
      */
@@ -57,6 +57,6 @@ public class MIDIEndpoint
      * @since Available in iOS 4.2 and later.
      */
     @GlobalFunction("MIDIEndpointSetRefCons")
-    protected native MIDIError setRefCons(@Pointer long ref1, @Pointer long ref2);
+    protected native MIDIError setRefCons(Todo ref1, Todo ref2);
     
 }

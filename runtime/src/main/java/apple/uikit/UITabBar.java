@@ -166,9 +166,9 @@ public class UITabBar
     
     
     @Mapping("setItems:animated:")
-    public native void setItems(NSArray<UITabBarItem> items, boolean animated);
+    public native void setItems(NSArray<?> items, boolean animated);
     @Mapping("beginCustomizingItems:")
-    public native void beginCustomizing(NSArray<UITabBarItem> items);
+    public native void beginCustomizing(NSArray<?> items);
     @Mapping("endCustomizingAnimated:")
     public native boolean endCustomizing(boolean animated);
     @Mapping("isCustomizing")

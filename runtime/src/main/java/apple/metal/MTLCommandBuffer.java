@@ -51,16 +51,12 @@ public final class MTLCommandBuffer
     public native void enqueue();
     @Mapping("commit")
     public native void commit();
-    @Mapping("addScheduledHandler:")
-    public native void addScheduledHandler(@Block VoidBlock1<MTLCommandBuffer> block);
     @Mapping("presentDrawable:")
     public native void presentDrawable(MTLDrawable drawable);
     @Mapping("presentDrawable:atTime:")
     public native void presentDrawableAtTime(MTLDrawable drawable, double presentationTime);
     @Mapping("waitUntilScheduled")
     public native void waitUntilScheduled();
-    @Mapping("addCompletedHandler:")
-    public native void addCompletedHandler(@Block VoidBlock1<MTLCommandBuffer> block);
     @Mapping("waitUntilCompleted")
     public native void waitUntilCompleted();
     @Mapping("blitCommandEncoder")

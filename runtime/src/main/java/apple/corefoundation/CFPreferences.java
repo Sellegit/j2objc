@@ -44,11 +44,11 @@ public class CFPreferences
     @GlobalFunction("CFPreferencesCopyValue")
     protected static native CFType getValue(String key, String applicationID, String userName, String hostName);
     @GlobalFunction("CFPreferencesCopyMultiple")
-    protected static native Map<String, ?> getMultiple(List<String> keysToFetch, String applicationID, String userName, String hostName);
+    protected static native Map<String, ?> getMultiple(CFArray keysToFetch, String applicationID, String userName, String hostName);
     @GlobalFunction("CFPreferencesSetValue")
     protected static native void setValue(String key, CFType value, String applicationID, String userName, String hostName);
     @GlobalFunction("CFPreferencesSetMultiple")
-    protected static native void setMultiple(Map<String, ?> keysToSet, List<String> keysToRemove, String applicationID, String userName, String hostName);
+    protected static native void setMultiple(CFDictionary keysToSet, CFArray keysToRemove, String applicationID, String userName, String hostName);
     @GlobalFunction("CFPreferencesSynchronize")
     protected static native boolean synchronize(String applicationID, String userName, String hostName);
     /**

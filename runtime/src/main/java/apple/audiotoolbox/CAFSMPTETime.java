@@ -46,31 +46,31 @@ public class CAFSMPTETime
     ]-*/;
     public static native CAFSMPTETime copyWithmHours(CAFSMPTETime original, byte mHours) /*-[
         original.mHours = mHours;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native CAFSMPTETime copyWithmMinutes(CAFSMPTETime original, byte mMinutes) /*-[
         original.mMinutes = mMinutes;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native CAFSMPTETime copyWithmSeconds(CAFSMPTETime original, byte mSeconds) /*-[
         original.mSeconds = mSeconds;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native CAFSMPTETime copyWithmFrames(CAFSMPTETime original, byte mFrames) /*-[
         original.mFrames = mFrames;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native CAFSMPTETime copyWithmSubFrameSampleOffset(CAFSMPTETime original, int mSubFrameSampleOffset) /*-[
         original.mSubFrameSampleOffset = mSubFrameSampleOffset;
-        return __new;
+        return original;
     ]-*/;
 
     

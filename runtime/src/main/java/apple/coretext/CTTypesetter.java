@@ -42,7 +42,7 @@ public class CTTypesetter
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTTypesetterCreateWithAttributedStringAndOptions")
-    public static native CTTypesetter create(NSAttributedString string, CTTypesetterOptions options);
+    public static native CTTypesetter create(NSAttributedString string, CFDictionary options);
     /**
      * @since Available in iOS 3.2 and later.
      */

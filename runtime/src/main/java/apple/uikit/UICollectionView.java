@@ -68,11 +68,11 @@ public class UICollectionView
     @Mapping("registerNib:forCellWithReuseIdentifier:")
     public native void registerReusableCellNib(UINib nib, String identifier);
     @Mapping("registerNib:forSupplementaryViewOfKind:withReuseIdentifier:")
-    public native void registerReusableSupplementaryViewNib(UINib nib, UICollectionElementKind kind, String identifier);
+    public native void registerReusableSupplementaryViewNib(UINib nib, String kind, String identifier);
     @Mapping("dequeueReusableCellWithReuseIdentifier:forIndexPath:")
     public native UICollectionReusableView dequeueReusableCell(String identifier, NSIndexPath indexPath);
     @Mapping("dequeueReusableSupplementaryViewOfKind:withReuseIdentifier:forIndexPath:")
-    public native UICollectionReusableView dequeueReusableSupplementaryView(UICollectionElementKind elementKind, String identifier, NSIndexPath indexPath);
+    public native UICollectionReusableView dequeueReusableSupplementaryView(String elementKind, String identifier, NSIndexPath indexPath);
     @Mapping("indexPathsForSelectedItems")
     public native NSArray<NSIndexPath> getIndexPathsForSelectedItems();
     @Mapping("selectItemAtIndexPath:animated:scrollPosition:")
@@ -91,11 +91,6 @@ public class UICollectionView
     /**
      * @since Available in iOS 7.0 and later.
      */
-    @Mapping("startInteractiveTransitionToCollectionViewLayout:completion:")
-    public native UICollectionViewTransitionLayout startInteractiveTransition(UICollectionViewLayout layout, @Block VoidBlock2<Boolean, Boolean> completion);
-    /**
-     * @since Available in iOS 7.0 and later.
-     */
     @Mapping("finishInteractiveTransition")
     public native void finishInteractiveTransition();
     /**
@@ -110,7 +105,7 @@ public class UICollectionView
     @Mapping("layoutAttributesForItemAtIndexPath:")
     public native UICollectionViewLayoutAttributes getLayoutAttributesForItem(NSIndexPath indexPath);
     @Mapping("layoutAttributesForSupplementaryElementOfKind:atIndexPath:")
-    public native UICollectionViewLayoutAttributes getLayoutAttributesForSupplementaryElement(UICollectionElementKind kind, NSIndexPath indexPath);
+    public native UICollectionViewLayoutAttributes getLayoutAttributesForSupplementaryElement(String kind, NSIndexPath indexPath);
     @Mapping("indexPathForItemAtPoint:")
     public native NSIndexPath getIndexPathForItem(CGPoint point);
     @Mapping("indexPathForCell:")
@@ -132,11 +127,11 @@ public class UICollectionView
     @Mapping("moveSection:toSection:")
     public native void moveSection(@MachineSizedSInt long section, @MachineSizedSInt long newSection);
     @Mapping("insertItemsAtIndexPaths:")
-    public native void insertItems(NSArray<NSIndexPath> indexPaths);
+    public native void insertItems(NSArray<?> indexPaths);
     @Mapping("deleteItemsAtIndexPaths:")
-    public native void deleteItems(NSArray<NSIndexPath> indexPaths);
+    public native void deleteItems(NSArray<?> indexPaths);
     @Mapping("reloadItemsAtIndexPaths:")
-    public native void reloadItems(NSArray<NSIndexPath> indexPaths);
+    public native void reloadItems(NSArray<?> indexPaths);
     @Mapping("moveItemAtIndexPath:toIndexPath:")
     public native void moveItem(NSIndexPath indexPath, NSIndexPath newIndexPath);
     @Mapping("performBatchUpdates:completion:")

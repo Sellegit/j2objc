@@ -144,7 +144,7 @@ public class UINavigationController
      * @since Available in iOS 3.0 and later.
      */
     @Mapping("setViewControllers:animated:")
-    public native void setViewControllers(NSArray<UIViewController> viewControllers, boolean animated);
+    public native void setViewControllers(NSArray<?> viewControllers, boolean animated);
     @Mapping("setNavigationBarHidden:animated:")
     public native void setNavigationBarHidden(boolean hidden, boolean animated);
     /**

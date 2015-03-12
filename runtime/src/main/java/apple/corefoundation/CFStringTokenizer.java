@@ -43,7 +43,7 @@ public class CFStringTokenizer
      * @since Available in iOS 3.0 and later.
      */
     @GlobalFunction("CFStringTokenizerCreate")
-    protected static native CFStringTokenizer create(CFAllocator alloc, String string, CFRange range, CFStringTokenizerUnitOptions options, CFLocale locale);
+    protected static native CFStringTokenizer create(CFAllocator alloc, String string, CFRange range, @MachineSizedUInt long options, CFLocale locale);
     /**
      * @since Available in iOS 3.0 and later.
      */
@@ -68,11 +68,11 @@ public class CFStringTokenizer
      * @since Available in iOS 3.0 and later.
      */
     @GlobalFunction("CFStringTokenizerCopyCurrentTokenAttribute")
-    public native CFType getCurrentTokenAttribute(CFStringTokenizerUnitOptions attribute);
+    public native CFType getCurrentTokenAttribute(@MachineSizedUInt long attribute);
     /**
      * @since Available in iOS 3.0 and later.
      */
     @GlobalFunction("CFStringTokenizerGetCurrentSubTokens")
-    protected native @MachineSizedSInt long getCurrentSubTokens(Todo ranges, @MachineSizedSInt long maxRangeLength, List<String> derivedSubTokens);
+    protected native @MachineSizedSInt long getCurrentSubTokens(CFRange ranges, @MachineSizedSInt long maxRangeLength, CFArray derivedSubTokens);
     
 }

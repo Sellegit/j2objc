@@ -53,12 +53,12 @@ public class CFHTTPMessage
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFHTTPMessageCreateRequest")
-    protected static native CFHTTPMessage createRequest(CFAllocator alloc, String requestMethod, NSURL url, CFString httpVersion);
+    protected static native CFHTTPMessage createRequest(CFAllocator alloc, String requestMethod, NSURL url, String httpVersion);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFHTTPMessageCreateResponse")
-    protected static native CFHTTPMessage createResponse(CFAllocator alloc, @MachineSizedSInt long statusCode, String statusDescription, CFString httpVersion);
+    protected static native CFHTTPMessage createResponse(CFAllocator alloc, @MachineSizedSInt long statusCode, String statusDescription, String httpVersion);
     /**
      * @since Available in iOS 2.0 and later.
      */
@@ -108,7 +108,7 @@ public class CFHTTPMessage
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFHTTPMessageAppendBytes")
-    protected native boolean appendBytes(@Pointer long newBytes, @MachineSizedSInt long numBytes);
+    protected native boolean appendBytes(Todo newBytes, @MachineSizedSInt long numBytes);
     /**
      * @since Available in iOS 2.0 and later.
      */
@@ -133,7 +133,7 @@ public class CFHTTPMessage
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFHTTPMessageAddAuthentication")
-    public native boolean addAuthentication(CFHTTPMessage authenticationFailureResponse, String username, String password, CFHTTPAuthenticationScheme authenticationScheme, boolean forProxy);
+    public native boolean addAuthentication(CFHTTPMessage authenticationFailureResponse, String username, String password, String authenticationScheme, boolean forProxy);
     /**
      * @since Available in iOS 2.0 and later.
      */

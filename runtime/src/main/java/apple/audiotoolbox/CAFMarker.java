@@ -46,31 +46,31 @@ public class CAFMarker
     ]-*/;
     public static native CAFMarker copyWithmType(CAFMarker original, int mType) /*-[
         original.mType = mType;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native CAFMarker copyWithmFramePosition(CAFMarker original, double mFramePosition) /*-[
         original.mFramePosition = mFramePosition;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native CAFMarker copyWithmMarkerID(CAFMarker original, int mMarkerID) /*-[
         original.mMarkerID = mMarkerID;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native CAFMarker copyWithmSMPTETime(CAFMarker original, CAFSMPTETime mSMPTETime) /*-[
         original.mSMPTETime = mSMPTETime;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native CAFMarker copyWithmChannel(CAFMarker original, int mChannel) /*-[
         original.mChannel = mChannel;
-        return __new;
+        return original;
     ]-*/;
 
     

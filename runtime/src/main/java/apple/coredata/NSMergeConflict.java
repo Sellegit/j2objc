@@ -28,7 +28,7 @@ public class NSMergeConflict
     
     public NSMergeConflict() {}
     @Mapping("initWithSource:newVersion:oldVersion:cachedSnapshot:persistedSnapshot:")
-    public NSMergeConflict(NSManagedObject srcObject, @MachineSizedUInt long newvers, @MachineSizedUInt long oldvers, Map<String, NSObject> cachesnap, Map<String, NSObject> persnap) { }
+    public NSMergeConflict(NSManagedObject srcObject, @MachineSizedUInt long newvers, @MachineSizedUInt long oldvers, NSDictionary<?, ?> cachesnap, NSDictionary<?, ?> persnap) { }
     
     
     @Mapping("sourceObject")

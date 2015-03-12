@@ -31,6 +31,6 @@ public abstract class ABNewPersonViewControllerDelegateAdapter
     
     
     @NotImplemented("newPersonViewController:didCompleteWithNewPerson:")
-    public void didComplete(ABNewPersonViewController newPersonView, ABPerson person) { throw new UnsupportedOperationException(); }
+    public void didComplete(ABNewPersonViewController newPersonView, ABRecord person) { throw new UnsupportedOperationException(); }
     
 }

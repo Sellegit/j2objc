@@ -36,11 +36,6 @@ public class CIKernel
     
     @Mapping("name")
     public native String getName();
-    /**
-     * @since Available in iOS 8.0 and later.
-     */
-    @Mapping("applyWithExtent:roiCallback:arguments:")
-    public native CIImage apply(CGRect extent, @Block(" (,)") Block2<Integer, CGRect, CGRect> callback, NSArray<?> args);
     @Mapping("kernelsWithString:")
     public static native NSArray<CIKernel> createKernels(String s);
     /**

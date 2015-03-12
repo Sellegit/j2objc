@@ -68,7 +68,7 @@ public class AVMutableCompositionTrack
      * @since Available in iOS 5.0 and later.
      */
     @Mapping("insertTimeRanges:ofTracks:atTime:error:")
-    public native boolean insertTimeRanges(List<CMTimeRange> timeRanges, NSArray<AVAssetTrack> tracks, CMTime startTime, Todo error);
+    public native boolean insertTimeRanges(NSArray<?> timeRanges, NSArray<?> tracks, CMTime startTime, Todo error);
     @Mapping("insertEmptyTimeRange:")
     public native void insertEmptyTimeRange(CMTimeRange timeRange);
     @Mapping("removeTimeRange:")
@@ -76,6 +76,6 @@ public class AVMutableCompositionTrack
     @Mapping("scaleTimeRange:toDuration:")
     public native void scaleTimeRange(CMTimeRange timeRange, CMTime duration);
     @Mapping("validateTrackSegments:error:")
-    public native boolean validateTrackSegments(NSArray<AVCompositionTrackSegment> trackSegments, Todo error);
+    public native boolean validateTrackSegments(NSArray<?> trackSegments, Todo error);
     
 }

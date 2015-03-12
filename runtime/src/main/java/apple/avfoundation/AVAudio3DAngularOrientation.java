@@ -45,19 +45,19 @@ public class AVAudio3DAngularOrientation
     ]-*/;
     public static native AVAudio3DAngularOrientation copyWithyaw(AVAudio3DAngularOrientation original, float yaw) /*-[
         original.yaw = yaw;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native AVAudio3DAngularOrientation copyWithpitch(AVAudio3DAngularOrientation original, float pitch) /*-[
         original.pitch = pitch;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native AVAudio3DAngularOrientation copyWithroll(AVAudio3DAngularOrientation original, float roll) /*-[
         original.roll = roll;
-        return __new;
+        return original;
     ]-*/;
 
     

@@ -33,7 +33,7 @@ public class UIFontDescriptor
     
     public UIFontDescriptor() {}
     @Mapping("initWithFontAttributes:")
-    public UIFontDescriptor(UIFontDescriptorAttributes attributes) { }
+    public UIFontDescriptor(NSDictionary<?, ?> attributes) { }
     
     
     @Mapping("postscriptName")
@@ -48,13 +48,13 @@ public class UIFontDescriptor
     
     
     @Mapping("objectForKey:")
-    protected native Object getValue(NSString anAttribute);
+    protected native Object getValue(String anAttribute);
     @Mapping("fontAttributes")
     public native UIFontDescriptorAttributes getFontAttributes();
     @Mapping("matchingFontDescriptorsWithMandatoryKeys:")
-    protected native NSArray<UIFontDescriptor> getMatchingFontDescriptors(NSSet<NSString> mandatoryKeys);
+    protected native NSArray<UIFontDescriptor> getMatchingFontDescriptors(NSSet<?> mandatoryKeys);
     @Mapping("fontDescriptorByAddingAttributes:")
-    public native UIFontDescriptor newWithAttributes(UIFontDescriptorAttributes attributes);
+    public native UIFontDescriptor newWithAttributes(NSDictionary<?, ?> attributes);
     @Mapping("fontDescriptorWithSymbolicTraits:")
     public native UIFontDescriptor newWithSymbolicTraits(@Representing("UIFontDescriptorSymbolicTraits") int symbolicTraits);
     @Mapping("fontDescriptorWithSize:")
@@ -66,13 +66,13 @@ public class UIFontDescriptor
     @Mapping("fontDescriptorWithFamily:")
     public native UIFontDescriptor newWithFamily(String newFamily);
     @Mapping("fontDescriptorWithFontAttributes:")
-    public static native UIFontDescriptor create(UIFontDescriptorAttributes attributes);
+    public static native UIFontDescriptor create(NSDictionary<?, ?> attributes);
     @Mapping("fontDescriptorWithName:size:")
     public static native UIFontDescriptor create(String fontName, @MachineSizedFloat double size);
     @Mapping("fontDescriptorWithName:matrix:")
     public static native UIFontDescriptor create(String fontName, CGAffineTransform matrix);
     @Mapping("preferredFontDescriptorWithTextStyle:")
-    protected static native UIFontDescriptor getPreferredFontDescriptor(NSString style);
+    protected static native UIFontDescriptor getPreferredFontDescriptor(String style);
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
     @Mapping("encodeWithCoder:")

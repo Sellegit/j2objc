@@ -40,8 +40,8 @@ public class NSMetadataItem
     
     
     @Mapping("valueForAttribute:")
-    public native Object getValue(NSMetadataItemAttribute key);
+    public native Object getValue(String key);
     @Mapping("valuesForAttributes:")
-    public native NSDictionary<?, ?> getValues(List<NSMetadataItemAttribute> keys);
+    public native NSDictionary<?, ?> getValues(NSArray<?> keys);
     
 }

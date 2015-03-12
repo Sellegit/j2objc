@@ -42,19 +42,19 @@ public class CVPlanarPixelBufferInfo_YCbCrPlanar
     ]-*/;
     public static native CVPlanarPixelBufferInfo_YCbCrPlanar copyWithcomponentInfoY(CVPlanarPixelBufferInfo_YCbCrPlanar original, CVPlanarComponentInfo componentInfoY) /*-[
         original.componentInfoY = componentInfoY;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native CVPlanarPixelBufferInfo_YCbCrPlanar copyWithcomponentInfoCb(CVPlanarPixelBufferInfo_YCbCrPlanar original, CVPlanarComponentInfo componentInfoCb) /*-[
         original.componentInfoCb = componentInfoCb;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native CVPlanarPixelBufferInfo_YCbCrPlanar copyWithcomponentInfoCr(CVPlanarPixelBufferInfo_YCbCrPlanar original, CVPlanarComponentInfo componentInfoCr) /*-[
         original.componentInfoCr = componentInfoCr;
-        return __new;
+        return original;
     ]-*/;
 
     

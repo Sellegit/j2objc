@@ -91,7 +91,7 @@ public class CMBufferQueue
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMBufferQueueResetWithCallback")
-    private native CMBufferQueueError reset(FunctionPtr callback, @Pointer long refcon);
+    private native CMBufferQueueError reset(FunctionPtr callback, Todo refcon);
     /**
      * @since Available in iOS 4.0 and later.
      */
@@ -141,12 +141,12 @@ public class CMBufferQueue
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMBufferQueueInstallTrigger")
-    private native CMBufferQueueError installTrigger(FunctionPtr triggerCallback, @Pointer long triggerRefcon, CMBufferQueueTriggerCondition triggerCondition, CMTime triggerTime, Todo triggerTokenOut);
+    private native CMBufferQueueError installTrigger(FunctionPtr triggerCallback, Todo triggerRefcon, CMBufferQueueTriggerCondition triggerCondition, CMTime triggerTime, Todo triggerTokenOut);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMBufferQueueInstallTriggerWithIntegerThreshold")
-    private native CMBufferQueueError installTrigger(FunctionPtr triggerCallback, @Pointer long triggerRefcon, CMBufferQueueTriggerCondition triggerCondition, @MachineSizedSInt long triggerThreshold, Todo triggerTokenOut);
+    private native CMBufferQueueError installTrigger(FunctionPtr triggerCallback, Todo triggerRefcon, CMBufferQueueTriggerCondition triggerCondition, @MachineSizedSInt long triggerThreshold, Todo triggerTokenOut);
     /**
      * @since Available in iOS 4.0 and later.
      */
@@ -161,11 +161,11 @@ public class CMBufferQueue
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMBufferQueueCallForEachBuffer")
-    private native CMBufferQueueError callForEachBuffer(FunctionPtr callback, @Pointer long refcon);
+    private native CMBufferQueueError callForEachBuffer(FunctionPtr callback, Todo refcon);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMBufferQueueSetValidationCallback")
-    private native CMBufferQueueError setValidationCallback(FunctionPtr validationCallback, @Pointer long validationRefCon);
+    private native CMBufferQueueError setValidationCallback(FunctionPtr validationCallback, Todo validationRefCon);
     
 }

@@ -40,13 +40,13 @@ public class CVPlanarComponentInfo
     ]-*/;
     public static native CVPlanarComponentInfo copyWithoffset(CVPlanarComponentInfo original, int offset) /*-[
         original.offset = offset;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native CVPlanarComponentInfo copyWithrowBytes(CVPlanarComponentInfo original, int rowBytes) /*-[
         original.rowBytes = rowBytes;
-        return __new;
+        return original;
     ]-*/;
 
     

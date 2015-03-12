@@ -39,7 +39,7 @@ public class UINib
     
     
     @Mapping("instantiateWithOwner:options:")
-    public native NSArray<NSObject> instantiate(Object ownerOrNil, UINibLoadingOptions optionsOrNil);
+    public native NSArray<NSObject> instantiate(Object ownerOrNil, NSDictionary<?, ?> optionsOrNil);
     @Mapping("nibWithNibName:bundle:")
     public static native UINib create(String name, NSBundle bundleOrNil);
     @Mapping("nibWithData:bundle:")

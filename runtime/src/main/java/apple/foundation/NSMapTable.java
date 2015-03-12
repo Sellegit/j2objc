@@ -32,8 +32,6 @@ public class NSMapTable <K, V>
     
     
     public NSMapTable() {}
-    @Mapping("initWithKeyOptions:valueOptions:capacity:")
-    public NSMapTable(NSMapTableOptions keyOptions, NSMapTableOptions valueOptions, @MachineSizedUInt long initialCapacity) { }
     
     
     @Mapping("count")

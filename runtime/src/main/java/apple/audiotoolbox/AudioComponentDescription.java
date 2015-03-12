@@ -46,31 +46,31 @@ public class AudioComponentDescription
     ]-*/;
     public static native AudioComponentDescription copyWithcomponentType(AudioComponentDescription original, int componentType) /*-[
         original.componentType = componentType;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native AudioComponentDescription copyWithcomponentSubType(AudioComponentDescription original, int componentSubType) /*-[
         original.componentSubType = componentSubType;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native AudioComponentDescription copyWithcomponentManufacturer(AudioComponentDescription original, int componentManufacturer) /*-[
         original.componentManufacturer = componentManufacturer;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native AudioComponentDescription copyWithcomponentFlags(AudioComponentDescription original, int componentFlags) /*-[
         original.componentFlags = componentFlags;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native AudioComponentDescription copyWithcomponentFlagsMask(AudioComponentDescription original, int componentFlagsMask) /*-[
         original.componentFlagsMask = componentFlagsMask;
-        return __new;
+        return original;
     ]-*/;
 
     

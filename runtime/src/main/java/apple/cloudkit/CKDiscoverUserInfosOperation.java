@@ -29,7 +29,7 @@ public class CKDiscoverUserInfosOperation
     
     public CKDiscoverUserInfosOperation() {}
     @Mapping("initWithEmailAddresses:userRecordIDs:")
-    public CKDiscoverUserInfosOperation(List<String> emailAddresses, NSArray<CKRecordID> userRecordIDs) { }
+    public CKDiscoverUserInfosOperation(NSArray<?> emailAddresses, NSArray<?> userRecordIDs) { }
     
     
     @Mapping("emailAddresses")

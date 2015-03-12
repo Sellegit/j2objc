@@ -46,31 +46,31 @@ public class CAFPacketTableHeader
     ]-*/;
     public static native CAFPacketTableHeader copyWithmNumberPackets(CAFPacketTableHeader original, long mNumberPackets) /*-[
         original.mNumberPackets = mNumberPackets;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native CAFPacketTableHeader copyWithmNumberValidFrames(CAFPacketTableHeader original, long mNumberValidFrames) /*-[
         original.mNumberValidFrames = mNumberValidFrames;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native CAFPacketTableHeader copyWithmPrimingFrames(CAFPacketTableHeader original, int mPrimingFrames) /*-[
         original.mPrimingFrames = mPrimingFrames;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native CAFPacketTableHeader copyWithmRemainderFrames(CAFPacketTableHeader original, int mRemainderFrames) /*-[
         original.mRemainderFrames = mRemainderFrames;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native CAFPacketTableHeader copyWithmPacketDescriptions(CAFPacketTableHeader original, ByteBuffer mPacketDescriptions) /*-[
         original.mPacketDescriptions = mPacketDescriptions;
-        return __new;
+        return original;
     ]-*/;
 
     

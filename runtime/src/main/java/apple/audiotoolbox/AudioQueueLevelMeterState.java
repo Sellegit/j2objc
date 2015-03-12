@@ -40,13 +40,13 @@ public class AudioQueueLevelMeterState
     ]-*/;
     public static native AudioQueueLevelMeterState copyWithmAveragePower(AudioQueueLevelMeterState original, float mAveragePower) /*-[
         original.mAveragePower = mAveragePower;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native AudioQueueLevelMeterState copyWithmPeakPower(AudioQueueLevelMeterState original, float mPeakPower) /*-[
         original.mPeakPower = mPeakPower;
-        return __new;
+        return original;
     ]-*/;
 
     

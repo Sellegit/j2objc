@@ -52,11 +52,6 @@ public class EKEventStore
     public static native NSString ChangedNotification();
     
     /**
-     * @since Available in iOS 6.0 and later.
-     */
-    @Mapping("requestAccessToEntityType:completion:")
-    public native void requestAccess(@Representing("EKEntityType") int entityType, @Block VoidBlock2<Boolean, NSError> completion);
-    /**
      * @since Available in iOS 5.0 and later.
      */
     @Mapping("sources")
@@ -125,10 +120,8 @@ public class EKEventStore
     public native EKEvent getEvent(String identifier);
     @Mapping("eventsMatchingPredicate:")
     public native NSArray<EKEvent> getEvents(NSPredicate predicate);
-    @Mapping("enumerateEventsMatchingPredicate:usingBlock:")
-    public native void enumerateEvents(NSPredicate predicate, @Block VoidBlock2<EKEvent, Todo> block);
     @Mapping("predicateForEventsWithStartDate:endDate:calendars:")
-    public native NSPredicate getPredicateForEvents(NSDate startDate, NSDate endDate, NSArray<EKCalendar> calendars);
+    public native NSPredicate getPredicateForEvents(NSDate startDate, NSDate endDate, NSArray<?> calendars);
     /**
      * @since Available in iOS 6.0 and later.
      */
@@ -143,7 +136,7 @@ public class EKEventStore
      * @since Available in iOS 6.0 and later.
      */
     @Mapping("fetchRemindersMatchingPredicate:completion:")
-    public native Object fetchReminders(NSPredicate predicate, @Block VoidBlock1<NSArray<EKReminder>> completion);
+    public native Object fetchReminders(NSPredicate predicate, Todo completion);
     /**
      * @since Available in iOS 6.0 and later.
      */
@@ -153,17 +146,17 @@ public class EKEventStore
      * @since Available in iOS 6.0 and later.
      */
     @Mapping("predicateForRemindersInCalendars:")
-    public native NSPredicate getPredicateForReminders(NSArray<EKCalendar> calendars);
+    public native NSPredicate getPredicateForReminders(NSArray<?> calendars);
     /**
      * @since Available in iOS 6.0 and later.
      */
     @Mapping("predicateForIncompleteRemindersWithDueDateStarting:ending:calendars:")
-    public native NSPredicate getPredicateForIncompleteReminders(NSDate startDate, NSDate endDate, NSArray<EKCalendar> calendars);
+    public native NSPredicate getPredicateForIncompleteReminders(NSDate startDate, NSDate endDate, NSArray<?> calendars);
     /**
      * @since Available in iOS 6.0 and later.
      */
     @Mapping("predicateForCompletedRemindersWithCompletionDateStarting:ending:calendars:")
-    public native NSPredicate getPredicateForCompletedReminders(NSDate startDate, NSDate endDate, NSArray<EKCalendar> calendars);
+    public native NSPredicate getPredicateForCompletedReminders(NSDate startDate, NSDate endDate, NSArray<?> calendars);
     /**
      * @since Available in iOS 5.0 and later.
      */

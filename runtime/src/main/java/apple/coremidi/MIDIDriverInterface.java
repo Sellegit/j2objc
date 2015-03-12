@@ -31,7 +31,7 @@ public class MIDIDriverInterface
     
     public static native MIDIDriverInterface copyWith_reserved(MIDIDriverInterface original, Todo _reserved) /*-[
         original._reserved = _reserved;
-        return __new;
+        return original;
     ]-*/;
 
     

@@ -53,6 +53,6 @@ public class AVAssetReaderTrackOutput
     
     
     @Mapping("assetReaderTrackOutputWithTrack:outputSettings:")
-    public static native AVAssetReaderTrackOutput create(AVAssetTrack track, NSDictionary<NSString, NSObject> outputSettings);
+    public static native AVAssetReaderTrackOutput create(AVAssetTrack track, NSDictionary<?, ?> outputSettings);
     
 }

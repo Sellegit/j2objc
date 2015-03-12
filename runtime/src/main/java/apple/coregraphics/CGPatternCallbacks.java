@@ -32,7 +32,7 @@ import apple.uikit.*;
     
     public static native CGPatternCallbacks copyWithversion(CGPatternCallbacks original, int version) /*-[
         original.version = version;
-        return __new;
+        return original;
     ]-*/;
 
     

@@ -96,6 +96,6 @@ public class ADBannerView
      */
     @Deprecated
     @Mapping("sizeFromBannerContentSizeIdentifier:")
-    protected static native CGSize getSizeForIdentifier(NSString contentSizeIdentifier);
+    protected static native CGSize getSizeForIdentifier(String contentSizeIdentifier);
     
 }

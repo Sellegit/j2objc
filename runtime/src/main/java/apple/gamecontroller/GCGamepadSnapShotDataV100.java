@@ -53,61 +53,61 @@ public class GCGamepadSnapShotDataV100
     ]-*/;
     public static native GCGamepadSnapShotDataV100 copyWithversion(GCGamepadSnapShotDataV100 original, short version) /*-[
         original.version = version;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native GCGamepadSnapShotDataV100 copyWithsize(GCGamepadSnapShotDataV100 original, short size) /*-[
         original.size = size;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native GCGamepadSnapShotDataV100 copyWithdpadX(GCGamepadSnapShotDataV100 original, float dpadX) /*-[
         original.dpadX = dpadX;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native GCGamepadSnapShotDataV100 copyWithdpadY(GCGamepadSnapShotDataV100 original, float dpadY) /*-[
         original.dpadY = dpadY;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native GCGamepadSnapShotDataV100 copyWithbuttonA(GCGamepadSnapShotDataV100 original, float buttonA) /*-[
         original.buttonA = buttonA;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native GCGamepadSnapShotDataV100 copyWithbuttonB(GCGamepadSnapShotDataV100 original, float buttonB) /*-[
         original.buttonB = buttonB;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native GCGamepadSnapShotDataV100 copyWithbuttonX(GCGamepadSnapShotDataV100 original, float buttonX) /*-[
         original.buttonX = buttonX;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native GCGamepadSnapShotDataV100 copyWithbuttonY(GCGamepadSnapShotDataV100 original, float buttonY) /*-[
         original.buttonY = buttonY;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native GCGamepadSnapShotDataV100 copyWithleftShoulder(GCGamepadSnapShotDataV100 original, float leftShoulder) /*-[
         original.leftShoulder = leftShoulder;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native GCGamepadSnapShotDataV100 copyWithrightShoulder(GCGamepadSnapShotDataV100 original, float rightShoulder) /*-[
         original.rightShoulder = rightShoulder;
-        return __new;
+        return original;
     ]-*/;
 
     

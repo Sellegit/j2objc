@@ -36,7 +36,7 @@ public class NSLinguisticTagger
      * @since Available in iOS 5.0 and later.
      */
     @Mapping("initWithTagSchemes:options:")
-    public NSLinguisticTagger(List<NSLinguisticTagScheme> tagSchemes, NSLinguisticTaggerOptions opts) { }
+    public NSLinguisticTagger(NSArray<?> tagSchemes, @MachineSizedUInt long opts) { }
     
     
     /**
@@ -76,7 +76,7 @@ public class NSLinguisticTagger
      * @since Available in iOS 5.0 and later.
      */
     @Mapping("enumerateTagsInRange:scheme:options:usingBlock:")
-    public native void enumerateTagsInRange(NSRange range, NSLinguisticTagScheme tagScheme, @Representing("NSLinguisticTaggerOptions") @MachineSizedUInt long opts, @Block("(,,,)") VoidBlock4<NSLinguisticTag, NSRange, NSRange, Todo> block);
+    public native void enumerateTagsInRange(NSRange range, String tagScheme, @Representing("NSLinguisticTaggerOptions") @MachineSizedUInt long opts, Todo block);
     /**
      * @since Available in iOS 5.0 and later.
      */
@@ -86,7 +86,7 @@ public class NSLinguisticTagger
      * @since Available in iOS 5.0 and later.
      */
     @Mapping("tagAtIndex:scheme:tokenRange:sentenceRange:")
-    public native String getTag(@MachineSizedUInt long charIndex, NSLinguisticTagScheme tagScheme, NSRange tokenRange, NSRange sentenceRange);
+    public native String getTag(@MachineSizedUInt long charIndex, String tagScheme, NSRange tokenRange, NSRange sentenceRange);
     /**
      * @since Available in iOS 5.0 and later.
      */

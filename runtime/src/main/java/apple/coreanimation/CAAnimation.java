@@ -95,6 +95,6 @@ public class CAAnimation
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
     @Mapping("runActionForKey:object:arguments:")
-    public native void runAction(String event, Object anObject, Map<String, NSObject> dict);
+    public native void runAction(String event, Object anObject, NSDictionary<?, ?> dict);
     
 }

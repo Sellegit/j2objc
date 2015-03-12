@@ -229,11 +229,6 @@ public class CLLocationManager
     @Mapping("significantLocationChangeMonitoringAvailable")
     public static native boolean isSignificantLocationChangeMonitoringAvailable();
     /**
-     * @since Available in iOS 7.0 and later.
-     */
-    @Mapping("isMonitoringAvailableForClass:")
-    public static native boolean isMonitoringAvailable(Class<? extends CLRegion> regionClass);
-    /**
      * @since Available in iOS 4.0 and later.
      * @deprecated Deprecated in iOS 7.0.
      */

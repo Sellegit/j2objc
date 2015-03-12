@@ -62,8 +62,8 @@ public class CATransaction
     @Mapping("setCompletionBlock:")
     public static native void setCompletionBlock(@Block Runnable block);
     @Mapping("valueForKey:")
-    public static native Object get(CATransactionProperty key);
+    public static native Object get(String key);
     @Mapping("setValue:forKey:")
-    protected static native void set(Object anObject, CATransactionProperty key);
+    protected static native void set(Object anObject, String key);
     
 }

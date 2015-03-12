@@ -94,22 +94,22 @@ public class AVMetadataItem
      * @since Available in iOS 6.0 and later.
      */
     @Mapping("metadataItemsFromArray:filteredAndSortedAccordingToPreferredLanguages:")
-    public static native NSArray<AVMetadataItem> filterMetadataItemsByPreferredLanguages(NSArray<AVMetadataItem> metadataItems, List<String> preferredLanguages);
+    public static native NSArray<AVMetadataItem> filterMetadataItemsByPreferredLanguages(NSArray<?> metadataItems, NSArray<?> preferredLanguages);
     /**
      * @since Available in iOS 8.0 and later.
      */
     @Mapping("metadataItemsFromArray:filteredByIdentifier:")
-    public static native NSArray<AVMetadataItem> filterMetadataItemsByIdentifier(NSArray<AVMetadataItem> metadataItems, String identifier);
+    public static native NSArray<AVMetadataItem> filterMetadataItemsByIdentifier(NSArray<?> metadataItems, String identifier);
     /**
      * @since Available in iOS 7.0 and later.
      */
     @Mapping("metadataItemsFromArray:filteredByMetadataItemFilter:")
-    public static native NSArray<AVMetadataItem> filterMetadataItems(NSArray<AVMetadataItem> metadataItems, AVMetadataItemFilter metadataItemFilter);
+    public static native NSArray<AVMetadataItem> filterMetadataItems(NSArray<?> metadataItems, AVMetadataItemFilter metadataItemFilter);
     /**
      * @since Available in iOS 8.0 and later.
      */
     @Mapping("identifierForKey:keySpace:")
-    public static native String getIdentifierForKey(Object key, AVMetadataKeySpace keySpace);
+    public static native String getIdentifierForKey(Object key, String keySpace);
     /**
      * @since Available in iOS 8.0 and later.
      */
@@ -121,9 +121,9 @@ public class AVMetadataItem
     @Mapping("keyForIdentifier:")
     public static native Object getKeyForIdentifier(String identifier);
     @Mapping("metadataItemsFromArray:withLocale:")
-    public static native NSArray<AVMetadataItem> filterMetadataItemsByLocale(NSArray<AVMetadataItem> metadataItems, NSLocale locale);
+    public static native NSArray<AVMetadataItem> filterMetadataItemsByLocale(NSArray<?> metadataItems, NSLocale locale);
     @Mapping("metadataItemsFromArray:withKey:keySpace:")
-    public static native NSArray<AVMetadataItem> filterMetadataItemsByKey(NSArray<AVMetadataItem> metadataItems, Object key, AVMetadataKeySpace keySpace);
+    public static native NSArray<AVMetadataItem> filterMetadataItemsByKey(NSArray<?> metadataItems, Object key, String keySpace);
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
     

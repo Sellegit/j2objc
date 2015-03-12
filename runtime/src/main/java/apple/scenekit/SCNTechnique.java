@@ -38,12 +38,10 @@ public class SCNTechnique
     
     
     
-    @Mapping("handleBindingOfSymbol:usingBlock:")
-    public native void handleBindingOfSymbol(String symbol, @Block VoidBlock4<Integer, Integer, SCNNode, SCNRenderer> block);
     @Mapping("techniqueWithDictionary:")
     public static native SCNTechnique create(NSDictionary<?, ?> dictionary);
     @Mapping("techniqueBySequencingTechniques:")
-    public static native SCNTechnique create(NSArray<SCNTechnique> techniques);
+    public static native SCNTechnique create(NSArray<?> techniques);
     @Mapping("addAnimation:forKey:")
     public native void addAnimation(CAAnimation animation, String key);
     @Mapping("removeAllAnimations")

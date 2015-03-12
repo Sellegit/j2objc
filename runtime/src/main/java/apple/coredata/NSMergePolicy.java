@@ -63,6 +63,6 @@ public class NSMergePolicy
     public static native NSMergePolicy getRollbackMergePolicy();
     
     @Mapping("resolveConflicts:error:")
-    protected native boolean resolveConflicts(NSArray<NSMergeConflict> list, Todo error);
+    protected native boolean resolveConflicts(NSArray<?> list, Todo error);
     
 }

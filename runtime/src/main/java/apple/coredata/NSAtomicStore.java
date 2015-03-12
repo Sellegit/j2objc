@@ -28,7 +28,7 @@ public class NSAtomicStore
     
     public NSAtomicStore() {}
     @Mapping("initWithPersistentStoreCoordinator:configurationName:URL:options:")
-    public NSAtomicStore(NSPersistentStoreCoordinator coordinator, String configurationName, NSURL url, NSPersistentStoreOptions options) { }
+    public NSAtomicStore(NSPersistentStoreCoordinator coordinator, String configurationName, NSURL url, NSDictionary<?, ?> options) { }
     
     
     
@@ -46,9 +46,9 @@ public class NSAtomicStore
     @Mapping("cacheNodes")
     public native NSSet<NSAtomicStoreCacheNode> getCacheNodes();
     @Mapping("addCacheNodes:")
-    public native void addCacheNodes(NSSet<NSAtomicStoreCacheNode> cacheNodes);
+    public native void addCacheNodes(NSSet<?> cacheNodes);
     @Mapping("willRemoveCacheNodes:")
-    public native void willRemoveCacheNodes(NSSet<NSAtomicStoreCacheNode> cacheNodes);
+    public native void willRemoveCacheNodes(NSSet<?> cacheNodes);
     @Mapping("cacheNodeForObjectID:")
     public native NSAtomicStoreCacheNode getCacheNode(NSManagedObjectID objectID);
     @Mapping("objectIDForEntity:referenceObject:")

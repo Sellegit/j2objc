@@ -61,13 +61,13 @@ public class SCNPhysicsWorld
     @Mapping("allBehaviors")
     public native NSArray<SCNPhysicsBehavior> getAllBehaviors();
     @Mapping("rayTestWithSegmentFromPoint:toPoint:options:")
-    public native NSArray<SCNHitTestResult> rayTestWithSegment(SCNVector3 origin, SCNVector3 dest, SCNPhysicsTestOptions options);
+    public native NSArray<SCNHitTestResult> rayTestWithSegment(SCNVector3 origin, SCNVector3 dest, NSDictionary<?, ?> options);
     @Mapping("contactTestBetweenBody:andBody:options:")
-    public native NSArray<SCNHitTestResult> contactTestBetweenBodies(SCNPhysicsBody bodyA, SCNPhysicsBody bodyB, SCNPhysicsTestOptions options);
+    public native NSArray<SCNHitTestResult> contactTestBetweenBodies(SCNPhysicsBody bodyA, SCNPhysicsBody bodyB, NSDictionary<?, ?> options);
     @Mapping("contactTestWithBody:options:")
-    public native NSArray<SCNHitTestResult> contactTestWithBody(SCNPhysicsBody body, SCNPhysicsTestOptions options);
+    public native NSArray<SCNHitTestResult> contactTestWithBody(SCNPhysicsBody body, NSDictionary<?, ?> options);
     @Mapping("convexSweepTestWithShape:fromTransform:toTransform:options:")
-    public native NSArray<SCNHitTestResult> convexSweepTestWithShape(SCNPhysicsShape shape, SCNMatrix4 from, SCNMatrix4 to, SCNPhysicsTestOptions options);
+    public native NSArray<SCNHitTestResult> convexSweepTestWithShape(SCNPhysicsShape shape, SCNMatrix4 from, SCNMatrix4 to, NSDictionary<?, ?> options);
     @Mapping("updateCollisionPairs")
     public native void updateCollisionPairs();
     

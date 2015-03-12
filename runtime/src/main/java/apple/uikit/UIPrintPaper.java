@@ -42,7 +42,7 @@ public class UIPrintPaper
     
     
     @Mapping("bestPaperForPageSize:withPapersFromArray:")
-    public static native UIPrintPaper createBestForPageSize(CGSize contentSize, NSArray<UIPrintPaper> paperList);
+    public static native UIPrintPaper createBestForPageSize(CGSize contentSize, NSArray<?> paperList);
     @Mapping("printRect")
     public native CGRect getPrintRect();
     

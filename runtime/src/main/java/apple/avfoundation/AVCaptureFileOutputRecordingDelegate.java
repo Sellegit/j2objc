@@ -33,9 +33,9 @@ public interface AVCaptureFileOutputRecordingDelegate
     
     
     @Mapping("captureOutput:didStartRecordingToOutputFileAtURL:fromConnections:")
-    void didStartRecording(AVCaptureFileOutput captureOutput, NSURL fileURL, NSArray<AVCaptureConnection> connections);
+    void didStartRecording(AVCaptureFileOutput captureOutput, NSURL fileURL, NSArray<?> connections);
     @Mapping("captureOutput:didFinishRecordingToOutputFileAtURL:fromConnections:error:")
-    void didFinishRecording(AVCaptureFileOutput captureOutput, NSURL outputFileURL, NSArray<AVCaptureConnection> connections, NSError error);
+    void didFinishRecording(AVCaptureFileOutput captureOutput, NSURL outputFileURL, NSArray<?> connections, NSError error);
     
     /*<adapter>*/
     /*</adapter>*/

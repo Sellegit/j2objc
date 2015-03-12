@@ -49,6 +49,6 @@ public class SCNPhysicsVehicle
     @Mapping("applyBrakingForce:forWheelAtIndex:")
     public native void applyBrakingForceForWheel(@MachineSizedFloat double value, @MachineSizedSInt long index);
     @Mapping("vehicleWithChassisBody:wheels:")
-    public static native SCNPhysicsVehicle create(SCNPhysicsBody chassisBody, NSArray<SCNPhysicsVehicleWheel> wheels);
+    public static native SCNPhysicsVehicle create(SCNPhysicsBody chassisBody, NSArray<?> wheels);
     
 }

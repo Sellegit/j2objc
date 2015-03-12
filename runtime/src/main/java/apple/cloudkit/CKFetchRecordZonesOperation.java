@@ -29,7 +29,7 @@ public class CKFetchRecordZonesOperation
     
     public CKFetchRecordZonesOperation() {}
     @Mapping("initWithRecordZoneIDs:")
-    public CKFetchRecordZonesOperation(NSArray<CKRecordZoneID> zoneIDs) { }
+    public CKFetchRecordZonesOperation(NSArray<?> zoneIDs) { }
     
     
     @Mapping("recordZoneIDs")

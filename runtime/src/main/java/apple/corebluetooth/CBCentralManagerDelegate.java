@@ -30,13 +30,13 @@ public interface CBCentralManagerDelegate
     @Mapping("centralManagerDidUpdateState:")
     void didUpdateState(CBCentralManager central);
     @Mapping("centralManager:willRestoreState:")
-    void willRestoreState(CBCentralManager central, CBCentralManagerRestoredState dict);
+    void willRestoreState(CBCentralManager central, NSDictionary<?, ?> dict);
     @Mapping("centralManager:didRetrievePeripherals:")
-    void didRetrievePeripherals(CBCentralManager central, NSArray<CBPeripheral> peripherals);
+    void didRetrievePeripherals(CBCentralManager central, NSArray<?> peripherals);
     @Mapping("centralManager:didRetrieveConnectedPeripherals:")
-    void didRetrieveConnectedPeripherals(CBCentralManager central, NSArray<CBPeripheral> peripherals);
+    void didRetrieveConnectedPeripherals(CBCentralManager central, NSArray<?> peripherals);
     @Mapping("centralManager:didDiscoverPeripheral:advertisementData:RSSI:")
-    void didDiscoverPeripheral(CBCentralManager central, CBPeripheral peripheral, CBAdvertisementData advertisementData, NSNumber rssi);
+    void didDiscoverPeripheral(CBCentralManager central, CBPeripheral peripheral, NSDictionary<?, ?> advertisementData, NSNumber RSSI);
     @Mapping("centralManager:didConnectPeripheral:")
     void didConnectPeripheral(CBCentralManager central, CBPeripheral peripheral);
     @Mapping("centralManager:didFailToConnectPeripheral:error:")

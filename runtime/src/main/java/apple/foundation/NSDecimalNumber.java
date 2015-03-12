@@ -30,7 +30,7 @@ public class NSDecimalNumber
     
     
     @Mapping("initWithString:locale:")
-    public NSDecimalNumber(String numberValue, NSLocale locale) { }
+    public NSDecimalNumber(String numberValue, Object locale) { }
     
     
     

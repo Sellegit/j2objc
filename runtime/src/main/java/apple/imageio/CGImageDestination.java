@@ -57,17 +57,17 @@ public class CGImageDestination
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CGImageDestinationSetProperties")
-    public native void setProperties(CGImageDestinationProperties properties);
+    public native void setProperties(NSDictionary<?, ?> properties);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CGImageDestinationAddImage")
-    public native void addImage(CGImage image, CGImageDestinationProperties properties);
+    public native void addImage(CGImage image, NSDictionary<?, ?> properties);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CGImageDestinationAddImageFromSource")
-    public native void addImageFromSource(CGImageSource isrc, @MachineSizedUInt long index, CGImageDestinationProperties properties);
+    public native void addImageFromSource(CGImageSource isrc, @MachineSizedUInt long index, NSDictionary<?, ?> properties);
     /**
      * @since Available in iOS 7.0 and later.
      */
@@ -77,6 +77,6 @@ public class CGImageDestination
      * @since Available in iOS 7.0 and later.
      */
     @GlobalFunction("CGImageDestinationCopyImageSource")
-    protected native boolean copyImageSource(CGImageSource isrc, CGImageDestinationCopySourceOptions options, Todo err);
+    protected native boolean copyImageSource(CGImageSource isrc, NSDictionary<?, ?> options, Todo err);
     
 }

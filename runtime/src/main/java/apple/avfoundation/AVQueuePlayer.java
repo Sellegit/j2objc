@@ -34,7 +34,7 @@ public class AVQueuePlayer
     
     public AVQueuePlayer() {}
     @Mapping("initWithItems:")
-    public AVQueuePlayer(NSArray<AVPlayerItem> items) { }
+    public AVQueuePlayer(NSArray<?> items) { }
     @Mapping("initWithURL:")
     public AVQueuePlayer(NSURL URL) { }
     @Mapping("initWithPlayerItem:")
@@ -58,6 +58,6 @@ public class AVQueuePlayer
     @Mapping("removeAllItems")
     public native void removeAllItems();
     @Mapping("queuePlayerWithItems:")
-    public static native AVQueuePlayer create(NSArray<AVPlayerItem> items);
+    public static native AVQueuePlayer create(NSArray<?> items);
     
 }

@@ -41,9 +41,6 @@ public abstract class SCNShadableAdapter
     
     
     
-    @NotImplemented("handleBindingOfSymbol:usingBlock:")
-    public void handleBindingOfSymbol(String symbol, @Block VoidBlock4<Integer, Integer, SCNNode, SCNRenderer> block) { throw new UnsupportedOperationException(); }
-    @NotImplemented("handleUnbindingOfSymbol:usingBlock:")
-    public void handleUnbindingOfSymbol(String symbol, @Block VoidBlock4<Integer, Integer, SCNNode, SCNRenderer> block) { throw new UnsupportedOperationException(); }
+    
     
 }

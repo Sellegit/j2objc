@@ -33,7 +33,7 @@ public class UIDocumentMenuViewController
     
     public UIDocumentMenuViewController() {}
     @Mapping("initWithDocumentTypes:inMode:")
-    public UIDocumentMenuViewController(List<String> allowedUTIs, @Representing("UIDocumentPickerMode") @MachineSizedUInt long mode) { }
+    public UIDocumentMenuViewController(NSArray<?> allowedUTIs, @Representing("UIDocumentPickerMode") @MachineSizedUInt long mode) { }
     @Mapping("initWithURL:inMode:")
     public UIDocumentMenuViewController(NSURL url, @Representing("UIDocumentPickerMode") @MachineSizedUInt long mode) { }
     @Mapping("initWithNibName:bundle:")

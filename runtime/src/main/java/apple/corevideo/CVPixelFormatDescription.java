@@ -33,7 +33,7 @@ public class CVPixelFormatDescription
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CVPixelFormatDescriptionCreateWithPixelFormatType")
-    protected static native NSDictionary<NSString, ?> create(CFAllocator allocator, CVPixelFormatType pixelFormat);
+    protected static native NSDictionary<NSString, ?> create(CFAllocator allocator, int pixelFormat);
     /**
      * @since Available in iOS 4.0 and later.
      */
@@ -43,6 +43,6 @@ public class CVPixelFormatDescription
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CVPixelFormatDescriptionRegisterDescriptionWithPixelFormatType")
-    public static native void registerDescription(NSDictionary<NSString, ?> description, CVPixelFormatType pixelFormat);
+    public static native void registerDescription(CFDictionary description, int pixelFormat);
     
 }

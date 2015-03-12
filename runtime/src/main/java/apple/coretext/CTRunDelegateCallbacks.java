@@ -31,7 +31,7 @@ import apple.foundation.*;
     
     public static native CTRunDelegateCallbacks copyWithversion(CTRunDelegateCallbacks original, @MachineSizedSInt long version) /*-[
         original.version = version;
-        return __new;
+        return original;
     ]-*/;
 
     

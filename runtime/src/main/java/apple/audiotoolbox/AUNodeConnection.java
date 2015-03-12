@@ -44,25 +44,25 @@ public class AUNodeConnection
     ]-*/;
     public static native AUNodeConnection copyWithsourceNode(AUNodeConnection original, int sourceNode) /*-[
         original.sourceNode = sourceNode;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native AUNodeConnection copyWithsourceOutputNumber(AUNodeConnection original, int sourceOutputNumber) /*-[
         original.sourceOutputNumber = sourceOutputNumber;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native AUNodeConnection copyWithdestNode(AUNodeConnection original, int destNode) /*-[
         original.destNode = destNode;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native AUNodeConnection copyWithdestInputNumber(AUNodeConnection original, int destInputNumber) /*-[
         original.destInputNumber = destInputNumber;
-        return __new;
+        return original;
     ]-*/;
 
     

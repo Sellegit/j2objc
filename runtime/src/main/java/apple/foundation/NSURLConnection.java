@@ -75,7 +75,7 @@ public class NSURLConnection
     @Mapping("setDelegateQueue:")
     public native void setDelegateQueue(NSOperationQueue queue);
     @Mapping("connectionWithRequest:delegate:")
-    public static native NSURLConnection create(NSURLRequest request, NSURLConnectionDelegate delegate);
+    public static native NSURLConnection create(NSURLRequest request, Object delegate);
     @Mapping("canHandleRequest:")
     public static native boolean canHandleRequest(NSURLRequest request);
     @Mapping("sendSynchronousRequest:returningResponse:error:")

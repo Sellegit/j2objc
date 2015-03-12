@@ -37,17 +37,17 @@ public class CTFontCollection
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTFontCollectionCreateFromAvailableFonts")
-    public static native CTFontCollection createFromAvailableFonts(CTFontCollectionOptions options);
+    public static native CTFontCollection createFromAvailableFonts(CFDictionary options);
     /**
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTFontCollectionCreateWithFontDescriptors")
-    public static native CTFontCollection create(List<CTFontDescriptor> queryDescriptors, CTFontCollectionOptions options);
+    public static native CTFontCollection create(CFArray queryDescriptors, CFDictionary options);
     /**
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTFontCollectionCreateCopyWithFontDescriptors")
-    public native CTFontCollection createCopy(List<CTFontDescriptor> queryDescriptors, CTFontCollectionOptions options);
+    public native CTFontCollection createCopy(CFArray queryDescriptors, CFDictionary options);
     /**
      * @since Available in iOS 3.2 and later.
      */
@@ -57,6 +57,6 @@ public class CTFontCollection
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTFontCollectionCreateMatchingFontDescriptorsSortedWithCallback")
-    protected native List<CTFontDescriptor> getMatchingFontDescriptorsSorted(FunctionPtr sortCallback, @Pointer long refCon);
+    protected native List<CTFontDescriptor> getMatchingFontDescriptorsSorted(FunctionPtr sortCallback, Todo refCon);
     
 }

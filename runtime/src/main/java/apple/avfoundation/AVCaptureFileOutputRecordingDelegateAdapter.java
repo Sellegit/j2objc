@@ -35,8 +35,8 @@ public abstract class AVCaptureFileOutputRecordingDelegateAdapter
     
     
     @NotImplemented("captureOutput:didStartRecordingToOutputFileAtURL:fromConnections:")
-    public void didStartRecording(AVCaptureFileOutput captureOutput, NSURL fileURL, NSArray<AVCaptureConnection> connections) { throw new UnsupportedOperationException(); }
+    public void didStartRecording(AVCaptureFileOutput captureOutput, NSURL fileURL, NSArray<?> connections) { throw new UnsupportedOperationException(); }
     @NotImplemented("captureOutput:didFinishRecordingToOutputFileAtURL:fromConnections:error:")
-    public void didFinishRecording(AVCaptureFileOutput captureOutput, NSURL outputFileURL, NSArray<AVCaptureConnection> connections, NSError error) { throw new UnsupportedOperationException(); }
+    public void didFinishRecording(AVCaptureFileOutput captureOutput, NSURL outputFileURL, NSArray<?> connections, NSError error) { throw new UnsupportedOperationException(); }
     
 }

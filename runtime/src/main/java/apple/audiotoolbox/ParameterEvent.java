@@ -44,25 +44,25 @@ public class ParameterEvent
     ]-*/;
     public static native ParameterEvent copyWithparameterID(ParameterEvent original, int parameterID) /*-[
         original.parameterID = parameterID;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native ParameterEvent copyWithscope(ParameterEvent original, int scope) /*-[
         original.scope = scope;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native ParameterEvent copyWithelement(ParameterEvent original, int element) /*-[
         original.element = element;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native ParameterEvent copyWithvalue(ParameterEvent original, float value) /*-[
         original.value = value;
-        return __new;
+        return original;
     ]-*/;
 
     

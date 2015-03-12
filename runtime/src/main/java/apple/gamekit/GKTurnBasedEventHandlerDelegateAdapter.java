@@ -35,7 +35,7 @@ public abstract class GKTurnBasedEventHandlerDelegateAdapter
      */
     @Deprecated
     @NotImplemented("handleInviteFromGameCenter:")
-    public void handleInvite(List<String> playersToInvite) { throw new UnsupportedOperationException(); }
+    public void handleInvite(NSArray<?> playersToInvite) { throw new UnsupportedOperationException(); }
     /**
      * @since Available in iOS 6.0 and later.
      * @deprecated Deprecated in iOS 7.0.

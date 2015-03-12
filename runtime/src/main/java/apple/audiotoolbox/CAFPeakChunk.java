@@ -40,13 +40,13 @@ public class CAFPeakChunk
     ]-*/;
     public static native CAFPeakChunk copyWithmEditCount(CAFPeakChunk original, int mEditCount) /*-[
         original.mEditCount = mEditCount;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native CAFPeakChunk copyWithmPeaks(CAFPeakChunk original, CAFPositionPeak mPeaks) /*-[
         original.mPeaks = mPeaks;
-        return __new;
+        return original;
     ]-*/;
 
     

@@ -58,7 +58,7 @@ public class CVBuffer
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CVBufferSetAttachments")
-    public native void setAttachments(NSDictionary<NSString, ?> theAttachments, CVAttachmentMode attachmentMode);
+    public native void setAttachments(CFDictionary theAttachments, CVAttachmentMode attachmentMode);
     /**
      * @since Available in iOS 4.0 and later.
      */

@@ -50,12 +50,12 @@ public interface UIViewControllerContextTransitioning
     @Mapping("completeTransition:")
     void completeTransition(boolean didComplete);
     @Mapping("viewControllerForKey:")
-    UIViewController getViewController(UITransitionContextViewControllerType key);
+    UIViewController getViewController(String key);
     /**
      * @since Available in iOS 8.0 and later.
      */
     @Mapping("viewForKey:")
-    UIView getView(UITransitionContextViewType key);
+    UIView getView(String key);
     /**
      * @since Available in iOS 8.0 and later.
      */

@@ -35,7 +35,7 @@ public class NSAttributedString
     @Mapping("initWithString:")
     public NSAttributedString(String str) { }
     @Mapping("initWithString:attributes:")
-    public NSAttributedString(String str, NSDictionary<NSString, NSObject> attrs) { }
+    public NSAttributedString(String str, NSDictionary<?, ?> attrs) { }
     @Mapping("initWithAttributedString:")
     public NSAttributedString(NSAttributedString attrStr) { }
     
@@ -50,13 +50,13 @@ public class NSAttributedString
     @Mapping("attributesAtIndex:effectiveRange:")
     public native NSDictionary<NSString, NSObject> getAttributesDictionary(@MachineSizedUInt long location, NSRange range);
     @Mapping("attribute:atIndex:effectiveRange:")
-    public native Object getAttribute(NSString attrName, @MachineSizedUInt long location, NSRange range);
+    public native Object getAttribute(String attrName, @MachineSizedUInt long location, NSRange range);
     @Mapping("attributedSubstringFromRange:")
     public native NSAttributedString substring(NSRange range);
     @Mapping("attributesAtIndex:longestEffectiveRange:inRange:")
     public native NSDictionary<NSString, NSObject> getAttributesDictionary(@MachineSizedUInt long location, NSRange range, NSRange rangeLimit);
     @Mapping("attribute:atIndex:longestEffectiveRange:inRange:")
-    public native Object getAttribute(NSString attrName, @MachineSizedUInt long location, NSRange range, NSRange rangeLimit);
+    public native Object getAttribute(String attrName, @MachineSizedUInt long location, NSRange range, NSRange rangeLimit);
     @Mapping("isEqualToAttributedString:")
     public native boolean equalsTo(NSAttributedString other);
     @Mapping("copyWithZone:")

@@ -54,16 +54,16 @@ public class CIFilter
      * @since Available in iOS 8.0 and later.
      */
     @Mapping("filterWithName:withInputParameters:")
-    public static native CIFilter create(String name, CIFilterInputParameters params);
+    public static native CIFilter create(String name, NSDictionary<?, ?> params);
     @Mapping("filterNamesInCategory:")
-    public static native List<String> getFilterNames(CIFilterCategory category);
+    public static native List<String> getFilterNames(String category);
     @Mapping("filterNamesInCategories:")
-    public static native List<String> getFilterNames(List<CIFilterCategory> categories);
+    public static native List<String> getFilterNames(NSArray<?> categories);
     /**
      * @since Available in iOS 6.0 and later.
      */
     @Mapping("serializedXMPFromFilters:inputImageExtent:")
-    public static native NSData serializeToXMP(NSArray<CIFilter> filters, CGRect extent);
+    public static native NSData serializeToXMP(NSArray<?> filters, CGRect extent);
     /**
      * @since Available in iOS 6.0 and later.
      */

@@ -38,6 +38,6 @@ public abstract class AVPlayerItemLegibleOutputPushDelegateAdapter
      * @since Available in iOS 7.0 and later.
      */
     @NotImplemented("legibleOutput:didOutputAttributedStrings:nativeSampleBuffers:forItemTime:")
-    public void didOutputAttributedStrings(AVPlayerItemLegibleOutput output, NSArray<NSAttributedString> strings, List<CMSampleBuffer> nativeSamples, CMTime itemTime) { throw new UnsupportedOperationException(); }
+    public void didOutputAttributedStrings(AVPlayerItemLegibleOutput output, NSArray<?> strings, NSArray<?> nativeSamples, CMTime itemTime) { throw new UnsupportedOperationException(); }
     
 }

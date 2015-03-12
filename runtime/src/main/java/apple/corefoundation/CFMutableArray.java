@@ -32,22 +32,22 @@ public class CFMutableArray
     @GlobalFunction("CFArrayCreateMutableCopy")
     protected static native CFMutableArray createMutableCopy(CFAllocator allocator, @MachineSizedSInt long capacity, CFArray theArray);
     @GlobalFunction("CFArrayAppendValue")
-    protected native void appendValue(Todo value);
+    protected static native void appendValue(CFArray theArray, Todo value);
     @GlobalFunction("CFArrayInsertValueAtIndex")
-    protected native void insertValueAtIndex(@MachineSizedSInt long idx, Todo value);
+    protected static native void insertValueAtIndex(CFArray theArray, @MachineSizedSInt long idx, Todo value);
     @GlobalFunction("CFArraySetValueAtIndex")
-    protected native void setValueAtIndex(@MachineSizedSInt long idx, Todo value);
+    protected static native void setValueAtIndex(CFArray theArray, @MachineSizedSInt long idx, Todo value);
     @GlobalFunction("CFArrayRemoveValueAtIndex")
-    protected native void removeValueAtIndex(@MachineSizedSInt long idx);
+    protected static native void removeValueAtIndex(CFArray theArray, @MachineSizedSInt long idx);
     @GlobalFunction("CFArrayRemoveAllValues")
-    protected native void removeAllValues();
+    protected static native void removeAllValues(CFArray theArray);
     @GlobalFunction("CFArrayReplaceValues")
-    protected native void replaceValues(CFRange range, Todo newValues, @MachineSizedSInt long newCount);
+    protected static native void replaceValues(CFArray theArray, CFRange range, Todo newValues, @MachineSizedSInt long newCount);
     @GlobalFunction("CFArrayExchangeValuesAtIndices")
-    protected native void exchangeValuesAtIndices(@MachineSizedSInt long idx1, @MachineSizedSInt long idx2);
+    protected static native void exchangeValuesAtIndices(CFArray theArray, @MachineSizedSInt long idx1, @MachineSizedSInt long idx2);
     @GlobalFunction("CFArraySortValues")
-    protected native void sortValues(CFRange range, FunctionPtr comparator, Todo context);
+    protected static native void sortValues(CFArray theArray, CFRange range, FunctionPtr comparator, Todo context);
     @GlobalFunction("CFArrayAppendArray")
-    protected native void appendArray(CFArray otherArray, CFRange otherRange);
+    protected static native void appendArray(CFArray theArray, CFArray otherArray, CFRange otherRange);
     
 }

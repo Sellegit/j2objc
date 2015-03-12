@@ -30,6 +30,8 @@ public class NSString
     
     
     public NSString() {}
+    @Mapping("initWithCharacters:length:")
+    public NSString(Todo characters, @MachineSizedUInt long length) { }
     
     
     @Mapping("length")
@@ -39,6 +41,8 @@ public class NSString
     
     @Mapping("characterAtIndex:")
     protected native short getCharactersAt(@MachineSizedUInt long index);
+    @Mapping("getCharacters:range:")
+    protected native void getCharacters(Todo buffer, NSRange aRange);
     @Mapping("hasPrefix:")
     public native boolean hasPrefix(String aString);
     @Mapping("hasSuffix:")

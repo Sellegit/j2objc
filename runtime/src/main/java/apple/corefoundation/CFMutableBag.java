@@ -32,14 +32,14 @@ public class CFMutableBag
     @GlobalFunction("CFBagCreateMutableCopy")
     protected static native CFMutableBag createMutableCopy(CFAllocator allocator, @MachineSizedSInt long capacity, CFBag theBag);
     @GlobalFunction("CFBagAddValue")
-    protected native void addValue(Todo value);
+    protected static native void addValue(CFBag theBag, Todo value);
     @GlobalFunction("CFBagReplaceValue")
-    protected native void replaceValue(Todo value);
+    protected static native void replaceValue(CFBag theBag, Todo value);
     @GlobalFunction("CFBagSetValue")
-    protected native void setValue(Todo value);
+    protected static native void setValue(CFBag theBag, Todo value);
     @GlobalFunction("CFBagRemoveValue")
-    protected native void removeValue(Todo value);
+    protected static native void removeValue(CFBag theBag, Todo value);
     @GlobalFunction("CFBagRemoveAllValues")
-    protected native void removeAllValues();
+    protected static native void removeAllValues(CFBag theBag);
     
 }

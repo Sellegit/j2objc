@@ -39,19 +39,19 @@ public class AudioBuffer
     ]-*/;
     public static native AudioBuffer copyWithmNumberChannels(AudioBuffer original, int mNumberChannels) /*-[
         original.mNumberChannels = mNumberChannels;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native AudioBuffer copyWithmDataByteSize(AudioBuffer original, int mDataByteSize) /*-[
         original.mDataByteSize = mDataByteSize;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native AudioBuffer copyWithmData(AudioBuffer original, Todo mData) /*-[
         original.mData = mData;
-        return __new;
+        return original;
     ]-*/;
 
     

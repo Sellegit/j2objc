@@ -34,7 +34,7 @@ public class AVAssetReaderAudioMixOutput
     
     public AVAssetReaderAudioMixOutput() {}
     @Mapping("initWithAudioTracks:audioSettings:")
-    public AVAssetReaderAudioMixOutput(NSArray<AVAssetTrack> audioTracks, AVAudioSettings audioSettings) { }
+    public AVAssetReaderAudioMixOutput(NSArray<?> audioTracks, NSDictionary<?, ?> audioSettings) { }
     
     
     @Mapping("audioTracks")
@@ -59,6 +59,6 @@ public class AVAssetReaderAudioMixOutput
     
     
     @Mapping("assetReaderAudioMixOutputWithAudioTracks:audioSettings:")
-    public static native AVAssetReaderAudioMixOutput create(NSArray<AVAssetTrack> audioTracks, AVAudioSettings audioSettings);
+    public static native AVAssetReaderAudioMixOutput create(NSArray<?> audioTracks, NSDictionary<?, ?> audioSettings);
     
 }

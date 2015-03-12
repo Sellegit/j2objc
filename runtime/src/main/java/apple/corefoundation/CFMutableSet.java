@@ -32,14 +32,14 @@ public class CFMutableSet
     @GlobalFunction("CFSetCreateMutableCopy")
     protected static native CFMutableSet createMutableCopy(CFAllocator allocator, @MachineSizedSInt long capacity, CFSet theSet);
     @GlobalFunction("CFSetAddValue")
-    protected native void addValue(Todo value);
+    protected static native void addValue(CFSet theSet, Todo value);
     @GlobalFunction("CFSetReplaceValue")
-    protected native void replaceValue(Todo value);
+    protected static native void replaceValue(CFSet theSet, Todo value);
     @GlobalFunction("CFSetSetValue")
-    protected native void setValue(Todo value);
+    protected static native void setValue(CFSet theSet, Todo value);
     @GlobalFunction("CFSetRemoveValue")
-    protected native void removeValue(Todo value);
+    protected static native void removeValue(CFSet theSet, Todo value);
     @GlobalFunction("CFSetRemoveAllValues")
-    protected native void removeAllValues();
+    protected static native void removeAllValues(CFSet theSet);
     
 }

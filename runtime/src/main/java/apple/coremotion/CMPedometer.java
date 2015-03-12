@@ -33,10 +33,6 @@ public class CMPedometer
     
     
     
-    @Mapping("queryPedometerDataFromDate:toDate:withHandler:")
-    public native void queryPedometerData(NSDate start, NSDate end, @Block VoidBlock2<CMPedometerData, NSError> handler);
-    @Mapping("startPedometerUpdatesFromDate:withHandler:")
-    public native void startPedometerUpdates(NSDate start, @Block VoidBlock2<CMPedometerData, NSError> handler);
     @Mapping("stopPedometerUpdates")
     public native void stopPedometerUpdates();
     @Mapping("isStepCountingAvailable")

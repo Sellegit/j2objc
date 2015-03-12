@@ -36,22 +36,22 @@ public class CMBlockBuffer
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMBlockBufferCreateEmpty")
-    private static native int create(CFAllocator structureAllocator, int subBlockCapacity, CMBlockBufferFlag flags, Todo newBBufOut);
+    private static native int create(CFAllocator structureAllocator, int subBlockCapacity, int flags, Todo newBBufOut);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMBlockBufferCreateWithMemoryBlock")
-    private static native int create(CFAllocator structureAllocator, Todo memoryBlock, @MachineSizedUInt long blockLength, CFAllocator blockAllocator, CMBlockBufferCustomBlockSource customBlockSource, @MachineSizedUInt long offsetToData, @MachineSizedUInt long dataLength, CMBlockBufferFlag flags, Todo newBBufOut);
+    private static native int create(CFAllocator structureAllocator, Todo memoryBlock, @MachineSizedUInt long blockLength, CFAllocator blockAllocator, CMBlockBufferCustomBlockSource customBlockSource, @MachineSizedUInt long offsetToData, @MachineSizedUInt long dataLength, int flags, Todo newBBufOut);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMBlockBufferCreateWithBufferReference")
-    private static native int create(CFAllocator structureAllocator, CMBlockBuffer targetBuffer, @MachineSizedUInt long offsetToData, @MachineSizedUInt long dataLength, CMBlockBufferFlag flags, Todo newBBufOut);
+    private static native int create(CFAllocator structureAllocator, CMBlockBuffer targetBuffer, @MachineSizedUInt long offsetToData, @MachineSizedUInt long dataLength, int flags, Todo newBBufOut);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMBlockBufferCreateContiguous")
-    private static native int create(CFAllocator structureAllocator, CMBlockBuffer sourceBuffer, CFAllocator blockAllocator, CMBlockBufferCustomBlockSource customBlockSource, @MachineSizedUInt long offsetToData, @MachineSizedUInt long dataLength, CMBlockBufferFlag flags, Todo newBBufOut);
+    private static native int create(CFAllocator structureAllocator, CMBlockBuffer sourceBuffer, CFAllocator blockAllocator, CMBlockBufferCustomBlockSource customBlockSource, @MachineSizedUInt long offsetToData, @MachineSizedUInt long dataLength, int flags, Todo newBBufOut);
     /**
      * @since Available in iOS 4.0 and later.
      */
@@ -61,7 +61,7 @@ public class CMBlockBuffer
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMBlockBufferAppendMemoryBlock")
-    public native int appendMemoryBlock(Todo memoryBlock, @MachineSizedUInt long blockLength, CFAllocator blockAllocator, CMBlockBufferCustomBlockSource customBlockSource, @MachineSizedUInt long offsetToData, @MachineSizedUInt long dataLength, CMBlockBufferFlag flags);
+    public native int appendMemoryBlock(Todo memoryBlock, @MachineSizedUInt long blockLength, CFAllocator blockAllocator, CMBlockBufferCustomBlockSource customBlockSource, @MachineSizedUInt long offsetToData, @MachineSizedUInt long dataLength, int flags);
     /**
      * @since Available in iOS 4.0 and later.
      */

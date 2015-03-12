@@ -39,19 +39,19 @@ public class AudioClassDescription
     ]-*/;
     public static native AudioClassDescription copyWithmType(AudioClassDescription original, int mType) /*-[
         original.mType = mType;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native AudioClassDescription copyWithmSubType(AudioClassDescription original, int mSubType) /*-[
         original.mSubType = mSubType;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native AudioClassDescription copyWithmManufacturer(AudioClassDescription original, int mManufacturer) /*-[
         original.mManufacturer = mManufacturer;
-        return __new;
+        return original;
     ]-*/;
 
     

@@ -44,7 +44,7 @@ public class AVCaptureOutput
      * @since Available in iOS 5.0 and later.
      */
     @Mapping("connectionWithMediaType:")
-    public native AVCaptureConnection getConnection(AVMediaType mediaType);
+    public native AVCaptureConnection getConnection(String mediaType);
     /**
      * @since Available in iOS 6.0 and later.
      */

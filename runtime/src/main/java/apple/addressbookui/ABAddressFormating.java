@@ -29,6 +29,6 @@ public class ABAddressFormating
     
     
     @GlobalFunction("ABCreateStringWithAddressDictionary")
-    public static native String createString(CFDictionary address, boolean addCountryName);
+    public static native String createString(NSDictionary<?, ?> address, boolean addCountryName);
     
 }

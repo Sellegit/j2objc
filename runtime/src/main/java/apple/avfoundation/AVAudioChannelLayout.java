@@ -49,7 +49,7 @@ public class AVAudioChannelLayout
     
     
     @Mapping("isEqual:")
-    public native boolean equalsTo(AVAudioChannelLayout object);
+    public native boolean equalsTo(Object object);
     @Mapping("layoutWithLayoutTag:")
     public static native AVAudioChannelLayout create(@Representing("AudioChannelLayoutTag") int layoutTag);
     @Mapping("layoutWithLayout:")

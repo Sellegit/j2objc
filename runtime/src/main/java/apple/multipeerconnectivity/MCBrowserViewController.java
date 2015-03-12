@@ -57,7 +57,7 @@ public class MCBrowserViewController
     
     
     @Mapping("browser:foundPeer:withDiscoveryInfo:")
-    public native void foundPeer(MCNearbyServiceBrowser browser, MCPeerID peerID, Map<String, String> info);
+    public native void foundPeer(MCNearbyServiceBrowser browser, MCPeerID peerID, NSDictionary<?, ?> info);
     @Mapping("browser:lostPeer:")
     public native void lostPeer(MCNearbyServiceBrowser browser, MCPeerID peerID);
     @Mapping("browser:didNotStartBrowsingForPeers:")

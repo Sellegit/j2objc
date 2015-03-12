@@ -46,37 +46,37 @@ public class MTLViewport
     ]-*/;
     public static native MTLViewport copyWithoriginX(MTLViewport original, double originX) /*-[
         original.originX = originX;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native MTLViewport copyWithoriginY(MTLViewport original, double originY) /*-[
         original.originY = originY;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native MTLViewport copyWithwidth(MTLViewport original, double width) /*-[
         original.width = width;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native MTLViewport copyWithheight(MTLViewport original, double height) /*-[
         original.height = height;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native MTLViewport copyWithznear(MTLViewport original, double znear) /*-[
         original.znear = znear;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native MTLViewport copyWithzfar(MTLViewport original, double zfar) /*-[
         original.zfar = zfar;
-        return __new;
+        return original;
     ]-*/;
 
     

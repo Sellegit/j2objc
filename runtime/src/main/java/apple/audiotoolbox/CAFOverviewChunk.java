@@ -42,19 +42,19 @@ public class CAFOverviewChunk
     ]-*/;
     public static native CAFOverviewChunk copyWithmEditCount(CAFOverviewChunk original, int mEditCount) /*-[
         original.mEditCount = mEditCount;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native CAFOverviewChunk copyWithmNumFramesPerOVWSample(CAFOverviewChunk original, int mNumFramesPerOVWSample) /*-[
         original.mNumFramesPerOVWSample = mNumFramesPerOVWSample;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native CAFOverviewChunk copyWithmData(CAFOverviewChunk original, CAFOverviewSample mData) /*-[
         original.mData = mData;
-        return __new;
+        return original;
     ]-*/;
 
     

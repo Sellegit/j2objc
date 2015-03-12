@@ -41,38 +41,38 @@ public class MIDISysexSendRequest
     
     public static native MIDISysexSendRequest copyWithdestination(MIDISysexSendRequest original, MIDIEndpoint destination) /*-[
         original.destination = destination;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native MIDISysexSendRequest copyWithdata(MIDISysexSendRequest original, Todo data) /*-[
         original.data = data;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native MIDISysexSendRequest copyWithbytesToSend(MIDISysexSendRequest original, int bytesToSend) /*-[
         original.bytesToSend = bytesToSend;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native MIDISysexSendRequest copyWithcomplete(MIDISysexSendRequest original, boolean complete) /*-[
         original.complete = complete;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native MIDISysexSendRequest copyWithreserved(MIDISysexSendRequest original, ByteBuffer reserved) /*-[
         original.reserved = reserved;
-        return __new;
+        return original;
     ]-*/;
 
     
     
     public static native MIDISysexSendRequest copyWithcompletionRefCon(MIDISysexSendRequest original, Todo completionRefCon) /*-[
         original.completionRefCon = completionRefCon;
-        return __new;
+        return original;
     ]-*/;
 
     

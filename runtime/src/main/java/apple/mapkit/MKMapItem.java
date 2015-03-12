@@ -54,10 +54,10 @@ public class MKMapItem
     
     
     @Mapping("openInMapsWithLaunchOptions:")
-    public native boolean openInMaps(MKLaunchOptions launchOptions);
+    public native boolean openInMaps(NSDictionary<?, ?> launchOptions);
     @Mapping("mapItemForCurrentLocation")
     public static native MKMapItem getMapItemForCurrentLocation();
     @Mapping("openMapsWithItems:launchOptions:")
-    public static native boolean openMaps(NSArray<MKMapItem> mapItems, MKLaunchOptions launchOptions);
+    public static native boolean openMaps(NSArray<?> mapItems, NSDictionary<?, ?> launchOptions);
     
 }

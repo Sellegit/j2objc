@@ -40,13 +40,13 @@ public class MusicEventUserData
     ]-*/;
     public static native MusicEventUserData copyWithlength(MusicEventUserData original, int length) /*-[
         original.length = length;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native MusicEventUserData copyWithdata(MusicEventUserData original, ByteBuffer data) /*-[
         original.data = data;
-        return __new;
+        return original;
     ]-*/;
 
     

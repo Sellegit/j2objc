@@ -29,7 +29,7 @@ public class CKModifyRecordZonesOperation
     
     public CKModifyRecordZonesOperation() {}
     @Mapping("initWithRecordZonesToSave:recordZoneIDsToDelete:")
-    public CKModifyRecordZonesOperation(NSArray<CKRecordZone> recordZonesToSave, NSArray<CKRecordZoneID> recordZoneIDsToDelete) { }
+    public CKModifyRecordZonesOperation(NSArray<?> recordZonesToSave, NSArray<?> recordZoneIDsToDelete) { }
     
     
     @Mapping("recordZonesToSave")

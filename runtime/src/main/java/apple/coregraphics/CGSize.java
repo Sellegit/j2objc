@@ -38,13 +38,13 @@ public class CGSize
     ]-*/;
     public static native CGSize copyWithwidth(CGSize original, @MachineSizedFloat double width) /*-[
         original.width = width;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native CGSize copyWithheight(CGSize original, @MachineSizedFloat double height) /*-[
         original.height = height;
-        return __new;
+        return original;
     ]-*/;
 
     
@@ -68,7 +68,7 @@ public class CGSize
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGSizeMakeWithDictionaryRepresentation")
-    private static native boolean fromDictionary(NSDictionary<NSString, NSNumber> dict, CGSize size);
+    private static native boolean fromDictionary(NSDictionary<?, ?> dict, CGSize size);
     /**
      * @since Available in iOS 2.0 and later.
      */

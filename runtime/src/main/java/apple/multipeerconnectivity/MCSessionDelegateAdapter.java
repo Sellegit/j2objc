@@ -41,6 +41,6 @@ public abstract class MCSessionDelegateAdapter
     @NotImplemented("session:didFinishReceivingResourceWithName:fromPeer:atURL:withError:")
     public void didFinishReceivingResource(MCSession session, String resourceName, MCPeerID peerID, NSURL localURL, NSError error) { throw new UnsupportedOperationException(); }
     @NotImplemented("session:didReceiveCertificate:fromPeer:certificateHandler:")
-    public void didReceiveCertificate(MCSession session, List<SecIdentity> certificate, MCPeerID peerID, @Block VoidBooleanBlock certificateHandler) { throw new UnsupportedOperationException(); }
+    public void didReceiveCertificate(MCSession session, NSArray<?> certificate, MCPeerID peerID, @Block VoidBooleanBlock certificateHandler) { throw new UnsupportedOperationException(); }
     
 }

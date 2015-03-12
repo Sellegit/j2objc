@@ -34,12 +34,12 @@ public abstract class SKPaymentTransactionObserverAdapter
      * @since Available in iOS 3.0 and later.
      */
     @NotImplemented("paymentQueue:updatedTransactions:")
-    public void updatedTransactions(SKPaymentQueue queue, NSArray<SKPaymentTransaction> transactions) { throw new UnsupportedOperationException(); }
+    public void updatedTransactions(SKPaymentQueue queue, NSArray<?> transactions) { throw new UnsupportedOperationException(); }
     /**
      * @since Available in iOS 3.0 and later.
      */
     @NotImplemented("paymentQueue:removedTransactions:")
-    public void removedTransactions(SKPaymentQueue queue, NSArray<SKPaymentTransaction> transactions) { throw new UnsupportedOperationException(); }
+    public void removedTransactions(SKPaymentQueue queue, NSArray<?> transactions) { throw new UnsupportedOperationException(); }
     /**
      * @since Available in iOS 3.0 and later.
      */
@@ -54,6 +54,6 @@ public abstract class SKPaymentTransactionObserverAdapter
      * @since Available in iOS 6.0 and later.
      */
     @NotImplemented("paymentQueue:updatedDownloads:")
-    public void updatedDownloads(SKPaymentQueue queue, NSArray<SKDownload> downloads) { throw new UnsupportedOperationException(); }
+    public void updatedDownloads(SKPaymentQueue queue, NSArray<?> downloads) { throw new UnsupportedOperationException(); }
     
 }

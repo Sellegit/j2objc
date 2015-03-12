@@ -41,14 +41,14 @@ public class AVVideoCompositionLayerInstruction
     
     
     @Mapping("getTransformRampForTime:startTransform:endTransform:timeRange:")
-    public native boolean getTransformRamp(CMTime time, Todo startTransform, Todo endTransform, Todo timeRange);
+    public native boolean getTransformRamp(CMTime time, CGAffineTransform startTransform, CGAffineTransform endTransform, CMTimeRange timeRange);
     @Mapping("getOpacityRampForTime:startOpacity:endOpacity:timeRange:")
-    public native boolean getOpacityRamp(CMTime time, Todo startOpacity, Todo endOpacity, Todo timeRange);
+    public native boolean getOpacityRamp(CMTime time, Todo startOpacity, Todo endOpacity, CMTimeRange timeRange);
     /**
      * @since Available in iOS 7.0 and later.
      */
     @Mapping("getCropRectangleRampForTime:startCropRectangle:endCropRectangle:timeRange:")
-    public native boolean getCropRectangleRamp(CMTime time, Todo startCropRectangle, Todo endCropRectangle, Todo timeRange);
+    public native boolean getCropRectangleRamp(CMTime time, CGRect startCropRectangle, CGRect endCropRectangle, CMTimeRange timeRange);
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
     

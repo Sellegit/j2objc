@@ -28,7 +28,7 @@ public class NSIncrementalStoreNode
     
     public NSIncrementalStoreNode() {}
     @Mapping("initWithObjectID:withValues:version:")
-    public NSIncrementalStoreNode(NSManagedObjectID objectID, Map<String, NSObject> values, long version) { }
+    public NSIncrementalStoreNode(NSManagedObjectID objectID, NSDictionary<?, ?> values, long version) { }
     
     
     @Mapping("objectID")
@@ -39,7 +39,7 @@ public class NSIncrementalStoreNode
     
     
     @Mapping("updateWithValues:version:")
-    public native void update(Map<String, NSObject> values, long version);
+    public native void update(NSDictionary<?, ?> values, long version);
     @Mapping("valueForPropertyDescription:")
     public native Object getValue(NSPropertyDescription prop);
     

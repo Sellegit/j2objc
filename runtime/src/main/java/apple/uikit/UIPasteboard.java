@@ -101,7 +101,7 @@ public class UIPasteboard
     @Mapping("pasteboardTypes")
     public native List<String> getTypes();
     @Mapping("containsPasteboardTypes:")
-    public native boolean contains(List<String> pasteboardTypes);
+    public native boolean contains(NSArray<?> pasteboardTypes);
     @Mapping("dataForPasteboardType:")
     public native NSData getData(String pasteboardType);
     @Mapping("valueForPasteboardType:")
@@ -113,15 +113,15 @@ public class UIPasteboard
     @Mapping("pasteboardTypesForItemSet:")
     private native NSArray<NSArray<NSString>> getTypes0(NSIndexSet itemSet);
     @Mapping("containsPasteboardTypes:inItemSet:")
-    public native boolean contains(List<String> pasteboardTypes, NSIndexSet itemSet);
+    public native boolean contains(NSArray<?> pasteboardTypes, NSIndexSet itemSet);
     @Mapping("itemSetWithPasteboardTypes:")
-    public native NSIndexSet getItemsWithTypes(List<String> pasteboardTypes);
+    public native NSIndexSet getItemsWithTypes(NSArray<?> pasteboardTypes);
     @Mapping("valuesForPasteboardType:inItemSet:")
     public native NSArray<?> getValues(String pasteboardType, NSIndexSet itemSet);
     @Mapping("dataForPasteboardType:inItemSet:")
     public native NSArray<NSData> getData(String pasteboardType, NSIndexSet itemSet);
     @Mapping("addItems:")
-    private native void addItems(NSArray<NSDictionary<NSString, NSObject>> items);
+    private native void addItems(NSArray<?> items);
     @Mapping("generalPasteboard")
     public static native UIPasteboard getGeneralPasteboard();
     @Mapping("pasteboardWithName:create:")

@@ -32,18 +32,18 @@ public class CFMutableAttributedString
     @GlobalFunction("CFAttributedStringCreateMutable")
     protected static native CFMutableAttributedString createMutable(CFAllocator alloc, @MachineSizedSInt long maxLength);
     @GlobalFunction("CFAttributedStringReplaceString")
-    public native void replaceString(CFRange range, String replacement);
+    public static native void replaceString(CFAttributedString aStr, CFRange range, String replacement);
     @GlobalFunction("CFAttributedStringSetAttributes")
-    public native void setAttributes(CFRange range, CFDictionary replacement, boolean clearOtherAttributes);
+    public static native void setAttributes(CFAttributedString aStr, CFRange range, CFDictionary replacement, boolean clearOtherAttributes);
     @GlobalFunction("CFAttributedStringSetAttribute")
-    public native void setAttribute(CFRange range, String attrName, CFType value);
+    public static native void setAttribute(CFAttributedString aStr, CFRange range, String attrName, CFType value);
     @GlobalFunction("CFAttributedStringRemoveAttribute")
-    public native void removeAttribute(CFRange range, String attrName);
+    public static native void removeAttribute(CFAttributedString aStr, CFRange range, String attrName);
     @GlobalFunction("CFAttributedStringReplaceAttributedString")
-    public native void replaceAttributedString(CFRange range, CFAttributedString replacement);
+    public static native void replaceAttributedString(CFAttributedString aStr, CFRange range, CFAttributedString replacement);
     @GlobalFunction("CFAttributedStringBeginEditing")
-    public native void beginEditing();
+    public static native void beginEditing(CFAttributedString aStr);
     @GlobalFunction("CFAttributedStringEndEditing")
-    public native void endEditing();
+    public static native void endEditing(CFAttributedString aStr);
     
 }

@@ -46,37 +46,37 @@ public class CGAffineTransform
     ]-*/;
     public static native CGAffineTransform copyWitha(CGAffineTransform original, @MachineSizedFloat double a) /*-[
         original.a = a;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native CGAffineTransform copyWithb(CGAffineTransform original, @MachineSizedFloat double b) /*-[
         original.b = b;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native CGAffineTransform copyWithc(CGAffineTransform original, @MachineSizedFloat double c) /*-[
         original.c = c;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native CGAffineTransform copyWithd(CGAffineTransform original, @MachineSizedFloat double d) /*-[
         original.d = d;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native CGAffineTransform copyWithtx(CGAffineTransform original, @MachineSizedFloat double tx) /*-[
         original.tx = tx;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native CGAffineTransform copyWithty(CGAffineTransform original, @MachineSizedFloat double ty) /*-[
         original.ty = ty;
-        return __new;
+        return original;
     ]-*/;
 
     

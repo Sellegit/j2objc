@@ -199,8 +199,8 @@ public class NSBundle
     @Mapping("pathsForResourcesOfType:inDirectory:")
     public static native List<String> findResourcesPathsInBundlePath(String ext, String bundlePath);
     @Mapping("preferredLocalizationsFromArray:")
-    public static native List<String> getPreferredLocalizations(List<String> localizationsArray);
+    public static native List<String> getPreferredLocalizations(NSArray<?> localizationsArray);
     @Mapping("preferredLocalizationsFromArray:forPreferences:")
-    public static native List<String> getPreferredLocalizations(List<String> localizationsArray, List<String> preferencesArray);
+    public static native List<String> getPreferredLocalizations(NSArray<?> localizationsArray, NSArray<?> preferencesArray);
     
 }

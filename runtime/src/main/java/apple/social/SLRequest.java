@@ -48,9 +48,7 @@ public class SLRequest
     public native void addMultipartData(NSData data, String name, String type, String filename);
     @Mapping("preparedURLRequest")
     public native NSURLRequest getPreparedURLRequest();
-    @Mapping("performRequestWithHandler:")
-    public native void performRequest(@Block VoidBlock3<NSData, NSHTTPURLResponse, NSError> handler);
     @Mapping("requestForServiceType:requestMethod:URL:parameters:")
-    public static native SLRequest create(SLServiceType serviceType, @Representing("SLRequestMethod") @MachineSizedSInt long requestMethod, NSURL url, Map<String, NSObject> parameters);
+    public static native SLRequest create(String serviceType, @Representing("SLRequestMethod") @MachineSizedSInt long requestMethod, NSURL url, NSDictionary<?, ?> parameters);
     
 }

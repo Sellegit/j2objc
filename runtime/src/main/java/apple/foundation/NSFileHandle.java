@@ -126,19 +126,19 @@ public class NSFileHandle
     @Mapping("fileHandleForUpdatingURL:error:")
     protected static native NSFileHandle createForUpdating(NSURL url, Todo error);
     @Mapping("readInBackgroundAndNotifyForModes:")
-    public native void readInBackgroundAndNotify(List<String> modes);
+    public native void readInBackgroundAndNotify(NSArray<?> modes);
     @Mapping("readInBackgroundAndNotify")
     public native void readInBackgroundAndNotify();
     @Mapping("readToEndOfFileInBackgroundAndNotifyForModes:")
-    public native void readToEndOfFileInBackgroundAndNotify(List<String> modes);
+    public native void readToEndOfFileInBackgroundAndNotify(NSArray<?> modes);
     @Mapping("readToEndOfFileInBackgroundAndNotify")
     public native void readToEndOfFileInBackgroundAndNotify();
     @Mapping("acceptConnectionInBackgroundAndNotifyForModes:")
-    public native void acceptConnectionInBackgroundAndNotify(List<String> modes);
+    public native void acceptConnectionInBackgroundAndNotify(NSArray<?> modes);
     @Mapping("acceptConnectionInBackgroundAndNotify")
     public native void acceptConnectionInBackgroundAndNotify();
     @Mapping("waitForDataInBackgroundAndNotifyForModes:")
-    public native void waitForDataInBackgroundAndNotify(List<String> modes);
+    public native void waitForDataInBackgroundAndNotify(NSArray<?> modes);
     @Mapping("waitForDataInBackgroundAndNotify")
     public native void waitForDataInBackgroundAndNotify();
     

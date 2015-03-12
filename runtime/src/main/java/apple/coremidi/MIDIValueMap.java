@@ -35,7 +35,7 @@ public class MIDIValueMap
     ]-*/;
     public static native MIDIValueMap copyWithvalue(MIDIValueMap original, ByteBuffer value) /*-[
         original.value = value;
-        return __new;
+        return original;
     ]-*/;
 
     

@@ -44,25 +44,25 @@ public class AudioBalanceFade
     ]-*/;
     public static native AudioBalanceFade copyWithmLeftRightBalance(AudioBalanceFade original, float mLeftRightBalance) /*-[
         original.mLeftRightBalance = mLeftRightBalance;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native AudioBalanceFade copyWithmBackFrontFade(AudioBalanceFade original, float mBackFrontFade) /*-[
         original.mBackFrontFade = mBackFrontFade;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native AudioBalanceFade copyWithmType(AudioBalanceFade original, int mType) /*-[
         original.mType = mType;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native AudioBalanceFade copyWithmChannelLayout(AudioBalanceFade original, AudioChannelLayout mChannelLayout) /*-[
         original.mChannelLayout = mChannelLayout;
-        return __new;
+        return original;
     ]-*/;
 
     

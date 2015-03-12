@@ -46,14 +46,14 @@ public interface GKMatchmakerViewControllerDelegate
      * @since Available in iOS 8.0 and later.
      */
     @Mapping("matchmakerViewController:didFindHostedPlayers:")
-    void didFindHostedPlayers(GKMatchmakerViewController viewController, NSArray<GKPlayer> players);
+    void didFindHostedPlayers(GKMatchmakerViewController viewController, NSArray<?> players);
     /**
      * @since Available in iOS 4.1 and later.
      * @deprecated Deprecated in iOS 8.0.
      */
     @Deprecated
     @Mapping("matchmakerViewController:didFindPlayers:")
-    void didFindPlayers(GKMatchmakerViewController viewController, List<String> playerIDs);
+    void didFindPlayers(GKMatchmakerViewController viewController, NSArray<?> playerIDs);
     /**
      * @since Available in iOS 8.0 and later.
      */

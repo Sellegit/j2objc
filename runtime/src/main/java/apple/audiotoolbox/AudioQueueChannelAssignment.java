@@ -40,13 +40,13 @@ public class AudioQueueChannelAssignment
     ]-*/;
     public static native AudioQueueChannelAssignment copyWithmDeviceUID(AudioQueueChannelAssignment original, CFString mDeviceUID) /*-[
         original.mDeviceUID = mDeviceUID;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native AudioQueueChannelAssignment copyWithmChannelNumber(AudioQueueChannelAssignment original, int mChannelNumber) /*-[
         original.mChannelNumber = mChannelNumber;
-        return __new;
+        return original;
     ]-*/;
 
     

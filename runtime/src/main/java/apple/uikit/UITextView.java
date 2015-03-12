@@ -301,7 +301,7 @@ public class UITextView
     @Mapping("characterOffsetOfPosition:withinRange:")
     public native @MachineSizedSInt long getCharacterOffset(UITextPosition position, UITextRange range);
     @Mapping("insertDictationResult:")
-    public native void insertDictationResult(NSArray<UIDictationPhrase> dictationResult);
+    public native void insertDictationResult(NSArray<?> dictationResult);
     @Mapping("dictationRecordingDidEnd")
     public native void dictationRecordingDidEnd();
     @Mapping("dictationRecognitionFailed")

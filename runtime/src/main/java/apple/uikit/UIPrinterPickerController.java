@@ -43,12 +43,6 @@ public class UIPrinterPickerController
     
     
     
-    @Mapping("presentAnimated:completionHandler:")
-    public native boolean presentAnimated(boolean animated, @Block VoidBlock3<UIPrinterPickerController, Boolean, NSError> completion);
-    @Mapping("presentFromRect:inView:animated:completionHandler:")
-    public native boolean presentFromRectInView(CGRect rect, UIView view, boolean animated, @Block VoidBlock3<UIPrinterPickerController, Boolean, NSError> completion);
-    @Mapping("presentFromBarButtonItem:animated:completionHandler:")
-    public native boolean presentFromBarButtonItem(UIBarButtonItem item, boolean animated, @Block VoidBlock3<UIPrinterPickerController, Boolean, NSError> completion);
     @Mapping("dismissAnimated:")
     public native void dismissAnimated(boolean animated);
     @Mapping("printerPickerControllerWithInitiallySelectedPrinter:")

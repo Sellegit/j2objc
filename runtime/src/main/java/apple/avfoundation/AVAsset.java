@@ -123,11 +123,11 @@ public class AVAsset
     @Mapping("trackWithTrackID:")
     public native AVAssetTrack getTrack(int trackID);
     @Mapping("tracksWithMediaType:")
-    public native NSArray<AVAssetTrack> getTracksWithType(AVMediaType mediaType);
+    public native NSArray<AVAssetTrack> getTracksWithType(String mediaType);
     @Mapping("tracksWithMediaCharacteristic:")
-    public native NSArray<AVAssetTrack> getTracksWithCharacteristic(AVMediaCharacteristic mediaCharacteristic);
+    public native NSArray<AVAssetTrack> getTracksWithCharacteristic(String mediaCharacteristic);
     @Mapping("metadataForFormat:")
-    public native NSArray<AVMetadataItem> getMetadata(AVMetadataFormat format);
+    public native NSArray<AVMetadataItem> getMetadata(String format);
     /**
      * @since Available in iOS 4.3 and later.
      */
@@ -137,12 +137,12 @@ public class AVAsset
      * @since Available in iOS 6.0 and later.
      */
     @Mapping("chapterMetadataGroupsBestMatchingPreferredLanguages:")
-    public native NSArray<AVTimedMetadataGroup> getChapterMetadataGroupsBestMatchingPreferredLanguages(List<String> preferredLanguages);
+    public native NSArray<AVTimedMetadataGroup> getChapterMetadataGroupsBestMatchingPreferredLanguages(NSArray<?> preferredLanguages);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @Mapping("mediaSelectionGroupForMediaCharacteristic:")
-    public native AVMediaSelectionGroup getMediaSelectionGroup(AVMediaCharacteristic mediaCharacteristic);
+    public native AVMediaSelectionGroup getMediaSelectionGroup(String mediaCharacteristic);
     @Mapping("unusedTrackID")
     public native int getUnusedTrackID();
     @Mapping("copyWithZone:")

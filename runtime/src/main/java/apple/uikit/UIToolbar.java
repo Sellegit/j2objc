@@ -84,7 +84,7 @@ public class UIToolbar
     
     
     @Mapping("setItems:animated:")
-    public native void setItems(NSArray<UIBarButtonItem> items, boolean animated);
+    public native void setItems(NSArray<?> items, boolean animated);
     /**
      * @since Available in iOS 5.0 and later.
      */

@@ -39,7 +39,7 @@ public interface MCSessionDelegate
     @Mapping("session:didFinishReceivingResourceWithName:fromPeer:atURL:withError:")
     void didFinishReceivingResource(MCSession session, String resourceName, MCPeerID peerID, NSURL localURL, NSError error);
     @Mapping("session:didReceiveCertificate:fromPeer:certificateHandler:")
-    void didReceiveCertificate(MCSession session, List<SecIdentity> certificate, MCPeerID peerID, @Block VoidBooleanBlock certificateHandler);
+    void didReceiveCertificate(MCSession session, NSArray<?> certificate, MCPeerID peerID, @Block VoidBooleanBlock certificateHandler);
     
     /*<adapter>*/
     /*</adapter>*/

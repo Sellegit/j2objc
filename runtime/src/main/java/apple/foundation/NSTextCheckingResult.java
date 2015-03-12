@@ -97,13 +97,13 @@ public class NSTextCheckingResult
     @Mapping("spellCheckingResultWithRange:")
     public static native NSTextCheckingResult createSpellCheckingResult(NSRange range);
     @Mapping("grammarCheckingResultWithRange:details:")
-    public static native NSTextCheckingResult createGrammarCheckingResult(NSRange range, List<String> details);
+    public static native NSTextCheckingResult createGrammarCheckingResult(NSRange range, NSArray<?> details);
     @Mapping("dateCheckingResultWithRange:date:")
     public static native NSTextCheckingResult createDateCheckingResult(NSRange range, NSDate date);
     @Mapping("dateCheckingResultWithRange:date:timeZone:duration:")
     public static native NSTextCheckingResult createDateCheckingResult(NSRange range, NSDate date, NSTimeZone timeZone, double duration);
     @Mapping("addressCheckingResultWithRange:components:")
-    public static native NSTextCheckingResult createAddressCheckingResult(NSRange range, NSTextCheckingAddressComponents components);
+    public static native NSTextCheckingResult createAddressCheckingResult(NSRange range, NSDictionary<?, ?> components);
     @Mapping("linkCheckingResultWithRange:URL:")
     public static native NSTextCheckingResult createLinkCheckingResult(NSRange range, NSURL url);
     @Mapping("quoteCheckingResultWithRange:replacementString:")
@@ -118,7 +118,7 @@ public class NSTextCheckingResult
      * @since Available in iOS 7.0 and later.
      */
     @Mapping("correctionCheckingResultWithRange:replacementString:alternativeStrings:")
-    public static native NSTextCheckingResult createCorrectionCheckingResult(NSRange range, String replacementString, List<String> alternativeStrings);
+    public static native NSTextCheckingResult createCorrectionCheckingResult(NSRange range, String replacementString, NSArray<?> alternativeStrings);
     /**
      * @since Available in iOS 4.0 and later.
      */
@@ -133,7 +133,7 @@ public class NSTextCheckingResult
      * @since Available in iOS 4.0 and later.
      */
     @Mapping("transitInformationCheckingResultWithRange:components:")
-    public static native NSTextCheckingResult createTransitInformationCheckingResult(NSRange range, NSTextCheckingTransitComponents components);
+    public static native NSTextCheckingResult createTransitInformationCheckingResult(NSRange range, NSDictionary<?, ?> components);
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
     @Mapping("encodeWithCoder:")

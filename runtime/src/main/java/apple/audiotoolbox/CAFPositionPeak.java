@@ -40,13 +40,13 @@ public class CAFPositionPeak
     ]-*/;
     public static native CAFPositionPeak copyWithmValue(CAFPositionPeak original, float mValue) /*-[
         original.mValue = mValue;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native CAFPositionPeak copyWithmFrameNumber(CAFPositionPeak original, long mFrameNumber) /*-[
         original.mFrameNumber = mFrameNumber;
-        return __new;
+        return original;
     ]-*/;
 
     

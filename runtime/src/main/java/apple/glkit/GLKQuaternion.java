@@ -38,7 +38,7 @@ public class GLKQuaternion
     ]-*/;
     public static native GLKQuaternion copyWithq(GLKQuaternion original, FloatBuffer q) /*-[
         original.q = q;
-        return __new;
+        return original;
     ]-*/;
 
     

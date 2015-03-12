@@ -62,7 +62,7 @@ public class CFNetService
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFNetServiceRegisterWithOptions")
-    protected native boolean register(CFNetServiceOptions options, Todo error);
+    protected native boolean register(@MachineSizedUInt long options, Todo error);
     /**
      * @since Available in iOS 2.0 and later.
      */
@@ -107,7 +107,7 @@ public class CFNetService
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFNetServiceCreateTXTDataWithDictionary")
-    protected static native NSData createTXTData(CFAllocator alloc, NSDictionary<NSString, ?> keyValuePairs);
+    protected static native NSData createTXTData(CFAllocator alloc, CFDictionary keyValuePairs);
     /**
      * @since Available in iOS 2.0 and later.
      */
@@ -117,12 +117,12 @@ public class CFNetService
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFNetServiceScheduleWithRunLoop")
-    public native void schedule(CFRunLoop runLoop, CFString runLoopMode);
+    public native void schedule(CFRunLoop runLoop, String runLoopMode);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFNetServiceUnscheduleFromRunLoop")
-    public native void unschedule(CFRunLoop runLoop, CFString runLoopMode);
+    public native void unschedule(CFRunLoop runLoop, String runLoopMode);
     /**
      * @since Available in iOS 2.0 and later.
      */

@@ -34,7 +34,7 @@ public class CBCentralManager
      * @since Available in iOS 7.0 and later.
      */
     @Mapping("initWithDelegate:queue:options:")
-    public CBCentralManager(CBCentralManagerDelegate delegate, DispatchQueue queue, CBCentralManagerOptions options) { }
+    public CBCentralManager(CBCentralManagerDelegate delegate, DispatchQueue queue, NSDictionary<?, ?> options) { }
     
     
     @Mapping("delegate")
@@ -52,12 +52,12 @@ public class CBCentralManager
      */
     @Deprecated
     @Mapping("retrievePeripherals:")
-    public native void retrievePeripherals(List<CFUUID> peripheralUUIDs);
+    public native void retrievePeripherals(NSArray<?> peripheralUUIDs);
     /**
      * @since Available in iOS 7.0 and later.
      */
     @Mapping("retrievePeripheralsWithIdentifiers:")
-    public native NSArray<CBPeripheral> retrievePeripheralsWithId(NSArray<NSUUID> identifiers);
+    public native NSArray<CBPeripheral> retrievePeripheralsWithId(NSArray<?> identifiers);
     /**
      * @since Available in iOS 5.0 and later.
      * @deprecated Deprecated in iOS 7.0.
@@ -69,13 +69,13 @@ public class CBCentralManager
      * @since Available in iOS 7.0 and later.
      */
     @Mapping("retrieveConnectedPeripheralsWithServices:")
-    public native NSArray<CBPeripheral> retrieveConnectedPeripherals(NSArray<CBUUID> serviceUUIDs);
+    public native NSArray<CBPeripheral> retrieveConnectedPeripherals(NSArray<?> serviceUUIDs);
     @Mapping("scanForPeripheralsWithServices:options:")
-    public native void scanForPeripherals(NSArray<CBUUID> serviceUUIDs, CBCentralManagerScanOptions options);
+    public native void scanForPeripherals(NSArray<?> serviceUUIDs, NSDictionary<?, ?> options);
     @Mapping("stopScan")
     public native void stopScan();
     @Mapping("connectPeripheral:options:")
-    public native void connectPeripheral(CBPeripheral peripheral, CBConnectPeripheralOptions options);
+    public native void connectPeripheral(CBPeripheral peripheral, NSDictionary<?, ?> options);
     @Mapping("cancelPeripheralConnection:")
     public native void cancelPeripheralConnection(CBPeripheral peripheral);
     

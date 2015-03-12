@@ -38,7 +38,7 @@ public class GLKMatrix3
     ]-*/;
     public static native GLKMatrix3 copyWithm(GLKMatrix3 original, FloatBuffer m) /*-[
         original.m = m;
-        return __new;
+        return original;
     ]-*/;
 
     

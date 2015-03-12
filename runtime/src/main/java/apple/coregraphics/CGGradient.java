@@ -38,11 +38,11 @@ public class CGGradient
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGGradientCreateWithColorComponents")
-    protected static native CGGradient create(CGColorSpace space, @Pointer long components, @Pointer long locations, @MachineSizedUInt long count);
+    protected static native CGGradient create(CGColorSpace space, Todo components, Todo locations, @MachineSizedUInt long count);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGGradientCreateWithColors")
-    protected static native CGGradient create(CGColorSpace space, CFArray colors, @Pointer long locations);
+    protected static native CGGradient create(CGColorSpace space, NSArray<?> colors, Todo locations);
     
 }

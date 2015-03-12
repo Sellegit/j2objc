@@ -32,7 +32,7 @@ public interface UIImagePickerControllerDelegate
     
     
     @Mapping("imagePickerController:didFinishPickingMediaWithInfo:")
-    void didFinishPickingMedia(UIImagePickerController picker, UIImagePickerControllerEditingInfo info);
+    void didFinishPickingMedia(UIImagePickerController picker, NSDictionary<?, ?> info);
     @Mapping("imagePickerControllerDidCancel:")
     void didCancel(UIImagePickerController picker);
     

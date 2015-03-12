@@ -63,7 +63,7 @@ public class GKAchievementDescription
     
     
     @Mapping("loadAchievementDescriptionsWithCompletionHandler:")
-    public static native void loadAchievementDescriptions(@Block VoidBlock2<NSArray<GKAchievementDescription>, NSError> completionHandler);
+    public static native void loadAchievementDescriptions(Todo completionHandler);
     @Mapping("loadImageWithCompletionHandler:")
     public native void loadImage(@Block VoidBlock2<UIImage, NSError> completionHandler);
     @Mapping("incompleteAchievementImage")

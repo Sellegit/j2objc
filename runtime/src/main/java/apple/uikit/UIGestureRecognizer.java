@@ -33,7 +33,7 @@ public class UIGestureRecognizer
     
     public UIGestureRecognizer() {}
     @Mapping("initWithTarget:action:")
-    public UIGestureRecognizer(NSObject target, Selector action) { }
+    public UIGestureRecognizer(Object target, Selector action) { }
     
     
     @Mapping("state")

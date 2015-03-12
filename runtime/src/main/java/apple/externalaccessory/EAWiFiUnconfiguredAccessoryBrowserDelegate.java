@@ -37,12 +37,12 @@ public interface EAWiFiUnconfiguredAccessoryBrowserDelegate
      * @since Available in iOS 8.0 and later.
      */
     @Mapping("accessoryBrowser:didFindUnconfiguredAccessories:")
-    void didFindUnconfiguredAccessories(EAWiFiUnconfiguredAccessoryBrowser browser, NSSet<EAWiFiUnconfiguredAccessory> accessories);
+    void didFindUnconfiguredAccessories(EAWiFiUnconfiguredAccessoryBrowser browser, NSSet<?> accessories);
     /**
      * @since Available in iOS 8.0 and later.
      */
     @Mapping("accessoryBrowser:didRemoveUnconfiguredAccessories:")
-    void didRemoveUnconfiguredAccessories(EAWiFiUnconfiguredAccessoryBrowser browser, NSSet<EAWiFiUnconfiguredAccessory> accessories);
+    void didRemoveUnconfiguredAccessories(EAWiFiUnconfiguredAccessoryBrowser browser, NSSet<?> accessories);
     /**
      * @since Available in iOS 8.0 and later.
      */

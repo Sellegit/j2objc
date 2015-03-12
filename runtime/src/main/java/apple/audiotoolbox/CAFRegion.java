@@ -44,25 +44,25 @@ public class CAFRegion
     ]-*/;
     public static native CAFRegion copyWithmRegionID(CAFRegion original, int mRegionID) /*-[
         original.mRegionID = mRegionID;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native CAFRegion copyWithmFlags(CAFRegion original, int mFlags) /*-[
         original.mFlags = mFlags;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native CAFRegion copyWithmNumberMarkers(CAFRegion original, int mNumberMarkers) /*-[
         original.mNumberMarkers = mNumberMarkers;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native CAFRegion copyWithmMarkers(CAFRegion original, CAFMarker mMarkers) /*-[
         original.mMarkers = mMarkers;
-        return __new;
+        return original;
     ]-*/;
 
     

@@ -40,14 +40,14 @@ public class NSPredicate
     
     
     @Mapping("predicateWithSubstitutionVariables:")
-    public native NSPredicate newPredicateWithSubstitutionVariables(NSDictionary<NSString, ?> variables);
+    public native NSPredicate newPredicateWithSubstitutionVariables(NSDictionary<?, ?> variables);
     @Mapping("evaluateWithObject:")
     public native boolean evaluate(Object object);
     /**
      * @since Available in iOS 3.0 and later.
      */
     @Mapping("evaluateWithObject:substitutionVariables:")
-    public native boolean evaluate(Object object, NSDictionary<NSString, ?> bindings);
+    public native boolean evaluate(Object object, NSDictionary<?, ?> bindings);
     /**
      * @since Available in iOS 7.0 and later.
      */
@@ -61,7 +61,7 @@ public class NSPredicate
      * @since Available in iOS 4.0 and later.
      */
     @Mapping("predicateWithBlock:")
-    public static native NSPredicate create(@Block Block2<NSObject, NSDictionary<NSString, ?>, Boolean> block);
+    public static native NSPredicate create(Todo block);
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
     

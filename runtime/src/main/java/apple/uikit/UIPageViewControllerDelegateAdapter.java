@@ -37,9 +37,9 @@ public abstract class UIPageViewControllerDelegateAdapter
      * @since Available in iOS 6.0 and later.
      */
     @NotImplemented("pageViewController:willTransitionToViewControllers:")
-    public void willTransition(UIPageViewController pageViewController, NSArray<UIViewController> pendingViewControllers) { throw new UnsupportedOperationException(); }
+    public void willTransition(UIPageViewController pageViewController, NSArray<?> pendingViewControllers) { throw new UnsupportedOperationException(); }
     @NotImplemented("pageViewController:didFinishAnimating:previousViewControllers:transitionCompleted:")
-    public void didFinishAnimating(UIPageViewController pageViewController, boolean finished, NSArray<UIViewController> previousViewControllers, boolean completed) { throw new UnsupportedOperationException(); }
+    public void didFinishAnimating(UIPageViewController pageViewController, boolean finished, NSArray<?> previousViewControllers, boolean completed) { throw new UnsupportedOperationException(); }
     @NotImplemented("pageViewController:spineLocationForInterfaceOrientation:")
     public @Representing("UIPageViewControllerSpineLocation") @MachineSizedSInt long getSpineLocation(UIPageViewController pageViewController, @Representing("UIInterfaceOrientation") @MachineSizedSInt long orientation) { throw new UnsupportedOperationException(); }
     /**

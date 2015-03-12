@@ -48,17 +48,17 @@ public class MFMailComposeViewController
      * @since Available in iOS 3.0 and later.
      */
     @Mapping("setToRecipients:")
-    public native void setToRecipients(List<String> toRecipients);
+    public native void setToRecipients(NSArray<?> toRecipients);
     /**
      * @since Available in iOS 3.0 and later.
      */
     @Mapping("setCcRecipients:")
-    public native void setCcRecipients(List<String> ccRecipients);
+    public native void setCcRecipients(NSArray<?> ccRecipients);
     /**
      * @since Available in iOS 3.0 and later.
      */
     @Mapping("setBccRecipients:")
-    public native void setBccRecipients(List<String> bccRecipients);
+    public native void setBccRecipients(NSArray<?> bccRecipients);
     /**
      * @since Available in iOS 3.0 and later.
      */

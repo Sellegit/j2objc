@@ -44,6 +44,6 @@ public class CMClosedCaptionFormatDescription
      * @since Available in iOS 8.0 and later.
      */
     @GlobalFunction("CMClosedCaptionFormatDescriptionCopyAsBigEndianClosedCaptionDescriptionBlockBuffer")
-    private static native int copyAsBigEndianClosedCaptionDescriptionBlockBuffer(CFAllocator allocator, CMClosedCaptionFormatDescription closedCaptionFormatDescription, String closedCaptionDescriptionFlavor, Todo closedCaptionDescriptionBlockBufferOut);
+    private static native int copyAsBigEndianClosedCaptionDescriptionBlockBuffer(CFAllocator allocator, CMFormatDescription closedCaptionFormatDescription, String closedCaptionDescriptionFlavor, Todo closedCaptionDescriptionBlockBufferOut);
     
 }

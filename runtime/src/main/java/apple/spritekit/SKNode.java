@@ -116,7 +116,7 @@ public class SKNode
     @Mapping("insertChild:atIndex:")
     public native void insertChild(SKNode node, @MachineSizedSInt long index);
     @Mapping("removeChildrenInArray:")
-    public native void removeChildren(NSArray<SKNode> nodes);
+    public native void removeChildren(NSArray<?> nodes);
     @Mapping("removeAllChildren")
     public native void removeAllChildren();
     @Mapping("removeFromParent")

@@ -33,7 +33,7 @@ public class NSTextTab
     
     public NSTextTab() {}
     @Mapping("initWithTextAlignment:location:options:")
-    public NSTextTab(@Representing("NSTextAlignment") @MachineSizedSInt long alignment, @MachineSizedFloat double loc, NSTextTabOptions options) { }
+    public NSTextTab(@Representing("NSTextAlignment") @MachineSizedSInt long alignment, @MachineSizedFloat double loc, NSDictionary<?, ?> options) { }
     
     
     @Mapping("alignment")
@@ -41,7 +41,7 @@ public class NSTextTab
     @Mapping("location")
     public native @MachineSizedFloat double getLocation();
     @Mapping("options")
-    public native NSTextTabOptions getOptions();
+    public native NSDictionary<?, ?> getOptions();
     
     
     

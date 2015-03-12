@@ -36,7 +36,7 @@ public class NSURLCredential
      * @since Available in iOS 3.0 and later.
      */
     @Mapping("initWithIdentity:certificates:persistence:")
-    public NSURLCredential(SecIdentity identity, List<SecCertificate> certArray, @Representing("NSURLCredentialPersistence") @MachineSizedUInt long persistence) { }
+    public NSURLCredential(SecIdentity identity, NSArray<?> certArray, @Representing("NSURLCredentialPersistence") @MachineSizedUInt long persistence) { }
     /**
      * @since Available in iOS 3.0 and later.
      */

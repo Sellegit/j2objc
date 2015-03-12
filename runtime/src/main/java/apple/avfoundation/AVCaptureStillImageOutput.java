@@ -94,11 +94,11 @@ public class AVCaptureStillImageOutput
      * @since Available in iOS 8.0 and later.
      */
     @Mapping("prepareToCaptureStillImageBracketFromConnection:withSettingsArray:completionHandler:")
-    public native void prepareToCaptureStillImageBracket(AVCaptureConnection connection, NSArray<AVCaptureBracketedStillImageSettings> settings, @Block VoidBlock2<Boolean, NSError> handler);
+    public native void prepareToCaptureStillImageBracket(AVCaptureConnection connection, NSArray<?> settings, @Block VoidBlock2<Boolean, NSError> handler);
     /**
      * @since Available in iOS 8.0 and later.
      */
     @Mapping("captureStillImageBracketAsynchronouslyFromConnection:withSettingsArray:completionHandler:")
-    public native void captureStillImageBracketAsynchronously(AVCaptureConnection connection, NSArray<AVCaptureBracketedStillImageSettings> settings, @Block VoidBlock3<CMSampleBuffer, AVCaptureBracketedStillImageSettings, NSError> handler);
+    public native void captureStillImageBracketAsynchronously(AVCaptureConnection connection, NSArray<?> settings, @Block VoidBlock3<CMSampleBuffer, AVCaptureBracketedStillImageSettings, NSError> handler);
     
 }

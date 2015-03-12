@@ -82,18 +82,18 @@ public class NSLayoutConstraint
     
     
     @Mapping("constraintsWithVisualFormat:options:metrics:views:")
-    public static native NSArray<NSLayoutConstraint> create(String format, @Representing("NSLayoutFormatOptions") @MachineSizedUInt long opts, Map<String, Number> metrics, Map<String, NSObjectProtocol> views);
+    public static native NSArray<NSLayoutConstraint> create(String format, @Representing("NSLayoutFormatOptions") @MachineSizedUInt long opts, NSDictionary<?, ?> metrics, NSDictionary<?, ?> views);
     @Mapping("constraintWithItem:attribute:relatedBy:toItem:attribute:multiplier:constant:")
     public static native NSLayoutConstraint create(Object view1, @Representing("NSLayoutAttribute") @MachineSizedSInt long attr1, @Representing("NSLayoutRelation") @MachineSizedSInt long relation, Object view2, @Representing("NSLayoutAttribute") @MachineSizedSInt long attr2, @MachineSizedFloat double multiplier, @MachineSizedFloat double c);
     /**
      * @since Available in iOS 8.0 and later.
      */
     @Mapping("activateConstraints:")
-    public static native void activateConstraints(NSArray<NSLayoutConstraint> constraints);
+    public static native void activateConstraints(NSArray<?> constraints);
     /**
      * @since Available in iOS 8.0 and later.
      */
     @Mapping("deactivateConstraints:")
-    public static native void deactivateConstraints(NSArray<NSLayoutConstraint> constraints);
+    public static native void deactivateConstraints(NSArray<?> constraints);
     
 }

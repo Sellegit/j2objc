@@ -44,25 +44,25 @@ public class MIDIChannelMessage
     ]-*/;
     public static native MIDIChannelMessage copyWithstatus(MIDIChannelMessage original, byte status) /*-[
         original.status = status;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native MIDIChannelMessage copyWithdata1(MIDIChannelMessage original, byte data1) /*-[
         original.data1 = data1;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native MIDIChannelMessage copyWithdata2(MIDIChannelMessage original, byte data2) /*-[
         original.data2 = data2;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native MIDIChannelMessage copyWithreserved(MIDIChannelMessage original, byte reserved) /*-[
         original.reserved = reserved;
-        return __new;
+        return original;
     ]-*/;
 
     

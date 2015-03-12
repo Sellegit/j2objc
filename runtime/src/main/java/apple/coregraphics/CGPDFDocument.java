@@ -53,7 +53,7 @@ public class CGPDFDocument
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGPDFDocumentUnlockWithPassword")
-    public native boolean unlockWithPassword(String password);
+    public native boolean unlockWithPassword(Todo password);
     /**
      * @since Available in iOS 2.0 and later.
      */

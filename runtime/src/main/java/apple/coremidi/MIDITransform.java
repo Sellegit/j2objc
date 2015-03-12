@@ -37,13 +37,13 @@ public class MIDITransform
     ]-*/;
     public static native MIDITransform copyWithtransform(MIDITransform original, MIDITransformType transform) /*-[
         original.transform = transform;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native MIDITransform copyWithparam(MIDITransform original, short param) /*-[
         original.param = param;
-        return __new;
+        return original;
     ]-*/;
 
     

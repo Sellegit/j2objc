@@ -92,7 +92,7 @@ public class CMSampleBuffer
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMSampleBufferCreate")
-    private static native CMSampleBufferError create(CFAllocator allocator, CMBlockBuffer dataBuffer, boolean dataReady, FunctionPtr makeDataReadyCallback, @Pointer long makeDataReadyRefcon, CMFormatDescription formatDescription, @MachineSizedSInt long numSamples, @MachineSizedSInt long numSampleTimingEntries, CMSampleTimingInfo sampleTimingArray, @MachineSizedSInt long numSampleSizeEntries, Todo sampleSizeArray, Todo sBufOut);
+    private static native CMSampleBufferError create(CFAllocator allocator, CMBlockBuffer dataBuffer, boolean dataReady, FunctionPtr makeDataReadyCallback, Todo makeDataReadyRefcon, CMFormatDescription formatDescription, @MachineSizedSInt long numSamples, @MachineSizedSInt long numSampleTimingEntries, CMSampleTimingInfo sampleTimingArray, @MachineSizedSInt long numSampleSizeEntries, Todo sampleSizeArray, Todo sBufOut);
     /**
      * @since Available in iOS 8.0 and later.
      */
@@ -102,7 +102,7 @@ public class CMSampleBuffer
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMAudioSampleBufferCreateWithPacketDescriptions")
-    private static native CMSampleBufferError createAudioSampleBuffer(CFAllocator allocator, CMBlockBuffer dataBuffer, boolean dataReady, FunctionPtr makeDataReadyCallback, @Pointer long makeDataReadyRefcon, CMFormatDescription formatDescription, @MachineSizedSInt long numSamples, CMTime sbufPTS, AudioStreamPacketDescription packetDescriptions, Todo sBufOut);
+    private static native CMSampleBufferError createAudioSampleBuffer(CFAllocator allocator, CMBlockBuffer dataBuffer, boolean dataReady, FunctionPtr makeDataReadyCallback, Todo makeDataReadyRefcon, CMFormatDescription formatDescription, @MachineSizedSInt long numSamples, CMTime sbufPTS, AudioStreamPacketDescription packetDescriptions, Todo sBufOut);
     /**
      * @since Available in iOS 8.0 and later.
      */
@@ -112,7 +112,7 @@ public class CMSampleBuffer
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMSampleBufferCreateForImageBuffer")
-    private static native CMSampleBufferError createForImageBuffer(CFAllocator allocator, CVImageBuffer imageBuffer, boolean dataReady, FunctionPtr makeDataReadyCallback, @Pointer long makeDataReadyRefcon, CMVideoFormatDescription formatDescription, CMSampleTimingInfo sampleTiming, Todo sBufOut);
+    private static native CMSampleBufferError createForImageBuffer(CFAllocator allocator, CVImageBuffer imageBuffer, boolean dataReady, FunctionPtr makeDataReadyCallback, Todo makeDataReadyRefcon, CMVideoFormatDescription formatDescription, CMSampleTimingInfo sampleTiming, Todo sBufOut);
     /**
      * @since Available in iOS 8.0 and later.
      */
@@ -157,12 +157,12 @@ public class CMSampleBuffer
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMSampleBufferSetDataBufferFromAudioBufferList")
-    public native CMSampleBufferError setAudioBufferList(CFAllocator bbufStructAllocator, CFAllocator bbufMemoryAllocator, CMSampleBufferFlag flags, AudioBufferList bufferList);
+    public native CMSampleBufferError setAudioBufferList(CFAllocator bbufStructAllocator, CFAllocator bbufMemoryAllocator, int flags, AudioBufferList bufferList);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMSampleBufferGetAudioBufferListWithRetainedBlockBuffer")
-    private native CMSampleBufferError getAudioBufferList(Todo bufferListSizeNeededOut, AudioBufferList bufferListOut, @MachineSizedUInt long bufferListSize, CFAllocator bbufStructAllocator, CFAllocator bbufMemoryAllocator, CMSampleBufferFlag flags, Todo blockBufferOut);
+    private native CMSampleBufferError getAudioBufferList(Todo bufferListSizeNeededOut, AudioBufferList bufferListOut, @MachineSizedUInt long bufferListSize, CFAllocator bbufStructAllocator, CFAllocator bbufMemoryAllocator, int flags, Todo blockBufferOut);
     /**
      * @since Available in iOS 4.0 and later.
      */
@@ -187,7 +187,7 @@ public class CMSampleBuffer
      * @since Available in iOS 8.0 and later.
      */
     @GlobalFunction("CMSampleBufferSetDataFailed")
-    public native CMSampleBufferError setDataFailed(CMSampleBufferError status);
+    public native CMSampleBufferError setDataFailed(int status);
     /**
      * @since Available in iOS 8.0 and later.
      */
@@ -217,7 +217,7 @@ public class CMSampleBuffer
      * @since Available in iOS 8.0 and later.
      */
     @GlobalFunction("CMSampleBufferSetInvalidateHandler")
-    public native CMSampleBufferError setInvalidateHandler(@Block VoidBlock1<CMSampleBuffer> invalidateHandler);
+    public native CMSampleBufferError setInvalidateHandler(FunctionPtr invalidateHandler);
     /**
      * @since Available in iOS 4.0 and later.
      */
@@ -307,11 +307,11 @@ public class CMSampleBuffer
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMSampleBufferCallForEachSample")
-    private native CMSampleBufferError callForEachSample(FunctionPtr callback, @Pointer long refcon);
+    private native CMSampleBufferError callForEachSample(FunctionPtr callback, Todo refcon);
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalFunction("CMSampleBufferCallBlockForEachSample")
-    public native CMSampleBufferError callForEachSample(@Block Block2<CMSampleBuffer, Long, CMSampleBufferError> handler);
+    public native CMSampleBufferError callForEachSample(Todo handler);
     
 }

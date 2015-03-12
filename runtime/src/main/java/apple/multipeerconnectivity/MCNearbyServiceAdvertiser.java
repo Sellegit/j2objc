@@ -30,7 +30,7 @@ public class MCNearbyServiceAdvertiser
     
     public MCNearbyServiceAdvertiser() {}
     @Mapping("initWithPeer:discoveryInfo:serviceType:")
-    public MCNearbyServiceAdvertiser(MCPeerID myPeerID, Map<String, String> info, String serviceType) { }
+    public MCNearbyServiceAdvertiser(MCPeerID myPeerID, NSDictionary<?, ?> info, String serviceType) { }
     
     
     @Mapping("delegate")

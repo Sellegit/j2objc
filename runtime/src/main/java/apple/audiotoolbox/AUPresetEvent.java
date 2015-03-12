@@ -42,19 +42,19 @@ public class AUPresetEvent
     ]-*/;
     public static native AUPresetEvent copyWithscope(AUPresetEvent original, int scope) /*-[
         original.scope = scope;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native AUPresetEvent copyWithelement(AUPresetEvent original, int element) /*-[
         original.element = element;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native AUPresetEvent copyWithpreset(AUPresetEvent original, CFType preset) /*-[
         original.preset = preset;
-        return __new;
+        return original;
     ]-*/;
 
     

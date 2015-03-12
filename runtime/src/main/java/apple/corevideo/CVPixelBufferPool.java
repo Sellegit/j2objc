@@ -38,7 +38,7 @@ public class CVPixelBufferPool
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CVPixelBufferPoolCreate")
-    protected static native CVReturn create(CFAllocator allocator, NSDictionary<NSString, ?> poolAttributes, NSDictionary<NSString, ?> pixelBufferAttributes, Todo poolOut);
+    protected static native CVReturn create(CFAllocator allocator, CFDictionary poolAttributes, CFDictionary pixelBufferAttributes, Todo poolOut);
     /**
      * @since Available in iOS 4.0 and later.
      */
@@ -58,6 +58,6 @@ public class CVPixelBufferPool
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CVPixelBufferPoolCreatePixelBufferWithAuxAttributes")
-    protected static native CVReturn createPixelBuffer(CFAllocator allocator, CVPixelBufferPool pixelBufferPool, NSDictionary<NSString, ?> auxAttributes, Todo pixelBufferOut);
+    protected static native CVReturn createPixelBuffer(CFAllocator allocator, CVPixelBufferPool pixelBufferPool, CFDictionary auxAttributes, Todo pixelBufferOut);
     
 }

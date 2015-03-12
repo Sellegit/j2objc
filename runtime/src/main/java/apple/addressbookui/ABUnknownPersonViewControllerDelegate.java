@@ -29,12 +29,12 @@ public interface ABUnknownPersonViewControllerDelegate
     
     
     @Mapping("unknownPersonViewController:didResolveToPerson:")
-    void didResolveToPerson(ABUnknownPersonViewController unknownCardViewController, ABPerson person);
+    void didResolveToPerson(ABUnknownPersonViewController unknownCardViewController, ABRecord person);
     /**
      * @since Available in iOS 3.0 and later.
      */
     @Mapping("unknownPersonViewController:shouldPerformDefaultActionForPerson:property:identifier:")
-    boolean shouldPerformDefaultAction(ABUnknownPersonViewController personViewController, ABPerson person, ABProperty property, int identifier);
+    boolean shouldPerformDefaultAction(ABUnknownPersonViewController personViewController, ABRecord person, int property, int identifier);
     
     /*<adapter>*/
     /*</adapter>*/

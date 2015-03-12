@@ -77,7 +77,7 @@ public class NSFileVersion
      * @since Available in iOS 8.0 and later.
      */
     @Mapping("getNonlocalVersionsOfItemAtURL:completionHandler:")
-    public static native void getNonlocalItemVersionsAtURL(NSURL url, @Block VoidBlock2<NSArray<NSFileVersion>, NSError> completionHandler);
+    public static native void getNonlocalItemVersionsAtURL(NSURL url, Todo completionHandler);
     @Mapping("versionOfItemAtURL:forPersistentIdentifier:")
     public static native NSFileVersion getItemVersionAtURL(NSURL url, Object persistentIdentifier);
     @Mapping("removeOtherVersionsOfItemAtURL:error:")

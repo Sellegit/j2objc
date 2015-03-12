@@ -42,19 +42,19 @@ public class AudioFileMarkerList
     ]-*/;
     public static native AudioFileMarkerList copyWithmSMPTE_TimeType(AudioFileMarkerList original, int mSMPTE_TimeType) /*-[
         original.mSMPTE_TimeType = mSMPTE_TimeType;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native AudioFileMarkerList copyWithmNumberMarkers(AudioFileMarkerList original, int mNumberMarkers) /*-[
         original.mNumberMarkers = mNumberMarkers;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native AudioFileMarkerList copyWithmMarkers(AudioFileMarkerList original, AudioFileMarker mMarkers) /*-[
         original.mMarkers = mMarkers;
-        return __new;
+        return original;
     ]-*/;
 
     

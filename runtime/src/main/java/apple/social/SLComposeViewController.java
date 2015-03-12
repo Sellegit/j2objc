@@ -53,8 +53,8 @@ public class SLComposeViewController
     @Mapping("removeAllURLs")
     public native boolean removeAllURLs();
     @Mapping("isAvailableForServiceType:")
-    public static native boolean isAvailable(SLServiceType serviceType);
+    public static native boolean isAvailable(String serviceType);
     @Mapping("composeViewControllerForServiceType:")
-    public static native SLComposeViewController create(SLServiceType serviceType);
+    public static native SLComposeViewController create(String serviceType);
     
 }

@@ -53,7 +53,7 @@ public class NSFileCoordinator
      * @since Available in iOS 8.0 and later.
      */
     @Mapping("coordinateAccessWithIntents:queue:byAccessor:")
-    public native void coordinateAccessWithIntents(NSArray<NSFileAccessIntent> intents, NSOperationQueue queue, @Block VoidBlock1<NSError> accessor);
+    public native void coordinateAccessWithIntents(NSArray<?> intents, NSOperationQueue queue, @Block VoidBlock1<NSError> accessor);
     @Mapping("coordinateReadingItemAtURL:options:error:byAccessor:")
     protected native void coordinateReadingItem(NSURL url, @Representing("NSFileCoordinatorReadingOptions") @MachineSizedUInt long options, Todo outError, @Block VoidBlock1<NSURL> reader);
     @Mapping("coordinateWritingItemAtURL:options:error:byAccessor:")
@@ -63,7 +63,7 @@ public class NSFileCoordinator
     @Mapping("coordinateWritingItemAtURL:options:writingItemAtURL:options:error:byAccessor:")
     protected native void coordinateWritingItem(NSURL url1, @Representing("NSFileCoordinatorWritingOptions") @MachineSizedUInt long options1, NSURL url2, @Representing("NSFileCoordinatorWritingOptions") @MachineSizedUInt long options2, Todo outError, @Block VoidBlock2<NSURL, NSURL> writer);
     @Mapping("prepareForReadingItemsAtURLs:options:writingItemsAtURLs:options:error:byAccessor:")
-    protected native void prepareForReadingItems(NSArray<NSURL> readingURLs, @Representing("NSFileCoordinatorReadingOptions") @MachineSizedUInt long readingOptions, NSArray<NSURL> writingURLs, @Representing("NSFileCoordinatorWritingOptions") @MachineSizedUInt long writingOptions, Todo outError, @Block("(@Block)") VoidBlock1<Runnable> batchAccessor);
+    protected native void prepareForReadingItems(NSArray<?> readingURLs, @Representing("NSFileCoordinatorReadingOptions") @MachineSizedUInt long readingOptions, NSArray<?> writingURLs, @Representing("NSFileCoordinatorWritingOptions") @MachineSizedUInt long writingOptions, Todo outError, @Block("(@Block)") VoidBlock1<Runnable> batchAccessor);
     /**
      * @since Available in iOS 6.0 and later.
      */

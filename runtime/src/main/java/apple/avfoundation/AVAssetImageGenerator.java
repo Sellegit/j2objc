@@ -88,8 +88,6 @@ public class AVAssetImageGenerator
     
     @Mapping("copyCGImageAtTime:actualTime:error:")
     public native CGImage getCGImageAtTime(CMTime requestedTime, CMTime actualTime, Todo outError);
-    @Mapping("generateCGImagesAsynchronouslyForTimes:completionHandler:")
-    public native void generateCGImagesAsynchronously(List<CMTime> requestedTimes, @Block VoidBlock5<CMTime, CGImage, CMTime, AVAssetImageGeneratorResult, NSError> handler);
     @Mapping("cancelAllCGImageGeneration")
     public native void cancelAllCGImageGeneration();
     @Mapping("assetImageGeneratorWithAsset:")

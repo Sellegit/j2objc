@@ -63,7 +63,7 @@ public class NSMigrationManager
     
     
     @Mapping("migrateStoreFromURL:type:options:withMappingModel:toDestinationURL:destinationType:destinationOptions:error:")
-    protected native boolean migrateStore(NSURL sourceURL, String sStoreType, NSPersistentStoreOptions sOptions, NSMappingModel mappings, NSURL dURL, String dStoreType, NSPersistentStoreOptions dOptions, Todo error);
+    protected native boolean migrateStore(NSURL sourceURL, String sStoreType, NSDictionary<?, ?> sOptions, NSMappingModel mappings, NSURL dURL, String dStoreType, NSDictionary<?, ?> dOptions, Todo error);
     @Mapping("reset")
     public native void reset();
     @Mapping("sourceEntityForEntityMapping:")
@@ -73,9 +73,9 @@ public class NSMigrationManager
     @Mapping("associateSourceInstance:withDestinationInstance:forEntityMapping:")
     public native void associateInstances(NSManagedObject sourceInstance, NSManagedObject destinationInstance, NSEntityMapping entityMapping);
     @Mapping("destinationInstancesForEntityMappingNamed:sourceInstances:")
-    public native NSArray<NSEntityMapping> getDestinationInstances(String mappingName, NSArray<NSEntityMapping> sourceInstances);
+    public native NSArray<NSEntityMapping> getDestinationInstances(String mappingName, NSArray<?> sourceInstances);
     @Mapping("sourceInstancesForEntityMappingNamed:destinationInstances:")
-    public native NSArray<NSEntityMapping> getSourceInstances(String mappingName, NSArray<NSEntityMapping> destinationInstances);
+    public native NSArray<NSEntityMapping> getSourceInstances(String mappingName, NSArray<?> destinationInstances);
     @Mapping("cancelMigrationWithError:")
     public native void cancelMigration(NSError error);
     

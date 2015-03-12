@@ -44,25 +44,25 @@ public class MusicDeviceNoteParams
     ]-*/;
     public static native MusicDeviceNoteParams copyWithargCount(MusicDeviceNoteParams original, int argCount) /*-[
         original.argCount = argCount;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native MusicDeviceNoteParams copyWithmPitch(MusicDeviceNoteParams original, float mPitch) /*-[
         original.mPitch = mPitch;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native MusicDeviceNoteParams copyWithmVelocity(MusicDeviceNoteParams original, float mVelocity) /*-[
         original.mVelocity = mVelocity;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native MusicDeviceNoteParams copyWithmControls(MusicDeviceNoteParams original, NoteParamsControlValue mControls) /*-[
         original.mControls = mControls;
-        return __new;
+        return original;
     ]-*/;
 
     

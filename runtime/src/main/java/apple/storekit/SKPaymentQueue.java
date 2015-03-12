@@ -63,22 +63,22 @@ public class SKPaymentQueue
      * @since Available in iOS 6.0 and later.
      */
     @Mapping("startDownloads:")
-    public native void startDownloads(NSArray<SKDownload> downloads);
+    public native void startDownloads(NSArray<?> downloads);
     /**
      * @since Available in iOS 6.0 and later.
      */
     @Mapping("pauseDownloads:")
-    public native void pauseDownloads(NSArray<SKDownload> downloads);
+    public native void pauseDownloads(NSArray<?> downloads);
     /**
      * @since Available in iOS 6.0 and later.
      */
     @Mapping("resumeDownloads:")
-    public native void resumeDownloads(NSArray<SKDownload> downloads);
+    public native void resumeDownloads(NSArray<?> downloads);
     /**
      * @since Available in iOS 6.0 and later.
      */
     @Mapping("cancelDownloads:")
-    public native void cancelDownloads(NSArray<SKDownload> downloads);
+    public native void cancelDownloads(NSArray<?> downloads);
     /**
      * @since Available in iOS 3.0 and later.
      */

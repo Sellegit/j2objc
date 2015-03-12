@@ -30,7 +30,7 @@ public class HKSampleQuery
     
     public HKSampleQuery() {}
     @Mapping("initWithSampleType:predicate:limit:sortDescriptors:resultsHandler:")
-    public HKSampleQuery(HKSampleType sampleType, NSPredicate predicate, @MachineSizedUInt long limit, NSArray<NSSortDescriptor> sortDescriptors, @Block VoidBlock3<HKSampleQuery, NSArray<HKSample>, NSError> resultsHandler) { }
+    public HKSampleQuery(HKSampleType sampleType, NSPredicate predicate, @MachineSizedUInt long limit, NSArray<?> sortDescriptors, Todo resultsHandler) { }
     
     
     @Mapping("limit")

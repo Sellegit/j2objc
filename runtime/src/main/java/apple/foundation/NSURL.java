@@ -134,7 +134,7 @@ public class NSURL
      * @since Available in iOS 4.0 and later.
      */
     @Mapping("getResourceValue:forKey:error:")
-    private native boolean getResourceValue(Todo value, NSString key, Todo error);
+    private native boolean getResourceValue(Todo value, String key, Todo error);
     /**
      * @since Available in iOS 4.0 and later.
      */
@@ -144,7 +144,7 @@ public class NSURL
      * @since Available in iOS 4.0 and later.
      */
     @Mapping("setResourceValue:forKey:error:")
-    protected native boolean setResourceValue(Object value, NSString key, Todo error);
+    protected native boolean setResourceValue(Object value, String key, Todo error);
     /**
      * @since Available in iOS 4.0 and later.
      */
@@ -154,7 +154,7 @@ public class NSURL
      * @since Available in iOS 7.0 and later.
      */
     @Mapping("removeCachedResourceValueForKey:")
-    protected native void removeCachedResourceValue(NSString key);
+    protected native void removeCachedResourceValue(String key);
     /**
      * @since Available in iOS 7.0 and later.
      */
@@ -164,7 +164,7 @@ public class NSURL
      * @since Available in iOS 7.0 and later.
      */
     @Mapping("setTemporaryResourceValue:forKey:")
-    protected native void setTemporaryResourceValue(Object value, NSString key);
+    protected native void setTemporaryResourceValue(Object value, String key);
     /**
      * @since Available in iOS 4.0 and later.
      */
@@ -189,7 +189,7 @@ public class NSURL
      * @since Available in iOS 4.0 and later.
      */
     @Mapping("writeBookmarkData:toURL:options:error:")
-    protected static native boolean writeBookmarkData(NSData bookmarkData, NSURL bookmarkFileURL, NSURLBookmarkCreationOptions options, Todo error);
+    protected static native boolean writeBookmarkData(NSData bookmarkData, NSURL bookmarkFileURL, @MachineSizedUInt long options, Todo error);
     /**
      * @since Available in iOS 4.0 and later.
      */
@@ -199,7 +199,7 @@ public class NSURL
      * @since Available in iOS 8.0 and later.
      */
     @Mapping("getPromisedItemResourceValue:forKey:error:")
-    protected native boolean getPromisedItemResourceValue(Todo value, NSString key, Todo error);
+    protected native boolean getPromisedItemResourceValue(Todo value, String key, Todo error);
     /**
      * @since Available in iOS 8.0 and later.
      */

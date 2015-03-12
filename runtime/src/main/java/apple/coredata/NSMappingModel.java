@@ -41,7 +41,7 @@ public class NSMappingModel
     
     
     @Mapping("mappingModelFromBundles:forSourceModel:destinationModel:")
-    public static native NSMappingModel create(NSArray<NSBundle> bundles, NSManagedObjectModel sourceModel, NSManagedObjectModel destinationModel);
+    public static native NSMappingModel create(NSArray<?> bundles, NSManagedObjectModel sourceModel, NSManagedObjectModel destinationModel);
     /**
      * @since Available in iOS 3.0 and later.
      */

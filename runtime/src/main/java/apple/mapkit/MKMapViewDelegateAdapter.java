@@ -54,7 +54,7 @@ public abstract class MKMapViewDelegateAdapter
     @NotImplemented("mapView:viewForAnnotation:")
     public MKAnnotationView getAnnotationView(MKMapView mapView, MKAnnotation annotation) { throw new UnsupportedOperationException(); }
     @NotImplemented("mapView:didAddAnnotationViews:")
-    public void didAddAnnotationViews(MKMapView mapView, NSArray<MKAnnotationView> views) { throw new UnsupportedOperationException(); }
+    public void didAddAnnotationViews(MKMapView mapView, NSArray<?> views) { throw new UnsupportedOperationException(); }
     @NotImplemented("mapView:annotationView:calloutAccessoryControlTapped:")
     public void calloutAccessoryControlTapped(MKMapView mapView, MKAnnotationView view, UIControl control) { throw new UnsupportedOperationException(); }
     /**
@@ -106,7 +106,7 @@ public abstract class MKMapViewDelegateAdapter
      * @since Available in iOS 7.0 and later.
      */
     @NotImplemented("mapView:didAddOverlayRenderers:")
-    public void didAddOverlayRenderers(MKMapView mapView, NSArray<MKOverlayRenderer> renderers) { throw new UnsupportedOperationException(); }
+    public void didAddOverlayRenderers(MKMapView mapView, NSArray<?> renderers) { throw new UnsupportedOperationException(); }
     /**
      * @since Available in iOS 4.0 and later.
      * @deprecated Deprecated in iOS 7.0.
@@ -120,6 +120,6 @@ public abstract class MKMapViewDelegateAdapter
      */
     @Deprecated
     @NotImplemented("mapView:didAddOverlayViews:")
-    public void didAddOverlayViews(MKMapView mapView, NSArray<MKOverlayView> overlayViews) { throw new UnsupportedOperationException(); }
+    public void didAddOverlayViews(MKMapView mapView, NSArray<?> overlayViews) { throw new UnsupportedOperationException(); }
     
 }

@@ -40,13 +40,13 @@ public class CAFAudioFormatListItem
     ]-*/;
     public static native CAFAudioFormatListItem copyWithmFormat(CAFAudioFormatListItem original, CAFAudioDescription mFormat) /*-[
         original.mFormat = mFormat;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native CAFAudioFormatListItem copyWithmChannelLayoutTag(CAFAudioFormatListItem original, int mChannelLayoutTag) /*-[
         original.mChannelLayoutTag = mChannelLayoutTag;
-        return __new;
+        return original;
     ]-*/;
 
     

@@ -32,7 +32,7 @@ public class CFReadStream
     @GlobalFunction("CFReadStreamGetTypeID")
     public static native @MachineSizedUInt long getClassTypeID();
     @GlobalFunction("CFReadStreamCreateWithBytesNoCopy")
-    protected static native CFReadStream create(CFAllocator alloc, @Pointer long bytes, @MachineSizedSInt long length, CFAllocator bytesDeallocator);
+    protected static native CFReadStream create(CFAllocator alloc, Todo bytes, @MachineSizedSInt long length, CFAllocator bytesDeallocator);
     @GlobalFunction("CFReadStreamCreateWithFile")
     protected static native CFReadStream create(CFAllocator alloc, CFURL fileURL);
     @GlobalFunction("CFReadStreamGetStatus")
@@ -49,15 +49,15 @@ public class CFReadStream
     @GlobalFunction("CFReadStreamHasBytesAvailable")
     public native boolean hasBytesAvailable();
     @GlobalFunction("CFReadStreamRead")
-    private native @MachineSizedSInt long read(@Pointer long buffer, @MachineSizedSInt long bufferLength);
+    private native @MachineSizedSInt long read(Todo buffer, @MachineSizedSInt long bufferLength);
     @GlobalFunction("CFReadStreamGetBuffer")
     private native Todo getBuffer(@MachineSizedSInt long maxBytesToRead, Todo numBytesRead);
     @GlobalFunction("CFReadStreamCopyProperty")
-    public native CFType getProperty(CFStreamProperty propertyName);
+    public native CFType getProperty(String propertyName);
     @GlobalFunction("CFReadStreamSetProperty")
-    public native boolean setProperty(CFStreamProperty propertyName, CFType propertyValue);
+    public native boolean setProperty(String propertyName, CFType propertyValue);
     @GlobalFunction("CFReadStreamSetClient")
-    private native boolean setClient(CFStreamEventType streamEvents, FunctionPtr clientCB, CFStreamClientContext clientContext);
+    private native boolean setClient(@MachineSizedUInt long streamEvents, FunctionPtr clientCB, CFStreamClientContext clientContext);
     @GlobalFunction("CFReadStreamScheduleWithRunLoop")
     public native void scheduleInRunLoop(CFRunLoop runLoop, String runLoopMode);
     @GlobalFunction("CFReadStreamUnscheduleFromRunLoop")

@@ -88,7 +88,7 @@ public class CFLocale
     @GlobalFunction("CFLocaleCreateComponentsFromLocaleIdentifier")
     protected static native Map<CFLocaleComponent, NSObject> getComponentsFromLocaleIdentifier(CFAllocator allocator, String localeID);
     @GlobalFunction("CFLocaleCreateLocaleIdentifierFromComponents")
-    protected static native String getLocaleIdentifierFromComponents(CFAllocator allocator, Map<CFLocaleComponent, NSObject> dictionary);
+    protected static native String getLocaleIdentifierFromComponents(CFAllocator allocator, CFDictionary dictionary);
     @GlobalFunction("CFLocaleCreate")
     protected static native CFLocale create(CFAllocator allocator, String localeIdentifier);
     @GlobalFunction("CFLocaleCreateCopy")
@@ -96,8 +96,8 @@ public class CFLocale
     @GlobalFunction("CFLocaleGetIdentifier")
     public native String getIdentifier();
     @GlobalFunction("CFLocaleGetValue")
-    public native CFType getComponent(CFLocaleComponent key);
+    public native CFType getComponent(String key);
     @GlobalFunction("CFLocaleCopyDisplayNameForPropertyValue")
-    public native String getComponentDisplayName(CFLocaleComponent key, String value);
+    public native String getComponentDisplayName(String key, String value);
     
 }

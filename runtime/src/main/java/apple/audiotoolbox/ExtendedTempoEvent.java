@@ -38,7 +38,7 @@ public class ExtendedTempoEvent
     ]-*/;
     public static native ExtendedTempoEvent copyWithbpm(ExtendedTempoEvent original, double bpm) /*-[
         original.bpm = bpm;
-        return __new;
+        return original;
     ]-*/;
 
     

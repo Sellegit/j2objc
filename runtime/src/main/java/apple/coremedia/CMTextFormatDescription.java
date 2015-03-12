@@ -34,27 +34,27 @@ public class CMTextFormatDescription
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMTextFormatDescriptionGetDisplayFlags")
-    private native int getDisplayFlags(Todo outDisplayFlags);
+    private static native int getDisplayFlags(CMFormatDescription desc, Todo outDisplayFlags);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMTextFormatDescriptionGetJustification")
-    private native int getJustification(Todo outHorizontalJust, Todo outVerticalJust);
+    private static native int getJustification(CMFormatDescription desc, Todo outHorizontalJust, Todo outVerticalJust);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMTextFormatDescriptionGetDefaultTextBox")
-    private native int getDefaultTextBox(boolean originIsAtTopLeft, @MachineSizedFloat double heightOfTextTrack, Todo outDefaultTextBox);
+    private static native int getDefaultTextBox(CMFormatDescription desc, boolean originIsAtTopLeft, @MachineSizedFloat double heightOfTextTrack, CGRect outDefaultTextBox);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMTextFormatDescriptionGetDefaultStyle")
-    private native int getDefaultStyle(Todo outLocalFontID, Todo outBold, Todo outItalic, Todo outUnderline, Todo outFontSize, Todo outColorComponents);
+    private static native int getDefaultStyle(CMFormatDescription desc, Todo outLocalFontID, Todo outBold, Todo outItalic, Todo outUnderline, Todo outFontSize, Todo outColorComponents);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMTextFormatDescriptionGetFontName")
-    private native int getFontName(short localFontID, Todo outFontName);
+    private static native int getFontName(CMFormatDescription desc, short localFontID, Todo outFontName);
     /**
      * @since Available in iOS 8.0 and later.
      */

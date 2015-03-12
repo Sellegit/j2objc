@@ -64,7 +64,7 @@ public class GKLocalPlayer
      * @since Available in iOS 8.0 and later.
      */
     @Mapping("loadFriendPlayersWithCompletionHandler:")
-    public native void loadFriendPlayers(@Block VoidBlock2<NSArray<GKPlayer>, NSError> completionHandler);
+    public native void loadFriendPlayers(Todo completionHandler);
     /**
      * @since Available in iOS 7.0 and later.
      */
@@ -117,7 +117,7 @@ public class GKLocalPlayer
      */
     @Deprecated
     @Mapping("loadFriendsWithCompletionHandler:")
-    public native void loadFriends(@Block VoidBlock2<NSArray<NSString>, NSError> completionHandler);
+    public native void loadFriends(Todo completionHandler);
     /**
      * @since Available in iOS 4.1 and later.
      * @deprecated Deprecated in iOS 6.0.
@@ -126,16 +126,16 @@ public class GKLocalPlayer
     @Mapping("authenticateWithCompletionHandler:")
     public native void authenticate(@Block VoidBlock1<NSError> completionHandler);
     @Mapping("fetchSavedGamesWithCompletionHandler:")
-    public native void fetchSavedGames(@Block VoidBlock2<NSArray<GKSavedGame>, NSError> handler);
+    public native void fetchSavedGames(Todo handler);
     @Mapping("saveGameData:withName:completionHandler:")
     public native void saveGameData(NSData data, String name, @Block VoidBlock2<GKSavedGame, NSError> handler);
     @Mapping("deleteSavedGamesWithName:completionHandler:")
     public native void deleteSavedGames(String name, @Block VoidBlock1<NSError> handler);
     @Mapping("resolveConflictingSavedGames:withData:completionHandler:")
-    public native void resolveConflictingSavedGames(NSArray<GKSavedGame> conflictingSavedGames, NSData data, @Block VoidBlock2<NSArray<GKSavedGame>, NSError> handler);
+    public native void resolveConflictingSavedGames(NSArray<?> conflictingSavedGames, NSData data, Todo handler);
     @Mapping("player:didModifySavedGame:")
     public native void didModifySavedGame(GKPlayer player, GKSavedGame savedGame);
     @Mapping("player:hasConflictingSavedGames:")
-    public native void hasConflictingSavedGames(GKPlayer player, NSArray<GKSavedGame> savedGames);
+    public native void hasConflictingSavedGames(GKPlayer player, NSArray<?> savedGames);
     
 }

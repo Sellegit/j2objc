@@ -38,13 +38,13 @@ public class MTLRegion
     ]-*/;
     public static native MTLRegion copyWithorigin(MTLRegion original, MTLOrigin origin) /*-[
         original.origin = origin;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native MTLRegion copyWithsize(MTLRegion original, MTLSize size) /*-[
         original.size = size;
-        return __new;
+        return original;
     ]-*/;
 
     

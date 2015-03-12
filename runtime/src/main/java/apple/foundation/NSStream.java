@@ -48,9 +48,9 @@ public class NSStream
     @Mapping("close")
     public native void close();
     @Mapping("propertyForKey:")
-    public native Object getProperty(NSStreamProperty key);
+    public native Object getProperty(String key);
     @Mapping("setProperty:forKey:")
-    protected native boolean setProperty(Object property, NSStreamProperty key);
+    protected native boolean setProperty(Object property, String key);
     @Mapping("scheduleInRunLoop:forMode:")
     public native void scheduleInRunLoop(NSRunLoop aRunLoop, String mode);
     @Mapping("removeFromRunLoop:forMode:")

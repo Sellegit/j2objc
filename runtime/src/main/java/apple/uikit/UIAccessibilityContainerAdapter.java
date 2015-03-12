@@ -47,6 +47,6 @@ public abstract class UIAccessibilityContainerAdapter
     @NotImplemented("accessibilityElementAtIndex:")
     public UIAccessibilityElement getAccessibilityElement(@MachineSizedSInt long index) { throw new UnsupportedOperationException(); }
     @NotImplemented("indexOfAccessibilityElement:")
-    public @MachineSizedSInt long indexOfAccessibilityElement(UIAccessibilityElement element) { throw new UnsupportedOperationException(); }
+    public @MachineSizedSInt long indexOfAccessibilityElement(Object element) { throw new UnsupportedOperationException(); }
     
 }

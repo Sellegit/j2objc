@@ -117,7 +117,7 @@ public class GKScore
      * @since Available in iOS 6.0 and later.
      */
     @Mapping("reportScores:withCompletionHandler:")
-    public static native void reportScores(NSArray<GKScore> scores, @Block VoidBlock1<NSError> completionHandler);
+    public static native void reportScores(NSArray<?> scores, @Block VoidBlock1<NSError> completionHandler);
     /**
      * @since Available in iOS 4.1 and later.
      * @deprecated Deprecated in iOS 7.0.
@@ -126,29 +126,17 @@ public class GKScore
     @Mapping("reportScoreWithCompletionHandler:")
     public native void reportScore(@Block VoidBlock1<NSError> completionHandler);
     /**
-     * @since Available in iOS 8.0 and later.
-     */
-    @Mapping("challengeComposeControllerWithMessage:players:completionHandler:")
-    public native UIViewController getChallengeComposeController(String message, NSArray<GKPlayer> players, @Block VoidBlock3<UIViewController, Boolean, NSArray<GKPlayer>> completionHandler);
-    /**
      * @since Available in iOS 6.0 and later.
      * @deprecated Deprecated in iOS 7.0.
      */
     @Deprecated
     @Mapping("issueChallengeToPlayers:message:")
-    public native void issueChallengeToPlayers(List<String> playerIDs, String message);
+    public native void issueChallengeToPlayers(NSArray<?> playerIDs, String message);
     /**
      * @since Available in iOS 7.0 and later.
      */
     @Mapping("reportScores:withEligibleChallenges:withCompletionHandler:")
-    public static native void reportScores(NSArray<GKScore> scores, NSArray<GKChallenge> challenges, @Block VoidBlock1<NSError> completionHandler);
-    /**
-     * @since Available in iOS 7.0 and later.
-     * @deprecated Deprecated in iOS 8.0.
-     */
-    @Deprecated
-    @Mapping("challengeComposeControllerWithPlayers:message:completionHandler:")
-    public native UIViewController getChallengeComposeController(List<String> playerIDs, String message, @Block VoidBlock3<UIViewController, Boolean, NSArray<NSString>> completionHandler);
+    public static native void reportScores(NSArray<?> scores, NSArray<?> challenges, @Block VoidBlock1<NSError> completionHandler);
     @Mapping("encodeWithCoder:")
     public native void encode(NSCoder aCoder);
     

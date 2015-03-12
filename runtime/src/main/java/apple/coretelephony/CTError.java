@@ -37,13 +37,13 @@ public class CTError
     ]-*/;
     public static native CTError copyWithdomain(CTError original, CTErrorDomain domain) /*-[
         original.domain = domain;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native CTError copyWitherror(CTError original, int error) /*-[
         original.error = error;
-        return __new;
+        return original;
     ]-*/;
 
     

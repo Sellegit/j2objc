@@ -61,11 +61,6 @@ public class EAAccessoryManager
     protected static native NSString AccessorySelectedKey();
     
     /**
-     * @since Available in iOS 6.0 and later.
-     */
-    @Mapping("showBluetoothAccessoryPickerWithNameFilter:completion:")
-    public native void showBluetoothAccessoryPicker(NSPredicate predicate, @Block VoidBlock1<NSError> completion);
-    /**
      * @since Available in iOS 3.0 and later.
      */
     @Mapping("registerForLocalNotifications")

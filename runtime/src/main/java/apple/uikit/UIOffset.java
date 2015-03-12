@@ -42,13 +42,13 @@ public class UIOffset
     ]-*/;
     public static native UIOffset copyWithhorizontal(UIOffset original, @MachineSizedFloat double horizontal) /*-[
         original.horizontal = horizontal;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native UIOffset copyWithvertical(UIOffset original, @MachineSizedFloat double vertical) /*-[
         original.vertical = vertical;
-        return __new;
+        return original;
     ]-*/;
 
     

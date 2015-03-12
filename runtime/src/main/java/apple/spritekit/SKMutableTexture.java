@@ -45,7 +45,7 @@ public class SKMutableTexture
     
     
     @Mapping("modifyPixelDataWithBlock:")
-    public native void modifyPixelData(@Block("(,@MachineSizedUInt)") VoidBlock2<Todo, Long> block);
+    public native void modifyPixelData(Todo block);
     @Mapping("mutableTextureWithSize:")
     public static native SKMutableTexture create(CGSize size);
     

@@ -138,7 +138,7 @@ public class UIImage
     @GlobalFunction("UIImageJPEGRepresentation")
     public native NSData toJPEGData(@MachineSizedFloat double compressionQuality);
     @GlobalFunction("UIImageWriteToSavedPhotosAlbum")
-    public native void saveToPhotosAlbum(Object completionTarget, Selector completionSelector, @Pointer long contextInfo);
+    public native void saveToPhotosAlbum(Object completionTarget, Selector completionSelector, Todo contextInfo);
     
     @Mapping("drawAtPoint:")
     public native void draw(CGPoint point);
@@ -219,7 +219,7 @@ public class UIImage
      * @since Available in iOS 5.0 and later.
      */
     @Mapping("animatedImageWithImages:duration:")
-    public static native UIImage createAnimated(NSArray<UIImage> images, double duration);
+    public static native UIImage createAnimated(NSArray<?> images, double duration);
     @Mapping("stretchableImageWithLeftCapWidth:topCapHeight:")
     public native UIImage createStretchable(@MachineSizedSInt long leftCapWidth, @MachineSizedSInt long topCapHeight);
     

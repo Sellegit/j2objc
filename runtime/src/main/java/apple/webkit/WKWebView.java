@@ -88,6 +88,6 @@ public class WKWebView
     @Mapping("stopLoading")
     public native void stopLoading();
     @Mapping("evaluateJavaScript:completionHandler:")
-    public native void evaluateJavaScript(String javaScriptString, @Block VoidBlock2<NSObject, NSError> completionHandler);
+    public native void evaluateJavaScript(String javaScriptString, Todo completionHandler);
     
 }

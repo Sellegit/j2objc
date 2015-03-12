@@ -180,7 +180,7 @@ public class SKPhysicsBody
     @Mapping("bodyWithTexture:alphaThreshold:size:")
     public static native SKPhysicsBody createWithTexture(SKTexture texture, float alphaThreshold, CGSize size);
     @Mapping("bodyWithBodies:")
-    public static native SKPhysicsBody createWithBodies(NSArray<SKPhysicsBody> bodies);
+    public static native SKPhysicsBody createWithBodies(NSArray<?> bodies);
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
     @Mapping("encodeWithCoder:")

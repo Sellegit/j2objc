@@ -44,19 +44,19 @@ public class NSOperatingSystemVersion
     ]-*/;
     public static native NSOperatingSystemVersion copyWithmajorVersion(NSOperatingSystemVersion original, @MachineSizedSInt long majorVersion) /*-[
         original.majorVersion = majorVersion;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native NSOperatingSystemVersion copyWithminorVersion(NSOperatingSystemVersion original, @MachineSizedSInt long minorVersion) /*-[
         original.minorVersion = minorVersion;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native NSOperatingSystemVersion copyWithpatchVersion(NSOperatingSystemVersion original, @MachineSizedSInt long patchVersion) /*-[
         original.patchVersion = patchVersion;
-        return __new;
+        return original;
     ]-*/;
 
     

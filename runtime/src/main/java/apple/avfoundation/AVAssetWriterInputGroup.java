@@ -34,7 +34,7 @@ public class AVAssetWriterInputGroup
     
     public AVAssetWriterInputGroup() {}
     @Mapping("initWithInputs:defaultInput:")
-    public AVAssetWriterInputGroup(NSArray<AVAssetWriterInput> inputs, AVAssetWriterInput defaultInput) { }
+    public AVAssetWriterInputGroup(NSArray<?> inputs, AVAssetWriterInput defaultInput) { }
     
     
     @Mapping("inputs")
@@ -45,6 +45,6 @@ public class AVAssetWriterInputGroup
     
     
     @Mapping("assetWriterInputGroupWithInputs:defaultInput:")
-    public static native AVAssetWriterInputGroup create(NSArray<AVAssetWriterInput> inputs, AVAssetWriterInput defaultInput);
+    public static native AVAssetWriterInputGroup create(NSArray<?> inputs, AVAssetWriterInput defaultInput);
     
 }

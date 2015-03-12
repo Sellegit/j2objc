@@ -34,7 +34,7 @@ public interface UIPrintInteractionControllerDelegate
     @Mapping("printInteractionControllerParentViewController:")
     UIViewController getParentViewController(UIPrintInteractionController printInteractionController);
     @Mapping("printInteractionController:choosePaper:")
-    UIPrintPaper choosePaper(UIPrintInteractionController printInteractionController, NSArray<UIPrintPaper> paperList);
+    UIPrintPaper choosePaper(UIPrintInteractionController printInteractionController, NSArray<?> paperList);
     @Mapping("printInteractionControllerWillPresentPrinterOptions:")
     void willPresentPrinterOptions(UIPrintInteractionController printInteractionController);
     @Mapping("printInteractionControllerDidPresentPrinterOptions:")

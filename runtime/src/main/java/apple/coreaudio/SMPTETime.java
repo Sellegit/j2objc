@@ -51,55 +51,55 @@ public class SMPTETime
     ]-*/;
     public static native SMPTETime copyWithmSubframes(SMPTETime original, short mSubframes) /*-[
         original.mSubframes = mSubframes;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native SMPTETime copyWithmSubframeDivisor(SMPTETime original, short mSubframeDivisor) /*-[
         original.mSubframeDivisor = mSubframeDivisor;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native SMPTETime copyWithmCounter(SMPTETime original, int mCounter) /*-[
         original.mCounter = mCounter;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native SMPTETime copyWithmType(SMPTETime original, SMPTETimeType mType) /*-[
         original.mType = mType;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native SMPTETime copyWithmFlags(SMPTETime original, SMPTEStateFlags mFlags) /*-[
         original.mFlags = mFlags;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native SMPTETime copyWithmHours(SMPTETime original, short mHours) /*-[
         original.mHours = mHours;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native SMPTETime copyWithmMinutes(SMPTETime original, short mMinutes) /*-[
         original.mMinutes = mMinutes;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native SMPTETime copyWithmSeconds(SMPTETime original, short mSeconds) /*-[
         original.mSeconds = mSeconds;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native SMPTETime copyWithmFrames(SMPTETime original, short mFrames) /*-[
         original.mFrames = mFrames;
-        return __new;
+        return original;
     ]-*/;
 
     

@@ -50,6 +50,6 @@ public class SKStoreProductViewController
      * @since Available in iOS 6.0 and later.
      */
     @Mapping("loadProductWithParameters:completionBlock:")
-    public native void loadProduct(SKStoreProductParameters parameters, @Block VoidBlock2<Boolean, NSError> block);
+    public native void loadProduct(NSDictionary<?, ?> parameters, @Block VoidBlock2<Boolean, NSError> block);
     
 }

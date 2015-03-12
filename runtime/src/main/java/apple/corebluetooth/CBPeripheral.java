@@ -60,11 +60,11 @@ public class CBPeripheral
     @Mapping("readRSSI")
     public native void readRSSI();
     @Mapping("discoverServices:")
-    public native void discoverServices(NSArray<CBUUID> serviceUUIDs);
+    public native void discoverServices(NSArray<?> serviceUUIDs);
     @Mapping("discoverIncludedServices:forService:")
-    public native void discoverIncludedServices(NSArray<CBUUID> includedServiceUUIDs, CBService service);
+    public native void discoverIncludedServices(NSArray<?> includedServiceUUIDs, CBService service);
     @Mapping("discoverCharacteristics:forService:")
-    public native void discoverCharacteristics(NSArray<CBUUID> characteristicUUIDs, CBService service);
+    public native void discoverCharacteristics(NSArray<?> characteristicUUIDs, CBService service);
     @Mapping("readValueForCharacteristic:")
     public native void readValue(CBCharacteristic characteristic);
     @Mapping("writeValue:forCharacteristic:type:")

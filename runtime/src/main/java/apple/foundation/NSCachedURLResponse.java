@@ -33,7 +33,7 @@ public class NSCachedURLResponse
     @Mapping("initWithResponse:data:")
     public NSCachedURLResponse(NSURLResponse response, NSData data) { }
     @Mapping("initWithResponse:data:userInfo:storagePolicy:")
-    public NSCachedURLResponse(NSURLResponse response, NSData data, NSDictionary<?, ?> userInfo, NSURLCacheStoragePolicy storagePolicy) { }
+    public NSCachedURLResponse(NSURLResponse response, NSData data, NSDictionary<?, ?> userInfo, @Representing("NSURLCacheStoragePolicy") @MachineSizedUInt long storagePolicy) { }
     
     
     @Mapping("response")

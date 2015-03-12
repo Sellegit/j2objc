@@ -48,7 +48,7 @@ public class PHCollectionList
     @Mapping("fetchCollectionListsContainingCollection:options:")
     public static native PHFetchResult fetchCollectionListsContainingCollection(PHCollection collection, PHFetchOptions options);
     @Mapping("fetchCollectionListsWithLocalIdentifiers:options:")
-    public static native PHFetchResult fetchCollectionListsWithLocalIdentifiers(List<String> identifiers, PHFetchOptions options);
+    public static native PHFetchResult fetchCollectionListsWithLocalIdentifiers(NSArray<?> identifiers, PHFetchOptions options);
     @Mapping("fetchCollectionListsWithType:subtype:options:")
     public static native PHFetchResult fetchCollectionListsWithType(@Representing("PHCollectionListType") @MachineSizedSInt long collectionListType, @Representing("PHCollectionListSubtype") @MachineSizedSInt long subtype, PHFetchOptions options);
     @Mapping("fetchMomentListsWithSubtype:containingMoment:options:")
@@ -56,7 +56,7 @@ public class PHCollectionList
     @Mapping("fetchMomentListsWithSubtype:options:")
     public static native PHFetchResult fetchMomentListsWithSubtype(@Representing("PHCollectionListSubtype") @MachineSizedSInt long momentListSubtype, PHFetchOptions options);
     @Mapping("transientCollectionListWithCollections:title:")
-    public static native PHCollectionList createTransientCollectionList(NSArray<PHCollection> collections, String title);
+    public static native PHCollectionList createTransientCollectionList(NSArray<?> collections, String title);
     @Mapping("transientCollectionListWithCollectionsFetchResult:title:")
     public static native PHCollectionList createTransientCollectionList(PHFetchResult fetchResult, String title);
     

@@ -39,19 +39,19 @@ public class CMMagneticField
     ]-*/;
     public static native CMMagneticField copyWithx(CMMagneticField original, double x) /*-[
         original.x = x;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native CMMagneticField copyWithy(CMMagneticField original, double y) /*-[
         original.y = y;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native CMMagneticField copyWithz(CMMagneticField original, double z) /*-[
         original.z = z;
-        return __new;
+        return original;
     ]-*/;
 
     

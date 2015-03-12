@@ -31,46 +31,46 @@ public class CGPDFContext
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGPDFContextCreate")
-    public static native CGPDFContext create(CGDataConsumer consumer, CGRect mediaBox, CGPDFContextOptions auxiliaryInfo);
+    public static native CGPDFContext create(CGDataConsumer consumer, CGRect mediaBox, NSDictionary<?, ?> auxiliaryInfo);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGPDFContextCreateWithURL")
-    public static native CGPDFContext createWithURL(NSURL url, CGRect mediaBox, CGPDFContextOptions auxiliaryInfo);
+    public static native CGPDFContext createWithURL(NSURL url, CGRect mediaBox, NSDictionary<?, ?> auxiliaryInfo);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGPDFContextClose")
-    public native void closeContext();
+    public static native void closeContext(CGContext context);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGPDFContextBeginPage")
-    public static native void beginPage(CGContext context, CGPDFBoxOptions pageInfo);
+    public static native void beginPage(CGContext context, NSDictionary<?, ?> pageInfo);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGPDFContextEndPage")
-    public native void endPage();
+    public static native void endPage(CGContext context);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CGPDFContextAddDocumentMetadata")
-    public native void addDocumentMetadata(NSData metadata);
+    public static native void addDocumentMetadata(CGContext context, NSData metadata);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGPDFContextSetURLForRect")
-    public native void setURLForRect(NSURL url, CGRect rect);
+    public static native void setURLForRect(CGContext context, NSURL url, CGRect rect);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGPDFContextAddDestinationAtPoint")
-    public native void addDestinationAtPoint(String name, CGPoint point);
+    public static native void addDestinationAtPoint(CGContext context, String name, CGPoint point);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGPDFContextSetDestinationForRect")
-    public native void setDestinationForRect(String name, CGRect rect);
+    public static native void setDestinationForRect(CGContext context, String name, CGRect rect);
     
 }

@@ -38,13 +38,13 @@ public class CGRect
     ]-*/;
     public static native CGRect copyWithorigin(CGRect original, CGPoint origin) /*-[
         original.origin = origin;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native CGRect copyWithsize(CGRect original, CGSize size) /*-[
         original.size = size;
-        return __new;
+        return original;
     ]-*/;
 
     
@@ -183,7 +183,7 @@ public class CGRect
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGRectMakeWithDictionaryRepresentation")
-    private static native boolean fromDictionary(NSDictionary<NSString, NSNumber> dict, CGRect rect);
+    private static native boolean fromDictionary(NSDictionary<?, ?> dict, CGRect rect);
     /**
      * @since Available in iOS 2.0 and later.
      */

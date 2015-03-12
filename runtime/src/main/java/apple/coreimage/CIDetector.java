@@ -43,6 +43,6 @@ public class CIDetector
      * @since Available in iOS 5.0 and later.
      */
     @Mapping("featuresInImage:options:")
-    public native NSArray<CIFeature> findFeatures(CIImage image, CIDetectorFeatureOptions options);
+    public native NSArray<CIFeature> findFeatures(CIImage image, NSDictionary<?, ?> options);
     
 }

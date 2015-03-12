@@ -51,7 +51,7 @@ public class ADClient
      * @since Available in iOS 8.0 and later.
      */
     @Mapping("addClientToSegments:replaceExisting:")
-    public native void addClientToSegments(List<String> segmentIdentifiers, boolean replaceExisting);
+    public native void addClientToSegments(NSArray<?> segmentIdentifiers, boolean replaceExisting);
     /**
      * @since Available in iOS 7.1 and later.
      */

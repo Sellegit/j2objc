@@ -111,7 +111,7 @@ public abstract class UITextInputAdapter
     @NotImplemented("characterOffsetOfPosition:withinRange:")
     public @MachineSizedSInt long getCharacterOffset(UITextPosition position, UITextRange range) { throw new UnsupportedOperationException(); }
     @NotImplemented("insertDictationResult:")
-    public void insertDictationResult(NSArray<UIDictationPhrase> dictationResult) { throw new UnsupportedOperationException(); }
+    public void insertDictationResult(NSArray<?> dictationResult) { throw new UnsupportedOperationException(); }
     @NotImplemented("dictationRecordingDidEnd")
     public void dictationRecordingDidEnd() { throw new UnsupportedOperationException(); }
     @NotImplemented("dictationRecognitionFailed")

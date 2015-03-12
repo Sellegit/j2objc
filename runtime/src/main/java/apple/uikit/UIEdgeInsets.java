@@ -46,25 +46,25 @@ public class UIEdgeInsets
     ]-*/;
     public static native UIEdgeInsets copyWithtop(UIEdgeInsets original, @MachineSizedFloat double top) /*-[
         original.top = top;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native UIEdgeInsets copyWithleft(UIEdgeInsets original, @MachineSizedFloat double left) /*-[
         original.left = left;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native UIEdgeInsets copyWithbottom(UIEdgeInsets original, @MachineSizedFloat double bottom) /*-[
         original.bottom = bottom;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native UIEdgeInsets copyWithright(UIEdgeInsets original, @MachineSizedFloat double right) /*-[
         original.right = right;
-        return __new;
+        return original;
     ]-*/;
 
     

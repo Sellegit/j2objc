@@ -42,19 +42,19 @@ public class AUNodeRenderCallback
     ]-*/;
     public static native AUNodeRenderCallback copyWithdestNode(AUNodeRenderCallback original, int destNode) /*-[
         original.destNode = destNode;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native AUNodeRenderCallback copyWithdestInputNumber(AUNodeRenderCallback original, int destInputNumber) /*-[
         original.destInputNumber = destInputNumber;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native AUNodeRenderCallback copyWithcback(AUNodeRenderCallback original, AURenderCallbackStruct cback) /*-[
         original.cback = cback;
-        return __new;
+        return original;
     ]-*/;
 
     

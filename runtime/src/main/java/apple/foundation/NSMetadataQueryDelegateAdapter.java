@@ -36,6 +36,6 @@ public abstract class NSMetadataQueryDelegateAdapter
     @NotImplemented("metadataQuery:replacementObjectForResultObject:")
     public Object getReplacementObject(NSMetadataQuery query, NSMetadataItem result) { throw new UnsupportedOperationException(); }
     @NotImplemented("metadataQuery:replacementValueForAttribute:value:")
-    public Object getReplacementValue(NSMetadataQuery query, NSMetadataItemAttribute attribute, Object attrValue) { throw new UnsupportedOperationException(); }
+    public Object getReplacementValue(NSMetadataQuery query, String attrName, Object attrValue) { throw new UnsupportedOperationException(); }
     
 }

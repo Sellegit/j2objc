@@ -41,13 +41,13 @@ public class CMTimeMapping
     ]-*/;
     public static native CMTimeMapping copyWithsource(CMTimeMapping original, CMTimeRange source) /*-[
         original.source = source;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native CMTimeMapping copyWithtarget(CMTimeMapping original, CMTimeRange target) /*-[
         original.target = target;
-        return __new;
+        return original;
     ]-*/;
 
     

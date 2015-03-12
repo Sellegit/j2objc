@@ -36,7 +36,7 @@ public interface AVPlayerItemMetadataOutputPushDelegate
      * @since Available in iOS 8.0 and later.
      */
     @Mapping("metadataOutput:didOutputTimedMetadataGroups:fromPlayerItemTrack:")
-    void didOutputTimedMetadataGroups(AVPlayerItemMetadataOutput output, NSArray<AVTimedMetadataGroup> groups, AVPlayerItemTrack track);
+    void didOutputTimedMetadataGroups(AVPlayerItemMetadataOutput output, NSArray<?> groups, AVPlayerItemTrack track);
     
     /*<adapter>*/
     /*</adapter>*/

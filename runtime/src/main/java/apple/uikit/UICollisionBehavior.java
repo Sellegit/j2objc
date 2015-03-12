@@ -33,7 +33,7 @@ public class UICollisionBehavior
     
     public UICollisionBehavior() {}
     @Mapping("initWithItems:")
-    public UICollisionBehavior(List<UIDynamicItem> items) { }
+    public UICollisionBehavior(NSArray<?> items) { }
     
     
     @Mapping("items")

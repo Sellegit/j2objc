@@ -32,8 +32,6 @@ public class NSHashTable <T>
     
     
     public NSHashTable() {}
-    @Mapping("initWithOptions:capacity:")
-    public NSHashTable(NSHashTableOptions options, @MachineSizedUInt long initialCapacity) { }
     
     
     @Mapping("count")
@@ -60,17 +58,17 @@ public class NSHashTable <T>
     @Mapping("containsObject:")
     private native boolean containsObject(Object anObject);
     @Mapping("intersectsHashTable:")
-    public native boolean intersects(NSHashTable<T> other);
+    public native boolean intersects(NSHashTable other);
     @Mapping("isEqualToHashTable:")
-    public native boolean isEqualTo(NSHashTable<T> other);
+    public native boolean isEqualTo(NSHashTable other);
     @Mapping("isSubsetOfHashTable:")
-    public native boolean isSubsetOf(NSHashTable<T> other);
+    public native boolean isSubsetOf(NSHashTable other);
     @Mapping("intersectHashTable:")
-    public native void intersect(NSHashTable<T> other);
+    public native void intersect(NSHashTable other);
     @Mapping("unionHashTable:")
-    public native void union(NSHashTable<T> other);
+    public native void union(NSHashTable other);
     @Mapping("minusHashTable:")
-    public native void minus(NSHashTable<T> other);
+    public native void minus(NSHashTable other);
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
     @Mapping("encodeWithCoder:")

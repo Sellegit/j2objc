@@ -128,10 +128,6 @@ public class SCNMaterial
     public native boolean isAnimationPaused(String key);
     @Mapping("removeAnimationForKey:fadeOutDuration:")
     public native void removeAnimation(String key, @MachineSizedFloat double duration);
-    @Mapping("handleBindingOfSymbol:usingBlock:")
-    public native void handleBindingOfSymbol(String symbol, @Block VoidBlock4<Integer, Integer, SCNNode, SCNRenderer> block);
-    @Mapping("handleUnbindingOfSymbol:usingBlock:")
-    public native void handleUnbindingOfSymbol(String symbol, @Block VoidBlock4<Integer, Integer, SCNNode, SCNRenderer> block);
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
     

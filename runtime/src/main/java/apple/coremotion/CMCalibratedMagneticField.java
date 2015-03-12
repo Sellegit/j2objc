@@ -37,13 +37,13 @@ public class CMCalibratedMagneticField
     ]-*/;
     public static native CMCalibratedMagneticField copyWithfield(CMCalibratedMagneticField original, CMMagneticField field) /*-[
         original.field = field;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native CMCalibratedMagneticField copyWithaccuracy(CMCalibratedMagneticField original, CMMagneticFieldCalibrationAccuracy accuracy) /*-[
         original.accuracy = accuracy;
-        return __new;
+        return original;
     ]-*/;
 
     

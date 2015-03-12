@@ -39,8 +39,8 @@ public class HKCorrelation
     @Mapping("objectsForType:")
     public native NSSet<HKSample> getObjectsForType(HKObjectType objectType);
     @Mapping("correlationWithType:startDate:endDate:objects:")
-    public static native HKCorrelation create(HKCorrelationType correlationType, NSDate startDate, NSDate endDate, NSSet<HKSample> objects);
+    public static native HKCorrelation create(HKCorrelationType correlationType, NSDate startDate, NSDate endDate, NSSet<?> objects);
     @Mapping("correlationWithType:startDate:endDate:objects:metadata:")
-    public static native HKCorrelation create(HKCorrelationType correlationType, NSDate startDate, NSDate endDate, NSSet<HKSample> objects, NSDictionary<?, ?> metadata);
+    public static native HKCorrelation create(HKCorrelationType correlationType, NSDate startDate, NSDate endDate, NSSet<?> objects, NSDictionary<?, ?> metadata);
     
 }

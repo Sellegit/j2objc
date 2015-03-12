@@ -46,6 +46,7 @@ public class NSInputStream
     
     
     
-    
+    @Mapping("read:maxLength:")
+    protected native @MachineSizedSInt long read(Todo buffer, @MachineSizedUInt long len);
     
 }

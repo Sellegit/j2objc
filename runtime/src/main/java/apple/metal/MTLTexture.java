@@ -61,6 +61,14 @@ public final class MTLTexture
     
     
     
+    @Mapping("getBytes:bytesPerRow:bytesPerImage:fromRegion:mipmapLevel:slice:")
+    protected native void getBytes(Todo pixelBytes, @MachineSizedUInt long bytesPerRow, @MachineSizedUInt long bytesPerImage, MTLRegion region, @MachineSizedUInt long level, @MachineSizedUInt long slice);
+    @Mapping("replaceRegion:mipmapLevel:slice:withBytes:bytesPerRow:bytesPerImage:")
+    protected native void replaceRegion(MTLRegion region, @MachineSizedUInt long level, @MachineSizedUInt long slice, Todo pixelBytes, @MachineSizedUInt long bytesPerRow, @MachineSizedUInt long bytesPerImage);
+    @Mapping("getBytes:bytesPerRow:fromRegion:mipmapLevel:")
+    protected native void getBytes(Todo pixelBytes, @MachineSizedUInt long bytesPerRow, MTLRegion region, @MachineSizedUInt long level);
+    @Mapping("replaceRegion:mipmapLevel:withBytes:bytesPerRow:")
+    protected native void replaceRegion(MTLRegion region, @MachineSizedUInt long level, Todo pixelBytes, @MachineSizedUInt long bytesPerRow);
     @Mapping("newTextureViewWithPixelFormat:")
     public native MTLTexture newTextureView(@Representing("MTLPixelFormat") @MachineSizedUInt long pixelFormat);
     @Mapping("setPurgeableState:")

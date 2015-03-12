@@ -63,7 +63,7 @@ public class HMHome
     @Mapping("assignAccessory:toRoom:completionHandler:")
     public native void assignAccessoryToRoom(HMAccessory accessory, HMRoom room, @Block VoidBlock1<NSError> completion);
     @Mapping("servicesWithTypes:")
-    public native NSArray<HMService> getServicesWithTypes(List<HMServiceType> serviceTypes);
+    public native NSArray<HMService> getServicesWithTypes(NSArray<?> serviceTypes);
     @Mapping("unblockAccessory:completionHandler:")
     public native void unblockAccessory(HMAccessory accessory, @Block VoidBlock1<NSError> completion);
     @Mapping("addUserWithCompletionHandler:")

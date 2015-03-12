@@ -44,25 +44,25 @@ public class ExtendedNoteOnEvent
     ]-*/;
     public static native ExtendedNoteOnEvent copyWithinstrumentID(ExtendedNoteOnEvent original, int instrumentID) /*-[
         original.instrumentID = instrumentID;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native ExtendedNoteOnEvent copyWithgroupID(ExtendedNoteOnEvent original, int groupID) /*-[
         original.groupID = groupID;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native ExtendedNoteOnEvent copyWithduration(ExtendedNoteOnEvent original, float duration) /*-[
         original.duration = duration;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native ExtendedNoteOnEvent copyWithextendedParams(ExtendedNoteOnEvent original, MusicDeviceNoteParams extendedParams) /*-[
         original.extendedParams = extendedParams;
-        return __new;
+        return original;
     ]-*/;
 
     

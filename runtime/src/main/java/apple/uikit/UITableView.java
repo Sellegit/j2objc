@@ -288,14 +288,14 @@ public class UITableView
     @Mapping("moveSection:toSection:")
     public native void moveSection(@MachineSizedSInt long section, @MachineSizedSInt long newSection);
     @Mapping("insertRowsAtIndexPaths:withRowAnimation:")
-    public native void insertRows(NSArray<NSIndexPath> indexPaths, @Representing("UITableViewRowAnimation") @MachineSizedSInt long animation);
+    public native void insertRows(NSArray<?> indexPaths, @Representing("UITableViewRowAnimation") @MachineSizedSInt long animation);
     @Mapping("deleteRowsAtIndexPaths:withRowAnimation:")
-    public native void deleteRows(NSArray<NSIndexPath> indexPaths, @Representing("UITableViewRowAnimation") @MachineSizedSInt long animation);
+    public native void deleteRows(NSArray<?> indexPaths, @Representing("UITableViewRowAnimation") @MachineSizedSInt long animation);
     /**
      * @since Available in iOS 3.0 and later.
      */
     @Mapping("reloadRowsAtIndexPaths:withRowAnimation:")
-    public native void reloadRows(NSArray<NSIndexPath> indexPaths, @Representing("UITableViewRowAnimation") @MachineSizedSInt long animation);
+    public native void reloadRows(NSArray<?> indexPaths, @Representing("UITableViewRowAnimation") @MachineSizedSInt long animation);
     /**
      * @since Available in iOS 5.0 and later.
      */

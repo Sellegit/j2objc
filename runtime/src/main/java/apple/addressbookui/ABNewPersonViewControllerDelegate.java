@@ -29,7 +29,7 @@ public interface ABNewPersonViewControllerDelegate
     
     
     @Mapping("newPersonViewController:didCompleteWithNewPerson:")
-    void didComplete(ABNewPersonViewController newPersonView, ABPerson person);
+    void didComplete(ABNewPersonViewController newPersonView, ABRecord person);
     
     /*<adapter>*/
     /*</adapter>*/

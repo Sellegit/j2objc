@@ -98,8 +98,6 @@ public class SCNPhysicsField
     public static native SCNPhysicsField createElectricField();
     @Mapping("magneticField")
     public static native SCNPhysicsField createMagneticField();
-    @Mapping("customFieldWithEvaluationBlock:")
-    public static native SCNPhysicsField createCustomField(@Block Block5<SCNVector3, SCNVector3, Float, Float, Double, SCNVector3> block);
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
     

@@ -72,6 +72,6 @@ public class AVOutputSettingsAssistant
     @Mapping("availableOutputSettingsPresets")
     public static native List<AVOutputSettingsPreset> getAvailableOutputSettingsPresets();
     @Mapping("outputSettingsAssistantWithPreset:")
-    public static native AVOutputSettingsAssistant create(AVOutputSettingsPreset presetIdentifier);
+    public static native AVOutputSettingsAssistant create(String presetIdentifier);
     
 }

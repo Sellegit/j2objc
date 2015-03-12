@@ -40,7 +40,7 @@ public class NSExtensionContext
     
     
     @Mapping("completeRequestReturningItems:completionHandler:")
-    public native void completeRequest(NSArray<NSExtensionItem> items, @Block VoidBooleanBlock completionHandler);
+    public native void completeRequest(NSArray<?> items, @Block VoidBooleanBlock completionHandler);
     @Mapping("cancelRequestWithError:")
     public native void cancelRequest(NSError error);
     @Mapping("openURL:completionHandler:")

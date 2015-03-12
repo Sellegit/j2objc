@@ -33,7 +33,7 @@ public class TWRequest
     
     public TWRequest() {}
     @Mapping("initWithURL:parameters:requestMethod:")
-    public TWRequest(NSURL url, NSDictionary<NSString, ?> parameters, @Representing("TWRequestMethod") int requestMethod) { }
+    public TWRequest(NSURL url, NSDictionary<?, ?> parameters, @Representing("TWRequestMethod") int requestMethod) { }
     
     
     @Mapping("account")
@@ -53,7 +53,5 @@ public class TWRequest
     public native void addMultiPartData(NSData data, String name, String type);
     @Mapping("signedURLRequest")
     public native NSURLRequest getSignedURLRequest();
-    @Mapping("performRequestWithHandler:")
-    public native void performRequest(@Block VoidBlock3<NSData, NSHTTPURLResponse, NSError> handler);
     
 }

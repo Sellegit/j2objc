@@ -33,7 +33,7 @@ public class UIPageViewController
     
     public UIPageViewController() {}
     @Mapping("initWithTransitionStyle:navigationOrientation:options:")
-    public UIPageViewController(@Representing("UIPageViewControllerTransitionStyle") @MachineSizedSInt long style, @Representing("UIPageViewControllerNavigationOrientation") @MachineSizedSInt long navigationOrientation, UIPageViewControllerOptions options) { }
+    public UIPageViewController(@Representing("UIPageViewControllerTransitionStyle") @MachineSizedSInt long style, @Representing("UIPageViewControllerNavigationOrientation") @MachineSizedSInt long navigationOrientation, NSDictionary<?, ?> options) { }
     @Mapping("initWithNibName:bundle:")
     public UIPageViewController(String nibNameOrNil, NSBundle nibBundleOrNil) { }
     
@@ -64,6 +64,6 @@ public class UIPageViewController
     
     
     @Mapping("setViewControllers:direction:animated:completion:")
-    public native void setViewControllers(NSArray<UIViewController> viewControllers, @Representing("UIPageViewControllerNavigationDirection") @MachineSizedSInt long direction, boolean animated, @Block VoidBooleanBlock completion);
+    public native void setViewControllers(NSArray<?> viewControllers, @Representing("UIPageViewControllerNavigationDirection") @MachineSizedSInt long direction, boolean animated, @Block VoidBooleanBlock completion);
     
 }

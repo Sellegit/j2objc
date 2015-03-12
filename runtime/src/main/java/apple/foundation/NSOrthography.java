@@ -36,7 +36,7 @@ public class NSOrthography
      * @since Available in iOS 4.0 and later.
      */
     @Mapping("initWithDominantScript:languageMap:")
-    public NSOrthography(String script, Map<String, List<String>> map) { }
+    public NSOrthography(String script, NSDictionary<?, ?> map) { }
     @Mapping("initWithCoder:")
     public NSOrthography(NSCoder aDecoder) { }
     

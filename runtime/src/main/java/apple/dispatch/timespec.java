@@ -36,13 +36,13 @@ import apple.coreservices.*;
     ]-*/;
     public static native timespec copyWithtv_sec(timespec original, @MachineSizedSInt long tv_sec) /*-[
         original.tv_sec = tv_sec;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native timespec copyWithtv_nsec(timespec original, @MachineSizedSInt long tv_nsec) /*-[
         original.tv_nsec = tv_nsec;
-        return __new;
+        return original;
     ]-*/;
 
     

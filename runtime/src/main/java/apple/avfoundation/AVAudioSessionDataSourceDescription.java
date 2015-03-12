@@ -71,6 +71,6 @@ public class AVAudioSessionDataSourceDescription
      * @since Available in iOS 7.0 and later.
      */
     @Mapping("setPreferredPolarPattern:error:")
-    public native boolean setPreferredPolarPattern(AVAudioSessionPolarPattern pattern, Todo outError);
+    public native boolean setPreferredPolarPattern(String pattern, Todo outError);
     
 }

@@ -41,25 +41,25 @@ public class AudioChannelLayout
     ]-*/;
     public static native AudioChannelLayout copyWithmChannelLayoutTag(AudioChannelLayout original, AudioChannelLayoutTag mChannelLayoutTag) /*-[
         original.mChannelLayoutTag = mChannelLayoutTag;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native AudioChannelLayout copyWithmChannelBitmap(AudioChannelLayout original, AudioChannelBit mChannelBitmap) /*-[
         original.mChannelBitmap = mChannelBitmap;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native AudioChannelLayout copyWithmNumberChannelDescriptions(AudioChannelLayout original, int mNumberChannelDescriptions) /*-[
         original.mNumberChannelDescriptions = mNumberChannelDescriptions;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native AudioChannelLayout copyWithmChannelDescriptions(AudioChannelLayout original, AudioChannelDescription mChannelDescriptions) /*-[
         original.mChannelDescriptions = mChannelDescriptions;
-        return __new;
+        return original;
     ]-*/;
 
     

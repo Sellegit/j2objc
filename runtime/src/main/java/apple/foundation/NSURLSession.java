@@ -62,7 +62,7 @@ public class NSURLSession
     @Mapping("flushWithCompletionHandler:")
     public native void flush(@Block Runnable completionHandler);
     @Mapping("getTasksWithCompletionHandler:")
-    public native void getTasks(@Block VoidBlock3<NSArray<NSURLSessionDataTask>, NSArray<NSURLSessionUploadTask>, NSArray<NSURLSessionDownloadTask>> completionHandler);
+    public native void getTasks(Todo completionHandler);
     @Mapping("dataTaskWithRequest:")
     public native NSURLSessionDataTask newDataTask(NSURLRequest request);
     @Mapping("dataTaskWithURL:")

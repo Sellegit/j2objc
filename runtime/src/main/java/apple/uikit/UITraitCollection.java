@@ -48,7 +48,7 @@ public class UITraitCollection
     @Mapping("containsTraitsInCollection:")
     public native boolean containsTraits(UITraitCollection trait);
     @Mapping("traitCollectionWithTraitsFromCollections:")
-    public static native UITraitCollection createWithTraits(NSArray<UITraitCollection> traitCollections);
+    public static native UITraitCollection createWithTraits(NSArray<?> traitCollections);
     @Mapping("traitCollectionWithUserInterfaceIdiom:")
     public static native UITraitCollection createWithUserInterfaceIdiom(@Representing("UIUserInterfaceIdiom") @MachineSizedSInt long idiom);
     @Mapping("traitCollectionWithDisplayScale:")

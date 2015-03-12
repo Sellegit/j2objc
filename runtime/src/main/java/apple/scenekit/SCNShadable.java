@@ -39,10 +39,7 @@ public interface SCNShadable
     void setProgram(SCNProgram v);
     
     
-    @Mapping("handleBindingOfSymbol:usingBlock:")
-    void handleBindingOfSymbol(String symbol, @Block VoidBlock4<Integer, Integer, SCNNode, SCNRenderer> block);
-    @Mapping("handleUnbindingOfSymbol:usingBlock:")
-    void handleUnbindingOfSymbol(String symbol, @Block VoidBlock4<Integer, Integer, SCNNode, SCNRenderer> block);
+    
     
     /*<adapter>*/
     /*</adapter>*/

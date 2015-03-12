@@ -31,7 +31,7 @@ public interface GKTurnBasedEventListener
      * @since Available in iOS 8.0 and later.
      */
     @Mapping("player:didRequestMatchWithOtherPlayers:")
-    void didRequestMatch(GKPlayer player, NSArray<GKPlayer> playersToInvite);
+    void didRequestMatchWithOtherPlayers(GKPlayer player, NSArray<?> playersToInvite);
     /**
      * @since Available in iOS 7.0 and later.
      */
@@ -53,14 +53,14 @@ public interface GKTurnBasedEventListener
      * @since Available in iOS 7.0 and later.
      */
     @Mapping("player:receivedExchangeReplies:forCompletedExchange:forMatch:")
-    void receivedExchangeReplies(GKPlayer player, NSArray<GKTurnBasedExchange> replies, GKTurnBasedExchange exchange, GKTurnBasedMatch match);
+    void receivedExchangeReplies(GKPlayer player, NSArray<?> replies, GKTurnBasedExchange exchange, GKTurnBasedMatch match);
     /**
      * @since Available in iOS 7.0 and later.
      * @deprecated Deprecated in iOS 8.0.
      */
     @Deprecated
     @Mapping("player:didRequestMatchWithPlayers:")
-    void didRequestMatch(GKPlayer player, List<String> playerIDsToInvite);
+    void didRequestMatchWithPlayers(GKPlayer player, NSArray<?> playerIDsToInvite);
     
     /*<adapter>*/
     /*</adapter>*/

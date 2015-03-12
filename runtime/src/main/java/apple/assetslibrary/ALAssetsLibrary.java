@@ -40,34 +40,6 @@ public class ALAssetsLibrary
     @GlobalConstant("ALAssetsLibraryChangedNotification")
     public static native NSString ChangedNotification();
     
-    @Mapping("enumerateGroupsWithTypes:usingBlock:failureBlock:")
-    public native void enumerateGroups(@Representing("ALAssetsGroupType") int types, @Block VoidBlock2<ALAssetsGroup, Todo> enumerationBlock, @Block VoidBlock1<NSError> failureBlock);
-    @Mapping("assetForURL:resultBlock:failureBlock:")
-    public native void getAsset(NSURL assetURL, @Block VoidBlock1<ALAsset> resultBlock, @Block VoidBlock1<NSError> failureBlock);
-    /**
-     * @since Available in iOS 5.0 and later.
-     */
-    @Mapping("groupForURL:resultBlock:failureBlock:")
-    public native void getGroup(NSURL groupURL, @Block VoidBlock1<ALAssetsGroup> resultBlock, @Block VoidBlock1<NSError> failureBlock);
-    /**
-     * @since Available in iOS 5.0 and later.
-     */
-    @Mapping("addAssetsGroupAlbumWithName:resultBlock:failureBlock:")
-    public native void addAssetsGroupAlbum(String name, @Block VoidBlock1<ALAssetsGroup> resultBlock, @Block VoidBlock1<NSError> failureBlock);
-    @Mapping("writeImageToSavedPhotosAlbum:orientation:completionBlock:")
-    public native void writeImageToSavedPhotosAlbum(CGImage imageRef, @Representing("ALAssetOrientation") @MachineSizedSInt long orientation, @Block VoidBlock2<NSURL, NSError> completionBlock);
-    /**
-     * @since Available in iOS 4.1 and later.
-     */
-    @Mapping("writeImageToSavedPhotosAlbum:metadata:completionBlock:")
-    public native void writeImageToSavedPhotosAlbum(CGImage imageRef, CGImageProperties metadata, @Block VoidBlock2<NSURL, NSError> completionBlock);
-    /**
-     * @since Available in iOS 4.1 and later.
-     */
-    @Mapping("writeImageDataToSavedPhotosAlbum:metadata:completionBlock:")
-    public native void writeImageDataToSavedPhotosAlbum(NSData imageData, CGImageProperties metadata, @Block VoidBlock2<NSURL, NSError> completionBlock);
-    @Mapping("writeVideoAtPathToSavedPhotosAlbum:completionBlock:")
-    public native void writeVideoToSavedPhotosAlbum(NSURL videoPathURL, @Block VoidBlock2<NSURL, NSError> completionBlock);
     @Mapping("videoAtPathIsCompatibleWithSavedPhotosAlbum:")
     public native boolean isVideoCompatibleWithSavedPhotosAlbum(NSURL videoPathURL);
     /**

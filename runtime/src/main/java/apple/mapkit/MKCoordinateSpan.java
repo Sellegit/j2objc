@@ -40,13 +40,13 @@ public class MKCoordinateSpan
     ]-*/;
     public static native MKCoordinateSpan copyWithlatitudeDelta(MKCoordinateSpan original, double latitudeDelta) /*-[
         original.latitudeDelta = latitudeDelta;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native MKCoordinateSpan copyWithlongitudeDelta(MKCoordinateSpan original, double longitudeDelta) /*-[
         original.longitudeDelta = longitudeDelta;
-        return __new;
+        return original;
     ]-*/;
 
     

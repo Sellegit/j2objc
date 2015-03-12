@@ -39,7 +39,7 @@ public interface CLLocationManagerDelegate
      * @since Available in iOS 6.0 and later.
      */
     @Mapping("locationManager:didUpdateLocations:")
-    void didUpdateLocations(CLLocationManager manager, NSArray<CLLocation> locations);
+    void didUpdateLocations(CLLocationManager manager, NSArray<?> locations);
     /**
      * @since Available in iOS 3.0 and later.
      */

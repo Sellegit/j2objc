@@ -181,11 +181,11 @@ public class MKMapView
     @Mapping("addAnnotation:")
     public native void addAnnotation(MKAnnotation annotation);
     @Mapping("addAnnotations:")
-    public native void addAnnotations(List<? extends MKAnnotation> annotations);
+    public native void addAnnotations(NSArray<?> annotations);
     @Mapping("removeAnnotation:")
     public native void removeAnnotation(MKAnnotation annotation);
     @Mapping("removeAnnotations:")
-    public native void removeAnnotations(List<? extends MKAnnotation> annotations);
+    public native void removeAnnotations(NSArray<?> annotations);
     /**
      * @since Available in iOS 4.2 and later.
      */
@@ -203,7 +203,7 @@ public class MKMapView
      * @since Available in iOS 7.0 and later.
      */
     @Mapping("showAnnotations:animated:")
-    public native void showAnnotations(List<? extends MKAnnotation> annotations, boolean animated);
+    public native void showAnnotations(NSArray<?> annotations, boolean animated);
     /**
      * @since Available in iOS 7.0 and later.
      */
@@ -213,7 +213,7 @@ public class MKMapView
      * @since Available in iOS 7.0 and later.
      */
     @Mapping("addOverlays:level:")
-    public native void addOverlays(List<? extends MKOverlay> overlays, @Representing("MKOverlayLevel") @MachineSizedSInt long level);
+    public native void addOverlays(NSArray<?> overlays, @Representing("MKOverlayLevel") @MachineSizedSInt long level);
     /**
      * @since Available in iOS 4.0 and later.
      */
@@ -223,7 +223,7 @@ public class MKMapView
      * @since Available in iOS 4.0 and later.
      */
     @Mapping("removeOverlays:")
-    public native void removeOverlays(List<? extends MKOverlay> overlays);
+    public native void removeOverlays(NSArray<?> overlays);
     /**
      * @since Available in iOS 7.0 and later.
      */
@@ -270,7 +270,7 @@ public class MKMapView
      * @since Available in iOS 4.0 and later.
      */
     @Mapping("addOverlays:")
-    public native void addOverlays(List<? extends MKOverlay> overlays);
+    public native void addOverlays(NSArray<?> overlays);
     /**
      * @since Available in iOS 4.0 and later.
      */

@@ -48,20 +48,20 @@ public class AVMediaSelectionGroup
     
     
     @Mapping("mediaSelectionOptionWithPropertyList:")
-    public native AVMediaSelectionOption getMediaSelectionOption(NSPropertyList plist);
+    public native AVMediaSelectionOption getMediaSelectionOption(Object plist);
     @Mapping("playableMediaSelectionOptionsFromArray:")
-    public static native NSArray<AVMediaSelectionOption> filterPlayableMediaSelectionOptions(NSArray<AVMediaSelectionOption> mediaSelectionOptions);
+    public static native NSArray<AVMediaSelectionOption> filterPlayableMediaSelectionOptions(NSArray<?> mediaSelectionOptions);
     /**
      * @since Available in iOS 6.0 and later.
      */
     @Mapping("mediaSelectionOptionsFromArray:filteredAndSortedAccordingToPreferredLanguages:")
-    public static native NSArray<AVMediaSelectionOption> filterMediaSelectionOptionsByPreferredLanguages(NSArray<AVMediaSelectionOption> mediaSelectionOptions, List<String> preferredLanguages);
+    public static native NSArray<AVMediaSelectionOption> filterMediaSelectionOptionsByPreferredLanguages(NSArray<?> mediaSelectionOptions, NSArray<?> preferredLanguages);
     @Mapping("mediaSelectionOptionsFromArray:withLocale:")
-    public static native NSArray<AVMediaSelectionOption> filterMediaSelectionOptionsByLocale(NSArray<AVMediaSelectionOption> mediaSelectionOptions, NSLocale locale);
+    public static native NSArray<AVMediaSelectionOption> filterMediaSelectionOptionsByLocale(NSArray<?> mediaSelectionOptions, NSLocale locale);
     @Mapping("mediaSelectionOptionsFromArray:withMediaCharacteristics:")
-    public static native NSArray<AVMediaSelectionOption> filterMediaSelectionOptionsWithMediaCharacteristics(NSArray<AVMediaSelectionOption> mediaSelectionOptions, List<AVMediaCharacteristic> mediaCharacteristics);
+    public static native NSArray<AVMediaSelectionOption> filterMediaSelectionOptionsWithMediaCharacteristics(NSArray<?> mediaSelectionOptions, NSArray<?> mediaCharacteristics);
     @Mapping("mediaSelectionOptionsFromArray:withoutMediaCharacteristics:")
-    public static native NSArray<AVMediaSelectionOption> filterMediaSelectionOptionsWithoutMediaCharacteristics(NSArray<AVMediaSelectionOption> mediaSelectionOptions, List<AVMediaCharacteristic> mediaCharacteristics);
+    public static native NSArray<AVMediaSelectionOption> filterMediaSelectionOptionsWithoutMediaCharacteristics(NSArray<?> mediaSelectionOptions, NSArray<?> mediaCharacteristics);
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
     

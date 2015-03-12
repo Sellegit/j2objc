@@ -40,13 +40,13 @@ public class CAFChunkHeader
     ]-*/;
     public static native CAFChunkHeader copyWithmChunkType(CAFChunkHeader original, int mChunkType) /*-[
         original.mChunkType = mChunkType;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native CAFChunkHeader copyWithmChunkSize(CAFChunkHeader original, long mChunkSize) /*-[
         original.mChunkSize = mChunkSize;
-        return __new;
+        return original;
     ]-*/;
 
     

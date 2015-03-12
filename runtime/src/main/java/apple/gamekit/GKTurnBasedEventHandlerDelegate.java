@@ -37,7 +37,7 @@ public interface GKTurnBasedEventHandlerDelegate
      */
     @Deprecated
     @Mapping("handleInviteFromGameCenter:")
-    void handleInvite(List<String> playersToInvite);
+    void handleInvite(NSArray<?> playersToInvite);
     /**
      * @since Available in iOS 6.0 and later.
      * @deprecated Deprecated in iOS 7.0.

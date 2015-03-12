@@ -39,7 +39,7 @@ public class CMBlockBufferCustomBlockSource
     
     public static native CMBlockBufferCustomBlockSource copyWithversion(CMBlockBufferCustomBlockSource original, int version) /*-[
         original.version = version;
-        return __new;
+        return original;
     ]-*/;
 
     
@@ -47,7 +47,7 @@ public class CMBlockBufferCustomBlockSource
     
     public static native CMBlockBufferCustomBlockSource copyWithrefCon(CMBlockBufferCustomBlockSource original, Todo refCon) /*-[
         original.refCon = refCon;
-        return __new;
+        return original;
     ]-*/;
 
     

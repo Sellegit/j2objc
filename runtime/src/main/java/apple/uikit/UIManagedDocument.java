@@ -52,7 +52,7 @@ public class UIManagedDocument
     
     
     @Mapping("configurePersistentStoreCoordinatorForURL:ofType:modelConfiguration:storeOptions:error:")
-    protected native boolean configurePersistentStoreCoordinator(NSURL storeURL, String fileType, String configuration, NSPersistentStoreOptions storeOptions, Todo error);
+    protected native boolean configurePersistentStoreCoordinator(NSURL storeURL, String fileType, String configuration, NSDictionary<?, ?> storeOptions, Todo error);
     @Mapping("persistentStoreTypeForFileType:")
     public native String getPersistentStoreType(String fileType);
     @Mapping("readAdditionalContentFromURL:error:")

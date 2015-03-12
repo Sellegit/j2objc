@@ -32,6 +32,8 @@ public class NSOrderedSet <T>
     
     
     public NSOrderedSet() {}
+    @Mapping("initWithObjects:count:")
+    public NSOrderedSet(Todo objects, @MachineSizedUInt long cnt) { }
     @Mapping("initWithOrderedSet:")
     public NSOrderedSet(NSOrderedSet<?> set) { }
     @Mapping("initWithArray:")

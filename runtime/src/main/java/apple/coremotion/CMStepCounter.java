@@ -35,10 +35,6 @@ public class CMStepCounter
     
     
     
-    @Mapping("queryStepCountStartingFrom:to:toQueue:withHandler:")
-    public native void queryStepCount(NSDate start, NSDate end, NSOperationQueue queue, @Block("(@MachineSizedSInt,)") VoidBlock2<Long, NSError> handler);
-    @Mapping("startStepCountingUpdatesToQueue:updateOn:withHandler:")
-    public native void startStepCountingUpdates(NSOperationQueue queue, @MachineSizedSInt long stepCounts, @Block("(@MachineSizedSInt,,)") VoidBlock3<Long, NSDate, NSError> handler);
     @Mapping("stopStepCountingUpdates")
     public native void stopStepCountingUpdates();
     @Mapping("isStepCountingAvailable")

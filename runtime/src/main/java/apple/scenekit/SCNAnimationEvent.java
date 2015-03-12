@@ -37,7 +37,6 @@ public class SCNAnimationEvent
     
     
     
-    @Mapping("animationEventWithKeyTime:block:")
-    public static native SCNAnimationEvent create(@MachineSizedFloat double time, @Block VoidBlock3<CAAnimation, NSObject, Boolean> eventBlock);
+    
     
 }

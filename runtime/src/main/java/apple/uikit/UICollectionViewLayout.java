@@ -85,7 +85,7 @@ public class UICollectionViewLayout
     @Mapping("collectionViewContentSize")
     public native CGSize getCollectionViewContentSize();
     @Mapping("prepareForCollectionViewUpdates:")
-    public native void prepareForCollectionViewUpdates(NSArray<UICollectionViewUpdateItem> updateItems);
+    public native void prepareForCollectionViewUpdates(NSArray<?> updateItems);
     @Mapping("finalizeCollectionViewUpdates")
     public native void finalizeCollectionViewUpdates();
     @Mapping("prepareForAnimatedBoundsChange:")

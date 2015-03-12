@@ -33,12 +33,12 @@ public class CGColor
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGColorCreate")
-    protected static native CGColor create(CGColorSpace space, @Pointer long components);
+    protected static native CGColor create(CGColorSpace space, Todo components);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGColorCreateWithPattern")
-    protected static native CGColor createWithPattern(CGColorSpace space, CGPattern pattern, @Pointer long components);
+    protected static native CGColor createWithPattern(CGColorSpace space, CGPattern pattern, Todo components);
     /**
      * @since Available in iOS 2.0 and later.
      */

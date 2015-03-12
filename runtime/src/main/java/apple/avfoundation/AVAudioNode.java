@@ -56,8 +56,6 @@ public class AVAudioNode
     public native String getNameForInputBus(@MachineSizedUInt long bus);
     @Mapping("nameForOutputBus:")
     public native String getNameForOutputBus(@MachineSizedUInt long bus);
-    @Mapping("installTapOnBus:bufferSize:format:block:")
-    public native void installTapOnBus(@MachineSizedUInt long bus, int bufferSize, AVAudioFormat format, @Block VoidBlock2<AVAudioPCMBuffer, AVAudioTime> tapBlock);
     @Mapping("removeTapOnBus:")
     public native void removeTapOnBus(@MachineSizedUInt long bus);
     

@@ -46,12 +46,12 @@ public interface UIApplicationDelegate
      * @since Available in iOS 6.0 and later.
      */
     @Mapping("application:willFinishLaunchingWithOptions:")
-    boolean willFinishLaunching(UIApplication application, UIApplicationLaunchOptions launchOptions);
+    boolean willFinishLaunching(UIApplication application, NSDictionary<?, ?> launchOptions);
     /**
      * @since Available in iOS 3.0 and later.
      */
     @Mapping("application:didFinishLaunchingWithOptions:")
-    boolean didFinishLaunching(UIApplication application, UIApplicationLaunchOptions launchOptions);
+    boolean didFinishLaunching(UIApplication application, NSDictionary<?, ?> launchOptions);
     @Mapping("applicationDidBecomeActive:")
     void didBecomeActive(UIApplication application);
     @Mapping("applicationWillResignActive:")
@@ -62,7 +62,7 @@ public interface UIApplicationDelegate
      * @since Available in iOS 4.2 and later.
      */
     @Mapping("application:openURL:sourceApplication:annotation:")
-    boolean openURL(UIApplication application, NSURL url, String sourceApplication, NSPropertyList annotation);
+    boolean openURL(UIApplication application, NSURL url, String sourceApplication, Object annotation);
     @Mapping("applicationDidReceiveMemoryWarning:")
     void didReceiveMemoryWarning(UIApplication application);
     @Mapping("applicationWillTerminate:")
@@ -156,12 +156,12 @@ public interface UIApplicationDelegate
      * @since Available in iOS 8.0 and later.
      */
     @Mapping("application:shouldAllowExtensionPointIdentifier:")
-    boolean shouldAllowExtensionPointIdentifier(UIApplication application, UIApplicationExtensionPointIdentifier extensionPointIdentifier);
+    boolean shouldAllowExtensionPointIdentifier(UIApplication application, String extensionPointIdentifier);
     /**
      * @since Available in iOS 6.0 and later.
      */
     @Mapping("application:viewControllerWithRestorationIdentifierPath:coder:")
-    UIViewController getViewController(UIApplication application, List<String> identifierComponents, NSCoder coder);
+    UIViewController getViewController(UIApplication application, NSArray<?> identifierComponents, NSCoder coder);
     /**
      * @since Available in iOS 6.0 and later.
      */
@@ -191,7 +191,7 @@ public interface UIApplicationDelegate
      * @since Available in iOS 8.0 and later.
      */
     @Mapping("application:continueUserActivity:restorationHandler:")
-    boolean continueUserActivity(UIApplication application, NSUserActivity userActivity, @Block VoidBlock1<NSArray<UIResponder>> restorationHandler);
+    boolean continueUserActivity(UIApplication application, NSUserActivity userActivity, Todo restorationHandler);
     /**
      * @since Available in iOS 8.0 and later.
      */

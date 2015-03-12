@@ -54,55 +54,55 @@ public class CVSMPTETime
     ]-*/;
     public static native CVSMPTETime copyWithsubframes(CVSMPTETime original, short subframes) /*-[
         original.subframes = subframes;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native CVSMPTETime copyWithsubframeDivisor(CVSMPTETime original, short subframeDivisor) /*-[
         original.subframeDivisor = subframeDivisor;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native CVSMPTETime copyWithcounter(CVSMPTETime original, int counter) /*-[
         original.counter = counter;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native CVSMPTETime copyWithtype(CVSMPTETime original, int type) /*-[
         original.type = type;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native CVSMPTETime copyWithflags(CVSMPTETime original, int flags) /*-[
         original.flags = flags;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native CVSMPTETime copyWithhours(CVSMPTETime original, short hours) /*-[
         original.hours = hours;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native CVSMPTETime copyWithminutes(CVSMPTETime original, short minutes) /*-[
         original.minutes = minutes;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native CVSMPTETime copyWithseconds(CVSMPTETime original, short seconds) /*-[
         original.seconds = seconds;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native CVSMPTETime copyWithframes(CVSMPTETime original, short frames) /*-[
         original.frames = frames;
-        return __new;
+        return original;
     ]-*/;
 
     

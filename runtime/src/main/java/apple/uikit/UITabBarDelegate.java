@@ -34,13 +34,13 @@ public interface UITabBarDelegate
     @Mapping("tabBar:didSelectItem:")
     void didSelectItem(UITabBar tabBar, UITabBarItem item);
     @Mapping("tabBar:willBeginCustomizingItems:")
-    void willBeginCustomizingItems(UITabBar tabBar, NSArray<UITabBarItem> items);
+    void willBeginCustomizingItems(UITabBar tabBar, NSArray<?> items);
     @Mapping("tabBar:didBeginCustomizingItems:")
-    void didBeginCustomizingItems(UITabBar tabBar, NSArray<UITabBarItem> items);
+    void didBeginCustomizingItems(UITabBar tabBar, NSArray<?> items);
     @Mapping("tabBar:willEndCustomizingItems:changed:")
-    void willEndCustomizingItems(UITabBar tabBar, NSArray<UITabBarItem> items, boolean changed);
+    void willEndCustomizingItems(UITabBar tabBar, NSArray<?> items, boolean changed);
     @Mapping("tabBar:didEndCustomizingItems:changed:")
-    void didEndCustomizingItems(UITabBar tabBar, NSArray<UITabBarItem> items, boolean changed);
+    void didEndCustomizingItems(UITabBar tabBar, NSArray<?> items, boolean changed);
     
     /*<adapter>*/
     /*</adapter>*/

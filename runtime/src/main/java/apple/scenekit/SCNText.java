@@ -77,6 +77,6 @@ public class SCNText
     
     
     @Mapping("textWithString:extrusionDepth:")
-    public static native SCNText create(NSAttributedString string, @MachineSizedFloat double extrusionDepth);
+    public static native SCNText create(Object string, @MachineSizedFloat double extrusionDepth);
     
 }

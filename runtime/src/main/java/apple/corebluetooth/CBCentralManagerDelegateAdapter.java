@@ -32,13 +32,13 @@ public abstract class CBCentralManagerDelegateAdapter
     @NotImplemented("centralManagerDidUpdateState:")
     public void didUpdateState(CBCentralManager central) { throw new UnsupportedOperationException(); }
     @NotImplemented("centralManager:willRestoreState:")
-    public void willRestoreState(CBCentralManager central, CBCentralManagerRestoredState dict) { throw new UnsupportedOperationException(); }
+    public void willRestoreState(CBCentralManager central, NSDictionary<?, ?> dict) { throw new UnsupportedOperationException(); }
     @NotImplemented("centralManager:didRetrievePeripherals:")
-    public void didRetrievePeripherals(CBCentralManager central, NSArray<CBPeripheral> peripherals) { throw new UnsupportedOperationException(); }
+    public void didRetrievePeripherals(CBCentralManager central, NSArray<?> peripherals) { throw new UnsupportedOperationException(); }
     @NotImplemented("centralManager:didRetrieveConnectedPeripherals:")
-    public void didRetrieveConnectedPeripherals(CBCentralManager central, NSArray<CBPeripheral> peripherals) { throw new UnsupportedOperationException(); }
+    public void didRetrieveConnectedPeripherals(CBCentralManager central, NSArray<?> peripherals) { throw new UnsupportedOperationException(); }
     @NotImplemented("centralManager:didDiscoverPeripheral:advertisementData:RSSI:")
-    public void didDiscoverPeripheral(CBCentralManager central, CBPeripheral peripheral, CBAdvertisementData advertisementData, NSNumber rssi) { throw new UnsupportedOperationException(); }
+    public void didDiscoverPeripheral(CBCentralManager central, CBPeripheral peripheral, NSDictionary<?, ?> advertisementData, NSNumber RSSI) { throw new UnsupportedOperationException(); }
     @NotImplemented("centralManager:didConnectPeripheral:")
     public void didConnectPeripheral(CBCentralManager central, CBPeripheral peripheral) { throw new UnsupportedOperationException(); }
     @NotImplemented("centralManager:didFailToConnectPeripheral:error:")

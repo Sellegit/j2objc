@@ -178,22 +178,22 @@ public class AVAssetWriterInput
     @Mapping("markAsFinished")
     public native void markAsFinished();
     @Mapping("assetWriterInputWithMediaType:outputSettings:")
-    public static native AVAssetWriterInput create(AVMediaType mediaType, NSDictionary<NSString, NSObject> outputSettings);
+    public static native AVAssetWriterInput create(String mediaType, NSDictionary<?, ?> outputSettings);
     /**
      * @since Available in iOS 6.0 and later.
      */
     @Mapping("assetWriterInputWithMediaType:outputSettings:sourceFormatHint:")
-    public static native AVAssetWriterInput create(AVMediaType mediaType, NSDictionary<NSString, NSObject> outputSettings, CMFormatDescription sourceFormatHint);
+    public static native AVAssetWriterInput create(String mediaType, NSDictionary<?, ?> outputSettings, CMFormatDescription sourceFormatHint);
     /**
      * @since Available in iOS 7.0 and later.
      */
     @Mapping("canAddTrackAssociationWithTrackOfInput:type:")
-    public native boolean canAddTrackAssociation(AVAssetWriterInput input, AVTrackAssociationType trackAssociationType);
+    public native boolean canAddTrackAssociation(AVAssetWriterInput input, String trackAssociationType);
     /**
      * @since Available in iOS 7.0 and later.
      */
     @Mapping("addTrackAssociationWithTrackOfInput:type:")
-    public native void addTrackAssociation(AVAssetWriterInput input, AVTrackAssociationType trackAssociationType);
+    public native void addTrackAssociation(AVAssetWriterInput input, String trackAssociationType);
     /**
      * @since Available in iOS 8.0 and later.
      */

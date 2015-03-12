@@ -50,43 +50,43 @@ public class CAFAudioDescription
     ]-*/;
     public static native CAFAudioDescription copyWithmSampleRate(CAFAudioDescription original, double mSampleRate) /*-[
         original.mSampleRate = mSampleRate;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native CAFAudioDescription copyWithmFormatID(CAFAudioDescription original, int mFormatID) /*-[
         original.mFormatID = mFormatID;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native CAFAudioDescription copyWithmFormatFlags(CAFAudioDescription original, int mFormatFlags) /*-[
         original.mFormatFlags = mFormatFlags;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native CAFAudioDescription copyWithmBytesPerPacket(CAFAudioDescription original, int mBytesPerPacket) /*-[
         original.mBytesPerPacket = mBytesPerPacket;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native CAFAudioDescription copyWithmFramesPerPacket(CAFAudioDescription original, int mFramesPerPacket) /*-[
         original.mFramesPerPacket = mFramesPerPacket;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native CAFAudioDescription copyWithmChannelsPerFrame(CAFAudioDescription original, int mChannelsPerFrame) /*-[
         original.mChannelsPerFrame = mChannelsPerFrame;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native CAFAudioDescription copyWithmBitsPerChannel(CAFAudioDescription original, int mBitsPerChannel) /*-[
         original.mBitsPerChannel = mBitsPerChannel;
-        return __new;
+        return original;
     ]-*/;
 
     

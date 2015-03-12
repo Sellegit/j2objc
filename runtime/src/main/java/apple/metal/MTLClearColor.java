@@ -42,25 +42,25 @@ public class MTLClearColor
     ]-*/;
     public static native MTLClearColor copyWithred(MTLClearColor original, double red) /*-[
         original.red = red;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native MTLClearColor copyWithgreen(MTLClearColor original, double green) /*-[
         original.green = green;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native MTLClearColor copyWithblue(MTLClearColor original, double blue) /*-[
         original.blue = blue;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native MTLClearColor copyWithalpha(MTLClearColor original, double alpha) /*-[
         original.alpha = alpha;
-        return __new;
+        return original;
     ]-*/;
 
     

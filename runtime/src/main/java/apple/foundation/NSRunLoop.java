@@ -63,7 +63,7 @@ public class NSRunLoop
     @Mapping("runMode:beforeDate:")
     public native boolean runUntil(String mode, NSDate limitDate);
     @Mapping("performSelector:target:argument:order:modes:")
-    public native void perform(Selector aSelector, Object target, Object arg, @MachineSizedUInt long order, List<String> modes);
+    public native void perform(Selector aSelector, Object target, Object arg, @MachineSizedUInt long order, NSArray<?> modes);
     @Mapping("cancelPerformSelector:target:argument:")
     public native void cancel(Selector aSelector, Object target, Object arg);
     @Mapping("cancelPerformSelectorsWithTarget:")

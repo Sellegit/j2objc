@@ -30,7 +30,7 @@ public class MCAdvertiserAssistant
     
     public MCAdvertiserAssistant() {}
     @Mapping("initWithServiceType:discoveryInfo:session:")
-    public MCAdvertiserAssistant(String serviceType, Map<String, String> info, MCSession session) { }
+    public MCAdvertiserAssistant(String serviceType, NSDictionary<?, ?> info, MCSession session) { }
     
     
     @Mapping("delegate")

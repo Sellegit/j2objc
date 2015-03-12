@@ -53,7 +53,7 @@ public class GKPlayer
     public static native NSString DidChangeNotification();
     
     @Mapping("loadPlayersForIdentifiers:withCompletionHandler:")
-    public static native void loadPlayers(List<String> identifiers, @Block VoidBlock2<NSArray<GKPlayer>, NSError> completionHandler);
+    public static native void loadPlayers(NSArray<?> identifiers, Todo completionHandler);
     /**
      * @since Available in iOS 5.0 and later.
      */

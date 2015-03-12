@@ -38,7 +38,7 @@ public class CAFInfoStrings
     ]-*/;
     public static native CAFInfoStrings copyWithmNumEntries(CAFInfoStrings original, int mNumEntries) /*-[
         original.mNumEntries = mNumEntries;
-        return __new;
+        return original;
     ]-*/;
 
     

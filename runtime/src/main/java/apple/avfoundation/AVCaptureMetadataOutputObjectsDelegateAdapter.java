@@ -35,6 +35,6 @@ public abstract class AVCaptureMetadataOutputObjectsDelegateAdapter
     
     
     @NotImplemented("captureOutput:didOutputMetadataObjects:fromConnection:")
-    public void didOutputMetadataObjects(AVCaptureOutput captureOutput, NSArray<AVMetadataObject> metadataObjects, AVCaptureConnection connection) { throw new UnsupportedOperationException(); }
+    public void didOutputMetadataObjects(AVCaptureOutput captureOutput, NSArray<?> metadataObjects, AVCaptureConnection connection) { throw new UnsupportedOperationException(); }
     
 }

@@ -39,19 +39,19 @@ public class GCRotationRate
     ]-*/;
     public static native GCRotationRate copyWithx(GCRotationRate original, double x) /*-[
         original.x = x;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native GCRotationRate copyWithy(GCRotationRate original, double y) /*-[
         original.y = y;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native GCRotationRate copyWithz(GCRotationRate original, double z) /*-[
         original.z = z;
-        return __new;
+        return original;
     ]-*/;
 
     

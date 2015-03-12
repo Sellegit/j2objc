@@ -35,10 +35,10 @@ public abstract class SCNBoundingVolumeAdapter
     
     
     @NotImplemented("getBoundingBoxMin:max:")
-    public boolean getBoundingBox(Todo min, Todo max) { throw new UnsupportedOperationException(); }
+    public boolean getBoundingBox(SCNVector3 min, SCNVector3 max) { throw new UnsupportedOperationException(); }
     @NotImplemented("getBoundingSphereCenter:radius:")
-    public boolean getBoundingSphere(Todo center, Todo radius) { throw new UnsupportedOperationException(); }
+    public boolean getBoundingSphere(SCNVector3 center, Todo radius) { throw new UnsupportedOperationException(); }
     @NotImplemented("setBoundingBoxMin:max:")
-    public void setBoundingBox(Todo min, Todo max) { throw new UnsupportedOperationException(); }
+    public void setBoundingBox(SCNVector3 min, SCNVector3 max) { throw new UnsupportedOperationException(); }
     
 }

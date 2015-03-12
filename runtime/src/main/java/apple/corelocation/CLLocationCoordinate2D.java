@@ -39,13 +39,13 @@ public class CLLocationCoordinate2D
     ]-*/;
     public static native CLLocationCoordinate2D copyWithlatitude(CLLocationCoordinate2D original, double latitude) /*-[
         original.latitude = latitude;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native CLLocationCoordinate2D copyWithlongitude(CLLocationCoordinate2D original, double longitude) /*-[
         original.longitude = longitude;
-        return __new;
+        return original;
     ]-*/;
 
     

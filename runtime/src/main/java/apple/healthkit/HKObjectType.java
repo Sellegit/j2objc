@@ -37,11 +37,11 @@ public class HKObjectType
     @Mapping("quantityTypeForIdentifier:")
     public static native HKQuantityType getQuantityType(String identifier);
     @Mapping("categoryTypeForIdentifier:")
-    public static native HKCategoryType getCategoryType(HKCategoryTypeIdentifier identifier);
+    public static native HKCategoryType getCategoryType(String identifier);
     @Mapping("characteristicTypeForIdentifier:")
-    public static native HKCharacteristicType getCharacteristicType(HKCharacteristicTypeIdentifier identifier);
+    public static native HKCharacteristicType getCharacteristicType(String identifier);
     @Mapping("correlationTypeForIdentifier:")
-    public static native HKCorrelationType getCorrelationType(HKCorrelationTypeIdentifier identifier);
+    public static native HKCorrelationType getCorrelationType(String identifier);
     @Mapping("workoutType")
     public static native HKWorkoutType getWorkoutType();
     @Mapping("copyWithZone:")

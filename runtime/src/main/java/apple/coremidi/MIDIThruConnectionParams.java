@@ -83,151 +83,151 @@ public class MIDIThruConnectionParams
     ]-*/;
     public static native MIDIThruConnectionParams copyWithversion(MIDIThruConnectionParams original, int version) /*-[
         original.version = version;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native MIDIThruConnectionParams copyWithnumSources(MIDIThruConnectionParams original, int numSources) /*-[
         original.numSources = numSources;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native MIDIThruConnectionParams copyWithsources(MIDIThruConnectionParams original, MIDIThruConnectionEndpoint sources) /*-[
         original.sources = sources;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native MIDIThruConnectionParams copyWithnumDestinations(MIDIThruConnectionParams original, int numDestinations) /*-[
         original.numDestinations = numDestinations;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native MIDIThruConnectionParams copyWithdestinations(MIDIThruConnectionParams original, MIDIThruConnectionEndpoint destinations) /*-[
         original.destinations = destinations;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native MIDIThruConnectionParams copyWithchannelMap(MIDIThruConnectionParams original, ByteBuffer channelMap) /*-[
         original.channelMap = channelMap;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native MIDIThruConnectionParams copyWithlowVelocity(MIDIThruConnectionParams original, byte lowVelocity) /*-[
         original.lowVelocity = lowVelocity;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native MIDIThruConnectionParams copyWithhighVelocity(MIDIThruConnectionParams original, byte highVelocity) /*-[
         original.highVelocity = highVelocity;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native MIDIThruConnectionParams copyWithlowNote(MIDIThruConnectionParams original, byte lowNote) /*-[
         original.lowNote = lowNote;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native MIDIThruConnectionParams copyWithhighNote(MIDIThruConnectionParams original, byte highNote) /*-[
         original.highNote = highNote;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native MIDIThruConnectionParams copyWithnoteNumber(MIDIThruConnectionParams original, MIDITransform noteNumber) /*-[
         original.noteNumber = noteNumber;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native MIDIThruConnectionParams copyWithvelocity(MIDIThruConnectionParams original, MIDITransform velocity) /*-[
         original.velocity = velocity;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native MIDIThruConnectionParams copyWithkeyPressure(MIDIThruConnectionParams original, MIDITransform keyPressure) /*-[
         original.keyPressure = keyPressure;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native MIDIThruConnectionParams copyWithchannelPressure(MIDIThruConnectionParams original, MIDITransform channelPressure) /*-[
         original.channelPressure = channelPressure;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native MIDIThruConnectionParams copyWithprogramChange(MIDIThruConnectionParams original, MIDITransform programChange) /*-[
         original.programChange = programChange;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native MIDIThruConnectionParams copyWithpitchBend(MIDIThruConnectionParams original, MIDITransform pitchBend) /*-[
         original.pitchBend = pitchBend;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native MIDIThruConnectionParams copyWithfilterOutSysEx(MIDIThruConnectionParams original, byte filterOutSysEx) /*-[
         original.filterOutSysEx = filterOutSysEx;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native MIDIThruConnectionParams copyWithfilterOutMTC(MIDIThruConnectionParams original, byte filterOutMTC) /*-[
         original.filterOutMTC = filterOutMTC;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native MIDIThruConnectionParams copyWithfilterOutBeatClock(MIDIThruConnectionParams original, byte filterOutBeatClock) /*-[
         original.filterOutBeatClock = filterOutBeatClock;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native MIDIThruConnectionParams copyWithfilterOutTuneRequest(MIDIThruConnectionParams original, byte filterOutTuneRequest) /*-[
         original.filterOutTuneRequest = filterOutTuneRequest;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native MIDIThruConnectionParams copyWithreserved2(MIDIThruConnectionParams original, ByteBuffer reserved2) /*-[
         original.reserved2 = reserved2;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native MIDIThruConnectionParams copyWithfilterOutAllControls(MIDIThruConnectionParams original, byte filterOutAllControls) /*-[
         original.filterOutAllControls = filterOutAllControls;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native MIDIThruConnectionParams copyWithnumControlTransforms(MIDIThruConnectionParams original, short numControlTransforms) /*-[
         original.numControlTransforms = numControlTransforms;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native MIDIThruConnectionParams copyWithnumMaps(MIDIThruConnectionParams original, short numMaps) /*-[
         original.numMaps = numMaps;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native MIDIThruConnectionParams copyWithreserved3(MIDIThruConnectionParams original, ShortBuffer reserved3) /*-[
         original.reserved3 = reserved3;
-        return __new;
+        return original;
     ]-*/;
 
     

@@ -34,13 +34,13 @@ public class CFBinaryHeapCompareContext
     
     public static native CFBinaryHeapCompareContext copyWithversion(CFBinaryHeapCompareContext original, @MachineSizedSInt long version) /*-[
         original.version = version;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native CFBinaryHeapCompareContext copyWithinfo(CFBinaryHeapCompareContext original, Todo info) /*-[
         original.info = info;
-        return __new;
+        return original;
     ]-*/;
 
     

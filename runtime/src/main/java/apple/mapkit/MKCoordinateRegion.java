@@ -40,13 +40,13 @@ public class MKCoordinateRegion
     ]-*/;
     public static native MKCoordinateRegion copyWithcenter(MKCoordinateRegion original, CLLocationCoordinate2D center) /*-[
         original.center = center;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native MKCoordinateRegion copyWithspan(MKCoordinateRegion original, MKCoordinateSpan span) /*-[
         original.span = span;
-        return __new;
+        return original;
     ]-*/;
 
     

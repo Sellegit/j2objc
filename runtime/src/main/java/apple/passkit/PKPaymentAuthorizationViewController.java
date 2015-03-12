@@ -45,6 +45,6 @@ public class PKPaymentAuthorizationViewController
     @Mapping("canMakePayments")
     public static native boolean canMakePayments();
     @Mapping("canMakePaymentsUsingNetworks:")
-    public static native boolean canMakePaymentsUsingNetworks(List<PKPaymentNetwork> supportedNetworks);
+    public static native boolean canMakePaymentsUsingNetworks(NSArray<?> supportedNetworks);
     
 }

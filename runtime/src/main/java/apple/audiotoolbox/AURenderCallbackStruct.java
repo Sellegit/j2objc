@@ -35,7 +35,7 @@ public class AURenderCallbackStruct
     
     public static native AURenderCallbackStruct copyWithinputProcRefCon(AURenderCallbackStruct original, Todo inputProcRefCon) /*-[
         original.inputProcRefCon = inputProcRefCon;
-        return __new;
+        return original;
     ]-*/;
 
     

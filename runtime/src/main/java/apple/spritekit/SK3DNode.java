@@ -72,7 +72,7 @@ public class SK3DNode
     
     
     @Mapping("hitTest:options:")
-    public native NSArray<SCNHitTestResult> hitTest(CGPoint thePoint, SCNHitTestOptions options);
+    public native NSArray<SCNHitTestResult> hitTest(CGPoint thePoint, NSDictionary<?, ?> options);
     @Mapping("projectPoint:")
     public native SKVector3 projectPoint(SKVector3 point);
     @Mapping("unprojectPoint:")

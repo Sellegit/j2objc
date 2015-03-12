@@ -33,7 +33,7 @@ public class NSCompoundPredicate
     
     public NSCompoundPredicate() {}
     @Mapping("initWithType:subpredicates:")
-    public NSCompoundPredicate(@Representing("NSCompoundPredicateType") @MachineSizedUInt long type, NSArray<NSPredicate> subpredicates) { }
+    public NSCompoundPredicate(@Representing("NSCompoundPredicateType") @MachineSizedUInt long type, NSArray<?> subpredicates) { }
     
     
     @Mapping("compoundPredicateType")
@@ -44,9 +44,9 @@ public class NSCompoundPredicate
     
     
     @Mapping("andPredicateWithSubpredicates:")
-    public static native NSCompoundPredicate createAndPredicate(NSArray<NSPredicate> subpredicates);
+    public static native NSCompoundPredicate createAndPredicate(NSArray<?> subpredicates);
     @Mapping("orPredicateWithSubpredicates:")
-    public static native NSCompoundPredicate createOrPredicate(NSArray<NSPredicate> subpredicates);
+    public static native NSCompoundPredicate createOrPredicate(NSArray<?> subpredicates);
     @Mapping("notPredicateWithSubpredicate:")
     public static native NSCompoundPredicate createNotPredicate(NSPredicate predicate);
     

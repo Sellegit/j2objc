@@ -44,25 +44,25 @@ public class ExtendedAudioFormatInfo
     ]-*/;
     public static native ExtendedAudioFormatInfo copyWithmASBD(ExtendedAudioFormatInfo original, AudioStreamBasicDescription mASBD) /*-[
         original.mASBD = mASBD;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native ExtendedAudioFormatInfo copyWithmMagicCookie(ExtendedAudioFormatInfo original, Todo mMagicCookie) /*-[
         original.mMagicCookie = mMagicCookie;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native ExtendedAudioFormatInfo copyWithmMagicCookieSize(ExtendedAudioFormatInfo original, int mMagicCookieSize) /*-[
         original.mMagicCookieSize = mMagicCookieSize;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native ExtendedAudioFormatInfo copyWithmClassDescription(ExtendedAudioFormatInfo original, AudioClassDescription mClassDescription) /*-[
         original.mClassDescription = mClassDescription;
-        return __new;
+        return original;
     ]-*/;
 
     

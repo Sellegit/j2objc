@@ -39,8 +39,6 @@ public class MKLocalSearch
     
     
     
-    @Mapping("startWithCompletionHandler:")
-    public native void start(@Block VoidBlock2<MKLocalSearchResponse, NSError> completionHandler);
     @Mapping("cancel")
     public native void cancel();
     

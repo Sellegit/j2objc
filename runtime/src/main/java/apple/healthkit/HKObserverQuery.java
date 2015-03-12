@@ -28,7 +28,7 @@ public class HKObserverQuery
     
     public HKObserverQuery() {}
     @Mapping("initWithSampleType:predicate:updateHandler:")
-    public HKObserverQuery(HKSampleType sampleType, NSPredicate predicate, @Block("(,@Block,)") VoidBlock3<HKObserverQuery, Runnable, NSError> updateHandler) { }
+    public HKObserverQuery(HKSampleType sampleType, NSPredicate predicate, Todo updateHandler) { }
     
     
     

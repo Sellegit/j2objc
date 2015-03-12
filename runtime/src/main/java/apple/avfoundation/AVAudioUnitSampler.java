@@ -57,6 +57,6 @@ public class AVAudioUnitSampler
     @Mapping("loadInstrumentAtURL:error:")
     public native boolean loadInstrument(NSURL instrumentURL, Todo outError);
     @Mapping("loadAudioFilesAtURLs:error:")
-    public native boolean loadAudioFiles(NSArray<NSURL> audioFiles, Todo outError);
+    public native boolean loadAudioFiles(NSArray<?> audioFiles, Todo outError);
     
 }

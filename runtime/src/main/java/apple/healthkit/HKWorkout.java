@@ -45,7 +45,7 @@ public class HKWorkout
     @Mapping("workoutWithActivityType:startDate:endDate:")
     public static native HKWorkout create(@Representing("HKWorkoutActivityType") @MachineSizedUInt long workoutActivityType, NSDate startDate, NSDate endDate);
     @Mapping("workoutWithActivityType:startDate:endDate:workoutEvents:totalEnergyBurned:totalDistance:metadata:")
-    public static native HKWorkout create(@Representing("HKWorkoutActivityType") @MachineSizedUInt long workoutActivityType, NSDate startDate, NSDate endDate, NSArray<HKWorkoutEvent> workoutEvents, HKQuantity totalEnergyBurned, HKQuantity totalDistance, NSDictionary<?, ?> metadata);
+    public static native HKWorkout create(@Representing("HKWorkoutActivityType") @MachineSizedUInt long workoutActivityType, NSDate startDate, NSDate endDate, NSArray<?> workoutEvents, HKQuantity totalEnergyBurned, HKQuantity totalDistance, NSDictionary<?, ?> metadata);
     @Mapping("workoutWithActivityType:startDate:endDate:duration:totalEnergyBurned:totalDistance:metadata:")
     public static native HKWorkout create(@Representing("HKWorkoutActivityType") @MachineSizedUInt long workoutActivityType, NSDate startDate, NSDate endDate, double duration, HKQuantity totalEnergyBurned, HKQuantity totalDistance, NSDictionary<?, ?> metadata);
     

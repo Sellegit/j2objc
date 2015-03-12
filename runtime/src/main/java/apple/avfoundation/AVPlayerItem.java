@@ -41,7 +41,7 @@ public class AVPlayerItem
      * @since Available in iOS 7.0 and later.
      */
     @Mapping("initWithAsset:automaticallyLoadedAssetKeys:")
-    public AVPlayerItem(AVAsset asset, List<String> automaticallyLoadedAssetKeys) { }
+    public AVPlayerItem(AVAsset asset, NSArray<?> automaticallyLoadedAssetKeys) { }
     
     
     @Mapping("status")
@@ -229,7 +229,7 @@ public class AVPlayerItem
      * @since Available in iOS 7.0 and later.
      */
     @Mapping("playerItemWithAsset:automaticallyLoadedAssetKeys:")
-    public static native AVPlayerItem create(AVAsset asset, List<String> automaticallyLoadedAssetKeys);
+    public static native AVPlayerItem create(AVAsset asset, NSArray<?> automaticallyLoadedAssetKeys);
     @Mapping("currentTime")
     public native CMTime getCurrentTime();
     @Mapping("seekToTime:")

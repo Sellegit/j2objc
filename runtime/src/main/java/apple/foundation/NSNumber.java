@@ -60,7 +60,7 @@ public class NSNumber
     @Mapping("isEqualToNumber:")
     public native boolean isEqualTo(NSNumber number);
     @Mapping("descriptionWithLocale:")
-    public native String toString(NSLocale locale);
+    public native String toString(Object locale);
     @Mapping("numberWithChar:")
     public static native NSNumber valueOf(byte value);
     @Mapping("numberWithShort:")

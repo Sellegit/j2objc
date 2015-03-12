@@ -33,7 +33,7 @@ public class NSItemProvider
     
     public NSItemProvider() {}
     @Mapping("initWithItem:typeIdentifier:")
-    public NSItemProvider(NSObject item, String typeIdentifier) { }
+    public NSItemProvider(Object item, String typeIdentifier) { }
     @Mapping("initWithContentsOfURL:")
     public NSItemProvider(NSURL fileURL) { }
     
@@ -64,17 +64,8 @@ public class NSItemProvider
     @GlobalConstant("NSExtensionJavaScriptFinalizeArgumentKey")
     public static native String JavaScriptFinalizeArgumentKey();
     
-    @Mapping("registerItemForTypeIdentifier:loadHandler:")
-    public native void registerItemForTypeIdentifier(String typeIdentifier, @Block("(@Block,,)") VoidBlock3<VoidBlock2<NSObject, NSError>, ObjCClass, NSDictionary<NSString, NSObject>> loadHandler);
     @Mapping("hasItemConformingToTypeIdentifier:")
     public native boolean hasItemConformingToTypeIdentifier(String typeIdentifier);
-    @Mapping("loadItemForTypeIdentifier:options:completionHandler:")
-    public native void loadItemForTypeIdentifier(String typeIdentifier, NSItemProviderOptions options, @Block VoidBlock2<NSObject, NSError> completionHandler);
-    /**
-     * @since Available in iOS 8.0 and later.
-     */
-    @Mapping("loadPreviewImageWithOptions:completionHandler:")
-    public native void loadPreviewImage(NSItemProviderOptions options, @Block VoidBlock2<NSObject, NSError> completionHandler);
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
     

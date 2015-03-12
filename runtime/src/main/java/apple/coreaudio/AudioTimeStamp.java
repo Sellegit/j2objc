@@ -47,43 +47,43 @@ public class AudioTimeStamp
     ]-*/;
     public static native AudioTimeStamp copyWithmSampleTime(AudioTimeStamp original, double mSampleTime) /*-[
         original.mSampleTime = mSampleTime;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native AudioTimeStamp copyWithmHostTime(AudioTimeStamp original, long mHostTime) /*-[
         original.mHostTime = mHostTime;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native AudioTimeStamp copyWithmRateScalar(AudioTimeStamp original, double mRateScalar) /*-[
         original.mRateScalar = mRateScalar;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native AudioTimeStamp copyWithmWordClockTime(AudioTimeStamp original, long mWordClockTime) /*-[
         original.mWordClockTime = mWordClockTime;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native AudioTimeStamp copyWithmSMPTETime(AudioTimeStamp original, SMPTETime mSMPTETime) /*-[
         original.mSMPTETime = mSMPTETime;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native AudioTimeStamp copyWithmFlags(AudioTimeStamp original, int mFlags) /*-[
         original.mFlags = mFlags;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native AudioTimeStamp copyWithmReserved(AudioTimeStamp original, int mReserved) /*-[
         original.mReserved = mReserved;
-        return __new;
+        return original;
     ]-*/;
 
     

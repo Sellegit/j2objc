@@ -35,8 +35,8 @@ public abstract class PKPaymentAuthorizationViewControllerDelegateAdapter
     @NotImplemented("paymentAuthorizationViewControllerDidFinish:")
     public void didFinish(PKPaymentAuthorizationViewController controller) { throw new UnsupportedOperationException(); }
     @NotImplemented("paymentAuthorizationViewController:didSelectShippingMethod:completion:")
-    public void didSelectShippingMethod(PKPaymentAuthorizationViewController controller, PKShippingMethod shippingMethod, @Block VoidBlock2<PKPaymentAuthorizationStatus, NSArray<PKPaymentSummaryItem>> completion) { throw new UnsupportedOperationException(); }
+    public void didSelectShippingMethod(PKPaymentAuthorizationViewController controller, PKShippingMethod shippingMethod, Todo completion) { throw new UnsupportedOperationException(); }
     @NotImplemented("paymentAuthorizationViewController:didSelectShippingAddress:completion:")
-    public void didSelectShippingAddress(PKPaymentAuthorizationViewController controller, ABRecord address, @Block VoidBlock3<PKPaymentAuthorizationStatus, NSArray<PKShippingMethod>, NSArray<PKPaymentSummaryItem>> completion) { throw new UnsupportedOperationException(); }
+    public void didSelectShippingAddress(PKPaymentAuthorizationViewController controller, ABRecord address, Todo completion) { throw new UnsupportedOperationException(); }
     
 }

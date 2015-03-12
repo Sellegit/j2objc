@@ -40,13 +40,13 @@ public class CAFOverviewSample
     ]-*/;
     public static native CAFOverviewSample copyWithmMinValue(CAFOverviewSample original, short mMinValue) /*-[
         original.mMinValue = mMinValue;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native CAFOverviewSample copyWithmMaxValue(CAFOverviewSample original, short mMaxValue) /*-[
         original.mMaxValue = mMaxValue;
-        return __new;
+        return original;
     ]-*/;
 
     

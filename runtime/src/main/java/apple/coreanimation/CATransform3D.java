@@ -69,97 +69,97 @@ public class CATransform3D
     ]-*/;
     public static native CATransform3D copyWithm11(CATransform3D original, @MachineSizedFloat double m11) /*-[
         original.m11 = m11;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native CATransform3D copyWithm12(CATransform3D original, @MachineSizedFloat double m12) /*-[
         original.m12 = m12;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native CATransform3D copyWithm13(CATransform3D original, @MachineSizedFloat double m13) /*-[
         original.m13 = m13;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native CATransform3D copyWithm14(CATransform3D original, @MachineSizedFloat double m14) /*-[
         original.m14 = m14;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native CATransform3D copyWithm21(CATransform3D original, @MachineSizedFloat double m21) /*-[
         original.m21 = m21;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native CATransform3D copyWithm22(CATransform3D original, @MachineSizedFloat double m22) /*-[
         original.m22 = m22;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native CATransform3D copyWithm23(CATransform3D original, @MachineSizedFloat double m23) /*-[
         original.m23 = m23;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native CATransform3D copyWithm24(CATransform3D original, @MachineSizedFloat double m24) /*-[
         original.m24 = m24;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native CATransform3D copyWithm31(CATransform3D original, @MachineSizedFloat double m31) /*-[
         original.m31 = m31;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native CATransform3D copyWithm32(CATransform3D original, @MachineSizedFloat double m32) /*-[
         original.m32 = m32;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native CATransform3D copyWithm33(CATransform3D original, @MachineSizedFloat double m33) /*-[
         original.m33 = m33;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native CATransform3D copyWithm34(CATransform3D original, @MachineSizedFloat double m34) /*-[
         original.m34 = m34;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native CATransform3D copyWithm41(CATransform3D original, @MachineSizedFloat double m41) /*-[
         original.m41 = m41;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native CATransform3D copyWithm42(CATransform3D original, @MachineSizedFloat double m42) /*-[
         original.m42 = m42;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native CATransform3D copyWithm43(CATransform3D original, @MachineSizedFloat double m43) /*-[
         original.m43 = m43;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native CATransform3D copyWithm44(CATransform3D original, @MachineSizedFloat double m44) /*-[
         original.m44 = m44;
-        return __new;
+        return original;
     ]-*/;
 
     

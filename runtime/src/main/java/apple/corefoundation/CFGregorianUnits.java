@@ -46,37 +46,37 @@ public class CFGregorianUnits
     ]-*/;
     public static native CFGregorianUnits copyWithyears(CFGregorianUnits original, int years) /*-[
         original.years = years;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native CFGregorianUnits copyWithmonths(CFGregorianUnits original, int months) /*-[
         original.months = months;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native CFGregorianUnits copyWithdays(CFGregorianUnits original, int days) /*-[
         original.days = days;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native CFGregorianUnits copyWithhours(CFGregorianUnits original, int hours) /*-[
         original.hours = hours;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native CFGregorianUnits copyWithminutes(CFGregorianUnits original, int minutes) /*-[
         original.minutes = minutes;
-        return __new;
+        return original;
     ]-*/;
 
     
     public static native CFGregorianUnits copyWithseconds(CFGregorianUnits original, double seconds) /*-[
         original.seconds = seconds;
-        return __new;
+        return original;
     ]-*/;
 
     

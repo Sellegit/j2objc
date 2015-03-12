@@ -77,6 +77,6 @@ public class ABPersonViewController
     
     
     @Mapping("setHighlightedItemForProperty:withIdentifier:")
-    public native void setHighlightedItem(ABPersonProperty property, int identifier);
+    public native void setHighlightedItem(int property, int identifier);
     
 }

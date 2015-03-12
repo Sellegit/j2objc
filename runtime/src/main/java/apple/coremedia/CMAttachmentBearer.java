@@ -36,32 +36,32 @@ public class CMAttachmentBearer
      * @since Available in iOS 4.0  and later.
      */
     @GlobalFunction("CMSetAttachment")
-    public static native void setAttachment(CFType target, String key, CFType value, CMAttachmentMode attachmentMode);
+    public static native void setAttachment(CMAttachmentBearer target, String key, CFType value, CMAttachmentMode attachmentMode);
     /**
      * @since Available in iOS 4.0  and later.
      */
     @GlobalFunction("CMGetAttachment")
-    private static native CFType getAttachment(CFType target, String key, Todo attachmentModeOut);
+    private static native CFType getAttachment(CMAttachmentBearer target, String key, Todo attachmentModeOut);
     /**
      * @since Available in iOS 4.0  and later.
      */
     @GlobalFunction("CMRemoveAttachment")
-    public static native void removeAttachment(CFType target, String key);
+    public static native void removeAttachment(CMAttachmentBearer target, String key);
     /**
      * @since Available in iOS 4.0  and later.
      */
     @GlobalFunction("CMRemoveAllAttachments")
-    public static native void removeAllAttachments(CFType target);
+    public static native void removeAllAttachments(CMAttachmentBearer target);
     /**
      * @since Available in iOS 4.0  and later.
      */
     @GlobalFunction("CMCopyDictionaryOfAttachments")
-    private static native CFDictionary getAttachments(CFAllocator allocator, CFType target, CMAttachmentMode attachmentMode);
+    private static native CFDictionary getAttachments(CFAllocator allocator, CMAttachmentBearer target, CMAttachmentMode attachmentMode);
     /**
      * @since Available in iOS 4.0  and later.
      */
     @GlobalFunction("CMSetAttachments")
-    public static native void setAttachments(CFType target, CFDictionary theAttachments, CMAttachmentMode attachmentMode);
+    public static native void setAttachments(CMAttachmentBearer target, NSDictionary<?, ?> theAttachments, CMAttachmentMode attachmentMode);
     /**
      * @since Available in iOS 4.0  and later.
      */

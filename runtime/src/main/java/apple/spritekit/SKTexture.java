@@ -88,7 +88,7 @@ public class SKTexture
     @Mapping("textureWithData:size:rowLength:alignment:")
     public static native SKTexture create(NSData pixelData, CGSize size, int rowLength, int alignment);
     @Mapping("preloadTextures:withCompletionHandler:")
-    public static native void preloadTextures(NSArray<SKTexture> textures, @Block Runnable completionHandler);
+    public static native void preloadTextures(NSArray<?> textures, @Block Runnable completionHandler);
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
     @Mapping("encodeWithCoder:")
