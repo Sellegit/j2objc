@@ -14,8 +14,11 @@
 
 package com.google.devtools.j2objc.translate;
 
+import com.google.common.collect.Lists;
+import com.google.common.collect.Maps;
 import com.google.common.collect.Sets;
 import com.google.devtools.j2objc.Options;
+import com.google.devtools.j2objc.ast.AbstractTypeDeclaration;
 import com.google.devtools.j2objc.ast.AnnotationTypeDeclaration;
 import com.google.devtools.j2objc.ast.Block;
 import com.google.devtools.j2objc.ast.BodyDeclaration;
@@ -39,6 +42,7 @@ import com.google.devtools.j2objc.ast.SuperMethodInvocation;
 import com.google.devtools.j2objc.ast.ThisExpression;
 import com.google.devtools.j2objc.ast.TreeUtil;
 import com.google.devtools.j2objc.ast.TreeVisitor;
+import com.google.devtools.j2objc.types.AbstractTypeBinding;
 import com.google.devtools.j2objc.types.GeneratedVariableBinding;
 import com.google.devtools.j2objc.types.Types;
 import com.google.devtools.j2objc.util.BindingUtil;
@@ -52,7 +56,10 @@ import org.eclipse.jdt.core.dom.Modifier;
 import org.eclipse.jdt.internal.compiler.lookup.Binding;
 
 import java.util.Collections;
+import java.util.Dictionary;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
 /**
@@ -65,6 +72,7 @@ import java.util.Set;
 public class Functionizer extends TreeVisitor {
 
   private Set<IMethodBinding> functionizableMethods;
+  private Map<IMethodBinding, FunctionDeclaration> functionizedMethods = Maps.newHashMap();
 
   @Override
   public boolean visit(CompilationUnit node) {
@@ -188,6 +196,25 @@ public class Functionizer extends TreeVisitor {
     }
 
     node.replaceWith(functionInvocation);
+
+    // if the function it's trying to call rests in a mapped class, then we need to include
+    //   the implementation in this class (as a hack)
+    ITypeBinding declaringClass = binding.getDeclaringClass();
+    if (BindingUtil.extractMappingName(declaringClass) != null) {
+      FunctionDeclaration function = functionizedMethods.get(binding);
+      if (function != null) {
+        // right now assumes there is only static method
+        assert BindingUtil.isStatic(binding);
+        function = makeStaticFunction(binding);
+      }
+
+      AbstractTypeDeclaration thisClass = TreeUtil.getOwningType(node);
+      List<BodyDeclaration> decls = thisClass.getBodyDeclarations();
+      int ind = decls.indexOf(function); // to hell with O(n^2) performance
+      if (ind == -1) {
+        decls.add(0, function);
+      }
+    }
   }
 
   @Override
@@ -213,6 +240,8 @@ public class Functionizer extends TreeVisitor {
       } else {
         setFunctionCaller(node, function);
       }
+
+      functionizedMethods.put(binding, function);
       ErrorUtil.functionizedMethod();
     }
   }

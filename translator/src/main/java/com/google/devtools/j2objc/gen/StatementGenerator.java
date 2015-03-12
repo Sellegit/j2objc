@@ -461,7 +461,8 @@ public class StatementGenerator extends TreeVisitor {
     for (Type exceptionType : ((UnionType) exception.getType()).getTypes()) {
       buffer.append("@catch (");
       exceptionType.accept(this);
-      buffer.append(' ');
+      // Assume exception is definitely pointer type
+      buffer.append(" *");
       exception.getName().accept(this);
       buffer.append(") {\n");
       printMainExceptionStore(hasResources, node);
