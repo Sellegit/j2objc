@@ -18,7 +18,7 @@ import apple.uikit.*;
 
 
 
-@Library("GameKit") @Mapping("GKTurnBasedEventListener")
+@Library("GameKit/GameKit.h") @Mapping("GKTurnBasedEventListener")
 public interface GKTurnBasedEventListener 
      {
 

@@ -25,7 +25,7 @@ import apple.mediatoolbox.*;
  * @since Available in iOS 6.0 and later.
  */
 
-@Library("AVFoundation")
+@Library("AVFoundation/AVFoundation.h")
 @Mapping("AVAudioSessionInterruptionType")
 public final class AVAudioSessionInterruptionType extends ObjCEnum {
     

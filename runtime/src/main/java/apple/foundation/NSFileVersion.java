@@ -24,7 +24,7 @@ import apple.dispatch.*;
  * @since Available in iOS 5.0 and later.
  */
 
-@Library("Foundation") @Mapping("NSFileVersion")
+@Library("Foundation/Foundation.h") @Mapping("NSFileVersion")
 public class NSFileVersion 
     extends NSObject 
      {

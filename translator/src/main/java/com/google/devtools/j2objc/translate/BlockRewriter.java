@@ -14,6 +14,7 @@ import com.google.devtools.j2objc.ast.SimpleType;
 import com.google.devtools.j2objc.ast.SingleVariableDeclaration;
 import com.google.devtools.j2objc.ast.Statement;
 import com.google.devtools.j2objc.ast.TreeVisitor;
+import com.google.devtools.j2objc.ast.TypeDeclaration;
 import com.google.devtools.j2objc.ast.VariableDeclarationFragment;
 import com.google.devtools.j2objc.ast.VariableDeclarationStatement;
 import com.google.devtools.j2objc.types.GeneratedMethodBinding;
@@ -46,6 +47,13 @@ import javax.naming.Binding;
 public class BlockRewriter extends TreeVisitor {
 
   @Override
+  public boolean visit(TypeDeclaration node) {
+    ITypeBinding binding = node.getTypeBinding();
+    // no need to rewrite blocks in adapters, they are stubs anyways
+    return !BindingUtil.isAdapter(binding);
+  }
+
+  @Override
   public void endVisit(MethodDeclaration node) {
     IMethodBinding binding = node.getMethodBinding();
 
@@ -53,7 +61,11 @@ public class BlockRewriter extends TreeVisitor {
       IAnnotationBinding annotation = BindingUtil.getAnnotation(
           binding.getParameterAnnotations(i), com.google.j2objc.annotations.Block.class);
       if (annotation != null) {
-        insertBlockWrappingStatement(node.getBody(), node, annotation, i);
+        Block body = node.getBody();
+        // allow for native methods
+        if (body != null) {
+          insertBlockWrappingStatement(node.getBody(), node, annotation, i);
+        }
       }
     }
   }

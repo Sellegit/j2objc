@@ -16,7 +16,7 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreMIDI")
+@Library("CoreMIDI/CoreMIDI.h")
 public class MIDI 
     extends Object 
      {

@@ -19,7 +19,7 @@ import apple.accounts.*;
 
 
 
-@Library("StoreKit") @Mapping("SKProductsRequestDelegate")
+@Library("StoreKit/StoreKit.h") @Mapping("SKProductsRequestDelegate")
 public interface SKProductsRequestDelegate 
     extends SKRequestDelegate {
 

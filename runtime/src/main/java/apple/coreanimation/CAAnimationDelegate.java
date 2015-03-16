@@ -21,7 +21,7 @@ import apple.metal.*;
 
 
 
-@Library("QuartzCore") @Mapping("CAAnimationDelegate")
+@Library("QuartzCore/QuartzCore.h") @Mapping("CAAnimationDelegate")
 public interface CAAnimationDelegate 
      {
 

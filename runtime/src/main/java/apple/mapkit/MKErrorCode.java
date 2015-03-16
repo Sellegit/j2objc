@@ -22,7 +22,7 @@ import apple.dispatch.*;
  * @since Available in iOS 3.0 and later.
  */
 
-@Library("MapKit")
+@Library("MapKit/MapKit.h")
 @Mapping("MKErrorCode")
 public final class MKErrorCode extends ObjCEnum {
     

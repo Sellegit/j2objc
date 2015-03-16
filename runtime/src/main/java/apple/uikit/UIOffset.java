@@ -22,7 +22,7 @@ import apple.corelocation.*;
 
 
 
-@Mapping("UIOffset") @Library("UIKit")
+@Mapping("UIOffset") @Library("UIKit/UIKit.h")
 public class UIOffset 
     extends Struct 
      {

@@ -22,7 +22,7 @@ import apple.corelocation.*;
 
 
 
-@Library("UIKit")
+@Library("UIKit/UIKit.h")
 @Mapping("UIViewAnimationCurve")
 public final class UIViewAnimationCurve extends ObjCEnum {
     

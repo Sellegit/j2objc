@@ -23,7 +23,7 @@ import apple.opengles.*;
 
 
 
-@Library("SceneKit")
+@Library("SceneKit/SceneKit.h")
 @Mapping("SCNAntialiasingMode")
 public final class SCNAntialiasingMode extends ObjCEnum {
     

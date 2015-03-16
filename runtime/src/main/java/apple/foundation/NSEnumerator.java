@@ -22,7 +22,7 @@ import apple.dispatch.*;
 
 
 
-@Library("Foundation") @Mapping("NSEnumerator")
+@Library("Foundation/Foundation.h") @Mapping("NSEnumerator")
 public class NSEnumerator <T>
     extends NSObject 
     implements NSFastEnumeration {

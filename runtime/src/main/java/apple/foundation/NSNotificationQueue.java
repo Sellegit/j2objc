@@ -22,7 +22,7 @@ import apple.dispatch.*;
 
 
 
-@Library("Foundation") @Mapping("NSNotificationQueue")
+@Library("Foundation/Foundation.h") @Mapping("NSNotificationQueue")
 public class NSNotificationQueue 
     extends NSObject 
      {

@@ -21,7 +21,7 @@ import apple.corevideo.*;
 
 
 
-@Mapping("CMBlockBufferCustomBlockSource")
+@Mapping("CMBlockBufferCustomBlockSource") @Library("CoreMedia/CoreMedia.h")
 public class CMBlockBufferCustomBlockSource 
     extends Struct 
      {

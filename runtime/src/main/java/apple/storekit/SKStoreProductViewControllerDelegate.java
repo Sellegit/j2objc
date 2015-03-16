@@ -19,7 +19,7 @@ import apple.accounts.*;
 
 
 
-@Library("StoreKit") @Mapping("SKStoreProductViewControllerDelegate")
+@Library("StoreKit/StoreKit.h") @Mapping("SKStoreProductViewControllerDelegate")
 public interface SKStoreProductViewControllerDelegate 
     extends NSObjectProtocol {
 

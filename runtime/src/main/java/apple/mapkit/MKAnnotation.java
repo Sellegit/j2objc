@@ -20,7 +20,7 @@ import apple.dispatch.*;
 
 
 
-@Library("MapKit") @Mapping("MKAnnotation")
+@Library("MapKit/MapKit.h") @Mapping("MKAnnotation")
 public interface MKAnnotation 
     extends NSObjectProtocol {
 

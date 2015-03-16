@@ -20,7 +20,7 @@ import apple.imageio.*;
  * @since Available in iOS 4.0 and later.
  */
 
-@Library("AssetsLibrary") @Mapping("ALAssetsFilter")
+@Library("AssetsLibrary/AssetsLibrary.h") @Mapping("ALAssetsFilter")
 public class ALAssetsFilter 
     extends NSObject 
      {

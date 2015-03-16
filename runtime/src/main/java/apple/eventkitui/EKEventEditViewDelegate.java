@@ -19,7 +19,7 @@ import apple.uikit.*;
 
 
 
-@Library("EventKitUI") @Mapping("EKEventEditViewDelegate")
+@Library("EventKitUI/EventKitUI.h") @Mapping("EKEventEditViewDelegate")
 public interface EKEventEditViewDelegate 
     extends NSObjectProtocol {
 

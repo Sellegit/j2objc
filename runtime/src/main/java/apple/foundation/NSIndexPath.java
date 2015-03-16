@@ -22,7 +22,7 @@ import apple.dispatch.*;
 
 
 
-@Library("Foundation") @Mapping("NSIndexPath")
+@Library("Foundation/Foundation.h") @Mapping("NSIndexPath")
 public class NSIndexPath 
     extends NSObject 
     implements NSCopying {

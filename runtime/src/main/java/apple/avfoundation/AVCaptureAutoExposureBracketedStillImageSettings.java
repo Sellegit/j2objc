@@ -25,7 +25,7 @@ import apple.mediatoolbox.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("AVFoundation") @Mapping("AVCaptureAutoExposureBracketedStillImageSettings")
+@Library("AVFoundation/AVFoundation.h") @Mapping("AVCaptureAutoExposureBracketedStillImageSettings")
 public class AVCaptureAutoExposureBracketedStillImageSettings 
     extends AVCaptureBracketedStillImageSettings 
      {

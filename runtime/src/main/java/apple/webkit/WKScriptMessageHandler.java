@@ -18,7 +18,7 @@ import apple.uikit.*;
 
 
 
-@Library("WebKit") @Mapping("WKScriptMessageHandler")
+@Library("WebKit/WebKit.h") @Mapping("WKScriptMessageHandler")
 public interface WKScriptMessageHandler 
     extends NSObjectProtocol {
 

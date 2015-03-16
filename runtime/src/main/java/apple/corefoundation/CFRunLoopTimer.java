@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreFoundation")
+@Library("CoreFoundation/CoreFoundation.h")
 public class CFRunLoopTimer 
     extends CFType 
      {
@@ -37,28 +37,28 @@ public class CFRunLoopTimer
     @GlobalFunction("CFRunLoopTimerCreateWithHandler")
     protected static native CFRunLoopTimer create(CFAllocator allocator, double fireDate, double interval, @MachineSizedUInt long flags, @MachineSizedSInt long order, @Block VoidBlock1<CFRunLoopTimer> block);
     @GlobalFunction("CFRunLoopTimerGetNextFireDate")
-    public native double getNextFireDate();
+    public static native double getNextFireDate(CFRunLoopTimer timer);
     @GlobalFunction("CFRunLoopTimerSetNextFireDate")
-    public native void setNextFireDate(double fireDate);
+    public static native void setNextFireDate(CFRunLoopTimer timer, double fireDate);
     @GlobalFunction("CFRunLoopTimerGetInterval")
-    public native double getInterval();
+    public static native double getInterval(CFRunLoopTimer timer);
     @GlobalFunction("CFRunLoopTimerDoesRepeat")
-    public native boolean doesRepeat();
+    public static native boolean doesRepeat(CFRunLoopTimer timer);
     @GlobalFunction("CFRunLoopTimerGetOrder")
-    public native @MachineSizedSInt long getOrder();
+    public static native @MachineSizedSInt long getOrder(CFRunLoopTimer timer);
     @GlobalFunction("CFRunLoopTimerInvalidate")
-    public native void invalidate();
+    public static native void invalidate(CFRunLoopTimer timer);
     @GlobalFunction("CFRunLoopTimerIsValid")
-    public native boolean isValid();
+    public static native boolean isValid(CFRunLoopTimer timer);
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalFunction("CFRunLoopTimerGetTolerance")
-    public native double getTolerance();
+    public static native double getTolerance(CFRunLoopTimer timer);
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalFunction("CFRunLoopTimerSetTolerance")
-    public native void setTolerance(double tolerance);
+    public static native void setTolerance(CFRunLoopTimer timer, double tolerance);
     
 }

@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreFoundation")
+@Library("CoreFoundation/CoreFoundation.h")
 public class CFPlugIn 
     extends CFType 
      {
@@ -32,11 +32,11 @@ public class CFPlugIn
     @GlobalFunction("CFPlugInCreate")
     protected static native CFPlugIn create(CFAllocator allocator, CFURL plugInURL);
     @GlobalFunction("CFPlugInGetBundle")
-    public native CFBundle getBundle();
+    public static native CFBundle getBundle(CFPlugIn plugIn);
     @GlobalFunction("CFPlugInSetLoadOnDemand")
-    public native void setLoadOnDemand(boolean flag);
+    public static native void setLoadOnDemand(CFPlugIn plugIn, boolean flag);
     @GlobalFunction("CFPlugInIsLoadOnDemand")
-    public native boolean isLoadingOnDemand();
+    public static native boolean isLoadingOnDemand(CFPlugIn plugIn);
     @GlobalFunction("CFPlugInFindFactoriesForPlugInType")
     public static native CFArray findFactoriesForPlugInType(CFUUID typeUUID);
     @GlobalFunction("CFPlugInFindFactoriesForPlugInTypeInPlugIn")

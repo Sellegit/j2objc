@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreFoundation")
+@Library("CoreFoundation/CoreFoundation.h")
 public class CFMachPort 
     extends CFType 
      {
@@ -36,15 +36,15 @@ public class CFMachPort
     @GlobalFunction("CFMachPortCreateWithPort")
     protected static native CFMachPort create(CFAllocator allocator, int portNum, FunctionPtr callout, CFMachPortContext context, Todo shouldFreeInfo);
     @GlobalFunction("CFMachPortGetPort")
-    public native int getPort();
+    public static native int getPort(CFMachPort port);
     @GlobalFunction("CFMachPortInvalidate")
-    public native void invalidate();
+    public static native void invalidate(CFMachPort port);
     @GlobalFunction("CFMachPortIsValid")
-    public native boolean isValid();
+    public static native boolean isValid(CFMachPort port);
     @GlobalFunction("CFMachPortGetInvalidationCallBack")
-    private native FunctionPtr getInvalidationCallBack0();
+    private static native FunctionPtr getInvalidationCallBack0(CFMachPort port);
     @GlobalFunction("CFMachPortSetInvalidationCallBack")
-    private native void setInvalidationCallBack0(FunctionPtr callout);
+    private static native void setInvalidationCallBack0(CFMachPort port, FunctionPtr callout);
     @GlobalFunction("CFMachPortCreateRunLoopSource")
     protected static native CFRunLoopSource createRunLoopSource(CFAllocator allocator, CFMachPort port, @MachineSizedSInt long order);
     

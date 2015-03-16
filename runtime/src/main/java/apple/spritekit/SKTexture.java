@@ -24,7 +24,7 @@ import apple.scenekit.*;
 
 
 
-@Library("SpriteKit") @Mapping("SKTexture")
+@Library("SpriteKit/SpriteKit.h") @Mapping("SKTexture")
 public class SKTexture 
     extends NSObject 
     implements NSCopying, NSCoding {

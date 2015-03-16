@@ -23,7 +23,7 @@ import apple.metal.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("QuartzCore") @Mapping("CAMetalLayer")
+@Library("QuartzCore/QuartzCore.h") @Mapping("CAMetalLayer")
 public class CAMetalLayer 
     extends CALayer 
      {

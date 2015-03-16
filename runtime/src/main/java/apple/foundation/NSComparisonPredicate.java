@@ -24,7 +24,7 @@ import apple.dispatch.*;
  * @since Available in iOS 3.0 and later.
  */
 
-@Library("Foundation") @Mapping("NSComparisonPredicate")
+@Library("Foundation/Foundation.h") @Mapping("NSComparisonPredicate")
 public class NSComparisonPredicate 
     extends NSPredicate 
      {

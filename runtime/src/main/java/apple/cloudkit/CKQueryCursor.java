@@ -20,7 +20,7 @@ import apple.corelocation.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("CloudKit") @Mapping("CKQueryCursor")
+@Library("CloudKit/CloudKit.h") @Mapping("CKQueryCursor")
 public class CKQueryCursor 
     extends NSObject 
     implements NSCopying {

@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreFoundation")
+@Library("CoreFoundation/CoreFoundation.h")
 public class CFType 
     extends Object 
      {
@@ -30,31 +30,31 @@ public class CFType
     
     
     @GlobalFunction("CFGetTypeID")
-    public native @MachineSizedUInt long getTypeID();
+    public static native @MachineSizedUInt long getTypeID(CFType cf);
     @GlobalFunction("CFCopyTypeIDDescription")
     public static native String getTypeIDDescription(@MachineSizedUInt long type_id);
     @GlobalFunction("CFRetain")
-    public native CFType retain();
+    public static native CFType retain(CFType cf);
     @GlobalFunction("CFRelease")
-    public native void release();
+    public static native void release(CFType cf);
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalFunction("CFAutorelease")
-    public native CFType autorelease();
+    public static native CFType autorelease(CFType arg);
     @GlobalFunction("CFGetRetainCount")
-    public native @MachineSizedSInt long getRetainCount();
+    public static native @MachineSizedSInt long getRetainCount(CFType cf);
     @GlobalFunction("CFEqual")
-    public native boolean equalsTo(CFType cf2);
+    public static native boolean equalsTo(CFType cf1, CFType cf2);
     @GlobalFunction("CFHash")
-    public native @MachineSizedUInt long hash();
+    public static native @MachineSizedUInt long hash(CFType cf);
     @GlobalFunction("CFCopyDescription")
-    protected native CFString getDescription();
+    protected static native CFString getDescription(CFType cf);
     @GlobalFunction("CFGetAllocator")
-    public native CFAllocator getAllocator();
+    public static native CFAllocator getAllocator(CFType cf);
     @GlobalFunction("CFMakeCollectable")
-    public native CFType makeCollectable();
+    public static native CFType makeCollectable(CFType cf);
     @GlobalFunction("CFShow")
-    public native void show();
+    public static native void show(CFType obj);
     
 }

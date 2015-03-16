@@ -22,7 +22,7 @@ import apple.corelocation.*;
 
 
 
-@Library("UIKit") @Mapping("UITextInputDelegate")
+@Library("UIKit/UIKit.h") @Mapping("UITextInputDelegate")
 public interface UITextInputDelegate 
     extends NSObjectProtocol {
 

@@ -22,7 +22,7 @@ import apple.dispatch.*;
  * @since Available in iOS 4.0 and later.
  */
 
-@Library("MapKit") @Mapping("MKPointAnnotation")
+@Library("MapKit/MapKit.h") @Mapping("MKPointAnnotation")
 public class MKPointAnnotation 
     extends MKShape 
      {

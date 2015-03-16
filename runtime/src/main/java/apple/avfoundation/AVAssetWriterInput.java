@@ -25,7 +25,7 @@ import apple.mediatoolbox.*;
  * @since Available in iOS 4.1 and later.
  */
 
-@Library("AVFoundation") @Mapping("AVAssetWriterInput")
+@Library("AVFoundation/AVFoundation.h") @Mapping("AVAssetWriterInput")
 public class AVAssetWriterInput 
     extends NSObject 
      {

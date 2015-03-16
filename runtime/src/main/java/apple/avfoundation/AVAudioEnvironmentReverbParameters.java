@@ -25,7 +25,7 @@ import apple.mediatoolbox.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("AVFoundation") @Mapping("AVAudioEnvironmentReverbParameters")
+@Library("AVFoundation/AVFoundation.h") @Mapping("AVAudioEnvironmentReverbParameters")
 public class AVAudioEnvironmentReverbParameters 
     extends NSObject 
      {

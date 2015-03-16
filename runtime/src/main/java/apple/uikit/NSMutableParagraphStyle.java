@@ -24,7 +24,7 @@ import apple.corelocation.*;
  * @since Available in iOS 6.0 and later.
  */
 
-@Library("UIKit") @Mapping("NSMutableParagraphStyle")
+@Library("UIKit/UIKit.h") @Mapping("NSMutableParagraphStyle")
 public class NSMutableParagraphStyle 
     extends NSParagraphStyle 
      {

@@ -24,7 +24,7 @@ import apple.corelocation.*;
  * @since Available in iOS 6.0 and later.
  */
 
-@Library("UIKit") @Mapping("UICollectionViewUpdateItem")
+@Library("UIKit/UIKit.h") @Mapping("UICollectionViewUpdateItem")
 public class UICollectionViewUpdateItem 
     extends NSObject 
      {

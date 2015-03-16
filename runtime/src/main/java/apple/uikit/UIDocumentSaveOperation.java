@@ -22,7 +22,7 @@ import apple.corelocation.*;
 
 
 
-@Library("UIKit")
+@Library("UIKit/UIKit.h")
 @Mapping("UIDocumentSaveOperation")
 public final class UIDocumentSaveOperation extends ObjCEnum {
     

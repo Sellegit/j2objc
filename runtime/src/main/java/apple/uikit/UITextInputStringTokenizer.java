@@ -24,7 +24,7 @@ import apple.corelocation.*;
  * @since Available in iOS 3.2 and later.
  */
 
-@Library("UIKit") @Mapping("UITextInputStringTokenizer")
+@Library("UIKit/UIKit.h") @Mapping("UITextInputStringTokenizer")
 public class UITextInputStringTokenizer 
     extends NSObject 
     implements UITextInputTokenizer {

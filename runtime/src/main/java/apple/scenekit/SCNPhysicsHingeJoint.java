@@ -23,7 +23,7 @@ import apple.opengles.*;
 
 
 
-@Library("SceneKit") @Mapping("SCNPhysicsHingeJoint")
+@Library("SceneKit/SceneKit.h") @Mapping("SCNPhysicsHingeJoint")
 public class SCNPhysicsHingeJoint 
     extends SCNPhysicsBehavior 
      {

@@ -18,7 +18,7 @@ import apple.foundation.*;
 
 
 
-@Library("CoreFoundation")
+@Library("CoreFoundation/CoreFoundation.h")
 @Mapping("CFURLEnumeratorResult")
 public final class CFURLEnumeratorResult extends ObjCEnum {
     

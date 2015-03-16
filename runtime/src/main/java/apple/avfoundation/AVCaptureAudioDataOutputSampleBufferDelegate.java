@@ -23,7 +23,7 @@ import apple.mediatoolbox.*;
 
 
 
-@Library("AVFoundation") @Mapping("AVCaptureAudioDataOutputSampleBufferDelegate")
+@Library("AVFoundation/AVFoundation.h") @Mapping("AVCaptureAudioDataOutputSampleBufferDelegate")
 public interface AVCaptureAudioDataOutputSampleBufferDelegate 
     extends NSObjectProtocol {
 

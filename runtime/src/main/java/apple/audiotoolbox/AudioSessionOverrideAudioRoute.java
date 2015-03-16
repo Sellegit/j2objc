@@ -20,7 +20,7 @@ import apple.coremedia.*;
 
 
 
-@Library("AudioToolbox")
+@Library("AudioToolbox/AudioToolbox.h")
 @Mapping("AudioSessionOverrideAudioRoute")
 public final class AudioSessionOverrideAudioRoute extends ObjCEnum {
     

@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 
 
-@Library("CoreData")
+@Library("CoreData/CoreData.h")
 @Mapping("NSMergePolicyType")
 public final class NSMergePolicyType extends ObjCEnum {
     

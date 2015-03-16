@@ -20,7 +20,7 @@ import apple.imageio.*;
 
 
 
-@Library("CoreImage") @Mapping("CIQRCodeFeature")
+@Library("CoreImage/CoreImage.h") @Mapping("CIQRCodeFeature")
 public class CIQRCodeFeature 
     extends CIFeature 
      {

@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 
 
-@Mapping("CMAcceleration")
+@Mapping("CMAcceleration") @Library("CoreMotion/CoreMotion.h")
 public class CMAcceleration 
     extends Struct 
      {

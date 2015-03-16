@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 
 
-@Library("ImageIO")
+@Library("ImageIO/ImageIO.h")
 @Mapping("CGImageSourceStatus")
 public final class CGImageSourceStatus extends ObjCEnum {
     

@@ -24,7 +24,7 @@ import apple.scenekit.*;
 
 
 
-@Library("SpriteKit") @Mapping("SKView")
+@Library("SpriteKit/SpriteKit.h") @Mapping("SKView")
 public class SKView 
     extends UIView 
      {

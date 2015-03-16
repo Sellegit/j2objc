@@ -19,7 +19,7 @@ import apple.foundation.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("HomeKit") @Mapping("HMCharacteristicWriteAction")
+@Library("HomeKit/HomeKit.h") @Mapping("HMCharacteristicWriteAction")
 public class HMCharacteristicWriteAction 
     extends HMAction 
      {

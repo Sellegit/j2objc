@@ -25,7 +25,7 @@ import apple.mediatoolbox.*;
  * @since Available in iOS 7.0 and later.
  */
 
-@Library("AVFoundation")
+@Library("AVFoundation/AVFoundation.h")
 @Mapping("AVAudioSessionErrorCode")
 public final class AVAudioSessionErrorCode extends ObjCEnum {
     

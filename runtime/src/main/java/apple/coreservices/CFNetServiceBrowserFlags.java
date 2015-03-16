@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 
 
-@Library("CFNetwork")
+@Library("CFNetwork/CFNetwork.h")
 @Mapping("CFNetServiceBrowserFlags")
 public final class CFNetServiceBrowserFlags extends ObjCEnum {
     

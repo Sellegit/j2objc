@@ -19,7 +19,7 @@ import apple.security.*;
 
 
 
-@Library("MultipeerConnectivity") @Mapping("MCNearbyServiceAdvertiserDelegate")
+@Library("MultipeerConnectivity/MultipeerConnectivity.h") @Mapping("MCNearbyServiceAdvertiserDelegate")
 public interface MCNearbyServiceAdvertiserDelegate 
     extends NSObjectProtocol {
 

@@ -22,7 +22,7 @@ import apple.corelocation.*;
 
 
 
-@Library("UIKit") @Mapping("UIAccessibilityIdentification")
+@Library("UIKit/UIKit.h") @Mapping("UIAccessibilityIdentification")
 public interface UIAccessibilityIdentification 
     extends NSObjectProtocol {
 

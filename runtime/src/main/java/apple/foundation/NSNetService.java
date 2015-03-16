@@ -22,7 +22,7 @@ import apple.dispatch.*;
 
 
 
-@Library("Foundation") @Mapping("NSNetService")
+@Library("Foundation/Foundation.h") @Mapping("NSNetService")
 public class NSNetService 
     extends NSObject 
      {

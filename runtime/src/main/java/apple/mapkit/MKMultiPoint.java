@@ -22,7 +22,7 @@ import apple.dispatch.*;
  * @since Available in iOS 4.0 and later.
  */
 
-@Library("MapKit") @Mapping("MKMultiPoint")
+@Library("MapKit/MapKit.h") @Mapping("MKMultiPoint")
 public class MKMultiPoint 
     extends MKShape 
      {

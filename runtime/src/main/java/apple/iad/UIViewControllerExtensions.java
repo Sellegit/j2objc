@@ -20,7 +20,7 @@ import apple.avkit.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("iAd")
+@Library("iAd/iAd.h")
 public final class UIViewControllerExtensions 
     extends NSExtensions 
      {
@@ -30,54 +30,10 @@ public final class UIViewControllerExtensions
     private UIViewControllerExtensions() {}
     
     
-    /**
-     * @since Available in iOS 7.0 and later.
-     */
-    @Mapping("interstitialPresentationPolicy")
-    public static native @Representing("ADInterstitialPresentationPolicy") @MachineSizedSInt long getInterstitialPresentationPolicy(UIViewController thiz);
-    /**
-     * @since Available in iOS 7.0 and later.
-     */
-    @Mapping("setInterstitialPresentationPolicy:")
-    public static native void setInterstitialPresentationPolicy(UIViewController thiz, @Representing("ADInterstitialPresentationPolicy") @MachineSizedSInt long v);
-    /**
-     * @since Available in iOS 7.0 and later.
-     */
-    @Mapping("canDisplayBannerAds")
-    public static native boolean canDisplayBannerAds(UIViewController thiz);
-    /**
-     * @since Available in iOS 7.0 and later.
-     */
-    @Mapping("setCanDisplayBannerAds:")
-    public static native void setCanDisplayBannerAds(UIViewController thiz, boolean v);
-    /**
-     * @since Available in iOS 7.0 and later.
-     */
-    @Mapping("originalContentView")
-    public static native UIView getOriginalContentView(UIViewController thiz);
-    /**
-     * @since Available in iOS 7.0 and later.
-     */
-    @Mapping("isPresentingFullScreenAd")
-    public static native boolean isPresentingFullScreenAd(UIViewController thiz);
-    /**
-     * @since Available in iOS 7.0 and later.
-     */
-    @Mapping("isDisplayingBannerAd")
-    public static native boolean isDisplayingBannerAd(UIViewController thiz);
-    /**
-     * @since Available in iOS 7.0 and later.
-     */
-    @Mapping("shouldPresentInterstitialAd")
-    public static native boolean shouldPresentInterstitialAd(UIViewController thiz);
     
     
     
-    /**
-     * @since Available in iOS 7.0 and later.
-     */
-    @Mapping("requestInterstitialAdPresentation")
-    public static native boolean requestInterstitialAdPresentation(UIViewController thiz);
+    
     /**
      * @since Available in iOS 7.0 and later.
      */

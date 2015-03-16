@@ -20,7 +20,7 @@ import apple.uikit.*;
  * @since Available in iOS 3.0 and later.
  */
 
-@Library("MediaPlayer") @Mapping("MPMediaPlaylist")
+@Library("MediaPlayer/MediaPlayer.h") @Mapping("MPMediaPlaylist")
 public class MPMediaPlaylist 
     extends MPMediaItemCollection 
      {

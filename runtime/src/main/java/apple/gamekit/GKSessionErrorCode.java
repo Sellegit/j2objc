@@ -18,7 +18,7 @@ import apple.uikit.*;
 
 
 
-@Library("GameKit")
+@Library("GameKit/GameKit.h")
 @Mapping("GKSessionErrorCode")
 public final class GKSessionErrorCode extends ObjCEnum {
     

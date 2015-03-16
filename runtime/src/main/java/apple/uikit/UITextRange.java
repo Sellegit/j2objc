@@ -24,7 +24,7 @@ import apple.corelocation.*;
  * @since Available in iOS 3.2 and later.
  */
 
-@Library("UIKit") @Mapping("UITextRange")
+@Library("UIKit/UIKit.h") @Mapping("UITextRange")
 public class UITextRange 
     extends NSObject 
      {

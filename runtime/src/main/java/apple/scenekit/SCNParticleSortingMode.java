@@ -23,7 +23,7 @@ import apple.opengles.*;
 
 
 
-@Library("SceneKit")
+@Library("SceneKit/SceneKit.h")
 @Mapping("SCNParticleSortingMode")
 public final class SCNParticleSortingMode extends ObjCEnum {
     

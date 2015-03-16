@@ -21,7 +21,7 @@ import apple.addressbook.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("PassKit")
+@Library("PassKit/PassKit.h")
 @Mapping("PKPaymentPassActivationState")
 public final class PKPaymentPassActivationState extends ObjCEnum {
     

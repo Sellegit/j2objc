@@ -22,7 +22,7 @@ import apple.dispatch.*;
 
 
 
-@Library("Foundation") @Mapping("NSFileHandle")
+@Library("Foundation/Foundation.h") @Mapping("NSFileHandle")
 public class NSFileHandle 
     extends NSObject 
      {

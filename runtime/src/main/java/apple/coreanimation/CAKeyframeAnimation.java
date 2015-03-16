@@ -21,7 +21,7 @@ import apple.metal.*;
 
 
 
-@Library("QuartzCore") @Mapping("CAKeyframeAnimation")
+@Library("QuartzCore/QuartzCore.h") @Mapping("CAKeyframeAnimation")
 public class CAKeyframeAnimation 
     extends CAPropertyAnimation 
      {

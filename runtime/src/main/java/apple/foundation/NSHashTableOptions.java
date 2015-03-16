@@ -22,7 +22,7 @@ import apple.dispatch.*;
 
 
 
-@Library("Foundation")
+@Library("Foundation/Foundation.h")
 @Mapping("NSHashTableOptions")
 public final class NSHashTableOptions extends ObjCEnum {
     

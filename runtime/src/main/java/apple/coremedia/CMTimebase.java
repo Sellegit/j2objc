@@ -20,7 +20,7 @@ import apple.corevideo.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreMedia")
+@Library("CoreMedia/CoreMedia.h")
 public class CMTimebase 
     extends CMClockOrTimebase 
      {
@@ -67,106 +67,106 @@ public class CMTimebase
      * @since Available in iOS 6.0 and later.
      */
     @GlobalFunction("CMTimebaseGetMasterTimebase")
-    public native CMTimebase getMasterTimebase();
+    public static native CMTimebase getMasterTimebase(CMTimebase timebase);
     /**
      * @since Available in iOS 6.0 and later.
      */
     @GlobalFunction("CMTimebaseGetMasterClock")
-    public native CMClock getMasterClock();
+    public static native CMClock getMasterClock(CMTimebase timebase);
     /**
      * @since Available in iOS 6.0 and later.
      */
     @GlobalFunction("CMTimebaseGetMaster")
-    public native CMTimebase getMaster();
+    public static native CMTimebase getMaster(CMTimebase timebase);
     /**
      * @since Available in iOS 6.0 and later.
      */
     @GlobalFunction("CMTimebaseGetUltimateMasterClock")
-    public native CMClock getUltimateMasterClock();
+    public static native CMClock getUltimateMasterClock(CMTimebase timebase);
     /**
      * @since Available in iOS 6.0 and later.
      */
     @GlobalFunction("CMTimebaseGetTime")
-    public native CMTime getTime();
+    public static native CMTime getTime(CMTimebase timebase);
     /**
      * @since Available in iOS 6.0 and later.
      */
     @GlobalFunction("CMTimebaseGetTimeWithTimeScale")
-    public native CMTime getTime(int timescale, CMTimeRoundingMethod method);
+    public static native CMTime getTime(CMTimebase timebase, int timescale, CMTimeRoundingMethod method);
     /**
      * @since Available in iOS 6.0 and later.
      */
     @GlobalFunction("CMTimebaseSetTime")
-    public native CMTimebaseError setTime(CMTime time);
+    public static native CMTimebaseError setTime(CMTimebase timebase, CMTime time);
     /**
      * @since Available in iOS 6.0 and later.
      */
     @GlobalFunction("CMTimebaseSetAnchorTime")
-    public native CMTimebaseError setAnchorTime(CMTime timebaseTime, CMTime immediateMasterTime);
+    public static native CMTimebaseError setAnchorTime(CMTimebase timebase, CMTime timebaseTime, CMTime immediateMasterTime);
     /**
      * @since Available in iOS 6.0 and later.
      */
     @GlobalFunction("CMTimebaseGetRate")
-    public native double getRate();
+    public static native double getRate(CMTimebase timebase);
     /**
      * @since Available in iOS 6.0 and later.
      */
     @GlobalFunction("CMTimebaseSetRate")
-    public native CMTimebaseError setRate(double rate);
+    public static native CMTimebaseError setRate(CMTimebase timebase, double rate);
     /**
      * @since Available in iOS 6.0 and later.
      */
     @GlobalFunction("CMTimebaseSetRateAndAnchorTime")
-    public native CMTimebaseError setRateAndAnchorTime(double rate, CMTime timebaseTime, CMTime immediateMasterTime);
+    public static native CMTimebaseError setRateAndAnchorTime(CMTimebase timebase, double rate, CMTime timebaseTime, CMTime immediateMasterTime);
     /**
      * @since Available in iOS 6.0 and later.
      */
     @GlobalFunction("CMTimebaseGetEffectiveRate")
-    public native double getEffectiveRate();
+    public static native double getEffectiveRate(CMTimebase timebase);
     /**
      * @since Available in iOS 6.0 and later.
      */
     @GlobalFunction("CMTimebaseAddTimer")
-    public native CMTimebaseError addTimer(CFRunLoopTimer timer, CFRunLoop runloop);
+    public static native CMTimebaseError addTimer(CMTimebase timebase, CFRunLoopTimer timer, CFRunLoop runloop);
     /**
      * @since Available in iOS 6.0 and later.
      */
     @GlobalFunction("CMTimebaseRemoveTimer")
-    public native CMTimebaseError removeTimer(CFRunLoopTimer timer);
+    public static native CMTimebaseError removeTimer(CMTimebase timebase, CFRunLoopTimer timer);
     /**
      * @since Available in iOS 6.0 and later.
      */
     @GlobalFunction("CMTimebaseSetTimerNextFireTime")
-    public native CMTimebaseError setTimerNextFireTime(CFRunLoopTimer timer, CMTime fireTime, int flags);
+    public static native CMTimebaseError setTimerNextFireTime(CMTimebase timebase, CFRunLoopTimer timer, CMTime fireTime, int flags);
     /**
      * @since Available in iOS 6.0 and later.
      */
     @GlobalFunction("CMTimebaseSetTimerToFireImmediately")
-    public native CMTimebaseError setTimerToFireImmediately(CFRunLoopTimer timer);
+    public static native CMTimebaseError setTimerToFireImmediately(CMTimebase timebase, CFRunLoopTimer timer);
     /**
      * @since Available in iOS 6.0 and later.
      */
     @GlobalFunction("CMTimebaseAddTimerDispatchSource")
-    public native CMTimebaseError addTimerDispatchSource(DispatchSource timerSource);
+    public static native CMTimebaseError addTimerDispatchSource(CMTimebase timebase, DispatchSource timerSource);
     /**
      * @since Available in iOS 6.0 and later.
      */
     @GlobalFunction("CMTimebaseRemoveTimerDispatchSource")
-    public native CMTimebaseError removeTimerDispatchSource(DispatchSource timerSource);
+    public static native CMTimebaseError removeTimerDispatchSource(CMTimebase timebase, DispatchSource timerSource);
     /**
      * @since Available in iOS 6.0 and later.
      */
     @GlobalFunction("CMTimebaseSetTimerDispatchSourceNextFireTime")
-    public native CMTimebaseError setTimerDispatchSourceNextFireTime(DispatchSource timerSource, CMTime fireTime, int flags);
+    public static native CMTimebaseError setTimerDispatchSourceNextFireTime(CMTimebase timebase, DispatchSource timerSource, CMTime fireTime, int flags);
     /**
      * @since Available in iOS 6.0 and later.
      */
     @GlobalFunction("CMTimebaseSetTimerDispatchSourceToFireImmediately")
-    public native CMTimebaseError setTimerDispatchSourceToFireImmediately(DispatchSource timerSource);
+    public static native CMTimebaseError setTimerDispatchSourceToFireImmediately(CMTimebase timebase, DispatchSource timerSource);
     /**
      * @since Available in iOS 6.0 and later.
      */
     @GlobalFunction("CMTimebaseNotificationBarrier")
-    public native CMTimebaseError notificationBarrier();
+    public static native CMTimebaseError notificationBarrier(CMTimebase timebase);
     
 }

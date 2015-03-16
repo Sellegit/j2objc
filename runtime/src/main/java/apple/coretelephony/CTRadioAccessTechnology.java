@@ -16,7 +16,7 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreTelephony")
+@Library("CoreTelephony/CoreTelephony.h")
 public class CTRadioAccessTechnology 
     extends Object 
      {

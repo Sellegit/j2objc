@@ -22,7 +22,7 @@ import apple.corelocation.*;
 
 
 
-@Mapping("UIEdgeInsets") @Library("UIKit")
+@Mapping("UIEdgeInsets") @Library("UIKit/UIKit.h")
 public class UIEdgeInsets 
     extends Struct 
      {

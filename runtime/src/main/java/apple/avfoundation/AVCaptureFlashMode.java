@@ -25,7 +25,7 @@ import apple.mediatoolbox.*;
  * @since Available in iOS 4.0 and later.
  */
 
-@Library("AVFoundation")
+@Library("AVFoundation/AVFoundation.h")
 @Mapping("AVCaptureFlashMode")
 public final class AVCaptureFlashMode extends ObjCEnum {
     

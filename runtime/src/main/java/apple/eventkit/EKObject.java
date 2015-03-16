@@ -19,7 +19,7 @@ import apple.corelocation.*;
 
 
 
-@Library("EventKit") @Mapping("EKObject")
+@Library("EventKit/EventKit.h") @Mapping("EKObject")
 public class EKObject 
     extends NSObject 
      {

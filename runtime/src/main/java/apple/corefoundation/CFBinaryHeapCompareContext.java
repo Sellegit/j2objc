@@ -18,7 +18,7 @@ import apple.foundation.*;
 
 
 
-@Mapping("CFBinaryHeapCompareContext")
+@Mapping("CFBinaryHeapCompareContext") @Library("CoreFoundation/CoreFoundation.h")
 public class CFBinaryHeapCompareContext 
     extends Struct 
      {

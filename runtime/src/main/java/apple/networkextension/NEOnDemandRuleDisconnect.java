@@ -19,7 +19,7 @@ import apple.foundation.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("NetworkExtension") @Mapping("NEOnDemandRuleDisconnect")
+@Library("NetworkExtension/NetworkExtension.h") @Mapping("NEOnDemandRuleDisconnect")
 public class NEOnDemandRuleDisconnect 
     extends NEOnDemandRule 
      {

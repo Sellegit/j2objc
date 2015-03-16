@@ -24,7 +24,7 @@ import apple.corelocation.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("UIKit") @Mapping("UIUserNotificationSettings")
+@Library("UIKit/UIKit.h") @Mapping("UIUserNotificationSettings")
 public class UIUserNotificationSettings 
     extends NSObject 
      {

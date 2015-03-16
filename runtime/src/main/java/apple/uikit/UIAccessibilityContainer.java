@@ -22,7 +22,7 @@ import apple.corelocation.*;
 
 
 
-@Library("UIKit") @Mapping("UIAccessibilityContainer")
+@Library("UIKit/UIKit.h") @Mapping("UIAccessibilityContainer")
 public interface UIAccessibilityContainer 
      {
 

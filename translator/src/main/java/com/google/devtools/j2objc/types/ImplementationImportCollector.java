@@ -79,6 +79,9 @@ public class ImplementationImportCollector extends TreeVisitor {
   public void collect(CompilationUnit unit) {
     mainTypeName = NameTable.getMainTypeFullName(unit);
     run(unit);
+//    System.err.println("unit:" + unit);
+//    System.err.println("imports:" + imports);
+//    System.err.println("declared:" + declaredTypes);
     for (Import imp : declaredTypes) {
       imports.remove(imp);
     }
@@ -106,8 +109,11 @@ public class ImplementationImportCollector extends TreeVisitor {
   // exception is the main type, as it's needed to import the matching
   // header file.
   private void addDeclaredType(ITypeBinding type, boolean isEnum) {
-    if (type != null
-        && !NameTable.getFullName(type).equals(mainTypeName + (isEnum ? "Enum" : ""))) {
+    if (type != null) {
+      if (BindingUtil.extractLibraryName(type) != null
+          || NameTable.getFullName(type).equals(mainTypeName + (isEnum ? "Enum" : "")) ){
+        return;
+      }
       Import.addImports(type, declaredTypes);
     }
   }

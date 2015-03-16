@@ -25,7 +25,7 @@ import apple.mediatoolbox.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("AVFoundation") @Mapping("AVAudioUnit")
+@Library("AVFoundation/AVFoundation.h") @Mapping("AVAudioUnit")
 public class AVAudioUnit 
     extends AVAudioNode 
      {

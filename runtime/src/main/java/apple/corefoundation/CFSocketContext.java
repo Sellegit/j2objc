@@ -18,7 +18,7 @@ import apple.foundation.*;
 
 
 
-@Mapping("CFSocketContext")
+@Mapping("CFSocketContext") @Library("CoreFoundation/CoreFoundation.h")
  class CFSocketContext 
     extends Struct 
      {

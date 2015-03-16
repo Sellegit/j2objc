@@ -18,7 +18,7 @@ import apple.uikit.*;
 
 
 
-@Library("MediaPlayer")
+@Library("MediaPlayer/MediaPlayer.h")
 @Mapping("MPMovieMediaTypeMask")
 public final class MPMovieMediaTypeMask extends ObjCEnum {
     

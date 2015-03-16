@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 
 
-@Mapping("CTRunDelegateCallbacks")
+@Mapping("CTRunDelegateCallbacks") @Library("CoreText/CoreText.h")
  class CTRunDelegateCallbacks 
     extends Struct 
      {

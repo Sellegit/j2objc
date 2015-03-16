@@ -22,7 +22,7 @@ import apple.corelocation.*;
 
 
 
-@Library("UIKit")
+@Library("UIKit/UIKit.h")
 @Mapping("UIModalPresentationStyle")
 public final class UIModalPresentationStyle extends ObjCEnum {
     

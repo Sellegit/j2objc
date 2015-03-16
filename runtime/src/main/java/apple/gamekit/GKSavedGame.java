@@ -18,7 +18,7 @@ import apple.uikit.*;
 
 
 
-@Library("GameKit") @Mapping("GKSavedGame")
+@Library("GameKit/GameKit.h") @Mapping("GKSavedGame")
 public class GKSavedGame 
     extends NSObject 
     implements NSCopying {

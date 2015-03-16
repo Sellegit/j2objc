@@ -22,7 +22,7 @@ import apple.uikit.*;
  */
 @Deprecated
 
-@Library("GameKit") @Mapping("GKTurnBasedEventHandler")
+@Library("GameKit/GameKit.h") @Mapping("GKTurnBasedEventHandler")
 public class GKTurnBasedEventHandler 
     extends NSObject 
      {

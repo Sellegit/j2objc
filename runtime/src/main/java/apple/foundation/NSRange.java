@@ -22,7 +22,7 @@ import apple.dispatch.*;
 
 
 
-@Mapping("NSRange") @Library("Foundation")
+@Mapping("NSRange") @Library("Foundation/Foundation.h")
 public class NSRange 
     extends Struct 
      {

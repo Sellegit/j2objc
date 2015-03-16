@@ -24,7 +24,7 @@ import apple.accounts.*;
  */
 @Deprecated
 
-@Library("Twitter") @Mapping("TWTweetComposeViewController")
+@Library("Twitter/Twitter.h") @Mapping("TWTweetComposeViewController")
 public class TWTweetComposeViewController 
     extends UIViewController 
      {

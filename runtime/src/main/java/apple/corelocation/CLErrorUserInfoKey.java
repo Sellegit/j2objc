@@ -18,7 +18,7 @@ import apple.corebluetooth.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreLocation")
+@Library("CoreLocation/CoreLocation.h")
 public class CLErrorUserInfoKey 
     extends GlobalValueEnumeration<NSString>
      {

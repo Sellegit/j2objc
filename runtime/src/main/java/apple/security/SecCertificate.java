@@ -16,7 +16,7 @@ import apple.dispatch.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("Security")
+@Library("Security/Security.h")
 public class SecCertificate 
     extends CFType 
      {
@@ -53,11 +53,11 @@ public class SecCertificate
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("SecCertificateCopyData")
-    public native CFData copyData();
+    public static native CFData copyData(SecCertificate certificate);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("SecCertificateCopySubjectSummary")
-    public native CFString copySubjectSummary();
+    public static native CFString copySubjectSummary(SecCertificate certificate);
     
 }

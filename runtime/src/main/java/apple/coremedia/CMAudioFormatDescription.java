@@ -20,7 +20,7 @@ import apple.corevideo.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreMedia")
+@Library("CoreMedia/CoreMedia.h")
 public class CMAudioFormatDescription 
     extends CMFormatDescription 
      {
@@ -39,32 +39,32 @@ public class CMAudioFormatDescription
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMAudioFormatDescriptionGetStreamBasicDescription")
-    public native AudioStreamBasicDescription getStreamBasicDescription();
+    public static native AudioStreamBasicDescription getStreamBasicDescription(CMAudioFormatDescription desc);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMAudioFormatDescriptionGetMagicCookie")
-    private native Todo getMagicCookie(Todo cookieSizeOut);
+    private static native Todo getMagicCookie(CMAudioFormatDescription desc, Todo cookieSizeOut);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMAudioFormatDescriptionGetChannelLayout")
-    private native AudioChannelLayout getChannelLayout(Todo layoutSize);
+    private static native AudioChannelLayout getChannelLayout(CMAudioFormatDescription desc, Todo layoutSize);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMAudioFormatDescriptionGetFormatList")
-    private native AudioFormatListItem getFormatList(Todo formatListSize);
+    private static native AudioFormatListItem getFormatList(CMAudioFormatDescription desc, Todo formatListSize);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMAudioFormatDescriptionGetRichestDecodableFormat")
-    public native AudioFormatListItem getRichestDecodableFormat();
+    public static native AudioFormatListItem getRichestDecodableFormat(CMAudioFormatDescription desc);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMAudioFormatDescriptionGetMostCompatibleFormat")
-    public native AudioFormatListItem getMostCompatibleFormat();
+    public static native AudioFormatListItem getMostCompatibleFormat(CMAudioFormatDescription desc);
     /**
      * @since Available in iOS 4.0 and later.
      */
@@ -74,7 +74,7 @@ public class CMAudioFormatDescription
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMAudioFormatDescriptionEqual")
-    private native boolean equalsTo(CMAudioFormatDescription desc2, CMAudioFormatDescriptionMask equalityMask, Todo equalityMaskOut);
+    private static native boolean equalsTo(CMAudioFormatDescription desc1, CMAudioFormatDescription desc2, CMAudioFormatDescriptionMask equalityMask, Todo equalityMaskOut);
     /**
      * @since Available in iOS 8.0 and later.
      */

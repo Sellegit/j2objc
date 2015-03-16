@@ -24,7 +24,7 @@ import apple.dispatch.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("Foundation") @Mapping("NSExtensionItem")
+@Library("Foundation/Foundation.h") @Mapping("NSExtensionItem")
 public class NSExtensionItem 
     extends NSObject 
     implements NSCopying {

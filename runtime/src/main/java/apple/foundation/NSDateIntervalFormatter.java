@@ -24,7 +24,7 @@ import apple.dispatch.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("Foundation") @Mapping("NSDateIntervalFormatter")
+@Library("Foundation/Foundation.h") @Mapping("NSDateIntervalFormatter")
 public class NSDateIntervalFormatter 
     extends NSFormatter 
      {

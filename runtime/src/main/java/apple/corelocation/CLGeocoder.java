@@ -21,7 +21,7 @@ import apple.corebluetooth.*;
  * @since Available in iOS 5.0 and later.
  */
 
-@Library("CoreLocation") @Mapping("CLGeocoder")
+@Library("CoreLocation/CoreLocation.h") @Mapping("CLGeocoder")
 public class CLGeocoder 
     extends NSObject 
      {

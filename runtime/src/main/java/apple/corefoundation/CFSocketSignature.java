@@ -18,7 +18,7 @@ import apple.foundation.*;
 
 
 
-@Mapping("CFSocketSignature")
+@Mapping("CFSocketSignature") @Library("CoreFoundation/CoreFoundation.h")
 public class CFSocketSignature 
     extends Struct 
      {

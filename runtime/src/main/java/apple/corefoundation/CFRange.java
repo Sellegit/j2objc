@@ -18,7 +18,7 @@ import apple.foundation.*;
 
 
 
-@Mapping("CFRange")
+@Mapping("CFRange") @Library("CoreFoundation/CoreFoundation.h")
 public class CFRange 
     extends Struct 
      {

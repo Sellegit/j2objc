@@ -25,7 +25,7 @@ import apple.mediatoolbox.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("AVFoundation") @Mapping("AVAudioUnitVarispeed")
+@Library("AVFoundation/AVFoundation.h") @Mapping("AVAudioUnitVarispeed")
 public class AVAudioUnitVarispeed 
     extends AVAudioUnitTimeEffect 
      {

@@ -18,7 +18,7 @@ import apple.uikit.*;
 
 
 
-@Library("CoreGraphics")
+@Library("CoreGraphics/CoreGraphics.h")
 @Mapping("CGGradientDrawingOptions")
 public final class CGGradientDrawingOptions extends ObjCEnum {
     

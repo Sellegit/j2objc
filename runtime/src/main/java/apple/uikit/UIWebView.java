@@ -24,7 +24,7 @@ import apple.corelocation.*;
  * @since Available in iOS 2.0 and later.
  */
 
-@Library("UIKit") @Mapping("UIWebView")
+@Library("UIKit/UIKit.h") @Mapping("UIWebView")
 public class UIWebView 
     extends UIView 
     implements NSCoding, UIScrollViewDelegate {

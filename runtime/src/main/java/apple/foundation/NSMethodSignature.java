@@ -22,7 +22,7 @@ import apple.dispatch.*;
 
 
 
-@Library("Foundation") @Mapping("NSMethodSignature")
+@Library("Foundation/Foundation.h") @Mapping("NSMethodSignature")
 public class NSMethodSignature 
     extends NSObject 
      {

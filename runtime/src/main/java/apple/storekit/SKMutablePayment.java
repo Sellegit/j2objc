@@ -21,7 +21,7 @@ import apple.accounts.*;
  * @since Available in iOS 3.0 and later.
  */
 
-@Library("StoreKit") @Mapping("SKMutablePayment")
+@Library("StoreKit/StoreKit.h") @Mapping("SKMutablePayment")
 public class SKMutablePayment 
     extends SKPayment 
      {

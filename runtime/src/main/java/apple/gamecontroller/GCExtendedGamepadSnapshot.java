@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 
 
-@Library("GameController") @Mapping("GCExtendedGamepadSnapshot")
+@Library("GameController/GameController.h") @Mapping("GCExtendedGamepadSnapshot")
 public class GCExtendedGamepadSnapshot 
     extends GCExtendedGamepad 
      {

@@ -22,7 +22,7 @@ import apple.dispatch.*;
 
 
 
-@Library("Foundation") @Mapping("NSCachedURLResponse")
+@Library("Foundation/Foundation.h") @Mapping("NSCachedURLResponse")
 public class NSCachedURLResponse 
     extends NSObject 
     implements NSCopying {

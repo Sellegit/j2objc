@@ -24,7 +24,7 @@ import apple.corelocation.*;
  * @since Available in iOS 5.0 and later.
  */
 
-@Library("UIKit") @Mapping("UIDocument")
+@Library("UIKit/UIKit.h") @Mapping("UIDocument")
 public class UIDocument 
     extends NSObject 
     implements NSFilePresenter {

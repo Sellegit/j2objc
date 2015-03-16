@@ -24,7 +24,7 @@ import apple.corelocation.*;
  * @since Available in iOS 3.2 and later.
  */
 
-@Library("UIKit") @Mapping("UIRotationGestureRecognizer")
+@Library("UIKit/UIKit.h") @Mapping("UIRotationGestureRecognizer")
 public class UIRotationGestureRecognizer 
     extends UIGestureRecognizer 
      {

@@ -23,7 +23,7 @@ import apple.opengles.*;
 
 
 
-@Library("SceneKit") @Mapping("SCNActionable")
+@Library("SceneKit/SceneKit.h") @Mapping("SCNActionable")
 public interface SCNActionable 
     extends NSObjectProtocol {
 

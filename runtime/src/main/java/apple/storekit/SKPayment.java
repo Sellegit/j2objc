@@ -21,7 +21,7 @@ import apple.accounts.*;
  * @since Available in iOS 3.0 and later.
  */
 
-@Library("StoreKit") @Mapping("SKPayment")
+@Library("StoreKit/StoreKit.h") @Mapping("SKPayment")
 public class SKPayment 
     extends NSObject 
     implements NSCopying {

@@ -16,7 +16,7 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("OpenGLES")
+@Library("OpenGLES/OpenGLES.h")
 public class OpenGLES 
     extends Object 
      {

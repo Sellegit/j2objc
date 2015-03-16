@@ -23,7 +23,7 @@ import apple.opengles.*;
 
 
 
-@Library("SceneKit") @Mapping("SCNMorpher")
+@Library("SceneKit/SceneKit.h") @Mapping("SCNMorpher")
 public class SCNMorpher 
     extends NSObject 
     implements SCNAnimatable {

@@ -22,7 +22,7 @@ import apple.corelocation.*;
 
 
 
-@Library("UIKit")
+@Library("UIKit/UIKit.h")
 @Mapping("UIModalTransitionStyle")
 public final class UIModalTransitionStyle extends ObjCEnum {
     

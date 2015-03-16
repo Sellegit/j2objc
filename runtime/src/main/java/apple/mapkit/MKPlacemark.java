@@ -22,7 +22,7 @@ import apple.dispatch.*;
  * @since Available in iOS 3.0 and later.
  */
 
-@Library("MapKit") @Mapping("MKPlacemark")
+@Library("MapKit/MapKit.h") @Mapping("MKPlacemark")
 public class MKPlacemark 
     extends CLPlacemark 
     implements MKAnnotation {

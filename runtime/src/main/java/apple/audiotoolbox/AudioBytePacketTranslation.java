@@ -20,7 +20,7 @@ import apple.coremedia.*;
 
 
 
-@Mapping("AudioBytePacketTranslation")
+@Mapping("AudioBytePacketTranslation") @Library("AudioToolbox/AudioToolbox.h")
 public class AudioBytePacketTranslation 
     extends Struct 
      {
@@ -43,26 +43,26 @@ public class AudioBytePacketTranslation
         return __new;
     ]-*/;
     public static native AudioBytePacketTranslation copyWithmByte(AudioBytePacketTranslation original, long mByte) /*-[
-        original.mByte = mByte;
-        return original;
+        AudioBytePacketTranslation __new = { .mByte = mByte, .mPacket = original.mPacket, .mByteOffsetInPacket = original.mByteOffsetInPacket, .mFlags = original.mFlags };
+        return __new;
     ]-*/;
 
     
     public static native AudioBytePacketTranslation copyWithmPacket(AudioBytePacketTranslation original, long mPacket) /*-[
-        original.mPacket = mPacket;
-        return original;
+        AudioBytePacketTranslation __new = { .mByte = original.mByte, .mPacket = mPacket, .mByteOffsetInPacket = original.mByteOffsetInPacket, .mFlags = original.mFlags };
+        return __new;
     ]-*/;
 
     
     public static native AudioBytePacketTranslation copyWithmByteOffsetInPacket(AudioBytePacketTranslation original, int mByteOffsetInPacket) /*-[
-        original.mByteOffsetInPacket = mByteOffsetInPacket;
-        return original;
+        AudioBytePacketTranslation __new = { .mByte = original.mByte, .mPacket = original.mPacket, .mByteOffsetInPacket = mByteOffsetInPacket, .mFlags = original.mFlags };
+        return __new;
     ]-*/;
 
     
     public static native AudioBytePacketTranslation copyWithmFlags(AudioBytePacketTranslation original, int mFlags) /*-[
-        original.mFlags = mFlags;
-        return original;
+        AudioBytePacketTranslation __new = { .mByte = original.mByte, .mPacket = original.mPacket, .mByteOffsetInPacket = original.mByteOffsetInPacket, .mFlags = mFlags };
+        return __new;
     ]-*/;
 
     

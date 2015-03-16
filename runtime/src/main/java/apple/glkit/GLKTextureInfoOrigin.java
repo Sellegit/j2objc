@@ -22,7 +22,7 @@ import apple.dispatch.*;
  * @since Available in iOS 5.0 and later.
  */
 
-@Library("GLKit")
+@Library("GLKit/GLKit.h")
 @Mapping("GLKTextureInfoOrigin")
 public final class GLKTextureInfoOrigin extends ObjCEnum {
     

@@ -22,7 +22,7 @@ import apple.corelocation.*;
 
 
 
-@Library("UIKit") @Mapping("UIPickerViewAccessibilityDelegate")
+@Library("UIKit/UIKit.h") @Mapping("UIPickerViewAccessibilityDelegate")
 public interface UIPickerViewAccessibilityDelegate 
     extends UIPickerViewDelegate {
 

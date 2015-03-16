@@ -25,7 +25,7 @@ import apple.mediatoolbox.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("AVFoundation")
+@Library("AVFoundation/AVFoundation.h")
 @Mapping("AVAudio3DMixingRenderingAlgorithm")
 public final class AVAudio3DMixingRenderingAlgorithm extends ObjCEnum {
     

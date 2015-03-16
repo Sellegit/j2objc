@@ -24,7 +24,7 @@ import apple.dispatch.*;
  * @since Available in iOS 3.0 and later.
  */
 
-@Library("Foundation") @Mapping("NSUndoManager")
+@Library("Foundation/Foundation.h") @Mapping("NSUndoManager")
 public class NSUndoManager 
     extends NSObject 
      {

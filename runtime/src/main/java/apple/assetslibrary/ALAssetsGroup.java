@@ -20,7 +20,7 @@ import apple.imageio.*;
  * @since Available in iOS 4.0 and later.
  */
 
-@Library("AssetsLibrary") @Mapping("ALAssetsGroup")
+@Library("AssetsLibrary/AssetsLibrary.h") @Mapping("ALAssetsGroup")
 public class ALAssetsGroup 
     extends NSObject 
      {

@@ -23,7 +23,7 @@ import apple.opengles.*;
 
 
 
-@Library("SceneKit") @Mapping("SCNShadable")
+@Library("SceneKit/SceneKit.h") @Mapping("SCNShadable")
 public interface SCNShadable 
     extends NSObjectProtocol {
 

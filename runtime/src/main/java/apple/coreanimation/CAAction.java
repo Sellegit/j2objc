@@ -21,7 +21,7 @@ import apple.metal.*;
 
 
 
-@Library("QuartzCore") @Mapping("CAAction")
+@Library("QuartzCore/QuartzCore.h") @Mapping("CAAction")
 public interface CAAction 
      {
 

@@ -20,7 +20,7 @@ import apple.metal.*;
 
 
 
-@Mapping("CVPlanarComponentInfo")
+@Mapping("CVPlanarComponentInfo") @Library("CoreVideo/CoreVideo.h")
 public class CVPlanarComponentInfo 
     extends Struct 
      {

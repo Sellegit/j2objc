@@ -22,7 +22,7 @@ import apple.uikit.*;
  */
 @Deprecated
 
-@Library("GameKit") @Mapping("GKAchievementViewControllerDelegate")
+@Library("GameKit/GameKit.h") @Mapping("GKAchievementViewControllerDelegate")
 public interface GKAchievementViewControllerDelegate 
     extends NSObjectProtocol {
 

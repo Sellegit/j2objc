@@ -22,7 +22,7 @@ import apple.dispatch.*;
  * @since Available in iOS 5.0 and later.
  */
 
-@Library("GLKit") @Mapping("GLKEffectPropertyTransform")
+@Library("GLKit/GLKit.h") @Mapping("GLKEffectPropertyTransform")
 public class GLKEffectPropertyTransform 
     extends GLKEffectProperty 
      {

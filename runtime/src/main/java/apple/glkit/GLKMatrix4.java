@@ -20,7 +20,7 @@ import apple.dispatch.*;
 
 
 
-@Mapping("GLKMatrix4") @Library("GLKit")
+@Mapping("GLKMatrix4") @Library("GLKit/GLKit.h")
 public class GLKMatrix4 
     extends Struct 
      {
@@ -80,68 +80,68 @@ public class GLKMatrix4
     @GlobalFunction("GLKMatrix4MakeLookAt")
     public static native GLKMatrix4 createLookAt(float eyeX, float eyeY, float eyeZ, float centerX, float centerY, float centerZ, float upX, float upY, float upZ);
     @GlobalFunction("GLKMatrix4GetMatrix3")
-    public native GLKMatrix3 getMatrix3();
+    public static native GLKMatrix3 getMatrix3(GLKMatrix4 matrix);
     @GlobalFunction("GLKMatrix4GetMatrix2")
-    public native GLKMatrix2 getMatrix2();
+    public static native GLKMatrix2 getMatrix2(GLKMatrix4 matrix);
     @GlobalFunction("GLKMatrix4GetRow")
-    public native GLKVector4 getRow(int row);
+    public static native GLKVector4 getRow(GLKMatrix4 matrix, int row);
     @GlobalFunction("GLKMatrix4GetColumn")
-    public native GLKVector4 getColumn(int column);
+    public static native GLKVector4 getColumn(GLKMatrix4 matrix, int column);
     @GlobalFunction("GLKMatrix4SetRow")
-    public native GLKMatrix4 setRow(int row, GLKVector4 vector);
+    public static native GLKMatrix4 setRow(GLKMatrix4 matrix, int row, GLKVector4 vector);
     @GlobalFunction("GLKMatrix4SetColumn")
-    public native GLKMatrix4 setColumn(int column, GLKVector4 vector);
+    public static native GLKMatrix4 setColumn(GLKMatrix4 matrix, int column, GLKVector4 vector);
     @GlobalFunction("GLKMatrix4Transpose")
-    public native GLKMatrix4 transpose();
+    public static native GLKMatrix4 transpose(GLKMatrix4 matrix);
     @GlobalFunction("GLKMatrix4Invert")
-    public native GLKMatrix4 invert(Todo isInvertible);
+    public static native GLKMatrix4 invert(GLKMatrix4 matrix, Todo isInvertible);
     @GlobalFunction("GLKMatrix4InvertAndTranspose")
-    public native GLKMatrix4 invertAndTranspose(Todo isInvertible);
+    public static native GLKMatrix4 invertAndTranspose(GLKMatrix4 matrix, Todo isInvertible);
     @GlobalFunction("GLKMatrix4Multiply")
-    public native GLKMatrix4 multiply(GLKMatrix4 matrixRight);
+    public static native GLKMatrix4 multiply(GLKMatrix4 matrixLeft, GLKMatrix4 matrixRight);
     @GlobalFunction("GLKMatrix4Add")
-    public native GLKMatrix4 add(GLKMatrix4 matrixRight);
+    public static native GLKMatrix4 add(GLKMatrix4 matrixLeft, GLKMatrix4 matrixRight);
     @GlobalFunction("GLKMatrix4Subtract")
-    public native GLKMatrix4 subtract(GLKMatrix4 matrixRight);
+    public static native GLKMatrix4 subtract(GLKMatrix4 matrixLeft, GLKMatrix4 matrixRight);
     @GlobalFunction("GLKMatrix4Translate")
-    public native GLKMatrix4 translate(float tx, float ty, float tz);
+    public static native GLKMatrix4 translate(GLKMatrix4 matrix, float tx, float ty, float tz);
     @GlobalFunction("GLKMatrix4TranslateWithVector3")
-    public native GLKMatrix4 translateWithVector3(GLKVector3 translationVector);
+    public static native GLKMatrix4 translateWithVector3(GLKMatrix4 matrix, GLKVector3 translationVector);
     @GlobalFunction("GLKMatrix4TranslateWithVector4")
-    public native GLKMatrix4 translateWithVector4(GLKVector4 translationVector);
+    public static native GLKMatrix4 translateWithVector4(GLKMatrix4 matrix, GLKVector4 translationVector);
     @GlobalFunction("GLKMatrix4Scale")
-    public native GLKMatrix4 scale(float sx, float sy, float sz);
+    public static native GLKMatrix4 scale(GLKMatrix4 matrix, float sx, float sy, float sz);
     @GlobalFunction("GLKMatrix4ScaleWithVector3")
-    public native GLKMatrix4 scaleWithVector3(GLKVector3 scaleVector);
+    public static native GLKMatrix4 scaleWithVector3(GLKMatrix4 matrix, GLKVector3 scaleVector);
     @GlobalFunction("GLKMatrix4ScaleWithVector4")
-    public native GLKMatrix4 scaleWithVector4(GLKVector4 scaleVector);
+    public static native GLKMatrix4 scaleWithVector4(GLKMatrix4 matrix, GLKVector4 scaleVector);
     @GlobalFunction("GLKMatrix4Rotate")
-    public native GLKMatrix4 rotate(float radians, float x, float y, float z);
+    public static native GLKMatrix4 rotate(GLKMatrix4 matrix, float radians, float x, float y, float z);
     @GlobalFunction("GLKMatrix4RotateWithVector3")
-    public native GLKMatrix4 rotateWithVector3(float radians, GLKVector3 axisVector);
+    public static native GLKMatrix4 rotateWithVector3(GLKMatrix4 matrix, float radians, GLKVector3 axisVector);
     @GlobalFunction("GLKMatrix4RotateWithVector4")
-    public native GLKMatrix4 rotateWithVector4(float radians, GLKVector4 axisVector);
+    public static native GLKMatrix4 rotateWithVector4(GLKMatrix4 matrix, float radians, GLKVector4 axisVector);
     @GlobalFunction("GLKMatrix4RotateX")
-    public native GLKMatrix4 rotateX(float radians);
+    public static native GLKMatrix4 rotateX(GLKMatrix4 matrix, float radians);
     @GlobalFunction("GLKMatrix4RotateY")
-    public native GLKMatrix4 rotateY(float radians);
+    public static native GLKMatrix4 rotateY(GLKMatrix4 matrix, float radians);
     @GlobalFunction("GLKMatrix4RotateZ")
-    public native GLKMatrix4 rotateZ(float radians);
+    public static native GLKMatrix4 rotateZ(GLKMatrix4 matrix, float radians);
     @GlobalFunction("GLKMatrix4MultiplyVector3")
-    public native GLKVector3 multiplyVector3(GLKVector3 vectorRight);
+    public static native GLKVector3 multiplyVector3(GLKMatrix4 matrixLeft, GLKVector3 vectorRight);
     @GlobalFunction("GLKMatrix4MultiplyVector3WithTranslation")
-    public native GLKVector3 multiplyVector3WithTranslation(GLKVector3 vectorRight);
+    public static native GLKVector3 multiplyVector3WithTranslation(GLKMatrix4 matrixLeft, GLKVector3 vectorRight);
     @GlobalFunction("GLKMatrix4MultiplyAndProjectVector3")
-    public native GLKVector3 multiplyAndProjectVector3(GLKVector3 vectorRight);
+    public static native GLKVector3 multiplyAndProjectVector3(GLKMatrix4 matrixLeft, GLKVector3 vectorRight);
     @GlobalFunction("GLKMatrix4MultiplyVector3Array")
-    public native void multiplyVector3Array(GLKVector3 vectors, @MachineSizedUInt long vectorCount);
+    public static native void multiplyVector3Array(GLKMatrix4 matrix, GLKVector3 vectors, @MachineSizedUInt long vectorCount);
     @GlobalFunction("GLKMatrix4MultiplyVector3ArrayWithTranslation")
-    public native void multiplyVector3ArrayWithTranslation(GLKVector3 vectors, @MachineSizedUInt long vectorCount);
+    public static native void multiplyVector3ArrayWithTranslation(GLKMatrix4 matrix, GLKVector3 vectors, @MachineSizedUInt long vectorCount);
     @GlobalFunction("GLKMatrix4MultiplyAndProjectVector3Array")
-    public native void multiplyAndProjectVector3Array(GLKVector3 vectors, @MachineSizedUInt long vectorCount);
+    public static native void multiplyAndProjectVector3Array(GLKMatrix4 matrix, GLKVector3 vectors, @MachineSizedUInt long vectorCount);
     @GlobalFunction("GLKMatrix4MultiplyVector4")
-    public native GLKVector4 multiplyVector4(GLKVector4 vectorRight);
+    public static native GLKVector4 multiplyVector4(GLKMatrix4 matrixLeft, GLKVector4 vectorRight);
     @GlobalFunction("GLKMatrix4MultiplyVector4Array")
-    public native void multiplyVector4Array(GLKVector4 vectors, @MachineSizedUInt long vectorCount);
+    public static native void multiplyVector4Array(GLKMatrix4 matrix, GLKVector4 vectors, @MachineSizedUInt long vectorCount);
     
 }

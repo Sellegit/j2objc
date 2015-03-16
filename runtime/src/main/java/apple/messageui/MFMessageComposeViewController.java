@@ -20,7 +20,7 @@ import apple.uikit.*;
  * @since Available in iOS 4.0 and later.
  */
 
-@Library("MessageUI") @Mapping("MFMessageComposeViewController")
+@Library("MessageUI/MessageUI.h") @Mapping("MFMessageComposeViewController")
 public class MFMessageComposeViewController 
     extends UINavigationController 
      {

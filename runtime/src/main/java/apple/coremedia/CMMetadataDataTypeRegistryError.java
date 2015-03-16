@@ -21,7 +21,7 @@ import apple.corevideo.*;
 
 
 
-@Library("CoreMedia")
+@Library("CoreMedia/CoreMedia.h")
 @Mapping("CMMetadataDataTypeRegistryError")
 public final class CMMetadataDataTypeRegistryError extends ObjCEnum {
     

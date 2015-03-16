@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 
 
-@Library("GameController") @Mapping("GCController")
+@Library("GameController/GameController.h") @Mapping("GCController")
 public class GCController 
     extends NSObject 
      {

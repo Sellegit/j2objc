@@ -22,7 +22,7 @@ import apple.dispatch.*;
 
 
 
-@Library("Foundation") @Mapping("NSTimer")
+@Library("Foundation/Foundation.h") @Mapping("NSTimer")
 public class NSTimer 
     extends NSObject 
      {

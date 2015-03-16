@@ -19,7 +19,7 @@ import apple.foundation.*;
  * @since Available in iOS 3.0 and later.
  */
 
-@Library("CoreData") @Mapping("NSAtomicStore")
+@Library("CoreData/CoreData.h") @Mapping("NSAtomicStore")
 public class NSAtomicStore 
     extends NSPersistentStore 
      {

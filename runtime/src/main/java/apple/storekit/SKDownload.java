@@ -21,7 +21,7 @@ import apple.accounts.*;
  * @since Available in iOS 6.0 and later.
  */
 
-@Library("StoreKit") @Mapping("SKDownload")
+@Library("StoreKit/StoreKit.h") @Mapping("SKDownload")
 public class SKDownload 
     extends NSObject 
      {

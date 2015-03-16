@@ -24,7 +24,7 @@ import apple.corelocation.*;
  * @since Available in iOS 2.0 and later.
  */
 
-@Library("UIKit") @Mapping("UINavigationItem")
+@Library("UIKit/UIKit.h") @Mapping("UINavigationItem")
 public class UINavigationItem 
     extends NSObject 
     implements NSCoding {

@@ -22,7 +22,7 @@ import apple.avfoundation.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("Photos") @Mapping("PHCachingImageManager")
+@Library("Photos/Photos.h") @Mapping("PHCachingImageManager")
 public class PHCachingImageManager 
     extends PHImageManager 
      {

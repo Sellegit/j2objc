@@ -22,7 +22,7 @@ import apple.dispatch.*;
  * @since Available in iOS 7.0 and later.
  */
 
-@Library("MapKit") @Mapping("MKTileOverlay")
+@Library("MapKit/MapKit.h") @Mapping("MKTileOverlay")
 public class MKTileOverlay 
     extends NSObject 
     implements MKOverlay {

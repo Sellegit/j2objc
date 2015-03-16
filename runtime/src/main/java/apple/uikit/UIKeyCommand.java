@@ -24,7 +24,7 @@ import apple.corelocation.*;
  * @since Available in iOS 7.0 and later.
  */
 
-@Library("UIKit") @Mapping("UIKeyCommand")
+@Library("UIKit/UIKit.h") @Mapping("UIKeyCommand")
 public class UIKeyCommand 
     extends NSObject 
     implements NSCopying {

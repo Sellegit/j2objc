@@ -24,7 +24,7 @@ import apple.corelocation.*;
  * @since Available in iOS 6.0 and later.
  */
 
-@Library("UIKit") @Mapping("UICollectionView")
+@Library("UIKit/UIKit.h") @Mapping("UICollectionView")
 public class UICollectionView 
     extends UIScrollView 
      {

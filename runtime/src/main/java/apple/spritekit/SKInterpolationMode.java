@@ -24,7 +24,7 @@ import apple.scenekit.*;
 
 
 
-@Library("SpriteKit")
+@Library("SpriteKit/SpriteKit.h")
 @Mapping("SKInterpolationMode")
 public final class SKInterpolationMode extends ObjCEnum {
     

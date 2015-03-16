@@ -19,7 +19,7 @@ import apple.corebluetooth.*;
 
 
 
-@Library("CoreLocation") @Mapping("CLLocationManagerDelegate")
+@Library("CoreLocation/CoreLocation.h") @Mapping("CLLocationManagerDelegate")
 public interface CLLocationManagerDelegate 
     extends NSObjectProtocol {
 

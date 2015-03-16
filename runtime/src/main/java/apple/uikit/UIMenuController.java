@@ -24,7 +24,7 @@ import apple.corelocation.*;
  * @since Available in iOS 3.0 and later.
  */
 
-@Library("UIKit") @Mapping("UIMenuController")
+@Library("UIKit/UIKit.h") @Mapping("UIMenuController")
 public class UIMenuController 
     extends NSObject 
      {

@@ -20,7 +20,7 @@ import apple.corelocation.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("CloudKit") @Mapping("CKRecordZoneNotification")
+@Library("CloudKit/CloudKit.h") @Mapping("CKRecordZoneNotification")
 public class CKRecordZoneNotification 
     extends CKNotification 
      {

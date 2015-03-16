@@ -18,7 +18,7 @@ import apple.foundation.*;
 
 
 
-@Mapping("CFRunLoopTimerContext")
+@Mapping("CFRunLoopTimerContext") @Library("CoreFoundation/CoreFoundation.h")
  class CFRunLoopTimerContext 
     extends Struct 
      {

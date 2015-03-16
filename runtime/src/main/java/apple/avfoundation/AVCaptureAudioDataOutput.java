@@ -25,7 +25,7 @@ import apple.mediatoolbox.*;
  * @since Available in iOS 4.0 and later.
  */
 
-@Library("AVFoundation") @Mapping("AVCaptureAudioDataOutput")
+@Library("AVFoundation/AVFoundation.h") @Mapping("AVCaptureAudioDataOutput")
 public class AVCaptureAudioDataOutput 
     extends AVCaptureOutput 
      {

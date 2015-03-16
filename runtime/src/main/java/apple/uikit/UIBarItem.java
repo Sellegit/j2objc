@@ -24,7 +24,7 @@ import apple.corelocation.*;
  * @since Available in iOS 2.0 and later.
  */
 
-@Library("UIKit") @Mapping("UIBarItem")
+@Library("UIKit/UIKit.h") @Mapping("UIBarItem")
 public class UIBarItem 
     extends NSObject 
     implements UIAppearanceContainer {

@@ -21,7 +21,7 @@ import apple.accounts.*;
  * @since Available in iOS 3.0 and later.
  */
 
-@Library("StoreKit") @Mapping("SKPaymentQueue")
+@Library("StoreKit/StoreKit.h") @Mapping("SKPaymentQueue")
 public class SKPaymentQueue 
     extends NSObject 
      {

@@ -22,7 +22,7 @@ import apple.dispatch.*;
 
 
 
-@Mapping("NSDecimal") @Library("Foundation")
+@Mapping("NSDecimal") @Library("Foundation/Foundation.h")
 public class NSDecimal 
     extends Struct 
      {

@@ -24,7 +24,7 @@ import apple.corelocation.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("UIKit") @Mapping("UIAlertAction")
+@Library("UIKit/UIKit.h") @Mapping("UIAlertAction")
 public class UIAlertAction 
     extends NSObject 
     implements NSCopying {

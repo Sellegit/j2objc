@@ -19,7 +19,7 @@ import apple.foundation.*;
  * @since Available in iOS 3.0 and later.
  */
 
-@Library("CoreData") @Mapping("NSEntityDescription")
+@Library("CoreData/CoreData.h") @Mapping("NSEntityDescription")
 public class NSEntityDescription 
     extends NSObject 
     implements NSCoding, NSCopying, NSFastEnumeration {

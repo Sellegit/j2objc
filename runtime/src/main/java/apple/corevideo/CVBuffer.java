@@ -19,7 +19,7 @@ import apple.metal.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreVideo")
+@Library("CoreVideo/CoreVideo.h")
 public class CVBuffer 
     extends CFType 
      {
@@ -33,36 +33,36 @@ public class CVBuffer
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CVBufferSetAttachment")
-    public native void setAttachment(CFString key, CFType value, CVAttachmentMode attachmentMode);
+    public static native void setAttachment(CVBuffer buffer, CFString key, CFType value, CVAttachmentMode attachmentMode);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CVBufferGetAttachment")
-    protected native CFType getAttachment(CFString key, Todo attachmentMode);
+    protected static native CFType getAttachment(CVBuffer buffer, CFString key, Todo attachmentMode);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CVBufferRemoveAttachment")
-    public native void removeAttachment(CFString key);
+    public static native void removeAttachment(CVBuffer buffer, CFString key);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CVBufferRemoveAllAttachments")
-    public native void removeAllAttachments();
+    public static native void removeAllAttachments(CVBuffer buffer);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CVBufferGetAttachments")
-    public native NSDictionary<NSString, ?> getAttachments(CVAttachmentMode attachmentMode);
+    public static native NSDictionary<NSString, ?> getAttachments(CVBuffer buffer, CVAttachmentMode attachmentMode);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CVBufferSetAttachments")
-    public native void setAttachments(CFDictionary theAttachments, CVAttachmentMode attachmentMode);
+    public static native void setAttachments(CVBuffer buffer, CFDictionary theAttachments, CVAttachmentMode attachmentMode);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CVBufferPropagateAttachments")
-    public native void propagateAttachments(CVBuffer destinationBuffer);
+    public static native void propagateAttachments(CVBuffer sourceBuffer, CVBuffer destinationBuffer);
     
 }

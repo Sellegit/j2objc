@@ -20,7 +20,7 @@ import apple.dispatch.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("Metal") @Mapping("MTLRenderPassStencilAttachmentDescriptor")
+@Library("Metal/Metal.h") @Mapping("MTLRenderPassStencilAttachmentDescriptor")
 public class MTLRenderPassStencilAttachmentDescriptor 
     extends MTLRenderPassAttachmentDescriptor 
      {

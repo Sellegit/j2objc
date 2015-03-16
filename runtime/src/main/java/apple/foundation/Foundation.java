@@ -21,7 +21,7 @@ import apple.dispatch.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("Foundation")
+@Library("Foundation/Foundation.h")
 public class Foundation 
     extends Object 
      {
@@ -50,5 +50,25 @@ public class Foundation
      */
     @GlobalConstant("NSURLFileResourceTypeKey")
     protected static native NSString FileResourceTypeValue();
+    /**
+     * @since Available in iOS 8.2 and later.
+     */
+    @GlobalConstant("NSExtensionHostWillEnterForegroundNotification")
+    public static native String ExtensionHostWillEnterForegroundNotification();
+    /**
+     * @since Available in iOS 8.2 and later.
+     */
+    @GlobalConstant("NSExtensionHostDidEnterBackgroundNotification")
+    public static native String ExtensionHostDidEnterBackgroundNotification();
+    /**
+     * @since Available in iOS 8.2 and later.
+     */
+    @GlobalConstant("NSExtensionHostWillResignActiveNotification")
+    public static native String ExtensionHostWillResignActiveNotification();
+    /**
+     * @since Available in iOS 8.2 and later.
+     */
+    @GlobalConstant("NSExtensionHostDidBecomeActiveNotification")
+    public static native String ExtensionHostDidBecomeActiveNotification();
     
 }

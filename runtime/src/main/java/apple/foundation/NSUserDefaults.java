@@ -22,7 +22,7 @@ import apple.dispatch.*;
 
 
 
-@Library("Foundation") @Mapping("NSUserDefaults")
+@Library("Foundation/Foundation.h") @Mapping("NSUserDefaults")
 public class NSUserDefaults 
     extends NSObject 
      {

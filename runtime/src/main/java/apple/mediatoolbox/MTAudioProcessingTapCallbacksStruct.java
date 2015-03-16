@@ -19,7 +19,7 @@ import apple.coreaudio.*;
 
 
 
-@Mapping("MTAudioProcessingTapCallbacksStruct")
+@Mapping("MTAudioProcessingTapCallbacksStruct") @Library("MediaToolbox/MediaToolbox.h")
  class MTAudioProcessingTapCallbacksStruct 
     extends Struct 
      {

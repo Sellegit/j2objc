@@ -23,7 +23,7 @@ import apple.opengles.*;
 
 
 
-@Library("SceneKit") @Mapping("SCNTransaction")
+@Library("SceneKit/SceneKit.h") @Mapping("SCNTransaction")
 public class SCNTransaction 
     extends NSObject 
      {

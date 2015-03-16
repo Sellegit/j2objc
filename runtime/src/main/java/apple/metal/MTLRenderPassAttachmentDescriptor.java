@@ -20,7 +20,7 @@ import apple.dispatch.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("Metal") @Mapping("MTLRenderPassAttachmentDescriptor")
+@Library("Metal/Metal.h") @Mapping("MTLRenderPassAttachmentDescriptor")
 public class MTLRenderPassAttachmentDescriptor 
     extends NSObject 
     implements NSCopying {

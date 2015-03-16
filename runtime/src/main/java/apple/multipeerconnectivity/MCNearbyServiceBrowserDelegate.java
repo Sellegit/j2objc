@@ -19,7 +19,7 @@ import apple.security.*;
 
 
 
-@Library("MultipeerConnectivity") @Mapping("MCNearbyServiceBrowserDelegate")
+@Library("MultipeerConnectivity/MultipeerConnectivity.h") @Mapping("MCNearbyServiceBrowserDelegate")
 public interface MCNearbyServiceBrowserDelegate 
     extends NSObjectProtocol {
 

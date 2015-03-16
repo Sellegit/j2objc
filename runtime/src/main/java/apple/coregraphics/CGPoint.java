@@ -18,7 +18,7 @@ import apple.uikit.*;
 
 
 
-@Mapping("CGPoint") @Library("CoreGraphics")
+@Mapping("CGPoint") @Library("CoreGraphics/CoreGraphics.h")
 public class CGPoint 
     extends Struct 
      {
@@ -58,12 +58,12 @@ public class CGPoint
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGPointEqualToPoint")
-    public native boolean equalToPoint(CGPoint point2);
+    public static native boolean equalToPoint(CGPoint point1, CGPoint point2);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGPointCreateDictionaryRepresentation")
-    public native NSDictionary<NSString, NSNumber> toDictionary();
+    public static native NSDictionary<NSString, NSNumber> toDictionary(CGPoint point);
     /**
      * @since Available in iOS 2.0 and later.
      */
@@ -73,6 +73,6 @@ public class CGPoint
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGPointApplyAffineTransform")
-    public native CGPoint apply(CGAffineTransform t);
+    public static native CGPoint apply(CGPoint point, CGAffineTransform t);
     
 }

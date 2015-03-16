@@ -25,7 +25,7 @@ import apple.mediatoolbox.*;
  * @since Available in iOS 4.3 and later.
  */
 
-@Library("AVFoundation") @Mapping("AVTimedMetadataGroup")
+@Library("AVFoundation/AVFoundation.h") @Mapping("AVTimedMetadataGroup")
 public class AVTimedMetadataGroup 
     extends NSObject 
     implements NSCopying {

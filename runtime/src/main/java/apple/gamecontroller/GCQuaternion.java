@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 
 
-@Mapping("GCQuaternion")
+@Mapping("GCQuaternion") @Library("GameController/GameController.h")
 public class GCQuaternion 
     extends Struct 
      {

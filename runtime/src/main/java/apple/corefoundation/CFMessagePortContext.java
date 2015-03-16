@@ -18,7 +18,7 @@ import apple.foundation.*;
 
 
 
-@Mapping("CFMessagePortContext")
+@Mapping("CFMessagePortContext") @Library("CoreFoundation/CoreFoundation.h")
  class CFMessagePortContext 
     extends Struct 
      {

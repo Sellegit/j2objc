@@ -23,7 +23,7 @@ import apple.mediatoolbox.*;
 
 
 
-@Library("AVFoundation") @Mapping("AVPlayerItemOutputPushDelegate")
+@Library("AVFoundation/AVFoundation.h") @Mapping("AVPlayerItemOutputPushDelegate")
 public interface AVPlayerItemOutputPushDelegate 
     extends NSObjectProtocol {
 

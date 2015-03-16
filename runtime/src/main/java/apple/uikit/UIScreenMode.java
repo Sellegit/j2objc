@@ -24,7 +24,7 @@ import apple.corelocation.*;
  * @since Available in iOS 3.2 and later.
  */
 
-@Library("UIKit") @Mapping("UIScreenMode")
+@Library("UIKit/UIKit.h") @Mapping("UIScreenMode")
 public class UIScreenMode 
     extends NSObject 
      {

@@ -24,7 +24,7 @@ import apple.corelocation.*;
  * @since Available in iOS 7.0 and later.
  */
 
-@Library("UIKit")
+@Library("UIKit/UIKit.h")
 @Mapping("UIBackgroundRefreshStatus")
 public final class UIBackgroundRefreshStatus extends ObjCEnum {
     

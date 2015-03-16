@@ -22,7 +22,7 @@ import apple.opengles.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("SceneKit")
+@Library("SceneKit/SceneKit.h")
 public final class NSValueExtensions 
     extends NSExtensions 
      {
@@ -32,12 +32,7 @@ public final class NSValueExtensions
     private NSValueExtensions() {}
     
     
-    @Mapping("SCNVector3Value")
-    public static native SCNVector3 getSCNVector3Value(NSValue thiz);
-    @Mapping("SCNVector4Value")
-    public static native SCNVector4 getSCNVector4Value(NSValue thiz);
-    @Mapping("SCNMatrix4Value")
-    public static native SCNMatrix4 getSCNMatrix4Value(NSValue thiz);
+    
     
     
     

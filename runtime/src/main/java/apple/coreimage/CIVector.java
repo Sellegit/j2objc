@@ -20,7 +20,7 @@ import apple.imageio.*;
 
 
 
-@Library("CoreImage") @Mapping("CIVector")
+@Library("CoreImage/CoreImage.h") @Mapping("CIVector")
 public class CIVector 
     extends NSObject 
     implements NSCopying, NSCoding {

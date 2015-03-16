@@ -24,7 +24,7 @@ import apple.corelocation.*;
  * @since Available in iOS 2.0 and later.
  */
 
-@Library("UIKit") @Mapping("UIButton")
+@Library("UIKit/UIKit.h") @Mapping("UIButton")
 public class UIButton 
     extends UIControl 
     implements NSCoding {

@@ -26,7 +26,7 @@ import apple.scenekit.*;
  * @since Available in iOS 7.0 and later.
  */
 
-@Library("SpriteKit")
+@Library("SpriteKit/SpriteKit.h")
 @Mapping("SKLabelHorizontalAlignmentMode")
 public final class SKLabelHorizontalAlignmentMode extends ObjCEnum {
     

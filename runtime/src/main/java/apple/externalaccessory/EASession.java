@@ -21,7 +21,7 @@ import apple.dispatch.*;
  * @since Available in iOS 3.0 and later.
  */
 
-@Library("ExternalAccessory") @Mapping("EASession")
+@Library("ExternalAccessory/ExternalAccessory.h") @Mapping("EASession")
 public class EASession 
     extends NSObject 
      {

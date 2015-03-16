@@ -25,7 +25,7 @@ import apple.opengles.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("SceneKit")
+@Library("SceneKit/SceneKit.h")
 @Mapping("SCNPhysicsFieldScope")
 public final class SCNPhysicsFieldScope extends ObjCEnum {
     

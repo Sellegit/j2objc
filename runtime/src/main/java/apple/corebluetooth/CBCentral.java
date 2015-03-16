@@ -20,7 +20,7 @@ import apple.dispatch.*;
  * @since Available in iOS 6.0 and later.
  */
 
-@Library("CoreBluetooth") @Mapping("CBCentral")
+@Library("CoreBluetooth/CoreBluetooth.h") @Mapping("CBCentral")
 public class CBCentral 
     extends CBPeer 
      {

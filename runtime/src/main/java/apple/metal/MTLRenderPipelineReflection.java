@@ -20,7 +20,7 @@ import apple.dispatch.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("Metal") @Mapping("MTLRenderPipelineReflection")
+@Library("Metal/Metal.h") @Mapping("MTLRenderPipelineReflection")
 public class MTLRenderPipelineReflection 
     extends NSObject 
      {

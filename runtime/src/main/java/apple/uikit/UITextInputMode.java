@@ -24,7 +24,7 @@ import apple.corelocation.*;
  * @since Available in iOS 4.2 and later.
  */
 
-@Library("UIKit") @Mapping("UITextInputMode")
+@Library("UIKit/UIKit.h") @Mapping("UITextInputMode")
 public class UITextInputMode 
     extends NSObject 
      {

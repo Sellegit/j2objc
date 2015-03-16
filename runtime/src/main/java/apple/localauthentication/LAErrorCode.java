@@ -19,7 +19,7 @@ import apple.foundation.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("LocalAuthentication")
+@Library("LocalAuthentication/LocalAuthentication.h")
 @Mapping("LAErrorCode")
 public final class LAErrorCode extends ObjCEnum {
     

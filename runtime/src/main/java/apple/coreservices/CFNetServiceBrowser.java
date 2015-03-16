@@ -16,7 +16,7 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CFNetwork")
+@Library("CFNetwork/CFNetwork.h")
 public class CFNetServiceBrowser 
     extends CFType 
      {
@@ -42,31 +42,31 @@ public class CFNetServiceBrowser
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFNetServiceBrowserInvalidate")
-    public native void invalidate();
+    public static native void invalidate(CFNetServiceBrowser browser);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFNetServiceBrowserSearchForDomains")
-    protected native boolean searchForDomains(boolean registrationDomains, Todo error);
+    protected static native boolean searchForDomains(CFNetServiceBrowser browser, boolean registrationDomains, Todo error);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFNetServiceBrowserSearchForServices")
-    protected native boolean searchForServices(String domain, String serviceType, Todo error);
+    protected static native boolean searchForServices(CFNetServiceBrowser browser, String domain, String serviceType, Todo error);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFNetServiceBrowserStopSearch")
-    protected native void stopSearch(Todo error);
+    protected static native void stopSearch(CFNetServiceBrowser browser, Todo error);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFNetServiceBrowserScheduleWithRunLoop")
-    public native void schedule(CFRunLoop runLoop, String runLoopMode);
+    public static native void schedule(CFNetServiceBrowser browser, CFRunLoop runLoop, String runLoopMode);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFNetServiceBrowserUnscheduleFromRunLoop")
-    public native void unschedule(CFRunLoop runLoop, String runLoopMode);
+    public static native void unschedule(CFNetServiceBrowser browser, CFRunLoop runLoop, String runLoopMode);
     
 }

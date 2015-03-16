@@ -23,7 +23,7 @@ import apple.opengles.*;
 
 
 
-@Library("SceneKit") @Mapping("SCNAction")
+@Library("SceneKit/SceneKit.h") @Mapping("SCNAction")
 public class SCNAction 
     extends NSObject 
     implements NSCopying {

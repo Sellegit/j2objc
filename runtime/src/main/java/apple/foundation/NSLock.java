@@ -22,7 +22,7 @@ import apple.dispatch.*;
 
 
 
-@Library("Foundation") @Mapping("NSLock")
+@Library("Foundation/Foundation.h") @Mapping("NSLock")
 public class NSLock 
     extends NSObject 
     implements NSLocking {

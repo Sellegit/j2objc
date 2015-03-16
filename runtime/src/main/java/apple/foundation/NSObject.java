@@ -24,7 +24,7 @@ import apple.dispatch.*;
  * @since Available in iOS 2.0 and later.
  */
 
-@Library("Foundation") @Mapping("NSObject")
+@Library("Foundation/Foundation.h") @Mapping("NSObject")
 public class NSObject 
     extends Object 
     implements NSObjectProtocol {

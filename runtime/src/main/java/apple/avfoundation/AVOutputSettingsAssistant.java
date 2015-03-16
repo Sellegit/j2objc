@@ -25,7 +25,7 @@ import apple.mediatoolbox.*;
  * @since Available in iOS 7.0 and later.
  */
 
-@Library("AVFoundation") @Mapping("AVOutputSettingsAssistant")
+@Library("AVFoundation/AVFoundation.h") @Mapping("AVOutputSettingsAssistant")
 public class AVOutputSettingsAssistant 
     extends NSObject 
      {

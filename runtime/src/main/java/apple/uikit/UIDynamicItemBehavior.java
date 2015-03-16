@@ -24,7 +24,7 @@ import apple.corelocation.*;
  * @since Available in iOS 7.0 and later.
  */
 
-@Library("UIKit") @Mapping("UIDynamicItemBehavior")
+@Library("UIKit/UIKit.h") @Mapping("UIDynamicItemBehavior")
 public class UIDynamicItemBehavior 
     extends UIDynamicBehavior 
      {

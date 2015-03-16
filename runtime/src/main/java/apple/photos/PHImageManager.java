@@ -22,7 +22,7 @@ import apple.avfoundation.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("Photos") @Mapping("PHImageManager")
+@Library("Photos/Photos.h") @Mapping("PHImageManager")
 public class PHImageManager 
     extends NSObject 
      {

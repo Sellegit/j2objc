@@ -20,7 +20,7 @@ import apple.dispatch.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("Metal") @Mapping("MTLDepthStencilDescriptor")
+@Library("Metal/Metal.h") @Mapping("MTLDepthStencilDescriptor")
 public class MTLDepthStencilDescriptor 
     extends NSObject 
     implements NSCopying {

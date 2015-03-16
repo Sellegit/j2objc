@@ -22,7 +22,7 @@ import apple.corelocation.*;
 
 
 
-@Library("UIKit")
+@Library("UIKit/UIKit.h")
 @Mapping("UIAlertViewStyle")
 public final class UIAlertViewStyle extends ObjCEnum {
     

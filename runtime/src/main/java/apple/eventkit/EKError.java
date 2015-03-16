@@ -18,7 +18,7 @@ import apple.corelocation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("EventKit")
+@Library("EventKit/EventKit.h")
 public class EKError 
     extends Todo 
      {

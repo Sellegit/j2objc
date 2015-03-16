@@ -23,7 +23,7 @@ import apple.opengles.*;
 
 
 
-@Mapping("SCNMatrix4") @Library("SceneKit")
+@Mapping("SCNMatrix4") @Library("SceneKit/SceneKit.h")
 public class SCNMatrix4 
     extends Struct 
      {
@@ -171,19 +171,19 @@ public class SCNMatrix4
     @GlobalFunction("SCNMatrix4MakeRotation")
     public static native SCNMatrix4 createRotation(float angle, float x, float y, float z);
     @GlobalFunction("SCNMatrix4Scale")
-    public native SCNMatrix4 scale(float x, float y, float z);
+    public static native SCNMatrix4 scale(SCNMatrix4 mat, float x, float y, float z);
     @GlobalFunction("SCNMatrix4Rotate")
-    public native SCNMatrix4 rotate(float angle, float x, float y, float z);
+    public static native SCNMatrix4 rotate(SCNMatrix4 mat, float angle, float x, float y, float z);
     @GlobalFunction("SCNMatrix4Invert")
-    public native SCNMatrix4 invert();
+    public static native SCNMatrix4 invert(SCNMatrix4 mat);
     @GlobalFunction("SCNMatrix4Mult")
-    public native SCNMatrix4 mult(SCNMatrix4 matB);
+    public static native SCNMatrix4 mult(SCNMatrix4 matA, SCNMatrix4 matB);
     @GlobalFunction("SCNMatrix4IsIdentity")
-    public native boolean isIdentity();
+    public static native boolean isIdentity(SCNMatrix4 mat);
     @GlobalFunction("SCNMatrix4EqualToMatrix4")
-    public native boolean equalsTo(SCNMatrix4 matB);
+    public static native boolean equalsTo(SCNMatrix4 matA, SCNMatrix4 matB);
     @GlobalFunction("SCNMatrix4ToGLKMatrix4")
-    public native GLKMatrix4 toGLKMatrix4();
+    public static native GLKMatrix4 toGLKMatrix4(SCNMatrix4 mat);
     @GlobalFunction("SCNMatrix4FromGLKMatrix4")
     public static native SCNMatrix4 fromGLKMatrix4(GLKMatrix4 mat);
     

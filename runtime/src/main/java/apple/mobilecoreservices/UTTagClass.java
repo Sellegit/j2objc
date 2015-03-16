@@ -16,7 +16,7 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("MobileCoreServices")
+@Library("MobileCoreServices/MobileCoreServices.h")
 public class UTTagClass 
     extends Object 
      {

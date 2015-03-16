@@ -24,7 +24,7 @@ import apple.corelocation.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("UIKit") @Mapping("UIDocumentMenuViewController")
+@Library("UIKit/UIKit.h") @Mapping("UIDocumentMenuViewController")
 public class UIDocumentMenuViewController 
     extends UIViewController 
      {

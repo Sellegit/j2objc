@@ -26,7 +26,7 @@ import apple.dispatch.*;
  */
 @Deprecated
 
-@Library("Foundation")
+@Library("Foundation/Foundation.h")
 @Mapping("NSOperatingSystem")
 public final class NSOperatingSystem extends ObjCEnum {
     

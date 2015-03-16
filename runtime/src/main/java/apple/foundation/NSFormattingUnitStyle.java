@@ -24,7 +24,7 @@ import apple.dispatch.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("Foundation")
+@Library("Foundation/Foundation.h")
 @Mapping("NSFormattingUnitStyle")
 public final class NSFormattingUnitStyle extends ObjCEnum {
     

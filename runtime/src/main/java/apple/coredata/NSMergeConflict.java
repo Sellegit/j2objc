@@ -19,7 +19,7 @@ import apple.foundation.*;
  * @since Available in iOS 5.0 and later.
  */
 
-@Library("CoreData") @Mapping("NSMergeConflict")
+@Library("CoreData/CoreData.h") @Mapping("NSMergeConflict")
 public class NSMergeConflict 
     extends NSObject 
      {

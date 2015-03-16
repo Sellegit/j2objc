@@ -18,7 +18,7 @@ import apple.uikit.*;
 
 
 
-@Library("QuickLook") @Mapping("QLPreviewItem")
+@Library("QuickLook/QuickLook.h") @Mapping("QLPreviewItem")
 public interface QLPreviewItem 
     extends NSObjectProtocol {
 

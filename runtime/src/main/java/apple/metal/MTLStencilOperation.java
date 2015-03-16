@@ -20,7 +20,7 @@ import apple.dispatch.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("Metal")
+@Library("Metal/Metal.h")
 @Mapping("MTLStencilOperation")
 public final class MTLStencilOperation extends ObjCEnum {
     

@@ -22,7 +22,7 @@ import apple.avfoundation.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("Photos") @Mapping("PHFetchResultChangeDetails")
+@Library("Photos/Photos.h") @Mapping("PHFetchResultChangeDetails")
 public class PHFetchResultChangeDetails 
     extends NSObject 
      {

@@ -18,7 +18,7 @@ import apple.dispatch.*;
 
 
 
-@Mapping("MTLClearColor")
+@Mapping("MTLClearColor") @Library("Metal/Metal.h")
 public class MTLClearColor 
     extends Struct 
      {

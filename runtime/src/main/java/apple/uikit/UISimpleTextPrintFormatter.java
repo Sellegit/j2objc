@@ -24,7 +24,7 @@ import apple.corelocation.*;
  * @since Available in iOS 4.2 and later.
  */
 
-@Library("UIKit") @Mapping("UISimpleTextPrintFormatter")
+@Library("UIKit/UIKit.h") @Mapping("UISimpleTextPrintFormatter")
 public class UISimpleTextPrintFormatter 
     extends UIPrintFormatter 
      {

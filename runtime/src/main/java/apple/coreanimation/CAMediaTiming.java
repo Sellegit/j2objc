@@ -21,7 +21,7 @@ import apple.metal.*;
 
 
 
-@Library("QuartzCore") @Mapping("CAMediaTiming")
+@Library("QuartzCore/QuartzCore.h") @Mapping("CAMediaTiming")
 public interface CAMediaTiming 
      {
 

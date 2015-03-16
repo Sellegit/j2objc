@@ -19,7 +19,7 @@ import apple.foundation.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("HomeKit") @Mapping("HMActionSet")
+@Library("HomeKit/HomeKit.h") @Mapping("HMActionSet")
 public class HMActionSet 
     extends NSObject 
      {

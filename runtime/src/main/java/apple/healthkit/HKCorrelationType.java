@@ -19,7 +19,7 @@ import apple.foundation.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("HealthKit") @Mapping("HKCorrelationType")
+@Library("HealthKit/HealthKit.h") @Mapping("HKCorrelationType")
 public class HKCorrelationType 
     extends HKSampleType 
      {

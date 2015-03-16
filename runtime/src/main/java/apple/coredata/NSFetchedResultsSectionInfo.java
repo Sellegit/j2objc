@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 
 
-@Library("CoreData") @Mapping("NSFetchedResultsSectionInfo")
+@Library("CoreData/CoreData.h") @Mapping("NSFetchedResultsSectionInfo")
 public interface NSFetchedResultsSectionInfo 
      {
 

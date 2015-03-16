@@ -25,7 +25,7 @@ import apple.mediatoolbox.*;
  * @since Available in iOS 4.0 and later.
  */
 
-@Library("AVFoundation") @Mapping("AVPlayer")
+@Library("AVFoundation/AVFoundation.h") @Mapping("AVPlayer")
 public class AVPlayer 
     extends NSObject 
      {

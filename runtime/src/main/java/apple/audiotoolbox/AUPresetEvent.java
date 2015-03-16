@@ -20,7 +20,7 @@ import apple.coremedia.*;
 
 
 
-@Mapping("AUPresetEvent")
+@Mapping("AUPresetEvent") @Library("AudioToolbox/AudioToolbox.h")
 public class AUPresetEvent 
     extends Struct 
      {
@@ -41,20 +41,20 @@ public class AUPresetEvent
         return __new;
     ]-*/;
     public static native AUPresetEvent copyWithscope(AUPresetEvent original, int scope) /*-[
-        original.scope = scope;
-        return original;
+        AUPresetEvent __new = { .scope = scope, .element = original.element, .preset = original.preset };
+        return __new;
     ]-*/;
 
     
     public static native AUPresetEvent copyWithelement(AUPresetEvent original, int element) /*-[
-        original.element = element;
-        return original;
+        AUPresetEvent __new = { .scope = original.scope, .element = element, .preset = original.preset };
+        return __new;
     ]-*/;
 
     
     public static native AUPresetEvent copyWithpreset(AUPresetEvent original, CFType preset) /*-[
-        original.preset = preset;
-        return original;
+        AUPresetEvent __new = { .scope = original.scope, .element = original.element, .preset = preset };
+        return __new;
     ]-*/;
 
     

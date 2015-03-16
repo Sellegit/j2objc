@@ -18,7 +18,7 @@ import apple.uikit.*;
 
 
 
-@Library("CoreGraphics")
+@Library("CoreGraphics/CoreGraphics.h")
 @Mapping("CGPDFBox")
 public final class CGPDFBox extends ObjCEnum {
     

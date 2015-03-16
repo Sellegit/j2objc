@@ -24,7 +24,7 @@ import apple.corelocation.*;
  * @since Available in iOS 2.0 and later.
  */
 
-@Library("UIKit") @Mapping("UIScreen")
+@Library("UIKit/UIKit.h") @Mapping("UIScreen")
 public class UIScreen 
     extends NSObject 
     implements UITraitEnvironment {

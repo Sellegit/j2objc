@@ -19,7 +19,7 @@ import apple.metal.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreVideo")
+@Library("CoreVideo/CoreVideo.h")
 public class CVOpenGLESTexture 
     extends CVImageBuffer 
      {
@@ -38,21 +38,21 @@ public class CVOpenGLESTexture
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("CVOpenGLESTextureGetTarget")
-    public native int getTarget();
+    public static native int getTarget(CVOpenGLESTexture image);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("CVOpenGLESTextureGetName")
-    public native int getName();
+    public static native int getName(CVOpenGLESTexture image);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("CVOpenGLESTextureIsFlipped")
-    public native boolean isFlipped();
+    public static native boolean isFlipped(CVOpenGLESTexture image);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("CVOpenGLESTextureGetCleanTexCoords")
-    protected native void getCleanTexCoords(Todo lowerLeft, Todo lowerRight, Todo upperRight, Todo upperLeft);
+    protected static native void getCleanTexCoords(CVOpenGLESTexture image, Todo lowerLeft, Todo lowerRight, Todo upperRight, Todo upperLeft);
     
 }

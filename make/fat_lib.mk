@@ -61,11 +61,10 @@ fat_lib_filtered_libtool = set -o pipefail && $(LIBTOOL) -static -o $1 -filelist
 ifneq ($(MAKECMDGOALS),clean)
 
 arch_flags = $(strip \
-  $(patsubst macosx,$(FAT_LIB_MACOSX_FLAGS),\
   $(patsubst iphone,$(FAT_LIB_IPHONE_FLAGS),\
   $(patsubst iphone64,$(FAT_LIB_IPHONE64_FLAGS),\
   $(patsubst iphonev7s,$(FAT_LIB_IPHONEV7S_FLAGS),\
-  $(patsubst simulator,$(FAT_LIB_SIMULATOR_FLAGS),$(1)))))))
+  $(patsubst simulator,$(FAT_LIB_SIMULATOR_FLAGS),$(1))))))
 
 fat_lib_dependencies:
 	@:

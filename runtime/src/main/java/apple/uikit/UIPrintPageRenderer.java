@@ -24,7 +24,7 @@ import apple.corelocation.*;
  * @since Available in iOS 4.2 and later.
  */
 
-@Library("UIKit") @Mapping("UIPrintPageRenderer")
+@Library("UIKit/UIKit.h") @Mapping("UIPrintPageRenderer")
 public class UIPrintPageRenderer 
     extends NSObject 
      {

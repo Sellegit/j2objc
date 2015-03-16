@@ -20,7 +20,7 @@ import apple.uikit.*;
  * @since Available in iOS 7.1 and later.
  */
 
-@Library("MediaPlayer") @Mapping("MPFeedbackCommand")
+@Library("MediaPlayer/MediaPlayer.h") @Mapping("MPFeedbackCommand")
 public class MPFeedbackCommand 
     extends MPRemoteCommand 
      {
@@ -38,6 +38,16 @@ public class MPFeedbackCommand
     public native String getLocalizedTitle();
     @Mapping("setLocalizedTitle:")
     public native void setLocalizedTitle(String v);
+    /**
+     * @since Available in iOS 8.0 and later.
+     */
+    @Mapping("localizedShortTitle")
+    public native String getLocalizedShortTitle();
+    /**
+     * @since Available in iOS 8.0 and later.
+     */
+    @Mapping("setLocalizedShortTitle:")
+    public native void setLocalizedShortTitle(String v);
     
     
     

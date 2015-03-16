@@ -23,7 +23,7 @@ import apple.opengles.*;
 
 
 
-@Library("SceneKit") @Mapping("SCNPhysicsVehicleWheel")
+@Library("SceneKit/SceneKit.h") @Mapping("SCNPhysicsVehicleWheel")
 public class SCNPhysicsVehicleWheel 
     extends NSObject 
     implements NSCopying {

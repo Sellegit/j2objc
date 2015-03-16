@@ -20,7 +20,7 @@ import apple.dispatch.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("Metal") @Mapping("MTLArgument")
+@Library("Metal/Metal.h") @Mapping("MTLArgument")
 public class MTLArgument 
     extends NSObject 
      {

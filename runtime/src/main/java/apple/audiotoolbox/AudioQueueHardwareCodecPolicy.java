@@ -20,7 +20,7 @@ import apple.coremedia.*;
 
 
 
-@Library("AudioToolbox")
+@Library("AudioToolbox/AudioToolbox.h")
 @Mapping("AudioQueueHardwareCodecPolicy")
 public final class AudioQueueHardwareCodecPolicy extends ObjCEnum {
     

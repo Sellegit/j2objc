@@ -18,7 +18,7 @@ import apple.uikit.*;
 
 
 
-@Library("GameKit") @Mapping("GKSavedGameListener")
+@Library("GameKit/GameKit.h") @Mapping("GKSavedGameListener")
 public interface GKSavedGameListener 
     extends NSObjectProtocol {
 

@@ -20,7 +20,7 @@ import apple.uikit.*;
  * @since Available in iOS 5.0 and later.
  */
 
-@Library("GameKit") @Mapping("GKNotificationBanner")
+@Library("GameKit/GameKit.h") @Mapping("GKNotificationBanner")
 public class GKNotificationBanner 
     extends NSObject 
      {

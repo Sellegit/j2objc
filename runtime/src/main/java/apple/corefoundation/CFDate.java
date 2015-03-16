@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreFoundation")
+@Library("CoreFoundation/CoreFoundation.h")
 public class CFDate 
     extends CFPropertyList 
      {
@@ -41,11 +41,11 @@ public class CFDate
     @GlobalFunction("CFDateCreate")
     protected static native CFDate create(CFAllocator allocator, double at);
     @GlobalFunction("CFDateGetAbsoluteTime")
-    public native double getAbsoluteTime();
+    public static native double getAbsoluteTime(CFDate theDate);
     @GlobalFunction("CFDateGetTimeIntervalSinceDate")
-    public native double getTimeIntervalSinceDate(CFDate otherDate);
+    public static native double getTimeIntervalSinceDate(CFDate theDate, CFDate otherDate);
     @GlobalFunction("CFDateCompare")
-    private native CFComparisonResult compareTo(CFDate otherDate, Todo context);
+    private static native CFComparisonResult compareTo(CFDate theDate, CFDate otherDate, Todo context);
     /**
      * @since Available in iOS 2.0 and later.
      * @deprecated Deprecated in iOS 8.0.

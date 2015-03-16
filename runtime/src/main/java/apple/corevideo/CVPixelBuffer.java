@@ -19,7 +19,7 @@ import apple.metal.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreVideo")
+@Library("CoreVideo/CoreVideo.h")
 public class CVPixelBuffer 
     extends CVImageBuffer 
      {
@@ -58,81 +58,81 @@ public class CVPixelBuffer
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CVPixelBufferLockBaseAddress")
-    public native CVReturn lockBaseAddress(long lockFlags);
+    public static native CVReturn lockBaseAddress(CVPixelBuffer pixelBuffer, long lockFlags);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CVPixelBufferUnlockBaseAddress")
-    public native CVReturn unlockBaseAddress(long unlockFlags);
+    public static native CVReturn unlockBaseAddress(CVPixelBuffer pixelBuffer, long unlockFlags);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CVPixelBufferGetWidth")
-    public native @MachineSizedUInt long getWidth();
+    public static native @MachineSizedUInt long getWidth(CVPixelBuffer pixelBuffer);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CVPixelBufferGetHeight")
-    public native @MachineSizedUInt long getHeight();
+    public static native @MachineSizedUInt long getHeight(CVPixelBuffer pixelBuffer);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CVPixelBufferGetPixelFormatType")
-    public native CVPixelFormatType getPixelFormatType();
+    public static native CVPixelFormatType getPixelFormatType(CVPixelBuffer pixelBuffer);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CVPixelBufferGetBaseAddress")
-    public native Todo getBaseAddress();
+    public static native Todo getBaseAddress(CVPixelBuffer pixelBuffer);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CVPixelBufferGetBytesPerRow")
-    public native @MachineSizedUInt long getBytesPerRow();
+    public static native @MachineSizedUInt long getBytesPerRow(CVPixelBuffer pixelBuffer);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CVPixelBufferGetDataSize")
-    public native @MachineSizedUInt long getDataSize();
+    public static native @MachineSizedUInt long getDataSize(CVPixelBuffer pixelBuffer);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CVPixelBufferIsPlanar")
-    public native boolean isPlanar();
+    public static native boolean isPlanar(CVPixelBuffer pixelBuffer);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CVPixelBufferGetPlaneCount")
-    public native @MachineSizedUInt long getPlaneCount();
+    public static native @MachineSizedUInt long getPlaneCount(CVPixelBuffer pixelBuffer);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CVPixelBufferGetWidthOfPlane")
-    public native @MachineSizedUInt long getWidthOfPlane(@MachineSizedUInt long planeIndex);
+    public static native @MachineSizedUInt long getWidthOfPlane(CVPixelBuffer pixelBuffer, @MachineSizedUInt long planeIndex);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CVPixelBufferGetHeightOfPlane")
-    public native @MachineSizedUInt long getHeightOfPlane(@MachineSizedUInt long planeIndex);
+    public static native @MachineSizedUInt long getHeightOfPlane(CVPixelBuffer pixelBuffer, @MachineSizedUInt long planeIndex);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CVPixelBufferGetBaseAddressOfPlane")
-    public native Todo getBaseAddressOfPlane(@MachineSizedUInt long planeIndex);
+    public static native Todo getBaseAddressOfPlane(CVPixelBuffer pixelBuffer, @MachineSizedUInt long planeIndex);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CVPixelBufferGetBytesPerRowOfPlane")
-    public native @MachineSizedUInt long getBytesPerRowOfPlane(@MachineSizedUInt long planeIndex);
+    public static native @MachineSizedUInt long getBytesPerRowOfPlane(CVPixelBuffer pixelBuffer, @MachineSizedUInt long planeIndex);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CVPixelBufferGetExtendedPixels")
-    protected native void getExtendedPixels(Todo extraColumnsOnLeft, Todo extraColumnsOnRight, Todo extraRowsOnTop, Todo extraRowsOnBottom);
+    protected static native void getExtendedPixels(CVPixelBuffer pixelBuffer, Todo extraColumnsOnLeft, Todo extraColumnsOnRight, Todo extraRowsOnTop, Todo extraRowsOnBottom);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CVPixelBufferFillExtendedPixels")
-    public native CVReturn fillExtendedPixels();
+    public static native CVReturn fillExtendedPixels(CVPixelBuffer pixelBuffer);
     
 }

@@ -22,7 +22,7 @@ import apple.dispatch.*;
 
 
 
-@Library("Foundation") @Mapping("NSMutableURLRequest")
+@Library("Foundation/Foundation.h") @Mapping("NSMutableURLRequest")
 public class NSMutableURLRequest 
     extends NSURLRequest 
      {

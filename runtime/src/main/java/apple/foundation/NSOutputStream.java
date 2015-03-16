@@ -22,7 +22,7 @@ import apple.dispatch.*;
 
 
 
-@Library("Foundation") @Mapping("NSOutputStream")
+@Library("Foundation/Foundation.h") @Mapping("NSOutputStream")
 public class NSOutputStream 
     extends NSStream 
      {

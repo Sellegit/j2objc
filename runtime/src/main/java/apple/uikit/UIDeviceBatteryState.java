@@ -22,7 +22,7 @@ import apple.corelocation.*;
 
 
 
-@Library("UIKit")
+@Library("UIKit/UIKit.h")
 @Mapping("UIDeviceBatteryState")
 public final class UIDeviceBatteryState extends ObjCEnum {
     

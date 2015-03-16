@@ -20,7 +20,7 @@ import apple.dispatch.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("Metal") @Mapping("MTLVertexBufferLayoutDescriptor")
+@Library("Metal/Metal.h") @Mapping("MTLVertexBufferLayoutDescriptor")
 public class MTLVertexBufferLayoutDescriptor 
     extends NSObject 
     implements NSCopying {

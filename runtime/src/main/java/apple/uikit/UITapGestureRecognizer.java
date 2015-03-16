@@ -24,7 +24,7 @@ import apple.corelocation.*;
  * @since Available in iOS 3.2 and later.
  */
 
-@Library("UIKit") @Mapping("UITapGestureRecognizer")
+@Library("UIKit/UIKit.h") @Mapping("UITapGestureRecognizer")
 public class UITapGestureRecognizer 
     extends UIGestureRecognizer 
      {

@@ -17,7 +17,7 @@ import apple.dispatch.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("SystemConfiguration")
+@Library("SystemConfiguration/SystemConfiguration.h")
 public class SCNetworkReachability 
     extends CFType 
      {
@@ -53,26 +53,26 @@ public class SCNetworkReachability
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("SCNetworkReachabilityGetFlags")
-    protected native boolean getFlags(Todo flags);
+    protected static native boolean getFlags(SCNetworkReachability target, Todo flags);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("SCNetworkReachabilitySetCallback")
-    protected native boolean setCallback(FunctionPtr callout, SCNetworkReachabilityContext context);
+    protected static native boolean setCallback(SCNetworkReachability target, FunctionPtr callout, SCNetworkReachabilityContext context);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("SCNetworkReachabilityScheduleWithRunLoop")
-    public native boolean schedule(CFRunLoop runLoop, String runLoopMode);
+    public static native boolean schedule(SCNetworkReachability target, CFRunLoop runLoop, String runLoopMode);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("SCNetworkReachabilityUnscheduleFromRunLoop")
-    public native boolean unschedule(CFRunLoop runLoop, String runLoopMode);
+    public static native boolean unschedule(SCNetworkReachability target, CFRunLoop runLoop, String runLoopMode);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("SCNetworkReachabilitySetDispatchQueue")
-    public native boolean setDispatchQueue(DispatchQueue queue);
+    public static native boolean setDispatchQueue(SCNetworkReachability target, DispatchQueue queue);
     
 }

@@ -20,7 +20,7 @@ import apple.uikit.*;
  * @since Available in iOS 4.2 and later.
  */
 
-@Library("MediaPlayer") @Mapping("MPMediaQuerySection")
+@Library("MediaPlayer/MediaPlayer.h") @Mapping("MPMediaQuerySection")
 public class MPMediaQuerySection 
     extends NSObject 
     implements NSCopying {

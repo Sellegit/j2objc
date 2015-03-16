@@ -19,7 +19,7 @@ import apple.dispatch.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("GLKit")
+@Library("GLKit/GLKit.h")
 public class GLKMatrixStack 
     extends CFType 
      {
@@ -36,54 +36,54 @@ public class GLKMatrixStack
     @GlobalFunction("GLKMatrixStackGetTypeID")
     public static native @MachineSizedUInt long getClassTypeID();
     @GlobalFunction("GLKMatrixStackPush")
-    public native void push();
+    public static native void push(GLKMatrixStack stack);
     @GlobalFunction("GLKMatrixStackPop")
-    public native void pop();
+    public static native void pop(GLKMatrixStack stack);
     @GlobalFunction("GLKMatrixStackSize")
-    public native int size();
+    public static native int size(GLKMatrixStack stack);
     @GlobalFunction("GLKMatrixStackLoadMatrix4")
-    public native void loadMatrix4(GLKMatrix4 matrix);
+    public static native void loadMatrix4(GLKMatrixStack stack, GLKMatrix4 matrix);
     @GlobalFunction("GLKMatrixStackGetMatrix4")
-    public native GLKMatrix4 getMatrix4();
+    public static native GLKMatrix4 getMatrix4(GLKMatrixStack stack);
     @GlobalFunction("GLKMatrixStackGetMatrix3")
-    public native GLKMatrix3 getMatrix3();
+    public static native GLKMatrix3 getMatrix3(GLKMatrixStack stack);
     @GlobalFunction("GLKMatrixStackGetMatrix2")
-    public native GLKMatrix2 getMatrix2();
+    public static native GLKMatrix2 getMatrix2(GLKMatrixStack stack);
     @GlobalFunction("GLKMatrixStackGetMatrix4Inverse")
-    public native GLKMatrix4 getMatrix4Inverse();
+    public static native GLKMatrix4 getMatrix4Inverse(GLKMatrixStack stack);
     @GlobalFunction("GLKMatrixStackGetMatrix4InverseTranspose")
-    public native GLKMatrix4 getMatrix4InverseTranspose();
+    public static native GLKMatrix4 getMatrix4InverseTranspose(GLKMatrixStack stack);
     @GlobalFunction("GLKMatrixStackGetMatrix3Inverse")
-    public native GLKMatrix3 getMatrix3Inverse();
+    public static native GLKMatrix3 getMatrix3Inverse(GLKMatrixStack stack);
     @GlobalFunction("GLKMatrixStackGetMatrix3InverseTranspose")
-    public native GLKMatrix3 getMatrix3InverseTranspose();
+    public static native GLKMatrix3 getMatrix3InverseTranspose(GLKMatrixStack stack);
     @GlobalFunction("GLKMatrixStackMultiplyMatrix4")
-    public native void multiplyMatrix4(GLKMatrix4 matrix);
+    public static native void multiplyMatrix4(GLKMatrixStack stack, GLKMatrix4 matrix);
     @GlobalFunction("GLKMatrixStackMultiplyMatrixStack")
-    public native void multiplyMatrixStack(GLKMatrixStack stackRight);
+    public static native void multiplyMatrixStack(GLKMatrixStack stackLeft, GLKMatrixStack stackRight);
     @GlobalFunction("GLKMatrixStackTranslate")
-    public native void translate(float tx, float ty, float tz);
+    public static native void translate(GLKMatrixStack stack, float tx, float ty, float tz);
     @GlobalFunction("GLKMatrixStackTranslateWithVector3")
-    public native void translate(GLKVector3 translationVector);
+    public static native void translate(GLKMatrixStack stack, GLKVector3 translationVector);
     @GlobalFunction("GLKMatrixStackTranslateWithVector4")
-    public native void translate(GLKVector4 translationVector);
+    public static native void translate(GLKMatrixStack stack, GLKVector4 translationVector);
     @GlobalFunction("GLKMatrixStackScale")
-    public native void scale(float sx, float sy, float sz);
+    public static native void scale(GLKMatrixStack stack, float sx, float sy, float sz);
     @GlobalFunction("GLKMatrixStackScaleWithVector3")
-    public native void scale(GLKVector3 scaleVector);
+    public static native void scale(GLKMatrixStack stack, GLKVector3 scaleVector);
     @GlobalFunction("GLKMatrixStackScaleWithVector4")
-    public native void scale(GLKVector4 scaleVector);
+    public static native void scale(GLKMatrixStack stack, GLKVector4 scaleVector);
     @GlobalFunction("GLKMatrixStackRotate")
-    public native void rotate(float radians, float x, float y, float z);
+    public static native void rotate(GLKMatrixStack stack, float radians, float x, float y, float z);
     @GlobalFunction("GLKMatrixStackRotateWithVector3")
-    public native void rotate(float radians, GLKVector3 axisVector);
+    public static native void rotate(GLKMatrixStack stack, float radians, GLKVector3 axisVector);
     @GlobalFunction("GLKMatrixStackRotateWithVector4")
-    public native void rotate(float radians, GLKVector4 axisVector);
+    public static native void rotate(GLKMatrixStack stack, float radians, GLKVector4 axisVector);
     @GlobalFunction("GLKMatrixStackRotateX")
-    public native void rotateX(float radians);
+    public static native void rotateX(GLKMatrixStack stack, float radians);
     @GlobalFunction("GLKMatrixStackRotateY")
-    public native void rotateY(float radians);
+    public static native void rotateY(GLKMatrixStack stack, float radians);
     @GlobalFunction("GLKMatrixStackRotateZ")
-    public native void rotateZ(float radians);
+    public static native void rotateZ(GLKMatrixStack stack, float radians);
     
 }

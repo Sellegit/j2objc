@@ -20,7 +20,7 @@ import apple.coremedia.*;
 
 
 
-@Mapping("AudioFilePacketTableInfo")
+@Mapping("AudioFilePacketTableInfo") @Library("AudioToolbox/AudioToolbox.h")
 public class AudioFilePacketTableInfo 
     extends Struct 
      {
@@ -41,20 +41,20 @@ public class AudioFilePacketTableInfo
         return __new;
     ]-*/;
     public static native AudioFilePacketTableInfo copyWithmNumberValidFrames(AudioFilePacketTableInfo original, long mNumberValidFrames) /*-[
-        original.mNumberValidFrames = mNumberValidFrames;
-        return original;
+        AudioFilePacketTableInfo __new = { .mNumberValidFrames = mNumberValidFrames, .mPrimingFrames = original.mPrimingFrames, .mRemainderFrames = original.mRemainderFrames };
+        return __new;
     ]-*/;
 
     
     public static native AudioFilePacketTableInfo copyWithmPrimingFrames(AudioFilePacketTableInfo original, int mPrimingFrames) /*-[
-        original.mPrimingFrames = mPrimingFrames;
-        return original;
+        AudioFilePacketTableInfo __new = { .mNumberValidFrames = original.mNumberValidFrames, .mPrimingFrames = mPrimingFrames, .mRemainderFrames = original.mRemainderFrames };
+        return __new;
     ]-*/;
 
     
     public static native AudioFilePacketTableInfo copyWithmRemainderFrames(AudioFilePacketTableInfo original, int mRemainderFrames) /*-[
-        original.mRemainderFrames = mRemainderFrames;
-        return original;
+        AudioFilePacketTableInfo __new = { .mNumberValidFrames = original.mNumberValidFrames, .mPrimingFrames = original.mPrimingFrames, .mRemainderFrames = mRemainderFrames };
+        return __new;
     ]-*/;
 
     

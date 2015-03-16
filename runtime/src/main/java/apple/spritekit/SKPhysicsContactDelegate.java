@@ -24,7 +24,7 @@ import apple.scenekit.*;
 
 
 
-@Library("SpriteKit") @Mapping("SKPhysicsContactDelegate")
+@Library("SpriteKit/SpriteKit.h") @Mapping("SKPhysicsContactDelegate")
 public interface SKPhysicsContactDelegate 
     extends NSObjectProtocol {
 

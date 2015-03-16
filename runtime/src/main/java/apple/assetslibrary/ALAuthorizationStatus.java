@@ -20,7 +20,7 @@ import apple.imageio.*;
  * @since Available in iOS 6.0 and later.
  */
 
-@Library("AssetsLibrary")
+@Library("AssetsLibrary/AssetsLibrary.h")
 @Mapping("ALAuthorizationStatus")
 public final class ALAuthorizationStatus extends ObjCEnum {
     

@@ -22,7 +22,7 @@ import apple.opengles.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("SceneKit")
+@Library("SceneKit/SceneKit.h")
 public final class CAAnimationExtensions 
     extends NSExtensions 
      {
@@ -32,22 +32,7 @@ public final class CAAnimationExtensions
     private CAAnimationExtensions() {}
     
     
-    @Mapping("usesSceneTimeBase")
-    public static native boolean usesSceneTimeBase(CAAnimation thiz);
-    @Mapping("setUsesSceneTimeBase:")
-    public static native void setUsesSceneTimeBase(CAAnimation thiz, boolean v);
-    @Mapping("fadeInDuration")
-    public static native @MachineSizedFloat double getFadeInDuration(CAAnimation thiz);
-    @Mapping("setFadeInDuration:")
-    public static native void setFadeInDuration(CAAnimation thiz, @MachineSizedFloat double v);
-    @Mapping("fadeOutDuration")
-    public static native @MachineSizedFloat double getFadeOutDuration(CAAnimation thiz);
-    @Mapping("setFadeOutDuration:")
-    public static native void setFadeOutDuration(CAAnimation thiz, @MachineSizedFloat double v);
-    @Mapping("animationEvents")
-    public static native NSArray<SCNAnimationEvent> getAnimationEvents(CAAnimation thiz);
-    @Mapping("setAnimationEvents:")
-    public static native void setAnimationEvents(CAAnimation thiz, NSArray<SCNAnimationEvent> v);
+    
     
     
     

@@ -18,7 +18,7 @@ import apple.foundation.*;
 
 
 
-@Mapping("CFUUIDBytes")
+@Mapping("CFUUIDBytes") @Library("CoreFoundation/CoreFoundation.h")
 public class CFUUIDBytes 
     extends Struct 
      {

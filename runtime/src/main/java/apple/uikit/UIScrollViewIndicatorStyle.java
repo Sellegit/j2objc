@@ -22,7 +22,7 @@ import apple.corelocation.*;
 
 
 
-@Library("UIKit")
+@Library("UIKit/UIKit.h")
 @Mapping("UIScrollViewIndicatorStyle")
 public final class UIScrollViewIndicatorStyle extends ObjCEnum {
     

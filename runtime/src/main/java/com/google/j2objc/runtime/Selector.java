@@ -5,7 +5,7 @@ import com.google.j2objc.annotations.GlobalFunction;
 import com.google.j2objc.annotations.Library;
 import com.google.j2objc.annotations.Mapping;
 
-@Library("Foundation") @Mapping("SEL")
+@Library("Foundation/Foundation.h") @Mapping("SEL")
 public final class Selector {
   private Selector() {}
 

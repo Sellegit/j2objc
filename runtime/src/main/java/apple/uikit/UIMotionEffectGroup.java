@@ -24,7 +24,7 @@ import apple.corelocation.*;
  * @since Available in iOS 7.0 and later.
  */
 
-@Library("UIKit") @Mapping("UIMotionEffectGroup")
+@Library("UIKit/UIKit.h") @Mapping("UIMotionEffectGroup")
 public class UIMotionEffectGroup 
     extends UIMotionEffect 
      {

@@ -24,7 +24,7 @@ import apple.corelocation.*;
  * @since Available in iOS 2.0 and later.
  */
 
-@Library("UIKit") @Mapping("UITouch")
+@Library("UIKit/UIKit.h") @Mapping("UITouch")
 public class UITouch 
     extends NSObject 
      {

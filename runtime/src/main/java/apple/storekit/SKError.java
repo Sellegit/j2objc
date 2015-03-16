@@ -18,7 +18,7 @@ import apple.accounts.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("StoreKit")
+@Library("StoreKit/StoreKit.h")
 public class SKError 
     extends Todo 
      {

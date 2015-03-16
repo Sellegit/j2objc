@@ -21,7 +21,7 @@ import apple.accounts.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("Social") @Mapping("SLComposeSheetConfigurationItem")
+@Library("Social/Social.h") @Mapping("SLComposeSheetConfigurationItem")
 public class SLComposeSheetConfigurationItem 
     extends NSObject 
      {

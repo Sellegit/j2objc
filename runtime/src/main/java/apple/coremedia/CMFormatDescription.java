@@ -20,7 +20,7 @@ import apple.corevideo.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreMedia")
+@Library("CoreMedia/CoreMedia.h")
 public class CMFormatDescription 
     extends CFType 
      {
@@ -46,31 +46,31 @@ public class CMFormatDescription
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMFormatDescriptionEqual")
-    public native boolean equalsTo(CMFormatDescription desc2);
+    public static native boolean equalsTo(CMFormatDescription desc1, CMFormatDescription desc2);
     /**
      * @since Available in iOS 4.3 and later.
      */
     @GlobalFunction("CMFormatDescriptionEqualIgnoringExtensionKeys")
-    private native boolean equalsTo(CMFormatDescription desc2, CFType formatDescriptionExtensionKeysToIgnore, CFType sampleDescriptionExtensionAtomKeysToIgnore);
+    private static native boolean equalsTo(CMFormatDescription desc1, CMFormatDescription desc2, CFType formatDescriptionExtensionKeysToIgnore, CFType sampleDescriptionExtensionAtomKeysToIgnore);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMFormatDescriptionGetMediaType")
-    public native CMMediaType getMediaType();
+    public static native CMMediaType getMediaType(CMFormatDescription desc);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMFormatDescriptionGetMediaSubType")
-    public native int getMediaSubType();
+    public static native int getMediaSubType(CMFormatDescription desc);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMFormatDescriptionGetExtensions")
-    public native CFDictionary getExtensionDictionary();
+    public static native CFDictionary getExtensionDictionary(CMFormatDescription desc);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMFormatDescriptionGetExtension")
-    public native CFType getExtension(String extensionKey);
+    public static native CFType getExtension(CMFormatDescription desc, String extensionKey);
     
 }

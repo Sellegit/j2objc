@@ -18,7 +18,7 @@ import apple.addressbook.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("AddressBookUI")
+@Library("AddressBookUI/AddressBookUI.h")
 public class ABAddressFormating 
     extends Object 
      {

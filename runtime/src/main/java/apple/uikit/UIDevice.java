@@ -24,7 +24,7 @@ import apple.corelocation.*;
  * @since Available in iOS 2.0 and later.
  */
 
-@Library("UIKit") @Mapping("UIDevice")
+@Library("UIKit/UIKit.h") @Mapping("UIDevice")
 public class UIDevice 
     extends NSObject 
      {

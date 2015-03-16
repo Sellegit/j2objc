@@ -18,7 +18,7 @@ import apple.imageio.*;
 
 
 
-@Library("AssetsLibrary")
+@Library("AssetsLibrary/AssetsLibrary.h")
 @Mapping("ALAssetsGroupType")
 public final class ALAssetsGroupType extends ObjCEnum {
     

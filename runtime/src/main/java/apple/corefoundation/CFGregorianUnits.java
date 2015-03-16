@@ -18,7 +18,7 @@ import apple.foundation.*;
 
 
 
-@Mapping("CFGregorianUnits")
+@Mapping("CFGregorianUnits") @Library("CoreFoundation/CoreFoundation.h")
 public class CFGregorianUnits 
     extends Struct 
      {

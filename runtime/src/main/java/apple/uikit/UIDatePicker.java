@@ -24,7 +24,7 @@ import apple.corelocation.*;
  * @since Available in iOS 2.0 and later.
  */
 
-@Library("UIKit") @Mapping("UIDatePicker")
+@Library("UIKit/UIKit.h") @Mapping("UIDatePicker")
 public class UIDatePicker 
     extends UIControl 
     implements NSCoding {

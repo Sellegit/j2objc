@@ -19,7 +19,7 @@ import apple.foundation.*;
  * @since Available in iOS 6.0 and later.
  */
 
-@Library("AdSupport") @Mapping("ASIdentifierManager")
+@Library("AdSupport/AdSupport.h") @Mapping("ASIdentifierManager")
 public class ASIdentifierManager 
     extends NSObject 
      {

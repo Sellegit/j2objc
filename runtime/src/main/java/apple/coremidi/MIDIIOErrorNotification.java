@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 
 
-@Mapping("MIDIIOErrorNotification")
+@Mapping("MIDIIOErrorNotification") @Library("CoreMIDI/CoreMIDI.h")
 public class MIDIIOErrorNotification 
     extends Struct 
      {

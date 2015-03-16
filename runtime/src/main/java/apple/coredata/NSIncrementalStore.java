@@ -19,7 +19,7 @@ import apple.foundation.*;
  * @since Available in iOS 5.0 and later.
  */
 
-@Library("CoreData") @Mapping("NSIncrementalStore")
+@Library("CoreData/CoreData.h") @Mapping("NSIncrementalStore")
 public class NSIncrementalStore 
     extends NSPersistentStore 
      {

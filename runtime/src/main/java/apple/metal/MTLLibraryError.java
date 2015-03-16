@@ -17,7 +17,7 @@ import apple.dispatch.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("Metal")
+@Library("Metal/Metal.h")
 public class MTLLibraryError 
     extends Todo 
      {

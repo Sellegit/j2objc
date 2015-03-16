@@ -20,7 +20,7 @@ import apple.coremedia.*;
 
 
 
-@Mapping("AudioQueueParameterEvent")
+@Mapping("AudioQueueParameterEvent") @Library("AudioToolbox/AudioToolbox.h")
 public class AudioQueueParameterEvent 
     extends Struct 
      {
@@ -39,14 +39,14 @@ public class AudioQueueParameterEvent
         return __new;
     ]-*/;
     public static native AudioQueueParameterEvent copyWithmID(AudioQueueParameterEvent original, int mID) /*-[
-        original.mID = mID;
-        return original;
+        AudioQueueParameterEvent __new = { .mID = mID, .mValue = original.mValue };
+        return __new;
     ]-*/;
 
     
     public static native AudioQueueParameterEvent copyWithmValue(AudioQueueParameterEvent original, float mValue) /*-[
-        original.mValue = mValue;
-        return original;
+        AudioQueueParameterEvent __new = { .mID = original.mID, .mValue = mValue };
+        return __new;
     ]-*/;
 
     

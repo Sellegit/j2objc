@@ -24,7 +24,7 @@ import apple.corelocation.*;
  * @since Available in iOS 6.0 and later.
  */
 
-@Library("UIKit") @Mapping("UIRefreshControl")
+@Library("UIKit/UIKit.h") @Mapping("UIRefreshControl")
 public class UIRefreshControl 
     extends UIControl 
      {

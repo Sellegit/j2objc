@@ -22,7 +22,7 @@ import apple.dispatch.*;
  * @since Available in iOS 7.0 and later.
  */
 
-@Library("MapKit") @Mapping("MKGeodesicPolyline")
+@Library("MapKit/MapKit.h") @Mapping("MKGeodesicPolyline")
 public class MKGeodesicPolyline 
     extends MKPolyline 
      {

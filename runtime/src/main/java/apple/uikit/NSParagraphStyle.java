@@ -24,7 +24,7 @@ import apple.corelocation.*;
  * @since Available in iOS 6.0 and later.
  */
 
-@Library("UIKit") @Mapping("NSParagraphStyle")
+@Library("UIKit/UIKit.h") @Mapping("NSParagraphStyle")
 public class NSParagraphStyle 
     extends NSObject 
     implements NSCopying, NSCoding {

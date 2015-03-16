@@ -20,7 +20,7 @@ import apple.coremedia.*;
 
 
 
-@Mapping("MIDINoteMessage")
+@Mapping("MIDINoteMessage") @Library("AudioToolbox/AudioToolbox.h")
 public class MIDINoteMessage 
     extends Struct 
      {
@@ -45,32 +45,32 @@ public class MIDINoteMessage
         return __new;
     ]-*/;
     public static native MIDINoteMessage copyWithchannel(MIDINoteMessage original, byte channel) /*-[
-        original.channel = channel;
-        return original;
+        MIDINoteMessage __new = { .channel = channel, .note = original.note, .velocity = original.velocity, .releaseVelocity = original.releaseVelocity, .duration = original.duration };
+        return __new;
     ]-*/;
 
     
     public static native MIDINoteMessage copyWithnote(MIDINoteMessage original, byte note) /*-[
-        original.note = note;
-        return original;
+        MIDINoteMessage __new = { .channel = original.channel, .note = note, .velocity = original.velocity, .releaseVelocity = original.releaseVelocity, .duration = original.duration };
+        return __new;
     ]-*/;
 
     
     public static native MIDINoteMessage copyWithvelocity(MIDINoteMessage original, byte velocity) /*-[
-        original.velocity = velocity;
-        return original;
+        MIDINoteMessage __new = { .channel = original.channel, .note = original.note, .velocity = velocity, .releaseVelocity = original.releaseVelocity, .duration = original.duration };
+        return __new;
     ]-*/;
 
     
     public static native MIDINoteMessage copyWithreleaseVelocity(MIDINoteMessage original, byte releaseVelocity) /*-[
-        original.releaseVelocity = releaseVelocity;
-        return original;
+        MIDINoteMessage __new = { .channel = original.channel, .note = original.note, .velocity = original.velocity, .releaseVelocity = releaseVelocity, .duration = original.duration };
+        return __new;
     ]-*/;
 
     
     public static native MIDINoteMessage copyWithduration(MIDINoteMessage original, float duration) /*-[
-        original.duration = duration;
-        return original;
+        MIDINoteMessage __new = { .channel = original.channel, .note = original.note, .velocity = original.velocity, .releaseVelocity = original.releaseVelocity, .duration = duration };
+        return __new;
     ]-*/;
 
     

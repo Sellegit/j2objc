@@ -23,7 +23,7 @@ import apple.mediatoolbox.*;
 
 
 
-@Library("AVFoundation") @Mapping("AVAssetResourceLoaderDelegate")
+@Library("AVFoundation/AVFoundation.h") @Mapping("AVAssetResourceLoaderDelegate")
 public interface AVAssetResourceLoaderDelegate 
     extends NSObjectProtocol {
 

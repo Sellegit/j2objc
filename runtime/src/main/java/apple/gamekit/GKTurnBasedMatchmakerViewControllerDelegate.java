@@ -18,7 +18,7 @@ import apple.uikit.*;
 
 
 
-@Library("GameKit") @Mapping("GKTurnBasedMatchmakerViewControllerDelegate")
+@Library("GameKit/GameKit.h") @Mapping("GKTurnBasedMatchmakerViewControllerDelegate")
 public interface GKTurnBasedMatchmakerViewControllerDelegate 
     extends NSObjectProtocol {
 

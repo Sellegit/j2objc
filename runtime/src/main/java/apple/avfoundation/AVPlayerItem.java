@@ -25,7 +25,7 @@ import apple.mediatoolbox.*;
  * @since Available in iOS 4.0 and later.
  */
 
-@Library("AVFoundation") @Mapping("AVPlayerItem")
+@Library("AVFoundation/AVFoundation.h") @Mapping("AVPlayerItem")
 public class AVPlayerItem 
     extends NSObject 
     implements NSCopying {

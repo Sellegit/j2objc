@@ -20,7 +20,7 @@ import apple.dispatch.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("Metal") @Mapping("MTLRenderPipelineColorAttachmentDescriptor")
+@Library("Metal/Metal.h") @Mapping("MTLRenderPipelineColorAttachmentDescriptor")
 public class MTLRenderPipelineColorAttachmentDescriptor 
     extends NSObject 
     implements NSCopying {

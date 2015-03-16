@@ -20,7 +20,7 @@ import apple.metal.*;
 
 
 
-@Library("CoreVideo")
+@Library("CoreVideo/CoreVideo.h")
 @Mapping("CVPixelBufferLockFlags")
 public final class CVPixelBufferLockFlags extends ObjCEnum {
     

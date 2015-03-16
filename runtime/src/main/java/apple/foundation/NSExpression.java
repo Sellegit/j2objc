@@ -24,7 +24,7 @@ import apple.dispatch.*;
  * @since Available in iOS 3.0 and later.
  */
 
-@Library("Foundation") @Mapping("NSExpression")
+@Library("Foundation/Foundation.h") @Mapping("NSExpression")
 public class NSExpression 
     extends NSObject 
     implements NSCopying {

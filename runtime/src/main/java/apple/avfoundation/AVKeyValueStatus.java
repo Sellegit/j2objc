@@ -23,7 +23,7 @@ import apple.mediatoolbox.*;
 
 
 
-@Library("AVFoundation")
+@Library("AVFoundation/AVFoundation.h")
 @Mapping("AVKeyValueStatus")
 public final class AVKeyValueStatus extends ObjCEnum {
     

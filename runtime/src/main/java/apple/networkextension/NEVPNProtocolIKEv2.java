@@ -19,7 +19,7 @@ import apple.foundation.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("NetworkExtension") @Mapping("NEVPNProtocolIKEv2")
+@Library("NetworkExtension/NetworkExtension.h") @Mapping("NEVPNProtocolIKEv2")
 public class NEVPNProtocolIKEv2 
     extends NEVPNProtocolIPSec 
      {

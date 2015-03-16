@@ -19,7 +19,7 @@ import apple.foundation.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("HealthKit") @Mapping("HKBloodTypeObject")
+@Library("HealthKit/HealthKit.h") @Mapping("HKBloodTypeObject")
 public class HKBloodTypeObject 
     extends NSObject 
      {

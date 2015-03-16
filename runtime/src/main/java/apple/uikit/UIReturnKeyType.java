@@ -22,7 +22,7 @@ import apple.corelocation.*;
 
 
 
-@Library("UIKit")
+@Library("UIKit/UIKit.h")
 @Mapping("UIReturnKeyType")
 public final class UIReturnKeyType extends ObjCEnum {
     

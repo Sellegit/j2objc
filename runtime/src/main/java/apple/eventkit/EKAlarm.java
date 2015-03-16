@@ -21,7 +21,7 @@ import apple.corelocation.*;
  * @since Available in iOS 4.0 and later.
  */
 
-@Library("EventKit") @Mapping("EKAlarm")
+@Library("EventKit/EventKit.h") @Mapping("EKAlarm")
 public class EKAlarm 
     extends EKObject 
     implements NSCopying {

@@ -25,7 +25,7 @@ import apple.mediatoolbox.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("AVFoundation") @Mapping("AVAudioChannelLayout")
+@Library("AVFoundation/AVFoundation.h") @Mapping("AVAudioChannelLayout")
 public class AVAudioChannelLayout 
     extends NSObject 
      {

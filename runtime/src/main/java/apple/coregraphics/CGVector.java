@@ -18,7 +18,7 @@ import apple.uikit.*;
 
 
 
-@Mapping("CGVector")
+@Mapping("CGVector") @Library("CoreGraphics/CoreGraphics.h")
 public class CGVector 
     extends Struct 
      {

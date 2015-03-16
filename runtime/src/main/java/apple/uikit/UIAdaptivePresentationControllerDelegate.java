@@ -22,7 +22,7 @@ import apple.corelocation.*;
 
 
 
-@Library("UIKit") @Mapping("UIAdaptivePresentationControllerDelegate")
+@Library("UIKit/UIKit.h") @Mapping("UIAdaptivePresentationControllerDelegate")
 public interface UIAdaptivePresentationControllerDelegate 
     extends NSObjectProtocol {
 

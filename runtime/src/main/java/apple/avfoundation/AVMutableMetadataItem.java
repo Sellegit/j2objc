@@ -25,7 +25,7 @@ import apple.mediatoolbox.*;
  * @since Available in iOS 4.0 and later.
  */
 
-@Library("AVFoundation") @Mapping("AVMutableMetadataItem")
+@Library("AVFoundation/AVFoundation.h") @Mapping("AVMutableMetadataItem")
 public class AVMutableMetadataItem 
     extends AVMetadataItem 
      {

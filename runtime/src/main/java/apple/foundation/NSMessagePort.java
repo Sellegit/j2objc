@@ -22,7 +22,7 @@ import apple.dispatch.*;
 
 
 
-@Library("Foundation") @Mapping("NSMessagePort")
+@Library("Foundation/Foundation.h") @Mapping("NSMessagePort")
 public class NSMessagePort 
     extends NSPort 
      {

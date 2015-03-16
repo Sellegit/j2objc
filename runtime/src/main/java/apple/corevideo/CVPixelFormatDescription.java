@@ -19,7 +19,7 @@ import apple.metal.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreVideo")
+@Library("CoreVideo/CoreVideo.h")
 public class CVPixelFormatDescription 
     extends Object 
      {

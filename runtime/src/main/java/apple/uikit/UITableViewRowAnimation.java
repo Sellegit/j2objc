@@ -22,7 +22,7 @@ import apple.corelocation.*;
 
 
 
-@Library("UIKit")
+@Library("UIKit/UIKit.h")
 @Mapping("UITableViewRowAnimation")
 public final class UITableViewRowAnimation extends ObjCEnum {
     

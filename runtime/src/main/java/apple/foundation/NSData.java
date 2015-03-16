@@ -22,7 +22,7 @@ import apple.dispatch.*;
 
 
 
-@Library("Foundation") @Mapping("NSData")
+@Library("Foundation/Foundation.h") @Mapping("NSData")
 public class NSData 
     extends NSObject 
     implements NSPropertyList {

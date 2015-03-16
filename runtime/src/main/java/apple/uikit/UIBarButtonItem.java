@@ -24,7 +24,7 @@ import apple.corelocation.*;
  * @since Available in iOS 2.0 and later.
  */
 
-@Library("UIKit") @Mapping("UIBarButtonItem")
+@Library("UIKit/UIKit.h") @Mapping("UIBarButtonItem")
 public class UIBarButtonItem 
     extends UIBarItem 
     implements NSCoding {

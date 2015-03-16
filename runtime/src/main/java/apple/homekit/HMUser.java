@@ -19,7 +19,7 @@ import apple.foundation.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("HomeKit") @Mapping("HMUser")
+@Library("HomeKit/HomeKit.h") @Mapping("HMUser")
 public class HMUser 
     extends NSObject 
      {

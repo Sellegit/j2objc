@@ -24,7 +24,7 @@ import apple.corelocation.*;
  * @since Available in iOS 4.2 and later.
  */
 
-@Library("UIKit") @Mapping("UIPrintInteractionController")
+@Library("UIKit/UIKit.h") @Mapping("UIPrintInteractionController")
 public class UIPrintInteractionController 
     extends NSObject 
      {

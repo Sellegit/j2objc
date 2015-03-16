@@ -20,7 +20,7 @@ import apple.imageio.*;
 
 
 
-@Library("CoreImage") @Mapping("CIContext")
+@Library("CoreImage/CoreImage.h") @Mapping("CIContext")
 public class CIContext 
     extends NSObject 
      {

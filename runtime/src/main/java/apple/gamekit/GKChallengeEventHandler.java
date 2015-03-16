@@ -22,7 +22,7 @@ import apple.uikit.*;
  */
 @Deprecated
 
-@Library("GameKit") @Mapping("GKChallengeEventHandler")
+@Library("GameKit/GameKit.h") @Mapping("GKChallengeEventHandler")
 public class GKChallengeEventHandler 
     extends NSObject 
      {

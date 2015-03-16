@@ -20,7 +20,7 @@ import apple.coremedia.*;
 
 
 
-@Mapping("AudioFormatListItem")
+@Mapping("AudioFormatListItem") @Library("AudioToolbox/AudioToolbox.h")
 public class AudioFormatListItem 
     extends Struct 
      {
@@ -39,14 +39,14 @@ public class AudioFormatListItem
         return __new;
     ]-*/;
     public static native AudioFormatListItem copyWithmASBD(AudioFormatListItem original, AudioStreamBasicDescription mASBD) /*-[
-        original.mASBD = mASBD;
-        return original;
+        AudioFormatListItem __new = { .mASBD = mASBD, .mChannelLayoutTag = original.mChannelLayoutTag };
+        return __new;
     ]-*/;
 
     
     public static native AudioFormatListItem copyWithmChannelLayoutTag(AudioFormatListItem original, AudioChannelLayoutTag mChannelLayoutTag) /*-[
-        original.mChannelLayoutTag = mChannelLayoutTag;
-        return original;
+        AudioFormatListItem __new = { .mASBD = original.mASBD, .mChannelLayoutTag = mChannelLayoutTag };
+        return __new;
     ]-*/;
 
     

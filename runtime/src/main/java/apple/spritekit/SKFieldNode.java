@@ -26,7 +26,7 @@ import apple.scenekit.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("SpriteKit") @Mapping("SKFieldNode")
+@Library("SpriteKit/SpriteKit.h") @Mapping("SKFieldNode")
 public class SKFieldNode 
     extends SKNode 
      {

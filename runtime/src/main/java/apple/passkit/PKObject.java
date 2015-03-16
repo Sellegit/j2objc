@@ -19,7 +19,7 @@ import apple.addressbook.*;
 
 
 
-@Library("PassKit") @Mapping("PKObject")
+@Library("PassKit/PassKit.h") @Mapping("PKObject")
 public class PKObject 
     extends NSObject 
      {

@@ -24,7 +24,7 @@ import apple.corelocation.*;
  * @since Available in iOS 6.0 and later.
  */
 
-@Library("UIKit")
+@Library("UIKit/UIKit.h")
 @Mapping("NSTextAlignment")
 public final class NSTextAlignment extends ObjCEnum {
     

@@ -20,7 +20,7 @@ import apple.corelocation.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("CloudKit") @Mapping("CKFetchRecordChangesOperation")
+@Library("CloudKit/CloudKit.h") @Mapping("CKFetchRecordChangesOperation")
 public class CKFetchRecordChangesOperation 
     extends CKDatabaseOperation 
      {

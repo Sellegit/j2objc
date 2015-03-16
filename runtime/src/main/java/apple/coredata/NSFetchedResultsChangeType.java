@@ -19,7 +19,7 @@ import apple.foundation.*;
  * @since Available in iOS 3.0 and later.
  */
 
-@Library("CoreData")
+@Library("CoreData/CoreData.h")
 @Mapping("NSFetchedResultsChangeType")
 public final class NSFetchedResultsChangeType extends ObjCEnum {
     

@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreFoundation")
+@Library("CoreFoundation/CoreFoundation.h")
 public class CFURL 
     extends CFType 
      {
@@ -48,47 +48,47 @@ public class CFURL
     @GlobalFunction("CFURLCreateFromFileSystemRepresentationRelativeToBase")
     public static native CFURL createFromFileSystemRepresentationRelativeToBase(CFAllocator allocator, Todo buffer, @MachineSizedSInt long bufLen, boolean isDirectory, CFURL baseURL);
     @GlobalFunction("CFURLGetFileSystemRepresentation")
-    public native boolean getFileSystemRepresentation(boolean resolveAgainstBase, Todo buffer, @MachineSizedSInt long maxBufLen);
+    public static native boolean getFileSystemRepresentation(CFURL url, boolean resolveAgainstBase, Todo buffer, @MachineSizedSInt long maxBufLen);
     @GlobalFunction("CFURLCopyAbsoluteURL")
-    public native CFURL copyAbsoluteURL();
+    public static native CFURL copyAbsoluteURL(CFURL relativeURL);
     @GlobalFunction("CFURLGetString")
-    public native String getString();
+    public static native String getString(CFURL anURL);
     @GlobalFunction("CFURLGetBaseURL")
-    public native CFURL getBaseURL();
+    public static native CFURL getBaseURL(CFURL anURL);
     @GlobalFunction("CFURLCanBeDecomposed")
-    public native boolean canBeDecomposed();
+    public static native boolean canBeDecomposed(CFURL anURL);
     @GlobalFunction("CFURLCopyScheme")
-    public native String copyScheme();
+    public static native String copyScheme(CFURL anURL);
     @GlobalFunction("CFURLCopyNetLocation")
-    public native String copyNetLocation();
+    public static native String copyNetLocation(CFURL anURL);
     @GlobalFunction("CFURLCopyPath")
-    public native String copyPath();
+    public static native String copyPath(CFURL anURL);
     @GlobalFunction("CFURLCopyStrictPath")
-    public native String copyStrictPath(Todo isAbsolute);
+    public static native String copyStrictPath(CFURL anURL, Todo isAbsolute);
     @GlobalFunction("CFURLCopyFileSystemPath")
-    public native String copyFileSystemPath(CFURLPathStyle pathStyle);
+    public static native String copyFileSystemPath(CFURL anURL, CFURLPathStyle pathStyle);
     @GlobalFunction("CFURLHasDirectoryPath")
-    public native boolean hasDirectoryPath();
+    public static native boolean hasDirectoryPath(CFURL anURL);
     @GlobalFunction("CFURLCopyResourceSpecifier")
-    public native String copyResourceSpecifier();
+    public static native String copyResourceSpecifier(CFURL anURL);
     @GlobalFunction("CFURLCopyHostName")
-    public native String copyHostName();
+    public static native String copyHostName(CFURL anURL);
     @GlobalFunction("CFURLGetPortNumber")
-    public native int getPortNumber();
+    public static native int getPortNumber(CFURL anURL);
     @GlobalFunction("CFURLCopyUserName")
-    public native String copyUserName();
+    public static native String copyUserName(CFURL anURL);
     @GlobalFunction("CFURLCopyPassword")
-    public native String copyPassword();
+    public static native String copyPassword(CFURL anURL);
     @GlobalFunction("CFURLCopyParameterString")
-    public native String copyParameterString(String charactersToLeaveEscaped);
+    public static native String copyParameterString(CFURL anURL, String charactersToLeaveEscaped);
     @GlobalFunction("CFURLCopyQueryString")
-    public native String copyQueryString(String charactersToLeaveEscaped);
+    public static native String copyQueryString(CFURL anURL, String charactersToLeaveEscaped);
     @GlobalFunction("CFURLCopyFragment")
-    public native String copyFragment(String charactersToLeaveEscaped);
+    public static native String copyFragment(CFURL anURL, String charactersToLeaveEscaped);
     @GlobalFunction("CFURLCopyLastPathComponent")
-    public native String copyLastPathComponent();
+    public static native String copyLastPathComponent(CFURL url);
     @GlobalFunction("CFURLCopyPathExtension")
-    public native String copyPathExtension();
+    public static native String copyPathExtension(CFURL url);
     @GlobalFunction("CFURLCreateCopyAppendingPathComponent")
     public static native CFURL createCopyAppendingPathComponent(CFAllocator allocator, CFURL url, String pathComponent, boolean isDirectory);
     @GlobalFunction("CFURLCreateCopyDeletingLastPathComponent")
@@ -98,9 +98,9 @@ public class CFURL
     @GlobalFunction("CFURLCreateCopyDeletingPathExtension")
     public static native CFURL createCopyDeletingPathExtension(CFAllocator allocator, CFURL url);
     @GlobalFunction("CFURLGetBytes")
-    public native @MachineSizedSInt long getBytes(Todo buffer, @MachineSizedSInt long bufferLength);
+    public static native @MachineSizedSInt long getBytes(CFURL url, Todo buffer, @MachineSizedSInt long bufferLength);
     @GlobalFunction("CFURLGetByteRangeForComponent")
-    public native CFRange getByteRangeForComponent(CFURLComponentType component, CFRange rangeIncludingSeparators);
+    public static native CFRange getByteRangeForComponent(CFURL url, CFURLComponentType component, CFRange rangeIncludingSeparators);
     @GlobalFunction("CFURLCreateStringByReplacingPercentEscapes")
     public static native String createStringByReplacingPercentEscapes(CFAllocator allocator, String originalString, String charactersToLeaveEscaped);
     @GlobalFunction("CFURLCreateStringByReplacingPercentEscapesUsingEncoding")
@@ -111,7 +111,7 @@ public class CFURL
      * @since Available in iOS 7.0 and later.
      */
     @GlobalFunction("CFURLIsFileReferenceURL")
-    public native boolean isFileReferenceURL();
+    public static native boolean isFileReferenceURL(CFURL url);
     /**
      * @since Available in iOS 4.0 and later.
      */
@@ -126,42 +126,42 @@ public class CFURL
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CFURLCopyResourcePropertyForKey")
-    public native boolean copyResourcePropertyForKey(String key, Todo propertyValueTypeRefPtr, Todo error);
+    public static native boolean copyResourcePropertyForKey(CFURL url, String key, Todo propertyValueTypeRefPtr, Todo error);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CFURLCopyResourcePropertiesForKeys")
-    public native CFDictionary copyResourcePropertiesForKeys(CFArray keys, Todo error);
+    public static native CFDictionary copyResourcePropertiesForKeys(CFURL url, CFArray keys, Todo error);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CFURLSetResourcePropertyForKey")
-    public native boolean setResourcePropertyForKey(String key, CFType propertyValue, Todo error);
+    public static native boolean setResourcePropertyForKey(CFURL url, String key, CFType propertyValue, Todo error);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CFURLSetResourcePropertiesForKeys")
-    public native boolean setResourcePropertiesForKeys(CFDictionary keyedPropertyValues, Todo error);
+    public static native boolean setResourcePropertiesForKeys(CFURL url, CFDictionary keyedPropertyValues, Todo error);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CFURLClearResourcePropertyCacheForKey")
-    public native void clearResourcePropertyCacheForKey(String key);
+    public static native void clearResourcePropertyCacheForKey(CFURL url, String key);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CFURLClearResourcePropertyCache")
-    public native void clearResourcePropertyCache();
+    public static native void clearResourcePropertyCache(CFURL url);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CFURLSetTemporaryResourcePropertyForKey")
-    public native void setTemporaryResourcePropertyForKey(String key, CFType propertyValue);
+    public static native void setTemporaryResourcePropertyForKey(CFURL url, String key, CFType propertyValue);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CFURLResourceIsReachable")
-    public native boolean resourceIsReachable(Todo error);
+    public static native boolean resourceIsReachable(CFURL url, Todo error);
     /**
      * @since Available in iOS 4.0 and later.
      */
@@ -196,12 +196,12 @@ public class CFURL
      * @since Available in iOS 8.0 and later.
      */
     @GlobalFunction("CFURLStartAccessingSecurityScopedResource")
-    public native boolean startAccessingSecurityScopedResource();
+    public static native boolean startAccessingSecurityScopedResource(CFURL url);
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalFunction("CFURLStopAccessingSecurityScopedResource")
-    public native void stopAccessingSecurityScopedResource();
+    public static native void stopAccessingSecurityScopedResource(CFURL url);
     /**
      * @since Available in iOS 2.0 and later.
      * @deprecated Deprecated in iOS 7.0.
@@ -215,14 +215,14 @@ public class CFURL
      */
     @Deprecated
     @GlobalFunction("CFURLWriteDataAndPropertiesToResource")
-    public native boolean writeDataAndPropertiesToResource(CFData dataToWrite, CFDictionary propertiesToWrite, Todo errorCode);
+    public static native boolean writeDataAndPropertiesToResource(CFURL url, CFData dataToWrite, CFDictionary propertiesToWrite, Todo errorCode);
     /**
      * @since Available in iOS 2.0 and later.
      * @deprecated Deprecated in iOS 7.0.
      */
     @Deprecated
     @GlobalFunction("CFURLDestroyResource")
-    public native boolean destroyResource(Todo errorCode);
+    public static native boolean destroyResource(CFURL url, Todo errorCode);
     /**
      * @since Available in iOS 2.0 and later.
      * @deprecated Deprecated in iOS 7.0.

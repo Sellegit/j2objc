@@ -22,7 +22,7 @@ import apple.corelocation.*;
 
 
 
-@Library("UIKit") @Mapping("NSLayoutManagerDelegate")
+@Library("UIKit/UIKit.h") @Mapping("NSLayoutManagerDelegate")
 public interface NSLayoutManagerDelegate 
     extends NSObjectProtocol {
 

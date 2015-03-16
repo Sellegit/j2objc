@@ -20,7 +20,7 @@ import apple.coremedia.*;
 
 
 
-@Mapping("CAFOverviewSample")
+@Mapping("CAFOverviewSample") @Library("AudioToolbox/AudioToolbox.h")
 public class CAFOverviewSample 
     extends Struct 
      {
@@ -39,14 +39,14 @@ public class CAFOverviewSample
         return __new;
     ]-*/;
     public static native CAFOverviewSample copyWithmMinValue(CAFOverviewSample original, short mMinValue) /*-[
-        original.mMinValue = mMinValue;
-        return original;
+        CAFOverviewSample __new = { .mMinValue = mMinValue, .mMaxValue = original.mMaxValue };
+        return __new;
     ]-*/;
 
     
     public static native CAFOverviewSample copyWithmMaxValue(CAFOverviewSample original, short mMaxValue) /*-[
-        original.mMaxValue = mMaxValue;
-        return original;
+        CAFOverviewSample __new = { .mMinValue = original.mMinValue, .mMaxValue = mMaxValue };
+        return __new;
     ]-*/;
 
     

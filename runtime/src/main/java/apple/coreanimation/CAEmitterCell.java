@@ -21,7 +21,7 @@ import apple.metal.*;
 
 
 
-@Library("QuartzCore") @Mapping("CAEmitterCell")
+@Library("QuartzCore/QuartzCore.h") @Mapping("CAEmitterCell")
 public class CAEmitterCell 
     extends NSObject 
     implements NSCoding, CAMediaTiming {

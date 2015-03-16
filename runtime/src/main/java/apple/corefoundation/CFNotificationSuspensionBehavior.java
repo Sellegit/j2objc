@@ -18,7 +18,7 @@ import apple.foundation.*;
 
 
 
-@Library("CoreFoundation")
+@Library("CoreFoundation/CoreFoundation.h")
 @Mapping("CFNotificationSuspensionBehavior")
 public final class CFNotificationSuspensionBehavior extends ObjCEnum {
     

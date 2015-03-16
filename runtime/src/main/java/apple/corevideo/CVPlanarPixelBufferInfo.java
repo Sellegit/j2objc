@@ -20,7 +20,7 @@ import apple.metal.*;
 
 
 
-@Mapping("CVPlanarPixelBufferInfo")
+@Mapping("CVPlanarPixelBufferInfo") @Library("CoreVideo/CoreVideo.h")
 public class CVPlanarPixelBufferInfo 
     extends Struct 
      {

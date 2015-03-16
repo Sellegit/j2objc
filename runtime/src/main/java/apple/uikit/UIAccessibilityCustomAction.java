@@ -24,7 +24,7 @@ import apple.corelocation.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("UIKit") @Mapping("UIAccessibilityCustomAction")
+@Library("UIKit/UIKit.h") @Mapping("UIAccessibilityCustomAction")
 public class UIAccessibilityCustomAction 
     extends NSObject 
      {

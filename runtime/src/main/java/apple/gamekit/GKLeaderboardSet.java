@@ -20,7 +20,7 @@ import apple.uikit.*;
  * @since Available in iOS 7.0 and later.
  */
 
-@Library("GameKit") @Mapping("GKLeaderboardSet")
+@Library("GameKit/GameKit.h") @Mapping("GKLeaderboardSet")
 public class GKLeaderboardSet 
     extends NSObject 
     implements NSCoding {

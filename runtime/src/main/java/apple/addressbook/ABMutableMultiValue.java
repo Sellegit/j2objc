@@ -16,7 +16,7 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("AddressBook")
+@Library("AddressBook/AddressBook.h")
 public class ABMutableMultiValue 
     extends ABMultiValue 
      {
@@ -31,14 +31,14 @@ public class ABMutableMultiValue
     @GlobalFunction("ABMultiValueCreateMutableCopy")
     public static native ABMutableMultiValue create(ABMultiValue multiValue);
     @GlobalFunction("ABMultiValueAddValueAndLabel")
-    protected native boolean addValueAndLabel(CFType value, String label, Todo outIdentifier);
+    protected static native boolean addValueAndLabel(ABMutableMultiValue multiValue, CFType value, String label, Todo outIdentifier);
     @GlobalFunction("ABMultiValueInsertValueAndLabelAtIndex")
-    protected native boolean insertValueAndLabel(CFType value, String label, @MachineSizedSInt long index, Todo outIdentifier);
+    protected static native boolean insertValueAndLabel(ABMutableMultiValue multiValue, CFType value, String label, @MachineSizedSInt long index, Todo outIdentifier);
     @GlobalFunction("ABMultiValueRemoveValueAndLabelAtIndex")
-    public native boolean removeValueAndLabel(@MachineSizedSInt long index);
+    public static native boolean removeValueAndLabel(ABMutableMultiValue multiValue, @MachineSizedSInt long index);
     @GlobalFunction("ABMultiValueReplaceValueAtIndex")
-    public native boolean replaceValue(CFType value, @MachineSizedSInt long index);
+    public static native boolean replaceValue(ABMutableMultiValue multiValue, CFType value, @MachineSizedSInt long index);
     @GlobalFunction("ABMultiValueReplaceLabelAtIndex")
-    protected native boolean replaceLabel(String label, @MachineSizedSInt long index);
+    protected static native boolean replaceLabel(ABMutableMultiValue multiValue, String label, @MachineSizedSInt long index);
     
 }

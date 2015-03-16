@@ -24,7 +24,7 @@ import apple.scenekit.*;
 
 
 
-@Library("SpriteKit") @Mapping("SKTextureAtlas")
+@Library("SpriteKit/SpriteKit.h") @Mapping("SKTextureAtlas")
 public class SKTextureAtlas 
     extends NSObject 
     implements NSCoding {

@@ -23,7 +23,7 @@ import apple.avkit.*;
  * @since Available in iOS 7.1 and later.
  */
 
-@Library("iAd") @Mapping("ADClient")
+@Library("iAd/iAd.h") @Mapping("ADClient")
 public class ADClient 
     extends NSObject 
      {

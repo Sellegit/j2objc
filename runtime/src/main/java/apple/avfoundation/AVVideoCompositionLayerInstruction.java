@@ -25,7 +25,7 @@ import apple.mediatoolbox.*;
  * @since Available in iOS 4.0 and later.
  */
 
-@Library("AVFoundation") @Mapping("AVVideoCompositionLayerInstruction")
+@Library("AVFoundation/AVFoundation.h") @Mapping("AVVideoCompositionLayerInstruction")
 public class AVVideoCompositionLayerInstruction 
     extends NSObject 
     implements NSCopying {

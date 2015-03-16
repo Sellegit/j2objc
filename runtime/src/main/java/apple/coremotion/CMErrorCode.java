@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 
 
-@Library("CoreMotion")
+@Library("CoreMotion/CoreMotion.h")
 @Mapping("CMErrorCode")
 public final class CMErrorCode extends ObjCEnum {
     
@@ -37,6 +37,14 @@ public final class CMErrorCode extends ObjCEnum {
     public static final long MotionActivityNotEntitled = 106L;
     @GlobalConstant("CMErrorInvalidParameter")
     public static final long InvalidParameter = 107L;
+    @GlobalConstant("CMErrorInvalidAction")
+    public static final long InvalidAction = 108L;
+    @GlobalConstant("CMErrorNotAvailable")
+    public static final long NotAvailable = 109L;
+    @GlobalConstant("CMErrorNotEntitled")
+    public static final long NotEntitled = 110L;
+    @GlobalConstant("CMErrorNotAuthorized")
+    public static final long NotAuthorized = 111L;
     
 
 }

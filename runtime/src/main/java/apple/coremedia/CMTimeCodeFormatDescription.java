@@ -20,7 +20,7 @@ import apple.corevideo.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreMedia")
+@Library("CoreMedia/CoreMedia.h")
 public class CMTimeCodeFormatDescription 
     extends CMFormatDescription 
      {
@@ -39,17 +39,17 @@ public class CMTimeCodeFormatDescription
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMTimeCodeFormatDescriptionGetFrameDuration")
-    public native CMTime getFrameDuration();
+    public static native CMTime getFrameDuration(CMTimeCodeFormatDescription timeCodeFormatDescription);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMTimeCodeFormatDescriptionGetFrameQuanta")
-    public native int getFrameQuanta();
+    public static native int getFrameQuanta(CMTimeCodeFormatDescription timeCodeFormatDescription);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMTimeCodeFormatDescriptionGetTimeCodeFlags")
-    public native CMTimeCodeFlag getTimeCodeFlags();
+    public static native CMTimeCodeFlag getTimeCodeFlags(CMTimeCodeFormatDescription desc);
     /**
      * @since Available in iOS 8.0 and later.
      */

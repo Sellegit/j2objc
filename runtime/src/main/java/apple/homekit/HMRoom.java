@@ -19,7 +19,7 @@ import apple.foundation.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("HomeKit") @Mapping("HMRoom")
+@Library("HomeKit/HomeKit.h") @Mapping("HMRoom")
 public class HMRoom 
     extends NSObject 
      {

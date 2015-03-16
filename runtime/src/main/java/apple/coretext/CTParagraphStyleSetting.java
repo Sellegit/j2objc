@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 
 
-@Mapping("CTParagraphStyleSetting")
+@Mapping("CTParagraphStyleSetting") @Library("CoreText/CoreText.h")
 public class CTParagraphStyleSetting 
     extends Struct 
      {

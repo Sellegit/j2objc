@@ -20,7 +20,7 @@ import apple.uikit.*;
  * @since Available in iOS 4.2 and later.
  */
 
-@Library("GameKit") @Mapping("GKFriendRequestComposeViewController")
+@Library("GameKit/GameKit.h") @Mapping("GKFriendRequestComposeViewController")
 public class GKFriendRequestComposeViewController 
     extends UINavigationController 
      {

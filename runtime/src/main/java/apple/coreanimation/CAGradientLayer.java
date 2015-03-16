@@ -21,7 +21,7 @@ import apple.metal.*;
 
 
 
-@Library("QuartzCore") @Mapping("CAGradientLayer")
+@Library("QuartzCore/QuartzCore.h") @Mapping("CAGradientLayer")
 public class CAGradientLayer 
     extends CALayer 
      {

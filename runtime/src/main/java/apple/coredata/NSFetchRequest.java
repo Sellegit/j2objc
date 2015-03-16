@@ -19,7 +19,7 @@ import apple.foundation.*;
  * @since Available in iOS 3.0 and later.
  */
 
-@Library("CoreData") @Mapping("NSFetchRequest")
+@Library("CoreData/CoreData.h") @Mapping("NSFetchRequest")
 public class NSFetchRequest 
     extends NSPersistentStoreRequest 
     implements NSCoding {

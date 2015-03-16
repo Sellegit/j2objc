@@ -22,7 +22,7 @@ import apple.dispatch.*;
 
 
 
-@Library("Foundation") @Mapping("NSError")
+@Library("Foundation/Foundation.h") @Mapping("NSError")
 public class NSError 
     extends NSObject 
     implements NSCopying {

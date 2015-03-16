@@ -22,7 +22,7 @@ import apple.corelocation.*;
 
 
 
-@Library("UIKit") @Mapping("UIPrintInteractionControllerDelegate")
+@Library("UIKit/UIKit.h") @Mapping("UIPrintInteractionControllerDelegate")
 public interface UIPrintInteractionControllerDelegate 
     extends NSObjectProtocol {
 

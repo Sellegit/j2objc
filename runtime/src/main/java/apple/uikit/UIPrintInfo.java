@@ -24,7 +24,7 @@ import apple.corelocation.*;
  * @since Available in iOS 4.2 and later.
  */
 
-@Library("UIKit") @Mapping("UIPrintInfo")
+@Library("UIKit/UIKit.h") @Mapping("UIPrintInfo")
 public class UIPrintInfo 
     extends NSObject 
     implements NSCopying, NSCoding {

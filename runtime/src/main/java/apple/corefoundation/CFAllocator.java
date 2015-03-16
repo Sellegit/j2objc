@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreFoundation")
+@Library("CoreFoundation/CoreFoundation.h")
 public class CFAllocator 
     extends CFType 
      {
@@ -49,16 +49,16 @@ public class CFAllocator
     @GlobalFunction("CFAllocatorGetDefault")
     public static native CFAllocator getDefault();
     @GlobalFunction("CFAllocatorCreate")
-    public native CFAllocator create(CFAllocatorContext context);
+    public static native CFAllocator create(CFAllocator allocator, CFAllocatorContext context);
     @GlobalFunction("CFAllocatorAllocate")
-    public native Todo allocate(@MachineSizedSInt long size, @MachineSizedUInt long hint);
+    public static native Todo allocate(CFAllocator allocator, @MachineSizedSInt long size, @MachineSizedUInt long hint);
     @GlobalFunction("CFAllocatorReallocate")
-    public native Todo reallocate(Todo ptr, @MachineSizedSInt long newsize, @MachineSizedUInt long hint);
+    public static native Todo reallocate(CFAllocator allocator, Todo ptr, @MachineSizedSInt long newsize, @MachineSizedUInt long hint);
     @GlobalFunction("CFAllocatorDeallocate")
-    public native void deallocate(Todo ptr);
+    public static native void deallocate(CFAllocator allocator, Todo ptr);
     @GlobalFunction("CFAllocatorGetPreferredSizeForSize")
-    public native @MachineSizedSInt long getPreferredSizeForSize(@MachineSizedSInt long size, @MachineSizedUInt long hint);
+    public static native @MachineSizedSInt long getPreferredSizeForSize(CFAllocator allocator, @MachineSizedSInt long size, @MachineSizedUInt long hint);
     @GlobalFunction("CFAllocatorGetContext")
-    private native void getContext(CFAllocatorContext context);
+    private static native void getContext(CFAllocator allocator, CFAllocatorContext context);
     
 }

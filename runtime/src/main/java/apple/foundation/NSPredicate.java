@@ -24,7 +24,7 @@ import apple.dispatch.*;
  * @since Available in iOS 3.0 and later.
  */
 
-@Library("Foundation") @Mapping("NSPredicate")
+@Library("Foundation/Foundation.h") @Mapping("NSPredicate")
 public class NSPredicate 
     extends NSObject 
     implements NSCopying {

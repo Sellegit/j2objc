@@ -19,7 +19,7 @@ import apple.foundation.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("CoreMotion") @Mapping("CMAltimeter")
+@Library("CoreMotion/CoreMotion.h") @Mapping("CMAltimeter")
 public class CMAltimeter 
     extends NSObject 
      {

@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreFoundation")
+@Library("CoreFoundation/CoreFoundation.h")
 public class CFWriteStream 
     extends CFType 
      {
@@ -36,41 +36,41 @@ public class CFWriteStream
     @GlobalFunction("CFWriteStreamCreateWithFile")
     protected static native CFWriteStream create(CFAllocator alloc, CFURL fileURL);
     @GlobalFunction("CFWriteStreamGetStatus")
-    public native CFStreamStatus getStatus();
+    public static native CFStreamStatus getStatus(CFWriteStream stream);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFWriteStreamCopyError")
-    public native CFError getError();
+    public static native CFError getError(CFWriteStream stream);
     @GlobalFunction("CFWriteStreamOpen")
-    public native boolean openStream();
+    public static native boolean openStream(CFWriteStream stream);
     @GlobalFunction("CFWriteStreamClose")
-    public native void closeStream();
+    public static native void closeStream(CFWriteStream stream);
     @GlobalFunction("CFWriteStreamCanAcceptBytes")
-    public native boolean canAcceptBytes();
+    public static native boolean canAcceptBytes(CFWriteStream stream);
     @GlobalFunction("CFWriteStreamWrite")
-    private native @MachineSizedSInt long write(Todo buffer, @MachineSizedSInt long bufferLength);
+    private static native @MachineSizedSInt long write(CFWriteStream stream, Todo buffer, @MachineSizedSInt long bufferLength);
     @GlobalFunction("CFWriteStreamCopyProperty")
-    public native CFType getProperty(String propertyName);
+    public static native CFType getProperty(CFWriteStream stream, String propertyName);
     @GlobalFunction("CFWriteStreamSetProperty")
-    public native boolean setProperty(String propertyName, CFType propertyValue);
+    public static native boolean setProperty(CFWriteStream stream, String propertyName, CFType propertyValue);
     @GlobalFunction("CFWriteStreamSetClient")
-    private native boolean setClient(@MachineSizedUInt long streamEvents, FunctionPtr clientCB, CFStreamClientContext clientContext);
+    private static native boolean setClient(CFWriteStream stream, @MachineSizedUInt long streamEvents, FunctionPtr clientCB, CFStreamClientContext clientContext);
     @GlobalFunction("CFWriteStreamScheduleWithRunLoop")
-    public native void scheduleInRunLoop(CFRunLoop runLoop, String runLoopMode);
+    public static native void scheduleInRunLoop(CFWriteStream stream, CFRunLoop runLoop, String runLoopMode);
     @GlobalFunction("CFWriteStreamUnscheduleFromRunLoop")
-    public native void unscheduleFromRunLoop(CFRunLoop runLoop, String runLoopMode);
+    public static native void unscheduleFromRunLoop(CFWriteStream stream, CFRunLoop runLoop, String runLoopMode);
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalFunction("CFWriteStreamSetDispatchQueue")
-    public native void setDispatchQueue(DispatchQueue q);
+    public static native void setDispatchQueue(CFWriteStream stream, DispatchQueue q);
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalFunction("CFWriteStreamCopyDispatchQueue")
-    public native DispatchQueue getDispatchQueue();
+    public static native DispatchQueue getDispatchQueue(CFWriteStream stream);
     @GlobalFunction("CFWriteStreamGetError")
-    public native CFStreamError getStreamError();
+    public static native CFStreamError getStreamError(CFWriteStream stream);
     
 }

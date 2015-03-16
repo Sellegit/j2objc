@@ -21,7 +21,7 @@ import apple.metal.*;
 
 
 
-@Library("QuartzCore") @Mapping("CATransition")
+@Library("QuartzCore/QuartzCore.h") @Mapping("CATransition")
 public class CATransition 
     extends CAAnimation 
      {

@@ -17,7 +17,7 @@ import apple.dispatch.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("PushKit")
+@Library("PushKit/PushKit.h")
 public class PKPushType 
     extends Object 
      {

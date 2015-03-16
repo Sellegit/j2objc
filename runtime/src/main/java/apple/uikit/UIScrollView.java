@@ -24,7 +24,7 @@ import apple.corelocation.*;
  * @since Available in iOS 2.0 and later.
  */
 
-@Library("UIKit") @Mapping("UIScrollView")
+@Library("UIKit/UIKit.h") @Mapping("UIScrollView")
 public class UIScrollView 
     extends UIView 
     implements NSCoding {

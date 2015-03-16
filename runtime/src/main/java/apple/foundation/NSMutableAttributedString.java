@@ -24,7 +24,7 @@ import apple.dispatch.*;
  * @since Available in iOS 3.2 and later.
  */
 
-@Library("Foundation") @Mapping("NSMutableAttributedString")
+@Library("Foundation/Foundation.h") @Mapping("NSMutableAttributedString")
 public class NSMutableAttributedString 
     extends NSAttributedString 
      {

@@ -16,7 +16,7 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreText")
+@Library("CoreText/CoreText.h")
 public class CTParagraphStyle 
     extends CFType 
      {
@@ -42,11 +42,11 @@ public class CTParagraphStyle
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTParagraphStyleCreateCopy")
-    public native CTParagraphStyle createCopy();
+    public static native CTParagraphStyle createCopy(CTParagraphStyle paragraphStyle);
     /**
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTParagraphStyleGetValueForSpecifier")
-    public native boolean getValueForSpecifier(CTParagraphStyleSpecifier spec, @MachineSizedUInt long valueBufferSize, Todo valueBuffer);
+    public static native boolean getValueForSpecifier(CTParagraphStyle paragraphStyle, CTParagraphStyleSpecifier spec, @MachineSizedUInt long valueBufferSize, Todo valueBuffer);
     
 }

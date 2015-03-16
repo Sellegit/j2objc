@@ -20,7 +20,7 @@ import apple.uikit.*;
  * @since Available in iOS 7.1 and later.
  */
 
-@Library("MediaPlayer") @Mapping("MPFeedbackCommandEvent")
+@Library("MediaPlayer/MediaPlayer.h") @Mapping("MPFeedbackCommandEvent")
 public class MPFeedbackCommandEvent 
     extends MPRemoteCommandEvent 
      {

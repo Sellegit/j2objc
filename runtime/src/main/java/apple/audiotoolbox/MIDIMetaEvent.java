@@ -20,7 +20,7 @@ import apple.coremedia.*;
 
 
 
-@Mapping("MIDIMetaEvent")
+@Mapping("MIDIMetaEvent") @Library("AudioToolbox/AudioToolbox.h")
 public class MIDIMetaEvent 
     extends Struct 
      {
@@ -47,38 +47,38 @@ public class MIDIMetaEvent
         return __new;
     ]-*/;
     public static native MIDIMetaEvent copyWithmetaEventType(MIDIMetaEvent original, byte metaEventType) /*-[
-        original.metaEventType = metaEventType;
-        return original;
+        MIDIMetaEvent __new = { .metaEventType = metaEventType, .unused1 = original.unused1, .unused2 = original.unused2, .unused3 = original.unused3, .dataLength = original.dataLength, .data = original.data };
+        return __new;
     ]-*/;
 
     
     public static native MIDIMetaEvent copyWithunused1(MIDIMetaEvent original, byte unused1) /*-[
-        original.unused1 = unused1;
-        return original;
+        MIDIMetaEvent __new = { .metaEventType = original.metaEventType, .unused1 = unused1, .unused2 = original.unused2, .unused3 = original.unused3, .dataLength = original.dataLength, .data = original.data };
+        return __new;
     ]-*/;
 
     
     public static native MIDIMetaEvent copyWithunused2(MIDIMetaEvent original, byte unused2) /*-[
-        original.unused2 = unused2;
-        return original;
+        MIDIMetaEvent __new = { .metaEventType = original.metaEventType, .unused1 = original.unused1, .unused2 = unused2, .unused3 = original.unused3, .dataLength = original.dataLength, .data = original.data };
+        return __new;
     ]-*/;
 
     
     public static native MIDIMetaEvent copyWithunused3(MIDIMetaEvent original, byte unused3) /*-[
-        original.unused3 = unused3;
-        return original;
+        MIDIMetaEvent __new = { .metaEventType = original.metaEventType, .unused1 = original.unused1, .unused2 = original.unused2, .unused3 = unused3, .dataLength = original.dataLength, .data = original.data };
+        return __new;
     ]-*/;
 
     
     public static native MIDIMetaEvent copyWithdataLength(MIDIMetaEvent original, int dataLength) /*-[
-        original.dataLength = dataLength;
-        return original;
+        MIDIMetaEvent __new = { .metaEventType = original.metaEventType, .unused1 = original.unused1, .unused2 = original.unused2, .unused3 = original.unused3, .dataLength = dataLength, .data = original.data };
+        return __new;
     ]-*/;
 
     
     public static native MIDIMetaEvent copyWithdata(MIDIMetaEvent original, ByteBuffer data) /*-[
-        original.data = data;
-        return original;
+        MIDIMetaEvent __new = { .metaEventType = original.metaEventType, .unused1 = original.unused1, .unused2 = original.unused2, .unused3 = original.unused3, .dataLength = original.dataLength, .data = data };
+        return __new;
     ]-*/;
 
     

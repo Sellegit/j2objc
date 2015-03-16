@@ -16,7 +16,7 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreText")
+@Library("CoreText/CoreText.h")
 public class CTLine 
     extends CFType 
      {
@@ -42,66 +42,66 @@ public class CTLine
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTLineCreateTruncatedLine")
-    public native CTLine createTruncatedLine(double width, CTLineTruncationType truncationType, CTLine truncationToken);
+    public static native CTLine createTruncatedLine(CTLine line, double width, CTLineTruncationType truncationType, CTLine truncationToken);
     /**
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTLineCreateJustifiedLine")
-    public native CTLine createJustifiedLine(@MachineSizedFloat double justificationFactor, double justificationWidth);
+    public static native CTLine createJustifiedLine(CTLine line, @MachineSizedFloat double justificationFactor, double justificationWidth);
     /**
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTLineGetGlyphCount")
-    public native @MachineSizedSInt long getGlyphCount();
+    public static native @MachineSizedSInt long getGlyphCount(CTLine line);
     /**
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTLineGetGlyphRuns")
-    protected native CFArray getGlyphRuns0();
+    protected static native CFArray getGlyphRuns0(CTLine line);
     /**
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTLineGetStringRange")
-    public native CFRange getStringRange();
+    public static native CFRange getStringRange(CTLine line);
     /**
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTLineGetPenOffsetForFlush")
-    public native double getPenOffset(@MachineSizedFloat double flushFactor, double flushWidth);
+    public static native double getPenOffset(CTLine line, @MachineSizedFloat double flushFactor, double flushWidth);
     /**
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTLineDraw")
-    public native void draw(CGContext context);
+    public static native void draw(CTLine line, CGContext context);
     /**
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTLineGetTypographicBounds")
-    protected native double getTypographicBounds(Todo ascent, Todo descent, Todo leading);
+    protected static native double getTypographicBounds(CTLine line, Todo ascent, Todo descent, Todo leading);
     /**
      * @since Available in iOS 6.0 and later.
      */
     @GlobalFunction("CTLineGetBoundsWithOptions")
-    public native CGRect getBounds(CTLineBoundsOptions options);
+    public static native CGRect getBounds(CTLine line, CTLineBoundsOptions options);
     /**
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTLineGetTrailingWhitespaceWidth")
-    public native double getTrailingWhitespaceWidth();
+    public static native double getTrailingWhitespaceWidth(CTLine line);
     /**
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTLineGetImageBounds")
-    public native CGRect getImageBounds(CGContext context);
+    public static native CGRect getImageBounds(CTLine line, CGContext context);
     /**
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTLineGetStringIndexForPosition")
-    public native @MachineSizedSInt long getStringIndex(CGPoint position);
+    public static native @MachineSizedSInt long getStringIndex(CTLine line, CGPoint position);
     /**
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTLineGetOffsetForStringIndex")
-    protected native @MachineSizedFloat double getOffset(@MachineSizedSInt long charIndex, Todo secondaryOffset);
+    protected static native @MachineSizedFloat double getOffset(CTLine line, @MachineSizedSInt long charIndex, Todo secondaryOffset);
     
 }

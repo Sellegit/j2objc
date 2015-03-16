@@ -22,7 +22,7 @@ import apple.avfoundation.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("Photos") @Mapping("PHAsset")
+@Library("Photos/Photos.h") @Mapping("PHAsset")
 public class PHAsset 
     extends PHObject 
      {

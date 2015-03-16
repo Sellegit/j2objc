@@ -22,7 +22,7 @@ import apple.corelocation.*;
 
 
 
-@Library("UIKit")
+@Library("UIKit/UIKit.h")
 @Mapping("UITabBarSystemItem")
 public final class UITabBarSystemItem extends ObjCEnum {
     

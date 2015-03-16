@@ -21,7 +21,7 @@ import apple.addressbook.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("PassKit") @Mapping("PKPayment")
+@Library("PassKit/PassKit.h") @Mapping("PKPayment")
 public class PKPayment 
     extends NSObject 
      {

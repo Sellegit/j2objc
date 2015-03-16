@@ -21,7 +21,7 @@ import apple.addressbook.*;
  * @since Available in iOS 6.0 and later.
  */
 
-@Library("PassKit") @Mapping("PKAddPassesViewController")
+@Library("PassKit/PassKit.h") @Mapping("PKAddPassesViewController")
 public class PKAddPassesViewController 
     extends UIViewController 
      {

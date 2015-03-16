@@ -23,7 +23,7 @@ import apple.opengles.*;
 
 
 
-@Library("SceneKit") @Mapping("SCNParticleSystem")
+@Library("SceneKit/SceneKit.h") @Mapping("SCNParticleSystem")
 public class SCNParticleSystem 
     extends NSObject 
     implements NSCopying, SCNAnimatable {

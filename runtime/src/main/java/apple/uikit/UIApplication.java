@@ -24,7 +24,7 @@ import apple.corelocation.*;
  * @since Available in iOS 2.0 and later.
  */
 
-@Library("UIKit") @Mapping("UIApplication")
+@Library("UIKit/UIKit.h") @Mapping("UIApplication")
 public class UIApplication 
     extends UIResponder 
     implements UIActionSheetDelegate {

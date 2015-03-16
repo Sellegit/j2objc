@@ -22,7 +22,7 @@ import apple.corelocation.*;
 
 
 
-@Library("UIKit")
+@Library("UIKit/UIKit.h")
 @Mapping("UISearchBarIcon")
 public final class UISearchBarIcon extends ObjCEnum {
     

@@ -19,7 +19,7 @@ import apple.foundation.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("NetworkExtension") @Mapping("NEOnDemandRuleEvaluateConnection")
+@Library("NetworkExtension/NetworkExtension.h") @Mapping("NEOnDemandRuleEvaluateConnection")
 public class NEOnDemandRuleEvaluateConnection 
     extends NEOnDemandRule 
      {

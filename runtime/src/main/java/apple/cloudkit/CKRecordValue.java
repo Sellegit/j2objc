@@ -18,7 +18,7 @@ import apple.corelocation.*;
 
 
 
-@Library("CloudKit") @Mapping("CKRecordValue")
+@Library("CloudKit/CloudKit.h") @Mapping("CKRecordValue")
 public interface CKRecordValue 
     extends NSObjectProtocol {
 

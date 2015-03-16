@@ -24,7 +24,7 @@ import apple.dispatch.*;
  * @since Available in iOS 2.0 and later.
  */
 
-@Library("Foundation") @Mapping("NSOperation")
+@Library("Foundation/Foundation.h") @Mapping("NSOperation")
 public class NSOperation 
     extends NSObject 
      {

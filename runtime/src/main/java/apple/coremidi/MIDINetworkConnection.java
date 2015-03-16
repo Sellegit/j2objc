@@ -19,7 +19,7 @@ import apple.foundation.*;
  * @since Available in iOS 4.2 and later.
  */
 
-@Library("CoreMIDI") @Mapping("MIDINetworkConnection")
+@Library("CoreMIDI/CoreMIDI.h") @Mapping("MIDINetworkConnection")
 public class MIDINetworkConnection 
     extends NSObject 
      {

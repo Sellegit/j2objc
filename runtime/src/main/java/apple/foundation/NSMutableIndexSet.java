@@ -22,7 +22,7 @@ import apple.dispatch.*;
 
 
 
-@Library("Foundation") @Mapping("NSMutableIndexSet")
+@Library("Foundation/Foundation.h") @Mapping("NSMutableIndexSet")
 public class NSMutableIndexSet 
     extends NSIndexSet 
      {

@@ -21,7 +21,7 @@ import apple.corebluetooth.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("CoreLocation") @Mapping("CLVisit")
+@Library("CoreLocation/CoreLocation.h") @Mapping("CLVisit")
 public class CLVisit 
     extends NSObject 
     implements NSCopying {

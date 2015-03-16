@@ -21,7 +21,7 @@ import apple.uikit.*;
  * @since Available in iOS 4.0 and later.
  */
 
-@Library("EventKitUI") @Mapping("EKEventEditViewController")
+@Library("EventKitUI/EventKitUI.h") @Mapping("EKEventEditViewController")
 public class EKEventEditViewController 
     extends UINavigationController 
      {

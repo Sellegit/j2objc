@@ -20,7 +20,7 @@ import apple.coremedia.*;
 
 
 
-@Mapping("MusicEventUserData")
+@Mapping("MusicEventUserData") @Library("AudioToolbox/AudioToolbox.h")
 public class MusicEventUserData 
     extends Struct 
      {
@@ -39,14 +39,14 @@ public class MusicEventUserData
         return __new;
     ]-*/;
     public static native MusicEventUserData copyWithlength(MusicEventUserData original, int length) /*-[
-        original.length = length;
-        return original;
+        MusicEventUserData __new = { .length = length, .data = original.data };
+        return __new;
     ]-*/;
 
     
     public static native MusicEventUserData copyWithdata(MusicEventUserData original, ByteBuffer data) /*-[
-        original.data = data;
-        return original;
+        MusicEventUserData __new = { .length = original.length, .data = data };
+        return __new;
     ]-*/;
 
     

@@ -20,7 +20,7 @@ import apple.uikit.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("NotificationCenter") @Mapping("NCWidgetController")
+@Library("NotificationCenter/NotificationCenter.h") @Mapping("NCWidgetController")
 public class NCWidgetController 
     extends NSObject 
      {

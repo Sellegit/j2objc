@@ -24,7 +24,7 @@ import apple.corelocation.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("UIKit") @Mapping("UIPopoverPresentationController")
+@Library("UIKit/UIKit.h") @Mapping("UIPopoverPresentationController")
 public class UIPopoverPresentationController 
     extends UIPresentationController 
      {

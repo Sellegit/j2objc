@@ -18,7 +18,7 @@ import apple.foundation.*;
 
 
 
-@Mapping("CFFileDescriptorContext")
+@Mapping("CFFileDescriptorContext") @Library("CoreFoundation/CoreFoundation.h")
  class CFFileDescriptorContext 
     extends Struct 
      {

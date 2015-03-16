@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 
 
-@Library("CoreData")
+@Library("CoreData/CoreData.h")
 @Mapping("NSCoreDataErrorCode")
 public final class NSCoreDataErrorCode extends ObjCEnum {
     

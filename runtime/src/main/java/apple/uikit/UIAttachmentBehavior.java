@@ -24,7 +24,7 @@ import apple.corelocation.*;
  * @since Available in iOS 7.0 and later.
  */
 
-@Library("UIKit") @Mapping("UIAttachmentBehavior")
+@Library("UIKit/UIKit.h") @Mapping("UIAttachmentBehavior")
 public class UIAttachmentBehavior 
     extends UIDynamicBehavior 
      {

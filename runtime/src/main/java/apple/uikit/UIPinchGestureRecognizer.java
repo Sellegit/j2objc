@@ -24,7 +24,7 @@ import apple.corelocation.*;
  * @since Available in iOS 3.2 and later.
  */
 
-@Library("UIKit") @Mapping("UIPinchGestureRecognizer")
+@Library("UIKit/UIKit.h") @Mapping("UIPinchGestureRecognizer")
 public class UIPinchGestureRecognizer 
     extends UIGestureRecognizer 
      {

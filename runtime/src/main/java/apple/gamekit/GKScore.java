@@ -20,7 +20,7 @@ import apple.uikit.*;
  * @since Available in iOS 4.1 and later.
  */
 
-@Library("GameKit") @Mapping("GKScore")
+@Library("GameKit/GameKit.h") @Mapping("GKScore")
 public class GKScore 
     extends NSObject 
     implements NSCoding {

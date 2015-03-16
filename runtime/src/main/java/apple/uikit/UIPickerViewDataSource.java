@@ -22,7 +22,7 @@ import apple.corelocation.*;
 
 
 
-@Library("UIKit") @Mapping("UIPickerViewDataSource")
+@Library("UIKit/UIKit.h") @Mapping("UIPickerViewDataSource")
 public interface UIPickerViewDataSource 
     extends NSObjectProtocol {
 

@@ -20,7 +20,7 @@ import apple.uikit.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("WebKit") @Mapping("WKFrameInfo")
+@Library("WebKit/WebKit.h") @Mapping("WKFrameInfo")
 public class WKFrameInfo 
     extends NSObject 
     implements NSCopying {

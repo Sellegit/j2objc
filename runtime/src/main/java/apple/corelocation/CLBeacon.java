@@ -21,7 +21,7 @@ import apple.corebluetooth.*;
  * @since Available in iOS 7.0 and later.
  */
 
-@Library("CoreLocation") @Mapping("CLBeacon")
+@Library("CoreLocation/CoreLocation.h") @Mapping("CLBeacon")
 public class CLBeacon 
     extends NSObject 
     implements NSCopying {

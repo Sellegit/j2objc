@@ -19,7 +19,7 @@ import apple.foundation.*;
  * @since Available in iOS 4.0 and later.
  */
 
-@Library("CoreMotion") @Mapping("CMAttitude")
+@Library("CoreMotion/CoreMotion.h") @Mapping("CMAttitude")
 public class CMAttitude 
     extends NSObject 
     implements NSCopying {

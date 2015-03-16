@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 
 
-@Mapping("MIDIObjectAddRemoveNotification")
+@Mapping("MIDIObjectAddRemoveNotification") @Library("CoreMIDI/CoreMIDI.h")
 public class MIDIObjectAddRemoveNotification 
     extends Struct 
      {

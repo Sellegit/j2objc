@@ -18,7 +18,7 @@ import apple.uikit.*;
 
 
 
-@Library("MessageUI")
+@Library("MessageUI/MessageUI.h")
 @Mapping("MFMailComposeResult")
 public final class MFMailComposeResult extends ObjCEnum {
     

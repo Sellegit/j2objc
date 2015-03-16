@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 
 
-@Library("CoreTelephony")
+@Library("CoreTelephony/CoreTelephony.h")
 @Mapping("CTErrorDomain")
 public final class CTErrorDomain extends ObjCEnum {
     

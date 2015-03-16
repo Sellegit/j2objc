@@ -21,7 +21,7 @@ import apple.security.*;
  * @since Available in iOS 7.0 and later.
  */
 
-@Library("MultipeerConnectivity") @Mapping("MCAdvertiserAssistant")
+@Library("MultipeerConnectivity/MultipeerConnectivity.h") @Mapping("MCAdvertiserAssistant")
 public class MCAdvertiserAssistant 
     extends NSObject 
      {

@@ -21,7 +21,7 @@ import apple.security.*;
  * @since Available in iOS 7.0 and later.
  */
 
-@Library("MultipeerConnectivity")
+@Library("MultipeerConnectivity/MultipeerConnectivity.h")
 @Mapping("MCErrorCode")
 public final class MCErrorCode extends ObjCEnum {
     

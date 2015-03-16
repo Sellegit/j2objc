@@ -22,7 +22,7 @@ import apple.corelocation.*;
 
 
 
-@Library("UIKit") @Mapping("UISearchResultsUpdating")
+@Library("UIKit/UIKit.h") @Mapping("UISearchResultsUpdating")
 public interface UISearchResultsUpdating 
     extends NSObjectProtocol {
 

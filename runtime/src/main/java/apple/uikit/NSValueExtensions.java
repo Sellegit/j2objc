@@ -21,7 +21,7 @@ import apple.corelocation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("UIKit")
+@Library("UIKit/UIKit.h")
 public final class NSValueExtensions 
     extends NSExtensions 
      {
@@ -35,23 +35,6 @@ public final class NSValueExtensions
     
     
     
-    @Mapping("CGPointValue")
-    public static native CGPoint getPointValue(NSValue thiz);
-    @Mapping("CGVectorValue")
-    public static native CGVector getVectorValue(NSValue thiz);
-    @Mapping("CGSizeValue")
-    public static native CGSize getSizeValue(NSValue thiz);
-    @Mapping("CGRectValue")
-    public static native CGRect getRectValue(NSValue thiz);
-    @Mapping("CGAffineTransformValue")
-    public static native CGAffineTransform getAffineTransformValue(NSValue thiz);
-    @Mapping("UIEdgeInsetsValue")
-    public static native UIEdgeInsets getEdgeInsetsValue(NSValue thiz);
-    /**
-     * @since Available in iOS 5.0 and later.
-     */
-    @Mapping("UIOffsetValue")
-    public static native UIOffset getOffsetValue(NSValue thiz);
     @Mapping("valueWithCGPoint:")
     public static native NSValue create(CGPoint point);
     @Mapping("valueWithCGVector:")

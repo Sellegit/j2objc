@@ -24,7 +24,7 @@ import apple.corelocation.*;
  * @since Available in iOS 6.0 and later.
  */
 
-@Library("UIKit") @Mapping("UICollectionViewLayout")
+@Library("UIKit/UIKit.h") @Mapping("UICollectionViewLayout")
 public class UICollectionViewLayout 
     extends NSObject 
     implements NSCoding {

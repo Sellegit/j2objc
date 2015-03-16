@@ -18,7 +18,7 @@ import apple.dispatch.*;
 
 
 
-@Library("CoreBluetooth")
+@Library("CoreBluetooth/CoreBluetooth.h")
 @Mapping("CBATTErrorCode")
 public final class CBATTErrorCode extends ObjCEnum {
     

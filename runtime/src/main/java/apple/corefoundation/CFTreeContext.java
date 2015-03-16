@@ -18,7 +18,7 @@ import apple.foundation.*;
 
 
 
-@Mapping("CFTreeContext")
+@Mapping("CFTreeContext") @Library("CoreFoundation/CoreFoundation.h")
  class CFTreeContext 
     extends Struct 
      {

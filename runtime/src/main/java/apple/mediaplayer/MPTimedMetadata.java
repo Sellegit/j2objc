@@ -20,7 +20,7 @@ import apple.uikit.*;
  * @since Available in iOS 4.0 and later.
  */
 
-@Library("MediaPlayer") @Mapping("MPTimedMetadata")
+@Library("MediaPlayer/MediaPlayer.h") @Mapping("MPTimedMetadata")
 public class MPTimedMetadata 
     extends NSObject 
      {

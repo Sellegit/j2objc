@@ -22,7 +22,7 @@ import apple.dispatch.*;
 
 
 
-@Library("Foundation") @Mapping("NSIndexSet")
+@Library("Foundation/Foundation.h") @Mapping("NSIndexSet")
 public class NSIndexSet 
     extends NSObject 
     implements NSCopying {

@@ -19,7 +19,7 @@ import apple.corelocation.*;
 
 
 
-@Library("EventKit")
+@Library("EventKit/EventKit.h")
 @Mapping("EKParticipantStatus")
 public final class EKParticipantStatus extends ObjCEnum {
     

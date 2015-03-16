@@ -20,7 +20,7 @@ import apple.coremedia.*;
 
 
 
-@Mapping("AudioFileTypeAndFormatID")
+@Mapping("AudioFileTypeAndFormatID") @Library("AudioToolbox/AudioToolbox.h")
 public class AudioFileTypeAndFormatID 
     extends Struct 
      {
@@ -39,14 +39,14 @@ public class AudioFileTypeAndFormatID
         return __new;
     ]-*/;
     public static native AudioFileTypeAndFormatID copyWithmFileType(AudioFileTypeAndFormatID original, int mFileType) /*-[
-        original.mFileType = mFileType;
-        return original;
+        AudioFileTypeAndFormatID __new = { .mFileType = mFileType, .mFormatID = original.mFormatID };
+        return __new;
     ]-*/;
 
     
     public static native AudioFileTypeAndFormatID copyWithmFormatID(AudioFileTypeAndFormatID original, int mFormatID) /*-[
-        original.mFormatID = mFormatID;
-        return original;
+        AudioFileTypeAndFormatID __new = { .mFileType = original.mFileType, .mFormatID = mFormatID };
+        return __new;
     ]-*/;
 
     

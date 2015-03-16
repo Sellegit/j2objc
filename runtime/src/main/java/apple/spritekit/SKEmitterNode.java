@@ -24,7 +24,7 @@ import apple.scenekit.*;
 
 
 
-@Library("SpriteKit") @Mapping("SKEmitterNode")
+@Library("SpriteKit/SpriteKit.h") @Mapping("SKEmitterNode")
 public class SKEmitterNode 
     extends SKNode 
      {

@@ -26,7 +26,7 @@ import apple.scenekit.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("SpriteKit") @Mapping("SK3DNode")
+@Library("SpriteKit/SpriteKit.h") @Mapping("SK3DNode")
 public class SK3DNode 
     extends SKNode 
      {

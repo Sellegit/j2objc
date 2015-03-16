@@ -24,7 +24,7 @@ import apple.dispatch.*;
  * @since Available in iOS 4.0 and later.
  */
 
-@Library("Foundation") @Mapping("NSRegularExpression")
+@Library("Foundation/Foundation.h") @Mapping("NSRegularExpression")
 public class NSRegularExpression 
     extends NSObject 
     implements NSCopying, NSCoding {

@@ -24,7 +24,7 @@ import apple.scenekit.*;
 
 
 
-@Library("SpriteKit") @Mapping("SKCropNode")
+@Library("SpriteKit/SpriteKit.h") @Mapping("SKCropNode")
 public class SKCropNode 
     extends SKNode 
      {

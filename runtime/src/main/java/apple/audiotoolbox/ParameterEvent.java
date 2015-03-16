@@ -20,7 +20,7 @@ import apple.coremedia.*;
 
 
 
-@Mapping("ParameterEvent")
+@Mapping("ParameterEvent") @Library("AudioToolbox/AudioToolbox.h")
 public class ParameterEvent 
     extends Struct 
      {
@@ -43,26 +43,26 @@ public class ParameterEvent
         return __new;
     ]-*/;
     public static native ParameterEvent copyWithparameterID(ParameterEvent original, int parameterID) /*-[
-        original.parameterID = parameterID;
-        return original;
+        ParameterEvent __new = { .parameterID = parameterID, .scope = original.scope, .element = original.element, .value = original.value };
+        return __new;
     ]-*/;
 
     
     public static native ParameterEvent copyWithscope(ParameterEvent original, int scope) /*-[
-        original.scope = scope;
-        return original;
+        ParameterEvent __new = { .parameterID = original.parameterID, .scope = scope, .element = original.element, .value = original.value };
+        return __new;
     ]-*/;
 
     
     public static native ParameterEvent copyWithelement(ParameterEvent original, int element) /*-[
-        original.element = element;
-        return original;
+        ParameterEvent __new = { .parameterID = original.parameterID, .scope = original.scope, .element = element, .value = original.value };
+        return __new;
     ]-*/;
 
     
     public static native ParameterEvent copyWithvalue(ParameterEvent original, float value) /*-[
-        original.value = value;
-        return original;
+        ParameterEvent __new = { .parameterID = original.parameterID, .scope = original.scope, .element = original.element, .value = value };
+        return __new;
     ]-*/;
 
     

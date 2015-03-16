@@ -25,7 +25,7 @@ import apple.mediatoolbox.*;
  * @since Available in iOS 4.1 and later.
  */
 
-@Library("AVFoundation") @Mapping("AVAssetReader")
+@Library("AVFoundation/AVFoundation.h") @Mapping("AVAssetReader")
 public class AVAssetReader 
     extends NSObject 
      {

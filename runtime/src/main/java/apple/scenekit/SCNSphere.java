@@ -23,7 +23,7 @@ import apple.opengles.*;
 
 
 
-@Library("SceneKit") @Mapping("SCNSphere")
+@Library("SceneKit/SceneKit.h") @Mapping("SCNSphere")
 public class SCNSphere 
     extends SCNGeometry 
      {

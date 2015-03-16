@@ -20,7 +20,7 @@ import apple.imageio.*;
 
 
 
-@Library("CoreImage") @Mapping("CIImage")
+@Library("CoreImage/CoreImage.h") @Mapping("CIImage")
 public class CIImage 
     extends NSObject 
     implements NSCoding, NSCopying {

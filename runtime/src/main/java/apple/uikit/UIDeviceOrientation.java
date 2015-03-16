@@ -22,7 +22,7 @@ import apple.corelocation.*;
 
 
 
-@Library("UIKit")
+@Library("UIKit/UIKit.h")
 @Mapping("UIDeviceOrientation")
 public final class UIDeviceOrientation extends ObjCEnum {
     

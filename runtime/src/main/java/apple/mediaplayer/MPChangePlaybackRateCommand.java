@@ -20,7 +20,7 @@ import apple.uikit.*;
  * @since Available in iOS 7.1 and later.
  */
 
-@Library("MediaPlayer") @Mapping("MPChangePlaybackRateCommand")
+@Library("MediaPlayer/MediaPlayer.h") @Mapping("MPChangePlaybackRateCommand")
 public class MPChangePlaybackRateCommand 
     extends MPRemoteCommand 
      {

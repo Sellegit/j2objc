@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 
 
-@Library("CoreAudio")
+@Library("CoreAudio/CoreAudioTypes.h")
 @Mapping("AudioChannelFlag")
 public final class AudioChannelFlag extends ObjCEnum {
     

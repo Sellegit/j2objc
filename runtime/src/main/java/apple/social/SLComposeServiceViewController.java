@@ -21,7 +21,7 @@ import apple.accounts.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("Social") @Mapping("SLComposeServiceViewController")
+@Library("Social/Social.h") @Mapping("SLComposeServiceViewController")
 public class SLComposeServiceViewController 
     extends UIViewController 
     implements UITextViewDelegate {

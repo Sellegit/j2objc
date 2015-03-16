@@ -22,7 +22,7 @@ import apple.dispatch.*;
 
 
 
-@Library("Foundation") @Mapping("NSNotificationCenter")
+@Library("Foundation/Foundation.h") @Mapping("NSNotificationCenter")
 public class NSNotificationCenter 
     extends NSObject 
      {

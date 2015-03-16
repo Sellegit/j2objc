@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 
 
-@Mapping("MIDIValueMap")
+@Mapping("MIDIValueMap") @Library("CoreMIDI/CoreMIDI.h")
 public class MIDIValueMap 
     extends Struct 
      {

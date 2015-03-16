@@ -22,7 +22,7 @@ import apple.corelocation.*;
 
 
 
-@Library("UIKit")
+@Library("UIKit/UIKit.h")
 @Mapping("UIPrintInfoDuplex")
 public final class UIPrintInfoDuplex extends ObjCEnum {
     

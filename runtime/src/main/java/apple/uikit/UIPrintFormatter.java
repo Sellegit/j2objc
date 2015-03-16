@@ -24,7 +24,7 @@ import apple.corelocation.*;
  * @since Available in iOS 4.2 and later.
  */
 
-@Library("UIKit") @Mapping("UIPrintFormatter")
+@Library("UIKit/UIKit.h") @Mapping("UIPrintFormatter")
 public class UIPrintFormatter 
     extends NSObject 
     implements NSCopying {

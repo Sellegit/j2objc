@@ -20,7 +20,7 @@ import apple.coremedia.*;
 
 
 
-@Mapping("CAFPacketTableHeader")
+@Mapping("CAFPacketTableHeader") @Library("AudioToolbox/AudioToolbox.h")
 public class CAFPacketTableHeader 
     extends Struct 
      {
@@ -45,32 +45,32 @@ public class CAFPacketTableHeader
         return __new;
     ]-*/;
     public static native CAFPacketTableHeader copyWithmNumberPackets(CAFPacketTableHeader original, long mNumberPackets) /*-[
-        original.mNumberPackets = mNumberPackets;
-        return original;
+        CAFPacketTableHeader __new = { .mNumberPackets = mNumberPackets, .mNumberValidFrames = original.mNumberValidFrames, .mPrimingFrames = original.mPrimingFrames, .mRemainderFrames = original.mRemainderFrames, .mPacketDescriptions = original.mPacketDescriptions };
+        return __new;
     ]-*/;
 
     
     public static native CAFPacketTableHeader copyWithmNumberValidFrames(CAFPacketTableHeader original, long mNumberValidFrames) /*-[
-        original.mNumberValidFrames = mNumberValidFrames;
-        return original;
+        CAFPacketTableHeader __new = { .mNumberPackets = original.mNumberPackets, .mNumberValidFrames = mNumberValidFrames, .mPrimingFrames = original.mPrimingFrames, .mRemainderFrames = original.mRemainderFrames, .mPacketDescriptions = original.mPacketDescriptions };
+        return __new;
     ]-*/;
 
     
     public static native CAFPacketTableHeader copyWithmPrimingFrames(CAFPacketTableHeader original, int mPrimingFrames) /*-[
-        original.mPrimingFrames = mPrimingFrames;
-        return original;
+        CAFPacketTableHeader __new = { .mNumberPackets = original.mNumberPackets, .mNumberValidFrames = original.mNumberValidFrames, .mPrimingFrames = mPrimingFrames, .mRemainderFrames = original.mRemainderFrames, .mPacketDescriptions = original.mPacketDescriptions };
+        return __new;
     ]-*/;
 
     
     public static native CAFPacketTableHeader copyWithmRemainderFrames(CAFPacketTableHeader original, int mRemainderFrames) /*-[
-        original.mRemainderFrames = mRemainderFrames;
-        return original;
+        CAFPacketTableHeader __new = { .mNumberPackets = original.mNumberPackets, .mNumberValidFrames = original.mNumberValidFrames, .mPrimingFrames = original.mPrimingFrames, .mRemainderFrames = mRemainderFrames, .mPacketDescriptions = original.mPacketDescriptions };
+        return __new;
     ]-*/;
 
     
     public static native CAFPacketTableHeader copyWithmPacketDescriptions(CAFPacketTableHeader original, ByteBuffer mPacketDescriptions) /*-[
-        original.mPacketDescriptions = mPacketDescriptions;
-        return original;
+        CAFPacketTableHeader __new = { .mNumberPackets = original.mNumberPackets, .mNumberValidFrames = original.mNumberValidFrames, .mPrimingFrames = original.mPrimingFrames, .mRemainderFrames = original.mRemainderFrames, .mPacketDescriptions = mPacketDescriptions };
+        return __new;
     ]-*/;
 
     

@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 
 
-@Mapping("AudioValueTranslation")
+@Mapping("AudioValueTranslation") @Library("CoreAudio/CoreAudioTypes.h")
 public class AudioValueTranslation 
     extends Struct 
      {

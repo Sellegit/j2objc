@@ -22,7 +22,7 @@ import apple.corelocation.*;
 
 
 
-@Library("UIKit")
+@Library("UIKit/UIKit.h")
 @Mapping("UITextAutocorrectionType")
 public final class UITextAutocorrectionType extends ObjCEnum {
     

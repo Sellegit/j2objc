@@ -22,7 +22,7 @@ import apple.dispatch.*;
 
 
 
-@Library("Foundation") @Mapping("NSPort")
+@Library("Foundation/Foundation.h") @Mapping("NSPort")
 public class NSPort 
     extends NSObject 
     implements NSCopying, NSCoding {

@@ -21,7 +21,7 @@ import apple.metal.*;
 
 
 
-@Library("QuartzCore") @Mapping("CALayerDelegate")
+@Library("QuartzCore/QuartzCore.h") @Mapping("CALayerDelegate")
 public interface CALayerDelegate 
      {
 

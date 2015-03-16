@@ -20,7 +20,7 @@ import apple.corelocation.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("CloudKit")
+@Library("CloudKit/CloudKit.h")
 @Mapping("CKApplicationPermissionStatus")
 public final class CKApplicationPermissionStatus extends ObjCEnum {
     

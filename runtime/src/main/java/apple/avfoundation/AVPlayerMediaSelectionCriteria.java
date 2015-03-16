@@ -25,7 +25,7 @@ import apple.mediatoolbox.*;
  * @since Available in iOS 7.0 and later.
  */
 
-@Library("AVFoundation") @Mapping("AVPlayerMediaSelectionCriteria")
+@Library("AVFoundation/AVFoundation.h") @Mapping("AVPlayerMediaSelectionCriteria")
 public class AVPlayerMediaSelectionCriteria 
     extends NSObject 
      {

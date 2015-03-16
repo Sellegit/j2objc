@@ -22,7 +22,7 @@ import apple.corelocation.*;
 
 
 
-@Library("UIKit") @Mapping("UIBarPositioningDelegate")
+@Library("UIKit/UIKit.h") @Mapping("UIBarPositioningDelegate")
 public interface UIBarPositioningDelegate 
     extends NSObjectProtocol {
 

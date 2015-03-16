@@ -22,7 +22,7 @@ import apple.dispatch.*;
 
 
 
-@Library("Foundation") @Mapping("NSRecursiveLock")
+@Library("Foundation/Foundation.h") @Mapping("NSRecursiveLock")
 public class NSRecursiveLock 
     extends NSObject 
     implements NSLocking {

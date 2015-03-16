@@ -19,7 +19,7 @@ import apple.foundation.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("HealthKit") @Mapping("HKObjectType")
+@Library("HealthKit/HealthKit.h") @Mapping("HKObjectType")
 public class HKObjectType 
     extends NSObject 
     implements NSCopying {

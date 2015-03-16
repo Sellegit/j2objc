@@ -16,7 +16,7 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreMIDI")
+@Library("CoreMIDI/CoreMIDI.h")
 public class MIDIEntity 
     extends MIDIObject 
      {
@@ -32,31 +32,31 @@ public class MIDIEntity
      * @since Available in iOS 4.2 and later.
      */
     @GlobalFunction("MIDIEntityGetNumberOfSources")
-    public native @MachineSizedUInt long getNumberOfSources();
+    public static native @MachineSizedUInt long getNumberOfSources(MIDIEntity entity);
     /**
      * @since Available in iOS 4.2 and later.
      */
     @GlobalFunction("MIDIEntityGetSource")
-    public native MIDIEndpoint getSource(@MachineSizedUInt long sourceIndex0);
+    public static native MIDIEndpoint getSource(MIDIEntity entity, @MachineSizedUInt long sourceIndex0);
     /**
      * @since Available in iOS 4.2 and later.
      */
     @GlobalFunction("MIDIEntityGetNumberOfDestinations")
-    public native @MachineSizedUInt long getNumberOfDestinations();
+    public static native @MachineSizedUInt long getNumberOfDestinations(MIDIEntity entity);
     /**
      * @since Available in iOS 4.2 and later.
      */
     @GlobalFunction("MIDIEntityGetDestination")
-    public native MIDIEndpoint getDestination(@MachineSizedUInt long destIndex0);
+    public static native MIDIEndpoint getDestination(MIDIEntity entity, @MachineSizedUInt long destIndex0);
     /**
      * @since Available in iOS 4.2 and later.
      */
     @GlobalFunction("MIDIEntityGetDevice")
-    protected native MIDIError getDevice(Todo outDevice);
+    protected static native MIDIError getDevice(MIDIEntity inEntity, Todo outDevice);
     /**
      * @since Available in iOS 4.2 and later.
      */
     @GlobalFunction("MIDIEntityAddOrRemoveEndpoints")
-    public native MIDIError addOrRemoveEndpoints(@MachineSizedUInt long numSourceEndpoints, @MachineSizedUInt long numDestinationEndpoints);
+    public static native MIDIError addOrRemoveEndpoints(MIDIEntity entity, @MachineSizedUInt long numSourceEndpoints, @MachineSizedUInt long numDestinationEndpoints);
     
 }

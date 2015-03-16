@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 
 
-@Library("CoreMotion")
+@Library("CoreMotion/CoreMotion.h")
 @Mapping("CMAttitudeReferenceFrame")
 public final class CMAttitudeReferenceFrame extends ObjCEnum {
     

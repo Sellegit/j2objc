@@ -24,7 +24,7 @@ import apple.corelocation.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("UIKit") @Mapping("UIVibrancyEffect")
+@Library("UIKit/UIKit.h") @Mapping("UIVibrancyEffect")
 public class UIVibrancyEffect 
     extends UIVisualEffect 
      {

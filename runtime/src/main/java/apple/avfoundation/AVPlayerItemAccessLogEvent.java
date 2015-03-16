@@ -25,7 +25,7 @@ import apple.mediatoolbox.*;
  * @since Available in iOS 4.3 and later.
  */
 
-@Library("AVFoundation") @Mapping("AVPlayerItemAccessLogEvent")
+@Library("AVFoundation/AVFoundation.h") @Mapping("AVPlayerItemAccessLogEvent")
 public class AVPlayerItemAccessLogEvent 
     extends NSObject 
     implements NSCopying {

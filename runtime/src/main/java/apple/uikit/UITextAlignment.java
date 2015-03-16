@@ -26,7 +26,7 @@ import apple.corelocation.*;
  */
 @Deprecated
 
-@Library("UIKit")
+@Library("UIKit/UIKit.h")
 @Mapping("UITextAlignment")
 public final class UITextAlignment extends ObjCEnum {
     

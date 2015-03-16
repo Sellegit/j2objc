@@ -19,7 +19,7 @@ import apple.foundation.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("NetworkExtension") @Mapping("NEVPNIKEv2SecurityAssociationParameters")
+@Library("NetworkExtension/NetworkExtension.h") @Mapping("NEVPNIKEv2SecurityAssociationParameters")
 public class NEVPNIKEv2SecurityAssociationParameters 
     extends NSObject 
     implements NSCopying {

@@ -20,7 +20,7 @@ import apple.corelocation.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("CloudKit") @Mapping("CKAsset")
+@Library("CloudKit/CloudKit.h") @Mapping("CKAsset")
 public class CKAsset 
     extends NSObject 
     implements CKRecordValue {

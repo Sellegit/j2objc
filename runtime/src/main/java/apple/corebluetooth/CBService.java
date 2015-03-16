@@ -20,7 +20,7 @@ import apple.dispatch.*;
  * @since Available in iOS 5.0 and later.
  */
 
-@Library("CoreBluetooth") @Mapping("CBService")
+@Library("CoreBluetooth/CoreBluetooth.h") @Mapping("CBService")
 public class CBService 
     extends CBAttribute 
      {

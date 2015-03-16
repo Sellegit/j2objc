@@ -25,7 +25,7 @@ import apple.mediatoolbox.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("AVFoundation") @Mapping("AVAudioMixing")
+@Library("AVFoundation/AVFoundation.h") @Mapping("AVAudioMixing")
 public interface AVAudioMixing 
     extends AVAudioStereoMixing, AVAudio3DMixing {
 

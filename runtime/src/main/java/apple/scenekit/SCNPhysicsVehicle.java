@@ -23,7 +23,7 @@ import apple.opengles.*;
 
 
 
-@Library("SceneKit") @Mapping("SCNPhysicsVehicle")
+@Library("SceneKit/SceneKit.h") @Mapping("SCNPhysicsVehicle")
 public class SCNPhysicsVehicle 
     extends SCNPhysicsBehavior 
      {

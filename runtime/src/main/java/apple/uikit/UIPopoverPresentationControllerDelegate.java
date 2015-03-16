@@ -22,7 +22,7 @@ import apple.corelocation.*;
 
 
 
-@Library("UIKit") @Mapping("UIPopoverPresentationControllerDelegate")
+@Library("UIKit/UIKit.h") @Mapping("UIPopoverPresentationControllerDelegate")
 public interface UIPopoverPresentationControllerDelegate 
     extends UIAdaptivePresentationControllerDelegate {
 

@@ -25,7 +25,7 @@ import apple.mediatoolbox.*;
  * @since Available in iOS 7.0 and later.
  */
 
-@Library("AVFoundation") @Mapping("AVAssetResourceLoadingDataRequest")
+@Library("AVFoundation/AVFoundation.h") @Mapping("AVAssetResourceLoadingDataRequest")
 public class AVAssetResourceLoadingDataRequest 
     extends NSObject 
      {

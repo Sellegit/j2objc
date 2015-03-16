@@ -25,7 +25,7 @@ import apple.mediatoolbox.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("AVFoundation") @Mapping("AVMIDIPlayer")
+@Library("AVFoundation/AVFoundation.h") @Mapping("AVMIDIPlayer")
 public class AVMIDIPlayer 
     extends NSObject 
      {

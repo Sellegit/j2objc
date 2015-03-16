@@ -16,7 +16,7 @@ import apple.dispatch.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("Security")
+@Library("Security/Security.h")
 public class SecTrust 
     extends CFType 
      {
@@ -73,101 +73,101 @@ public class SecTrust
      * @since Available in iOS 6.0 and later.
      */
     @GlobalFunction("SecTrustSetPolicies")
-    public native int setPolicies(CFType policies);
+    public static native int setPolicies(SecTrust trust, CFType policies);
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalFunction("SecTrustCopyPolicies")
-    public native int copyPolicies(Todo policies);
+    public static native int copyPolicies(SecTrust trust, Todo policies);
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalFunction("SecTrustSetNetworkFetchAllowed")
-    public native int setNetworkFetchAllowed(boolean allowFetch);
+    public static native int setNetworkFetchAllowed(SecTrust trust, boolean allowFetch);
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalFunction("SecTrustGetNetworkFetchAllowed")
-    public native int getNetworkFetchAllowed(Todo allowFetch);
+    public static native int getNetworkFetchAllowed(SecTrust trust, Todo allowFetch);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("SecTrustSetAnchorCertificates")
-    public native int setAnchorCertificates(CFArray anchorCertificates);
+    public static native int setAnchorCertificates(SecTrust trust, CFArray anchorCertificates);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("SecTrustSetAnchorCertificatesOnly")
-    public native int setAnchorCertificatesOnly(boolean anchorCertificatesOnly);
+    public static native int setAnchorCertificatesOnly(SecTrust trust, boolean anchorCertificatesOnly);
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalFunction("SecTrustCopyCustomAnchorCertificates")
-    public native int copyCustomAnchorCertificates(Todo anchors);
+    public static native int copyCustomAnchorCertificates(SecTrust trust, Todo anchors);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("SecTrustSetVerifyDate")
-    public native int setVerifyDate(CFDate verifyDate);
+    public static native int setVerifyDate(SecTrust trust, CFDate verifyDate);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("SecTrustGetVerifyTime")
-    public native double getVerifyTime();
+    public static native double getVerifyTime(SecTrust trust);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("SecTrustEvaluate")
-    public native int evaluate(Todo result);
+    public static native int evaluate(SecTrust trust, Todo result);
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalFunction("SecTrustEvaluateAsync")
-    public native int evaluateAsync(DispatchQueue queue, FunctionPtr result);
+    public static native int evaluateAsync(SecTrust trust, DispatchQueue queue, FunctionPtr result);
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalFunction("SecTrustGetTrustResult")
-    public native int getTrustResult(Todo result);
+    public static native int getTrustResult(SecTrust trust, Todo result);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("SecTrustCopyPublicKey")
-    public native SecKey copyPublicKey();
+    public static native SecKey copyPublicKey(SecTrust trust);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("SecTrustGetCertificateCount")
-    public native @MachineSizedSInt long getCertificateCount();
+    public static native @MachineSizedSInt long getCertificateCount(SecTrust trust);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("SecTrustGetCertificateAtIndex")
-    public native SecCertificate getCertificateAtIndex(@MachineSizedSInt long ix);
+    public static native SecCertificate getCertificateAtIndex(SecTrust trust, @MachineSizedSInt long ix);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("SecTrustCopyExceptions")
-    public native CFData copyExceptions();
+    public static native CFData copyExceptions(SecTrust trust);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("SecTrustSetExceptions")
-    public native boolean setExceptions(CFData exceptions);
+    public static native boolean setExceptions(SecTrust trust, CFData exceptions);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("SecTrustCopyProperties")
-    public native CFArray copyProperties();
+    public static native CFArray copyProperties(SecTrust trust);
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalFunction("SecTrustCopyResult")
-    public native CFDictionary copyResult();
+    public static native CFDictionary copyResult(SecTrust trust);
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalFunction("SecTrustSetOCSPResponse")
-    public native int setOCSPResponse(CFType responseData);
+    public static native int setOCSPResponse(SecTrust trust, CFType responseData);
     
 }

@@ -22,7 +22,7 @@ import apple.dispatch.*;
 
 
 
-@Library("Foundation")
+@Library("Foundation/Foundation.h")
 @Mapping("NSURLCredentialPersistence")
 public final class NSURLCredentialPersistence extends ObjCEnum {
     

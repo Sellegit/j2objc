@@ -22,7 +22,7 @@ import apple.corelocation.*;
 
 
 
-@Library("UIKit") @Mapping("UIPickerViewDelegate")
+@Library("UIKit/UIKit.h") @Mapping("UIPickerViewDelegate")
 public interface UIPickerViewDelegate 
     extends NSObjectProtocol {
 

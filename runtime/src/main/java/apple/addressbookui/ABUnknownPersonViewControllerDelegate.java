@@ -19,7 +19,7 @@ import apple.addressbook.*;
 
 
 
-@Library("AddressBookUI") @Mapping("ABUnknownPersonViewControllerDelegate")
+@Library("AddressBookUI/AddressBookUI.h") @Mapping("ABUnknownPersonViewControllerDelegate")
 public interface ABUnknownPersonViewControllerDelegate 
     extends NSObjectProtocol {
 

@@ -20,7 +20,7 @@ import apple.dispatch.*;
 
 
 
-@Mapping("GLKMatrix2")
+@Mapping("GLKMatrix2") @Library("GLKit/GLKit.h")
 public class GLKMatrix2 
     extends Struct 
      {

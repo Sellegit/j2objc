@@ -24,7 +24,7 @@ import apple.corelocation.*;
  * @since Available in iOS 6.0 and later.
  */
 
-@Library("UIKit") @Mapping("UICollectionViewCell")
+@Library("UIKit/UIKit.h") @Mapping("UICollectionViewCell")
 public class UICollectionViewCell 
     extends UICollectionReusableView 
      {

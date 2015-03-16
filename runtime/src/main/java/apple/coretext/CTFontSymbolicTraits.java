@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 
 
-@Library("CoreText")
+@Library("CoreText/CoreText.h")
 @Mapping("CTFontSymbolicTraits")
 public final class CTFontSymbolicTraits extends ObjCEnum {
     

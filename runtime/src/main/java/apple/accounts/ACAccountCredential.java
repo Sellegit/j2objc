@@ -19,7 +19,7 @@ import apple.foundation.*;
  * @since Available in iOS 5.0 and later.
  */
 
-@Library("Accounts") @Mapping("ACAccountCredential")
+@Library("Accounts/Accounts.h") @Mapping("ACAccountCredential")
 public class ACAccountCredential 
     extends NSObject 
      {

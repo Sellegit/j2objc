@@ -18,7 +18,7 @@ import apple.foundation.*;
 
 
 
-@Mapping("CFGregorianDate") @Library("CoreFoundation")
+@Mapping("CFGregorianDate") @Library("CoreFoundation/CoreFoundation.h")
 public class CFGregorianDate 
     extends Struct 
      {
@@ -86,14 +86,14 @@ public class CFGregorianDate
      */
     @Deprecated
     @GlobalFunction("CFGregorianDateIsValid")
-    public native boolean isValid(@MachineSizedUInt long unitFlags);
+    public static native boolean isValid(CFGregorianDate gdate, @MachineSizedUInt long unitFlags);
     /**
      * @since Available in iOS 2.0 and later.
      * @deprecated Deprecated in iOS 8.0.
      */
     @Deprecated
     @GlobalFunction("CFGregorianDateGetAbsoluteTime")
-    public native double getAbsoluteTime(CFTimeZone tz);
+    public static native double getAbsoluteTime(CFGregorianDate gdate, CFTimeZone tz);
     /**
      * @since Available in iOS 2.0 and later.
      * @deprecated Deprecated in iOS 8.0.

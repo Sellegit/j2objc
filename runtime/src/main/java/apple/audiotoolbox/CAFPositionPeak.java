@@ -20,7 +20,7 @@ import apple.coremedia.*;
 
 
 
-@Mapping("CAFPositionPeak")
+@Mapping("CAFPositionPeak") @Library("AudioToolbox/AudioToolbox.h")
 public class CAFPositionPeak 
     extends Struct 
      {
@@ -39,14 +39,14 @@ public class CAFPositionPeak
         return __new;
     ]-*/;
     public static native CAFPositionPeak copyWithmValue(CAFPositionPeak original, float mValue) /*-[
-        original.mValue = mValue;
-        return original;
+        CAFPositionPeak __new = { .mValue = mValue, .mFrameNumber = original.mFrameNumber };
+        return __new;
     ]-*/;
 
     
     public static native CAFPositionPeak copyWithmFrameNumber(CAFPositionPeak original, long mFrameNumber) /*-[
-        original.mFrameNumber = mFrameNumber;
-        return original;
+        CAFPositionPeak __new = { .mValue = original.mValue, .mFrameNumber = mFrameNumber };
+        return __new;
     ]-*/;
 
     

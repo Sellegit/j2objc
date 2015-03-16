@@ -20,7 +20,7 @@ import apple.dispatch.*;
 
 
 
-@Mapping("GLKVector2") @Library("GLKit")
+@Mapping("GLKVector2") @Library("GLKit/GLKit.h")
 public class GLKVector2 
     extends Struct 
      {
@@ -47,50 +47,50 @@ public class GLKVector2
     @GlobalFunction("GLKVector2MakeWithArray")
     public static native GLKVector2 createPrime(FloatBuffer values);
     @GlobalFunction("GLKVector2Negate")
-    public native GLKVector2 negate();
+    public static native GLKVector2 negate(GLKVector2 vector);
     @GlobalFunction("GLKVector2Add")
-    public native GLKVector2 add(GLKVector2 vectorRight);
+    public static native GLKVector2 add(GLKVector2 vectorLeft, GLKVector2 vectorRight);
     @GlobalFunction("GLKVector2Subtract")
-    public native GLKVector2 subtract(GLKVector2 vectorRight);
+    public static native GLKVector2 subtract(GLKVector2 vectorLeft, GLKVector2 vectorRight);
     @GlobalFunction("GLKVector2Multiply")
-    public native GLKVector2 multiply(GLKVector2 vectorRight);
+    public static native GLKVector2 multiply(GLKVector2 vectorLeft, GLKVector2 vectorRight);
     @GlobalFunction("GLKVector2Divide")
-    public native GLKVector2 divide(GLKVector2 vectorRight);
+    public static native GLKVector2 divide(GLKVector2 vectorLeft, GLKVector2 vectorRight);
     @GlobalFunction("GLKVector2AddScalar")
-    public native GLKVector2 addScalar(float value);
+    public static native GLKVector2 addScalar(GLKVector2 vector, float value);
     @GlobalFunction("GLKVector2SubtractScalar")
-    public native GLKVector2 subtractScalar(float value);
+    public static native GLKVector2 subtractScalar(GLKVector2 vector, float value);
     @GlobalFunction("GLKVector2MultiplyScalar")
-    public native GLKVector2 multiplyScalar(float value);
+    public static native GLKVector2 multiplyScalar(GLKVector2 vector, float value);
     @GlobalFunction("GLKVector2DivideScalar")
-    public native GLKVector2 divideScalar(float value);
+    public static native GLKVector2 divideScalar(GLKVector2 vector, float value);
     @GlobalFunction("GLKVector2Maximum")
-    public native GLKVector2 maximum(GLKVector2 vectorRight);
+    public static native GLKVector2 maximum(GLKVector2 vectorLeft, GLKVector2 vectorRight);
     @GlobalFunction("GLKVector2Minimum")
-    public native GLKVector2 minimum(GLKVector2 vectorRight);
+    public static native GLKVector2 minimum(GLKVector2 vectorLeft, GLKVector2 vectorRight);
     @GlobalFunction("GLKVector2AllEqualToVector2")
-    public native boolean allEqualToVector2(GLKVector2 vectorRight);
+    public static native boolean allEqualToVector2(GLKVector2 vectorLeft, GLKVector2 vectorRight);
     @GlobalFunction("GLKVector2AllEqualToScalar")
-    public native boolean allEqualToScalar(float value);
+    public static native boolean allEqualToScalar(GLKVector2 vector, float value);
     @GlobalFunction("GLKVector2AllGreaterThanVector2")
-    public native boolean allGreaterThanVector2(GLKVector2 vectorRight);
+    public static native boolean allGreaterThanVector2(GLKVector2 vectorLeft, GLKVector2 vectorRight);
     @GlobalFunction("GLKVector2AllGreaterThanScalar")
-    public native boolean allGreaterThanScalar(float value);
+    public static native boolean allGreaterThanScalar(GLKVector2 vector, float value);
     @GlobalFunction("GLKVector2AllGreaterThanOrEqualToVector2")
-    public native boolean allGreaterThanOrEqualToVector2(GLKVector2 vectorRight);
+    public static native boolean allGreaterThanOrEqualToVector2(GLKVector2 vectorLeft, GLKVector2 vectorRight);
     @GlobalFunction("GLKVector2AllGreaterThanOrEqualToScalar")
-    public native boolean allGreaterThanOrEqualToScalar(float value);
+    public static native boolean allGreaterThanOrEqualToScalar(GLKVector2 vector, float value);
     @GlobalFunction("GLKVector2Normalize")
-    public native GLKVector2 normalize();
+    public static native GLKVector2 normalize(GLKVector2 vector);
     @GlobalFunction("GLKVector2DotProduct")
-    public native float dotProduct(GLKVector2 vectorRight);
+    public static native float dotProduct(GLKVector2 vectorLeft, GLKVector2 vectorRight);
     @GlobalFunction("GLKVector2Length")
-    public native float length();
+    public static native float length(GLKVector2 vector);
     @GlobalFunction("GLKVector2Distance")
-    public native float distance(GLKVector2 vectorEnd);
+    public static native float distance(GLKVector2 vectorStart, GLKVector2 vectorEnd);
     @GlobalFunction("GLKVector2Lerp")
-    public native GLKVector2 lerp(GLKVector2 vectorEnd, float t);
+    public static native GLKVector2 lerp(GLKVector2 vectorStart, GLKVector2 vectorEnd, float t);
     @GlobalFunction("GLKVector2Project")
-    public native GLKVector2 project(GLKVector2 projectionVector);
+    public static native GLKVector2 project(GLKVector2 vectorToProject, GLKVector2 projectionVector);
     
 }

@@ -21,7 +21,7 @@ import apple.corevideo.*;
 
 
 
-@Library("CoreMedia")
+@Library("CoreMedia/CoreMedia.h")
 @Mapping("CMBlockBufferError")
 public final class CMBlockBufferError extends ObjCEnum {
     

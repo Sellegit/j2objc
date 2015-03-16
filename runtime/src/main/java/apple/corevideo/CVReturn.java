@@ -20,7 +20,7 @@ import apple.metal.*;
 
 
 
-@Library("CoreVideo")
+@Library("CoreVideo/CoreVideo.h")
 @Mapping("CVReturn")
 public final class CVReturn extends ObjCEnum {
     

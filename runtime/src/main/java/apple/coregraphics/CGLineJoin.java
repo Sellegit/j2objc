@@ -18,7 +18,7 @@ import apple.uikit.*;
 
 
 
-@Library("CoreGraphics")
+@Library("CoreGraphics/CoreGraphics.h")
 @Mapping("CGLineJoin")
 public final class CGLineJoin extends ObjCEnum {
     

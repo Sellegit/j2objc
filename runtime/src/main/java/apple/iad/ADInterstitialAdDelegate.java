@@ -21,7 +21,7 @@ import apple.avkit.*;
 
 
 
-@Library("iAd") @Mapping("ADInterstitialAdDelegate")
+@Library("iAd/iAd.h") @Mapping("ADInterstitialAdDelegate")
 public interface ADInterstitialAdDelegate 
     extends NSObjectProtocol {
 

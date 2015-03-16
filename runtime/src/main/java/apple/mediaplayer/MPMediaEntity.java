@@ -20,7 +20,7 @@ import apple.uikit.*;
  * @since Available in iOS 4.2 and later.
  */
 
-@Library("MediaPlayer") @Mapping("MPMediaEntity")
+@Library("MediaPlayer/MediaPlayer.h") @Mapping("MPMediaEntity")
 public class MPMediaEntity 
     extends NSObject 
      {

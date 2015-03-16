@@ -22,7 +22,7 @@ import apple.corelocation.*;
 
 
 
-@Library("UIKit") @Mapping("UIWebViewDelegate")
+@Library("UIKit/UIKit.h") @Mapping("UIWebViewDelegate")
 public interface UIWebViewDelegate 
     extends NSObjectProtocol {
 

@@ -24,7 +24,7 @@ import apple.dispatch.*;
  * @since Available in iOS 5.0 and later.
  */
 
-@Library("Foundation")
+@Library("Foundation/Foundation.h")
 @Mapping("NSJSONReadingOptions")
 public final class NSJSONReadingOptions extends ObjCEnum {
     

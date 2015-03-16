@@ -16,7 +16,7 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("SafariServices")
+@Library("SafariServices/SafariServices.h")
 public class SSReadingListError 
     extends Todo 
      {

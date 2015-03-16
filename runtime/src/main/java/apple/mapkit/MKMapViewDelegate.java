@@ -20,7 +20,7 @@ import apple.dispatch.*;
 
 
 
-@Library("MapKit") @Mapping("MKMapViewDelegate")
+@Library("MapKit/MapKit.h") @Mapping("MKMapViewDelegate")
 public interface MKMapViewDelegate 
     extends NSObjectProtocol {
 

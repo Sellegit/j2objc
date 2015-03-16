@@ -21,7 +21,7 @@ import apple.security.*;
  * @since Available in iOS 7.0 and later.
  */
 
-@Library("MultipeerConnectivity") @Mapping("MCNearbyServiceAdvertiser")
+@Library("MultipeerConnectivity/MultipeerConnectivity.h") @Mapping("MCNearbyServiceAdvertiser")
 public class MCNearbyServiceAdvertiser 
     extends NSObject 
      {

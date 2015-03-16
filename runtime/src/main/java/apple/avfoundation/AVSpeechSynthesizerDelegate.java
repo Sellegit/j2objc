@@ -23,7 +23,7 @@ import apple.mediatoolbox.*;
 
 
 
-@Library("AVFoundation") @Mapping("AVSpeechSynthesizerDelegate")
+@Library("AVFoundation/AVFoundation.h") @Mapping("AVSpeechSynthesizerDelegate")
 public interface AVSpeechSynthesizerDelegate 
     extends NSObjectProtocol {
 

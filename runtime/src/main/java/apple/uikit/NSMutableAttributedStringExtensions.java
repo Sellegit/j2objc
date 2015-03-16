@@ -21,7 +21,7 @@ import apple.corelocation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("UIKit")
+@Library("UIKit/UIKit.h")
 public final class NSMutableAttributedStringExtensions 
     extends NSExtensions 
      {
@@ -35,10 +35,6 @@ public final class NSMutableAttributedStringExtensions
     
     
     
-    /**
-     * @since Available in iOS 7.0 and later.
-     */
-    @Mapping("fixAttributesInRange:")
-    public static native void fixAttributesInRange(NSMutableAttributedString thiz, NSRange range);
+    
     
 }

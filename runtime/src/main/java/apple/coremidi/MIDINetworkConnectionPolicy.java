@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 
 
-@Library("CoreMIDI")
+@Library("CoreMIDI/CoreMIDI.h")
 @Mapping("MIDINetworkConnectionPolicy")
 public final class MIDINetworkConnectionPolicy extends ObjCEnum {
     

@@ -25,7 +25,7 @@ import apple.mediatoolbox.*;
  * @since Available in iOS 7.0 and later.
  */
 
-@Library("AVFoundation") @Mapping("AVSpeechUtterance")
+@Library("AVFoundation/AVFoundation.h") @Mapping("AVSpeechUtterance")
 public class AVSpeechUtterance 
     extends NSObject 
     implements NSCopying {

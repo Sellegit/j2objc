@@ -20,7 +20,7 @@ import apple.foundation.*;
  * @since Available in iOS 4.0 and later.
  */
 
-@Library("CoreFoundation")
+@Library("CoreFoundation/CoreFoundation.h")
 @Mapping("CFDataSearchFlags")
 public final class CFDataSearchFlags extends ObjCEnum {
     

@@ -19,7 +19,7 @@ import apple.dispatch.*;
 
 
 
-@Library("ExternalAccessory") @Mapping("EAWiFiUnconfiguredAccessoryBrowserDelegate")
+@Library("ExternalAccessory/ExternalAccessory.h") @Mapping("EAWiFiUnconfiguredAccessoryBrowserDelegate")
 public interface EAWiFiUnconfiguredAccessoryBrowserDelegate 
     extends NSObjectProtocol {
 

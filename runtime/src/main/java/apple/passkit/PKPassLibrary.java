@@ -21,7 +21,7 @@ import apple.addressbook.*;
  * @since Available in iOS 6.0 and later.
  */
 
-@Library("PassKit") @Mapping("PKPassLibrary")
+@Library("PassKit/PassKit.h") @Mapping("PKPassLibrary")
 public class PKPassLibrary 
     extends NSObject 
      {

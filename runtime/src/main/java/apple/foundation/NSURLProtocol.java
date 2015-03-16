@@ -22,7 +22,7 @@ import apple.dispatch.*;
 
 
 
-@Library("Foundation") @Mapping("NSURLProtocol")
+@Library("Foundation/Foundation.h") @Mapping("NSURLProtocol")
 public class NSURLProtocol 
     extends NSObject 
      {

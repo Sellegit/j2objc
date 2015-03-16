@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 
 
-@Library("GameController") @Mapping("GCControllerButtonInput")
+@Library("GameController/GameController.h") @Mapping("GCControllerButtonInput")
 public class GCControllerButtonInput 
     extends GCControllerElement 
      {

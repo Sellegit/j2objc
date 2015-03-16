@@ -21,7 +21,7 @@ import apple.accounts.*;
  * @since Available in iOS 6.0 and later.
  */
 
-@Library("StoreKit") @Mapping("SKStoreProductViewController")
+@Library("StoreKit/StoreKit.h") @Mapping("SKStoreProductViewController")
 public class SKStoreProductViewController 
     extends UIViewController 
      {

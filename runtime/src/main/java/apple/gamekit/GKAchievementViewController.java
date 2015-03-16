@@ -22,7 +22,7 @@ import apple.uikit.*;
  */
 @Deprecated
 
-@Library("GameKit") @Mapping("GKAchievementViewController")
+@Library("GameKit/GameKit.h") @Mapping("GKAchievementViewController")
 public class GKAchievementViewController 
     extends GKGameCenterViewController 
      {

@@ -22,7 +22,7 @@ import apple.corelocation.*;
 
 
 
-@Library("UIKit")
+@Library("UIKit/UIKit.h")
 @Mapping("UITableViewCellEditingStyle")
 public final class UITableViewCellEditingStyle extends ObjCEnum {
     

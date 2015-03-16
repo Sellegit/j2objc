@@ -20,7 +20,7 @@ import apple.uikit.*;
  * @since Available in iOS 5.0 and later.
  */
 
-@Library("GameKit") @Mapping("GKTurnBasedMatch")
+@Library("GameKit/GameKit.h") @Mapping("GKTurnBasedMatch")
 public class GKTurnBasedMatch 
     extends NSObject 
      {

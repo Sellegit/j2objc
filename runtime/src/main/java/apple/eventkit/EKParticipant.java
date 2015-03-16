@@ -21,7 +21,7 @@ import apple.corelocation.*;
  * @since Available in iOS 4.0 and later.
  */
 
-@Library("EventKit") @Mapping("EKParticipant")
+@Library("EventKit/EventKit.h") @Mapping("EKParticipant")
 public class EKParticipant 
     extends EKObject 
     implements NSCopying {

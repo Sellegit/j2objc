@@ -22,7 +22,7 @@ import apple.dispatch.*;
 
 
 
-@Library("Foundation") @Mapping("NSDecimalNumberBehaviors")
+@Library("Foundation/Foundation.h") @Mapping("NSDecimalNumberBehaviors")
 public interface NSDecimalNumberBehaviors 
      {
 

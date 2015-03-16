@@ -20,7 +20,7 @@ import apple.uikit.*;
  * @since Available in iOS 7.1 and later.
  */
 
-@Library("MediaPlayer") @Mapping("MPRatingCommand")
+@Library("MediaPlayer/MediaPlayer.h") @Mapping("MPRatingCommand")
 public class MPRatingCommand 
     extends MPRemoteCommand 
      {

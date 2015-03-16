@@ -25,7 +25,7 @@ import apple.mediatoolbox.*;
  * @since Available in iOS 3.0 and later.
  */
 
-@Library("AVFoundation") @Mapping("AVAudioSession")
+@Library("AVFoundation/AVFoundation.h") @Mapping("AVAudioSession")
 public class AVAudioSession 
     extends NSObject 
      {

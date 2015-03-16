@@ -19,7 +19,7 @@ import apple.foundation.*;
  * @since Available in iOS 7.0 and later.
  */
 
-@Library("CoreData")
+@Library("CoreData/CoreData.h")
 @Mapping("NSPersistentStoreUbiquitousTransitionType")
 public final class NSPersistentStoreUbiquitousTransitionType extends ObjCEnum {
     

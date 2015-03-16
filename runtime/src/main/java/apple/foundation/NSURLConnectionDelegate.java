@@ -22,7 +22,7 @@ import apple.dispatch.*;
 
 
 
-@Library("Foundation") @Mapping("NSURLConnectionDelegate")
+@Library("Foundation/Foundation.h") @Mapping("NSURLConnectionDelegate")
 public interface NSURLConnectionDelegate 
     extends NSObjectProtocol {
 

@@ -18,7 +18,7 @@ import apple.uikit.*;
 
 
 
-@Library("MessageUI") @Mapping("MFMailComposeViewController")
+@Library("MessageUI/MessageUI.h") @Mapping("MFMailComposeViewController")
 public class MFMailComposeViewController 
     extends UINavigationController 
      {

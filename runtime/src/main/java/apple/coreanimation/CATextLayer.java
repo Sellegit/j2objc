@@ -21,7 +21,7 @@ import apple.metal.*;
 
 
 
-@Library("QuartzCore") @Mapping("CATextLayer")
+@Library("QuartzCore/QuartzCore.h") @Mapping("CATextLayer")
 public class CATextLayer 
     extends CALayer 
      {

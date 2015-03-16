@@ -21,7 +21,7 @@ import apple.corevideo.*;
 
 
 
-@Mapping("CMVideoDimensions")
+@Mapping("CMVideoDimensions") @Library("CoreMedia/CoreMedia.h")
 public class CMVideoDimensions 
     extends Struct 
      {

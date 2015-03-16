@@ -22,7 +22,7 @@ import apple.dispatch.*;
 
 
 
-@Library("Foundation") @Mapping("NSCoder")
+@Library("Foundation/Foundation.h") @Mapping("NSCoder")
 public class NSCoder 
     extends NSObject 
      {

@@ -19,7 +19,7 @@ import apple.foundation.*;
  * @since Available in iOS 4.0 and later.
  */
 
-@Library("CoreMotion") @Mapping("CMLogItem")
+@Library("CoreMotion/CoreMotion.h") @Mapping("CMLogItem")
 public class CMLogItem 
     extends NSObject 
     implements NSCopying {

@@ -22,7 +22,7 @@ import apple.dispatch.*;
  * @since Available in iOS 4.0 and later.
  */
 
-@Library("MapKit") @Mapping("MKPolygonView")
+@Library("MapKit/MapKit.h") @Mapping("MKPolygonView")
 public class MKPolygonView 
     extends MKOverlayPathView 
      {

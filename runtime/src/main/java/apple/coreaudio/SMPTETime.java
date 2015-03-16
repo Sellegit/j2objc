@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 
 
-@Mapping("SMPTETime")
+@Mapping("SMPTETime") @Library("CoreAudio/CoreAudioTypes.h")
 public class SMPTETime 
     extends Struct 
      {

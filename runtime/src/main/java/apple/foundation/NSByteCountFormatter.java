@@ -24,7 +24,7 @@ import apple.dispatch.*;
  * @since Available in iOS 6.0 and later.
  */
 
-@Library("Foundation") @Mapping("NSByteCountFormatter")
+@Library("Foundation/Foundation.h") @Mapping("NSByteCountFormatter")
 public class NSByteCountFormatter 
     extends NSFormatter 
      {

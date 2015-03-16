@@ -17,7 +17,7 @@ import apple.uikit.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("GameKit")
+@Library("GameKit/GameKit.h")
 public class GKError 
     extends Todo 
      {

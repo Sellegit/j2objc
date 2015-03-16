@@ -22,7 +22,7 @@ import apple.dispatch.*;
 
 
 
-@Library("Foundation")
+@Library("Foundation/Foundation.h")
 @Mapping("NSOperationQueuePriority")
 public final class NSOperationQueuePriority extends ObjCEnum {
     

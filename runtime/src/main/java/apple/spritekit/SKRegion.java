@@ -26,7 +26,7 @@ import apple.scenekit.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("SpriteKit") @Mapping("SKRegion")
+@Library("SpriteKit/SpriteKit.h") @Mapping("SKRegion")
 public class SKRegion 
     extends NSObject 
     implements NSCopying, NSCoding {

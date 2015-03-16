@@ -19,7 +19,7 @@ import apple.foundation.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("HomeKit") @Mapping("HMHomeManager")
+@Library("HomeKit/HomeKit.h") @Mapping("HMHomeManager")
 public class HMHomeManager 
     extends NSObject 
      {

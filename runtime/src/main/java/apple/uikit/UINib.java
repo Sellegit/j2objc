@@ -24,7 +24,7 @@ import apple.corelocation.*;
  * @since Available in iOS 4.0 and later.
  */
 
-@Library("UIKit") @Mapping("UINib")
+@Library("UIKit/UIKit.h") @Mapping("UINib")
 public class UINib 
     extends NSObject 
      {

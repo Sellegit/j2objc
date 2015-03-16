@@ -24,7 +24,7 @@ import apple.dispatch.*;
  * @since Available in iOS 5.0 and later.
  */
 
-@Library("Foundation") @Mapping("NSLinguisticTagger")
+@Library("Foundation/Foundation.h") @Mapping("NSLinguisticTagger")
 public class NSLinguisticTagger 
     extends NSObject 
      {

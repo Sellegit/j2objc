@@ -20,7 +20,7 @@ import apple.metal.*;
 
 
 
-@Mapping("CVSMPTETime")
+@Mapping("CVSMPTETime") @Library("CoreVideo/CoreVideo.h")
 public class CVSMPTETime 
     extends Struct 
      {

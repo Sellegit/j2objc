@@ -24,7 +24,7 @@ import apple.corelocation.*;
  * @since Available in iOS 2.0 and later.
  */
 
-@Library("UIKit") @Mapping("UIPageControl")
+@Library("UIKit/UIKit.h") @Mapping("UIPageControl")
 public class UIPageControl 
     extends UIControl 
      {

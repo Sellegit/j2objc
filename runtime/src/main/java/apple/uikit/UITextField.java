@@ -24,7 +24,7 @@ import apple.corelocation.*;
  * @since Available in iOS 2.0 and later.
  */
 
-@Library("UIKit") @Mapping("UITextField")
+@Library("UIKit/UIKit.h") @Mapping("UITextField")
 public class UITextField 
     extends UIControl 
     implements UITextInput, NSCoding {

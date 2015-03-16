@@ -21,7 +21,7 @@ import apple.dispatch.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("Foundation")
+@Library("Foundation/Foundation.h")
 public class NSURLUbiquitousItemDownloadingStatus 
     extends Object 
      {

@@ -24,7 +24,7 @@ import apple.corelocation.*;
  * @since Available in iOS 2.0 and later.
  */
 
-@Library("UIKit") @Mapping("UIFont")
+@Library("UIKit/UIKit.h") @Mapping("UIFont")
 public class UIFont 
     extends NSObject 
     implements NSCopying {
@@ -82,6 +82,11 @@ public class UIFont
     public static native UIFont getBoldSystemFont(@MachineSizedFloat double fontSize);
     @Mapping("italicSystemFontOfSize:")
     public static native UIFont getItalicSystemFont(@MachineSizedFloat double fontSize);
+    /**
+     * @since Available in iOS 8.2 and later.
+     */
+    @Mapping("systemFontOfSize:weight:")
+    public static native UIFont systemFontOfSize$weight$(@MachineSizedFloat double fontSize, @MachineSizedFloat double weight);
     /**
      * @since Available in iOS 7.0 and later.
      */

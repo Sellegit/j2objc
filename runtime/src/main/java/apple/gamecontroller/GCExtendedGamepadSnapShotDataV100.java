@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 
 
-@Mapping("GCExtendedGamepadSnapShotDataV100") @Library("GameController")
+@Mapping("GCExtendedGamepadSnapShotDataV100") @Library("GameController/GameController.h")
 public class GCExtendedGamepadSnapShotDataV100 
     extends Struct 
      {
@@ -160,8 +160,8 @@ public class GCExtendedGamepadSnapShotDataV100
 
     
     @GlobalFunction("GCExtendedGamepadSnapShotDataV100FromNSData")
-    public native boolean setData(NSData data);
+    public static native boolean setData(GCExtendedGamepadSnapShotDataV100 snapshotData, NSData data);
     @GlobalFunction("NSDataFromGCExtendedGamepadSnapShotDataV100")
-    public native NSData getData();
+    public static native NSData getData(GCExtendedGamepadSnapShotDataV100 snapshotData);
     
 }

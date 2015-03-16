@@ -19,7 +19,7 @@ import apple.corelocation.*;
 
 
 
-@Library("EventKit")
+@Library("EventKit/EventKit.h")
 @Mapping("EKWeekDay")
 public final class EKWeekDay extends ObjCEnum {
     

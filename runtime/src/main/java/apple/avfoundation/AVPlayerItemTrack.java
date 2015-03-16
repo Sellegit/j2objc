@@ -25,7 +25,7 @@ import apple.mediatoolbox.*;
  * @since Available in iOS 4.0 and later.
  */
 
-@Library("AVFoundation") @Mapping("AVPlayerItemTrack")
+@Library("AVFoundation/AVFoundation.h") @Mapping("AVPlayerItemTrack")
 public class AVPlayerItemTrack 
     extends NSObject 
      {

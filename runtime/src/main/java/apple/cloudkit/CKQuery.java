@@ -20,7 +20,7 @@ import apple.corelocation.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("CloudKit") @Mapping("CKQuery")
+@Library("CloudKit/CloudKit.h") @Mapping("CKQuery")
 public class CKQuery 
     extends NSObject 
     implements NSCopying {

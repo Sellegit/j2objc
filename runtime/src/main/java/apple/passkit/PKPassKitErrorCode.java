@@ -21,7 +21,7 @@ import apple.addressbook.*;
  * @since Available in iOS 6.0 and later.
  */
 
-@Library("PassKit")
+@Library("PassKit/PassKit.h")
 @Mapping("PKPassKitErrorCode")
 public final class PKPassKitErrorCode extends ObjCEnum {
     

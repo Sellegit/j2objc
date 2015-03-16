@@ -20,7 +20,7 @@ import apple.corelocation.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("CloudKit") @Mapping("CKContainer")
+@Library("CloudKit/CloudKit.h") @Mapping("CKContainer")
 public class CKContainer 
     extends NSObject 
      {

@@ -18,7 +18,7 @@ import apple.uikit.*;
 
 
 
-@Library("QuickLook") @Mapping("QLPreviewControllerDelegate")
+@Library("QuickLook/QuickLook.h") @Mapping("QLPreviewControllerDelegate")
 public interface QLPreviewControllerDelegate 
     extends NSObjectProtocol {
 

@@ -23,7 +23,7 @@ import apple.opengles.*;
 
 
 
-@Library("SceneKit") @Mapping("SCNTorus")
+@Library("SceneKit/SceneKit.h") @Mapping("SCNTorus")
 public class SCNTorus 
     extends SCNGeometry 
      {

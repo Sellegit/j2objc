@@ -21,7 +21,7 @@ import apple.corelocation.*;
  * @since Available in iOS 4.0 and later.
  */
 
-@Library("EventKit") @Mapping("EKRecurrenceDayOfWeek")
+@Library("EventKit/EventKit.h") @Mapping("EKRecurrenceDayOfWeek")
 public class EKRecurrenceDayOfWeek 
     extends NSObject 
     implements NSCopying {

@@ -23,7 +23,7 @@ import apple.mediatoolbox.*;
 
 
 
-@Library("AVFoundation") @Mapping("AVCaptureFileOutputRecordingDelegate")
+@Library("AVFoundation/AVFoundation.h") @Mapping("AVCaptureFileOutputRecordingDelegate")
 public interface AVCaptureFileOutputRecordingDelegate 
     extends NSObjectProtocol {
 

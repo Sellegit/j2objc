@@ -20,7 +20,7 @@ import apple.dispatch.*;
 
 
 
-@Mapping("MKMapRect") @Library("MapKit")
+@Mapping("MKMapRect") @Library("MapKit/MapKit.h")
 public class MKMapRect 
     extends Struct 
      {
@@ -65,51 +65,51 @@ public class MKMapRect
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("MKMapRectUnion")
-    public native MKMapRect union(MKMapRect rect2);
+    public static native MKMapRect union(MKMapRect rect1, MKMapRect rect2);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("MKMapRectIntersection")
-    public native MKMapRect intersection(MKMapRect rect2);
+    public static native MKMapRect intersection(MKMapRect rect1, MKMapRect rect2);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("MKMapRectInset")
-    public native MKMapRect inset(double dx, double dy);
+    public static native MKMapRect inset(MKMapRect rect, double dx, double dy);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("MKMapRectOffset")
-    public native MKMapRect offset(double dx, double dy);
+    public static native MKMapRect offset(MKMapRect rect, double dx, double dy);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("MKMapRectDivide")
-    public native void divide(MKMapRect slice, MKMapRect remainder, double amount, CGRectEdge edge);
+    public static native void divide(MKMapRect rect, MKMapRect slice, MKMapRect remainder, double amount, CGRectEdge edge);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("MKMapRectContainsPoint")
-    public native boolean contains(MKMapPoint point);
+    public static native boolean contains(MKMapRect rect, MKMapPoint point);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("MKMapRectContainsRect")
-    public native boolean contains(MKMapRect rect2);
+    public static native boolean contains(MKMapRect rect1, MKMapRect rect2);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("MKMapRectIntersectsRect")
-    public native boolean intersects(MKMapRect rect2);
+    public static native boolean intersects(MKMapRect rect1, MKMapRect rect2);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("MKMapRectSpans180thMeridian")
-    public native boolean isSpanning180thMeridian();
+    public static native boolean isSpanning180thMeridian(MKMapRect rect);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("MKMapRectRemainder")
-    public native MKMapRect remainder();
+    public static native MKMapRect remainder(MKMapRect rect);
     
 }

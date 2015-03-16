@@ -16,7 +16,7 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreData")
+@Library("CoreData/CoreData.h")
 public class NSPersistentStoreCoordinatorChangeNotificationInfo 
     extends Object 
      {

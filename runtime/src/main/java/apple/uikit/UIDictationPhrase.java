@@ -24,7 +24,7 @@ import apple.corelocation.*;
  * @since Available in iOS 5.1 and later.
  */
 
-@Library("UIKit") @Mapping("UIDictationPhrase")
+@Library("UIKit/UIKit.h") @Mapping("UIDictationPhrase")
 public class UIDictationPhrase 
     extends NSObject 
      {

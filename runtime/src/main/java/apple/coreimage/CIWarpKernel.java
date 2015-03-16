@@ -20,7 +20,7 @@ import apple.imageio.*;
 
 
 
-@Library("CoreImage") @Mapping("CIWarpKernel")
+@Library("CoreImage/CoreImage.h") @Mapping("CIWarpKernel")
 public class CIWarpKernel 
     extends CIKernel 
      {

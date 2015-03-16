@@ -21,7 +21,7 @@ import apple.metal.*;
 
 
 
-@Library("QuartzCore") @Mapping("CAEmitterLayer")
+@Library("QuartzCore/QuartzCore.h") @Mapping("CAEmitterLayer")
 public class CAEmitterLayer 
     extends CALayer 
      {

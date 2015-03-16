@@ -23,7 +23,7 @@ import apple.mediatoolbox.*;
 
 
 
-@Library("AVFoundation") @Mapping("AVCaptureMetadataOutputObjectsDelegate")
+@Library("AVFoundation/AVFoundation.h") @Mapping("AVCaptureMetadataOutputObjectsDelegate")
 public interface AVCaptureMetadataOutputObjectsDelegate 
     extends NSObjectProtocol {
 

@@ -24,7 +24,7 @@ import apple.corelocation.*;
  * @since Available in iOS 6.0 and later.
  */
 
-@Library("UIKit") @Mapping("UIActivity")
+@Library("UIKit/UIKit.h") @Mapping("UIActivity")
 public class UIActivity 
     extends NSObject 
      {

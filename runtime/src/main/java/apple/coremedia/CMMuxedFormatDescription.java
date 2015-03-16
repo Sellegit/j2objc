@@ -20,7 +20,7 @@ import apple.corevideo.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreMedia")
+@Library("CoreMedia/CoreMedia.h")
 public class CMMuxedFormatDescription 
     extends CMFormatDescription 
      {

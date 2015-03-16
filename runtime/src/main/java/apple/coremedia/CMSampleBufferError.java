@@ -21,7 +21,7 @@ import apple.corevideo.*;
 
 
 
-@Library("CoreMedia")
+@Library("CoreMedia/CoreMedia.h")
 @Mapping("CMSampleBufferError")
 public final class CMSampleBufferError extends ObjCEnum {
     

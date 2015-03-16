@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreFoundation")
+@Library("CoreFoundation/CoreFoundation.h")
 public class CFSet 
     extends CFType 
      {
@@ -41,18 +41,18 @@ public class CFSet
     @GlobalFunction("CFSetCreateCopy")
     protected static native CFSet createCopy(CFAllocator allocator, CFSet theSet);
     @GlobalFunction("CFSetGetCount")
-    protected native @MachineSizedSInt long getCount();
+    protected static native @MachineSizedSInt long getCount(CFSet theSet);
     @GlobalFunction("CFSetGetCountOfValue")
-    protected native @MachineSizedSInt long getCountOfValue(Todo value);
+    protected static native @MachineSizedSInt long getCountOfValue(CFSet theSet, Todo value);
     @GlobalFunction("CFSetContainsValue")
-    protected native boolean containsValue(Todo value);
+    protected static native boolean containsValue(CFSet theSet, Todo value);
     @GlobalFunction("CFSetGetValue")
-    protected native Todo getValue(Todo value);
+    protected static native Todo getValue(CFSet theSet, Todo value);
     @GlobalFunction("CFSetGetValueIfPresent")
-    protected native boolean getValueIfPresent(Todo candidate, Todo value);
+    protected static native boolean getValueIfPresent(CFSet theSet, Todo candidate, Todo value);
     @GlobalFunction("CFSetGetValues")
-    protected native void getValues(Todo values);
+    protected static native void getValues(CFSet theSet, Todo values);
     @GlobalFunction("CFSetApplyFunction")
-    protected native void applyFunction(FunctionPtr applier, Todo context);
+    protected static native void applyFunction(CFSet theSet, FunctionPtr applier, Todo context);
     
 }

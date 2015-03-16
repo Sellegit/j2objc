@@ -23,7 +23,7 @@ import apple.opengles.*;
 
 
 
-@Library("SceneKit") @Mapping("SCNAnimatable")
+@Library("SceneKit/SceneKit.h") @Mapping("SCNAnimatable")
 public interface SCNAnimatable 
     extends NSObjectProtocol {
 

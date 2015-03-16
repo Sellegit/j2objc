@@ -16,7 +16,7 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreMotion")
+@Library("CoreMotion/CoreMotion.h")
 public class CMError 
     extends Todo 
      {

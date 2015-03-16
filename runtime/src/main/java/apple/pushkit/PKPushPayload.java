@@ -20,7 +20,7 @@ import apple.dispatch.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("PushKit") @Mapping("PKPushPayload")
+@Library("PushKit/PushKit.h") @Mapping("PKPushPayload")
 public class PKPushPayload 
     extends NSObject 
      {

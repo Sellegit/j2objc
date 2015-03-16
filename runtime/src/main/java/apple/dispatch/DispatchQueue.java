@@ -15,7 +15,7 @@ import apple.coreservices.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("System")
+@Library("System/System.h")
 public class DispatchQueue 
     extends DispatchObject 
      {
@@ -42,12 +42,12 @@ public class DispatchQueue
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("dispatch_async")
-    public native void async(@Block Runnable block);
+    public static native void async(DispatchQueue queue, @Block Runnable block);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("dispatch_sync")
-    public native void sync(@Block Runnable block);
+    public static native void sync(DispatchQueue queue, @Block Runnable block);
     /**
      * @since Available in iOS 4.0 and later.
      */
@@ -79,12 +79,12 @@ public class DispatchQueue
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("dispatch_queue_get_label")
-    public native String getLabel();
+    public static native String getLabel(DispatchQueue queue);
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalFunction("dispatch_queue_get_qos_class")
-    public native int getQosClass(Todo relative_priority_ptr);
+    public static native int getQosClass(DispatchQueue queue, Todo relative_priority_ptr);
     /**
      * @since Available in iOS 4.0 and later.
      */
@@ -94,11 +94,11 @@ public class DispatchQueue
      * @since Available in iOS 4.3 and later.
      */
     @GlobalFunction("dispatch_barrier_async")
-    public native void barrierAsync(@Block Runnable block);
+    public static native void barrierAsync(DispatchQueue queue, @Block Runnable block);
     /**
      * @since Available in iOS 4.3 and later.
      */
     @GlobalFunction("dispatch_barrier_sync")
-    public native void barrierSync(@Block Runnable block);
+    public static native void barrierSync(DispatchQueue queue, @Block Runnable block);
     
 }

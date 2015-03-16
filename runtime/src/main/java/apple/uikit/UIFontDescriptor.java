@@ -24,7 +24,7 @@ import apple.corelocation.*;
  * @since Available in iOS 7.0 and later.
  */
 
-@Library("UIKit") @Mapping("UIFontDescriptor")
+@Library("UIKit/UIKit.h") @Mapping("UIFontDescriptor")
 public class UIFontDescriptor 
     extends NSObject 
     implements NSCopying, NSCoding {

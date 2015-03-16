@@ -19,7 +19,7 @@ import apple.foundation.*;
  * @since Available in iOS 3.0 and later.
  */
 
-@Library("CoreData") @Mapping("NSManagedObject")
+@Library("CoreData/CoreData.h") @Mapping("NSManagedObject")
 public class NSManagedObject 
     extends NSObject 
      {

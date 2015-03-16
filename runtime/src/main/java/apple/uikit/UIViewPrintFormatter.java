@@ -24,7 +24,7 @@ import apple.corelocation.*;
  * @since Available in iOS 4.2 and later.
  */
 
-@Library("UIKit") @Mapping("UIViewPrintFormatter")
+@Library("UIKit/UIKit.h") @Mapping("UIViewPrintFormatter")
 public class UIViewPrintFormatter 
     extends UIPrintFormatter 
      {

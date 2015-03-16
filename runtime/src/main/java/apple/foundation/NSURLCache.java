@@ -22,7 +22,7 @@ import apple.dispatch.*;
 
 
 
-@Library("Foundation") @Mapping("NSURLCache")
+@Library("Foundation/Foundation.h") @Mapping("NSURLCache")
 public class NSURLCache 
     extends NSObject 
      {

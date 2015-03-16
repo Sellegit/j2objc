@@ -20,7 +20,7 @@ import apple.coremedia.*;
 
 
 
-@Mapping("CAFFileHeader")
+@Mapping("CAFFileHeader") @Library("AudioToolbox/AudioToolbox.h")
 public class CAFFileHeader 
     extends Struct 
      {
@@ -41,20 +41,20 @@ public class CAFFileHeader
         return __new;
     ]-*/;
     public static native CAFFileHeader copyWithmFileType(CAFFileHeader original, int mFileType) /*-[
-        original.mFileType = mFileType;
-        return original;
+        CAFFileHeader __new = { .mFileType = mFileType, .mFileVersion = original.mFileVersion, .mFileFlags = original.mFileFlags };
+        return __new;
     ]-*/;
 
     
     public static native CAFFileHeader copyWithmFileVersion(CAFFileHeader original, short mFileVersion) /*-[
-        original.mFileVersion = mFileVersion;
-        return original;
+        CAFFileHeader __new = { .mFileType = original.mFileType, .mFileVersion = mFileVersion, .mFileFlags = original.mFileFlags };
+        return __new;
     ]-*/;
 
     
     public static native CAFFileHeader copyWithmFileFlags(CAFFileHeader original, short mFileFlags) /*-[
-        original.mFileFlags = mFileFlags;
-        return original;
+        CAFFileHeader __new = { .mFileType = original.mFileType, .mFileVersion = original.mFileVersion, .mFileFlags = mFileFlags };
+        return __new;
     ]-*/;
 
     

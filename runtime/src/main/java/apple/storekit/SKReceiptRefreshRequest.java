@@ -21,7 +21,7 @@ import apple.accounts.*;
  * @since Available in iOS 7.0 and later.
  */
 
-@Library("StoreKit") @Mapping("SKReceiptRefreshRequest")
+@Library("StoreKit/StoreKit.h") @Mapping("SKReceiptRefreshRequest")
 public class SKReceiptRefreshRequest 
     extends SKRequest 
      {

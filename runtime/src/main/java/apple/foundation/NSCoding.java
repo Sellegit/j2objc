@@ -22,7 +22,7 @@ import apple.dispatch.*;
 
 
 
-@Library("Foundation") @Mapping("NSCoding")
+@Library("Foundation/Foundation.h") @Mapping("NSCoding")
 public interface NSCoding 
      {
 

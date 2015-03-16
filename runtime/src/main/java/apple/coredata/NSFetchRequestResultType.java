@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 
 
-@Library("CoreData")
+@Library("CoreData/CoreData.h")
 @Mapping("NSFetchRequestResultType")
 public final class NSFetchRequestResultType extends ObjCEnum {
     

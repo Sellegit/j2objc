@@ -22,7 +22,7 @@ import apple.uikit.*;
  */
 @Deprecated
 
-@Library("GameKit") @Mapping("GKSession")
+@Library("GameKit/GameKit.h") @Mapping("GKSession")
 public class GKSession 
     extends NSObject 
      {

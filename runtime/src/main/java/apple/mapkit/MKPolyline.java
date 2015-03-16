@@ -22,7 +22,7 @@ import apple.dispatch.*;
  * @since Available in iOS 4.0 and later.
  */
 
-@Library("MapKit") @Mapping("MKPolyline")
+@Library("MapKit/MapKit.h") @Mapping("MKPolyline")
 public class MKPolyline 
     extends MKMultiPoint 
     implements MKOverlay {

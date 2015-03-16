@@ -22,7 +22,7 @@ import apple.corelocation.*;
 
 
 
-@Library("UIKit") @Mapping("UIPrinterPickerControllerDelegate")
+@Library("UIKit/UIKit.h") @Mapping("UIPrinterPickerControllerDelegate")
 public interface UIPrinterPickerControllerDelegate 
     extends NSObjectProtocol {
 

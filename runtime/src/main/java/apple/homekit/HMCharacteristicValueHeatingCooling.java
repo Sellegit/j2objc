@@ -19,7 +19,7 @@ import apple.foundation.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("HomeKit")
+@Library("HomeKit/HomeKit.h")
 @Mapping("HMCharacteristicValueHeatingCooling")
 public final class HMCharacteristicValueHeatingCooling extends ObjCEnum {
     

@@ -17,7 +17,7 @@ import apple.dispatch.*;
 
 
 
-@Library("Security")
+@Library("Security/Security.h")
 @Mapping("SSLAuthenticate")
 public final class SSLAuthenticate extends ObjCEnum {
     

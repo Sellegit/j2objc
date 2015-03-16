@@ -18,7 +18,7 @@ import apple.uikit.*;
 
 
 
-@Mapping("CGPathElement")
+@Mapping("CGPathElement") @Library("CoreGraphics/CoreGraphics.h")
  class CGPathElement 
     extends Struct 
      {

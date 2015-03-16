@@ -22,7 +22,7 @@ import apple.dispatch.*;
 
 
 
-@Library("Foundation") @Mapping("NSObject")
+@Library("Foundation/Foundation.h") @Mapping("NSObject")
 public interface NSObjectProtocol 
      {
 

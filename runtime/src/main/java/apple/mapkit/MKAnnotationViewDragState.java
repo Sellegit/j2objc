@@ -22,7 +22,7 @@ import apple.dispatch.*;
  * @since Available in iOS 4.0 and later.
  */
 
-@Library("MapKit")
+@Library("MapKit/MapKit.h")
 @Mapping("MKAnnotationViewDragState")
 public final class MKAnnotationViewDragState extends ObjCEnum {
     

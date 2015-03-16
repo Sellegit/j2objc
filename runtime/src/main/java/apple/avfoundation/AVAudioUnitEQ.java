@@ -25,7 +25,7 @@ import apple.mediatoolbox.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("AVFoundation") @Mapping("AVAudioUnitEQ")
+@Library("AVFoundation/AVFoundation.h") @Mapping("AVAudioUnitEQ")
 public class AVAudioUnitEQ 
     extends AVAudioUnitEffect 
      {

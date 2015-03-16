@@ -19,7 +19,7 @@ import apple.security.*;
 
 
 
-@Library("MultipeerConnectivity") @Mapping("MCAdvertiserAssistantDelegate")
+@Library("MultipeerConnectivity/MultipeerConnectivity.h") @Mapping("MCAdvertiserAssistantDelegate")
 public interface MCAdvertiserAssistantDelegate 
     extends NSObjectProtocol {
 

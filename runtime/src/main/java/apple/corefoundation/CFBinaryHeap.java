@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreFoundation")
+@Library("CoreFoundation/CoreFoundation.h")
 public class CFBinaryHeap 
     extends CFType 
      {
@@ -39,24 +39,24 @@ public class CFBinaryHeap
     @GlobalFunction("CFBinaryHeapCreateCopy")
     public static native CFBinaryHeap createCopy(CFAllocator allocator, @MachineSizedSInt long capacity, CFBinaryHeap heap);
     @GlobalFunction("CFBinaryHeapGetCount")
-    public native @MachineSizedSInt long getCount();
+    public static native @MachineSizedSInt long getCount(CFBinaryHeap heap);
     @GlobalFunction("CFBinaryHeapGetCountOfValue")
-    public native @MachineSizedSInt long getCountOfValue(Todo value);
+    public static native @MachineSizedSInt long getCountOfValue(CFBinaryHeap heap, Todo value);
     @GlobalFunction("CFBinaryHeapContainsValue")
-    public native boolean containsValue(Todo value);
+    public static native boolean containsValue(CFBinaryHeap heap, Todo value);
     @GlobalFunction("CFBinaryHeapGetMinimum")
-    public native Todo getMinimum();
+    public static native Todo getMinimum(CFBinaryHeap heap);
     @GlobalFunction("CFBinaryHeapGetMinimumIfPresent")
-    public native boolean getMinimumIfPresent(Todo value);
+    public static native boolean getMinimumIfPresent(CFBinaryHeap heap, Todo value);
     @GlobalFunction("CFBinaryHeapGetValues")
-    public native void getValues(Todo values);
+    public static native void getValues(CFBinaryHeap heap, Todo values);
     @GlobalFunction("CFBinaryHeapApplyFunction")
-    public native void applyFunction(FunctionPtr applier, Todo context);
+    public static native void applyFunction(CFBinaryHeap heap, FunctionPtr applier, Todo context);
     @GlobalFunction("CFBinaryHeapAddValue")
-    public native void addValue(Todo value);
+    public static native void addValue(CFBinaryHeap heap, Todo value);
     @GlobalFunction("CFBinaryHeapRemoveMinimumValue")
-    public native void removeMinimumValue();
+    public static native void removeMinimumValue(CFBinaryHeap heap);
     @GlobalFunction("CFBinaryHeapRemoveAllValues")
-    public native void removeAllValues();
+    public static native void removeAllValues(CFBinaryHeap heap);
     
 }

@@ -18,7 +18,7 @@ import apple.dispatch.*;
 
 
 
-@Library("CoreBluetooth")
+@Library("CoreBluetooth/CoreBluetooth.h")
 @Mapping("CBCharacteristicWriteType")
 public final class CBCharacteristicWriteType extends ObjCEnum {
     

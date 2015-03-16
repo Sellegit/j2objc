@@ -21,7 +21,7 @@ import apple.corebluetooth.*;
  * @since Available in iOS 2.0 and later.
  */
 
-@Library("CoreLocation") @Mapping("CLLocation")
+@Library("CoreLocation/CoreLocation.h") @Mapping("CLLocation")
 public class CLLocation 
     extends NSObject 
     implements NSCopying {

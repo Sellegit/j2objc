@@ -21,7 +21,7 @@ import apple.corevideo.*;
 
 
 
-@Library("CoreMedia")
+@Library("CoreMedia/CoreMedia.h")
 @Mapping("CMBufferQueueTriggerCondition")
 public final class CMBufferQueueTriggerCondition extends ObjCEnum {
     

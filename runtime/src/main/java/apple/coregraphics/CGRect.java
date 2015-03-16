@@ -18,7 +18,7 @@ import apple.uikit.*;
 
 
 
-@Mapping("CGRect") @Library("CoreGraphics")
+@Mapping("CGRect") @Library("CoreGraphics/CoreGraphics.h")
 public class CGRect 
     extends Struct 
      {
@@ -68,117 +68,117 @@ public class CGRect
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGRectGetMinX")
-    public native @MachineSizedFloat double getMinX();
+    public static native @MachineSizedFloat double getMinX(CGRect rect);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGRectGetMidX")
-    public native @MachineSizedFloat double getMidX();
+    public static native @MachineSizedFloat double getMidX(CGRect rect);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGRectGetMaxX")
-    public native @MachineSizedFloat double getMaxX();
+    public static native @MachineSizedFloat double getMaxX(CGRect rect);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGRectGetMinY")
-    public native @MachineSizedFloat double getMinY();
+    public static native @MachineSizedFloat double getMinY(CGRect rect);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGRectGetMidY")
-    public native @MachineSizedFloat double getMidY();
+    public static native @MachineSizedFloat double getMidY(CGRect rect);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGRectGetMaxY")
-    public native @MachineSizedFloat double getMaxY();
+    public static native @MachineSizedFloat double getMaxY(CGRect rect);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGRectGetWidth")
-    public native @MachineSizedFloat double getWidth();
+    public static native @MachineSizedFloat double getWidth(CGRect rect);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGRectGetHeight")
-    public native @MachineSizedFloat double getHeight();
+    public static native @MachineSizedFloat double getHeight(CGRect rect);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGRectEqualToRect")
-    public native boolean equalToRect(CGRect rect2);
+    public static native boolean equalToRect(CGRect rect1, CGRect rect2);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGRectStandardize")
-    public native CGRect standardize();
+    public static native CGRect standardize(CGRect rect);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGRectIsEmpty")
-    public native boolean isEmpty();
+    public static native boolean isEmpty(CGRect rect);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGRectIsNull")
-    public native boolean isNull();
+    public static native boolean isNull(CGRect rect);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGRectIsInfinite")
-    public native boolean isInfinite();
+    public static native boolean isInfinite(CGRect rect);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGRectInset")
-    public native CGRect inset(@MachineSizedFloat double dx, @MachineSizedFloat double dy);
+    public static native CGRect inset(CGRect rect, @MachineSizedFloat double dx, @MachineSizedFloat double dy);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGRectIntegral")
-    public native CGRect integral();
+    public static native CGRect integral(CGRect rect);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGRectUnion")
-    public native CGRect union(CGRect r2);
+    public static native CGRect union(CGRect r1, CGRect r2);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGRectIntersection")
-    public native CGRect intersection(CGRect r2);
+    public static native CGRect intersection(CGRect r1, CGRect r2);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGRectOffset")
-    public native CGRect offset(@MachineSizedFloat double dx, @MachineSizedFloat double dy);
+    public static native CGRect offset(CGRect rect, @MachineSizedFloat double dx, @MachineSizedFloat double dy);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGRectDivide")
-    public native void divide(CGRect slice, CGRect remainder, @MachineSizedFloat double amount, CGRectEdge edge);
+    public static native void divide(CGRect rect, CGRect slice, CGRect remainder, @MachineSizedFloat double amount, CGRectEdge edge);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGRectContainsPoint")
-    public native boolean contains(CGPoint point);
+    public static native boolean contains(CGRect rect, CGPoint point);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGRectContainsRect")
-    public native boolean contains(CGRect rect2);
+    public static native boolean contains(CGRect rect1, CGRect rect2);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGRectIntersectsRect")
-    public native boolean intersects(CGRect rect2);
+    public static native boolean intersects(CGRect rect1, CGRect rect2);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGRectCreateDictionaryRepresentation")
-    public native NSDictionary<NSString, NSNumber> toDictionary();
+    public static native NSDictionary<NSString, NSNumber> toDictionary(CGRect p0);
     /**
      * @since Available in iOS 2.0 and later.
      */
@@ -188,6 +188,6 @@ public class CGRect
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGRectApplyAffineTransform")
-    public native CGRect apply(CGAffineTransform t);
+    public static native CGRect apply(CGRect rect, CGAffineTransform t);
     
 }

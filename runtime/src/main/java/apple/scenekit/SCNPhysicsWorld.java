@@ -23,7 +23,7 @@ import apple.opengles.*;
 
 
 
-@Library("SceneKit") @Mapping("SCNPhysicsWorld")
+@Library("SceneKit/SceneKit.h") @Mapping("SCNPhysicsWorld")
 public class SCNPhysicsWorld 
     extends NSObject 
      {

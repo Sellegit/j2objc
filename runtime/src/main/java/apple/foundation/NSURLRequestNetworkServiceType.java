@@ -22,7 +22,7 @@ import apple.dispatch.*;
 
 
 
-@Library("Foundation")
+@Library("Foundation/Foundation.h")
 @Mapping("NSURLRequestNetworkServiceType")
 public final class NSURLRequestNetworkServiceType extends ObjCEnum {
     

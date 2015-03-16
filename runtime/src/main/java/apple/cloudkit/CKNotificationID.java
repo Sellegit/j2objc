@@ -20,7 +20,7 @@ import apple.corelocation.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("CloudKit") @Mapping("CKNotificationID")
+@Library("CloudKit/CloudKit.h") @Mapping("CKNotificationID")
 public class CKNotificationID 
     extends NSObject 
     implements NSCopying {

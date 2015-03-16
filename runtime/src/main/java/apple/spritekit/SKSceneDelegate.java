@@ -26,7 +26,7 @@ import apple.scenekit.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("SpriteKit") @Mapping("SKSceneDelegate")
+@Library("SpriteKit/SpriteKit.h") @Mapping("SKSceneDelegate")
 public interface SKSceneDelegate 
     extends NSObjectProtocol {
 

@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 
 
-@Library("GameController") @Mapping("GCControllerAxisInput")
+@Library("GameController/GameController.h") @Mapping("GCControllerAxisInput")
 public class GCControllerAxisInput 
     extends GCControllerElement 
      {

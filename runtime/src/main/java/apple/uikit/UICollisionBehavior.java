@@ -24,7 +24,7 @@ import apple.corelocation.*;
  * @since Available in iOS 7.0 and later.
  */
 
-@Library("UIKit") @Mapping("UICollisionBehavior")
+@Library("UIKit/UIKit.h") @Mapping("UICollisionBehavior")
 public class UICollisionBehavior 
     extends UIDynamicBehavior 
      {

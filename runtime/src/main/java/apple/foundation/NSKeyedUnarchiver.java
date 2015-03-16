@@ -22,7 +22,7 @@ import apple.dispatch.*;
 
 
 
-@Library("Foundation") @Mapping("NSKeyedUnarchiver")
+@Library("Foundation/Foundation.h") @Mapping("NSKeyedUnarchiver")
 public class NSKeyedUnarchiver 
     extends NSCoder 
      {

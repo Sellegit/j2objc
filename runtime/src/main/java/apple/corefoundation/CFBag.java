@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreFoundation")
+@Library("CoreFoundation/CoreFoundation.h")
 public class CFBag 
     extends CFType 
      {
@@ -41,18 +41,18 @@ public class CFBag
     @GlobalFunction("CFBagCreateCopy")
     protected static native CFBag createCopy(CFAllocator allocator, CFBag theBag);
     @GlobalFunction("CFBagGetCount")
-    protected native @MachineSizedSInt long getCount();
+    protected static native @MachineSizedSInt long getCount(CFBag theBag);
     @GlobalFunction("CFBagGetCountOfValue")
-    protected native @MachineSizedSInt long getCountOfValue(Todo value);
+    protected static native @MachineSizedSInt long getCountOfValue(CFBag theBag, Todo value);
     @GlobalFunction("CFBagContainsValue")
-    protected native boolean containsValue(Todo value);
+    protected static native boolean containsValue(CFBag theBag, Todo value);
     @GlobalFunction("CFBagGetValue")
-    protected native Todo getValue(Todo value);
+    protected static native Todo getValue(CFBag theBag, Todo value);
     @GlobalFunction("CFBagGetValueIfPresent")
-    protected native boolean getValueIfPresent(Todo candidate, Todo value);
+    protected static native boolean getValueIfPresent(CFBag theBag, Todo candidate, Todo value);
     @GlobalFunction("CFBagGetValues")
-    protected native void getValues(Todo values);
+    protected static native void getValues(CFBag theBag, Todo values);
     @GlobalFunction("CFBagApplyFunction")
-    protected native void applyFunction(FunctionPtr applier, Todo context);
+    protected static native void applyFunction(CFBag theBag, FunctionPtr applier, Todo context);
     
 }

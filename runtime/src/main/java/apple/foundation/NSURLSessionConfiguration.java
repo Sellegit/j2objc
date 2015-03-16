@@ -24,7 +24,7 @@ import apple.dispatch.*;
  * @since Available in iOS 7.0 and later.
  */
 
-@Library("Foundation") @Mapping("NSURLSessionConfiguration")
+@Library("Foundation/Foundation.h") @Mapping("NSURLSessionConfiguration")
 public class NSURLSessionConfiguration 
     extends NSObject 
     implements NSCopying {

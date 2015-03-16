@@ -20,7 +20,7 @@ import apple.imageio.*;
 
 
 
-@Library("CoreImage") @Mapping("CIFilter")
+@Library("CoreImage/CoreImage.h") @Mapping("CIFilter")
 public class CIFilter 
     extends NSObject 
     implements NSCoding, NSCopying {

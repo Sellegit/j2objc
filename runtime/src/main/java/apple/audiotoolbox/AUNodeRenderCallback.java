@@ -20,7 +20,7 @@ import apple.coremedia.*;
 
 
 
-@Mapping("AUNodeRenderCallback")
+@Mapping("AUNodeRenderCallback") @Library("AudioToolbox/AudioToolbox.h")
 public class AUNodeRenderCallback 
     extends Struct 
      {
@@ -41,20 +41,20 @@ public class AUNodeRenderCallback
         return __new;
     ]-*/;
     public static native AUNodeRenderCallback copyWithdestNode(AUNodeRenderCallback original, int destNode) /*-[
-        original.destNode = destNode;
-        return original;
+        AUNodeRenderCallback __new = { .destNode = destNode, .destInputNumber = original.destInputNumber, .cback = original.cback };
+        return __new;
     ]-*/;
 
     
     public static native AUNodeRenderCallback copyWithdestInputNumber(AUNodeRenderCallback original, int destInputNumber) /*-[
-        original.destInputNumber = destInputNumber;
-        return original;
+        AUNodeRenderCallback __new = { .destNode = original.destNode, .destInputNumber = destInputNumber, .cback = original.cback };
+        return __new;
     ]-*/;
 
     
     public static native AUNodeRenderCallback copyWithcback(AUNodeRenderCallback original, AURenderCallbackStruct cback) /*-[
-        original.cback = cback;
-        return original;
+        AUNodeRenderCallback __new = { .destNode = original.destNode, .destInputNumber = original.destInputNumber, .cback = cback };
+        return __new;
     ]-*/;
 
     

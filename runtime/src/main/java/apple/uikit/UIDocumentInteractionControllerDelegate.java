@@ -22,7 +22,7 @@ import apple.corelocation.*;
 
 
 
-@Library("UIKit") @Mapping("UIDocumentInteractionControllerDelegate")
+@Library("UIKit/UIKit.h") @Mapping("UIDocumentInteractionControllerDelegate")
 public interface UIDocumentInteractionControllerDelegate 
     extends NSObjectProtocol {
 

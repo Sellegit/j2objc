@@ -24,7 +24,7 @@ import apple.dispatch.*;
  * @since Available in iOS 5.0 and later.
  */
 
-@Library("Foundation") @Mapping("NSMutableOrderedSet")
+@Library("Foundation/Foundation.h") @Mapping("NSMutableOrderedSet")
 public class NSMutableOrderedSet 
     extends NSOrderedSet 
      {

@@ -25,7 +25,7 @@ import apple.mediatoolbox.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("AVFoundation") @Mapping("AVAudioUnitGenerator")
+@Library("AVFoundation/AVFoundation.h") @Mapping("AVAudioUnitGenerator")
 public class AVAudioUnitGenerator 
     extends AVAudioUnit 
     implements AVAudioMixing {

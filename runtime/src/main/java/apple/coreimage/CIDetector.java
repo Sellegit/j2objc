@@ -20,7 +20,7 @@ import apple.imageio.*;
 
 
 
-@Library("CoreImage") @Mapping("CIDetector")
+@Library("CoreImage/CoreImage.h") @Mapping("CIDetector")
 public class CIDetector 
     extends NSObject 
      {

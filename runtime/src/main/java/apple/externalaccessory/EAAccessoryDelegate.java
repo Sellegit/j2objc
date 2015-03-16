@@ -19,7 +19,7 @@ import apple.dispatch.*;
 
 
 
-@Library("ExternalAccessory") @Mapping("EAAccessoryDelegate")
+@Library("ExternalAccessory/ExternalAccessory.h") @Mapping("EAAccessoryDelegate")
 public interface EAAccessoryDelegate 
     extends NSObjectProtocol {
 

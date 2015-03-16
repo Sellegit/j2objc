@@ -17,7 +17,7 @@ import apple.dispatch.*;
 
 
 
-@Library("Security")
+@Library("Security/Security.h")
 @Mapping("SSLConnectionType")
 public final class SSLConnectionType extends ObjCEnum {
     

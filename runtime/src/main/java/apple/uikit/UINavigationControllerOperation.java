@@ -22,7 +22,7 @@ import apple.corelocation.*;
 
 
 
-@Library("UIKit")
+@Library("UIKit/UIKit.h")
 @Mapping("UINavigationControllerOperation")
 public final class UINavigationControllerOperation extends ObjCEnum {
     

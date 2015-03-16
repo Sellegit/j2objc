@@ -16,7 +16,7 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("NewsstandKit")
+@Library("NewsstandKit/NewsstandKit.h")
 public final class NSURLConnectionExtensions 
     extends NSExtensions 
      {
@@ -26,11 +26,7 @@ public final class NSURLConnectionExtensions
     private NSURLConnectionExtensions() {}
     
     
-    /**
-     * @since Available in iOS 5.0 and later.
-     */
-    @Mapping("newsstandAssetDownload")
-    public static native NKAssetDownload getNewsstandAssetDownload(NSURLConnection thiz);
+    
     
     
     

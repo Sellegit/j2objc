@@ -25,7 +25,7 @@ import apple.mediatoolbox.*;
  * @since Available in iOS 5.0 and later.
  */
 
-@Library("AVFoundation") @Mapping("AVMediaSelectionOption")
+@Library("AVFoundation/AVFoundation.h") @Mapping("AVMediaSelectionOption")
 public class AVMediaSelectionOption 
     extends NSObject 
     implements NSCopying {

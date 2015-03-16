@@ -16,7 +16,7 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("AddressBook")
+@Library("AddressBook/AddressBook.h")
 public class ABPersonSocialProfile 
     extends Object 
      {

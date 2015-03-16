@@ -21,7 +21,7 @@ import apple.uikit.*;
  * @since Available in iOS 4.0 and later.
  */
 
-@Library("EventKitUI") @Mapping("EKEventViewController")
+@Library("EventKitUI/EventKitUI.h") @Mapping("EKEventViewController")
 public class EKEventViewController 
     extends UIViewController 
      {

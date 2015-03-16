@@ -24,7 +24,7 @@ import apple.dispatch.*;
  * @since Available in iOS 5.0 and later.
  */
 
-@Library("Foundation") @Mapping("NSJSONSerialization")
+@Library("Foundation/Foundation.h") @Mapping("NSJSONSerialization")
 public class NSJSONSerialization 
     extends NSObject 
      {

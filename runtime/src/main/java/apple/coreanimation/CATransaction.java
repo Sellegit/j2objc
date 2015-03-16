@@ -21,7 +21,7 @@ import apple.metal.*;
 
 
 
-@Library("QuartzCore") @Mapping("CATransaction")
+@Library("QuartzCore/QuartzCore.h") @Mapping("CATransaction")
 public class CATransaction 
     extends NSObject 
      {

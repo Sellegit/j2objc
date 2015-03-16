@@ -18,7 +18,7 @@ import apple.addressbook.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("PassKit")
+@Library("PassKit/PassKit.h")
 public class PKPassKitError 
     extends Todo 
      {

@@ -24,7 +24,7 @@ import apple.corelocation.*;
  * @since Available in iOS 7.0 and later.
  */
 
-@Library("UIKit") @Mapping("NSTextContainer")
+@Library("UIKit/UIKit.h") @Mapping("NSTextContainer")
 public class NSTextContainer 
     extends NSObject 
     implements NSCoding, NSTextLayoutOrientationProvider {

@@ -24,7 +24,7 @@ import apple.corelocation.*;
  * @since Available in iOS 3.2 and later.
  */
 
-@Library("UIKit") @Mapping("UISwipeGestureRecognizer")
+@Library("UIKit/UIKit.h") @Mapping("UISwipeGestureRecognizer")
 public class UISwipeGestureRecognizer 
     extends UIGestureRecognizer 
      {

@@ -21,7 +21,7 @@ import apple.corevideo.*;
 
 
 
-@Library("CoreMedia")
+@Library("CoreMedia/CoreMedia.h")
 @Mapping("CMSampleBufferFlag")
 public final class CMSampleBufferFlag extends ObjCEnum {
     

@@ -18,7 +18,7 @@ import apple.foundation.*;
 
 
 
-@Mapping("CFMachPortContext")
+@Mapping("CFMachPortContext") @Library("CoreFoundation/CoreFoundation.h")
  class CFMachPortContext 
     extends Struct 
      {

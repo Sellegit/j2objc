@@ -22,7 +22,7 @@ import apple.dispatch.*;
 
 
 
-@Library("Foundation") @Mapping("NSErrorRecoveryAttempting")
+@Library("Foundation/Foundation.h") @Mapping("NSErrorRecoveryAttempting")
 public interface NSErrorRecoveryAttempting 
      {
 

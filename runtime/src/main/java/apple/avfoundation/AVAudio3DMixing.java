@@ -23,7 +23,7 @@ import apple.mediatoolbox.*;
 
 
 
-@Library("AVFoundation") @Mapping("AVAudio3DMixing")
+@Library("AVFoundation/AVFoundation.h") @Mapping("AVAudio3DMixing")
 public interface AVAudio3DMixing 
     extends NSObjectProtocol {
 

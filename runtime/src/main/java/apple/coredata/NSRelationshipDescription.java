@@ -19,7 +19,7 @@ import apple.foundation.*;
  * @since Available in iOS 3.0 and later.
  */
 
-@Library("CoreData") @Mapping("NSRelationshipDescription")
+@Library("CoreData/CoreData.h") @Mapping("NSRelationshipDescription")
 public class NSRelationshipDescription 
     extends NSPropertyDescription 
      {

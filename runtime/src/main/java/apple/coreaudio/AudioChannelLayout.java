@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 
 
-@Mapping("AudioChannelLayout")
+@Mapping("AudioChannelLayout") @Library("CoreAudio/CoreAudioTypes.h")
 public class AudioChannelLayout 
     extends Struct 
      {
@@ -29,13 +29,13 @@ public class AudioChannelLayout
     @DotMapping("mChannelLayoutTag")
     public native AudioChannelLayoutTag getMChannelLayoutTag();
     @DotMapping("mChannelBitmap")
-    public native AudioChannelBit getMChannelBitmap();
+    public native int getMChannelBitmap();
     @DotMapping("mNumberChannelDescriptions")
     public native int getMNumberChannelDescriptions();
     @DotMapping("mChannelDescriptions")
     public native AudioChannelDescription getMChannelDescriptions();
     
-    public static native AudioChannelLayout create(AudioChannelLayoutTag mChannelLayoutTag, AudioChannelBit mChannelBitmap, int mNumberChannelDescriptions, AudioChannelDescription mChannelDescriptions) /*-[
+    public static native AudioChannelLayout create(AudioChannelLayoutTag mChannelLayoutTag, int mChannelBitmap, int mNumberChannelDescriptions, AudioChannelDescription mChannelDescriptions) /*-[
         AudioChannelLayout __new = { .mChannelLayoutTag = mChannelLayoutTag, .mChannelBitmap = mChannelBitmap, .mNumberChannelDescriptions = mNumberChannelDescriptions, .mChannelDescriptions = mChannelDescriptions };
         return __new;
     ]-*/;
@@ -45,7 +45,7 @@ public class AudioChannelLayout
     ]-*/;
 
     
-    public static native AudioChannelLayout copyWithmChannelBitmap(AudioChannelLayout original, AudioChannelBit mChannelBitmap) /*-[
+    public static native AudioChannelLayout copyWithmChannelBitmap(AudioChannelLayout original, int mChannelBitmap) /*-[
         original.mChannelBitmap = mChannelBitmap;
         return original;
     ]-*/;

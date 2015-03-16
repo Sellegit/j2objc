@@ -20,7 +20,7 @@ import apple.corevideo.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreMedia")
+@Library("CoreMedia/CoreMedia.h")
 public class CMSampleBuffer 
     extends CFType 
      {
@@ -142,176 +142,176 @@ public class CMSampleBuffer
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMSampleBufferSetDataBuffer")
-    public native int setDataBuffer(CMBlockBuffer dataBuffer);
+    public static native int setDataBuffer(CMSampleBuffer sbuf, CMBlockBuffer dataBuffer);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMSampleBufferGetDataBuffer")
-    public native CMBlockBuffer getDataBuffer();
+    public static native CMBlockBuffer getDataBuffer(CMSampleBuffer sbuf);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMSampleBufferGetImageBuffer")
-    public native CVImageBuffer getImageBuffer();
+    public static native CVImageBuffer getImageBuffer(CMSampleBuffer sbuf);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMSampleBufferSetDataBufferFromAudioBufferList")
-    public native CMSampleBufferError setAudioBufferList(CFAllocator bbufStructAllocator, CFAllocator bbufMemoryAllocator, int flags, AudioBufferList bufferList);
+    public static native CMSampleBufferError setAudioBufferList(CMSampleBuffer sbuf, CFAllocator bbufStructAllocator, CFAllocator bbufMemoryAllocator, int flags, AudioBufferList bufferList);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMSampleBufferGetAudioBufferListWithRetainedBlockBuffer")
-    private native CMSampleBufferError getAudioBufferList(Todo bufferListSizeNeededOut, AudioBufferList bufferListOut, @MachineSizedUInt long bufferListSize, CFAllocator bbufStructAllocator, CFAllocator bbufMemoryAllocator, int flags, Todo blockBufferOut);
+    private static native CMSampleBufferError getAudioBufferList(CMSampleBuffer sbuf, Todo bufferListSizeNeededOut, AudioBufferList bufferListOut, @MachineSizedUInt long bufferListSize, CFAllocator bbufStructAllocator, CFAllocator bbufMemoryAllocator, int flags, Todo blockBufferOut);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMSampleBufferGetAudioStreamPacketDescriptions")
-    private native CMSampleBufferError getAudioStreamPacketDescriptions(@MachineSizedUInt long packetDescriptionsSize, AudioStreamPacketDescription packetDescriptionsOut, Todo packetDescriptionsSizeNeededOut);
+    private static native CMSampleBufferError getAudioStreamPacketDescriptions(CMSampleBuffer sbuf, @MachineSizedUInt long packetDescriptionsSize, AudioStreamPacketDescription packetDescriptionsOut, Todo packetDescriptionsSizeNeededOut);
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalFunction("CMSampleBufferCopyPCMDataIntoAudioBufferList")
-    public native CMSampleBufferError copyPCMDataIntoAudioBufferList(int frameOffset, int numFrames, AudioBufferList bufferList);
+    public static native CMSampleBufferError copyPCMDataIntoAudioBufferList(CMSampleBuffer sbuf, int frameOffset, int numFrames, AudioBufferList bufferList);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMSampleBufferSetDataReady")
-    public native CMSampleBufferError setDataReady();
+    public static native CMSampleBufferError setDataReady(CMSampleBuffer sbuf);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMSampleBufferDataIsReady")
-    public native boolean isDataReady();
+    public static native boolean isDataReady(CMSampleBuffer sbuf);
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalFunction("CMSampleBufferSetDataFailed")
-    public native CMSampleBufferError setDataFailed(int status);
+    public static native CMSampleBufferError setDataFailed(CMSampleBuffer sbuf, int status);
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalFunction("CMSampleBufferHasDataFailed")
-    private native boolean hasDataFailed(Todo statusOut);
+    private static native boolean hasDataFailed(CMSampleBuffer sbuf, Todo statusOut);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMSampleBufferMakeDataReady")
-    public native CMSampleBufferError makeDataReady();
+    public static native CMSampleBufferError makeDataReady(CMSampleBuffer sbuf);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMSampleBufferTrackDataReadiness")
-    public native CMSampleBufferError trackDataReadiness(CMSampleBuffer sbufToTrack);
+    public static native CMSampleBufferError trackDataReadiness(CMSampleBuffer sbuf, CMSampleBuffer sbufToTrack);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMSampleBufferInvalidate")
-    public native CMSampleBufferError invalidate();
+    public static native CMSampleBufferError invalidate(CMSampleBuffer sbuf);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMSampleBufferSetInvalidateCallback")
-    private native CMSampleBufferError setInvalidateCallback(FunctionPtr invalidateCallback, long invalidateRefCon);
+    private static native CMSampleBufferError setInvalidateCallback(CMSampleBuffer sbuf, FunctionPtr invalidateCallback, long invalidateRefCon);
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalFunction("CMSampleBufferSetInvalidateHandler")
-    public native CMSampleBufferError setInvalidateHandler(FunctionPtr invalidateHandler);
+    public static native CMSampleBufferError setInvalidateHandler(CMSampleBuffer sbuf, FunctionPtr invalidateHandler);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMSampleBufferIsValid")
-    public native boolean isValid();
+    public static native boolean isValid(CMSampleBuffer sbuf);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMSampleBufferGetNumSamples")
-    public native @MachineSizedSInt long getNumSamples();
+    public static native @MachineSizedSInt long getNumSamples(CMSampleBuffer sbuf);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMSampleBufferGetDuration")
-    public native CMTime getDuration();
+    public static native CMTime getDuration(CMSampleBuffer sbuf);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMSampleBufferGetPresentationTimeStamp")
-    public native CMTime getPresentationTimeStamp();
+    public static native CMTime getPresentationTimeStamp(CMSampleBuffer sbuf);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMSampleBufferGetDecodeTimeStamp")
-    public native CMTime getDecodeTimeStamp();
+    public static native CMTime getDecodeTimeStamp(CMSampleBuffer sbuf);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMSampleBufferGetOutputDuration")
-    public native CMTime getOutputDuration();
+    public static native CMTime getOutputDuration(CMSampleBuffer sbuf);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMSampleBufferGetOutputPresentationTimeStamp")
-    public native CMTime getOutputPresentationTimeStamp();
+    public static native CMTime getOutputPresentationTimeStamp(CMSampleBuffer sbuf);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMSampleBufferSetOutputPresentationTimeStamp")
-    public native CMSampleBufferError setOutputPresentationTimeStamp(CMTime outputPresentationTimeStamp);
+    public static native CMSampleBufferError setOutputPresentationTimeStamp(CMSampleBuffer sbuf, CMTime outputPresentationTimeStamp);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMSampleBufferGetOutputDecodeTimeStamp")
-    public native CMTime getOutputDecodeTimeStamp();
+    public static native CMTime getOutputDecodeTimeStamp(CMSampleBuffer sbuf);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMSampleBufferGetSampleTimingInfoArray")
-    private native CMSampleBufferError getSampleTimingInfoArray(@MachineSizedSInt long timingArrayEntries, CMSampleTimingInfo timingArrayOut, Todo timingArrayEntriesNeededOut);
+    private static native CMSampleBufferError getSampleTimingInfoArray(CMSampleBuffer sbuf, @MachineSizedSInt long timingArrayEntries, CMSampleTimingInfo timingArrayOut, Todo timingArrayEntriesNeededOut);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMSampleBufferGetOutputSampleTimingInfoArray")
-    private native CMSampleBufferError getOutputSampleTimingInfoArray(@MachineSizedSInt long timingArrayEntries, CMSampleTimingInfo timingArrayOut, Todo timingArrayEntriesNeededOut);
+    private static native CMSampleBufferError getOutputSampleTimingInfoArray(CMSampleBuffer sbuf, @MachineSizedSInt long timingArrayEntries, CMSampleTimingInfo timingArrayOut, Todo timingArrayEntriesNeededOut);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMSampleBufferGetSampleTimingInfo")
-    private native CMSampleBufferError getSampleTimingInfo(@MachineSizedSInt long sampleIndex, CMSampleTimingInfo timingInfoOut);
+    private static native CMSampleBufferError getSampleTimingInfo(CMSampleBuffer sbuf, @MachineSizedSInt long sampleIndex, CMSampleTimingInfo timingInfoOut);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMSampleBufferGetSampleSizeArray")
-    private native CMSampleBufferError getSampleSizeArray(@MachineSizedSInt long sizeArrayEntries, Todo sizeArrayOut, Todo sizeArrayEntriesNeededOut);
+    private static native CMSampleBufferError getSampleSizeArray(CMSampleBuffer sbuf, @MachineSizedSInt long sizeArrayEntries, Todo sizeArrayOut, Todo sizeArrayEntriesNeededOut);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMSampleBufferGetSampleSize")
-    public native @MachineSizedUInt long getSampleSize(@MachineSizedSInt long sampleIndex);
+    public static native @MachineSizedUInt long getSampleSize(CMSampleBuffer sbuf, @MachineSizedSInt long sampleIndex);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMSampleBufferGetTotalSampleSize")
-    public native @MachineSizedUInt long getTotalSampleSize();
+    public static native @MachineSizedUInt long getTotalSampleSize(CMSampleBuffer sbuf);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMSampleBufferGetFormatDescription")
-    public native CMFormatDescription getFormatDescription();
+    public static native CMFormatDescription getFormatDescription(CMSampleBuffer sbuf);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMSampleBufferGetSampleAttachmentsArray")
-    public native List<CMSampleAttachment> getSampleAttachments(boolean createIfNecessary);
+    public static native List<CMSampleAttachment> getSampleAttachments(CMSampleBuffer sbuf, boolean createIfNecessary);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMSampleBufferCallForEachSample")
-    private native CMSampleBufferError callForEachSample(FunctionPtr callback, Todo refcon);
+    private static native CMSampleBufferError callForEachSample(CMSampleBuffer sbuf, FunctionPtr callback, Todo refcon);
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalFunction("CMSampleBufferCallBlockForEachSample")
-    public native CMSampleBufferError callForEachSample(Todo handler);
+    public static native CMSampleBufferError callForEachSample(CMSampleBuffer sbuf, Todo handler);
     
 }

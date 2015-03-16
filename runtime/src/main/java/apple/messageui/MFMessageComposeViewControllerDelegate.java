@@ -18,7 +18,7 @@ import apple.uikit.*;
 
 
 
-@Library("MessageUI") @Mapping("MFMessageComposeViewControllerDelegate")
+@Library("MessageUI/MessageUI.h") @Mapping("MFMessageComposeViewControllerDelegate")
 public interface MFMessageComposeViewControllerDelegate 
     extends NSObjectProtocol {
 

@@ -20,7 +20,7 @@ import apple.dispatch.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("PushKit") @Mapping("PKPushRegistry")
+@Library("PushKit/PushKit.h") @Mapping("PKPushRegistry")
 public class PKPushRegistry 
     extends NSObject 
      {

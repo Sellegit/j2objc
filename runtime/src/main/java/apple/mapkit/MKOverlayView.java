@@ -22,7 +22,7 @@ import apple.dispatch.*;
  * @since Available in iOS 4.0 and later.
  */
 
-@Library("MapKit") @Mapping("MKOverlayView")
+@Library("MapKit/MapKit.h") @Mapping("MKOverlayView")
 public class MKOverlayView 
     extends UIView 
      {

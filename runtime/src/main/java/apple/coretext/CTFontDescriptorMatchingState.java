@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 
 
-@Library("CoreText")
+@Library("CoreText/CoreText.h")
 @Mapping("CTFontDescriptorMatchingState")
 public final class CTFontDescriptorMatchingState extends ObjCEnum {
     

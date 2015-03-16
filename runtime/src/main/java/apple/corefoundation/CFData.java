@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreFoundation")
+@Library("CoreFoundation/CoreFoundation.h")
 public class CFData 
     extends CFPropertyList 
      {
@@ -38,17 +38,17 @@ public class CFData
     @GlobalFunction("CFDataCreateCopy")
     protected static native CFData create(CFAllocator allocator, CFData theData);
     @GlobalFunction("CFDataGetLength")
-    public native @MachineSizedSInt long getLength();
+    public static native @MachineSizedSInt long getLength(CFData theData);
     @GlobalFunction("CFDataGetBytePtr")
-    public native Todo getBytePtr();
+    public static native Todo getBytePtr(CFData theData);
     @GlobalFunction("CFDataGetMutableBytePtr")
-    public native Todo getMutableBytePtr();
+    public static native Todo getMutableBytePtr(CFData theData);
     @GlobalFunction("CFDataGetBytes")
-    protected native void getBytes(CFRange range, Todo buffer);
+    protected static native void getBytes(CFData theData, CFRange range, Todo buffer);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CFDataFind")
-    public native CFRange find(CFData dataToFind, CFRange searchRange, CFDataSearchFlags compareOptions);
+    public static native CFRange find(CFData theData, CFData dataToFind, CFRange searchRange, CFDataSearchFlags compareOptions);
     
 }

@@ -20,7 +20,7 @@ import apple.corelocation.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("CloudKit") @Mapping("CKDatabaseOperation")
+@Library("CloudKit/CloudKit.h") @Mapping("CKDatabaseOperation")
 public class CKDatabaseOperation 
     extends CKOperation 
      {

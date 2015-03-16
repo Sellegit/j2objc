@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 
 
-@Mapping("CMRotationRate")
+@Mapping("CMRotationRate") @Library("CoreMotion/CoreMotion.h")
 public class CMRotationRate 
     extends Struct 
      {

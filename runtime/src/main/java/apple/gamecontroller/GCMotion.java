@@ -19,7 +19,7 @@ import apple.foundation.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("GameController") @Mapping("GCMotion")
+@Library("GameController/GameController.h") @Mapping("GCMotion")
 public class GCMotion 
     extends NSObject 
      {

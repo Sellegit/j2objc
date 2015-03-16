@@ -19,7 +19,7 @@ import apple.foundation.*;
  * @since Available in iOS 7.0 and later.
  */
 
-@Library("SafariServices") @Mapping("SSReadingList")
+@Library("SafariServices/SafariServices.h") @Mapping("SSReadingList")
 public class SSReadingList 
     extends NSObject 
      {

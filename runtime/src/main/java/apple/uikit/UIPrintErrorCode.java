@@ -22,7 +22,7 @@ import apple.corelocation.*;
 
 
 
-@Library("UIKit")
+@Library("UIKit/UIKit.h")
 @Mapping("UIPrintErrorCode")
 public final class UIPrintErrorCode extends ObjCEnum {
     

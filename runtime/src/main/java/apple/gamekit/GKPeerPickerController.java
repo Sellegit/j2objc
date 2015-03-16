@@ -22,7 +22,7 @@ import apple.uikit.*;
  */
 @Deprecated
 
-@Library("GameKit") @Mapping("GKPeerPickerController")
+@Library("GameKit/GameKit.h") @Mapping("GKPeerPickerController")
 public class GKPeerPickerController 
     extends NSObject 
      {

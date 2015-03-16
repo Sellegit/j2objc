@@ -20,7 +20,7 @@ import apple.dispatch.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("Metal") @Mapping("MTLDrawable")
+@Library("Metal/Metal.h") @Mapping("MTLDrawable")
 public interface MTLDrawable 
     extends NSObjectProtocol {
 

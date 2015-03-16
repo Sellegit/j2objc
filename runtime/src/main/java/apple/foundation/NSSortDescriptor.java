@@ -22,7 +22,7 @@ import apple.dispatch.*;
 
 
 
-@Library("Foundation") @Mapping("NSSortDescriptor")
+@Library("Foundation/Foundation.h") @Mapping("NSSortDescriptor")
 public class NSSortDescriptor 
     extends NSObject 
     implements NSCopying {

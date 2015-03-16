@@ -24,7 +24,7 @@ import apple.dispatch.*;
  * @since Available in iOS 7.0 and later.
  */
 
-@Library("Foundation")
+@Library("Foundation/Foundation.h")
 @Mapping("NSURLSessionTaskState")
 public final class NSURLSessionTaskState extends ObjCEnum {
     

@@ -23,7 +23,7 @@ import apple.opengles.*;
 
 
 
-@Library("SceneKit") @Mapping("SCNCamera")
+@Library("SceneKit/SceneKit.h") @Mapping("SCNCamera")
 public class SCNCamera 
     extends NSObject 
     implements SCNAnimatable, SCNTechniqueSupport, NSCopying {

@@ -20,7 +20,7 @@ import apple.coremedia.*;
 
 
 
-@Mapping("CAFInfoStrings")
+@Mapping("CAFInfoStrings") @Library("AudioToolbox/AudioToolbox.h")
 public class CAFInfoStrings 
     extends Struct 
      {
@@ -37,8 +37,8 @@ public class CAFInfoStrings
         return __new;
     ]-*/;
     public static native CAFInfoStrings copyWithmNumEntries(CAFInfoStrings original, int mNumEntries) /*-[
-        original.mNumEntries = mNumEntries;
-        return original;
+        CAFInfoStrings __new = { .mNumEntries = mNumEntries };
+        return __new;
     ]-*/;
 
     

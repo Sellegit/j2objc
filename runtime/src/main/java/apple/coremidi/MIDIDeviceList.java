@@ -16,7 +16,7 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreMIDI")
+@Library("CoreMIDI/CoreMIDI.h")
 public class MIDIDeviceList 
     extends MIDIObject 
      {
@@ -32,21 +32,21 @@ public class MIDIDeviceList
      * @since Available in iOS 4.2 and later.
      */
     @GlobalFunction("MIDIDeviceListGetNumberOfDevices")
-    public native @MachineSizedUInt long getNumberOfDevices();
+    public static native @MachineSizedUInt long getNumberOfDevices(MIDIDeviceList devList);
     /**
      * @since Available in iOS 4.2 and later.
      */
     @GlobalFunction("MIDIDeviceListGetDevice")
-    public native MIDIDevice getDevice(@MachineSizedUInt long index0);
+    public static native MIDIDevice getDevice(MIDIDeviceList devList, @MachineSizedUInt long index0);
     /**
      * @since Available in iOS 4.2 and later.
      */
     @GlobalFunction("MIDIDeviceListAddDevice")
-    public native MIDIError addDevice(MIDIDevice dev);
+    public static native MIDIError addDevice(MIDIDeviceList devList, MIDIDevice dev);
     /**
      * @since Available in iOS 4.2 and later.
      */
     @GlobalFunction("MIDIDeviceListDispose")
-    public native MIDIError dispose();
+    public static native MIDIError dispose(MIDIDeviceList devList);
     
 }

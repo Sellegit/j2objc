@@ -17,7 +17,7 @@ import apple.uikit.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreGraphics")
+@Library("CoreGraphics/CoreGraphics.h")
 public class CGColorSpace 
     extends CFType 
      {
@@ -93,31 +93,31 @@ public class CGColorSpace
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGColorSpaceGetNumberOfComponents")
-    public native @MachineSizedUInt long getNumberOfComponents();
+    public static native @MachineSizedUInt long getNumberOfComponents(CGColorSpace space);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGColorSpaceGetModel")
-    public native CGColorSpaceModel getModel();
+    public static native CGColorSpaceModel getModel(CGColorSpace space);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGColorSpaceGetBaseColorSpace")
-    public native CGColorSpace getBaseColorSpace();
+    public static native CGColorSpace getBaseColorSpace(CGColorSpace space);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGColorSpaceGetColorTableCount")
-    public native @MachineSizedUInt long getColorTableCount();
+    public static native @MachineSizedUInt long getColorTableCount(CGColorSpace space);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGColorSpaceGetColorTable")
-    protected native void getColorTable(Todo table);
+    protected static native void getColorTable(CGColorSpace space, Todo table);
     /**
      * @since Available in iOS 6.0 and later.
      */
     @GlobalFunction("CGColorSpaceCopyICCProfile")
-    public native NSData copyICCProfile();
+    public static native NSData copyICCProfile(CGColorSpace space);
     
 }

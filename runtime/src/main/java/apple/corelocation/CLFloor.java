@@ -21,7 +21,7 @@ import apple.corebluetooth.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("CoreLocation") @Mapping("CLFloor")
+@Library("CoreLocation/CoreLocation.h") @Mapping("CLFloor")
 public class CLFloor 
     extends NSObject 
     implements NSCopying {

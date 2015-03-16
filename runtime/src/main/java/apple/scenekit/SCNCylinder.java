@@ -23,7 +23,7 @@ import apple.opengles.*;
 
 
 
-@Library("SceneKit") @Mapping("SCNCylinder")
+@Library("SceneKit/SceneKit.h") @Mapping("SCNCylinder")
 public class SCNCylinder 
     extends SCNGeometry 
      {

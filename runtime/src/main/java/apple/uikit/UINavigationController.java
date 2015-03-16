@@ -24,7 +24,7 @@ import apple.corelocation.*;
  * @since Available in iOS 2.0 and later.
  */
 
-@Library("UIKit") @Mapping("UINavigationController")
+@Library("UIKit/UIKit.h") @Mapping("UINavigationController")
 public class UINavigationController 
     extends UIViewController 
      {

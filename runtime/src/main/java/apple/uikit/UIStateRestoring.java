@@ -22,7 +22,7 @@ import apple.corelocation.*;
 
 
 
-@Library("UIKit") @Mapping("UIStateRestoring")
+@Library("UIKit/UIKit.h") @Mapping("UIStateRestoring")
 public interface UIStateRestoring 
     extends NSObjectProtocol {
 

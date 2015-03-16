@@ -20,7 +20,7 @@ import apple.coremedia.*;
 
 
 
-@Mapping("NoteParamsControlValue")
+@Mapping("NoteParamsControlValue") @Library("AudioToolbox/AudioToolbox.h")
 public class NoteParamsControlValue 
     extends Struct 
      {
@@ -39,14 +39,14 @@ public class NoteParamsControlValue
         return __new;
     ]-*/;
     public static native NoteParamsControlValue copyWithmID(NoteParamsControlValue original, int mID) /*-[
-        original.mID = mID;
-        return original;
+        NoteParamsControlValue __new = { .mID = mID, .mValue = original.mValue };
+        return __new;
     ]-*/;
 
     
     public static native NoteParamsControlValue copyWithmValue(NoteParamsControlValue original, float mValue) /*-[
-        original.mValue = mValue;
-        return original;
+        NoteParamsControlValue __new = { .mID = original.mID, .mValue = mValue };
+        return __new;
     ]-*/;
 
     

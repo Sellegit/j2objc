@@ -22,7 +22,7 @@ import apple.dispatch.*;
 
 
 
-@Library("Foundation")
+@Library("Foundation/Foundation.h")
 @Mapping("NSComparisonResult")
 public final class NSComparisonResult extends ObjCEnum {
     

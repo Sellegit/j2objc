@@ -18,7 +18,7 @@ import apple.dispatch.*;
 
 
 
-@Mapping("MTLRegion")
+@Mapping("MTLRegion") @Library("Metal/Metal.h")
 public class MTLRegion 
     extends Struct 
      {

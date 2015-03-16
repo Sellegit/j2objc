@@ -19,7 +19,7 @@ import apple.avfoundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("Photos")
+@Library("Photos/Photos.h")
 public class PHContentEditingInputRequestResult 
     extends Object 
      {

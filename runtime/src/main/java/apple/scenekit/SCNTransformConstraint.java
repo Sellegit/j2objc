@@ -23,7 +23,7 @@ import apple.opengles.*;
 
 
 
-@Library("SceneKit") @Mapping("SCNTransformConstraint")
+@Library("SceneKit/SceneKit.h") @Mapping("SCNTransformConstraint")
 public class SCNTransformConstraint 
     extends SCNConstraint 
      {

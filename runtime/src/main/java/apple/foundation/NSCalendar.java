@@ -22,7 +22,7 @@ import apple.dispatch.*;
 
 
 
-@Library("Foundation") @Mapping("NSCalendar")
+@Library("Foundation/Foundation.h") @Mapping("NSCalendar")
 public class NSCalendar 
     extends NSObject 
     implements NSCopying {

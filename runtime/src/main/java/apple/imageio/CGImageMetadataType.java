@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 
 
-@Library("ImageIO")
+@Library("ImageIO/ImageIO.h")
 @Mapping("CGImageMetadataType")
 public final class CGImageMetadataType extends ObjCEnum {
     

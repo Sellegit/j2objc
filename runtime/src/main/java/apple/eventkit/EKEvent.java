@@ -21,7 +21,7 @@ import apple.corelocation.*;
  * @since Available in iOS 4.0 and later.
  */
 
-@Library("EventKit") @Mapping("EKEvent")
+@Library("EventKit/EventKit.h") @Mapping("EKEvent")
 public class EKEvent 
     extends EKCalendarItem 
      {

@@ -20,7 +20,7 @@ import apple.coremedia.*;
 
 
 
-@Mapping("CAFRegion")
+@Mapping("CAFRegion") @Library("AudioToolbox/AudioToolbox.h")
 public class CAFRegion 
     extends Struct 
      {
@@ -43,26 +43,26 @@ public class CAFRegion
         return __new;
     ]-*/;
     public static native CAFRegion copyWithmRegionID(CAFRegion original, int mRegionID) /*-[
-        original.mRegionID = mRegionID;
-        return original;
+        CAFRegion __new = { .mRegionID = mRegionID, .mFlags = original.mFlags, .mNumberMarkers = original.mNumberMarkers, .mMarkers = original.mMarkers };
+        return __new;
     ]-*/;
 
     
     public static native CAFRegion copyWithmFlags(CAFRegion original, int mFlags) /*-[
-        original.mFlags = mFlags;
-        return original;
+        CAFRegion __new = { .mRegionID = original.mRegionID, .mFlags = mFlags, .mNumberMarkers = original.mNumberMarkers, .mMarkers = original.mMarkers };
+        return __new;
     ]-*/;
 
     
     public static native CAFRegion copyWithmNumberMarkers(CAFRegion original, int mNumberMarkers) /*-[
-        original.mNumberMarkers = mNumberMarkers;
-        return original;
+        CAFRegion __new = { .mRegionID = original.mRegionID, .mFlags = original.mFlags, .mNumberMarkers = mNumberMarkers, .mMarkers = original.mMarkers };
+        return __new;
     ]-*/;
 
     
     public static native CAFRegion copyWithmMarkers(CAFRegion original, CAFMarker mMarkers) /*-[
-        original.mMarkers = mMarkers;
-        return original;
+        CAFRegion __new = { .mRegionID = original.mRegionID, .mFlags = original.mFlags, .mNumberMarkers = original.mNumberMarkers, .mMarkers = mMarkers };
+        return __new;
     ]-*/;
 
     

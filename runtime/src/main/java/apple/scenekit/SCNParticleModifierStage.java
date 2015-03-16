@@ -23,7 +23,7 @@ import apple.opengles.*;
 
 
 
-@Library("SceneKit")
+@Library("SceneKit/SceneKit.h")
 @Mapping("SCNParticleModifierStage")
 public final class SCNParticleModifierStage extends ObjCEnum {
     

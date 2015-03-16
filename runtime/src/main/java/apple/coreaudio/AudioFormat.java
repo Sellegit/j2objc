@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 
 
-@Library("CoreAudio")
+@Library("CoreAudio/CoreAudioTypes.h")
 @Mapping("AudioFormat")
 public final class AudioFormat extends ObjCEnum {
     

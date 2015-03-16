@@ -21,7 +21,7 @@ import apple.corevideo.*;
 
 
 
-@Library("CoreMedia")
+@Library("CoreMedia/CoreMedia.h")
 @Mapping("CMTimeRoundingMethod")
 public final class CMTimeRoundingMethod extends ObjCEnum {
     

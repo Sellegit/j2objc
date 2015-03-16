@@ -22,7 +22,7 @@ import apple.corelocation.*;
 
 
 
-@Library("UIKit") @Mapping("UIPopoverControllerDelegate")
+@Library("UIKit/UIKit.h") @Mapping("UIPopoverControllerDelegate")
 public interface UIPopoverControllerDelegate 
     extends NSObjectProtocol {
 

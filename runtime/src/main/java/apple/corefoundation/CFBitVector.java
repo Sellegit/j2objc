@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreFoundation")
+@Library("CoreFoundation/CoreFoundation.h")
 public class CFBitVector 
     extends CFType 
      {
@@ -36,18 +36,18 @@ public class CFBitVector
     @GlobalFunction("CFBitVectorCreateCopy")
     public static native CFBitVector createCopy(CFAllocator allocator, CFBitVector bv);
     @GlobalFunction("CFBitVectorGetCount")
-    public native @MachineSizedSInt long getCount();
+    public static native @MachineSizedSInt long getCount(CFBitVector bv);
     @GlobalFunction("CFBitVectorGetCountOfBit")
-    public native @MachineSizedSInt long getCountOfBit(CFRange range, int value);
+    public static native @MachineSizedSInt long getCountOfBit(CFBitVector bv, CFRange range, int value);
     @GlobalFunction("CFBitVectorContainsBit")
-    public native boolean containsBit(CFRange range, int value);
+    public static native boolean containsBit(CFBitVector bv, CFRange range, int value);
     @GlobalFunction("CFBitVectorGetBitAtIndex")
-    public native int getBitAtIndex(@MachineSizedSInt long idx);
+    public static native int getBitAtIndex(CFBitVector bv, @MachineSizedSInt long idx);
     @GlobalFunction("CFBitVectorGetBits")
-    public native void getBits(CFRange range, Todo bytes);
+    public static native void getBits(CFBitVector bv, CFRange range, Todo bytes);
     @GlobalFunction("CFBitVectorGetFirstIndexOfBit")
-    public native @MachineSizedSInt long getFirstIndexOfBit(CFRange range, int value);
+    public static native @MachineSizedSInt long getFirstIndexOfBit(CFBitVector bv, CFRange range, int value);
     @GlobalFunction("CFBitVectorGetLastIndexOfBit")
-    public native @MachineSizedSInt long getLastIndexOfBit(CFRange range, int value);
+    public static native @MachineSizedSInt long getLastIndexOfBit(CFBitVector bv, CFRange range, int value);
     
 }

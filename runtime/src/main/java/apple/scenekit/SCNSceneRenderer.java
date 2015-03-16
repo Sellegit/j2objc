@@ -23,7 +23,7 @@ import apple.opengles.*;
 
 
 
-@Library("SceneKit") @Mapping("SCNSceneRenderer")
+@Library("SceneKit/SceneKit.h") @Mapping("SCNSceneRenderer")
 public interface SCNSceneRenderer 
     extends NSObjectProtocol {
 

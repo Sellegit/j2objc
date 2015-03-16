@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreFoundation")
+@Library("CoreFoundation/CoreFoundation.h")
 public class CFFileDescriptor 
     extends CFType 
      {
@@ -43,32 +43,32 @@ public class CFFileDescriptor
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFFileDescriptorGetNativeDescriptor")
-    public native int getNativeDescriptor();
+    public static native int getNativeDescriptor(CFFileDescriptor f);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFFileDescriptorGetContext")
-    public native void getContext(CFFileDescriptorContext context);
+    public static native void getContext(CFFileDescriptor f, CFFileDescriptorContext context);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFFileDescriptorEnableCallBacks")
-    public native void enableCallBacks(@MachineSizedUInt long callBackTypes);
+    public static native void enableCallBacks(CFFileDescriptor f, @MachineSizedUInt long callBackTypes);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFFileDescriptorDisableCallBacks")
-    public native void disableCallBacks(@MachineSizedUInt long callBackTypes);
+    public static native void disableCallBacks(CFFileDescriptor f, @MachineSizedUInt long callBackTypes);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFFileDescriptorInvalidate")
-    public native void invalidate();
+    public static native void invalidate(CFFileDescriptor f);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFFileDescriptorIsValid")
-    public native boolean isValid();
+    public static native boolean isValid(CFFileDescriptor f);
     /**
      * @since Available in iOS 2.0 and later.
      */

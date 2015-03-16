@@ -20,7 +20,7 @@ import apple.foundation.*;
  * @since Available in iOS 6.0 and later.
  */
 
-@Library("CoreFoundation")
+@Library("CoreFoundation/CoreFoundation.h")
 @Mapping("CFFileSecurityClearOptions")
 public final class CFFileSecurityClearOptions extends ObjCEnum {
     

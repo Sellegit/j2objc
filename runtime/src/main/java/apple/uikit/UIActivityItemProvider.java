@@ -24,7 +24,7 @@ import apple.corelocation.*;
  * @since Available in iOS 6.0 and later.
  */
 
-@Library("UIKit") @Mapping("UIActivityItemProvider")
+@Library("UIKit/UIKit.h") @Mapping("UIActivityItemProvider")
 public class UIActivityItemProvider 
     extends NSOperation 
     implements UIActivityItemSource {

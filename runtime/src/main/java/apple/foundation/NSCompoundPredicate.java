@@ -24,7 +24,7 @@ import apple.dispatch.*;
  * @since Available in iOS 3.0 and later.
  */
 
-@Library("Foundation") @Mapping("NSCompoundPredicate")
+@Library("Foundation/Foundation.h") @Mapping("NSCompoundPredicate")
 public class NSCompoundPredicate 
     extends NSPredicate 
      {

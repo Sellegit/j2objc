@@ -25,7 +25,7 @@ import apple.mediatoolbox.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("AVFoundation") @Mapping("AVAudioPCMBuffer")
+@Library("AVFoundation/AVFoundation.h") @Mapping("AVAudioPCMBuffer")
 public class AVAudioPCMBuffer 
     extends AVAudioBuffer 
      {

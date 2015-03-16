@@ -25,7 +25,7 @@ import apple.mediatoolbox.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("AVFoundation") @Mapping("AVAssetReaderOutputMetadataAdaptor")
+@Library("AVFoundation/AVFoundation.h") @Mapping("AVAssetReaderOutputMetadataAdaptor")
 public class AVAssetReaderOutputMetadataAdaptor 
     extends NSObject 
      {

@@ -22,7 +22,7 @@ import apple.corelocation.*;
 
 
 
-@Library("UIKit") @Mapping("UIApplicationDelegate")
+@Library("UIKit/UIKit.h") @Mapping("UIApplicationDelegate")
 public interface UIApplicationDelegate 
     extends NSObjectProtocol {
 
@@ -127,6 +127,11 @@ public interface UIApplicationDelegate
      */
     @Mapping("application:handleEventsForBackgroundURLSession:completionHandler:")
     void handleEventsForBackgroundURLSession(UIApplication application, String identifier, @Block Runnable completionHandler);
+    /**
+     * @since Available in iOS 8.2 and later.
+     */
+    @Mapping("application:handleWatchKitExtensionRequest:reply:")
+    void application$handleWatchKitExtensionRequest$reply$(UIApplication application, NSDictionary<?, ?> userInfo, Todo reply);
     /**
      * @since Available in iOS 4.0 and later.
      */

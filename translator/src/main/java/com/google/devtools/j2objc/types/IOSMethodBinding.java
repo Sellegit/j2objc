@@ -59,6 +59,7 @@ public class IOSMethodBinding extends GeneratedMethodBinding {
         iosMethod, original, original.getModifiers(), returnType, null, declaringClass,
         null, original.isVarargs(), false);
     binding.addParameters(original);
+    binding.addAnnotations(original);
     return binding;
   }
 

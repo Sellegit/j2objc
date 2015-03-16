@@ -22,7 +22,7 @@ import apple.corelocation.*;
 
 
 
-@Library("UIKit")
+@Library("UIKit/UIKit.h")
 @Mapping("UIUserInterfaceIdiom")
 public final class UIUserInterfaceIdiom extends ObjCEnum {
     

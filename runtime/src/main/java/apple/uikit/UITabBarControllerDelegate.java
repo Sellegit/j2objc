@@ -22,7 +22,7 @@ import apple.corelocation.*;
 
 
 
-@Library("UIKit") @Mapping("UITabBarControllerDelegate")
+@Library("UIKit/UIKit.h") @Mapping("UITabBarControllerDelegate")
 public interface UITabBarControllerDelegate 
     extends NSObjectProtocol {
 

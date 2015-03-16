@@ -24,7 +24,7 @@ import apple.corelocation.*;
  * @since Available in iOS 3.2 and later.
  */
 
-@Library("UIKit") @Mapping("UITextChecker")
+@Library("UIKit/UIKit.h") @Mapping("UITextChecker")
 public class UITextChecker 
     extends NSObject 
      {

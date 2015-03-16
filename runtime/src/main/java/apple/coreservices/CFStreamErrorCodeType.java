@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 
 
-@Library("CFNetwork")
+@Library("CFNetwork/CFNetwork.h")
 @Mapping("CFStreamErrorCodeType")
 public final class CFStreamErrorCodeType extends ObjCEnum {
     

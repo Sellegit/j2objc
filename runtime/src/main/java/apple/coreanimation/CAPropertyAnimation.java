@@ -21,7 +21,7 @@ import apple.metal.*;
 
 
 
-@Library("QuartzCore") @Mapping("CAPropertyAnimation")
+@Library("QuartzCore/QuartzCore.h") @Mapping("CAPropertyAnimation")
 public class CAPropertyAnimation 
     extends CAAnimation 
      {

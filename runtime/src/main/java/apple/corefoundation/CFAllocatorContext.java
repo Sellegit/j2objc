@@ -18,7 +18,7 @@ import apple.foundation.*;
 
 
 
-@Mapping("CFAllocatorContext")
+@Mapping("CFAllocatorContext") @Library("CoreFoundation/CoreFoundation.h")
 public class CFAllocatorContext 
     extends Struct 
      {

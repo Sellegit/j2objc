@@ -19,7 +19,7 @@ import apple.corelocation.*;
 
 
 
-@Library("EventKit")
+@Library("EventKit/EventKit.h")
 @Mapping("EKEventAvailability")
 public final class EKEventAvailability extends ObjCEnum {
     

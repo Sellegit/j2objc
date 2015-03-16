@@ -24,7 +24,7 @@ import apple.corelocation.*;
  * @since Available in iOS 3.1 and later.
  */
 
-@Library("UIKit") @Mapping("UIVideoEditorController")
+@Library("UIKit/UIKit.h") @Mapping("UIVideoEditorController")
 public class UIVideoEditorController 
     extends UINavigationController 
      {

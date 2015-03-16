@@ -21,7 +21,7 @@ import apple.corevideo.*;
 
 
 
-@Mapping("CMTimeRange") @Library("CoreMedia")
+@Mapping("CMTimeRange") @Library("CoreMedia/CoreMedia.h")
 public class CMTimeRange 
     extends Struct 
      {
@@ -66,32 +66,32 @@ public class CMTimeRange
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMTimeRangeGetUnion")
-    public native CMTimeRange union(CMTimeRange range2);
+    public static native CMTimeRange union(CMTimeRange range1, CMTimeRange range2);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMTimeRangeGetIntersection")
-    public native CMTimeRange intersection(CMTimeRange range2);
+    public static native CMTimeRange intersection(CMTimeRange range1, CMTimeRange range2);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMTimeRangeEqual")
-    public native boolean equals(CMTimeRange range2);
+    public static native boolean equals(CMTimeRange range1, CMTimeRange range2);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMTimeRangeContainsTime")
-    public native boolean containsTime(CMTime time);
+    public static native boolean containsTime(CMTimeRange range, CMTime time);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMTimeRangeContainsTimeRange")
-    public native boolean containsTimeRange(CMTimeRange range2);
+    public static native boolean containsTimeRange(CMTimeRange range1, CMTimeRange range2);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMTimeRangeGetEnd")
-    public native CMTime getEnd();
+    public static native CMTime getEnd(CMTimeRange range);
     /**
      * @since Available in iOS 4.0 and later.
      */
@@ -101,7 +101,7 @@ public class CMTimeRange
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMTimeRangeCopyAsDictionary")
-    public native NSDictionary<?, ?> asDictionary(CFAllocator allocator);
+    public static native NSDictionary<?, ?> asDictionary(CMTimeRange range, CFAllocator allocator);
     /**
      * @since Available in iOS 4.0 and later.
      */
@@ -116,6 +116,6 @@ public class CMTimeRange
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMTimeRangeShow")
-    public native void show();
+    public static native void show(CMTimeRange range);
     
 }

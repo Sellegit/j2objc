@@ -18,7 +18,7 @@ import apple.dispatch.*;
 
 
 
-@Library("SystemConfiguration")
+@Library("SystemConfiguration/SystemConfiguration.h")
 @Mapping("SCNetworkReachabilityFlags")
 public final class SCNetworkReachabilityFlags extends ObjCEnum {
     

@@ -24,7 +24,7 @@ import apple.corelocation.*;
  * @since Available in iOS 6.0 and later.
  */
 
-@Library("UIKit") @Mapping("UICollectionViewFlowLayout")
+@Library("UIKit/UIKit.h") @Mapping("UICollectionViewFlowLayout")
 public class UICollectionViewFlowLayout 
     extends UICollectionViewLayout 
      {

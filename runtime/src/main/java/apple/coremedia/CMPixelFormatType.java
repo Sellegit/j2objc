@@ -21,7 +21,7 @@ import apple.corevideo.*;
 
 
 
-@Library("CoreMedia")
+@Library("CoreMedia/CoreMedia.h")
 @Mapping("CMPixelFormatType")
 public final class CMPixelFormatType extends ObjCEnum {
     

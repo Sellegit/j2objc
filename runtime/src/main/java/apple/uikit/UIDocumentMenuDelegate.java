@@ -22,7 +22,7 @@ import apple.corelocation.*;
 
 
 
-@Library("UIKit") @Mapping("UIDocumentMenuDelegate")
+@Library("UIKit/UIKit.h") @Mapping("UIDocumentMenuDelegate")
 public interface UIDocumentMenuDelegate 
     extends NSObjectProtocol {
 

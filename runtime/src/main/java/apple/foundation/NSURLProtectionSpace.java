@@ -22,7 +22,7 @@ import apple.dispatch.*;
 
 
 
-@Library("Foundation") @Mapping("NSURLProtectionSpace")
+@Library("Foundation/Foundation.h") @Mapping("NSURLProtectionSpace")
 public class NSURLProtectionSpace 
     extends NSObject 
     implements NSCopying {

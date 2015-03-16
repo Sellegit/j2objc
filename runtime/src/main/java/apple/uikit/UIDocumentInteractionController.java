@@ -24,7 +24,7 @@ import apple.corelocation.*;
  * @since Available in iOS 3.2 and later.
  */
 
-@Library("UIKit") @Mapping("UIDocumentInteractionController")
+@Library("UIKit/UIKit.h") @Mapping("UIDocumentInteractionController")
 public class UIDocumentInteractionController 
     extends NSObject 
     implements UIActionSheetDelegate {

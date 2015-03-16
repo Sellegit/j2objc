@@ -20,7 +20,7 @@ import apple.dispatch.*;
 
 
 
-@Mapping("MKTileOverlayPath")
+@Mapping("MKTileOverlayPath") @Library("MapKit/MapKit.h")
 public class MKTileOverlayPath 
     extends Struct 
      {

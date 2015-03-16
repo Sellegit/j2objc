@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreFoundation")
+@Library("CoreFoundation/CoreFoundation.h")
 public class CFURLEnumerator 
     extends CFType 
      {
@@ -48,16 +48,16 @@ public class CFURLEnumerator
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CFURLEnumeratorGetNextURL")
-    public native CFURLEnumeratorResult getNextURL(Todo url, Todo error);
+    public static native CFURLEnumeratorResult getNextURL(CFURLEnumerator enumerator, Todo url, Todo error);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CFURLEnumeratorSkipDescendents")
-    public native void skipDescendents();
+    public static native void skipDescendents(CFURLEnumerator enumerator);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CFURLEnumeratorGetDescendentLevel")
-    public native @MachineSizedSInt long getDescendentLevel();
+    public static native @MachineSizedSInt long getDescendentLevel(CFURLEnumerator enumerator);
     
 }

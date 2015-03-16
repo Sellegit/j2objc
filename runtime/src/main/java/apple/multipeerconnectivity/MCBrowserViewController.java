@@ -21,7 +21,7 @@ import apple.security.*;
  * @since Available in iOS 7.0 and later.
  */
 
-@Library("MultipeerConnectivity") @Mapping("MCBrowserViewController")
+@Library("MultipeerConnectivity/MultipeerConnectivity.h") @Mapping("MCBrowserViewController")
 public class MCBrowserViewController 
     extends UIViewController 
     implements MCNearbyServiceBrowserDelegate {

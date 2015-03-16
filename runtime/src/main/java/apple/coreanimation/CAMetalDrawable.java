@@ -21,7 +21,7 @@ import apple.metal.*;
 
 
 
-@Library("QuartzCore") @Mapping("CAMetalDrawable")
+@Library("QuartzCore/QuartzCore.h") @Mapping("CAMetalDrawable")
 public interface CAMetalDrawable 
     extends MTLDrawable {
 

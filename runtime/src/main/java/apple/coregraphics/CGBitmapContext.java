@@ -17,7 +17,7 @@ import apple.uikit.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreGraphics")
+@Library("CoreGraphics/CoreGraphics.h")
 public class CGBitmapContext 
     extends CGContext 
      {

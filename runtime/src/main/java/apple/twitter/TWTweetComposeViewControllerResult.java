@@ -20,7 +20,7 @@ import apple.accounts.*;
 
 
 
-@Library("Twitter")
+@Library("Twitter/Twitter.h")
 @Mapping("TWTweetComposeViewControllerResult")
 public final class TWTweetComposeViewControllerResult extends ObjCEnum {
     

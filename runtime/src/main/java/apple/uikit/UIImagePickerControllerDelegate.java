@@ -22,7 +22,7 @@ import apple.corelocation.*;
 
 
 
-@Library("UIKit") @Mapping("UIImagePickerControllerDelegate")
+@Library("UIKit/UIKit.h") @Mapping("UIImagePickerControllerDelegate")
 public interface UIImagePickerControllerDelegate 
     extends UINavigationControllerDelegate {
 

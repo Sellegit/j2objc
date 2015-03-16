@@ -23,7 +23,7 @@ import apple.opengles.*;
 
 
 
-@Library("SceneKit") @Mapping("SCNLight")
+@Library("SceneKit/SceneKit.h") @Mapping("SCNLight")
 public class SCNLight 
     extends NSObject 
     implements SCNAnimatable, SCNTechniqueSupport, NSCopying {

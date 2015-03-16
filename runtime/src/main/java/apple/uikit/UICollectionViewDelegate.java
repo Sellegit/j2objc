@@ -22,7 +22,7 @@ import apple.corelocation.*;
 
 
 
-@Library("UIKit") @Mapping("UICollectionViewDelegate")
+@Library("UIKit/UIKit.h") @Mapping("UICollectionViewDelegate")
 public interface UICollectionViewDelegate 
     extends UIScrollViewDelegate {
 

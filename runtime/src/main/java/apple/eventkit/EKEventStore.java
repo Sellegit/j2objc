@@ -21,7 +21,7 @@ import apple.corelocation.*;
  * @since Available in iOS 4.0 and later.
  */
 
-@Library("EventKit") @Mapping("EKEventStore")
+@Library("EventKit/EventKit.h") @Mapping("EKEventStore")
 public class EKEventStore 
     extends NSObject 
      {

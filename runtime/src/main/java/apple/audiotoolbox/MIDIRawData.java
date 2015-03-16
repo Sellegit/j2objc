@@ -20,7 +20,7 @@ import apple.coremedia.*;
 
 
 
-@Mapping("MIDIRawData")
+@Mapping("MIDIRawData") @Library("AudioToolbox/AudioToolbox.h")
 public class MIDIRawData 
     extends Struct 
      {
@@ -39,14 +39,14 @@ public class MIDIRawData
         return __new;
     ]-*/;
     public static native MIDIRawData copyWithlength(MIDIRawData original, int length) /*-[
-        original.length = length;
-        return original;
+        MIDIRawData __new = { .length = length, .data = original.data };
+        return __new;
     ]-*/;
 
     
     public static native MIDIRawData copyWithdata(MIDIRawData original, ByteBuffer data) /*-[
-        original.data = data;
-        return original;
+        MIDIRawData __new = { .length = original.length, .data = data };
+        return __new;
     ]-*/;
 
     

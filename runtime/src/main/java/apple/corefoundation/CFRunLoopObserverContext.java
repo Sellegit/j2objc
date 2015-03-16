@@ -18,7 +18,7 @@ import apple.foundation.*;
 
 
 
-@Mapping("CFRunLoopObserverContext")
+@Mapping("CFRunLoopObserverContext") @Library("CoreFoundation/CoreFoundation.h")
  class CFRunLoopObserverContext 
     extends Struct 
      {

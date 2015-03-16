@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 
 
-@Mapping("CMRotationMatrix")
+@Mapping("CMRotationMatrix") @Library("CoreMotion/CoreMotion.h")
 public class CMRotationMatrix 
     extends Struct 
      {

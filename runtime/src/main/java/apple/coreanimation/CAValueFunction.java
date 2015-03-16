@@ -21,7 +21,7 @@ import apple.metal.*;
 
 
 
-@Library("QuartzCore") @Mapping("CAValueFunction")
+@Library("QuartzCore/QuartzCore.h") @Mapping("CAValueFunction")
 public class CAValueFunction 
     extends NSObject 
     implements NSCoding {

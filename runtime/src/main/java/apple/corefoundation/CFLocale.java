@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreFoundation")
+@Library("CoreFoundation/CoreFoundation.h")
 public class CFLocale 
     extends CFType 
      {
@@ -94,10 +94,10 @@ public class CFLocale
     @GlobalFunction("CFLocaleCreateCopy")
     protected static native CFLocale createCopy(CFAllocator allocator, CFLocale locale);
     @GlobalFunction("CFLocaleGetIdentifier")
-    public native String getIdentifier();
+    public static native String getIdentifier(CFLocale locale);
     @GlobalFunction("CFLocaleGetValue")
-    public native CFType getComponent(String key);
+    public static native CFType getComponent(CFLocale locale, String key);
     @GlobalFunction("CFLocaleCopyDisplayNameForPropertyValue")
-    public native String getComponentDisplayName(String key, String value);
+    public static native String getComponentDisplayName(CFLocale displayLocale, String key, String value);
     
 }

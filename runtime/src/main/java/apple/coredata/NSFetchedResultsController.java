@@ -19,7 +19,7 @@ import apple.foundation.*;
  * @since Available in iOS 3.0 and later.
  */
 
-@Library("CoreData") @Mapping("NSFetchedResultsController")
+@Library("CoreData/CoreData.h") @Mapping("NSFetchedResultsController")
 public class NSFetchedResultsController 
     extends NSObject 
      {

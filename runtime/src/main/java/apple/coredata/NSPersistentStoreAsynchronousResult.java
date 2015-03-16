@@ -19,7 +19,7 @@ import apple.foundation.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("CoreData") @Mapping("NSPersistentStoreAsynchronousResult")
+@Library("CoreData/CoreData.h") @Mapping("NSPersistentStoreAsynchronousResult")
 public class NSPersistentStoreAsynchronousResult 
     extends NSPersistentStoreResult 
      {

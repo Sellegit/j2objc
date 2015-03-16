@@ -22,7 +22,7 @@ import apple.dispatch.*;
 
 
 
-@Library("Foundation") @Mapping("NSCountedSet")
+@Library("Foundation/Foundation.h") @Mapping("NSCountedSet")
 public class NSCountedSet 
     extends NSMutableSet 
      {

@@ -24,7 +24,7 @@ import apple.corelocation.*;
  * @since Available in iOS 2.0 and later.
  */
 
-@Library("UIKit") @Mapping("UITableViewController")
+@Library("UIKit/UIKit.h") @Mapping("UITableViewController")
 public class UITableViewController 
     extends UIViewController 
     implements UITableViewDelegate, UITableViewDataSource {

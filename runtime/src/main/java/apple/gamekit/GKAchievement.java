@@ -20,7 +20,7 @@ import apple.uikit.*;
  * @since Available in iOS 4.1 and later.
  */
 
-@Library("GameKit") @Mapping("GKAchievement")
+@Library("GameKit/GameKit.h") @Mapping("GKAchievement")
 public class GKAchievement 
     extends NSObject 
     implements NSCoding {

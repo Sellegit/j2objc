@@ -20,7 +20,7 @@ import apple.uikit.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("NotificationCenter")
+@Library("NotificationCenter/NotificationCenter.h")
 @Mapping("NCUpdateResult")
 public final class NCUpdateResult extends ObjCEnum {
     

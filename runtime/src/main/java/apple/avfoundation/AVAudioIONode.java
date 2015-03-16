@@ -25,7 +25,7 @@ import apple.mediatoolbox.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("AVFoundation") @Mapping("AVAudioIONode")
+@Library("AVFoundation/AVFoundation.h") @Mapping("AVAudioIONode")
 public class AVAudioIONode 
     extends AVAudioNode 
      {

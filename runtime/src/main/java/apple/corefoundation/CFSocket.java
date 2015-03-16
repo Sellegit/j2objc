@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreFoundation")
+@Library("CoreFoundation/CoreFoundation.h")
 public class CFSocket 
     extends CFType 
      {
@@ -40,33 +40,33 @@ public class CFSocket
     @GlobalFunction("CFSocketCreateConnectedToSocketSignature")
     public static native CFSocket createConnectedToSocketSignature(CFAllocator allocator, CFSocketSignature signature, @MachineSizedUInt long callBackTypes, FunctionPtr callout, CFSocketContext context, double timeout);
     @GlobalFunction("CFSocketSetAddress")
-    public native CFSocketError setAddress(CFData address);
+    public static native CFSocketError setAddress(CFSocket s, CFData address);
     @GlobalFunction("CFSocketConnectToAddress")
-    public native CFSocketError connectToAddress(CFData address, double timeout);
+    public static native CFSocketError connectToAddress(CFSocket s, CFData address, double timeout);
     @GlobalFunction("CFSocketInvalidate")
-    public native void invalidate();
+    public static native void invalidate(CFSocket s);
     @GlobalFunction("CFSocketIsValid")
-    public native boolean isValid();
+    public static native boolean isValid(CFSocket s);
     @GlobalFunction("CFSocketCopyAddress")
-    public native CFData copyAddress();
+    public static native CFData copyAddress(CFSocket s);
     @GlobalFunction("CFSocketCopyPeerAddress")
-    public native CFData copyPeerAddress();
+    public static native CFData copyPeerAddress(CFSocket s);
     @GlobalFunction("CFSocketGetContext")
-    public native void getContext(CFSocketContext context);
+    public static native void getContext(CFSocket s, CFSocketContext context);
     @GlobalFunction("CFSocketGetNative")
-    public native int getNative();
+    public static native int getNative(CFSocket s);
     @GlobalFunction("CFSocketCreateRunLoopSource")
     public static native CFRunLoopSource createRunLoopSource(CFAllocator allocator, CFSocket s, @MachineSizedSInt long order);
     @GlobalFunction("CFSocketGetSocketFlags")
-    public native CFSocketFlags getSocketFlags();
+    public static native CFSocketFlags getSocketFlags(CFSocket s);
     @GlobalFunction("CFSocketSetSocketFlags")
-    public native void setSocketFlags(@MachineSizedUInt long flags);
+    public static native void setSocketFlags(CFSocket s, @MachineSizedUInt long flags);
     @GlobalFunction("CFSocketDisableCallBacks")
-    public native void disableCallBacks(@MachineSizedUInt long callBackTypes);
+    public static native void disableCallBacks(CFSocket s, @MachineSizedUInt long callBackTypes);
     @GlobalFunction("CFSocketEnableCallBacks")
-    public native void enableCallBacks(@MachineSizedUInt long callBackTypes);
+    public static native void enableCallBacks(CFSocket s, @MachineSizedUInt long callBackTypes);
     @GlobalFunction("CFSocketSendData")
-    public native CFSocketError sendData(CFData address, CFData data, double timeout);
+    public static native CFSocketError sendData(CFSocket s, CFData address, CFData data, double timeout);
     @GlobalFunction("CFSocketRegisterValue")
     public static native CFSocketError registerValue(CFSocketSignature nameServerSignature, double timeout, String name, CFType value);
     @GlobalFunction("CFSocketCopyRegisteredValue")

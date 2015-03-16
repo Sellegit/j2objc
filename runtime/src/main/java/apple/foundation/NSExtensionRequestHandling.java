@@ -22,7 +22,7 @@ import apple.dispatch.*;
 
 
 
-@Library("Foundation") @Mapping("NSExtensionRequestHandling")
+@Library("Foundation/Foundation.h") @Mapping("NSExtensionRequestHandling")
 public interface NSExtensionRequestHandling 
     extends NSObjectProtocol {
 

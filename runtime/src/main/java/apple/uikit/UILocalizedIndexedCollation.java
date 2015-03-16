@@ -24,7 +24,7 @@ import apple.corelocation.*;
  * @since Available in iOS 3.0 and later.
  */
 
-@Library("UIKit") @Mapping("UILocalizedIndexedCollation")
+@Library("UIKit/UIKit.h") @Mapping("UILocalizedIndexedCollation")
 public class UILocalizedIndexedCollation 
     extends NSObject 
      {

@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreFoundation")
+@Library("CoreFoundation/CoreFoundation.h")
 public class CFStringTokenizer 
     extends CFType 
      {
@@ -48,31 +48,31 @@ public class CFStringTokenizer
      * @since Available in iOS 3.0 and later.
      */
     @GlobalFunction("CFStringTokenizerSetString")
-    public native void setString(String string, CFRange range);
+    public static native void setString(CFStringTokenizer tokenizer, String string, CFRange range);
     /**
      * @since Available in iOS 3.0 and later.
      */
     @GlobalFunction("CFStringTokenizerGoToTokenAtIndex")
-    public native CFStringTokenizerTokenType goToToken(@MachineSizedSInt long index);
+    public static native CFStringTokenizerTokenType goToToken(CFStringTokenizer tokenizer, @MachineSizedSInt long index);
     /**
      * @since Available in iOS 3.0 and later.
      */
     @GlobalFunction("CFStringTokenizerAdvanceToNextToken")
-    public native CFStringTokenizerTokenType advanceToNextToken();
+    public static native CFStringTokenizerTokenType advanceToNextToken(CFStringTokenizer tokenizer);
     /**
      * @since Available in iOS 3.0 and later.
      */
     @GlobalFunction("CFStringTokenizerGetCurrentTokenRange")
-    public native CFRange getCurrentTokenRange();
+    public static native CFRange getCurrentTokenRange(CFStringTokenizer tokenizer);
     /**
      * @since Available in iOS 3.0 and later.
      */
     @GlobalFunction("CFStringTokenizerCopyCurrentTokenAttribute")
-    public native CFType getCurrentTokenAttribute(@MachineSizedUInt long attribute);
+    public static native CFType getCurrentTokenAttribute(CFStringTokenizer tokenizer, @MachineSizedUInt long attribute);
     /**
      * @since Available in iOS 3.0 and later.
      */
     @GlobalFunction("CFStringTokenizerGetCurrentSubTokens")
-    protected native @MachineSizedSInt long getCurrentSubTokens(CFRange ranges, @MachineSizedSInt long maxRangeLength, CFArray derivedSubTokens);
+    protected static native @MachineSizedSInt long getCurrentSubTokens(CFStringTokenizer tokenizer, CFRange ranges, @MachineSizedSInt long maxRangeLength, CFArray derivedSubTokens);
     
 }

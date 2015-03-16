@@ -24,7 +24,7 @@ import apple.corelocation.*;
  * @since Available in iOS 7.0 and later.
  */
 
-@Library("UIKit") @Mapping("NSLayoutManager")
+@Library("UIKit/UIKit.h") @Mapping("NSLayoutManager")
 public class NSLayoutManager 
     extends NSObject 
     implements NSCoding {

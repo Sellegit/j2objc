@@ -22,7 +22,7 @@ import apple.corelocation.*;
 
 
 
-@Library("UIKit")
+@Library("UIKit/UIKit.h")
 @Mapping("UITextWritingDirection")
 public final class UITextWritingDirection extends ObjCEnum {
     

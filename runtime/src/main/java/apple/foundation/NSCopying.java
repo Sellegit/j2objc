@@ -22,7 +22,7 @@ import apple.dispatch.*;
 
 
 
-@Library("Foundation") @Mapping("NSCopying")
+@Library("Foundation/Foundation.h") @Mapping("NSCopying")
 public interface NSCopying 
      {
 

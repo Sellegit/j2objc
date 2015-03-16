@@ -16,7 +16,7 @@ import apple.dispatch.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("Security")
+@Library("Security/Security.h")
 public class SSLContext 
     extends CFType 
      {
@@ -42,191 +42,191 @@ public class SSLContext
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("SSLGetSessionState")
-    public native int getSessionState(Todo state);
+    public static native int getSessionState(SSLContext context, Todo state);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("SSLSetSessionOption")
-    public native int setSessionOption(SSLSessionOption option, boolean value);
+    public static native int setSessionOption(SSLContext context, SSLSessionOption option, boolean value);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("SSLGetSessionOption")
-    public native int getSessionOption(SSLSessionOption option, Todo value);
+    public static native int getSessionOption(SSLContext context, SSLSessionOption option, Todo value);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("SSLSetIOFuncs")
-    public native int setIOFuncs(FunctionPtr readFunc, FunctionPtr writeFunc);
+    public static native int setIOFuncs(SSLContext context, FunctionPtr readFunc, FunctionPtr writeFunc);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("SSLSetProtocolVersionMin")
-    public native int setProtocolVersionMin(SSLProtocol minVersion);
+    public static native int setProtocolVersionMin(SSLContext context, SSLProtocol minVersion);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("SSLGetProtocolVersionMin")
-    public native int getProtocolVersionMin(Todo minVersion);
+    public static native int getProtocolVersionMin(SSLContext context, Todo minVersion);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("SSLSetProtocolVersionMax")
-    public native int setProtocolVersionMax(SSLProtocol maxVersion);
+    public static native int setProtocolVersionMax(SSLContext context, SSLProtocol maxVersion);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("SSLGetProtocolVersionMax")
-    public native int getProtocolVersionMax(Todo maxVersion);
+    public static native int getProtocolVersionMax(SSLContext context, Todo maxVersion);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("SSLSetCertificate")
-    public native int setCertificate(CFArray certRefs);
+    public static native int setCertificate(SSLContext context, CFArray certRefs);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("SSLSetConnection")
-    public native int setConnection(Todo connection);
+    public static native int setConnection(SSLContext context, Todo connection);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("SSLGetConnection")
-    public native int getConnection(Todo connection);
+    public static native int getConnection(SSLContext context, Todo connection);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("SSLSetPeerDomainName")
-    public native int setPeerDomainName(Todo peerName, @MachineSizedUInt long peerNameLen);
+    public static native int setPeerDomainName(SSLContext context, Todo peerName, @MachineSizedUInt long peerNameLen);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("SSLGetPeerDomainNameLength")
-    public native int getPeerDomainNameLength(Todo peerNameLen);
+    public static native int getPeerDomainNameLength(SSLContext context, Todo peerNameLen);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("SSLGetPeerDomainName")
-    public native int getPeerDomainName(Todo peerName, Todo peerNameLen);
+    public static native int getPeerDomainName(SSLContext context, Todo peerName, Todo peerNameLen);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("SSLSetDatagramHelloCookie")
-    public native int setDatagramHelloCookie(Todo cookie, @MachineSizedUInt long cookieLen);
+    public static native int setDatagramHelloCookie(SSLContext dtlsContext, Todo cookie, @MachineSizedUInt long cookieLen);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("SSLSetMaxDatagramRecordSize")
-    public native int setMaxDatagramRecordSize(@MachineSizedUInt long maxSize);
+    public static native int setMaxDatagramRecordSize(SSLContext dtlsContext, @MachineSizedUInt long maxSize);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("SSLGetMaxDatagramRecordSize")
-    public native int getMaxDatagramRecordSize(Todo maxSize);
+    public static native int getMaxDatagramRecordSize(SSLContext dtlsContext, Todo maxSize);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("SSLGetNegotiatedProtocolVersion")
-    public native int getNegotiatedProtocolVersion(Todo protocol);
+    public static native int getNegotiatedProtocolVersion(SSLContext context, Todo protocol);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("SSLGetNumberSupportedCiphers")
-    public native int getNumberSupportedCiphers(Todo numCiphers);
+    public static native int getNumberSupportedCiphers(SSLContext context, Todo numCiphers);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("SSLGetSupportedCiphers")
-    public native int getSupportedCiphers(Todo ciphers, Todo numCiphers);
+    public static native int getSupportedCiphers(SSLContext context, Todo ciphers, Todo numCiphers);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("SSLSetEnabledCiphers")
-    public native int setEnabledCiphers(Todo ciphers, @MachineSizedUInt long numCiphers);
+    public static native int setEnabledCiphers(SSLContext context, Todo ciphers, @MachineSizedUInt long numCiphers);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("SSLGetNumberEnabledCiphers")
-    public native int getNumberEnabledCiphers(Todo numCiphers);
+    public static native int getNumberEnabledCiphers(SSLContext context, Todo numCiphers);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("SSLGetEnabledCiphers")
-    public native int getEnabledCiphers(Todo ciphers, Todo numCiphers);
+    public static native int getEnabledCiphers(SSLContext context, Todo ciphers, Todo numCiphers);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("SSLCopyPeerTrust")
-    public native int copyPeerTrust(Todo trust);
+    public static native int copyPeerTrust(SSLContext context, Todo trust);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("SSLSetPeerID")
-    public native int setPeerID(Todo peerID, @MachineSizedUInt long peerIDLen);
+    public static native int setPeerID(SSLContext context, Todo peerID, @MachineSizedUInt long peerIDLen);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("SSLGetPeerID")
-    public native int getPeerID(Todo peerID, Todo peerIDLen);
+    public static native int getPeerID(SSLContext context, Todo peerID, Todo peerIDLen);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("SSLGetNegotiatedCipher")
-    public native int getNegotiatedCipher(Todo cipherSuite);
+    public static native int getNegotiatedCipher(SSLContext context, Todo cipherSuite);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("SSLSetEncryptionCertificate")
-    public native int setEncryptionCertificate(CFArray certRefs);
+    public static native int setEncryptionCertificate(SSLContext context, CFArray certRefs);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("SSLSetClientSideAuthenticate")
-    public native int setClientSideAuthenticate(SSLAuthenticate auth);
+    public static native int setClientSideAuthenticate(SSLContext context, SSLAuthenticate auth);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("SSLAddDistinguishedName")
-    public native int addDistinguishedName(Todo derDN, @MachineSizedUInt long derDNLen);
+    public static native int addDistinguishedName(SSLContext context, Todo derDN, @MachineSizedUInt long derDNLen);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("SSLCopyDistinguishedNames")
-    public native int copyDistinguishedNames(Todo names);
+    public static native int copyDistinguishedNames(SSLContext context, Todo names);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("SSLGetClientCertificateState")
-    public native int getClientCertificateState(Todo clientState);
+    public static native int getClientCertificateState(SSLContext context, Todo clientState);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("SSLHandshake")
-    public native int handshake();
+    public static native int handshake(SSLContext context);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("SSLWrite")
-    public native int write(Todo data, @MachineSizedUInt long dataLength, Todo processed);
+    public static native int write(SSLContext context, Todo data, @MachineSizedUInt long dataLength, Todo processed);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("SSLRead")
-    public native int read(Todo data, @MachineSizedUInt long dataLength, Todo processed);
+    public static native int read(SSLContext context, Todo data, @MachineSizedUInt long dataLength, Todo processed);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("SSLGetBufferedReadSize")
-    public native int getBufferedReadSize(Todo bufSize);
+    public static native int getBufferedReadSize(SSLContext context, Todo bufSize);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("SSLGetDatagramWriteSize")
-    public native int getDatagramWriteSize(Todo bufSize);
+    public static native int getDatagramWriteSize(SSLContext dtlsContext, Todo bufSize);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("SSLClose")
-    public native int closeContext();
+    public static native int closeContext(SSLContext context);
     
 }

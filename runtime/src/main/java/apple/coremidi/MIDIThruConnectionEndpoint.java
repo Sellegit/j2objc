@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 
 
-@Mapping("MIDIThruConnectionEndpoint")
+@Mapping("MIDIThruConnectionEndpoint") @Library("CoreMIDI/CoreMIDI.h")
 public class MIDIThruConnectionEndpoint 
     extends Struct 
      {

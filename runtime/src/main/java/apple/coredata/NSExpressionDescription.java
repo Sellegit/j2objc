@@ -19,7 +19,7 @@ import apple.foundation.*;
  * @since Available in iOS 3.0 and later.
  */
 
-@Library("CoreData") @Mapping("NSExpressionDescription")
+@Library("CoreData/CoreData.h") @Mapping("NSExpressionDescription")
 public class NSExpressionDescription 
     extends NSPropertyDescription 
      {

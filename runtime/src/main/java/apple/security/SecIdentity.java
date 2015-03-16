@@ -16,7 +16,7 @@ import apple.dispatch.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("Security")
+@Library("Security/Security.h")
 public class SecIdentity 
     extends CFType 
      {
@@ -37,11 +37,11 @@ public class SecIdentity
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("SecIdentityCopyCertificate")
-    public native int copyCertificate(Todo certificateRef);
+    public static native int copyCertificate(SecIdentity identityRef, Todo certificateRef);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("SecIdentityCopyPrivateKey")
-    public native int copyPrivateKey(Todo privateKeyRef);
+    public static native int copyPrivateKey(SecIdentity identityRef, Todo privateKeyRef);
     
 }

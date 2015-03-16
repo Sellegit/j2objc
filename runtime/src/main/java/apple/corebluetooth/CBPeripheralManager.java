@@ -20,7 +20,7 @@ import apple.dispatch.*;
  * @since Available in iOS 6.0 and later.
  */
 
-@Library("CoreBluetooth") @Mapping("CBPeripheralManager")
+@Library("CoreBluetooth/CoreBluetooth.h") @Mapping("CBPeripheralManager")
 public class CBPeripheralManager 
     extends NSObject 
      {

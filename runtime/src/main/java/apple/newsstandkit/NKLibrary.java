@@ -19,7 +19,7 @@ import apple.foundation.*;
  * @since Available in iOS 5.0 and later.
  */
 
-@Library("NewsstandKit") @Mapping("NKLibrary")
+@Library("NewsstandKit/NewsstandKit.h") @Mapping("NKLibrary")
 public class NKLibrary 
     extends NSObject 
      {

@@ -25,7 +25,7 @@ import apple.mediatoolbox.*;
  * @since Available in iOS 4.0 and later.
  */
 
-@Library("AVFoundation") @Mapping("AVMetadataItem")
+@Library("AVFoundation/AVFoundation.h") @Mapping("AVMetadataItem")
 public class AVMetadataItem 
     extends NSObject 
     implements AVAsynchronousKeyValueLoading, NSCopying {

@@ -25,7 +25,7 @@ import apple.mediatoolbox.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("AVFoundation") @Mapping("AVAudioEnvironmentNode")
+@Library("AVFoundation/AVFoundation.h") @Mapping("AVAudioEnvironmentNode")
 public class AVAudioEnvironmentNode 
     extends AVAudioNode 
     implements AVAudioMixing {

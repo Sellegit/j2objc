@@ -20,7 +20,7 @@ import apple.uikit.*;
  * @since Available in iOS 4.0 and later.
  */
 
-@Library("QuickLook") @Mapping("QLPreviewController")
+@Library("QuickLook/QuickLook.h") @Mapping("QLPreviewController")
 public class QLPreviewController 
     extends UIViewController 
      {

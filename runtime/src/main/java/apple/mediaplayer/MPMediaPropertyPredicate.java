@@ -20,7 +20,7 @@ import apple.uikit.*;
  * @since Available in iOS 3.0 and later.
  */
 
-@Library("MediaPlayer") @Mapping("MPMediaPropertyPredicate")
+@Library("MediaPlayer/MediaPlayer.h") @Mapping("MPMediaPropertyPredicate")
 public class MPMediaPropertyPredicate 
     extends MPMediaPredicate 
      {

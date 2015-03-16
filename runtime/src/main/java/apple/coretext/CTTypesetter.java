@@ -16,7 +16,7 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreText")
+@Library("CoreText/CoreText.h")
 public class CTTypesetter 
     extends CFType 
      {
@@ -47,31 +47,31 @@ public class CTTypesetter
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTTypesetterCreateLineWithOffset")
-    public native CTLine createLine(CFRange stringRange, double offset);
+    public static native CTLine createLine(CTTypesetter typesetter, CFRange stringRange, double offset);
     /**
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTTypesetterCreateLine")
-    public native CTLine createLine(CFRange stringRange);
+    public static native CTLine createLine(CTTypesetter typesetter, CFRange stringRange);
     /**
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTTypesetterSuggestLineBreakWithOffset")
-    public native @MachineSizedSInt long suggestLineBreak(@MachineSizedSInt long startIndex, double width, double offset);
+    public static native @MachineSizedSInt long suggestLineBreak(CTTypesetter typesetter, @MachineSizedSInt long startIndex, double width, double offset);
     /**
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTTypesetterSuggestLineBreak")
-    public native @MachineSizedSInt long suggestLineBreak(@MachineSizedSInt long startIndex, double width);
+    public static native @MachineSizedSInt long suggestLineBreak(CTTypesetter typesetter, @MachineSizedSInt long startIndex, double width);
     /**
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTTypesetterSuggestClusterBreakWithOffset")
-    public native @MachineSizedSInt long suggestClusterBreak(@MachineSizedSInt long startIndex, double width, double offset);
+    public static native @MachineSizedSInt long suggestClusterBreak(CTTypesetter typesetter, @MachineSizedSInt long startIndex, double width, double offset);
     /**
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTTypesetterSuggestClusterBreak")
-    public native @MachineSizedSInt long suggestClusterBreak(@MachineSizedSInt long startIndex, double width);
+    public static native @MachineSizedSInt long suggestClusterBreak(CTTypesetter typesetter, @MachineSizedSInt long startIndex, double width);
     
 }

@@ -24,7 +24,7 @@ import apple.corelocation.*;
  * @since Available in iOS 3.0 and later.
  */
 
-@Library("UIKit") @Mapping("UIAccessibilityElement")
+@Library("UIKit/UIKit.h") @Mapping("UIAccessibilityElement")
 public class UIAccessibilityElement 
     extends NSObject 
     implements UIAccessibilityIdentification {

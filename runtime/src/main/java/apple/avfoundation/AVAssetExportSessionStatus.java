@@ -23,7 +23,7 @@ import apple.mediatoolbox.*;
 
 
 
-@Library("AVFoundation")
+@Library("AVFoundation/AVFoundation.h")
 @Mapping("AVAssetExportSessionStatus")
 public final class AVAssetExportSessionStatus extends ObjCEnum {
     

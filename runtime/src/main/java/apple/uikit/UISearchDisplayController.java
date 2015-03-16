@@ -26,7 +26,7 @@ import apple.corelocation.*;
  */
 @Deprecated
 
-@Library("UIKit") @Mapping("UISearchDisplayController")
+@Library("UIKit/UIKit.h") @Mapping("UISearchDisplayController")
 public class UISearchDisplayController 
     extends NSObject 
      {

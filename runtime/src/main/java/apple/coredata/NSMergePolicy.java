@@ -19,7 +19,7 @@ import apple.foundation.*;
  * @since Available in iOS 5.0 and later.
  */
 
-@Library("CoreData") @Mapping("NSMergePolicy")
+@Library("CoreData/CoreData.h") @Mapping("NSMergePolicy")
 public class NSMergePolicy 
     extends NSObject 
      {

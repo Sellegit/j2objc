@@ -18,7 +18,7 @@ import apple.security.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("MultipeerConnectivity")
+@Library("MultipeerConnectivity/MultipeerConnectivity.h")
 public class MCError 
     extends Todo 
      {

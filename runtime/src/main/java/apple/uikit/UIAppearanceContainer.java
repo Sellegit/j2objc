@@ -22,7 +22,7 @@ import apple.corelocation.*;
 
 
 
-@Library("UIKit") @Mapping("UIAppearanceContainer")
+@Library("UIKit/UIKit.h") @Mapping("UIAppearanceContainer")
 public interface UIAppearanceContainer 
     extends NSObjectProtocol {
 

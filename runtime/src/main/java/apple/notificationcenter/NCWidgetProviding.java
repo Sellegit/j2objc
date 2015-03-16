@@ -18,7 +18,7 @@ import apple.uikit.*;
 
 
 
-@Library("NotificationCenter") @Mapping("NCWidgetProviding")
+@Library("NotificationCenter/NotificationCenter.h") @Mapping("NCWidgetProviding")
 public interface NCWidgetProviding 
     extends NSObjectProtocol {
 

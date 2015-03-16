@@ -24,7 +24,7 @@ import apple.corelocation.*;
  * @since Available in iOS 4.2 and later.
  */
 
-@Library("UIKit") @Mapping("UIMarkupTextPrintFormatter")
+@Library("UIKit/UIKit.h") @Mapping("UIMarkupTextPrintFormatter")
 public class UIMarkupTextPrintFormatter 
     extends UIPrintFormatter 
      {

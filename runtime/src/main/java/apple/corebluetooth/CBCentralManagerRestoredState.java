@@ -17,7 +17,7 @@ import apple.dispatch.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreBluetooth")
+@Library("CoreBluetooth/CoreBluetooth.h")
 public class CBCentralManagerRestoredState 
     extends Object 
      {

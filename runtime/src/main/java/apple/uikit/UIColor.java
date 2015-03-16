@@ -24,7 +24,7 @@ import apple.corelocation.*;
  * @since Available in iOS 2.0 and later.
  */
 
-@Library("UIKit") @Mapping("UIColor")
+@Library("UIKit/UIKit.h") @Mapping("UIColor")
 public class UIColor 
     extends NSObject 
     implements NSCopying {

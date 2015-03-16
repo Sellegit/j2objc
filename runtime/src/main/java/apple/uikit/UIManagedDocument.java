@@ -24,7 +24,7 @@ import apple.corelocation.*;
  * @since Available in iOS 5.0 and later.
  */
 
-@Library("UIKit") @Mapping("UIManagedDocument")
+@Library("UIKit/UIKit.h") @Mapping("UIManagedDocument")
 public class UIManagedDocument 
     extends UIDocument 
      {

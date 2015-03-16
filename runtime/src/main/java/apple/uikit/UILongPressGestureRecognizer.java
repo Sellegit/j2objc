@@ -24,7 +24,7 @@ import apple.corelocation.*;
  * @since Available in iOS 3.2 and later.
  */
 
-@Library("UIKit") @Mapping("UILongPressGestureRecognizer")
+@Library("UIKit/UIKit.h") @Mapping("UILongPressGestureRecognizer")
 public class UILongPressGestureRecognizer 
     extends UIGestureRecognizer 
      {

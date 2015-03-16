@@ -19,7 +19,7 @@ import apple.dispatch.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("GLKit")
+@Library("GLKit/GLKit.h")
 public class GLKTextureLoaderOptions 
     extends NSDictionaryWrapper
      {

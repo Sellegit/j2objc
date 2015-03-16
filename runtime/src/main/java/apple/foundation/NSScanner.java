@@ -22,7 +22,7 @@ import apple.dispatch.*;
 
 
 
-@Library("Foundation") @Mapping("NSScanner")
+@Library("Foundation/Foundation.h") @Mapping("NSScanner")
 public class NSScanner 
     extends NSObject 
     implements NSCopying {

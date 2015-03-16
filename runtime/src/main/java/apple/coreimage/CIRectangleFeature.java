@@ -20,7 +20,7 @@ import apple.imageio.*;
 
 
 
-@Library("CoreImage") @Mapping("CIRectangleFeature")
+@Library("CoreImage/CoreImage.h") @Mapping("CIRectangleFeature")
 public class CIRectangleFeature 
     extends CIFeature 
      {

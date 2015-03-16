@@ -19,7 +19,7 @@ import apple.foundation.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("LocalAuthentication") @Mapping("LAContext")
+@Library("LocalAuthentication/LocalAuthentication.h") @Mapping("LAContext")
 public class LAContext 
     extends NSObject 
      {

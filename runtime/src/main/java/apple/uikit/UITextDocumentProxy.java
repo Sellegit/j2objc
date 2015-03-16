@@ -22,7 +22,7 @@ import apple.corelocation.*;
 
 
 
-@Library("UIKit") @Mapping("UITextDocumentProxy")
+@Library("UIKit/UIKit.h") @Mapping("UITextDocumentProxy")
 public interface UITextDocumentProxy 
     extends UIKeyInput {
 

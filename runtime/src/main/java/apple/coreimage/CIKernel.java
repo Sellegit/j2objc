@@ -20,7 +20,7 @@ import apple.imageio.*;
 
 
 
-@Library("CoreImage") @Mapping("CIKernel")
+@Library("CoreImage/CoreImage.h") @Mapping("CIKernel")
 public class CIKernel 
     extends NSObject 
      {

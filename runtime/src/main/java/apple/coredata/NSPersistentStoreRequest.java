@@ -19,7 +19,7 @@ import apple.foundation.*;
  * @since Available in iOS 5.0 and later.
  */
 
-@Library("CoreData") @Mapping("NSPersistentStoreRequest")
+@Library("CoreData/CoreData.h") @Mapping("NSPersistentStoreRequest")
 public class NSPersistentStoreRequest 
     extends NSObject 
     implements NSCopying {

@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 
 
-@Mapping("MIDIThruConnectionParams") @Library("CoreMIDI")
+@Mapping("MIDIThruConnectionParams") @Library("CoreMIDI/CoreMIDI.h")
 public class MIDIThruConnectionParams 
     extends Struct 
      {
@@ -235,6 +235,6 @@ public class MIDIThruConnectionParams
      * @since Available in iOS 4.2 and later.
      */
     @GlobalFunction("MIDIThruConnectionParamsInitialize")
-    public native void initialize();
+    public static native void initialize(MIDIThruConnectionParams inConnectionParams);
     
 }

@@ -22,7 +22,7 @@ import apple.dispatch.*;
  * @since Available in iOS 5.0 and later.
  */
 
-@Library("GLKit") @Mapping("GLKTextureLoader")
+@Library("GLKit/GLKit.h") @Mapping("GLKTextureLoader")
 public class GLKTextureLoader 
     extends NSObject 
      {

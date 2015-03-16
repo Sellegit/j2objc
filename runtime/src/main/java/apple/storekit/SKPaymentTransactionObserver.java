@@ -19,7 +19,7 @@ import apple.accounts.*;
 
 
 
-@Library("StoreKit") @Mapping("SKPaymentTransactionObserver")
+@Library("StoreKit/StoreKit.h") @Mapping("SKPaymentTransactionObserver")
 public interface SKPaymentTransactionObserver 
     extends NSObjectProtocol {
 

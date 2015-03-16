@@ -24,7 +24,7 @@ import apple.corelocation.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("UIKit") @Mapping("UILexiconEntry")
+@Library("UIKit/UIKit.h") @Mapping("UILexiconEntry")
 public class UILexiconEntry 
     extends NSObject 
     implements NSCopying {

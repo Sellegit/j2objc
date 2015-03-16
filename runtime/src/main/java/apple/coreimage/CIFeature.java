@@ -20,7 +20,7 @@ import apple.imageio.*;
 
 
 
-@Library("CoreImage") @Mapping("CIFeature")
+@Library("CoreImage/CoreImage.h") @Mapping("CIFeature")
 public class CIFeature 
     extends NSObject 
      {

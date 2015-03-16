@@ -20,7 +20,7 @@ import apple.dispatch.*;
  * @since Available in iOS 6.0 and later.
  */
 
-@Library("CoreBluetooth")
+@Library("CoreBluetooth/CoreBluetooth.h")
 @Mapping("CBPeripheralManagerConnectionLatency")
 public final class CBPeripheralManagerConnectionLatency extends ObjCEnum {
     

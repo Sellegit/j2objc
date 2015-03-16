@@ -19,7 +19,7 @@ import apple.foundation.*;
  * @since Available in iOS 3.0 and later.
  */
 
-@Library("CoreData") @Mapping("NSMigrationManager")
+@Library("CoreData/CoreData.h") @Mapping("NSMigrationManager")
 public class NSMigrationManager 
     extends NSObject 
      {

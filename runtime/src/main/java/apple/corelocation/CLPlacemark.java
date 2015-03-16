@@ -21,7 +21,7 @@ import apple.corebluetooth.*;
  * @since Available in iOS 5.0 and later.
  */
 
-@Library("CoreLocation") @Mapping("CLPlacemark")
+@Library("CoreLocation/CoreLocation.h") @Mapping("CLPlacemark")
 public class CLPlacemark 
     extends NSObject 
     implements NSCopying {

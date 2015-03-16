@@ -22,7 +22,7 @@ import apple.avfoundation.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("Photos") @Mapping("PHContentEditingOutput")
+@Library("Photos/Photos.h") @Mapping("PHContentEditingOutput")
 public class PHContentEditingOutput 
     extends NSObject 
      {

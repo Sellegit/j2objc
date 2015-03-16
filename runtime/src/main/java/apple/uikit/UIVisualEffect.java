@@ -24,7 +24,7 @@ import apple.corelocation.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("UIKit") @Mapping("UIVisualEffect")
+@Library("UIKit/UIKit.h") @Mapping("UIVisualEffect")
 public class UIVisualEffect 
     extends NSObject 
     implements NSCopying {

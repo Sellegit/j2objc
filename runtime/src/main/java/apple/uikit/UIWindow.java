@@ -24,7 +24,7 @@ import apple.corelocation.*;
  * @since Available in iOS 2.0 and later.
  */
 
-@Library("UIKit") @Mapping("UIWindow")
+@Library("UIKit/UIKit.h") @Mapping("UIWindow")
 public class UIWindow 
     extends UIView 
      {

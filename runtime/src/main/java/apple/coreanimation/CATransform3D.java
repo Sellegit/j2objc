@@ -21,7 +21,7 @@ import apple.metal.*;
 
 
 
-@Mapping("CATransform3D") @Library("QuartzCore")
+@Mapping("CATransform3D") @Library("QuartzCore/QuartzCore.h")
 public class CATransform3D 
     extends Struct 
      {
@@ -173,12 +173,12 @@ public class CATransform3D
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CATransform3DIsIdentity")
-    public native boolean isIdentity();
+    public static native boolean isIdentity(CATransform3D t);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CATransform3DEqualToTransform")
-    public native boolean equalToTransform(CATransform3D b);
+    public static native boolean equalToTransform(CATransform3D a, CATransform3D b);
     /**
      * @since Available in iOS 2.0 and later.
      */
@@ -198,27 +198,27 @@ public class CATransform3D
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CATransform3DTranslate")
-    public native CATransform3D translate(@MachineSizedFloat double tx, @MachineSizedFloat double ty, @MachineSizedFloat double tz);
+    public static native CATransform3D translate(CATransform3D t, @MachineSizedFloat double tx, @MachineSizedFloat double ty, @MachineSizedFloat double tz);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CATransform3DScale")
-    public native CATransform3D scale(@MachineSizedFloat double sx, @MachineSizedFloat double sy, @MachineSizedFloat double sz);
+    public static native CATransform3D scale(CATransform3D t, @MachineSizedFloat double sx, @MachineSizedFloat double sy, @MachineSizedFloat double sz);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CATransform3DRotate")
-    public native CATransform3D rotate(@MachineSizedFloat double angle, @MachineSizedFloat double x, @MachineSizedFloat double y, @MachineSizedFloat double z);
+    public static native CATransform3D rotate(CATransform3D t, @MachineSizedFloat double angle, @MachineSizedFloat double x, @MachineSizedFloat double y, @MachineSizedFloat double z);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CATransform3DConcat")
-    public native CATransform3D concat(CATransform3D b);
+    public static native CATransform3D concat(CATransform3D a, CATransform3D b);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CATransform3DInvert")
-    public native CATransform3D invert();
+    public static native CATransform3D invert(CATransform3D t);
     /**
      * @since Available in iOS 2.0 and later.
      */
@@ -228,11 +228,11 @@ public class CATransform3D
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CATransform3DIsAffine")
-    public native boolean isAffine();
+    public static native boolean isAffine(CATransform3D t);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CATransform3DGetAffineTransform")
-    public native CGAffineTransform getAffineTransform();
+    public static native CGAffineTransform getAffineTransform(CATransform3D t);
     
 }

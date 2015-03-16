@@ -18,7 +18,7 @@ import apple.uikit.*;
 
 
 
-@Library("GameKit") @Mapping("GKVoiceChatClient")
+@Library("GameKit/GameKit.h") @Mapping("GKVoiceChatClient")
 public interface GKVoiceChatClient 
     extends NSObjectProtocol {
 

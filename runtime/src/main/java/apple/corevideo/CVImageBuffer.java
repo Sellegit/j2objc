@@ -19,7 +19,7 @@ import apple.metal.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreVideo")
+@Library("CoreVideo/CoreVideo.h")
 public class CVImageBuffer 
     extends CVBuffer 
      {
@@ -33,21 +33,21 @@ public class CVImageBuffer
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CVImageBufferGetEncodedSize")
-    public native CGSize getEncodedSize();
+    public static native CGSize getEncodedSize(CVImageBuffer imageBuffer);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CVImageBufferGetDisplaySize")
-    public native CGSize getDisplaySize();
+    public static native CGSize getDisplaySize(CVImageBuffer imageBuffer);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CVImageBufferGetCleanRect")
-    public native CGRect getCleanRect();
+    public static native CGRect getCleanRect(CVImageBuffer imageBuffer);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CVImageBufferIsFlipped")
-    public native boolean isFlipped();
+    public static native boolean isFlipped(CVImageBuffer imageBuffer);
     
 }

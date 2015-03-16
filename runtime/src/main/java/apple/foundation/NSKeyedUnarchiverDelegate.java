@@ -22,7 +22,7 @@ import apple.dispatch.*;
 
 
 
-@Library("Foundation") @Mapping("NSKeyedUnarchiverDelegate")
+@Library("Foundation/Foundation.h") @Mapping("NSKeyedUnarchiverDelegate")
 public interface NSKeyedUnarchiverDelegate 
     extends NSObjectProtocol {
 

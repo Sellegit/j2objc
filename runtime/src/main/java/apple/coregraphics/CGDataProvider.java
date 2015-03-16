@@ -17,7 +17,7 @@ import apple.uikit.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreGraphics")
+@Library("CoreGraphics/CoreGraphics.h")
 public class CGDataProvider 
     extends CFType 
      {
@@ -53,6 +53,6 @@ public class CGDataProvider
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGDataProviderCopyData")
-    public native NSData getData();
+    public static native NSData getData(CGDataProvider provider);
     
 }

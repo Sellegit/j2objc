@@ -22,7 +22,7 @@ import apple.uikit.*;
  */
 @Deprecated
 
-@Library("GameKit") @Mapping("GKTurnBasedEventHandlerDelegate")
+@Library("GameKit/GameKit.h") @Mapping("GKTurnBasedEventHandlerDelegate")
 public interface GKTurnBasedEventHandlerDelegate 
      {
 

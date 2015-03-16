@@ -22,7 +22,7 @@ import apple.corelocation.*;
 
 
 
-@Library("UIKit") @Mapping("UITableViewDataSource")
+@Library("UIKit/UIKit.h") @Mapping("UITableViewDataSource")
 public interface UITableViewDataSource 
     extends NSObjectProtocol {
 

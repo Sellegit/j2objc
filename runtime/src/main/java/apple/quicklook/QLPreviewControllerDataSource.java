@@ -18,7 +18,7 @@ import apple.uikit.*;
 
 
 
-@Library("QuickLook") @Mapping("QLPreviewControllerDataSource")
+@Library("QuickLook/QuickLook.h") @Mapping("QLPreviewControllerDataSource")
 public interface QLPreviewControllerDataSource 
      {
 

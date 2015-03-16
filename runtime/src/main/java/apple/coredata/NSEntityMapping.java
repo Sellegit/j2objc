@@ -19,7 +19,7 @@ import apple.foundation.*;
  * @since Available in iOS 3.0 and later.
  */
 
-@Library("CoreData") @Mapping("NSEntityMapping")
+@Library("CoreData/CoreData.h") @Mapping("NSEntityMapping")
 public class NSEntityMapping 
     extends NSObject 
      {

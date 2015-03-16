@@ -22,7 +22,7 @@ import apple.corelocation.*;
 
 
 
-@Library("UIKit")
+@Library("UIKit/UIKit.h")
 @Mapping("UITextAutocapitalizationType")
 public final class UITextAutocapitalizationType extends ObjCEnum {
     

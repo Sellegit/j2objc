@@ -19,7 +19,7 @@ import apple.metal.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreVideo")
+@Library("CoreVideo/CoreVideo.h")
 public class CVOpenGLESTextureCache 
     extends CFType 
      {
@@ -48,6 +48,6 @@ public class CVOpenGLESTextureCache
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("CVOpenGLESTextureCacheFlush")
-    public native void flush(long options);
+    public static native void flush(CVOpenGLESTextureCache textureCache, long options);
     
 }

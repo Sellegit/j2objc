@@ -21,7 +21,7 @@ import apple.metal.*;
 
 
 
-@Library("QuartzCore") @Mapping("CAReplicatorLayer")
+@Library("QuartzCore/QuartzCore.h") @Mapping("CAReplicatorLayer")
 public class CAReplicatorLayer 
     extends CALayer 
      {

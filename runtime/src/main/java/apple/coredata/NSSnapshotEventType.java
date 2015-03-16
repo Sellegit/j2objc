@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 
 
-@Library("CoreData")
+@Library("CoreData/CoreData.h")
 @Mapping("NSSnapshotEventType")
 public final class NSSnapshotEventType extends ObjCEnum {
     

@@ -23,7 +23,7 @@ import apple.avkit.*;
  * @since Available in iOS 7.0 and later.
  */
 
-@Library("iAd")
+@Library("iAd/iAd.h")
 @Mapping("ADInterstitialPresentationPolicy")
 public final class ADInterstitialPresentationPolicy extends ObjCEnum {
     

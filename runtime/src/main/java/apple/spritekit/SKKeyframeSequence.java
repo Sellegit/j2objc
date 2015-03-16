@@ -24,7 +24,7 @@ import apple.scenekit.*;
 
 
 
-@Library("SpriteKit") @Mapping("SKKeyframeSequence")
+@Library("SpriteKit/SpriteKit.h") @Mapping("SKKeyframeSequence")
 public class SKKeyframeSequence 
     extends NSObject 
     implements NSCoding, NSCopying {

@@ -21,7 +21,7 @@ import apple.dispatch.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("Foundation")
+@Library("Foundation/Foundation.h")
 public class NSZone 
     extends Object 
      {
@@ -38,21 +38,21 @@ public class NSZone
     @GlobalFunction("NSCreateZone")
     public static native NSZone create(@MachineSizedUInt long startSize, @MachineSizedUInt long granularity, boolean canFree);
     @GlobalFunction("NSRecycleZone")
-    public native void recycle();
+    public static native void recycle(NSZone zone);
     @GlobalFunction("NSSetZoneName")
-    public native void setName(String name);
+    public static native void setName(NSZone zone, String name);
     @GlobalFunction("NSZoneName")
-    public native String getName();
+    public static native String getName(NSZone zone);
     @GlobalFunction("NSZoneFromPointer")
     public static native NSZone fromPointer(Todo ptr);
     @GlobalFunction("NSZoneMalloc")
-    public native Todo malloc(@MachineSizedUInt long size);
+    public static native Todo malloc(NSZone zone, @MachineSizedUInt long size);
     @GlobalFunction("NSZoneCalloc")
-    public native Todo calloc(@MachineSizedUInt long numElems, @MachineSizedUInt long byteSize);
+    public static native Todo calloc(NSZone zone, @MachineSizedUInt long numElems, @MachineSizedUInt long byteSize);
     @GlobalFunction("NSZoneRealloc")
-    public native Todo realloc(Todo ptr, @MachineSizedUInt long size);
+    public static native Todo realloc(NSZone zone, Todo ptr, @MachineSizedUInt long size);
     @GlobalFunction("NSZoneFree")
-    public native void free(Todo ptr);
+    public static native void free(NSZone zone, Todo ptr);
     @GlobalFunction("NSPageSize")
     public static native @MachineSizedUInt long getPageSize();
     @GlobalFunction("NSLogPageSize")

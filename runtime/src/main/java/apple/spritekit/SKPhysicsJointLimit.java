@@ -24,7 +24,7 @@ import apple.scenekit.*;
 
 
 
-@Library("SpriteKit") @Mapping("SKPhysicsJointLimit")
+@Library("SpriteKit/SpriteKit.h") @Mapping("SKPhysicsJointLimit")
 public class SKPhysicsJointLimit 
     extends SKPhysicsJoint 
      {

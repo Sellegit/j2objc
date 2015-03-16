@@ -22,7 +22,7 @@ import apple.dispatch.*;
  * @since Available in iOS 3.0 and later.
  */
 
-@Library("MapKit") @Mapping("MKMapView")
+@Library("MapKit/MapKit.h") @Mapping("MKMapView")
 public class MKMapView 
     extends UIView 
     implements NSCoding {

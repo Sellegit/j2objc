@@ -21,7 +21,7 @@ import apple.uikit.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("CoreAudioKit") @Mapping("CABTMIDICentralViewController")
+@Library("CoreAudioKit/CoreAudioKit.h") @Mapping("CABTMIDICentralViewController")
 public class CABTMIDICentralViewController 
     extends UIViewController 
      {

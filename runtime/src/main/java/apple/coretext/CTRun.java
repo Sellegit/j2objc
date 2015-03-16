@@ -16,7 +16,7 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreText")
+@Library("CoreText/CoreText.h")
 public class CTRun 
     extends CFType 
      {
@@ -37,61 +37,61 @@ public class CTRun
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTRunGetGlyphCount")
-    public native @MachineSizedSInt long getGlyphCount();
+    public static native @MachineSizedSInt long getGlyphCount(CTRun run);
     /**
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTRunGetAttributes")
-    public native CFDictionary getAttributes();
+    public static native CFDictionary getAttributes(CTRun run);
     /**
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTRunGetStatus")
-    public native CTRunStatus getStatus();
+    public static native CTRunStatus getStatus(CTRun run);
     /**
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTRunGetGlyphs")
-    protected native void getGlyphs(CFRange range, Todo buffer);
+    protected static native void getGlyphs(CTRun run, CFRange range, Todo buffer);
     /**
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTRunGetPositions")
-    protected native void getPositions(CFRange range, CGPoint buffer);
+    protected static native void getPositions(CTRun run, CFRange range, CGPoint buffer);
     /**
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTRunGetAdvances")
-    protected native void getAdvances(CFRange range, CGSize buffer);
+    protected static native void getAdvances(CTRun run, CFRange range, CGSize buffer);
     /**
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTRunGetStringIndices")
-    protected native void getStringIndices(CFRange range, Todo buffer);
+    protected static native void getStringIndices(CTRun run, CFRange range, Todo buffer);
     /**
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTRunGetStringRange")
-    public native CFRange getStringRange();
+    public static native CFRange getStringRange(CTRun run);
     /**
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTRunGetTypographicBounds")
-    protected native double getTypographicBounds(CFRange range, Todo ascent, Todo descent, Todo leading);
+    protected static native double getTypographicBounds(CTRun run, CFRange range, Todo ascent, Todo descent, Todo leading);
     /**
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTRunGetImageBounds")
-    public native CGRect getImageBounds(CGContext context, CFRange range);
+    public static native CGRect getImageBounds(CTRun run, CGContext context, CFRange range);
     /**
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTRunGetTextMatrix")
-    public native CGAffineTransform getTextMatrix();
+    public static native CGAffineTransform getTextMatrix(CTRun run);
     /**
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTRunDraw")
-    public native void draw(CGContext context, CFRange range);
+    public static native void draw(CTRun run, CGContext context, CFRange range);
     
 }

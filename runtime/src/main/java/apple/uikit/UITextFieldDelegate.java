@@ -22,7 +22,7 @@ import apple.corelocation.*;
 
 
 
-@Library("UIKit") @Mapping("UITextFieldDelegate")
+@Library("UIKit/UIKit.h") @Mapping("UITextFieldDelegate")
 public interface UITextFieldDelegate 
     extends NSObjectProtocol {
 

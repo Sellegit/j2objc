@@ -18,7 +18,7 @@ import apple.uikit.*;
 
 
 
-@Library("GameKit") @Mapping("GKInviteEventListener")
+@Library("GameKit/GameKit.h") @Mapping("GKInviteEventListener")
 public interface GKInviteEventListener 
      {
 

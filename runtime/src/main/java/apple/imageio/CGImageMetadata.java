@@ -16,7 +16,7 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("ImageIO")
+@Library("ImageIO/ImageIO.h")
 public class CGImageMetadata 
     extends CFType 
      {
@@ -44,47 +44,47 @@ public class CGImageMetadata
      * @since Available in iOS 7.0 and later.
      */
     @GlobalFunction("CGImageMetadataCopyTags")
-    public native List<CGImageMetadataTag> getTags();
+    public static native List<CGImageMetadataTag> getTags(CGImageMetadata metadata);
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalFunction("CGImageMetadataCopyTagWithPath")
-    public native CGImageMetadataTag getTagAtPath(CGImageMetadataTag parent, String path);
+    public static native CGImageMetadataTag getTagAtPath(CGImageMetadata metadata, CGImageMetadataTag parent, String path);
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalFunction("CGImageMetadataCopyStringValueWithPath")
-    public native String getStringValueAtPath(CGImageMetadataTag parent, String path);
+    public static native String getStringValueAtPath(CGImageMetadata metadata, CGImageMetadataTag parent, String path);
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalFunction("CGImageMetadataRegisterNamespaceForPrefix")
-    protected native boolean registerNamespaceForPrefix(String xmlns, String prefix, Todo err);
+    protected static native boolean registerNamespaceForPrefix(CGImageMetadata metadata, String xmlns, String prefix, Todo err);
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalFunction("CGImageMetadataSetTagWithPath")
-    public native boolean setTagAtPath(CGImageMetadataTag parent, String path, CGImageMetadataTag tag);
+    public static native boolean setTagAtPath(CGImageMetadata metadata, CGImageMetadataTag parent, String path, CGImageMetadataTag tag);
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalFunction("CGImageMetadataSetValueWithPath")
-    public native boolean setValueAtPath(CGImageMetadataTag parent, String path, CFType value);
+    public static native boolean setValueAtPath(CGImageMetadata metadata, CGImageMetadataTag parent, String path, CFType value);
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalFunction("CGImageMetadataRemoveTagWithPath")
-    public native boolean removeTagAtPath(CGImageMetadataTag parent, String path);
+    public static native boolean removeTagAtPath(CGImageMetadata metadata, CGImageMetadataTag parent, String path);
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalFunction("CGImageMetadataEnumerateTagsUsingBlock")
-    public native void enumerateTags(String rootPath, NSDictionary<?, ?> options, FunctionPtr block);
+    public static native void enumerateTags(CGImageMetadata metadata, String rootPath, NSDictionary<?, ?> options, FunctionPtr block);
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalFunction("CGImageMetadataCreateXMPData")
-    public native NSData createXMPData(NSDictionary<?, ?> options);
+    public static native NSData createXMPData(CGImageMetadata metadata, NSDictionary<?, ?> options);
     /**
      * @since Available in iOS 7.0 and later.
      */

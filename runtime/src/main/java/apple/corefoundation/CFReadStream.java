@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreFoundation")
+@Library("CoreFoundation/CoreFoundation.h")
 public class CFReadStream 
     extends CFType 
      {
@@ -36,43 +36,43 @@ public class CFReadStream
     @GlobalFunction("CFReadStreamCreateWithFile")
     protected static native CFReadStream create(CFAllocator alloc, CFURL fileURL);
     @GlobalFunction("CFReadStreamGetStatus")
-    public native CFStreamStatus getStatus();
+    public static native CFStreamStatus getStatus(CFReadStream stream);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFReadStreamCopyError")
-    public native CFError getError();
+    public static native CFError getError(CFReadStream stream);
     @GlobalFunction("CFReadStreamOpen")
-    public native boolean openStream();
+    public static native boolean openStream(CFReadStream stream);
     @GlobalFunction("CFReadStreamClose")
-    public native void closeStream();
+    public static native void closeStream(CFReadStream stream);
     @GlobalFunction("CFReadStreamHasBytesAvailable")
-    public native boolean hasBytesAvailable();
+    public static native boolean hasBytesAvailable(CFReadStream stream);
     @GlobalFunction("CFReadStreamRead")
-    private native @MachineSizedSInt long read(Todo buffer, @MachineSizedSInt long bufferLength);
+    private static native @MachineSizedSInt long read(CFReadStream stream, Todo buffer, @MachineSizedSInt long bufferLength);
     @GlobalFunction("CFReadStreamGetBuffer")
-    private native Todo getBuffer(@MachineSizedSInt long maxBytesToRead, Todo numBytesRead);
+    private static native Todo getBuffer(CFReadStream stream, @MachineSizedSInt long maxBytesToRead, Todo numBytesRead);
     @GlobalFunction("CFReadStreamCopyProperty")
-    public native CFType getProperty(String propertyName);
+    public static native CFType getProperty(CFReadStream stream, String propertyName);
     @GlobalFunction("CFReadStreamSetProperty")
-    public native boolean setProperty(String propertyName, CFType propertyValue);
+    public static native boolean setProperty(CFReadStream stream, String propertyName, CFType propertyValue);
     @GlobalFunction("CFReadStreamSetClient")
-    private native boolean setClient(@MachineSizedUInt long streamEvents, FunctionPtr clientCB, CFStreamClientContext clientContext);
+    private static native boolean setClient(CFReadStream stream, @MachineSizedUInt long streamEvents, FunctionPtr clientCB, CFStreamClientContext clientContext);
     @GlobalFunction("CFReadStreamScheduleWithRunLoop")
-    public native void scheduleInRunLoop(CFRunLoop runLoop, String runLoopMode);
+    public static native void scheduleInRunLoop(CFReadStream stream, CFRunLoop runLoop, String runLoopMode);
     @GlobalFunction("CFReadStreamUnscheduleFromRunLoop")
-    public native void unscheduleFromRunLoop(CFRunLoop runLoop, String runLoopMode);
+    public static native void unscheduleFromRunLoop(CFReadStream stream, CFRunLoop runLoop, String runLoopMode);
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalFunction("CFReadStreamSetDispatchQueue")
-    public native void setDispatchQueue(DispatchQueue q);
+    public static native void setDispatchQueue(CFReadStream stream, DispatchQueue q);
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalFunction("CFReadStreamCopyDispatchQueue")
-    public native DispatchQueue getDispatchQueue();
+    public static native DispatchQueue getDispatchQueue(CFReadStream stream);
     @GlobalFunction("CFReadStreamGetError")
-    public native CFStreamError getStreamError();
+    public static native CFStreamError getStreamError(CFReadStream stream);
     
 }

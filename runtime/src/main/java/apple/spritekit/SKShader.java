@@ -26,7 +26,7 @@ import apple.scenekit.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("SpriteKit") @Mapping("SKShader")
+@Library("SpriteKit/SpriteKit.h") @Mapping("SKShader")
 public class SKShader 
     extends NSObject 
     implements NSCopying, NSCoding {

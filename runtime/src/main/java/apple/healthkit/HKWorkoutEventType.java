@@ -19,7 +19,7 @@ import apple.foundation.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("HealthKit")
+@Library("HealthKit/HealthKit.h")
 @Mapping("HKWorkoutEventType")
 public final class HKWorkoutEventType extends ObjCEnum {
     

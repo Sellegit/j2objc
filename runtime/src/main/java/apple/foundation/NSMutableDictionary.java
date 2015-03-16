@@ -22,7 +22,7 @@ import apple.dispatch.*;
 
 
 
-@Library("Foundation") @Mapping("NSMutableDictionary")
+@Library("Foundation/Foundation.h") @Mapping("NSMutableDictionary")
 public class NSMutableDictionary <K, V>
     extends NSDictionary 
      {

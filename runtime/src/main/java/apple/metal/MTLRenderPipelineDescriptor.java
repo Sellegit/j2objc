@@ -20,7 +20,7 @@ import apple.dispatch.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("Metal") @Mapping("MTLRenderPipelineDescriptor")
+@Library("Metal/Metal.h") @Mapping("MTLRenderPipelineDescriptor")
 public class MTLRenderPipelineDescriptor 
     extends NSObject 
     implements NSCopying {

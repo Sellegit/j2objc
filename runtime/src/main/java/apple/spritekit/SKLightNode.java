@@ -26,7 +26,7 @@ import apple.scenekit.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("SpriteKit") @Mapping("SKLightNode")
+@Library("SpriteKit/SpriteKit.h") @Mapping("SKLightNode")
 public class SKLightNode 
     extends SKNode 
      {

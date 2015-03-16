@@ -20,7 +20,7 @@ import apple.uikit.*;
  * @since Available in iOS 7.1 and later.
  */
 
-@Library("MediaPlayer")
+@Library("MediaPlayer/MediaPlayer.h")
 @Mapping("MPRemoteCommandHandlerStatus")
 public final class MPRemoteCommandHandlerStatus extends ObjCEnum {
     

@@ -20,7 +20,7 @@ import apple.coremedia.*;
 
 
 
-@Mapping("CAFChunkHeader")
+@Mapping("CAFChunkHeader") @Library("AudioToolbox/AudioToolbox.h")
 public class CAFChunkHeader 
     extends Struct 
      {
@@ -39,14 +39,14 @@ public class CAFChunkHeader
         return __new;
     ]-*/;
     public static native CAFChunkHeader copyWithmChunkType(CAFChunkHeader original, int mChunkType) /*-[
-        original.mChunkType = mChunkType;
-        return original;
+        CAFChunkHeader __new = { .mChunkType = mChunkType, .mChunkSize = original.mChunkSize };
+        return __new;
     ]-*/;
 
     
     public static native CAFChunkHeader copyWithmChunkSize(CAFChunkHeader original, long mChunkSize) /*-[
-        original.mChunkSize = mChunkSize;
-        return original;
+        CAFChunkHeader __new = { .mChunkType = original.mChunkType, .mChunkSize = mChunkSize };
+        return __new;
     ]-*/;
 
     

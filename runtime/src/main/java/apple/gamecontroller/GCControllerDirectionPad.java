@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 
 
-@Library("GameController") @Mapping("GCControllerDirectionPad")
+@Library("GameController/GameController.h") @Mapping("GCControllerDirectionPad")
 public class GCControllerDirectionPad 
     extends GCControllerElement 
      {

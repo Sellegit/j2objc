@@ -19,7 +19,7 @@ import apple.foundation.*;
  * @since Available in iOS 7.0 and later.
  */
 
-@Library("CoreMotion") @Mapping("CMMotionActivity")
+@Library("CoreMotion/CoreMotion.h") @Mapping("CMMotionActivity")
 public class CMMotionActivity 
     extends CMLogItem 
      {

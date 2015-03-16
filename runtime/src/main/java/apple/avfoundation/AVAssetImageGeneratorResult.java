@@ -23,7 +23,7 @@ import apple.mediatoolbox.*;
 
 
 
-@Library("AVFoundation")
+@Library("AVFoundation/AVFoundation.h")
 @Mapping("AVAssetImageGeneratorResult")
 public final class AVAssetImageGeneratorResult extends ObjCEnum {
     

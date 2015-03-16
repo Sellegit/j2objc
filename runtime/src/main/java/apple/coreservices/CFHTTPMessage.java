@@ -16,7 +16,7 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CFNetwork")
+@Library("CFNetwork/CFNetwork.h")
 public class CFHTTPMessage 
     extends CFType 
      {
@@ -73,86 +73,86 @@ public class CFHTTPMessage
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFHTTPMessageIsRequest")
-    public native boolean isRequest();
+    public static native boolean isRequest(CFHTTPMessage message);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFHTTPMessageCopyVersion")
-    public native CFHTTPVersion getVersion();
+    public static native CFHTTPVersion getVersion(CFHTTPMessage message);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFHTTPMessageCopyBody")
-    public native NSData getBody();
+    public static native NSData getBody(CFHTTPMessage message);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFHTTPMessageSetBody")
-    public native void setBody(NSData bodyData);
+    public static native void setBody(CFHTTPMessage message, NSData bodyData);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFHTTPMessageCopyHeaderFieldValue")
-    public native String getHeaderFieldValue(String headerField);
+    public static native String getHeaderFieldValue(CFHTTPMessage message, String headerField);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFHTTPMessageCopyAllHeaderFields")
-    public native NSDictionary<NSString, NSString> getAllHeaderFields();
+    public static native NSDictionary<NSString, NSString> getAllHeaderFields(CFHTTPMessage message);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFHTTPMessageSetHeaderFieldValue")
-    public native void setHeaderFieldValue(String headerField, String value);
+    public static native void setHeaderFieldValue(CFHTTPMessage message, String headerField, String value);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFHTTPMessageAppendBytes")
-    protected native boolean appendBytes(Todo newBytes, @MachineSizedSInt long numBytes);
+    protected static native boolean appendBytes(CFHTTPMessage message, Todo newBytes, @MachineSizedSInt long numBytes);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFHTTPMessageIsHeaderComplete")
-    public native boolean isHeaderComplete();
+    public static native boolean isHeaderComplete(CFHTTPMessage message);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFHTTPMessageCopySerializedMessage")
-    public native NSData getSerializedMessage();
+    public static native NSData getSerializedMessage(CFHTTPMessage message);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFHTTPMessageCopyRequestURL")
-    public native NSURL getRequestURL();
+    public static native NSURL getRequestURL(CFHTTPMessage request);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFHTTPMessageCopyRequestMethod")
-    public native String getRequestMethod();
+    public static native String getRequestMethod(CFHTTPMessage request);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFHTTPMessageAddAuthentication")
-    public native boolean addAuthentication(CFHTTPMessage authenticationFailureResponse, String username, String password, String authenticationScheme, boolean forProxy);
+    public static native boolean addAuthentication(CFHTTPMessage request, CFHTTPMessage authenticationFailureResponse, String username, String password, String authenticationScheme, boolean forProxy);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFHTTPMessageGetResponseStatusCode")
-    public native @MachineSizedSInt long getResponseStatusCode();
+    public static native @MachineSizedSInt long getResponseStatusCode(CFHTTPMessage response);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFHTTPMessageCopyResponseStatusLine")
-    public native String getResponseStatusLine();
+    public static native String getResponseStatusLine(CFHTTPMessage response);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFHTTPMessageApplyCredentials")
-    protected native boolean applyCredentials(CFHTTPAuthentication auth, String username, String password, Todo error);
+    protected static native boolean applyCredentials(CFHTTPMessage request, CFHTTPAuthentication auth, String username, String password, Todo error);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFHTTPMessageApplyCredentialDictionary")
-    protected native boolean applyCredentialDictionary(CFHTTPAuthentication auth, CFDictionary dict, Todo error);
+    protected static native boolean applyCredentialDictionary(CFHTTPMessage request, CFHTTPAuthentication auth, CFDictionary dict, Todo error);
     
 }

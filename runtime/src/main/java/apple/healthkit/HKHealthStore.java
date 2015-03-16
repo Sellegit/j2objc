@@ -19,7 +19,7 @@ import apple.foundation.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("HealthKit") @Mapping("HKHealthStore")
+@Library("HealthKit/HealthKit.h") @Mapping("HKHealthStore")
 public class HKHealthStore 
     extends NSObject 
      {
@@ -63,5 +63,10 @@ public class HKHealthStore
     public native void disableBackgroundDeliveryForType(HKObjectType type, @Block VoidBlock2<Boolean, NSError> completion);
     @Mapping("disableAllBackgroundDeliveryWithCompletion:")
     public native void disableAllBackgroundDelivery(@Block VoidBlock2<Boolean, NSError> completion);
+    /**
+     * @since Available in iOS 8.2 and later.
+     */
+    @Mapping("preferredUnitsForQuantityTypes:completion:")
+    public native void preferredUnitsForQuantityTypes$completion$(NSSet<?> quantityTypes, Todo completion);
     
 }

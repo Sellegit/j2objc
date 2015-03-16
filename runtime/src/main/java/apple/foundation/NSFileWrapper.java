@@ -24,7 +24,7 @@ import apple.dispatch.*;
  * @since Available in iOS 4.0 and later.
  */
 
-@Library("Foundation") @Mapping("NSFileWrapper")
+@Library("Foundation/Foundation.h") @Mapping("NSFileWrapper")
 public class NSFileWrapper 
     extends NSObject 
     implements NSCoding {

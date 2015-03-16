@@ -109,7 +109,11 @@ public class ObjectiveCHeaderGenerator extends ObjectiveCSourceFileGenerator {
   public void generate(TypeDeclaration node) {
     ITypeBinding binding = node.getTypeBinding();
     if (BindingUtil.extractMappingName(binding) != null) {
-      // this is a stub type that proxies some native type. don't generate
+      // this is a stub type that proxies some native type. don't generate anything
+      //   other than static functions
+      printFunctions(node.getBodyDeclarations());
+      return;
+    } else if (BindingUtil.isAdapter(binding)) {
       return;
     }
 
@@ -449,15 +453,12 @@ public class ObjectiveCHeaderGenerator extends ObjectiveCSourceFileGenerator {
 
     // Print collected includes.
     Set<Import> superTypes = collector.getSuperTypes();
-    if (!superTypes.isEmpty()) {
-      Set<String> includeStmts = Sets.newTreeSet();
-      for (Import imp : superTypes) {
-//        includeStmts.add(String.format("#include \"%s.h\"", imp.getImportFileName()));
-        includeStmts.add(imp.getIncludeStatement());
-      }
-      for (String stmt : includeStmts) {
-        println(stmt);
-      }
+    Set<String> includeStmts = Sets.newTreeSet();
+    for (Import imp : superTypes) {
+      includeStmts.add(imp.getIncludeStatement());
+    }
+    for (String stmt : includeStmts) {
+      println(stmt);
     }
   }
 

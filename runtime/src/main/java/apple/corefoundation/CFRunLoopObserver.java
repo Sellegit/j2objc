@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreFoundation")
+@Library("CoreFoundation/CoreFoundation.h")
 public class CFRunLoopObserver 
     extends CFType 
      {
@@ -37,14 +37,14 @@ public class CFRunLoopObserver
     @GlobalFunction("CFRunLoopObserverCreateWithHandler")
     protected static native CFRunLoopObserver create(CFAllocator allocator, @MachineSizedUInt long activities, boolean repeats, @MachineSizedSInt long order, @Block VoidBlock2<CFRunLoopObserver, CFRunLoopActivity> block);
     @GlobalFunction("CFRunLoopObserverGetActivities")
-    public native CFRunLoopActivity getActivities();
+    public static native CFRunLoopActivity getActivities(CFRunLoopObserver observer);
     @GlobalFunction("CFRunLoopObserverDoesRepeat")
-    public native boolean doesRepeat();
+    public static native boolean doesRepeat(CFRunLoopObserver observer);
     @GlobalFunction("CFRunLoopObserverGetOrder")
-    public native @MachineSizedSInt long getOrder();
+    public static native @MachineSizedSInt long getOrder(CFRunLoopObserver observer);
     @GlobalFunction("CFRunLoopObserverInvalidate")
-    public native void invalidate();
+    public static native void invalidate(CFRunLoopObserver observer);
     @GlobalFunction("CFRunLoopObserverIsValid")
-    public native boolean isValid();
+    public static native boolean isValid(CFRunLoopObserver observer);
     
 }

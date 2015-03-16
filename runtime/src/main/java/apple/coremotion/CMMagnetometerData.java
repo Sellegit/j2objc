@@ -19,7 +19,7 @@ import apple.foundation.*;
  * @since Available in iOS 5.0 and later.
  */
 
-@Library("CoreMotion") @Mapping("CMMagnetometerData")
+@Library("CoreMotion/CoreMotion.h") @Mapping("CMMagnetometerData")
 public class CMMagnetometerData 
     extends CMLogItem 
      {

@@ -18,7 +18,7 @@ import apple.accounts.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("Social")
+@Library("Social/Social.h")
 public class SLServiceType 
     extends Object 
      {

@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 
 
-@Library("CoreMIDI")
+@Library("CoreMIDI/CoreMIDI.h")
 @Mapping("MIDIObjectType")
 public final class MIDIObjectType extends ObjCEnum {
     

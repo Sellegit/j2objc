@@ -19,7 +19,7 @@ import apple.dispatch.*;
 
 
 
-@Library("ExternalAccessory")
+@Library("ExternalAccessory/ExternalAccessory.h")
 @Mapping("EABluetoothAccessoryPickerErrorCode")
 public final class EABluetoothAccessoryPickerErrorCode extends ObjCEnum {
     

@@ -23,7 +23,7 @@ import apple.opengles.*;
 
 
 
-@Library("SceneKit") @Mapping("SCNText")
+@Library("SceneKit/SceneKit.h") @Mapping("SCNText")
 public class SCNText 
     extends SCNGeometry 
      {

@@ -16,7 +16,7 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreMIDI")
+@Library("CoreMIDI/CoreMIDI.h")
 public class MIDIPort 
     extends MIDIObject 
      {
@@ -42,16 +42,16 @@ public class MIDIPort
      * @since Available in iOS 4.2 and later.
      */
     @GlobalFunction("MIDIPortDispose")
-    public native MIDIError dispose();
+    public static native MIDIError dispose(MIDIPort port);
     /**
      * @since Available in iOS 4.2 and later.
      */
     @GlobalFunction("MIDIPortConnectSource")
-    protected native MIDIError connectSource(MIDIEndpoint source, Todo connRefCon);
+    protected static native MIDIError connectSource(MIDIPort port, MIDIEndpoint source, Todo connRefCon);
     /**
      * @since Available in iOS 4.2 and later.
      */
     @GlobalFunction("MIDIPortDisconnectSource")
-    public native MIDIError disconnectSource(MIDIEndpoint source);
+    public static native MIDIError disconnectSource(MIDIPort port, MIDIEndpoint source);
     
 }

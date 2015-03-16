@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 
 
-@Mapping("AudioTimeStamp")
+@Mapping("AudioTimeStamp") @Library("CoreAudio/CoreAudioTypes.h")
 public class AudioTimeStamp 
     extends Struct 
      {

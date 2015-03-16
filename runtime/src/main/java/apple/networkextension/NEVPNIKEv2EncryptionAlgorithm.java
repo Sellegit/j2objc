@@ -19,7 +19,7 @@ import apple.foundation.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("NetworkExtension")
+@Library("NetworkExtension/NetworkExtension.h")
 @Mapping("NEVPNIKEv2EncryptionAlgorithm")
 public final class NEVPNIKEv2EncryptionAlgorithm extends ObjCEnum {
     

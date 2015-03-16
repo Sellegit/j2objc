@@ -20,7 +20,7 @@ import apple.uikit.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("WebKit") @Mapping("WKNavigationResponse")
+@Library("WebKit/WebKit.h") @Mapping("WKNavigationResponse")
 public class WKNavigationResponse 
     extends NSObject 
      {

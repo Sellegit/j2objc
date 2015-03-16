@@ -25,7 +25,7 @@ import apple.mediatoolbox.*;
  * @since Available in iOS 4.1 and later.
  */
 
-@Library("AVFoundation") @Mapping("AVQueuePlayer")
+@Library("AVFoundation/AVFoundation.h") @Mapping("AVQueuePlayer")
 public class AVQueuePlayer 
     extends AVPlayer 
      {

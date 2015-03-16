@@ -22,7 +22,7 @@ import apple.corelocation.*;
 
 
 
-@Library("UIKit") @Mapping("UIKeyInput")
+@Library("UIKit/UIKit.h") @Mapping("UIKeyInput")
 public interface UIKeyInput 
     extends UITextInputTraits {
 

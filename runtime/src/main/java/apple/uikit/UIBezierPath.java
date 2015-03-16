@@ -24,7 +24,7 @@ import apple.corelocation.*;
  * @since Available in iOS 3.2 and later.
  */
 
-@Library("UIKit") @Mapping("UIBezierPath")
+@Library("UIKit/UIKit.h") @Mapping("UIBezierPath")
 public class UIBezierPath 
     extends NSObject 
     implements NSCopying, NSCoding {

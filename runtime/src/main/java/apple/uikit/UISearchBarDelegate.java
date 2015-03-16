@@ -22,7 +22,7 @@ import apple.corelocation.*;
 
 
 
-@Library("UIKit") @Mapping("UISearchBarDelegate")
+@Library("UIKit/UIKit.h") @Mapping("UISearchBarDelegate")
 public interface UISearchBarDelegate 
     extends UIBarPositioningDelegate {
 

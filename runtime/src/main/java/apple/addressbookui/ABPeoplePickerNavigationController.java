@@ -21,7 +21,7 @@ import apple.addressbook.*;
  * @since Available in iOS 2.0 and later.
  */
 
-@Library("AddressBookUI") @Mapping("ABPeoplePickerNavigationController")
+@Library("AddressBookUI/AddressBookUI.h") @Mapping("ABPeoplePickerNavigationController")
 public class ABPeoplePickerNavigationController 
     extends UINavigationController 
      {

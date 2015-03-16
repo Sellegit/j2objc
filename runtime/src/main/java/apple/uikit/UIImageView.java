@@ -24,7 +24,7 @@ import apple.corelocation.*;
  * @since Available in iOS 2.0 and later.
  */
 
-@Library("UIKit") @Mapping("UIImageView")
+@Library("UIKit/UIKit.h") @Mapping("UIImageView")
 public class UIImageView 
     extends UIView 
      {

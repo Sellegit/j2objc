@@ -20,7 +20,7 @@ import apple.coremedia.*;
 
 
 
-@Mapping("AURenderCallbackStruct")
+@Mapping("AURenderCallbackStruct") @Library("AudioToolbox/AudioToolbox.h")
 public class AURenderCallbackStruct 
     extends Struct 
      {
@@ -32,11 +32,5 @@ public class AURenderCallbackStruct
     @DotMapping("inputProcRefCon")
     public native Todo getInputProcRefCon();
     
-    
-    public static native AURenderCallbackStruct copyWithinputProcRefCon(AURenderCallbackStruct original, Todo inputProcRefCon) /*-[
-        original.inputProcRefCon = inputProcRefCon;
-        return original;
-    ]-*/;
-
     
 }

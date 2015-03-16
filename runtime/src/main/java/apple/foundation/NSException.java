@@ -22,7 +22,7 @@ import apple.dispatch.*;
 
 
 
-@Library("Foundation") @Mapping("NSException")
+@Library("Foundation/Foundation.h") @Mapping("NSException")
 public class NSException 
     extends NSObject 
     implements NSCopying, NSCoding {

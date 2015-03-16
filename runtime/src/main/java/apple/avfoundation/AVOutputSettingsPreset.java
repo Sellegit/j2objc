@@ -22,7 +22,7 @@ import apple.mediatoolbox.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("AVFoundation")
+@Library("AVFoundation/AVFoundation.h")
 public class AVOutputSettingsPreset 
     extends Object 
      {

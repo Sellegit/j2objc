@@ -15,7 +15,7 @@ import apple.coreservices.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("System")
+@Library("System/System.h")
 public class DispatchSemaphore 
     extends DispatchObject 
      {
@@ -36,11 +36,11 @@ public class DispatchSemaphore
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("dispatch_semaphore_wait")
-    public native @MachineSizedSInt long await(long timeout);
+    public static native @MachineSizedSInt long await(DispatchSemaphore dsema, long timeout);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("dispatch_semaphore_signal")
-    public native @MachineSizedSInt long signal();
+    public static native @MachineSizedSInt long signal(DispatchSemaphore dsema);
     
 }

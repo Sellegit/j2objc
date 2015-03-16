@@ -18,7 +18,7 @@ import apple.uikit.*;
 
 
 
-@Library("CoreGraphics")
+@Library("CoreGraphics/CoreGraphics.h")
 @Mapping("CGInterpolationQuality")
 public final class CGInterpolationQuality extends ObjCEnum {
     

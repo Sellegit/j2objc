@@ -19,7 +19,7 @@ import apple.foundation.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("HomeKit") @Mapping("HMAccessoryBrowser")
+@Library("HomeKit/HomeKit.h") @Mapping("HMAccessoryBrowser")
 public class HMAccessoryBrowser 
     extends NSObject 
      {

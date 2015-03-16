@@ -22,7 +22,7 @@ import apple.opengles.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("SceneKit")
+@Library("SceneKit/SceneKit.h")
 public class SCNLightingModel 
     extends Object 
      {

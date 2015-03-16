@@ -22,7 +22,7 @@ import apple.dispatch.*;
 
 
 
-@Library("Foundation") @Mapping("NSURLCredentialStorage")
+@Library("Foundation/Foundation.h") @Mapping("NSURLCredentialStorage")
 public class NSURLCredentialStorage 
     extends NSObject 
      {

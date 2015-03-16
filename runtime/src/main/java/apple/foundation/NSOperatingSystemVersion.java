@@ -22,7 +22,7 @@ import apple.dispatch.*;
 
 
 
-@Mapping("NSOperatingSystemVersion")
+@Mapping("NSOperatingSystemVersion") @Library("Foundation/Foundation.h")
 public class NSOperatingSystemVersion 
     extends Struct 
      {

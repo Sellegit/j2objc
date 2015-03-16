@@ -19,7 +19,7 @@ import apple.dispatch.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("MapKit")
+@Library("MapKit/MapKit.h")
 public class MKError 
     extends Todo 
      {

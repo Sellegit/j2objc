@@ -19,7 +19,7 @@ import apple.foundation.*;
  * @since Available in iOS 7.0 and later.
  */
 
-@Library("CoreMotion") @Mapping("CMMotionActivityManager")
+@Library("CoreMotion/CoreMotion.h") @Mapping("CMMotionActivityManager")
 public class CMMotionActivityManager 
     extends NSObject 
      {

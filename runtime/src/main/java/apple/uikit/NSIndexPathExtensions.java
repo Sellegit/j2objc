@@ -21,7 +21,7 @@ import apple.corelocation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("UIKit")
+@Library("UIKit/UIKit.h")
 public final class NSIndexPathExtensions 
     extends NSExtensions 
      {
@@ -31,15 +31,7 @@ public final class NSIndexPathExtensions
     private NSIndexPathExtensions() {}
     
     
-    @Mapping("section")
-    public static native @MachineSizedSInt long getSection(NSIndexPath thiz);
-    @Mapping("row")
-    public static native @MachineSizedSInt long getRow(NSIndexPath thiz);
-    /**
-     * @since Available in iOS 6.0 and later.
-     */
-    @Mapping("item")
-    public static native @MachineSizedSInt long getItem(NSIndexPath thiz);
+    
     
     
     

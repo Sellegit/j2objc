@@ -19,7 +19,7 @@ import apple.coremedia.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("AudioToolbox")
+@Library("AudioToolbox/AudioToolbox.h")
 public class MusicEventIterator 
     extends Object 
      {
@@ -40,56 +40,56 @@ public class MusicEventIterator
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("DisposeMusicEventIterator")
-    public native int dispose();
+    public static native int dispose(MusicEventIterator inIterator);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("MusicEventIteratorSeek")
-    public native int seek(double inTimeStamp);
+    public static native int seek(MusicEventIterator inIterator, double inTimeStamp);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("MusicEventIteratorNextEvent")
-    public native int nextEvent();
+    public static native int nextEvent(MusicEventIterator inIterator);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("MusicEventIteratorPreviousEvent")
-    public native int previousEvent();
+    public static native int previousEvent(MusicEventIterator inIterator);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("MusicEventIteratorGetEventInfo")
-    public native int getEventInfo(Todo outTimeStamp, Todo outEventType, Todo outEventData, Todo outEventDataSize);
+    public static native int getEventInfo(MusicEventIterator inIterator, Todo outTimeStamp, Todo outEventType, Todo outEventData, Todo outEventDataSize);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("MusicEventIteratorSetEventInfo")
-    public native int setEventInfo(MusicEventType inEventType, Todo inEventData);
+    public static native int setEventInfo(MusicEventIterator inIterator, MusicEventType inEventType, Todo inEventData);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("MusicEventIteratorSetEventTime")
-    public native int setEventTime(double inTimeStamp);
+    public static native int setEventTime(MusicEventIterator inIterator, double inTimeStamp);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("MusicEventIteratorDeleteEvent")
-    public native int deleteEvent();
+    public static native int deleteEvent(MusicEventIterator inIterator);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("MusicEventIteratorHasPreviousEvent")
-    public native int hasPreviousEvent(Todo outHasPrevEvent);
+    public static native int hasPreviousEvent(MusicEventIterator inIterator, Todo outHasPrevEvent);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("MusicEventIteratorHasNextEvent")
-    public native int hasNextEvent(Todo outHasNextEvent);
+    public static native int hasNextEvent(MusicEventIterator inIterator, Todo outHasNextEvent);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("MusicEventIteratorHasCurrentEvent")
-    public native int hasCurrentEvent(Todo outHasCurEvent);
+    public static native int hasCurrentEvent(MusicEventIterator inIterator, Todo outHasCurEvent);
     
 }

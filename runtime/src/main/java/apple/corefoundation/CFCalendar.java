@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreFoundation")
+@Library("CoreFoundation/CoreFoundation.h")
 public class CFCalendar 
     extends CFType 
      {
@@ -36,35 +36,35 @@ public class CFCalendar
     @GlobalFunction("CFCalendarCreateWithIdentifier")
     protected static native CFCalendar create(CFAllocator allocator, String identifier);
     @GlobalFunction("CFCalendarGetIdentifier")
-    public native CFCalendarIdentifier getIdentifier();
+    public static native CFCalendarIdentifier getIdentifier(CFCalendar calendar);
     @GlobalFunction("CFCalendarCopyLocale")
-    public native CFLocale getLocale();
+    public static native CFLocale getLocale(CFCalendar calendar);
     @GlobalFunction("CFCalendarSetLocale")
-    public native void setLocale(CFLocale locale);
+    public static native void setLocale(CFCalendar calendar, CFLocale locale);
     @GlobalFunction("CFCalendarCopyTimeZone")
-    public native CFTimeZone getTimeZone();
+    public static native CFTimeZone getTimeZone(CFCalendar calendar);
     @GlobalFunction("CFCalendarSetTimeZone")
-    public native void setTimeZone(CFTimeZone tz);
+    public static native void setTimeZone(CFCalendar calendar, CFTimeZone tz);
     @GlobalFunction("CFCalendarGetFirstWeekday")
-    public native @MachineSizedSInt long getFirstWeekday();
+    public static native @MachineSizedSInt long getFirstWeekday(CFCalendar calendar);
     @GlobalFunction("CFCalendarSetFirstWeekday")
-    public native void setFirstWeekday(@MachineSizedSInt long wkdy);
+    public static native void setFirstWeekday(CFCalendar calendar, @MachineSizedSInt long wkdy);
     @GlobalFunction("CFCalendarGetMinimumDaysInFirstWeek")
-    public native @MachineSizedSInt long getMinimumDaysInFirstWeek();
+    public static native @MachineSizedSInt long getMinimumDaysInFirstWeek(CFCalendar calendar);
     @GlobalFunction("CFCalendarSetMinimumDaysInFirstWeek")
-    public native void setMinimumDaysInFirstWeek(@MachineSizedSInt long mwd);
+    public static native void setMinimumDaysInFirstWeek(CFCalendar calendar, @MachineSizedSInt long mwd);
     @GlobalFunction("CFCalendarGetMinimumRangeOfUnit")
-    public native CFRange getMinimumRangeOfUnit(CFCalendarUnit unit);
+    public static native CFRange getMinimumRangeOfUnit(CFCalendar calendar, CFCalendarUnit unit);
     @GlobalFunction("CFCalendarGetMaximumRangeOfUnit")
-    public native CFRange getMaximumRangeOfUnit(CFCalendarUnit unit);
+    public static native CFRange getMaximumRangeOfUnit(CFCalendar calendar, CFCalendarUnit unit);
     @GlobalFunction("CFCalendarGetRangeOfUnit")
-    public native CFRange getRangeOfUnit(CFCalendarUnit smallerUnit, CFCalendarUnit biggerUnit, double at);
+    public static native CFRange getRangeOfUnit(CFCalendar calendar, CFCalendarUnit smallerUnit, CFCalendarUnit biggerUnit, double at);
     @GlobalFunction("CFCalendarGetOrdinalityOfUnit")
-    public native @MachineSizedSInt long getOrdinalityOfUnit(CFCalendarUnit smallerUnit, CFCalendarUnit biggerUnit, double at);
+    public static native @MachineSizedSInt long getOrdinalityOfUnit(CFCalendar calendar, CFCalendarUnit smallerUnit, CFCalendarUnit biggerUnit, double at);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFCalendarGetTimeRangeOfUnit")
-    private native boolean getTimeRangeOfUnit(CFCalendarUnit unit, double at, Todo startp, Todo tip);
+    private static native boolean getTimeRangeOfUnit(CFCalendar calendar, CFCalendarUnit unit, double at, Todo startp, Todo tip);
     
 }

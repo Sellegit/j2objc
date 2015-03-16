@@ -21,7 +21,7 @@ import apple.metal.*;
 
 
 
-@Library("QuartzCore") @Mapping("CAAnimation")
+@Library("QuartzCore/QuartzCore.h") @Mapping("CAAnimation")
 public class CAAnimation 
     extends NSObject 
     implements NSCoding, NSCopying, CAMediaTiming, CAAction {

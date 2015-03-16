@@ -20,7 +20,7 @@ import apple.dispatch.*;
 
 
 
-@Mapping("GLKQuaternion") @Library("GLKit")
+@Mapping("GLKQuaternion") @Library("GLKit/GLKit.h")
 public class GLKQuaternion 
     extends Struct 
      {
@@ -60,32 +60,32 @@ public class GLKQuaternion
     @GlobalFunction("GLKQuaternionMakeWithMatrix4")
     public static native GLKQuaternion createPrime(GLKMatrix4 matrix);
     @GlobalFunction("GLKQuaternionAngle")
-    public native float angle();
+    public static native float angle(GLKQuaternion quaternion);
     @GlobalFunction("GLKQuaternionAxis")
-    public native GLKVector3 axis();
+    public static native GLKVector3 axis(GLKQuaternion quaternion);
     @GlobalFunction("GLKQuaternionAdd")
-    public native GLKQuaternion add(GLKQuaternion quaternionRight);
+    public static native GLKQuaternion add(GLKQuaternion quaternionLeft, GLKQuaternion quaternionRight);
     @GlobalFunction("GLKQuaternionSubtract")
-    public native GLKQuaternion subtract(GLKQuaternion quaternionRight);
+    public static native GLKQuaternion subtract(GLKQuaternion quaternionLeft, GLKQuaternion quaternionRight);
     @GlobalFunction("GLKQuaternionMultiply")
-    public native GLKQuaternion multiply(GLKQuaternion quaternionRight);
+    public static native GLKQuaternion multiply(GLKQuaternion quaternionLeft, GLKQuaternion quaternionRight);
     @GlobalFunction("GLKQuaternionSlerp")
-    public native GLKQuaternion slerp(GLKQuaternion quaternionEnd, float t);
+    public static native GLKQuaternion slerp(GLKQuaternion quaternionStart, GLKQuaternion quaternionEnd, float t);
     @GlobalFunction("GLKQuaternionLength")
-    public native float length();
+    public static native float length(GLKQuaternion quaternion);
     @GlobalFunction("GLKQuaternionConjugate")
-    public native GLKQuaternion conjugate();
+    public static native GLKQuaternion conjugate(GLKQuaternion quaternion);
     @GlobalFunction("GLKQuaternionInvert")
-    public native GLKQuaternion invert();
+    public static native GLKQuaternion invert(GLKQuaternion quaternion);
     @GlobalFunction("GLKQuaternionNormalize")
-    public native GLKQuaternion normalize();
+    public static native GLKQuaternion normalize(GLKQuaternion quaternion);
     @GlobalFunction("GLKQuaternionRotateVector3")
-    public native GLKVector3 rotateVector3(GLKVector3 vector);
+    public static native GLKVector3 rotateVector3(GLKQuaternion quaternion, GLKVector3 vector);
     @GlobalFunction("GLKQuaternionRotateVector3Array")
-    public native void rotateVector3Array(GLKVector3 vectors, @MachineSizedUInt long vectorCount);
+    public static native void rotateVector3Array(GLKQuaternion quaternion, GLKVector3 vectors, @MachineSizedUInt long vectorCount);
     @GlobalFunction("GLKQuaternionRotateVector4")
-    public native GLKVector4 rotateVector4(GLKVector4 vector);
+    public static native GLKVector4 rotateVector4(GLKQuaternion quaternion, GLKVector4 vector);
     @GlobalFunction("GLKQuaternionRotateVector4Array")
-    public native void rotateVector4Array(GLKVector4 vectors, @MachineSizedUInt long vectorCount);
+    public static native void rotateVector4Array(GLKQuaternion quaternion, GLKVector4 vectors, @MachineSizedUInt long vectorCount);
     
 }

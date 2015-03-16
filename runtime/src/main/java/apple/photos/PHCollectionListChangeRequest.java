@@ -22,7 +22,7 @@ import apple.avfoundation.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("Photos") @Mapping("PHCollectionListChangeRequest")
+@Library("Photos/Photos.h") @Mapping("PHCollectionListChangeRequest")
 public class PHCollectionListChangeRequest 
     extends NSObject 
      {

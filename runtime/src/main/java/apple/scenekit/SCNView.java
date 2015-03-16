@@ -23,7 +23,7 @@ import apple.opengles.*;
 
 
 
-@Library("SceneKit") @Mapping("SCNView")
+@Library("SceneKit/SceneKit.h") @Mapping("SCNView")
 public class SCNView 
     extends UIView 
     implements SCNSceneRenderer, SCNTechniqueSupport {

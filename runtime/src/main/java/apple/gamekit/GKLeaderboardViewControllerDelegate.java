@@ -22,7 +22,7 @@ import apple.uikit.*;
  */
 @Deprecated
 
-@Library("GameKit") @Mapping("GKLeaderboardViewControllerDelegate")
+@Library("GameKit/GameKit.h") @Mapping("GKLeaderboardViewControllerDelegate")
 public interface GKLeaderboardViewControllerDelegate 
     extends NSObjectProtocol {
 

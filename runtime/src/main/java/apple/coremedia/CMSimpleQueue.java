@@ -20,7 +20,7 @@ import apple.corevideo.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreMedia")
+@Library("CoreMedia/CoreMedia.h")
 public class CMSimpleQueue 
     extends CFType 
      {
@@ -46,31 +46,31 @@ public class CMSimpleQueue
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("CMSimpleQueueEnqueue")
-    public native CMSimpleQueueError enqueue(Todo element);
+    public static native CMSimpleQueueError enqueue(CMSimpleQueue queue, Todo element);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("CMSimpleQueueDequeue")
-    public native Todo dequeue();
+    public static native Todo dequeue(CMSimpleQueue queue);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("CMSimpleQueueGetHead")
-    public native Todo getHead();
+    public static native Todo getHead(CMSimpleQueue queue);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("CMSimpleQueueReset")
-    public native CMSimpleQueueError reset();
+    public static native CMSimpleQueueError reset(CMSimpleQueue queue);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("CMSimpleQueueGetCapacity")
-    public native CMSimpleQueueError getCapacity();
+    public static native CMSimpleQueueError getCapacity(CMSimpleQueue queue);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("CMSimpleQueueGetCount")
-    public native CMSimpleQueueError getCount();
+    public static native CMSimpleQueueError getCount(CMSimpleQueue queue);
     
 }

@@ -20,7 +20,7 @@ import apple.corevideo.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreMedia")
+@Library("CoreMedia/CoreMedia.h")
 public class CMBufferQueue 
     extends CFType 
      {
@@ -46,126 +46,126 @@ public class CMBufferQueue
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMBufferQueueEnqueue")
-    public native CMBufferQueueError enqueue(CFType buf);
+    public static native CMBufferQueueError enqueue(CMBufferQueue queue, CFType buf);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMBufferQueueDequeueAndRetain")
-    public native CFType dequeueAndRetain();
+    public static native CFType dequeueAndRetain(CMBufferQueue queue);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMBufferQueueDequeueIfDataReadyAndRetain")
-    public native CFType dequeueIfDataReadyAndRetain();
+    public static native CFType dequeueIfDataReadyAndRetain(CMBufferQueue queue);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMBufferQueueGetHead")
-    public native CFType getHead();
+    public static native CFType getHead(CMBufferQueue queue);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMBufferQueueIsEmpty")
-    public native boolean isEmpty();
+    public static native boolean isEmpty(CMBufferQueue queue);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMBufferQueueMarkEndOfData")
-    public native CMBufferQueueError markEndOfData();
+    public static native CMBufferQueueError markEndOfData(CMBufferQueue queue);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMBufferQueueContainsEndOfData")
-    public native boolean containsEndOfData();
+    public static native boolean containsEndOfData(CMBufferQueue queue);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMBufferQueueIsAtEndOfData")
-    public native boolean isAtEndOfData();
+    public static native boolean isAtEndOfData(CMBufferQueue queue);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMBufferQueueReset")
-    public native CMBufferQueueError reset();
+    public static native CMBufferQueueError reset(CMBufferQueue queue);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMBufferQueueResetWithCallback")
-    private native CMBufferQueueError reset(FunctionPtr callback, Todo refcon);
+    private static native CMBufferQueueError reset(CMBufferQueue queue, FunctionPtr callback, Todo refcon);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMBufferQueueGetBufferCount")
-    public native @MachineSizedSInt long getBufferCount();
+    public static native @MachineSizedSInt long getBufferCount(CMBufferQueue queue);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMBufferQueueGetDuration")
-    public native CMTime getDuration();
+    public static native CMTime getDuration(CMBufferQueue queue);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMBufferQueueGetMinDecodeTimeStamp")
-    public native CMTime getMinDecodeTimeStamp();
+    public static native CMTime getMinDecodeTimeStamp(CMBufferQueue queue);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMBufferQueueGetFirstDecodeTimeStamp")
-    public native CMTime getFirstDecodeTimeStamp();
+    public static native CMTime getFirstDecodeTimeStamp(CMBufferQueue queue);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMBufferQueueGetMinPresentationTimeStamp")
-    public native CMTime getMinPresentationTimeStamp();
+    public static native CMTime getMinPresentationTimeStamp(CMBufferQueue queue);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMBufferQueueGetFirstPresentationTimeStamp")
-    public native CMTime getFirstPresentationTimeStamp();
+    public static native CMTime getFirstPresentationTimeStamp(CMBufferQueue queue);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMBufferQueueGetMaxPresentationTimeStamp")
-    public native CMTime getMaxPresentationTimeStamp();
+    public static native CMTime getMaxPresentationTimeStamp(CMBufferQueue queue);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMBufferQueueGetEndPresentationTimeStamp")
-    public native CMTime getEndPresentationTimeStamp();
+    public static native CMTime getEndPresentationTimeStamp(CMBufferQueue queue);
     /**
      * @since Available in iOS 7.1 and later.
      */
     @GlobalFunction("CMBufferQueueGetTotalSize")
-    public native @MachineSizedUInt long getTotalSize();
+    public static native @MachineSizedUInt long getTotalSize(CMBufferQueue queue);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMBufferQueueInstallTrigger")
-    private native CMBufferQueueError installTrigger(FunctionPtr triggerCallback, Todo triggerRefcon, CMBufferQueueTriggerCondition triggerCondition, CMTime triggerTime, Todo triggerTokenOut);
+    private static native CMBufferQueueError installTrigger(CMBufferQueue queue, FunctionPtr triggerCallback, Todo triggerRefcon, CMBufferQueueTriggerCondition triggerCondition, CMTime triggerTime, Todo triggerTokenOut);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMBufferQueueInstallTriggerWithIntegerThreshold")
-    private native CMBufferQueueError installTrigger(FunctionPtr triggerCallback, Todo triggerRefcon, CMBufferQueueTriggerCondition triggerCondition, @MachineSizedSInt long triggerThreshold, Todo triggerTokenOut);
+    private static native CMBufferQueueError installTrigger(CMBufferQueue queue, FunctionPtr triggerCallback, Todo triggerRefcon, CMBufferQueueTriggerCondition triggerCondition, @MachineSizedSInt long triggerThreshold, Todo triggerTokenOut);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMBufferQueueRemoveTrigger")
-    public native CMBufferQueueError removeTrigger(CMBufferQueueTriggerToken triggerToken);
+    public static native CMBufferQueueError removeTrigger(CMBufferQueue queue, CMBufferQueueTriggerToken triggerToken);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMBufferQueueTestTrigger")
-    public native boolean testTrigger(CMBufferQueueTriggerToken triggerToken);
+    public static native boolean testTrigger(CMBufferQueue queue, CMBufferQueueTriggerToken triggerToken);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMBufferQueueCallForEachBuffer")
-    private native CMBufferQueueError callForEachBuffer(FunctionPtr callback, Todo refcon);
+    private static native CMBufferQueueError callForEachBuffer(CMBufferQueue queue, FunctionPtr callback, Todo refcon);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMBufferQueueSetValidationCallback")
-    private native CMBufferQueueError setValidationCallback(FunctionPtr validationCallback, Todo validationRefCon);
+    private static native CMBufferQueueError setValidationCallback(CMBufferQueue queue, FunctionPtr validationCallback, Todo validationRefCon);
     
 }

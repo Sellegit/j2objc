@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreFoundation")
+@Library("CoreFoundation/CoreFoundation.h")
 public class CFTimeZone 
     extends CFType 
      {
@@ -58,29 +58,29 @@ public class CFTimeZone
     @GlobalFunction("CFTimeZoneCreateWithName")
     protected static native CFTimeZone create(CFAllocator allocator, String name, boolean tryAbbrev);
     @GlobalFunction("CFTimeZoneGetName")
-    public native String getName();
+    public static native String getName(CFTimeZone tz);
     @GlobalFunction("CFTimeZoneGetData")
-    public native CFData getData();
+    public static native CFData getData(CFTimeZone tz);
     @GlobalFunction("CFTimeZoneGetSecondsFromGMT")
-    public native double getSecondsFromGMT(double at);
+    public static native double getSecondsFromGMT(CFTimeZone tz, double at);
     @GlobalFunction("CFTimeZoneCopyAbbreviation")
-    public native String getAbbreviation(double at);
+    public static native String getAbbreviation(CFTimeZone tz, double at);
     @GlobalFunction("CFTimeZoneIsDaylightSavingTime")
-    public native boolean isDaylightSavingTime(double at);
+    public static native boolean isDaylightSavingTime(CFTimeZone tz, double at);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFTimeZoneGetDaylightSavingTimeOffset")
-    public native double getDaylightSavingTimeOffset(double at);
+    public static native double getDaylightSavingTimeOffset(CFTimeZone tz, double at);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFTimeZoneGetNextDaylightSavingTimeTransition")
-    public native double getNextDaylightSavingTimeTransition(double at);
+    public static native double getNextDaylightSavingTimeTransition(CFTimeZone tz, double at);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFTimeZoneCopyLocalizedName")
-    public native String getLocalizedName(CFTimeZoneNameStyle style, CFLocale locale);
+    public static native String getLocalizedName(CFTimeZone tz, CFTimeZoneNameStyle style, CFLocale locale);
     
 }

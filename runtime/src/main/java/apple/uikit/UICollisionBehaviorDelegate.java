@@ -22,7 +22,7 @@ import apple.corelocation.*;
 
 
 
-@Library("UIKit") @Mapping("UICollisionBehaviorDelegate")
+@Library("UIKit/UIKit.h") @Mapping("UICollisionBehaviorDelegate")
 public interface UICollisionBehaviorDelegate 
     extends NSObjectProtocol {
 

@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 
 
-@Mapping("MIDIDriverInterface")
+@Mapping("MIDIDriverInterface") @Library("CoreMIDI/CoreMIDI.h")
 public class MIDIDriverInterface 
     extends Struct 
      {

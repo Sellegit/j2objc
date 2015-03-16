@@ -22,7 +22,7 @@ import apple.corelocation.*;
 
 
 
-@Library("UIKit") @Mapping("UINavigationControllerDelegate")
+@Library("UIKit/UIKit.h") @Mapping("UINavigationControllerDelegate")
 public interface UINavigationControllerDelegate 
     extends NSObjectProtocol {
 

@@ -24,7 +24,7 @@ import apple.dispatch.*;
  * @since Available in iOS 4.0 and later.
  */
 
-@Library("Foundation") @Mapping("NSTextCheckingResult")
+@Library("Foundation/Foundation.h") @Mapping("NSTextCheckingResult")
 public class NSTextCheckingResult 
     extends NSObject 
     implements NSCopying, NSCoding {

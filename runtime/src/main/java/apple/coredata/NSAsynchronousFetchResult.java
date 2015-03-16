@@ -19,7 +19,7 @@ import apple.foundation.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("CoreData") @Mapping("NSAsynchronousFetchResult")
+@Library("CoreData/CoreData.h") @Mapping("NSAsynchronousFetchResult")
 public class NSAsynchronousFetchResult 
     extends NSPersistentStoreAsynchronousResult 
      {

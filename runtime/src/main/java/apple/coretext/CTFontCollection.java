@@ -16,7 +16,7 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreText")
+@Library("CoreText/CoreText.h")
 public class CTFontCollection 
     extends CFType 
      {
@@ -47,16 +47,16 @@ public class CTFontCollection
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTFontCollectionCreateCopyWithFontDescriptors")
-    public native CTFontCollection createCopy(CFArray queryDescriptors, CFDictionary options);
+    public static native CTFontCollection createCopy(CTFontCollection original, CFArray queryDescriptors, CFDictionary options);
     /**
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTFontCollectionCreateMatchingFontDescriptors")
-    public native List<CTFontDescriptor> getMatchingFontDescriptors();
+    public static native List<CTFontDescriptor> getMatchingFontDescriptors(CTFontCollection collection);
     /**
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTFontCollectionCreateMatchingFontDescriptorsSortedWithCallback")
-    protected native List<CTFontDescriptor> getMatchingFontDescriptorsSorted(FunctionPtr sortCallback, Todo refCon);
+    protected static native List<CTFontDescriptor> getMatchingFontDescriptorsSorted(CTFontCollection collection, FunctionPtr sortCallback, Todo refCon);
     
 }

@@ -22,7 +22,7 @@ import apple.corelocation.*;
 
 
 
-@Library("UIKit")
+@Library("UIKit/UIKit.h")
 @Mapping("UIProgressViewStyle")
 public final class UIProgressViewStyle extends ObjCEnum {
     

@@ -16,7 +16,7 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreText")
+@Library("CoreText/CoreText.h")
 public class CTFrame 
     extends CFType 
      {
@@ -37,36 +37,36 @@ public class CTFrame
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTFrameGetStringRange")
-    public native CFRange getStringRange();
+    public static native CFRange getStringRange(CTFrame frame);
     /**
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTFrameGetVisibleStringRange")
-    public native CFRange getVisibleStringRange();
+    public static native CFRange getVisibleStringRange(CTFrame frame);
     /**
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTFrameGetPath")
-    public native CGPath getPath();
+    public static native CGPath getPath(CTFrame frame);
     /**
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTFrameGetFrameAttributes")
-    public native CTFrameAttributes getFrameAttributes();
+    public static native CTFrameAttributes getFrameAttributes(CTFrame frame);
     /**
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTFrameGetLines")
-    public native List<CTLine> getLines();
+    public static native List<CTLine> getLines(CTFrame frame);
     /**
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTFrameGetLineOrigins")
-    public native void getLineOrigins(CFRange range, CGPoint origins);
+    public static native void getLineOrigins(CTFrame frame, CFRange range, CGPoint origins);
     /**
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTFrameDraw")
-    public native void draw(CGContext context);
+    public static native void draw(CTFrame frame, CGContext context);
     
 }

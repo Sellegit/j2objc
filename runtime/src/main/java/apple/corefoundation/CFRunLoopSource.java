@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreFoundation")
+@Library("CoreFoundation/CoreFoundation.h")
 public class CFRunLoopSource 
     extends CFType 
      {
@@ -34,14 +34,14 @@ public class CFRunLoopSource
     @GlobalFunction("CFRunLoopSourceCreate")
     protected static native CFRunLoopSource create(CFAllocator allocator, @MachineSizedSInt long order, CFRunLoopSourceContext context);
     @GlobalFunction("CFRunLoopSourceGetOrder")
-    public native @MachineSizedSInt long getOrder();
+    public static native @MachineSizedSInt long getOrder(CFRunLoopSource source);
     @GlobalFunction("CFRunLoopSourceInvalidate")
-    public native void invalidate();
+    public static native void invalidate(CFRunLoopSource source);
     @GlobalFunction("CFRunLoopSourceIsValid")
-    public native boolean isValid();
+    public static native boolean isValid(CFRunLoopSource source);
     @GlobalFunction("CFRunLoopSourceGetContext")
-    private native void getContext(CFRunLoopSourceContext context);
+    private static native void getContext(CFRunLoopSource source, CFRunLoopSourceContext context);
     @GlobalFunction("CFRunLoopSourceSignal")
-    public native void signal();
+    public static native void signal(CFRunLoopSource source);
     
 }

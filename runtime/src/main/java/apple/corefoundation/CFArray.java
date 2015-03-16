@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreFoundation")
+@Library("CoreFoundation/CoreFoundation.h")
 public class CFArray 
     extends CFPropertyList 
      {
@@ -39,22 +39,22 @@ public class CFArray
     @GlobalFunction("CFArrayCreateCopy")
     protected static native CFArray createCopy(CFAllocator allocator, CFArray theArray);
     @GlobalFunction("CFArrayGetCount")
-    protected native @MachineSizedSInt long getCount();
+    protected static native @MachineSizedSInt long getCount(CFArray theArray);
     @GlobalFunction("CFArrayGetCountOfValue")
-    protected native @MachineSizedSInt long getCountOfValue(CFRange range, Todo value);
+    protected static native @MachineSizedSInt long getCountOfValue(CFArray theArray, CFRange range, Todo value);
     @GlobalFunction("CFArrayContainsValue")
-    protected native boolean containsValue(CFRange range, Todo value);
+    protected static native boolean containsValue(CFArray theArray, CFRange range, Todo value);
     @GlobalFunction("CFArrayGetValueAtIndex")
-    protected native Todo getValueAtIndex(@MachineSizedSInt long idx);
+    protected static native Todo getValueAtIndex(CFArray theArray, @MachineSizedSInt long idx);
     @GlobalFunction("CFArrayGetValues")
-    protected native void getValues(CFRange range, Todo values);
+    protected static native void getValues(CFArray theArray, CFRange range, Todo values);
     @GlobalFunction("CFArrayApplyFunction")
-    protected native void applyFunction(CFRange range, FunctionPtr applier, Todo context);
+    protected static native void applyFunction(CFArray theArray, CFRange range, FunctionPtr applier, Todo context);
     @GlobalFunction("CFArrayGetFirstIndexOfValue")
-    protected native @MachineSizedSInt long getFirstIndexOfValue(CFRange range, Todo value);
+    protected static native @MachineSizedSInt long getFirstIndexOfValue(CFArray theArray, CFRange range, Todo value);
     @GlobalFunction("CFArrayGetLastIndexOfValue")
-    protected native @MachineSizedSInt long getLastIndexOfValue(CFRange range, Todo value);
+    protected static native @MachineSizedSInt long getLastIndexOfValue(CFArray theArray, CFRange range, Todo value);
     @GlobalFunction("CFArrayBSearchValues")
-    protected native @MachineSizedSInt long bSearchValues(CFRange range, Todo value, FunctionPtr comparator, Todo context);
+    protected static native @MachineSizedSInt long bSearchValues(CFArray theArray, CFRange range, Todo value, FunctionPtr comparator, Todo context);
     
 }

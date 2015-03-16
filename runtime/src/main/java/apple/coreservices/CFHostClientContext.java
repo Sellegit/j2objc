@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 
 
-@Mapping("CFHostClientContext")
+@Mapping("CFHostClientContext") @Library("CFNetwork/CFNetwork.h")
  class CFHostClientContext 
     extends Struct 
      {

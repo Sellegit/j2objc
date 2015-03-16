@@ -24,7 +24,7 @@ import apple.corelocation.*;
  * @since Available in iOS 7.0 and later.
  */
 
-@Library("UIKit") @Mapping("UIPercentDrivenInteractiveTransition")
+@Library("UIKit/UIKit.h") @Mapping("UIPercentDrivenInteractiveTransition")
 public class UIPercentDrivenInteractiveTransition 
     extends NSObject 
     implements UIViewControllerInteractiveTransitioning {

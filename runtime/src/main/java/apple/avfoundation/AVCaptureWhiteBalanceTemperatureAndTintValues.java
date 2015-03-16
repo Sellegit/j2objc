@@ -23,7 +23,7 @@ import apple.mediatoolbox.*;
 
 
 
-@Mapping("AVCaptureWhiteBalanceTemperatureAndTintValues")
+@Mapping("AVCaptureWhiteBalanceTemperatureAndTintValues") @Library("AVFoundation/AVFoundation.h")
 public class AVCaptureWhiteBalanceTemperatureAndTintValues 
     extends Struct 
      {

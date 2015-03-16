@@ -18,7 +18,7 @@ import apple.uikit.*;
 
 
 
-@Library("MediaPlayer")
+@Library("MediaPlayer/MediaPlayer.h")
 @Mapping("MPMovieScalingMode")
 public final class MPMovieScalingMode extends ObjCEnum {
     

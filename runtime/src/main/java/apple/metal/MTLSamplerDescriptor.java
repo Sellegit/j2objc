@@ -20,7 +20,7 @@ import apple.dispatch.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("Metal") @Mapping("MTLSamplerDescriptor")
+@Library("Metal/Metal.h") @Mapping("MTLSamplerDescriptor")
 public class MTLSamplerDescriptor 
     extends NSObject 
     implements NSCopying {

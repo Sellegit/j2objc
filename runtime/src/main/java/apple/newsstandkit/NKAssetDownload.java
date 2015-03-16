@@ -19,7 +19,7 @@ import apple.foundation.*;
  * @since Available in iOS 5.0 and later.
  */
 
-@Library("NewsstandKit") @Mapping("NKAssetDownload")
+@Library("NewsstandKit/NewsstandKit.h") @Mapping("NKAssetDownload")
 public class NKAssetDownload 
     extends NSObject 
      {

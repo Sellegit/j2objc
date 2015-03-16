@@ -24,7 +24,7 @@ import apple.dispatch.*;
  * @since Available in iOS 4.0 and later.
  */
 
-@Library("Foundation")
+@Library("Foundation/Foundation.h")
 @Mapping("NSDataSearchOptions")
 public final class NSDataSearchOptions extends ObjCEnum {
     

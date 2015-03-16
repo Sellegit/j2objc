@@ -24,7 +24,7 @@ import apple.corelocation.*;
  * @since Available in iOS 2.0 and later.
  */
 
-@Library("UIKit") @Mapping("UITableView")
+@Library("UIKit/UIKit.h") @Mapping("UITableView")
 public class UITableView 
     extends UIScrollView 
     implements NSCoding {

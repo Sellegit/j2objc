@@ -20,7 +20,7 @@ import apple.dispatch.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("Metal") @Mapping("MTLVertexAttributeDescriptor")
+@Library("Metal/Metal.h") @Mapping("MTLVertexAttributeDescriptor")
 public class MTLVertexAttributeDescriptor 
     extends NSObject 
     implements NSCopying {

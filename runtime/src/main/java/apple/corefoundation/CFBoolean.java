@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreFoundation")
+@Library("CoreFoundation/CoreFoundation.h")
 public class CFBoolean 
     extends CFPropertyList 
      {
@@ -37,6 +37,6 @@ public class CFBoolean
     @GlobalFunction("CFBooleanGetTypeID")
     public static native @MachineSizedUInt long getClassTypeID();
     @GlobalFunction("CFBooleanGetValue")
-    public native boolean booleanValue();
+    public static native boolean booleanValue(CFBoolean boolVal);
     
 }

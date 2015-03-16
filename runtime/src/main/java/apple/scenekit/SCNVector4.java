@@ -23,7 +23,7 @@ import apple.opengles.*;
 
 
 
-@Mapping("SCNVector4") @Library("SceneKit")
+@Mapping("SCNVector4") @Library("SceneKit/SceneKit.h")
 public class SCNVector4 
     extends Struct 
      {
@@ -73,6 +73,6 @@ public class SCNVector4
     public static native SCNVector4 Zero();
     
     @GlobalFunction("SCNVector4EqualToVector4")
-    public native boolean equalsTo(SCNVector4 b);
+    public static native boolean equalsTo(SCNVector4 a, SCNVector4 b);
     
 }

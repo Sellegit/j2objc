@@ -21,7 +21,7 @@ import apple.metal.*;
 
 
 
-@Library("QuartzCore") @Mapping("CAAnimationGroup")
+@Library("QuartzCore/QuartzCore.h") @Mapping("CAAnimationGroup")
 public class CAAnimationGroup 
     extends CAAnimation 
      {

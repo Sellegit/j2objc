@@ -22,7 +22,7 @@ import apple.iad.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("AVKit") @Mapping("AVPlayerViewController")
+@Library("AVKit/AVKit.h") @Mapping("AVPlayerViewController")
 public class AVPlayerViewController 
     extends UIViewController 
      {

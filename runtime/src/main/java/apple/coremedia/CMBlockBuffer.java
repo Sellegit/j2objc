@@ -20,7 +20,7 @@ import apple.corevideo.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreMedia")
+@Library("CoreMedia/CoreMedia.h")
 public class CMBlockBuffer 
     extends CFType 
      {
@@ -61,17 +61,17 @@ public class CMBlockBuffer
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMBlockBufferAppendMemoryBlock")
-    public native int appendMemoryBlock(Todo memoryBlock, @MachineSizedUInt long blockLength, CFAllocator blockAllocator, CMBlockBufferCustomBlockSource customBlockSource, @MachineSizedUInt long offsetToData, @MachineSizedUInt long dataLength, int flags);
+    public static native int appendMemoryBlock(CMBlockBuffer theBuffer, Todo memoryBlock, @MachineSizedUInt long blockLength, CFAllocator blockAllocator, CMBlockBufferCustomBlockSource customBlockSource, @MachineSizedUInt long offsetToData, @MachineSizedUInt long dataLength, int flags);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMBlockBufferAppendBufferReference")
-    public native CMBlockBufferError appendBufferReference(CMBlockBuffer targetBBuf, @MachineSizedUInt long offsetToData, @MachineSizedUInt long dataLength, int flags);
+    public static native CMBlockBufferError appendBufferReference(CMBlockBuffer theBuffer, CMBlockBuffer targetBBuf, @MachineSizedUInt long offsetToData, @MachineSizedUInt long dataLength, int flags);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMBlockBufferAssureBlockMemory")
-    public native CMBlockBufferError assureBlockMemory();
+    public static native CMBlockBufferError assureBlockMemory(CMBlockBuffer theBuffer);
     /**
      * @since Available in iOS 4.0 and later.
      */
@@ -81,7 +81,7 @@ public class CMBlockBuffer
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMBlockBufferCopyDataBytes")
-    public native CMBlockBufferError copyDataBytes(@MachineSizedUInt long offsetToData, @MachineSizedUInt long dataLength, Todo destination);
+    public static native CMBlockBufferError copyDataBytes(CMBlockBuffer theSourceBuffer, @MachineSizedUInt long offsetToData, @MachineSizedUInt long dataLength, Todo destination);
     /**
      * @since Available in iOS 4.0 and later.
      */
@@ -96,21 +96,21 @@ public class CMBlockBuffer
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMBlockBufferGetDataPointer")
-    public native int getDataPointer(@MachineSizedUInt long offset, Todo lengthAtOffset, Todo totalLength, Todo dataPointer);
+    public static native int getDataPointer(CMBlockBuffer theBuffer, @MachineSizedUInt long offset, Todo lengthAtOffset, Todo totalLength, Todo dataPointer);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMBlockBufferGetDataLength")
-    public native @MachineSizedUInt long getDataLength();
+    public static native @MachineSizedUInt long getDataLength(CMBlockBuffer theBuffer);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMBlockBufferIsRangeContiguous")
-    public native boolean isRangeContiguous(@MachineSizedUInt long offset, @MachineSizedUInt long length);
+    public static native boolean isRangeContiguous(CMBlockBuffer theBuffer, @MachineSizedUInt long offset, @MachineSizedUInt long length);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMBlockBufferIsEmpty")
-    public native boolean isEmpty();
+    public static native boolean isEmpty(CMBlockBuffer theBuffer);
     
 }

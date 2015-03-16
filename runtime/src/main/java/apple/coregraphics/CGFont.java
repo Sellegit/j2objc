@@ -17,7 +17,7 @@ import apple.uikit.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreGraphics")
+@Library("CoreGraphics/CoreGraphics.h")
 public class CGFont 
     extends CFType 
      {
@@ -52,81 +52,81 @@ public class CGFont
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGFontGetNumberOfGlyphs")
-    public native @MachineSizedUInt long getNumberOfGlyphs();
+    public static native @MachineSizedUInt long getNumberOfGlyphs(CGFont font);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGFontGetUnitsPerEm")
-    public native int getUnitsPerEm();
+    public static native int getUnitsPerEm(CGFont font);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGFontCopyPostScriptName")
-    public native String getPostScriptName();
+    public static native String getPostScriptName(CGFont font);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGFontCopyFullName")
-    public native String getFullName();
+    public static native String getFullName(CGFont font);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGFontGetAscent")
-    public native int getAscent();
+    public static native int getAscent(CGFont font);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGFontGetDescent")
-    public native int getDescent();
+    public static native int getDescent(CGFont font);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGFontGetLeading")
-    public native int getLeading();
+    public static native int getLeading(CGFont font);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGFontGetCapHeight")
-    public native int getCapHeight();
+    public static native int getCapHeight(CGFont font);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGFontGetXHeight")
-    public native int getXHeight();
+    public static native int getXHeight(CGFont font);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGFontGetFontBBox")
-    public native CGRect getFontBBox();
+    public static native CGRect getFontBBox(CGFont font);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGFontGetItalicAngle")
-    public native @MachineSizedFloat double getItalicAngle();
+    public static native @MachineSizedFloat double getItalicAngle(CGFont font);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGFontGetStemV")
-    public native @MachineSizedFloat double getStemV();
+    public static native @MachineSizedFloat double getStemV(CGFont font);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGFontGetGlyphAdvances")
-    protected native boolean getGlyphAdvances(Todo glyphs, @MachineSizedUInt long count, Todo advances);
+    protected static native boolean getGlyphAdvances(CGFont font, Todo glyphs, @MachineSizedUInt long count, Todo advances);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGFontGetGlyphBBoxes")
-    protected native boolean getGlyphBBoxes(Todo glyphs, @MachineSizedUInt long count, CGRect bboxes);
+    protected static native boolean getGlyphBBoxes(CGFont font, Todo glyphs, @MachineSizedUInt long count, CGRect bboxes);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGFontGetGlyphWithGlyphName")
-    public native char getGlyphWithGlyphName(String name);
+    public static native char getGlyphWithGlyphName(CGFont font, String name);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGFontCopyGlyphNameForGlyph")
-    public native String getGlyphNameForGlyph(short glyph);
+    public static native String getGlyphNameForGlyph(CGFont font, short glyph);
     
 }

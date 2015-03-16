@@ -24,7 +24,7 @@ import apple.dispatch.*;
  * @since Available in iOS 5.0 and later.
  */
 
-@Library("Foundation") @Mapping("NSMetadataQuery")
+@Library("Foundation/Foundation.h") @Mapping("NSMetadataQuery")
 public class NSMetadataQuery 
     extends NSObject 
      {

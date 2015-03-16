@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreFoundation")
+@Library("CoreFoundation/CoreFoundation.h")
 public class CFCharacterSet 
     extends CFType 
      {
@@ -42,13 +42,13 @@ public class CFCharacterSet
     @GlobalFunction("CFCharacterSetCreateInvertedSet")
     protected static native CFCharacterSet createInvertedSet(CFAllocator alloc, CFCharacterSet theSet);
     @GlobalFunction("CFCharacterSetIsSupersetOfSet")
-    public native boolean isSupersetOfSet(CFCharacterSet theOtherset);
+    public static native boolean isSupersetOfSet(CFCharacterSet theSet, CFCharacterSet theOtherset);
     @GlobalFunction("CFCharacterSetHasMemberInPlane")
-    public native boolean hasMemberInPlane(@MachineSizedSInt long thePlane);
+    public static native boolean hasMemberInPlane(CFCharacterSet theSet, @MachineSizedSInt long thePlane);
     @GlobalFunction("CFCharacterSetIsCharacterMember")
-    public native boolean isCharacterMember(short theChar);
+    public static native boolean isCharacterMember(CFCharacterSet theSet, short theChar);
     @GlobalFunction("CFCharacterSetIsLongCharacterMember")
-    public native boolean isLongCharacterMember(int theChar);
+    public static native boolean isLongCharacterMember(CFCharacterSet theSet, int theChar);
     @GlobalFunction("CFCharacterSetCreateBitmapRepresentation")
     protected static native CFData createBitmapRepresentation(CFAllocator alloc, CFCharacterSet theSet);
     

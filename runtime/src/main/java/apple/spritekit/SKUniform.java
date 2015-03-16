@@ -26,7 +26,7 @@ import apple.scenekit.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("SpriteKit") @Mapping("SKUniform")
+@Library("SpriteKit/SpriteKit.h") @Mapping("SKUniform")
 public class SKUniform 
     extends NSObject 
     implements NSCopying, NSCoding {

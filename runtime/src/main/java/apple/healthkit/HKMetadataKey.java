@@ -16,7 +16,7 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("HealthKit")
+@Library("HealthKit/HealthKit.h")
 public class HKMetadataKey 
     extends Object 
      {

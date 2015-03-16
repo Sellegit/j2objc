@@ -20,7 +20,7 @@ import apple.avkit.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("iAd")
+@Library("iAd/iAd.h")
 public class ADBannerContentSizeIdentifier 
     extends Object 
      {

@@ -18,7 +18,7 @@ import apple.foundation.*;
 
 
 
-@Library("CoreFoundation")
+@Library("CoreFoundation/CoreFoundation.h")
 @Mapping("CFStringNormalizationForm")
 public final class CFStringNormalizationForm extends ObjCEnum {
     

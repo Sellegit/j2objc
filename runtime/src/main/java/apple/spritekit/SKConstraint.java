@@ -26,7 +26,7 @@ import apple.scenekit.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("SpriteKit") @Mapping("SKConstraint")
+@Library("SpriteKit/SpriteKit.h") @Mapping("SKConstraint")
 public class SKConstraint 
     extends NSObject 
     implements NSCoding, NSCopying {

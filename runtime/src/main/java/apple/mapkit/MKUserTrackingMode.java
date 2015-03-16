@@ -22,7 +22,7 @@ import apple.dispatch.*;
  * @since Available in iOS 5.0 and later.
  */
 
-@Library("MapKit")
+@Library("MapKit/MapKit.h")
 @Mapping("MKUserTrackingMode")
 public final class MKUserTrackingMode extends ObjCEnum {
     

@@ -22,7 +22,7 @@ import apple.corelocation.*;
 
 
 
-@Library("UIKit") @Mapping("UIDynamicAnimatorDelegate")
+@Library("UIKit/UIKit.h") @Mapping("UIDynamicAnimatorDelegate")
 public interface UIDynamicAnimatorDelegate 
     extends NSObjectProtocol {
 

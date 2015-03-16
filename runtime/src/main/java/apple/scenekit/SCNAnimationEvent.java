@@ -23,7 +23,7 @@ import apple.opengles.*;
 
 
 
-@Library("SceneKit") @Mapping("SCNAnimationEvent")
+@Library("SceneKit/SceneKit.h") @Mapping("SCNAnimationEvent")
 public class SCNAnimationEvent 
     extends NSObject 
      {

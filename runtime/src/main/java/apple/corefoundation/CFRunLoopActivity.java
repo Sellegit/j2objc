@@ -18,7 +18,7 @@ import apple.foundation.*;
 
 
 
-@Library("CoreFoundation")
+@Library("CoreFoundation/CoreFoundation.h")
 @Mapping("CFRunLoopActivity")
 public final class CFRunLoopActivity extends ObjCEnum {
     

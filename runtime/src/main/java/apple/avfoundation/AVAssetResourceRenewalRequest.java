@@ -25,7 +25,7 @@ import apple.mediatoolbox.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("AVFoundation") @Mapping("AVAssetResourceRenewalRequest")
+@Library("AVFoundation/AVFoundation.h") @Mapping("AVAssetResourceRenewalRequest")
 public class AVAssetResourceRenewalRequest 
     extends AVAssetResourceLoadingRequest 
      {

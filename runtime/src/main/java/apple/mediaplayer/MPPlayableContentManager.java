@@ -20,7 +20,7 @@ import apple.uikit.*;
  * @since Available in iOS 7.1 and later.
  */
 
-@Library("MediaPlayer") @Mapping("MPPlayableContentManager")
+@Library("MediaPlayer/MediaPlayer.h") @Mapping("MPPlayableContentManager")
 public class MPPlayableContentManager 
     extends NSObject 
      {

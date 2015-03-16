@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 
 
-@Library("CoreText")
+@Library("CoreText/CoreText.h")
 @Mapping("CTParagraphStyleSpecifier")
 public final class CTParagraphStyleSpecifier extends ObjCEnum {
     

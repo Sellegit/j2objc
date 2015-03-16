@@ -23,7 +23,7 @@ import apple.opengles.*;
 
 
 
-@Library("SceneKit") @Mapping("SCNTube")
+@Library("SceneKit/SceneKit.h") @Mapping("SCNTube")
 public class SCNTube 
     extends SCNGeometry 
      {

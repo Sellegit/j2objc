@@ -16,7 +16,7 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CFNetwork")
+@Library("CFNetwork/CFNetwork.h")
 public class CFNetServiceMonitor 
     extends CFType 
      {
@@ -42,26 +42,26 @@ public class CFNetServiceMonitor
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFNetServiceMonitorInvalidate")
-    public native void invalidate();
+    public static native void invalidate(CFNetServiceMonitor monitor);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFNetServiceMonitorStart")
-    protected native boolean start(CFNetServiceMonitorType recordType, Todo error);
+    protected static native boolean start(CFNetServiceMonitor monitor, CFNetServiceMonitorType recordType, Todo error);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFNetServiceMonitorStop")
-    protected native void stop(Todo error);
+    protected static native void stop(CFNetServiceMonitor monitor, Todo error);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFNetServiceMonitorScheduleWithRunLoop")
-    public native void schedule(CFRunLoop runLoop, String runLoopMode);
+    public static native void schedule(CFNetServiceMonitor monitor, CFRunLoop runLoop, String runLoopMode);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFNetServiceMonitorUnscheduleFromRunLoop")
-    public native void unschedule(CFRunLoop runLoop, String runLoopMode);
+    public static native void unschedule(CFNetServiceMonitor monitor, CFRunLoop runLoop, String runLoopMode);
     
 }

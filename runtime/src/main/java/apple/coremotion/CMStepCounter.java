@@ -21,7 +21,7 @@ import apple.foundation.*;
  */
 @Deprecated
 
-@Library("CoreMotion") @Mapping("CMStepCounter")
+@Library("CoreMotion/CoreMotion.h") @Mapping("CMStepCounter")
 public class CMStepCounter 
     extends NSObject 
      {

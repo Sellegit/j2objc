@@ -24,7 +24,7 @@ import apple.scenekit.*;
 
 
 
-@Library("SpriteKit") @Mapping("SKPhysicsJointSpring")
+@Library("SpriteKit/SpriteKit.h") @Mapping("SKPhysicsJointSpring")
 public class SKPhysicsJointSpring 
     extends SKPhysicsJoint 
      {

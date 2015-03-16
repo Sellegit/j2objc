@@ -25,7 +25,7 @@ import apple.mediatoolbox.*;
  * @since Available in iOS 4.0 and later.
  */
 
-@Library("AVFoundation") @Mapping("AVVideoCompositionCoreAnimationTool")
+@Library("AVFoundation/AVFoundation.h") @Mapping("AVVideoCompositionCoreAnimationTool")
 public class AVVideoCompositionCoreAnimationTool 
     extends NSObject 
      {

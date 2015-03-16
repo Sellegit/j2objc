@@ -19,7 +19,7 @@ import apple.foundation.*;
  * @since Available in iOS 4.0 and later.
  */
 
-@Library("CoreTelephony") @Mapping("CTCarrier")
+@Library("CoreTelephony/CoreTelephony.h") @Mapping("CTCarrier")
 public class CTCarrier 
     extends NSObject 
      {

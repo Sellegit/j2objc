@@ -20,7 +20,7 @@ import apple.corevideo.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreMedia")
+@Library("CoreMedia/CoreMedia.h")
 public class CMClock 
     extends CMClockOrTimebase 
      {
@@ -56,22 +56,22 @@ public class CMClock
      * @since Available in iOS 6.0 and later.
      */
     @GlobalFunction("CMClockGetTime")
-    public native CMTime getTime();
+    public static native CMTime getTime(CMClock clock);
     /**
      * @since Available in iOS 6.0 and later.
      */
     @GlobalFunction("CMClockGetAnchorTime")
-    protected native int getAnchorTime(CMTime outClockTime, CMTime outReferenceClockTime);
+    protected static native int getAnchorTime(CMClock clock, CMTime outClockTime, CMTime outReferenceClockTime);
     /**
      * @since Available in iOS 6.0 and later.
      */
     @GlobalFunction("CMClockMightDrift")
-    public native boolean mightDrift(CMClock otherClock);
+    public static native boolean mightDrift(CMClock clock, CMClock otherClock);
     /**
      * @since Available in iOS 6.0 and later.
      */
     @GlobalFunction("CMClockInvalidate")
-    public native void invalidate();
+    public static native void invalidate(CMClock clock);
     /**
      * @since Available in iOS 6.0 and later.
      */

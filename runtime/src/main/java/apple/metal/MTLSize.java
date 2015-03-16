@@ -18,7 +18,7 @@ import apple.dispatch.*;
 
 
 
-@Mapping("MTLSize")
+@Mapping("MTLSize") @Library("Metal/Metal.h")
 public class MTLSize 
     extends Struct 
      {

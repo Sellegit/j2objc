@@ -20,7 +20,7 @@ import apple.uikit.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("WebKit") @Mapping("WKBackForwardListItem")
+@Library("WebKit/WebKit.h") @Mapping("WKBackForwardListItem")
 public class WKBackForwardListItem 
     extends NSObject 
      {

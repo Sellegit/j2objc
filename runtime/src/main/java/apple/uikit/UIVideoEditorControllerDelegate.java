@@ -22,7 +22,7 @@ import apple.corelocation.*;
 
 
 
-@Library("UIKit") @Mapping("UIVideoEditorControllerDelegate")
+@Library("UIKit/UIKit.h") @Mapping("UIVideoEditorControllerDelegate")
 public interface UIVideoEditorControllerDelegate 
     extends UINavigationControllerDelegate {
 

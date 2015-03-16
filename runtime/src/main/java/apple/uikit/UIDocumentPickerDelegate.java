@@ -22,7 +22,7 @@ import apple.corelocation.*;
 
 
 
-@Library("UIKit") @Mapping("UIDocumentPickerDelegate")
+@Library("UIKit/UIKit.h") @Mapping("UIDocumentPickerDelegate")
 public interface UIDocumentPickerDelegate 
     extends NSObjectProtocol {
 

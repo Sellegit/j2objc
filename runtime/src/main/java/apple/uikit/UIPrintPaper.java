@@ -24,7 +24,7 @@ import apple.corelocation.*;
  * @since Available in iOS 4.2 and later.
  */
 
-@Library("UIKit") @Mapping("UIPrintPaper")
+@Library("UIKit/UIKit.h") @Mapping("UIPrintPaper")
 public class UIPrintPaper 
     extends NSObject 
      {

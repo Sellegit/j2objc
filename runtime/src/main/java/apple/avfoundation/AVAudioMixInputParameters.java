@@ -25,7 +25,7 @@ import apple.mediatoolbox.*;
  * @since Available in iOS 4.0 and later.
  */
 
-@Library("AVFoundation") @Mapping("AVAudioMixInputParameters")
+@Library("AVFoundation/AVFoundation.h") @Mapping("AVAudioMixInputParameters")
 public class AVAudioMixInputParameters 
     extends NSObject 
     implements NSCopying {

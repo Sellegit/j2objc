@@ -17,7 +17,7 @@ import apple.imageio.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("AssetsLibrary")
+@Library("AssetsLibrary/AssetsLibrary.h")
 public class ALAssetsLibraryError 
     extends Todo 
      {

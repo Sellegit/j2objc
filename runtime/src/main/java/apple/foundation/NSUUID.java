@@ -24,7 +24,7 @@ import apple.dispatch.*;
  * @since Available in iOS 6.0 and later.
  */
 
-@Library("Foundation") @Mapping("NSUUID")
+@Library("Foundation/Foundation.h") @Mapping("NSUUID")
 public class NSUUID 
     extends NSObject 
     implements NSCopying {

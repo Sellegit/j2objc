@@ -19,7 +19,7 @@ import apple.coremedia.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("AudioToolbox")
+@Library("AudioToolbox/AudioToolbox.h")
 public class MusicSequence 
     extends Object 
      {
@@ -40,106 +40,106 @@ public class MusicSequence
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("DisposeMusicSequence")
-    public native int dispose();
+    public static native int dispose(MusicSequence inSequence);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("MusicSequenceNewTrack")
-    public native int newTrack(Todo outTrack);
+    public static native int newTrack(MusicSequence inSequence, Todo outTrack);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("MusicSequenceDisposeTrack")
-    public native int disposeTrack(MusicTrack inTrack);
+    public static native int disposeTrack(MusicSequence inSequence, MusicTrack inTrack);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("MusicSequenceGetTrackCount")
-    public native int getTrackCount(Todo outNumberOfTracks);
+    public static native int getTrackCount(MusicSequence inSequence, Todo outNumberOfTracks);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("MusicSequenceGetIndTrack")
-    public native int getIndTrack(int inTrackIndex, Todo outTrack);
+    public static native int getIndTrack(MusicSequence inSequence, int inTrackIndex, Todo outTrack);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("MusicSequenceGetTrackIndex")
-    public native int getTrackIndex(MusicTrack inTrack, Todo outTrackIndex);
+    public static native int getTrackIndex(MusicSequence inSequence, MusicTrack inTrack, Todo outTrackIndex);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("MusicSequenceGetTempoTrack")
-    public native int getTempoTrack(Todo outTrack);
+    public static native int getTempoTrack(MusicSequence inSequence, Todo outTrack);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("MusicSequenceSetMIDIEndpoint")
-    public native int setMIDIEndpoint(MIDIEndpoint inEndpoint);
+    public static native int setMIDIEndpoint(MusicSequence inSequence, MIDIEndpoint inEndpoint);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("MusicSequenceSetSequenceType")
-    public native int setSequenceType(MusicSequenceType inType);
+    public static native int setSequenceType(MusicSequence inSequence, MusicSequenceType inType);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("MusicSequenceGetSequenceType")
-    public native int getSequenceType(Todo outType);
+    public static native int getSequenceType(MusicSequence inSequence, Todo outType);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("MusicSequenceFileLoad")
-    public native int fileLoad(CFURL inFileRef, int inFileTypeHint, int inFlags);
+    public static native int fileLoad(MusicSequence inSequence, CFURL inFileRef, int inFileTypeHint, int inFlags);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("MusicSequenceFileLoadData")
-    public native int fileLoadData(CFData inData, int inFileTypeHint, int inFlags);
+    public static native int fileLoadData(MusicSequence inSequence, CFData inData, int inFileTypeHint, int inFlags);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("MusicSequenceFileCreate")
-    public native int fileCreate(CFURL inFileRef, int inFileType, int inFlags, short inResolution);
+    public static native int fileCreate(MusicSequence inSequence, CFURL inFileRef, int inFileType, int inFlags, short inResolution);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("MusicSequenceFileCreateData")
-    public native int fileCreateData(int inFileType, int inFlags, short inResolution, Todo outData);
+    public static native int fileCreateData(MusicSequence inSequence, int inFileType, int inFlags, short inResolution, Todo outData);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("MusicSequenceReverse")
-    public native int reverse();
+    public static native int reverse(MusicSequence inSequence);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("MusicSequenceGetSecondsForBeats")
-    public native int getSecondsForBeats(double inBeats, Todo outSeconds);
+    public static native int getSecondsForBeats(MusicSequence inSequence, double inBeats, Todo outSeconds);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("MusicSequenceGetBeatsForSeconds")
-    public native int getBeatsForSeconds(double inSeconds, Todo outBeats);
+    public static native int getBeatsForSeconds(MusicSequence inSequence, double inSeconds, Todo outBeats);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("MusicSequenceSetUserCallback")
-    public native int setUserCallback(FunctionPtr inCallback, Todo inClientData);
+    public static native int setUserCallback(MusicSequence inSequence, FunctionPtr inCallback, Todo inClientData);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("MusicSequenceBeatsToBarBeatTime")
-    public native int beatsToBarBeatTime(double inBeats, int inSubbeatDivisor, CABarBeatTime outBarBeatTime);
+    public static native int beatsToBarBeatTime(MusicSequence inSequence, double inBeats, int inSubbeatDivisor, CABarBeatTime outBarBeatTime);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("MusicSequenceBarBeatTimeToBeats")
-    public native int barBeatTimeToBeats(CABarBeatTime inBarBeatTime, Todo outBeats);
+    public static native int barBeatTimeToBeats(MusicSequence inSequence, CABarBeatTime inBarBeatTime, Todo outBeats);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("MusicSequenceGetInfoDictionary")
-    public native CFDictionary getInfoDictionary();
+    public static native CFDictionary getInfoDictionary(MusicSequence inSequence);
     
 }

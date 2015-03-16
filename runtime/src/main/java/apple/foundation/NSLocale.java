@@ -22,7 +22,7 @@ import apple.dispatch.*;
 
 
 
-@Library("Foundation") @Mapping("NSLocale")
+@Library("Foundation/Foundation.h") @Mapping("NSLocale")
 public class NSLocale 
     extends NSObject 
     implements NSCopying {

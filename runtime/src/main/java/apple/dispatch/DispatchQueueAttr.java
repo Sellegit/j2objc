@@ -15,7 +15,7 @@ import apple.coreservices.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("System")
+@Library("System/System.h")
 public class DispatchQueueAttr 
     extends DispatchObject 
      {

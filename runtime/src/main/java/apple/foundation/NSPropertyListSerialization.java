@@ -22,7 +22,7 @@ import apple.dispatch.*;
 
 
 
-@Library("Foundation") @Mapping("NSPropertyListSerialization")
+@Library("Foundation/Foundation.h") @Mapping("NSPropertyListSerialization")
 public class NSPropertyListSerialization 
     extends NSObject 
      {

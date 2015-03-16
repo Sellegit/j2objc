@@ -23,7 +23,7 @@ import apple.opengles.*;
 
 
 
-@Library("SceneKit") @Mapping("SCNPhysicsContactDelegate")
+@Library("SceneKit/SceneKit.h") @Mapping("SCNPhysicsContactDelegate")
 public interface SCNPhysicsContactDelegate 
     extends NSObjectProtocol {
 

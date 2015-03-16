@@ -22,7 +22,7 @@ import apple.dispatch.*;
 
 
 
-@Library("Foundation") @Mapping("NSFormatter")
+@Library("Foundation/Foundation.h") @Mapping("NSFormatter")
 public class NSFormatter 
     extends NSObject 
     implements NSCopying, NSCoding {

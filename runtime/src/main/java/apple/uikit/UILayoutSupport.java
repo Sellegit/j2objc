@@ -22,7 +22,7 @@ import apple.corelocation.*;
 
 
 
-@Library("UIKit") @Mapping("UILayoutSupport")
+@Library("UIKit/UIKit.h") @Mapping("UILayoutSupport")
 public interface UILayoutSupport 
     extends NSObjectProtocol {
 

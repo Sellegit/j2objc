@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 
 
-@Mapping("AudioClassDescription")
+@Mapping("AudioClassDescription") @Library("CoreAudio/CoreAudioTypes.h")
 public class AudioClassDescription 
     extends Struct 
      {

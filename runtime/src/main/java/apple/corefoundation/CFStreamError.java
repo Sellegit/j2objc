@@ -18,7 +18,7 @@ import apple.foundation.*;
 
 
 
-@Mapping("CFStreamError")
+@Mapping("CFStreamError") @Library("CoreFoundation/CoreFoundation.h")
 public class CFStreamError 
     extends Struct 
      {

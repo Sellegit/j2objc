@@ -23,7 +23,7 @@ import apple.opengles.*;
 
 
 
-@Library("SceneKit") @Mapping("SCNMaterial")
+@Library("SceneKit/SceneKit.h") @Mapping("SCNMaterial")
 public class SCNMaterial 
     extends NSObject 
     implements SCNAnimatable, SCNShadable, NSCopying {

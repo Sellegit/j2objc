@@ -18,7 +18,7 @@ import apple.uikit.*;
 
 
 
-@Library("GameKit")
+@Library("GameKit/GameKit.h")
 @Mapping("GKLeaderboardPlayerScope")
 public final class GKLeaderboardPlayerScope extends ObjCEnum {
     

@@ -16,7 +16,7 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreText")
+@Library("CoreText/CoreText.h")
 public class CTFont 
     extends CFType 
      {
@@ -77,197 +77,197 @@ public class CTFont
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTFontCreateForString")
-    public native CTFont create(String string, CFRange range);
+    public static native CTFont create(CTFont currentFont, String string, CFRange range);
     /**
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTFontCopyFontDescriptor")
-    public native CTFontDescriptor getFontDescriptor();
+    public static native CTFontDescriptor getFontDescriptor(CTFont font);
     /**
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTFontCopyAttribute")
-    public native CFType getAttribute(String attribute);
+    public static native CFType getAttribute(CTFont font, String attribute);
     /**
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTFontGetSize")
-    public native @MachineSizedFloat double getSize();
+    public static native @MachineSizedFloat double getSize(CTFont font);
     /**
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTFontGetMatrix")
-    public native CGAffineTransform getMatrix();
+    public static native CGAffineTransform getMatrix(CTFont font);
     /**
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTFontGetSymbolicTraits")
-    public native CTFontSymbolicTraits getSymbolicTraits();
+    public static native CTFontSymbolicTraits getSymbolicTraits(CTFont font);
     /**
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTFontCopyTraits")
-    public native CTFontTraits getTraits();
+    public static native CTFontTraits getTraits(CTFont font);
     /**
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTFontCopyPostScriptName")
-    public native String getPostScriptName();
+    public static native String getPostScriptName(CTFont font);
     /**
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTFontCopyFamilyName")
-    public native String getFamilyName();
+    public static native String getFamilyName(CTFont font);
     /**
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTFontCopyFullName")
-    public native String getFullName();
+    public static native String getFullName(CTFont font);
     /**
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTFontCopyDisplayName")
-    public native String getDisplayName();
+    public static native String getDisplayName(CTFont font);
     /**
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTFontCopyName")
-    protected native String getName(String nameKey);
+    protected static native String getName(CTFont font, String nameKey);
     /**
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTFontCopyLocalizedName")
-    protected native String getLocalizedName(String nameKey, Todo actualLanguage);
+    protected static native String getLocalizedName(CTFont font, String nameKey, Todo actualLanguage);
     /**
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTFontCopyCharacterSet")
-    public native NSCharacterSet getCharacterSet();
+    public static native NSCharacterSet getCharacterSet(CTFont font);
     /**
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTFontGetStringEncoding")
-    public native int getStringEncoding();
+    public static native int getStringEncoding(CTFont font);
     /**
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTFontCopySupportedLanguages")
-    public native List<String> getSupportedLanguages();
+    public static native List<String> getSupportedLanguages(CTFont font);
     /**
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTFontGetGlyphsForCharacters")
-    protected native boolean getGlyphs(Todo characters, Todo glyphs, @MachineSizedSInt long count);
+    protected static native boolean getGlyphs(CTFont font, Todo characters, Todo glyphs, @MachineSizedSInt long count);
     /**
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTFontGetAscent")
-    public native @MachineSizedFloat double getAscent();
+    public static native @MachineSizedFloat double getAscent(CTFont font);
     /**
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTFontGetDescent")
-    public native @MachineSizedFloat double getDescent();
+    public static native @MachineSizedFloat double getDescent(CTFont font);
     /**
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTFontGetLeading")
-    public native @MachineSizedFloat double getLeading();
+    public static native @MachineSizedFloat double getLeading(CTFont font);
     /**
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTFontGetUnitsPerEm")
-    public native int getUnitsPerEm();
+    public static native int getUnitsPerEm(CTFont font);
     /**
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTFontGetGlyphCount")
-    public native @MachineSizedSInt long getGlyphCount();
+    public static native @MachineSizedSInt long getGlyphCount(CTFont font);
     /**
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTFontGetBoundingBox")
-    public native CGRect getBoundingBox();
+    public static native CGRect getBoundingBox(CTFont font);
     /**
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTFontGetUnderlinePosition")
-    public native @MachineSizedFloat double getUnderlinePosition();
+    public static native @MachineSizedFloat double getUnderlinePosition(CTFont font);
     /**
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTFontGetUnderlineThickness")
-    public native @MachineSizedFloat double getUnderlineThickness();
+    public static native @MachineSizedFloat double getUnderlineThickness(CTFont font);
     /**
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTFontGetSlantAngle")
-    public native @MachineSizedFloat double getSlantAngle();
+    public static native @MachineSizedFloat double getSlantAngle(CTFont font);
     /**
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTFontGetCapHeight")
-    public native @MachineSizedFloat double getCapHeight();
+    public static native @MachineSizedFloat double getCapHeight(CTFont font);
     /**
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTFontGetXHeight")
-    public native @MachineSizedFloat double getXHeight();
+    public static native @MachineSizedFloat double getXHeight(CTFont font);
     /**
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTFontGetGlyphWithName")
-    public native short getGlyph(String glyphName);
+    public static native short getGlyph(CTFont font, String glyphName);
     /**
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTFontGetBoundingRectsForGlyphs")
-    protected native CGRect getBoundingRects(CTFontOrientation orientation, Todo glyphs, CGRect boundingRects, @MachineSizedSInt long count);
+    protected static native CGRect getBoundingRects(CTFont font, CTFontOrientation orientation, Todo glyphs, CGRect boundingRects, @MachineSizedSInt long count);
     /**
      * @since Available in iOS 6.0 and later.
      */
     @GlobalFunction("CTFontGetOpticalBoundsForGlyphs")
-    protected native CGRect getOpticalBounds(Todo glyphs, CGRect boundingRects, @MachineSizedSInt long count, @MachineSizedUInt long options);
+    protected static native CGRect getOpticalBounds(CTFont font, Todo glyphs, CGRect boundingRects, @MachineSizedSInt long count, @MachineSizedUInt long options);
     /**
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTFontGetAdvancesForGlyphs")
-    protected native double getAdvances(CTFontOrientation orientation, Todo glyphs, CGSize advances, @MachineSizedSInt long count);
+    protected static native double getAdvances(CTFont font, CTFontOrientation orientation, Todo glyphs, CGSize advances, @MachineSizedSInt long count);
     /**
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTFontGetVerticalTranslationsForGlyphs")
-    protected native void getVerticalTranslations(Todo glyphs, CGSize translations, @MachineSizedSInt long count);
+    protected static native void getVerticalTranslations(CTFont font, Todo glyphs, CGSize translations, @MachineSizedSInt long count);
     /**
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTFontCreatePathForGlyph")
-    public native CGPath createPath(short glyph, CGAffineTransform transform);
+    public static native CGPath createPath(CTFont font, short glyph, CGAffineTransform transform);
     /**
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTFontCopyVariationAxes")
-    public native List<CTFontVariationAxes> getVariationAxes();
+    public static native List<CTFontVariationAxes> getVariationAxes(CTFont font);
     /**
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTFontCopyVariation")
-    public native CFDictionary getVariation();
+    public static native CFDictionary getVariation(CTFont font);
     /**
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTFontCopyFeatures")
-    public native CFArray getFeatures();
+    public static native CFArray getFeatures(CTFont font);
     /**
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTFontCopyFeatureSettings")
-    public native CFArray getFeatureSettings();
+    public static native CFArray getFeatureSettings(CTFont font);
     /**
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTFontCopyGraphicsFont")
-    public native CGFont getGraphicsFont(Todo attributes);
+    public static native CGFont getGraphicsFont(CTFont font, Todo attributes);
     /**
      * @since Available in iOS 3.2 and later.
      */
@@ -277,26 +277,26 @@ public class CTFont
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTFontCopyAvailableTables")
-    public native CFArray getAvailableTables(CTFontTableOptions options);
+    public static native CFArray getAvailableTables(CTFont font, CTFontTableOptions options);
     /**
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTFontCopyTable")
-    public native NSData getTable(CTFontTableTag table, CTFontTableOptions options);
+    public static native NSData getTable(CTFont font, CTFontTableTag table, CTFontTableOptions options);
     /**
      * @since Available in iOS 4.2 and later.
      */
     @GlobalFunction("CTFontDrawGlyphs")
-    public native void drawGlyphs(Todo glyphs, CGPoint positions, @MachineSizedUInt long count, CGContext context);
+    public static native void drawGlyphs(CTFont font, Todo glyphs, CGPoint positions, @MachineSizedUInt long count, CGContext context);
     /**
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTFontGetLigatureCaretPositions")
-    public native @MachineSizedSInt long getLigatureCaretPositions(short glyph, Todo positions, @MachineSizedSInt long maxPositions);
+    public static native @MachineSizedSInt long getLigatureCaretPositions(CTFont font, short glyph, Todo positions, @MachineSizedSInt long maxPositions);
     /**
      * @since Available in iOS 6.0 and later.
      */
     @GlobalFunction("CTFontCopyDefaultCascadeListForLanguages")
-    public native CFArray getDefaultCascadeList(CFArray languagePrefList);
+    public static native CFArray getDefaultCascadeList(CTFont font, CFArray languagePrefList);
     
 }

@@ -20,7 +20,7 @@ import apple.coremedia.*;
 
 
 
-@Mapping("ExtendedTempoEvent")
+@Mapping("ExtendedTempoEvent") @Library("AudioToolbox/AudioToolbox.h")
 public class ExtendedTempoEvent 
     extends Struct 
      {
@@ -37,8 +37,8 @@ public class ExtendedTempoEvent
         return __new;
     ]-*/;
     public static native ExtendedTempoEvent copyWithbpm(ExtendedTempoEvent original, double bpm) /*-[
-        original.bpm = bpm;
-        return original;
+        ExtendedTempoEvent __new = { .bpm = bpm };
+        return __new;
     ]-*/;
 
     

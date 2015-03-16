@@ -23,7 +23,7 @@ import apple.avkit.*;
  * @since Available in iOS 4.0 and later.
  */
 
-@Library("iAd") @Mapping("ADBannerView")
+@Library("iAd/iAd.h") @Mapping("ADBannerView")
 public class ADBannerView 
     extends UIView 
      {

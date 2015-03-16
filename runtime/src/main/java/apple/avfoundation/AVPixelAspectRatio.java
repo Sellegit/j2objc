@@ -23,7 +23,7 @@ import apple.mediatoolbox.*;
 
 
 
-@Mapping("AVPixelAspectRatio")
+@Mapping("AVPixelAspectRatio") @Library("AVFoundation/AVFoundation.h")
 public class AVPixelAspectRatio 
     extends Struct 
      {

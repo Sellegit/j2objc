@@ -18,7 +18,7 @@ import apple.dispatch.*;
 
 
 
-@Mapping("SCNetworkReachabilityContext")
+@Mapping("SCNetworkReachabilityContext") @Library("SystemConfiguration/SystemConfiguration.h")
  class SCNetworkReachabilityContext 
     extends Struct 
      {

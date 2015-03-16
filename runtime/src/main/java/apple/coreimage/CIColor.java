@@ -20,7 +20,7 @@ import apple.imageio.*;
 
 
 
-@Library("CoreImage") @Mapping("CIColor")
+@Library("CoreImage/CoreImage.h") @Mapping("CIColor")
 public class CIColor 
     extends NSObject 
     implements NSCoding, NSCopying {

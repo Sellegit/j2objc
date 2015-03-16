@@ -20,7 +20,7 @@ import apple.corevideo.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreMedia")
+@Library("CoreMedia/CoreMedia.h")
 public class CMMemoryPool 
     extends CFType 
      {
@@ -46,16 +46,16 @@ public class CMMemoryPool
      * @since Available in iOS 6.0 and later.
      */
     @GlobalFunction("CMMemoryPoolGetAllocator")
-    public native CFAllocator getAllocator();
+    public static native CFAllocator getAllocator(CMMemoryPool pool);
     /**
      * @since Available in iOS 6.0 and later.
      */
     @GlobalFunction("CMMemoryPoolFlush")
-    public native void flush();
+    public static native void flush(CMMemoryPool pool);
     /**
      * @since Available in iOS 6.0 and later.
      */
     @GlobalFunction("CMMemoryPoolInvalidate")
-    public native void invalidate();
+    public static native void invalidate(CMMemoryPool pool);
     
 }

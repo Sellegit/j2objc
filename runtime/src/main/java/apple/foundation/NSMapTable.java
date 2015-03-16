@@ -24,7 +24,7 @@ import apple.dispatch.*;
  * @since Available in iOS 6.0 and later.
  */
 
-@Library("Foundation") @Mapping("NSMapTable")
+@Library("Foundation/Foundation.h") @Mapping("NSMapTable")
 public class NSMapTable <K, V>
     extends NSObject 
     implements NSCopying, NSCoding, NSFastEnumeration {

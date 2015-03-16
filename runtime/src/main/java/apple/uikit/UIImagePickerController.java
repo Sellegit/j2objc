@@ -24,7 +24,7 @@ import apple.corelocation.*;
  * @since Available in iOS 2.0 and later.
  */
 
-@Library("UIKit") @Mapping("UIImagePickerController")
+@Library("UIKit/UIKit.h") @Mapping("UIImagePickerController")
 public class UIImagePickerController 
     extends UINavigationController 
     implements NSCoding {

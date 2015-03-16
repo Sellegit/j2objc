@@ -21,7 +21,7 @@ import apple.avkit.*;
 
 
 
-@Library("iAd") @Mapping("ADBannerViewDelegate")
+@Library("iAd/iAd.h") @Mapping("ADBannerViewDelegate")
 public interface ADBannerViewDelegate 
     extends NSObjectProtocol {
 

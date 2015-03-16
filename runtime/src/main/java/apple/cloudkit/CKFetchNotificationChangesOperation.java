@@ -20,7 +20,7 @@ import apple.corelocation.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("CloudKit") @Mapping("CKFetchNotificationChangesOperation")
+@Library("CloudKit/CloudKit.h") @Mapping("CKFetchNotificationChangesOperation")
 public class CKFetchNotificationChangesOperation 
     extends CKOperation 
      {

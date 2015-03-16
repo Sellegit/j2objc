@@ -22,7 +22,7 @@ import apple.corelocation.*;
 
 
 
-@Library("UIKit")
+@Library("UIKit/UIKit.h")
 @Mapping("UIBarButtonSystemItem")
 public final class UIBarButtonSystemItem extends ObjCEnum {
     

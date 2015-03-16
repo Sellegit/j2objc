@@ -24,7 +24,7 @@ import apple.corelocation.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("UIKit") @Mapping("UIInputViewController")
+@Library("UIKit/UIKit.h") @Mapping("UIInputViewController")
 public class UIInputViewController 
     extends UIViewController 
     implements UITextInputDelegate {

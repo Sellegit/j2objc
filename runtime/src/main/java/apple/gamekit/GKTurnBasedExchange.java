@@ -20,7 +20,7 @@ import apple.uikit.*;
  * @since Available in iOS 7.0 and later.
  */
 
-@Library("GameKit") @Mapping("GKTurnBasedExchange")
+@Library("GameKit/GameKit.h") @Mapping("GKTurnBasedExchange")
 public class GKTurnBasedExchange 
     extends NSObject 
      {

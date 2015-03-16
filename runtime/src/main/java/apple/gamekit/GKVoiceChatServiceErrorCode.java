@@ -18,7 +18,7 @@ import apple.uikit.*;
 
 
 
-@Library("GameKit")
+@Library("GameKit/GameKit.h")
 @Mapping("GKVoiceChatServiceErrorCode")
 public final class GKVoiceChatServiceErrorCode extends ObjCEnum {
     

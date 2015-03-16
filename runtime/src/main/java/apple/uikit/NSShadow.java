@@ -24,7 +24,7 @@ import apple.corelocation.*;
  * @since Available in iOS 6.0 and later.
  */
 
-@Library("UIKit") @Mapping("NSShadow")
+@Library("UIKit/UIKit.h") @Mapping("NSShadow")
 public class NSShadow 
     extends NSObject 
     implements NSCopying, NSCoding {

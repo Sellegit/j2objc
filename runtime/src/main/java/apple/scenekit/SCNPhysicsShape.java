@@ -23,7 +23,7 @@ import apple.opengles.*;
 
 
 
-@Library("SceneKit") @Mapping("SCNPhysicsShape")
+@Library("SceneKit/SceneKit.h") @Mapping("SCNPhysicsShape")
 public class SCNPhysicsShape 
     extends NSObject 
     implements NSCopying {

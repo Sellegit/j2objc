@@ -23,7 +23,7 @@ import apple.mediatoolbox.*;
 
 
 
-@Library("AVFoundation")
+@Library("AVFoundation/AVFoundation.h")
 @Mapping("AVAssetWriterStatus")
 public final class AVAssetWriterStatus extends ObjCEnum {
     

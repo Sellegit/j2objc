@@ -16,7 +16,7 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreMIDI")
+@Library("CoreMIDI/CoreMIDI.h")
 public class MIDIThruConnection 
     extends MIDIObject 
      {
@@ -37,17 +37,17 @@ public class MIDIThruConnection
      * @since Available in iOS 4.2 and later.
      */
     @GlobalFunction("MIDIThruConnectionDispose")
-    public native MIDIError dispose();
+    public static native MIDIError dispose(MIDIThruConnection connection);
     /**
      * @since Available in iOS 4.2 and later.
      */
     @GlobalFunction("MIDIThruConnectionGetParams")
-    protected native MIDIError getParams(NSData outConnectionParams);
+    protected static native MIDIError getParams(MIDIThruConnection connection, NSData outConnectionParams);
     /**
      * @since Available in iOS 4.2 and later.
      */
     @GlobalFunction("MIDIThruConnectionSetParams")
-    public native MIDIError setParams(NSData inConnectionParams);
+    public static native MIDIError setParams(MIDIThruConnection connection, NSData inConnectionParams);
     /**
      * @since Available in iOS 4.2 and later.
      */

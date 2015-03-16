@@ -22,7 +22,7 @@ import apple.dispatch.*;
 
 
 
-@Library("Foundation") @Mapping("NSTimeZone")
+@Library("Foundation/Foundation.h") @Mapping("NSTimeZone")
 public class NSTimeZone 
     extends NSObject 
     implements NSCopying {

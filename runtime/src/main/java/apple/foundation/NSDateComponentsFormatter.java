@@ -24,7 +24,7 @@ import apple.dispatch.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("Foundation") @Mapping("NSDateComponentsFormatter")
+@Library("Foundation/Foundation.h") @Mapping("NSDateComponentsFormatter")
 public class NSDateComponentsFormatter 
     extends NSFormatter 
      {

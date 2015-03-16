@@ -18,7 +18,7 @@ import apple.foundation.*;
 
 
 
-@Library("CoreFoundation")
+@Library("CoreFoundation/CoreFoundation.h")
 @Mapping("CFMessagePortErrorCode")
 public final class CFMessagePortErrorCode extends ObjCEnum {
     

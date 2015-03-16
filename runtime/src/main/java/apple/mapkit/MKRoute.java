@@ -22,7 +22,7 @@ import apple.dispatch.*;
  * @since Available in iOS 7.0 and later.
  */
 
-@Library("MapKit") @Mapping("MKRoute")
+@Library("MapKit/MapKit.h") @Mapping("MKRoute")
 public class MKRoute 
     extends NSObject 
      {

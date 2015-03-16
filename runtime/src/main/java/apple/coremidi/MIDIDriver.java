@@ -16,7 +16,7 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreMIDI")
+@Library("CoreMIDI/CoreMIDI.h")
 public class MIDIDriver 
     extends MIDIDriverInterface 
      {
@@ -35,6 +35,6 @@ public class MIDIDriver
      * @since Available in iOS 4.2 and later.
      */
     @GlobalFunction("MIDIGetDriverDeviceList")
-    public native MIDIDeviceList getDeviceList();
+    public static native MIDIDeviceList getDeviceList(MIDIDriver driver);
     
 }

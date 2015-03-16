@@ -18,7 +18,7 @@ import apple.uikit.*;
 
 
 
-@Library("MediaPlayer")
+@Library("MediaPlayer/MediaPlayer.h")
 @Mapping("MPMovieControlStyle")
 public final class MPMovieControlStyle extends ObjCEnum {
     

@@ -24,7 +24,7 @@ import apple.dispatch.*;
  * @since Available in iOS 4.0 and later.
  */
 
-@Library("Foundation") @Mapping("NSBlockOperation")
+@Library("Foundation/Foundation.h") @Mapping("NSBlockOperation")
 public class NSBlockOperation 
     extends NSOperation 
      {

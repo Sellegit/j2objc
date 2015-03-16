@@ -21,7 +21,7 @@ import apple.corelocation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("UIKit")
+@Library("UIKit/UIKit.h")
 public final class NSBundleExtensions 
     extends NSExtensions 
      {
@@ -35,7 +35,6 @@ public final class NSBundleExtensions
     
     
     
-    @Mapping("loadNibNamed:owner:options:")
-    public static native NSArray<?> loadNib(NSBundle thiz, String name, Object owner, NSDictionary<?, ?> options);
+    
     
 }

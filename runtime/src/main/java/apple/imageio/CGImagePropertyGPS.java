@@ -16,7 +16,7 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("ImageIO")
+@Library("ImageIO/ImageIO.h")
 public class CGImagePropertyGPS 
     extends Object 
      {

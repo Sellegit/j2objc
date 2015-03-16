@@ -20,7 +20,7 @@ import apple.metal.*;
 
 
 
-@Library("CoreVideo")
+@Library("CoreVideo/CoreVideo.h")
 @Mapping("CVPixelFormatType")
 public final class CVPixelFormatType extends ObjCEnum {
     

@@ -21,7 +21,7 @@ import apple.addressbook.*;
  * @since Available in iOS 2.0 and later.
  */
 
-@Library("AddressBookUI") @Mapping("ABUnknownPersonViewController")
+@Library("AddressBookUI/AddressBookUI.h") @Mapping("ABUnknownPersonViewController")
 public class ABUnknownPersonViewController 
     extends UIViewController 
      {

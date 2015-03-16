@@ -24,7 +24,7 @@ import apple.corelocation.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("UIKit") @Mapping("NSFileProviderExtension")
+@Library("UIKit/UIKit.h") @Mapping("NSFileProviderExtension")
 public class NSFileProviderExtension 
     extends NSObject 
      {

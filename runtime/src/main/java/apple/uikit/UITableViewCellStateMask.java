@@ -22,7 +22,7 @@ import apple.corelocation.*;
 
 
 
-@Library("UIKit")
+@Library("UIKit/UIKit.h")
 @Mapping("UITableViewCellStateMask")
 public final class UITableViewCellStateMask extends ObjCEnum {
     

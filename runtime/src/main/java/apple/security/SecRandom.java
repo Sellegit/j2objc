@@ -16,7 +16,7 @@ import apple.dispatch.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("Security")
+@Library("Security/Security.h")
 public class SecRandom 
     extends Object 
      {
@@ -38,6 +38,6 @@ public class SecRandom
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("SecRandomCopyBytes")
-    public native int copyBytes(@MachineSizedUInt long count, Todo bytes);
+    public static native int copyBytes(SecRandom rnd, @MachineSizedUInt long count, Todo bytes);
     
 }

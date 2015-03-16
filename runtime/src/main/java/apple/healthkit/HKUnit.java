@@ -19,10 +19,10 @@ import apple.foundation.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("HealthKit") @Mapping("HKUnit")
+@Library("HealthKit/HealthKit.h") @Mapping("HKUnit")
 public class HKUnit 
     extends NSObject 
-     {
+    implements NSCopying {
 
     
     public static final double MolarMassBloodGlucose = 180.15588000005408;
@@ -138,5 +138,7 @@ public class HKUnit
     public native HKUnit raiseToPower(@MachineSizedSInt long power);
     @Mapping("reciprocalUnit")
     public native HKUnit reciprocalUnit();
+    @Mapping("copyWithZone:")
+    public native Object copyWithZone$(NSZone zone);
     
 }

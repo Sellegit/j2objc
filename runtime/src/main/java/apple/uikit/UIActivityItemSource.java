@@ -22,7 +22,7 @@ import apple.corelocation.*;
 
 
 
-@Library("UIKit") @Mapping("UIActivityItemSource")
+@Library("UIKit/UIKit.h") @Mapping("UIActivityItemSource")
 public interface UIActivityItemSource 
     extends NSObjectProtocol {
 

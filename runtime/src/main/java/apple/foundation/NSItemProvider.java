@@ -24,7 +24,7 @@ import apple.dispatch.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("Foundation") @Mapping("NSItemProvider")
+@Library("Foundation/Foundation.h") @Mapping("NSItemProvider")
 public class NSItemProvider 
     extends NSObject 
     implements NSCopying {

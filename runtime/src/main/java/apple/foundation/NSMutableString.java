@@ -22,7 +22,7 @@ import apple.dispatch.*;
 
 
 
-@Library("Foundation") @Mapping("NSMutableString")
+@Library("Foundation/Foundation.h") @Mapping("NSMutableString")
 public class NSMutableString 
     extends NSString 
      {

@@ -22,7 +22,7 @@ import apple.dispatch.*;
 
 
 
-@Library("Foundation") @Mapping("NSInvocation")
+@Library("Foundation/Foundation.h") @Mapping("NSInvocation")
 public class NSInvocation 
     extends NSObject 
      {

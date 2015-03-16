@@ -22,7 +22,7 @@ import apple.corelocation.*;
 
 
 
-@Library("UIKit")
+@Library("UIKit/UIKit.h")
 @Mapping("UITextFieldViewMode")
 public final class UITextFieldViewMode extends ObjCEnum {
     

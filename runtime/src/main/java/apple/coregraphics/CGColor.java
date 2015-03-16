@@ -17,7 +17,7 @@ import apple.uikit.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreGraphics")
+@Library("CoreGraphics/CoreGraphics.h")
 public class CGColor 
     extends CFType 
      {
@@ -53,12 +53,12 @@ public class CGColor
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGColorEqualToColor")
-    public native boolean equalToColor(CGColor color2);
+    public static native boolean equalToColor(CGColor color1, CGColor color2);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGColorGetNumberOfComponents")
-    public native @MachineSizedUInt long getNumberOfComponents();
+    public static native @MachineSizedUInt long getNumberOfComponents(CGColor color);
     /**
      * @since Available in iOS 2.0 and later.
      */
@@ -68,17 +68,17 @@ public class CGColor
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGColorGetAlpha")
-    public native @MachineSizedFloat double getAlpha();
+    public static native @MachineSizedFloat double getAlpha(CGColor color);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGColorGetColorSpace")
-    public native CGColorSpace getColorSpace();
+    public static native CGColorSpace getColorSpace(CGColor color);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGColorGetPattern")
-    public native CGPattern getPattern();
+    public static native CGPattern getPattern(CGColor color);
     /**
      * @since Available in iOS 2.0 and later.
      */

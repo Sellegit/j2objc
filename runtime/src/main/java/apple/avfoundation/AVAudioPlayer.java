@@ -25,7 +25,7 @@ import apple.mediatoolbox.*;
  * @since Available in iOS 2.2 and later.
  */
 
-@Library("AVFoundation") @Mapping("AVAudioPlayer")
+@Library("AVFoundation/AVFoundation.h") @Mapping("AVAudioPlayer")
 public class AVAudioPlayer 
     extends NSObject 
      {

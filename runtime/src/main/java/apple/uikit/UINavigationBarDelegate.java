@@ -22,7 +22,7 @@ import apple.corelocation.*;
 
 
 
-@Library("UIKit") @Mapping("UINavigationBarDelegate")
+@Library("UIKit/UIKit.h") @Mapping("UINavigationBarDelegate")
 public interface UINavigationBarDelegate 
     extends UIBarPositioningDelegate {
 

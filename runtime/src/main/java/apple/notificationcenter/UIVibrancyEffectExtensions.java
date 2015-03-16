@@ -17,7 +17,7 @@ import apple.uikit.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("NotificationCenter")
+@Library("NotificationCenter/NotificationCenter.h")
 public final class UIVibrancyEffectExtensions 
     extends NSExtensions 
      {

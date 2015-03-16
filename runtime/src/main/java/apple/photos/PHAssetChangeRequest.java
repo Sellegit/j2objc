@@ -22,7 +22,7 @@ import apple.avfoundation.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("Photos") @Mapping("PHAssetChangeRequest")
+@Library("Photos/Photos.h") @Mapping("PHAssetChangeRequest")
 public class PHAssetChangeRequest 
     extends NSObject 
      {

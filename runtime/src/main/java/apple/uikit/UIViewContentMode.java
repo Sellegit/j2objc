@@ -22,7 +22,7 @@ import apple.corelocation.*;
 
 
 
-@Library("UIKit")
+@Library("UIKit/UIKit.h")
 @Mapping("UIViewContentMode")
 public final class UIViewContentMode extends ObjCEnum {
     

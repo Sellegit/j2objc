@@ -21,7 +21,7 @@ import apple.security.*;
  * @since Available in iOS 7.0 and later.
  */
 
-@Library("MultipeerConnectivity") @Mapping("MCNearbyServiceBrowser")
+@Library("MultipeerConnectivity/MultipeerConnectivity.h") @Mapping("MCNearbyServiceBrowser")
 public class MCNearbyServiceBrowser 
     extends NSObject 
      {

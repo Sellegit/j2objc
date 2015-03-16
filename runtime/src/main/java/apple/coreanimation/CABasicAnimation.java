@@ -21,7 +21,7 @@ import apple.metal.*;
 
 
 
-@Library("QuartzCore") @Mapping("CABasicAnimation")
+@Library("QuartzCore/QuartzCore.h") @Mapping("CABasicAnimation")
 public class CABasicAnimation 
     extends CAPropertyAnimation 
      {

@@ -24,7 +24,7 @@ import apple.dispatch.*;
  * @since Available in iOS 7.0 and later.
  */
 
-@Library("Foundation")
+@Library("Foundation/Foundation.h")
 @Mapping("NSURLSessionAuthChallengeDisposition")
 public final class NSURLSessionAuthChallengeDisposition extends ObjCEnum {
     

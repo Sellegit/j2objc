@@ -24,7 +24,7 @@ import apple.scenekit.*;
 
 
 
-@Library("SpriteKit") @Mapping("SKLabelNode")
+@Library("SpriteKit/SpriteKit.h") @Mapping("SKLabelNode")
 public class SKLabelNode 
     extends SKNode 
      {

@@ -22,7 +22,7 @@ import apple.corelocation.*;
 
 
 
-@Library("UIKit")
+@Library("UIKit/UIKit.h")
 @Mapping("UIGuidedAccessRestrictionState")
 public final class UIGuidedAccessRestrictionState extends ObjCEnum {
     

@@ -22,7 +22,7 @@ import apple.dispatch.*;
 
 
 
-@Library("Foundation")
+@Library("Foundation/Foundation.h")
 @Mapping("NSStringCompareOptions")
 public final class NSStringCompareOptions extends ObjCEnum {
     

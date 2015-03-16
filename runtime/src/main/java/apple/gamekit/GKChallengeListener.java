@@ -18,7 +18,7 @@ import apple.uikit.*;
 
 
 
-@Library("GameKit") @Mapping("GKChallengeListener")
+@Library("GameKit/GameKit.h") @Mapping("GKChallengeListener")
 public interface GKChallengeListener 
     extends NSObjectProtocol {
 

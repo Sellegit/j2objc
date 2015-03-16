@@ -18,7 +18,7 @@ import apple.dispatch.*;
 
 
 
-@Library("PushKit") @Mapping("PKPushRegistryDelegate")
+@Library("PushKit/PushKit.h") @Mapping("PKPushRegistryDelegate")
 public interface PKPushRegistryDelegate 
     extends NSObjectProtocol {
 

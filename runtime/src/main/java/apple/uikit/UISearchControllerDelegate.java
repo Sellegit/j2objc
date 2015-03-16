@@ -22,7 +22,7 @@ import apple.corelocation.*;
 
 
 
-@Library("UIKit") @Mapping("UISearchControllerDelegate")
+@Library("UIKit/UIKit.h") @Mapping("UISearchControllerDelegate")
 public interface UISearchControllerDelegate 
     extends NSObjectProtocol {
 

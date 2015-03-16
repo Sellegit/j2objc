@@ -22,7 +22,7 @@ import apple.corelocation.*;
 
 
 
-@Library("UIKit") @Mapping("UIDynamicItem")
+@Library("UIKit/UIKit.h") @Mapping("UIDynamicItem")
 public interface UIDynamicItem 
     extends NSObjectProtocol {
 

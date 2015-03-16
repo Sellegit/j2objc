@@ -22,7 +22,7 @@ import apple.dispatch.*;
 
 
 
-@Library("Foundation") @Mapping("NSMutableSet")
+@Library("Foundation/Foundation.h") @Mapping("NSMutableSet")
 public class NSMutableSet 
     extends NSSet 
      {

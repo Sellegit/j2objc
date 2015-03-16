@@ -20,7 +20,7 @@ import apple.corevideo.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreMedia")
+@Library("CoreMedia/CoreMedia.h")
 public class CMVideoFormatDescription 
     extends CMFormatDescription 
      {
@@ -44,17 +44,17 @@ public class CMVideoFormatDescription
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMVideoFormatDescriptionGetDimensions")
-    public native CMVideoDimensions getDimensions();
+    public static native CMVideoDimensions getDimensions(CMVideoFormatDescription videoDesc);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMVideoFormatDescriptionGetPresentationDimensions")
-    public native CGSize getPresentationDimensions(boolean usePixelAspectRatio, boolean useCleanAperture);
+    public static native CGSize getPresentationDimensions(CMVideoFormatDescription videoDesc, boolean usePixelAspectRatio, boolean useCleanAperture);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMVideoFormatDescriptionGetCleanAperture")
-    public native CGRect getCleanAperture(boolean originIsAtTopLeft);
+    public static native CGRect getCleanAperture(CMVideoFormatDescription videoDesc, boolean originIsAtTopLeft);
     /**
      * @since Available in iOS 4.0 and later.
      */
@@ -64,7 +64,7 @@ public class CMVideoFormatDescription
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMVideoFormatDescriptionMatchesImageBuffer")
-    public native boolean matchesImageBuffer(CVImageBuffer imageBuffer);
+    public static native boolean matchesImageBuffer(CMVideoFormatDescription desc, CVImageBuffer imageBuffer);
     /**
      * @since Available in iOS 8.0 and later.
      */

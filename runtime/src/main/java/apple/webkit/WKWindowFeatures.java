@@ -20,7 +20,7 @@ import apple.uikit.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("WebKit") @Mapping("WKWindowFeatures")
+@Library("WebKit/WebKit.h") @Mapping("WKWindowFeatures")
 public class WKWindowFeatures 
     extends NSObject 
      {

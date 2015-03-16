@@ -22,7 +22,7 @@ import apple.dispatch.*;
  * @since Available in iOS 7.0 and later.
  */
 
-@Library("MapKit") @Mapping("MKETAResponse")
+@Library("MapKit/MapKit.h") @Mapping("MKETAResponse")
 public class MKETAResponse 
     extends NSObject 
      {

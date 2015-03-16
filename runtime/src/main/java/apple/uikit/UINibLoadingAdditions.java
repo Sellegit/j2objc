@@ -22,7 +22,7 @@ import apple.corelocation.*;
 
 
 
-@Library("UIKit") @Mapping("UINibLoadingAdditions")
+@Library("UIKit/UIKit.h") @Mapping("UINibLoadingAdditions")
 public interface UINibLoadingAdditions 
      {
 

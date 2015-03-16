@@ -18,7 +18,7 @@ import apple.uikit.*;
 
 
 
-@Library("MediaPlayer") @Mapping("MPPlayableContentDelegate")
+@Library("MediaPlayer/MediaPlayer.h") @Mapping("MPPlayableContentDelegate")
 public interface MPPlayableContentDelegate 
     extends NSObjectProtocol {
 

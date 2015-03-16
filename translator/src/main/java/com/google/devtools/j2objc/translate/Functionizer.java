@@ -72,7 +72,7 @@ import java.util.Set;
 public class Functionizer extends TreeVisitor {
 
   private Set<IMethodBinding> functionizableMethods;
-  private Map<IMethodBinding, FunctionDeclaration> functionizedMethods = Maps.newHashMap();
+//  private Map<IMethodBinding, FunctionDeclaration> functionizedMethods = Maps.newHashMap();
 
   @Override
   public boolean visit(CompilationUnit node) {
@@ -196,25 +196,6 @@ public class Functionizer extends TreeVisitor {
     }
 
     node.replaceWith(functionInvocation);
-
-    // if the function it's trying to call rests in a mapped class, then we need to include
-    //   the implementation in this class (as a hack)
-    ITypeBinding declaringClass = binding.getDeclaringClass();
-    if (BindingUtil.extractMappingName(declaringClass) != null) {
-      FunctionDeclaration function = functionizedMethods.get(binding);
-      if (function != null) {
-        // right now assumes there is only static method
-        assert BindingUtil.isStatic(binding);
-        function = makeStaticFunction(binding);
-      }
-
-      AbstractTypeDeclaration thisClass = TreeUtil.getOwningType(node);
-      List<BodyDeclaration> decls = thisClass.getBodyDeclarations();
-      int ind = decls.indexOf(function); // to hell with O(n^2) performance
-      if (ind == -1) {
-        decls.add(0, function);
-      }
-    }
   }
 
   @Override
@@ -241,7 +222,6 @@ public class Functionizer extends TreeVisitor {
         setFunctionCaller(node, function);
       }
 
-      functionizedMethods.put(binding, function);
       ErrorUtil.functionizedMethod();
     }
   }

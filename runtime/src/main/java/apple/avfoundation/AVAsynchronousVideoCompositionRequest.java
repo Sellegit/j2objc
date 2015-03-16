@@ -25,7 +25,7 @@ import apple.mediatoolbox.*;
  * @since Available in iOS 7.0 and later.
  */
 
-@Library("AVFoundation") @Mapping("AVAsynchronousVideoCompositionRequest")
+@Library("AVFoundation/AVFoundation.h") @Mapping("AVAsynchronousVideoCompositionRequest")
 public class AVAsynchronousVideoCompositionRequest 
     extends NSObject 
     implements NSCopying {

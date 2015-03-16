@@ -19,7 +19,7 @@ import apple.foundation.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("HomeKit") @Mapping("HMZone")
+@Library("HomeKit/HomeKit.h") @Mapping("HMZone")
 public class HMZone 
     extends NSObject 
      {

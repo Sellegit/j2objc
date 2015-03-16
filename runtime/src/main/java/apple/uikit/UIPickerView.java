@@ -24,7 +24,7 @@ import apple.corelocation.*;
  * @since Available in iOS 2.0 and later.
  */
 
-@Library("UIKit") @Mapping("UIPickerView")
+@Library("UIKit/UIKit.h") @Mapping("UIPickerView")
 public class UIPickerView 
     extends UIView 
     implements NSCoding, UITableViewDataSource {

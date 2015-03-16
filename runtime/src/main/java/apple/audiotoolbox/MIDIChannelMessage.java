@@ -20,7 +20,7 @@ import apple.coremedia.*;
 
 
 
-@Mapping("MIDIChannelMessage")
+@Mapping("MIDIChannelMessage") @Library("AudioToolbox/AudioToolbox.h")
 public class MIDIChannelMessage 
     extends Struct 
      {
@@ -43,26 +43,26 @@ public class MIDIChannelMessage
         return __new;
     ]-*/;
     public static native MIDIChannelMessage copyWithstatus(MIDIChannelMessage original, byte status) /*-[
-        original.status = status;
-        return original;
+        MIDIChannelMessage __new = { .status = status, .data1 = original.data1, .data2 = original.data2, .reserved = original.reserved };
+        return __new;
     ]-*/;
 
     
     public static native MIDIChannelMessage copyWithdata1(MIDIChannelMessage original, byte data1) /*-[
-        original.data1 = data1;
-        return original;
+        MIDIChannelMessage __new = { .status = original.status, .data1 = data1, .data2 = original.data2, .reserved = original.reserved };
+        return __new;
     ]-*/;
 
     
     public static native MIDIChannelMessage copyWithdata2(MIDIChannelMessage original, byte data2) /*-[
-        original.data2 = data2;
-        return original;
+        MIDIChannelMessage __new = { .status = original.status, .data1 = original.data1, .data2 = data2, .reserved = original.reserved };
+        return __new;
     ]-*/;
 
     
     public static native MIDIChannelMessage copyWithreserved(MIDIChannelMessage original, byte reserved) /*-[
-        original.reserved = reserved;
-        return original;
+        MIDIChannelMessage __new = { .status = original.status, .data1 = original.data1, .data2 = original.data2, .reserved = reserved };
+        return __new;
     ]-*/;
 
     

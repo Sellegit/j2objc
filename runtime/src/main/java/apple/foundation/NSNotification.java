@@ -22,7 +22,7 @@ import apple.dispatch.*;
 
 
 
-@Library("Foundation") @Mapping("NSNotification")
+@Library("Foundation/Foundation.h") @Mapping("NSNotification")
 public class NSNotification 
     extends NSObject 
     implements NSCopying, NSCoding {

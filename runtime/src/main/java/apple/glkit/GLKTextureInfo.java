@@ -22,7 +22,7 @@ import apple.dispatch.*;
  * @since Available in iOS 5.0 and later.
  */
 
-@Library("GLKit") @Mapping("GLKTextureInfo")
+@Library("GLKit/GLKit.h") @Mapping("GLKTextureInfo")
 public class GLKTextureInfo 
     extends NSObject 
     implements NSCopying {

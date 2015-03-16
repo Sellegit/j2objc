@@ -20,7 +20,7 @@ import apple.dispatch.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("Metal") @Mapping("MTLVertexAttribute")
+@Library("Metal/Metal.h") @Mapping("MTLVertexAttribute")
 public class MTLVertexAttribute 
     extends NSObject 
      {

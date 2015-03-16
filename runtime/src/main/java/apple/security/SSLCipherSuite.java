@@ -17,7 +17,7 @@ import apple.dispatch.*;
 
 
 
-@Library("Security")
+@Library("Security/Security.h")
 @Mapping("SSLCipherSuite")
 public final class SSLCipherSuite extends ObjCEnum {
     

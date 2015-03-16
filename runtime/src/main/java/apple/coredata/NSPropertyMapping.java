@@ -19,7 +19,7 @@ import apple.foundation.*;
  * @since Available in iOS 3.0 and later.
  */
 
-@Library("CoreData") @Mapping("NSPropertyMapping")
+@Library("CoreData/CoreData.h") @Mapping("NSPropertyMapping")
 public class NSPropertyMapping 
     extends NSObject 
      {

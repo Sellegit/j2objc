@@ -25,7 +25,7 @@ import apple.mediatoolbox.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("AVFoundation") @Mapping("AVAudioStereoMixing")
+@Library("AVFoundation/AVFoundation.h") @Mapping("AVAudioStereoMixing")
 public interface AVAudioStereoMixing 
     extends NSObjectProtocol {
 

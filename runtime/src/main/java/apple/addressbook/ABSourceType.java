@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 
 
-@Library("AddressBook")
+@Library("AddressBook/AddressBook.h")
 @Mapping("ABSourceType")
 public final class ABSourceType extends ObjCEnum {
     

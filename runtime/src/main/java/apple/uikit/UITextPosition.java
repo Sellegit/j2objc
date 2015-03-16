@@ -24,7 +24,7 @@ import apple.corelocation.*;
  * @since Available in iOS 3.2 and later.
  */
 
-@Library("UIKit") @Mapping("UITextPosition")
+@Library("UIKit/UIKit.h") @Mapping("UITextPosition")
 public class UITextPosition 
     extends NSObject 
      {

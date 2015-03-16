@@ -25,7 +25,7 @@ import apple.mediatoolbox.*;
  * @since Available in iOS 4.0 and later.
  */
 
-@Library("AVFoundation") @Mapping("AVURLAsset")
+@Library("AVFoundation/AVFoundation.h") @Mapping("AVURLAsset")
 public class AVURLAsset 
     extends AVAsset 
      {

@@ -24,7 +24,7 @@ import apple.corelocation.*;
  * @since Available in iOS 2.0 and later.
  */
 
-@Library("UIKit") @Mapping("UISearchBar")
+@Library("UIKit/UIKit.h") @Mapping("UISearchBar")
 public class UISearchBar 
     extends UIView 
     implements UIBarPositioning, UITextInputTraits {

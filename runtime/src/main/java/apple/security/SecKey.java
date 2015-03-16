@@ -16,7 +16,7 @@ import apple.dispatch.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("Security")
+@Library("Security/Security.h")
 public class SecKey 
     extends CFType 
      {
@@ -53,26 +53,26 @@ public class SecKey
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("SecKeyRawSign")
-    public native int rawSign(SecPadding padding, Todo dataToSign, @MachineSizedUInt long dataToSignLen, Todo sig, Todo sigLen);
+    public static native int rawSign(SecKey key, SecPadding padding, Todo dataToSign, @MachineSizedUInt long dataToSignLen, Todo sig, Todo sigLen);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("SecKeyRawVerify")
-    public native int rawVerify(SecPadding padding, Todo signedData, @MachineSizedUInt long signedDataLen, Todo sig, @MachineSizedUInt long sigLen);
+    public static native int rawVerify(SecKey key, SecPadding padding, Todo signedData, @MachineSizedUInt long signedDataLen, Todo sig, @MachineSizedUInt long sigLen);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("SecKeyEncrypt")
-    public native int encrypt(SecPadding padding, Todo plainText, @MachineSizedUInt long plainTextLen, Todo cipherText, Todo cipherTextLen);
+    public static native int encrypt(SecKey key, SecPadding padding, Todo plainText, @MachineSizedUInt long plainTextLen, Todo cipherText, Todo cipherTextLen);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("SecKeyDecrypt")
-    public native int decrypt(SecPadding padding, Todo cipherText, @MachineSizedUInt long cipherTextLen, Todo plainText, Todo plainTextLen);
+    public static native int decrypt(SecKey key, SecPadding padding, Todo cipherText, @MachineSizedUInt long cipherTextLen, Todo plainText, Todo plainTextLen);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("SecKeyGetBlockSize")
-    public native @MachineSizedUInt long getBlockSize();
+    public static native @MachineSizedUInt long getBlockSize(SecKey key);
     
 }

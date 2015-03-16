@@ -23,7 +23,7 @@ import apple.mediatoolbox.*;
 
 
 
-@Mapping("AVAudio3DPoint")
+@Mapping("AVAudio3DPoint") @Library("AVFoundation/AVFoundation.h")
 public class AVAudio3DPoint 
     extends Struct 
      {

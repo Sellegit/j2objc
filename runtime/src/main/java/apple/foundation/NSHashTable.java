@@ -24,7 +24,7 @@ import apple.dispatch.*;
  * @since Available in iOS 6.0 and later.
  */
 
-@Library("Foundation") @Mapping("NSHashTable")
+@Library("Foundation/Foundation.h") @Mapping("NSHashTable")
 public class NSHashTable <T>
     extends NSObject 
     implements NSCopying, NSCoding, NSFastEnumeration {

@@ -19,7 +19,7 @@ import apple.foundation.*;
  * @since Available in iOS 5.0 and later.
  */
 
-@Library("Accounts") @Mapping("ACAccountStore")
+@Library("Accounts/Accounts.h") @Mapping("ACAccountStore")
 public class ACAccountStore 
     extends NSObject 
      {

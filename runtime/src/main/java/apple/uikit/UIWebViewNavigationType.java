@@ -22,7 +22,7 @@ import apple.corelocation.*;
 
 
 
-@Library("UIKit")
+@Library("UIKit/UIKit.h")
 @Mapping("UIWebViewNavigationType")
 public final class UIWebViewNavigationType extends ObjCEnum {
     

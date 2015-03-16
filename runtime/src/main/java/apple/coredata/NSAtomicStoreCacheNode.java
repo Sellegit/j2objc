@@ -19,7 +19,7 @@ import apple.foundation.*;
  * @since Available in iOS 3.0 and later.
  */
 
-@Library("CoreData") @Mapping("NSAtomicStoreCacheNode")
+@Library("CoreData/CoreData.h") @Mapping("NSAtomicStoreCacheNode")
 public class NSAtomicStoreCacheNode 
     extends NSObject 
      {

@@ -19,7 +19,7 @@ import apple.foundation.*;
  * @since Available in iOS 3.0 and later.
  */
 
-@Library("CoreData") @Mapping("NSManagedObjectID")
+@Library("CoreData/CoreData.h") @Mapping("NSManagedObjectID")
 public class NSManagedObjectID 
     extends NSObject 
     implements NSCopying {

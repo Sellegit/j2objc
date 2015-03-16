@@ -24,7 +24,7 @@ import apple.scenekit.*;
 
 
 
-@Library("SpriteKit") @Mapping("SKVideoNode")
+@Library("SpriteKit/SpriteKit.h") @Mapping("SKVideoNode")
 public class SKVideoNode 
     extends SKNode 
      {

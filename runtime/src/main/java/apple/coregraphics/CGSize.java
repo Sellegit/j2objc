@@ -18,7 +18,7 @@ import apple.uikit.*;
 
 
 
-@Mapping("CGSize") @Library("CoreGraphics")
+@Mapping("CGSize") @Library("CoreGraphics/CoreGraphics.h")
 public class CGSize 
     extends Struct 
      {
@@ -58,12 +58,12 @@ public class CGSize
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGSizeEqualToSize")
-    public native boolean equalToSize(CGSize size2);
+    public static native boolean equalToSize(CGSize size1, CGSize size2);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGSizeCreateDictionaryRepresentation")
-    public native NSDictionary<NSString, NSNumber> toDictionary();
+    public static native NSDictionary<NSString, NSNumber> toDictionary(CGSize size);
     /**
      * @since Available in iOS 2.0 and later.
      */
@@ -73,6 +73,6 @@ public class CGSize
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGSizeApplyAffineTransform")
-    public native CGSize apply(CGAffineTransform t);
+    public static native CGSize apply(CGSize size, CGAffineTransform t);
     
 }

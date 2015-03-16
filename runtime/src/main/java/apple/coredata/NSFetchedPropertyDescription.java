@@ -19,7 +19,7 @@ import apple.foundation.*;
  * @since Available in iOS 3.0 and later.
  */
 
-@Library("CoreData") @Mapping("NSFetchedPropertyDescription")
+@Library("CoreData/CoreData.h") @Mapping("NSFetchedPropertyDescription")
 public class NSFetchedPropertyDescription 
     extends NSPropertyDescription 
      {

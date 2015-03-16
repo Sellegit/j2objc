@@ -22,7 +22,7 @@ import apple.corelocation.*;
 
 
 
-@Library("UIKit") @Mapping("UIPageViewControllerDelegate")
+@Library("UIKit/UIKit.h") @Mapping("UIPageViewControllerDelegate")
 public interface UIPageViewControllerDelegate 
     extends NSObjectProtocol {
 

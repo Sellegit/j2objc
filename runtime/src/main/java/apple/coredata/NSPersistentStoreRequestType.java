@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 
 
-@Library("CoreData")
+@Library("CoreData/CoreData.h")
 @Mapping("NSPersistentStoreRequestType")
 public final class NSPersistentStoreRequestType extends ObjCEnum {
     

@@ -23,7 +23,7 @@ import apple.opengles.*;
 
 
 
-@Library("SceneKit") @Mapping("SCNNode")
+@Library("SceneKit/SceneKit.h") @Mapping("SCNNode")
 public class SCNNode 
     extends NSObject 
     implements NSCopying, SCNAnimatable, SCNActionable, SCNBoundingVolume {

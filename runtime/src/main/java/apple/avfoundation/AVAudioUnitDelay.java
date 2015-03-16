@@ -25,7 +25,7 @@ import apple.mediatoolbox.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("AVFoundation") @Mapping("AVAudioUnitDelay")
+@Library("AVFoundation/AVFoundation.h") @Mapping("AVAudioUnitDelay")
 public class AVAudioUnitDelay 
     extends AVAudioUnitEffect 
      {

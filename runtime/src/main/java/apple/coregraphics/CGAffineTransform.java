@@ -18,7 +18,7 @@ import apple.uikit.*;
 
 
 
-@Mapping("CGAffineTransform") @Library("CoreGraphics")
+@Mapping("CGAffineTransform") @Library("CoreGraphics/CoreGraphics.h")
 public class CGAffineTransform 
     extends Struct 
      {
@@ -105,36 +105,36 @@ public class CGAffineTransform
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGAffineTransformIsIdentity")
-    public native boolean isIdentity();
+    public static native boolean isIdentity(CGAffineTransform t);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGAffineTransformTranslate")
-    public native CGAffineTransform translate(@MachineSizedFloat double tx, @MachineSizedFloat double ty);
+    public static native CGAffineTransform translate(CGAffineTransform t, @MachineSizedFloat double tx, @MachineSizedFloat double ty);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGAffineTransformScale")
-    public native CGAffineTransform scale(@MachineSizedFloat double sx, @MachineSizedFloat double sy);
+    public static native CGAffineTransform scale(CGAffineTransform t, @MachineSizedFloat double sx, @MachineSizedFloat double sy);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGAffineTransformRotate")
-    public native CGAffineTransform rotate(@MachineSizedFloat double angle);
+    public static native CGAffineTransform rotate(CGAffineTransform t, @MachineSizedFloat double angle);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGAffineTransformInvert")
-    public native CGAffineTransform invert();
+    public static native CGAffineTransform invert(CGAffineTransform t);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGAffineTransformConcat")
-    public native CGAffineTransform concat(CGAffineTransform t2);
+    public static native CGAffineTransform concat(CGAffineTransform t1, CGAffineTransform t2);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGAffineTransformEqualToTransform")
-    public native boolean equalToTransform(CGAffineTransform t2);
+    public static native boolean equalToTransform(CGAffineTransform t1, CGAffineTransform t2);
     
 }

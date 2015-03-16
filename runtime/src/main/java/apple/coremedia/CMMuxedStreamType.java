@@ -21,7 +21,7 @@ import apple.corevideo.*;
 
 
 
-@Library("CoreMedia")
+@Library("CoreMedia/CoreMedia.h")
 @Mapping("CMMuxedStreamType")
 public final class CMMuxedStreamType extends ObjCEnum {
     

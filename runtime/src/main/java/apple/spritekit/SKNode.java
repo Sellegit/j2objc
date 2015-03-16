@@ -24,7 +24,7 @@ import apple.scenekit.*;
 
 
 
-@Library("SpriteKit") @Mapping("SKNode")
+@Library("SpriteKit/SpriteKit.h") @Mapping("SKNode")
 public class SKNode 
     extends UIResponder 
     implements NSCopying, NSCoding {

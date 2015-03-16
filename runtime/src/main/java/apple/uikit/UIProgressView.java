@@ -24,7 +24,7 @@ import apple.corelocation.*;
  * @since Available in iOS 2.0 and later.
  */
 
-@Library("UIKit") @Mapping("UIProgressView")
+@Library("UIKit/UIKit.h") @Mapping("UIProgressView")
 public class UIProgressView 
     extends UIView 
     implements NSCoding {

@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 
 
-@Mapping("GCAcceleration")
+@Mapping("GCAcceleration") @Library("GameController/GameController.h")
 public class GCAcceleration 
     extends Struct 
      {

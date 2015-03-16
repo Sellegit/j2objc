@@ -22,7 +22,7 @@ import apple.corelocation.*;
 
 
 
-@Library("UIKit") @Mapping("UIDataSourceModelAssociation")
+@Library("UIKit/UIKit.h") @Mapping("UIDataSourceModelAssociation")
 public interface UIDataSourceModelAssociation 
      {
 

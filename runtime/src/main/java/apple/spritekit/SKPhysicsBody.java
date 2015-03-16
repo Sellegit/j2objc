@@ -24,7 +24,7 @@ import apple.scenekit.*;
 
 
 
-@Library("SpriteKit") @Mapping("SKPhysicsBody")
+@Library("SpriteKit/SpriteKit.h") @Mapping("SKPhysicsBody")
 public class SKPhysicsBody 
     extends NSObject 
     implements NSCopying, NSCoding {

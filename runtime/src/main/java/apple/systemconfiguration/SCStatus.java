@@ -17,7 +17,7 @@ import apple.dispatch.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("SystemConfiguration")
+@Library("SystemConfiguration/SystemConfiguration.h")
 public class SCStatus 
     extends Object 
      {

@@ -24,7 +24,7 @@ import apple.dispatch.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("Foundation") @Mapping("NSEnergyFormatter")
+@Library("Foundation/Foundation.h") @Mapping("NSEnergyFormatter")
 public class NSEnergyFormatter 
     extends NSFormatter 
      {

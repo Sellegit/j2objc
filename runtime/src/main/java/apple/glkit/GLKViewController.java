@@ -22,7 +22,7 @@ import apple.dispatch.*;
  * @since Available in iOS 5.0 and later.
  */
 
-@Library("GLKit") @Mapping("GLKViewController")
+@Library("GLKit/GLKit.h") @Mapping("GLKViewController")
 public class GLKViewController 
     extends UIViewController 
     implements NSCoding, GLKViewDelegate {

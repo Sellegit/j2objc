@@ -16,7 +16,7 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreText")
+@Library("CoreText/CoreText.h")
 public class CTTextTab 
     extends CFType 
      {
@@ -42,16 +42,16 @@ public class CTTextTab
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTTextTabGetAlignment")
-    public native CTTextAlignment getAlignment();
+    public static native CTTextAlignment getAlignment(CTTextTab tab);
     /**
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTTextTabGetLocation")
-    public native double getLocation();
+    public static native double getLocation(CTTextTab tab);
     /**
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTTextTabGetOptions")
-    public native CTTextTabOptions getOptions();
+    public static native CTTextTabOptions getOptions(CTTextTab tab);
     
 }

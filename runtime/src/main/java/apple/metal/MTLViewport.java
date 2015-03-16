@@ -18,7 +18,7 @@ import apple.dispatch.*;
 
 
 
-@Mapping("MTLViewport")
+@Mapping("MTLViewport") @Library("Metal/Metal.h")
 public class MTLViewport 
     extends Struct 
      {

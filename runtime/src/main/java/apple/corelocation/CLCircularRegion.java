@@ -21,7 +21,7 @@ import apple.corebluetooth.*;
  * @since Available in iOS 7.0 and later.
  */
 
-@Library("CoreLocation") @Mapping("CLCircularRegion")
+@Library("CoreLocation/CoreLocation.h") @Mapping("CLCircularRegion")
 public class CLCircularRegion 
     extends CLRegion 
      {

@@ -15,7 +15,7 @@ import apple.coreservices.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("System")
+@Library("System/System.h")
 public class DispatchSource 
     extends DispatchObject 
      {
@@ -53,51 +53,51 @@ public class DispatchSource
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("dispatch_source_set_event_handler")
-    public native void setEventHandler(@Block Runnable handler);
+    public static native void setEventHandler(DispatchSource source, @Block Runnable handler);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("dispatch_source_set_cancel_handler")
-    public native void setCancelHandler(@Block Runnable handler);
+    public static native void setCancelHandler(DispatchSource source, @Block Runnable handler);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("dispatch_source_cancel")
-    public native void cancel();
+    public static native void cancel(DispatchSource source);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("dispatch_source_testcancel")
-    public native @MachineSizedSInt long testcancel();
+    public static native @MachineSizedSInt long testcancel(DispatchSource source);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("dispatch_source_get_handle")
-    public native @MachineSizedUInt long getSourceHandle();
+    public static native @MachineSizedUInt long getSourceHandle(DispatchSource source);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("dispatch_source_get_mask")
-    public native @MachineSizedUInt long getMask();
+    public static native @MachineSizedUInt long getMask(DispatchSource source);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("dispatch_source_get_data")
-    public native @MachineSizedUInt long getData();
+    public static native @MachineSizedUInt long getData(DispatchSource source);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("dispatch_source_merge_data")
-    public native void mergeData(@MachineSizedUInt long value);
+    public static native void mergeData(DispatchSource source, @MachineSizedUInt long value);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("dispatch_source_set_timer")
-    public native void setTimer(long start, long interval, long leeway);
+    public static native void setTimer(DispatchSource source, long start, long interval, long leeway);
     /**
      * @since Available in iOS 4.3 and later.
      */
     @GlobalFunction("dispatch_source_set_registration_handler")
-    public native void setRegistrationHandler(@Block Runnable handler);
+    public static native void setRegistrationHandler(DispatchSource source, @Block Runnable handler);
     
 }

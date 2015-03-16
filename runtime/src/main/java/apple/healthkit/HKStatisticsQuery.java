@@ -19,7 +19,7 @@ import apple.foundation.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("HealthKit") @Mapping("HKStatisticsQuery")
+@Library("HealthKit/HealthKit.h") @Mapping("HKStatisticsQuery")
 public class HKStatisticsQuery 
     extends HKQuery 
      {

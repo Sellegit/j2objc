@@ -19,7 +19,7 @@ import apple.foundation.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("CoreData") @Mapping("NSAsynchronousFetchRequest")
+@Library("CoreData/CoreData.h") @Mapping("NSAsynchronousFetchRequest")
 public class NSAsynchronousFetchRequest 
     extends NSPersistentStoreRequest 
      {

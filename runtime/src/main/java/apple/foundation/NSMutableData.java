@@ -22,7 +22,7 @@ import apple.dispatch.*;
 
 
 
-@Library("Foundation") @Mapping("NSMutableData")
+@Library("Foundation/Foundation.h") @Mapping("NSMutableData")
 public class NSMutableData 
     extends NSData 
      {

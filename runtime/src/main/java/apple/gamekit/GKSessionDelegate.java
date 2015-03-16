@@ -18,7 +18,7 @@ import apple.uikit.*;
 
 
 
-@Library("GameKit") @Mapping("GKSessionDelegate")
+@Library("GameKit/GameKit.h") @Mapping("GKSessionDelegate")
 public interface GKSessionDelegate 
     extends NSObjectProtocol {
 

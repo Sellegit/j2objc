@@ -16,7 +16,7 @@ import apple.dispatch.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("Security")
+@Library("Security/Security.h")
 public class SecPolicy 
     extends CFType 
      {
@@ -103,7 +103,7 @@ public class SecPolicy
      * @since Available in iOS 7.0 and later.
      */
     @GlobalFunction("SecPolicyCopyProperties")
-    public native CFDictionary copyProperties();
+    public static native CFDictionary copyProperties(SecPolicy policyRef);
     /**
      * @since Available in iOS 2.0 and later.
      */

@@ -24,7 +24,7 @@ import apple.dispatch.*;
  * @since Available in iOS 7.0 and later.
  */
 
-@Library("Foundation") @Mapping("NSURLSessionTask")
+@Library("Foundation/Foundation.h") @Mapping("NSURLSessionTask")
 public class NSURLSessionTask 
     extends NSObject 
     implements NSCopying {

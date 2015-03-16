@@ -25,7 +25,7 @@ import apple.mediatoolbox.*;
  * @since Available in iOS 7.0 and later.
  */
 
-@Library("AVFoundation") @Mapping("AVSpeechSynthesizer")
+@Library("AVFoundation/AVFoundation.h") @Mapping("AVSpeechSynthesizer")
 public class AVSpeechSynthesizer 
     extends NSObject 
      {

@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 
 
-@Mapping("CTError")
+@Mapping("CTError") @Library("CoreTelephony/CoreTelephony.h")
 public class CTError 
     extends Struct 
      {

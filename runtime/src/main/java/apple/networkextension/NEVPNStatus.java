@@ -19,7 +19,7 @@ import apple.foundation.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("NetworkExtension")
+@Library("NetworkExtension/NetworkExtension.h")
 @Mapping("NEVPNStatus")
 public final class NEVPNStatus extends ObjCEnum {
     

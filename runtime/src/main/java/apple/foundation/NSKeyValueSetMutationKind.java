@@ -22,7 +22,7 @@ import apple.dispatch.*;
 
 
 
-@Library("Foundation")
+@Library("Foundation/Foundation.h")
 @Mapping("NSKeyValueSetMutationKind")
 public final class NSKeyValueSetMutationKind extends ObjCEnum {
     

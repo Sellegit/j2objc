@@ -19,7 +19,7 @@ import apple.addressbook.*;
 
 
 
-@Library("PassKit") @Mapping("PKAddPassesViewControllerDelegate")
+@Library("PassKit/PassKit.h") @Mapping("PKAddPassesViewControllerDelegate")
 public interface PKAddPassesViewControllerDelegate 
     extends NSObjectProtocol {
 

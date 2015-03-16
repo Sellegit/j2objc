@@ -20,7 +20,7 @@ import apple.dispatch.*;
  * @since Available in iOS 6.0 and later.
  */
 
-@Library("CoreBluetooth") @Mapping("CBATTRequest")
+@Library("CoreBluetooth/CoreBluetooth.h") @Mapping("CBATTRequest")
 public class CBATTRequest 
     extends NSObject 
      {

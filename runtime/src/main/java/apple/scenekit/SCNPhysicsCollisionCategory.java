@@ -23,7 +23,7 @@ import apple.opengles.*;
 
 
 
-@Library("SceneKit")
+@Library("SceneKit/SceneKit.h")
 @Mapping("SCNPhysicsCollisionCategory")
 public final class SCNPhysicsCollisionCategory extends ObjCEnum {
     

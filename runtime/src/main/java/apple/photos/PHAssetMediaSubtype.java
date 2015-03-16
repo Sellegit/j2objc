@@ -22,7 +22,7 @@ import apple.avfoundation.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("Photos")
+@Library("Photos/Photos.h")
 @Mapping("PHAssetMediaSubtype")
 public final class PHAssetMediaSubtype extends ObjCEnum {
     

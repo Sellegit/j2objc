@@ -20,7 +20,7 @@ import apple.coremedia.*;
 
 
 
-@Mapping("CAFAudioDescription")
+@Mapping("CAFAudioDescription") @Library("AudioToolbox/AudioToolbox.h")
 public class CAFAudioDescription 
     extends Struct 
      {
@@ -49,44 +49,44 @@ public class CAFAudioDescription
         return __new;
     ]-*/;
     public static native CAFAudioDescription copyWithmSampleRate(CAFAudioDescription original, double mSampleRate) /*-[
-        original.mSampleRate = mSampleRate;
-        return original;
+        CAFAudioDescription __new = { .mSampleRate = mSampleRate, .mFormatID = original.mFormatID, .mFormatFlags = original.mFormatFlags, .mBytesPerPacket = original.mBytesPerPacket, .mFramesPerPacket = original.mFramesPerPacket, .mChannelsPerFrame = original.mChannelsPerFrame, .mBitsPerChannel = original.mBitsPerChannel };
+        return __new;
     ]-*/;
 
     
     public static native CAFAudioDescription copyWithmFormatID(CAFAudioDescription original, int mFormatID) /*-[
-        original.mFormatID = mFormatID;
-        return original;
+        CAFAudioDescription __new = { .mSampleRate = original.mSampleRate, .mFormatID = mFormatID, .mFormatFlags = original.mFormatFlags, .mBytesPerPacket = original.mBytesPerPacket, .mFramesPerPacket = original.mFramesPerPacket, .mChannelsPerFrame = original.mChannelsPerFrame, .mBitsPerChannel = original.mBitsPerChannel };
+        return __new;
     ]-*/;
 
     
     public static native CAFAudioDescription copyWithmFormatFlags(CAFAudioDescription original, int mFormatFlags) /*-[
-        original.mFormatFlags = mFormatFlags;
-        return original;
+        CAFAudioDescription __new = { .mSampleRate = original.mSampleRate, .mFormatID = original.mFormatID, .mFormatFlags = mFormatFlags, .mBytesPerPacket = original.mBytesPerPacket, .mFramesPerPacket = original.mFramesPerPacket, .mChannelsPerFrame = original.mChannelsPerFrame, .mBitsPerChannel = original.mBitsPerChannel };
+        return __new;
     ]-*/;
 
     
     public static native CAFAudioDescription copyWithmBytesPerPacket(CAFAudioDescription original, int mBytesPerPacket) /*-[
-        original.mBytesPerPacket = mBytesPerPacket;
-        return original;
+        CAFAudioDescription __new = { .mSampleRate = original.mSampleRate, .mFormatID = original.mFormatID, .mFormatFlags = original.mFormatFlags, .mBytesPerPacket = mBytesPerPacket, .mFramesPerPacket = original.mFramesPerPacket, .mChannelsPerFrame = original.mChannelsPerFrame, .mBitsPerChannel = original.mBitsPerChannel };
+        return __new;
     ]-*/;
 
     
     public static native CAFAudioDescription copyWithmFramesPerPacket(CAFAudioDescription original, int mFramesPerPacket) /*-[
-        original.mFramesPerPacket = mFramesPerPacket;
-        return original;
+        CAFAudioDescription __new = { .mSampleRate = original.mSampleRate, .mFormatID = original.mFormatID, .mFormatFlags = original.mFormatFlags, .mBytesPerPacket = original.mBytesPerPacket, .mFramesPerPacket = mFramesPerPacket, .mChannelsPerFrame = original.mChannelsPerFrame, .mBitsPerChannel = original.mBitsPerChannel };
+        return __new;
     ]-*/;
 
     
     public static native CAFAudioDescription copyWithmChannelsPerFrame(CAFAudioDescription original, int mChannelsPerFrame) /*-[
-        original.mChannelsPerFrame = mChannelsPerFrame;
-        return original;
+        CAFAudioDescription __new = { .mSampleRate = original.mSampleRate, .mFormatID = original.mFormatID, .mFormatFlags = original.mFormatFlags, .mBytesPerPacket = original.mBytesPerPacket, .mFramesPerPacket = original.mFramesPerPacket, .mChannelsPerFrame = mChannelsPerFrame, .mBitsPerChannel = original.mBitsPerChannel };
+        return __new;
     ]-*/;
 
     
     public static native CAFAudioDescription copyWithmBitsPerChannel(CAFAudioDescription original, int mBitsPerChannel) /*-[
-        original.mBitsPerChannel = mBitsPerChannel;
-        return original;
+        CAFAudioDescription __new = { .mSampleRate = original.mSampleRate, .mFormatID = original.mFormatID, .mFormatFlags = original.mFormatFlags, .mBytesPerPacket = original.mBytesPerPacket, .mFramesPerPacket = original.mFramesPerPacket, .mChannelsPerFrame = original.mChannelsPerFrame, .mBitsPerChannel = mBitsPerChannel };
+        return __new;
     ]-*/;
 
     

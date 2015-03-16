@@ -24,7 +24,7 @@ import apple.corelocation.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("UIKit") @Mapping("UITableViewRowAction")
+@Library("UIKit/UIKit.h") @Mapping("UITableViewRowAction")
 public class UITableViewRowAction 
     extends NSObject 
     implements NSCopying {

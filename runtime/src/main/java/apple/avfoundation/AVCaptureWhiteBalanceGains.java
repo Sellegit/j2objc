@@ -23,7 +23,7 @@ import apple.mediatoolbox.*;
 
 
 
-@Mapping("AVCaptureWhiteBalanceGains")
+@Mapping("AVCaptureWhiteBalanceGains") @Library("AVFoundation/AVFoundation.h")
 public class AVCaptureWhiteBalanceGains 
     extends Struct 
      {

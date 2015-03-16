@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreFoundation")
+@Library("CoreFoundation/CoreFoundation.h")
 public class CFAttributedString 
     extends CFType 
      {
@@ -38,18 +38,18 @@ public class CFAttributedString
     @GlobalFunction("CFAttributedStringCreateCopy")
     public static native CFAttributedString createCopy(CFAllocator alloc, CFAttributedString aStr);
     @GlobalFunction("CFAttributedStringGetString")
-    public native String getString();
+    public static native String getString(CFAttributedString aStr);
     @GlobalFunction("CFAttributedStringGetLength")
-    public native @MachineSizedSInt long getLength();
+    public static native @MachineSizedSInt long getLength(CFAttributedString aStr);
     @GlobalFunction("CFAttributedStringGetAttributes")
-    public native CFDictionary getAttributes(@MachineSizedSInt long loc, CFRange effectiveRange);
+    public static native CFDictionary getAttributes(CFAttributedString aStr, @MachineSizedSInt long loc, CFRange effectiveRange);
     @GlobalFunction("CFAttributedStringGetAttribute")
-    public native CFType getAttribute(@MachineSizedSInt long loc, String attrName, CFRange effectiveRange);
+    public static native CFType getAttribute(CFAttributedString aStr, @MachineSizedSInt long loc, String attrName, CFRange effectiveRange);
     @GlobalFunction("CFAttributedStringGetAttributesAndLongestEffectiveRange")
-    public native CFDictionary getAttributesAndLongestEffectiveRange(@MachineSizedSInt long loc, CFRange inRange, CFRange longestEffectiveRange);
+    public static native CFDictionary getAttributesAndLongestEffectiveRange(CFAttributedString aStr, @MachineSizedSInt long loc, CFRange inRange, CFRange longestEffectiveRange);
     @GlobalFunction("CFAttributedStringGetAttributeAndLongestEffectiveRange")
-    public native CFType getAttributeAndLongestEffectiveRange(@MachineSizedSInt long loc, String attrName, CFRange inRange, CFRange longestEffectiveRange);
+    public static native CFType getAttributeAndLongestEffectiveRange(CFAttributedString aStr, @MachineSizedSInt long loc, String attrName, CFRange inRange, CFRange longestEffectiveRange);
     @GlobalFunction("CFAttributedStringGetMutableString")
-    public native CFMutableString getMutableString();
+    public static native CFMutableString getMutableString(CFAttributedString aStr);
     
 }

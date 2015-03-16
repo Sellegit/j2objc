@@ -21,7 +21,7 @@ import apple.metal.*;
 
 
 
-@Library("QuartzCore") @Mapping("CAEAGLLayer")
+@Library("QuartzCore/QuartzCore.h") @Mapping("CAEAGLLayer")
 public class CAEAGLLayer 
     extends CALayer 
     implements EAGLDrawable {

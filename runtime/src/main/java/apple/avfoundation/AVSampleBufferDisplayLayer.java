@@ -25,7 +25,7 @@ import apple.mediatoolbox.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("AVFoundation") @Mapping("AVSampleBufferDisplayLayer")
+@Library("AVFoundation/AVFoundation.h") @Mapping("AVSampleBufferDisplayLayer")
 public class AVSampleBufferDisplayLayer 
     extends CALayer 
      {

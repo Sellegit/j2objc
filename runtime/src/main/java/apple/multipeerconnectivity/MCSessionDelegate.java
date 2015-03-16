@@ -19,7 +19,7 @@ import apple.security.*;
 
 
 
-@Library("MultipeerConnectivity") @Mapping("MCSessionDelegate")
+@Library("MultipeerConnectivity/MultipeerConnectivity.h") @Mapping("MCSessionDelegate")
 public interface MCSessionDelegate 
     extends NSObjectProtocol {
 

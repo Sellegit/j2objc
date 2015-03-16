@@ -24,7 +24,7 @@ import apple.corelocation.*;
  * @since Available in iOS 2.0 and later.
  */
 
-@Library("UIKit") @Mapping("UITabBar")
+@Library("UIKit/UIKit.h") @Mapping("UITabBar")
 public class UITabBar 
     extends UIView 
      {

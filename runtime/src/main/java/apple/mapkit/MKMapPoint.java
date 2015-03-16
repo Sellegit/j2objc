@@ -20,7 +20,7 @@ import apple.dispatch.*;
 
 
 
-@Mapping("MKMapPoint") @Library("MapKit")
+@Mapping("MKMapPoint") @Library("MapKit/MapKit.h")
 public class MKMapPoint 
     extends Struct 
      {
@@ -59,7 +59,7 @@ public class MKMapPoint
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("MKCoordinateForMapPoint")
-    public native CLLocationCoordinate2D toCoordinate();
+    public static native CLLocationCoordinate2D toCoordinate(MKMapPoint mapPoint);
     /**
      * @since Available in iOS 4.0 and later.
      */

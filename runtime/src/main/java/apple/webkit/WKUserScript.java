@@ -20,7 +20,7 @@ import apple.uikit.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("WebKit") @Mapping("WKUserScript")
+@Library("WebKit/WebKit.h") @Mapping("WKUserScript")
 public class WKUserScript 
     extends NSObject 
     implements NSCopying {

@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreFoundation")
+@Library("CoreFoundation/CoreFoundation.h")
 public class CFDictionary 
     extends CFPropertyList 
      {
@@ -43,22 +43,22 @@ public class CFDictionary
     @GlobalFunction("CFDictionaryCreateCopy")
     protected static native CFDictionary createCopy(CFAllocator allocator, CFDictionary theDict);
     @GlobalFunction("CFDictionaryGetCount")
-    protected native @MachineSizedSInt long getCount();
+    protected static native @MachineSizedSInt long getCount(CFDictionary theDict);
     @GlobalFunction("CFDictionaryGetCountOfKey")
-    protected native @MachineSizedSInt long getCountOfKey(Todo key);
+    protected static native @MachineSizedSInt long getCountOfKey(CFDictionary theDict, Todo key);
     @GlobalFunction("CFDictionaryGetCountOfValue")
-    protected native @MachineSizedSInt long getCountOfValue(Todo value);
+    protected static native @MachineSizedSInt long getCountOfValue(CFDictionary theDict, Todo value);
     @GlobalFunction("CFDictionaryContainsKey")
-    protected native boolean containsKey(Todo key);
+    protected static native boolean containsKey(CFDictionary theDict, Todo key);
     @GlobalFunction("CFDictionaryContainsValue")
-    protected native boolean containsValue(Todo value);
+    protected static native boolean containsValue(CFDictionary theDict, Todo value);
     @GlobalFunction("CFDictionaryGetValue")
-    protected native Todo getValue(Todo key);
+    protected static native Todo getValue(CFDictionary theDict, Todo key);
     @GlobalFunction("CFDictionaryGetValueIfPresent")
-    protected native boolean getValueIfPresent(Todo key, Todo value);
+    protected static native boolean getValueIfPresent(CFDictionary theDict, Todo key, Todo value);
     @GlobalFunction("CFDictionaryGetKeysAndValues")
-    protected native void getKeysAndValues(Todo keys, Todo values);
+    protected static native void getKeysAndValues(CFDictionary theDict, Todo keys, Todo values);
     @GlobalFunction("CFDictionaryApplyFunction")
-    protected native void applyFunction(FunctionPtr applier, Todo context);
+    protected static native void applyFunction(CFDictionary theDict, FunctionPtr applier, Todo context);
     
 }

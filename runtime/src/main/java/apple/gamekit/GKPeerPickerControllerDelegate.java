@@ -18,7 +18,7 @@ import apple.uikit.*;
 
 
 
-@Library("GameKit") @Mapping("GKPeerPickerControllerDelegate")
+@Library("GameKit/GameKit.h") @Mapping("GKPeerPickerControllerDelegate")
 public interface GKPeerPickerControllerDelegate 
     extends NSObjectProtocol {
 

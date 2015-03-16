@@ -17,7 +17,7 @@ import apple.dispatch.*;
 
 
 
-@Library("Security")
+@Library("Security/Security.h")
 @Mapping("SecRevocation")
 public final class SecRevocation extends ObjCEnum {
     

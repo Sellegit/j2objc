@@ -22,7 +22,7 @@ import apple.corelocation.*;
 
 
 
-@Library("UIKit")
+@Library("UIKit/UIKit.h")
 @Mapping("UIPageViewControllerTransitionStyle")
 public final class UIPageViewControllerTransitionStyle extends ObjCEnum {
     

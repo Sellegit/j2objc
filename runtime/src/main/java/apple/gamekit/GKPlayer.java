@@ -20,7 +20,7 @@ import apple.uikit.*;
  * @since Available in iOS 4.1 and later.
  */
 
-@Library("GameKit") @Mapping("GKPlayer")
+@Library("GameKit/GameKit.h") @Mapping("GKPlayer")
 public class GKPlayer 
     extends NSObject 
      {

@@ -24,7 +24,7 @@ import apple.corelocation.*;
  * @since Available in iOS 2.0 and later.
  */
 
-@Library("UIKit") @Mapping("UIEvent")
+@Library("UIKit/UIKit.h") @Mapping("UIEvent")
 public class UIEvent 
     extends NSObject 
      {

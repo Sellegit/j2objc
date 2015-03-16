@@ -17,7 +17,7 @@ import apple.uikit.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("MediaPlayer")
+@Library("MediaPlayer/MediaPlayer.h")
 public class MPNowPlayingInfo 
     extends Object 
      {

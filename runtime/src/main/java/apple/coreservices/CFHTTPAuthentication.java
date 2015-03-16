@@ -16,7 +16,7 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CFNetwork")
+@Library("CFNetwork/CFNetwork.h")
 public class CFHTTPAuthentication 
     extends CFType 
      {
@@ -42,41 +42,41 @@ public class CFHTTPAuthentication
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFHTTPAuthenticationIsValid")
-    protected native boolean isValid(Todo error);
+    protected static native boolean isValid(CFHTTPAuthentication auth, Todo error);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFHTTPAuthenticationAppliesToRequest")
-    public native boolean appliesToRequest(CFHTTPMessage request);
+    public static native boolean appliesToRequest(CFHTTPAuthentication auth, CFHTTPMessage request);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFHTTPAuthenticationRequiresOrderedRequests")
-    public native boolean requiresOrderedRequests();
+    public static native boolean requiresOrderedRequests(CFHTTPAuthentication auth);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFHTTPAuthenticationCopyRealm")
-    public native String getRealm();
+    public static native String getRealm(CFHTTPAuthentication auth);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFHTTPAuthenticationCopyDomains")
-    public native NSArray<NSURL> getDomains();
+    public static native NSArray<NSURL> getDomains(CFHTTPAuthentication auth);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFHTTPAuthenticationCopyMethod")
-    public native String getMethod();
+    public static native String getMethod(CFHTTPAuthentication auth);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFHTTPAuthenticationRequiresUserNameAndPassword")
-    public native boolean requiresUserNameAndPassword();
+    public static native boolean requiresUserNameAndPassword(CFHTTPAuthentication auth);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFHTTPAuthenticationRequiresAccountDomain")
-    public native boolean requiresAccountDomain();
+    public static native boolean requiresAccountDomain(CFHTTPAuthentication auth);
     
 }

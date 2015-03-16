@@ -20,7 +20,7 @@ import apple.avkit.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("iAd")
+@Library("iAd/iAd.h")
 public final class MPMoviePlayerControllerExtensions 
     extends NSExtensions 
      {
@@ -34,16 +34,6 @@ public final class MPMoviePlayerControllerExtensions
     
     
     
-    /**
-     * @since Available in iOS 7.0 and later.
-     */
-    @Mapping("playPrerollAdWithCompletionHandler:")
-    public static native void playPrerollAd(MPMoviePlayerController thiz, @Block VoidBlock1<NSError> completionHandler);
-    /**
-     * @since Available in iOS 8.0 and later.
-     */
-    @Mapping("cancelPreroll")
-    public static native void cancelPreroll(MPMoviePlayerController thiz);
     /**
      * @since Available in iOS 7.0 and later.
      */

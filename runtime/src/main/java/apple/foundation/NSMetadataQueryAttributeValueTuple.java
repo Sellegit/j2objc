@@ -24,7 +24,7 @@ import apple.dispatch.*;
  * @since Available in iOS 5.0 and later.
  */
 
-@Library("Foundation") @Mapping("NSMetadataQueryAttributeValueTuple")
+@Library("Foundation/Foundation.h") @Mapping("NSMetadataQueryAttributeValueTuple")
 public class NSMetadataQueryAttributeValueTuple 
     extends NSObject 
      {

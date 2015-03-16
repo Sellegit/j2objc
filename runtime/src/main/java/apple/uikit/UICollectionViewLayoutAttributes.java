@@ -24,7 +24,7 @@ import apple.corelocation.*;
  * @since Available in iOS 6.0 and later.
  */
 
-@Library("UIKit") @Mapping("UICollectionViewLayoutAttributes")
+@Library("UIKit/UIKit.h") @Mapping("UICollectionViewLayoutAttributes")
 public class UICollectionViewLayoutAttributes 
     extends NSObject 
     implements NSCopying, UIDynamicItem {

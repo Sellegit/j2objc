@@ -19,7 +19,7 @@ import apple.foundation.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("CoreMotion") @Mapping("CMAltitudeData")
+@Library("CoreMotion/CoreMotion.h") @Mapping("CMAltitudeData")
 public class CMAltitudeData 
     extends CMLogItem 
      {

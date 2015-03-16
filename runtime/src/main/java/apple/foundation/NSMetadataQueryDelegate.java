@@ -22,7 +22,7 @@ import apple.dispatch.*;
 
 
 
-@Library("Foundation") @Mapping("NSMetadataQueryDelegate")
+@Library("Foundation/Foundation.h") @Mapping("NSMetadataQueryDelegate")
 public interface NSMetadataQueryDelegate 
     extends NSObjectProtocol {
 

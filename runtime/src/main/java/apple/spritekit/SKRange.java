@@ -26,7 +26,7 @@ import apple.scenekit.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("SpriteKit") @Mapping("SKRange")
+@Library("SpriteKit/SpriteKit.h") @Mapping("SKRange")
 public class SKRange 
     extends NSObject 
     implements NSCoding, NSCopying {

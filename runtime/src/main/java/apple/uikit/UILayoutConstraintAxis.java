@@ -22,7 +22,7 @@ import apple.corelocation.*;
 
 
 
-@Library("UIKit")
+@Library("UIKit/UIKit.h")
 @Mapping("UILayoutConstraintAxis")
 public final class UILayoutConstraintAxis extends ObjCEnum {
     

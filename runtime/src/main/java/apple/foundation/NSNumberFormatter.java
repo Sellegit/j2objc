@@ -22,7 +22,7 @@ import apple.dispatch.*;
 
 
 
-@Library("Foundation") @Mapping("NSNumberFormatter")
+@Library("Foundation/Foundation.h") @Mapping("NSNumberFormatter")
 public class NSNumberFormatter 
     extends NSFormatter 
      {

@@ -25,7 +25,7 @@ import apple.mediatoolbox.*;
  * @since Available in iOS 7.0 and later.
  */
 
-@Library("AVFoundation") @Mapping("AVAssetTrackGroup")
+@Library("AVFoundation/AVFoundation.h") @Mapping("AVAssetTrackGroup")
 public class AVAssetTrackGroup 
     extends NSObject 
     implements NSCopying {

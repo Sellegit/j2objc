@@ -16,7 +16,7 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CFNetwork")
+@Library("CFNetwork/CFNetwork.h")
 public class CFSystemProxySettings 
     extends Object 
      {

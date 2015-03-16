@@ -20,7 +20,7 @@ import apple.uikit.*;
  * @since Available in iOS 5.0 and later.
  */
 
-@Library("MediaPlayer") @Mapping("MPNowPlayingInfoCenter")
+@Library("MediaPlayer/MediaPlayer.h") @Mapping("MPNowPlayingInfoCenter")
 public class MPNowPlayingInfoCenter 
     extends NSObject 
      {

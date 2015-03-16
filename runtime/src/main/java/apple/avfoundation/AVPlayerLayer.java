@@ -25,7 +25,7 @@ import apple.mediatoolbox.*;
  * @since Available in iOS 4.0 and later.
  */
 
-@Library("AVFoundation") @Mapping("AVPlayerLayer")
+@Library("AVFoundation/AVFoundation.h") @Mapping("AVPlayerLayer")
 public class AVPlayerLayer 
     extends CALayer 
      {

@@ -22,7 +22,7 @@ import apple.dispatch.*;
 
 
 
-@Library("Foundation") @Mapping("NSKeyedArchiverDelegate")
+@Library("Foundation/Foundation.h") @Mapping("NSKeyedArchiverDelegate")
 public interface NSKeyedArchiverDelegate 
     extends NSObjectProtocol {
 

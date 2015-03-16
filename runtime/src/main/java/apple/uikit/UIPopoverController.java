@@ -24,7 +24,7 @@ import apple.corelocation.*;
  * @since Available in iOS 3.2 and later.
  */
 
-@Library("UIKit") @Mapping("UIPopoverController")
+@Library("UIKit/UIKit.h") @Mapping("UIPopoverController")
 public class UIPopoverController 
     extends NSObject 
     implements UIAppearanceContainer {

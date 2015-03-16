@@ -22,7 +22,7 @@ import apple.dispatch.*;
 
 
 
-@Library("Foundation") @Mapping("NSArray")
+@Library("Foundation/Foundation.h") @Mapping("NSArray")
 public class NSArray <T>
     extends NSObject 
     implements NSFastEnumeration, NSPropertyList {

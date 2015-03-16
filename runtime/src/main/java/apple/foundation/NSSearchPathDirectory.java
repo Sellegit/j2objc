@@ -22,7 +22,7 @@ import apple.dispatch.*;
 
 
 
-@Library("Foundation")
+@Library("Foundation/Foundation.h")
 @Mapping("NSSearchPathDirectory")
 public final class NSSearchPathDirectory extends ObjCEnum {
     

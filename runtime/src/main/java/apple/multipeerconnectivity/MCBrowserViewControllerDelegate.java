@@ -19,7 +19,7 @@ import apple.security.*;
 
 
 
-@Library("MultipeerConnectivity") @Mapping("MCBrowserViewControllerDelegate")
+@Library("MultipeerConnectivity/MultipeerConnectivity.h") @Mapping("MCBrowserViewControllerDelegate")
 public interface MCBrowserViewControllerDelegate 
     extends NSObjectProtocol {
 

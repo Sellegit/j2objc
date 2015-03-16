@@ -18,7 +18,7 @@ import apple.uikit.*;
 
 
 
-@Library("WebKit") @Mapping("WKNavigationDelegate")
+@Library("WebKit/WebKit.h") @Mapping("WKNavigationDelegate")
 public interface WKNavigationDelegate 
     extends NSObjectProtocol {
 

@@ -22,7 +22,7 @@ import apple.dispatch.*;
 
 
 
-@Library("Foundation")
+@Library("Foundation/Foundation.h")
 @Mapping("NSCocoaErrorCode")
 public final class NSCocoaErrorCode extends ObjCEnum {
     

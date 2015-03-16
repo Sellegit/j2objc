@@ -19,7 +19,7 @@ import apple.foundation.*;
  * @since Available in iOS 7.0 and later.
  */
 
-@Library("SafariServices")
+@Library("SafariServices/SafariServices.h")
 @Mapping("SSReadingListErrorCode")
 public final class SSReadingListErrorCode extends ObjCEnum {
     

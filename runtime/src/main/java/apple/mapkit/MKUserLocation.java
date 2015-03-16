@@ -22,7 +22,7 @@ import apple.dispatch.*;
  * @since Available in iOS 3.0 and later.
  */
 
-@Library("MapKit") @Mapping("MKUserLocation")
+@Library("MapKit/MapKit.h") @Mapping("MKUserLocation")
 public class MKUserLocation 
     extends NSObject 
     implements MKAnnotation {

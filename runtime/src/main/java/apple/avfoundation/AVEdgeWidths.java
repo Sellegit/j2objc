@@ -23,7 +23,7 @@ import apple.mediatoolbox.*;
 
 
 
-@Mapping("AVEdgeWidths")
+@Mapping("AVEdgeWidths") @Library("AVFoundation/AVFoundation.h")
 public class AVEdgeWidths 
     extends Struct 
      {

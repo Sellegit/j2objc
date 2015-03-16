@@ -18,7 +18,7 @@ import apple.dispatch.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("ExternalAccessory")
+@Library("ExternalAccessory/ExternalAccessory.h")
 public class EABluetoothAccessoryPickerError 
     extends Todo 
      {

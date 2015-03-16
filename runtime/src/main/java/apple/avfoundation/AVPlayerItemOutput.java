@@ -25,7 +25,7 @@ import apple.mediatoolbox.*;
  * @since Available in iOS 6.0 and later.
  */
 
-@Library("AVFoundation") @Mapping("AVPlayerItemOutput")
+@Library("AVFoundation/AVFoundation.h") @Mapping("AVPlayerItemOutput")
 public class AVPlayerItemOutput 
     extends NSObject 
      {

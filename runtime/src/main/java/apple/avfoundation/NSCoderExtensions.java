@@ -22,7 +22,7 @@ import apple.mediatoolbox.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("AVFoundation")
+@Library("AVFoundation/AVFoundation.h")
 public final class NSCoderExtensions 
     extends NSExtensions 
      {
@@ -36,35 +36,6 @@ public final class NSCoderExtensions
     
     
     
-    /**
-     * @since Available in iOS 4.0 and later.
-     */
-    @Mapping("encodeCMTime:forKey:")
-    public static native void encodeCMTime(NSCoder thiz, CMTime time, String key);
-    /**
-     * @since Available in iOS 4.0 and later.
-     */
-    @Mapping("decodeCMTimeForKey:")
-    public static native CMTime decodeCMTime(NSCoder thiz, String key);
-    /**
-     * @since Available in iOS 4.0 and later.
-     */
-    @Mapping("encodeCMTimeRange:forKey:")
-    public static native void encodeCMTimeRange(NSCoder thiz, CMTimeRange timeRange, String key);
-    /**
-     * @since Available in iOS 4.0 and later.
-     */
-    @Mapping("decodeCMTimeRangeForKey:")
-    public static native CMTimeRange decodeCMTimeRange(NSCoder thiz, String key);
-    /**
-     * @since Available in iOS 4.0 and later.
-     */
-    @Mapping("encodeCMTimeMapping:forKey:")
-    public static native void encodeCMTimeMapping(NSCoder thiz, CMTimeMapping timeMapping, String key);
-    /**
-     * @since Available in iOS 4.0 and later.
-     */
-    @Mapping("decodeCMTimeMappingForKey:")
-    public static native CMTimeMapping decodeCMTimeMapping(NSCoder thiz, String key);
+    
     
 }

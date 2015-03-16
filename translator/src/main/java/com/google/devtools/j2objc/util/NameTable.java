@@ -687,6 +687,8 @@ public class NameTable {
       }
     } catch (IOException e) {
       // Continue, as there's no package-info to check.
+    } catch (StringIndexOutOfBoundsException e){
+      // Similarly
     }
 
     StringBuilder sb = new StringBuilder();

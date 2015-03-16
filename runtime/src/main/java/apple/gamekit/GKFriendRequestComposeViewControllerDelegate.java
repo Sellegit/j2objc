@@ -18,7 +18,7 @@ import apple.uikit.*;
 
 
 
-@Library("GameKit") @Mapping("GKFriendRequestComposeViewControllerDelegate")
+@Library("GameKit/GameKit.h") @Mapping("GKFriendRequestComposeViewControllerDelegate")
 public interface GKFriendRequestComposeViewControllerDelegate 
      {
 

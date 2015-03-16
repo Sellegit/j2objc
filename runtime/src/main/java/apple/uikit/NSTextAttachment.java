@@ -24,7 +24,7 @@ import apple.corelocation.*;
  * @since Available in iOS 7.0 and later.
  */
 
-@Library("UIKit") @Mapping("NSTextAttachment")
+@Library("UIKit/UIKit.h") @Mapping("NSTextAttachment")
 public class NSTextAttachment 
     extends NSObject 
     implements NSTextAttachmentContainer, NSCoding {

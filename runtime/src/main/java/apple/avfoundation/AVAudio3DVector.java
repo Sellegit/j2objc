@@ -23,7 +23,7 @@ import apple.mediatoolbox.*;
 
 
 
-@Mapping("AVAudio3DVector")
+@Mapping("AVAudio3DVector") @Library("AVFoundation/AVFoundation.h")
 public class AVAudio3DVector 
     extends Struct 
      {

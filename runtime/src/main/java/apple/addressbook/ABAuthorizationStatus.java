@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 
 
-@Library("AddressBook")
+@Library("AddressBook/AddressBook.h")
 @Mapping("ABAuthorizationStatus")
 public final class ABAuthorizationStatus extends ObjCEnum {
     

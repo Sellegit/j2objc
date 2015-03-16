@@ -17,7 +17,7 @@ import apple.corelocation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CloudKit")
+@Library("CloudKit/CloudKit.h")
 public class CKErrorUserInfoKey 
     extends GlobalValueEnumeration<NSString>
      {

@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 
 
-@Library("CoreMIDI")
+@Library("CoreMIDI/CoreMIDI.h")
 @Mapping("MIDINotificationMessageID")
 public final class MIDINotificationMessageID extends ObjCEnum {
     

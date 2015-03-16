@@ -21,7 +21,7 @@ import apple.corelocation.*;
  * @since Available in iOS 4.0 and later.
  */
 
-@Library("EventKit") @Mapping("EKRecurrenceEnd")
+@Library("EventKit/EventKit.h") @Mapping("EKRecurrenceEnd")
 public class EKRecurrenceEnd 
     extends NSObject 
     implements NSCopying {

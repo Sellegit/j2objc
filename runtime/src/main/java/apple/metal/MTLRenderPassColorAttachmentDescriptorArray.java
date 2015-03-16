@@ -20,7 +20,7 @@ import apple.dispatch.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("Metal") @Mapping("MTLRenderPassColorAttachmentDescriptorArray")
+@Library("Metal/Metal.h") @Mapping("MTLRenderPassColorAttachmentDescriptorArray")
 public class MTLRenderPassColorAttachmentDescriptorArray 
     extends NSObject 
      {

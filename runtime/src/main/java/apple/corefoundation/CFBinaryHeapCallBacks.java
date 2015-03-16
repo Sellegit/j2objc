@@ -18,7 +18,7 @@ import apple.foundation.*;
 
 
 
-@Mapping("CFBinaryHeapCallBacks")
+@Mapping("CFBinaryHeapCallBacks") @Library("CoreFoundation/CoreFoundation.h")
  class CFBinaryHeapCallBacks 
     extends Struct 
      {

@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 
 
-@Mapping("CMQuaternion")
+@Mapping("CMQuaternion") @Library("CoreMotion/CoreMotion.h")
 public class CMQuaternion 
     extends Struct 
      {

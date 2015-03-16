@@ -21,7 +21,7 @@ import apple.corelocation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("UIKit")
+@Library("UIKit/UIKit.h")
 public final class CIImageExtensions 
     extends NSExtensions 
      {

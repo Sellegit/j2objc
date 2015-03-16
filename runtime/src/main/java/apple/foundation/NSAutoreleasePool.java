@@ -22,7 +22,7 @@ import apple.dispatch.*;
 
 
 
-@Library("Foundation") @Mapping("NSAutoreleasePool")
+@Library("Foundation/Foundation.h") @Mapping("NSAutoreleasePool")
 public class NSAutoreleasePool 
     extends NSObject 
      {

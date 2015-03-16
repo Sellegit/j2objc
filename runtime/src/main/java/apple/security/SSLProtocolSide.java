@@ -17,7 +17,7 @@ import apple.dispatch.*;
 
 
 
-@Library("Security")
+@Library("Security/Security.h")
 @Mapping("SSLProtocolSide")
 public final class SSLProtocolSide extends ObjCEnum {
     

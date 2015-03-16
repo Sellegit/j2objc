@@ -23,7 +23,7 @@ import apple.opengles.*;
 
 
 
-@Library("SceneKit") @Mapping("SCNPyramid")
+@Library("SceneKit/SceneKit.h") @Mapping("SCNPyramid")
 public class SCNPyramid 
     extends SCNGeometry 
      {

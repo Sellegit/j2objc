@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 
 
-@Library("CoreData")
+@Library("CoreData/CoreData.h")
 @Mapping("NSBatchUpdateRequestResultType")
 public final class NSBatchUpdateRequestResultType extends ObjCEnum {
     

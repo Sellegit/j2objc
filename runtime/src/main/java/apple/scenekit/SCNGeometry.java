@@ -23,7 +23,7 @@ import apple.opengles.*;
 
 
 
-@Library("SceneKit") @Mapping("SCNGeometry")
+@Library("SceneKit/SceneKit.h") @Mapping("SCNGeometry")
 public class SCNGeometry 
     extends NSObject 
     implements SCNAnimatable, SCNBoundingVolume, SCNShadable, NSCopying {

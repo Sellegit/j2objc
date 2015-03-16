@@ -24,7 +24,7 @@ import apple.dispatch.*;
  * @since Available in iOS 3.0 and later.
  */
 
-@Library("Foundation") @Mapping("NSValueTransformer")
+@Library("Foundation/Foundation.h") @Mapping("NSValueTransformer")
 public class NSValueTransformer 
     extends NSObject 
      {

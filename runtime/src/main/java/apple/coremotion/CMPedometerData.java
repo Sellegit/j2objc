@@ -19,7 +19,7 @@ import apple.foundation.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("CoreMotion") @Mapping("CMPedometerData")
+@Library("CoreMotion/CoreMotion.h") @Mapping("CMPedometerData")
 public class CMPedometerData 
     extends NSObject 
     implements NSCopying {

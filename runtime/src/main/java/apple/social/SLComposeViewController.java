@@ -21,7 +21,7 @@ import apple.accounts.*;
  * @since Available in iOS 6.0 and later.
  */
 
-@Library("Social") @Mapping("SLComposeViewController")
+@Library("Social/Social.h") @Mapping("SLComposeViewController")
 public class SLComposeViewController 
     extends UIViewController 
      {

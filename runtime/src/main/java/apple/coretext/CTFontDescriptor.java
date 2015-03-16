@@ -16,7 +16,7 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreText")
+@Library("CoreText/CoreText.h")
 public class CTFontDescriptor 
     extends CFType 
      {
@@ -47,37 +47,37 @@ public class CTFontDescriptor
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTFontDescriptorCreateCopyWithAttributes")
-    public native CTFontDescriptor createCopy(CFDictionary attributes);
+    public static native CTFontDescriptor createCopy(CTFontDescriptor original, CFDictionary attributes);
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalFunction("CTFontDescriptorCreateCopyWithFamily")
-    public native CTFontDescriptor createCopy(String family);
+    public static native CTFontDescriptor createCopy(CTFontDescriptor original, String family);
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalFunction("CTFontDescriptorCreateCopyWithSymbolicTraits")
-    public native CTFontDescriptor createCopy(CTFontSymbolicTraits symTraitValue, CTFontSymbolicTraits symTraitMask);
+    public static native CTFontDescriptor createCopy(CTFontDescriptor original, CTFontSymbolicTraits symTraitValue, CTFontSymbolicTraits symTraitMask);
     /**
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTFontDescriptorCreateCopyWithVariation")
-    public native CTFontDescriptor createCopy(CFNumber variationIdentifier, @MachineSizedFloat double variationValue);
+    public static native CTFontDescriptor createCopy(CTFontDescriptor original, CFNumber variationIdentifier, @MachineSizedFloat double variationValue);
     /**
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTFontDescriptorCreateCopyWithFeature")
-    protected native CTFontDescriptor createCopy(CFNumber featureTypeIdentifier, CFNumber featureSelectorIdentifier);
+    protected static native CTFontDescriptor createCopy(CTFontDescriptor original, CFNumber featureTypeIdentifier, CFNumber featureSelectorIdentifier);
     /**
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTFontDescriptorCreateMatchingFontDescriptors")
-    protected native CFArray getMatchingFontDescriptors(CFSet mandatoryAttributes);
+    protected static native CFArray getMatchingFontDescriptors(CTFontDescriptor descriptor, CFSet mandatoryAttributes);
     /**
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTFontDescriptorCreateMatchingFontDescriptor")
-    protected native CTFontDescriptor getMatchingFontDescriptor(CFSet mandatoryAttributes);
+    protected static native CTFontDescriptor getMatchingFontDescriptor(CTFontDescriptor descriptor, CFSet mandatoryAttributes);
     /**
      * @since Available in iOS 6.0 and later.
      */
@@ -87,16 +87,16 @@ public class CTFontDescriptor
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTFontDescriptorCopyAttributes")
-    public native CFDictionary getAttributes();
+    public static native CFDictionary getAttributes(CTFontDescriptor descriptor);
     /**
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTFontDescriptorCopyAttribute")
-    public native CFType getAttribute(String attribute);
+    public static native CFType getAttribute(CTFontDescriptor descriptor, String attribute);
     /**
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTFontDescriptorCopyLocalizedAttribute")
-    protected native CFType getLocalizedAttribute(String attribute, Todo language);
+    protected static native CFType getLocalizedAttribute(CTFontDescriptor descriptor, String attribute, Todo language);
     
 }

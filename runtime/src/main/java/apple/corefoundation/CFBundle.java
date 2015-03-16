@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreFoundation")
+@Library("CoreFoundation/CoreFoundation.h")
 public class CFBundle 
     extends CFType 
      {
@@ -42,57 +42,57 @@ public class CFBundle
     @GlobalFunction("CFBundleCreateBundlesFromDirectory")
     public static native CFArray createBundlesFromDirectory(CFAllocator allocator, CFURL directoryURL, String bundleType);
     @GlobalFunction("CFBundleCopyBundleURL")
-    public native CFURL copyBundleURL();
+    public static native CFURL copyBundleURL(CFBundle bundle);
     @GlobalFunction("CFBundleGetValueForInfoDictionaryKey")
-    public native CFType getValueForInfoDictionaryKey(String key);
+    public static native CFType getValueForInfoDictionaryKey(CFBundle bundle, String key);
     @GlobalFunction("CFBundleGetInfoDictionary")
-    public native CFDictionary getInfoDictionary();
+    public static native CFDictionary getInfoDictionary(CFBundle bundle);
     @GlobalFunction("CFBundleGetLocalInfoDictionary")
-    public native CFDictionary getLocalInfoDictionary();
+    public static native CFDictionary getLocalInfoDictionary(CFBundle bundle);
     @GlobalFunction("CFBundleGetPackageInfo")
-    public native void getPackageInfo(Todo packageType, Todo packageCreator);
+    public static native void getPackageInfo(CFBundle bundle, Todo packageType, Todo packageCreator);
     @GlobalFunction("CFBundleGetIdentifier")
-    public native String getIdentifier();
+    public static native String getIdentifier(CFBundle bundle);
     @GlobalFunction("CFBundleGetVersionNumber")
-    public native int getVersionNumber();
+    public static native int getVersionNumber(CFBundle bundle);
     @GlobalFunction("CFBundleGetDevelopmentRegion")
-    public native String getDevelopmentRegion();
+    public static native String getDevelopmentRegion(CFBundle bundle);
     @GlobalFunction("CFBundleCopySupportFilesDirectoryURL")
-    public native CFURL copySupportFilesDirectoryURL();
+    public static native CFURL copySupportFilesDirectoryURL(CFBundle bundle);
     @GlobalFunction("CFBundleCopyResourcesDirectoryURL")
-    public native CFURL copyResourcesDirectoryURL();
+    public static native CFURL copyResourcesDirectoryURL(CFBundle bundle);
     @GlobalFunction("CFBundleCopyPrivateFrameworksURL")
-    public native CFURL copyPrivateFrameworksURL();
+    public static native CFURL copyPrivateFrameworksURL(CFBundle bundle);
     @GlobalFunction("CFBundleCopySharedFrameworksURL")
-    public native CFURL copySharedFrameworksURL();
+    public static native CFURL copySharedFrameworksURL(CFBundle bundle);
     @GlobalFunction("CFBundleCopySharedSupportURL")
-    public native CFURL copySharedSupportURL();
+    public static native CFURL copySharedSupportURL(CFBundle bundle);
     @GlobalFunction("CFBundleCopyBuiltInPlugInsURL")
-    public native CFURL copyBuiltInPlugInsURL();
+    public static native CFURL copyBuiltInPlugInsURL(CFBundle bundle);
     @GlobalFunction("CFBundleCopyInfoDictionaryInDirectory")
     public static native CFDictionary copyInfoDictionaryInDirectory(CFURL bundleURL);
     @GlobalFunction("CFBundleGetPackageInfoInDirectory")
     public static native boolean getPackageInfoInDirectory(CFURL url, Todo packageType, Todo packageCreator);
     @GlobalFunction("CFBundleCopyResourceURL")
-    public native CFURL copyResourceURL(String resourceName, String resourceType, String subDirName);
+    public static native CFURL copyResourceURL(CFBundle bundle, String resourceName, String resourceType, String subDirName);
     @GlobalFunction("CFBundleCopyResourceURLsOfType")
-    public native CFArray copyResourceURLsOfType(String resourceType, String subDirName);
+    public static native CFArray copyResourceURLsOfType(CFBundle bundle, String resourceType, String subDirName);
     @GlobalFunction("CFBundleCopyLocalizedString")
-    public native String copyLocalizedString(String key, String value, String tableName);
+    public static native String copyLocalizedString(CFBundle bundle, String key, String value, String tableName);
     @GlobalFunction("CFBundleCopyResourceURLInDirectory")
     public static native CFURL copyResourceURLInDirectory(CFURL bundleURL, String resourceName, String resourceType, String subDirName);
     @GlobalFunction("CFBundleCopyResourceURLsOfTypeInDirectory")
     public static native CFArray copyResourceURLsOfTypeInDirectory(CFURL bundleURL, String resourceType, String subDirName);
     @GlobalFunction("CFBundleCopyBundleLocalizations")
-    public native CFArray copyBundleLocalizations();
+    public static native CFArray copyBundleLocalizations(CFBundle bundle);
     @GlobalFunction("CFBundleCopyPreferredLocalizationsFromArray")
     public static native CFArray copyPreferredLocalizationsFromArray(CFArray locArray);
     @GlobalFunction("CFBundleCopyLocalizationsForPreferences")
     public static native CFArray copyLocalizationsForPreferences(CFArray locArray, CFArray prefArray);
     @GlobalFunction("CFBundleCopyResourceURLForLocalization")
-    public native CFURL copyResourceURLForLocalization(String resourceName, String resourceType, String subDirName, String localizationName);
+    public static native CFURL copyResourceURLForLocalization(CFBundle bundle, String resourceName, String resourceType, String subDirName, String localizationName);
     @GlobalFunction("CFBundleCopyResourceURLsOfTypeForLocalization")
-    public native CFArray copyResourceURLsOfTypeForLocalization(String resourceType, String subDirName, String localizationName);
+    public static native CFArray copyResourceURLsOfTypeForLocalization(CFBundle bundle, String resourceType, String subDirName, String localizationName);
     @GlobalFunction("CFBundleCopyInfoDictionaryForURL")
     public static native CFDictionary copyInfoDictionaryForURL(CFURL url);
     @GlobalFunction("CFBundleCopyLocalizationsForURL")
@@ -103,45 +103,45 @@ public class CFBundle
     @GlobalFunction("CFBundleCopyExecutableArchitecturesForURL")
     public static native CFArray copyExecutableArchitecturesForURL(CFURL url);
     @GlobalFunction("CFBundleCopyExecutableURL")
-    public native CFURL copyExecutableURL();
+    public static native CFURL copyExecutableURL(CFBundle bundle);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFBundleCopyExecutableArchitectures")
-    public native CFArray copyExecutableArchitectures();
+    public static native CFArray copyExecutableArchitectures(CFBundle bundle);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFBundlePreflightExecutable")
-    public native boolean preflightExecutable(Todo error);
+    public static native boolean preflightExecutable(CFBundle bundle, Todo error);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFBundleLoadExecutableAndReturnError")
-    public native boolean loadExecutableAndReturnError(Todo error);
+    public static native boolean loadExecutableAndReturnError(CFBundle bundle, Todo error);
     @GlobalFunction("CFBundleLoadExecutable")
-    public native boolean loadExecutable();
+    public static native boolean loadExecutable(CFBundle bundle);
     @GlobalFunction("CFBundleIsExecutableLoaded")
-    public native boolean isExecutableLoaded();
+    public static native boolean isExecutableLoaded(CFBundle bundle);
     @GlobalFunction("CFBundleUnloadExecutable")
-    public native void unloadExecutable();
+    public static native void unloadExecutable(CFBundle bundle);
     @GlobalFunction("CFBundleGetFunctionPointerForName")
-    public native Todo getFunctionPointerForName(String functionName);
+    public static native Todo getFunctionPointerForName(CFBundle bundle, String functionName);
     @GlobalFunction("CFBundleGetFunctionPointersForNames")
-    public native void getFunctionPointersForNames(CFArray functionNames, Todo ftbl);
+    public static native void getFunctionPointersForNames(CFBundle bundle, CFArray functionNames, Todo ftbl);
     @GlobalFunction("CFBundleGetDataPointerForName")
-    public native Todo getDataPointerForName(String symbolName);
+    public static native Todo getDataPointerForName(CFBundle bundle, String symbolName);
     @GlobalFunction("CFBundleGetDataPointersForNames")
-    public native void getDataPointersForNames(CFArray symbolNames, Todo stbl);
+    public static native void getDataPointersForNames(CFBundle bundle, CFArray symbolNames, Todo stbl);
     @GlobalFunction("CFBundleCopyAuxiliaryExecutableURL")
-    public native CFURL copyAuxiliaryExecutableURL(String executableName);
+    public static native CFURL copyAuxiliaryExecutableURL(CFBundle bundle, String executableName);
     @GlobalFunction("CFBundleGetPlugIn")
-    public native CFPlugIn getPlugIn();
+    public static native CFPlugIn getPlugIn(CFBundle bundle);
     @GlobalFunction("CFBundleOpenBundleResourceMap")
-    public native short openBundleResourceMap();
+    public static native short openBundleResourceMap(CFBundle bundle);
     @GlobalFunction("CFBundleOpenBundleResourceFiles")
-    public native int openBundleResourceFiles(Todo refNum, Todo localizedRefNum);
+    public static native int openBundleResourceFiles(CFBundle bundle, Todo refNum, Todo localizedRefNum);
     @GlobalFunction("CFBundleCloseBundleResourceMap")
-    public native void closeBundleResourceMap(short refNum);
+    public static native void closeBundleResourceMap(CFBundle bundle, short refNum);
     
 }

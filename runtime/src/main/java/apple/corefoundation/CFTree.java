@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreFoundation")
+@Library("CoreFoundation/CoreFoundation.h")
 public class CFTree 
     extends CFType 
      {
@@ -34,36 +34,36 @@ public class CFTree
     @GlobalFunction("CFTreeCreate")
     public static native CFTree create(CFAllocator allocator, CFTreeContext context);
     @GlobalFunction("CFTreeGetParent")
-    public native CFTree getParent();
+    public static native CFTree getParent(CFTree tree);
     @GlobalFunction("CFTreeGetNextSibling")
-    public native CFTree getNextSibling();
+    public static native CFTree getNextSibling(CFTree tree);
     @GlobalFunction("CFTreeGetFirstChild")
-    public native CFTree getFirstChild();
+    public static native CFTree getFirstChild(CFTree tree);
     @GlobalFunction("CFTreeGetContext")
-    public native void getContext(CFTreeContext context);
+    public static native void getContext(CFTree tree, CFTreeContext context);
     @GlobalFunction("CFTreeGetChildCount")
-    public native @MachineSizedSInt long getChildCount();
+    public static native @MachineSizedSInt long getChildCount(CFTree tree);
     @GlobalFunction("CFTreeGetChildAtIndex")
-    public native CFTree getChildAtIndex(@MachineSizedSInt long idx);
+    public static native CFTree getChildAtIndex(CFTree tree, @MachineSizedSInt long idx);
     @GlobalFunction("CFTreeGetChildren")
-    public native void getChildren(Todo children);
+    public static native void getChildren(CFTree tree, Todo children);
     @GlobalFunction("CFTreeApplyFunctionToChildren")
-    public native void applyFunctionToChildren(FunctionPtr applier, Todo context);
+    public static native void applyFunctionToChildren(CFTree tree, FunctionPtr applier, Todo context);
     @GlobalFunction("CFTreeFindRoot")
-    public native CFTree findRoot();
+    public static native CFTree findRoot(CFTree tree);
     @GlobalFunction("CFTreeSetContext")
-    public native void setContext(CFTreeContext context);
+    public static native void setContext(CFTree tree, CFTreeContext context);
     @GlobalFunction("CFTreePrependChild")
-    public native void prependChild(CFTree newChild);
+    public static native void prependChild(CFTree tree, CFTree newChild);
     @GlobalFunction("CFTreeAppendChild")
-    public native void appendChild(CFTree newChild);
+    public static native void appendChild(CFTree tree, CFTree newChild);
     @GlobalFunction("CFTreeInsertSibling")
-    public native void insertSibling(CFTree newSibling);
+    public static native void insertSibling(CFTree tree, CFTree newSibling);
     @GlobalFunction("CFTreeRemove")
-    public native void remove();
+    public static native void remove(CFTree tree);
     @GlobalFunction("CFTreeRemoveAllChildren")
-    public native void removeAllChildren();
+    public static native void removeAllChildren(CFTree tree);
     @GlobalFunction("CFTreeSortChildren")
-    public native void sortChildren(FunctionPtr comparator, Todo context);
+    public static native void sortChildren(CFTree tree, FunctionPtr comparator, Todo context);
     
 }

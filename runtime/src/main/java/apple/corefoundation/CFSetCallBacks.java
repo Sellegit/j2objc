@@ -18,7 +18,7 @@ import apple.foundation.*;
 
 
 
-@Mapping("CFSetCallBacks")
+@Mapping("CFSetCallBacks") @Library("CoreFoundation/CoreFoundation.h")
  class CFSetCallBacks 
     extends Struct 
      {

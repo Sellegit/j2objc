@@ -18,7 +18,7 @@ import apple.foundation.*;
 
 
 
-@Mapping("CFDictionaryKeyCallBacks")
+@Mapping("CFDictionaryKeyCallBacks") @Library("CoreFoundation/CoreFoundation.h")
  class CFDictionaryKeyCallBacks 
     extends Struct 
      {

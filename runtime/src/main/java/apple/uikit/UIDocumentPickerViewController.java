@@ -24,7 +24,7 @@ import apple.corelocation.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("UIKit") @Mapping("UIDocumentPickerViewController")
+@Library("UIKit/UIKit.h") @Mapping("UIDocumentPickerViewController")
 public class UIDocumentPickerViewController 
     extends UIViewController 
      {

@@ -22,7 +22,7 @@ import apple.dispatch.*;
 
 
 
-@Library("Foundation") @Mapping("NSKeyedArchiver")
+@Library("Foundation/Foundation.h") @Mapping("NSKeyedArchiver")
 public class NSKeyedArchiver 
     extends NSCoder 
      {

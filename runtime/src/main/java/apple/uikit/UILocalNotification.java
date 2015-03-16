@@ -24,7 +24,7 @@ import apple.corelocation.*;
  * @since Available in iOS 4.0 and later.
  */
 
-@Library("UIKit") @Mapping("UILocalNotification")
+@Library("UIKit/UIKit.h") @Mapping("UILocalNotification")
 public class UILocalNotification 
     extends NSObject 
     implements NSCopying, NSCoding {
@@ -86,6 +86,16 @@ public class UILocalNotification
     public native String getAlertLaunchImage();
     @Mapping("setAlertLaunchImage:")
     public native void setAlertLaunchImage(String v);
+    /**
+     * @since Available in iOS 8.2 and later.
+     */
+    @Mapping("alertTitle")
+    public native String getAlertTitle();
+    /**
+     * @since Available in iOS 8.2 and later.
+     */
+    @Mapping("setAlertTitle:")
+    public native void setAlertTitle(String v);
     @Mapping("soundName")
     public native String getSoundName();
     @Mapping("setSoundName:")

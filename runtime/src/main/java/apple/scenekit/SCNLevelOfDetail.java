@@ -23,7 +23,7 @@ import apple.opengles.*;
 
 
 
-@Library("SceneKit") @Mapping("SCNLevelOfDetail")
+@Library("SceneKit/SceneKit.h") @Mapping("SCNLevelOfDetail")
 public class SCNLevelOfDetail 
     extends NSObject 
     implements NSCopying {

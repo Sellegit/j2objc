@@ -20,7 +20,7 @@ import apple.coremedia.*;
 
 
 
-@Mapping("AudioFramePacketTranslation")
+@Mapping("AudioFramePacketTranslation") @Library("AudioToolbox/AudioToolbox.h")
 public class AudioFramePacketTranslation 
     extends Struct 
      {
@@ -41,20 +41,20 @@ public class AudioFramePacketTranslation
         return __new;
     ]-*/;
     public static native AudioFramePacketTranslation copyWithmFrame(AudioFramePacketTranslation original, long mFrame) /*-[
-        original.mFrame = mFrame;
-        return original;
+        AudioFramePacketTranslation __new = { .mFrame = mFrame, .mPacket = original.mPacket, .mFrameOffsetInPacket = original.mFrameOffsetInPacket };
+        return __new;
     ]-*/;
 
     
     public static native AudioFramePacketTranslation copyWithmPacket(AudioFramePacketTranslation original, long mPacket) /*-[
-        original.mPacket = mPacket;
-        return original;
+        AudioFramePacketTranslation __new = { .mFrame = original.mFrame, .mPacket = mPacket, .mFrameOffsetInPacket = original.mFrameOffsetInPacket };
+        return __new;
     ]-*/;
 
     
     public static native AudioFramePacketTranslation copyWithmFrameOffsetInPacket(AudioFramePacketTranslation original, int mFrameOffsetInPacket) /*-[
-        original.mFrameOffsetInPacket = mFrameOffsetInPacket;
-        return original;
+        AudioFramePacketTranslation __new = { .mFrame = original.mFrame, .mPacket = original.mPacket, .mFrameOffsetInPacket = mFrameOffsetInPacket };
+        return __new;
     ]-*/;
 
     

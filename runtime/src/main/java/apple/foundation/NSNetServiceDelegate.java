@@ -22,7 +22,7 @@ import apple.dispatch.*;
 
 
 
-@Library("Foundation") @Mapping("NSNetServiceDelegate")
+@Library("Foundation/Foundation.h") @Mapping("NSNetServiceDelegate")
 public interface NSNetServiceDelegate 
     extends NSObjectProtocol {
 

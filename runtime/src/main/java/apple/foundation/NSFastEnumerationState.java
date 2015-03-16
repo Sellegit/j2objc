@@ -22,7 +22,7 @@ import apple.dispatch.*;
 
 
 
-@Mapping("NSFastEnumerationState")
+@Mapping("NSFastEnumerationState") @Library("Foundation/Foundation.h")
 public class NSFastEnumerationState 
     extends Struct 
      {

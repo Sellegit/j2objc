@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 
 
-@Mapping("GCRotationRate")
+@Mapping("GCRotationRate") @Library("GameController/GameController.h")
 public class GCRotationRate 
     extends Struct 
      {

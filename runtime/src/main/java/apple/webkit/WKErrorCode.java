@@ -20,7 +20,7 @@ import apple.uikit.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("WebKit")
+@Library("WebKit/WebKit.h")
 @Mapping("WKErrorCode")
 public final class WKErrorCode extends ObjCEnum {
     

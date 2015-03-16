@@ -16,7 +16,7 @@ import apple.coreservices.*;
 
 
 
-@Mapping("timespec")
+@Mapping("timespec") @Library("System/System.h")
  class timespec 
     extends Struct 
      {

@@ -24,7 +24,7 @@ import apple.corelocation.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("UIKit") @Mapping("UITraitCollection")
+@Library("UIKit/UIKit.h") @Mapping("UITraitCollection")
 public class UITraitCollection 
     extends NSObject 
     implements NSCopying {

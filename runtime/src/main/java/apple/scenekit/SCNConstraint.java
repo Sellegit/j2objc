@@ -23,7 +23,7 @@ import apple.opengles.*;
 
 
 
-@Library("SceneKit") @Mapping("SCNConstraint")
+@Library("SceneKit/SceneKit.h") @Mapping("SCNConstraint")
 public class SCNConstraint 
     extends NSObject 
     implements NSCopying, SCNAnimatable {

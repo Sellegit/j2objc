@@ -18,7 +18,7 @@ import apple.foundation.*;
 
 
 
-@Mapping("CFRunLoopSourceContext")
+@Mapping("CFRunLoopSourceContext") @Library("CoreFoundation/CoreFoundation.h")
 public class CFRunLoopSourceContext 
     extends Struct 
      {

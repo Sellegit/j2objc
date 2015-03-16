@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 
 
-@Mapping("MIDISysexSendRequest")
+@Mapping("MIDISysexSendRequest") @Library("CoreMIDI/CoreMIDI.h")
 public class MIDISysexSendRequest 
     extends Struct 
      {

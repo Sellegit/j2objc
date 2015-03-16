@@ -25,7 +25,7 @@ import apple.mediatoolbox.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("AVFoundation") @Mapping("AVAudioUnitDistortion")
+@Library("AVFoundation/AVFoundation.h") @Mapping("AVAudioUnitDistortion")
 public class AVAudioUnitDistortion 
     extends AVAudioUnitEffect 
      {

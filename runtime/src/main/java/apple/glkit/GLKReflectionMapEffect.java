@@ -22,7 +22,7 @@ import apple.dispatch.*;
  * @since Available in iOS 5.0 and later.
  */
 
-@Library("GLKit") @Mapping("GLKReflectionMapEffect")
+@Library("GLKit/GLKit.h") @Mapping("GLKReflectionMapEffect")
 public class GLKReflectionMapEffect 
     extends GLKBaseEffect 
     implements GLKNamedEffect {

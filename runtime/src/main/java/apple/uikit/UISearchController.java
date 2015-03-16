@@ -24,7 +24,7 @@ import apple.corelocation.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("UIKit") @Mapping("UISearchController")
+@Library("UIKit/UIKit.h") @Mapping("UISearchController")
 public class UISearchController 
     extends UIViewController 
     implements UIViewControllerTransitioningDelegate, UIViewControllerAnimatedTransitioning {

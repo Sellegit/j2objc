@@ -25,7 +25,7 @@ import apple.mediatoolbox.*;
  * @since Available in iOS 4.0 and later.
  */
 
-@Library("AVFoundation") @Mapping("AVCaptureSession")
+@Library("AVFoundation/AVFoundation.h") @Mapping("AVCaptureSession")
 public class AVCaptureSession 
     extends NSObject 
      {

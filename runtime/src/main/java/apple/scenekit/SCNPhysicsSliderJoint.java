@@ -23,7 +23,7 @@ import apple.opengles.*;
 
 
 
-@Library("SceneKit") @Mapping("SCNPhysicsSliderJoint")
+@Library("SceneKit/SceneKit.h") @Mapping("SCNPhysicsSliderJoint")
 public class SCNPhysicsSliderJoint 
     extends SCNPhysicsBehavior 
      {

@@ -19,7 +19,7 @@ import apple.corebluetooth.*;
 
 
 
-@Library("CoreLocation")
+@Library("CoreLocation/CoreLocation.h")
 @Mapping("CLActivityType")
 public final class CLActivityType extends ObjCEnum {
     

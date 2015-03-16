@@ -24,7 +24,7 @@ import apple.corelocation.*;
  * @since Available in iOS 2.0 and later.
  */
 
-@Library("UIKit") @Mapping("UISegmentedControl")
+@Library("UIKit/UIKit.h") @Mapping("UISegmentedControl")
 public class UISegmentedControl 
     extends UIControl 
     implements NSCoding {

@@ -24,7 +24,7 @@ import apple.scenekit.*;
 
 
 
-@Library("SpriteKit") @Mapping("SKAction")
+@Library("SpriteKit/SpriteKit.h") @Mapping("SKAction")
 public class SKAction 
     extends NSObject 
     implements NSCopying, NSCoding {

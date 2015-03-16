@@ -23,7 +23,7 @@ import apple.mediatoolbox.*;
 
 
 
-@Library("AVFoundation") @Mapping("AVVideoCompositionValidationHandling")
+@Library("AVFoundation/AVFoundation.h") @Mapping("AVVideoCompositionValidationHandling")
 public interface AVVideoCompositionValidationHandling 
     extends NSObjectProtocol {
 

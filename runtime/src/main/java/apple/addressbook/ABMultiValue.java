@@ -16,7 +16,7 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("AddressBook")
+@Library("AddressBook/AddressBook.h")
 public class ABMultiValue 
     extends CFType 
      {
@@ -29,20 +29,20 @@ public class ABMultiValue
     
     
     @GlobalFunction("ABMultiValueGetPropertyType")
-    public native ABPropertyType getPropertyType();
+    public static native ABPropertyType getPropertyType(ABMultiValue multiValue);
     @GlobalFunction("ABMultiValueGetCount")
-    public native @MachineSizedSInt long getCount();
+    public static native @MachineSizedSInt long getCount(ABMultiValue multiValue);
     @GlobalFunction("ABMultiValueCopyValueAtIndex")
-    public native CFType getValue(@MachineSizedSInt long index);
+    public static native CFType getValue(ABMultiValue multiValue, @MachineSizedSInt long index);
     @GlobalFunction("ABMultiValueCopyArrayOfAllValues")
-    public native List<CFType> getAllValues();
+    public static native List<CFType> getAllValues(ABMultiValue multiValue);
     @GlobalFunction("ABMultiValueCopyLabelAtIndex")
-    public native CFString getLabel(@MachineSizedSInt long index);
+    public static native CFString getLabel(ABMultiValue multiValue, @MachineSizedSInt long index);
     @GlobalFunction("ABMultiValueGetIndexForIdentifier")
-    public native @MachineSizedSInt long indexOf(int identifier);
+    public static native @MachineSizedSInt long indexOf(ABMultiValue multiValue, int identifier);
     @GlobalFunction("ABMultiValueGetIdentifierAtIndex")
-    public native int getIdentifier(@MachineSizedSInt long index);
+    public static native int getIdentifier(ABMultiValue multiValue, @MachineSizedSInt long index);
     @GlobalFunction("ABMultiValueGetFirstIndexOfValue")
-    public native @MachineSizedSInt long indexOf(CFType value);
+    public static native @MachineSizedSInt long indexOf(ABMultiValue multiValue, CFType value);
     
 }

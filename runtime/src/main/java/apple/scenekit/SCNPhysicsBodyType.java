@@ -23,7 +23,7 @@ import apple.opengles.*;
 
 
 
-@Library("SceneKit")
+@Library("SceneKit/SceneKit.h")
 @Mapping("SCNPhysicsBodyType")
 public final class SCNPhysicsBodyType extends ObjCEnum {
     

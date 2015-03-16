@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 
 
-@Mapping("CMMagneticField")
+@Mapping("CMMagneticField") @Library("CoreMotion/CoreMotion.h")
 public class CMMagneticField 
     extends Struct 
      {

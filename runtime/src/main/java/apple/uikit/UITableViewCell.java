@@ -24,7 +24,7 @@ import apple.corelocation.*;
  * @since Available in iOS 2.0 and later.
  */
 
-@Library("UIKit") @Mapping("UITableViewCell")
+@Library("UIKit/UIKit.h") @Mapping("UITableViewCell")
 public class UITableViewCell 
     extends UIView 
     implements NSCoding, UIGestureRecognizerDelegate {

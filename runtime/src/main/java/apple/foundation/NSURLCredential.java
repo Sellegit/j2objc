@@ -22,7 +22,7 @@ import apple.dispatch.*;
 
 
 
-@Library("Foundation") @Mapping("NSURLCredential")
+@Library("Foundation/Foundation.h") @Mapping("NSURLCredential")
 public class NSURLCredential 
     extends NSObject 
     implements NSCopying {

@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreFoundation")
+@Library("CoreFoundation/CoreFoundation.h")
 public class CFNumber 
     extends CFPropertyList 
      {
@@ -41,14 +41,14 @@ public class CFNumber
     @GlobalFunction("CFNumberCreate")
     protected static native CFNumber create(CFAllocator allocator, CFNumberType theType, Todo valuePtr);
     @GlobalFunction("CFNumberGetType")
-    public native CFNumberType getType();
+    public static native CFNumberType getType(CFNumber number);
     @GlobalFunction("CFNumberGetByteSize")
-    public native @MachineSizedSInt long getByteSize();
+    public static native @MachineSizedSInt long getByteSize(CFNumber number);
     @GlobalFunction("CFNumberIsFloatType")
-    public native boolean isFloatType();
+    public static native boolean isFloatType(CFNumber number);
     @GlobalFunction("CFNumberGetValue")
-    protected native boolean getValue(CFNumberType theType, Todo valuePtr);
+    protected static native boolean getValue(CFNumber number, CFNumberType theType, Todo valuePtr);
     @GlobalFunction("CFNumberCompare")
-    protected native CFComparisonResult compareTo(CFNumber otherNumber, Todo context);
+    protected static native CFComparisonResult compareTo(CFNumber number, CFNumber otherNumber, Todo context);
     
 }

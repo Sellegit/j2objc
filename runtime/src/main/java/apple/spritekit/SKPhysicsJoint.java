@@ -24,7 +24,7 @@ import apple.scenekit.*;
 
 
 
-@Library("SpriteKit") @Mapping("SKPhysicsJoint")
+@Library("SpriteKit/SpriteKit.h") @Mapping("SKPhysicsJoint")
 public class SKPhysicsJoint 
     extends NSObject 
     implements NSCoding {

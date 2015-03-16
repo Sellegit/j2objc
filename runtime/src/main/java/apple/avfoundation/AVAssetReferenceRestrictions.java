@@ -23,7 +23,7 @@ import apple.mediatoolbox.*;
 
 
 
-@Library("AVFoundation")
+@Library("AVFoundation/AVFoundation.h")
 @Mapping("AVAssetReferenceRestrictions")
 public final class AVAssetReferenceRestrictions extends ObjCEnum {
     

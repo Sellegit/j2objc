@@ -19,7 +19,7 @@ import apple.accounts.*;
 
 
 
-@Library("Social")
+@Library("Social/Social.h")
 @Mapping("SLRequestMethod")
 public final class SLRequestMethod extends ObjCEnum {
     

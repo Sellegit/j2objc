@@ -21,7 +21,7 @@ import apple.metal.*;
 
 
 
-@Library("QuartzCore") @Mapping("CAShapeLayer")
+@Library("QuartzCore/QuartzCore.h") @Mapping("CAShapeLayer")
 public class CAShapeLayer 
     extends CALayer 
      {

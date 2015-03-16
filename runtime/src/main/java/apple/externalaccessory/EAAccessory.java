@@ -21,7 +21,7 @@ import apple.dispatch.*;
  * @since Available in iOS 3.0 and later.
  */
 
-@Library("ExternalAccessory") @Mapping("EAAccessory")
+@Library("ExternalAccessory/ExternalAccessory.h") @Mapping("EAAccessory")
 public class EAAccessory 
     extends NSObject 
      {

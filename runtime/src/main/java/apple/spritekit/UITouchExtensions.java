@@ -23,7 +23,7 @@ import apple.scenekit.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("SpriteKit")
+@Library("SpriteKit/SpriteKit.h")
 public final class UITouchExtensions 
     extends NSExtensions 
      {
@@ -37,9 +37,6 @@ public final class UITouchExtensions
     
     
     
-    @Mapping("locationInNode:")
-    public static native CGPoint getLocationInNode(UITouch thiz, SKNode node);
-    @Mapping("previousLocationInNode:")
-    public static native CGPoint getPreviousLocationInNode(UITouch thiz, SKNode node);
+    
     
 }

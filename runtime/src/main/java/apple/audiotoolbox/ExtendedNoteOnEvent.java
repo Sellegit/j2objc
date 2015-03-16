@@ -20,7 +20,7 @@ import apple.coremedia.*;
 
 
 
-@Mapping("ExtendedNoteOnEvent")
+@Mapping("ExtendedNoteOnEvent") @Library("AudioToolbox/AudioToolbox.h")
 public class ExtendedNoteOnEvent 
     extends Struct 
      {
@@ -43,26 +43,26 @@ public class ExtendedNoteOnEvent
         return __new;
     ]-*/;
     public static native ExtendedNoteOnEvent copyWithinstrumentID(ExtendedNoteOnEvent original, int instrumentID) /*-[
-        original.instrumentID = instrumentID;
-        return original;
+        ExtendedNoteOnEvent __new = { .instrumentID = instrumentID, .groupID = original.groupID, .duration = original.duration, .extendedParams = original.extendedParams };
+        return __new;
     ]-*/;
 
     
     public static native ExtendedNoteOnEvent copyWithgroupID(ExtendedNoteOnEvent original, int groupID) /*-[
-        original.groupID = groupID;
-        return original;
+        ExtendedNoteOnEvent __new = { .instrumentID = original.instrumentID, .groupID = groupID, .duration = original.duration, .extendedParams = original.extendedParams };
+        return __new;
     ]-*/;
 
     
     public static native ExtendedNoteOnEvent copyWithduration(ExtendedNoteOnEvent original, float duration) /*-[
-        original.duration = duration;
-        return original;
+        ExtendedNoteOnEvent __new = { .instrumentID = original.instrumentID, .groupID = original.groupID, .duration = duration, .extendedParams = original.extendedParams };
+        return __new;
     ]-*/;
 
     
     public static native ExtendedNoteOnEvent copyWithextendedParams(ExtendedNoteOnEvent original, MusicDeviceNoteParams extendedParams) /*-[
-        original.extendedParams = extendedParams;
-        return original;
+        ExtendedNoteOnEvent __new = { .instrumentID = original.instrumentID, .groupID = original.groupID, .duration = original.duration, .extendedParams = extendedParams };
+        return __new;
     ]-*/;
 
     

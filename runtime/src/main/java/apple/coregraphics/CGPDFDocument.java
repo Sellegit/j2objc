@@ -17,7 +17,7 @@ import apple.uikit.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreGraphics")
+@Library("CoreGraphics/CoreGraphics.h")
 public class CGPDFDocument 
     extends CFType 
      {
@@ -43,42 +43,42 @@ public class CGPDFDocument
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGPDFDocumentGetVersion")
-    protected native void getVersion(Todo majorVersion, Todo minorVersion);
+    protected static native void getVersion(CGPDFDocument document, Todo majorVersion, Todo minorVersion);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGPDFDocumentIsEncrypted")
-    public native boolean isEncrypted();
+    public static native boolean isEncrypted(CGPDFDocument document);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGPDFDocumentUnlockWithPassword")
-    public native boolean unlockWithPassword(Todo password);
+    public static native boolean unlockWithPassword(CGPDFDocument document, Todo password);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGPDFDocumentIsUnlocked")
-    public native boolean isUnlocked();
+    public static native boolean isUnlocked(CGPDFDocument document);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGPDFDocumentAllowsPrinting")
-    public native boolean allowsPrinting();
+    public static native boolean allowsPrinting(CGPDFDocument document);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGPDFDocumentAllowsCopying")
-    public native boolean allowsCopying();
+    public static native boolean allowsCopying(CGPDFDocument document);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGPDFDocumentGetNumberOfPages")
-    public native @MachineSizedUInt long getNumberOfPages();
+    public static native @MachineSizedUInt long getNumberOfPages(CGPDFDocument document);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGPDFDocumentGetPage")
-    public native CGPDFPage getPage(@MachineSizedUInt long pageNumber);
+    public static native CGPDFPage getPage(CGPDFDocument document, @MachineSizedUInt long pageNumber);
     /**
      * @since Available in iOS 2.0 and later.
      */

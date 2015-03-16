@@ -23,7 +23,7 @@ import apple.opengles.*;
 
 
 
-@Library("SceneKit") @Mapping("SCNScene")
+@Library("SceneKit/SceneKit.h") @Mapping("SCNScene")
 public class SCNScene 
     extends NSObject 
      {

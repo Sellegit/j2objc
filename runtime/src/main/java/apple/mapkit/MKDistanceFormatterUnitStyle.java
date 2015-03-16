@@ -22,7 +22,7 @@ import apple.dispatch.*;
  * @since Available in iOS 7.0 and later.
  */
 
-@Library("MapKit")
+@Library("MapKit/MapKit.h")
 @Mapping("MKDistanceFormatterUnitStyle")
 public final class MKDistanceFormatterUnitStyle extends ObjCEnum {
     

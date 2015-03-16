@@ -21,7 +21,7 @@ import apple.corelocation.*;
  * @since Available in iOS 6.0 and later.
  */
 
-@Library("EventKit") @Mapping("EKStructuredLocation")
+@Library("EventKit/EventKit.h") @Mapping("EKStructuredLocation")
 public class EKStructuredLocation 
     extends EKObject 
     implements NSCopying {

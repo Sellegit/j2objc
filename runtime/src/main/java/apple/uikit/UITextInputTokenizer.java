@@ -22,7 +22,7 @@ import apple.corelocation.*;
 
 
 
-@Library("UIKit") @Mapping("UITextInputTokenizer")
+@Library("UIKit/UIKit.h") @Mapping("UITextInputTokenizer")
 public interface UITextInputTokenizer 
     extends NSObjectProtocol {
 

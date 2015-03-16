@@ -26,7 +26,7 @@ import apple.scenekit.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("SpriteKit")
+@Library("SpriteKit/SpriteKit.h")
 @Mapping("SKUniformType")
 public final class SKUniformType extends ObjCEnum {
     

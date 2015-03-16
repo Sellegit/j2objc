@@ -20,7 +20,7 @@ import apple.corelocation.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("CloudKit") @Mapping("CKServerChangeToken")
+@Library("CloudKit/CloudKit.h") @Mapping("CKServerChangeToken")
 public class CKServerChangeToken 
     extends NSObject 
     implements NSCopying {

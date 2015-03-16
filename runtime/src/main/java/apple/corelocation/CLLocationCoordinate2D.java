@@ -19,7 +19,7 @@ import apple.corebluetooth.*;
 
 
 
-@Mapping("CLLocationCoordinate2D") @Library("CoreLocation")
+@Mapping("CLLocationCoordinate2D") @Library("CoreLocation/CoreLocation.h")
 public class CLLocationCoordinate2D 
     extends Struct 
      {

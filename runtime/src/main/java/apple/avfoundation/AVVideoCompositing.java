@@ -25,7 +25,7 @@ import apple.mediatoolbox.*;
  * @since Available in iOS 7.0 and later.
  */
 
-@Library("AVFoundation") @Mapping("AVVideoCompositing")
+@Library("AVFoundation/AVFoundation.h") @Mapping("AVVideoCompositing")
 public interface AVVideoCompositing 
     extends NSObjectProtocol {
 

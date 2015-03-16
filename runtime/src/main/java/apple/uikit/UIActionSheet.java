@@ -24,7 +24,7 @@ import apple.corelocation.*;
  * @since Available in iOS 2.0 and later.
  */
 
-@Library("UIKit") @Mapping("UIActionSheet")
+@Library("UIKit/UIKit.h") @Mapping("UIActionSheet")
 public class UIActionSheet 
     extends UIView 
      {

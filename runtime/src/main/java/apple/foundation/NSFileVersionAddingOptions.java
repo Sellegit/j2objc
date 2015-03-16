@@ -22,7 +22,7 @@ import apple.dispatch.*;
 
 
 
-@Library("Foundation")
+@Library("Foundation/Foundation.h")
 @Mapping("NSFileVersionAddingOptions")
 public final class NSFileVersionAddingOptions extends ObjCEnum {
     

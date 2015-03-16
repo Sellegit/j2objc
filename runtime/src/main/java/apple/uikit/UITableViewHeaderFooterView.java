@@ -24,7 +24,7 @@ import apple.corelocation.*;
  * @since Available in iOS 6.0 and later.
  */
 
-@Library("UIKit") @Mapping("UITableViewHeaderFooterView")
+@Library("UIKit/UIKit.h") @Mapping("UITableViewHeaderFooterView")
 public class UITableViewHeaderFooterView 
     extends UIView 
      {

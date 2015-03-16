@@ -20,7 +20,7 @@ import apple.coremedia.*;
 
 
 
-@Mapping("CABarBeatTime")
+@Mapping("CABarBeatTime") @Library("AudioToolbox/AudioToolbox.h")
 public class CABarBeatTime 
     extends Struct 
      {
@@ -45,32 +45,32 @@ public class CABarBeatTime
         return __new;
     ]-*/;
     public static native CABarBeatTime copyWithbar(CABarBeatTime original, int bar) /*-[
-        original.bar = bar;
-        return original;
+        CABarBeatTime __new = { .bar = bar, .beat = original.beat, .subbeat = original.subbeat, .subbeatDivisor = original.subbeatDivisor, .reserved = original.reserved };
+        return __new;
     ]-*/;
 
     
     public static native CABarBeatTime copyWithbeat(CABarBeatTime original, short beat) /*-[
-        original.beat = beat;
-        return original;
+        CABarBeatTime __new = { .bar = original.bar, .beat = beat, .subbeat = original.subbeat, .subbeatDivisor = original.subbeatDivisor, .reserved = original.reserved };
+        return __new;
     ]-*/;
 
     
     public static native CABarBeatTime copyWithsubbeat(CABarBeatTime original, short subbeat) /*-[
-        original.subbeat = subbeat;
-        return original;
+        CABarBeatTime __new = { .bar = original.bar, .beat = original.beat, .subbeat = subbeat, .subbeatDivisor = original.subbeatDivisor, .reserved = original.reserved };
+        return __new;
     ]-*/;
 
     
     public static native CABarBeatTime copyWithsubbeatDivisor(CABarBeatTime original, short subbeatDivisor) /*-[
-        original.subbeatDivisor = subbeatDivisor;
-        return original;
+        CABarBeatTime __new = { .bar = original.bar, .beat = original.beat, .subbeat = original.subbeat, .subbeatDivisor = subbeatDivisor, .reserved = original.reserved };
+        return __new;
     ]-*/;
 
     
     public static native CABarBeatTime copyWithreserved(CABarBeatTime original, short reserved) /*-[
-        original.reserved = reserved;
-        return original;
+        CABarBeatTime __new = { .bar = original.bar, .beat = original.beat, .subbeat = original.subbeat, .subbeatDivisor = original.subbeatDivisor, .reserved = reserved };
+        return __new;
     ]-*/;
 
     

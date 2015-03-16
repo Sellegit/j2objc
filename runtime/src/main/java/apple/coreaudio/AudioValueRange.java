@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 
 
-@Mapping("AudioValueRange")
+@Mapping("AudioValueRange") @Library("CoreAudio/CoreAudioTypes.h")
 public class AudioValueRange 
     extends Struct 
      {

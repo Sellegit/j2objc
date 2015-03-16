@@ -20,7 +20,7 @@ import apple.avfoundation.*;
 
 
 
-@Library("Photos") @Mapping("PHAssetCollectionChangeRequest")
+@Library("Photos/Photos.h") @Mapping("PHAssetCollectionChangeRequest")
 public class PHAssetCollectionChangeRequest 
     extends NSObject 
      {

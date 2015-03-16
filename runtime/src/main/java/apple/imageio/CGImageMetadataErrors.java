@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 
 
-@Library("ImageIO")
+@Library("ImageIO/ImageIO.h")
 @Mapping("CGImageMetadataErrors")
 public final class CGImageMetadataErrors extends ObjCEnum {
     

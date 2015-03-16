@@ -22,7 +22,7 @@ import apple.dispatch.*;
 
 
 
-@Library("Foundation") @Mapping("NSURLSessionDownloadTask")
+@Library("Foundation/Foundation.h") @Mapping("NSURLSessionDownloadTask")
 public class NSURLSessionDownloadTask 
     extends NSURLSessionTask 
      {

@@ -19,7 +19,7 @@ import apple.coremedia.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("AudioToolbox")
+@Library("AudioToolbox/AudioToolbox.h")
 public class AudioFile 
     extends Object 
      {
@@ -55,79 +55,79 @@ public class AudioFile
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("AudioFileClose")
-    public native AudioFileError closeFile();
+    public static native AudioFileError closeFile(AudioFile inAudioFile);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("AudioFileOptimize")
-    public native AudioFileError optimize();
+    public static native AudioFileError optimize(AudioFile inAudioFile);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("AudioFileReadBytes")
-    public native AudioFileError readBytes(boolean inUseCache, long inStartingByte, Todo ioNumBytes, Todo outBuffer);
+    public static native AudioFileError readBytes(AudioFile inAudioFile, boolean inUseCache, long inStartingByte, Todo ioNumBytes, Todo outBuffer);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("AudioFileWriteBytes")
-    public native AudioFileError writeBytes(boolean inUseCache, long inStartingByte, Todo ioNumBytes, Todo inBuffer);
+    public static native AudioFileError writeBytes(AudioFile inAudioFile, boolean inUseCache, long inStartingByte, Todo ioNumBytes, Todo inBuffer);
     /**
      * @since Available in iOS 2.2 and later.
      */
     @GlobalFunction("AudioFileReadPacketData")
-    public native AudioFileError readPacketData(boolean inUseCache, Todo ioNumBytes, AudioStreamPacketDescription outPacketDescriptions, long inStartingPacket, Todo ioNumPackets, Todo outBuffer);
+    public static native AudioFileError readPacketData(AudioFile inAudioFile, boolean inUseCache, Todo ioNumBytes, AudioStreamPacketDescription outPacketDescriptions, long inStartingPacket, Todo ioNumPackets, Todo outBuffer);
     /**
      * @since Available in iOS 2.0 and later.
      * @deprecated Deprecated in iOS 8.0.
      */
     @Deprecated
     @GlobalFunction("AudioFileReadPackets")
-    public native AudioFileError readPackets(boolean inUseCache, Todo outNumBytes, AudioStreamPacketDescription outPacketDescriptions, long inStartingPacket, Todo ioNumPackets, Todo outBuffer);
+    public static native AudioFileError readPackets(AudioFile inAudioFile, boolean inUseCache, Todo outNumBytes, AudioStreamPacketDescription outPacketDescriptions, long inStartingPacket, Todo ioNumPackets, Todo outBuffer);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("AudioFileWritePackets")
-    public native AudioFileError writePackets(boolean inUseCache, int inNumBytes, AudioStreamPacketDescription inPacketDescriptions, long inStartingPacket, Todo ioNumPackets, Todo inBuffer);
+    public static native AudioFileError writePackets(AudioFile inAudioFile, boolean inUseCache, int inNumBytes, AudioStreamPacketDescription inPacketDescriptions, long inStartingPacket, Todo ioNumPackets, Todo inBuffer);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("AudioFileCountUserData")
-    public native AudioFileError countUserData(int inUserDataID, Todo outNumberItems);
+    public static native AudioFileError countUserData(AudioFile inAudioFile, int inUserDataID, Todo outNumberItems);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("AudioFileGetUserDataSize")
-    public native AudioFileError getUserDataSize(int inUserDataID, int inIndex, Todo outUserDataSize);
+    public static native AudioFileError getUserDataSize(AudioFile inAudioFile, int inUserDataID, int inIndex, Todo outUserDataSize);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("AudioFileGetUserData")
-    public native AudioFileError getUserData(int inUserDataID, int inIndex, Todo ioUserDataSize, Todo outUserData);
+    public static native AudioFileError getUserData(AudioFile inAudioFile, int inUserDataID, int inIndex, Todo ioUserDataSize, Todo outUserData);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("AudioFileSetUserData")
-    public native AudioFileError setUserData(int inUserDataID, int inIndex, int inUserDataSize, Todo inUserData);
+    public static native AudioFileError setUserData(AudioFile inAudioFile, int inUserDataID, int inIndex, int inUserDataSize, Todo inUserData);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("AudioFileRemoveUserData")
-    public native AudioFileError removeUserData(int inUserDataID, int inIndex);
+    public static native AudioFileError removeUserData(AudioFile inAudioFile, int inUserDataID, int inIndex);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("AudioFileGetPropertyInfo")
-    public native AudioFileError getPropertyInfo(int inPropertyID, Todo outDataSize, Todo isWritable);
+    public static native AudioFileError getPropertyInfo(AudioFile inAudioFile, int inPropertyID, Todo outDataSize, Todo isWritable);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("AudioFileGetProperty")
-    public native AudioFileError getProperty(int inPropertyID, Todo ioDataSize, Todo outPropertyData);
+    public static native AudioFileError getProperty(AudioFile inAudioFile, int inPropertyID, Todo ioDataSize, Todo outPropertyData);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("AudioFileSetProperty")
-    public native AudioFileError setProperty(int inPropertyID, int inDataSize, Todo inPropertyData);
+    public static native AudioFileError setProperty(AudioFile inAudioFile, int inPropertyID, int inDataSize, Todo inPropertyData);
     /**
      * @since Available in iOS 2.0 and later.
      */

@@ -21,7 +21,7 @@ import apple.accounts.*;
  * @since Available in iOS 6.0 and later.
  */
 
-@Library("Social") @Mapping("SLRequest")
+@Library("Social/Social.h") @Mapping("SLRequest")
 public class SLRequest 
     extends NSObject 
      {

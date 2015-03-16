@@ -17,7 +17,7 @@ import apple.uikit.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("WebKit")
+@Library("WebKit/WebKit.h")
 public class WKError 
     extends Todo 
      {

@@ -18,7 +18,7 @@ import apple.foundation.*;
 
 
 
-@Library("CoreFoundation")
+@Library("CoreFoundation/CoreFoundation.h")
 @Mapping("CFCharacterSetPredefinedSet")
 public final class CFCharacterSetPredefinedSet extends ObjCEnum {
     

@@ -20,7 +20,7 @@ import apple.uikit.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("WebKit") @Mapping("WKUserContentController")
+@Library("WebKit/WebKit.h") @Mapping("WKUserContentController")
 public class WKUserContentController 
     extends NSObject 
      {

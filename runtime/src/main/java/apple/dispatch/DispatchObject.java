@@ -15,7 +15,7 @@ import apple.coreservices.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("System")
+@Library("System/System.h")
 public class DispatchObject 
     extends Object 
      {
@@ -31,26 +31,26 @@ public class DispatchObject
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("dispatch_retain")
-    public native void retain();
+    public static native void retain(DispatchObject object);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("dispatch_release")
-    public native void release();
+    public static native void release(DispatchObject object);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("dispatch_suspend")
-    public native void suspend();
+    public static native void suspend(DispatchObject object);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("dispatch_resume")
-    public native void resume();
+    public static native void resume(DispatchObject object);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("dispatch_set_target_queue")
-    public native void setTargetQueue(DispatchQueue queue);
+    public static native void setTargetQueue(DispatchObject object, DispatchQueue queue);
     
 }

@@ -22,7 +22,7 @@ import apple.mediatoolbox.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("AVFoundation")
+@Library("AVFoundation/AVFoundation.h")
 public final class NSValueExtensions 
     extends NSExtensions 
      {
@@ -32,21 +32,7 @@ public final class NSValueExtensions
     private NSValueExtensions() {}
     
     
-    /**
-     * @since Available in iOS 4.0 and later.
-     */
-    @Mapping("CMTimeValue")
-    public static native CMTime getCMTimeValue(NSValue thiz);
-    /**
-     * @since Available in iOS 4.0 and later.
-     */
-    @Mapping("CMTimeRangeValue")
-    public static native CMTimeRange getCMTimeRangeValue(NSValue thiz);
-    /**
-     * @since Available in iOS 4.0 and later.
-     */
-    @Mapping("CMTimeMappingValue")
-    public static native CMTimeMapping getCMTimeMappingValue(NSValue thiz);
+    
     
     
     

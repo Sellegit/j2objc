@@ -24,7 +24,7 @@ import apple.corelocation.*;
  * @since Available in iOS 3.2 and later.
  */
 
-@Library("UIKit") @Mapping("UIGestureRecognizer")
+@Library("UIKit/UIKit.h") @Mapping("UIGestureRecognizer")
 public class UIGestureRecognizer 
     extends NSObject 
      {

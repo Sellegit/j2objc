@@ -24,7 +24,7 @@ import apple.corelocation.*;
  * @since Available in iOS 2.0 and later.
  */
 
-@Library("UIKit") @Mapping("UIView")
+@Library("UIKit/UIKit.h") @Mapping("UIView")
 public class UIView 
     extends UIResponder 
     implements NSCoding, UIAppearanceContainer, UIDynamicItem, UITraitEnvironment, UICoordinateSpace, UIAccessibilityIdentification {

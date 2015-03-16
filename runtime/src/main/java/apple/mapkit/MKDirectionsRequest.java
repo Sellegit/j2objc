@@ -22,7 +22,7 @@ import apple.dispatch.*;
  * @since Available in iOS 6.0 and later.
  */
 
-@Library("MapKit") @Mapping("MKDirectionsRequest")
+@Library("MapKit/MapKit.h") @Mapping("MKDirectionsRequest")
 public class MKDirectionsRequest 
     extends NSObject 
      {

@@ -21,7 +21,7 @@ import apple.metal.*;
 
 
 
-@Library("QuartzCore") @Mapping("CADisplayLink")
+@Library("QuartzCore/QuartzCore.h") @Mapping("CADisplayLink")
 public class CADisplayLink 
     extends NSObject 
      {

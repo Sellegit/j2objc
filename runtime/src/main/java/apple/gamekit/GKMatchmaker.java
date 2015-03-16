@@ -20,7 +20,7 @@ import apple.uikit.*;
  * @since Available in iOS 4.1 and later.
  */
 
-@Library("GameKit") @Mapping("GKMatchmaker")
+@Library("GameKit/GameKit.h") @Mapping("GKMatchmaker")
 public class GKMatchmaker 
     extends NSObject 
      {

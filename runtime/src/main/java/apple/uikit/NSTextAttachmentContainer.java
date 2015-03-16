@@ -22,7 +22,7 @@ import apple.corelocation.*;
 
 
 
-@Library("UIKit") @Mapping("NSTextAttachmentContainer")
+@Library("UIKit/UIKit.h") @Mapping("NSTextAttachmentContainer")
 public interface NSTextAttachmentContainer 
     extends NSObjectProtocol {
 

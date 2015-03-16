@@ -20,7 +20,7 @@ import apple.corelocation.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("CloudKit") @Mapping("CKNotification")
+@Library("CloudKit/CloudKit.h") @Mapping("CKNotification")
 public class CKNotification 
     extends NSObject 
      {

@@ -22,7 +22,7 @@ import apple.dispatch.*;
 
 
 
-@Library("Foundation") @Mapping("NSRunLoop")
+@Library("Foundation/Foundation.h") @Mapping("NSRunLoop")
 public class NSRunLoop 
     extends NSObject 
      {

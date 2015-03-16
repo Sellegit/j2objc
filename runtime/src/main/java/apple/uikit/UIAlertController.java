@@ -24,7 +24,7 @@ import apple.corelocation.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("UIKit") @Mapping("UIAlertController")
+@Library("UIKit/UIKit.h") @Mapping("UIAlertController")
 public class UIAlertController 
     extends UIViewController 
      {

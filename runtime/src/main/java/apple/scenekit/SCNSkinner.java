@@ -23,7 +23,7 @@ import apple.opengles.*;
 
 
 
-@Library("SceneKit") @Mapping("SCNSkinner")
+@Library("SceneKit/SceneKit.h") @Mapping("SCNSkinner")
 public class SCNSkinner 
     extends NSObject 
      {

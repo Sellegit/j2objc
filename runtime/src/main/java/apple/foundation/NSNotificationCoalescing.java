@@ -22,7 +22,7 @@ import apple.dispatch.*;
 
 
 
-@Library("Foundation")
+@Library("Foundation/Foundation.h")
 @Mapping("NSNotificationCoalescing")
 public final class NSNotificationCoalescing extends ObjCEnum {
     

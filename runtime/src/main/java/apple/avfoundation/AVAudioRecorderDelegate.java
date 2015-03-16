@@ -23,7 +23,7 @@ import apple.mediatoolbox.*;
 
 
 
-@Library("AVFoundation") @Mapping("AVAudioRecorderDelegate")
+@Library("AVFoundation/AVFoundation.h") @Mapping("AVAudioRecorderDelegate")
 public interface AVAudioRecorderDelegate 
     extends NSObjectProtocol {
 

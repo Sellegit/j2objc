@@ -20,7 +20,7 @@ import apple.dispatch.*;
 
 
 
-@Library("MapKit") @Mapping("MKOverlay")
+@Library("MapKit/MapKit.h") @Mapping("MKOverlay")
 public interface MKOverlay 
     extends MKAnnotation {
 

@@ -21,7 +21,7 @@ import apple.metal.*;
 
 
 
-@Library("QuartzCore") @Mapping("CAMediaTimingFunction")
+@Library("QuartzCore/QuartzCore.h") @Mapping("CAMediaTimingFunction")
 public class CAMediaTimingFunction 
     extends NSObject 
     implements NSCoding {

@@ -19,7 +19,7 @@ import apple.foundation.*;
  * @since Available in iOS 3.0 and later.
  */
 
-@Library("CoreData") @Mapping("NSPropertyDescription")
+@Library("CoreData/CoreData.h") @Mapping("NSPropertyDescription")
 public class NSPropertyDescription 
     extends NSObject 
     implements NSCoding, NSCopying {

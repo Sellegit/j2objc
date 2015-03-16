@@ -23,7 +23,7 @@ import apple.mediatoolbox.*;
 
 
 
-@Mapping("AVCaptureWhiteBalanceChromaticityValues")
+@Mapping("AVCaptureWhiteBalanceChromaticityValues") @Library("AVFoundation/AVFoundation.h")
 public class AVCaptureWhiteBalanceChromaticityValues 
     extends Struct 
      {

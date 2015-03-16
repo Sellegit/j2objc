@@ -24,7 +24,7 @@ import apple.scenekit.*;
 
 
 
-@Library("SpriteKit") @Mapping("SKPhysicsContact")
+@Library("SpriteKit/SpriteKit.h") @Mapping("SKPhysicsContact")
 public class SKPhysicsContact 
     extends NSObject 
      {

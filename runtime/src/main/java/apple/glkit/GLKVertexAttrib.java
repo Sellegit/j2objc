@@ -22,7 +22,7 @@ import apple.dispatch.*;
  * @since Available in iOS 5.0 and later.
  */
 
-@Library("GLKit")
+@Library("GLKit/GLKit.h")
 @Mapping("GLKVertexAttrib")
 public final class GLKVertexAttrib extends ObjCEnum {
     

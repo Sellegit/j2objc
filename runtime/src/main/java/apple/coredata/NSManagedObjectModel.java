@@ -19,7 +19,7 @@ import apple.foundation.*;
  * @since Available in iOS 3.0 and later.
  */
 
-@Library("CoreData") @Mapping("NSManagedObjectModel")
+@Library("CoreData/CoreData.h") @Mapping("NSManagedObjectModel")
 public class NSManagedObjectModel 
     extends NSObject 
     implements NSCoding, NSCopying, NSFastEnumeration {

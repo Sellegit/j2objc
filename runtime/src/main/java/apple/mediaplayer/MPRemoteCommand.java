@@ -20,7 +20,7 @@ import apple.uikit.*;
  * @since Available in iOS 7.1 and later.
  */
 
-@Library("MediaPlayer") @Mapping("MPRemoteCommand")
+@Library("MediaPlayer/MediaPlayer.h") @Mapping("MPRemoteCommand")
 public class MPRemoteCommand 
     extends NSObject 
      {

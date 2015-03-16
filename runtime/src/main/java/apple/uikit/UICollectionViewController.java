@@ -24,7 +24,7 @@ import apple.corelocation.*;
  * @since Available in iOS 6.0 and later.
  */
 
-@Library("UIKit") @Mapping("UICollectionViewController")
+@Library("UIKit/UIKit.h") @Mapping("UICollectionViewController")
 public class UICollectionViewController 
     extends UIViewController 
     implements UICollectionViewDelegate, UICollectionViewDataSource {

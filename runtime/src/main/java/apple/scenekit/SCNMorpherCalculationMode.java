@@ -23,7 +23,7 @@ import apple.opengles.*;
 
 
 
-@Library("SceneKit")
+@Library("SceneKit/SceneKit.h")
 @Mapping("SCNMorpherCalculationMode")
 public final class SCNMorpherCalculationMode extends ObjCEnum {
     

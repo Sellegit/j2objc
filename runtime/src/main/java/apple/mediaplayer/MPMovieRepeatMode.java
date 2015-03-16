@@ -18,7 +18,7 @@ import apple.uikit.*;
 
 
 
-@Library("MediaPlayer")
+@Library("MediaPlayer/MediaPlayer.h")
 @Mapping("MPMovieRepeatMode")
 public final class MPMovieRepeatMode extends ObjCEnum {
     

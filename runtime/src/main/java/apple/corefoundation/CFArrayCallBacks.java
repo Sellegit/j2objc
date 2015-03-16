@@ -18,7 +18,7 @@ import apple.foundation.*;
 
 
 
-@Mapping("CFArrayCallBacks")
+@Mapping("CFArrayCallBacks") @Library("CoreFoundation/CoreFoundation.h")
  class CFArrayCallBacks 
     extends Struct 
      {

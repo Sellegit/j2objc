@@ -23,7 +23,7 @@ import apple.opengles.*;
 
 
 
-@Library("SceneKit")
+@Library("SceneKit/SceneKit.h")
 @Mapping("SCNSceneSourceStatus")
 public final class SCNSceneSourceStatus extends ObjCEnum {
     

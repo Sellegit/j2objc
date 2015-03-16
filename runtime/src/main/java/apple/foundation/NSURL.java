@@ -22,7 +22,7 @@ import apple.dispatch.*;
 
 
 
-@Library("Foundation") @Mapping("NSURL")
+@Library("Foundation/Foundation.h") @Mapping("NSURL")
 public class NSURL 
     extends NSObject 
     implements NSCopying {

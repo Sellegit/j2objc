@@ -20,7 +20,7 @@ import apple.coremedia.*;
 
 
 
-@Mapping("MusicTrackLoopInfo")
+@Mapping("MusicTrackLoopInfo") @Library("AudioToolbox/AudioToolbox.h")
 public class MusicTrackLoopInfo 
     extends Struct 
      {
@@ -39,14 +39,14 @@ public class MusicTrackLoopInfo
         return __new;
     ]-*/;
     public static native MusicTrackLoopInfo copyWithloopDuration(MusicTrackLoopInfo original, double loopDuration) /*-[
-        original.loopDuration = loopDuration;
-        return original;
+        MusicTrackLoopInfo __new = { .loopDuration = loopDuration, .numberOfLoops = original.numberOfLoops };
+        return __new;
     ]-*/;
 
     
     public static native MusicTrackLoopInfo copyWithnumberOfLoops(MusicTrackLoopInfo original, int numberOfLoops) /*-[
-        original.numberOfLoops = numberOfLoops;
-        return original;
+        MusicTrackLoopInfo __new = { .loopDuration = original.loopDuration, .numberOfLoops = numberOfLoops };
+        return __new;
     ]-*/;
 
     

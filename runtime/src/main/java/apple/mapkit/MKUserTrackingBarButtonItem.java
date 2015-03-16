@@ -22,7 +22,7 @@ import apple.dispatch.*;
  * @since Available in iOS 5.0 and later.
  */
 
-@Library("MapKit") @Mapping("MKUserTrackingBarButtonItem")
+@Library("MapKit/MapKit.h") @Mapping("MKUserTrackingBarButtonItem")
 public class MKUserTrackingBarButtonItem 
     extends UIBarButtonItem 
      {

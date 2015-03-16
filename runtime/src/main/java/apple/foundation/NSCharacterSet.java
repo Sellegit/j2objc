@@ -22,7 +22,7 @@ import apple.dispatch.*;
 
 
 
-@Library("Foundation") @Mapping("NSCharacterSet")
+@Library("Foundation/Foundation.h") @Mapping("NSCharacterSet")
 public class NSCharacterSet 
     extends NSObject 
     implements NSCopying, NSCoding {

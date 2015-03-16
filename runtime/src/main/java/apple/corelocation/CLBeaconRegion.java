@@ -21,7 +21,7 @@ import apple.corebluetooth.*;
  * @since Available in iOS 7.0 and later.
  */
 
-@Library("CoreLocation") @Mapping("CLBeaconRegion")
+@Library("CoreLocation/CoreLocation.h") @Mapping("CLBeaconRegion")
 public class CLBeaconRegion 
     extends CLRegion 
      {

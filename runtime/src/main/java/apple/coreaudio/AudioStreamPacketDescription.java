@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 
 
-@Mapping("AudioStreamPacketDescription")
+@Mapping("AudioStreamPacketDescription") @Library("CoreAudio/CoreAudioTypes.h")
 public class AudioStreamPacketDescription 
     extends Struct 
      {

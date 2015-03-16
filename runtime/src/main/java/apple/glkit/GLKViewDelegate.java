@@ -20,7 +20,7 @@ import apple.dispatch.*;
 
 
 
-@Library("GLKit") @Mapping("GLKViewDelegate")
+@Library("GLKit/GLKit.h") @Mapping("GLKViewDelegate")
 public interface GLKViewDelegate 
     extends NSObjectProtocol {
 

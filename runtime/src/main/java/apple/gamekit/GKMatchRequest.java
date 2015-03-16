@@ -20,7 +20,7 @@ import apple.uikit.*;
  * @since Available in iOS 4.1 and later.
  */
 
-@Library("GameKit") @Mapping("GKMatchRequest")
+@Library("GameKit/GameKit.h") @Mapping("GKMatchRequest")
 public class GKMatchRequest 
     extends NSObject 
      {

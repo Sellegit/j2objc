@@ -19,7 +19,7 @@ import apple.foundation.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("HomeKit") @Mapping("HMTimerTrigger")
+@Library("HomeKit/HomeKit.h") @Mapping("HMTimerTrigger")
 public class HMTimerTrigger 
     extends HMTrigger 
      {

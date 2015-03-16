@@ -482,7 +482,7 @@ public final class BindingUtil {
   }
 
   static final Splitter IOS_METHOD_PART_SPLITTER =
-      Splitter.on(Pattern.compile(":")).omitEmptyStrings().trimResults();
+      Splitter.on(Pattern.compile(":"));
   /**
    * NOTE: this helper only analyzes the @Mapping annotation
    * Attempt to get a mapped method for given method binding by the following logic
@@ -548,13 +548,26 @@ public final class BindingUtil {
       return null;
     } else {
       String methodName = candidates.get(0);
+      int ind = 0;
       for (String curName : candidates) {
         if (!curName.equals(methodName)) {
-          ErrorUtil.error(
-              "Ambiguous mapping specified for " + method.getName() + ". Detected " + methodName +
-              " and " + curName);
-          return null;
+          if (method.isConstructor()) {
+            // TODO: it's possible for a super constructor to share the same java signature (unfortunately)
+            //   so we will allow for this case for now
+          } else {
+            ErrorUtil.error(
+                "Ambiguous mapping specified for " + method.getName() + ". Detected " + methodName +
+                " and " + curName);
+            System.err.println("this " + method);
+            System.err.println("this " + method.getClass());
+            System.err.println("that  " + methodCandidates.get(ind));
+            System.err.println("that  " + methodCandidates.get(ind).getClass());
+            System.err.println("is equal? " + methodCandidates.get(ind).isEqualTo(method));
+            System.err.println("overrides? " + method.overrides(methodCandidates.get(ind)));
+            return null;
+          }
         }
+        ind++;
       }
 
       IMethodBinding methodBinding = methodCandidates.get(0);
@@ -570,7 +583,7 @@ public final class BindingUtil {
           IAnnotationBinding otherAnnotation = getAnnotation(
               curMethod.getParameterAnnotations(i), Representing.class);
           if ((annotation == null ^ otherAnnotation == null) ||
-              (annotation != null && !(annotation.equals(otherAnnotation)))) {
+              (annotation != null && !(annotation.isEqualTo(otherAnnotation)))) {
             ErrorUtil.error(
                 "Ambiguous representing clause: " + methodBinding.toString() + ", " + curMethod.toString());
             return null;
@@ -581,16 +594,19 @@ public final class BindingUtil {
       ITypeBinding[] paramTypes = method.getParameterTypes();
       if (methodName.endsWith(":")) {
         // has arguments
-        if (methodParts.size() != paramTypes.length) {
+        if (methodParts.size() != paramTypes.length + 1) {
           ErrorUtil.error(
               "Illegal selector: " + methodName + " for " + methodBinding.getName());
+          System.err.println(methodParts);
+          System.err.println(methodParts.size());
+          System.err.println(paramTypes.length);
           return null;
         }
       } else {
         if (paramTypes.length != 0) {
           ErrorUtil.error(
               "Illegal selector: " + methodName + " for " + methodBinding.getName() +
-              ". Don't expect parameters");
+              ". Didn't expect parameters");
           return null;
         }
       }

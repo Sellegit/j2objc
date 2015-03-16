@@ -17,7 +17,7 @@ import apple.dispatch.*;
 
 
 
-@Library("Security")
+@Library("Security/Security.h")
 @Mapping("SecTrustResultType")
 public final class SecTrustResultType extends ObjCEnum {
     

@@ -25,7 +25,7 @@ import apple.mediatoolbox.*;
  * @since Available in iOS 7.0 and later.
  */
 
-@Library("AVFoundation") @Mapping("AVMetadataMachineReadableCodeObject")
+@Library("AVFoundation/AVFoundation.h") @Mapping("AVMetadataMachineReadableCodeObject")
 public class AVMetadataMachineReadableCodeObject 
     extends AVMetadataObject 
      {

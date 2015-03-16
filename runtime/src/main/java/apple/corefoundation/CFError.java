@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreFoundation")
+@Library("CoreFoundation/CoreFoundation.h")
 public class CFError 
     extends CFType 
      {
@@ -43,26 +43,26 @@ public class CFError
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFErrorGetDomain")
-    public native String getDomain();
+    public static native String getDomain(CFError err);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFErrorGetCode")
-    public native @MachineSizedSInt long getCode();
+    public static native @MachineSizedSInt long getCode(CFError err);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFErrorCopyUserInfo")
-    public native CFDictionary getUserInfo();
+    public static native CFDictionary getUserInfo(CFError err);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFErrorCopyFailureReason")
-    public native String getFailureReason();
+    public static native String getFailureReason(CFError err);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFErrorCopyRecoverySuggestion")
-    public native String getRecoverySuggestion();
+    public static native String getRecoverySuggestion(CFError err);
     
 }

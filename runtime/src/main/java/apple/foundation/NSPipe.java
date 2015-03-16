@@ -22,7 +22,7 @@ import apple.dispatch.*;
 
 
 
-@Library("Foundation") @Mapping("NSPipe")
+@Library("Foundation/Foundation.h") @Mapping("NSPipe")
 public class NSPipe 
     extends NSObject 
      {

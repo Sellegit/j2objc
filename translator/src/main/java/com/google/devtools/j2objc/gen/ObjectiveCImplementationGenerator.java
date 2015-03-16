@@ -138,7 +138,11 @@ public class ObjectiveCImplementationGenerator extends ObjectiveCSourceFileGener
         if (!node.isInterface()
             || !Iterables.isEmpty(getStaticFieldsNeedingInitialization(node))
             || TranslationUtil.needsReflection(node)) {
-          types.add(node);
+
+          ITypeBinding binding = node.getTypeBinding();
+          if (!BindingUtil.isAdapter(binding)) {
+            types.add(node);
+          }
         }
         return false;
       }

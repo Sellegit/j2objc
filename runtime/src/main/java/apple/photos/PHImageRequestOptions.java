@@ -22,7 +22,7 @@ import apple.avfoundation.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("Photos") @Mapping("PHImageRequestOptions")
+@Library("Photos/Photos.h") @Mapping("PHImageRequestOptions")
 public class PHImageRequestOptions 
     extends NSObject 
     implements NSCopying {

@@ -23,7 +23,7 @@ import apple.opengles.*;
 
 
 
-@Library("SceneKit") @Mapping("SCNHitTestResult")
+@Library("SceneKit/SceneKit.h") @Mapping("SCNHitTestResult")
 public class SCNHitTestResult 
     extends NSObject 
      {

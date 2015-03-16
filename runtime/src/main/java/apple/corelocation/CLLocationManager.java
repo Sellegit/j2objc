@@ -21,7 +21,7 @@ import apple.corebluetooth.*;
  * @since Available in iOS 2.0 and later.
  */
 
-@Library("CoreLocation") @Mapping("CLLocationManager")
+@Library("CoreLocation/CoreLocation.h") @Mapping("CLLocationManager")
 public class CLLocationManager 
     extends NSObject 
      {

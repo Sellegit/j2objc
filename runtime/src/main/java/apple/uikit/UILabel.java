@@ -24,7 +24,7 @@ import apple.corelocation.*;
  * @since Available in iOS 2.0 and later.
  */
 
-@Library("UIKit") @Mapping("UILabel")
+@Library("UIKit/UIKit.h") @Mapping("UILabel")
 public class UILabel 
     extends UIView 
     implements NSCoding {

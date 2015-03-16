@@ -20,7 +20,7 @@ import apple.uikit.*;
  * @since Available in iOS 4.1 and later.
  */
 
-@Library("GameKit") @Mapping("GKInvite")
+@Library("GameKit/GameKit.h") @Mapping("GKInvite")
 public class GKInvite 
     extends NSObject 
      {

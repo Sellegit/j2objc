@@ -21,7 +21,7 @@ import apple.security.*;
  * @since Available in iOS 7.0 and later.
  */
 
-@Library("MultipeerConnectivity") @Mapping("MCSession")
+@Library("MultipeerConnectivity/MultipeerConnectivity.h") @Mapping("MCSession")
 public class MCSession 
     extends NSObject 
      {

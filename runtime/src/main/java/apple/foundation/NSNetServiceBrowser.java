@@ -22,7 +22,7 @@ import apple.dispatch.*;
 
 
 
-@Library("Foundation") @Mapping("NSNetServiceBrowser")
+@Library("Foundation/Foundation.h") @Mapping("NSNetServiceBrowser")
 public class NSNetServiceBrowser 
     extends NSObject 
      {

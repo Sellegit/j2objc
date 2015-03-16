@@ -16,7 +16,7 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("HomeKit")
+@Library("HomeKit/HomeKit.h")
 public class HMErrorUserInfoKey 
     extends GlobalValueEnumeration<NSString>
      {

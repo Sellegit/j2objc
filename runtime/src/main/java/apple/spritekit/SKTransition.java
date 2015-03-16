@@ -24,7 +24,7 @@ import apple.scenekit.*;
 
 
 
-@Library("SpriteKit") @Mapping("SKTransition")
+@Library("SpriteKit/SpriteKit.h") @Mapping("SKTransition")
 public class SKTransition 
     extends NSObject 
      {

@@ -25,7 +25,7 @@ import apple.mediatoolbox.*;
  * @since Available in iOS 4.0 and later.
  */
 
-@Library("AVFoundation") @Mapping("AVCaptureInput")
+@Library("AVFoundation/AVFoundation.h") @Mapping("AVCaptureInput")
 public class AVCaptureInput 
     extends NSObject 
      {

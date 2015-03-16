@@ -24,7 +24,7 @@ import apple.corelocation.*;
  * @since Available in iOS 2.0 and later.
  */
 
-@Library("UIKit") @Mapping("UIViewController")
+@Library("UIKit/UIKit.h") @Mapping("UIViewController")
 public class UIViewController 
     extends UIResponder 
     implements NSCoding, UIAppearanceContainer, UITraitEnvironment, UIStateRestoring, NSExtensionRequestHandling {

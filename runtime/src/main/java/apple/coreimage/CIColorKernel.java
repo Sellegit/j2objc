@@ -20,7 +20,7 @@ import apple.imageio.*;
 
 
 
-@Library("CoreImage") @Mapping("CIColorKernel")
+@Library("CoreImage/CoreImage.h") @Mapping("CIColorKernel")
 public class CIColorKernel 
     extends CIKernel 
      {

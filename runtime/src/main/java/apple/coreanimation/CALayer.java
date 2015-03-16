@@ -21,7 +21,7 @@ import apple.metal.*;
 
 
 
-@Library("QuartzCore") @Mapping("CALayer")
+@Library("QuartzCore/QuartzCore.h") @Mapping("CALayer")
 public class CALayer 
     extends NSObject 
     implements NSCoding, CAMediaTiming {

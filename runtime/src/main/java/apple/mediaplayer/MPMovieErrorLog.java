@@ -20,7 +20,7 @@ import apple.uikit.*;
  * @since Available in iOS 4.3 and later.
  */
 
-@Library("MediaPlayer") @Mapping("MPMovieErrorLog")
+@Library("MediaPlayer/MediaPlayer.h") @Mapping("MPMovieErrorLog")
 public class MPMovieErrorLog 
     extends NSObject 
     implements NSCopying {

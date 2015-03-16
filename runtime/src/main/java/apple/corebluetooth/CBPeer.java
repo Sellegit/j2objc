@@ -20,7 +20,7 @@ import apple.dispatch.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("CoreBluetooth") @Mapping("CBPeer")
+@Library("CoreBluetooth/CoreBluetooth.h") @Mapping("CBPeer")
 public class CBPeer 
     extends NSObject 
     implements NSCopying {

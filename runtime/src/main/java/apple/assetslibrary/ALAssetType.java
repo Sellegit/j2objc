@@ -17,7 +17,7 @@ import apple.imageio.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("AssetsLibrary")
+@Library("AssetsLibrary/AssetsLibrary.h")
 public class ALAssetType 
     extends Object 
      {

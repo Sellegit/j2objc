@@ -16,7 +16,7 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("ImageIO")
+@Library("ImageIO/ImageIO.h")
 public class CGImageDestination 
     extends CFType 
      {
@@ -57,26 +57,26 @@ public class CGImageDestination
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CGImageDestinationSetProperties")
-    public native void setProperties(NSDictionary<?, ?> properties);
+    public static native void setProperties(CGImageDestination idst, NSDictionary<?, ?> properties);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CGImageDestinationAddImage")
-    public native void addImage(CGImage image, NSDictionary<?, ?> properties);
+    public static native void addImage(CGImageDestination idst, CGImage image, NSDictionary<?, ?> properties);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CGImageDestinationAddImageFromSource")
-    public native void addImageFromSource(CGImageSource isrc, @MachineSizedUInt long index, NSDictionary<?, ?> properties);
+    public static native void addImageFromSource(CGImageDestination idst, CGImageSource isrc, @MachineSizedUInt long index, NSDictionary<?, ?> properties);
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalFunction("CGImageDestinationAddImageAndMetadata")
-    public native void addImageAndMetadata(CGImage image, CGImageMetadata metadata, NSDictionary<?, ?> options);
+    public static native void addImageAndMetadata(CGImageDestination idst, CGImage image, CGImageMetadata metadata, NSDictionary<?, ?> options);
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalFunction("CGImageDestinationCopyImageSource")
-    protected native boolean copyImageSource(CGImageSource isrc, NSDictionary<?, ?> options, Todo err);
+    protected static native boolean copyImageSource(CGImageDestination idst, CGImageSource isrc, NSDictionary<?, ?> options, Todo err);
     
 }

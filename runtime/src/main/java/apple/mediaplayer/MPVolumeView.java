@@ -20,7 +20,7 @@ import apple.uikit.*;
  * @since Available in iOS 2.0 and later.
  */
 
-@Library("MediaPlayer") @Mapping("MPVolumeView")
+@Library("MediaPlayer/MediaPlayer.h") @Mapping("MPVolumeView")
 public class MPVolumeView 
     extends UIView 
     implements NSCoding {

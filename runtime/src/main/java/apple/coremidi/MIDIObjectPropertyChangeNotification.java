@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 
 
-@Mapping("MIDIObjectPropertyChangeNotification")
+@Mapping("MIDIObjectPropertyChangeNotification") @Library("CoreMIDI/CoreMIDI.h")
 public class MIDIObjectPropertyChangeNotification 
     extends Struct 
      {

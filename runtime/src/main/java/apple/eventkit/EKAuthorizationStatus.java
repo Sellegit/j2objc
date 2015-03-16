@@ -21,7 +21,7 @@ import apple.corelocation.*;
  * @since Available in iOS 6.0 and later.
  */
 
-@Library("EventKit")
+@Library("EventKit/EventKit.h")
 @Mapping("EKAuthorizationStatus")
 public final class EKAuthorizationStatus extends ObjCEnum {
     

@@ -16,7 +16,7 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CFNetwork")
+@Library("CFNetwork/CFNetwork.h")
 public class CFHost 
     extends CFType 
      {
@@ -52,42 +52,42 @@ public class CFHost
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFHostStartInfoResolution")
-    protected native boolean startInfoResolution(CFHostInfoType info, Todo error);
+    protected static native boolean startInfoResolution(CFHost theHost, CFHostInfoType info, Todo error);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFHostGetAddressing")
-    protected native NSArray<NSData> getAddressing(Todo hasBeenResolved);
+    protected static native NSArray<NSData> getAddressing(CFHost theHost, Todo hasBeenResolved);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFHostGetNames")
-    protected native List<String> getNames(Todo hasBeenResolved);
+    protected static native List<String> getNames(CFHost theHost, Todo hasBeenResolved);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFHostGetReachability")
-    protected native NSData getReachability(Todo hasBeenResolved);
+    protected static native NSData getReachability(CFHost theHost, Todo hasBeenResolved);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFHostCancelInfoResolution")
-    public native void cancelInfoResolution(CFHostInfoType info);
+    public static native void cancelInfoResolution(CFHost theHost, CFHostInfoType info);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFHostSetClient")
-    protected native boolean setCallback(FunctionPtr clientCB, CFHostClientContext clientContext);
+    protected static native boolean setCallback(CFHost theHost, FunctionPtr clientCB, CFHostClientContext clientContext);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFHostScheduleWithRunLoop")
-    public native void schedule(CFRunLoop runLoop, String runLoopMode);
+    public static native void schedule(CFHost theHost, CFRunLoop runLoop, String runLoopMode);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFHostUnscheduleFromRunLoop")
-    public native void unschedule(CFRunLoop runLoop, String runLoopMode);
+    public static native void unschedule(CFHost theHost, CFRunLoop runLoop, String runLoopMode);
     /**
      * @since Available in iOS 2.0 and later.
      */

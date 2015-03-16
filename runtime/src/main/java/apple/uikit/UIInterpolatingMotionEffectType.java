@@ -22,7 +22,7 @@ import apple.corelocation.*;
 
 
 
-@Library("UIKit")
+@Library("UIKit/UIKit.h")
 @Mapping("UIInterpolatingMotionEffectType")
 public final class UIInterpolatingMotionEffectType extends ObjCEnum {
     

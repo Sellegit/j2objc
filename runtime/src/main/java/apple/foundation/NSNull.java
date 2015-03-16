@@ -22,7 +22,7 @@ import apple.dispatch.*;
 
 
 
-@Library("Foundation") @Mapping("NSNull")
+@Library("Foundation/Foundation.h") @Mapping("NSNull")
 public class NSNull 
     extends NSObject 
     implements NSCopying {

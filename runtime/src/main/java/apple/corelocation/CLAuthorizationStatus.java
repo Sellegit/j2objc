@@ -19,7 +19,7 @@ import apple.corebluetooth.*;
 
 
 
-@Library("CoreLocation")
+@Library("CoreLocation/CoreLocation.h")
 @Mapping("CLAuthorizationStatus")
 public final class CLAuthorizationStatus extends ObjCEnum {
     
@@ -30,13 +30,6 @@ public final class CLAuthorizationStatus extends ObjCEnum {
     @GlobalConstant("kCLAuthorizationStatusDenied")
     public static final long Denied = 2L;
     /**
-     * @since Available in iOS 2.0 and later.
-     * @deprecated Deprecated in iOS 8.0.
-     */
-    @Deprecated
-    @GlobalConstant("kCLAuthorizationStatusAuthorized")
-    public static final long Authorized = 3L;
-    /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("kCLAuthorizationStatusAuthorizedAlways")
@@ -46,6 +39,13 @@ public final class CLAuthorizationStatus extends ObjCEnum {
      */
     @GlobalConstant("kCLAuthorizationStatusAuthorizedWhenInUse")
     public static final long AuthorizedWhenInUse = 4L;
+    /**
+     * @since Available in iOS 2.0 and later.
+     * @deprecated Deprecated in iOS 8.0.
+     */
+    @Deprecated
+    @GlobalConstant("kCLAuthorizationStatusAuthorized")
+    public static final long Authorized = 3L;
     
 
 }

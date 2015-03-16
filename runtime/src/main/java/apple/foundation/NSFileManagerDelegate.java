@@ -22,7 +22,7 @@ import apple.dispatch.*;
 
 
 
-@Library("Foundation") @Mapping("NSFileManagerDelegate")
+@Library("Foundation/Foundation.h") @Mapping("NSFileManagerDelegate")
 public interface NSFileManagerDelegate 
     extends NSObjectProtocol {
 

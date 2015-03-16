@@ -17,7 +17,7 @@ import apple.uikit.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreGraphics")
+@Library("CoreGraphics/CoreGraphics.h")
 public class CGPath 
     extends CFType 
      {
@@ -73,41 +73,41 @@ public class CGPath
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGPathEqualToPath")
-    public native boolean equalToPath(CGPath path2);
+    public static native boolean equalToPath(CGPath path1, CGPath path2);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGPathIsEmpty")
-    public native boolean isEmpty();
+    public static native boolean isEmpty(CGPath path);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGPathIsRect")
-    public native boolean isRect(CGRect rect);
+    public static native boolean isRect(CGPath path, CGRect rect);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGPathGetCurrentPoint")
-    public native CGPoint getCurrentPoint();
+    public static native CGPoint getCurrentPoint(CGPath path);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGPathGetBoundingBox")
-    public native CGRect getBoundingBox();
+    public static native CGRect getBoundingBox(CGPath path);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CGPathGetPathBoundingBox")
-    public native CGRect getPathBoundingBox();
+    public static native CGRect getPathBoundingBox(CGPath path);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGPathContainsPoint")
-    public native boolean containsPoint(CGAffineTransform m, CGPoint point, boolean eoFill);
+    public static native boolean containsPoint(CGPath path, CGAffineTransform m, CGPoint point, boolean eoFill);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGPathApply")
-    protected native void apply(Todo info, FunctionPtr function);
+    protected static native void apply(CGPath path, Todo info, FunctionPtr function);
     
 }

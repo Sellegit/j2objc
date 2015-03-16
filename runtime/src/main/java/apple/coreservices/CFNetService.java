@@ -16,7 +16,7 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CFNetwork")
+@Library("CFNetwork/CFNetwork.h")
 public class CFNetService 
     extends CFType 
      {
@@ -47,57 +47,57 @@ public class CFNetService
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFNetServiceGetDomain")
-    public native String getDomain();
+    public static native String getDomain(CFNetService theService);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFNetServiceGetType")
-    public native String getType();
+    public static native String getType(CFNetService theService);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFNetServiceGetName")
-    public native String getName();
+    public static native String getName(CFNetService theService);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFNetServiceRegisterWithOptions")
-    protected native boolean register(@MachineSizedUInt long options, Todo error);
+    protected static native boolean register(CFNetService theService, @MachineSizedUInt long options, Todo error);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFNetServiceResolveWithTimeout")
-    protected native boolean resolve(double timeout, Todo error);
+    protected static native boolean resolve(CFNetService theService, double timeout, Todo error);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFNetServiceCancel")
-    public native void cancel();
+    public static native void cancel(CFNetService theService);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFNetServiceGetTargetHost")
-    public native String getTargetHost();
+    public static native String getTargetHost(CFNetService theService);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFNetServiceGetPortNumber")
-    public native int getPortNumber();
+    public static native int getPortNumber(CFNetService theService);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFNetServiceGetAddressing")
-    public native NSArray<NSData> getAddressing();
+    public static native NSArray<NSData> getAddressing(CFNetService theService);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFNetServiceGetTXTData")
-    public native NSData getTXTData();
+    public static native NSData getTXTData(CFNetService theService);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFNetServiceSetTXTData")
-    public native boolean setTXTData(NSData txtRecord);
+    public static native boolean setTXTData(CFNetService theService, NSData txtRecord);
     /**
      * @since Available in iOS 2.0 and later.
      */
@@ -112,17 +112,17 @@ public class CFNetService
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFNetServiceSetClient")
-    protected native boolean setCallback(FunctionPtr clientCB, CFNetServiceClientContext clientContext);
+    protected static native boolean setCallback(CFNetService theService, FunctionPtr clientCB, CFNetServiceClientContext clientContext);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFNetServiceScheduleWithRunLoop")
-    public native void schedule(CFRunLoop runLoop, String runLoopMode);
+    public static native void schedule(CFNetService theService, CFRunLoop runLoop, String runLoopMode);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFNetServiceUnscheduleFromRunLoop")
-    public native void unschedule(CFRunLoop runLoop, String runLoopMode);
+    public static native void unschedule(CFNetService theService, CFRunLoop runLoop, String runLoopMode);
     /**
      * @since Available in iOS 2.0 and later.
      */

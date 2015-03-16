@@ -19,7 +19,7 @@ import apple.coreaudio.*;
 
 
 
-@Library("MediaToolbox")
+@Library("MediaToolbox/MediaToolbox.h")
 @Mapping("MTAudioProcessingTapCreationFlag")
 public final class MTAudioProcessingTapCreationFlag extends ObjCEnum {
     

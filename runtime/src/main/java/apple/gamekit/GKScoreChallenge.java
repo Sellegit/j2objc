@@ -20,7 +20,7 @@ import apple.uikit.*;
  * @since Available in iOS 6.0 and later.
  */
 
-@Library("GameKit") @Mapping("GKScoreChallenge")
+@Library("GameKit/GameKit.h") @Mapping("GKScoreChallenge")
 public class GKScoreChallenge 
     extends GKChallenge 
      {

@@ -19,7 +19,7 @@ import apple.foundation.*;
  * @since Available in iOS 3.0 and later.
  */
 
-@Library("CoreData") @Mapping("NSFetchRequestExpression")
+@Library("CoreData/CoreData.h") @Mapping("NSFetchRequestExpression")
 public class NSFetchRequestExpression 
     extends NSExpression 
      {

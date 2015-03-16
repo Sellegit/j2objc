@@ -22,7 +22,7 @@ import apple.corelocation.*;
 
 
 
-@Library("UIKit") @Mapping("UIActionSheetDelegate")
+@Library("UIKit/UIKit.h") @Mapping("UIActionSheetDelegate")
 public interface UIActionSheetDelegate 
     extends NSObjectProtocol {
 

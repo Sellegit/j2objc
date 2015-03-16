@@ -24,7 +24,7 @@ import apple.corelocation.*;
  * @since Available in iOS 5.0 and later.
  */
 
-@Library("UIKit") @Mapping("UIStoryboardSegue")
+@Library("UIKit/UIKit.h") @Mapping("UIStoryboardSegue")
 public class UIStoryboardSegue 
     extends NSObject 
      {

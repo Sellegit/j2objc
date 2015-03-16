@@ -21,7 +21,7 @@ import apple.metal.*;
 
 
 
-@Library("QuartzCore") @Mapping("CAScrollLayer")
+@Library("QuartzCore/QuartzCore.h") @Mapping("CAScrollLayer")
 public class CAScrollLayer 
     extends CALayer 
      {
@@ -41,8 +41,8 @@ public class CAScrollLayer
     
     
     @Mapping("scrollToPoint:")
-    public native void scrollTo(CGPoint p);
+    public native void scrollToPoint(CGPoint p);
     @Mapping("scrollToRect:")
-    public native void scrollTo(CGRect r);
+    public native void scrollToRect(CGRect r);
     
 }

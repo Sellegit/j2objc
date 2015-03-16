@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 
 
-@Mapping("MIDIPacket")
+@Mapping("MIDIPacket") @Library("CoreMIDI/CoreMIDI.h")
 public class MIDIPacket 
     extends Struct 
      {

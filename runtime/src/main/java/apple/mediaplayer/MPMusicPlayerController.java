@@ -20,7 +20,7 @@ import apple.uikit.*;
  * @since Available in iOS 3.0 and later.
  */
 
-@Library("MediaPlayer") @Mapping("MPMusicPlayerController")
+@Library("MediaPlayer/MediaPlayer.h") @Mapping("MPMusicPlayerController")
 public class MPMusicPlayerController 
     extends NSObject 
     implements MPMediaPlayback {

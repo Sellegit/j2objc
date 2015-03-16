@@ -25,7 +25,7 @@ import apple.mediatoolbox.*;
  * @since Available in iOS 7.0 and later.
  */
 
-@Library("AVFoundation")
+@Library("AVFoundation/AVFoundation.h")
 @Mapping("AVCaptureAutoFocusRangeRestriction")
 public final class AVCaptureAutoFocusRangeRestriction extends ObjCEnum {
     

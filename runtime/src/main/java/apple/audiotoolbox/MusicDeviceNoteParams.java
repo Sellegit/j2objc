@@ -20,7 +20,7 @@ import apple.coremedia.*;
 
 
 
-@Mapping("MusicDeviceNoteParams")
+@Mapping("MusicDeviceNoteParams") @Library("AudioToolbox/AudioToolbox.h")
 public class MusicDeviceNoteParams 
     extends Struct 
      {
@@ -43,26 +43,26 @@ public class MusicDeviceNoteParams
         return __new;
     ]-*/;
     public static native MusicDeviceNoteParams copyWithargCount(MusicDeviceNoteParams original, int argCount) /*-[
-        original.argCount = argCount;
-        return original;
+        MusicDeviceNoteParams __new = { .argCount = argCount, .mPitch = original.mPitch, .mVelocity = original.mVelocity, .mControls = original.mControls };
+        return __new;
     ]-*/;
 
     
     public static native MusicDeviceNoteParams copyWithmPitch(MusicDeviceNoteParams original, float mPitch) /*-[
-        original.mPitch = mPitch;
-        return original;
+        MusicDeviceNoteParams __new = { .argCount = original.argCount, .mPitch = mPitch, .mVelocity = original.mVelocity, .mControls = original.mControls };
+        return __new;
     ]-*/;
 
     
     public static native MusicDeviceNoteParams copyWithmVelocity(MusicDeviceNoteParams original, float mVelocity) /*-[
-        original.mVelocity = mVelocity;
-        return original;
+        MusicDeviceNoteParams __new = { .argCount = original.argCount, .mPitch = original.mPitch, .mVelocity = mVelocity, .mControls = original.mControls };
+        return __new;
     ]-*/;
 
     
     public static native MusicDeviceNoteParams copyWithmControls(MusicDeviceNoteParams original, NoteParamsControlValue mControls) /*-[
-        original.mControls = mControls;
-        return original;
+        MusicDeviceNoteParams __new = { .argCount = original.argCount, .mPitch = original.mPitch, .mVelocity = original.mVelocity, .mControls = mControls };
+        return __new;
     ]-*/;
 
     

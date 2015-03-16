@@ -20,7 +20,7 @@ import apple.dispatch.*;
  * @since Available in iOS 6.0 and later.
  */
 
-@Library("CoreBluetooth") @Mapping("CBMutableService")
+@Library("CoreBluetooth/CoreBluetooth.h") @Mapping("CBMutableService")
 public class CBMutableService 
     extends CBService 
      {

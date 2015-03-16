@@ -22,7 +22,7 @@ import apple.corelocation.*;
 
 
 
-@Library("UIKit") @Mapping("UITextViewDelegate")
+@Library("UIKit/UIKit.h") @Mapping("UITextViewDelegate")
 public interface UITextViewDelegate 
     extends NSObjectProtocol, UIScrollViewDelegate {
 

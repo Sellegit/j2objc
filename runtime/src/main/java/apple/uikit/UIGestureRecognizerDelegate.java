@@ -22,7 +22,7 @@ import apple.corelocation.*;
 
 
 
-@Library("UIKit") @Mapping("UIGestureRecognizerDelegate")
+@Library("UIKit/UIKit.h") @Mapping("UIGestureRecognizerDelegate")
 public interface UIGestureRecognizerDelegate 
     extends NSObjectProtocol {
 

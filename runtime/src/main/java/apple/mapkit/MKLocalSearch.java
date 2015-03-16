@@ -22,7 +22,7 @@ import apple.dispatch.*;
  * @since Available in iOS 6.1 and later.
  */
 
-@Library("MapKit") @Mapping("MKLocalSearch")
+@Library("MapKit/MapKit.h") @Mapping("MKLocalSearch")
 public class MKLocalSearch 
     extends NSObject 
      {

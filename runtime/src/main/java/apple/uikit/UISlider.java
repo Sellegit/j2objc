@@ -24,7 +24,7 @@ import apple.corelocation.*;
  * @since Available in iOS 2.0 and later.
  */
 
-@Library("UIKit") @Mapping("UISlider")
+@Library("UIKit/UIKit.h") @Mapping("UISlider")
 public class UISlider 
     extends UIControl 
     implements NSCoding {

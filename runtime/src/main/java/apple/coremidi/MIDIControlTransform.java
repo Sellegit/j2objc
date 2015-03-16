@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 
 
-@Mapping("MIDIControlTransform")
+@Mapping("MIDIControlTransform") @Library("CoreMIDI/CoreMIDI.h")
 public class MIDIControlTransform 
     extends Struct 
      {

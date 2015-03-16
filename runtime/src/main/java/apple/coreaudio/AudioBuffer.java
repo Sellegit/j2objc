@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 
 
-@Mapping("AudioBuffer")
+@Mapping("AudioBuffer") @Library("CoreAudio/CoreAudioTypes.h")
 public class AudioBuffer 
     extends Struct 
      {

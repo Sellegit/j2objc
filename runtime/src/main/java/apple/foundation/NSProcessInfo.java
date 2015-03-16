@@ -22,7 +22,7 @@ import apple.dispatch.*;
 
 
 
-@Library("Foundation") @Mapping("NSProcessInfo")
+@Library("Foundation/Foundation.h") @Mapping("NSProcessInfo")
 public class NSProcessInfo 
     extends NSObject 
      {
@@ -112,5 +112,10 @@ public class NSProcessInfo
      */
     @Mapping("performActivityWithOptions:reason:usingBlock:")
     public native void performActivity(@Representing("NSActivityOptions") long options, String reason, @Block Runnable block);
+    /**
+     * @since Available in iOS 8.2 and later.
+     */
+    @Mapping("performExpiringActivityWithReason:usingBlock:")
+    public native void performExpiringActivityWithReason$usingBlock$(String reason, @Block VoidBooleanBlock block);
     
 }

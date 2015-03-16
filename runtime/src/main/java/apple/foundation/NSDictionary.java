@@ -22,7 +22,7 @@ import apple.dispatch.*;
 
 
 
-@Library("Foundation") @Mapping("NSDictionary")
+@Library("Foundation/Foundation.h") @Mapping("NSDictionary")
 public class NSDictionary <K, V>
     extends NSObject 
     implements NSPropertyList, NSFastEnumeration {

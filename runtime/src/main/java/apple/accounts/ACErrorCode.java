@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 
 
-@Library("Accounts")
+@Library("Accounts/Accounts.h")
 @Mapping("ACErrorCode")
 public final class ACErrorCode extends ObjCEnum {
     
@@ -61,8 +61,8 @@ public final class ACErrorCode extends ObjCEnum {
     public static final long FailedSerializingAccountInfo = 19L;
     @GlobalConstant("ACErrorInvalidCommand")
     public static final long InvalidCommand = 20L;
-    @GlobalConstant("ACErrorMissingMessageID")
-    public static final long MissingMessageID = 21L;
+    @GlobalConstant("ACErrorMissingTransportMessageID")
+    public static final long MissingTransportMessageID = 21L;
     
 
 }

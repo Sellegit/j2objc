@@ -19,7 +19,7 @@ import apple.addressbook.*;
 
 
 
-@Library("AddressBookUI") @Mapping("ABPeoplePickerNavigationControllerDelegate")
+@Library("AddressBookUI/AddressBookUI.h") @Mapping("ABPeoplePickerNavigationControllerDelegate")
 public interface ABPeoplePickerNavigationControllerDelegate 
     extends NSObjectProtocol {
 

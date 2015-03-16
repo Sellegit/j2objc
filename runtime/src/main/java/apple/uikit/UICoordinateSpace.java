@@ -22,7 +22,7 @@ import apple.corelocation.*;
 
 
 
-@Library("UIKit") @Mapping("UICoordinateSpace")
+@Library("UIKit/UIKit.h") @Mapping("UICoordinateSpace")
 public interface UICoordinateSpace 
     extends NSObjectProtocol {
 

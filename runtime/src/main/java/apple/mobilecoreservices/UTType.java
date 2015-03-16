@@ -16,7 +16,7 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("MobileCoreServices")
+@Library("MobileCoreServices/MobileCoreServices.h")
 public class UTType 
     extends Object 
      {
@@ -26,7 +26,7 @@ public class UTType
     
     
     
-    @Library("MobileCoreServices")
+    @Library("MobileCoreServices/MobileCoreServices.h")
     public static class AbstractBase {
 
         /**
@@ -66,7 +66,7 @@ public class UTType
         public static native String DiskImage();
     }
 
-    @Library("MobileCoreServices")
+    @Library("MobileCoreServices/MobileCoreServices.h")
     public static class ConcreteBase {
 
         /**
@@ -116,7 +116,7 @@ public class UTType
         public static native String URLBookmarkData();
     }
 
-    @Library("MobileCoreServices")
+    @Library("MobileCoreServices/MobileCoreServices.h")
     public static class URL {
 
         /**
@@ -131,7 +131,7 @@ public class UTType
         public static native String FileURL();
     }
 
-    @Library("MobileCoreServices")
+    @Library("MobileCoreServices/MobileCoreServices.h")
     public static class Text {
 
         /**
@@ -186,7 +186,7 @@ public class UTType
         public static native String RTF();
     }
 
-    @Library("MobileCoreServices")
+    @Library("MobileCoreServices/MobileCoreServices.h")
     public static class MarkupLanguage {
 
         /**
@@ -201,7 +201,7 @@ public class UTType
         public static native String XML();
     }
 
-    @Library("MobileCoreServices")
+    @Library("MobileCoreServices/MobileCoreServices.h")
     public static class ProgrammingLanguage {
 
         /**
@@ -251,7 +251,7 @@ public class UTType
         public static native String JavaSource();
     }
 
-    @Library("MobileCoreServices")
+    @Library("MobileCoreServices/MobileCoreServices.h")
     public static class ScriptingLanguage {
 
         /**
@@ -306,7 +306,7 @@ public class UTType
         public static native String PHPScript();
     }
 
-    @Library("MobileCoreServices")
+    @Library("MobileCoreServices/MobileCoreServices.h")
     public static class SerializedData {
 
         /**
@@ -331,7 +331,7 @@ public class UTType
         public static native String BinaryPropertyList();
     }
 
-    @Library("MobileCoreServices")
+    @Library("MobileCoreServices/MobileCoreServices.h")
     public static class CompositeContent {
 
         /**
@@ -361,7 +361,7 @@ public class UTType
         public static native String WebArchive();
     }
 
-    @Library("MobileCoreServices")
+    @Library("MobileCoreServices/MobileCoreServices.h")
     public static class ImageContent {
 
         /**
@@ -431,7 +431,7 @@ public class UTType
         public static native String ScalableVectorGraphics();
     }
 
-    @Library("MobileCoreServices")
+    @Library("MobileCoreServices/MobileCoreServices.h")
     public static class AudiovisualContent {
 
         /**
@@ -531,7 +531,7 @@ public class UTType
         public static native String M3UPlaylist();
     }
 
-    @Library("MobileCoreServices")
+    @Library("MobileCoreServices/MobileCoreServices.h")
     public static class Directory {
 
         /**
@@ -581,7 +581,7 @@ public class UTType
         public static native String Framework();
     }
 
-    @Library("MobileCoreServices")
+    @Library("MobileCoreServices/MobileCoreServices.h")
     public static class ApplicationAndExecutable {
 
         /**
@@ -626,7 +626,7 @@ public class UTType
         public static native String SystemPreferencesPane();
     }
 
-    @Library("MobileCoreServices")
+    @Library("MobileCoreServices/MobileCoreServices.h")
     public static class Archive {
 
         /**
@@ -646,7 +646,7 @@ public class UTType
         public static native String ZipArchive();
     }
 
-    @Library("MobileCoreServices")
+    @Library("MobileCoreServices/MobileCoreServices.h")
     public static class Document {
 
         /**
@@ -666,7 +666,7 @@ public class UTType
         public static native String Database();
     }
 
-    @Library("MobileCoreServices")
+    @Library("MobileCoreServices/MobileCoreServices.h")
     public static class Contact {
 
         /**
@@ -691,7 +691,7 @@ public class UTType
         public static native String EmailMessage();
     }
 
-    @Library("MobileCoreServices")
+    @Library("MobileCoreServices/MobileCoreServices.h")
     public static class Internet {
 
         /**
@@ -701,7 +701,7 @@ public class UTType
         public static native String InternetLocation();
     }
 
-    @Library("MobileCoreServices")
+    @Library("MobileCoreServices/MobileCoreServices.h")
     public static class Miscellaneous {
 
         /**

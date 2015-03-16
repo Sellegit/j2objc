@@ -21,7 +21,7 @@ import apple.corevideo.*;
 
 
 
-@Mapping("CMSampleTimingInfo") @Library("CoreMedia")
+@Mapping("CMSampleTimingInfo") @Library("CoreMedia/CoreMedia.h")
 public class CMSampleTimingInfo 
     extends Struct 
      {

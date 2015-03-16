@@ -25,7 +25,7 @@ import apple.mediatoolbox.*;
  * @since Available in iOS 6.0 and later.
  */
 
-@Library("AVFoundation") @Mapping("AVMetadataObject")
+@Library("AVFoundation/AVFoundation.h") @Mapping("AVMetadataObject")
 public class AVMetadataObject 
     extends NSObject 
      {

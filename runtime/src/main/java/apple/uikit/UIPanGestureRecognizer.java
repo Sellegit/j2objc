@@ -24,7 +24,7 @@ import apple.corelocation.*;
  * @since Available in iOS 3.2 and later.
  */
 
-@Library("UIKit") @Mapping("UIPanGestureRecognizer")
+@Library("UIKit/UIKit.h") @Mapping("UIPanGestureRecognizer")
 public class UIPanGestureRecognizer 
     extends UIGestureRecognizer 
      {

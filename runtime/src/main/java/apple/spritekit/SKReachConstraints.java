@@ -26,7 +26,7 @@ import apple.scenekit.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("SpriteKit") @Mapping("SKReachConstraints")
+@Library("SpriteKit/SpriteKit.h") @Mapping("SKReachConstraints")
 public class SKReachConstraints 
     extends NSObject 
     implements NSCoding {

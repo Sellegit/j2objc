@@ -18,7 +18,7 @@ import apple.dispatch.*;
 
 
 
-@Library("CoreBluetooth") @Mapping("CBCentralManagerDelegate")
+@Library("CoreBluetooth/CoreBluetooth.h") @Mapping("CBCentralManagerDelegate")
 public interface CBCentralManagerDelegate 
     extends NSObjectProtocol {
 

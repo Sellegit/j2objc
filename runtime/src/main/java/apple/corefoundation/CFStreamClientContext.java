@@ -18,7 +18,7 @@ import apple.foundation.*;
 
 
 
-@Mapping("CFStreamClientContext")
+@Mapping("CFStreamClientContext") @Library("CoreFoundation/CoreFoundation.h")
 public class CFStreamClientContext 
     extends Struct 
      {

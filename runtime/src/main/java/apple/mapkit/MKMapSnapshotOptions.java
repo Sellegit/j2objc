@@ -22,7 +22,7 @@ import apple.dispatch.*;
  * @since Available in iOS 7.0 and later.
  */
 
-@Library("MapKit") @Mapping("MKMapSnapshotOptions")
+@Library("MapKit/MapKit.h") @Mapping("MKMapSnapshotOptions")
 public class MKMapSnapshotOptions 
     extends NSObject 
     implements NSCopying {

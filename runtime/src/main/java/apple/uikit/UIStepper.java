@@ -24,7 +24,7 @@ import apple.corelocation.*;
  * @since Available in iOS 5.0 and later.
  */
 
-@Library("UIKit") @Mapping("UIStepper")
+@Library("UIKit/UIKit.h") @Mapping("UIStepper")
 public class UIStepper 
     extends UIControl 
      {

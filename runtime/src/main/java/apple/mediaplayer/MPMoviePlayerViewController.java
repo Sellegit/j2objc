@@ -20,7 +20,7 @@ import apple.uikit.*;
  * @since Available in iOS 3.2 and later.
  */
 
-@Library("MediaPlayer") @Mapping("MPMoviePlayerViewController")
+@Library("MediaPlayer/MediaPlayer.h") @Mapping("MPMoviePlayerViewController")
 public class MPMoviePlayerViewController 
     extends UIViewController 
      {

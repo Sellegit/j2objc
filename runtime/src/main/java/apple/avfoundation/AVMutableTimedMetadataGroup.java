@@ -25,7 +25,7 @@ import apple.mediatoolbox.*;
  * @since Available in iOS 4.3 and later.
  */
 
-@Library("AVFoundation") @Mapping("AVMutableTimedMetadataGroup")
+@Library("AVFoundation/AVFoundation.h") @Mapping("AVMutableTimedMetadataGroup")
 public class AVMutableTimedMetadataGroup 
     extends AVTimedMetadataGroup 
      {

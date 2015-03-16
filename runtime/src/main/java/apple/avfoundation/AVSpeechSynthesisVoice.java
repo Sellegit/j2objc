@@ -25,7 +25,7 @@ import apple.mediatoolbox.*;
  * @since Available in iOS 7.0 and later.
  */
 
-@Library("AVFoundation") @Mapping("AVSpeechSynthesisVoice")
+@Library("AVFoundation/AVFoundation.h") @Mapping("AVSpeechSynthesisVoice")
 public class AVSpeechSynthesisVoice 
     extends NSObject 
      {

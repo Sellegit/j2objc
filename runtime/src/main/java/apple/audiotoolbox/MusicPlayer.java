@@ -19,7 +19,7 @@ import apple.coremedia.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("AudioToolbox")
+@Library("AudioToolbox/AudioToolbox.h")
 public class MusicPlayer 
     extends Object 
      {
@@ -40,66 +40,66 @@ public class MusicPlayer
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("DisposeMusicPlayer")
-    public native int dispose();
+    public static native int dispose(MusicPlayer inPlayer);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("MusicPlayerSetSequence")
-    public native int setSequence(MusicSequence inSequence);
+    public static native int setSequence(MusicPlayer inPlayer, MusicSequence inSequence);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("MusicPlayerGetSequence")
-    public native int getSequence(Todo outSequence);
+    public static native int getSequence(MusicPlayer inPlayer, Todo outSequence);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("MusicPlayerSetTime")
-    public native int setTime(double inTime);
+    public static native int setTime(MusicPlayer inPlayer, double inTime);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("MusicPlayerGetTime")
-    public native int getTime(Todo outTime);
+    public static native int getTime(MusicPlayer inPlayer, Todo outTime);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("MusicPlayerGetHostTimeForBeats")
-    public native int getHostTimeForBeats(double inBeats, Todo outHostTime);
+    public static native int getHostTimeForBeats(MusicPlayer inPlayer, double inBeats, Todo outHostTime);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("MusicPlayerGetBeatsForHostTime")
-    public native int getBeatsForHostTime(long inHostTime, Todo outBeats);
+    public static native int getBeatsForHostTime(MusicPlayer inPlayer, long inHostTime, Todo outBeats);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("MusicPlayerPreroll")
-    public native int preroll();
+    public static native int preroll(MusicPlayer inPlayer);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("MusicPlayerStart")
-    public native int start();
+    public static native int start(MusicPlayer inPlayer);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("MusicPlayerStop")
-    public native int stop();
+    public static native int stop(MusicPlayer inPlayer);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("MusicPlayerIsPlaying")
-    public native int isPlaying(Todo outIsPlaying);
+    public static native int isPlaying(MusicPlayer inPlayer, Todo outIsPlaying);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("MusicPlayerSetPlayRateScalar")
-    public native int setPlayRateScalar(double inScaleRate);
+    public static native int setPlayRateScalar(MusicPlayer inPlayer, double inScaleRate);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("MusicPlayerGetPlayRateScalar")
-    public native int getPlayRateScalar(Todo outScaleRate);
+    public static native int getPlayRateScalar(MusicPlayer inPlayer, Todo outScaleRate);
     
 }

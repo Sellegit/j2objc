@@ -16,7 +16,7 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreText")
+@Library("CoreText/CoreText.h")
  class CTRunDelegateIntern 
     extends CFType 
      {
@@ -42,6 +42,6 @@ import apple.foundation.*;
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTRunDelegateGetRefCon")
-    protected native @Pointer long getRefCon();
+    protected static native @Pointer long getRefCon(CTRunDelegateIntern runDelegate);
     
 }

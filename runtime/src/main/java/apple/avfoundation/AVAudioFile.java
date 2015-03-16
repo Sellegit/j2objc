@@ -25,7 +25,7 @@ import apple.mediatoolbox.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("AVFoundation") @Mapping("AVAudioFile")
+@Library("AVFoundation/AVFoundation.h") @Mapping("AVAudioFile")
 public class AVAudioFile 
     extends NSObject 
      {

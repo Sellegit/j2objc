@@ -22,7 +22,7 @@ import apple.avfoundation.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("Photos") @Mapping("PHFetchOptions")
+@Library("Photos/Photos.h") @Mapping("PHFetchOptions")
 public class PHFetchOptions 
     extends NSObject 
     implements NSCopying {

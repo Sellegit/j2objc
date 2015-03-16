@@ -18,7 +18,7 @@ import apple.uikit.*;
 
 
 
-@Library("WebKit") @Mapping("WKUIDelegate")
+@Library("WebKit/WebKit.h") @Mapping("WKUIDelegate")
 public interface WKUIDelegate 
     extends NSObjectProtocol {
 

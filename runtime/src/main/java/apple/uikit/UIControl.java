@@ -24,7 +24,7 @@ import apple.corelocation.*;
  * @since Available in iOS 2.0 and later.
  */
 
-@Library("UIKit") @Mapping("UIControl")
+@Library("UIKit/UIKit.h") @Mapping("UIControl")
 public class UIControl 
     extends UIView 
      {

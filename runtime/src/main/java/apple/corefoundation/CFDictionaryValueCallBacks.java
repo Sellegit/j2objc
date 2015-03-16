@@ -18,7 +18,7 @@ import apple.foundation.*;
 
 
 
-@Mapping("CFDictionaryValueCallBacks")
+@Mapping("CFDictionaryValueCallBacks") @Library("CoreFoundation/CoreFoundation.h")
  class CFDictionaryValueCallBacks 
     extends Struct 
      {

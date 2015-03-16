@@ -22,7 +22,7 @@ import apple.dispatch.*;
 
 
 
-@Library("Foundation") @Mapping("NSURLAuthenticationChallengeSender")
+@Library("Foundation/Foundation.h") @Mapping("NSURLAuthenticationChallengeSender")
 public interface NSURLAuthenticationChallengeSender 
     extends NSObjectProtocol {
 

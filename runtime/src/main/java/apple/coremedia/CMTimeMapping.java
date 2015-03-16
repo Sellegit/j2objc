@@ -21,7 +21,7 @@ import apple.corevideo.*;
 
 
 
-@Mapping("CMTimeMapping")
+@Mapping("CMTimeMapping") @Library("CoreMedia/CoreMedia.h")
 public class CMTimeMapping 
     extends Struct 
      {

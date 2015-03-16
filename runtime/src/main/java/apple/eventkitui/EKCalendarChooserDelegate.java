@@ -19,7 +19,7 @@ import apple.uikit.*;
 
 
 
-@Library("EventKitUI") @Mapping("EKCalendarChooserDelegate")
+@Library("EventKitUI/EventKitUI.h") @Mapping("EKCalendarChooserDelegate")
 public interface EKCalendarChooserDelegate 
     extends NSObjectProtocol {
 

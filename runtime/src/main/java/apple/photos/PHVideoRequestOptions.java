@@ -22,7 +22,7 @@ import apple.avfoundation.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("Photos") @Mapping("PHVideoRequestOptions")
+@Library("Photos/Photos.h") @Mapping("PHVideoRequestOptions")
 public class PHVideoRequestOptions 
     extends NSObject 
      {

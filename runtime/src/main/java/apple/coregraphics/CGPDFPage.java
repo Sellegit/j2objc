@@ -17,7 +17,7 @@ import apple.uikit.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreGraphics")
+@Library("CoreGraphics/CoreGraphics.h")
 public class CGPDFPage 
     extends CFType 
      {
@@ -33,27 +33,27 @@ public class CGPDFPage
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGPDFPageGetDocument")
-    public native CGPDFDocument getDocument();
+    public static native CGPDFDocument getDocument(CGPDFPage page);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGPDFPageGetPageNumber")
-    public native @MachineSizedUInt long getPageNumber();
+    public static native @MachineSizedUInt long getPageNumber(CGPDFPage page);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGPDFPageGetBoxRect")
-    public native CGRect getBoxRect(CGPDFBox box);
+    public static native CGRect getBoxRect(CGPDFPage page, CGPDFBox box);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGPDFPageGetRotationAngle")
-    public native int getRotationAngle();
+    public static native int getRotationAngle(CGPDFPage page);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGPDFPageGetDrawingTransform")
-    public native CGAffineTransform getDrawingTransform(CGPDFBox box, CGRect rect, int rotate, boolean preserveAspectRatio);
+    public static native CGAffineTransform getDrawingTransform(CGPDFPage page, CGPDFBox box, CGRect rect, int rotate, boolean preserveAspectRatio);
     /**
      * @since Available in iOS 2.0 and later.
      */

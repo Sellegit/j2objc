@@ -16,7 +16,7 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("NetworkExtension")
+@Library("NetworkExtension/NetworkExtension.h")
 public class NEVPNError 
     extends Todo 
      {

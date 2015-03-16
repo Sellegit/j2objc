@@ -22,7 +22,7 @@ import apple.corelocation.*;
 
 
 
-@Library("UIKit")
+@Library("UIKit/UIKit.h")
 @Mapping("UIStatusBarStyle")
 public final class UIStatusBarStyle extends ObjCEnum {
     

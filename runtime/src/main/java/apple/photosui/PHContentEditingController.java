@@ -19,7 +19,7 @@ import apple.uikit.*;
 
 
 
-@Library("PhotosUI") @Mapping("PHContentEditingController")
+@Library("PhotosUI/PhotosUI.h") @Mapping("PHContentEditingController")
 public interface PHContentEditingController 
     extends NSObjectProtocol {
 

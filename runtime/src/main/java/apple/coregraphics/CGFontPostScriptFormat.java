@@ -18,7 +18,7 @@ import apple.uikit.*;
 
 
 
-@Library("CoreGraphics")
+@Library("CoreGraphics/CoreGraphics.h")
 @Mapping("CGFontPostScriptFormat")
 public final class CGFontPostScriptFormat extends ObjCEnum {
     

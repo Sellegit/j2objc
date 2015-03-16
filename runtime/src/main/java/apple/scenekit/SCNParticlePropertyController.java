@@ -23,7 +23,7 @@ import apple.opengles.*;
 
 
 
-@Library("SceneKit") @Mapping("SCNParticlePropertyController")
+@Library("SceneKit/SceneKit.h") @Mapping("SCNParticlePropertyController")
 public class SCNParticlePropertyController 
     extends NSObject 
     implements NSCopying {

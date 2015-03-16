@@ -25,7 +25,7 @@ import apple.mediatoolbox.*;
  * @since Available in iOS 7.0 and later.
  */
 
-@Library("AVFoundation") @Mapping("AVVideoCompositionRenderContext")
+@Library("AVFoundation/AVFoundation.h") @Mapping("AVVideoCompositionRenderContext")
 public class AVVideoCompositionRenderContext 
     extends NSObject 
      {

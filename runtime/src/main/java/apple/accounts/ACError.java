@@ -16,7 +16,7 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("Accounts")
+@Library("Accounts/Accounts.h")
 public class ACError 
     extends Todo 
      {

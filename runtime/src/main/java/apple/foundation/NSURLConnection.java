@@ -22,7 +22,7 @@ import apple.dispatch.*;
 
 
 
-@Library("Foundation") @Mapping("NSURLConnection")
+@Library("Foundation/Foundation.h") @Mapping("NSURLConnection")
 public class NSURLConnection 
     extends NSObject 
      {

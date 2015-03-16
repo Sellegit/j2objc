@@ -24,7 +24,7 @@ import apple.dispatch.*;
  * @since Available in iOS 2.0 and later.
  */
 
-@Library("Foundation") @Mapping("NSCondition")
+@Library("Foundation/Foundation.h") @Mapping("NSCondition")
 public class NSCondition 
     extends NSObject 
     implements NSLocking {

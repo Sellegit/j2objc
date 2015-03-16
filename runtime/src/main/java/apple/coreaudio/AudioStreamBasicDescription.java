@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 
 
-@Mapping("AudioStreamBasicDescription")
+@Mapping("AudioStreamBasicDescription") @Library("CoreAudio/CoreAudioTypes.h")
 public class AudioStreamBasicDescription 
     extends Struct 
      {
@@ -29,7 +29,7 @@ public class AudioStreamBasicDescription
     @DotMapping("mSampleRate")
     public native double getMSampleRate();
     @DotMapping("mFormatID")
-    public native AudioFormat getMFormatID();
+    public native int getMFormatID();
     @DotMapping("mFormatFlags")
     public native int getMFormatFlags();
     @DotMapping("mBytesPerPacket")
@@ -45,7 +45,7 @@ public class AudioStreamBasicDescription
     @DotMapping("mReserved")
     public native int getMReserved();
     
-    public static native AudioStreamBasicDescription create(double mSampleRate, AudioFormat mFormatID, int mFormatFlags, int mBytesPerPacket, int mFramesPerPacket, int mBytesPerFrame, int mChannelsPerFrame, int mBitsPerChannel, int mReserved) /*-[
+    public static native AudioStreamBasicDescription create(double mSampleRate, int mFormatID, int mFormatFlags, int mBytesPerPacket, int mFramesPerPacket, int mBytesPerFrame, int mChannelsPerFrame, int mBitsPerChannel, int mReserved) /*-[
         AudioStreamBasicDescription __new = { .mSampleRate = mSampleRate, .mFormatID = mFormatID, .mFormatFlags = mFormatFlags, .mBytesPerPacket = mBytesPerPacket, .mFramesPerPacket = mFramesPerPacket, .mBytesPerFrame = mBytesPerFrame, .mChannelsPerFrame = mChannelsPerFrame, .mBitsPerChannel = mBitsPerChannel, .mReserved = mReserved };
         return __new;
     ]-*/;
@@ -55,7 +55,7 @@ public class AudioStreamBasicDescription
     ]-*/;
 
     
-    public static native AudioStreamBasicDescription copyWithmFormatID(AudioStreamBasicDescription original, AudioFormat mFormatID) /*-[
+    public static native AudioStreamBasicDescription copyWithmFormatID(AudioStreamBasicDescription original, int mFormatID) /*-[
         original.mFormatID = mFormatID;
         return original;
     ]-*/;

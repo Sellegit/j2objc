@@ -16,7 +16,7 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("LocalAuthentication")
+@Library("LocalAuthentication/LocalAuthentication.h")
 public class LAError 
     extends Todo 
      {

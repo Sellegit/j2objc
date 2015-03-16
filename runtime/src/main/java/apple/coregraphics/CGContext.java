@@ -17,7 +17,7 @@ import apple.uikit.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreGraphics")
+@Library("CoreGraphics/CoreGraphics.h")
 public class CGContext 
     extends CFType 
      {
@@ -38,598 +38,598 @@ public class CGContext
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGContextSaveGState")
-    public native void saveGState();
+    public static native void saveGState(CGContext c);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGContextRestoreGState")
-    public native void restoreGState();
+    public static native void restoreGState(CGContext c);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGContextScaleCTM")
-    public native void scaleCTM(@MachineSizedFloat double sx, @MachineSizedFloat double sy);
+    public static native void scaleCTM(CGContext c, @MachineSizedFloat double sx, @MachineSizedFloat double sy);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGContextTranslateCTM")
-    public native void translateCTM(@MachineSizedFloat double tx, @MachineSizedFloat double ty);
+    public static native void translateCTM(CGContext c, @MachineSizedFloat double tx, @MachineSizedFloat double ty);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGContextRotateCTM")
-    public native void rotateCTM(@MachineSizedFloat double angle);
+    public static native void rotateCTM(CGContext c, @MachineSizedFloat double angle);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGContextConcatCTM")
-    public native void concatCTM(CGAffineTransform transform);
+    public static native void concatCTM(CGContext c, CGAffineTransform transform);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGContextGetCTM")
-    public native CGAffineTransform getCTM();
+    public static native CGAffineTransform getCTM(CGContext c);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGContextSetLineWidth")
-    public native void setLineWidth(@MachineSizedFloat double width);
+    public static native void setLineWidth(CGContext c, @MachineSizedFloat double width);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGContextSetLineCap")
-    public native void setLineCap(CGLineCap cap);
+    public static native void setLineCap(CGContext c, CGLineCap cap);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGContextSetLineJoin")
-    public native void setLineJoin(CGLineJoin join);
+    public static native void setLineJoin(CGContext c, CGLineJoin join);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGContextSetMiterLimit")
-    public native void setMiterLimit(@MachineSizedFloat double limit);
+    public static native void setMiterLimit(CGContext c, @MachineSizedFloat double limit);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGContextSetLineDash")
-    protected native void setLineDash(@MachineSizedFloat double phase, Todo lengths, @MachineSizedUInt long count);
+    protected static native void setLineDash(CGContext c, @MachineSizedFloat double phase, Todo lengths, @MachineSizedUInt long count);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGContextSetFlatness")
-    public native void setFlatness(@MachineSizedFloat double flatness);
+    public static native void setFlatness(CGContext c, @MachineSizedFloat double flatness);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGContextSetAlpha")
-    public native void setAlpha(@MachineSizedFloat double alpha);
+    public static native void setAlpha(CGContext c, @MachineSizedFloat double alpha);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGContextSetBlendMode")
-    public native void setBlendMode(CGBlendMode mode);
+    public static native void setBlendMode(CGContext context, CGBlendMode mode);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGContextBeginPath")
-    public native void beginPath();
+    public static native void beginPath(CGContext c);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGContextMoveToPoint")
-    public native void moveToPoint(@MachineSizedFloat double x, @MachineSizedFloat double y);
+    public static native void moveToPoint(CGContext c, @MachineSizedFloat double x, @MachineSizedFloat double y);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGContextAddLineToPoint")
-    public native void addLineToPoint(@MachineSizedFloat double x, @MachineSizedFloat double y);
+    public static native void addLineToPoint(CGContext c, @MachineSizedFloat double x, @MachineSizedFloat double y);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGContextAddCurveToPoint")
-    public native void addCurveToPoint(@MachineSizedFloat double cp1x, @MachineSizedFloat double cp1y, @MachineSizedFloat double cp2x, @MachineSizedFloat double cp2y, @MachineSizedFloat double x, @MachineSizedFloat double y);
+    public static native void addCurveToPoint(CGContext c, @MachineSizedFloat double cp1x, @MachineSizedFloat double cp1y, @MachineSizedFloat double cp2x, @MachineSizedFloat double cp2y, @MachineSizedFloat double x, @MachineSizedFloat double y);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGContextAddQuadCurveToPoint")
-    public native void addQuadCurveToPoint(@MachineSizedFloat double cpx, @MachineSizedFloat double cpy, @MachineSizedFloat double x, @MachineSizedFloat double y);
+    public static native void addQuadCurveToPoint(CGContext c, @MachineSizedFloat double cpx, @MachineSizedFloat double cpy, @MachineSizedFloat double x, @MachineSizedFloat double y);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGContextClosePath")
-    public native void closePath();
+    public static native void closePath(CGContext c);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGContextAddRect")
-    public native void addRect(CGRect rect);
+    public static native void addRect(CGContext c, CGRect rect);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGContextAddRects")
-    protected native void addRects(CGRect rects, @MachineSizedUInt long count);
+    protected static native void addRects(CGContext c, CGRect rects, @MachineSizedUInt long count);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGContextAddLines")
-    protected native void addLines(CGPoint points, @MachineSizedUInt long count);
+    protected static native void addLines(CGContext c, CGPoint points, @MachineSizedUInt long count);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGContextAddEllipseInRect")
-    public native void addEllipseInRect(CGRect rect);
+    public static native void addEllipseInRect(CGContext context, CGRect rect);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGContextAddArc")
-    public native void addArc(@MachineSizedFloat double x, @MachineSizedFloat double y, @MachineSizedFloat double radius, @MachineSizedFloat double startAngle, @MachineSizedFloat double endAngle, int clockwise);
+    public static native void addArc(CGContext c, @MachineSizedFloat double x, @MachineSizedFloat double y, @MachineSizedFloat double radius, @MachineSizedFloat double startAngle, @MachineSizedFloat double endAngle, int clockwise);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGContextAddArcToPoint")
-    public native void addArcToPoint(@MachineSizedFloat double x1, @MachineSizedFloat double y1, @MachineSizedFloat double x2, @MachineSizedFloat double y2, @MachineSizedFloat double radius);
+    public static native void addArcToPoint(CGContext c, @MachineSizedFloat double x1, @MachineSizedFloat double y1, @MachineSizedFloat double x2, @MachineSizedFloat double y2, @MachineSizedFloat double radius);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGContextAddPath")
-    public native void addPath(CGPath path);
+    public static native void addPath(CGContext context, CGPath path);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGContextReplacePathWithStrokedPath")
-    public native void replacePathWithStrokedPath();
+    public static native void replacePathWithStrokedPath(CGContext c);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGContextIsPathEmpty")
-    public native boolean isPathEmpty();
+    public static native boolean isPathEmpty(CGContext context);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGContextGetPathCurrentPoint")
-    public native CGPoint getPathCurrentPoint();
+    public static native CGPoint getPathCurrentPoint(CGContext context);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGContextGetPathBoundingBox")
-    public native CGRect getPathBoundingBox();
+    public static native CGRect getPathBoundingBox(CGContext context);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGContextCopyPath")
-    public native CGPath getPath();
+    public static native CGPath getPath(CGContext context);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGContextPathContainsPoint")
-    public native boolean pathContainsPoint(CGPoint point, CGPathDrawingMode mode);
+    public static native boolean pathContainsPoint(CGContext context, CGPoint point, CGPathDrawingMode mode);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGContextDrawPath")
-    public native void drawPath(CGPathDrawingMode mode);
+    public static native void drawPath(CGContext c, CGPathDrawingMode mode);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGContextFillPath")
-    public native void fillPath();
+    public static native void fillPath(CGContext c);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGContextEOFillPath")
-    public native void evenOddFillPath();
+    public static native void evenOddFillPath(CGContext c);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGContextStrokePath")
-    public native void strokePath();
+    public static native void strokePath(CGContext c);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGContextFillRect")
-    public native void fillRect(CGRect rect);
+    public static native void fillRect(CGContext c, CGRect rect);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGContextFillRects")
-    protected native void fillRects(CGRect rects, @MachineSizedUInt long count);
+    protected static native void fillRects(CGContext c, CGRect rects, @MachineSizedUInt long count);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGContextStrokeRect")
-    public native void strokeRect(CGRect rect);
+    public static native void strokeRect(CGContext c, CGRect rect);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGContextStrokeRectWithWidth")
-    public native void strokeRectWithWidth(CGRect rect, @MachineSizedFloat double width);
+    public static native void strokeRectWithWidth(CGContext c, CGRect rect, @MachineSizedFloat double width);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGContextClearRect")
-    public native void clearRect(CGRect rect);
+    public static native void clearRect(CGContext c, CGRect rect);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGContextFillEllipseInRect")
-    public native void fillEllipseInRect(CGRect rect);
+    public static native void fillEllipseInRect(CGContext context, CGRect rect);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGContextStrokeEllipseInRect")
-    public native void strokeEllipseInRect(CGRect rect);
+    public static native void strokeEllipseInRect(CGContext context, CGRect rect);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGContextStrokeLineSegments")
-    protected native void strokeLineSegments(CGPoint points, @MachineSizedUInt long count);
+    protected static native void strokeLineSegments(CGContext c, CGPoint points, @MachineSizedUInt long count);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGContextClip")
-    public native void clip();
+    public static native void clip(CGContext c);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGContextEOClip")
-    public native void evenOddClip();
+    public static native void evenOddClip(CGContext c);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGContextClipToMask")
-    public native void clipToMask(CGRect rect, CGImage mask);
+    public static native void clipToMask(CGContext c, CGRect rect, CGImage mask);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGContextGetClipBoundingBox")
-    public native CGRect getClipBoundingBox();
+    public static native CGRect getClipBoundingBox(CGContext c);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGContextClipToRect")
-    public native void clipToRect(CGRect rect);
+    public static native void clipToRect(CGContext c, CGRect rect);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGContextClipToRects")
-    protected native void clipToRects(CGRect rects, @MachineSizedUInt long count);
+    protected static native void clipToRects(CGContext c, CGRect rects, @MachineSizedUInt long count);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGContextSetFillColorWithColor")
-    public native void setFillColorWithColor(CGColor color);
+    public static native void setFillColorWithColor(CGContext c, CGColor color);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGContextSetStrokeColorWithColor")
-    public native void setStrokeColorWithColor(CGColor color);
+    public static native void setStrokeColorWithColor(CGContext c, CGColor color);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGContextSetFillColorSpace")
-    public native void setFillColorSpace(CGColorSpace space);
+    public static native void setFillColorSpace(CGContext context, CGColorSpace space);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGContextSetStrokeColorSpace")
-    public native void setStrokeColorSpace(CGColorSpace space);
+    public static native void setStrokeColorSpace(CGContext context, CGColorSpace space);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGContextSetFillColor")
-    protected native void setFillColor(Todo components);
+    protected static native void setFillColor(CGContext context, Todo components);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGContextSetStrokeColor")
-    protected native void setStrokeColor(Todo components);
+    protected static native void setStrokeColor(CGContext context, Todo components);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGContextSetFillPattern")
-    protected native void setFillPattern(CGPattern pattern, Todo components);
+    protected static native void setFillPattern(CGContext context, CGPattern pattern, Todo components);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGContextSetStrokePattern")
-    protected native void setStrokePattern(CGPattern pattern, Todo components);
+    protected static native void setStrokePattern(CGContext context, CGPattern pattern, Todo components);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGContextSetPatternPhase")
-    public native void setPatternPhase(CGSize phase);
+    public static native void setPatternPhase(CGContext context, CGSize phase);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGContextSetGrayFillColor")
-    public native void setGrayFillColor(@MachineSizedFloat double gray, @MachineSizedFloat double alpha);
+    public static native void setGrayFillColor(CGContext context, @MachineSizedFloat double gray, @MachineSizedFloat double alpha);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGContextSetGrayStrokeColor")
-    public native void setGrayStrokeColor(@MachineSizedFloat double gray, @MachineSizedFloat double alpha);
+    public static native void setGrayStrokeColor(CGContext context, @MachineSizedFloat double gray, @MachineSizedFloat double alpha);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGContextSetRGBFillColor")
-    public native void setRGBFillColor(@MachineSizedFloat double red, @MachineSizedFloat double green, @MachineSizedFloat double blue, @MachineSizedFloat double alpha);
+    public static native void setRGBFillColor(CGContext context, @MachineSizedFloat double red, @MachineSizedFloat double green, @MachineSizedFloat double blue, @MachineSizedFloat double alpha);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGContextSetRGBStrokeColor")
-    public native void setRGBStrokeColor(@MachineSizedFloat double red, @MachineSizedFloat double green, @MachineSizedFloat double blue, @MachineSizedFloat double alpha);
+    public static native void setRGBStrokeColor(CGContext context, @MachineSizedFloat double red, @MachineSizedFloat double green, @MachineSizedFloat double blue, @MachineSizedFloat double alpha);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGContextSetCMYKFillColor")
-    public native void setCMYKFillColor(@MachineSizedFloat double cyan, @MachineSizedFloat double magenta, @MachineSizedFloat double yellow, @MachineSizedFloat double black, @MachineSizedFloat double alpha);
+    public static native void setCMYKFillColor(CGContext context, @MachineSizedFloat double cyan, @MachineSizedFloat double magenta, @MachineSizedFloat double yellow, @MachineSizedFloat double black, @MachineSizedFloat double alpha);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGContextSetCMYKStrokeColor")
-    public native void setCMYKStrokeColor(@MachineSizedFloat double cyan, @MachineSizedFloat double magenta, @MachineSizedFloat double yellow, @MachineSizedFloat double black, @MachineSizedFloat double alpha);
+    public static native void setCMYKStrokeColor(CGContext context, @MachineSizedFloat double cyan, @MachineSizedFloat double magenta, @MachineSizedFloat double yellow, @MachineSizedFloat double black, @MachineSizedFloat double alpha);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGContextSetRenderingIntent")
-    public native void setRenderingIntent(CGColorRenderingIntent intent);
+    public static native void setRenderingIntent(CGContext context, CGColorRenderingIntent intent);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGContextDrawImage")
-    public native void drawImage(CGRect rect, CGImage image);
+    public static native void drawImage(CGContext c, CGRect rect, CGImage image);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGContextDrawTiledImage")
-    public native void drawTiledImage(CGRect rect, CGImage image);
+    public static native void drawTiledImage(CGContext c, CGRect rect, CGImage image);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGContextGetInterpolationQuality")
-    public native CGInterpolationQuality getInterpolationQuality();
+    public static native CGInterpolationQuality getInterpolationQuality(CGContext context);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGContextSetInterpolationQuality")
-    public native void setInterpolationQuality(CGInterpolationQuality quality);
+    public static native void setInterpolationQuality(CGContext context, CGInterpolationQuality quality);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGContextSetShadowWithColor")
-    public native void setShadowWithColor(CGSize offset, @MachineSizedFloat double blur, CGColor color);
+    public static native void setShadowWithColor(CGContext context, CGSize offset, @MachineSizedFloat double blur, CGColor color);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGContextSetShadow")
-    public native void setShadow(CGSize offset, @MachineSizedFloat double blur);
+    public static native void setShadow(CGContext context, CGSize offset, @MachineSizedFloat double blur);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGContextDrawLinearGradient")
-    public native void drawLinearGradient(CGGradient gradient, CGPoint startPoint, CGPoint endPoint, CGGradientDrawingOptions options);
+    public static native void drawLinearGradient(CGContext context, CGGradient gradient, CGPoint startPoint, CGPoint endPoint, CGGradientDrawingOptions options);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGContextDrawRadialGradient")
-    public native void drawRadialGradient(CGGradient gradient, CGPoint startCenter, @MachineSizedFloat double startRadius, CGPoint endCenter, @MachineSizedFloat double endRadius, CGGradientDrawingOptions options);
+    public static native void drawRadialGradient(CGContext context, CGGradient gradient, CGPoint startCenter, @MachineSizedFloat double startRadius, CGPoint endCenter, @MachineSizedFloat double endRadius, CGGradientDrawingOptions options);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGContextDrawShading")
-    public native void drawShading(CGShading shading);
+    public static native void drawShading(CGContext context, CGShading shading);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGContextSetCharacterSpacing")
-    public native void setCharacterSpacing(@MachineSizedFloat double spacing);
+    public static native void setCharacterSpacing(CGContext context, @MachineSizedFloat double spacing);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGContextSetTextPosition")
-    public native void setTextPosition(@MachineSizedFloat double x, @MachineSizedFloat double y);
+    public static native void setTextPosition(CGContext c, @MachineSizedFloat double x, @MachineSizedFloat double y);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGContextGetTextPosition")
-    public native CGPoint getTextPosition();
+    public static native CGPoint getTextPosition(CGContext context);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGContextSetTextMatrix")
-    public native void setTextMatrix(CGAffineTransform t);
+    public static native void setTextMatrix(CGContext c, CGAffineTransform t);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGContextGetTextMatrix")
-    public native CGAffineTransform getTextMatrix();
+    public static native CGAffineTransform getTextMatrix(CGContext c);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGContextSetTextDrawingMode")
-    public native void setTextDrawingMode(CGTextDrawingMode mode);
+    public static native void setTextDrawingMode(CGContext c, CGTextDrawingMode mode);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGContextSetFont")
-    public native void setFont(CGFont font);
+    public static native void setFont(CGContext c, CGFont font);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGContextSetFontSize")
-    public native void setFontSize(@MachineSizedFloat double size);
+    public static native void setFontSize(CGContext c, @MachineSizedFloat double size);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGContextShowGlyphsAtPositions")
-    protected native void showGlyphsAtPositions(Todo glyphs, CGPoint positions, @MachineSizedUInt long count);
+    protected static native void showGlyphsAtPositions(CGContext context, Todo glyphs, CGPoint positions, @MachineSizedUInt long count);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGContextDrawPDFPage")
-    public native void drawPDFPage(CGPDFPage page);
+    public static native void drawPDFPage(CGContext c, CGPDFPage page);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGContextBeginPage")
-    public native void beginPage(CGRect mediaBox);
+    public static native void beginPage(CGContext c, CGRect mediaBox);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGContextEndPage")
-    public native void endPage();
+    public static native void endPage(CGContext c);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGContextFlush")
-    public native void flush();
+    public static native void flush(CGContext c);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGContextSynchronize")
-    public native void synchronize();
+    public static native void synchronize(CGContext c);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGContextSetShouldAntialias")
-    public native void setShouldAntialias(boolean shouldAntialias);
+    public static native void setShouldAntialias(CGContext context, boolean shouldAntialias);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGContextSetAllowsAntialiasing")
-    public native void setAllowsAntialiasing(boolean allowsAntialiasing);
+    public static native void setAllowsAntialiasing(CGContext context, boolean allowsAntialiasing);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGContextSetShouldSmoothFonts")
-    public native void setShouldSmoothFonts(boolean shouldSmoothFonts);
+    public static native void setShouldSmoothFonts(CGContext context, boolean shouldSmoothFonts);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGContextSetAllowsFontSmoothing")
-    public native void setAllowsFontSmoothing(boolean allowsFontSmoothing);
+    public static native void setAllowsFontSmoothing(CGContext context, boolean allowsFontSmoothing);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGContextSetShouldSubpixelPositionFonts")
-    public native void setShouldSubpixelPositionFonts(boolean shouldSubpixelPositionFonts);
+    public static native void setShouldSubpixelPositionFonts(CGContext context, boolean shouldSubpixelPositionFonts);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGContextSetAllowsFontSubpixelPositioning")
-    public native void setAllowsFontSubpixelPositioning(boolean allowsFontSubpixelPositioning);
+    public static native void setAllowsFontSubpixelPositioning(CGContext context, boolean allowsFontSubpixelPositioning);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGContextSetShouldSubpixelQuantizeFonts")
-    public native void setShouldSubpixelQuantizeFonts(boolean shouldSubpixelQuantizeFonts);
+    public static native void setShouldSubpixelQuantizeFonts(CGContext context, boolean shouldSubpixelQuantizeFonts);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGContextSetAllowsFontSubpixelQuantization")
-    public native void setAllowsFontSubpixelQuantization(boolean allowsFontSubpixelQuantization);
+    public static native void setAllowsFontSubpixelQuantization(CGContext context, boolean allowsFontSubpixelQuantization);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGContextBeginTransparencyLayer")
-    public native void beginTransparencyLayer(NSDictionary<?, ?> auxiliaryInfo);
+    public static native void beginTransparencyLayer(CGContext context, NSDictionary<?, ?> auxiliaryInfo);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGContextBeginTransparencyLayerWithRect")
-    public native void beginTransparencyLayerWithRect(CGRect rect, NSDictionary<?, ?> auxiliaryInfo);
+    public static native void beginTransparencyLayerWithRect(CGContext context, CGRect rect, NSDictionary<?, ?> auxiliaryInfo);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGContextEndTransparencyLayer")
-    public native void endTransparencyLayer();
+    public static native void endTransparencyLayer(CGContext context);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGContextGetUserSpaceToDeviceSpaceTransform")
-    public native CGAffineTransform getUserSpaceToDeviceSpaceTransform();
+    public static native CGAffineTransform getUserSpaceToDeviceSpaceTransform(CGContext context);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGContextConvertPointToDeviceSpace")
-    public native CGPoint convertPointToDeviceSpace(CGPoint point);
+    public static native CGPoint convertPointToDeviceSpace(CGContext context, CGPoint point);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGContextConvertPointToUserSpace")
-    public native CGPoint convertPointToUserSpace(CGPoint point);
+    public static native CGPoint convertPointToUserSpace(CGContext context, CGPoint point);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGContextConvertSizeToDeviceSpace")
-    public native CGSize convertSizeToDeviceSpace(CGSize size);
+    public static native CGSize convertSizeToDeviceSpace(CGContext context, CGSize size);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGContextConvertSizeToUserSpace")
-    public native CGSize convertSizeToUserSpace(CGSize size);
+    public static native CGSize convertSizeToUserSpace(CGContext context, CGSize size);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGContextConvertRectToDeviceSpace")
-    public native CGRect convertRectToDeviceSpace(CGRect rect);
+    public static native CGRect convertRectToDeviceSpace(CGContext context, CGRect rect);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGContextConvertRectToUserSpace")
-    public native CGRect convertRectToUserSpace(CGRect rect);
+    public static native CGRect convertRectToUserSpace(CGContext context, CGRect rect);
     /**
      * @since Available in iOS 2.0 and later.
      * @deprecated Deprecated in iOS 7.0.
      */
     @Deprecated
     @GlobalFunction("CGContextSelectFont")
-    protected native void selectFont(Todo name, @MachineSizedFloat double size, CGTextEncoding textEncoding);
+    protected static native void selectFont(CGContext c, Todo name, @MachineSizedFloat double size, CGTextEncoding textEncoding);
     /**
      * @since Available in iOS 2.0 and later.
      * @deprecated Deprecated in iOS 7.0.
      */
     @Deprecated
     @GlobalFunction("CGContextShowText")
-    protected native void showText(Todo string, @MachineSizedUInt long length);
+    protected static native void showText(CGContext c, Todo string, @MachineSizedUInt long length);
     /**
      * @since Available in iOS 2.0 and later.
      * @deprecated Deprecated in iOS 7.0.
      */
     @Deprecated
     @GlobalFunction("CGContextShowTextAtPoint")
-    protected native void showTextAtPoint(@MachineSizedFloat double x, @MachineSizedFloat double y, Todo string, @MachineSizedUInt long length);
+    protected static native void showTextAtPoint(CGContext c, @MachineSizedFloat double x, @MachineSizedFloat double y, Todo string, @MachineSizedUInt long length);
     /**
      * @since Available in iOS 2.0 and later.
      * @deprecated Deprecated in iOS 7.0.
      */
     @Deprecated
     @GlobalFunction("CGContextShowGlyphs")
-    protected native void showGlyphs(Todo g, @MachineSizedUInt long count);
+    protected static native void showGlyphs(CGContext c, Todo g, @MachineSizedUInt long count);
     /**
      * @since Available in iOS 2.0 and later.
      * @deprecated Deprecated in iOS 7.0.
      */
     @Deprecated
     @GlobalFunction("CGContextShowGlyphsAtPoint")
-    protected native void showGlyphsAtPoint(@MachineSizedFloat double x, @MachineSizedFloat double y, Todo glyphs, @MachineSizedUInt long count);
+    protected static native void showGlyphsAtPoint(CGContext context, @MachineSizedFloat double x, @MachineSizedFloat double y, Todo glyphs, @MachineSizedUInt long count);
     /**
      * @since Available in iOS 2.0 and later.
      * @deprecated Deprecated in iOS 7.0.
      */
     @Deprecated
     @GlobalFunction("CGContextShowGlyphsWithAdvances")
-    protected native void showGlyphsWithAdvances(Todo glyphs, CGSize advances, @MachineSizedUInt long count);
+    protected static native void showGlyphsWithAdvances(CGContext context, Todo glyphs, CGSize advances, @MachineSizedUInt long count);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGContextDrawLayerInRect")
-    public native void drawLayerInRect(CGRect rect, CGLayer layer);
+    public static native void drawLayerInRect(CGContext context, CGRect rect, CGLayer layer);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGContextDrawLayerAtPoint")
-    public native void drawLayerAtPoint(CGPoint point, CGLayer layer);
+    public static native void drawLayerAtPoint(CGContext context, CGPoint point, CGLayer layer);
     
 }

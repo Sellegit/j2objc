@@ -24,7 +24,7 @@ import apple.corelocation.*;
  * @since Available in iOS 6.0 and later.
  */
 
-@Library("UIKit") @Mapping("NSStringDrawingContext")
+@Library("UIKit/UIKit.h") @Mapping("NSStringDrawingContext")
 public class NSStringDrawingContext 
     extends NSObject 
      {

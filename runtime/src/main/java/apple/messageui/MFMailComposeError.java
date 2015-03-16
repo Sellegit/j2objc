@@ -17,7 +17,7 @@ import apple.uikit.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("MessageUI")
+@Library("MessageUI/MessageUI.h")
 public class MFMailComposeError 
     extends Todo 
      {

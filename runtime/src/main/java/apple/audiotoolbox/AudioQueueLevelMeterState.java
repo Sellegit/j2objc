@@ -20,7 +20,7 @@ import apple.coremedia.*;
 
 
 
-@Mapping("AudioQueueLevelMeterState")
+@Mapping("AudioQueueLevelMeterState") @Library("AudioToolbox/AudioToolbox.h")
 public class AudioQueueLevelMeterState 
     extends Struct 
      {
@@ -39,14 +39,14 @@ public class AudioQueueLevelMeterState
         return __new;
     ]-*/;
     public static native AudioQueueLevelMeterState copyWithmAveragePower(AudioQueueLevelMeterState original, float mAveragePower) /*-[
-        original.mAveragePower = mAveragePower;
-        return original;
+        AudioQueueLevelMeterState __new = { .mAveragePower = mAveragePower, .mPeakPower = original.mPeakPower };
+        return __new;
     ]-*/;
 
     
     public static native AudioQueueLevelMeterState copyWithmPeakPower(AudioQueueLevelMeterState original, float mPeakPower) /*-[
-        original.mPeakPower = mPeakPower;
-        return original;
+        AudioQueueLevelMeterState __new = { .mAveragePower = original.mAveragePower, .mPeakPower = mPeakPower };
+        return __new;
     ]-*/;
 
     

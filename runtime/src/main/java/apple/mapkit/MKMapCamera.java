@@ -22,7 +22,7 @@ import apple.dispatch.*;
  * @since Available in iOS 7.0 and later.
  */
 
-@Library("MapKit") @Mapping("MKMapCamera")
+@Library("MapKit/MapKit.h") @Mapping("MKMapCamera")
 public class MKMapCamera 
     extends NSObject 
     implements NSCopying {

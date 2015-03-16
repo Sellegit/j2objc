@@ -22,7 +22,7 @@ import apple.dispatch.*;
 
 
 
-@Library("Foundation") @Mapping("NSValue")
+@Library("Foundation/Foundation.h") @Mapping("NSValue")
 public class NSValue 
     extends NSObject 
     implements NSCopying {

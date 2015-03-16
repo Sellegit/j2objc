@@ -43,6 +43,7 @@ import com.google.devtools.j2objc.translate.GwtConverter;
 import com.google.devtools.j2objc.translate.InitializationNormalizer;
 import com.google.devtools.j2objc.translate.InnerClassExtractor;
 import com.google.devtools.j2objc.translate.JavaToIOSMethodTranslator;
+import com.google.devtools.j2objc.translate.MappedNativeMethodRemover;
 import com.google.devtools.j2objc.translate.NilCheckResolver;
 import com.google.devtools.j2objc.translate.OcniExtractor;
 import com.google.devtools.j2objc.translate.OperatorRewriter;
@@ -218,31 +219,37 @@ class TranslationProcessor extends FileProcessor {
   protected void processUnit(
       String path, String source, org.eclipse.jdt.core.dom.CompilationUnit unit,
       TimeTracker ticker) {
-    String relativePath = getRelativePath(path, unit);
-    processedFiles.add(relativePath);
-    seenFiles.add(relativePath);
+    CompilationUnit newUnit = null;
+    try {
+      String relativePath = getRelativePath(path, unit);
+      processedFiles.add(relativePath);
+      seenFiles.add(relativePath);
 
-    CompilationUnit newUnit = TreeConverter.convertCompilationUnit(unit, path, source);
+      newUnit = TreeConverter.convertCompilationUnit(unit, path, source);
 
-    applyMutations(newUnit, deadCodeMap, ticker);
-    ticker.tick("Tree mutations");
+      applyMutations(newUnit, deadCodeMap, ticker);
+      ticker.tick("Tree mutations");
 
-    if (unit.types().isEmpty() && !newUnit.getMainTypeName().endsWith("package_info")) {
-      logger.finest("skipping dead file " + path);
-      return;
+      if (unit.types().isEmpty() && !newUnit.getMainTypeName().endsWith("package_info")) {
+        logger.finest("skipping dead file " + path);
+        return;
+      }
+
+      logger.finest("writing output file(s) to " + Options.getOutputDirectory().getAbsolutePath());
+
+      generateObjectiveCSource(newUnit, ticker);
+      ticker.tick("Source generation");
+
+      if (Options.buildClosure()) {
+        // Add out-of-date dependencies to translation list.
+        checkDependencies(newUnit);
+      }
+
+      OuterReferenceResolver.cleanup();
+    } finally {
+//      System.err.println("Exception while processing: " + path);
+//      System.err.println("Current compilation unit: " + newUnit);
     }
-
-    logger.finest("writing output file(s) to " + Options.getOutputDirectory().getAbsolutePath());
-
-    generateObjectiveCSource(newUnit, ticker);
-    ticker.tick("Source generation");
-
-    if (Options.buildClosure()) {
-      // Add out-of-date dependencies to translation list.
-      checkDependencies(newUnit);
-    }
-
-    OuterReferenceResolver.cleanup();
   }
 
   /**
@@ -387,6 +394,9 @@ class TranslationProcessor extends FileProcessor {
     // added in other phases may need added casts.
     new CastResolver().run(unit);
     ticker.tick("CastResolver");
+
+    new MappedNativeMethodRemover().run(unit);
+    ticker.tick("MappedNativeMethodRemover");
 
     for (Plugin plugin : Options.getPlugins()) {
       plugin.processUnit(unit);

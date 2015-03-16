@@ -17,7 +17,7 @@ import apple.uikit.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreGraphics")
+@Library("CoreGraphics/CoreGraphics.h")
 public class CGMutablePath 
     extends CGPath 
      {
@@ -48,71 +48,71 @@ public class CGMutablePath
      * @since Available in iOS 7.0 and later.
      */
     @GlobalFunction("CGPathAddRoundedRect")
-    public native void addRoundedRect(CGAffineTransform transform, CGRect rect, @MachineSizedFloat double cornerWidth, @MachineSizedFloat double cornerHeight);
+    public static native void addRoundedRect(CGMutablePath path, CGAffineTransform transform, CGRect rect, @MachineSizedFloat double cornerWidth, @MachineSizedFloat double cornerHeight);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGPathMoveToPoint")
-    public native void moveToPoint(CGAffineTransform m, @MachineSizedFloat double x, @MachineSizedFloat double y);
+    public static native void moveToPoint(CGMutablePath path, CGAffineTransform m, @MachineSizedFloat double x, @MachineSizedFloat double y);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGPathAddLineToPoint")
-    public native void addLineToPoint(CGAffineTransform m, @MachineSizedFloat double x, @MachineSizedFloat double y);
+    public static native void addLineToPoint(CGMutablePath path, CGAffineTransform m, @MachineSizedFloat double x, @MachineSizedFloat double y);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGPathAddQuadCurveToPoint")
-    public native void addQuadCurveToPoint(CGAffineTransform m, @MachineSizedFloat double cpx, @MachineSizedFloat double cpy, @MachineSizedFloat double x, @MachineSizedFloat double y);
+    public static native void addQuadCurveToPoint(CGMutablePath path, CGAffineTransform m, @MachineSizedFloat double cpx, @MachineSizedFloat double cpy, @MachineSizedFloat double x, @MachineSizedFloat double y);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGPathAddCurveToPoint")
-    public native void addCurveToPoint(CGAffineTransform m, @MachineSizedFloat double cp1x, @MachineSizedFloat double cp1y, @MachineSizedFloat double cp2x, @MachineSizedFloat double cp2y, @MachineSizedFloat double x, @MachineSizedFloat double y);
+    public static native void addCurveToPoint(CGMutablePath path, CGAffineTransform m, @MachineSizedFloat double cp1x, @MachineSizedFloat double cp1y, @MachineSizedFloat double cp2x, @MachineSizedFloat double cp2y, @MachineSizedFloat double x, @MachineSizedFloat double y);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGPathCloseSubpath")
-    public native void closeSubpath();
+    public static native void closeSubpath(CGMutablePath path);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGPathAddRect")
-    public native void addRect(CGAffineTransform m, CGRect rect);
+    public static native void addRect(CGMutablePath path, CGAffineTransform m, CGRect rect);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGPathAddRects")
-    protected native void addRects(CGAffineTransform m, CGRect rects, @MachineSizedUInt long count);
+    protected static native void addRects(CGMutablePath path, CGAffineTransform m, CGRect rects, @MachineSizedUInt long count);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGPathAddLines")
-    protected native void addLines(CGAffineTransform m, CGPoint points, @MachineSizedUInt long count);
+    protected static native void addLines(CGMutablePath path, CGAffineTransform m, CGPoint points, @MachineSizedUInt long count);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGPathAddEllipseInRect")
-    public native void addEllipseInRect(CGAffineTransform m, CGRect rect);
+    public static native void addEllipseInRect(CGMutablePath path, CGAffineTransform m, CGRect rect);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("CGPathAddRelativeArc")
-    public native void addRelativeArc(CGAffineTransform matrix, @MachineSizedFloat double x, @MachineSizedFloat double y, @MachineSizedFloat double radius, @MachineSizedFloat double startAngle, @MachineSizedFloat double delta);
+    public static native void addRelativeArc(CGMutablePath path, CGAffineTransform matrix, @MachineSizedFloat double x, @MachineSizedFloat double y, @MachineSizedFloat double radius, @MachineSizedFloat double startAngle, @MachineSizedFloat double delta);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGPathAddArc")
-    public native void addArc(CGAffineTransform m, @MachineSizedFloat double x, @MachineSizedFloat double y, @MachineSizedFloat double radius, @MachineSizedFloat double startAngle, @MachineSizedFloat double endAngle, boolean clockwise);
+    public static native void addArc(CGMutablePath path, CGAffineTransform m, @MachineSizedFloat double x, @MachineSizedFloat double y, @MachineSizedFloat double radius, @MachineSizedFloat double startAngle, @MachineSizedFloat double endAngle, boolean clockwise);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGPathAddArcToPoint")
-    public native void addArcToPoint(CGAffineTransform m, @MachineSizedFloat double x1, @MachineSizedFloat double y1, @MachineSizedFloat double x2, @MachineSizedFloat double y2, @MachineSizedFloat double radius);
+    public static native void addArcToPoint(CGMutablePath path, CGAffineTransform m, @MachineSizedFloat double x1, @MachineSizedFloat double y1, @MachineSizedFloat double x2, @MachineSizedFloat double y2, @MachineSizedFloat double radius);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGPathAddPath")
-    public native void addPath(CGAffineTransform m, CGPath path2);
+    public static native void addPath(CGMutablePath path1, CGAffineTransform m, CGPath path2);
     
 }

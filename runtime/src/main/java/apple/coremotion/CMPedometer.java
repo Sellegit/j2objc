@@ -19,7 +19,7 @@ import apple.foundation.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("CoreMotion") @Mapping("CMPedometer")
+@Library("CoreMotion/CoreMotion.h") @Mapping("CMPedometer")
 public class CMPedometer 
     extends NSObject 
      {

@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 
 
-@Mapping("MIDIPacketList") @Library("CoreMIDI")
+@Mapping("MIDIPacketList") @Library("CoreMIDI/CoreMIDI.h")
 public class MIDIPacketList 
     extends Struct 
      {
@@ -51,11 +51,11 @@ public class MIDIPacketList
      * @since Available in iOS 4.2 and later.
      */
     @GlobalFunction("MIDIPacketListInit")
-    public native MIDIPacket init();
+    public static native MIDIPacket init(MIDIPacketList pktlist);
     /**
      * @since Available in iOS 4.2 and later.
      */
     @GlobalFunction("MIDIPacketListAdd")
-    protected native MIDIPacket add(@MachineSizedUInt long listSize, MIDIPacket curPacket, long time, @MachineSizedUInt long nData, Todo data);
+    protected static native MIDIPacket add(MIDIPacketList pktlist, @MachineSizedUInt long listSize, MIDIPacket curPacket, long time, @MachineSizedUInt long nData, Todo data);
     
 }

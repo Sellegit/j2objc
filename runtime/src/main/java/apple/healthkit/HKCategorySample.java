@@ -19,7 +19,7 @@ import apple.foundation.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("HealthKit") @Mapping("HKCategorySample")
+@Library("HealthKit/HealthKit.h") @Mapping("HKCategorySample")
 public class HKCategorySample 
     extends HKSample 
      {

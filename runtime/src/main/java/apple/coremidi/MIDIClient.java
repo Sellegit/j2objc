@@ -16,7 +16,7 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreMIDI")
+@Library("CoreMIDI/CoreMIDI.h")
 public class MIDIClient 
     extends MIDIObject 
      {
@@ -37,6 +37,6 @@ public class MIDIClient
      * @since Available in iOS 4.2 and later.
      */
     @GlobalFunction("MIDIClientDispose")
-    public native MIDIError dispose();
+    public static native MIDIError dispose(MIDIClient client);
     
 }

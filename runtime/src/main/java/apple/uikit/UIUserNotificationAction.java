@@ -24,7 +24,7 @@ import apple.corelocation.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("UIKit") @Mapping("UIUserNotificationAction")
+@Library("UIKit/UIKit.h") @Mapping("UIUserNotificationAction")
 public class UIUserNotificationAction 
     extends NSObject 
     implements NSCopying {

@@ -19,7 +19,7 @@ import apple.addressbook.*;
 
 
 
-@Library("PassKit") @Mapping("PKPaymentAuthorizationViewControllerDelegate")
+@Library("PassKit/PassKit.h") @Mapping("PKPaymentAuthorizationViewControllerDelegate")
 public interface PKPaymentAuthorizationViewControllerDelegate 
     extends NSObjectProtocol {
 

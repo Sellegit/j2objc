@@ -25,7 +25,7 @@ import apple.mediatoolbox.*;
  * @since Available in iOS 4.0 and later.
  */
 
-@Library("AVFoundation") @Mapping("AVAudioMix")
+@Library("AVFoundation/AVFoundation.h") @Mapping("AVAudioMix")
 public class AVAudioMix 
     extends NSObject 
     implements NSCopying {

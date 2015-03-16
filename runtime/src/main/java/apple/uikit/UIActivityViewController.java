@@ -24,7 +24,7 @@ import apple.corelocation.*;
  * @since Available in iOS 6.0 and later.
  */
 
-@Library("UIKit") @Mapping("UIActivityViewController")
+@Library("UIKit/UIKit.h") @Mapping("UIActivityViewController")
 public class UIActivityViewController 
     extends UIViewController 
      {

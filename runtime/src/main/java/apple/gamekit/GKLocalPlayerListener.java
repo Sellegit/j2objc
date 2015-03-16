@@ -18,7 +18,7 @@ import apple.uikit.*;
 
 
 
-@Library("GameKit") @Mapping("GKLocalPlayerListener")
+@Library("GameKit/GameKit.h") @Mapping("GKLocalPlayerListener")
 public interface GKLocalPlayerListener 
     extends GKChallengeListener, GKInviteEventListener, GKTurnBasedEventListener, GKSavedGameListener {
 

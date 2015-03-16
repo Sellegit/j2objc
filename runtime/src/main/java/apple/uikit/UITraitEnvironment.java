@@ -22,7 +22,7 @@ import apple.corelocation.*;
 
 
 
-@Library("UIKit") @Mapping("UITraitEnvironment")
+@Library("UIKit/UIKit.h") @Mapping("UITraitEnvironment")
 public interface UITraitEnvironment 
     extends NSObjectProtocol {
 

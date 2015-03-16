@@ -18,7 +18,7 @@ import apple.uikit.*;
 
 
 
-@Library("MediaPlayer") @Mapping("MPMediaPlayback")
+@Library("MediaPlayer/MediaPlayer.h") @Mapping("MPMediaPlayback")
 public interface MPMediaPlayback 
      {
 

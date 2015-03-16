@@ -22,7 +22,7 @@ import apple.dispatch.*;
 
 
 
-@Library("Foundation") @Mapping("NSStreamDelegate")
+@Library("Foundation/Foundation.h") @Mapping("NSStreamDelegate")
 public interface NSStreamDelegate 
     extends NSObjectProtocol {
 

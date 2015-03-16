@@ -22,7 +22,7 @@ import apple.corelocation.*;
 
 
 
-@Library("UIKit") @Mapping("UICollectionViewDelegateFlowLayout")
+@Library("UIKit/UIKit.h") @Mapping("UICollectionViewDelegateFlowLayout")
 public interface UICollectionViewDelegateFlowLayout 
     extends UICollectionViewDelegate {
 

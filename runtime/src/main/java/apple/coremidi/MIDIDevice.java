@@ -16,7 +16,7 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreMIDI")
+@Library("CoreMIDI/CoreMIDI.h")
 public class MIDIDevice 
     extends MIDIObject 
      {
@@ -32,22 +32,22 @@ public class MIDIDevice
      * @since Available in iOS 4.2 and later.
      */
     @GlobalFunction("MIDIDeviceGetNumberOfEntities")
-    public native @MachineSizedUInt long getNumberOfEntities();
+    public static native @MachineSizedUInt long getNumberOfEntities(MIDIDevice device);
     /**
      * @since Available in iOS 4.2 and later.
      */
     @GlobalFunction("MIDIDeviceGetEntity")
-    public native MIDIEntity getEntity(@MachineSizedUInt long entityIndex0);
+    public static native MIDIEntity getEntity(MIDIDevice device, @MachineSizedUInt long entityIndex0);
     /**
      * @since Available in iOS 4.2 and later.
      */
     @GlobalFunction("MIDIDeviceAddEntity")
-    protected native MIDIError addEntity(String name, boolean embedded, @MachineSizedUInt long numSourceEndpoints, @MachineSizedUInt long numDestinationEndpoints, Todo newEntity);
+    protected static native MIDIError addEntity(MIDIDevice device, String name, boolean embedded, @MachineSizedUInt long numSourceEndpoints, @MachineSizedUInt long numDestinationEndpoints, Todo newEntity);
     /**
      * @since Available in iOS 4.2 and later.
      */
     @GlobalFunction("MIDIDeviceRemoveEntity")
-    public native MIDIError removeEntity(MIDIEntity entity);
+    public static native MIDIError removeEntity(MIDIDevice device, MIDIEntity entity);
     /**
      * @since Available in iOS 4.2 and later.
      */
@@ -62,6 +62,6 @@ public class MIDIDevice
      * @since Available in iOS 4.2 and later.
      */
     @GlobalFunction("MIDIDeviceDispose")
-    public native MIDIError dispose();
+    public static native MIDIError dispose(MIDIDevice device);
     
 }

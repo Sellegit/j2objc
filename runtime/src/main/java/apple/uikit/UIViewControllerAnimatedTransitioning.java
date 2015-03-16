@@ -22,7 +22,7 @@ import apple.corelocation.*;
 
 
 
-@Library("UIKit") @Mapping("UIViewControllerAnimatedTransitioning")
+@Library("UIKit/UIKit.h") @Mapping("UIViewControllerAnimatedTransitioning")
 public interface UIViewControllerAnimatedTransitioning 
     extends NSObjectProtocol {
 

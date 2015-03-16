@@ -22,7 +22,7 @@ import apple.dispatch.*;
 
 
 
-@Library("Foundation")
+@Library("Foundation/Foundation.h")
 @Mapping("NSNumberFormatterRoundingMode")
 public final class NSNumberFormatterRoundingMode extends ObjCEnum {
     

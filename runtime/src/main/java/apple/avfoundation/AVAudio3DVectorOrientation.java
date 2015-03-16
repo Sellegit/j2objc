@@ -23,7 +23,7 @@ import apple.mediatoolbox.*;
 
 
 
-@Mapping("AVAudio3DVectorOrientation")
+@Mapping("AVAudio3DVectorOrientation") @Library("AVFoundation/AVFoundation.h")
 public class AVAudio3DVectorOrientation 
     extends Struct 
      {

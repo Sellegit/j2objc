@@ -22,7 +22,7 @@ import apple.dispatch.*;
 
 
 
-@Library("Foundation") @Mapping("NSURLSessionUploadTask")
+@Library("Foundation/Foundation.h") @Mapping("NSURLSessionUploadTask")
 public class NSURLSessionUploadTask 
     extends NSURLSessionDataTask 
      {

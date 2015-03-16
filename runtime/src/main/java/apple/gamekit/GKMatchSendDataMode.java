@@ -18,7 +18,7 @@ import apple.uikit.*;
 
 
 
-@Library("GameKit")
+@Library("GameKit/GameKit.h")
 @Mapping("GKMatchSendDataMode")
 public final class GKMatchSendDataMode extends ObjCEnum {
     

@@ -22,7 +22,7 @@ import apple.uikit.*;
  */
 @Deprecated
 
-@Library("GameKit") @Mapping("GKVoiceChatService")
+@Library("GameKit/GameKit.h") @Mapping("GKVoiceChatService")
 public class GKVoiceChatService 
     extends NSObject 
      {

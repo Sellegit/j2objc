@@ -24,7 +24,7 @@ import apple.corelocation.*;
  * @since Available in iOS 2.0 and later.
  */
 
-@Library("UIKit") @Mapping("UISwitch")
+@Library("UIKit/UIKit.h") @Mapping("UISwitch")
 public class UISwitch 
     extends UIControl 
     implements NSCoding {

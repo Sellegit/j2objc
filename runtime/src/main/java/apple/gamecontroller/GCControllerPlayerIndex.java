@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 
 
-@Library("GameController")
+@Library("GameController/GameController.h")
 @Mapping("GCControllerPlayerIndex")
 public final class GCControllerPlayerIndex extends ObjCEnum {
     

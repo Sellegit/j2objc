@@ -20,7 +20,7 @@ import apple.coremedia.*;
 
 
 
-@Mapping("CAFStringID")
+@Mapping("CAFStringID") @Library("AudioToolbox/AudioToolbox.h")
 public class CAFStringID 
     extends Struct 
      {
@@ -39,14 +39,14 @@ public class CAFStringID
         return __new;
     ]-*/;
     public static native CAFStringID copyWithmStringID(CAFStringID original, int mStringID) /*-[
-        original.mStringID = mStringID;
-        return original;
+        CAFStringID __new = { .mStringID = mStringID, .mStringStartByteOffset = original.mStringStartByteOffset };
+        return __new;
     ]-*/;
 
     
     public static native CAFStringID copyWithmStringStartByteOffset(CAFStringID original, long mStringStartByteOffset) /*-[
-        original.mStringStartByteOffset = mStringStartByteOffset;
-        return original;
+        CAFStringID __new = { .mStringID = original.mStringID, .mStringStartByteOffset = mStringStartByteOffset };
+        return __new;
     ]-*/;
 
     

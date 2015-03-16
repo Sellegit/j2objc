@@ -18,7 +18,7 @@ import apple.uikit.*;
 
 
 
-@Library("GameKit") @Mapping("GKMatchmakerViewControllerDelegate")
+@Library("GameKit/GameKit.h") @Mapping("GKMatchmakerViewControllerDelegate")
 public interface GKMatchmakerViewControllerDelegate 
     extends NSObjectProtocol {
 

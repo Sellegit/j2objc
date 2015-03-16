@@ -25,7 +25,7 @@ import apple.mediatoolbox.*;
  * @since Available in iOS 7.0 and later.
  */
 
-@Library("AVFoundation") @Mapping("AVCaptureDeviceFormat")
+@Library("AVFoundation/AVFoundation.h") @Mapping("AVCaptureDeviceFormat")
 public class AVCaptureDeviceFormat 
     extends NSObject 
      {

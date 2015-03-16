@@ -24,7 +24,7 @@ import apple.dispatch.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("Foundation") @Mapping("NSUserActivityDelegate")
+@Library("Foundation/Foundation.h") @Mapping("NSUserActivityDelegate")
 public interface NSUserActivityDelegate 
     extends NSObjectProtocol {
 

@@ -20,7 +20,7 @@ import apple.metal.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("QuartzCore")
+@Library("QuartzCore/QuartzCore.h")
 public class CAMediaTimingFunctionName 
     extends Object 
      {

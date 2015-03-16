@@ -22,7 +22,7 @@ import apple.dispatch.*;
 
 
 
-@Library("Foundation") @Mapping("NSDecimalNumberHandler")
+@Library("Foundation/Foundation.h") @Mapping("NSDecimalNumberHandler")
 public class NSDecimalNumberHandler 
     extends NSObject 
     implements NSDecimalNumberBehaviors, NSCoding {

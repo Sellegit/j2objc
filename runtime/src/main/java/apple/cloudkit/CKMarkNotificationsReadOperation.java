@@ -20,7 +20,7 @@ import apple.corelocation.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("CloudKit") @Mapping("CKMarkNotificationsReadOperation")
+@Library("CloudKit/CloudKit.h") @Mapping("CKMarkNotificationsReadOperation")
 public class CKMarkNotificationsReadOperation 
     extends CKOperation 
      {

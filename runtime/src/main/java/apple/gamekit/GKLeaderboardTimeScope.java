@@ -18,7 +18,7 @@ import apple.uikit.*;
 
 
 
-@Library("GameKit")
+@Library("GameKit/GameKit.h")
 @Mapping("GKLeaderboardTimeScope")
 public final class GKLeaderboardTimeScope extends ObjCEnum {
     

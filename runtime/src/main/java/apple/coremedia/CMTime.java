@@ -21,7 +21,7 @@ import apple.corevideo.*;
 
 
 
-@Mapping("CMTime") @Library("CoreMedia")
+@Mapping("CMTime") @Library("CoreMedia/CoreMedia.h")
 public class CMTime 
     extends Struct 
      {
@@ -114,62 +114,62 @@ public class CMTime
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMTimeGetSeconds")
-    public native double getSeconds();
+    public static native double getSeconds(CMTime time);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMTimeConvertScale")
-    public native CMTime convertScale(int newTimescale, CMTimeRoundingMethod method);
+    public static native CMTime convertScale(CMTime time, int newTimescale, CMTimeRoundingMethod method);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMTimeAdd")
-    public native CMTime add(CMTime addend2);
+    public static native CMTime add(CMTime addend1, CMTime addend2);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMTimeSubtract")
-    public native CMTime subtract(CMTime subtrahend);
+    public static native CMTime subtract(CMTime minuend, CMTime subtrahend);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMTimeMultiply")
-    public native CMTime multiply(int multiplier);
+    public static native CMTime multiply(CMTime time, int multiplier);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMTimeMultiplyByFloat64")
-    public native CMTime multiplyByFloat64(double multiplier);
+    public static native CMTime multiplyByFloat64(CMTime time, double multiplier);
     /**
      * @since Available in iOS 7.1 and later.
      */
     @GlobalFunction("CMTimeMultiplyByRatio")
-    public native CMTime multiplyByRatio(int multiplier, int divisor);
+    public static native CMTime multiplyByRatio(CMTime time, int multiplier, int divisor);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMTimeCompare")
-    public native int compare(CMTime time2);
+    public static native int compare(CMTime time1, CMTime time2);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMTimeMinimum")
-    public native CMTime minimum(CMTime time2);
+    public static native CMTime minimum(CMTime time1, CMTime time2);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMTimeMaximum")
-    public native CMTime maximum(CMTime time2);
+    public static native CMTime maximum(CMTime time1, CMTime time2);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMTimeAbsoluteValue")
-    public native CMTime absoluteValue();
+    public static native CMTime absoluteValue(CMTime time);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMTimeCopyAsDictionary")
-    public native NSDictionary<?, ?> asDictionary(CFAllocator allocator);
+    public static native NSDictionary<?, ?> asDictionary(CMTime time, CFAllocator allocator);
     /**
      * @since Available in iOS 4.0 and later.
      */
@@ -184,21 +184,21 @@ public class CMTime
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMTimeShow")
-    public native void show();
+    public static native void show(CMTime time);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMTimeMapTimeFromRangeToRange")
-    public native CMTime mapTimeFromRangeToRange(CMTimeRange fromRange, CMTimeRange toRange);
+    public static native CMTime mapTimeFromRangeToRange(CMTime t, CMTimeRange fromRange, CMTimeRange toRange);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMTimeClampToRange")
-    public native CMTime clampToRange(CMTimeRange range);
+    public static native CMTime clampToRange(CMTime time, CMTimeRange range);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMTimeMapDurationFromRangeToRange")
-    public native CMTime mapDurationFromRangeToRange(CMTimeRange fromRange, CMTimeRange toRange);
+    public static native CMTime mapDurationFromRangeToRange(CMTime dur, CMTimeRange fromRange, CMTimeRange toRange);
     
 }

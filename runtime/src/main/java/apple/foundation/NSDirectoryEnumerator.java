@@ -22,7 +22,7 @@ import apple.dispatch.*;
 
 
 
-@Library("Foundation") @Mapping("NSDirectoryEnumerator")
+@Library("Foundation/Foundation.h") @Mapping("NSDirectoryEnumerator")
 public class NSDirectoryEnumerator 
     extends NSEnumerator 
      {

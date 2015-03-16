@@ -23,7 +23,7 @@ import apple.mediatoolbox.*;
 
 
 
-@Library("AVFoundation") @Mapping("AVAudioSessionDelegate")
+@Library("AVFoundation/AVFoundation.h") @Mapping("AVAudioSessionDelegate")
 public interface AVAudioSessionDelegate 
     extends NSObjectProtocol {
 

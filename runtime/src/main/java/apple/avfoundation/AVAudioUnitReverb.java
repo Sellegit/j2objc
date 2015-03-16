@@ -25,7 +25,7 @@ import apple.mediatoolbox.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("AVFoundation") @Mapping("AVAudioUnitReverb")
+@Library("AVFoundation/AVFoundation.h") @Mapping("AVAudioUnitReverb")
 public class AVAudioUnitReverb 
     extends AVAudioUnitEffect 
      {

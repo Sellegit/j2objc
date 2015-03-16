@@ -20,7 +20,7 @@ import apple.uikit.*;
  * @since Available in iOS 5.0 and later.
  */
 
-@Library("GameKit") @Mapping("GKTurnBasedMatchmakerViewController")
+@Library("GameKit/GameKit.h") @Mapping("GKTurnBasedMatchmakerViewController")
 public class GKTurnBasedMatchmakerViewController 
     extends UINavigationController 
      {

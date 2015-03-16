@@ -22,7 +22,7 @@ import apple.corelocation.*;
 
 
 
-@Library("UIKit")
+@Library("UIKit/UIKit.h")
 @Mapping("UICollectionElementCategory")
 public final class UICollectionElementCategory extends ObjCEnum {
     

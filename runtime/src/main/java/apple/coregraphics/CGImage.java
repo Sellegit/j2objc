@@ -17,7 +17,7 @@ import apple.uikit.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreGraphics")
+@Library("CoreGraphics/CoreGraphics.h")
 public class CGImage 
     extends CFType 
      {
@@ -83,66 +83,66 @@ public class CGImage
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGImageIsMask")
-    public native boolean isMask();
+    public static native boolean isMask(CGImage image);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGImageGetWidth")
-    public native @MachineSizedUInt long getWidth();
+    public static native @MachineSizedUInt long getWidth(CGImage image);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGImageGetHeight")
-    public native @MachineSizedUInt long getHeight();
+    public static native @MachineSizedUInt long getHeight(CGImage image);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGImageGetBitsPerComponent")
-    public native @MachineSizedUInt long getBitsPerComponent();
+    public static native @MachineSizedUInt long getBitsPerComponent(CGImage image);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGImageGetBitsPerPixel")
-    public native @MachineSizedUInt long getBitsPerPixel();
+    public static native @MachineSizedUInt long getBitsPerPixel(CGImage image);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGImageGetBytesPerRow")
-    public native @MachineSizedUInt long getBytesPerRow();
+    public static native @MachineSizedUInt long getBytesPerRow(CGImage image);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGImageGetColorSpace")
-    public native CGColorSpace getColorSpace();
+    public static native CGColorSpace getColorSpace(CGImage image);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGImageGetAlphaInfo")
-    public native CGImageAlphaInfo getAlphaInfo();
+    public static native CGImageAlphaInfo getAlphaInfo(CGImage image);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGImageGetDataProvider")
-    public native CGDataProvider getDataProvider();
+    public static native CGDataProvider getDataProvider(CGImage image);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGImageGetDecode")
-    public native Todo getDecode();
+    public static native Todo getDecode(CGImage image);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGImageGetShouldInterpolate")
-    public native boolean getShouldInterpolate();
+    public static native boolean getShouldInterpolate(CGImage image);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGImageGetRenderingIntent")
-    public native CGColorRenderingIntent getRenderingIntent();
+    public static native CGColorRenderingIntent getRenderingIntent(CGImage image);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGImageGetBitmapInfo")
-    public native CGBitmapInfo getBitmapInfo();
+    public static native CGBitmapInfo getBitmapInfo(CGImage image);
     
 }

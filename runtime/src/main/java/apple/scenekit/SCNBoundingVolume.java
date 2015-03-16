@@ -23,7 +23,7 @@ import apple.opengles.*;
 
 
 
-@Library("SceneKit") @Mapping("SCNBoundingVolume")
+@Library("SceneKit/SceneKit.h") @Mapping("SCNBoundingVolume")
 public interface SCNBoundingVolume 
     extends NSObjectProtocol {
 

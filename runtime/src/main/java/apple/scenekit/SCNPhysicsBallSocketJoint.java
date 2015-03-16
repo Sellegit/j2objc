@@ -23,7 +23,7 @@ import apple.opengles.*;
 
 
 
-@Library("SceneKit") @Mapping("SCNPhysicsBallSocketJoint")
+@Library("SceneKit/SceneKit.h") @Mapping("SCNPhysicsBallSocketJoint")
 public class SCNPhysicsBallSocketJoint 
     extends SCNPhysicsBehavior 
      {

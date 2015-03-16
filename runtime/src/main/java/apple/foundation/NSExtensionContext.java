@@ -24,7 +24,7 @@ import apple.dispatch.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("Foundation") @Mapping("NSExtensionContext")
+@Library("Foundation/Foundation.h") @Mapping("NSExtensionContext")
 public class NSExtensionContext 
     extends NSObject 
      {

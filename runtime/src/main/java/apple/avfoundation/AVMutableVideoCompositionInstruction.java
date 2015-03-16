@@ -25,7 +25,7 @@ import apple.mediatoolbox.*;
  * @since Available in iOS 4.0 and later.
  */
 
-@Library("AVFoundation") @Mapping("AVMutableVideoCompositionInstruction")
+@Library("AVFoundation/AVFoundation.h") @Mapping("AVMutableVideoCompositionInstruction")
 public class AVMutableVideoCompositionInstruction 
     extends AVVideoCompositionInstruction 
      {

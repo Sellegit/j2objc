@@ -22,7 +22,7 @@ import apple.avfoundation.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("Photos") @Mapping("PHFetchResult")
+@Library("Photos/Photos.h") @Mapping("PHFetchResult")
 public class PHFetchResult 
     extends NSObject 
     implements NSCopying, NSFastEnumeration {

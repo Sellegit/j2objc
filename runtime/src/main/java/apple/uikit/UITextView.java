@@ -24,7 +24,7 @@ import apple.corelocation.*;
  * @since Available in iOS 2.0 and later.
  */
 
-@Library("UIKit") @Mapping("UITextView")
+@Library("UIKit/UIKit.h") @Mapping("UITextView")
 public class UITextView 
     extends UIScrollView 
     implements UITextInput {

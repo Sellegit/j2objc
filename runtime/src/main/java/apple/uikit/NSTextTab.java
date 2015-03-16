@@ -24,7 +24,7 @@ import apple.corelocation.*;
  * @since Available in iOS 7.0 and later.
  */
 
-@Library("UIKit") @Mapping("NSTextTab")
+@Library("UIKit/UIKit.h") @Mapping("NSTextTab")
 public class NSTextTab 
     extends NSObject 
     implements NSCopying, NSCoding {

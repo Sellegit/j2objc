@@ -21,7 +21,7 @@ import apple.corevideo.*;
 
 
 
-@Mapping("CMBufferCallbacksStruct")
+@Mapping("CMBufferCallbacksStruct") @Library("CoreMedia/CoreMedia.h")
  class CMBufferCallbacksStruct 
     extends Struct 
      {

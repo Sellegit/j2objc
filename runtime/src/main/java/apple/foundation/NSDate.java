@@ -22,7 +22,7 @@ import apple.dispatch.*;
 
 
 
-@Library("Foundation") @Mapping("NSDate")
+@Library("Foundation/Foundation.h") @Mapping("NSDate")
 public class NSDate 
     extends NSObject 
     implements NSPropertyList {

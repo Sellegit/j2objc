@@ -22,7 +22,7 @@ import apple.dispatch.*;
 
 
 
-@Library("Foundation") @Mapping("NSURLSessionTaskDelegate")
+@Library("Foundation/Foundation.h") @Mapping("NSURLSessionTaskDelegate")
 public interface NSURLSessionTaskDelegate 
     extends NSURLSessionDelegate {
 

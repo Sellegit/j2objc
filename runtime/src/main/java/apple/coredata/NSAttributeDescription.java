@@ -19,7 +19,7 @@ import apple.foundation.*;
  * @since Available in iOS 3.0 and later.
  */
 
-@Library("CoreData") @Mapping("NSAttributeDescription")
+@Library("CoreData/CoreData.h") @Mapping("NSAttributeDescription")
 public class NSAttributeDescription 
     extends NSPropertyDescription 
      {

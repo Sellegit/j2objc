@@ -19,7 +19,7 @@ import apple.foundation.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("HealthKit") @Mapping("HKWorkout")
+@Library("HealthKit/HealthKit.h") @Mapping("HKWorkout")
 public class HKWorkout 
     extends HKSample 
      {

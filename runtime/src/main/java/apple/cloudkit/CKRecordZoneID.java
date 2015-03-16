@@ -20,7 +20,7 @@ import apple.corelocation.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("CloudKit") @Mapping("CKRecordZoneID")
+@Library("CloudKit/CloudKit.h") @Mapping("CKRecordZoneID")
 public class CKRecordZoneID 
     extends NSObject 
     implements NSCopying {

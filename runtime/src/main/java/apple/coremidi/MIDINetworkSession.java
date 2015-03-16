@@ -19,7 +19,7 @@ import apple.foundation.*;
  * @since Available in iOS 4.2 and later.
  */
 
-@Library("CoreMIDI") @Mapping("MIDINetworkSession")
+@Library("CoreMIDI/CoreMIDI.h") @Mapping("MIDINetworkSession")
 public class MIDINetworkSession 
     extends NSObject 
      {

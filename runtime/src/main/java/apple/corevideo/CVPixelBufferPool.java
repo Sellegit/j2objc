@@ -19,7 +19,7 @@ import apple.metal.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreVideo")
+@Library("CoreVideo/CoreVideo.h")
 public class CVPixelBufferPool 
     extends CFType 
      {
@@ -43,12 +43,12 @@ public class CVPixelBufferPool
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CVPixelBufferPoolGetAttributes")
-    public native NSDictionary<NSString, ?> getAttributes();
+    public static native NSDictionary<NSString, ?> getAttributes(CVPixelBufferPool pool);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CVPixelBufferPoolGetPixelBufferAttributes")
-    public native NSDictionary<NSString, ?> getPixelBufferAttributes();
+    public static native NSDictionary<NSString, ?> getPixelBufferAttributes(CVPixelBufferPool pool);
     /**
      * @since Available in iOS 4.0 and later.
      */

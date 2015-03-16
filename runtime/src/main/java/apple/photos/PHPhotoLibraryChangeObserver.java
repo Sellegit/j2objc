@@ -22,7 +22,7 @@ import apple.avfoundation.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("Photos") @Mapping("PHPhotoLibraryChangeObserver")
+@Library("Photos/Photos.h") @Mapping("PHPhotoLibraryChangeObserver")
 public interface PHPhotoLibraryChangeObserver 
     extends NSObjectProtocol {
 

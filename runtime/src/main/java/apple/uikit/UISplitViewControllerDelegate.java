@@ -22,7 +22,7 @@ import apple.corelocation.*;
 
 
 
-@Library("UIKit") @Mapping("UISplitViewControllerDelegate")
+@Library("UIKit/UIKit.h") @Mapping("UISplitViewControllerDelegate")
 public interface UISplitViewControllerDelegate 
      {
 

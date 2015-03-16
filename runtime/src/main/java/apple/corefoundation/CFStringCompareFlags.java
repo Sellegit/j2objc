@@ -18,7 +18,7 @@ import apple.foundation.*;
 
 
 
-@Library("CoreFoundation")
+@Library("CoreFoundation/CoreFoundation.h")
 @Mapping("CFStringCompareFlags")
 public final class CFStringCompareFlags extends ObjCEnum {
     

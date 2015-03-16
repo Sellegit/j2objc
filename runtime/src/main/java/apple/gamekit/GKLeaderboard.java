@@ -20,7 +20,7 @@ import apple.uikit.*;
  * @since Available in iOS 4.1 and later.
  */
 
-@Library("GameKit") @Mapping("GKLeaderboard")
+@Library("GameKit/GameKit.h") @Mapping("GKLeaderboard")
 public class GKLeaderboard 
     extends NSObject 
      {

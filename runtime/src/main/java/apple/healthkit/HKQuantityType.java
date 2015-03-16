@@ -19,7 +19,7 @@ import apple.foundation.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("HealthKit") @Mapping("HKQuantityType")
+@Library("HealthKit/HealthKit.h") @Mapping("HKQuantityType")
 public class HKQuantityType 
     extends HKSampleType 
      {

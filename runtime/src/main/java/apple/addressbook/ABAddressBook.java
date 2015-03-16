@@ -16,7 +16,7 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("AddressBook")
+@Library("AddressBook/AddressBook.h")
 public class ABAddressBook 
     extends CFType 
      {
@@ -47,66 +47,66 @@ public class ABAddressBook
      * @since Available in iOS 6.0 and later.
      */
     @GlobalFunction("ABAddressBookRequestAccessWithCompletion")
-    public native void requestAccess(FunctionPtr completion);
+    public static native void requestAccess(ABAddressBook addressBook, FunctionPtr completion);
     @GlobalFunction("ABAddressBookSave")
-    protected native boolean save(Todo error);
+    protected static native boolean save(ABAddressBook addressBook, Todo error);
     @GlobalFunction("ABAddressBookHasUnsavedChanges")
-    public native boolean hasUnsavedChanges();
+    public static native boolean hasUnsavedChanges(ABAddressBook addressBook);
     @GlobalFunction("ABAddressBookAddRecord")
-    protected native boolean addRecord(ABRecord record, Todo error);
+    protected static native boolean addRecord(ABAddressBook addressBook, ABRecord record, Todo error);
     @GlobalFunction("ABAddressBookRemoveRecord")
-    protected native boolean removeRecord(ABRecord record, Todo error);
+    protected static native boolean removeRecord(ABAddressBook addressBook, ABRecord record, Todo error);
     @GlobalFunction("ABAddressBookCopyLocalizedLabel")
     public static native String getLocalizedLabel(String label);
     @GlobalFunction("ABAddressBookRegisterExternalChangeCallback")
-    protected native void registerExternalChangeCallback(FunctionPtr callback, Todo context);
+    protected static native void registerExternalChangeCallback(ABAddressBook addressBook, FunctionPtr callback, Todo context);
     @GlobalFunction("ABAddressBookUnregisterExternalChangeCallback")
-    protected native void unregisterExternalChangeCallback(FunctionPtr callback, Todo context);
+    protected static native void unregisterExternalChangeCallback(ABAddressBook addressBook, FunctionPtr callback, Todo context);
     @GlobalFunction("ABAddressBookRevert")
-    public native void revert();
+    public static native void revert(ABAddressBook addressBook);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("ABAddressBookCopyDefaultSource")
-    public native ABRecord getDefaultSource();
+    public static native ABRecord getDefaultSource(ABAddressBook addressBook);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("ABAddressBookGetSourceWithRecordID")
-    public native ABRecord getSource(int sourceID);
+    public static native ABRecord getSource(ABAddressBook addressBook, int sourceID);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("ABAddressBookCopyArrayOfAllSources")
-    public native NSArray<?> getAllSources();
+    public static native NSArray<?> getAllSources(ABAddressBook addressBook);
     @GlobalFunction("ABAddressBookGetPersonCount")
-    public native @MachineSizedSInt long getPersonCount();
+    public static native @MachineSizedSInt long getPersonCount(ABAddressBook addressBook);
     @GlobalFunction("ABAddressBookGetPersonWithRecordID")
-    public native ABPerson getPerson(int recordID);
+    public static native ABPerson getPerson(ABAddressBook addressBook, int recordID);
     @GlobalFunction("ABAddressBookCopyArrayOfAllPeople")
-    public native List<ABPerson> getAllPeople();
+    public static native List<ABPerson> getAllPeople(ABAddressBook addressBook);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("ABAddressBookCopyArrayOfAllPeopleInSource")
-    public native List<ABPerson> getAllPeopleInSource(ABRecord source);
+    public static native List<ABPerson> getAllPeopleInSource(ABAddressBook addressBook, ABRecord source);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("ABAddressBookCopyArrayOfAllPeopleInSourceWithSortOrdering")
-    public native List<ABPerson> getAllPeopleInSource(ABRecord source, ABPersonSortOrdering sortOrdering);
+    public static native List<ABPerson> getAllPeopleInSource(ABAddressBook addressBook, ABRecord source, ABPersonSortOrdering sortOrdering);
     @GlobalFunction("ABAddressBookCopyPeopleWithName")
-    public native List<ABPerson> getPeople(String name);
+    public static native List<ABPerson> getPeople(ABAddressBook addressBook, String name);
     @GlobalFunction("ABAddressBookGetGroupWithRecordID")
-    public native ABGroup getGroup(int recordID);
+    public static native ABGroup getGroup(ABAddressBook addressBook, int recordID);
     @GlobalFunction("ABAddressBookGetGroupCount")
-    public native @MachineSizedSInt long getGroupCount();
+    public static native @MachineSizedSInt long getGroupCount(ABAddressBook addressBook);
     @GlobalFunction("ABAddressBookCopyArrayOfAllGroups")
-    public native List<ABGroup> getAllGroups();
+    public static native List<ABGroup> getAllGroups(ABAddressBook addressBook);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("ABAddressBookCopyArrayOfAllGroupsInSource")
-    public native List<ABGroup> getAllGroupsInSource(ABRecord source);
+    public static native List<ABGroup> getAllGroupsInSource(ABAddressBook addressBook, ABRecord source);
     
 }

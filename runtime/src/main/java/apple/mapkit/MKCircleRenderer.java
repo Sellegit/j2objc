@@ -22,7 +22,7 @@ import apple.dispatch.*;
  * @since Available in iOS 7.0 and later.
  */
 
-@Library("MapKit") @Mapping("MKCircleRenderer")
+@Library("MapKit/MapKit.h") @Mapping("MKCircleRenderer")
 public class MKCircleRenderer 
     extends MKOverlayPathRenderer 
      {

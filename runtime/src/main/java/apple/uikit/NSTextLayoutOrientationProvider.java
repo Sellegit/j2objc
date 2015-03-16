@@ -22,7 +22,7 @@ import apple.corelocation.*;
 
 
 
-@Library("UIKit") @Mapping("NSTextLayoutOrientationProvider")
+@Library("UIKit/UIKit.h") @Mapping("NSTextLayoutOrientationProvider")
 public interface NSTextLayoutOrientationProvider 
      {
 

@@ -19,7 +19,7 @@ import apple.corebluetooth.*;
 
 
 
-@Library("CoreLocation")
+@Library("CoreLocation/CoreLocation.h")
 @Mapping("CLErrorCode")
 public final class CLErrorCode extends ObjCEnum {
     

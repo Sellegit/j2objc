@@ -50,12 +50,14 @@ import com.google.devtools.j2objc.types.IOSMethod;
 import com.google.devtools.j2objc.types.IOSMethodBinding;
 import com.google.devtools.j2objc.types.IOSParameter;
 import com.google.devtools.j2objc.util.BindingUtil;
+import com.google.devtools.j2objc.util.ErrorUtil;
 import com.google.devtools.j2objc.util.NameTable;
 
 import org.eclipse.jdt.core.dom.IMethodBinding;
 import org.eclipse.jdt.core.dom.ITypeBinding;
 import org.eclipse.jdt.core.dom.IVariableBinding;
 import org.eclipse.jdt.core.dom.Modifier;
+import org.eclipse.jdt.internal.compiler.lookup.Binding;
 
 import java.text.BreakIterator;
 import java.util.Iterator;
@@ -157,6 +159,7 @@ public abstract class ObjectiveCSourceFileGenerator extends SourceFileGenerator 
 
   protected void printMethod(MethodDeclaration m) {
     IMethodBinding binding = m.getMethodBinding();
+
     IOSMethod iosMethod = IOSMethodBinding.getIOSMethod(binding);
     if (iosMethod != null) {
       printMappedMethodDeclaration(m, iosMethod);

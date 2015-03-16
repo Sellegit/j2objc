@@ -24,7 +24,7 @@ import apple.dispatch.*;
  * @since Available in iOS 5.0 and later.
  */
 
-@Library("Foundation") @Mapping("NSUbiquitousKeyValueStore")
+@Library("Foundation/Foundation.h") @Mapping("NSUbiquitousKeyValueStore")
 public class NSUbiquitousKeyValueStore 
     extends NSObject 
      {

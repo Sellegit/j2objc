@@ -21,7 +21,7 @@ import apple.accounts.*;
  * @since Available in iOS 3.0 and later.
  */
 
-@Library("StoreKit") @Mapping("SKProductsRequest")
+@Library("StoreKit/StoreKit.h") @Mapping("SKProductsRequest")
 public class SKProductsRequest 
     extends SKRequest 
      {

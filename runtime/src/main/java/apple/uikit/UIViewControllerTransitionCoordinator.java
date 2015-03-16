@@ -22,7 +22,7 @@ import apple.corelocation.*;
 
 
 
-@Library("UIKit") @Mapping("UIViewControllerTransitionCoordinator")
+@Library("UIKit/UIKit.h") @Mapping("UIViewControllerTransitionCoordinator")
 public interface UIViewControllerTransitionCoordinator 
     extends UIViewControllerTransitionCoordinatorContext {
 

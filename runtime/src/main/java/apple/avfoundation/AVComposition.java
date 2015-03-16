@@ -25,7 +25,7 @@ import apple.mediatoolbox.*;
  * @since Available in iOS 4.0 and later.
  */
 
-@Library("AVFoundation") @Mapping("AVComposition")
+@Library("AVFoundation/AVFoundation.h") @Mapping("AVComposition")
 public class AVComposition 
     extends AVAsset 
      {

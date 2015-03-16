@@ -24,7 +24,7 @@ import apple.corelocation.*;
  * @since Available in iOS 7.0 and later.
  */
 
-@Library("UIKit") @Mapping("NSTextStorage")
+@Library("UIKit/UIKit.h") @Mapping("NSTextStorage")
 public class NSTextStorage 
     extends NSMutableAttributedString 
      {

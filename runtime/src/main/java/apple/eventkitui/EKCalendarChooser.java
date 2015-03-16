@@ -21,7 +21,7 @@ import apple.uikit.*;
  * @since Available in iOS 5.0 and later.
  */
 
-@Library("EventKitUI") @Mapping("EKCalendarChooser")
+@Library("EventKitUI/EventKitUI.h") @Mapping("EKCalendarChooser")
 public class EKCalendarChooser 
     extends UIViewController 
      {

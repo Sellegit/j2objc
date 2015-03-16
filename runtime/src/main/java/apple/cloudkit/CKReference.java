@@ -20,7 +20,7 @@ import apple.corelocation.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("CloudKit") @Mapping("CKReference")
+@Library("CloudKit/CloudKit.h") @Mapping("CKReference")
 public class CKReference 
     extends NSObject 
     implements NSCopying, CKRecordValue {

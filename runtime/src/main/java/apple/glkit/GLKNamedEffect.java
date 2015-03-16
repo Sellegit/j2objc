@@ -20,7 +20,7 @@ import apple.dispatch.*;
 
 
 
-@Library("GLKit") @Mapping("GLKNamedEffect")
+@Library("GLKit/GLKit.h") @Mapping("GLKNamedEffect")
 public interface GLKNamedEffect 
      {
 

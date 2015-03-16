@@ -22,7 +22,7 @@ import apple.dispatch.*;
  * @since Available in iOS 4.0 and later.
  */
 
-@Library("MapKit") @Mapping("MKCircle")
+@Library("MapKit/MapKit.h") @Mapping("MKCircle")
 public class MKCircle 
     extends MKShape 
     implements MKOverlay {

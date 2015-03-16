@@ -19,7 +19,7 @@ import apple.foundation.*;
  * @since Available in iOS 5.0 and later.
  */
 
-@Library("CoreData") @Mapping("NSSaveChangesRequest")
+@Library("CoreData/CoreData.h") @Mapping("NSSaveChangesRequest")
 public class NSSaveChangesRequest 
     extends NSPersistentStoreRequest 
      {

@@ -215,7 +215,7 @@ public class Import implements Comparable<Import> {
 
   public String getIncludeStatement() {
     if (isFoundation) {
-     return String.format("#import <%s/%s.h>", importFileName, importFileName);
+     return String.format("#import <%s>", importFileName);
     } else {
       return String.format("#include \"%s.h\"", getImportFileName());
     }
@@ -240,8 +240,10 @@ public class Import implements Comparable<Import> {
     }
     String libName = BindingUtil.extractLibraryName(binding);
     if (libName != null) {
+      // this is to include the original header file
+      imports.add(new Import(binding));
+      // this is to include the framework header
       imports.add(new Import(binding, true, libName));
-      return;
     }
     if (BindingUtil.isAdapter(binding)) {
       return;

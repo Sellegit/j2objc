@@ -20,7 +20,7 @@ import apple.dispatch.*;
 
 
 
-@Mapping("MKCoordinateRegion") @Library("MapKit")
+@Mapping("MKCoordinateRegion") @Library("MapKit/MapKit.h")
 public class MKCoordinateRegion 
     extends Struct 
      {

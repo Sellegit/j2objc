@@ -22,7 +22,7 @@ import apple.dispatch.*;
 
 
 
-@Library("Foundation") @Mapping("NSMachPortDelegate")
+@Library("Foundation/Foundation.h") @Mapping("NSMachPortDelegate")
 public interface NSMachPortDelegate 
     extends NSPortDelegate {
 

@@ -22,7 +22,7 @@ import apple.dispatch.*;
  * @since Available in iOS 3.0 and later.
  */
 
-@Library("MapKit") @Mapping("MKAnnotationView")
+@Library("MapKit/MapKit.h") @Mapping("MKAnnotationView")
 public class MKAnnotationView 
     extends UIView 
      {

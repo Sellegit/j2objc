@@ -24,7 +24,7 @@ import apple.accounts.*;
  */
 @Deprecated
 
-@Library("Twitter") @Mapping("TWRequest")
+@Library("Twitter/Twitter.h") @Mapping("TWRequest")
 public class TWRequest 
     extends NSObject 
      {

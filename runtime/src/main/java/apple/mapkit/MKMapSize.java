@@ -20,7 +20,7 @@ import apple.dispatch.*;
 
 
 
-@Mapping("MKMapSize") @Library("MapKit")
+@Mapping("MKMapSize") @Library("MapKit/MapKit.h")
 public class MKMapSize 
     extends Struct 
      {

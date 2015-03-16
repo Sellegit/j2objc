@@ -22,7 +22,7 @@ import apple.dispatch.*;
 
 
 
-@Library("Foundation") @Mapping("NSDateComponents")
+@Library("Foundation/Foundation.h") @Mapping("NSDateComponents")
 public class NSDateComponents 
     extends NSObject 
     implements NSCopying {

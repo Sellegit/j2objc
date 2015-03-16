@@ -22,7 +22,7 @@ import apple.corelocation.*;
 
 
 
-@Library("UIKit")
+@Library("UIKit/UIKit.h")
 @Mapping("UIAccessibilityScrollDirection")
 public final class UIAccessibilityScrollDirection extends ObjCEnum {
     

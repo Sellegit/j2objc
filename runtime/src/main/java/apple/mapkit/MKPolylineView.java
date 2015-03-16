@@ -22,7 +22,7 @@ import apple.dispatch.*;
  * @since Available in iOS 4.0 and later.
  */
 
-@Library("MapKit") @Mapping("MKPolylineView")
+@Library("MapKit/MapKit.h") @Mapping("MKPolylineView")
 public class MKPolylineView 
     extends MKOverlayPathView 
      {

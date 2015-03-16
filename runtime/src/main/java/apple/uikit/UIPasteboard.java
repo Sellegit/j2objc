@@ -24,7 +24,7 @@ import apple.corelocation.*;
  * @since Available in iOS 3.0 and later.
  */
 
-@Library("UIKit") @Mapping("UIPasteboard")
+@Library("UIKit/UIKit.h") @Mapping("UIPasteboard")
 public class UIPasteboard 
     extends NSObject 
      {

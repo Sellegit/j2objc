@@ -20,7 +20,7 @@ import apple.coremedia.*;
 
 
 
-@Mapping("AudioFormatInfo")
+@Mapping("AudioFormatInfo") @Library("AudioToolbox/AudioToolbox.h")
 public class AudioFormatInfo 
     extends Struct 
      {
@@ -36,26 +36,5 @@ public class AudioFormatInfo
     @DotMapping("mMagicCookieSize")
     public native int getMMagicCookieSize();
     
-    public static native AudioFormatInfo create(AudioStreamBasicDescription mASBD, Todo mMagicCookie, int mMagicCookieSize) /*-[
-        AudioFormatInfo __new = { .mASBD = mASBD, .mMagicCookie = mMagicCookie, .mMagicCookieSize = mMagicCookieSize };
-        return __new;
-    ]-*/;
-    public static native AudioFormatInfo copyWithmASBD(AudioFormatInfo original, AudioStreamBasicDescription mASBD) /*-[
-        original.mASBD = mASBD;
-        return original;
-    ]-*/;
-
-    
-    public static native AudioFormatInfo copyWithmMagicCookie(AudioFormatInfo original, Todo mMagicCookie) /*-[
-        original.mMagicCookie = mMagicCookie;
-        return original;
-    ]-*/;
-
-    
-    public static native AudioFormatInfo copyWithmMagicCookieSize(AudioFormatInfo original, int mMagicCookieSize) /*-[
-        original.mMagicCookieSize = mMagicCookieSize;
-        return original;
-    ]-*/;
-
     
 }

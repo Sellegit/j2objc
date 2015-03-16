@@ -20,7 +20,7 @@ import apple.metal.*;
 
 
 
-@Library("CoreVideo")
+@Library("CoreVideo/CoreVideo.h")
 @Mapping("CVAttachmentMode")
 public final class CVAttachmentMode extends ObjCEnum {
     

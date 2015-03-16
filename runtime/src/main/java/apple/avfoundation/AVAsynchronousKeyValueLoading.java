@@ -23,7 +23,7 @@ import apple.mediatoolbox.*;
 
 
 
-@Library("AVFoundation") @Mapping("AVAsynchronousKeyValueLoading")
+@Library("AVFoundation/AVFoundation.h") @Mapping("AVAsynchronousKeyValueLoading")
 public interface AVAsynchronousKeyValueLoading 
      {
 

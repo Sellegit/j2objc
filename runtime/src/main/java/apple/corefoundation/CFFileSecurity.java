@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreFoundation")
+@Library("CoreFoundation/CoreFoundation.h")
 public class CFFileSecurity 
     extends CFType 
      {
@@ -48,56 +48,56 @@ public class CFFileSecurity
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("CFFileSecurityCopyOwnerUUID")
-    public native boolean copyOwnerUUID(Todo ownerUUID);
+    public static native boolean copyOwnerUUID(CFFileSecurity fileSec, Todo ownerUUID);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("CFFileSecuritySetOwnerUUID")
-    public native boolean setOwnerUUID(CFUUID ownerUUID);
+    public static native boolean setOwnerUUID(CFFileSecurity fileSec, CFUUID ownerUUID);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("CFFileSecurityCopyGroupUUID")
-    public native boolean copyGroupUUID(Todo groupUUID);
+    public static native boolean copyGroupUUID(CFFileSecurity fileSec, Todo groupUUID);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("CFFileSecuritySetGroupUUID")
-    public native boolean setGroupUUID(CFUUID groupUUID);
+    public static native boolean setGroupUUID(CFFileSecurity fileSec, CFUUID groupUUID);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("CFFileSecurityGetOwner")
-    public native boolean getOwner(Todo owner);
+    public static native boolean getOwner(CFFileSecurity fileSec, Todo owner);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("CFFileSecuritySetOwner")
-    public native boolean setOwner(int owner);
+    public static native boolean setOwner(CFFileSecurity fileSec, int owner);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("CFFileSecurityGetGroup")
-    public native boolean getGroup(Todo group);
+    public static native boolean getGroup(CFFileSecurity fileSec, Todo group);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("CFFileSecuritySetGroup")
-    public native boolean setGroup(int group);
+    public static native boolean setGroup(CFFileSecurity fileSec, int group);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("CFFileSecurityGetMode")
-    public native boolean getMode(Todo mode);
+    public static native boolean getMode(CFFileSecurity fileSec, Todo mode);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("CFFileSecuritySetMode")
-    public native boolean setMode(short mode);
+    public static native boolean setMode(CFFileSecurity fileSec, short mode);
     /**
      * @since Available in iOS 6.0 and later.
      */
     @GlobalFunction("CFFileSecurityClearProperties")
-    public native boolean clearProperties(CFFileSecurityClearOptions clearPropertyMask);
+    public static native boolean clearProperties(CFFileSecurity fileSec, CFFileSecurityClearOptions clearPropertyMask);
     
 }

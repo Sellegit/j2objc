@@ -22,7 +22,7 @@ import apple.corelocation.*;
 
 
 
-@Library("UIKit") @Mapping("UIAlertViewDelegate")
+@Library("UIKit/UIKit.h") @Mapping("UIAlertViewDelegate")
 public interface UIAlertViewDelegate 
     extends NSObjectProtocol {
 

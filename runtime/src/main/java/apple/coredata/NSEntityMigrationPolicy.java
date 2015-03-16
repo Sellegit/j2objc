@@ -19,7 +19,7 @@ import apple.foundation.*;
  * @since Available in iOS 3.0 and later.
  */
 
-@Library("CoreData") @Mapping("NSEntityMigrationPolicy")
+@Library("CoreData/CoreData.h") @Mapping("NSEntityMigrationPolicy")
 public class NSEntityMigrationPolicy 
     extends NSObject 
      {

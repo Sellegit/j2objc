@@ -15,7 +15,7 @@ import apple.coreservices.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("System")
+@Library("System/System.h")
 public class DispatchData 
     extends DispatchObject 
      {
@@ -57,31 +57,31 @@ public class DispatchData
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("dispatch_data_get_size")
-    public native @MachineSizedUInt long getSize();
+    public static native @MachineSizedUInt long getSize(DispatchData data);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("dispatch_data_create_map")
-    public native DispatchData createMap(Todo buffer_ptr, Todo size_ptr);
+    public static native DispatchData createMap(DispatchData data, Todo buffer_ptr, Todo size_ptr);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("dispatch_data_create_concat")
-    public native DispatchData createConcat(DispatchData data2);
+    public static native DispatchData createConcat(DispatchData data1, DispatchData data2);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("dispatch_data_create_subrange")
-    public native DispatchData createSubrange(@MachineSizedUInt long offset, @MachineSizedUInt long length);
+    public static native DispatchData createSubrange(DispatchData data, @MachineSizedUInt long offset, @MachineSizedUInt long length);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("dispatch_data_apply")
-    public native boolean apply(@Block("(,@MachineSizedUInt,,@MachineSizedUInt)") VoidBlock4<DispatchData, Long, Todo, Long> applier);
+    public static native boolean apply(DispatchData data, @Block("(,@MachineSizedUInt,,@MachineSizedUInt)") VoidBlock4<DispatchData, Long, Todo, Long> applier);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("dispatch_data_copy_region")
-    public native DispatchData copyRegion(@MachineSizedUInt long location, Todo offset_ptr);
+    public static native DispatchData copyRegion(DispatchData data, @MachineSizedUInt long location, Todo offset_ptr);
     
 }

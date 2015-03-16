@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 
 
-@Library("CoreText")
+@Library("CoreText/CoreText.h")
 @Mapping("CTCharacterCollection")
 public final class CTCharacterCollection extends ObjCEnum {
     

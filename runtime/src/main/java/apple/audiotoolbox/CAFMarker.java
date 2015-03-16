@@ -20,7 +20,7 @@ import apple.coremedia.*;
 
 
 
-@Mapping("CAFMarker")
+@Mapping("CAFMarker") @Library("AudioToolbox/AudioToolbox.h")
 public class CAFMarker 
     extends Struct 
      {
@@ -36,41 +36,41 @@ public class CAFMarker
     @DotMapping("mMarkerID")
     public native int getMMarkerID();
     @DotMapping("mSMPTETime")
-    public native CAFSMPTETime getMSMPTETime();
+    public native CAF_SMPTE_Time getMSMPTETime();
     @DotMapping("mChannel")
     public native int getMChannel();
     
-    public static native CAFMarker create(int mType, double mFramePosition, int mMarkerID, CAFSMPTETime mSMPTETime, int mChannel) /*-[
+    public static native CAFMarker create(int mType, double mFramePosition, int mMarkerID, CAF_SMPTE_Time mSMPTETime, int mChannel) /*-[
         CAFMarker __new = { .mType = mType, .mFramePosition = mFramePosition, .mMarkerID = mMarkerID, .mSMPTETime = mSMPTETime, .mChannel = mChannel };
         return __new;
     ]-*/;
     public static native CAFMarker copyWithmType(CAFMarker original, int mType) /*-[
-        original.mType = mType;
-        return original;
+        CAFMarker __new = { .mType = mType, .mFramePosition = original.mFramePosition, .mMarkerID = original.mMarkerID, .mSMPTETime = original.mSMPTETime, .mChannel = original.mChannel };
+        return __new;
     ]-*/;
 
     
     public static native CAFMarker copyWithmFramePosition(CAFMarker original, double mFramePosition) /*-[
-        original.mFramePosition = mFramePosition;
-        return original;
+        CAFMarker __new = { .mType = original.mType, .mFramePosition = mFramePosition, .mMarkerID = original.mMarkerID, .mSMPTETime = original.mSMPTETime, .mChannel = original.mChannel };
+        return __new;
     ]-*/;
 
     
     public static native CAFMarker copyWithmMarkerID(CAFMarker original, int mMarkerID) /*-[
-        original.mMarkerID = mMarkerID;
-        return original;
+        CAFMarker __new = { .mType = original.mType, .mFramePosition = original.mFramePosition, .mMarkerID = mMarkerID, .mSMPTETime = original.mSMPTETime, .mChannel = original.mChannel };
+        return __new;
     ]-*/;
 
     
-    public static native CAFMarker copyWithmSMPTETime(CAFMarker original, CAFSMPTETime mSMPTETime) /*-[
-        original.mSMPTETime = mSMPTETime;
-        return original;
+    public static native CAFMarker copyWithmSMPTETime(CAFMarker original, CAF_SMPTE_Time mSMPTETime) /*-[
+        CAFMarker __new = { .mType = original.mType, .mFramePosition = original.mFramePosition, .mMarkerID = original.mMarkerID, .mSMPTETime = mSMPTETime, .mChannel = original.mChannel };
+        return __new;
     ]-*/;
 
     
     public static native CAFMarker copyWithmChannel(CAFMarker original, int mChannel) /*-[
-        original.mChannel = mChannel;
-        return original;
+        CAFMarker __new = { .mType = original.mType, .mFramePosition = original.mFramePosition, .mMarkerID = original.mMarkerID, .mSMPTETime = original.mSMPTETime, .mChannel = mChannel };
+        return __new;
     ]-*/;
 
     

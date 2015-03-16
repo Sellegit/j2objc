@@ -23,7 +23,7 @@ import apple.opengles.*;
 
 
 
-@Library("SceneKit") @Mapping("SCNTechniqueSupport")
+@Library("SceneKit/SceneKit.h") @Mapping("SCNTechniqueSupport")
 public interface SCNTechniqueSupport 
     extends NSObjectProtocol {
 

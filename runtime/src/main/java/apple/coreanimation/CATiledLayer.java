@@ -21,7 +21,7 @@ import apple.metal.*;
 
 
 
-@Library("QuartzCore") @Mapping("CATiledLayer")
+@Library("QuartzCore/QuartzCore.h") @Mapping("CATiledLayer")
 public class CATiledLayer 
     extends CALayer 
      {

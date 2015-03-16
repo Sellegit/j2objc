@@ -18,7 +18,7 @@ import apple.uikit.*;
 
 
 
-@Mapping("CGFunctionCallbacks")
+@Mapping("CGFunctionCallbacks") @Library("CoreGraphics/CoreGraphics.h")
  class CGFunctionCallbacks 
     extends Struct 
      {

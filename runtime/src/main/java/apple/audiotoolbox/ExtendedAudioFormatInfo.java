@@ -20,7 +20,7 @@ import apple.coremedia.*;
 
 
 
-@Mapping("ExtendedAudioFormatInfo")
+@Mapping("ExtendedAudioFormatInfo") @Library("AudioToolbox/AudioToolbox.h")
 public class ExtendedAudioFormatInfo 
     extends Struct 
      {
@@ -38,32 +38,5 @@ public class ExtendedAudioFormatInfo
     @DotMapping("mClassDescription")
     public native AudioClassDescription getMClassDescription();
     
-    public static native ExtendedAudioFormatInfo create(AudioStreamBasicDescription mASBD, Todo mMagicCookie, int mMagicCookieSize, AudioClassDescription mClassDescription) /*-[
-        ExtendedAudioFormatInfo __new = { .mASBD = mASBD, .mMagicCookie = mMagicCookie, .mMagicCookieSize = mMagicCookieSize, .mClassDescription = mClassDescription };
-        return __new;
-    ]-*/;
-    public static native ExtendedAudioFormatInfo copyWithmASBD(ExtendedAudioFormatInfo original, AudioStreamBasicDescription mASBD) /*-[
-        original.mASBD = mASBD;
-        return original;
-    ]-*/;
-
-    
-    public static native ExtendedAudioFormatInfo copyWithmMagicCookie(ExtendedAudioFormatInfo original, Todo mMagicCookie) /*-[
-        original.mMagicCookie = mMagicCookie;
-        return original;
-    ]-*/;
-
-    
-    public static native ExtendedAudioFormatInfo copyWithmMagicCookieSize(ExtendedAudioFormatInfo original, int mMagicCookieSize) /*-[
-        original.mMagicCookieSize = mMagicCookieSize;
-        return original;
-    ]-*/;
-
-    
-    public static native ExtendedAudioFormatInfo copyWithmClassDescription(ExtendedAudioFormatInfo original, AudioClassDescription mClassDescription) /*-[
-        original.mClassDescription = mClassDescription;
-        return original;
-    ]-*/;
-
     
 }

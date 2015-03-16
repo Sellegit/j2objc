@@ -24,7 +24,7 @@ import apple.corelocation.*;
  * @since Available in iOS 3.2 and later.
  */
 
-@Library("UIKit") @Mapping("UISplitViewController")
+@Library("UIKit/UIKit.h") @Mapping("UISplitViewController")
 public class UISplitViewController 
     extends UIViewController 
      {

@@ -22,7 +22,7 @@ import apple.dispatch.*;
 
 
 
-@Library("Foundation") @Mapping("NSDateFormatter")
+@Library("Foundation/Foundation.h") @Mapping("NSDateFormatter")
 public class NSDateFormatter 
     extends NSFormatter 
      {

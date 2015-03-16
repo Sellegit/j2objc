@@ -24,7 +24,7 @@ import apple.dispatch.*;
  * @since Available in iOS 3.2 and later.
  */
 
-@Library("Foundation") @Mapping("NSAttributedString")
+@Library("Foundation/Foundation.h") @Mapping("NSAttributedString")
 public class NSAttributedString 
     extends NSObject 
     implements NSCopying {

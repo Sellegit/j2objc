@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 
 
-@Library("CoreText")
+@Library("CoreText/CoreText.h")
 @Mapping("CTFontUIFontType")
 public final class CTFontUIFontType extends ObjCEnum {
     

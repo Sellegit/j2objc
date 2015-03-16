@@ -18,7 +18,7 @@ import apple.dispatch.*;
 
 
 
-@Mapping("MTLScissorRect")
+@Mapping("MTLScissorRect") @Library("Metal/Metal.h")
 public class MTLScissorRect 
     extends Struct 
      {

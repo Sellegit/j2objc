@@ -19,7 +19,7 @@ import apple.dispatch.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("MapKit")
+@Library("MapKit/MapKit.h")
 public final class NSValueExtensions 
     extends NSExtensions 
      {
@@ -29,10 +29,7 @@ public final class NSValueExtensions
     private NSValueExtensions() {}
     
     
-    @Mapping("MKCoordinateValue")
-    public static native CLLocationCoordinate2D getMKCoordinateValue(NSValue thiz);
-    @Mapping("MKCoordinateSpanValue")
-    public static native MKCoordinateSpan getMKCoordinateSpanValue(NSValue thiz);
+    
     
     
     

@@ -22,7 +22,7 @@ import apple.dispatch.*;
 
 
 
-@Library("Foundation") @Mapping("NSBundle")
+@Library("Foundation/Foundation.h") @Mapping("NSBundle")
 public class NSBundle 
     extends NSObject 
      {

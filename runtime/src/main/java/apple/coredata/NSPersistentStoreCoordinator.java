@@ -19,7 +19,7 @@ import apple.foundation.*;
  * @since Available in iOS 3.0 and later.
  */
 
-@Library("CoreData") @Mapping("NSPersistentStoreCoordinator")
+@Library("CoreData/CoreData.h") @Mapping("NSPersistentStoreCoordinator")
 public class NSPersistentStoreCoordinator 
     extends NSObject 
     implements NSLocking {

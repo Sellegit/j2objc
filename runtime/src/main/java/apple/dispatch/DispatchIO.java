@@ -15,7 +15,7 @@ import apple.coreservices.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("System")
+@Library("System/System.h")
 public class DispatchIO 
     extends DispatchObject 
      {
@@ -51,41 +51,41 @@ public class DispatchIO
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("dispatch_io_read")
-    public native void read(long offset, @MachineSizedUInt long length, DispatchQueue queue, @Block VoidBlock3<Boolean, DispatchData, Integer> io_handler);
+    public static native void read(DispatchIO channel, long offset, @MachineSizedUInt long length, DispatchQueue queue, @Block VoidBlock3<Boolean, DispatchData, Integer> io_handler);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("dispatch_io_write")
-    public native void write(long offset, DispatchData data, DispatchQueue queue, @Block VoidBlock3<Boolean, DispatchData, Integer> io_handler);
+    public static native void write(DispatchIO channel, long offset, DispatchData data, DispatchQueue queue, @Block VoidBlock3<Boolean, DispatchData, Integer> io_handler);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("dispatch_io_close")
-    public native void close(@MachineSizedUInt long flags);
+    public static native void close(DispatchIO channel, @MachineSizedUInt long flags);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("dispatch_io_barrier")
-    public native void barrier(@Block Runnable barrier);
+    public static native void barrier(DispatchIO channel, @Block Runnable barrier);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("dispatch_io_get_descriptor")
-    public native int getDescriptor();
+    public static native int getDescriptor(DispatchIO channel);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("dispatch_io_set_high_water")
-    public native void setHighWater(@MachineSizedUInt long high_water);
+    public static native void setHighWater(DispatchIO channel, @MachineSizedUInt long high_water);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("dispatch_io_set_low_water")
-    public native void setLowWater(@MachineSizedUInt long low_water);
+    public static native void setLowWater(DispatchIO channel, @MachineSizedUInt long low_water);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("dispatch_io_set_interval")
-    public native void setInterval(long interval, @MachineSizedUInt long flags);
+    public static native void setInterval(DispatchIO channel, long interval, @MachineSizedUInt long flags);
     
 }

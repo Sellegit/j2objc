@@ -24,7 +24,7 @@ import apple.dispatch.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("Foundation")
+@Library("Foundation/Foundation.h")
 @Mapping("NSLengthFormatterUnit")
 public final class NSLengthFormatterUnit extends ObjCEnum {
     

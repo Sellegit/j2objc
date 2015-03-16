@@ -23,7 +23,7 @@ import apple.opengles.*;
 
 
 
-@Library("SceneKit") @Mapping("SCNLookAtConstraint")
+@Library("SceneKit/SceneKit.h") @Mapping("SCNLookAtConstraint")
 public class SCNLookAtConstraint 
     extends SCNConstraint 
      {

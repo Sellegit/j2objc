@@ -24,7 +24,7 @@ import apple.corelocation.*;
  * @since Available in iOS 7.0 and later.
  */
 
-@Library("UIKit") @Mapping("UICollectionViewLayoutInvalidationContext")
+@Library("UIKit/UIKit.h") @Mapping("UICollectionViewLayoutInvalidationContext")
 public class UICollectionViewLayoutInvalidationContext 
     extends NSObject 
      {

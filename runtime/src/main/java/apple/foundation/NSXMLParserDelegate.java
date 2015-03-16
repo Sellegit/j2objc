@@ -22,7 +22,7 @@ import apple.dispatch.*;
 
 
 
-@Library("Foundation") @Mapping("NSXMLParserDelegate")
+@Library("Foundation/Foundation.h") @Mapping("NSXMLParserDelegate")
 public interface NSXMLParserDelegate 
     extends NSObjectProtocol {
 

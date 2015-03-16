@@ -22,7 +22,7 @@ import apple.corelocation.*;
 
 
 
-@Library("UIKit")
+@Library("UIKit/UIKit.h")
 @Mapping("UIPageViewControllerNavigationOrientation")
 public final class UIPageViewControllerNavigationOrientation extends ObjCEnum {
     

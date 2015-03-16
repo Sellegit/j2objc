@@ -26,7 +26,7 @@ import apple.corelocation.*;
  */
 @Deprecated
 
-@Library("UIKit")
+@Library("UIKit/UIKit.h")
 @Mapping("UILineBreakMode")
 public final class UILineBreakMode extends ObjCEnum {
     

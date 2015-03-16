@@ -25,7 +25,7 @@ import apple.mediatoolbox.*;
  * @since Available in iOS 5.0 and later.
  */
 
-@Library("AVFoundation") @Mapping("AVMediaSelectionGroup")
+@Library("AVFoundation/AVFoundation.h") @Mapping("AVMediaSelectionGroup")
 public class AVMediaSelectionGroup 
     extends NSObject 
     implements NSCopying {

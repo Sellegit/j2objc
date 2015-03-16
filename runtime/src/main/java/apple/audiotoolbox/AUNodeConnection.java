@@ -20,7 +20,7 @@ import apple.coremedia.*;
 
 
 
-@Mapping("AUNodeConnection")
+@Mapping("AUNodeConnection") @Library("AudioToolbox/AudioToolbox.h")
 public class AUNodeConnection 
     extends Struct 
      {
@@ -43,26 +43,26 @@ public class AUNodeConnection
         return __new;
     ]-*/;
     public static native AUNodeConnection copyWithsourceNode(AUNodeConnection original, int sourceNode) /*-[
-        original.sourceNode = sourceNode;
-        return original;
+        AUNodeConnection __new = { .sourceNode = sourceNode, .sourceOutputNumber = original.sourceOutputNumber, .destNode = original.destNode, .destInputNumber = original.destInputNumber };
+        return __new;
     ]-*/;
 
     
     public static native AUNodeConnection copyWithsourceOutputNumber(AUNodeConnection original, int sourceOutputNumber) /*-[
-        original.sourceOutputNumber = sourceOutputNumber;
-        return original;
+        AUNodeConnection __new = { .sourceNode = original.sourceNode, .sourceOutputNumber = sourceOutputNumber, .destNode = original.destNode, .destInputNumber = original.destInputNumber };
+        return __new;
     ]-*/;
 
     
     public static native AUNodeConnection copyWithdestNode(AUNodeConnection original, int destNode) /*-[
-        original.destNode = destNode;
-        return original;
+        AUNodeConnection __new = { .sourceNode = original.sourceNode, .sourceOutputNumber = original.sourceOutputNumber, .destNode = destNode, .destInputNumber = original.destInputNumber };
+        return __new;
     ]-*/;
 
     
     public static native AUNodeConnection copyWithdestInputNumber(AUNodeConnection original, int destInputNumber) /*-[
-        original.destInputNumber = destInputNumber;
-        return original;
+        AUNodeConnection __new = { .sourceNode = original.sourceNode, .sourceOutputNumber = original.sourceOutputNumber, .destNode = original.destNode, .destInputNumber = destInputNumber };
+        return __new;
     ]-*/;
 
     

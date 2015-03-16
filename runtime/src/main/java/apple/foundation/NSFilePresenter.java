@@ -22,7 +22,7 @@ import apple.dispatch.*;
 
 
 
-@Library("Foundation") @Mapping("NSFilePresenter")
+@Library("Foundation/Foundation.h") @Mapping("NSFilePresenter")
 public interface NSFilePresenter 
     extends NSObjectProtocol {
 

@@ -24,7 +24,7 @@ import apple.dispatch.*;
  * @since Available in iOS 5.0 and later.
  */
 
-@Library("Foundation") @Mapping("NSMetadataItem")
+@Library("Foundation/Foundation.h") @Mapping("NSMetadataItem")
 public class NSMetadataItem 
     extends NSObject 
      {

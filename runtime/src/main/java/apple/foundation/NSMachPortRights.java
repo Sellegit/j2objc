@@ -24,7 +24,7 @@ import apple.dispatch.*;
  * @since Available in iOS 2.0 and later.
  */
 
-@Library("Foundation")
+@Library("Foundation/Foundation.h")
 @Mapping("NSMachPortRights")
 public final class NSMachPortRights extends ObjCEnum {
     

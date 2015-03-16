@@ -22,7 +22,7 @@ import apple.dispatch.*;
 
 
 
-@Library("Foundation")
+@Library("Foundation/Foundation.h")
 @Mapping("NSDateFormatterBehavior")
 public final class NSDateFormatterBehavior extends ObjCEnum {
     

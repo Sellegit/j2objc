@@ -24,7 +24,7 @@ import apple.corelocation.*;
  * @since Available in iOS 2.0 and later.
  */
 
-@Library("UIKit") @Mapping("UIAlertView")
+@Library("UIKit/UIKit.h") @Mapping("UIAlertView")
 public class UIAlertView 
     extends UIView 
      {

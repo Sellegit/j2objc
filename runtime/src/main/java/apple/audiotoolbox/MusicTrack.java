@@ -19,7 +19,7 @@ import apple.coremedia.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("AudioToolbox")
+@Library("AudioToolbox/AudioToolbox.h")
 public class MusicTrack 
     extends Object 
      {
@@ -35,106 +35,106 @@ public class MusicTrack
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("MusicTrackGetSequence")
-    public native int getSequence(Todo outSequence);
+    public static native int getSequence(MusicTrack inTrack, Todo outSequence);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("MusicTrackSetDestNode")
-    public native int setDestNode(int inNode);
+    public static native int setDestNode(MusicTrack inTrack, int inNode);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("MusicTrackSetDestMIDIEndpoint")
-    public native int setDestMIDIEndpoint(MIDIEndpoint inEndpoint);
+    public static native int setDestMIDIEndpoint(MusicTrack inTrack, MIDIEndpoint inEndpoint);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("MusicTrackGetDestNode")
-    public native int getDestNode(Todo outNode);
+    public static native int getDestNode(MusicTrack inTrack, Todo outNode);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("MusicTrackGetDestMIDIEndpoint")
-    public native int getDestMIDIEndpoint(Todo outEndpoint);
+    public static native int getDestMIDIEndpoint(MusicTrack inTrack, Todo outEndpoint);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("MusicTrackSetProperty")
-    public native int setProperty(int inPropertyID, Todo inData, int inLength);
+    public static native int setProperty(MusicTrack inTrack, int inPropertyID, Todo inData, int inLength);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("MusicTrackGetProperty")
-    public native int getProperty(int inPropertyID, Todo outData, Todo ioLength);
+    public static native int getProperty(MusicTrack inTrack, int inPropertyID, Todo outData, Todo ioLength);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("MusicTrackMoveEvents")
-    public native int moveEvents(double inStartTime, double inEndTime, double inMoveTime);
+    public static native int moveEvents(MusicTrack inTrack, double inStartTime, double inEndTime, double inMoveTime);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("MusicTrackClear")
-    public native int clear(double inStartTime, double inEndTime);
+    public static native int clear(MusicTrack inTrack, double inStartTime, double inEndTime);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("MusicTrackCut")
-    public native int cut(double inStartTime, double inEndTime);
+    public static native int cut(MusicTrack inTrack, double inStartTime, double inEndTime);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("MusicTrackCopyInsert")
-    public native int copyInsert(double inSourceStartTime, double inSourceEndTime, MusicTrack inDestTrack, double inDestInsertTime);
+    public static native int copyInsert(MusicTrack inSourceTrack, double inSourceStartTime, double inSourceEndTime, MusicTrack inDestTrack, double inDestInsertTime);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("MusicTrackMerge")
-    public native int merge(double inSourceStartTime, double inSourceEndTime, MusicTrack inDestTrack, double inDestInsertTime);
+    public static native int merge(MusicTrack inSourceTrack, double inSourceStartTime, double inSourceEndTime, MusicTrack inDestTrack, double inDestInsertTime);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("MusicTrackNewMIDINoteEvent")
-    public native int newMIDINoteEvent(double inTimeStamp, MIDINoteMessage inMessage);
+    public static native int newMIDINoteEvent(MusicTrack inTrack, double inTimeStamp, MIDINoteMessage inMessage);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("MusicTrackNewMIDIChannelEvent")
-    public native int newMIDIChannelEvent(double inTimeStamp, MIDIChannelMessage inMessage);
+    public static native int newMIDIChannelEvent(MusicTrack inTrack, double inTimeStamp, MIDIChannelMessage inMessage);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("MusicTrackNewMIDIRawDataEvent")
-    public native int newMIDIRawDataEvent(double inTimeStamp, MIDIRawData inRawData);
+    public static native int newMIDIRawDataEvent(MusicTrack inTrack, double inTimeStamp, MIDIRawData inRawData);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("MusicTrackNewExtendedNoteEvent")
-    public native int newExtendedNoteEvent(double inTimeStamp, ExtendedNoteOnEvent inInfo);
+    public static native int newExtendedNoteEvent(MusicTrack inTrack, double inTimeStamp, ExtendedNoteOnEvent inInfo);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("MusicTrackNewParameterEvent")
-    public native int newParameterEvent(double inTimeStamp, ParameterEvent inInfo);
+    public static native int newParameterEvent(MusicTrack inTrack, double inTimeStamp, ParameterEvent inInfo);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("MusicTrackNewExtendedTempoEvent")
-    public native int newExtendedTempoEvent(double inTimeStamp, double inBPM);
+    public static native int newExtendedTempoEvent(MusicTrack inTrack, double inTimeStamp, double inBPM);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("MusicTrackNewMetaEvent")
-    public native int newMetaEvent(double inTimeStamp, MIDIMetaEvent inMetaEvent);
+    public static native int newMetaEvent(MusicTrack inTrack, double inTimeStamp, MIDIMetaEvent inMetaEvent);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("MusicTrackNewUserEvent")
-    public native int newUserEvent(double inTimeStamp, MusicEventUserData inUserData);
+    public static native int newUserEvent(MusicTrack inTrack, double inTimeStamp, MusicEventUserData inUserData);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("MusicTrackNewAUPresetEvent")
-    public native int newAUPresetEvent(double inTimeStamp, AUPresetEvent inPresetEvent);
+    public static native int newAUPresetEvent(MusicTrack inTrack, double inTimeStamp, AUPresetEvent inPresetEvent);
     
 }

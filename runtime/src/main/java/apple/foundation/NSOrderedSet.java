@@ -24,7 +24,7 @@ import apple.dispatch.*;
  * @since Available in iOS 5.0 and later.
  */
 
-@Library("Foundation") @Mapping("NSOrderedSet")
+@Library("Foundation/Foundation.h") @Mapping("NSOrderedSet")
 public class NSOrderedSet <T>
     extends NSObject 
     implements NSFastEnumeration {

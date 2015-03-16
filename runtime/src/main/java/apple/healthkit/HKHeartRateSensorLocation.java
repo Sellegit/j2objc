@@ -19,7 +19,7 @@ import apple.foundation.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("HealthKit")
+@Library("HealthKit/HealthKit.h")
 @Mapping("HKHeartRateSensorLocation")
 public final class HKHeartRateSensorLocation extends ObjCEnum {
     

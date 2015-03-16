@@ -24,7 +24,7 @@ import apple.corelocation.*;
  * @since Available in iOS 7.0 and later.
  */
 
-@Library("UIKit") @Mapping("UIPushBehavior")
+@Library("UIKit/UIKit.h") @Mapping("UIPushBehavior")
 public class UIPushBehavior 
     extends UIDynamicBehavior 
      {

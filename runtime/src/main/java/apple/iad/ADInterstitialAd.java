@@ -23,7 +23,7 @@ import apple.avkit.*;
  * @since Available in iOS 4.3 and later.
  */
 
-@Library("iAd") @Mapping("ADInterstitialAd")
+@Library("iAd/iAd.h") @Mapping("ADInterstitialAd")
 public final class ADInterstitialAd 
     extends NSObject 
      {

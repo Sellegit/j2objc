@@ -22,7 +22,7 @@ import apple.dispatch.*;
 
 
 
-@Library("Foundation") @Mapping("NSHTTPCookie")
+@Library("Foundation/Foundation.h") @Mapping("NSHTTPCookie")
 public class NSHTTPCookie 
     extends NSObject 
      {

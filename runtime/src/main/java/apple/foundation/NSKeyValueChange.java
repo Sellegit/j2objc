@@ -22,7 +22,7 @@ import apple.dispatch.*;
 
 
 
-@Library("Foundation")
+@Library("Foundation/Foundation.h")
 @Mapping("NSKeyValueChange")
 public final class NSKeyValueChange extends ObjCEnum {
     

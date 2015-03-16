@@ -15,7 +15,7 @@ import apple.coreservices.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("System")
+@Library("System/System.h")
 public class DispatchGroup 
     extends DispatchObject 
      {
@@ -36,26 +36,26 @@ public class DispatchGroup
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("dispatch_group_async")
-    public native void async(DispatchQueue queue, @Block Runnable block);
+    public static native void async(DispatchGroup group, DispatchQueue queue, @Block Runnable block);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("dispatch_group_wait")
-    public native @MachineSizedSInt long await(long timeout);
+    public static native @MachineSizedSInt long await(DispatchGroup group, long timeout);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("dispatch_group_notify")
-    public native void notify(DispatchQueue queue, @Block Runnable block);
+    public static native void notify(DispatchGroup group, DispatchQueue queue, @Block Runnable block);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("dispatch_group_enter")
-    public native void enter();
+    public static native void enter(DispatchGroup group);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("dispatch_group_leave")
-    public native void leave();
+    public static native void leave(DispatchGroup group);
     
 }

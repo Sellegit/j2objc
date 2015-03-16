@@ -20,7 +20,7 @@ import apple.dispatch.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("PushKit") @Mapping("PKPushCredentials")
+@Library("PushKit/PushKit.h") @Mapping("PKPushCredentials")
 public class PKPushCredentials 
     extends NSObject 
      {

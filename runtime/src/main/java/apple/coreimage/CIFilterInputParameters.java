@@ -19,7 +19,7 @@ import apple.imageio.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreImage")
+@Library("CoreImage/CoreImage.h")
 public class CIFilterInputParameters 
     extends Object 
      {

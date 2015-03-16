@@ -22,7 +22,7 @@ import apple.corelocation.*;
 
 
 
-@Library("UIKit")
+@Library("UIKit/UIKit.h")
 @Mapping("UIDocumentChangeKind")
 public final class UIDocumentChangeKind extends ObjCEnum {
     

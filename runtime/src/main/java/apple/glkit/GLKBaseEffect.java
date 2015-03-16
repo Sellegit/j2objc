@@ -22,7 +22,7 @@ import apple.dispatch.*;
  * @since Available in iOS 5.0 and later.
  */
 
-@Library("GLKit") @Mapping("GLKBaseEffect")
+@Library("GLKit/GLKit.h") @Mapping("GLKBaseEffect")
 public class GLKBaseEffect 
     extends NSObject 
     implements GLKNamedEffect {

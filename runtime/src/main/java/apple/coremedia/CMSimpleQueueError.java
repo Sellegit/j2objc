@@ -21,7 +21,7 @@ import apple.corevideo.*;
 
 
 
-@Library("CoreMedia")
+@Library("CoreMedia/CoreMedia.h")
 @Mapping("CMSimpleQueueError")
 public final class CMSimpleQueueError extends ObjCEnum {
     

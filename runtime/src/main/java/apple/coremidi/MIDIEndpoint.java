@@ -16,7 +16,7 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreMIDI")
+@Library("CoreMIDI/CoreMIDI.h")
 public class MIDIEndpoint 
     extends MIDIObject 
      {
@@ -32,7 +32,7 @@ public class MIDIEndpoint
      * @since Available in iOS 4.2 and later.
      */
     @GlobalFunction("MIDIEndpointGetEntity")
-    protected native MIDIError getEntity(Todo outEntity);
+    protected static native MIDIError getEntity(MIDIEndpoint inEndpoint, Todo outEntity);
     /**
      * @since Available in iOS 4.2 and later.
      */
@@ -47,16 +47,16 @@ public class MIDIEndpoint
      * @since Available in iOS 4.2 and later.
      */
     @GlobalFunction("MIDIEndpointDispose")
-    public native MIDIError dispose();
+    public static native MIDIError dispose(MIDIEndpoint endpt);
     /**
      * @since Available in iOS 4.2 and later.
      */
     @GlobalFunction("MIDIReceived")
-    public native MIDIError received(MIDIPacketList pktlist);
+    public static native MIDIError received(MIDIEndpoint src, MIDIPacketList pktlist);
     /**
      * @since Available in iOS 4.2 and later.
      */
     @GlobalFunction("MIDIEndpointSetRefCons")
-    protected native MIDIError setRefCons(Todo ref1, Todo ref2);
+    protected static native MIDIError setRefCons(MIDIEndpoint endpt, Todo ref1, Todo ref2);
     
 }

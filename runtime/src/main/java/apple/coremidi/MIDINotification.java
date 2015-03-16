@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 
 
-@Mapping("MIDINotification")
+@Mapping("MIDINotification") @Library("CoreMIDI/CoreMIDI.h")
 public class MIDINotification 
     extends Struct 
      {

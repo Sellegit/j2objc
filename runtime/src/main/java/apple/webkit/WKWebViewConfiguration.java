@@ -20,7 +20,7 @@ import apple.uikit.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("WebKit") @Mapping("WKWebViewConfiguration")
+@Library("WebKit/WebKit.h") @Mapping("WKWebViewConfiguration")
 public class WKWebViewConfiguration 
     extends NSObject 
     implements NSCopying {

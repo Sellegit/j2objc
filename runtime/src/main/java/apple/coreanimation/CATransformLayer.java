@@ -21,7 +21,7 @@ import apple.metal.*;
 
 
 
-@Library("QuartzCore") @Mapping("CATransformLayer")
+@Library("QuartzCore/QuartzCore.h") @Mapping("CATransformLayer")
 public class CATransformLayer 
     extends CALayer 
      {

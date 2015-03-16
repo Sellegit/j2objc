@@ -19,7 +19,7 @@ import apple.foundation.*;
  * @since Available in iOS 4.0 and later.
  */
 
-@Library("CoreTelephony") @Mapping("CTCall")
+@Library("CoreTelephony/CoreTelephony.h") @Mapping("CTCall")
 public class CTCall 
     extends NSObject 
      {

@@ -19,7 +19,7 @@ import apple.corelocation.*;
 
 
 
-@Library("EventKit")
+@Library("EventKit/EventKit.h")
 @Mapping("EKRecurrenceFrequency")
 public final class EKRecurrenceFrequency extends ObjCEnum {
     

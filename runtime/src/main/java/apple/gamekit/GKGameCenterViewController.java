@@ -20,7 +20,7 @@ import apple.uikit.*;
  * @since Available in iOS 6.0 and later.
  */
 
-@Library("GameKit") @Mapping("GKGameCenterViewController")
+@Library("GameKit/GameKit.h") @Mapping("GKGameCenterViewController")
 public class GKGameCenterViewController 
     extends UINavigationController 
      {

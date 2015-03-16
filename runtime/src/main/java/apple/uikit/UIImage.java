@@ -24,7 +24,7 @@ import apple.corelocation.*;
  * @since Available in iOS 2.0 and later.
  */
 
-@Library("UIKit") @Mapping("UIImage")
+@Library("UIKit/UIKit.h") @Mapping("UIImage")
 public class UIImage 
     extends NSObject 
     implements UIAccessibilityIdentification {
@@ -134,11 +134,11 @@ public class UIImage
     
     
     @GlobalFunction("UIImagePNGRepresentation")
-    public native NSData toPNGData();
+    public static native NSData toPNGData(UIImage image);
     @GlobalFunction("UIImageJPEGRepresentation")
-    public native NSData toJPEGData(@MachineSizedFloat double compressionQuality);
+    public static native NSData toJPEGData(UIImage image, @MachineSizedFloat double compressionQuality);
     @GlobalFunction("UIImageWriteToSavedPhotosAlbum")
-    public native void saveToPhotosAlbum(Object completionTarget, Selector completionSelector, Todo contextInfo);
+    public static native void saveToPhotosAlbum(UIImage image, Object completionTarget, Selector completionSelector, Todo contextInfo);
     
     @Mapping("drawAtPoint:")
     public native void draw(CGPoint point);

@@ -22,7 +22,7 @@ import apple.avfoundation.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("Photos") @Mapping("PHChange")
+@Library("Photos/Photos.h") @Mapping("PHChange")
 public class PHChange 
     extends NSObject 
      {

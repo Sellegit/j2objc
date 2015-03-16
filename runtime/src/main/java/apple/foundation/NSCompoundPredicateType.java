@@ -22,7 +22,7 @@ import apple.dispatch.*;
 
 
 
-@Library("Foundation")
+@Library("Foundation/Foundation.h")
 @Mapping("NSCompoundPredicateType")
 public final class NSCompoundPredicateType extends ObjCEnum {
     

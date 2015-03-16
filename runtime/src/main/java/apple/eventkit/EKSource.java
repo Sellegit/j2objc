@@ -21,7 +21,7 @@ import apple.corelocation.*;
  * @since Available in iOS 5.0 and later.
  */
 
-@Library("EventKit") @Mapping("EKSource")
+@Library("EventKit/EventKit.h") @Mapping("EKSource")
 public class EKSource 
     extends EKObject 
      {

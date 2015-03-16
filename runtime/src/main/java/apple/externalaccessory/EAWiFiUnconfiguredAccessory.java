@@ -21,7 +21,7 @@ import apple.dispatch.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("ExternalAccessory") @Mapping("EAWiFiUnconfiguredAccessory")
+@Library("ExternalAccessory/ExternalAccessory.h") @Mapping("EAWiFiUnconfiguredAccessory")
 public class EAWiFiUnconfiguredAccessory 
     extends NSObject 
      {

@@ -25,7 +25,7 @@ import apple.mediatoolbox.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("AVFoundation") @Mapping("AVAudioBuffer")
+@Library("AVFoundation/AVFoundation.h") @Mapping("AVAudioBuffer")
 public class AVAudioBuffer 
     extends NSObject 
     implements NSCopying {

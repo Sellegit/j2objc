@@ -19,7 +19,7 @@ import apple.foundation.*;
  * @since Available in iOS 8.0 and later.
  */
 
-@Library("HealthKit") @Mapping("HKStatistics")
+@Library("HealthKit/HealthKit.h") @Mapping("HKStatistics")
 public class HKStatistics 
     extends NSObject 
     implements NSCopying {

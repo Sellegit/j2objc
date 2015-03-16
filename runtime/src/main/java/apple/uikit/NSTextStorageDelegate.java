@@ -22,7 +22,7 @@ import apple.corelocation.*;
 
 
 
-@Library("UIKit") @Mapping("NSTextStorageDelegate")
+@Library("UIKit/UIKit.h") @Mapping("NSTextStorageDelegate")
 public interface NSTextStorageDelegate 
     extends NSObjectProtocol {
 

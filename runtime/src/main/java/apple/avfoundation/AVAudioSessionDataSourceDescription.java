@@ -25,7 +25,7 @@ import apple.mediatoolbox.*;
  * @since Available in iOS 6.0 and later.
  */
 
-@Library("AVFoundation") @Mapping("AVAudioSessionDataSourceDescription")
+@Library("AVFoundation/AVFoundation.h") @Mapping("AVAudioSessionDataSourceDescription")
 public class AVAudioSessionDataSourceDescription 
     extends NSObject 
      {

@@ -21,7 +21,7 @@ import apple.corelocation.*;
  * @since Available in iOS 6.0 and later.
  */
 
-@Library("EventKit") @Mapping("EKReminder")
+@Library("EventKit/EventKit.h") @Mapping("EKReminder")
 public class EKReminder 
     extends EKCalendarItem 
      {

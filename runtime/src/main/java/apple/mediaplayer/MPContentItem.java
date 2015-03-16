@@ -20,7 +20,7 @@ import apple.uikit.*;
  * @since Available in iOS 7.1 and later.
  */
 
-@Library("MediaPlayer") @Mapping("MPContentItem")
+@Library("MediaPlayer/MediaPlayer.h") @Mapping("MPContentItem")
 public class MPContentItem 
     extends NSObject 
      {

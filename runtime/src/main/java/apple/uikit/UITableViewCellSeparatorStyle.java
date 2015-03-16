@@ -22,7 +22,7 @@ import apple.corelocation.*;
 
 
 
-@Library("UIKit")
+@Library("UIKit/UIKit.h")
 @Mapping("UITableViewCellSeparatorStyle")
 public final class UITableViewCellSeparatorStyle extends ObjCEnum {
     

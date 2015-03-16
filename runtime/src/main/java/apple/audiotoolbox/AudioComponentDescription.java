@@ -20,7 +20,7 @@ import apple.coremedia.*;
 
 
 
-@Mapping("AudioComponentDescription")
+@Mapping("AudioComponentDescription") @Library("AudioToolbox/AudioToolbox.h")
 public class AudioComponentDescription 
     extends Struct 
      {
@@ -45,32 +45,32 @@ public class AudioComponentDescription
         return __new;
     ]-*/;
     public static native AudioComponentDescription copyWithcomponentType(AudioComponentDescription original, int componentType) /*-[
-        original.componentType = componentType;
-        return original;
+        AudioComponentDescription __new = { .componentType = componentType, .componentSubType = original.componentSubType, .componentManufacturer = original.componentManufacturer, .componentFlags = original.componentFlags, .componentFlagsMask = original.componentFlagsMask };
+        return __new;
     ]-*/;
 
     
     public static native AudioComponentDescription copyWithcomponentSubType(AudioComponentDescription original, int componentSubType) /*-[
-        original.componentSubType = componentSubType;
-        return original;
+        AudioComponentDescription __new = { .componentType = original.componentType, .componentSubType = componentSubType, .componentManufacturer = original.componentManufacturer, .componentFlags = original.componentFlags, .componentFlagsMask = original.componentFlagsMask };
+        return __new;
     ]-*/;
 
     
     public static native AudioComponentDescription copyWithcomponentManufacturer(AudioComponentDescription original, int componentManufacturer) /*-[
-        original.componentManufacturer = componentManufacturer;
-        return original;
+        AudioComponentDescription __new = { .componentType = original.componentType, .componentSubType = original.componentSubType, .componentManufacturer = componentManufacturer, .componentFlags = original.componentFlags, .componentFlagsMask = original.componentFlagsMask };
+        return __new;
     ]-*/;
 
     
     public static native AudioComponentDescription copyWithcomponentFlags(AudioComponentDescription original, int componentFlags) /*-[
-        original.componentFlags = componentFlags;
-        return original;
+        AudioComponentDescription __new = { .componentType = original.componentType, .componentSubType = original.componentSubType, .componentManufacturer = original.componentManufacturer, .componentFlags = componentFlags, .componentFlagsMask = original.componentFlagsMask };
+        return __new;
     ]-*/;
 
     
     public static native AudioComponentDescription copyWithcomponentFlagsMask(AudioComponentDescription original, int componentFlagsMask) /*-[
-        original.componentFlagsMask = componentFlagsMask;
-        return original;
+        AudioComponentDescription __new = { .componentType = original.componentType, .componentSubType = original.componentSubType, .componentManufacturer = original.componentManufacturer, .componentFlags = original.componentFlags, .componentFlagsMask = componentFlagsMask };
+        return __new;
     ]-*/;
 
     

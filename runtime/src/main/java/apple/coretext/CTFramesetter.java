@@ -16,7 +16,7 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreText")
+@Library("CoreText/CoreText.h")
 public class CTFramesetter 
     extends CFType 
      {
@@ -42,16 +42,16 @@ public class CTFramesetter
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTFramesetterCreateFrame")
-    public native CTFrame createFrame(CFRange stringRange, CGPath path, CFDictionary frameAttributes);
+    public static native CTFrame createFrame(CTFramesetter framesetter, CFRange stringRange, CGPath path, CFDictionary frameAttributes);
     /**
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTFramesetterGetTypesetter")
-    public native CTTypesetter getTypesetter();
+    public static native CTTypesetter getTypesetter(CTFramesetter framesetter);
     /**
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTFramesetterSuggestFrameSizeWithConstraints")
-    public native CGSize suggestFrameSize(CFRange stringRange, CFDictionary frameAttributes, CGSize constraints, CFRange fitRange);
+    public static native CGSize suggestFrameSize(CTFramesetter framesetter, CFRange stringRange, CFDictionary frameAttributes, CGSize constraints, CFRange fitRange);
     
 }

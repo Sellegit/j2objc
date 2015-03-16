@@ -22,7 +22,7 @@ import apple.dispatch.*;
 
 
 
-@Library("Foundation")
+@Library("Foundation/Foundation.h")
 @Mapping("NSURLErrorCode")
 public final class NSURLErrorCode extends ObjCEnum {
     

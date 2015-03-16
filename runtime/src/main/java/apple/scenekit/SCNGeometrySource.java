@@ -23,7 +23,7 @@ import apple.opengles.*;
 
 
 
-@Library("SceneKit") @Mapping("SCNGeometrySource")
+@Library("SceneKit/SceneKit.h") @Mapping("SCNGeometrySource")
 public class SCNGeometrySource 
     extends NSObject 
      {
