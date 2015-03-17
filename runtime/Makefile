@@ -63,7 +63,7 @@ include ../make/fat_lib.mk
 
 fat_lib_dependencies: annotations_dist
 
-DIST_LIBRARY = $(ARCH_LIB_DIR)/runtime.a
+DIST_LIBRARY = $(ARCH_LIB_DIR)/libruntime.a
 JAR = $(BUILD_DIR)/j2objc_runtime.jar
 DIST_JAR = $(DIST_JAR_DIR)/j2objc_runtime.jar
 
