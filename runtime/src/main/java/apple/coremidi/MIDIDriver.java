@@ -18,7 +18,7 @@ import apple.foundation.*;
 /*</javadoc>*/
 @Library("CoreMIDI/CoreMIDI.h")
 public class MIDIDriver 
-    extends MIDIDriverInterface 
+    extends Object 
      {
 
     

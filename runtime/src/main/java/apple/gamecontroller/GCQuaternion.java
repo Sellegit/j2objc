@@ -40,26 +40,26 @@ public class GCQuaternion
         return __new;
     ]-*/;
     public static native GCQuaternion copyWithx(GCQuaternion original, double x) /*-[
-        original.x = x;
-        return original;
+        GCQuaternion __new = { .x = x, .y = original.y, .z = original.z, .w = original.w };
+        return __new;
     ]-*/;
 
     
     public static native GCQuaternion copyWithy(GCQuaternion original, double y) /*-[
-        original.y = y;
-        return original;
+        GCQuaternion __new = { .x = original.x, .y = y, .z = original.z, .w = original.w };
+        return __new;
     ]-*/;
 
     
     public static native GCQuaternion copyWithz(GCQuaternion original, double z) /*-[
-        original.z = z;
-        return original;
+        GCQuaternion __new = { .x = original.x, .y = original.y, .z = z, .w = original.w };
+        return __new;
     ]-*/;
 
     
     public static native GCQuaternion copyWithw(GCQuaternion original, double w) /*-[
-        original.w = w;
-        return original;
+        GCQuaternion __new = { .x = original.x, .y = original.y, .z = original.z, .w = w };
+        return __new;
     ]-*/;
 
     

@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 import apple.opengles.*;
 import apple.coremedia.*;
-import apple.metal.*;
 
 
 
@@ -53,56 +52,56 @@ public class CVSMPTETime
         return __new;
     ]-*/;
     public static native CVSMPTETime copyWithsubframes(CVSMPTETime original, short subframes) /*-[
-        original.subframes = subframes;
-        return original;
+        CVSMPTETime __new = { .subframes = subframes, .subframeDivisor = original.subframeDivisor, .counter = original.counter, .type = original.type, .flags = original.flags, .hours = original.hours, .minutes = original.minutes, .seconds = original.seconds, .frames = original.frames };
+        return __new;
     ]-*/;
 
     
     public static native CVSMPTETime copyWithsubframeDivisor(CVSMPTETime original, short subframeDivisor) /*-[
-        original.subframeDivisor = subframeDivisor;
-        return original;
+        CVSMPTETime __new = { .subframes = original.subframes, .subframeDivisor = subframeDivisor, .counter = original.counter, .type = original.type, .flags = original.flags, .hours = original.hours, .minutes = original.minutes, .seconds = original.seconds, .frames = original.frames };
+        return __new;
     ]-*/;
 
     
     public static native CVSMPTETime copyWithcounter(CVSMPTETime original, int counter) /*-[
-        original.counter = counter;
-        return original;
+        CVSMPTETime __new = { .subframes = original.subframes, .subframeDivisor = original.subframeDivisor, .counter = counter, .type = original.type, .flags = original.flags, .hours = original.hours, .minutes = original.minutes, .seconds = original.seconds, .frames = original.frames };
+        return __new;
     ]-*/;
 
     
     public static native CVSMPTETime copyWithtype(CVSMPTETime original, int type) /*-[
-        original.type = type;
-        return original;
+        CVSMPTETime __new = { .subframes = original.subframes, .subframeDivisor = original.subframeDivisor, .counter = original.counter, .type = type, .flags = original.flags, .hours = original.hours, .minutes = original.minutes, .seconds = original.seconds, .frames = original.frames };
+        return __new;
     ]-*/;
 
     
     public static native CVSMPTETime copyWithflags(CVSMPTETime original, int flags) /*-[
-        original.flags = flags;
-        return original;
+        CVSMPTETime __new = { .subframes = original.subframes, .subframeDivisor = original.subframeDivisor, .counter = original.counter, .type = original.type, .flags = flags, .hours = original.hours, .minutes = original.minutes, .seconds = original.seconds, .frames = original.frames };
+        return __new;
     ]-*/;
 
     
     public static native CVSMPTETime copyWithhours(CVSMPTETime original, short hours) /*-[
-        original.hours = hours;
-        return original;
+        CVSMPTETime __new = { .subframes = original.subframes, .subframeDivisor = original.subframeDivisor, .counter = original.counter, .type = original.type, .flags = original.flags, .hours = hours, .minutes = original.minutes, .seconds = original.seconds, .frames = original.frames };
+        return __new;
     ]-*/;
 
     
     public static native CVSMPTETime copyWithminutes(CVSMPTETime original, short minutes) /*-[
-        original.minutes = minutes;
-        return original;
+        CVSMPTETime __new = { .subframes = original.subframes, .subframeDivisor = original.subframeDivisor, .counter = original.counter, .type = original.type, .flags = original.flags, .hours = original.hours, .minutes = minutes, .seconds = original.seconds, .frames = original.frames };
+        return __new;
     ]-*/;
 
     
     public static native CVSMPTETime copyWithseconds(CVSMPTETime original, short seconds) /*-[
-        original.seconds = seconds;
-        return original;
+        CVSMPTETime __new = { .subframes = original.subframes, .subframeDivisor = original.subframeDivisor, .counter = original.counter, .type = original.type, .flags = original.flags, .hours = original.hours, .minutes = original.minutes, .seconds = seconds, .frames = original.frames };
+        return __new;
     ]-*/;
 
     
     public static native CVSMPTETime copyWithframes(CVSMPTETime original, short frames) /*-[
-        original.frames = frames;
-        return original;
+        CVSMPTETime __new = { .subframes = original.subframes, .subframeDivisor = original.subframeDivisor, .counter = original.counter, .type = original.type, .flags = original.flags, .hours = original.hours, .minutes = original.minutes, .seconds = original.seconds, .frames = frames };
+        return __new;
     ]-*/;
 
     

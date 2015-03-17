@@ -36,32 +36,5 @@ public class CFSocketSignature
     @DotMapping("address")
     public native CFData getAddress();
     
-    public static native CFSocketSignature create(int protocolFamily, int socketType, int protocol, CFData address) /*-[
-        CFSocketSignature __new = { .protocolFamily = protocolFamily, .socketType = socketType, .protocol = protocol, .address = address };
-        return __new;
-    ]-*/;
-    public static native CFSocketSignature copyWithprotocolFamily(CFSocketSignature original, int protocolFamily) /*-[
-        original.protocolFamily = protocolFamily;
-        return original;
-    ]-*/;
-
-    
-    public static native CFSocketSignature copyWithsocketType(CFSocketSignature original, int socketType) /*-[
-        original.socketType = socketType;
-        return original;
-    ]-*/;
-
-    
-    public static native CFSocketSignature copyWithprotocol(CFSocketSignature original, int protocol) /*-[
-        original.protocol = protocol;
-        return original;
-    ]-*/;
-
-    
-    public static native CFSocketSignature copyWithaddress(CFSocketSignature original, CFData address) /*-[
-        original.address = address;
-        return original;
-    ]-*/;
-
     
 }

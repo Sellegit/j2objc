@@ -53,22 +53,22 @@ public class AudioQueue
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("AudioQueueFreeBuffer")
-    public static native AudioQueueError freeBuffer(OpaqueAudioQueue inAQ, AudioQueueBuffer inBuffer);
+    public static native AudioQueueError freeBuffer(OpaqueAudioQueue inAQ, Todo inBuffer);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("AudioQueueEnqueueBuffer")
-    public static native AudioQueueError enqueueBuffer(OpaqueAudioQueue inAQ, AudioQueueBuffer inBuffer, int inNumPacketDescs, AudioStreamPacketDescription inPacketDescs);
+    public static native AudioQueueError enqueueBuffer(OpaqueAudioQueue inAQ, Todo inBuffer, int inNumPacketDescs, Todo inPacketDescs);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("AudioQueueEnqueueBufferWithParameters")
-    public static native AudioQueueError enqueueBufferWithParameters(OpaqueAudioQueue inAQ, AudioQueueBuffer inBuffer, int inNumPacketDescs, AudioStreamPacketDescription inPacketDescs, int inTrimFramesAtStart, int inTrimFramesAtEnd, int inNumParamValues, AudioQueueParameterEvent inParamValues, AudioTimeStamp inStartTime, AudioTimeStamp outActualStartTime);
+    public static native AudioQueueError enqueueBufferWithParameters(OpaqueAudioQueue inAQ, Todo inBuffer, int inNumPacketDescs, Todo inPacketDescs, int inTrimFramesAtStart, int inTrimFramesAtEnd, int inNumParamValues, Todo inParamValues, Todo inStartTime, Todo outActualStartTime);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("AudioQueueStart")
-    public static native AudioQueueError start(OpaqueAudioQueue inAQ, AudioTimeStamp inStartTime);
+    public static native AudioQueueError start(OpaqueAudioQueue inAQ, Todo inStartTime);
     /**
      * @since Available in iOS 2.0 and later.
      */
@@ -143,22 +143,22 @@ public class AudioQueue
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("AudioQueueGetCurrentTime")
-    public static native AudioQueueError getCurrentTime(OpaqueAudioQueue inAQ, OpaqueAudioQueueTimeline inTimeline, AudioTimeStamp outTimeStamp, Todo outTimelineDiscontinuity);
+    public static native AudioQueueError getCurrentTime(OpaqueAudioQueue inAQ, OpaqueAudioQueueTimeline inTimeline, Todo outTimeStamp, Todo outTimelineDiscontinuity);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("AudioQueueDeviceGetCurrentTime")
-    public static native AudioQueueError deviceGetCurrentTime(OpaqueAudioQueue inAQ, AudioTimeStamp outTimeStamp);
+    public static native AudioQueueError deviceGetCurrentTime(OpaqueAudioQueue inAQ, Todo outTimeStamp);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("AudioQueueDeviceTranslateTime")
-    public static native AudioQueueError deviceTranslateTime(OpaqueAudioQueue inAQ, AudioTimeStamp inTime, AudioTimeStamp outTime);
+    public static native AudioQueueError deviceTranslateTime(OpaqueAudioQueue inAQ, Todo inTime, Todo outTime);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("AudioQueueDeviceGetNearestStartTime")
-    public static native AudioQueueError deviceGetNearestStartTime(OpaqueAudioQueue inAQ, AudioTimeStamp ioRequestedStartTime, int inFlags);
+    public static native AudioQueueError deviceGetNearestStartTime(OpaqueAudioQueue inAQ, Todo ioRequestedStartTime, int inFlags);
     /**
      * @since Available in iOS 2.0 and later.
      */
@@ -168,7 +168,7 @@ public class AudioQueue
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("AudioQueueOfflineRender")
-    public static native AudioQueueError offlineRender(OpaqueAudioQueue inAQ, AudioTimeStamp inTimestamp, AudioQueueBuffer ioBuffer, int inNumberFrames);
+    public static native AudioQueueError offlineRender(OpaqueAudioQueue inAQ, Todo inTimestamp, Todo ioBuffer, int inNumberFrames);
     /**
      * @since Available in iOS 6.0 and later.
      */
@@ -183,7 +183,7 @@ public class AudioQueue
      * @since Available in iOS 6.0 and later.
      */
     @GlobalFunction("AudioQueueProcessingTapGetSourceAudio")
-    public static native AudioQueueError processingTapGetSourceAudio(OpaqueAudioQueueProcessingTap inAQTap, int inNumberFrames, AudioTimeStamp ioTimeStamp, Todo outFlags, Todo outNumberFrames, AudioBufferList ioData);
+    public static native AudioQueueError processingTapGetSourceAudio(OpaqueAudioQueueProcessingTap inAQTap, int inNumberFrames, Todo ioTimeStamp, Todo outFlags, Todo outNumberFrames, Todo ioData);
     /**
      * @since Available in iOS 6.0 and later.
      */

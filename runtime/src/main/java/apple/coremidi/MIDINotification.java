@@ -36,14 +36,14 @@ public class MIDINotification
         return __new;
     ]-*/;
     public static native MIDINotification copyWithmessageID(MIDINotification original, MIDINotificationMessageID messageID) /*-[
-        original.messageID = messageID;
-        return original;
+        MIDINotification __new = { .messageID = messageID, .messageSize = original.messageSize };
+        return __new;
     ]-*/;
 
     
     public static native MIDINotification copyWithmessageSize(MIDINotification original, int messageSize) /*-[
-        original.messageSize = messageSize;
-        return original;
+        MIDINotification __new = { .messageID = original.messageID, .messageSize = messageSize };
+        return __new;
     ]-*/;
 
     

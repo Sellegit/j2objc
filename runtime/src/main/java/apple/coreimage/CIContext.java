@@ -52,16 +52,6 @@ public class CIContext
     /**
      * @since Available in iOS 5.0 and later.
      */
-    @Mapping("render:toCVPixelBuffer:")
-    public native void render(CIImage image, CVPixelBuffer buffer);
-    /**
-     * @since Available in iOS 5.0 and later.
-     */
-    @Mapping("render:toCVPixelBuffer:bounds:colorSpace:")
-    public native void render(CIImage image, CVPixelBuffer buffer, CGRect r, CGColorSpace cs);
-    /**
-     * @since Available in iOS 5.0 and later.
-     */
     @Mapping("inputImageMaximumSize")
     public native CGSize getInputImageMaximumSize();
     /**

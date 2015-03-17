@@ -283,8 +283,6 @@ public class AVAudioSession
      */
     @Mapping("setPreferredSampleRate:error:")
     public native boolean setPreferredSampleRate(double sampleRate, Todo outError);
-    @Mapping("setPreferredIOBufferDuration:error:")
-    public native boolean setPreferredIOBufferDuration(double duration, Todo outError);
     /**
      * @since Available in iOS 7.0 and later.
      */

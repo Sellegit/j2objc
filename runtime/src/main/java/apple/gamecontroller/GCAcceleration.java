@@ -38,20 +38,20 @@ public class GCAcceleration
         return __new;
     ]-*/;
     public static native GCAcceleration copyWithx(GCAcceleration original, double x) /*-[
-        original.x = x;
-        return original;
+        GCAcceleration __new = { .x = x, .y = original.y, .z = original.z };
+        return __new;
     ]-*/;
 
     
     public static native GCAcceleration copyWithy(GCAcceleration original, double y) /*-[
-        original.y = y;
-        return original;
+        GCAcceleration __new = { .x = original.x, .y = y, .z = original.z };
+        return __new;
     ]-*/;
 
     
     public static native GCAcceleration copyWithz(GCAcceleration original, double z) /*-[
-        original.z = z;
-        return original;
+        GCAcceleration __new = { .x = original.x, .y = original.y, .z = z };
+        return __new;
     ]-*/;
 
     

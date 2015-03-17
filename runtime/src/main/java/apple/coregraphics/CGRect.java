@@ -37,14 +37,14 @@ public class CGRect
         return __new;
     ]-*/;
     public static native CGRect copyWithorigin(CGRect original, CGPoint origin) /*-[
-        original.origin = origin;
-        return original;
+        CGRect __new = { .origin = origin, .size = original.size };
+        return __new;
     ]-*/;
 
     
     public static native CGRect copyWithsize(CGRect original, CGSize size) /*-[
-        original.size = size;
-        return original;
+        CGRect __new = { .origin = original.origin, .size = size };
+        return __new;
     ]-*/;
 
     

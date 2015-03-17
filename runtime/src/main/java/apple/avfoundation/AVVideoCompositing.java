@@ -31,10 +31,7 @@ public interface AVVideoCompositing
 
     
     
-    @Mapping("sourcePixelBufferAttributes")
-    CVPixelBufferAttributes getSourcePixelBufferAttributes();
-    @Mapping("requiredPixelBufferAttributesForRenderContext")
-    CVPixelBufferAttributes getRequiredPixelBufferAttributesForRenderContext();
+    
     
     
     @Mapping("renderContextChanged:")

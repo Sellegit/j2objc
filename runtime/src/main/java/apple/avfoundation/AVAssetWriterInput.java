@@ -173,8 +173,6 @@ public class AVAssetWriterInput
     
     @Mapping("requestMediaDataWhenReadyOnQueue:usingBlock:")
     public native void requestMediaDataWhenReady(DispatchQueue queue, @Block Runnable block);
-    @Mapping("appendSampleBuffer:")
-    public native boolean appendSampleBuffer(CMSampleBuffer sampleBuffer);
     @Mapping("markAsFinished")
     public native void markAsFinished();
     @Mapping("assetWriterInputWithMediaType:outputSettings:")

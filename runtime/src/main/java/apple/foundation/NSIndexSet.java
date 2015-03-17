@@ -57,8 +57,6 @@ public class NSIndexSet
     public native @MachineSizedUInt long greaterThanOrEqual(@MachineSizedUInt long value);
     @Mapping("indexLessThanOrEqualToIndex:")
     public native @MachineSizedUInt long lessThanOrEqual(@MachineSizedUInt long value);
-    @Mapping("getIndexes:maxCount:inIndexRange:")
-    protected native @MachineSizedUInt long getIndexes(Todo indexBuffer, @MachineSizedUInt long bufferSize, NSRange range);
     /**
      * @since Available in iOS 2.0 and later.
      */

@@ -34,46 +34,8 @@ public class MIDISysexSendRequest
     public native int getBytesToSend();
     @DotMapping("complete")
     public native boolean getComplete();
-    @DotMapping("reserved")
-    public native ByteBuffer getReserved();
     @DotMapping("completionRefCon")
     public native Todo getCompletionRefCon();
     
-    public static native MIDISysexSendRequest copyWithdestination(MIDISysexSendRequest original, MIDIEndpoint destination) /*-[
-        original.destination = destination;
-        return original;
-    ]-*/;
-
-    
-    public static native MIDISysexSendRequest copyWithdata(MIDISysexSendRequest original, Todo data) /*-[
-        original.data = data;
-        return original;
-    ]-*/;
-
-    
-    public static native MIDISysexSendRequest copyWithbytesToSend(MIDISysexSendRequest original, int bytesToSend) /*-[
-        original.bytesToSend = bytesToSend;
-        return original;
-    ]-*/;
-
-    
-    public static native MIDISysexSendRequest copyWithcomplete(MIDISysexSendRequest original, boolean complete) /*-[
-        original.complete = complete;
-        return original;
-    ]-*/;
-
-    
-    public static native MIDISysexSendRequest copyWithreserved(MIDISysexSendRequest original, ByteBuffer reserved) /*-[
-        original.reserved = reserved;
-        return original;
-    ]-*/;
-
-    
-    
-    public static native MIDISysexSendRequest copyWithcompletionRefCon(MIDISysexSendRequest original, Todo completionRefCon) /*-[
-        original.completionRefCon = completionRefCon;
-        return original;
-    ]-*/;
-
     
 }

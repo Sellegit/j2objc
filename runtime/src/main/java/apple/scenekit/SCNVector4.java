@@ -46,26 +46,26 @@ public class SCNVector4
         return __new;
     ]-*/;
     public static native SCNVector4 copyWithx(SCNVector4 original, float x) /*-[
-        original.x = x;
-        return original;
+        SCNVector4 __new = { .x = x, .y = original.y, .z = original.z, .w = original.w };
+        return __new;
     ]-*/;
 
     
     public static native SCNVector4 copyWithy(SCNVector4 original, float y) /*-[
-        original.y = y;
-        return original;
+        SCNVector4 __new = { .x = original.x, .y = y, .z = original.z, .w = original.w };
+        return __new;
     ]-*/;
 
     
     public static native SCNVector4 copyWithz(SCNVector4 original, float z) /*-[
-        original.z = z;
-        return original;
+        SCNVector4 __new = { .x = original.x, .y = original.y, .z = z, .w = original.w };
+        return __new;
     ]-*/;
 
     
     public static native SCNVector4 copyWithw(SCNVector4 original, float w) /*-[
-        original.w = w;
-        return original;
+        SCNVector4 __new = { .x = original.x, .y = original.y, .z = original.z, .w = w };
+        return __new;
     ]-*/;
 
     

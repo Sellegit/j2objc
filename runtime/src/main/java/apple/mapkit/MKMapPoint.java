@@ -39,14 +39,14 @@ public class MKMapPoint
         return __new;
     ]-*/;
     public static native MKMapPoint copyWithx(MKMapPoint original, double x) /*-[
-        original.x = x;
-        return original;
+        MKMapPoint __new = { .x = x, .y = original.y };
+        return __new;
     ]-*/;
 
     
     public static native MKMapPoint copyWithy(MKMapPoint original, double y) /*-[
-        original.y = y;
-        return original;
+        MKMapPoint __new = { .x = original.x, .y = y };
+        return __new;
     ]-*/;
 
     

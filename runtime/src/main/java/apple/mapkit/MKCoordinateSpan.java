@@ -39,14 +39,14 @@ public class MKCoordinateSpan
         return __new;
     ]-*/;
     public static native MKCoordinateSpan copyWithlatitudeDelta(MKCoordinateSpan original, double latitudeDelta) /*-[
-        original.latitudeDelta = latitudeDelta;
-        return original;
+        MKCoordinateSpan __new = { .latitudeDelta = latitudeDelta, .longitudeDelta = original.longitudeDelta };
+        return __new;
     ]-*/;
 
     
     public static native MKCoordinateSpan copyWithlongitudeDelta(MKCoordinateSpan original, double longitudeDelta) /*-[
-        original.longitudeDelta = longitudeDelta;
-        return original;
+        MKCoordinateSpan __new = { .latitudeDelta = original.latitudeDelta, .longitudeDelta = longitudeDelta };
+        return __new;
     ]-*/;
 
     

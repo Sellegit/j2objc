@@ -15,7 +15,6 @@ import apple.foundation.*;
 import apple.coreimage.*;
 import apple.coretext.*;
 import apple.opengles.*;
-import apple.metal.*;
 
 
 
@@ -35,10 +34,6 @@ public class CAMetalLayer
     public CAMetalLayer(Object layer) { }
     
     
-    @Mapping("device")
-    public native MTLDevice getDevice();
-    @Mapping("setDevice:")
-    public native void setDevice(MTLDevice v);
     @Mapping("pixelFormat")
     public native @Representing("MTLPixelFormat") @MachineSizedUInt long getPixelFormat();
     @Mapping("setPixelFormat:")
@@ -59,8 +54,8 @@ public class CAMetalLayer
     
     
     @Mapping("nextDrawable")
-    public native CAMetalDrawable nextDrawable();
+    public native Todo nextDrawable();
     @Mapping("newDrawable")
-    public native CAMetalDrawable newDrawable();
+    public native Todo newDrawable();
     
 }

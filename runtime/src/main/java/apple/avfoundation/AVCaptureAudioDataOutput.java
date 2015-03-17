@@ -35,15 +35,11 @@ public class AVCaptureAudioDataOutput
     public AVCaptureAudioDataOutput() {}
     
     
-    @Mapping("sampleBufferDelegate")
-    public native AVCaptureAudioDataOutputSampleBufferDelegate getSampleBufferDelegate();
     @Mapping("sampleBufferCallbackQueue")
     public native DispatchQueue getSampleBufferCallbackQueue();
     
     
     
-    @Mapping("setSampleBufferDelegate:queue:")
-    public native void setSampleBufferDelegate(AVCaptureAudioDataOutputSampleBufferDelegate sampleBufferDelegate, DispatchQueue sampleBufferCallbackQueue);
     /**
      * @since Available in iOS 7.0 and later.
      */

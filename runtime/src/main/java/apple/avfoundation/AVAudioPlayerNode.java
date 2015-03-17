@@ -72,10 +72,6 @@ public class AVAudioPlayerNode
     
     
     
-    @Mapping("scheduleBuffer:completionHandler:")
-    public native void scheduleBuffer(AVAudioPCMBuffer buffer, @Block Runnable completionHandler);
-    @Mapping("scheduleBuffer:atTime:options:completionHandler:")
-    public native void scheduleBuffer(AVAudioPCMBuffer buffer, AVAudioTime when, @Representing("AVAudioPlayerNodeBufferOptions") @MachineSizedUInt long options, @Block Runnable completionHandler);
     @Mapping("scheduleFile:atTime:completionHandler:")
     public native void scheduleFile(AVAudioFile file, AVAudioTime when, @Block Runnable completionHandler);
     @Mapping("scheduleSegment:startingFrame:frameCount:atTime:completionHandler:")

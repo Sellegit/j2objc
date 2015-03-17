@@ -45,38 +45,38 @@ public class CFGregorianDate
         return __new;
     ]-*/;
     public static native CFGregorianDate copyWithyear(CFGregorianDate original, int year) /*-[
-        original.year = year;
-        return original;
+        CFGregorianDate __new = { .year = year, .month = original.month, .day = original.day, .hour = original.hour, .minute = original.minute, .second = original.second };
+        return __new;
     ]-*/;
 
     
     public static native CFGregorianDate copyWithmonth(CFGregorianDate original, byte month) /*-[
-        original.month = month;
-        return original;
+        CFGregorianDate __new = { .year = original.year, .month = month, .day = original.day, .hour = original.hour, .minute = original.minute, .second = original.second };
+        return __new;
     ]-*/;
 
     
     public static native CFGregorianDate copyWithday(CFGregorianDate original, byte day) /*-[
-        original.day = day;
-        return original;
+        CFGregorianDate __new = { .year = original.year, .month = original.month, .day = day, .hour = original.hour, .minute = original.minute, .second = original.second };
+        return __new;
     ]-*/;
 
     
     public static native CFGregorianDate copyWithhour(CFGregorianDate original, byte hour) /*-[
-        original.hour = hour;
-        return original;
+        CFGregorianDate __new = { .year = original.year, .month = original.month, .day = original.day, .hour = hour, .minute = original.minute, .second = original.second };
+        return __new;
     ]-*/;
 
     
     public static native CFGregorianDate copyWithminute(CFGregorianDate original, byte minute) /*-[
-        original.minute = minute;
-        return original;
+        CFGregorianDate __new = { .year = original.year, .month = original.month, .day = original.day, .hour = original.hour, .minute = minute, .second = original.second };
+        return __new;
     ]-*/;
 
     
     public static native CFGregorianDate copyWithsecond(CFGregorianDate original, double second) /*-[
-        original.second = second;
-        return original;
+        CFGregorianDate __new = { .year = original.year, .month = original.month, .day = original.day, .hour = original.hour, .minute = original.minute, .second = second };
+        return __new;
     ]-*/;
 
     

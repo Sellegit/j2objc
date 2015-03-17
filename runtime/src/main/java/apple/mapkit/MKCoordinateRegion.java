@@ -39,14 +39,14 @@ public class MKCoordinateRegion
         return __new;
     ]-*/;
     public static native MKCoordinateRegion copyWithcenter(MKCoordinateRegion original, CLLocationCoordinate2D center) /*-[
-        original.center = center;
-        return original;
+        MKCoordinateRegion __new = { .center = center, .span = original.span };
+        return __new;
     ]-*/;
 
     
     public static native MKCoordinateRegion copyWithspan(MKCoordinateRegion original, MKCoordinateSpan span) /*-[
-        original.span = span;
-        return original;
+        MKCoordinateRegion __new = { .center = original.center, .span = span };
+        return __new;
     ]-*/;
 
     

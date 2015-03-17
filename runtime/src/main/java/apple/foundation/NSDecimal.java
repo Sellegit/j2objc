@@ -41,48 +41,7 @@ public class NSDecimal
     public native int get_isCompact();
     @DotMapping("_reserved")
     public native int get_reserved();
-    @DotMapping("_mantissa")
-    public native ShortBuffer get_mantissa();
     
-    public static native NSDecimal create(int _exponent, int _length, int _isNegative, int _isCompact, int _reserved, ShortBuffer _mantissa) /*-[
-        NSDecimal __new = { ._exponent = _exponent, ._length = _length, ._isNegative = _isNegative, ._isCompact = _isCompact, ._reserved = _reserved, ._mantissa = _mantissa };
-        return __new;
-    ]-*/;
-    public static native NSDecimal copyWith_exponent(NSDecimal original, int _exponent) /*-[
-        original._exponent = _exponent;
-        return original;
-    ]-*/;
-
-    
-    public static native NSDecimal copyWith_length(NSDecimal original, int _length) /*-[
-        original._length = _length;
-        return original;
-    ]-*/;
-
-    
-    public static native NSDecimal copyWith_isNegative(NSDecimal original, int _isNegative) /*-[
-        original._isNegative = _isNegative;
-        return original;
-    ]-*/;
-
-    
-    public static native NSDecimal copyWith_isCompact(NSDecimal original, int _isCompact) /*-[
-        original._isCompact = _isCompact;
-        return original;
-    ]-*/;
-
-    
-    public static native NSDecimal copyWith_reserved(NSDecimal original, int _reserved) /*-[
-        original._reserved = _reserved;
-        return original;
-    ]-*/;
-
-    
-    public static native NSDecimal copyWith_mantissa(NSDecimal original, ShortBuffer _mantissa) /*-[
-        original._mantissa = _mantissa;
-        return original;
-    ]-*/;
-
     
     @GlobalFunction("NSDecimalCompact")
     public static native void compact(NSDecimal number);

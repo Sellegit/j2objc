@@ -34,7 +34,6 @@ public abstract class AVCaptureAudioDataOutputSampleBufferDelegateAdapter
     
     
     
-    @NotImplemented("captureOutput:didOutputSampleBuffer:fromConnection:")
-    public void didOutputSampleBuffer(AVCaptureOutput captureOutput, CMSampleBuffer sampleBuffer, AVCaptureConnection connection) { throw new UnsupportedOperationException(); }
+    
     
 }

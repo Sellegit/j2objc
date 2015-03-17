@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 import apple.opengles.*;
 import apple.coremedia.*;
-import apple.metal.*;
 
 
 
@@ -36,26 +35,5 @@ public class CVPlanarPixelBufferInfo_YCbCrPlanar
     @DotMapping("componentInfoCr")
     public native CVPlanarComponentInfo getComponentInfoCr();
     
-    public static native CVPlanarPixelBufferInfo_YCbCrPlanar create(CVPlanarComponentInfo componentInfoY, CVPlanarComponentInfo componentInfoCb, CVPlanarComponentInfo componentInfoCr) /*-[
-        CVPlanarPixelBufferInfo_YCbCrPlanar __new = { .componentInfoY = componentInfoY, .componentInfoCb = componentInfoCb, .componentInfoCr = componentInfoCr };
-        return __new;
-    ]-*/;
-    public static native CVPlanarPixelBufferInfo_YCbCrPlanar copyWithcomponentInfoY(CVPlanarPixelBufferInfo_YCbCrPlanar original, CVPlanarComponentInfo componentInfoY) /*-[
-        original.componentInfoY = componentInfoY;
-        return original;
-    ]-*/;
-
-    
-    public static native CVPlanarPixelBufferInfo_YCbCrPlanar copyWithcomponentInfoCb(CVPlanarPixelBufferInfo_YCbCrPlanar original, CVPlanarComponentInfo componentInfoCb) /*-[
-        original.componentInfoCb = componentInfoCb;
-        return original;
-    ]-*/;
-
-    
-    public static native CVPlanarPixelBufferInfo_YCbCrPlanar copyWithcomponentInfoCr(CVPlanarPixelBufferInfo_YCbCrPlanar original, CVPlanarComponentInfo componentInfoCr) /*-[
-        original.componentInfoCr = componentInfoCr;
-        return original;
-    ]-*/;
-
     
 }

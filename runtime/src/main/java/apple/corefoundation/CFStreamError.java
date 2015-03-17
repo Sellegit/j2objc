@@ -37,14 +37,14 @@ public class CFStreamError
         return __new;
     ]-*/;
     public static native CFStreamError copyWithdomain(CFStreamError original, CFStreamErrorDomain domain) /*-[
-        original.domain = domain;
-        return original;
+        CFStreamError __new = { .domain = domain, .error = original.error };
+        return __new;
     ]-*/;
 
     
     public static native CFStreamError copyWitherror(CFStreamError original, int error) /*-[
-        original.error = error;
-        return original;
+        CFStreamError __new = { .domain = original.domain, .error = error };
+        return __new;
     ]-*/;
 
     

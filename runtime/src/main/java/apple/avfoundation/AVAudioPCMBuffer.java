@@ -33,8 +33,6 @@ public class AVAudioPCMBuffer
     
     
     public AVAudioPCMBuffer() {}
-    @Mapping("initWithPCMFormat:frameCapacity:")
-    public AVAudioPCMBuffer(AVAudioFormat format, int frameCapacity) { }
     
     
     @Mapping("frameCapacity")

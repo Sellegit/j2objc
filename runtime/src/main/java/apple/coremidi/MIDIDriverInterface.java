@@ -29,21 +29,5 @@ public class MIDIDriverInterface
     @DotMapping("_reserved")
     public native Todo get_reserved();
     
-    public static native MIDIDriverInterface copyWith_reserved(MIDIDriverInterface original, Todo _reserved) /*-[
-        original._reserved = _reserved;
-        return original;
-    ]-*/;
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     
 }

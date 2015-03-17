@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 
 
-@Library("OpenGLES/OpenGLES.h") @Mapping("EAGLDrawable")
+@Library("OpenGLES/EAGL.h") @Mapping("EAGLDrawable")
 public interface EAGLDrawable 
      {
 

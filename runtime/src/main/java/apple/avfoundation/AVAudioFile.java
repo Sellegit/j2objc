@@ -50,11 +50,6 @@ public class AVAudioFile
     
     
     
-    @Mapping("readIntoBuffer:error:")
-    public native boolean readIntoBuffer(AVAudioPCMBuffer buffer, Todo outError);
-    @Mapping("readIntoBuffer:frameCount:error:")
-    public native boolean readIntoBuffer(AVAudioPCMBuffer buffer, int frames, Todo outError);
-    @Mapping("writeFromBuffer:error:")
-    public native boolean writeFromBuffer(AVAudioPCMBuffer buffer, Todo outError);
+    
     
 }

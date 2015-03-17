@@ -75,19 +75,19 @@ public class AudioFile
      * @since Available in iOS 2.2 and later.
      */
     @GlobalFunction("AudioFileReadPacketData")
-    public static native AudioFileError readPacketData(AudioFile inAudioFile, boolean inUseCache, Todo ioNumBytes, AudioStreamPacketDescription outPacketDescriptions, long inStartingPacket, Todo ioNumPackets, Todo outBuffer);
+    public static native AudioFileError readPacketData(AudioFile inAudioFile, boolean inUseCache, Todo ioNumBytes, Todo outPacketDescriptions, long inStartingPacket, Todo ioNumPackets, Todo outBuffer);
     /**
      * @since Available in iOS 2.0 and later.
      * @deprecated Deprecated in iOS 8.0.
      */
     @Deprecated
     @GlobalFunction("AudioFileReadPackets")
-    public static native AudioFileError readPackets(AudioFile inAudioFile, boolean inUseCache, Todo outNumBytes, AudioStreamPacketDescription outPacketDescriptions, long inStartingPacket, Todo ioNumPackets, Todo outBuffer);
+    public static native AudioFileError readPackets(AudioFile inAudioFile, boolean inUseCache, Todo outNumBytes, Todo outPacketDescriptions, long inStartingPacket, Todo ioNumPackets, Todo outBuffer);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("AudioFileWritePackets")
-    public static native AudioFileError writePackets(AudioFile inAudioFile, boolean inUseCache, int inNumBytes, AudioStreamPacketDescription inPacketDescriptions, long inStartingPacket, Todo ioNumPackets, Todo inBuffer);
+    public static native AudioFileError writePackets(AudioFile inAudioFile, boolean inUseCache, int inNumBytes, Todo inPacketDescriptions, long inStartingPacket, Todo ioNumPackets, Todo inBuffer);
     /**
      * @since Available in iOS 2.0 and later.
      */

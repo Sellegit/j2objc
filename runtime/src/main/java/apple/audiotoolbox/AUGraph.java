@@ -68,7 +68,7 @@ public class AUGraph
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("AUGraphSetNodeInputCallback")
-    public static native int setNodeInputCallback(OpaqueAUGraph inGraph, int inDestNode, int inDestInputNumber, AURenderCallbackStruct inInputCallback);
+    public static native int setNodeInputCallback(OpaqueAUGraph inGraph, int inDestNode, int inDestInputNumber, Todo inInputCallback);
     /**
      * @since Available in iOS 2.0 and later.
      */
@@ -168,11 +168,11 @@ public class AUGraph
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("MusicSequenceSetAUGraph")
-    public static native int musicSequenceSet(MusicSequence inSequence, OpaqueAUGraph inGraph);
+    public static native int musicSequenceSet(OpaqueMusicSequence inSequence, OpaqueAUGraph inGraph);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("MusicSequenceGetAUGraph")
-    public static native int musicSequenceGet(MusicSequence inSequence, Todo outGraph);
+    public static native int musicSequenceGet(OpaqueMusicSequence inSequence, Todo outGraph);
     
 }

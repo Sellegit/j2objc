@@ -31,21 +31,6 @@ public class MIDIPacketList
     @DotMapping("packet")
     public native MIDIPacket getPacket();
     
-    public static native MIDIPacketList create(int numPackets, MIDIPacket packet) /*-[
-        MIDIPacketList __new = { .numPackets = numPackets, .packet = packet };
-        return __new;
-    ]-*/;
-    public static native MIDIPacketList copyWithnumPackets(MIDIPacketList original, int numPackets) /*-[
-        original.numPackets = numPackets;
-        return original;
-    ]-*/;
-
-    
-    public static native MIDIPacketList copyWithpacket(MIDIPacketList original, MIDIPacket packet) /*-[
-        original.packet = packet;
-        return original;
-    ]-*/;
-
     
     /**
      * @since Available in iOS 4.2 and later.

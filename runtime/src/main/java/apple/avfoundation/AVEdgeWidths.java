@@ -46,26 +46,26 @@ public class AVEdgeWidths
         return __new;
     ]-*/;
     public static native AVEdgeWidths copyWithleft(AVEdgeWidths original, @MachineSizedFloat double left) /*-[
-        original.left = left;
-        return original;
+        AVEdgeWidths __new = { .left = left, .top = original.top, .right = original.right, .bottom = original.bottom };
+        return __new;
     ]-*/;
 
     
     public static native AVEdgeWidths copyWithtop(AVEdgeWidths original, @MachineSizedFloat double top) /*-[
-        original.top = top;
-        return original;
+        AVEdgeWidths __new = { .left = original.left, .top = top, .right = original.right, .bottom = original.bottom };
+        return __new;
     ]-*/;
 
     
     public static native AVEdgeWidths copyWithright(AVEdgeWidths original, @MachineSizedFloat double right) /*-[
-        original.right = right;
-        return original;
+        AVEdgeWidths __new = { .left = original.left, .top = original.top, .right = right, .bottom = original.bottom };
+        return __new;
     ]-*/;
 
     
     public static native AVEdgeWidths copyWithbottom(AVEdgeWidths original, @MachineSizedFloat double bottom) /*-[
-        original.bottom = bottom;
-        return original;
+        AVEdgeWidths __new = { .left = original.left, .top = original.top, .right = original.right, .bottom = bottom };
+        return __new;
     ]-*/;
 
     

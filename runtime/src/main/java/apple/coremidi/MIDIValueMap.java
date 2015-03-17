@@ -26,17 +26,7 @@ public class MIDIValueMap
     protected MIDIValueMap() {}
     
     
-    @DotMapping("value")
-    public native ByteBuffer getValue();
     
-    public static native MIDIValueMap create(ByteBuffer value) /*-[
-        MIDIValueMap __new = { .value = value };
-        return __new;
-    ]-*/;
-    public static native MIDIValueMap copyWithvalue(MIDIValueMap original, ByteBuffer value) /*-[
-        original.value = value;
-        return original;
-    ]-*/;
-
+    
     
 }

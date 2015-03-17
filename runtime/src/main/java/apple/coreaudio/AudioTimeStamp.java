@@ -46,44 +46,44 @@ public class AudioTimeStamp
         return __new;
     ]-*/;
     public static native AudioTimeStamp copyWithmSampleTime(AudioTimeStamp original, double mSampleTime) /*-[
-        original.mSampleTime = mSampleTime;
-        return original;
+        AudioTimeStamp __new = { .mSampleTime = mSampleTime, .mHostTime = original.mHostTime, .mRateScalar = original.mRateScalar, .mWordClockTime = original.mWordClockTime, .mSMPTETime = original.mSMPTETime, .mFlags = original.mFlags, .mReserved = original.mReserved };
+        return __new;
     ]-*/;
 
     
     public static native AudioTimeStamp copyWithmHostTime(AudioTimeStamp original, long mHostTime) /*-[
-        original.mHostTime = mHostTime;
-        return original;
+        AudioTimeStamp __new = { .mSampleTime = original.mSampleTime, .mHostTime = mHostTime, .mRateScalar = original.mRateScalar, .mWordClockTime = original.mWordClockTime, .mSMPTETime = original.mSMPTETime, .mFlags = original.mFlags, .mReserved = original.mReserved };
+        return __new;
     ]-*/;
 
     
     public static native AudioTimeStamp copyWithmRateScalar(AudioTimeStamp original, double mRateScalar) /*-[
-        original.mRateScalar = mRateScalar;
-        return original;
+        AudioTimeStamp __new = { .mSampleTime = original.mSampleTime, .mHostTime = original.mHostTime, .mRateScalar = mRateScalar, .mWordClockTime = original.mWordClockTime, .mSMPTETime = original.mSMPTETime, .mFlags = original.mFlags, .mReserved = original.mReserved };
+        return __new;
     ]-*/;
 
     
     public static native AudioTimeStamp copyWithmWordClockTime(AudioTimeStamp original, long mWordClockTime) /*-[
-        original.mWordClockTime = mWordClockTime;
-        return original;
+        AudioTimeStamp __new = { .mSampleTime = original.mSampleTime, .mHostTime = original.mHostTime, .mRateScalar = original.mRateScalar, .mWordClockTime = mWordClockTime, .mSMPTETime = original.mSMPTETime, .mFlags = original.mFlags, .mReserved = original.mReserved };
+        return __new;
     ]-*/;
 
     
     public static native AudioTimeStamp copyWithmSMPTETime(AudioTimeStamp original, SMPTETime mSMPTETime) /*-[
-        original.mSMPTETime = mSMPTETime;
-        return original;
+        AudioTimeStamp __new = { .mSampleTime = original.mSampleTime, .mHostTime = original.mHostTime, .mRateScalar = original.mRateScalar, .mWordClockTime = original.mWordClockTime, .mSMPTETime = mSMPTETime, .mFlags = original.mFlags, .mReserved = original.mReserved };
+        return __new;
     ]-*/;
 
     
     public static native AudioTimeStamp copyWithmFlags(AudioTimeStamp original, int mFlags) /*-[
-        original.mFlags = mFlags;
-        return original;
+        AudioTimeStamp __new = { .mSampleTime = original.mSampleTime, .mHostTime = original.mHostTime, .mRateScalar = original.mRateScalar, .mWordClockTime = original.mWordClockTime, .mSMPTETime = original.mSMPTETime, .mFlags = mFlags, .mReserved = original.mReserved };
+        return __new;
     ]-*/;
 
     
     public static native AudioTimeStamp copyWithmReserved(AudioTimeStamp original, int mReserved) /*-[
-        original.mReserved = mReserved;
-        return original;
+        AudioTimeStamp __new = { .mSampleTime = original.mSampleTime, .mHostTime = original.mHostTime, .mRateScalar = original.mRateScalar, .mWordClockTime = original.mWordClockTime, .mSMPTETime = original.mSMPTETime, .mFlags = original.mFlags, .mReserved = mReserved };
+        return __new;
     ]-*/;
 
     

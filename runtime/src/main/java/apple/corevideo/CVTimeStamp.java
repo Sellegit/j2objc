@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 import apple.opengles.*;
 import apple.coremedia.*;
-import apple.metal.*;
 
 
 
@@ -48,62 +47,5 @@ public class CVTimeStamp
     @DotMapping("reserved")
     public native long getReserved();
     
-    public static native CVTimeStamp create(int version, int videoTimeScale, long videoTime, long hostTime, double rateScalar, long videoRefreshPeriod, CVSMPTETime smpteTime, long flags, long reserved) /*-[
-        CVTimeStamp __new = { .version = version, .videoTimeScale = videoTimeScale, .videoTime = videoTime, .hostTime = hostTime, .rateScalar = rateScalar, .videoRefreshPeriod = videoRefreshPeriod, .smpteTime = smpteTime, .flags = flags, .reserved = reserved };
-        return __new;
-    ]-*/;
-    public static native CVTimeStamp copyWithversion(CVTimeStamp original, int version) /*-[
-        original.version = version;
-        return original;
-    ]-*/;
-
-    
-    public static native CVTimeStamp copyWithvideoTimeScale(CVTimeStamp original, int videoTimeScale) /*-[
-        original.videoTimeScale = videoTimeScale;
-        return original;
-    ]-*/;
-
-    
-    public static native CVTimeStamp copyWithvideoTime(CVTimeStamp original, long videoTime) /*-[
-        original.videoTime = videoTime;
-        return original;
-    ]-*/;
-
-    
-    public static native CVTimeStamp copyWithhostTime(CVTimeStamp original, long hostTime) /*-[
-        original.hostTime = hostTime;
-        return original;
-    ]-*/;
-
-    
-    public static native CVTimeStamp copyWithrateScalar(CVTimeStamp original, double rateScalar) /*-[
-        original.rateScalar = rateScalar;
-        return original;
-    ]-*/;
-
-    
-    public static native CVTimeStamp copyWithvideoRefreshPeriod(CVTimeStamp original, long videoRefreshPeriod) /*-[
-        original.videoRefreshPeriod = videoRefreshPeriod;
-        return original;
-    ]-*/;
-
-    
-    public static native CVTimeStamp copyWithsmpteTime(CVTimeStamp original, CVSMPTETime smpteTime) /*-[
-        original.smpteTime = smpteTime;
-        return original;
-    ]-*/;
-
-    
-    public static native CVTimeStamp copyWithflags(CVTimeStamp original, long flags) /*-[
-        original.flags = flags;
-        return original;
-    ]-*/;
-
-    
-    public static native CVTimeStamp copyWithreserved(CVTimeStamp original, long reserved) /*-[
-        original.reserved = reserved;
-        return original;
-    ]-*/;
-
     
 }

@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 
 
-@Library("OpenGLES/OpenGLES.h") @Mapping("EAGLSharegroup")
+@Library("OpenGLES/EAGL.h") @Mapping("EAGLSharegroup")
 public class EAGLSharegroup 
     extends NSObject 
      {

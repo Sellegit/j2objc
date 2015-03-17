@@ -30,14 +30,5 @@ import apple.foundation.*;
     @DotMapping("version")
     public native @MachineSizedSInt long getVersion();
     
-    public static native CFMessagePortContext copyWithversion(CFMessagePortContext original, @MachineSizedSInt long version) /*-[
-        original.version = version;
-        return original;
-    ]-*/;
-
-    
-    
-    
-    
     
 }

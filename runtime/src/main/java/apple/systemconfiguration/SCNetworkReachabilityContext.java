@@ -30,14 +30,5 @@ import apple.dispatch.*;
     @DotMapping("version")
     public native @MachineSizedSInt long getVersion();
     
-    public static native SCNetworkReachabilityContext copyWithversion(SCNetworkReachabilityContext original, @MachineSizedSInt long version) /*-[
-        original.version = version;
-        return original;
-    ]-*/;
-
-    
-    
-    
-    
     
 }

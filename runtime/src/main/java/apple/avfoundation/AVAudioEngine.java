@@ -36,9 +36,9 @@ public class AVAudioEngine
     
     
     @Mapping("musicSequence")
-    public native MusicSequence getMusicSequence();
+    public native OpaqueMusicSequence getMusicSequence();
     @Mapping("setMusicSequence:")
-    public native void setMusicSequence(MusicSequence v);
+    public native void setMusicSequence(OpaqueMusicSequence v);
     @Mapping("outputNode")
     public native AVAudioOutputNode getOutputNode();
     @Mapping("inputNode")

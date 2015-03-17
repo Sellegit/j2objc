@@ -70,98 +70,98 @@ public class SCNMatrix4
         return __new;
     ]-*/;
     public static native SCNMatrix4 copyWithm11(SCNMatrix4 original, float m11) /*-[
-        original.m11 = m11;
-        return original;
+        SCNMatrix4 __new = { .m11 = m11, .m12 = original.m12, .m13 = original.m13, .m14 = original.m14, .m21 = original.m21, .m22 = original.m22, .m23 = original.m23, .m24 = original.m24, .m31 = original.m31, .m32 = original.m32, .m33 = original.m33, .m34 = original.m34, .m41 = original.m41, .m42 = original.m42, .m43 = original.m43, .m44 = original.m44 };
+        return __new;
     ]-*/;
 
     
     public static native SCNMatrix4 copyWithm12(SCNMatrix4 original, float m12) /*-[
-        original.m12 = m12;
-        return original;
+        SCNMatrix4 __new = { .m11 = original.m11, .m12 = m12, .m13 = original.m13, .m14 = original.m14, .m21 = original.m21, .m22 = original.m22, .m23 = original.m23, .m24 = original.m24, .m31 = original.m31, .m32 = original.m32, .m33 = original.m33, .m34 = original.m34, .m41 = original.m41, .m42 = original.m42, .m43 = original.m43, .m44 = original.m44 };
+        return __new;
     ]-*/;
 
     
     public static native SCNMatrix4 copyWithm13(SCNMatrix4 original, float m13) /*-[
-        original.m13 = m13;
-        return original;
+        SCNMatrix4 __new = { .m11 = original.m11, .m12 = original.m12, .m13 = m13, .m14 = original.m14, .m21 = original.m21, .m22 = original.m22, .m23 = original.m23, .m24 = original.m24, .m31 = original.m31, .m32 = original.m32, .m33 = original.m33, .m34 = original.m34, .m41 = original.m41, .m42 = original.m42, .m43 = original.m43, .m44 = original.m44 };
+        return __new;
     ]-*/;
 
     
     public static native SCNMatrix4 copyWithm14(SCNMatrix4 original, float m14) /*-[
-        original.m14 = m14;
-        return original;
+        SCNMatrix4 __new = { .m11 = original.m11, .m12 = original.m12, .m13 = original.m13, .m14 = m14, .m21 = original.m21, .m22 = original.m22, .m23 = original.m23, .m24 = original.m24, .m31 = original.m31, .m32 = original.m32, .m33 = original.m33, .m34 = original.m34, .m41 = original.m41, .m42 = original.m42, .m43 = original.m43, .m44 = original.m44 };
+        return __new;
     ]-*/;
 
     
     public static native SCNMatrix4 copyWithm21(SCNMatrix4 original, float m21) /*-[
-        original.m21 = m21;
-        return original;
+        SCNMatrix4 __new = { .m11 = original.m11, .m12 = original.m12, .m13 = original.m13, .m14 = original.m14, .m21 = m21, .m22 = original.m22, .m23 = original.m23, .m24 = original.m24, .m31 = original.m31, .m32 = original.m32, .m33 = original.m33, .m34 = original.m34, .m41 = original.m41, .m42 = original.m42, .m43 = original.m43, .m44 = original.m44 };
+        return __new;
     ]-*/;
 
     
     public static native SCNMatrix4 copyWithm22(SCNMatrix4 original, float m22) /*-[
-        original.m22 = m22;
-        return original;
+        SCNMatrix4 __new = { .m11 = original.m11, .m12 = original.m12, .m13 = original.m13, .m14 = original.m14, .m21 = original.m21, .m22 = m22, .m23 = original.m23, .m24 = original.m24, .m31 = original.m31, .m32 = original.m32, .m33 = original.m33, .m34 = original.m34, .m41 = original.m41, .m42 = original.m42, .m43 = original.m43, .m44 = original.m44 };
+        return __new;
     ]-*/;
 
     
     public static native SCNMatrix4 copyWithm23(SCNMatrix4 original, float m23) /*-[
-        original.m23 = m23;
-        return original;
+        SCNMatrix4 __new = { .m11 = original.m11, .m12 = original.m12, .m13 = original.m13, .m14 = original.m14, .m21 = original.m21, .m22 = original.m22, .m23 = m23, .m24 = original.m24, .m31 = original.m31, .m32 = original.m32, .m33 = original.m33, .m34 = original.m34, .m41 = original.m41, .m42 = original.m42, .m43 = original.m43, .m44 = original.m44 };
+        return __new;
     ]-*/;
 
     
     public static native SCNMatrix4 copyWithm24(SCNMatrix4 original, float m24) /*-[
-        original.m24 = m24;
-        return original;
+        SCNMatrix4 __new = { .m11 = original.m11, .m12 = original.m12, .m13 = original.m13, .m14 = original.m14, .m21 = original.m21, .m22 = original.m22, .m23 = original.m23, .m24 = m24, .m31 = original.m31, .m32 = original.m32, .m33 = original.m33, .m34 = original.m34, .m41 = original.m41, .m42 = original.m42, .m43 = original.m43, .m44 = original.m44 };
+        return __new;
     ]-*/;
 
     
     public static native SCNMatrix4 copyWithm31(SCNMatrix4 original, float m31) /*-[
-        original.m31 = m31;
-        return original;
+        SCNMatrix4 __new = { .m11 = original.m11, .m12 = original.m12, .m13 = original.m13, .m14 = original.m14, .m21 = original.m21, .m22 = original.m22, .m23 = original.m23, .m24 = original.m24, .m31 = m31, .m32 = original.m32, .m33 = original.m33, .m34 = original.m34, .m41 = original.m41, .m42 = original.m42, .m43 = original.m43, .m44 = original.m44 };
+        return __new;
     ]-*/;
 
     
     public static native SCNMatrix4 copyWithm32(SCNMatrix4 original, float m32) /*-[
-        original.m32 = m32;
-        return original;
+        SCNMatrix4 __new = { .m11 = original.m11, .m12 = original.m12, .m13 = original.m13, .m14 = original.m14, .m21 = original.m21, .m22 = original.m22, .m23 = original.m23, .m24 = original.m24, .m31 = original.m31, .m32 = m32, .m33 = original.m33, .m34 = original.m34, .m41 = original.m41, .m42 = original.m42, .m43 = original.m43, .m44 = original.m44 };
+        return __new;
     ]-*/;
 
     
     public static native SCNMatrix4 copyWithm33(SCNMatrix4 original, float m33) /*-[
-        original.m33 = m33;
-        return original;
+        SCNMatrix4 __new = { .m11 = original.m11, .m12 = original.m12, .m13 = original.m13, .m14 = original.m14, .m21 = original.m21, .m22 = original.m22, .m23 = original.m23, .m24 = original.m24, .m31 = original.m31, .m32 = original.m32, .m33 = m33, .m34 = original.m34, .m41 = original.m41, .m42 = original.m42, .m43 = original.m43, .m44 = original.m44 };
+        return __new;
     ]-*/;
 
     
     public static native SCNMatrix4 copyWithm34(SCNMatrix4 original, float m34) /*-[
-        original.m34 = m34;
-        return original;
+        SCNMatrix4 __new = { .m11 = original.m11, .m12 = original.m12, .m13 = original.m13, .m14 = original.m14, .m21 = original.m21, .m22 = original.m22, .m23 = original.m23, .m24 = original.m24, .m31 = original.m31, .m32 = original.m32, .m33 = original.m33, .m34 = m34, .m41 = original.m41, .m42 = original.m42, .m43 = original.m43, .m44 = original.m44 };
+        return __new;
     ]-*/;
 
     
     public static native SCNMatrix4 copyWithm41(SCNMatrix4 original, float m41) /*-[
-        original.m41 = m41;
-        return original;
+        SCNMatrix4 __new = { .m11 = original.m11, .m12 = original.m12, .m13 = original.m13, .m14 = original.m14, .m21 = original.m21, .m22 = original.m22, .m23 = original.m23, .m24 = original.m24, .m31 = original.m31, .m32 = original.m32, .m33 = original.m33, .m34 = original.m34, .m41 = m41, .m42 = original.m42, .m43 = original.m43, .m44 = original.m44 };
+        return __new;
     ]-*/;
 
     
     public static native SCNMatrix4 copyWithm42(SCNMatrix4 original, float m42) /*-[
-        original.m42 = m42;
-        return original;
+        SCNMatrix4 __new = { .m11 = original.m11, .m12 = original.m12, .m13 = original.m13, .m14 = original.m14, .m21 = original.m21, .m22 = original.m22, .m23 = original.m23, .m24 = original.m24, .m31 = original.m31, .m32 = original.m32, .m33 = original.m33, .m34 = original.m34, .m41 = original.m41, .m42 = m42, .m43 = original.m43, .m44 = original.m44 };
+        return __new;
     ]-*/;
 
     
     public static native SCNMatrix4 copyWithm43(SCNMatrix4 original, float m43) /*-[
-        original.m43 = m43;
-        return original;
+        SCNMatrix4 __new = { .m11 = original.m11, .m12 = original.m12, .m13 = original.m13, .m14 = original.m14, .m21 = original.m21, .m22 = original.m22, .m23 = original.m23, .m24 = original.m24, .m31 = original.m31, .m32 = original.m32, .m33 = original.m33, .m34 = original.m34, .m41 = original.m41, .m42 = original.m42, .m43 = m43, .m44 = original.m44 };
+        return __new;
     ]-*/;
 
     
     public static native SCNMatrix4 copyWithm44(SCNMatrix4 original, float m44) /*-[
-        original.m44 = m44;
-        return original;
+        SCNMatrix4 __new = { .m11 = original.m11, .m12 = original.m12, .m13 = original.m13, .m14 = original.m14, .m21 = original.m21, .m22 = original.m22, .m23 = original.m23, .m24 = original.m24, .m31 = original.m31, .m32 = original.m32, .m33 = original.m33, .m34 = original.m34, .m41 = original.m41, .m42 = original.m42, .m43 = original.m43, .m44 = m44 };
+        return __new;
     ]-*/;
 
     

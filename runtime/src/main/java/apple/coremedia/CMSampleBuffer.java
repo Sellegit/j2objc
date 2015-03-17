@@ -102,12 +102,12 @@ public class CMSampleBuffer
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMAudioSampleBufferCreateWithPacketDescriptions")
-    private static native CMSampleBufferError createAudioSampleBuffer(CFAllocator allocator, CMBlockBuffer dataBuffer, boolean dataReady, FunctionPtr makeDataReadyCallback, Todo makeDataReadyRefcon, CMFormatDescription formatDescription, @MachineSizedSInt long numSamples, CMTime sbufPTS, AudioStreamPacketDescription packetDescriptions, Todo sBufOut);
+    private static native CMSampleBufferError createAudioSampleBuffer(CFAllocator allocator, CMBlockBuffer dataBuffer, boolean dataReady, FunctionPtr makeDataReadyCallback, Todo makeDataReadyRefcon, CMFormatDescription formatDescription, @MachineSizedSInt long numSamples, CMTime sbufPTS, Todo packetDescriptions, Todo sBufOut);
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalFunction("CMAudioSampleBufferCreateReadyWithPacketDescriptions")
-    private static native CMSampleBufferError createAudioSampleBuffer(CFAllocator allocator, CMBlockBuffer dataBuffer, CMFormatDescription formatDescription, @MachineSizedSInt long numSamples, CMTime sbufPTS, AudioStreamPacketDescription packetDescriptions, Todo sBufOut);
+    private static native CMSampleBufferError createAudioSampleBuffer(CFAllocator allocator, CMBlockBuffer dataBuffer, CMFormatDescription formatDescription, @MachineSizedSInt long numSamples, CMTime sbufPTS, Todo packetDescriptions, Todo sBufOut);
     /**
      * @since Available in iOS 4.0 and later.
      */
@@ -157,22 +157,22 @@ public class CMSampleBuffer
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMSampleBufferSetDataBufferFromAudioBufferList")
-    public static native CMSampleBufferError setAudioBufferList(CMSampleBuffer sbuf, CFAllocator bbufStructAllocator, CFAllocator bbufMemoryAllocator, int flags, AudioBufferList bufferList);
+    public static native CMSampleBufferError setAudioBufferList(CMSampleBuffer sbuf, CFAllocator bbufStructAllocator, CFAllocator bbufMemoryAllocator, int flags, Todo bufferList);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMSampleBufferGetAudioBufferListWithRetainedBlockBuffer")
-    private static native CMSampleBufferError getAudioBufferList(CMSampleBuffer sbuf, Todo bufferListSizeNeededOut, AudioBufferList bufferListOut, @MachineSizedUInt long bufferListSize, CFAllocator bbufStructAllocator, CFAllocator bbufMemoryAllocator, int flags, Todo blockBufferOut);
+    private static native CMSampleBufferError getAudioBufferList(CMSampleBuffer sbuf, Todo bufferListSizeNeededOut, Todo bufferListOut, @MachineSizedUInt long bufferListSize, CFAllocator bbufStructAllocator, CFAllocator bbufMemoryAllocator, int flags, Todo blockBufferOut);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMSampleBufferGetAudioStreamPacketDescriptions")
-    private static native CMSampleBufferError getAudioStreamPacketDescriptions(CMSampleBuffer sbuf, @MachineSizedUInt long packetDescriptionsSize, AudioStreamPacketDescription packetDescriptionsOut, Todo packetDescriptionsSizeNeededOut);
+    private static native CMSampleBufferError getAudioStreamPacketDescriptions(CMSampleBuffer sbuf, @MachineSizedUInt long packetDescriptionsSize, Todo packetDescriptionsOut, Todo packetDescriptionsSizeNeededOut);
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalFunction("CMSampleBufferCopyPCMDataIntoAudioBufferList")
-    public static native CMSampleBufferError copyPCMDataIntoAudioBufferList(CMSampleBuffer sbuf, int frameOffset, int numFrames, AudioBufferList bufferList);
+    public static native CMSampleBufferError copyPCMDataIntoAudioBufferList(CMSampleBuffer sbuf, int frameOffset, int numFrames, Todo bufferList);
     /**
      * @since Available in iOS 4.0 and later.
      */

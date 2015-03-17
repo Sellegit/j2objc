@@ -37,14 +37,14 @@ public class CGSize
         return __new;
     ]-*/;
     public static native CGSize copyWithwidth(CGSize original, @MachineSizedFloat double width) /*-[
-        original.width = width;
-        return original;
+        CGSize __new = { .width = width, .height = original.height };
+        return __new;
     ]-*/;
 
     
     public static native CGSize copyWithheight(CGSize original, @MachineSizedFloat double height) /*-[
-        original.height = height;
-        return original;
+        CGSize __new = { .width = original.width, .height = height };
+        return __new;
     ]-*/;
 
     

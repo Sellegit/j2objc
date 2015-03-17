@@ -48,17 +48,17 @@ public class ExtAudioFile
      * @since Available in iOS 2.1 and later.
      */
     @GlobalFunction("ExtAudioFileRead")
-    public static native int read(OpaqueExtAudioFile inExtAudioFile, Todo ioNumberFrames, AudioBufferList ioData);
+    public static native int read(OpaqueExtAudioFile inExtAudioFile, Todo ioNumberFrames, Todo ioData);
     /**
      * @since Available in iOS 2.1 and later.
      */
     @GlobalFunction("ExtAudioFileWrite")
-    public static native int write(OpaqueExtAudioFile inExtAudioFile, int inNumberFrames, AudioBufferList ioData);
+    public static native int write(OpaqueExtAudioFile inExtAudioFile, int inNumberFrames, Todo ioData);
     /**
      * @since Available in iOS 2.1 and later.
      */
     @GlobalFunction("ExtAudioFileWriteAsync")
-    public static native int writeAsync(OpaqueExtAudioFile inExtAudioFile, int inNumberFrames, AudioBufferList ioData);
+    public static native int writeAsync(OpaqueExtAudioFile inExtAudioFile, int inNumberFrames, Todo ioData);
     /**
      * @since Available in iOS 2.1 and later.
      */

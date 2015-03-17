@@ -29,18 +29,8 @@ public class GLKQuaternion
     protected GLKQuaternion() {}
     
     
-    @DotMapping("q")
-    public native FloatBuffer getQ();
     
-    public static native GLKQuaternion create(FloatBuffer q) /*-[
-        GLKQuaternion __new = { .q = q };
-        return __new;
-    ]-*/;
-    public static native GLKQuaternion copyWithq(GLKQuaternion original, FloatBuffer q) /*-[
-        original.q = q;
-        return original;
-    ]-*/;
-
+    
     
     @GlobalConstant("GLKQuaternionIdentity")
     public static native GLKQuaternion Identity();

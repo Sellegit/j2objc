@@ -16,7 +16,7 @@ import apple.coreservices.*;
 
 
 
-@Mapping("timespec") @Library("System/System.h")
+@Mapping("timespec") @Library("dispatch/dispatch.h")
  class timespec 
     extends Struct 
      {
@@ -30,20 +30,5 @@ import apple.coreservices.*;
     @DotMapping("tv_nsec")
     public native @MachineSizedSInt long getTv_nsec();
     
-    public static native timespec create(@MachineSizedSInt long tv_sec, @MachineSizedSInt long tv_nsec) /*-[
-        timespec __new = { .tv_sec = tv_sec, .tv_nsec = tv_nsec };
-        return __new;
-    ]-*/;
-    public static native timespec copyWithtv_sec(timespec original, @MachineSizedSInt long tv_sec) /*-[
-        original.tv_sec = tv_sec;
-        return original;
-    ]-*/;
-
-    
-    public static native timespec copyWithtv_nsec(timespec original, @MachineSizedSInt long tv_nsec) /*-[
-        original.tv_nsec = tv_nsec;
-        return original;
-    ]-*/;
-
     
 }

@@ -37,18 +37,5 @@ public class CMBlockBufferCustomBlockSource
     @DotMapping("refCon")
     public native Todo getRefCon();
     
-    public static native CMBlockBufferCustomBlockSource copyWithversion(CMBlockBufferCustomBlockSource original, int version) /*-[
-        original.version = version;
-        return original;
-    ]-*/;
-
-    
-    
-    
-    public static native CMBlockBufferCustomBlockSource copyWithrefCon(CMBlockBufferCustomBlockSource original, Todo refCon) /*-[
-        original.refCon = refCon;
-        return original;
-    ]-*/;
-
     
 }

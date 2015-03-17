@@ -42,14 +42,14 @@ public class AVAudio3DVectorOrientation
         return __new;
     ]-*/;
     public static native AVAudio3DVectorOrientation copyWithforward(AVAudio3DVectorOrientation original, AVAudio3DVector forward) /*-[
-        original.forward = forward;
-        return original;
+        AVAudio3DVectorOrientation __new = { .forward = forward, .up = original.up };
+        return __new;
     ]-*/;
 
     
     public static native AVAudio3DVectorOrientation copyWithup(AVAudio3DVectorOrientation original, AVAudio3DVector up) /*-[
-        original.up = up;
-        return original;
+        AVAudio3DVectorOrientation __new = { .forward = original.forward, .up = up };
+        return __new;
     ]-*/;
 
     

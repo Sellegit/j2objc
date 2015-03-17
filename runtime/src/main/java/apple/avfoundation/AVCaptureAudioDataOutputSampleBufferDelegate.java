@@ -32,8 +32,7 @@ public interface AVCaptureAudioDataOutputSampleBufferDelegate
     
     
     
-    @Mapping("captureOutput:didOutputSampleBuffer:fromConnection:")
-    void didOutputSampleBuffer(AVCaptureOutput captureOutput, CMSampleBuffer sampleBuffer, AVCaptureConnection connection);
+    
     
     /*<adapter>*/
     /*</adapter>*/

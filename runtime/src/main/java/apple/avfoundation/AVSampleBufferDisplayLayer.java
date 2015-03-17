@@ -33,8 +33,6 @@ public class AVSampleBufferDisplayLayer
     
     
     public AVSampleBufferDisplayLayer() {}
-    @Mapping("initWithLayer:")
-    public AVSampleBufferDisplayLayer(Object layer) { }
     
     
     @Mapping("controlTimebase")
@@ -45,11 +43,6 @@ public class AVSampleBufferDisplayLayer
     public native AVLayerVideoGravity getVideoGravity();
     @Mapping("setVideoGravity:")
     public native void setVideoGravity(AVLayerVideoGravity v);
-    /**
-     * @since Available in iOS 8.0 and later.
-     */
-    @Mapping("status")
-    public native @Representing("AVQueuedSampleBufferRenderingStatus") @MachineSizedSInt long getStatus();
     /**
      * @since Available in iOS 8.0 and later.
      */
@@ -71,8 +64,6 @@ public class AVSampleBufferDisplayLayer
     @GlobalConstant("AVSampleBufferDisplayLayerFailedToDecodeNotificationErrorKey")
     public static native NSString FailedToDecodeNotificationErrorKey();
     
-    @Mapping("enqueueSampleBuffer:")
-    public native void enqueueSampleBuffer(CMSampleBuffer sampleBuffer);
     @Mapping("flush")
     public native void flush();
     @Mapping("flushAndRemoveImage")

@@ -38,20 +38,20 @@ public class CMAcceleration
         return __new;
     ]-*/;
     public static native CMAcceleration copyWithx(CMAcceleration original, double x) /*-[
-        original.x = x;
-        return original;
+        CMAcceleration __new = { .x = x, .y = original.y, .z = original.z };
+        return __new;
     ]-*/;
 
     
     public static native CMAcceleration copyWithy(CMAcceleration original, double y) /*-[
-        original.y = y;
-        return original;
+        CMAcceleration __new = { .x = original.x, .y = y, .z = original.z };
+        return __new;
     ]-*/;
 
     
     public static native CMAcceleration copyWithz(CMAcceleration original, double z) /*-[
-        original.z = z;
-        return original;
+        CMAcceleration __new = { .x = original.x, .y = original.y, .z = z };
+        return __new;
     ]-*/;
 
     

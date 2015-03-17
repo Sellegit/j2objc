@@ -30,15 +30,5 @@ import apple.foundation.*;
     @DotMapping("version")
     public native @MachineSizedSInt long getVersion();
     
-    public static native CFSetCallBacks copyWithversion(CFSetCallBacks original, @MachineSizedSInt long version) /*-[
-        original.version = version;
-        return original;
-    ]-*/;
-
-    
-    
-    
-    
-    
     
 }

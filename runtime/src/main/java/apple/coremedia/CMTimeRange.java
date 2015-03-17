@@ -40,14 +40,14 @@ public class CMTimeRange
         return __new;
     ]-*/;
     public static native CMTimeRange copyWithstart(CMTimeRange original, CMTime start) /*-[
-        original.start = start;
-        return original;
+        CMTimeRange __new = { .start = start, .duration = original.duration };
+        return __new;
     ]-*/;
 
     
     public static native CMTimeRange copyWithduration(CMTimeRange original, CMTime duration) /*-[
-        original.duration = duration;
-        return original;
+        CMTimeRange __new = { .start = original.start, .duration = duration };
+        return __new;
     ]-*/;
 
     

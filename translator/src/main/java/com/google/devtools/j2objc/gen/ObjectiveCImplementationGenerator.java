@@ -57,6 +57,7 @@ import org.eclipse.jdt.core.dom.IMethodBinding;
 import org.eclipse.jdt.core.dom.ITypeBinding;
 import org.eclipse.jdt.core.dom.IVariableBinding;
 import org.eclipse.jdt.core.dom.Modifier;
+import org.eclipse.jdt.internal.compiler.lookup.Binding;
 
 import java.util.List;
 import java.util.Set;
@@ -854,8 +855,11 @@ public class ObjectiveCImplementationGenerator extends ObjectiveCSourceFileGener
 
   private void printClassExtensions(List<AbstractTypeDeclaration> types) {
     for (AbstractTypeDeclaration type : types) {
-      if (type.getTypeBinding().isClass() || type.getTypeBinding().isEnum()) {
-        printClassExtension(type);
+      String mapping = BindingUtil.extractMappingName(type.getTypeBinding());
+      if (mapping == null) {
+        if (type.getTypeBinding().isClass() || type.getTypeBinding().isEnum()) {
+          printClassExtension(type);
+        }
       }
     }
   }

@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 import apple.opengles.*;
 import apple.coremedia.*;
-import apple.metal.*;
 
 
 
@@ -39,14 +38,14 @@ public class CVPlanarComponentInfo
         return __new;
     ]-*/;
     public static native CVPlanarComponentInfo copyWithoffset(CVPlanarComponentInfo original, int offset) /*-[
-        original.offset = offset;
-        return original;
+        CVPlanarComponentInfo __new = { .offset = offset, .rowBytes = original.rowBytes };
+        return __new;
     ]-*/;
 
     
     public static native CVPlanarComponentInfo copyWithrowBytes(CVPlanarComponentInfo original, int rowBytes) /*-[
-        original.rowBytes = rowBytes;
-        return original;
+        CVPlanarComponentInfo __new = { .offset = original.offset, .rowBytes = rowBytes };
+        return __new;
     ]-*/;
 
     

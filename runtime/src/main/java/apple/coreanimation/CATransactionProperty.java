@@ -15,7 +15,6 @@ import apple.foundation.*;
 import apple.coreimage.*;
 import apple.coretext.*;
 import apple.opengles.*;
-import apple.metal.*;
 
 
 /*<javadoc>*/

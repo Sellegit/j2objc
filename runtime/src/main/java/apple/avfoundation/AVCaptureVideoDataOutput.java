@@ -35,8 +35,6 @@ public class AVCaptureVideoDataOutput
     public AVCaptureVideoDataOutput() {}
     
     
-    @Mapping("sampleBufferDelegate")
-    public native AVCaptureVideoDataOutputSampleBufferDelegate getSampleBufferDelegate();
     @Mapping("sampleBufferCallbackQueue")
     public native DispatchQueue getSampleBufferCallbackQueue();
     @Mapping("videoSettings")
@@ -60,8 +58,6 @@ public class AVCaptureVideoDataOutput
     
     
     
-    @Mapping("setSampleBufferDelegate:queue:")
-    public native void setSampleBufferDelegate(AVCaptureVideoDataOutputSampleBufferDelegate sampleBufferDelegate, DispatchQueue sampleBufferCallbackQueue);
     /**
      * @since Available in iOS 7.0 and later.
      */

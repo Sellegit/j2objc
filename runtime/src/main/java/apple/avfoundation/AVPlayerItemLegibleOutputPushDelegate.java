@@ -32,11 +32,7 @@ public interface AVPlayerItemLegibleOutputPushDelegate
     
     
     
-    /**
-     * @since Available in iOS 7.0 and later.
-     */
-    @Mapping("legibleOutput:didOutputAttributedStrings:nativeSampleBuffers:forItemTime:")
-    void didOutputAttributedStrings(AVPlayerItemLegibleOutput output, NSArray<?> strings, NSArray<?> nativeSamples, CMTime itemTime);
+    
     
     /*<adapter>*/
     /*</adapter>*/

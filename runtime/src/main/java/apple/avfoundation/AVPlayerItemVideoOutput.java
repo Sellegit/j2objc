@@ -33,8 +33,6 @@ public class AVPlayerItemVideoOutput
     
     
     public AVPlayerItemVideoOutput() {}
-    @Mapping("initWithPixelBufferAttributes:")
-    public AVPlayerItemVideoOutput(NSDictionary<?, ?> pixelBufferAttributes) { }
     
     
     @Mapping("delegate")
@@ -44,10 +42,6 @@ public class AVPlayerItemVideoOutput
     
     
     
-    @Mapping("hasNewPixelBufferForItemTime:")
-    public native boolean hasNewPixelBufferForItemTime(CMTime itemTime);
-    @Mapping("copyPixelBufferForItemTime:itemTimeForDisplay:")
-    public native CVPixelBuffer getPixelBufferForItemTime(CMTime itemTime, CMTime outItemTimeForDisplay);
     @Mapping("setDelegate:queue:")
     public native void setDelegate(AVPlayerItemOutputPullDelegate delegate, DispatchQueue delegateQueue);
     @Mapping("requestNotificationOfMediaDataChangeWithAdvanceInterval:")

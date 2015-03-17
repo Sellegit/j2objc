@@ -35,23 +35,5 @@ import apple.corevideo.*;
     @DotMapping("dataBecameReadyNotification")
     public native String getDataBecameReadyNotification();
     
-    public static native CMBufferCallbacksStruct copyWithversion(CMBufferCallbacksStruct original, int version) /*-[
-        original.version = version;
-        return original;
-    ]-*/;
-
-    
-    
-    
-    
-    
-    
-    
-    public static native CMBufferCallbacksStruct copyWithdataBecameReadyNotification(CMBufferCallbacksStruct original, String dataBecameReadyNotification) /*-[
-        original.dataBecameReadyNotification = dataBecameReadyNotification;
-        return original;
-    ]-*/;
-
-    
     
 }

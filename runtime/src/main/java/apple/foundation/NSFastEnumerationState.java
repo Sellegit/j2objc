@@ -38,23 +38,5 @@ public class NSFastEnumerationState
     @DotMapping("mutationsPtr")
     public native Todo getMutationsPtr();
     
-    public static native NSFastEnumerationState copyWithstate(NSFastEnumerationState original, @MachineSizedUInt long state) /*-[
-        original.state = state;
-        return original;
-    ]-*/;
-
-    
-    public static native NSFastEnumerationState copyWithitemsPtr(NSFastEnumerationState original, Todo itemsPtr) /*-[
-        original.itemsPtr = itemsPtr;
-        return original;
-    ]-*/;
-
-    
-    public static native NSFastEnumerationState copyWithmutationsPtr(NSFastEnumerationState original, Todo mutationsPtr) /*-[
-        original.mutationsPtr = mutationsPtr;
-        return original;
-    ]-*/;
-
-    
     
 }

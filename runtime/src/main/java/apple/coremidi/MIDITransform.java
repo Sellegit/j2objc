@@ -36,14 +36,14 @@ public class MIDITransform
         return __new;
     ]-*/;
     public static native MIDITransform copyWithtransform(MIDITransform original, MIDITransformType transform) /*-[
-        original.transform = transform;
-        return original;
+        MIDITransform __new = { .transform = transform, .param = original.param };
+        return __new;
     ]-*/;
 
     
     public static native MIDITransform copyWithparam(MIDITransform original, short param) /*-[
-        original.param = param;
-        return original;
+        MIDITransform __new = { .transform = original.transform, .param = param };
+        return __new;
     ]-*/;
 
     

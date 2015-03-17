@@ -50,56 +50,56 @@ public class CMRotationMatrix
         return __new;
     ]-*/;
     public static native CMRotationMatrix copyWithm11(CMRotationMatrix original, double m11) /*-[
-        original.m11 = m11;
-        return original;
+        CMRotationMatrix __new = { .m11 = m11, .m12 = original.m12, .m13 = original.m13, .m21 = original.m21, .m22 = original.m22, .m23 = original.m23, .m31 = original.m31, .m32 = original.m32, .m33 = original.m33 };
+        return __new;
     ]-*/;
 
     
     public static native CMRotationMatrix copyWithm12(CMRotationMatrix original, double m12) /*-[
-        original.m12 = m12;
-        return original;
+        CMRotationMatrix __new = { .m11 = original.m11, .m12 = m12, .m13 = original.m13, .m21 = original.m21, .m22 = original.m22, .m23 = original.m23, .m31 = original.m31, .m32 = original.m32, .m33 = original.m33 };
+        return __new;
     ]-*/;
 
     
     public static native CMRotationMatrix copyWithm13(CMRotationMatrix original, double m13) /*-[
-        original.m13 = m13;
-        return original;
+        CMRotationMatrix __new = { .m11 = original.m11, .m12 = original.m12, .m13 = m13, .m21 = original.m21, .m22 = original.m22, .m23 = original.m23, .m31 = original.m31, .m32 = original.m32, .m33 = original.m33 };
+        return __new;
     ]-*/;
 
     
     public static native CMRotationMatrix copyWithm21(CMRotationMatrix original, double m21) /*-[
-        original.m21 = m21;
-        return original;
+        CMRotationMatrix __new = { .m11 = original.m11, .m12 = original.m12, .m13 = original.m13, .m21 = m21, .m22 = original.m22, .m23 = original.m23, .m31 = original.m31, .m32 = original.m32, .m33 = original.m33 };
+        return __new;
     ]-*/;
 
     
     public static native CMRotationMatrix copyWithm22(CMRotationMatrix original, double m22) /*-[
-        original.m22 = m22;
-        return original;
+        CMRotationMatrix __new = { .m11 = original.m11, .m12 = original.m12, .m13 = original.m13, .m21 = original.m21, .m22 = m22, .m23 = original.m23, .m31 = original.m31, .m32 = original.m32, .m33 = original.m33 };
+        return __new;
     ]-*/;
 
     
     public static native CMRotationMatrix copyWithm23(CMRotationMatrix original, double m23) /*-[
-        original.m23 = m23;
-        return original;
+        CMRotationMatrix __new = { .m11 = original.m11, .m12 = original.m12, .m13 = original.m13, .m21 = original.m21, .m22 = original.m22, .m23 = m23, .m31 = original.m31, .m32 = original.m32, .m33 = original.m33 };
+        return __new;
     ]-*/;
 
     
     public static native CMRotationMatrix copyWithm31(CMRotationMatrix original, double m31) /*-[
-        original.m31 = m31;
-        return original;
+        CMRotationMatrix __new = { .m11 = original.m11, .m12 = original.m12, .m13 = original.m13, .m21 = original.m21, .m22 = original.m22, .m23 = original.m23, .m31 = m31, .m32 = original.m32, .m33 = original.m33 };
+        return __new;
     ]-*/;
 
     
     public static native CMRotationMatrix copyWithm32(CMRotationMatrix original, double m32) /*-[
-        original.m32 = m32;
-        return original;
+        CMRotationMatrix __new = { .m11 = original.m11, .m12 = original.m12, .m13 = original.m13, .m21 = original.m21, .m22 = original.m22, .m23 = original.m23, .m31 = original.m31, .m32 = m32, .m33 = original.m33 };
+        return __new;
     ]-*/;
 
     
     public static native CMRotationMatrix copyWithm33(CMRotationMatrix original, double m33) /*-[
-        original.m33 = m33;
-        return original;
+        CMRotationMatrix __new = { .m11 = original.m11, .m12 = original.m12, .m13 = original.m13, .m21 = original.m21, .m22 = original.m22, .m23 = original.m23, .m31 = original.m31, .m32 = original.m32, .m33 = m33 };
+        return __new;
     ]-*/;
 
     

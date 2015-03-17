@@ -31,20 +31,5 @@ public class MIDIThruConnectionEndpoint
     @DotMapping("uniqueID")
     public native int getUniqueID();
     
-    public static native MIDIThruConnectionEndpoint create(MIDIEndpoint endpointRef, int uniqueID) /*-[
-        MIDIThruConnectionEndpoint __new = { .endpointRef = endpointRef, .uniqueID = uniqueID };
-        return __new;
-    ]-*/;
-    public static native MIDIThruConnectionEndpoint copyWithendpointRef(MIDIThruConnectionEndpoint original, MIDIEndpoint endpointRef) /*-[
-        original.endpointRef = endpointRef;
-        return original;
-    ]-*/;
-
-    
-    public static native MIDIThruConnectionEndpoint copyWithuniqueID(MIDIThruConnectionEndpoint original, int uniqueID) /*-[
-        original.uniqueID = uniqueID;
-        return original;
-    ]-*/;
-
     
 }

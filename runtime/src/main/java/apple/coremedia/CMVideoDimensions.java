@@ -40,14 +40,14 @@ public class CMVideoDimensions
         return __new;
     ]-*/;
     public static native CMVideoDimensions copyWithwidth(CMVideoDimensions original, int width) /*-[
-        original.width = width;
-        return original;
+        CMVideoDimensions __new = { .width = width, .height = original.height };
+        return __new;
     ]-*/;
 
     
     public static native CMVideoDimensions copyWithheight(CMVideoDimensions original, int height) /*-[
-        original.height = height;
-        return original;
+        CMVideoDimensions __new = { .width = original.width, .height = height };
+        return __new;
     ]-*/;
 
     

@@ -20,42 +20,14 @@ import apple.coremedia.*;
 
 
 
-@Mapping("CAFFileHeader") @Library("AudioToolbox/AudioToolbox.h")
-public class CAFFileHeader 
-    extends Struct 
-     {
+@Library("AudioToolbox/AudioToolbox.h")
+@Mapping("CAFFileHeader")
+public final class CAFFileHeader extends ObjCEnum {
+    
+    @GlobalConstant("kCAF_FileType")
+    public static final long Type = 1667327590L;
+    @GlobalConstant("kCAF_FileVersion_Initial")
+    public static final long Version_Initial = 1L;
+    
 
-    
-    protected CAFFileHeader() {}
-    
-    
-    @DotMapping("mFileType")
-    public native int getMFileType();
-    @DotMapping("mFileVersion")
-    public native short getMFileVersion();
-    @DotMapping("mFileFlags")
-    public native short getMFileFlags();
-    
-    public static native CAFFileHeader create(int mFileType, short mFileVersion, short mFileFlags) /*-[
-        CAFFileHeader __new = { .mFileType = mFileType, .mFileVersion = mFileVersion, .mFileFlags = mFileFlags };
-        return __new;
-    ]-*/;
-    public static native CAFFileHeader copyWithmFileType(CAFFileHeader original, int mFileType) /*-[
-        CAFFileHeader __new = { .mFileType = mFileType, .mFileVersion = original.mFileVersion, .mFileFlags = original.mFileFlags };
-        return __new;
-    ]-*/;
-
-    
-    public static native CAFFileHeader copyWithmFileVersion(CAFFileHeader original, short mFileVersion) /*-[
-        CAFFileHeader __new = { .mFileType = original.mFileType, .mFileVersion = mFileVersion, .mFileFlags = original.mFileFlags };
-        return __new;
-    ]-*/;
-
-    
-    public static native CAFFileHeader copyWithmFileFlags(CAFFileHeader original, short mFileFlags) /*-[
-        CAFFileHeader __new = { .mFileType = original.mFileType, .mFileVersion = original.mFileVersion, .mFileFlags = mFileFlags };
-        return __new;
-    ]-*/;
-
-    
 }

@@ -46,26 +46,26 @@ public class CMTime
         return __new;
     ]-*/;
     public static native CMTime copyWithvalue(CMTime original, long value) /*-[
-        original.value = value;
-        return original;
+        CMTime __new = { .value = value, .timescale = original.timescale, .flags = original.flags, .epoch = original.epoch };
+        return __new;
     ]-*/;
 
     
     public static native CMTime copyWithtimescale(CMTime original, int timescale) /*-[
-        original.timescale = timescale;
-        return original;
+        CMTime __new = { .value = original.value, .timescale = timescale, .flags = original.flags, .epoch = original.epoch };
+        return __new;
     ]-*/;
 
     
     public static native CMTime copyWithflags(CMTime original, CMTimeFlags flags) /*-[
-        original.flags = flags;
-        return original;
+        CMTime __new = { .value = original.value, .timescale = original.timescale, .flags = flags, .epoch = original.epoch };
+        return __new;
     ]-*/;
 
     
     public static native CMTime copyWithepoch(CMTime original, long epoch) /*-[
-        original.epoch = epoch;
-        return original;
+        CMTime __new = { .value = original.value, .timescale = original.timescale, .flags = original.flags, .epoch = epoch };
+        return __new;
     ]-*/;
 
     

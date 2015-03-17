@@ -42,32 +42,32 @@ public class MIDIControlTransform
         return __new;
     ]-*/;
     public static native MIDIControlTransform copyWithcontrolType(MIDIControlTransform original, MIDITransformControlType controlType) /*-[
-        original.controlType = controlType;
-        return original;
+        MIDIControlTransform __new = { .controlType = controlType, .remappedControlType = original.remappedControlType, .controlNumber = original.controlNumber, .transform = original.transform, .param = original.param };
+        return __new;
     ]-*/;
 
     
     public static native MIDIControlTransform copyWithremappedControlType(MIDIControlTransform original, MIDITransformControlType remappedControlType) /*-[
-        original.remappedControlType = remappedControlType;
-        return original;
+        MIDIControlTransform __new = { .controlType = original.controlType, .remappedControlType = remappedControlType, .controlNumber = original.controlNumber, .transform = original.transform, .param = original.param };
+        return __new;
     ]-*/;
 
     
     public static native MIDIControlTransform copyWithcontrolNumber(MIDIControlTransform original, short controlNumber) /*-[
-        original.controlNumber = controlNumber;
-        return original;
+        MIDIControlTransform __new = { .controlType = original.controlType, .remappedControlType = original.remappedControlType, .controlNumber = controlNumber, .transform = original.transform, .param = original.param };
+        return __new;
     ]-*/;
 
     
     public static native MIDIControlTransform copyWithtransform(MIDIControlTransform original, MIDITransformType transform) /*-[
-        original.transform = transform;
-        return original;
+        MIDIControlTransform __new = { .controlType = original.controlType, .remappedControlType = original.remappedControlType, .controlNumber = original.controlNumber, .transform = transform, .param = original.param };
+        return __new;
     ]-*/;
 
     
     public static native MIDIControlTransform copyWithparam(MIDIControlTransform original, short param) /*-[
-        original.param = param;
-        return original;
+        MIDIControlTransform __new = { .controlType = original.controlType, .remappedControlType = original.remappedControlType, .controlNumber = original.controlNumber, .transform = original.transform, .param = param };
+        return __new;
     ]-*/;
 
     

@@ -29,14 +29,5 @@ import apple.foundation.*;
     @DotMapping("version")
     public native @MachineSizedSInt long getVersion();
     
-    public static native CTRunDelegateCallbacks copyWithversion(CTRunDelegateCallbacks original, @MachineSizedSInt long version) /*-[
-        original.version = version;
-        return original;
-    ]-*/;
-
-    
-    
-    
-    
     
 }

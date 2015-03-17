@@ -31,8 +31,6 @@ public class NSOutputStream
     
     @Mapping("initToMemory")
     public NSOutputStream() { }
-    @Mapping("initToBuffer:capacity:")
-    public NSOutputStream(Todo buffer, @MachineSizedUInt long capacity) { }
     /**
      * @since Available in iOS 4.0 and later.
      */

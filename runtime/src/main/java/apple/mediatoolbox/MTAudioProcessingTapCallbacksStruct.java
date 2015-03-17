@@ -33,21 +33,5 @@ import apple.coreaudio.*;
     @DotMapping("clientInfo")
     public native Todo getClientInfo();
     
-    public static native MTAudioProcessingTapCallbacksStruct copyWithversion(MTAudioProcessingTapCallbacksStruct original, int version) /*-[
-        original.version = version;
-        return original;
-    ]-*/;
-
-    
-    public static native MTAudioProcessingTapCallbacksStruct copyWithclientInfo(MTAudioProcessingTapCallbacksStruct original, Todo clientInfo) /*-[
-        original.clientInfo = clientInfo;
-        return original;
-    ]-*/;
-
-    
-    
-    
-    
-    
     
 }

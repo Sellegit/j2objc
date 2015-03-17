@@ -40,14 +40,14 @@ public class CMTimeMapping
         return __new;
     ]-*/;
     public static native CMTimeMapping copyWithsource(CMTimeMapping original, CMTimeRange source) /*-[
-        original.source = source;
-        return original;
+        CMTimeMapping __new = { .source = source, .target = original.target };
+        return __new;
     ]-*/;
 
     
     public static native CMTimeMapping copyWithtarget(CMTimeMapping original, CMTimeRange target) /*-[
-        original.target = target;
-        return original;
+        CMTimeMapping __new = { .source = original.source, .target = target };
+        return __new;
     ]-*/;
 
     

@@ -37,14 +37,14 @@ public class CFRange
         return __new;
     ]-*/;
     public static native CFRange copyWithlocation(CFRange original, @MachineSizedSInt long location) /*-[
-        original.location = location;
-        return original;
+        CFRange __new = { .location = location, .length = original.length };
+        return __new;
     ]-*/;
 
     
     public static native CFRange copyWithlength(CFRange original, @MachineSizedSInt long length) /*-[
-        original.length = length;
-        return original;
+        CFRange __new = { .location = original.location, .length = length };
+        return __new;
     ]-*/;
 
     

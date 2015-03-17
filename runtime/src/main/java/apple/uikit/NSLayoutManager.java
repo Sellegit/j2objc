@@ -119,8 +119,6 @@ public class NSLayoutManager
     public native @MachineSizedUInt long getCharacterIndexForGlyph(@MachineSizedUInt long glyphIndex);
     @Mapping("glyphIndexForCharacterAtIndex:")
     public native @MachineSizedUInt long getGlyphIndexForCharacter(@MachineSizedUInt long charIndex);
-    @Mapping("getGlyphsInRange:glyphs:properties:characterIndexes:bidiLevels:")
-    public native @MachineSizedUInt long getGlyphs(NSRange glyphRange, Todo glyphBuffer, Todo props, Todo charIndexBuffer, Todo bidiLevelBuffer);
     @Mapping("setTextContainer:forGlyphRange:")
     public native void setTextContainer(NSTextContainer container, NSRange glyphRange);
     @Mapping("setLineFragmentRect:forGlyphRange:usedRect:")

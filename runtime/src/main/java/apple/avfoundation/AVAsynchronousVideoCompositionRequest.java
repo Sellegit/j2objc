@@ -46,10 +46,6 @@ public class AVAsynchronousVideoCompositionRequest
     
     
     
-    @Mapping("sourceFrameByTrackID:")
-    public native CVPixelBuffer getSourceFrame(int trackID);
-    @Mapping("finishWithComposedVideoFrame:")
-    public native void finish(CVPixelBuffer composedVideoFrame);
     @Mapping("finishWithError:")
     public native void finish(NSError error);
     @Mapping("finishCancelledRequest")

@@ -32,19 +32,5 @@ public class CFBinaryHeapCompareContext
     @DotMapping("info")
     public native Todo getInfo();
     
-    public static native CFBinaryHeapCompareContext copyWithversion(CFBinaryHeapCompareContext original, @MachineSizedSInt long version) /*-[
-        original.version = version;
-        return original;
-    ]-*/;
-
-    
-    public static native CFBinaryHeapCompareContext copyWithinfo(CFBinaryHeapCompareContext original, Todo info) /*-[
-        original.info = info;
-        return original;
-    ]-*/;
-
-    
-    
-    
     
 }

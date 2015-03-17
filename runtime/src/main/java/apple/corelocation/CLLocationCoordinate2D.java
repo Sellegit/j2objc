@@ -38,14 +38,14 @@ public class CLLocationCoordinate2D
         return __new;
     ]-*/;
     public static native CLLocationCoordinate2D copyWithlatitude(CLLocationCoordinate2D original, double latitude) /*-[
-        original.latitude = latitude;
-        return original;
+        CLLocationCoordinate2D __new = { .latitude = latitude, .longitude = original.longitude };
+        return __new;
     ]-*/;
 
     
     public static native CLLocationCoordinate2D copyWithlongitude(CLLocationCoordinate2D original, double longitude) /*-[
-        original.longitude = longitude;
-        return original;
+        CLLocationCoordinate2D __new = { .latitude = original.latitude, .longitude = longitude };
+        return __new;
     ]-*/;
 
     

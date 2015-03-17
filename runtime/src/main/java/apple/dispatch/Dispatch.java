@@ -15,7 +15,7 @@ import apple.coreservices.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("System/System.h")
+@Library("dispatch/dispatch.h")
 public class Dispatch 
     extends Object 
      {

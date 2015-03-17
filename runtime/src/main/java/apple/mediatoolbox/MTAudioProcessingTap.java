@@ -51,6 +51,6 @@ public class MTAudioProcessingTap
      * @since Available in iOS 6.0 and later.
      */
     @GlobalFunction("MTAudioProcessingTapGetSourceAudio")
-    protected static native int getSourceAudio(MTAudioProcessingTap tap, @MachineSizedSInt long numberFrames, AudioBufferList bufferListInOut, Todo flagsOut, CMTimeRange timeRangeOut, Todo numberFramesOut);
+    protected static native int getSourceAudio(MTAudioProcessingTap tap, @MachineSizedSInt long numberFrames, Todo bufferListInOut, Todo flagsOut, CMTimeRange timeRangeOut, Todo numberFramesOut);
     
 }

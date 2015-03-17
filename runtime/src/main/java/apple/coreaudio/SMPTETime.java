@@ -33,9 +33,9 @@ public class SMPTETime
     @DotMapping("mCounter")
     public native int getMCounter();
     @DotMapping("mType")
-    public native SMPTETimeType getMType();
+    public native int getMType();
     @DotMapping("mFlags")
-    public native SMPTEStateFlags getMFlags();
+    public native int getMFlags();
     @DotMapping("mHours")
     public native short getMHours();
     @DotMapping("mMinutes")
@@ -45,62 +45,5 @@ public class SMPTETime
     @DotMapping("mFrames")
     public native short getMFrames();
     
-    public static native SMPTETime create(short mSubframes, short mSubframeDivisor, int mCounter, SMPTETimeType mType, SMPTEStateFlags mFlags, short mHours, short mMinutes, short mSeconds, short mFrames) /*-[
-        SMPTETime __new = { .mSubframes = mSubframes, .mSubframeDivisor = mSubframeDivisor, .mCounter = mCounter, .mType = mType, .mFlags = mFlags, .mHours = mHours, .mMinutes = mMinutes, .mSeconds = mSeconds, .mFrames = mFrames };
-        return __new;
-    ]-*/;
-    public static native SMPTETime copyWithmSubframes(SMPTETime original, short mSubframes) /*-[
-        original.mSubframes = mSubframes;
-        return original;
-    ]-*/;
-
-    
-    public static native SMPTETime copyWithmSubframeDivisor(SMPTETime original, short mSubframeDivisor) /*-[
-        original.mSubframeDivisor = mSubframeDivisor;
-        return original;
-    ]-*/;
-
-    
-    public static native SMPTETime copyWithmCounter(SMPTETime original, int mCounter) /*-[
-        original.mCounter = mCounter;
-        return original;
-    ]-*/;
-
-    
-    public static native SMPTETime copyWithmType(SMPTETime original, SMPTETimeType mType) /*-[
-        original.mType = mType;
-        return original;
-    ]-*/;
-
-    
-    public static native SMPTETime copyWithmFlags(SMPTETime original, SMPTEStateFlags mFlags) /*-[
-        original.mFlags = mFlags;
-        return original;
-    ]-*/;
-
-    
-    public static native SMPTETime copyWithmHours(SMPTETime original, short mHours) /*-[
-        original.mHours = mHours;
-        return original;
-    ]-*/;
-
-    
-    public static native SMPTETime copyWithmMinutes(SMPTETime original, short mMinutes) /*-[
-        original.mMinutes = mMinutes;
-        return original;
-    ]-*/;
-
-    
-    public static native SMPTETime copyWithmSeconds(SMPTETime original, short mSeconds) /*-[
-        original.mSeconds = mSeconds;
-        return original;
-    ]-*/;
-
-    
-    public static native SMPTETime copyWithmFrames(SMPTETime original, short mFrames) /*-[
-        original.mFrames = mFrames;
-        return original;
-    ]-*/;
-
     
 }

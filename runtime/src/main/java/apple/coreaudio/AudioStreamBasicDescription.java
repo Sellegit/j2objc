@@ -50,56 +50,56 @@ public class AudioStreamBasicDescription
         return __new;
     ]-*/;
     public static native AudioStreamBasicDescription copyWithmSampleRate(AudioStreamBasicDescription original, double mSampleRate) /*-[
-        original.mSampleRate = mSampleRate;
-        return original;
+        AudioStreamBasicDescription __new = { .mSampleRate = mSampleRate, .mFormatID = original.mFormatID, .mFormatFlags = original.mFormatFlags, .mBytesPerPacket = original.mBytesPerPacket, .mFramesPerPacket = original.mFramesPerPacket, .mBytesPerFrame = original.mBytesPerFrame, .mChannelsPerFrame = original.mChannelsPerFrame, .mBitsPerChannel = original.mBitsPerChannel, .mReserved = original.mReserved };
+        return __new;
     ]-*/;
 
     
     public static native AudioStreamBasicDescription copyWithmFormatID(AudioStreamBasicDescription original, int mFormatID) /*-[
-        original.mFormatID = mFormatID;
-        return original;
+        AudioStreamBasicDescription __new = { .mSampleRate = original.mSampleRate, .mFormatID = mFormatID, .mFormatFlags = original.mFormatFlags, .mBytesPerPacket = original.mBytesPerPacket, .mFramesPerPacket = original.mFramesPerPacket, .mBytesPerFrame = original.mBytesPerFrame, .mChannelsPerFrame = original.mChannelsPerFrame, .mBitsPerChannel = original.mBitsPerChannel, .mReserved = original.mReserved };
+        return __new;
     ]-*/;
 
     
     public static native AudioStreamBasicDescription copyWithmFormatFlags(AudioStreamBasicDescription original, int mFormatFlags) /*-[
-        original.mFormatFlags = mFormatFlags;
-        return original;
+        AudioStreamBasicDescription __new = { .mSampleRate = original.mSampleRate, .mFormatID = original.mFormatID, .mFormatFlags = mFormatFlags, .mBytesPerPacket = original.mBytesPerPacket, .mFramesPerPacket = original.mFramesPerPacket, .mBytesPerFrame = original.mBytesPerFrame, .mChannelsPerFrame = original.mChannelsPerFrame, .mBitsPerChannel = original.mBitsPerChannel, .mReserved = original.mReserved };
+        return __new;
     ]-*/;
 
     
     public static native AudioStreamBasicDescription copyWithmBytesPerPacket(AudioStreamBasicDescription original, int mBytesPerPacket) /*-[
-        original.mBytesPerPacket = mBytesPerPacket;
-        return original;
+        AudioStreamBasicDescription __new = { .mSampleRate = original.mSampleRate, .mFormatID = original.mFormatID, .mFormatFlags = original.mFormatFlags, .mBytesPerPacket = mBytesPerPacket, .mFramesPerPacket = original.mFramesPerPacket, .mBytesPerFrame = original.mBytesPerFrame, .mChannelsPerFrame = original.mChannelsPerFrame, .mBitsPerChannel = original.mBitsPerChannel, .mReserved = original.mReserved };
+        return __new;
     ]-*/;
 
     
     public static native AudioStreamBasicDescription copyWithmFramesPerPacket(AudioStreamBasicDescription original, int mFramesPerPacket) /*-[
-        original.mFramesPerPacket = mFramesPerPacket;
-        return original;
+        AudioStreamBasicDescription __new = { .mSampleRate = original.mSampleRate, .mFormatID = original.mFormatID, .mFormatFlags = original.mFormatFlags, .mBytesPerPacket = original.mBytesPerPacket, .mFramesPerPacket = mFramesPerPacket, .mBytesPerFrame = original.mBytesPerFrame, .mChannelsPerFrame = original.mChannelsPerFrame, .mBitsPerChannel = original.mBitsPerChannel, .mReserved = original.mReserved };
+        return __new;
     ]-*/;
 
     
     public static native AudioStreamBasicDescription copyWithmBytesPerFrame(AudioStreamBasicDescription original, int mBytesPerFrame) /*-[
-        original.mBytesPerFrame = mBytesPerFrame;
-        return original;
+        AudioStreamBasicDescription __new = { .mSampleRate = original.mSampleRate, .mFormatID = original.mFormatID, .mFormatFlags = original.mFormatFlags, .mBytesPerPacket = original.mBytesPerPacket, .mFramesPerPacket = original.mFramesPerPacket, .mBytesPerFrame = mBytesPerFrame, .mChannelsPerFrame = original.mChannelsPerFrame, .mBitsPerChannel = original.mBitsPerChannel, .mReserved = original.mReserved };
+        return __new;
     ]-*/;
 
     
     public static native AudioStreamBasicDescription copyWithmChannelsPerFrame(AudioStreamBasicDescription original, int mChannelsPerFrame) /*-[
-        original.mChannelsPerFrame = mChannelsPerFrame;
-        return original;
+        AudioStreamBasicDescription __new = { .mSampleRate = original.mSampleRate, .mFormatID = original.mFormatID, .mFormatFlags = original.mFormatFlags, .mBytesPerPacket = original.mBytesPerPacket, .mFramesPerPacket = original.mFramesPerPacket, .mBytesPerFrame = original.mBytesPerFrame, .mChannelsPerFrame = mChannelsPerFrame, .mBitsPerChannel = original.mBitsPerChannel, .mReserved = original.mReserved };
+        return __new;
     ]-*/;
 
     
     public static native AudioStreamBasicDescription copyWithmBitsPerChannel(AudioStreamBasicDescription original, int mBitsPerChannel) /*-[
-        original.mBitsPerChannel = mBitsPerChannel;
-        return original;
+        AudioStreamBasicDescription __new = { .mSampleRate = original.mSampleRate, .mFormatID = original.mFormatID, .mFormatFlags = original.mFormatFlags, .mBytesPerPacket = original.mBytesPerPacket, .mFramesPerPacket = original.mFramesPerPacket, .mBytesPerFrame = original.mBytesPerFrame, .mChannelsPerFrame = original.mChannelsPerFrame, .mBitsPerChannel = mBitsPerChannel, .mReserved = original.mReserved };
+        return __new;
     ]-*/;
 
     
     public static native AudioStreamBasicDescription copyWithmReserved(AudioStreamBasicDescription original, int mReserved) /*-[
-        original.mReserved = mReserved;
-        return original;
+        AudioStreamBasicDescription __new = { .mSampleRate = original.mSampleRate, .mFormatID = original.mFormatID, .mFormatFlags = original.mFormatFlags, .mBytesPerPacket = original.mBytesPerPacket, .mFramesPerPacket = original.mFramesPerPacket, .mBytesPerFrame = original.mBytesPerFrame, .mChannelsPerFrame = original.mChannelsPerFrame, .mBitsPerChannel = original.mBitsPerChannel, .mReserved = mReserved };
+        return __new;
     ]-*/;
 
     

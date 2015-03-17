@@ -39,14 +39,14 @@ public class MKMapRect
         return __new;
     ]-*/;
     public static native MKMapRect copyWithorigin(MKMapRect original, MKMapPoint origin) /*-[
-        original.origin = origin;
-        return original;
+        MKMapRect __new = { .origin = origin, .size = original.size };
+        return __new;
     ]-*/;
 
     
     public static native MKMapRect copyWithsize(MKMapRect original, MKMapSize size) /*-[
-        original.size = size;
-        return original;
+        MKMapRect __new = { .origin = original.origin, .size = size };
+        return __new;
     ]-*/;
 
     

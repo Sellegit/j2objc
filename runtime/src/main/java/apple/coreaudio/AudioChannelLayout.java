@@ -35,32 +35,5 @@ public class AudioChannelLayout
     @DotMapping("mChannelDescriptions")
     public native AudioChannelDescription getMChannelDescriptions();
     
-    public static native AudioChannelLayout create(AudioChannelLayoutTag mChannelLayoutTag, int mChannelBitmap, int mNumberChannelDescriptions, AudioChannelDescription mChannelDescriptions) /*-[
-        AudioChannelLayout __new = { .mChannelLayoutTag = mChannelLayoutTag, .mChannelBitmap = mChannelBitmap, .mNumberChannelDescriptions = mNumberChannelDescriptions, .mChannelDescriptions = mChannelDescriptions };
-        return __new;
-    ]-*/;
-    public static native AudioChannelLayout copyWithmChannelLayoutTag(AudioChannelLayout original, AudioChannelLayoutTag mChannelLayoutTag) /*-[
-        original.mChannelLayoutTag = mChannelLayoutTag;
-        return original;
-    ]-*/;
-
-    
-    public static native AudioChannelLayout copyWithmChannelBitmap(AudioChannelLayout original, int mChannelBitmap) /*-[
-        original.mChannelBitmap = mChannelBitmap;
-        return original;
-    ]-*/;
-
-    
-    public static native AudioChannelLayout copyWithmNumberChannelDescriptions(AudioChannelLayout original, int mNumberChannelDescriptions) /*-[
-        original.mNumberChannelDescriptions = mNumberChannelDescriptions;
-        return original;
-    ]-*/;
-
-    
-    public static native AudioChannelLayout copyWithmChannelDescriptions(AudioChannelLayout original, AudioChannelDescription mChannelDescriptions) /*-[
-        original.mChannelDescriptions = mChannelDescriptions;
-        return original;
-    ]-*/;
-
     
 }

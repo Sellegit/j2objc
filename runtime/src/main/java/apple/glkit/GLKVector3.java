@@ -29,18 +29,8 @@ public class GLKVector3
     protected GLKVector3() {}
     
     
-    @DotMapping("v")
-    public native FloatBuffer getV();
     
-    public static native GLKVector3 create(FloatBuffer v) /*-[
-        GLKVector3 __new = { .v = v };
-        return __new;
-    ]-*/;
-    public static native GLKVector3 copyWithv(GLKVector3 original, FloatBuffer v) /*-[
-        original.v = v;
-        return original;
-    ]-*/;
-
+    
     
     @GlobalFunction("GLKVector3Make")
     public static native GLKVector3 createPrime(float x, float y, float z);

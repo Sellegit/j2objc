@@ -35,32 +35,5 @@ public class MIDIIOErrorNotification
     @DotMapping("errorCode")
     public native int getErrorCode();
     
-    public static native MIDIIOErrorNotification create(MIDINotificationMessageID messageID, int messageSize, MIDIDevice driverDevice, int errorCode) /*-[
-        MIDIIOErrorNotification __new = { .messageID = messageID, .messageSize = messageSize, .driverDevice = driverDevice, .errorCode = errorCode };
-        return __new;
-    ]-*/;
-    public static native MIDIIOErrorNotification copyWithmessageID(MIDIIOErrorNotification original, MIDINotificationMessageID messageID) /*-[
-        original.messageID = messageID;
-        return original;
-    ]-*/;
-
-    
-    public static native MIDIIOErrorNotification copyWithmessageSize(MIDIIOErrorNotification original, int messageSize) /*-[
-        original.messageSize = messageSize;
-        return original;
-    ]-*/;
-
-    
-    public static native MIDIIOErrorNotification copyWithdriverDevice(MIDIIOErrorNotification original, MIDIDevice driverDevice) /*-[
-        original.driverDevice = driverDevice;
-        return original;
-    ]-*/;
-
-    
-    public static native MIDIIOErrorNotification copyWitherrorCode(MIDIIOErrorNotification original, int errorCode) /*-[
-        original.errorCode = errorCode;
-        return original;
-    ]-*/;
-
     
 }

@@ -16,7 +16,7 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("OpenGLES/OpenGLES.h")
+@Library("OpenGLES/EAGL.h")
 public class EAGLDrawableProperties 
     extends NSDictionaryWrapper
      {

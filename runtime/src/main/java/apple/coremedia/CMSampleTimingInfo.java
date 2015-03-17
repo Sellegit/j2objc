@@ -42,20 +42,20 @@ public class CMSampleTimingInfo
         return __new;
     ]-*/;
     public static native CMSampleTimingInfo copyWithduration(CMSampleTimingInfo original, CMTime duration) /*-[
-        original.duration = duration;
-        return original;
+        CMSampleTimingInfo __new = { .duration = duration, .presentationTimeStamp = original.presentationTimeStamp, .decodeTimeStamp = original.decodeTimeStamp };
+        return __new;
     ]-*/;
 
     
     public static native CMSampleTimingInfo copyWithpresentationTimeStamp(CMSampleTimingInfo original, CMTime presentationTimeStamp) /*-[
-        original.presentationTimeStamp = presentationTimeStamp;
-        return original;
+        CMSampleTimingInfo __new = { .duration = original.duration, .presentationTimeStamp = presentationTimeStamp, .decodeTimeStamp = original.decodeTimeStamp };
+        return __new;
     ]-*/;
 
     
     public static native CMSampleTimingInfo copyWithdecodeTimeStamp(CMSampleTimingInfo original, CMTime decodeTimeStamp) /*-[
-        original.decodeTimeStamp = decodeTimeStamp;
-        return original;
+        CMSampleTimingInfo __new = { .duration = original.duration, .presentationTimeStamp = original.presentationTimeStamp, .decodeTimeStamp = decodeTimeStamp };
+        return __new;
     ]-*/;
 
     

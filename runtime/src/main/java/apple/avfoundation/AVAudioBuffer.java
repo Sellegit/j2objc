@@ -37,10 +37,6 @@ public class AVAudioBuffer
     
     @Mapping("format")
     public native AVAudioFormat getFormat();
-    @Mapping("audioBufferList")
-    public native AudioBufferList getAudioBufferList();
-    @Mapping("mutableAudioBufferList")
-    public native AudioBufferList getMutableAudioBufferList();
     
     
     

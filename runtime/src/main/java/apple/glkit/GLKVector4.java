@@ -29,18 +29,8 @@ public class GLKVector4
     protected GLKVector4() {}
     
     
-    @DotMapping("v")
-    public native FloatBuffer getV();
     
-    public static native GLKVector4 create(FloatBuffer v) /*-[
-        GLKVector4 __new = { .v = v };
-        return __new;
-    ]-*/;
-    public static native GLKVector4 copyWithv(GLKVector4 original, FloatBuffer v) /*-[
-        original.v = v;
-        return original;
-    ]-*/;
-
+    
     
     @GlobalFunction("GLKVector4Make")
     public static native GLKVector4 createPrime(float x, float y, float z, float w);

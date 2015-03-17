@@ -30,12 +30,5 @@ import apple.uikit.*;
     @DotMapping("version")
     public native int getVersion();
     
-    public static native CGPatternCallbacks copyWithversion(CGPatternCallbacks original, int version) /*-[
-        original.version = version;
-        return original;
-    ]-*/;
-
-    
-    
     
 }

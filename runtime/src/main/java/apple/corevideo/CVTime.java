@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 import apple.opengles.*;
 import apple.coremedia.*;
-import apple.metal.*;
 
 
 
@@ -41,20 +40,20 @@ public class CVTime
         return __new;
     ]-*/;
     public static native CVTime copyWithtimeValue(CVTime original, long timeValue) /*-[
-        original.timeValue = timeValue;
-        return original;
+        CVTime __new = { .timeValue = timeValue, .timeScale = original.timeScale, .flags = original.flags };
+        return __new;
     ]-*/;
 
     
     public static native CVTime copyWithtimeScale(CVTime original, int timeScale) /*-[
-        original.timeScale = timeScale;
-        return original;
+        CVTime __new = { .timeValue = original.timeValue, .timeScale = timeScale, .flags = original.flags };
+        return __new;
     ]-*/;
 
     
     public static native CVTime copyWithflags(CVTime original, int flags) /*-[
-        original.flags = flags;
-        return original;
+        CVTime __new = { .timeValue = original.timeValue, .timeScale = original.timeScale, .flags = flags };
+        return __new;
     ]-*/;
 
     

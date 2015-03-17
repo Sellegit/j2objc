@@ -19,7 +19,7 @@ import apple.foundation.*;
  * @since Available in iOS 4.0 and later.
  */
 
-@Library("CoreTelephony/CoreTelephony.h") @Mapping("CTTelephonyNetworkInfo")
+@Library("CoreTelephony/CTCall.h") @Mapping("CTTelephonyNetworkInfo")
 public class CTTelephonyNetworkInfo 
     extends NSObject 
      {

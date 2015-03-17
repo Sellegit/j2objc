@@ -19,7 +19,7 @@ import apple.foundation.*;
  * @since Available in iOS 6.0 and later.
  */
 
-@Library("CoreTelephony/CoreTelephony.h") @Mapping("CTSubscriberInfo")
+@Library("CoreTelephony/CTCall.h") @Mapping("CTSubscriberInfo")
 public class CTSubscriberInfo 
     extends NSObject 
      {

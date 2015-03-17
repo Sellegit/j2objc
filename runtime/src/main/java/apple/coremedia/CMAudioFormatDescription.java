@@ -54,17 +54,17 @@ public class CMAudioFormatDescription
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMAudioFormatDescriptionGetFormatList")
-    private static native AudioFormatListItem getFormatList(CMAudioFormatDescription desc, Todo formatListSize);
+    private static native Todo getFormatList(CMAudioFormatDescription desc, Todo formatListSize);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMAudioFormatDescriptionGetRichestDecodableFormat")
-    public static native AudioFormatListItem getRichestDecodableFormat(CMAudioFormatDescription desc);
+    public static native Todo getRichestDecodableFormat(CMAudioFormatDescription desc);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMAudioFormatDescriptionGetMostCompatibleFormat")
-    public static native AudioFormatListItem getMostCompatibleFormat(CMAudioFormatDescription desc);
+    public static native Todo getMostCompatibleFormat(CMAudioFormatDescription desc);
     /**
      * @since Available in iOS 4.0 and later.
      */

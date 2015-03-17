@@ -40,7 +40,7 @@ public class AudioConverter
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("AudioConverterNewSpecific")
-    protected static native AudioConverterError create(AudioStreamBasicDescription inSourceFormat, AudioStreamBasicDescription inDestinationFormat, int inNumberClassDescriptions, AudioClassDescription inClassDescriptions, Todo outAudioConverter);
+    protected static native AudioConverterError create(AudioStreamBasicDescription inSourceFormat, AudioStreamBasicDescription inDestinationFormat, int inNumberClassDescriptions, Todo inClassDescriptions, Todo outAudioConverter);
     /**
      * @since Available in iOS 2.0 and later.
      */
@@ -70,11 +70,11 @@ public class AudioConverter
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("AudioConverterFillComplexBuffer")
-    protected static native AudioConverterError fillComplexBuffer(AudioConverter inAudioConverter, FunctionPtr inInputDataProc, Todo inInputDataProcUserData, Todo ioOutputDataPacketSize, AudioBufferList outOutputData, AudioStreamPacketDescription outPacketDescription);
+    protected static native AudioConverterError fillComplexBuffer(AudioConverter inAudioConverter, FunctionPtr inInputDataProc, Todo inInputDataProcUserData, Todo ioOutputDataPacketSize, Todo outOutputData, Todo outPacketDescription);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("AudioConverterConvertComplexBuffer")
-    protected static native AudioConverterError convertComplexBuffer(AudioConverter inAudioConverter, int inNumberPCMFrames, AudioBufferList inInputData, AudioBufferList outOutputData);
+    protected static native AudioConverterError convertComplexBuffer(AudioConverter inAudioConverter, int inNumberPCMFrames, Todo inInputData, Todo outOutputData);
     
 }

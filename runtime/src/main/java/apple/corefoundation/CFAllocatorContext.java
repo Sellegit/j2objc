@@ -32,23 +32,5 @@ public class CFAllocatorContext
     @DotMapping("info")
     public native Todo getInfo();
     
-    public static native CFAllocatorContext copyWithversion(CFAllocatorContext original, @MachineSizedSInt long version) /*-[
-        original.version = version;
-        return original;
-    ]-*/;
-
-    
-    public static native CFAllocatorContext copyWithinfo(CFAllocatorContext original, Todo info) /*-[
-        original.info = info;
-        return original;
-    ]-*/;
-
-    
-    
-    
-    
-    
-    
-    
     
 }

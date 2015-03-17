@@ -38,20 +38,20 @@ public class CMMagneticField
         return __new;
     ]-*/;
     public static native CMMagneticField copyWithx(CMMagneticField original, double x) /*-[
-        original.x = x;
-        return original;
+        CMMagneticField __new = { .x = x, .y = original.y, .z = original.z };
+        return __new;
     ]-*/;
 
     
     public static native CMMagneticField copyWithy(CMMagneticField original, double y) /*-[
-        original.y = y;
-        return original;
+        CMMagneticField __new = { .x = original.x, .y = y, .z = original.z };
+        return __new;
     ]-*/;
 
     
     public static native CMMagneticField copyWithz(CMMagneticField original, double z) /*-[
-        original.z = z;
-        return original;
+        CMMagneticField __new = { .x = original.x, .y = original.y, .z = z };
+        return __new;
     ]-*/;
 
     

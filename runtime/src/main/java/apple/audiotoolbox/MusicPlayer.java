@@ -26,8 +26,6 @@ public class MusicPlayer
 
     
     
-    protected MusicPlayer() {}
-    
     
     
     
@@ -40,66 +38,66 @@ public class MusicPlayer
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("DisposeMusicPlayer")
-    public static native int dispose(MusicPlayer inPlayer);
+    public static native int dispose(OpaqueMusicPlayer inPlayer);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("MusicPlayerSetSequence")
-    public static native int setSequence(MusicPlayer inPlayer, MusicSequence inSequence);
+    public static native int setSequence(OpaqueMusicPlayer inPlayer, OpaqueMusicSequence inSequence);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("MusicPlayerGetSequence")
-    public static native int getSequence(MusicPlayer inPlayer, Todo outSequence);
+    public static native int getSequence(OpaqueMusicPlayer inPlayer, Todo outSequence);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("MusicPlayerSetTime")
-    public static native int setTime(MusicPlayer inPlayer, double inTime);
+    public static native int setTime(OpaqueMusicPlayer inPlayer, double inTime);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("MusicPlayerGetTime")
-    public static native int getTime(MusicPlayer inPlayer, Todo outTime);
+    public static native int getTime(OpaqueMusicPlayer inPlayer, Todo outTime);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("MusicPlayerGetHostTimeForBeats")
-    public static native int getHostTimeForBeats(MusicPlayer inPlayer, double inBeats, Todo outHostTime);
+    public static native int getHostTimeForBeats(OpaqueMusicPlayer inPlayer, double inBeats, Todo outHostTime);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("MusicPlayerGetBeatsForHostTime")
-    public static native int getBeatsForHostTime(MusicPlayer inPlayer, long inHostTime, Todo outBeats);
+    public static native int getBeatsForHostTime(OpaqueMusicPlayer inPlayer, long inHostTime, Todo outBeats);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("MusicPlayerPreroll")
-    public static native int preroll(MusicPlayer inPlayer);
+    public static native int preroll(OpaqueMusicPlayer inPlayer);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("MusicPlayerStart")
-    public static native int start(MusicPlayer inPlayer);
+    public static native int start(OpaqueMusicPlayer inPlayer);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("MusicPlayerStop")
-    public static native int stop(MusicPlayer inPlayer);
+    public static native int stop(OpaqueMusicPlayer inPlayer);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("MusicPlayerIsPlaying")
-    public static native int isPlaying(MusicPlayer inPlayer, Todo outIsPlaying);
+    public static native int isPlaying(OpaqueMusicPlayer inPlayer, Todo outIsPlaying);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("MusicPlayerSetPlayRateScalar")
-    public static native int setPlayRateScalar(MusicPlayer inPlayer, double inScaleRate);
+    public static native int setPlayRateScalar(OpaqueMusicPlayer inPlayer, double inScaleRate);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("MusicPlayerGetPlayRateScalar")
-    public static native int getPlayRateScalar(MusicPlayer inPlayer, Todo outScaleRate);
+    public static native int getPlayRateScalar(OpaqueMusicPlayer inPlayer, Todo outScaleRate);
     
 }

@@ -44,20 +44,20 @@ public class AVAudio3DAngularOrientation
         return __new;
     ]-*/;
     public static native AVAudio3DAngularOrientation copyWithyaw(AVAudio3DAngularOrientation original, float yaw) /*-[
-        original.yaw = yaw;
-        return original;
+        AVAudio3DAngularOrientation __new = { .yaw = yaw, .pitch = original.pitch, .roll = original.roll };
+        return __new;
     ]-*/;
 
     
     public static native AVAudio3DAngularOrientation copyWithpitch(AVAudio3DAngularOrientation original, float pitch) /*-[
-        original.pitch = pitch;
-        return original;
+        AVAudio3DAngularOrientation __new = { .yaw = original.yaw, .pitch = pitch, .roll = original.roll };
+        return __new;
     ]-*/;
 
     
     public static native AVAudio3DAngularOrientation copyWithroll(AVAudio3DAngularOrientation original, float roll) /*-[
-        original.roll = roll;
-        return original;
+        AVAudio3DAngularOrientation __new = { .yaw = original.yaw, .pitch = original.pitch, .roll = roll };
+        return __new;
     ]-*/;
 
     

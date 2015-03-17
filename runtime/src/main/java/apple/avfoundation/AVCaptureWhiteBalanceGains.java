@@ -44,20 +44,20 @@ public class AVCaptureWhiteBalanceGains
         return __new;
     ]-*/;
     public static native AVCaptureWhiteBalanceGains copyWithredGain(AVCaptureWhiteBalanceGains original, float redGain) /*-[
-        original.redGain = redGain;
-        return original;
+        AVCaptureWhiteBalanceGains __new = { .redGain = redGain, .greenGain = original.greenGain, .blueGain = original.blueGain };
+        return __new;
     ]-*/;
 
     
     public static native AVCaptureWhiteBalanceGains copyWithgreenGain(AVCaptureWhiteBalanceGains original, float greenGain) /*-[
-        original.greenGain = greenGain;
-        return original;
+        AVCaptureWhiteBalanceGains __new = { .redGain = original.redGain, .greenGain = greenGain, .blueGain = original.blueGain };
+        return __new;
     ]-*/;
 
     
     public static native AVCaptureWhiteBalanceGains copyWithblueGain(AVCaptureWhiteBalanceGains original, float blueGain) /*-[
-        original.blueGain = blueGain;
-        return original;
+        AVCaptureWhiteBalanceGains __new = { .redGain = original.redGain, .greenGain = original.greenGain, .blueGain = blueGain };
+        return __new;
     ]-*/;
 
     

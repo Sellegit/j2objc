@@ -32,19 +32,5 @@ import apple.foundation.*;
     @DotMapping("info")
     public native Todo getInfo();
     
-    public static native CFRunLoopObserverContext copyWithversion(CFRunLoopObserverContext original, @MachineSizedSInt long version) /*-[
-        original.version = version;
-        return original;
-    ]-*/;
-
-    
-    public static native CFRunLoopObserverContext copyWithinfo(CFRunLoopObserverContext original, Todo info) /*-[
-        original.info = info;
-        return original;
-    ]-*/;
-
-    
-    
-    
     
 }

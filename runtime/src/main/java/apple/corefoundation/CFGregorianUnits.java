@@ -45,38 +45,38 @@ public class CFGregorianUnits
         return __new;
     ]-*/;
     public static native CFGregorianUnits copyWithyears(CFGregorianUnits original, int years) /*-[
-        original.years = years;
-        return original;
+        CFGregorianUnits __new = { .years = years, .months = original.months, .days = original.days, .hours = original.hours, .minutes = original.minutes, .seconds = original.seconds };
+        return __new;
     ]-*/;
 
     
     public static native CFGregorianUnits copyWithmonths(CFGregorianUnits original, int months) /*-[
-        original.months = months;
-        return original;
+        CFGregorianUnits __new = { .years = original.years, .months = months, .days = original.days, .hours = original.hours, .minutes = original.minutes, .seconds = original.seconds };
+        return __new;
     ]-*/;
 
     
     public static native CFGregorianUnits copyWithdays(CFGregorianUnits original, int days) /*-[
-        original.days = days;
-        return original;
+        CFGregorianUnits __new = { .years = original.years, .months = original.months, .days = days, .hours = original.hours, .minutes = original.minutes, .seconds = original.seconds };
+        return __new;
     ]-*/;
 
     
     public static native CFGregorianUnits copyWithhours(CFGregorianUnits original, int hours) /*-[
-        original.hours = hours;
-        return original;
+        CFGregorianUnits __new = { .years = original.years, .months = original.months, .days = original.days, .hours = hours, .minutes = original.minutes, .seconds = original.seconds };
+        return __new;
     ]-*/;
 
     
     public static native CFGregorianUnits copyWithminutes(CFGregorianUnits original, int minutes) /*-[
-        original.minutes = minutes;
-        return original;
+        CFGregorianUnits __new = { .years = original.years, .months = original.months, .days = original.days, .hours = original.hours, .minutes = minutes, .seconds = original.seconds };
+        return __new;
     ]-*/;
 
     
     public static native CFGregorianUnits copyWithseconds(CFGregorianUnits original, double seconds) /*-[
-        original.seconds = seconds;
-        return original;
+        CFGregorianUnits __new = { .years = original.years, .months = original.months, .days = original.days, .hours = original.hours, .minutes = original.minutes, .seconds = seconds };
+        return __new;
     ]-*/;
 
     

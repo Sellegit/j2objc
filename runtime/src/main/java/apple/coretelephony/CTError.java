@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 
 
-@Mapping("CTError") @Library("CoreTelephony/CoreTelephony.h")
+@Mapping("CTError") @Library("CoreTelephony/CTCall.h")
 public class CTError 
     extends Struct 
      {
@@ -31,20 +31,5 @@ public class CTError
     @DotMapping("error")
     public native int getErrorCode();
     
-    public static native CTError create(CTErrorDomain domain, int errorCode) /*-[
-        CTError __new = { .domain = domain, .error = error };
-        return __new;
-    ]-*/;
-    public static native CTError copyWithdomain(CTError original, CTErrorDomain domain) /*-[
-        original.domain = domain;
-        return original;
-    ]-*/;
-
-    
-    public static native CTError copyWitherror(CTError original, int error) /*-[
-        original.error = error;
-        return original;
-    ]-*/;
-
     
 }

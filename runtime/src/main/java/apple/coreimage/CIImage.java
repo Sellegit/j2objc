@@ -47,16 +47,6 @@ public class CIImage
     public CIImage(NSURL url) { }
     @Mapping("initWithContentsOfURL:options:")
     public CIImage(NSURL url, NSDictionary<?, ?> d) { }
-    /**
-     * @since Available in iOS 5.0 and later.
-     */
-    @Mapping("initWithCVPixelBuffer:")
-    public CIImage(CVPixelBuffer buffer) { }
-    /**
-     * @since Available in iOS 5.0 and later.
-     */
-    @Mapping("initWithCVPixelBuffer:options:")
-    public CIImage(CVPixelBuffer buffer, NSDictionary<?, ?> dict) { }
     @Mapping("initWithColor:")
     public CIImage(CIColor color) { }
     

@@ -30,14 +30,5 @@ public class CFStreamClientContext
     @DotMapping("version")
     public native @MachineSizedSInt long getVersion();
     
-    public static native CFStreamClientContext copyWithversion(CFStreamClientContext original, @MachineSizedSInt long version) /*-[
-        original.version = version;
-        return original;
-    ]-*/;
-
-    
-    
-    
-    
     
 }

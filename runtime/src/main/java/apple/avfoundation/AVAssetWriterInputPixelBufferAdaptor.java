@@ -33,22 +33,13 @@ public class AVAssetWriterInputPixelBufferAdaptor
     
     
     public AVAssetWriterInputPixelBufferAdaptor() {}
-    @Mapping("initWithAssetWriterInput:sourcePixelBufferAttributes:")
-    public AVAssetWriterInputPixelBufferAdaptor(AVAssetWriterInput input, NSDictionary<?, ?> sourcePixelBufferAttributes) { }
     
     
     @Mapping("assetWriterInput")
     public native AVAssetWriterInput getAssetWriterInput();
-    @Mapping("sourcePixelBufferAttributes")
-    public native CVPixelBufferAttributes getSourcePixelBufferAttributes();
-    @Mapping("pixelBufferPool")
-    public native CVPixelBufferPool getPixelBufferPool();
     
     
     
-    @Mapping("appendPixelBuffer:withPresentationTime:")
-    public native boolean appendPixelBuffer(CVPixelBuffer pixelBuffer, CMTime presentationTime);
-    @Mapping("assetWriterInputPixelBufferAdaptorWithAssetWriterInput:sourcePixelBufferAttributes:")
-    public static native AVAssetWriterInputPixelBufferAdaptor create(AVAssetWriterInput input, NSDictionary<?, ?> sourcePixelBufferAttributes);
+    
     
 }

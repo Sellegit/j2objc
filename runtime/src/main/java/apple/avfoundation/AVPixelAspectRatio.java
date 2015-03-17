@@ -42,14 +42,14 @@ public class AVPixelAspectRatio
         return __new;
     ]-*/;
     public static native AVPixelAspectRatio copyWithhorizontalSpacing(AVPixelAspectRatio original, @MachineSizedSInt long horizontalSpacing) /*-[
-        original.horizontalSpacing = horizontalSpacing;
-        return original;
+        AVPixelAspectRatio __new = { .horizontalSpacing = horizontalSpacing, .verticalSpacing = original.verticalSpacing };
+        return __new;
     ]-*/;
 
     
     public static native AVPixelAspectRatio copyWithverticalSpacing(AVPixelAspectRatio original, @MachineSizedSInt long verticalSpacing) /*-[
-        original.verticalSpacing = verticalSpacing;
-        return original;
+        AVPixelAspectRatio __new = { .horizontalSpacing = original.horizontalSpacing, .verticalSpacing = verticalSpacing };
+        return __new;
     ]-*/;
 
     

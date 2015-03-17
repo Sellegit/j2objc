@@ -29,18 +29,8 @@ public class GLKMatrix3
     protected GLKMatrix3() {}
     
     
-    @DotMapping("m")
-    public native FloatBuffer getM();
     
-    public static native GLKMatrix3 create(FloatBuffer m) /*-[
-        GLKMatrix3 __new = { .m = m };
-        return __new;
-    ]-*/;
-    public static native GLKMatrix3 copyWithm(GLKMatrix3 original, FloatBuffer m) /*-[
-        original.m = m;
-        return original;
-    ]-*/;
-
+    
     
     @GlobalConstant("GLKMatrix3Identity")
     public static native GLKMatrix3 Identity();

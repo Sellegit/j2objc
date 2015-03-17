@@ -32,24 +32,5 @@ public class CFRunLoopSourceContext
     @DotMapping("info")
     public native Todo getInfo();
     
-    public static native CFRunLoopSourceContext copyWithversion(CFRunLoopSourceContext original, @MachineSizedSInt long version) /*-[
-        original.version = version;
-        return original;
-    ]-*/;
-
-    
-    public static native CFRunLoopSourceContext copyWithinfo(CFRunLoopSourceContext original, Todo info) /*-[
-        original.info = info;
-        return original;
-    ]-*/;
-
-    
-    
-    
-    
-    
-    
-    
-    
     
 }

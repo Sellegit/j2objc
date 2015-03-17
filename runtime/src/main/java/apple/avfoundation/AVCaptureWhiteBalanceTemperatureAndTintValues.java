@@ -42,14 +42,14 @@ public class AVCaptureWhiteBalanceTemperatureAndTintValues
         return __new;
     ]-*/;
     public static native AVCaptureWhiteBalanceTemperatureAndTintValues copyWithtemperature(AVCaptureWhiteBalanceTemperatureAndTintValues original, float temperature) /*-[
-        original.temperature = temperature;
-        return original;
+        AVCaptureWhiteBalanceTemperatureAndTintValues __new = { .temperature = temperature, .tint = original.tint };
+        return __new;
     ]-*/;
 
     
     public static native AVCaptureWhiteBalanceTemperatureAndTintValues copyWithtint(AVCaptureWhiteBalanceTemperatureAndTintValues original, float tint) /*-[
-        original.tint = tint;
-        return original;
+        AVCaptureWhiteBalanceTemperatureAndTintValues __new = { .temperature = original.temperature, .tint = tint };
+        return __new;
     ]-*/;
 
     

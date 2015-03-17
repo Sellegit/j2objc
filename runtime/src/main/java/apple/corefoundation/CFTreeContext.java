@@ -32,19 +32,5 @@ import apple.foundation.*;
     @DotMapping("info")
     public native Todo getInfo();
     
-    public static native CFTreeContext copyWithversion(CFTreeContext original, @MachineSizedSInt long version) /*-[
-        original.version = version;
-        return original;
-    ]-*/;
-
-    
-    public static native CFTreeContext copyWithinfo(CFTreeContext original, Todo info) /*-[
-        original.info = info;
-        return original;
-    ]-*/;
-
-    
-    
-    
     
 }

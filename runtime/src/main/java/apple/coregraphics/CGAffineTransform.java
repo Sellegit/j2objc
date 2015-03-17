@@ -45,38 +45,38 @@ public class CGAffineTransform
         return __new;
     ]-*/;
     public static native CGAffineTransform copyWitha(CGAffineTransform original, @MachineSizedFloat double a) /*-[
-        original.a = a;
-        return original;
+        CGAffineTransform __new = { .a = a, .b = original.b, .c = original.c, .d = original.d, .tx = original.tx, .ty = original.ty };
+        return __new;
     ]-*/;
 
     
     public static native CGAffineTransform copyWithb(CGAffineTransform original, @MachineSizedFloat double b) /*-[
-        original.b = b;
-        return original;
+        CGAffineTransform __new = { .a = original.a, .b = b, .c = original.c, .d = original.d, .tx = original.tx, .ty = original.ty };
+        return __new;
     ]-*/;
 
     
     public static native CGAffineTransform copyWithc(CGAffineTransform original, @MachineSizedFloat double c) /*-[
-        original.c = c;
-        return original;
+        CGAffineTransform __new = { .a = original.a, .b = original.b, .c = c, .d = original.d, .tx = original.tx, .ty = original.ty };
+        return __new;
     ]-*/;
 
     
     public static native CGAffineTransform copyWithd(CGAffineTransform original, @MachineSizedFloat double d) /*-[
-        original.d = d;
-        return original;
+        CGAffineTransform __new = { .a = original.a, .b = original.b, .c = original.c, .d = d, .tx = original.tx, .ty = original.ty };
+        return __new;
     ]-*/;
 
     
     public static native CGAffineTransform copyWithtx(CGAffineTransform original, @MachineSizedFloat double tx) /*-[
-        original.tx = tx;
-        return original;
+        CGAffineTransform __new = { .a = original.a, .b = original.b, .c = original.c, .d = original.d, .tx = tx, .ty = original.ty };
+        return __new;
     ]-*/;
 
     
     public static native CGAffineTransform copyWithty(CGAffineTransform original, @MachineSizedFloat double ty) /*-[
-        original.ty = ty;
-        return original;
+        CGAffineTransform __new = { .a = original.a, .b = original.b, .c = original.c, .d = original.d, .tx = original.tx, .ty = ty };
+        return __new;
     ]-*/;
 
     

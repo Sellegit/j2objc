@@ -47,69 +47,6 @@ public class GCGamepadSnapShotDataV100
     @DotMapping("rightShoulder")
     public native float getRightShoulder();
     
-    public static native GCGamepadSnapShotDataV100 create(short version, short size, float dpadX, float dpadY, float buttonA, float buttonB, float buttonX, float buttonY, float leftShoulder, float rightShoulder) /*-[
-        GCGamepadSnapShotDataV100 __new = { .version = version, .size = size, .dpadX = dpadX, .dpadY = dpadY, .buttonA = buttonA, .buttonB = buttonB, .buttonX = buttonX, .buttonY = buttonY, .leftShoulder = leftShoulder, .rightShoulder = rightShoulder };
-        return __new;
-    ]-*/;
-    public static native GCGamepadSnapShotDataV100 copyWithversion(GCGamepadSnapShotDataV100 original, short version) /*-[
-        original.version = version;
-        return original;
-    ]-*/;
-
-    
-    public static native GCGamepadSnapShotDataV100 copyWithsize(GCGamepadSnapShotDataV100 original, short size) /*-[
-        original.size = size;
-        return original;
-    ]-*/;
-
-    
-    public static native GCGamepadSnapShotDataV100 copyWithdpadX(GCGamepadSnapShotDataV100 original, float dpadX) /*-[
-        original.dpadX = dpadX;
-        return original;
-    ]-*/;
-
-    
-    public static native GCGamepadSnapShotDataV100 copyWithdpadY(GCGamepadSnapShotDataV100 original, float dpadY) /*-[
-        original.dpadY = dpadY;
-        return original;
-    ]-*/;
-
-    
-    public static native GCGamepadSnapShotDataV100 copyWithbuttonA(GCGamepadSnapShotDataV100 original, float buttonA) /*-[
-        original.buttonA = buttonA;
-        return original;
-    ]-*/;
-
-    
-    public static native GCGamepadSnapShotDataV100 copyWithbuttonB(GCGamepadSnapShotDataV100 original, float buttonB) /*-[
-        original.buttonB = buttonB;
-        return original;
-    ]-*/;
-
-    
-    public static native GCGamepadSnapShotDataV100 copyWithbuttonX(GCGamepadSnapShotDataV100 original, float buttonX) /*-[
-        original.buttonX = buttonX;
-        return original;
-    ]-*/;
-
-    
-    public static native GCGamepadSnapShotDataV100 copyWithbuttonY(GCGamepadSnapShotDataV100 original, float buttonY) /*-[
-        original.buttonY = buttonY;
-        return original;
-    ]-*/;
-
-    
-    public static native GCGamepadSnapShotDataV100 copyWithleftShoulder(GCGamepadSnapShotDataV100 original, float leftShoulder) /*-[
-        original.leftShoulder = leftShoulder;
-        return original;
-    ]-*/;
-
-    
-    public static native GCGamepadSnapShotDataV100 copyWithrightShoulder(GCGamepadSnapShotDataV100 original, float rightShoulder) /*-[
-        original.rightShoulder = rightShoulder;
-        return original;
-    ]-*/;
-
     
     @GlobalFunction("GCGamepadSnapShotDataV100FromNSData")
     public static native boolean setData(GCGamepadSnapShotDataV100 snapshotData, NSData data);

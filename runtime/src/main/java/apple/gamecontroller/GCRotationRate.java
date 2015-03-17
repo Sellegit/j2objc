@@ -38,20 +38,20 @@ public class GCRotationRate
         return __new;
     ]-*/;
     public static native GCRotationRate copyWithx(GCRotationRate original, double x) /*-[
-        original.x = x;
-        return original;
+        GCRotationRate __new = { .x = x, .y = original.y, .z = original.z };
+        return __new;
     ]-*/;
 
     
     public static native GCRotationRate copyWithy(GCRotationRate original, double y) /*-[
-        original.y = y;
-        return original;
+        GCRotationRate __new = { .x = original.x, .y = y, .z = original.z };
+        return __new;
     ]-*/;
 
     
     public static native GCRotationRate copyWithz(GCRotationRate original, double z) /*-[
-        original.z = z;
-        return original;
+        GCRotationRate __new = { .x = original.x, .y = original.y, .z = z };
+        return __new;
     ]-*/;
 
     

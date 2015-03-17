@@ -60,8 +60,6 @@ public class AVAssetReaderOutput
     
     
     
-    @Mapping("copyNextSampleBuffer")
-    public native CMSampleBuffer getNextSampleBuffer();
     /**
      * @since Available in iOS 8.0 and later.
      */

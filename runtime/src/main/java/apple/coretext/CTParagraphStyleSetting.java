@@ -33,26 +33,5 @@ public class CTParagraphStyleSetting
     @DotMapping("value")
     public native Todo getValue();
     
-    public static native CTParagraphStyleSetting create(CTParagraphStyleSpecifier spec, @MachineSizedUInt long valueSize, Todo value) /*-[
-        CTParagraphStyleSetting __new = { .spec = spec, .valueSize = valueSize, .value = value };
-        return __new;
-    ]-*/;
-    public static native CTParagraphStyleSetting copyWithspec(CTParagraphStyleSetting original, CTParagraphStyleSpecifier spec) /*-[
-        original.spec = spec;
-        return original;
-    ]-*/;
-
-    
-    public static native CTParagraphStyleSetting copyWithvalueSize(CTParagraphStyleSetting original, @MachineSizedUInt long valueSize) /*-[
-        original.valueSize = valueSize;
-        return original;
-    ]-*/;
-
-    
-    public static native CTParagraphStyleSetting copyWithvalue(CTParagraphStyleSetting original, Todo value) /*-[
-        original.value = value;
-        return original;
-    ]-*/;
-
     
 }

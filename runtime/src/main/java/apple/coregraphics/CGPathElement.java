@@ -32,20 +32,5 @@ import apple.uikit.*;
     @DotMapping("points")
     public native CGPoint getPoints();
     
-    public static native CGPathElement create(CGPathElementType type, CGPoint points) /*-[
-        CGPathElement __new = { .type = type, .points = points };
-        return __new;
-    ]-*/;
-    public static native CGPathElement copyWithtype(CGPathElement original, CGPathElementType type) /*-[
-        original.type = type;
-        return original;
-    ]-*/;
-
-    
-    public static native CGPathElement copyWithpoints(CGPathElement original, CGPoint points) /*-[
-        original.points = points;
-        return original;
-    ]-*/;
-
     
 }

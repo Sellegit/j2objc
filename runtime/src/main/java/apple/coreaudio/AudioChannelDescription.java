@@ -29,30 +29,7 @@ public class AudioChannelDescription
     @DotMapping("mChannelLabel")
     public native AudioChannelLabel getMChannelLabel();
     @DotMapping("mChannelFlags")
-    public native AudioChannelFlag getMChannelFlags();
-    @DotMapping("mCoordinates")
-    public native FloatBuffer getMCoordinates();
+    public native int getMChannelFlags();
     
-    public static native AudioChannelDescription create(AudioChannelLabel mChannelLabel, AudioChannelFlag mChannelFlags, FloatBuffer mCoordinates) /*-[
-        AudioChannelDescription __new = { .mChannelLabel = mChannelLabel, .mChannelFlags = mChannelFlags, .mCoordinates = mCoordinates };
-        return __new;
-    ]-*/;
-    public static native AudioChannelDescription copyWithmChannelLabel(AudioChannelDescription original, AudioChannelLabel mChannelLabel) /*-[
-        original.mChannelLabel = mChannelLabel;
-        return original;
-    ]-*/;
-
-    
-    public static native AudioChannelDescription copyWithmChannelFlags(AudioChannelDescription original, AudioChannelFlag mChannelFlags) /*-[
-        original.mChannelFlags = mChannelFlags;
-        return original;
-    ]-*/;
-
-    
-    public static native AudioChannelDescription copyWithmCoordinates(AudioChannelDescription original, FloatBuffer mCoordinates) /*-[
-        original.mCoordinates = mCoordinates;
-        return original;
-    ]-*/;
-
     
 }

@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 
 
-@Library("OpenGLES/OpenGLES.h") @Mapping("EAGLContext")
+@Library("OpenGLES/EAGL.h") @Mapping("EAGLContext")
 public class EAGLContext 
     extends NSObject 
      {

@@ -35,11 +35,6 @@ public class AVTimedMetadataGroup
     public AVTimedMetadataGroup() {}
     @Mapping("initWithItems:timeRange:")
     public AVTimedMetadataGroup(NSArray<?> items, CMTimeRange timeRange) { }
-    /**
-     * @since Available in iOS 8.0 and later.
-     */
-    @Mapping("initWithSampleBuffer:")
-    public AVTimedMetadataGroup(CMSampleBuffer sampleBuffer) { }
     
     
     @Mapping("timeRange")

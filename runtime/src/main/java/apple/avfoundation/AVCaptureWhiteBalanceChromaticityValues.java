@@ -42,14 +42,14 @@ public class AVCaptureWhiteBalanceChromaticityValues
         return __new;
     ]-*/;
     public static native AVCaptureWhiteBalanceChromaticityValues copyWithx(AVCaptureWhiteBalanceChromaticityValues original, float x) /*-[
-        original.x = x;
-        return original;
+        AVCaptureWhiteBalanceChromaticityValues __new = { .x = x, .y = original.y };
+        return __new;
     ]-*/;
 
     
     public static native AVCaptureWhiteBalanceChromaticityValues copyWithy(AVCaptureWhiteBalanceChromaticityValues original, float y) /*-[
-        original.y = y;
-        return original;
+        AVCaptureWhiteBalanceChromaticityValues __new = { .x = original.x, .y = y };
+        return __new;
     ]-*/;
 
     

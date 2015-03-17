@@ -60,10 +60,5 @@ public class NSStream
      */
     @Mapping("getStreamsToHostWithName:port:inputStream:outputStream:")
     protected static native void getStreamsToHost(String hostname, @MachineSizedSInt long port, Todo inputStream, Todo outputStream);
-    /**
-     * @since Available in iOS 8.0 and later.
-     */
-    @Mapping("getBoundStreamsWithBufferSize:inputStream:outputStream:")
-    protected static native void getBoundStreams(@MachineSizedUInt long bufferSize, Todo inputStream, Todo outputStream);
     
 }

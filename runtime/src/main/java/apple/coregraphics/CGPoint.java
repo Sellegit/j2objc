@@ -37,14 +37,14 @@ public class CGPoint
         return __new;
     ]-*/;
     public static native CGPoint copyWithx(CGPoint original, @MachineSizedFloat double x) /*-[
-        original.x = x;
-        return original;
+        CGPoint __new = { .x = x, .y = original.y };
+        return __new;
     ]-*/;
 
     
     public static native CGPoint copyWithy(CGPoint original, @MachineSizedFloat double y) /*-[
-        original.y = y;
-        return original;
+        CGPoint __new = { .x = original.x, .y = y };
+        return __new;
     ]-*/;
 
     

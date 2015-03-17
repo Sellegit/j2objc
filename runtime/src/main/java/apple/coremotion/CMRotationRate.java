@@ -38,20 +38,20 @@ public class CMRotationRate
         return __new;
     ]-*/;
     public static native CMRotationRate copyWithx(CMRotationRate original, double x) /*-[
-        original.x = x;
-        return original;
+        CMRotationRate __new = { .x = x, .y = original.y, .z = original.z };
+        return __new;
     ]-*/;
 
     
     public static native CMRotationRate copyWithy(CMRotationRate original, double y) /*-[
-        original.y = y;
-        return original;
+        CMRotationRate __new = { .x = original.x, .y = y, .z = original.z };
+        return __new;
     ]-*/;
 
     
     public static native CMRotationRate copyWithz(CMRotationRate original, double z) /*-[
-        original.z = z;
-        return original;
+        CMRotationRate __new = { .x = original.x, .y = original.y, .z = z };
+        return __new;
     ]-*/;
 
     

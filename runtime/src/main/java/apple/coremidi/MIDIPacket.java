@@ -30,29 +30,6 @@ public class MIDIPacket
     public native long getTimeStamp();
     @DotMapping("length")
     public native short getLength();
-    @DotMapping("data")
-    public native ByteBuffer getData();
     
-    public static native MIDIPacket create(long timeStamp, short length, ByteBuffer data) /*-[
-        MIDIPacket __new = { .timeStamp = timeStamp, .length = length, .data = data };
-        return __new;
-    ]-*/;
-    public static native MIDIPacket copyWithtimeStamp(MIDIPacket original, long timeStamp) /*-[
-        original.timeStamp = timeStamp;
-        return original;
-    ]-*/;
-
-    
-    public static native MIDIPacket copyWithlength(MIDIPacket original, short length) /*-[
-        original.length = length;
-        return original;
-    ]-*/;
-
-    
-    public static native MIDIPacket copyWithdata(MIDIPacket original, ByteBuffer data) /*-[
-        original.data = data;
-        return original;
-    ]-*/;
-
     
 }

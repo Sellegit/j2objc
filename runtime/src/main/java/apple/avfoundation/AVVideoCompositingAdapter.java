@@ -30,10 +30,7 @@ public abstract class AVVideoCompositingAdapter
     
     
     
-    @NotImplemented("sourcePixelBufferAttributes")
-    public CVPixelBufferAttributes getSourcePixelBufferAttributes() { throw new UnsupportedOperationException(); }
-    @NotImplemented("requiredPixelBufferAttributesForRenderContext")
-    public CVPixelBufferAttributes getRequiredPixelBufferAttributesForRenderContext() { throw new UnsupportedOperationException(); }
+    
     
     
     

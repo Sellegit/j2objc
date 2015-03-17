@@ -81,12 +81,14 @@ clean:
 
 java: $(DIST_JAR)
 
+ARGS_FILE = $(JAR_STAGE_DIR)/args
 # TODO(kstanger): Add -Xlint:unchecked once warnings are fixed.
 $(JAR): $(JAVA_SOURCES) | $(BUILD_DIR) java_deps_dist annotations_dist
 	@echo "building j2objc_runtime.jar"
 	@rm -rf $(JAR_STAGE_DIR)
 	@mkdir $(JAR_STAGE_DIR)
-	@$(JAVAC) -sourcepath $(SOURCEPATH) -cp $(CLASSPATH) -encoding UTF-8 -d $(JAR_STAGE_DIR) $^
+	$(call long_list_to_file,$(ARGS_FILE),$^)
+	@$(JAVAC) -sourcepath $(SOURCEPATH) -cp $(CLASSPATH) -encoding UTF-8 -d $(JAR_STAGE_DIR) @$(ARGS_FILE)
 	@jar cf $@ -C $(JAR_STAGE_DIR) .
 
 $(DIST_JAR): $(JAR) | $(DIST_JAR_DIR)

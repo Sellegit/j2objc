@@ -52,7 +52,6 @@ public class AVVideoCompositionRenderContext
     
     
     
-    @Mapping("newPixelBuffer")
-    public native CVPixelBuffer newPixelBuffer();
+    
     
 }
