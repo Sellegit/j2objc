@@ -43,6 +43,8 @@ public class NSDecimal
     public native int get_reserved();
     
     
+    @GlobalFunction("NSDecimalIsNotANumber")
+    public static native boolean isNotANumber(NSDecimal dcm);
     @GlobalFunction("NSDecimalCompact")
     public static native void compact(NSDecimal number);
     @GlobalFunction("NSDecimalCompare")

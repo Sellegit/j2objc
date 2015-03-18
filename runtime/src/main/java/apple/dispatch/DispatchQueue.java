@@ -35,12 +35,6 @@ public class DispatchQueue
     /**
      * @since Available in iOS 4.0 and later.
      */
-    @GlobalConstant("_dispatch_main_q")
-    public static native DispatchQueue getMainQueue();
-    
-    /**
-     * @since Available in iOS 4.0 and later.
-     */
     @GlobalFunction("dispatch_async")
     public static native void async(DispatchQueue queue, @Block Runnable block);
     /**
@@ -60,6 +54,8 @@ public class DispatchQueue
     @Deprecated
     @GlobalFunction("dispatch_get_current_queue")
     public static native DispatchQueue getCurrentQueue();
+    @GlobalFunction("dispatch_get_main_queue")
+    public static native DispatchQueue getMainQueue();
     /**
      * @since Available in iOS 4.0 and later.
      */
