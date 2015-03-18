@@ -49,8 +49,6 @@ import java.util.List;
 import java.util.Set;
 import java.util.regex.Pattern;
 
-import jdk.nashorn.internal.runtime.GlobalFunctions;
-
 /**
  * Utility methods for working with binding types.
  *
