@@ -69,4 +69,4 @@ if [ ${SOURCEPATH_SET} -eq 0 ]; then
 fi
 
 java ${JAVA_ARGS[*]} -jar "${JAR}" "${BOOT_PATH}" -classpath "${CLASSPATH}" \
-    -sourcepath "${SOURCEPATH}" "${J2OBJC_ARGS[@]}"
+    -sourcepath "${SOURCEPATH}" -use-arc "${J2OBJC_ARGS[@]}"

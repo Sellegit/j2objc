@@ -848,8 +848,8 @@ public class ObjectiveCImplementationGenerator extends ObjectiveCSourceFileGener
       // Synthetic methods don't need to be declared.
       if (Modifier.isPrivate(modifiers) && !BindingUtil.isSynthetic(modifiers)) {
         methods.add(method);
-      }
-    }
+
+    }}
     return methods;
   }
 
