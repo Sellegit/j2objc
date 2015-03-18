@@ -14,6 +14,7 @@
 
 package com.google.devtools.j2objc.ast;
 
+import org.eclipse.jdt.core.dom.IMethodBinding;
 import org.eclipse.jdt.core.dom.ITypeBinding;
 
 import java.util.List;
@@ -29,6 +30,7 @@ public class FunctionInvocation extends Expression {
   // The return type of the declared function.
   private ITypeBinding declaredReturnType = null;
   private ITypeBinding declaringType = null;
+  private IMethodBinding methodBinding = null;
   private final ChildList<Expression> arguments = ChildList.create(Expression.class, this);
 
   public FunctionInvocation(FunctionInvocation other) {
@@ -37,16 +39,24 @@ public class FunctionInvocation extends Expression {
     typeBinding = other.getTypeBinding();
     declaredReturnType = other.getDeclaredReturnType();
     declaringType = other.getDeclaringType();
+    methodBinding = other.getMethodBinding();
     arguments.copyFrom(other.getArguments());
   }
 
   public FunctionInvocation(
       String name, ITypeBinding typeBinding, ITypeBinding declaredReturnType,
       ITypeBinding declaringType) {
+    this(name, typeBinding, declaredReturnType, declaringType, null);
+  }
+
+  public FunctionInvocation(
+      String name, ITypeBinding typeBinding, ITypeBinding declaredReturnType,
+      ITypeBinding declaringType, IMethodBinding methodBinding) {
     this.name = name;
     this.typeBinding = typeBinding;
     this.declaredReturnType = declaredReturnType;
     this.declaringType = declaringType;
+    this.methodBinding = methodBinding;
   }
 
   @Override
@@ -73,6 +83,14 @@ public class FunctionInvocation extends Expression {
 
   public List<Expression> getArguments() {
     return arguments;
+  }
+
+  public IMethodBinding getMethodBinding() {
+    return methodBinding;
+  }
+
+  public void setMethodBinding(IMethodBinding methodBinding) {
+    this.methodBinding = methodBinding;
   }
 
   @Override

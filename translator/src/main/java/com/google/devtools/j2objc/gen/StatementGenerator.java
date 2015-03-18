@@ -184,7 +184,10 @@ public class StatementGenerator extends TreeVisitor {
     }
     buffer.append(':');
 
+    printArgumentExpression(method, arg, index);
+  }
 
+  private void printArgumentExpression(IMethodBinding method, Expression arg, int index) {
     if (method != null) {
       // wrap @Block argument
       IAnnotationBinding blockAnnotation =
@@ -790,17 +793,20 @@ public class StatementGenerator extends TreeVisitor {
       return false;
     }
 
+    // TODO: move this into a function invocation thing?
     String fnName = BindingUtil.extractGlobalFunctionName(binding);
     if (fnName != null) {
       buffer.append(fnName);
       buffer.append('(');
-      for (Iterator<Expression> iter = node.getArguments().iterator(); iter.hasNext(); ) {
-        iter.next().accept(this);
-        if (iter.hasNext()) {
+      List<Expression> args = node.getArguments();
+      for (int i = 0; i < args.size(); i++) {
+        printArgumentExpression(binding, args.get(i), i);
+        if (i < args.size() - 1) {
           buffer.append(", ");
         }
       }
       buffer.append(')');
+
       return false;
     }
 
