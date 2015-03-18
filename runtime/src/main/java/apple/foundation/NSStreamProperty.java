@@ -35,26 +35,26 @@ public class NSStreamProperty
      * @since Available in iOS 2.0 and later.
      */
     @GlobalConstant("NSStreamSocketSecurityLevelKey")
-    protected static native NSString SocketSecurityLevelValue();
+    public static native NSString SocketSecurityLevelValue();
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalConstant("NSStreamSOCKSProxyConfigurationKey")
-    protected static native NSString SOCKSProxyConfigurationValue();
+    public static native NSString SOCKSProxyConfigurationValue();
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalConstant("NSStreamDataWrittenToMemoryStreamKey")
-    protected static native NSString DataWrittenToMemoryStreamValue();
+    public static native NSString DataWrittenToMemoryStreamValue();
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalConstant("NSStreamFileCurrentOffsetKey")
-    protected static native NSString FileCurrentOffsetValue();
+    public static native NSString FileCurrentOffsetValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("NSStreamNetworkServiceType")
-    protected static native NSString NetworkServiceTypeValue();
+    public static native NSString NetworkServiceTypeValue();
     
 }

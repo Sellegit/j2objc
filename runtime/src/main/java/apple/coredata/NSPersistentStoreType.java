@@ -30,16 +30,16 @@ public class NSPersistentStoreType
      * @since Available in iOS 3.0 and later.
      */
     @GlobalConstant("NSSQLiteStoreType")
-    protected static native String SQLiteValue();
+    public static native String SQLiteValue();
     /**
      * @since Available in iOS 3.0 and later.
      */
     @GlobalConstant("NSBinaryStoreType")
-    protected static native String BinaryValue();
+    public static native String BinaryValue();
     /**
      * @since Available in iOS 3.0 and later.
      */
     @GlobalConstant("NSInMemoryStoreType")
-    protected static native String InMemoryValue();
+    public static native String InMemoryValue();
     
 }

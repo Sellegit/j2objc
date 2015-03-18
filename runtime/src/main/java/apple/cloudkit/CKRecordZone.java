@@ -27,11 +27,12 @@ public class CKRecordZone
 
     
     
-    public CKRecordZone() {}
     @Mapping("initWithZoneName:")
     public CKRecordZone(String zoneName) { }
     @Mapping("initWithZoneID:")
     public CKRecordZone(CKRecordZoneID zoneID) { }
+    @Mapping("init")
+    public CKRecordZone() { }
     
     
     @Mapping("zoneID")

@@ -23,7 +23,7 @@ public class GCRotationRate
      {
 
     
-    protected GCRotationRate() {}
+    private GCRotationRate() {}
     
     
     @DotMapping("x")

@@ -27,9 +27,10 @@ public class CAMediaTimingFunction
 
     
     
-    public CAMediaTimingFunction() {}
     @Mapping("initWithControlPoints::::")
     public CAMediaTimingFunction(float c1x, float c1y, float c2x, float c2y) { }
+    @Mapping("init")
+    public CAMediaTimingFunction() { }
     
     
     
@@ -37,7 +38,7 @@ public class CAMediaTimingFunction
     
     
     @Mapping("getControlPointAtIndex:values:")
-    protected native void getControlPoint(@MachineSizedUInt long idx, Todo ptr);
+    public native void getControlPoint(@MachineSizedUInt long idx, Todo ptr);
     @Mapping("functionWithName:")
     public static native CAMediaTimingFunction create(String name);
     @Mapping("functionWithControlPoints::::")

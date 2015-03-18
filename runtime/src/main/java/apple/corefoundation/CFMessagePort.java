@@ -32,9 +32,9 @@ public class CFMessagePort
     @GlobalFunction("CFMessagePortGetTypeID")
     public static native @MachineSizedUInt long getClassTypeID();
     @GlobalFunction("CFMessagePortCreateLocal")
-    protected static native CFMessagePort createLocal(CFAllocator allocator, String name, FunctionPtr callout, CFMessagePortContext context, Todo shouldFreeInfo);
+    public static native CFMessagePort createLocal(CFAllocator allocator, String name, FunctionPtr callout, CFMessagePortContext context, Todo shouldFreeInfo);
     @GlobalFunction("CFMessagePortCreateRemote")
-    protected static native CFMessagePort createRemote(CFAllocator allocator, String name);
+    public static native CFMessagePort createRemote(CFAllocator allocator, String name);
     @GlobalFunction("CFMessagePortIsRemote")
     public static native boolean isRemote(CFMessagePort ms);
     @GlobalFunction("CFMessagePortGetName")
@@ -46,13 +46,13 @@ public class CFMessagePort
     @GlobalFunction("CFMessagePortIsValid")
     public static native boolean isValid(CFMessagePort ms);
     @GlobalFunction("CFMessagePortGetInvalidationCallBack")
-    private static native FunctionPtr getInvalidationCallBack0(CFMessagePort ms);
+    public static native FunctionPtr getInvalidationCallBack0(CFMessagePort ms);
     @GlobalFunction("CFMessagePortSetInvalidationCallBack")
-    private static native void setInvalidationCallBack0(CFMessagePort ms, FunctionPtr callout);
+    public static native void setInvalidationCallBack0(CFMessagePort ms, FunctionPtr callout);
     @GlobalFunction("CFMessagePortSendRequest")
-    protected static native CFMessagePortErrorCode sendRequest(CFMessagePort remote, int msgid, CFData data, double sendTimeout, double rcvTimeout, String replyMode, Todo returnData);
+    public static native CFMessagePortErrorCode sendRequest(CFMessagePort remote, int msgid, CFData data, double sendTimeout, double rcvTimeout, String replyMode, Todo returnData);
     @GlobalFunction("CFMessagePortCreateRunLoopSource")
-    protected static native CFRunLoopSource createRunLoopSource(CFAllocator allocator, CFMessagePort local, @MachineSizedSInt long order);
+    public static native CFRunLoopSource createRunLoopSource(CFAllocator allocator, CFMessagePort local, @MachineSizedSInt long order);
     /**
      * @since Available in iOS 4.0 and later.
      */

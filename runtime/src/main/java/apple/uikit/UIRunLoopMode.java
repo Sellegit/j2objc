@@ -32,6 +32,6 @@ public class UIRunLoopMode
     
     
     @GlobalConstant("UITrackingRunLoopMode")
-    protected static native String TrackingValue();
+    public static native String TrackingValue();
     
 }

@@ -26,7 +26,8 @@ public class ASIdentifierManager
 
     
     
-    public ASIdentifierManager() {}
+    @Mapping("init")
+    public ASIdentifierManager() { }
     
     
     @Mapping("advertisingIdentifier")

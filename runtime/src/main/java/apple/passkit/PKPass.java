@@ -26,7 +26,8 @@ public class PKPass
 
     
     
-    public PKPass() {}
+    @Mapping("init")
+    public PKPass() { }
     
     
     /**

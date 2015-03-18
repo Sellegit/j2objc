@@ -30,6 +30,6 @@ public class CTFrameClippingPath
      * @since Available in iOS 4.3 and later.
      */
     @GlobalConstant("kCTFramePathClippingPathAttributeName")
-    protected static native CFString Path();
+    public static native CFString Path();
     
 }

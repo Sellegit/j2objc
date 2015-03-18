@@ -29,7 +29,6 @@ public class NSMachPort
 
     
     
-    public NSMachPort() {}
     @Mapping("initWithMachPort:")
     public NSMachPort(int machPort) { }
     /**
@@ -37,6 +36,8 @@ public class NSMachPort
      */
     @Mapping("initWithMachPort:options:")
     public NSMachPort(int machPort, @MachineSizedUInt long f) { }
+    @Mapping("init")
+    public NSMachPort() { }
     
     
     @Mapping("machPort")

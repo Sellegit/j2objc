@@ -31,9 +31,10 @@ public class UIAccessibilityElement
 
     
     
-    public UIAccessibilityElement() {}
     @Mapping("initWithAccessibilityContainer:")
     public UIAccessibilityElement(Object container) { }
+    @Mapping("init")
+    public UIAccessibilityElement() { }
     
     
     @Mapping("accessibilityContainer")

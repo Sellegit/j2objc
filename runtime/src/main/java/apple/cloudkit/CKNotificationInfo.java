@@ -27,7 +27,8 @@ public class CKNotificationInfo
 
     
     
-    public CKNotificationInfo() {}
+    @Mapping("init")
+    public CKNotificationInfo() { }
     
     
     @Mapping("alertBody")

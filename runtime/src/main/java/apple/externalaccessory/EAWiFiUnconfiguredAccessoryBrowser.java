@@ -28,12 +28,13 @@ public class EAWiFiUnconfiguredAccessoryBrowser
 
     
     
-    public EAWiFiUnconfiguredAccessoryBrowser() {}
     /**
      * @since Available in iOS 8.0 and later.
      */
     @Mapping("initWithDelegate:queue:")
     public EAWiFiUnconfiguredAccessoryBrowser(EAWiFiUnconfiguredAccessoryBrowserDelegate delegate, DispatchQueue queue) { }
+    @Mapping("init")
+    public EAWiFiUnconfiguredAccessoryBrowser() { }
     
     
     @Mapping("delegate")

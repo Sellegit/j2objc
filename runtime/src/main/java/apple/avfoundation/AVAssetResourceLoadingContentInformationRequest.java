@@ -32,7 +32,8 @@ public class AVAssetResourceLoadingContentInformationRequest
 
     
     
-    public AVAssetResourceLoadingContentInformationRequest() {}
+    @Mapping("init")
+    public AVAssetResourceLoadingContentInformationRequest() { }
     
     
     @Mapping("contentType")

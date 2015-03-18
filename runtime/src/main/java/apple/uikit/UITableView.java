@@ -31,11 +31,12 @@ public class UITableView
 
     
     
-    public UITableView() {}
     @Mapping("initWithFrame:style:")
     public UITableView(CGRect frame, @Representing("UITableViewStyle") @MachineSizedSInt long style) { }
     @Mapping("initWithFrame:")
     public UITableView(CGRect frame) { }
+    @Mapping("init")
+    public UITableView() { }
     
     
     @Mapping("style")

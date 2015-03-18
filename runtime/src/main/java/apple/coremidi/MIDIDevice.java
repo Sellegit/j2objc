@@ -42,7 +42,7 @@ public class MIDIDevice
      * @since Available in iOS 4.2 and later.
      */
     @GlobalFunction("MIDIDeviceAddEntity")
-    protected static native MIDIError addEntity(MIDIDevice device, String name, boolean embedded, @MachineSizedUInt long numSourceEndpoints, @MachineSizedUInt long numDestinationEndpoints, Todo newEntity);
+    public static native MIDIError addEntity(MIDIDevice device, String name, boolean embedded, @MachineSizedUInt long numSourceEndpoints, @MachineSizedUInt long numDestinationEndpoints, Todo newEntity);
     /**
      * @since Available in iOS 4.2 and later.
      */
@@ -52,12 +52,12 @@ public class MIDIDevice
      * @since Available in iOS 4.2 and later.
      */
     @GlobalFunction("MIDIExternalDeviceCreate")
-    protected static native MIDIError createExternal(String name, String manufacturer, String model, Todo outDevice);
+    public static native MIDIError createExternal(String name, String manufacturer, String model, Todo outDevice);
     /**
      * @since Available in iOS 4.2 and later.
      */
     @GlobalFunction("MIDIDeviceCreate")
-    protected static native MIDIError create(MIDIDriver owner, String name, String manufacturer, String model, Todo outDevice);
+    public static native MIDIError create(MIDIDriver owner, String name, String manufacturer, String model, Todo outDevice);
     /**
      * @since Available in iOS 4.2 and later.
      */

@@ -30,7 +30,8 @@ public class SCNSkinner
 
     
     
-    public SCNSkinner() {}
+    @Mapping("init")
+    public SCNSkinner() { }
     
     
     @Mapping("skeleton")

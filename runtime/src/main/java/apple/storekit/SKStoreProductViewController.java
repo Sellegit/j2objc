@@ -28,9 +28,10 @@ public class SKStoreProductViewController
 
     
     
-    public SKStoreProductViewController() {}
     @Mapping("initWithNibName:bundle:")
     public SKStoreProductViewController(String nibNameOrNil, NSBundle nibBundleOrNil) { }
+    @Mapping("init")
+    public SKStoreProductViewController() { }
     
     
     /**

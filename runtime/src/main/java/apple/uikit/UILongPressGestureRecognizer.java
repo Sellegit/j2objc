@@ -31,9 +31,10 @@ public class UILongPressGestureRecognizer
 
     
     
-    public UILongPressGestureRecognizer() {}
     @Mapping("initWithTarget:action:")
     public UILongPressGestureRecognizer(Object target, Selector action) { }
+    @Mapping("init")
+    public UILongPressGestureRecognizer() { }
     
     
     @Mapping("numberOfTapsRequired")

@@ -29,9 +29,10 @@ public class NSCalendar
 
     
     
-    public NSCalendar() {}
     @Mapping("initWithCalendarIdentifier:")
     public NSCalendar(String ident) { }
+    @Mapping("init")
+    public NSCalendar() { }
     
     
     @Mapping("calendarIdentifier")
@@ -173,7 +174,7 @@ public class NSCalendar
      * @since Available in iOS 2.0 and later.
      */
     @Mapping("rangeOfUnit:startDate:interval:forDate:")
-    protected native boolean getRange(@Representing("NSCalendarUnit") @MachineSizedUInt long unit, Todo datep, Todo tip, NSDate date);
+    public native boolean getRange(@Representing("NSCalendarUnit") @MachineSizedUInt long unit, Todo datep, Todo tip, NSDate date);
     @Mapping("dateFromComponents:")
     public native NSDate newDateFromComponents(NSDateComponents comps);
     @Mapping("components:fromDate:")

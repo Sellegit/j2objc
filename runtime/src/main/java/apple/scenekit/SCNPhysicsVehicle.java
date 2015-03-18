@@ -30,7 +30,8 @@ public class SCNPhysicsVehicle
 
     
     
-    public SCNPhysicsVehicle() {}
+    @Mapping("init")
+    public SCNPhysicsVehicle() { }
     
     
     @Mapping("speedInKilometersPerHour")

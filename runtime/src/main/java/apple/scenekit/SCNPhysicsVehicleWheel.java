@@ -30,7 +30,8 @@ public class SCNPhysicsVehicleWheel
 
     
     
-    public SCNPhysicsVehicleWheel() {}
+    @Mapping("init")
+    public SCNPhysicsVehicleWheel() { }
     
     
     @Mapping("node")

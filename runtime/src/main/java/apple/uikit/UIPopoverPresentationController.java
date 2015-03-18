@@ -31,9 +31,10 @@ public class UIPopoverPresentationController
 
     
     
-    public UIPopoverPresentationController() {}
     @Mapping("initWithPresentedViewController:presentingViewController:")
     public UIPopoverPresentationController(UIViewController presentedViewController, UIViewController presentingViewController) { }
+    @Mapping("init")
+    public UIPopoverPresentationController() { }
     
     
     @Mapping("delegate")

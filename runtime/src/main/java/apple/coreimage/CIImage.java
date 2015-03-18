@@ -27,7 +27,6 @@ public class CIImage
 
     
     
-    public CIImage() {}
     @Mapping("initWithCGImage:")
     public CIImage(CGImage image) { }
     @Mapping("initWithCGImage:options:")
@@ -49,6 +48,8 @@ public class CIImage
     public CIImage(NSURL url, NSDictionary<?, ?> d) { }
     @Mapping("initWithColor:")
     public CIImage(CIColor color) { }
+    @Mapping("init")
+    public CIImage() { }
     
     
     

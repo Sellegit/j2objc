@@ -27,7 +27,8 @@ public class WKWebViewConfiguration
 
     
     
-    public WKWebViewConfiguration() {}
+    @Mapping("init")
+    public WKWebViewConfiguration() { }
     
     
     @Mapping("processPool")

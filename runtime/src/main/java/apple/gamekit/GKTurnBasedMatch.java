@@ -27,7 +27,8 @@ public class GKTurnBasedMatch
 
     
     
-    public GKTurnBasedMatch() {}
+    @Mapping("init")
+    public GKTurnBasedMatch() { }
     
     
     @Mapping("matchID")

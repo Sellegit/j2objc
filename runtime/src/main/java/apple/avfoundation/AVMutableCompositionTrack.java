@@ -32,7 +32,8 @@ public class AVMutableCompositionTrack
 
     
     
-    public AVMutableCompositionTrack() {}
+    @Mapping("init")
+    public AVMutableCompositionTrack() { }
     
     
     @Mapping("naturalTimeScale")

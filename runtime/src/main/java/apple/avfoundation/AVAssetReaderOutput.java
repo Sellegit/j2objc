@@ -32,7 +32,8 @@ public class AVAssetReaderOutput
 
     
     
-    public AVAssetReaderOutput() {}
+    @Mapping("init")
+    public AVAssetReaderOutput() { }
     
     
     @Mapping("mediaType")

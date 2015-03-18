@@ -27,7 +27,8 @@ public class CKRecordZoneNotification
 
     
     
-    public CKRecordZoneNotification() {}
+    @Mapping("init")
+    public CKRecordZoneNotification() { }
     
     
     @Mapping("recordZoneID")

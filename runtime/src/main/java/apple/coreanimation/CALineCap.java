@@ -33,16 +33,16 @@ public class CALineCap
      * @since Available in iOS 3.0 and later.
      */
     @GlobalConstant("kCALineCapButt")
-    protected static native NSString ButtValue();
+    public static native NSString ButtValue();
     /**
      * @since Available in iOS 3.0 and later.
      */
     @GlobalConstant("kCALineCapRound")
-    protected static native NSString RoundValue();
+    public static native NSString RoundValue();
     /**
      * @since Available in iOS 3.0 and later.
      */
     @GlobalConstant("kCALineCapSquare")
-    protected static native NSString SquareValue();
+    public static native NSString SquareValue();
     
 }

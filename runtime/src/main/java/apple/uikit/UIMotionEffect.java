@@ -31,7 +31,8 @@ public class UIMotionEffect
 
     
     
-    public UIMotionEffect() {}
+    @Mapping("init")
+    public UIMotionEffect() { }
     
     
     

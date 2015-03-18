@@ -31,9 +31,10 @@ public class TWRequest
 
     
     
-    public TWRequest() {}
     @Mapping("initWithURL:parameters:requestMethod:")
     public TWRequest(NSURL url, NSDictionary<?, ?> parameters, @Representing("TWRequestMethod") int requestMethod) { }
+    @Mapping("init")
+    public TWRequest() { }
     
     
     @Mapping("account")

@@ -31,7 +31,8 @@ public class UITextSelectionRect
 
     
     
-    public UITextSelectionRect() {}
+    @Mapping("init")
+    public UITextSelectionRect() { }
     
     
     @Mapping("rect")

@@ -32,9 +32,10 @@ public class AVAudioUnitMIDIInstrument
 
     
     
-    public AVAudioUnitMIDIInstrument() {}
     @Mapping("initWithAudioComponentDescription:")
     public AVAudioUnitMIDIInstrument(AudioComponentDescription description) { }
+    @Mapping("init")
+    public AVAudioUnitMIDIInstrument() { }
     
     
     

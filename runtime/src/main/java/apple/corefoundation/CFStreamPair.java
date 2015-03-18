@@ -28,12 +28,12 @@ public class CFStreamPair
     
     
     @GlobalFunction("CFStreamCreateBoundPair")
-    protected static native void create(CFAllocator alloc, Todo readStream, Todo writeStream, @MachineSizedSInt long transferBufferSize);
+    public static native void create(CFAllocator alloc, Todo readStream, Todo writeStream, @MachineSizedSInt long transferBufferSize);
     @GlobalFunction("CFStreamCreatePairWithSocket")
-    protected static native void create(CFAllocator alloc, int sock, Todo readStream, Todo writeStream);
+    public static native void create(CFAllocator alloc, int sock, Todo readStream, Todo writeStream);
     @GlobalFunction("CFStreamCreatePairWithSocketToHost")
-    protected static native void create(CFAllocator alloc, String host, int port, Todo readStream, Todo writeStream);
+    public static native void create(CFAllocator alloc, String host, int port, Todo readStream, Todo writeStream);
     @GlobalFunction("CFStreamCreatePairWithPeerSocketSignature")
-    protected static native void create(CFAllocator alloc, CFSocketSignature signature, Todo readStream, Todo writeStream);
+    public static native void create(CFAllocator alloc, CFSocketSignature signature, Todo readStream, Todo writeStream);
     
 }

@@ -32,7 +32,8 @@ public class AVVideoCompositionInstruction
 
     
     
-    public AVVideoCompositionInstruction() {}
+    @Mapping("init")
+    public AVVideoCompositionInstruction() { }
     
     
     @Mapping("timeRange")

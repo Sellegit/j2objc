@@ -31,7 +31,8 @@ public class UITableViewRowAction
 
     
     
-    public UITableViewRowAction() {}
+    @Mapping("init")
+    public UITableViewRowAction() { }
     
     
     @Mapping("style")

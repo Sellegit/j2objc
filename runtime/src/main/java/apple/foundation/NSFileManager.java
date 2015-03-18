@@ -29,7 +29,8 @@ public class NSFileManager
 
     
     
-    public NSFileManager() {}
+    @Mapping("init")
+    public NSFileManager() { }
     
     
     /**
@@ -62,12 +63,12 @@ public class NSFileManager
      * @since Available in iOS 4.0 and later.
      */
     @Mapping("mountedVolumeURLsIncludingResourceValuesForKeys:options:")
-    protected native NSArray<NSURL> getMountedVolumeURLsIncludingResourceValues(NSArray<?> propertyKeys, @Representing("NSVolumeEnumerationOptions") @MachineSizedUInt long options);
+    public native NSArray<NSURL> getMountedVolumeURLsIncludingResourceValues(NSArray<?> propertyKeys, @Representing("NSVolumeEnumerationOptions") @MachineSizedUInt long options);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @Mapping("contentsOfDirectoryAtURL:includingPropertiesForKeys:options:error:")
-    protected native NSArray<NSURL> getContentsOfDirectoryAtURL(NSURL url, NSArray<?> keys, @Representing("NSDirectoryEnumerationOptions") @MachineSizedUInt long mask, Todo error);
+    public native NSArray<NSURL> getContentsOfDirectoryAtURL(NSURL url, NSArray<?> keys, @Representing("NSDirectoryEnumerationOptions") @MachineSizedUInt long mask, Todo error);
     /**
      * @since Available in iOS 4.0 and later.
      */
@@ -77,107 +78,107 @@ public class NSFileManager
      * @since Available in iOS 4.0 and later.
      */
     @Mapping("URLForDirectory:inDomain:appropriateForURL:create:error:")
-    protected native NSURL getURLForDirectory(@Representing("NSSearchPathDirectory") @MachineSizedUInt long directory, @Representing("NSSearchPathDomainMask") @MachineSizedUInt long domain, NSURL url, boolean shouldCreate, Todo error);
+    public native NSURL getURLForDirectory(@Representing("NSSearchPathDirectory") @MachineSizedUInt long directory, @Representing("NSSearchPathDomainMask") @MachineSizedUInt long domain, NSURL url, boolean shouldCreate, Todo error);
     /**
      * @since Available in iOS 8.0 and later.
      */
     @Mapping("getRelationship:ofDirectoryAtURL:toItemAtURL:error:")
-    protected native boolean getRelationshipOfDirectoryToItem(Todo outRelationship, NSURL directoryURL, NSURL otherURL, Todo error);
+    public native boolean getRelationshipOfDirectoryToItem(Todo outRelationship, NSURL directoryURL, NSURL otherURL, Todo error);
     /**
      * @since Available in iOS 8.0 and later.
      */
     @Mapping("getRelationship:ofDirectory:inDomain:toItemAtURL:error:")
-    protected native boolean getRelationshipOfDirectoryToItem(Todo outRelationship, @Representing("NSSearchPathDirectory") @MachineSizedUInt long directory, @Representing("NSSearchPathDomainMask") @MachineSizedUInt long domainMask, NSURL url, Todo error);
+    public native boolean getRelationshipOfDirectoryToItem(Todo outRelationship, @Representing("NSSearchPathDirectory") @MachineSizedUInt long directory, @Representing("NSSearchPathDomainMask") @MachineSizedUInt long domainMask, NSURL url, Todo error);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @Mapping("createDirectoryAtURL:withIntermediateDirectories:attributes:error:")
-    protected native boolean createDirectoryAtURL(NSURL url, boolean createIntermediates, NSDictionary<?, ?> attributes, Todo error);
+    public native boolean createDirectoryAtURL(NSURL url, boolean createIntermediates, NSDictionary<?, ?> attributes, Todo error);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @Mapping("createSymbolicLinkAtURL:withDestinationURL:error:")
-    protected native boolean createSymbolicLinkAtURL(NSURL url, NSURL destURL, Todo error);
+    public native boolean createSymbolicLinkAtURL(NSURL url, NSURL destURL, Todo error);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @Mapping("setAttributes:ofItemAtPath:error:")
-    protected native boolean setAttributesForItem(NSDictionary<?, ?> attributes, String path, Todo error);
+    public native boolean setAttributesForItem(NSDictionary<?, ?> attributes, String path, Todo error);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @Mapping("createDirectoryAtPath:withIntermediateDirectories:attributes:error:")
-    protected native boolean createDirectoryAtPath(String path, boolean createIntermediates, NSDictionary<?, ?> attributes, Todo error);
+    public native boolean createDirectoryAtPath(String path, boolean createIntermediates, NSDictionary<?, ?> attributes, Todo error);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @Mapping("contentsOfDirectoryAtPath:error:")
-    protected native NSArray<NSURL> getContentsOfDirectoryAtPath(String path, Todo error);
+    public native NSArray<NSURL> getContentsOfDirectoryAtPath(String path, Todo error);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @Mapping("subpathsOfDirectoryAtPath:error:")
-    protected native List<String> getSubpathsOfDirectoryAtPath(String path, Todo error);
+    public native List<String> getSubpathsOfDirectoryAtPath(String path, Todo error);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @Mapping("attributesOfItemAtPath:error:")
-    protected native NSDictionary<?, ?> getAttributesOfItemAtPath(String path, Todo error);
+    public native NSDictionary<?, ?> getAttributesOfItemAtPath(String path, Todo error);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @Mapping("attributesOfFileSystemForPath:error:")
-    protected native NSDictionary<?, ?> getAttributesOfFileSystemAtPath(String path, Todo error);
+    public native NSDictionary<?, ?> getAttributesOfFileSystemAtPath(String path, Todo error);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @Mapping("createSymbolicLinkAtPath:withDestinationPath:error:")
-    protected native boolean createSymbolicLinkAtPath(String path, String destPath, Todo error);
+    public native boolean createSymbolicLinkAtPath(String path, String destPath, Todo error);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @Mapping("destinationOfSymbolicLinkAtPath:error:")
-    protected native String getDestinationOfSymbolicLinkAtPath(String path, Todo error);
+    public native String getDestinationOfSymbolicLinkAtPath(String path, Todo error);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @Mapping("copyItemAtPath:toPath:error:")
-    protected native boolean copyItemAtPath(String srcPath, String dstPath, Todo error);
+    public native boolean copyItemAtPath(String srcPath, String dstPath, Todo error);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @Mapping("moveItemAtPath:toPath:error:")
-    protected native boolean moveItemAtPath(String srcPath, String dstPath, Todo error);
+    public native boolean moveItemAtPath(String srcPath, String dstPath, Todo error);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @Mapping("linkItemAtPath:toPath:error:")
-    protected native boolean linkItemAtPath(String srcPath, String dstPath, Todo error);
+    public native boolean linkItemAtPath(String srcPath, String dstPath, Todo error);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @Mapping("removeItemAtPath:error:")
-    protected native boolean removeItemAtPath(String path, Todo error);
+    public native boolean removeItemAtPath(String path, Todo error);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @Mapping("copyItemAtURL:toURL:error:")
-    protected native boolean copyItemAtURL(NSURL srcURL, NSURL dstURL, Todo error);
+    public native boolean copyItemAtURL(NSURL srcURL, NSURL dstURL, Todo error);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @Mapping("moveItemAtURL:toURL:error:")
-    protected native boolean moveItemAtURL(NSURL srcURL, NSURL dstURL, Todo error);
+    public native boolean moveItemAtURL(NSURL srcURL, NSURL dstURL, Todo error);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @Mapping("linkItemAtURL:toURL:error:")
-    protected native boolean linkItemAtURL(NSURL srcURL, NSURL dstURL, Todo error);
+    public native boolean linkItemAtURL(NSURL srcURL, NSURL dstURL, Todo error);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @Mapping("removeItemAtURL:error:")
-    protected native boolean removeItemAtURL(NSURL URL, Todo error);
+    public native boolean removeItemAtURL(NSURL URL, Todo error);
     @Mapping("changeCurrentDirectoryPath:")
     public native boolean changeCurrentDirectoryPath(String path);
     @Mapping("fileExistsAtPath:")
@@ -202,7 +203,7 @@ public class NSFileManager
      * @since Available in iOS 4.0 and later.
      */
     @Mapping("enumeratorAtURL:includingPropertiesForKeys:options:errorHandler:")
-    protected native NSDirectoryEnumerator getEnumeratorAtURL(NSURL url, NSArray<?> keys, @Representing("NSDirectoryEnumerationOptions") @MachineSizedUInt long mask, @Block Block2<NSURL, NSError, Boolean> handler);
+    public native NSDirectoryEnumerator getEnumeratorAtURL(NSURL url, NSArray<?> keys, @Representing("NSDirectoryEnumerationOptions") @MachineSizedUInt long mask, @Block Block2<NSURL, NSError, Boolean> handler);
     @Mapping("subpathsAtPath:")
     public native List<String> getSubpathsAtPath(String path);
     @Mapping("contentsAtPath:")
@@ -217,12 +218,12 @@ public class NSFileManager
      * @since Available in iOS 4.0 and later.
      */
     @Mapping("replaceItemAtURL:withItemAtURL:backupItemName:options:resultingItemURL:error:")
-    protected native boolean replaceItemAtURL(NSURL originalItemURL, NSURL newItemURL, String backupItemName, @Representing("NSFileManagerItemReplacementOptions") @MachineSizedUInt long options, Todo resultingURL, Todo error);
+    public native boolean replaceItemAtURL(NSURL originalItemURL, NSURL newItemURL, String backupItemName, @Representing("NSFileManagerItemReplacementOptions") @MachineSizedUInt long options, Todo resultingURL, Todo error);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @Mapping("setUbiquitous:itemAtURL:destinationURL:error:")
-    protected native boolean setUbiquitousItemAtURL(boolean flag, NSURL url, NSURL destinationURL, Todo error);
+    public native boolean setUbiquitousItemAtURL(boolean flag, NSURL url, NSURL destinationURL, Todo error);
     /**
      * @since Available in iOS 5.0 and later.
      */
@@ -232,12 +233,12 @@ public class NSFileManager
      * @since Available in iOS 5.0 and later.
      */
     @Mapping("startDownloadingUbiquitousItemAtURL:error:")
-    protected native boolean startDownloadingUbiquitousItemAtURL(NSURL url, Todo error);
+    public native boolean startDownloadingUbiquitousItemAtURL(NSURL url, Todo error);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @Mapping("evictUbiquitousItemAtURL:error:")
-    protected native boolean evictUbiquitousItemAtURL(NSURL url, Todo error);
+    public native boolean evictUbiquitousItemAtURL(NSURL url, Todo error);
     /**
      * @since Available in iOS 5.0 and later.
      */
@@ -247,7 +248,7 @@ public class NSFileManager
      * @since Available in iOS 5.0 and later.
      */
     @Mapping("URLForPublishingUbiquitousItemAtURL:expirationDate:error:")
-    protected native NSURL getURLForPublishingUbiquitousItemAtURL(NSURL url, Todo outDate, Todo error);
+    public native NSURL getURLForPublishingUbiquitousItemAtURL(NSURL url, Todo outDate, Todo error);
     /**
      * @since Available in iOS 7.0 and later.
      */

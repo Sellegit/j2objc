@@ -33,10 +33,10 @@ public class SCNPhysicsShapeOptions
     
     
     @GlobalConstant("SCNPhysicsShapeTypeKey")
-    protected static native NSString TypeKey();
+    public static native NSString TypeKey();
     @GlobalConstant("SCNPhysicsShapeKeepAsCompoundKey")
-    protected static native NSString KeepAsCompoundKey();
+    public static native NSString KeepAsCompoundKey();
     @GlobalConstant("SCNPhysicsShapeScaleKey")
-    protected static native NSString ScaleKey();
+    public static native NSString ScaleKey();
     
 }

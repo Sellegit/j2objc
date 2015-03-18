@@ -29,7 +29,6 @@ public class MKCircleView
 
     
     
-    public MKCircleView() {}
     /**
      * @since Available in iOS 4.0 and later.
      * @deprecated Deprecated in iOS 7.0.
@@ -46,6 +45,8 @@ public class MKCircleView
     public MKCircleView(MKOverlay overlay) { }
     @Mapping("initWithFrame:")
     public MKCircleView(CGRect frame) { }
+    @Mapping("init")
+    public MKCircleView() { }
     
     
     /**

@@ -32,9 +32,10 @@ public class AVAssetExportSession
 
     
     
-    public AVAssetExportSession() {}
     @Mapping("initWithAsset:presetName:")
     public AVAssetExportSession(AVAsset asset, String presetName) { }
+    @Mapping("init")
+    public AVAssetExportSession() { }
     
     
     @Mapping("presetName")

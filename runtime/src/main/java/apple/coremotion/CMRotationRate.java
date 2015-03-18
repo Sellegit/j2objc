@@ -23,7 +23,7 @@ public class CMRotationRate
      {
 
     
-    protected CMRotationRate() {}
+    private CMRotationRate() {}
     
     
     @DotMapping("x")

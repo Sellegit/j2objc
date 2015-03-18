@@ -32,45 +32,45 @@ public class NSFileAttribute
     
     
     @GlobalConstant("NSFileType")
-    protected static native NSString TypeAttribute();
+    public static native NSString TypeAttribute();
     @GlobalConstant("NSFileSize")
-    protected static native NSString SizeAttribute();
+    public static native NSString SizeAttribute();
     @GlobalConstant("NSFileModificationDate")
-    protected static native NSString ModificationDateAttribute();
+    public static native NSString ModificationDateAttribute();
     @GlobalConstant("NSFileReferenceCount")
-    protected static native NSString ReferenceCountAttribute();
+    public static native NSString ReferenceCountAttribute();
     @GlobalConstant("NSFileDeviceIdentifier")
-    protected static native NSString DeviceIdentifierAttribute();
+    public static native NSString DeviceIdentifierAttribute();
     @GlobalConstant("NSFileOwnerAccountName")
-    protected static native NSString OwnerAccountNameAttribute();
+    public static native NSString OwnerAccountNameAttribute();
     @GlobalConstant("NSFileGroupOwnerAccountName")
-    protected static native NSString GroupOwnerAccountNameAttribute();
+    public static native NSString GroupOwnerAccountNameAttribute();
     @GlobalConstant("NSFilePosixPermissions")
-    protected static native NSString PosixPermissionsAttribute();
+    public static native NSString PosixPermissionsAttribute();
     @GlobalConstant("NSFileSystemFileNumber")
-    protected static native NSString SystemFileNumberAttribute();
+    public static native NSString SystemFileNumberAttribute();
     @GlobalConstant("NSFileExtensionHidden")
-    protected static native NSString ExtensionHiddenAttribute();
+    public static native NSString ExtensionHiddenAttribute();
     @GlobalConstant("NSFileHFSCreatorCode")
-    protected static native NSString HFSCreatorCodeAttribute();
+    public static native NSString HFSCreatorCodeAttribute();
     @GlobalConstant("NSFileHFSTypeCode")
-    protected static native NSString HFSTypeCodeAttribute();
+    public static native NSString HFSTypeCodeAttribute();
     @GlobalConstant("NSFileImmutable")
-    protected static native NSString ImmutableAttribute();
+    public static native NSString ImmutableAttribute();
     @GlobalConstant("NSFileAppendOnly")
-    protected static native NSString AppendOnlyAttribute();
+    public static native NSString AppendOnlyAttribute();
     @GlobalConstant("NSFileCreationDate")
-    protected static native NSString CreationDateAttribute();
+    public static native NSString CreationDateAttribute();
     @GlobalConstant("NSFileOwnerAccountID")
-    protected static native NSString OwnerAccountIDAttribute();
+    public static native NSString OwnerAccountIDAttribute();
     @GlobalConstant("NSFileGroupOwnerAccountID")
-    protected static native NSString GroupOwnerAccountIDAttribute();
+    public static native NSString GroupOwnerAccountIDAttribute();
     @GlobalConstant("NSFileBusy")
-    protected static native NSString BusyAttribute();
+    public static native NSString BusyAttribute();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("NSFileProtectionKey")
-    protected static native NSString ProtectionKeyAttribute();
+    public static native NSString ProtectionKeyAttribute();
     
 }

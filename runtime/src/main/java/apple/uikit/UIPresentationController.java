@@ -31,9 +31,10 @@ public class UIPresentationController
 
     
     
-    public UIPresentationController() {}
     @Mapping("initWithPresentedViewController:presentingViewController:")
     public UIPresentationController(UIViewController presentedViewController, UIViewController presentingViewController) { }
+    @Mapping("init")
+    public UIPresentationController() { }
     
     
     @Mapping("presentingViewController")

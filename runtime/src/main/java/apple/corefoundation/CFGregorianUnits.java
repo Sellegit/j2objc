@@ -24,7 +24,7 @@ public class CFGregorianUnits
      {
 
     
-    protected CFGregorianUnits() {}
+    private CFGregorianUnits() {}
     
     
     @DotMapping("years")

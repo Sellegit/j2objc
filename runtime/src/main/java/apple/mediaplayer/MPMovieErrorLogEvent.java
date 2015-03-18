@@ -27,7 +27,8 @@ public class MPMovieErrorLogEvent
 
     
     
-    public MPMovieErrorLogEvent() {}
+    @Mapping("init")
+    public MPMovieErrorLogEvent() { }
     
     
     @Mapping("date")

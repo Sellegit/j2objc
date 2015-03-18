@@ -26,7 +26,7 @@ public class MKTileOverlayPath
      {
 
     
-    protected MKTileOverlayPath() {}
+    private MKTileOverlayPath() {}
     
     
     @DotMapping("x")

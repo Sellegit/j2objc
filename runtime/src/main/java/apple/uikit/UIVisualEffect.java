@@ -31,7 +31,8 @@ public class UIVisualEffect
 
     
     
-    public UIVisualEffect() {}
+    @Mapping("init")
+    public UIVisualEffect() { }
     
     
     

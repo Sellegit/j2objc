@@ -28,7 +28,8 @@ public class CMStepCounter
 
     
     
-    public CMStepCounter() {}
+    @Mapping("init")
+    public CMStepCounter() { }
     
     
     

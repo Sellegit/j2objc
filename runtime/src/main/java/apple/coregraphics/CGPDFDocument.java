@@ -43,7 +43,7 @@ public class CGPDFDocument
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGPDFDocumentGetVersion")
-    protected static native void getVersion(CGPDFDocument document, Todo majorVersion, Todo minorVersion);
+    public static native void getVersion(CGPDFDocument document, Todo majorVersion, Todo minorVersion);
     /**
      * @since Available in iOS 2.0 and later.
      */

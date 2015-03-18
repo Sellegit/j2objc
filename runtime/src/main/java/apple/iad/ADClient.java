@@ -30,7 +30,8 @@ public class ADClient
 
     
     
-    
+    @Mapping("init")
+    public ADClient() { }
     
     
     

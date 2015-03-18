@@ -27,7 +27,8 @@ public class PHAssetCollectionChangeRequest
 
     
     
-    public PHAssetCollectionChangeRequest() {}
+    @Mapping("init")
+    public PHAssetCollectionChangeRequest() { }
     
     
     @Mapping("placeholderForCreatedAssetCollection")

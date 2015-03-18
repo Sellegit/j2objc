@@ -33,21 +33,21 @@ public class CAEmitterMode
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("kCAEmitterLayerPoints")
-    protected static native NSString PointsValue();
+    public static native NSString PointsValue();
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("kCAEmitterLayerOutline")
-    protected static native NSString OutlineValue();
+    public static native NSString OutlineValue();
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("kCAEmitterLayerSurface")
-    protected static native NSString SurfaceValue();
+    public static native NSString SurfaceValue();
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("kCAEmitterLayerVolume")
-    protected static native NSString VolumeValue();
+    public static native NSString VolumeValue();
     
 }

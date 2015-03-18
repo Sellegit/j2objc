@@ -23,7 +23,7 @@ public class MIDIPacket
      {
 
     
-    protected MIDIPacket() {}
+    private MIDIPacket() {}
     
     
     @DotMapping("timeStamp")

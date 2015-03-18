@@ -29,7 +29,8 @@ public class PHObjectChangeDetails
 
     
     
-    public PHObjectChangeDetails() {}
+    @Mapping("init")
+    public PHObjectChangeDetails() { }
     
     
     @Mapping("objectBeforeChanges")

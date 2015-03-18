@@ -30,7 +30,8 @@ public class SCNShape
 
     
     
-    public SCNShape() {}
+    @Mapping("init")
+    public SCNShape() { }
     
     
     @Mapping("path")

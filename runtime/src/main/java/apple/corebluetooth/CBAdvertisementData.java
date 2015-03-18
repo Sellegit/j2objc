@@ -28,29 +28,29 @@ public class CBAdvertisementData
     
     
     @GlobalConstant("CBAdvertisementDataLocalNameKey")
-    protected static native NSString LocalNameKey();
+    public static native NSString LocalNameKey();
     @GlobalConstant("CBAdvertisementDataTxPowerLevelKey")
-    protected static native NSString TxPowerLevelKey();
+    public static native NSString TxPowerLevelKey();
     @GlobalConstant("CBAdvertisementDataServiceUUIDsKey")
-    protected static native NSString ServiceUUIDsKey();
+    public static native NSString ServiceUUIDsKey();
     @GlobalConstant("CBAdvertisementDataServiceDataKey")
-    protected static native NSString ServiceDataKey();
+    public static native NSString ServiceDataKey();
     @GlobalConstant("CBAdvertisementDataManufacturerDataKey")
-    protected static native NSString ManufacturerDataKey();
+    public static native NSString ManufacturerDataKey();
     /**
      * @since Available in iOS 6.0 and later.
      */
     @GlobalConstant("CBAdvertisementDataOverflowServiceUUIDsKey")
-    protected static native NSString OverflowServiceUUIDsKey();
+    public static native NSString OverflowServiceUUIDsKey();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("CBAdvertisementDataIsConnectable")
-    protected static native NSString IsConnectable();
+    public static native NSString IsConnectable();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("CBAdvertisementDataSolicitedServiceUUIDsKey")
-    protected static native NSString SolicitedServiceUUIDsKey();
+    public static native NSString SolicitedServiceUUIDsKey();
     
 }

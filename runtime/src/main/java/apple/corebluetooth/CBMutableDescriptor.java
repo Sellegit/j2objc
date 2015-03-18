@@ -27,9 +27,10 @@ public class CBMutableDescriptor
 
     
     
-    public CBMutableDescriptor() {}
     @Mapping("initWithType:value:")
     public CBMutableDescriptor(CBUUID UUID, Object value) { }
+    @Mapping("init")
+    public CBMutableDescriptor() { }
     
     
     

@@ -30,31 +30,31 @@ public class CFSystemProxySettings
      * @since Available in iOS 2.0 and later.
      */
     @GlobalConstant("kCFNetworkProxiesHTTPEnable")
-    protected static native CFString HTTPEnable();
+    public static native CFString HTTPEnable();
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalConstant("kCFNetworkProxiesHTTPPort")
-    protected static native CFString HTTPPort();
+    public static native CFString HTTPPort();
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalConstant("kCFNetworkProxiesHTTPProxy")
-    protected static native CFString HTTPProxy();
+    public static native CFString HTTPProxy();
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalConstant("kCFNetworkProxiesProxyAutoConfigEnable")
-    protected static native CFString ProxyAutoConfigEnable();
+    public static native CFString ProxyAutoConfigEnable();
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalConstant("kCFNetworkProxiesProxyAutoConfigURLString")
-    protected static native CFString ProxyAutoConfigURLString();
+    public static native CFString ProxyAutoConfigURLString();
     /**
      * @since Available in iOS 3.0 and later.
      */
     @GlobalConstant("kCFNetworkProxiesProxyAutoConfigJavaScript")
-    protected static native CFString ProxyAutoConfigJavaScript();
+    public static native CFString ProxyAutoConfigJavaScript();
     
 }

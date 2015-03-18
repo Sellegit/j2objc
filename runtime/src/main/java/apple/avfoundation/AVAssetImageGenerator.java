@@ -32,9 +32,10 @@ public class AVAssetImageGenerator
 
     
     
-    public AVAssetImageGenerator() {}
     @Mapping("initWithAsset:")
     public AVAssetImageGenerator(AVAsset asset) { }
+    @Mapping("init")
+    public AVAssetImageGenerator() { }
     
     
     /**

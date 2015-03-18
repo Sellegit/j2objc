@@ -30,66 +30,66 @@ public class HKPredicateKeyPath
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("HKPredicateKeyPathUUID")
-    protected static native NSString UUIDValue();
+    public static native NSString UUIDValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("HKPredicateKeyPathSource")
-    protected static native NSString SourceValue();
+    public static native NSString SourceValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("HKPredicateKeyPathMetadata")
-    protected static native NSString MetadataValue();
+    public static native NSString MetadataValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("HKPredicateKeyPathCorrelation")
-    protected static native NSString CorrelationValue();
+    public static native NSString CorrelationValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("HKPredicateKeyPathWorkout")
-    protected static native NSString WorkoutValue();
+    public static native NSString WorkoutValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("HKPredicateKeyPathStartDate")
-    protected static native NSString StartDateValue();
+    public static native NSString StartDateValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("HKPredicateKeyPathEndDate")
-    protected static native NSString EndDateValue();
+    public static native NSString EndDateValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("HKPredicateKeyPathWorkoutDuration")
-    protected static native NSString WorkoutDurationValue();
+    public static native NSString WorkoutDurationValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("HKPredicateKeyPathWorkoutTotalDistance")
-    protected static native NSString WorkoutTotalDistanceValue();
+    public static native NSString WorkoutTotalDistanceValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("HKPredicateKeyPathWorkoutTotalEnergyBurned")
-    protected static native NSString WorkoutTotalEnergyBurnedValue();
+    public static native NSString WorkoutTotalEnergyBurnedValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("HKPredicateKeyPathWorkoutType")
-    protected static native NSString WorkoutTypeValue();
+    public static native NSString WorkoutTypeValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("HKPredicateKeyPathCategoryValue")
-    protected static native NSString CategoryValueValue();
+    public static native NSString CategoryValueValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("HKPredicateKeyPathQuantity")
-    protected static native NSString QuantityValue();
+    public static native NSString QuantityValue();
     
 }

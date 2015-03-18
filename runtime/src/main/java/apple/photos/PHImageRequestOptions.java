@@ -29,7 +29,8 @@ public class PHImageRequestOptions
 
     
     
-    public PHImageRequestOptions() {}
+    @Mapping("init")
+    public PHImageRequestOptions() { }
     
     
     @Mapping("version")

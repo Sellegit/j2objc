@@ -32,9 +32,10 @@ public class AVPlayerMediaSelectionCriteria
 
     
     
-    public AVPlayerMediaSelectionCriteria() {}
     @Mapping("initWithPreferredLanguages:preferredMediaCharacteristics:")
     public AVPlayerMediaSelectionCriteria(NSArray<?> preferredLanguages, NSArray<?> preferredMediaCharacteristics) { }
+    @Mapping("init")
+    public AVPlayerMediaSelectionCriteria() { }
     
     
     @Mapping("preferredLanguages")

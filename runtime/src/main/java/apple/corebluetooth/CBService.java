@@ -27,7 +27,8 @@ public class CBService
 
     
     
-    public CBService() {}
+    @Mapping("init")
+    public CBService() { }
     
     
     @Mapping("peripheral")

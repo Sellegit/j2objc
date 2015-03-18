@@ -29,11 +29,12 @@ public class NSIndexPath
 
     
     
-    public NSIndexPath() {}
     @Mapping("initWithIndexes:length:")
     public NSIndexPath(Todo indexes, @MachineSizedUInt long length) { }
     @Mapping("initWithIndex:")
     public NSIndexPath(@MachineSizedUInt long index) { }
+    @Mapping("init")
+    public NSIndexPath() { }
     
     
     @Mapping("length")
@@ -48,7 +49,7 @@ public class NSIndexPath
     @Mapping("indexAtPosition:")
     public native @MachineSizedUInt long getIndexAt(@MachineSizedUInt long position);
     @Mapping("getIndexes:")
-    private native void getIndexes(Todo indexes);
+    public native void getIndexes(Todo indexes);
     @Mapping("compare:")
     public native @Representing("NSComparisonResult") @MachineSizedSInt long compare(NSIndexPath otherObject);
     @Mapping("copyWithZone:")

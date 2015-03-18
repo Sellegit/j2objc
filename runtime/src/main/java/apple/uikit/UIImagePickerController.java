@@ -31,11 +31,12 @@ public class UIImagePickerController
 
     
     
-    public UIImagePickerController() {}
     @Mapping("initWithRootViewController:")
     public UIImagePickerController(UIViewController rootViewController) { }
     @Mapping("initWithNibName:bundle:")
     public UIImagePickerController(String nibNameOrNil, NSBundle nibBundleOrNil) { }
+    @Mapping("init")
+    public UIImagePickerController() { }
     
     
     @Mapping("delegate")

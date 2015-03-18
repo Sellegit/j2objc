@@ -36,7 +36,7 @@ public class CFNotificationCenter
     @GlobalFunction("CFNotificationCenterGetDarwinNotifyCenter")
     public static native CFNotificationCenter getDarwinNotifyCenter();
     @GlobalFunction("CFNotificationCenterAddObserver")
-    private static native void addObserver(CFNotificationCenter center, Todo observer, FunctionPtr callBack, String name, Todo object, CFNotificationSuspensionBehavior suspensionBehavior);
+    public static native void addObserver(CFNotificationCenter center, Todo observer, FunctionPtr callBack, String name, Todo object, CFNotificationSuspensionBehavior suspensionBehavior);
     @GlobalFunction("CFNotificationCenterRemoveObserver")
     public static native void removeObserver(CFNotificationCenter center, Todo observer, String name, Todo object);
     @GlobalFunction("CFNotificationCenterRemoveEveryObserver")

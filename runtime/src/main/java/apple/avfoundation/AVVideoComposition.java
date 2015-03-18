@@ -32,7 +32,8 @@ public class AVVideoComposition
 
     
     
-    public AVVideoComposition() {}
+    @Mapping("init")
+    public AVVideoComposition() { }
     
     
     /**

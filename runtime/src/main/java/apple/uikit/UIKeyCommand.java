@@ -31,7 +31,8 @@ public class UIKeyCommand
 
     
     
-    public UIKeyCommand() {}
+    @Mapping("init")
+    public UIKeyCommand() { }
     
     
     @Mapping("input")

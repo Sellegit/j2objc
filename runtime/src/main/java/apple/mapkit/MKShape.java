@@ -29,7 +29,8 @@ public class MKShape
 
     
     
-    public MKShape() {}
+    @Mapping("init")
+    public MKShape() { }
     
     
     @Mapping("title")

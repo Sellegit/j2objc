@@ -31,7 +31,6 @@ public class UIBarButtonItem
 
     
     
-    public UIBarButtonItem() {}
     @Mapping("initWithImage:style:target:action:")
     public UIBarButtonItem(UIImage image, @Representing("UIBarButtonItemStyle") @MachineSizedSInt long style, Object target, Selector action) { }
     /**
@@ -45,6 +44,8 @@ public class UIBarButtonItem
     public UIBarButtonItem(@Representing("UIBarButtonSystemItem") @MachineSizedSInt long systemItem, Object target, Selector action) { }
     @Mapping("initWithCustomView:")
     public UIBarButtonItem(UIView customView) { }
+    @Mapping("init")
+    public UIBarButtonItem() { }
     
     
     @Mapping("style")

@@ -27,7 +27,8 @@ public class CAPropertyAnimation
 
     
     
-    public CAPropertyAnimation() {}
+    @Mapping("init")
+    public CAPropertyAnimation() { }
     
     
     @Mapping("keyPath")

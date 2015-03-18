@@ -28,7 +28,8 @@ public class EAAccessoryManager
 
     
     
-    public EAAccessoryManager() {}
+    @Mapping("init")
+    public EAAccessoryManager() { }
     
     
     /**
@@ -53,12 +54,12 @@ public class EAAccessoryManager
      * @since Available in iOS 3.0 and later.
      */
     @GlobalConstant("EAAccessoryKey")
-    protected static native NSString AccessoryKey();
+    public static native NSString AccessoryKey();
     /**
      * @since Available in iOS 6.0 and later.
      */
     @GlobalConstant("EAAccessorySelectedKey")
-    protected static native NSString AccessorySelectedKey();
+    public static native NSString AccessorySelectedKey();
     
     /**
      * @since Available in iOS 3.0 and later.

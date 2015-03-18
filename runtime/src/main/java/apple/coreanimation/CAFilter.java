@@ -33,16 +33,16 @@ public class CAFilter
      * @since Available in iOS 2.0 and later.
      */
     @GlobalConstant("kCAFilterNearest")
-    protected static native NSString NearestValue();
+    public static native NSString NearestValue();
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalConstant("kCAFilterLinear")
-    protected static native NSString LinearValue();
+    public static native NSString LinearValue();
     /**
      * @since Available in iOS 3.0 and later.
      */
     @GlobalConstant("kCAFilterTrilinear")
-    protected static native NSString TrilinearValue();
+    public static native NSString TrilinearValue();
     
 }

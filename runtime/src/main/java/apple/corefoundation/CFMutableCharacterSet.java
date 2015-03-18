@@ -28,9 +28,9 @@ public class CFMutableCharacterSet
     
     
     @GlobalFunction("CFCharacterSetCreateMutable")
-    protected static native CFMutableCharacterSet createMutable(CFAllocator alloc);
+    public static native CFMutableCharacterSet createMutable(CFAllocator alloc);
     @GlobalFunction("CFCharacterSetCreateMutableCopy")
-    protected static native CFMutableCharacterSet createMutableCopy(CFAllocator alloc, CFCharacterSet theSet);
+    public static native CFMutableCharacterSet createMutableCopy(CFAllocator alloc, CFCharacterSet theSet);
     @GlobalFunction("CFCharacterSetAddCharactersInRange")
     public static native void addCharactersInRange(CFCharacterSet theSet, CFRange theRange);
     @GlobalFunction("CFCharacterSetRemoveCharactersInRange")

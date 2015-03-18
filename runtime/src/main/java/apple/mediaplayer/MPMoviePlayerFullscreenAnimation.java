@@ -31,11 +31,11 @@ public class MPMoviePlayerFullscreenAnimation
      * @since Available in iOS 3.2 and later.
      */
     @GlobalConstant("MPMoviePlayerFullscreenAnimationDurationUserInfoKey")
-    protected static native NSString DurationUserInfoKey();
+    public static native NSString DurationUserInfoKey();
     /**
      * @since Available in iOS 3.2 and later.
      */
     @GlobalConstant("MPMoviePlayerFullscreenAnimationCurveUserInfoKey")
-    protected static native NSString CurveUserInfoKey();
+    public static native NSString CurveUserInfoKey();
     
 }

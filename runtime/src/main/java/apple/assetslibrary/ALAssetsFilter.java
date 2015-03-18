@@ -27,7 +27,8 @@ public class ALAssetsFilter
 
     
     
-    public ALAssetsFilter() {}
+    @Mapping("init")
+    public ALAssetsFilter() { }
     
     
     

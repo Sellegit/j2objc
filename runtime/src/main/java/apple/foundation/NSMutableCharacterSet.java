@@ -29,9 +29,10 @@ public class NSMutableCharacterSet
 
     
     
-    public NSMutableCharacterSet() {}
     @Mapping("initWithCoder:")
     public NSMutableCharacterSet(NSCoder aDecoder) { }
+    @Mapping("init")
+    public NSMutableCharacterSet() { }
     
     
     
@@ -92,6 +93,6 @@ public class NSMutableCharacterSet
     @Mapping("characterSetWithBitmapRepresentation:")
     public static native NSMutableCharacterSet create(NSData data);
     @Mapping("characterSetWithContentsOfFile:")
-    private static native NSMutableCharacterSet createWithFile(String fName);
+    public static native NSMutableCharacterSet createWithFile(String fName);
     
 }

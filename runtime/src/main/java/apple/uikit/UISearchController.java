@@ -31,11 +31,12 @@ public class UISearchController
 
     
     
-    public UISearchController() {}
     @Mapping("initWithSearchResultsController:")
     public UISearchController(UIViewController searchResultsController) { }
     @Mapping("initWithNibName:bundle:")
     public UISearchController(String nibNameOrNil, NSBundle nibBundleOrNil) { }
+    @Mapping("init")
+    public UISearchController() { }
     
     
     @Mapping("searchResultsUpdater")

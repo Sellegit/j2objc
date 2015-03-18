@@ -29,7 +29,8 @@ public class PHAssetChangeRequest
 
     
     
-    public PHAssetChangeRequest() {}
+    @Mapping("init")
+    public PHAssetChangeRequest() { }
     
     
     @Mapping("placeholderForCreatedAsset")

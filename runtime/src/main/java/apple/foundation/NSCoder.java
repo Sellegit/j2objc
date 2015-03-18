@@ -29,7 +29,8 @@ public class NSCoder
 
     
     
-    public NSCoder() {}
+    @Mapping("init")
+    public NSCoder() { }
     
     
     @Mapping("systemVersion")

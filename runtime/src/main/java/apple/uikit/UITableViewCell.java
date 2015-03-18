@@ -31,7 +31,6 @@ public class UITableViewCell
 
     
     
-    public UITableViewCell() {}
     /**
      * @since Available in iOS 3.0 and later.
      */
@@ -39,6 +38,8 @@ public class UITableViewCell
     public UITableViewCell(@Representing("UITableViewCellStyle") @MachineSizedSInt long style, String reuseIdentifier) { }
     @Mapping("initWithFrame:")
     public UITableViewCell(CGRect frame) { }
+    @Mapping("init")
+    public UITableViewCell() { }
     
     
     /**

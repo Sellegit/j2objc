@@ -24,7 +24,7 @@ import apple.foundation.*;
      {
 
     
-    protected CFArrayCallBacks() {}
+    private CFArrayCallBacks() {}
     
     
     @DotMapping("version")

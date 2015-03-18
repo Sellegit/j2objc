@@ -29,7 +29,8 @@ public class NSFormatter
 
     
     
-    public NSFormatter() {}
+    @Mapping("init")
+    public NSFormatter() { }
     
     
     

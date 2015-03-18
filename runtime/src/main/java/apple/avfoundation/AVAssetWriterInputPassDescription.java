@@ -32,7 +32,8 @@ public class AVAssetWriterInputPassDescription
 
     
     
-    public AVAssetWriterInputPassDescription() {}
+    @Mapping("init")
+    public AVAssetWriterInputPassDescription() { }
     
     
     @Mapping("sourceTimeRanges")

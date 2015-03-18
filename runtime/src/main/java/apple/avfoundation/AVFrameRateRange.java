@@ -32,7 +32,8 @@ public class AVFrameRateRange
 
     
     
-    public AVFrameRateRange() {}
+    @Mapping("init")
+    public AVFrameRateRange() { }
     
     
     @Mapping("minFrameRate")

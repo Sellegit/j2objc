@@ -26,7 +26,8 @@ public class NSFetchedPropertyDescription
 
     
     
-    public NSFetchedPropertyDescription() {}
+    @Mapping("init")
+    public NSFetchedPropertyDescription() { }
     
     
     @Mapping("fetchRequest")

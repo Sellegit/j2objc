@@ -31,7 +31,6 @@ public class UISimpleTextPrintFormatter
 
     
     
-    public UISimpleTextPrintFormatter() {}
     @Mapping("initWithText:")
     public UISimpleTextPrintFormatter(String text) { }
     /**
@@ -39,6 +38,8 @@ public class UISimpleTextPrintFormatter
      */
     @Mapping("initWithAttributedText:")
     public UISimpleTextPrintFormatter(NSAttributedString attributedText) { }
+    @Mapping("init")
+    public UISimpleTextPrintFormatter() { }
     
     
     @Mapping("text")

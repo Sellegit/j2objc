@@ -27,7 +27,8 @@ public class PKPushPayload
 
     
     
-    public PKPushPayload() {}
+    @Mapping("init")
+    public PKPushPayload() { }
     
     
     @Mapping("type")

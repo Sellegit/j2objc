@@ -26,7 +26,7 @@ public class GLKVector3
      {
 
     
-    protected GLKVector3() {}
+    private GLKVector3() {}
     
     
     

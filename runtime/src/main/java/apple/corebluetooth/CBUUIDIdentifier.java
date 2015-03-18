@@ -28,72 +28,72 @@ public class CBUUIDIdentifier
     
     
     @GlobalConstant("CBUUIDCharacteristicExtendedPropertiesString")
-    protected static native String CharacteristicExtendedPropertiesValue();
+    public static native String CharacteristicExtendedPropertiesValue();
     @GlobalConstant("CBUUIDCharacteristicUserDescriptionString")
-    protected static native String CharacteristicUserDescriptionValue();
+    public static native String CharacteristicUserDescriptionValue();
     @GlobalConstant("CBUUIDClientCharacteristicConfigurationString")
-    protected static native String ClientCharacteristicConfigurationValue();
+    public static native String ClientCharacteristicConfigurationValue();
     @GlobalConstant("CBUUIDServerCharacteristicConfigurationString")
-    protected static native String ServerCharacteristicConfigurationValue();
+    public static native String ServerCharacteristicConfigurationValue();
     @GlobalConstant("CBUUIDCharacteristicFormatString")
-    protected static native String CharacteristicFormatValue();
+    public static native String CharacteristicFormatValue();
     @GlobalConstant("CBUUIDCharacteristicAggregateFormatString")
-    protected static native String CharacteristicAggregateFormatValue();
+    public static native String CharacteristicAggregateFormatValue();
     /**
      * @since Available in iOS 5.0 and later.
      * @deprecated Deprecated in iOS 7.0.
      */
     @Deprecated
     @GlobalConstant("CBUUIDGenericAccessProfileString")
-    protected static native String GenericAccessProfileValue();
+    public static native String GenericAccessProfileValue();
     /**
      * @since Available in iOS 5.0 and later.
      * @deprecated Deprecated in iOS 7.0.
      */
     @Deprecated
     @GlobalConstant("CBUUIDGenericAttributeProfileString")
-    protected static native String GenericAttributeProfileValue();
+    public static native String GenericAttributeProfileValue();
     /**
      * @since Available in iOS 5.0 and later.
      * @deprecated Deprecated in iOS 7.0.
      */
     @Deprecated
     @GlobalConstant("CBUUIDDeviceNameString")
-    protected static native String DeviceNameValue();
+    public static native String DeviceNameValue();
     /**
      * @since Available in iOS 5.0 and later.
      * @deprecated Deprecated in iOS 7.0.
      */
     @Deprecated
     @GlobalConstant("CBUUIDAppearanceString")
-    protected static native String AppearanceValue();
+    public static native String AppearanceValue();
     /**
      * @since Available in iOS 5.0 and later.
      * @deprecated Deprecated in iOS 7.0.
      */
     @Deprecated
     @GlobalConstant("CBUUIDPeripheralPrivacyFlagString")
-    protected static native String PeripheralPrivacyFlagValue();
+    public static native String PeripheralPrivacyFlagValue();
     /**
      * @since Available in iOS 5.0 and later.
      * @deprecated Deprecated in iOS 7.0.
      */
     @Deprecated
     @GlobalConstant("CBUUIDReconnectionAddressString")
-    protected static native String ReconnectionAddressValue();
+    public static native String ReconnectionAddressValue();
     /**
      * @since Available in iOS 5.0 and later.
      * @deprecated Deprecated in iOS 7.0.
      */
     @Deprecated
     @GlobalConstant("CBUUIDPeripheralPreferredConnectionParametersString")
-    protected static native String PeripheralPreferredConnectionParametersValue();
+    public static native String PeripheralPreferredConnectionParametersValue();
     /**
      * @since Available in iOS 5.0 and later.
      * @deprecated Deprecated in iOS 7.0.
      */
     @Deprecated
     @GlobalConstant("CBUUIDServiceChangedString")
-    protected static native String ServiceChangedValue();
+    public static native String ServiceChangedValue();
     
 }

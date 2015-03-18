@@ -30,7 +30,8 @@ public class SCNCamera
 
     
     
-    public SCNCamera() {}
+    @Mapping("init")
+    public SCNCamera() { }
     
     
     @Mapping("name")

@@ -30,171 +30,171 @@ public class HMCharacteristicType
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("HMCharacteristicTypePowerState")
-    protected static native NSString PowerStateValue();
+    public static native NSString PowerStateValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("HMCharacteristicTypeHue")
-    protected static native NSString HueValue();
+    public static native NSString HueValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("HMCharacteristicTypeSaturation")
-    protected static native NSString SaturationValue();
+    public static native NSString SaturationValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("HMCharacteristicTypeBrightness")
-    protected static native NSString BrightnessValue();
+    public static native NSString BrightnessValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("HMCharacteristicTypeTemperatureUnits")
-    protected static native NSString TemperatureUnitsValue();
+    public static native NSString TemperatureUnitsValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("HMCharacteristicTypeCurrentTemperature")
-    protected static native NSString CurrentTemperatureValue();
+    public static native NSString CurrentTemperatureValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("HMCharacteristicTypeTargetTemperature")
-    protected static native NSString TargetTemperatureValue();
+    public static native NSString TargetTemperatureValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("HMCharacteristicTypeCurrentHeatingCooling")
-    protected static native NSString CurrentHeatingCoolingValue();
+    public static native NSString CurrentHeatingCoolingValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("HMCharacteristicTypeTargetHeatingCooling")
-    protected static native NSString TargetHeatingCoolingValue();
+    public static native NSString TargetHeatingCoolingValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("HMCharacteristicTypeCoolingThreshold")
-    protected static native NSString CoolingThresholdValue();
+    public static native NSString CoolingThresholdValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("HMCharacteristicTypeHeatingThreshold")
-    protected static native NSString HeatingThresholdValue();
+    public static native NSString HeatingThresholdValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("HMCharacteristicTypeCurrentRelativeHumidity")
-    protected static native NSString CurrentRelativeHumidityValue();
+    public static native NSString CurrentRelativeHumidityValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("HMCharacteristicTypeTargetRelativeHumidity")
-    protected static native NSString TargetRelativeHumidityValue();
+    public static native NSString TargetRelativeHumidityValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("HMCharacteristicTypeCurrentDoorState")
-    protected static native NSString CurrentDoorStateValue();
+    public static native NSString CurrentDoorStateValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("HMCharacteristicTypeTargetDoorState")
-    protected static native NSString TargetDoorStateValue();
+    public static native NSString TargetDoorStateValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("HMCharacteristicTypeObstructionDetected")
-    protected static native NSString ObstructionDetectedValue();
+    public static native NSString ObstructionDetectedValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("HMCharacteristicTypeName")
-    protected static native NSString NameValue();
+    public static native NSString NameValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("HMCharacteristicTypeManufacturer")
-    protected static native NSString ManufacturerValue();
+    public static native NSString ManufacturerValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("HMCharacteristicTypeModel")
-    protected static native NSString ModelValue();
+    public static native NSString ModelValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("HMCharacteristicTypeSerialNumber")
-    protected static native NSString SerialNumberValue();
+    public static native NSString SerialNumberValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("HMCharacteristicTypeIdentify")
-    protected static native NSString IdentifyValue();
+    public static native NSString IdentifyValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("HMCharacteristicTypeRotationDirection")
-    protected static native NSString RotationDirectionValue();
+    public static native NSString RotationDirectionValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("HMCharacteristicTypeRotationSpeed")
-    protected static native NSString RotationSpeedValue();
+    public static native NSString RotationSpeedValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("HMCharacteristicTypeOutletInUse")
-    protected static native NSString OutletInUseValue();
+    public static native NSString OutletInUseValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("HMCharacteristicTypeVersion")
-    protected static native NSString VersionValue();
+    public static native NSString VersionValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("HMCharacteristicTypeLogs")
-    protected static native NSString LogsValue();
+    public static native NSString LogsValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("HMCharacteristicTypeAudioFeedback")
-    protected static native NSString AudioFeedbackValue();
+    public static native NSString AudioFeedbackValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("HMCharacteristicTypeAdminOnlyAccess")
-    protected static native NSString AdminOnlyAccessValue();
+    public static native NSString AdminOnlyAccessValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("HMCharacteristicTypeMotionDetected")
-    protected static native NSString MotionDetectedValue();
+    public static native NSString MotionDetectedValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("HMCharacteristicTypeCurrentLockMechanismState")
-    protected static native NSString CurrentLockMechanismStateValue();
+    public static native NSString CurrentLockMechanismStateValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("HMCharacteristicTypeTargetLockMechanismState")
-    protected static native NSString TargetLockMechanismStateValue();
+    public static native NSString TargetLockMechanismStateValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("HMCharacteristicTypeLockMechanismLastKnownAction")
-    protected static native NSString LockMechanismLastKnownActionValue();
+    public static native NSString LockMechanismLastKnownActionValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("HMCharacteristicTypeLockManagementControlPoint")
-    protected static native NSString LockManagementControlPointValue();
+    public static native NSString LockManagementControlPointValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("HMCharacteristicTypeLockManagementAutoSecureTimeout")
-    protected static native NSString LockManagementAutoSecureTimeoutValue();
+    public static native NSString LockManagementAutoSecureTimeoutValue();
     
 }

@@ -32,9 +32,10 @@ public class AVAudioUnitTimePitch
 
     
     
-    public AVAudioUnitTimePitch() {}
     @Mapping("initWithAudioComponentDescription:")
     public AVAudioUnitTimePitch(AudioComponentDescription audioComponentDescription) { }
+    @Mapping("init")
+    public AVAudioUnitTimePitch() { }
     
     
     @Mapping("rate")

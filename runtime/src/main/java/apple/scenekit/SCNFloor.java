@@ -30,7 +30,8 @@ public class SCNFloor
 
     
     
-    public SCNFloor() {}
+    @Mapping("init")
+    public SCNFloor() { }
     
     
     @Mapping("reflectivity")

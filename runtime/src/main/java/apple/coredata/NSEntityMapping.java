@@ -26,7 +26,8 @@ public class NSEntityMapping
 
     
     
-    public NSEntityMapping() {}
+    @Mapping("init")
+    public NSEntityMapping() { }
     
     
     @Mapping("name")

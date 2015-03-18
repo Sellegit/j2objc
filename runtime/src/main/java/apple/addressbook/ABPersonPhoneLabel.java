@@ -27,24 +27,24 @@ public class ABPersonPhoneLabel
     
     
     @GlobalConstant("kABPersonPhoneMobileLabel")
-    protected static native CFString MobileLabel();
+    public static native CFString MobileLabel();
     /**
      * @since Available in iOS 3.0 and later.
      */
     @GlobalConstant("kABPersonPhoneIPhoneLabel")
-    protected static native CFString IPhoneLabel();
+    public static native CFString IPhoneLabel();
     @GlobalConstant("kABPersonPhoneMainLabel")
-    protected static native CFString MainLabel();
+    public static native CFString MainLabel();
     @GlobalConstant("kABPersonPhoneHomeFAXLabel")
-    protected static native CFString HomeFAXLabel();
+    public static native CFString HomeFAXLabel();
     @GlobalConstant("kABPersonPhoneWorkFAXLabel")
-    protected static native CFString WorkFAXLabel();
+    public static native CFString WorkFAXLabel();
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("kABPersonPhoneOtherFAXLabel")
-    protected static native CFString OtherFAXLabel();
+    public static native CFString OtherFAXLabel();
     @GlobalConstant("kABPersonPhonePagerLabel")
-    protected static native CFString PagerLabel();
+    public static native CFString PagerLabel();
     
 }

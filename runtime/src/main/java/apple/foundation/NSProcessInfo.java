@@ -29,7 +29,8 @@ public class NSProcessInfo
 
     
     
-    
+    @Mapping("init")
+    public NSProcessInfo() { }
     
     
     @Mapping("environment")

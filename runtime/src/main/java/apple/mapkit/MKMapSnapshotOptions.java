@@ -29,7 +29,8 @@ public class MKMapSnapshotOptions
 
     
     
-    public MKMapSnapshotOptions() {}
+    @Mapping("init")
+    public MKMapSnapshotOptions() { }
     
     
     @Mapping("camera")

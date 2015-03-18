@@ -28,9 +28,10 @@ public class SLComposeServiceViewController
 
     
     
-    public SLComposeServiceViewController() {}
     @Mapping("initWithNibName:bundle:")
     public SLComposeServiceViewController(String nibNameOrNil, NSBundle nibBundleOrNil) { }
+    @Mapping("init")
+    public SLComposeServiceViewController() { }
     
     
     @Mapping("textView")

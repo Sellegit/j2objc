@@ -30,21 +30,21 @@ public class CGImageDestinationProperties
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("kCGImageDestinationLossyCompressionQuality")
-    protected static native CFString LossyCompressionQualityKey();
+    public static native CFString LossyCompressionQualityKey();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("kCGImageDestinationBackgroundColor")
-    protected static native CFString BackgroundColorKey();
+    public static native CFString BackgroundColorKey();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("kCGImageDestinationImageMaxPixelSize")
-    protected static native CFString ImageMaxPixelSizeKey();
+    public static native CFString ImageMaxPixelSizeKey();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("kCGImageDestinationEmbedThumbnail")
-    protected static native CFString EmbedThumbnailKey();
+    public static native CFString EmbedThumbnailKey();
     
 }

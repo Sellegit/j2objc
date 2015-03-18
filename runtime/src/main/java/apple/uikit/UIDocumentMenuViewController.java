@@ -31,13 +31,14 @@ public class UIDocumentMenuViewController
 
     
     
-    public UIDocumentMenuViewController() {}
     @Mapping("initWithDocumentTypes:inMode:")
     public UIDocumentMenuViewController(NSArray<?> allowedUTIs, @Representing("UIDocumentPickerMode") @MachineSizedUInt long mode) { }
     @Mapping("initWithURL:inMode:")
     public UIDocumentMenuViewController(NSURL url, @Representing("UIDocumentPickerMode") @MachineSizedUInt long mode) { }
     @Mapping("initWithNibName:bundle:")
     public UIDocumentMenuViewController(String nibNameOrNil, NSBundle nibBundleOrNil) { }
+    @Mapping("init")
+    public UIDocumentMenuViewController() { }
     
     
     @Mapping("delegate")

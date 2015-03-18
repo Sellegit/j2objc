@@ -30,21 +30,21 @@ public class HMCharacteristicMetadataUnits
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("HMCharacteristicMetadataUnitsCelsius")
-    protected static native NSString CelsiusValue();
+    public static native NSString CelsiusValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("HMCharacteristicMetadataUnitsFahrenheit")
-    protected static native NSString FahrenheitValue();
+    public static native NSString FahrenheitValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("HMCharacteristicMetadataUnitsPercentage")
-    protected static native NSString PercentageValue();
+    public static native NSString PercentageValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("HMCharacteristicMetadataUnitsArcDegree")
-    protected static native NSString ArcDegreeValue();
+    public static native NSString ArcDegreeValue();
     
 }

@@ -31,7 +31,8 @@ public class UICollectionViewFlowLayout
 
     
     
-    public UICollectionViewFlowLayout() {}
+    @Mapping("init")
+    public UICollectionViewFlowLayout() { }
     
     
     @Mapping("minimumLineSpacing")

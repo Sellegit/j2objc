@@ -31,13 +31,14 @@ public class SKKeyframeSequence
 
     
     
-    public SKKeyframeSequence() {}
     @Mapping("initWithKeyframeValues:times:")
     public SKKeyframeSequence(NSArray<?> values, NSArray<?> times) { }
     @Mapping("initWithCapacity:")
     public SKKeyframeSequence(@MachineSizedUInt long numItems) { }
     @Mapping("initWithCoder:")
     public SKKeyframeSequence(NSCoder aDecoder) { }
+    @Mapping("init")
+    public SKKeyframeSequence() { }
     
     
     @Mapping("interpolationMode")

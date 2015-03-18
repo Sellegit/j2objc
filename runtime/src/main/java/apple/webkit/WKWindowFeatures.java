@@ -27,25 +27,26 @@ public class WKWindowFeatures
 
     
     
-    public WKWindowFeatures() {}
+    @Mapping("init")
+    public WKWindowFeatures() { }
     
     
     @Mapping("menuBarVisibility")
-    protected native NSNumber menuBarVisibility();
+    public native NSNumber menuBarVisibility();
     @Mapping("statusBarVisibility")
-    protected native NSNumber statusBarVisibility();
+    public native NSNumber statusBarVisibility();
     @Mapping("toolbarsVisibility")
-    protected native NSNumber toolbarsVisibility();
+    public native NSNumber toolbarsVisibility();
     @Mapping("allowsResizing")
-    protected native NSNumber getAllowsResizing();
+    public native NSNumber getAllowsResizing();
     @Mapping("x")
-    protected native NSNumber x();
+    public native NSNumber x();
     @Mapping("y")
-    protected native NSNumber y();
+    public native NSNumber y();
     @Mapping("width")
-    protected native NSNumber width();
+    public native NSNumber width();
     @Mapping("height")
-    protected native NSNumber height();
+    public native NSNumber height();
     
     
     

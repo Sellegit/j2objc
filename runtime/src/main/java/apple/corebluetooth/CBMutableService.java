@@ -27,9 +27,10 @@ public class CBMutableService
 
     
     
-    public CBMutableService() {}
     @Mapping("initWithType:primary:")
     public CBMutableService(CBUUID UUID, boolean isPrimary) { }
+    @Mapping("init")
+    public CBMutableService() { }
     
     
     @Mapping("UUID")

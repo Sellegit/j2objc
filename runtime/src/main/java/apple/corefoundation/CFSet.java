@@ -37,22 +37,22 @@ public class CFSet
     @GlobalFunction("CFSetGetTypeID")
     public static native @MachineSizedUInt long getClassTypeID();
     @GlobalFunction("CFSetCreate")
-    protected static native CFSet create(CFAllocator allocator, Todo values, @MachineSizedSInt long numValues, CFSetCallBacks callBacks);
+    public static native CFSet create(CFAllocator allocator, Todo values, @MachineSizedSInt long numValues, CFSetCallBacks callBacks);
     @GlobalFunction("CFSetCreateCopy")
-    protected static native CFSet createCopy(CFAllocator allocator, CFSet theSet);
+    public static native CFSet createCopy(CFAllocator allocator, CFSet theSet);
     @GlobalFunction("CFSetGetCount")
-    protected static native @MachineSizedSInt long getCount(CFSet theSet);
+    public static native @MachineSizedSInt long getCount(CFSet theSet);
     @GlobalFunction("CFSetGetCountOfValue")
-    protected static native @MachineSizedSInt long getCountOfValue(CFSet theSet, Todo value);
+    public static native @MachineSizedSInt long getCountOfValue(CFSet theSet, Todo value);
     @GlobalFunction("CFSetContainsValue")
-    protected static native boolean containsValue(CFSet theSet, Todo value);
+    public static native boolean containsValue(CFSet theSet, Todo value);
     @GlobalFunction("CFSetGetValue")
-    protected static native Todo getValue(CFSet theSet, Todo value);
+    public static native Todo getValue(CFSet theSet, Todo value);
     @GlobalFunction("CFSetGetValueIfPresent")
-    protected static native boolean getValueIfPresent(CFSet theSet, Todo candidate, Todo value);
+    public static native boolean getValueIfPresent(CFSet theSet, Todo candidate, Todo value);
     @GlobalFunction("CFSetGetValues")
-    protected static native void getValues(CFSet theSet, Todo values);
+    public static native void getValues(CFSet theSet, Todo values);
     @GlobalFunction("CFSetApplyFunction")
-    protected static native void applyFunction(CFSet theSet, FunctionPtr applier, Todo context);
+    public static native void applyFunction(CFSet theSet, FunctionPtr applier, Todo context);
     
 }

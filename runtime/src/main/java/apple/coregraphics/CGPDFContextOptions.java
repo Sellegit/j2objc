@@ -31,51 +31,51 @@ public class CGPDFContextOptions
      * @since Available in iOS 2.0 and later.
      */
     @GlobalConstant("kCGPDFContextTitle")
-    protected static native CFString TitleKey();
+    public static native CFString TitleKey();
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalConstant("kCGPDFContextAuthor")
-    protected static native CFString AuthorKey();
+    public static native CFString AuthorKey();
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalConstant("kCGPDFContextSubject")
-    protected static native CFString SubjectKey();
+    public static native CFString SubjectKey();
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalConstant("kCGPDFContextKeywords")
-    protected static native CFString KeywordsKey();
+    public static native CFString KeywordsKey();
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalConstant("kCGPDFContextCreator")
-    protected static native CFString CreatorKey();
+    public static native CFString CreatorKey();
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalConstant("kCGPDFContextOwnerPassword")
-    protected static native CFString OwnerPasswordKey();
+    public static native CFString OwnerPasswordKey();
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalConstant("kCGPDFContextUserPassword")
-    protected static native CFString UserPasswordKey();
+    public static native CFString UserPasswordKey();
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalConstant("kCGPDFContextEncryptionKeyLength")
-    protected static native CFString EncryptionKeyLengthKey();
+    public static native CFString EncryptionKeyLengthKey();
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalConstant("kCGPDFContextAllowsPrinting")
-    protected static native CFString AllowsPrintingKey();
+    public static native CFString AllowsPrintingKey();
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalConstant("kCGPDFContextAllowsCopying")
-    protected static native CFString AllowsCopyingKey();
+    public static native CFString AllowsCopyingKey();
     
 }

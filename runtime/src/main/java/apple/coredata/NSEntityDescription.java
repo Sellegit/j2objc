@@ -26,7 +26,8 @@ public class NSEntityDescription
 
     
     
-    public NSEntityDescription() {}
+    @Mapping("init")
+    public NSEntityDescription() { }
     
     
     @Mapping("managedObjectModel")

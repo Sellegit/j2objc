@@ -32,11 +32,11 @@ public class NSRunLoopMode
     
     
     @GlobalConstant("NSDefaultRunLoopMode")
-    protected static native String DefaultValue();
+    public static native String DefaultValue();
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalConstant("NSRunLoopCommonModes")
-    protected static native String CommonValue();
+    public static native String CommonValue();
     
 }

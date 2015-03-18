@@ -27,7 +27,8 @@ public class MPNowPlayingInfoCenter
 
     
     
-    public MPNowPlayingInfoCenter() {}
+    @Mapping("init")
+    public MPNowPlayingInfoCenter() { }
     
     
     @Mapping("nowPlayingInfo")

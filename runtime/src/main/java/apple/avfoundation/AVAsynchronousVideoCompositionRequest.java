@@ -32,7 +32,8 @@ public class AVAsynchronousVideoCompositionRequest
 
     
     
-    public AVAsynchronousVideoCompositionRequest() {}
+    @Mapping("init")
+    public AVAsynchronousVideoCompositionRequest() { }
     
     
     @Mapping("renderContext")

@@ -52,20 +52,20 @@ public class NSObject
     @Mapping("mutableCopy")
     public native Object mutableCopy();
     @Mapping("addObserver:forKeyPath:options:context:")
-    private native void addObserver(NSObject observer, String keyPath, @Representing("NSKeyValueObservingOptions") @MachineSizedUInt long options, Todo context);
+    public native void addObserver(NSObject observer, String keyPath, @Representing("NSKeyValueObservingOptions") @MachineSizedUInt long options, Todo context);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @Mapping("removeObserver:forKeyPath:context:")
-    private native void removeObserver(NSObject observer, String keyPath, Todo context);
+    public native void removeObserver(NSObject observer, String keyPath, Todo context);
     @Mapping("willChangeValueForKey:")
     public native void willChangeValue(String key);
     @Mapping("didChangeValueForKey:")
     public native void didChangeValue(String key);
     @Mapping("willChange:valuesAtIndexes:forKey:")
-    private native void willChangeValues(@Representing("NSKeyValueChange") @MachineSizedUInt long changeKind, NSIndexSet indexes, String key);
+    public native void willChangeValues(@Representing("NSKeyValueChange") @MachineSizedUInt long changeKind, NSIndexSet indexes, String key);
     @Mapping("didChange:valuesAtIndexes:forKey:")
-    private native void didChangeValues(@Representing("NSKeyValueChange") @MachineSizedUInt long changeKind, NSIndexSet indexes, String key);
+    public native void didChangeValues(@Representing("NSKeyValueChange") @MachineSizedUInt long changeKind, NSIndexSet indexes, String key);
     @Mapping("willChangeValueForKey:withSetMutation:usingObjects:")
     public native void willChangeValue(String key, @Representing("NSKeyValueSetMutationKind") @MachineSizedUInt long mutationKind, NSSet<?> objects);
     @Mapping("didChangeValueForKey:withSetMutation:usingObjects:")

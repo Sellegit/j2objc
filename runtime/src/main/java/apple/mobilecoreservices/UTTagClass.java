@@ -30,11 +30,11 @@ public class UTTagClass
      * @since Available in iOS 3.0 and later.
      */
     @GlobalConstant("kUTTagClassFilenameExtension")
-    protected static native CFString FilenameExtensionValue();
+    public static native CFString FilenameExtensionValue();
     /**
      * @since Available in iOS 3.0 and later.
      */
     @GlobalConstant("kUTTagClassMIMEType")
-    protected static native CFString MIMETypeValue();
+    public static native CFString MIMETypeValue();
     
 }

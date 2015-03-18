@@ -31,7 +31,8 @@ public class UIMenuController
 
     
     
-    public UIMenuController() {}
+    @Mapping("init")
+    public UIMenuController() { }
     
     
     @Mapping("isMenuVisible")

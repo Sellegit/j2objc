@@ -26,9 +26,10 @@ public class NSIncrementalStore
 
     
     
-    public NSIncrementalStore() {}
     @Mapping("initWithPersistentStoreCoordinator:configurationName:URL:options:")
     public NSIncrementalStore(NSPersistentStoreCoordinator root, String name, NSURL url, NSDictionary<?, ?> options) { }
+    @Mapping("init")
+    public NSIncrementalStore() { }
     
     
     
@@ -36,15 +37,15 @@ public class NSIncrementalStore
     
     
     @Mapping("loadMetadata:")
-    protected native boolean loadMetadata(Todo error);
+    public native boolean loadMetadata(Todo error);
     @Mapping("executeRequest:withContext:error:")
-    protected native Object executeRequest(NSPersistentStoreRequest request, NSManagedObjectContext context, Todo error);
+    public native Object executeRequest(NSPersistentStoreRequest request, NSManagedObjectContext context, Todo error);
     @Mapping("newValuesForObjectWithID:withContext:error:")
-    protected native NSIncrementalStoreNode newValuesForObjectID(NSManagedObjectID objectID, NSManagedObjectContext context, Todo error);
+    public native NSIncrementalStoreNode newValuesForObjectID(NSManagedObjectID objectID, NSManagedObjectContext context, Todo error);
     @Mapping("newValueForRelationship:forObjectWithID:withContext:error:")
-    protected native Object newValueForRelationship(NSRelationshipDescription relationship, NSManagedObjectID objectID, NSManagedObjectContext context, Todo error);
+    public native Object newValueForRelationship(NSRelationshipDescription relationship, NSManagedObjectID objectID, NSManagedObjectContext context, Todo error);
     @Mapping("obtainPermanentIDsForObjects:error:")
-    protected native NSArray<NSManagedObjectID> obtainPermanentIDsForObjects(NSArray<?> array, Todo error);
+    public native NSArray<NSManagedObjectID> obtainPermanentIDsForObjects(NSArray<?> array, Todo error);
     @Mapping("managedObjectContextDidRegisterObjectsWithIDs:")
     public native void didRegisterObjects(NSArray<?> objectIDs);
     @Mapping("managedObjectContextDidUnregisterObjectsWithIDs:")

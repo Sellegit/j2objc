@@ -31,7 +31,8 @@ public class NSDateComponents
     public static final int UndefinedComponent = 2147483647;
     
     
-    public NSDateComponents() {}
+    @Mapping("init")
+    public NSDateComponents() { }
     
     
     /**
@@ -181,7 +182,7 @@ public class NSDateComponents
      * @since Available in iOS 8.0 and later.
      */
     @Mapping("setValue:forComponent:")
-    protected native void setValue(@MachineSizedSInt long value, @Representing("NSCalendarUnit") @MachineSizedUInt long unit);
+    public native void setValue(@MachineSizedSInt long value, @Representing("NSCalendarUnit") @MachineSizedUInt long unit);
     /**
      * @since Available in iOS 8.0 and later.
      */

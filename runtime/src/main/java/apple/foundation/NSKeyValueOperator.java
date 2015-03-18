@@ -32,26 +32,26 @@ public final class NSKeyValueOperator
     
     
     @GlobalConstant("NSAverageKeyValueOperator")
-    protected static native NSString AverageValue();
+    public static native NSString AverageValue();
     @GlobalConstant("NSCountKeyValueOperator")
-    protected static native NSString CountValue();
+    public static native NSString CountValue();
     @GlobalConstant("NSDistinctUnionOfArraysKeyValueOperator")
-    protected static native NSString DistinctUnionOfArraysValue();
+    public static native NSString DistinctUnionOfArraysValue();
     @GlobalConstant("NSDistinctUnionOfObjectsKeyValueOperator")
-    protected static native NSString DistinctUnionOfObjectsValue();
+    public static native NSString DistinctUnionOfObjectsValue();
     @GlobalConstant("NSDistinctUnionOfSetsKeyValueOperator")
-    protected static native NSString DistinctUnionOfSetsValue();
+    public static native NSString DistinctUnionOfSetsValue();
     @GlobalConstant("NSMaximumKeyValueOperator")
-    protected static native NSString MaximumValue();
+    public static native NSString MaximumValue();
     @GlobalConstant("NSMinimumKeyValueOperator")
-    protected static native NSString MinimumValue();
+    public static native NSString MinimumValue();
     @GlobalConstant("NSSumKeyValueOperator")
-    protected static native NSString SumValue();
+    public static native NSString SumValue();
     @GlobalConstant("NSUnionOfArraysKeyValueOperator")
-    protected static native NSString UnionOfArraysValue();
+    public static native NSString UnionOfArraysValue();
     @GlobalConstant("NSUnionOfObjectsKeyValueOperator")
-    protected static native NSString UnionOfObjectsValue();
+    public static native NSString UnionOfObjectsValue();
     @GlobalConstant("NSUnionOfSetsKeyValueOperator")
-    protected static native NSString UnionOfSetsValue();
+    public static native NSString UnionOfSetsValue();
     
 }

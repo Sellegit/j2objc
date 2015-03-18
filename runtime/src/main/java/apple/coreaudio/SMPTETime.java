@@ -23,7 +23,7 @@ public class SMPTETime
      {
 
     
-    protected SMPTETime() {}
+    private SMPTETime() {}
     
     
     @DotMapping("mSubframes")

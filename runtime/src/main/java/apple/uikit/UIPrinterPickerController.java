@@ -31,7 +31,8 @@ public class UIPrinterPickerController
 
     
     
-    public UIPrinterPickerController() {}
+    @Mapping("init")
+    public UIPrinterPickerController() { }
     
     
     @Mapping("selectedPrinter")

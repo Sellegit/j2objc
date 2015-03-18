@@ -31,11 +31,12 @@ public class UIVideoEditorController
 
     
     
-    public UIVideoEditorController() {}
     @Mapping("initWithRootViewController:")
     public UIVideoEditorController(UIViewController rootViewController) { }
     @Mapping("initWithNibName:bundle:")
     public UIVideoEditorController(String nibNameOrNil, NSBundle nibBundleOrNil) { }
+    @Mapping("init")
+    public UIVideoEditorController() { }
     
     
     @Mapping("delegate")
@@ -61,6 +62,6 @@ public class UIVideoEditorController
      * @since Available in iOS 3.1 and later.
      */
     @Mapping("canEditVideoAtPath:")
-    protected static native boolean canEditVideo(String videoPath);
+    public static native boolean canEditVideo(String videoPath);
     
 }

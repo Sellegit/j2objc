@@ -28,7 +28,7 @@ public class UIOffset
      {
 
     
-    protected UIOffset() {}
+    private UIOffset() {}
     
     
     @DotMapping("horizontal")
@@ -56,7 +56,7 @@ public class UIOffset
     public static native UIOffset Zero();
     
     @GlobalFunction("NSStringFromUIOffset")
-    protected static native String toString(UIOffset offset);
+    public static native String toString(UIOffset offset);
     @GlobalFunction("UIOffsetFromString")
     public static native UIOffset fromString(String string);
     

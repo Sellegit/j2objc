@@ -27,7 +27,7 @@ import apple.corevideo.*;
      {
 
     
-    protected CMBufferCallbacksStruct() {}
+    private CMBufferCallbacksStruct() {}
     
     
     @DotMapping("version")

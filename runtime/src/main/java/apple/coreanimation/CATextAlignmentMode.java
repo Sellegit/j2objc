@@ -33,26 +33,26 @@ public class CATextAlignmentMode
      * @since Available in iOS 3.2 and later.
      */
     @GlobalConstant("kCAAlignmentNatural")
-    protected static native NSString NaturalValue();
+    public static native NSString NaturalValue();
     /**
      * @since Available in iOS 3.2 and later.
      */
     @GlobalConstant("kCAAlignmentLeft")
-    protected static native NSString LeftValue();
+    public static native NSString LeftValue();
     /**
      * @since Available in iOS 3.2 and later.
      */
     @GlobalConstant("kCAAlignmentRight")
-    protected static native NSString RightValue();
+    public static native NSString RightValue();
     /**
      * @since Available in iOS 3.2 and later.
      */
     @GlobalConstant("kCAAlignmentCenter")
-    protected static native NSString CenterValue();
+    public static native NSString CenterValue();
     /**
      * @since Available in iOS 3.2 and later.
      */
     @GlobalConstant("kCAAlignmentJustified")
-    protected static native NSString JustifiedValue();
+    public static native NSString JustifiedValue();
     
 }

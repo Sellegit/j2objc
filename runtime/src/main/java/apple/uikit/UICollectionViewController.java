@@ -31,11 +31,12 @@ public class UICollectionViewController
 
     
     
-    public UICollectionViewController() {}
     @Mapping("initWithCollectionViewLayout:")
     public UICollectionViewController(UICollectionViewLayout layout) { }
     @Mapping("initWithNibName:bundle:")
     public UICollectionViewController(String nibNameOrNil, NSBundle nibBundleOrNil) { }
+    @Mapping("init")
+    public UICollectionViewController() { }
     
     
     @Mapping("collectionView")

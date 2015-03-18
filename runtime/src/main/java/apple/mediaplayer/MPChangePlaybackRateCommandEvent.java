@@ -27,7 +27,8 @@ public class MPChangePlaybackRateCommandEvent
 
     
     
-    public MPChangePlaybackRateCommandEvent() {}
+    @Mapping("init")
+    public MPChangePlaybackRateCommandEvent() { }
     
     
     @Mapping("playbackRate")

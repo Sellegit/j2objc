@@ -57,7 +57,7 @@ public class CTLine
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTLineGetGlyphRuns")
-    protected static native CFArray getGlyphRuns0(CTLine line);
+    public static native CFArray getGlyphRuns0(CTLine line);
     /**
      * @since Available in iOS 3.2 and later.
      */
@@ -77,7 +77,7 @@ public class CTLine
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTLineGetTypographicBounds")
-    protected static native double getTypographicBounds(CTLine line, Todo ascent, Todo descent, Todo leading);
+    public static native double getTypographicBounds(CTLine line, Todo ascent, Todo descent, Todo leading);
     /**
      * @since Available in iOS 6.0 and later.
      */
@@ -102,6 +102,6 @@ public class CTLine
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTLineGetOffsetForStringIndex")
-    protected static native @MachineSizedFloat double getOffset(CTLine line, @MachineSizedSInt long charIndex, Todo secondaryOffset);
+    public static native @MachineSizedFloat double getOffset(CTLine line, @MachineSizedSInt long charIndex, Todo secondaryOffset);
     
 }

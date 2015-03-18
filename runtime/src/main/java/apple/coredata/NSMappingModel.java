@@ -26,9 +26,10 @@ public class NSMappingModel
 
     
     
-    public NSMappingModel() {}
     @Mapping("initWithContentsOfURL:")
     public NSMappingModel(NSURL url) { }
+    @Mapping("init")
+    public NSMappingModel() { }
     
     
     @Mapping("entityMappings")
@@ -46,6 +47,6 @@ public class NSMappingModel
      * @since Available in iOS 3.0 and later.
      */
     @Mapping("inferredMappingModelForSourceModel:destinationModel:error:")
-    protected static native NSMappingModel createInferred(NSManagedObjectModel sourceModel, NSManagedObjectModel destinationModel, Todo error);
+    public static native NSMappingModel createInferred(NSManagedObjectModel sourceModel, NSManagedObjectModel destinationModel, Todo error);
     
 }

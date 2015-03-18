@@ -27,7 +27,8 @@ public class CATransition
 
     
     
-    public CATransition() {}
+    @Mapping("init")
+    public CATransition() { }
     
     
     @Mapping("type")

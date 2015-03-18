@@ -31,7 +31,8 @@ public class UICollectionViewLayoutAttributes
 
     
     
-    public UICollectionViewLayoutAttributes() {}
+    @Mapping("init")
+    public UICollectionViewLayoutAttributes() { }
     
     
     @Mapping("frame")

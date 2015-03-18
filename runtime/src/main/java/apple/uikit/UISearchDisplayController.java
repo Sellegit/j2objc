@@ -33,9 +33,10 @@ public class UISearchDisplayController
 
     
     
-    public UISearchDisplayController() {}
     @Mapping("initWithSearchBar:contentsController:")
     public UISearchDisplayController(UISearchBar searchBar, UIViewController viewController) { }
+    @Mapping("init")
+    public UISearchDisplayController() { }
     
     
     @Mapping("delegate")

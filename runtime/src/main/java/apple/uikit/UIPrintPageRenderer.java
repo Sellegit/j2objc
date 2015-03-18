@@ -31,7 +31,8 @@ public class UIPrintPageRenderer
 
     
     
-    public UIPrintPageRenderer() {}
+    @Mapping("init")
+    public UIPrintPageRenderer() { }
     
     
     @Mapping("headerHeight")

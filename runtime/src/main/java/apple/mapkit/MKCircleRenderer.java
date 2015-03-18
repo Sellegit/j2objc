@@ -29,11 +29,12 @@ public class MKCircleRenderer
 
     
     
-    public MKCircleRenderer() {}
     @Mapping("initWithCircle:")
     public MKCircleRenderer(MKCircle circle) { }
     @Mapping("initWithOverlay:")
     public MKCircleRenderer(MKOverlay overlay) { }
+    @Mapping("init")
+    public MKCircleRenderer() { }
     
     
     @Mapping("circle")

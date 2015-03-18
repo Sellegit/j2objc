@@ -33,11 +33,11 @@ public class CAAnimationRotationMode
      * @since Available in iOS 2.0 and later.
      */
     @GlobalConstant("kCAAnimationRotateAuto")
-    protected static native NSString AutoValue();
+    public static native NSString AutoValue();
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalConstant("kCAAnimationRotateAutoReverse")
-    protected static native NSString AutoReverseValue();
+    public static native NSString AutoReverseValue();
     
 }

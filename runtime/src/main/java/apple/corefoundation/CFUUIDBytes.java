@@ -24,7 +24,7 @@ public class CFUUIDBytes
      {
 
     
-    protected CFUUIDBytes() {}
+    private CFUUIDBytes() {}
     
     
     @DotMapping("byte0")

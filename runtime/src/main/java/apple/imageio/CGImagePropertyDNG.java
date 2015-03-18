@@ -30,31 +30,31 @@ public class CGImagePropertyDNG
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("kCGImagePropertyDNGVersion")
-    protected static native CFString VersionKey();
+    public static native CFString VersionKey();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("kCGImagePropertyDNGBackwardVersion")
-    protected static native CFString BackwardVersionKey();
+    public static native CFString BackwardVersionKey();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("kCGImagePropertyDNGUniqueCameraModel")
-    protected static native CFString UniqueCameraModelKey();
+    public static native CFString UniqueCameraModelKey();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("kCGImagePropertyDNGLocalizedCameraModel")
-    protected static native CFString LocalizedCameraModelKey();
+    public static native CFString LocalizedCameraModelKey();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("kCGImagePropertyDNGCameraSerialNumber")
-    protected static native CFString CameraSerialNumberKey();
+    public static native CFString CameraSerialNumberKey();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("kCGImagePropertyDNGLensInfo")
-    protected static native CFString LensInfoKey();
+    public static native CFString LensInfoKey();
     
 }

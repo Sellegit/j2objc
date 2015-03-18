@@ -32,7 +32,8 @@ public class AVVideoCompositionCoreAnimationTool
 
     
     
-    public AVVideoCompositionCoreAnimationTool() {}
+    @Mapping("init")
+    public AVVideoCompositionCoreAnimationTool() { }
     
     
     

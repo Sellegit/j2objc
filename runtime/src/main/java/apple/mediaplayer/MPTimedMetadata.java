@@ -27,7 +27,8 @@ public class MPTimedMetadata
 
     
     
-    public MPTimedMetadata() {}
+    @Mapping("init")
+    public MPTimedMetadata() { }
     
     
     @Mapping("key")
@@ -47,27 +48,27 @@ public class MPTimedMetadata
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("MPMoviePlayerTimedMetadataKeyName")
-    protected static native NSString Name();
+    public static native NSString Name();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("MPMoviePlayerTimedMetadataKeyInfo")
-    protected static native NSString Info();
+    public static native NSString Info();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("MPMoviePlayerTimedMetadataKeyMIMEType")
-    protected static native NSString MIMEType();
+    public static native NSString MIMEType();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("MPMoviePlayerTimedMetadataKeyDataType")
-    protected static native NSString DataType();
+    public static native NSString DataType();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("MPMoviePlayerTimedMetadataKeyLanguageCode")
-    protected static native NSString LanguageCode();
+    public static native NSString LanguageCode();
     
     
     

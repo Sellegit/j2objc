@@ -24,7 +24,7 @@ import apple.dispatch.*;
      {
 
     
-    protected SCNetworkReachabilityContext() {}
+    private SCNetworkReachabilityContext() {}
     
     
     @DotMapping("version")

@@ -32,7 +32,8 @@ public class AVAssetWriterInput
 
     
     
-    public AVAssetWriterInput() {}
+    @Mapping("init")
+    public AVAssetWriterInput() { }
     
     
     @Mapping("mediaType")

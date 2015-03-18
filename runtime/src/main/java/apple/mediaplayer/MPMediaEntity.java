@@ -27,7 +27,8 @@ public class MPMediaEntity
 
     
     
-    public MPMediaEntity() {}
+    @Mapping("init")
+    public MPMediaEntity() { }
     
     
     /**
@@ -42,7 +43,7 @@ public class MPMediaEntity
      * @since Available in iOS 4.0 and later.
      */
     @Mapping("enumerateValuesForProperties:usingBlock:")
-    protected native void enumerateValues(NSSet<?> properties, @Block VoidBlock3<NSString, NSObject, Todo> block);
+    public native void enumerateValues(NSSet<?> properties, @Block VoidBlock3<NSString, NSObject, Todo> block);
     @Mapping("valueForProperty:")
     public native Object getValue(String property);
     @Mapping("canFilterByProperty:")

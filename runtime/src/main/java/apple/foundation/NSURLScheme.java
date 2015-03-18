@@ -32,6 +32,6 @@ public class NSURLScheme
     
     
     @GlobalConstant("NSURLFileScheme")
-    protected static native NSString FileValue();
+    public static native NSString FileValue();
     
 }

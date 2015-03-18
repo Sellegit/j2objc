@@ -35,6 +35,6 @@ public class NSURLThumbnail
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("NSThumbnail1024x1024SizeKey")
-    protected static native NSString _1024x1024SizeKey();
+    public static native NSString _1024x1024SizeKey();
     
 }

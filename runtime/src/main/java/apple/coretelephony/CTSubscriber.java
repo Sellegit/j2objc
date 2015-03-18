@@ -26,7 +26,8 @@ public class CTSubscriber
 
     
     
-    public CTSubscriber() {}
+    @Mapping("init")
+    public CTSubscriber() { }
     
     
     /**

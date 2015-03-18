@@ -23,7 +23,7 @@ public class GCGamepadSnapShotDataV100
      {
 
     
-    protected GCGamepadSnapShotDataV100() {}
+    private GCGamepadSnapShotDataV100() {}
     
     
     @DotMapping("version")

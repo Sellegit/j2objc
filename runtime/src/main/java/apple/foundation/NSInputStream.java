@@ -29,7 +29,6 @@ public class NSInputStream
 
     
     
-    public NSInputStream() {}
     @Mapping("initWithData:")
     public NSInputStream(NSData data) { }
     /**
@@ -37,6 +36,8 @@ public class NSInputStream
      */
     @Mapping("initWithURL:")
     public NSInputStream(NSURL url) { }
+    @Mapping("init")
+    public NSInputStream() { }
     @Mapping("initWithFileAtPath:")
     public NSInputStream(String path) { }
     
@@ -47,6 +48,6 @@ public class NSInputStream
     
     
     @Mapping("read:maxLength:")
-    protected native @MachineSizedSInt long read(Todo buffer, @MachineSizedUInt long len);
+    public native @MachineSizedSInt long read(Todo buffer, @MachineSizedUInt long len);
     
 }

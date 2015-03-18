@@ -28,7 +28,8 @@ public class CLBeacon
 
     
     
-    public CLBeacon() {}
+    @Mapping("init")
+    public CLBeacon() { }
     
     
     @Mapping("proximityUUID")

@@ -31,7 +31,8 @@ public class SKPhysicsJointPin
 
     
     
-    public SKPhysicsJointPin() {}
+    @Mapping("init")
+    public SKPhysicsJointPin() { }
     
     
     @Mapping("shouldEnableLimits")

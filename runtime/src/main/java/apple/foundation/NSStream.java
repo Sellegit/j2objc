@@ -29,7 +29,8 @@ public class NSStream
 
     
     
-    public NSStream() {}
+    @Mapping("init")
+    public NSStream() { }
     
     
     @Mapping("delegate")
@@ -50,7 +51,7 @@ public class NSStream
     @Mapping("propertyForKey:")
     public native Object getProperty(String key);
     @Mapping("setProperty:forKey:")
-    protected native boolean setProperty(Object property, String key);
+    public native boolean setProperty(Object property, String key);
     @Mapping("scheduleInRunLoop:forMode:")
     public native void scheduleInRunLoop(NSRunLoop aRunLoop, String mode);
     @Mapping("removeFromRunLoop:forMode:")
@@ -59,6 +60,6 @@ public class NSStream
      * @since Available in iOS 8.0 and later.
      */
     @Mapping("getStreamsToHostWithName:port:inputStream:outputStream:")
-    protected static native void getStreamsToHost(String hostname, @MachineSizedSInt long port, Todo inputStream, Todo outputStream);
+    public static native void getStreamsToHost(String hostname, @MachineSizedSInt long port, Todo inputStream, Todo outputStream);
     
 }

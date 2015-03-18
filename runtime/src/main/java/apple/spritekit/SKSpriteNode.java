@@ -31,7 +31,6 @@ public class SKSpriteNode
 
     
     
-    public SKSpriteNode() {}
     @Mapping("initWithTexture:color:size:")
     public SKSpriteNode(SKTexture texture, UIColor color, CGSize size) { }
     @Mapping("initWithTexture:")
@@ -42,6 +41,8 @@ public class SKSpriteNode
     public SKSpriteNode(UIColor color, CGSize size) { }
     @Mapping("initWithCoder:")
     public SKSpriteNode(NSCoder aDecoder) { }
+    @Mapping("init")
+    public SKSpriteNode() { }
     
     
     @Mapping("texture")

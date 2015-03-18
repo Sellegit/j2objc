@@ -59,6 +59,6 @@ public class CFAllocator
     @GlobalFunction("CFAllocatorGetPreferredSizeForSize")
     public static native @MachineSizedSInt long getPreferredSizeForSize(CFAllocator allocator, @MachineSizedSInt long size, @MachineSizedUInt long hint);
     @GlobalFunction("CFAllocatorGetContext")
-    private static native void getContext(CFAllocator allocator, CFAllocatorContext context);
+    public static native void getContext(CFAllocator allocator, CFAllocatorContext context);
     
 }

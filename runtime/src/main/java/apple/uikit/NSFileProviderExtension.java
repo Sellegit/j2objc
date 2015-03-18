@@ -31,7 +31,8 @@ public class NSFileProviderExtension
 
     
     
-    public NSFileProviderExtension() {}
+    @Mapping("init")
+    public NSFileProviderExtension() { }
     
     
     
@@ -55,7 +56,7 @@ public class NSFileProviderExtension
     @Mapping("stopProvidingItemAtURL:")
     public native void stopProvidingItem(NSURL url);
     @Mapping("writePlaceholderAtURL:withMetadata:error:")
-    protected static native boolean writePlaceholder(NSURL placeholderURL, NSDictionary<?, ?> metadata, Todo error);
+    public static native boolean writePlaceholder(NSURL placeholderURL, NSDictionary<?, ?> metadata, Todo error);
     @Mapping("placeholderURLForURL:")
     public static native NSURL getPlaceholderURL(NSURL url);
     

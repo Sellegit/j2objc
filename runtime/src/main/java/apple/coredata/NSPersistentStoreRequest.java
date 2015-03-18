@@ -26,7 +26,8 @@ public class NSPersistentStoreRequest
 
     
     
-    public NSPersistentStoreRequest() {}
+    @Mapping("init")
+    public NSPersistentStoreRequest() { }
     
     
     @Mapping("affectedStores")

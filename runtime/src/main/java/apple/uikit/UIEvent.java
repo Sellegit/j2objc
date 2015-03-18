@@ -31,7 +31,8 @@ public class UIEvent
 
     
     
-    public UIEvent() {}
+    @Mapping("init")
+    public UIEvent() { }
     
     
     /**

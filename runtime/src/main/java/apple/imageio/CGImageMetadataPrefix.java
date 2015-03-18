@@ -30,46 +30,46 @@ public class CGImageMetadataPrefix
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("kCGImageMetadataPrefixExif")
-    protected static native CFString ExifValue();
+    public static native CFString ExifValue();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("kCGImageMetadataPrefixExifAux")
-    protected static native CFString ExifAuxValue();
+    public static native CFString ExifAuxValue();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("kCGImageMetadataPrefixExifEX")
-    protected static native CFString ExifEXValue();
+    public static native CFString ExifEXValue();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("kCGImageMetadataPrefixDublinCore")
-    protected static native CFString DublinCoreValue();
+    public static native CFString DublinCoreValue();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("kCGImageMetadataPrefixIPTCCore")
-    protected static native CFString IPTCCoreValue();
+    public static native CFString IPTCCoreValue();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("kCGImageMetadataPrefixPhotoshop")
-    protected static native CFString PhotoshopValue();
+    public static native CFString PhotoshopValue();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("kCGImageMetadataPrefixTIFF")
-    protected static native CFString TIFFValue();
+    public static native CFString TIFFValue();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("kCGImageMetadataPrefixXMPBasic")
-    protected static native CFString XMPBasicValue();
+    public static native CFString XMPBasicValue();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("kCGImageMetadataPrefixXMPRights")
-    protected static native CFString XMPRightsValue();
+    public static native CFString XMPRightsValue();
     
 }

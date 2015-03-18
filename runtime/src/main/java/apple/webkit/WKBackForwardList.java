@@ -27,7 +27,8 @@ public class WKBackForwardList
 
     
     
-    public WKBackForwardList() {}
+    @Mapping("init")
+    public WKBackForwardList() { }
     
     
     @Mapping("currentItem")

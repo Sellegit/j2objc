@@ -29,11 +29,12 @@ public class MKPolygonRenderer
 
     
     
-    public MKPolygonRenderer() {}
     @Mapping("initWithPolygon:")
     public MKPolygonRenderer(MKPolygon polygon) { }
     @Mapping("initWithOverlay:")
     public MKPolygonRenderer(MKOverlay overlay) { }
+    @Mapping("init")
+    public MKPolygonRenderer() { }
     
     
     @Mapping("polygon")

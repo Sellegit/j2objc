@@ -27,11 +27,12 @@ public class GKGameCenterViewController
 
     
     
-    public GKGameCenterViewController() {}
     @Mapping("initWithRootViewController:")
     public GKGameCenterViewController(UIViewController rootViewController) { }
     @Mapping("initWithNibName:bundle:")
     public GKGameCenterViewController(String nibNameOrNil, NSBundle nibBundleOrNil) { }
+    @Mapping("init")
+    public GKGameCenterViewController() { }
     
     
     @Mapping("gameCenterDelegate")

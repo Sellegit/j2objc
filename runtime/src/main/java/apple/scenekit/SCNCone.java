@@ -30,7 +30,8 @@ public class SCNCone
 
     
     
-    public SCNCone() {}
+    @Mapping("init")
+    public SCNCone() { }
     
     
     @Mapping("topRadius")

@@ -35,156 +35,156 @@ public class NSURLVolumeProperty
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("NSURLVolumeLocalizedFormatDescriptionKey")
-    protected static native NSString LocalizedFormatDescriptionValue();
+    public static native NSString LocalizedFormatDescriptionValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("NSURLVolumeTotalCapacityKey")
-    protected static native NSString TotalCapacityValue();
+    public static native NSString TotalCapacityValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("NSURLVolumeAvailableCapacityKey")
-    protected static native NSString AvailableCapacityValue();
+    public static native NSString AvailableCapacityValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("NSURLVolumeResourceCountKey")
-    protected static native NSString ResourceCountValue();
+    public static native NSString ResourceCountValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("NSURLVolumeSupportsPersistentIDsKey")
-    protected static native NSString SupportsPersistentIDsValue();
+    public static native NSString SupportsPersistentIDsValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("NSURLVolumeSupportsSymbolicLinksKey")
-    protected static native NSString SupportsSymbolicLinksValue();
+    public static native NSString SupportsSymbolicLinksValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("NSURLVolumeSupportsHardLinksKey")
-    protected static native NSString SupportsHardLinksValue();
+    public static native NSString SupportsHardLinksValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("NSURLVolumeSupportsJournalingKey")
-    protected static native NSString SupportsJournalingValue();
+    public static native NSString SupportsJournalingValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("NSURLVolumeIsJournalingKey")
-    protected static native NSString IsJournalingValue();
+    public static native NSString IsJournalingValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("NSURLVolumeSupportsSparseFilesKey")
-    protected static native NSString SupportsSparseFilesValue();
+    public static native NSString SupportsSparseFilesValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("NSURLVolumeSupportsZeroRunsKey")
-    protected static native NSString SupportsZeroRunsValue();
+    public static native NSString SupportsZeroRunsValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("NSURLVolumeSupportsCaseSensitiveNamesKey")
-    protected static native NSString SupportsCaseSensitiveNamesValue();
+    public static native NSString SupportsCaseSensitiveNamesValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("NSURLVolumeSupportsCasePreservedNamesKey")
-    protected static native NSString SupportsCasePreservedNamesValue();
+    public static native NSString SupportsCasePreservedNamesValue();
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("NSURLVolumeSupportsRootDirectoryDatesKey")
-    protected static native NSString SupportsRootDirectoryDatesValue();
+    public static native NSString SupportsRootDirectoryDatesValue();
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("NSURLVolumeSupportsVolumeSizesKey")
-    protected static native NSString SupportsVolumeSizesValue();
+    public static native NSString SupportsVolumeSizesValue();
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("NSURLVolumeSupportsRenamingKey")
-    protected static native NSString SupportsRenamingValue();
+    public static native NSString SupportsRenamingValue();
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("NSURLVolumeSupportsAdvisoryFileLockingKey")
-    protected static native NSString SupportsAdvisoryFileLockingValue();
+    public static native NSString SupportsAdvisoryFileLockingValue();
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("NSURLVolumeSupportsExtendedSecurityKey")
-    protected static native NSString SupportsExtendedSecurityValue();
+    public static native NSString SupportsExtendedSecurityValue();
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("NSURLVolumeIsBrowsableKey")
-    protected static native NSString IsBrowsableValue();
+    public static native NSString IsBrowsableValue();
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("NSURLVolumeMaximumFileSizeKey")
-    protected static native NSString MaximumFileSizeValue();
+    public static native NSString MaximumFileSizeValue();
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("NSURLVolumeIsEjectableKey")
-    protected static native NSString IsEjectableValue();
+    public static native NSString IsEjectableValue();
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("NSURLVolumeIsRemovableKey")
-    protected static native NSString IsRemovableValue();
+    public static native NSString IsRemovableValue();
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("NSURLVolumeIsInternalKey")
-    protected static native NSString IsInternalValue();
+    public static native NSString IsInternalValue();
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("NSURLVolumeIsAutomountedKey")
-    protected static native NSString IsAutomountedValue();
+    public static native NSString IsAutomountedValue();
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("NSURLVolumeIsLocalKey")
-    protected static native NSString IsLocalValue();
+    public static native NSString IsLocalValue();
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("NSURLVolumeIsReadOnlyKey")
-    protected static native NSString IsReadOnlyValue();
+    public static native NSString IsReadOnlyValue();
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("NSURLVolumeCreationDateKey")
-    protected static native NSString CreationDateValue();
+    public static native NSString CreationDateValue();
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("NSURLVolumeURLForRemountingKey")
-    protected static native NSString URLForRemountingValue();
+    public static native NSString URLForRemountingValue();
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("NSURLVolumeUUIDStringKey")
-    protected static native NSString UUIDStringValue();
+    public static native NSString UUIDStringValue();
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("NSURLVolumeNameKey")
-    protected static native NSString NameValue();
+    public static native NSString NameValue();
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("NSURLVolumeLocalizedNameKey")
-    protected static native NSString LocalizedNameValue();
+    public static native NSString LocalizedNameValue();
     
 }

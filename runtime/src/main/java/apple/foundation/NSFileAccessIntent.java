@@ -31,7 +31,8 @@ public class NSFileAccessIntent
 
     
     
-    public NSFileAccessIntent() {}
+    @Mapping("init")
+    public NSFileAccessIntent() { }
     
     
     @Mapping("URL")

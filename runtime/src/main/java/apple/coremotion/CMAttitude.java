@@ -26,7 +26,8 @@ public class CMAttitude
 
     
     
-    public CMAttitude() {}
+    @Mapping("init")
+    public CMAttitude() { }
     
     
     @Mapping("roll")

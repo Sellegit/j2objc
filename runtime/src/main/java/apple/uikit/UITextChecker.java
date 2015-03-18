@@ -31,7 +31,8 @@ public class UITextChecker
 
     
     
-    public UITextChecker() {}
+    @Mapping("init")
+    public UITextChecker() { }
     
     
     

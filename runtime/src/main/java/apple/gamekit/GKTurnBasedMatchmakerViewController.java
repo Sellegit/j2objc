@@ -27,11 +27,12 @@ public class GKTurnBasedMatchmakerViewController
 
     
     
-    public GKTurnBasedMatchmakerViewController() {}
     @Mapping("initWithRootViewController:")
     public GKTurnBasedMatchmakerViewController(UIViewController rootViewController) { }
     @Mapping("initWithNibName:bundle:")
     public GKTurnBasedMatchmakerViewController(String nibNameOrNil, NSBundle nibBundleOrNil) { }
+    @Mapping("init")
+    public GKTurnBasedMatchmakerViewController() { }
     @Mapping("initWithMatchRequest:")
     public GKTurnBasedMatchmakerViewController(GKMatchRequest request) { }
     

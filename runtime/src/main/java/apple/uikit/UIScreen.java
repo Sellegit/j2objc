@@ -31,7 +31,8 @@ public class UIScreen
 
     
     
-    public UIScreen() {}
+    @Mapping("init")
+    public UIScreen() { }
     
     
     @Mapping("bounds")

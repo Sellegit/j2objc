@@ -32,7 +32,8 @@ public class AVAudioSessionChannelDescription
 
     
     
-    public AVAudioSessionChannelDescription() {}
+    @Mapping("init")
+    public AVAudioSessionChannelDescription() { }
     
     
     @Mapping("channelName")

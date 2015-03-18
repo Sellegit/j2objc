@@ -33,11 +33,12 @@ public class SK3DNode
 
     
     
-    public SK3DNode() {}
     @Mapping("initWithViewportSize:")
     public SK3DNode(CGSize viewportSize) { }
     @Mapping("initWithCoder:")
     public SK3DNode(NSCoder aDecoder) { }
+    @Mapping("init")
+    public SK3DNode() { }
     
     
     @Mapping("viewportSize")

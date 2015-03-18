@@ -36,13 +36,13 @@ public class ADBannerContentSizeIdentifier
      */
     @Deprecated
     @GlobalConstant("ADBannerContentSizeIdentifierPortrait")
-    protected static native NSString SizePortraitValue();
+    public static native NSString SizePortraitValue();
     /**
      * @since Available in iOS 4.2 and later.
      * @deprecated Deprecated in iOS 6.0.
      */
     @Deprecated
     @GlobalConstant("ADBannerContentSizeIdentifierLandscape")
-    protected static native NSString SizeLandscapeValue();
+    public static native NSString SizeLandscapeValue();
     
 }

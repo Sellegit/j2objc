@@ -32,9 +32,10 @@ public class AVAudioUnitDistortion
 
     
     
-    public AVAudioUnitDistortion() {}
     @Mapping("initWithAudioComponentDescription:")
     public AVAudioUnitDistortion(AudioComponentDescription audioComponentDescription) { }
+    @Mapping("init")
+    public AVAudioUnitDistortion() { }
     
     
     @Mapping("preGain")

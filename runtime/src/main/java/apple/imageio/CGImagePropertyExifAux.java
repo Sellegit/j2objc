@@ -30,46 +30,46 @@ public class CGImagePropertyExifAux
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("kCGImagePropertyExifAuxLensInfo")
-    protected static native CFString LensInfoKey();
+    public static native CFString LensInfoKey();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("kCGImagePropertyExifAuxLensModel")
-    protected static native CFString LensModelKey();
+    public static native CFString LensModelKey();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("kCGImagePropertyExifAuxSerialNumber")
-    protected static native CFString SerialNumberKey();
+    public static native CFString SerialNumberKey();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("kCGImagePropertyExifAuxLensID")
-    protected static native CFString LensIDKey();
+    public static native CFString LensIDKey();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("kCGImagePropertyExifAuxLensSerialNumber")
-    protected static native CFString LensSerialNumberKey();
+    public static native CFString LensSerialNumberKey();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("kCGImagePropertyExifAuxImageNumber")
-    protected static native CFString ImageNumberKey();
+    public static native CFString ImageNumberKey();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("kCGImagePropertyExifAuxFlashCompensation")
-    protected static native CFString FlashCompensationKey();
+    public static native CFString FlashCompensationKey();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("kCGImagePropertyExifAuxOwnerName")
-    protected static native CFString OwnerNameKey();
+    public static native CFString OwnerNameKey();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("kCGImagePropertyExifAuxFirmware")
-    protected static native CFString FirmwareKey();
+    public static native CFString FirmwareKey();
     
 }

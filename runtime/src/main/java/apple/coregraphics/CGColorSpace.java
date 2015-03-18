@@ -48,17 +48,17 @@ public class CGColorSpace
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGColorSpaceCreateCalibratedGray")
-    protected static native CGColorSpace createCalibratedGray(Todo whitePoint, Todo blackPoint, @MachineSizedFloat double gamma);
+    public static native CGColorSpace createCalibratedGray(Todo whitePoint, Todo blackPoint, @MachineSizedFloat double gamma);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGColorSpaceCreateCalibratedRGB")
-    protected static native CGColorSpace createCalibratedRGB(Todo whitePoint, Todo blackPoint, Todo gamma, Todo matrix);
+    public static native CGColorSpace createCalibratedRGB(Todo whitePoint, Todo blackPoint, Todo gamma, Todo matrix);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGColorSpaceCreateLab")
-    protected static native CGColorSpace createLab(Todo whitePoint, Todo blackPoint, Todo range);
+    public static native CGColorSpace createLab(Todo whitePoint, Todo blackPoint, Todo range);
     /**
      * @since Available in iOS 2.0 and later.
      */
@@ -68,12 +68,12 @@ public class CGColorSpace
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGColorSpaceCreateICCBased")
-    protected static native CGColorSpace createICCBased(@MachineSizedUInt long nComponents, Todo range, CGDataProvider profile, CGColorSpace alternate);
+    public static native CGColorSpace createICCBased(@MachineSizedUInt long nComponents, Todo range, CGDataProvider profile, CGColorSpace alternate);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGColorSpaceCreateIndexed")
-    protected static native CGColorSpace createIndexed(CGColorSpace baseSpace, @MachineSizedUInt long lastIndex, Todo colorTable);
+    public static native CGColorSpace createIndexed(CGColorSpace baseSpace, @MachineSizedUInt long lastIndex, Todo colorTable);
     /**
      * @since Available in iOS 2.0 and later.
      */
@@ -113,7 +113,7 @@ public class CGColorSpace
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGColorSpaceGetColorTable")
-    protected static native void getColorTable(CGColorSpace space, Todo table);
+    public static native void getColorTable(CGColorSpace space, Todo table);
     /**
      * @since Available in iOS 6.0 and later.
      */

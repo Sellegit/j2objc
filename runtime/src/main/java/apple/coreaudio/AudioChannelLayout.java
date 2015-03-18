@@ -23,7 +23,7 @@ public class AudioChannelLayout
      {
 
     
-    protected AudioChannelLayout() {}
+    private AudioChannelLayout() {}
     
     
     @DotMapping("mChannelLayoutTag")

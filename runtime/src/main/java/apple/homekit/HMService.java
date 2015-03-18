@@ -26,7 +26,8 @@ public class HMService
 
     
     
-    public HMService() {}
+    @Mapping("init")
+    public HMService() { }
     
     
     @Mapping("accessory")

@@ -32,7 +32,8 @@ public class AVAudioMixerNode
 
     
     
-    public AVAudioMixerNode() {}
+    @Mapping("init")
+    public AVAudioMixerNode() { }
     
     
     @Mapping("outputVolume")

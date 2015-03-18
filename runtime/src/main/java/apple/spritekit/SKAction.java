@@ -31,7 +31,8 @@ public class SKAction
 
     
     
-    public SKAction() {}
+    @Mapping("init")
+    public SKAction() { }
     
     
     @Mapping("duration")

@@ -29,6 +29,8 @@ public class MPMediaQuery
     
     @Mapping("initWithFilterPredicates:")
     public MPMediaQuery(NSSet<?> filterPredicates) { }
+    @Mapping("init")
+    public MPMediaQuery() { }
     
     
     @Mapping("filterPredicates")

@@ -27,7 +27,7 @@ public class CMTimeRange
      {
 
     
-    protected CMTimeRange() {}
+    private CMTimeRange() {}
     
     
     @DotMapping("start")
@@ -111,7 +111,7 @@ public class CMTimeRange
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMTimeRangeCopyDescription")
-    private static native String getDescription(CFAllocator allocator, CMTimeRange range);
+    public static native String getDescription(CFAllocator allocator, CMTimeRange range);
     /**
      * @since Available in iOS 4.0 and later.
      */

@@ -29,9 +29,10 @@ public class MKTileOverlay
 
     
     
-    public MKTileOverlay() {}
     @Mapping("initWithURLTemplate:")
     public MKTileOverlay(String URLTemplate) { }
+    @Mapping("init")
+    public MKTileOverlay() { }
     
     
     @Mapping("tileSize")

@@ -26,7 +26,8 @@ public class CMMagnetometerData
 
     
     
-    public CMMagnetometerData() {}
+    @Mapping("init")
+    public CMMagnetometerData() { }
     
     
     @Mapping("magneticField")

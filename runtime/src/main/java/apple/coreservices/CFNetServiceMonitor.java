@@ -37,7 +37,7 @@ public class CFNetServiceMonitor
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFNetServiceMonitorCreate")
-    protected static native CFNetServiceMonitor create(CFAllocator alloc, CFNetService theService, FunctionPtr clientCB, CFNetServiceClientContext clientContext);
+    public static native CFNetServiceMonitor create(CFAllocator alloc, CFNetService theService, FunctionPtr clientCB, CFNetServiceClientContext clientContext);
     /**
      * @since Available in iOS 2.0 and later.
      */
@@ -47,12 +47,12 @@ public class CFNetServiceMonitor
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFNetServiceMonitorStart")
-    protected static native boolean start(CFNetServiceMonitor monitor, CFNetServiceMonitorType recordType, Todo error);
+    public static native boolean start(CFNetServiceMonitor monitor, CFNetServiceMonitorType recordType, Todo error);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFNetServiceMonitorStop")
-    protected static native void stop(CFNetServiceMonitor monitor, Todo error);
+    public static native void stop(CFNetServiceMonitor monitor, Todo error);
     /**
      * @since Available in iOS 2.0 and later.
      */

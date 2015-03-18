@@ -27,10 +27,10 @@ public class ABPropertyLabel
     
     
     @GlobalConstant("kABWorkLabel")
-    protected static native CFString WorkLabel();
+    public static native CFString WorkLabel();
     @GlobalConstant("kABHomeLabel")
-    protected static native CFString HomeLabel();
+    public static native CFString HomeLabel();
     @GlobalConstant("kABOtherLabel")
-    protected static native CFString OtherLabel();
+    public static native CFString OtherLabel();
     
 }

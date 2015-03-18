@@ -27,7 +27,8 @@ public class CIDetector
 
     
     
-    public CIDetector() {}
+    @Mapping("init")
+    public CIDetector() { }
     
     
     

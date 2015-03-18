@@ -31,11 +31,12 @@ public class UIInputView
 
     
     
-    public UIInputView() {}
     @Mapping("initWithFrame:inputViewStyle:")
     public UIInputView(CGRect frame, @Representing("UIInputViewStyle") @MachineSizedSInt long inputViewStyle) { }
     @Mapping("initWithFrame:")
     public UIInputView(CGRect frame) { }
+    @Mapping("init")
+    public UIInputView() { }
     
     
     @Mapping("inputViewStyle")

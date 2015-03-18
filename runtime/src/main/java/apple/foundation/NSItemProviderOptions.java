@@ -35,6 +35,6 @@ public class NSItemProviderOptions
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("NSItemProviderPreferredImageSizeKey")
-    protected static native NSString PreferredImageSizeKey();
+    public static native NSString PreferredImageSizeKey();
     
 }

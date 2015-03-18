@@ -32,7 +32,8 @@ public class AVSpeechSynthesisVoice
 
     
     
-    public AVSpeechSynthesisVoice() {}
+    @Mapping("init")
+    public AVSpeechSynthesisVoice() { }
     
     
     @Mapping("language")

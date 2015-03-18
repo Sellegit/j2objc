@@ -29,7 +29,8 @@ public class PHFetchResult
 
     
     
-    public PHFetchResult() {}
+    @Mapping("init")
+    public PHFetchResult() { }
     
     
     @Mapping("count")

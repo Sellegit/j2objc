@@ -28,7 +28,8 @@ public class PKPayment
 
     
     
-    public PKPayment() {}
+    @Mapping("init")
+    public PKPayment() { }
     
     
     @Mapping("token")

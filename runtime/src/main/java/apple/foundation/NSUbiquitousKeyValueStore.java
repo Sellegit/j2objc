@@ -31,7 +31,8 @@ public class NSUbiquitousKeyValueStore
 
     
     
-    public NSUbiquitousKeyValueStore() {}
+    @Mapping("init")
+    public NSUbiquitousKeyValueStore() { }
     
     
     @Mapping("dictionaryRepresentation")
@@ -48,17 +49,17 @@ public class NSUbiquitousKeyValueStore
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("NSUbiquitousKeyValueStoreChangeReasonKey")
-    protected static native NSString ChangeReasonKey();
+    public static native NSString ChangeReasonKey();
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("NSUbiquitousKeyValueStoreChangedKeysKey")
-    protected static native NSString ChangedKeysKey();
+    public static native NSString ChangedKeysKey();
     
     @Mapping("objectForKey:")
     public native Object get(String aKey);
     @Mapping("setObject:forKey:")
-    protected native void setObject(Object anObject, String aKey);
+    public native void setObject(Object anObject, String aKey);
     @Mapping("removeObjectForKey:")
     public native void remove(String aKey);
     @Mapping("stringForKey:")
@@ -76,19 +77,19 @@ public class NSUbiquitousKeyValueStore
     @Mapping("boolForKey:")
     public native boolean getBoolean(String aKey);
     @Mapping("setString:forKey:")
-    protected native void setString(String aString, String aKey);
+    public native void setString(String aString, String aKey);
     @Mapping("setData:forKey:")
-    protected native void setData(NSData aData, String aKey);
+    public native void setData(NSData aData, String aKey);
     @Mapping("setArray:forKey:")
-    protected native void setArray(NSArray<?> anArray, String aKey);
+    public native void setArray(NSArray<?> anArray, String aKey);
     @Mapping("setDictionary:forKey:")
-    protected native void setDictionary(NSDictionary<?, ?> aDictionary, String aKey);
+    public native void setDictionary(NSDictionary<?, ?> aDictionary, String aKey);
     @Mapping("setLongLong:forKey:")
-    protected native void setLongLong(long value, String aKey);
+    public native void setLongLong(long value, String aKey);
     @Mapping("setDouble:forKey:")
-    protected native void setDouble(double value, String aKey);
+    public native void setDouble(double value, String aKey);
     @Mapping("setBool:forKey:")
-    protected native void setBool(boolean value, String aKey);
+    public native void setBool(boolean value, String aKey);
     @Mapping("synchronize")
     public native boolean synchronize();
     @Mapping("defaultStore")

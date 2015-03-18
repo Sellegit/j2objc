@@ -31,9 +31,10 @@ public class UIPinchGestureRecognizer
 
     
     
-    public UIPinchGestureRecognizer() {}
     @Mapping("initWithTarget:action:")
     public UIPinchGestureRecognizer(Object target, Selector action) { }
+    @Mapping("init")
+    public UIPinchGestureRecognizer() { }
     
     
     @Mapping("scale")

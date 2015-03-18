@@ -35,21 +35,21 @@ public class NSFileProtection
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("NSFileProtectionNone")
-    protected static native NSString NoneValue();
+    public static native NSString NoneValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("NSFileProtectionComplete")
-    protected static native NSString CompleteValue();
+    public static native NSString CompleteValue();
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("NSFileProtectionCompleteUnlessOpen")
-    protected static native NSString CompleteUnlessOpenValue();
+    public static native NSString CompleteUnlessOpenValue();
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("NSFileProtectionCompleteUntilFirstUserAuthentication")
-    protected static native NSString CompleteUntilFirstUserAuthenticationValue();
+    public static native NSString CompleteUntilFirstUserAuthenticationValue();
     
 }

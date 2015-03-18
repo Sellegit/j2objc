@@ -23,7 +23,7 @@ public class MIDIDriverInterface
      {
 
     
-    protected MIDIDriverInterface() {}
+    private MIDIDriverInterface() {}
     
     
     @DotMapping("_reserved")

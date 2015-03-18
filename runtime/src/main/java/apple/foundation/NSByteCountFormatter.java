@@ -31,7 +31,8 @@ public class NSByteCountFormatter
 
     
     
-    public NSByteCountFormatter() {}
+    @Mapping("init")
+    public NSByteCountFormatter() { }
     
     
     @Mapping("allowedUnits")

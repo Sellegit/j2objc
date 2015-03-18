@@ -31,7 +31,8 @@ public class UIScreenMode
 
     
     
-    public UIScreenMode() {}
+    @Mapping("init")
+    public UIScreenMode() { }
     
     
     @Mapping("size")

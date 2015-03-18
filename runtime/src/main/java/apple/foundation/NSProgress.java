@@ -31,9 +31,10 @@ public class NSProgress
 
     
     
-    public NSProgress() {}
     @Mapping("initWithParent:userInfo:")
     public NSProgress(NSProgress parentProgressOrNil, NSDictionary<?, ?> userInfoOrNil) { }
+    @Mapping("init")
+    public NSProgress() { }
     
     
     @Mapping("totalUnitCount")
@@ -90,7 +91,7 @@ public class NSProgress
     @Mapping("resignCurrent")
     public native void resignCurrent();
     @Mapping("setUserInfoObject:forKey:")
-    protected native void setUserInfoObject(Object objectOrNil, String key);
+    public native void setUserInfoObject(Object objectOrNil, String key);
     @Mapping("cancel")
     public native void cancel();
     @Mapping("pause")

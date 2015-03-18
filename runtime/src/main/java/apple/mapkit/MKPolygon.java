@@ -29,7 +29,8 @@ public class MKPolygon
 
     
     
-    public MKPolygon() {}
+    @Mapping("init")
+    public MKPolygon() { }
     
     
     @Mapping("interiorPolygons")
@@ -42,13 +43,13 @@ public class MKPolygon
     
     
     @Mapping("polygonWithPoints:count:")
-    private static native MKPolygon create(MKMapPoint points, @MachineSizedUInt long count);
+    public static native MKPolygon create(MKMapPoint points, @MachineSizedUInt long count);
     @Mapping("polygonWithPoints:count:interiorPolygons:")
-    private static native MKPolygon create(MKMapPoint points, @MachineSizedUInt long count, NSArray<?> interiorPolygons);
+    public static native MKPolygon create(MKMapPoint points, @MachineSizedUInt long count, NSArray<?> interiorPolygons);
     @Mapping("polygonWithCoordinates:count:")
-    private static native MKPolygon create(CLLocationCoordinate2D coords, @MachineSizedUInt long count);
+    public static native MKPolygon create(CLLocationCoordinate2D coords, @MachineSizedUInt long count);
     @Mapping("polygonWithCoordinates:count:interiorPolygons:")
-    private static native MKPolygon create(CLLocationCoordinate2D coords, @MachineSizedUInt long count, NSArray<?> interiorPolygons);
+    public static native MKPolygon create(CLLocationCoordinate2D coords, @MachineSizedUInt long count, NSArray<?> interiorPolygons);
     @Mapping("intersectsMapRect:")
     public native boolean intersects(MKMapRect mapRect);
     /**

@@ -83,12 +83,12 @@ public class CGMutablePath
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGPathAddRects")
-    protected static native void addRects(CGMutablePath path, CGAffineTransform m, CGRect rects, @MachineSizedUInt long count);
+    public static native void addRects(CGMutablePath path, CGAffineTransform m, CGRect rects, @MachineSizedUInt long count);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGPathAddLines")
-    protected static native void addLines(CGMutablePath path, CGAffineTransform m, CGPoint points, @MachineSizedUInt long count);
+    public static native void addLines(CGMutablePath path, CGAffineTransform m, CGPoint points, @MachineSizedUInt long count);
     /**
      * @since Available in iOS 2.0 and later.
      */

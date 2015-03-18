@@ -28,11 +28,11 @@ public class CFMutableString
     
     
     @GlobalFunction("CFStringCreateMutable")
-    protected static native CFMutableString createMutable(CFAllocator alloc, @MachineSizedSInt long maxLength);
+    public static native CFMutableString createMutable(CFAllocator alloc, @MachineSizedSInt long maxLength);
     @GlobalFunction("CFStringCreateMutableCopy")
-    protected static native CFMutableString createMutableCopy(CFAllocator alloc, @MachineSizedSInt long maxLength, String theString);
+    public static native CFMutableString createMutableCopy(CFAllocator alloc, @MachineSizedSInt long maxLength, String theString);
     @GlobalFunction("CFStringCreateMutableWithExternalCharactersNoCopy")
-    protected static native CFMutableString createMutableWithExternalCharactersNoCopy(CFAllocator alloc, Todo chars, @MachineSizedSInt long numChars, @MachineSizedSInt long capacity, CFAllocator externalCharactersAllocator);
+    public static native CFMutableString createMutableWithExternalCharactersNoCopy(CFAllocator alloc, Todo chars, @MachineSizedSInt long numChars, @MachineSizedSInt long capacity, CFAllocator externalCharactersAllocator);
     @GlobalFunction("CFStringAppend")
     public static native void append(String theString, String appendedString);
     @GlobalFunction("CFStringAppendCharacters")

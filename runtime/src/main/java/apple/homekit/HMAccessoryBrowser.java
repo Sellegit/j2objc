@@ -26,7 +26,8 @@ public class HMAccessoryBrowser
 
     
     
-    public HMAccessoryBrowser() {}
+    @Mapping("init")
+    public HMAccessoryBrowser() { }
     
     
     @Mapping("delegate")

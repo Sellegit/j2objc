@@ -32,7 +32,8 @@ public class AVMutableComposition
 
     
     
-    public AVMutableComposition() {}
+    @Mapping("init")
+    public AVMutableComposition() { }
     
     
     @Mapping("tracks")

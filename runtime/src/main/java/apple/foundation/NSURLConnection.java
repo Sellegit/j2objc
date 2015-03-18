@@ -29,7 +29,6 @@ public class NSURLConnection
 
     
     
-    public NSURLConnection() {}
     /**
      * @since Available in iOS 2.0 and later.
      */
@@ -37,6 +36,8 @@ public class NSURLConnection
     public NSURLConnection(NSURLRequest request, Object delegate, boolean startImmediately) { }
     @Mapping("initWithRequest:delegate:")
     public NSURLConnection(NSURLRequest request, Object delegate) { }
+    @Mapping("init")
+    public NSURLConnection() { }
     
     
     /**
@@ -79,7 +80,7 @@ public class NSURLConnection
     @Mapping("canHandleRequest:")
     public static native boolean canHandleRequest(NSURLRequest request);
     @Mapping("sendSynchronousRequest:returningResponse:error:")
-    protected static native NSData sendSynchronousRequest(NSURLRequest request, Todo response, Todo error);
+    public static native NSData sendSynchronousRequest(NSURLRequest request, Todo response, Todo error);
     /**
      * @since Available in iOS 5.0 and later.
      */

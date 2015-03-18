@@ -31,7 +31,8 @@ public class UICollectionViewFlowLayoutInvalidationContext
 
     
     
-    public UICollectionViewFlowLayoutInvalidationContext() {}
+    @Mapping("init")
+    public UICollectionViewFlowLayoutInvalidationContext() { }
     
     
     @Mapping("invalidateFlowLayoutDelegateMetrics")

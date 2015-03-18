@@ -32,7 +32,8 @@ public class AVAsset
 
     
     
-    public AVAsset() {}
+    @Mapping("init")
+    public AVAsset() { }
     
     
     @Mapping("duration")

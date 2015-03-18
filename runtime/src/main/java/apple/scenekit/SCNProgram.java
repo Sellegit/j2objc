@@ -30,7 +30,8 @@ public class SCNProgram
 
     
     
-    public SCNProgram() {}
+    @Mapping("init")
+    public SCNProgram() { }
     
     
     @Mapping("vertexShader")

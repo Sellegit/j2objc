@@ -23,7 +23,7 @@ import apple.foundation.*;
      {
 
     
-    protected CTRunDelegateCallbacks() {}
+    private CTRunDelegateCallbacks() {}
     
     
     @DotMapping("version")

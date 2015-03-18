@@ -35,11 +35,11 @@ public class NSTextCheckingTransitComponents
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("NSTextCheckingAirlineKey")
-    protected static native NSString AirlineKey();
+    public static native NSString AirlineKey();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("NSTextCheckingFlightKey")
-    protected static native NSString FlightKey();
+    public static native NSString FlightKey();
     
 }

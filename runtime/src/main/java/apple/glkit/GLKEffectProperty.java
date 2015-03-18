@@ -29,7 +29,8 @@ public class GLKEffectProperty
 
     
     
-    public GLKEffectProperty() {}
+    @Mapping("init")
+    public GLKEffectProperty() { }
     
     
     

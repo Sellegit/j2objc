@@ -28,7 +28,6 @@ public class CLBeaconRegion
 
     
     
-    public CLBeaconRegion() {}
     @Mapping("initWithProximityUUID:identifier:")
     public CLBeaconRegion(NSUUID proximityUUID, String identifier) { }
     @Mapping("initWithProximityUUID:major:identifier:")
@@ -42,6 +41,8 @@ public class CLBeaconRegion
     @Deprecated
     @Mapping("initCircularRegionWithCenter:radius:identifier:")
     public CLBeaconRegion(CLLocationCoordinate2D center, double radius, String identifier) { }
+    @Mapping("init")
+    public CLBeaconRegion() { }
     
     
     @Mapping("proximityUUID")

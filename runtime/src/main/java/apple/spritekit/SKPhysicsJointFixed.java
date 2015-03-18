@@ -31,7 +31,8 @@ public class SKPhysicsJointFixed
 
     
     
-    public SKPhysicsJointFixed() {}
+    @Mapping("init")
+    public SKPhysicsJointFixed() { }
     
     
     

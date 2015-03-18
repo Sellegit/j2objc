@@ -31,26 +31,27 @@ public class NSMapTable <K, V>
 
     
     
-    public NSMapTable() {}
+    @Mapping("init")
+    public NSMapTable() { }
     
     
     @Mapping("count")
-    protected native @MachineSizedUInt long getCount();
+    public native @MachineSizedUInt long getCount();
     
     
     
     @Mapping("objectForKey:")
-    protected native Object getObject(Object aKey);
+    public native Object getObject(Object aKey);
     @Mapping("removeObjectForKey:")
-    protected native void removeObject(Object aKey);
+    public native void removeObject(Object aKey);
     @Mapping("setObject:forKey:")
-    protected native void setObject(Object anObject, Object aKey);
+    public native void setObject(Object anObject, Object aKey);
     @Mapping("keyEnumerator")
-    protected native NSEnumerator<K> getKeyEnumerator();
+    public native NSEnumerator<K> getKeyEnumerator();
     @Mapping("objectEnumerator")
-    protected native NSEnumerator<V> getObjectEnumerator();
+    public native NSEnumerator<V> getObjectEnumerator();
     @Mapping("removeAllObjects")
-    protected native void removeAllObjects();
+    public native void removeAllObjects();
     @Mapping("dictionaryRepresentation")
     public native NSDictionary<K, V> asDictionary();
     @Mapping("copyWithZone:")

@@ -30,41 +30,41 @@ public class CFProxy
      * @since Available in iOS 2.0 and later.
      */
     @GlobalConstant("kCFProxyTypeKey")
-    protected static native CFString TypeKey();
+    public static native CFString TypeKey();
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalConstant("kCFProxyHostNameKey")
-    protected static native CFString HostNameKey();
+    public static native CFString HostNameKey();
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalConstant("kCFProxyPortNumberKey")
-    protected static native CFString PortNumberKey();
+    public static native CFString PortNumberKey();
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalConstant("kCFProxyAutoConfigurationURLKey")
-    protected static native CFString AutoConfigurationURLKey();
+    public static native CFString AutoConfigurationURLKey();
     /**
      * @since Available in iOS 3.0 and later.
      */
     @GlobalConstant("kCFProxyAutoConfigurationJavaScriptKey")
-    protected static native CFString AutoConfigurationJavaScriptKey();
+    public static native CFString AutoConfigurationJavaScriptKey();
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalConstant("kCFProxyUsernameKey")
-    protected static native CFString UsernameKey();
+    public static native CFString UsernameKey();
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalConstant("kCFProxyPasswordKey")
-    protected static native CFString PasswordKey();
+    public static native CFString PasswordKey();
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalConstant("kCFProxyAutoConfigurationHTTPResponseKey")
-    protected static native CFString AutoConfigurationHTTPResponseKey();
+    public static native CFString AutoConfigurationHTTPResponseKey();
     
 }

@@ -28,7 +28,8 @@ public class PKShippingMethod
 
     
     
-    public PKShippingMethod() {}
+    @Mapping("init")
+    public PKShippingMethod() { }
     
     
     @Mapping("identifier")

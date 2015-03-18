@@ -29,9 +29,10 @@ public class GLKTextureLoader
 
     
     
-    public GLKTextureLoader() {}
     @Mapping("initWithSharegroup:")
     public GLKTextureLoader(EAGLSharegroup sharegroup) { }
+    @Mapping("init")
+    public GLKTextureLoader() { }
     
     
     

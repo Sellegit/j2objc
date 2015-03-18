@@ -29,7 +29,8 @@ public class GLKReflectionMapEffect
 
     
     
-    public GLKReflectionMapEffect() {}
+    @Mapping("init")
+    public GLKReflectionMapEffect() { }
     
     
     @Mapping("textureCubeMap")

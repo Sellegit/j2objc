@@ -34,6 +34,6 @@ public class CMMuxedFormatDescription
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMMuxedFormatDescriptionCreate")
-    private static native int create(CFAllocator allocator, CMMuxedStreamType muxType, NSDictionary<?, ?> extensions, Todo outDesc);
+    public static native int create(CFAllocator allocator, CMMuxedStreamType muxType, NSDictionary<?, ?> extensions, Todo outDesc);
     
 }

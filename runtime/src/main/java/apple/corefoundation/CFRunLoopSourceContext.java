@@ -24,7 +24,7 @@ public class CFRunLoopSourceContext
      {
 
     
-    protected CFRunLoopSourceContext() {}
+    private CFRunLoopSourceContext() {}
     
     
     @DotMapping("version")

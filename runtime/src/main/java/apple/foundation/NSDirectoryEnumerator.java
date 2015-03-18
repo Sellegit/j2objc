@@ -29,7 +29,8 @@ public class NSDirectoryEnumerator
 
     
     
-    
+    @Mapping("init")
+    public NSDirectoryEnumerator() { }
     
     
     @Mapping("fileAttributes")

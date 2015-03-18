@@ -35,11 +35,11 @@ public class UILayoutFittingSize
      * @since Available in iOS 6.0 and later.
      */
     @GlobalConstant("UILayoutFittingCompressedSize")
-    protected static native CGSize CompressedValue();
+    public static native CGSize CompressedValue();
     /**
      * @since Available in iOS 6.0 and later.
      */
     @GlobalConstant("UILayoutFittingExpandedSize")
-    protected static native CGSize ExpandedValue();
+    public static native CGSize ExpandedValue();
     
 }

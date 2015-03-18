@@ -27,7 +27,8 @@ public class MPFeedbackCommandEvent
 
     
     
-    public MPFeedbackCommandEvent() {}
+    @Mapping("init")
+    public MPFeedbackCommandEvent() { }
     
     
     @Mapping("isNegative")

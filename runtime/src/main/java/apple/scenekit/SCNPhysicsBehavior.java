@@ -30,7 +30,8 @@ public class SCNPhysicsBehavior
 
     
     
-    public SCNPhysicsBehavior() {}
+    @Mapping("init")
+    public SCNPhysicsBehavior() { }
     
     
     

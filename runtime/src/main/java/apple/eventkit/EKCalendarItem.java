@@ -28,7 +28,8 @@ public class EKCalendarItem
 
     
     
-    public EKCalendarItem() {}
+    @Mapping("init")
+    public EKCalendarItem() { }
     
     
     /**

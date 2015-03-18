@@ -31,13 +31,13 @@ public class CBConnectPeripheralOptions
      * @since Available in iOS 6.0 and later.
      */
     @GlobalConstant("CBConnectPeripheralOptionNotifyOnConnectionKey")
-    protected static native NSString NotifyOnConnectionKey();
+    public static native NSString NotifyOnConnectionKey();
     @GlobalConstant("CBConnectPeripheralOptionNotifyOnDisconnectionKey")
-    protected static native NSString NotifyOnDisconnectionKey();
+    public static native NSString NotifyOnDisconnectionKey();
     /**
      * @since Available in iOS 6.0 and later.
      */
     @GlobalConstant("CBConnectPeripheralOptionNotifyOnNotificationKey")
-    protected static native NSString NotifyOnNotificationKey();
+    public static native NSString NotifyOnNotificationKey();
     
 }

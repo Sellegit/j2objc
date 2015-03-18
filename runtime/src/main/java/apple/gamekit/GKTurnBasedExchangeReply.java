@@ -27,7 +27,8 @@ public class GKTurnBasedExchangeReply
 
     
     
-    public GKTurnBasedExchangeReply() {}
+    @Mapping("init")
+    public GKTurnBasedExchangeReply() { }
     
     
     @Mapping("recipient")

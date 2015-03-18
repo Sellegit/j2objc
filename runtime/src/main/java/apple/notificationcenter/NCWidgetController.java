@@ -27,7 +27,8 @@ public class NCWidgetController
 
     
     
-    public NCWidgetController() {}
+    @Mapping("init")
+    public NCWidgetController() { }
     
     
     

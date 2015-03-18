@@ -32,7 +32,8 @@ public class AVPlayerItemOutput
 
     
     
-    public AVPlayerItemOutput() {}
+    @Mapping("init")
+    public AVPlayerItemOutput() { }
     
     
     /**

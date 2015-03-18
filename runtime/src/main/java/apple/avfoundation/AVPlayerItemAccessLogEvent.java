@@ -32,7 +32,8 @@ public class AVPlayerItemAccessLogEvent
 
     
     
-    public AVPlayerItemAccessLogEvent() {}
+    @Mapping("init")
+    public AVPlayerItemAccessLogEvent() { }
     
     
     /**

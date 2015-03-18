@@ -31,9 +31,10 @@ public class UIDynamicItemBehavior
 
     
     
-    public UIDynamicItemBehavior() {}
     @Mapping("initWithItems:")
     public UIDynamicItemBehavior(NSArray<?> items) { }
+    @Mapping("init")
+    public UIDynamicItemBehavior() { }
     
     
     @Mapping("items")

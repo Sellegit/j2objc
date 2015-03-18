@@ -35,6 +35,6 @@ public class NSTextTabOptions
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("NSTabColumnTerminatorsAttributeName")
-    protected static native NSString TabColumnTerminatorsAttribute();
+    public static native NSString TabColumnTerminatorsAttribute();
     
 }

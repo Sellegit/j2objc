@@ -32,7 +32,8 @@ public class AVAssetResourceLoadingDataRequest
 
     
     
-    public AVAssetResourceLoadingDataRequest() {}
+    @Mapping("init")
+    public AVAssetResourceLoadingDataRequest() { }
     
     
     @Mapping("requestedOffset")

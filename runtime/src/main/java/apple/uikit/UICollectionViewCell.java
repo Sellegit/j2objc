@@ -31,9 +31,10 @@ public class UICollectionViewCell
 
     
     
-    public UICollectionViewCell() {}
     @Mapping("initWithFrame:")
     public UICollectionViewCell(CGRect frame) { }
+    @Mapping("init")
+    public UICollectionViewCell() { }
     
     
     @Mapping("contentView")

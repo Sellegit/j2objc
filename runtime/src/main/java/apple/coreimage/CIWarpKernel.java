@@ -27,7 +27,8 @@ public class CIWarpKernel
 
     
     
-    public CIWarpKernel() {}
+    @Mapping("init")
+    public CIWarpKernel() { }
     
     
     

@@ -36,6 +36,8 @@ public class NSNotification
     public NSNotification(String name, Object object, NSDictionary<?, ?> userInfo) { }
     @Mapping("initWithCoder:")
     public NSNotification(NSCoder aDecoder) { }
+    @Mapping("init")
+    public NSNotification() { }
     
     
     @Mapping("name")

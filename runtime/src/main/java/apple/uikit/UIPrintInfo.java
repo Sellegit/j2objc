@@ -31,7 +31,8 @@ public class UIPrintInfo
 
     
     
-    public UIPrintInfo() {}
+    @Mapping("init")
+    public UIPrintInfo() { }
     
     
     @Mapping("printerID")

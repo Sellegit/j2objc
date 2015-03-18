@@ -32,8 +32,8 @@ public class NSNetServiceErrorInfo
     
     
     @GlobalConstant("NSNetServicesErrorCode")
-    protected static native NSString ErrorCodeKey();
+    public static native NSString ErrorCodeKey();
     @GlobalConstant("NSNetServicesErrorDomain")
-    protected static native NSString ErrorDomainKey();
+    public static native NSString ErrorDomainKey();
     
 }

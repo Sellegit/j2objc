@@ -31,6 +31,8 @@ public class NSDecimalNumberHandler
     
     @Mapping("initWithRoundingMode:scale:raiseOnExactness:raiseOnOverflow:raiseOnUnderflow:raiseOnDivideByZero:")
     public NSDecimalNumberHandler(@Representing("NSRoundingMode") @MachineSizedUInt long roundingMode, short scale, boolean exact, boolean overflow, boolean underflow, boolean divideByZero) { }
+    @Mapping("init")
+    public NSDecimalNumberHandler() { }
     
     
     

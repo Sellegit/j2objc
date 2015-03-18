@@ -29,7 +29,8 @@ public class NSNull
 
     
     
-    
+    @Mapping("init")
+    public NSNull() { }
     
     
     

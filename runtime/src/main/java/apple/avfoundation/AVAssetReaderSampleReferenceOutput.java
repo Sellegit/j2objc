@@ -32,9 +32,10 @@ public class AVAssetReaderSampleReferenceOutput
 
     
     
-    public AVAssetReaderSampleReferenceOutput() {}
     @Mapping("initWithTrack:")
     public AVAssetReaderSampleReferenceOutput(AVAssetTrack track) { }
+    @Mapping("init")
+    public AVAssetReaderSampleReferenceOutput() { }
     
     
     @Mapping("track")

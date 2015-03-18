@@ -31,7 +31,8 @@ public class UIFont
 
     
     
-    public UIFont() {}
+    @Mapping("init")
+    public UIFont() { }
     
     
     @Mapping("familyName")
@@ -69,7 +70,7 @@ public class UIFont
      * @since Available in iOS 7.0 and later.
      */
     @Mapping("preferredFontForTextStyle:")
-    protected static native UIFont getPreferredFont(String style);
+    public static native UIFont getPreferredFont(String style);
     @Mapping("fontWithName:size:")
     public static native UIFont getFont(String fontName, @MachineSizedFloat double fontSize);
     @Mapping("familyNames")

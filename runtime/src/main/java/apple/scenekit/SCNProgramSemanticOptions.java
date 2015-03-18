@@ -33,6 +33,6 @@ public class SCNProgramSemanticOptions
     
     
     @GlobalConstant("SCNProgramMappingChannelKey")
-    protected static native NSString MappingChannelKey();
+    public static native NSString MappingChannelKey();
     
 }

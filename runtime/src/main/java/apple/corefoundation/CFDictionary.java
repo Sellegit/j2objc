@@ -39,26 +39,26 @@ public class CFDictionary
     @GlobalFunction("CFDictionaryGetTypeID")
     public static native @MachineSizedUInt long getClassTypeID();
     @GlobalFunction("CFDictionaryCreate")
-    protected static native CFDictionary create(CFAllocator allocator, Todo keys, Todo values, @MachineSizedSInt long numValues, CFDictionaryKeyCallBacks keyCallBacks, CFDictionaryValueCallBacks valueCallBacks);
+    public static native CFDictionary create(CFAllocator allocator, Todo keys, Todo values, @MachineSizedSInt long numValues, CFDictionaryKeyCallBacks keyCallBacks, CFDictionaryValueCallBacks valueCallBacks);
     @GlobalFunction("CFDictionaryCreateCopy")
-    protected static native CFDictionary createCopy(CFAllocator allocator, CFDictionary theDict);
+    public static native CFDictionary createCopy(CFAllocator allocator, CFDictionary theDict);
     @GlobalFunction("CFDictionaryGetCount")
-    protected static native @MachineSizedSInt long getCount(CFDictionary theDict);
+    public static native @MachineSizedSInt long getCount(CFDictionary theDict);
     @GlobalFunction("CFDictionaryGetCountOfKey")
-    protected static native @MachineSizedSInt long getCountOfKey(CFDictionary theDict, Todo key);
+    public static native @MachineSizedSInt long getCountOfKey(CFDictionary theDict, Todo key);
     @GlobalFunction("CFDictionaryGetCountOfValue")
-    protected static native @MachineSizedSInt long getCountOfValue(CFDictionary theDict, Todo value);
+    public static native @MachineSizedSInt long getCountOfValue(CFDictionary theDict, Todo value);
     @GlobalFunction("CFDictionaryContainsKey")
-    protected static native boolean containsKey(CFDictionary theDict, Todo key);
+    public static native boolean containsKey(CFDictionary theDict, Todo key);
     @GlobalFunction("CFDictionaryContainsValue")
-    protected static native boolean containsValue(CFDictionary theDict, Todo value);
+    public static native boolean containsValue(CFDictionary theDict, Todo value);
     @GlobalFunction("CFDictionaryGetValue")
-    protected static native Todo getValue(CFDictionary theDict, Todo key);
+    public static native Todo getValue(CFDictionary theDict, Todo key);
     @GlobalFunction("CFDictionaryGetValueIfPresent")
-    protected static native boolean getValueIfPresent(CFDictionary theDict, Todo key, Todo value);
+    public static native boolean getValueIfPresent(CFDictionary theDict, Todo key, Todo value);
     @GlobalFunction("CFDictionaryGetKeysAndValues")
-    protected static native void getKeysAndValues(CFDictionary theDict, Todo keys, Todo values);
+    public static native void getKeysAndValues(CFDictionary theDict, Todo keys, Todo values);
     @GlobalFunction("CFDictionaryApplyFunction")
-    protected static native void applyFunction(CFDictionary theDict, FunctionPtr applier, Todo context);
+    public static native void applyFunction(CFDictionary theDict, FunctionPtr applier, Todo context);
     
 }

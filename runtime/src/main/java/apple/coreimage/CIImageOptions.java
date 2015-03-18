@@ -30,11 +30,11 @@ public class CIImageOptions
     
     
     @GlobalConstant("kCIImageColorSpace")
-    protected static native CFString ColorSpaceKey();
+    public static native CFString ColorSpaceKey();
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("kCIImageProperties")
-    protected static native CFString PropertiesKey();
+    public static native CFString PropertiesKey();
     
 }

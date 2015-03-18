@@ -31,9 +31,10 @@ public class UIButton
 
     
     
-    public UIButton() {}
     @Mapping("initWithFrame:")
     public UIButton(CGRect frame) { }
+    @Mapping("init")
+    public UIButton() { }
     
     
     @Mapping("contentEdgeInsets")

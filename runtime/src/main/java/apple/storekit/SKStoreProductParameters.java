@@ -32,16 +32,16 @@ public class SKStoreProductParameters
      * @since Available in iOS 6.0 and later.
      */
     @GlobalConstant("SKStoreProductParameterITunesItemIdentifier")
-    protected static native NSString ITunesItemIdentifierKey();
+    public static native NSString ITunesItemIdentifierKey();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("SKStoreProductParameterAffiliateToken")
-    protected static native NSString AffiliateTokenKey();
+    public static native NSString AffiliateTokenKey();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("SKStoreProductParameterCampaignToken")
-    protected static native NSString CampaignTokenKey();
+    public static native NSString CampaignTokenKey();
     
 }

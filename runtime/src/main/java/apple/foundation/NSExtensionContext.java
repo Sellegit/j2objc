@@ -31,7 +31,8 @@ public class NSExtensionContext
 
     
     
-    public NSExtensionContext() {}
+    @Mapping("init")
+    public NSExtensionContext() { }
     
     
     @Mapping("inputItems")

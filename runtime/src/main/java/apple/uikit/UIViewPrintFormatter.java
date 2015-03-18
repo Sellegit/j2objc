@@ -31,7 +31,8 @@ public class UIViewPrintFormatter
 
     
     
-    public UIViewPrintFormatter() {}
+    @Mapping("init")
+    public UIViewPrintFormatter() { }
     
     
     @Mapping("view")

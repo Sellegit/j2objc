@@ -27,7 +27,8 @@ public class CKDatabaseOperation
 
     
     
-    public CKDatabaseOperation() {}
+    @Mapping("init")
+    public CKDatabaseOperation() { }
     
     
     @Mapping("database")

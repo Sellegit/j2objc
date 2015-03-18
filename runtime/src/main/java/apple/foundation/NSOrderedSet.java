@@ -41,7 +41,7 @@ public class NSOrderedSet <T>
     
     
     @Mapping("count")
-    protected native @MachineSizedUInt long getCount();
+    public native @MachineSizedUInt long getCount();
     @Mapping("firstObject")
     public native T getFirst();
     @Mapping("lastObject")
@@ -56,14 +56,14 @@ public class NSOrderedSet <T>
     
     
     @Mapping("objectAtIndex:")
-    protected native T getObjectAt(@MachineSizedUInt long idx);
+    public native T getObjectAt(@MachineSizedUInt long idx);
     @Mapping("indexOfObject:")
-    protected native @MachineSizedUInt long indexOfObject(Object object);
+    public native @MachineSizedUInt long indexOfObject(Object object);
     @Mapping("objectsAtIndexes:")
-    protected native NSArray<T> getObjectsAt(NSIndexSet indexes);
+    public native NSArray<T> getObjectsAt(NSIndexSet indexes);
     @Mapping("containsObject:")
-    protected native boolean containsObject(Object object);
+    public native boolean containsObject(Object object);
     @Mapping("objectEnumerator")
-    protected native NSEnumerator<T> objectEnumerator();
+    public native NSEnumerator<T> objectEnumerator();
     
 }

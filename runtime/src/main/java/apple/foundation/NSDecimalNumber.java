@@ -31,6 +31,8 @@ public class NSDecimalNumber
     
     @Mapping("initWithString:locale:")
     public NSDecimalNumber(String numberValue, Object locale) { }
+    @Mapping("init")
+    public NSDecimalNumber() { }
     
     
     

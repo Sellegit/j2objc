@@ -30,6 +30,6 @@ public class HKWorkoutTypeIdentifier
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("HKWorkoutTypeIdentifier")
-    protected static native NSString WorkoutValue();
+    public static native NSString WorkoutValue();
     
 }

@@ -28,7 +28,8 @@ public class EAWiFiUnconfiguredAccessory
 
     
     
-    public EAWiFiUnconfiguredAccessory() {}
+    @Mapping("init")
+    public EAWiFiUnconfiguredAccessory() { }
     
     
     @Mapping("name")

@@ -30,11 +30,12 @@ public class SCNView
 
     
     
-    public SCNView() {}
     @Mapping("initWithFrame:options:")
     public SCNView(CGRect frame, NSDictionary<?, ?> options) { }
     @Mapping("initWithFrame:")
     public SCNView(CGRect frame) { }
+    @Mapping("init")
+    public SCNView() { }
     
     
     @Mapping("scene")

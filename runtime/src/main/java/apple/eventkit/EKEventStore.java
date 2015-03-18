@@ -28,7 +28,8 @@ public class EKEventStore
 
     
     
-    public EKEventStore() {}
+    @Mapping("init")
+    public EKEventStore() { }
     
     
     @Mapping("eventStoreIdentifier")
@@ -80,12 +81,12 @@ public class EKEventStore
      * @since Available in iOS 5.0 and later.
      */
     @Mapping("saveCalendar:commit:error:")
-    protected native boolean saveCalendar(EKCalendar calendar, boolean commit, Todo error);
+    public native boolean saveCalendar(EKCalendar calendar, boolean commit, Todo error);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @Mapping("removeCalendar:commit:error:")
-    protected native boolean removeCalendar(EKCalendar calendar, boolean commit, Todo error);
+    public native boolean removeCalendar(EKCalendar calendar, boolean commit, Todo error);
     /**
      * @since Available in iOS 6.0 and later.
      */
@@ -100,22 +101,22 @@ public class EKEventStore
      * @since Available in iOS 4.0 and later.
      */
     @Mapping("saveEvent:span:error:")
-    protected native boolean saveEvent(EKEvent event, EKSpan span, Todo error);
+    public native boolean saveEvent(EKEvent event, EKSpan span, Todo error);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @Mapping("removeEvent:span:error:")
-    protected native boolean removeEvent(EKEvent event, EKSpan span, Todo error);
+    public native boolean removeEvent(EKEvent event, EKSpan span, Todo error);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @Mapping("saveEvent:span:commit:error:")
-    protected native boolean saveEvent(EKEvent event, EKSpan span, boolean commit, Todo error);
+    public native boolean saveEvent(EKEvent event, EKSpan span, boolean commit, Todo error);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @Mapping("removeEvent:span:commit:error:")
-    protected native boolean removeEvent(EKEvent event, EKSpan span, boolean commit, Todo error);
+    public native boolean removeEvent(EKEvent event, EKSpan span, boolean commit, Todo error);
     @Mapping("eventWithIdentifier:")
     public native EKEvent getEvent(String identifier);
     @Mapping("eventsMatchingPredicate:")
@@ -126,12 +127,12 @@ public class EKEventStore
      * @since Available in iOS 6.0 and later.
      */
     @Mapping("saveReminder:commit:error:")
-    protected native boolean saveReminder(EKReminder reminder, boolean commit, Todo error);
+    public native boolean saveReminder(EKReminder reminder, boolean commit, Todo error);
     /**
      * @since Available in iOS 6.0 and later.
      */
     @Mapping("removeReminder:commit:error:")
-    protected native boolean removeReminder(EKReminder reminder, boolean commit, Todo error);
+    public native boolean removeReminder(EKReminder reminder, boolean commit, Todo error);
     /**
      * @since Available in iOS 6.0 and later.
      */
@@ -161,7 +162,7 @@ public class EKEventStore
      * @since Available in iOS 5.0 and later.
      */
     @Mapping("commit:")
-    protected native boolean commit(Todo error);
+    public native boolean commit(Todo error);
     /**
      * @since Available in iOS 5.0 and later.
      */

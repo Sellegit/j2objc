@@ -33,11 +33,11 @@ public class CAShapeFillRule
      * @since Available in iOS 3.0 and later.
      */
     @GlobalConstant("kCAFillRuleNonZero")
-    protected static native NSString NonZeroValue();
+    public static native NSString NonZeroValue();
     /**
      * @since Available in iOS 3.0 and later.
      */
     @GlobalConstant("kCAFillRuleEvenOdd")
-    protected static native NSString EvenOddValue();
+    public static native NSString EvenOddValue();
     
 }

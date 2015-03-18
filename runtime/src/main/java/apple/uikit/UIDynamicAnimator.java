@@ -31,9 +31,10 @@ public class UIDynamicAnimator
 
     
     
-    public UIDynamicAnimator() {}
     @Mapping("initWithReferenceView:")
     public UIDynamicAnimator(UIView view) { }
+    @Mapping("init")
+    public UIDynamicAnimator() { }
     @Mapping("initWithCollectionViewLayout:")
     public UIDynamicAnimator(UICollectionViewLayout layout) { }
     

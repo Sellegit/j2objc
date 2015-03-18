@@ -31,7 +31,8 @@ public class UIAlertAction
 
     
     
-    public UIAlertAction() {}
+    @Mapping("init")
+    public UIAlertAction() { }
     
     
     @Mapping("title")

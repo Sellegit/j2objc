@@ -27,7 +27,6 @@ public class GKScore
 
     
     
-    public GKScore() {}
     @Mapping("initWithLeaderboardIdentifier:")
     public GKScore(String identifier) { }
     /**
@@ -35,6 +34,8 @@ public class GKScore
      */
     @Mapping("initWithLeaderboardIdentifier:player:")
     public GKScore(String identifier, GKPlayer player) { }
+    @Mapping("init")
+    public GKScore() { }
     /**
      * @since Available in iOS 7.0 and later.
      * @deprecated Deprecated in iOS 8.0.

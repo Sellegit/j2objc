@@ -30,7 +30,8 @@ public class SCNSphere
 
     
     
-    public SCNSphere() {}
+    @Mapping("init")
+    public SCNSphere() { }
     
     
     @Mapping("radius")

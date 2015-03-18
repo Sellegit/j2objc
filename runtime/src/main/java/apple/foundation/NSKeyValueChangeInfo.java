@@ -32,17 +32,17 @@ public class NSKeyValueChangeInfo
     
     
     @GlobalConstant("NSKeyValueChangeKindKey")
-    protected static native NSString KindKey();
+    public static native NSString KindKey();
     @GlobalConstant("NSKeyValueChangeNewKey")
-    protected static native NSString NewKey();
+    public static native NSString NewKey();
     @GlobalConstant("NSKeyValueChangeOldKey")
-    protected static native NSString OldKey();
+    public static native NSString OldKey();
     @GlobalConstant("NSKeyValueChangeIndexesKey")
-    protected static native NSString IndexesKey();
+    public static native NSString IndexesKey();
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalConstant("NSKeyValueChangeNotificationIsPriorKey")
-    protected static native NSString NotificationIsPriorKey();
+    public static native NSString NotificationIsPriorKey();
     
 }

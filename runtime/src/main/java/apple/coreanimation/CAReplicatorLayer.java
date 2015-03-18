@@ -27,7 +27,8 @@ public class CAReplicatorLayer
 
     
     
-    public CAReplicatorLayer() {}
+    @Mapping("init")
+    public CAReplicatorLayer() { }
     @Mapping("initWithLayer:")
     public CAReplicatorLayer(Object layer) { }
     

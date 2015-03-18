@@ -32,55 +32,55 @@ public class NSLocaleComponent
     
     
     @GlobalConstant("NSLocaleIdentifier")
-    protected static native NSString IdentifierValue();
+    public static native NSString IdentifierValue();
     @GlobalConstant("NSLocaleLanguageCode")
-    protected static native NSString LanguageCodeValue();
+    public static native NSString LanguageCodeValue();
     @GlobalConstant("NSLocaleCountryCode")
-    protected static native NSString CountryCodeValue();
+    public static native NSString CountryCodeValue();
     @GlobalConstant("NSLocaleScriptCode")
-    protected static native NSString ScriptCodeValue();
+    public static native NSString ScriptCodeValue();
     @GlobalConstant("NSLocaleVariantCode")
-    protected static native NSString VariantCodeValue();
+    public static native NSString VariantCodeValue();
     @GlobalConstant("NSLocaleExemplarCharacterSet")
-    protected static native NSString ExemplarCharacterSetValue();
+    public static native NSString ExemplarCharacterSetValue();
     @GlobalConstant("NSLocaleCollationIdentifier")
-    protected static native NSString CollationIdentifierValue();
+    public static native NSString CollationIdentifierValue();
     @GlobalConstant("NSLocaleUsesMetricSystem")
-    protected static native NSString UsesMetricSystemValue();
+    public static native NSString UsesMetricSystemValue();
     @GlobalConstant("NSLocaleMeasurementSystem")
-    protected static native NSString MeasurementSystemValue();
+    public static native NSString MeasurementSystemValue();
     @GlobalConstant("NSLocaleDecimalSeparator")
-    protected static native NSString DecimalSeparatorValue();
+    public static native NSString DecimalSeparatorValue();
     @GlobalConstant("NSLocaleGroupingSeparator")
-    protected static native NSString GroupingSeparatorValue();
+    public static native NSString GroupingSeparatorValue();
     @GlobalConstant("NSLocaleCurrencySymbol")
-    protected static native NSString CurrencySymbolValue();
+    public static native NSString CurrencySymbolValue();
     @GlobalConstant("NSLocaleCurrencyCode")
-    protected static native NSString CurrencyCodeValue();
+    public static native NSString CurrencyCodeValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("NSLocaleCollatorIdentifier")
-    protected static native NSString CollatorIdentifierValue();
+    public static native NSString CollatorIdentifierValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("NSLocaleQuotationBeginDelimiterKey")
-    protected static native NSString QuotationBeginDelimiterKeyValue();
+    public static native NSString QuotationBeginDelimiterKeyValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("NSLocaleQuotationEndDelimiterKey")
-    protected static native NSString QuotationEndDelimiterKeyValue();
+    public static native NSString QuotationEndDelimiterKeyValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("NSLocaleAlternateQuotationBeginDelimiterKey")
-    protected static native NSString AlternateQuotationBeginDelimiterKeyValue();
+    public static native NSString AlternateQuotationBeginDelimiterKeyValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("NSLocaleAlternateQuotationEndDelimiterKey")
-    protected static native NSString AlternateQuotationEndDelimiterKeyValue();
+    public static native NSString AlternateQuotationEndDelimiterKeyValue();
     
 }

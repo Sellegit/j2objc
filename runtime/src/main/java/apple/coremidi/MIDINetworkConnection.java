@@ -26,7 +26,8 @@ public class MIDINetworkConnection
 
     
     
-    public MIDINetworkConnection() {}
+    @Mapping("init")
+    public MIDINetworkConnection() { }
     
     
     @Mapping("host")

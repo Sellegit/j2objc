@@ -27,7 +27,8 @@ public class CAShapeLayer
 
     
     
-    public CAShapeLayer() {}
+    @Mapping("init")
+    public CAShapeLayer() { }
     @Mapping("initWithLayer:")
     public CAShapeLayer(Object layer) { }
     

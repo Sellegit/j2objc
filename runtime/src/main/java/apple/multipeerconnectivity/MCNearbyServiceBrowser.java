@@ -28,9 +28,10 @@ public class MCNearbyServiceBrowser
 
     
     
-    public MCNearbyServiceBrowser() {}
     @Mapping("initWithPeer:serviceType:")
     public MCNearbyServiceBrowser(MCPeerID myPeerID, String serviceType) { }
+    @Mapping("init")
+    public MCNearbyServiceBrowser() { }
     
     
     @Mapping("delegate")

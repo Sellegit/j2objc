@@ -24,7 +24,7 @@ public class CGPoint
      {
 
     
-    protected CGPoint() {}
+    private CGPoint() {}
     
     
     @DotMapping("x")
@@ -68,7 +68,7 @@ public class CGPoint
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGPointMakeWithDictionaryRepresentation")
-    private static native boolean fromDictionary(NSDictionary<?, ?> dict, CGPoint point);
+    public static native boolean fromDictionary(NSDictionary<?, ?> dict, CGPoint point);
     /**
      * @since Available in iOS 2.0 and later.
      */

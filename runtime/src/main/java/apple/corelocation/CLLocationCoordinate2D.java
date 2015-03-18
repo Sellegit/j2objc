@@ -25,7 +25,7 @@ public class CLLocationCoordinate2D
      {
 
     
-    protected CLLocationCoordinate2D() {}
+    private CLLocationCoordinate2D() {}
     
     
     @DotMapping("latitude")
@@ -59,6 +59,6 @@ public class CLLocationCoordinate2D
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CLLocationCoordinate2DIsValid")
-    private static native boolean isValid(CLLocationCoordinate2D coord);
+    public static native boolean isValid(CLLocationCoordinate2D coord);
     
 }

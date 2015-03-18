@@ -27,13 +27,14 @@ public class CKRecord
 
     
     
-    public CKRecord() {}
     @Mapping("initWithRecordType:")
     public CKRecord(String recordType) { }
     @Mapping("initWithRecordType:recordID:")
     public CKRecord(String recordType, CKRecordID recordID) { }
     @Mapping("initWithRecordType:zoneID:")
     public CKRecord(String recordType, CKRecordZoneID zoneID) { }
+    @Mapping("init")
+    public CKRecord() { }
     
     
     @Mapping("recordType")
@@ -56,7 +57,7 @@ public class CKRecord
     @Mapping("objectForKey:")
     public native Object get(String key);
     @Mapping("setObject:forKey:")
-    protected native void put(CKRecordValue object, String key);
+    public native void put(CKRecordValue object, String key);
     @Mapping("allKeys")
     public native List<String> getAllKeys();
     @Mapping("allTokens")

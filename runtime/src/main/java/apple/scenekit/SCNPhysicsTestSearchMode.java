@@ -33,10 +33,10 @@ public class SCNPhysicsTestSearchMode
     
     
     @GlobalConstant("SCNPhysicsTestSearchModeAny")
-    protected static native NSString AnyValue();
+    public static native NSString AnyValue();
     @GlobalConstant("SCNPhysicsTestSearchModeClosest")
-    protected static native NSString ClosestValue();
+    public static native NSString ClosestValue();
     @GlobalConstant("SCNPhysicsTestSearchModeAll")
-    protected static native NSString AllValue();
+    public static native NSString AllValue();
     
 }

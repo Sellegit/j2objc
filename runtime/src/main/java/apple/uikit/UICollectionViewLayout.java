@@ -31,7 +31,8 @@ public class UICollectionViewLayout
 
     
     
-    public UICollectionViewLayout() {}
+    @Mapping("init")
+    public UICollectionViewLayout() { }
     
     
     @Mapping("collectionView")

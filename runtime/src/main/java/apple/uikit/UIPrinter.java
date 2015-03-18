@@ -31,7 +31,8 @@ public class UIPrinter
 
     
     
-    public UIPrinter() {}
+    @Mapping("init")
+    public UIPrinter() { }
     
     
     @Mapping("URL")

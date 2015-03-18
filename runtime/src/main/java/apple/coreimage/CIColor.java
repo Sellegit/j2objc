@@ -27,7 +27,8 @@ public class CIColor
 
     
     
-    public CIColor() {}
+    @Mapping("init")
+    public CIColor() { }
     
     
     
@@ -37,7 +38,7 @@ public class CIColor
     @Mapping("numberOfComponents")
     public native @MachineSizedUInt long getNumberOfComponents();
     @Mapping("components")
-    protected native Todo components();
+    public native Todo components();
     @Mapping("alpha")
     public native @MachineSizedFloat double getAlpha();
     @Mapping("colorSpace")

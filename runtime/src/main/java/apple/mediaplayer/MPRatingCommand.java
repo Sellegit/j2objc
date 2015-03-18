@@ -27,7 +27,8 @@ public class MPRatingCommand
 
     
     
-    public MPRatingCommand() {}
+    @Mapping("init")
+    public MPRatingCommand() { }
     
     
     @Mapping("minimumRating")

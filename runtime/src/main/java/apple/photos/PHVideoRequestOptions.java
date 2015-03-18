@@ -29,7 +29,8 @@ public class PHVideoRequestOptions
 
     
     
-    public PHVideoRequestOptions() {}
+    @Mapping("init")
+    public PHVideoRequestOptions() { }
     
     
     @Mapping("isNetworkAccessAllowed")

@@ -33,17 +33,17 @@ public class SCNetworkReachability
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("SCNetworkReachabilityCreateWithAddress")
-    protected static native SCNetworkReachability create(CFAllocator allocator, Struct<?> address);
+    public static native SCNetworkReachability create(CFAllocator allocator, Struct<?> address);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("SCNetworkReachabilityCreateWithAddressPair")
-    protected static native SCNetworkReachability create(CFAllocator allocator, Struct<?> localAddress, Struct<?> remoteAddress);
+    public static native SCNetworkReachability create(CFAllocator allocator, Struct<?> localAddress, Struct<?> remoteAddress);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("SCNetworkReachabilityCreateWithName")
-    protected static native SCNetworkReachability create(CFAllocator allocator, Todo nodename);
+    public static native SCNetworkReachability create(CFAllocator allocator, Todo nodename);
     /**
      * @since Available in iOS 2.0 and later.
      */
@@ -53,12 +53,12 @@ public class SCNetworkReachability
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("SCNetworkReachabilityGetFlags")
-    protected static native boolean getFlags(SCNetworkReachability target, Todo flags);
+    public static native boolean getFlags(SCNetworkReachability target, Todo flags);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("SCNetworkReachabilitySetCallback")
-    protected static native boolean setCallback(SCNetworkReachability target, FunctionPtr callout, SCNetworkReachabilityContext context);
+    public static native boolean setCallback(SCNetworkReachability target, FunctionPtr callout, SCNetworkReachabilityContext context);
     /**
      * @since Available in iOS 2.0 and later.
      */

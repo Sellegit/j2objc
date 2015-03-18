@@ -29,7 +29,8 @@ public class PHAssetCollection
 
     
     
-    public PHAssetCollection() {}
+    @Mapping("init")
+    public PHAssetCollection() { }
     
     
     @Mapping("assetCollectionType")

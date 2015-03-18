@@ -26,7 +26,8 @@ public class NSPropertyMapping
 
     
     
-    public NSPropertyMapping() {}
+    @Mapping("init")
+    public NSPropertyMapping() { }
     
     
     @Mapping("name")

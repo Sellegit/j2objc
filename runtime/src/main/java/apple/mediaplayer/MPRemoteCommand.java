@@ -27,7 +27,8 @@ public class MPRemoteCommand
 
     
     
-    public MPRemoteCommand() {}
+    @Mapping("init")
+    public MPRemoteCommand() { }
     
     
     @Mapping("isEnabled")

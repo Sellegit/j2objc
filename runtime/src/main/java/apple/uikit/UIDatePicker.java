@@ -31,9 +31,10 @@ public class UIDatePicker
 
     
     
-    public UIDatePicker() {}
     @Mapping("initWithFrame:")
     public UIDatePicker(CGRect frame) { }
+    @Mapping("init")
+    public UIDatePicker() { }
     
     
     @Mapping("datePickerMode")

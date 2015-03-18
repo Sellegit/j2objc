@@ -31,7 +31,8 @@ public class NSURLSessionTask
 
     
     
-    public NSURLSessionTask() {}
+    @Mapping("init")
+    public NSURLSessionTask() { }
     
     
     @Mapping("taskIdentifier")

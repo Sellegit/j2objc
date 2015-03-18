@@ -30,31 +30,31 @@ public class NSExpressionMigrationKey
      * @since Available in iOS 3.0 and later.
      */
     @GlobalConstant("NSMigrationManagerKey")
-    protected static native String ManagerKeyValue();
+    public static native String ManagerKeyValue();
     /**
      * @since Available in iOS 3.0 and later.
      */
     @GlobalConstant("NSMigrationSourceObjectKey")
-    protected static native String SourceObjectKeyValue();
+    public static native String SourceObjectKeyValue();
     /**
      * @since Available in iOS 3.0 and later.
      */
     @GlobalConstant("NSMigrationDestinationObjectKey")
-    protected static native String DestinationObjectKeyValue();
+    public static native String DestinationObjectKeyValue();
     /**
      * @since Available in iOS 3.0 and later.
      */
     @GlobalConstant("NSMigrationEntityMappingKey")
-    protected static native String EntityMappingKeyValue();
+    public static native String EntityMappingKeyValue();
     /**
      * @since Available in iOS 3.0 and later.
      */
     @GlobalConstant("NSMigrationPropertyMappingKey")
-    protected static native String PropertyMappingKeyValue();
+    public static native String PropertyMappingKeyValue();
     /**
      * @since Available in iOS 3.0 and later.
      */
     @GlobalConstant("NSMigrationEntityPolicyKey")
-    protected static native String EntityPolicyKeyValue();
+    public static native String EntityPolicyKeyValue();
     
 }

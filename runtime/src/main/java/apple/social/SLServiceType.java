@@ -32,21 +32,21 @@ public class SLServiceType
      * @since Available in iOS 6.0 and later.
      */
     @GlobalConstant("SLServiceTypeTwitter")
-    protected static native NSString TwitterValue();
+    public static native NSString TwitterValue();
     /**
      * @since Available in iOS 6.0 and later.
      */
     @GlobalConstant("SLServiceTypeFacebook")
-    protected static native NSString FacebookValue();
+    public static native NSString FacebookValue();
     /**
      * @since Available in iOS 6.0 and later.
      */
     @GlobalConstant("SLServiceTypeSinaWeibo")
-    protected static native NSString SinaWeiboValue();
+    public static native NSString SinaWeiboValue();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("SLServiceTypeTencentWeibo")
-    protected static native NSString TencentWeiboValue();
+    public static native NSString TencentWeiboValue();
     
 }

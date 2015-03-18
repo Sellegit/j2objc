@@ -30,26 +30,26 @@ public class HKVitalSignsQuantityTypeIdentifier
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("HKQuantityTypeIdentifierHeartRate")
-    protected static native NSString HeartRateValue();
+    public static native NSString HeartRateValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("HKQuantityTypeIdentifierBodyTemperature")
-    protected static native NSString BodyTemperatureValue();
+    public static native NSString BodyTemperatureValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("HKQuantityTypeIdentifierBloodPressureSystolic")
-    protected static native NSString BloodPressureSystolicValue();
+    public static native NSString BloodPressureSystolicValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("HKQuantityTypeIdentifierBloodPressureDiastolic")
-    protected static native NSString BloodPressureDiastolicValue();
+    public static native NSString BloodPressureDiastolicValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("HKQuantityTypeIdentifierRespiratoryRate")
-    protected static native NSString RespiratoryRateValue();
+    public static native NSString RespiratoryRateValue();
     
 }

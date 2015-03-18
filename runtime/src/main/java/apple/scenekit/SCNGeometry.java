@@ -30,7 +30,8 @@ public class SCNGeometry
 
     
     
-    public SCNGeometry() {}
+    @Mapping("init")
+    public SCNGeometry() { }
     
     
     @Mapping("name")

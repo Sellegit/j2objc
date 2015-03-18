@@ -32,17 +32,17 @@ public class CFHTTPMessage
      * @since Available in iOS 2.0 and later.
      */
     @GlobalConstant("kCFHTTPAuthenticationUsername")
-    protected static native CFString HTTPAuthenticationUsername();
+    public static native CFString HTTPAuthenticationUsername();
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalConstant("kCFHTTPAuthenticationPassword")
-    protected static native CFString HTTPAuthenticationPassword();
+    public static native CFString HTTPAuthenticationPassword();
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalConstant("kCFHTTPAuthenticationAccountDomain")
-    protected static native CFString HTTPAuthenticationAccountDomain();
+    public static native CFString HTTPAuthenticationAccountDomain();
     
     /**
      * @since Available in iOS 2.0 and later.
@@ -53,17 +53,17 @@ public class CFHTTPMessage
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFHTTPMessageCreateRequest")
-    protected static native CFHTTPMessage createRequest(CFAllocator alloc, String requestMethod, NSURL url, String httpVersion);
+    public static native CFHTTPMessage createRequest(CFAllocator alloc, String requestMethod, NSURL url, String httpVersion);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFHTTPMessageCreateResponse")
-    protected static native CFHTTPMessage createResponse(CFAllocator alloc, @MachineSizedSInt long statusCode, String statusDescription, String httpVersion);
+    public static native CFHTTPMessage createResponse(CFAllocator alloc, @MachineSizedSInt long statusCode, String statusDescription, String httpVersion);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFHTTPMessageCreateEmpty")
-    protected static native CFHTTPMessage createEmpty(CFAllocator alloc, boolean isRequest);
+    public static native CFHTTPMessage createEmpty(CFAllocator alloc, boolean isRequest);
     /**
      * @since Available in iOS 2.0 and later.
      */
@@ -108,7 +108,7 @@ public class CFHTTPMessage
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFHTTPMessageAppendBytes")
-    protected static native boolean appendBytes(CFHTTPMessage message, Todo newBytes, @MachineSizedSInt long numBytes);
+    public static native boolean appendBytes(CFHTTPMessage message, Todo newBytes, @MachineSizedSInt long numBytes);
     /**
      * @since Available in iOS 2.0 and later.
      */
@@ -148,11 +148,11 @@ public class CFHTTPMessage
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFHTTPMessageApplyCredentials")
-    protected static native boolean applyCredentials(CFHTTPMessage request, CFHTTPAuthentication auth, String username, String password, Todo error);
+    public static native boolean applyCredentials(CFHTTPMessage request, CFHTTPAuthentication auth, String username, String password, Todo error);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFHTTPMessageApplyCredentialDictionary")
-    protected static native boolean applyCredentialDictionary(CFHTTPMessage request, CFHTTPAuthentication auth, CFDictionary dict, Todo error);
+    public static native boolean applyCredentialDictionary(CFHTTPMessage request, CFHTTPAuthentication auth, CFDictionary dict, Todo error);
     
 }

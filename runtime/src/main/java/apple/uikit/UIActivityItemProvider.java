@@ -31,9 +31,10 @@ public class UIActivityItemProvider
 
     
     
-    public UIActivityItemProvider() {}
     @Mapping("initWithPlaceholderItem:")
     public UIActivityItemProvider(Object placeholderItem) { }
+    @Mapping("init")
+    public UIActivityItemProvider() { }
     
     
     @Mapping("placeholderItem")

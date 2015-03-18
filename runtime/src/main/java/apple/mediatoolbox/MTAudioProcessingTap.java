@@ -41,7 +41,7 @@ public class MTAudioProcessingTap
      * @since Available in iOS 6.0 and later.
      */
     @GlobalFunction("MTAudioProcessingTapCreate")
-    protected static native int create(CFAllocator allocator, MTAudioProcessingTapCallbacksStruct callbacks, int flags, Todo tapOut);
+    public static native int create(CFAllocator allocator, MTAudioProcessingTapCallbacksStruct callbacks, int flags, Todo tapOut);
     /**
      * @since Available in iOS 6.0 and later.
      */
@@ -51,6 +51,6 @@ public class MTAudioProcessingTap
      * @since Available in iOS 6.0 and later.
      */
     @GlobalFunction("MTAudioProcessingTapGetSourceAudio")
-    protected static native int getSourceAudio(MTAudioProcessingTap tap, @MachineSizedSInt long numberFrames, Todo bufferListInOut, Todo flagsOut, CMTimeRange timeRangeOut, Todo numberFramesOut);
+    public static native int getSourceAudio(MTAudioProcessingTap tap, @MachineSizedSInt long numberFrames, Todo bufferListInOut, Todo flagsOut, CMTimeRange timeRangeOut, Todo numberFramesOut);
     
 }

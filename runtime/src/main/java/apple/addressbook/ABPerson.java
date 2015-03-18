@@ -63,7 +63,7 @@ public class ABPerson
     @GlobalFunction("ABPersonCopyCompositeNameDelimiterForRecord")
     public static native String getCompositeNameDelimiter(ABRecord record);
     @GlobalFunction("ABPersonSetImageData")
-    protected static native boolean setImageData(ABRecord person, NSData imageData, Todo error);
+    public static native boolean setImageData(ABRecord person, NSData imageData, Todo error);
     @GlobalFunction("ABPersonCopyImageData")
     public static native NSData getImageData(ABRecord person);
     /**
@@ -74,7 +74,7 @@ public class ABPerson
     @GlobalFunction("ABPersonHasImageData")
     public static native boolean hasImageData(ABRecord person);
     @GlobalFunction("ABPersonRemoveImageData")
-    protected static native boolean removeImageData(ABRecord person, Todo error);
+    public static native boolean removeImageData(ABRecord person, Todo error);
     @GlobalFunction("ABPersonComparePeopleByName")
     public static native CFComparisonResult compareTo(ABRecord person1, ABRecord person2, ABPersonSortOrdering ordering);
     /**

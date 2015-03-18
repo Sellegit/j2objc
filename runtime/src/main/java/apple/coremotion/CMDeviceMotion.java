@@ -26,7 +26,8 @@ public class CMDeviceMotion
 
     
     
-    public CMDeviceMotion() {}
+    @Mapping("init")
+    public CMDeviceMotion() { }
     
     
     @Mapping("attitude")

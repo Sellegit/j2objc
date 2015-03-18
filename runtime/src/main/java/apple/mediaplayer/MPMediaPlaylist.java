@@ -27,9 +27,10 @@ public class MPMediaPlaylist
 
     
     
-    public MPMediaPlaylist() {}
     @Mapping("initWithItems:")
     public MPMediaPlaylist(NSArray<?> items) { }
+    @Mapping("init")
+    public MPMediaPlaylist() { }
     
     
     /**

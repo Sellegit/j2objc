@@ -30,41 +30,41 @@ public class CFHTTPAuthenticationScheme
      * @since Available in iOS 2.0 and later.
      */
     @GlobalConstant("kCFHTTPAuthenticationSchemeBasic")
-    protected static native CFString BasicValue();
+    public static native CFString BasicValue();
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalConstant("kCFHTTPAuthenticationSchemeDigest")
-    protected static native CFString DigestValue();
+    public static native CFString DigestValue();
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalConstant("kCFHTTPAuthenticationSchemeNTLM")
-    protected static native CFString NTLMValue();
+    public static native CFString NTLMValue();
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalConstant("kCFHTTPAuthenticationSchemeKerberos")
-    protected static native CFString KerberosValue();
+    public static native CFString KerberosValue();
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalConstant("kCFHTTPAuthenticationSchemeNegotiate")
-    protected static native CFString NegotiateValue();
+    public static native CFString NegotiateValue();
     /**
      * @since Available in iOS 3.0 and later.
      */
     @GlobalConstant("kCFHTTPAuthenticationSchemeNegotiate2")
-    protected static native CFString Negotiate2Value();
+    public static native CFString Negotiate2Value();
     /**
      * @since Available in iOS 4.3 and later.
      */
     @GlobalConstant("kCFHTTPAuthenticationSchemeXMobileMeAuthToken")
-    protected static native CFString XMobileMeAuthTokenValue();
+    public static native CFString XMobileMeAuthTokenValue();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("kCFHTTPAuthenticationSchemeOAuth1")
-    protected static native CFString OAuth1Value();
+    public static native CFString OAuth1Value();
     
 }

@@ -27,7 +27,8 @@ public class CIFeature
 
     
     
-    public CIFeature() {}
+    @Mapping("init")
+    public CIFeature() { }
     
     
     @Mapping("type")

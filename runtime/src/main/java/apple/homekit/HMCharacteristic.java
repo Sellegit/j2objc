@@ -26,7 +26,8 @@ public class HMCharacteristic
 
     
     
-    public HMCharacteristic() {}
+    @Mapping("init")
+    public HMCharacteristic() { }
     
     
     @Mapping("characteristicType")

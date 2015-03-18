@@ -23,7 +23,7 @@ public class MIDIObjectPropertyChangeNotification
      {
 
     
-    protected MIDIObjectPropertyChangeNotification() {}
+    private MIDIObjectPropertyChangeNotification() {}
     
     
     @DotMapping("messageID")

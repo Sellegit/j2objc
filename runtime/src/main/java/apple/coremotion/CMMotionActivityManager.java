@@ -26,7 +26,8 @@ public class CMMotionActivityManager
 
     
     
-    public CMMotionActivityManager() {}
+    @Mapping("init")
+    public CMMotionActivityManager() { }
     
     
     

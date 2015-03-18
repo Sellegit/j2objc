@@ -32,7 +32,8 @@ public class AVAudioSession
 
     
     
-    public AVAudioSession() {}
+    @Mapping("init")
+    public AVAudioSession() { }
     
     
     @Mapping("category")

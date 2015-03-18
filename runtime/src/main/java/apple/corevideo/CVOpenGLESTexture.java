@@ -52,6 +52,6 @@ public class CVOpenGLESTexture
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("CVOpenGLESTextureGetCleanTexCoords")
-    protected static native void getCleanTexCoords(CVOpenGLESTexture image, Todo lowerLeft, Todo lowerRight, Todo upperRight, Todo upperLeft);
+    public static native void getCleanTexCoords(CVOpenGLESTexture image, Todo lowerLeft, Todo lowerRight, Todo upperRight, Todo upperLeft);
     
 }

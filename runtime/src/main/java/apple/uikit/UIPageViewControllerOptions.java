@@ -32,11 +32,11 @@ public class UIPageViewControllerOptions
     
     
     @GlobalConstant("UIPageViewControllerOptionSpineLocationKey")
-    protected static native NSString SpineLocationKey();
+    public static native NSString SpineLocationKey();
     /**
      * @since Available in iOS 6.0 and later.
      */
     @GlobalConstant("UIPageViewControllerOptionInterPageSpacingKey")
-    protected static native NSString InterPageSpacingKey();
+    public static native NSString InterPageSpacingKey();
     
 }

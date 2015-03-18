@@ -32,7 +32,6 @@ public class AVAudioFormat
 
     
     
-    public AVAudioFormat() {}
     @Mapping("initWithStreamDescription:")
     public AVAudioFormat(AudioStreamBasicDescription asbd) { }
     @Mapping("initWithStreamDescription:channelLayout:")
@@ -47,6 +46,8 @@ public class AVAudioFormat
     public AVAudioFormat(@Representing("AVAudioCommonFormat") @MachineSizedUInt long format, double sampleRate, boolean interleaved, AVAudioChannelLayout layout) { }
     @Mapping("initWithSettings:")
     public AVAudioFormat(NSDictionary<?, ?> settings) { }
+    @Mapping("init")
+    public AVAudioFormat() { }
     
     
     @Mapping("isStandard")

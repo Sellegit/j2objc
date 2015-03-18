@@ -30,16 +30,16 @@ public class HMCharacteristicProperty
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("HMCharacteristicPropertySupportsEventNotification")
-    protected static native NSString SupportsEventNotificationValue();
+    public static native NSString SupportsEventNotificationValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("HMCharacteristicPropertyReadable")
-    protected static native NSString ReadableValue();
+    public static native NSString ReadableValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("HMCharacteristicPropertyWritable")
-    protected static native NSString WritableValue();
+    public static native NSString WritableValue();
     
 }

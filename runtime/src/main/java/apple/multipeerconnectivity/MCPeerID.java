@@ -28,9 +28,10 @@ public class MCPeerID
 
     
     
-    public MCPeerID() {}
     @Mapping("initWithDisplayName:")
     public MCPeerID(String myDisplayName) { }
+    @Mapping("init")
+    public MCPeerID() { }
     
     
     @Mapping("displayName")

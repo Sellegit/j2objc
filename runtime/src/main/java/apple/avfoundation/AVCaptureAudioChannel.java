@@ -32,7 +32,8 @@ public class AVCaptureAudioChannel
 
     
     
-    public AVCaptureAudioChannel() {}
+    @Mapping("init")
+    public AVCaptureAudioChannel() { }
     
     
     @Mapping("averagePowerLevel")

@@ -25,7 +25,7 @@ public class CVTimeStamp
      {
 
     
-    protected CVTimeStamp() {}
+    private CVTimeStamp() {}
     
     
     @DotMapping("version")

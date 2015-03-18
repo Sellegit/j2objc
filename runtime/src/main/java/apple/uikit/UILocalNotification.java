@@ -31,7 +31,8 @@ public class UILocalNotification
 
     
     
-    public UILocalNotification() {}
+    @Mapping("init")
+    public UILocalNotification() { }
     
     
     @Mapping("fireDate")

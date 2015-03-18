@@ -118,18 +118,18 @@ public class NSBundle
     @GlobalConstant("NSBundleDidLoadNotification")
     public static native NSString DidLoadNotification();
     @GlobalConstant("NSLoadedClasses")
-    protected static native NSString LoadedClassesKey();
+    public static native NSString LoadedClassesKey();
     
     /**
      * @since Available in iOS 2.0 and later.
      */
     @Mapping("preflightAndReturnError:")
-    protected native boolean preflight(Todo error);
+    public native boolean preflight(Todo error);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @Mapping("loadAndReturnError:")
-    protected native boolean load(Todo error);
+    public native boolean load(Todo error);
     /**
      * @since Available in iOS 4.0 and later.
      */

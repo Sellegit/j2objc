@@ -29,11 +29,12 @@ public class NSNetService
 
     
     
-    public NSNetService() {}
     @Mapping("initWithDomain:type:name:port:")
     public NSNetService(String domain, String type, String name, int port) { }
     @Mapping("initWithDomain:type:name:")
     public NSNetService(String domain, String type, String name) { }
+    @Mapping("init")
+    public NSNetService() { }
     
     
     @Mapping("delegate")
@@ -84,7 +85,7 @@ public class NSNetService
     @Mapping("resolveWithTimeout:")
     public native void resolve(double timeout);
     @Mapping("getInputStream:outputStream:")
-    protected native boolean getStreams(Todo inputStream, Todo outputStream);
+    public native boolean getStreams(Todo inputStream, Todo outputStream);
     @Mapping("setTXTRecordData:")
     public native boolean setTXTRecordData(NSData recordData);
     @Mapping("TXTRecordData")

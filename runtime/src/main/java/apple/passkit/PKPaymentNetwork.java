@@ -29,10 +29,10 @@ public class PKPaymentNetwork
     
     
     @GlobalConstant("PKPaymentNetworkAmex")
-    protected static native NSString AmexValue();
+    public static native NSString AmexValue();
     @GlobalConstant("PKPaymentNetworkMasterCard")
-    protected static native NSString MasterCardValue();
+    public static native NSString MasterCardValue();
     @GlobalConstant("PKPaymentNetworkVisa")
-    protected static native NSString VisaValue();
+    public static native NSString VisaValue();
     
 }

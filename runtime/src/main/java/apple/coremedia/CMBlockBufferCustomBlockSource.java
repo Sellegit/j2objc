@@ -29,7 +29,7 @@ public class CMBlockBufferCustomBlockSource
     
     public static final int Version = 0;
     
-    protected CMBlockBufferCustomBlockSource() {}
+    private CMBlockBufferCustomBlockSource() {}
     
     
     @DotMapping("version")

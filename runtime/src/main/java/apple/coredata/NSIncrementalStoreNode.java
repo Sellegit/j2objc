@@ -26,9 +26,10 @@ public class NSIncrementalStoreNode
 
     
     
-    public NSIncrementalStoreNode() {}
     @Mapping("initWithObjectID:withValues:version:")
     public NSIncrementalStoreNode(NSManagedObjectID objectID, NSDictionary<?, ?> values, long version) { }
+    @Mapping("init")
+    public NSIncrementalStoreNode() { }
     
     
     @Mapping("objectID")

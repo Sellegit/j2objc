@@ -30,6 +30,6 @@ public class HKCategoryTypeIdentifier
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("HKCategoryTypeIdentifierSleepAnalysis")
-    protected static native NSString SleepAnalysisValue();
+    public static native NSString SleepAnalysisValue();
     
 }

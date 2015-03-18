@@ -29,7 +29,8 @@ public class MKUserLocation
 
     
     
-    public MKUserLocation() {}
+    @Mapping("init")
+    public MKUserLocation() { }
     
     
     @Mapping("isUpdating")

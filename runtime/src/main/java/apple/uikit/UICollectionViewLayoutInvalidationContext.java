@@ -31,7 +31,8 @@ public class UICollectionViewLayoutInvalidationContext
 
     
     
-    public UICollectionViewLayoutInvalidationContext() {}
+    @Mapping("init")
+    public UICollectionViewLayoutInvalidationContext() { }
     
     
     @Mapping("invalidateEverything")

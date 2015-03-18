@@ -26,9 +26,10 @@ public class NSMigrationManager
 
     
     
-    public NSMigrationManager() {}
     @Mapping("initWithSourceModel:destinationModel:")
     public NSMigrationManager(NSManagedObjectModel sourceModel, NSManagedObjectModel destinationModel) { }
+    @Mapping("init")
+    public NSMigrationManager() { }
     
     
     /**
@@ -63,7 +64,7 @@ public class NSMigrationManager
     
     
     @Mapping("migrateStoreFromURL:type:options:withMappingModel:toDestinationURL:destinationType:destinationOptions:error:")
-    protected native boolean migrateStore(NSURL sourceURL, String sStoreType, NSDictionary<?, ?> sOptions, NSMappingModel mappings, NSURL dURL, String dStoreType, NSDictionary<?, ?> dOptions, Todo error);
+    public native boolean migrateStore(NSURL sourceURL, String sStoreType, NSDictionary<?, ?> sOptions, NSMappingModel mappings, NSURL dURL, String dStoreType, NSDictionary<?, ?> dOptions, Todo error);
     @Mapping("reset")
     public native void reset();
     @Mapping("sourceEntityForEntityMapping:")

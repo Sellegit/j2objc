@@ -32,7 +32,8 @@ public class AVAudioSessionPortDescription
 
     
     
-    public AVAudioSessionPortDescription() {}
+    @Mapping("init")
+    public AVAudioSessionPortDescription() { }
     
     
     @Mapping("portType")

@@ -33,11 +33,12 @@ public class SKShader
 
     
     
-    public SKShader() {}
     @Mapping("initWithSource:")
     public SKShader(String source) { }
     @Mapping("initWithSource:uniforms:")
     public SKShader(String source, NSArray<?> uniforms) { }
+    @Mapping("init")
+    public SKShader() { }
     
     
     @Mapping("source")
@@ -64,7 +65,7 @@ public class SKShader
     @Mapping("shaderWithSource:uniforms:")
     public static native SKShader create(String source, NSArray<?> uniforms);
     @Mapping("shaderWithFileNamed:")
-    private static native SKShader createWithFile(String name);
+    public static native SKShader createWithFile(String name);
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
     @Mapping("encodeWithCoder:")

@@ -26,7 +26,8 @@ public class HKStatistics
 
     
     
-    public HKStatistics() {}
+    @Mapping("init")
+    public HKStatistics() { }
     
     
     @Mapping("quantityType")

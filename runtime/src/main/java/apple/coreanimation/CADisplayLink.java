@@ -27,7 +27,8 @@ public class CADisplayLink
 
     
     
-    
+    @Mapping("init")
+    public CADisplayLink() { }
     
     
     @Mapping("timestamp")

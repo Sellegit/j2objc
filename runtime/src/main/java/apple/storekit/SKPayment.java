@@ -28,7 +28,8 @@ public class SKPayment
 
     
     
-    public SKPayment() {}
+    @Mapping("init")
+    public SKPayment() { }
     
     
     /**

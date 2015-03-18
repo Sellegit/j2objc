@@ -32,7 +32,8 @@ public class AVAudioOutputNode
 
     
     
-    public AVAudioOutputNode() {}
+    @Mapping("init")
+    public AVAudioOutputNode() { }
     
     
     

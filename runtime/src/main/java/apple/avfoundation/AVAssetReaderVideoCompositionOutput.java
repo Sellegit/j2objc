@@ -32,7 +32,8 @@ public class AVAssetReaderVideoCompositionOutput
 
     
     
-    public AVAssetReaderVideoCompositionOutput() {}
+    @Mapping("init")
+    public AVAssetReaderVideoCompositionOutput() { }
     
     
     @Mapping("videoTracks")

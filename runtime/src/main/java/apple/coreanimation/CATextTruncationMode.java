@@ -33,21 +33,21 @@ public class CATextTruncationMode
      * @since Available in iOS 3.2 and later.
      */
     @GlobalConstant("kCATruncationNone")
-    protected static native NSString NoneValue();
+    public static native NSString NoneValue();
     /**
      * @since Available in iOS 3.2 and later.
      */
     @GlobalConstant("kCATruncationStart")
-    protected static native NSString StartValue();
+    public static native NSString StartValue();
     /**
      * @since Available in iOS 3.2 and later.
      */
     @GlobalConstant("kCATruncationEnd")
-    protected static native NSString EndValue();
+    public static native NSString EndValue();
     /**
      * @since Available in iOS 3.2 and later.
      */
     @GlobalConstant("kCATruncationMiddle")
-    protected static native NSString MiddleValue();
+    public static native NSString MiddleValue();
     
 }

@@ -29,7 +29,6 @@ public class NSHTTPURLResponse
 
     
     
-    public NSHTTPURLResponse() {}
     /**
      * @since Available in iOS 5.0 and later.
      */
@@ -37,6 +36,8 @@ public class NSHTTPURLResponse
     public NSHTTPURLResponse(NSURL url, @MachineSizedSInt long statusCode, String HTTPVersion, NSDictionary<?, ?> headerFields) { }
     @Mapping("initWithURL:MIMEType:expectedContentLength:textEncodingName:")
     public NSHTTPURLResponse(NSURL URL, String MIMEType, @MachineSizedSInt long length, String name) { }
+    @Mapping("init")
+    public NSHTTPURLResponse() { }
     
     
     @Mapping("statusCode")

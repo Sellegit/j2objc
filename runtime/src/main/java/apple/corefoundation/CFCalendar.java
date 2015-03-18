@@ -34,7 +34,7 @@ public class CFCalendar
     @GlobalFunction("CFCalendarCopyCurrent")
     public static native CFCalendar getCurrent();
     @GlobalFunction("CFCalendarCreateWithIdentifier")
-    protected static native CFCalendar create(CFAllocator allocator, String identifier);
+    public static native CFCalendar create(CFAllocator allocator, String identifier);
     @GlobalFunction("CFCalendarGetIdentifier")
     public static native CFCalendarIdentifier getIdentifier(CFCalendar calendar);
     @GlobalFunction("CFCalendarCopyLocale")
@@ -65,6 +65,6 @@ public class CFCalendar
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFCalendarGetTimeRangeOfUnit")
-    private static native boolean getTimeRangeOfUnit(CFCalendar calendar, CFCalendarUnit unit, double at, Todo startp, Todo tip);
+    public static native boolean getTimeRangeOfUnit(CFCalendar calendar, CFCalendarUnit unit, double at, Todo startp, Todo tip);
     
 }

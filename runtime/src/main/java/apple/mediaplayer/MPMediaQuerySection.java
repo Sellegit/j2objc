@@ -27,7 +27,8 @@ public class MPMediaQuerySection
 
     
     
-    public MPMediaQuerySection() {}
+    @Mapping("init")
+    public MPMediaQuerySection() { }
     
     
     @Mapping("title")

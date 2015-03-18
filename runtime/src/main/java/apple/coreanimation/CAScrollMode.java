@@ -33,21 +33,21 @@ public class CAScrollMode
      * @since Available in iOS 2.0 and later.
      */
     @GlobalConstant("kCAScrollNone")
-    protected static native NSString NoneValue();
+    public static native NSString NoneValue();
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalConstant("kCAScrollVertically")
-    protected static native NSString VerticallyValue();
+    public static native NSString VerticallyValue();
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalConstant("kCAScrollHorizontally")
-    protected static native NSString HorizontallyValue();
+    public static native NSString HorizontallyValue();
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalConstant("kCAScrollBoth")
-    protected static native NSString BothValue();
+    public static native NSString BothValue();
     
 }

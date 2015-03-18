@@ -32,11 +32,11 @@ public class PKRemovedPassInfo
      * @since Available in iOS 6.0 and later.
      */
     @GlobalConstant("PKPassLibraryPassTypeIdentifierUserInfoKey")
-    protected static native NSString PassTypeIdentifierKey();
+    public static native NSString PassTypeIdentifierKey();
     /**
      * @since Available in iOS 6.0 and later.
      */
     @GlobalConstant("PKPassLibrarySerialNumberUserInfoKey")
-    protected static native NSString SerialNumberKey();
+    public static native NSString SerialNumberKey();
     
 }

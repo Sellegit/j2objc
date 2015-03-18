@@ -27,7 +27,8 @@ public class CBAttribute
 
     
     
-    public CBAttribute() {}
+    @Mapping("init")
+    public CBAttribute() { }
     
     
     @Mapping("UUID")

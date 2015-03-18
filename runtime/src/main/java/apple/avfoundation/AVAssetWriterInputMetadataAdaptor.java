@@ -32,9 +32,10 @@ public class AVAssetWriterInputMetadataAdaptor
 
     
     
-    public AVAssetWriterInputMetadataAdaptor() {}
     @Mapping("initWithAssetWriterInput:")
     public AVAssetWriterInputMetadataAdaptor(AVAssetWriterInput input) { }
+    @Mapping("init")
+    public AVAssetWriterInputMetadataAdaptor() { }
     
     
     @Mapping("assetWriterInput")

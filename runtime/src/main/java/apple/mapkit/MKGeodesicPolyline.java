@@ -29,7 +29,8 @@ public class MKGeodesicPolyline
 
     
     
-    public MKGeodesicPolyline() {}
+    @Mapping("init")
+    public MKGeodesicPolyline() { }
     
     
     
@@ -37,8 +38,8 @@ public class MKGeodesicPolyline
     
     
     @Mapping("polylineWithPoints:count:")
-    private static native MKGeodesicPolyline create(MKMapPoint points, @MachineSizedUInt long count);
+    public static native MKGeodesicPolyline create(MKMapPoint points, @MachineSizedUInt long count);
     @Mapping("polylineWithCoordinates:count:")
-    private static native MKGeodesicPolyline create(CLLocationCoordinate2D coords, @MachineSizedUInt long count);
+    public static native MKGeodesicPolyline create(CLLocationCoordinate2D coords, @MachineSizedUInt long count);
     
 }

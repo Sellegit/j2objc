@@ -31,11 +31,12 @@ public class NSHashTable <T>
 
     
     
-    public NSHashTable() {}
+    @Mapping("init")
+    public NSHashTable() { }
     
     
     @Mapping("count")
-    protected native @MachineSizedUInt long getCount();
+    public native @MachineSizedUInt long getCount();
     @Mapping("allObjects")
     public native NSArray<T> getValues();
     @Mapping("anyObject")
@@ -46,17 +47,17 @@ public class NSHashTable <T>
     
     
     @Mapping("member:")
-    protected native Object isMember(Object object);
+    public native Object isMember(Object object);
     @Mapping("objectEnumerator")
-    private native NSEnumerator<T> getObjectEnumerator();
+    public native NSEnumerator<T> getObjectEnumerator();
     @Mapping("addObject:")
-    private native void addObject(Object object);
+    public native void addObject(Object object);
     @Mapping("removeObject:")
-    private native void removeObject(Object object);
+    public native void removeObject(Object object);
     @Mapping("removeAllObjects")
-    private native void removeAllObjects();
+    public native void removeAllObjects();
     @Mapping("containsObject:")
-    private native boolean containsObject(Object anObject);
+    public native boolean containsObject(Object anObject);
     @Mapping("intersectsHashTable:")
     public native boolean intersects(NSHashTable other);
     @Mapping("isEqualToHashTable:")

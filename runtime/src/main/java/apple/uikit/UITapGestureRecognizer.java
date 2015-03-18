@@ -31,9 +31,10 @@ public class UITapGestureRecognizer
 
     
     
-    public UITapGestureRecognizer() {}
     @Mapping("initWithTarget:action:")
     public UITapGestureRecognizer(Object target, Selector action) { }
+    @Mapping("init")
+    public UITapGestureRecognizer() { }
     
     
     @Mapping("numberOfTapsRequired")

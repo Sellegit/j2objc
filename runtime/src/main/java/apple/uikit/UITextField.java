@@ -31,9 +31,10 @@ public class UITextField
 
     
     
-    public UITextField() {}
     @Mapping("initWithFrame:")
     public UITextField(CGRect frame) { }
+    @Mapping("init")
+    public UITextField() { }
     
     
     @Mapping("text")

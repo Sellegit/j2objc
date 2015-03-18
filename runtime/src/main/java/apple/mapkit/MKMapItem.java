@@ -29,9 +29,10 @@ public class MKMapItem
 
     
     
-    public MKMapItem() {}
     @Mapping("initWithPlacemark:")
     public MKMapItem(MKPlacemark placemark) { }
+    @Mapping("init")
+    public MKMapItem() { }
     
     
     @Mapping("placemark")

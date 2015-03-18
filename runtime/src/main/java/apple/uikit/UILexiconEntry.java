@@ -31,7 +31,8 @@ public class UILexiconEntry
 
     
     
-    public UILexiconEntry() {}
+    @Mapping("init")
+    public UILexiconEntry() { }
     
     
     @Mapping("documentText")

@@ -28,9 +28,10 @@ public class ABPersonViewController
 
     
     
-    public ABPersonViewController() {}
     @Mapping("initWithNibName:bundle:")
     public ABPersonViewController(String nibNameOrNil, NSBundle nibBundleOrNil) { }
+    @Mapping("init")
+    public ABPersonViewController() { }
     
     
     @Mapping("personViewDelegate")

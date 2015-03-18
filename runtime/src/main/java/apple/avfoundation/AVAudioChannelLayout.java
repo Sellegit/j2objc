@@ -32,11 +32,12 @@ public class AVAudioChannelLayout
 
     
     
-    public AVAudioChannelLayout() {}
     @Mapping("initWithLayoutTag:")
     public AVAudioChannelLayout(@Representing("AudioChannelLayoutTag") int layoutTag) { }
     @Mapping("initWithLayout:")
     public AVAudioChannelLayout(AudioChannelLayout layout) { }
+    @Mapping("init")
+    public AVAudioChannelLayout() { }
     
     
     @Mapping("layoutTag")

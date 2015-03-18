@@ -32,7 +32,8 @@ public class AVAudioUnit
 
     
     
-    public AVAudioUnit() {}
+    @Mapping("init")
+    public AVAudioUnit() { }
     
     
     @Mapping("audioComponentDescription")

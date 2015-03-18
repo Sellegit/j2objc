@@ -35,26 +35,26 @@ public class UIStateRestorationKey
      * @since Available in iOS 6.0 and later.
      */
     @GlobalConstant("UIStateRestorationViewControllerStoryboardKey")
-    protected static native String ViewControllerStoryboardKey();
+    public static native String ViewControllerStoryboardKey();
     /**
      * @since Available in iOS 6.0 and later.
      */
     @GlobalConstant("UIApplicationStateRestorationBundleVersionKey")
-    protected static native String ApplicationBundleVersionKey();
+    public static native String ApplicationBundleVersionKey();
     /**
      * @since Available in iOS 6.0 and later.
      */
     @GlobalConstant("UIApplicationStateRestorationUserInterfaceIdiomKey")
-    protected static native String ApplicationUserInterfaceIdiomKey();
+    public static native String ApplicationUserInterfaceIdiomKey();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("UIApplicationStateRestorationTimestampKey")
-    protected static native String ApplicationTimestampKey();
+    public static native String ApplicationTimestampKey();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("UIApplicationStateRestorationSystemVersionKey")
-    protected static native String ApplicationSystemVersionKey();
+    public static native String ApplicationSystemVersionKey();
     
 }

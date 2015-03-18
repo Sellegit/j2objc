@@ -27,7 +27,8 @@ public class WKProcessPool
 
     
     
-    public WKProcessPool() {}
+    @Mapping("init")
+    public WKProcessPool() { }
     
     
     

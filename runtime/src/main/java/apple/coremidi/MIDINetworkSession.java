@@ -26,7 +26,8 @@ public class MIDINetworkSession
 
     
     
-    public MIDINetworkSession() {}
+    @Mapping("init")
+    public MIDINetworkSession() { }
     
     
     @Mapping("isEnabled")

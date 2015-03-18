@@ -27,9 +27,10 @@ public class QLPreviewController
 
     
     
-    public QLPreviewController() {}
     @Mapping("initWithNibName:bundle:")
     public QLPreviewController(String nibNameOrNil, NSBundle nibBundleOrNil) { }
+    @Mapping("init")
+    public QLPreviewController() { }
     
     
     @Mapping("dataSource")

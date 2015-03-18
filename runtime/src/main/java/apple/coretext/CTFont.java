@@ -132,12 +132,12 @@ public class CTFont
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTFontCopyName")
-    protected static native String getName(CTFont font, String nameKey);
+    public static native String getName(CTFont font, String nameKey);
     /**
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTFontCopyLocalizedName")
-    protected static native String getLocalizedName(CTFont font, String nameKey, Todo actualLanguage);
+    public static native String getLocalizedName(CTFont font, String nameKey, Todo actualLanguage);
     /**
      * @since Available in iOS 3.2 and later.
      */
@@ -157,7 +157,7 @@ public class CTFont
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTFontGetGlyphsForCharacters")
-    protected static native boolean getGlyphs(CTFont font, Todo characters, Todo glyphs, @MachineSizedSInt long count);
+    public static native boolean getGlyphs(CTFont font, Todo characters, Todo glyphs, @MachineSizedSInt long count);
     /**
      * @since Available in iOS 3.2 and later.
      */
@@ -222,22 +222,22 @@ public class CTFont
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTFontGetBoundingRectsForGlyphs")
-    protected static native CGRect getBoundingRects(CTFont font, CTFontOrientation orientation, Todo glyphs, CGRect boundingRects, @MachineSizedSInt long count);
+    public static native CGRect getBoundingRects(CTFont font, CTFontOrientation orientation, Todo glyphs, CGRect boundingRects, @MachineSizedSInt long count);
     /**
      * @since Available in iOS 6.0 and later.
      */
     @GlobalFunction("CTFontGetOpticalBoundsForGlyphs")
-    protected static native CGRect getOpticalBounds(CTFont font, Todo glyphs, CGRect boundingRects, @MachineSizedSInt long count, @MachineSizedUInt long options);
+    public static native CGRect getOpticalBounds(CTFont font, Todo glyphs, CGRect boundingRects, @MachineSizedSInt long count, @MachineSizedUInt long options);
     /**
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTFontGetAdvancesForGlyphs")
-    protected static native double getAdvances(CTFont font, CTFontOrientation orientation, Todo glyphs, CGSize advances, @MachineSizedSInt long count);
+    public static native double getAdvances(CTFont font, CTFontOrientation orientation, Todo glyphs, CGSize advances, @MachineSizedSInt long count);
     /**
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTFontGetVerticalTranslationsForGlyphs")
-    protected static native void getVerticalTranslations(CTFont font, Todo glyphs, CGSize translations, @MachineSizedSInt long count);
+    public static native void getVerticalTranslations(CTFont font, Todo glyphs, CGSize translations, @MachineSizedSInt long count);
     /**
      * @since Available in iOS 3.2 and later.
      */

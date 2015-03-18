@@ -24,7 +24,7 @@ import apple.foundation.*;
      {
 
     
-    protected CFRunLoopTimerContext() {}
+    private CFRunLoopTimerContext() {}
     
     
     @DotMapping("version")

@@ -26,7 +26,8 @@ public class HKObjectType
 
     
     
-    public HKObjectType() {}
+    @Mapping("init")
+    public HKObjectType() { }
     
     
     @Mapping("identifier")

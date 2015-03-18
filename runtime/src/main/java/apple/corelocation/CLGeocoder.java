@@ -28,7 +28,8 @@ public class CLGeocoder
 
     
     
-    public CLGeocoder() {}
+    @Mapping("init")
+    public CLGeocoder() { }
     
     
     @Mapping("isGeocoding")

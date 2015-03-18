@@ -27,7 +27,6 @@ public class GKAchievement
 
     
     
-    public GKAchievement() {}
     @Mapping("initWithIdentifier:")
     public GKAchievement(String identifier) { }
     /**
@@ -35,6 +34,8 @@ public class GKAchievement
      */
     @Mapping("initWithIdentifier:player:")
     public GKAchievement(String identifier, GKPlayer player) { }
+    @Mapping("init")
+    public GKAchievement() { }
     /**
      * @since Available in iOS 7.0 and later.
      * @deprecated Deprecated in iOS 8.0.

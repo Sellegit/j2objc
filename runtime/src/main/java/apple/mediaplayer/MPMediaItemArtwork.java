@@ -27,12 +27,13 @@ public class MPMediaItemArtwork
 
     
     
-    public MPMediaItemArtwork() {}
     /**
      * @since Available in iOS 5.0 and later.
      */
     @Mapping("initWithImage:")
     public MPMediaItemArtwork(UIImage image) { }
+    @Mapping("init")
+    public MPMediaItemArtwork() { }
     
     
     @Mapping("bounds")

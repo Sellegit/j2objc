@@ -31,9 +31,10 @@ public class NSFileCoordinator
 
     
     
-    public NSFileCoordinator() {}
     @Mapping("initWithFilePresenter:")
     public NSFileCoordinator(NSFilePresenter filePresenterOrNil) { }
+    @Mapping("init")
+    public NSFileCoordinator() { }
     
     
     /**
@@ -55,15 +56,15 @@ public class NSFileCoordinator
     @Mapping("coordinateAccessWithIntents:queue:byAccessor:")
     public native void coordinateAccessWithIntents(NSArray<?> intents, NSOperationQueue queue, @Block VoidBlock1<NSError> accessor);
     @Mapping("coordinateReadingItemAtURL:options:error:byAccessor:")
-    protected native void coordinateReadingItem(NSURL url, @Representing("NSFileCoordinatorReadingOptions") @MachineSizedUInt long options, Todo outError, @Block VoidBlock1<NSURL> reader);
+    public native void coordinateReadingItem(NSURL url, @Representing("NSFileCoordinatorReadingOptions") @MachineSizedUInt long options, Todo outError, @Block VoidBlock1<NSURL> reader);
     @Mapping("coordinateWritingItemAtURL:options:error:byAccessor:")
-    protected native void coordinateWritingItem(NSURL url, @Representing("NSFileCoordinatorWritingOptions") @MachineSizedUInt long options, Todo outError, @Block VoidBlock1<NSURL> writer);
+    public native void coordinateWritingItem(NSURL url, @Representing("NSFileCoordinatorWritingOptions") @MachineSizedUInt long options, Todo outError, @Block VoidBlock1<NSURL> writer);
     @Mapping("coordinateReadingItemAtURL:options:writingItemAtURL:options:error:byAccessor:")
-    protected native void coordinateReadingItem(NSURL readingURL, @Representing("NSFileCoordinatorReadingOptions") @MachineSizedUInt long readingOptions, NSURL writingURL, @Representing("NSFileCoordinatorWritingOptions") @MachineSizedUInt long writingOptions, Todo outError, @Block VoidBlock2<NSURL, NSURL> readerWriter);
+    public native void coordinateReadingItem(NSURL readingURL, @Representing("NSFileCoordinatorReadingOptions") @MachineSizedUInt long readingOptions, NSURL writingURL, @Representing("NSFileCoordinatorWritingOptions") @MachineSizedUInt long writingOptions, Todo outError, @Block VoidBlock2<NSURL, NSURL> readerWriter);
     @Mapping("coordinateWritingItemAtURL:options:writingItemAtURL:options:error:byAccessor:")
-    protected native void coordinateWritingItem(NSURL url1, @Representing("NSFileCoordinatorWritingOptions") @MachineSizedUInt long options1, NSURL url2, @Representing("NSFileCoordinatorWritingOptions") @MachineSizedUInt long options2, Todo outError, @Block VoidBlock2<NSURL, NSURL> writer);
+    public native void coordinateWritingItem(NSURL url1, @Representing("NSFileCoordinatorWritingOptions") @MachineSizedUInt long options1, NSURL url2, @Representing("NSFileCoordinatorWritingOptions") @MachineSizedUInt long options2, Todo outError, @Block VoidBlock2<NSURL, NSURL> writer);
     @Mapping("prepareForReadingItemsAtURLs:options:writingItemsAtURLs:options:error:byAccessor:")
-    protected native void prepareForReadingItems(NSArray<?> readingURLs, @Representing("NSFileCoordinatorReadingOptions") @MachineSizedUInt long readingOptions, NSArray<?> writingURLs, @Representing("NSFileCoordinatorWritingOptions") @MachineSizedUInt long writingOptions, Todo outError, @Block("(@Block)") VoidBlock1<Runnable> batchAccessor);
+    public native void prepareForReadingItems(NSArray<?> readingURLs, @Representing("NSFileCoordinatorReadingOptions") @MachineSizedUInt long readingOptions, NSArray<?> writingURLs, @Representing("NSFileCoordinatorWritingOptions") @MachineSizedUInt long writingOptions, Todo outError, @Block("(@Block)") VoidBlock1<Runnable> batchAccessor);
     /**
      * @since Available in iOS 6.0 and later.
      */

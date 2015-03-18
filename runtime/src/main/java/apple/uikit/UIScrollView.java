@@ -31,9 +31,10 @@ public class UIScrollView
 
     
     
-    public UIScrollView() {}
     @Mapping("initWithFrame:")
     public UIScrollView(CGRect frame) { }
+    @Mapping("init")
+    public UIScrollView() { }
     
     
     @Mapping("contentOffset")

@@ -26,12 +26,13 @@ public class NSFetchRequest
 
     
     
-    public NSFetchRequest() {}
     /**
      * @since Available in iOS 4.0 and later.
      */
     @Mapping("initWithEntityName:")
     public NSFetchRequest(String entityName) { }
+    @Mapping("init")
+    public NSFetchRequest() { }
     
     
     @Mapping("entity")

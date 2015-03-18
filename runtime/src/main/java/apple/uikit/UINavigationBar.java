@@ -31,9 +31,10 @@ public class UINavigationBar
 
     
     
-    public UINavigationBar() {}
     @Mapping("initWithFrame:")
     public UINavigationBar(CGRect frame) { }
+    @Mapping("init")
+    public UINavigationBar() { }
     
     
     @Mapping("barStyle")

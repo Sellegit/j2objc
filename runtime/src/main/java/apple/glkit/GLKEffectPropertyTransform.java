@@ -29,7 +29,8 @@ public class GLKEffectPropertyTransform
 
     
     
-    public GLKEffectPropertyTransform() {}
+    @Mapping("init")
+    public GLKEffectPropertyTransform() { }
     
     
     @Mapping("modelviewMatrix")

@@ -32,7 +32,8 @@ public class AVCaptureDeviceFormat
 
     
     
-    public AVCaptureDeviceFormat() {}
+    @Mapping("init")
+    public AVCaptureDeviceFormat() { }
     
     
     @Mapping("mediaType")

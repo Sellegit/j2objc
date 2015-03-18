@@ -27,7 +27,8 @@ public class CIFaceFeature
 
     
     
-    public CIFaceFeature() {}
+    @Mapping("init")
+    public CIFaceFeature() { }
     
     
     @Mapping("bounds")

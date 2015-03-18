@@ -31,9 +31,10 @@ public class UIPageControl
 
     
     
-    public UIPageControl() {}
     @Mapping("initWithFrame:")
     public UIPageControl(CGRect frame) { }
+    @Mapping("init")
+    public UIPageControl() { }
     
     
     @Mapping("numberOfPages")

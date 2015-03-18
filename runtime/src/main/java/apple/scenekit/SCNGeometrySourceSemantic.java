@@ -33,20 +33,20 @@ public class SCNGeometrySourceSemantic
     
     
     @GlobalConstant("SCNGeometrySourceSemanticVertex")
-    protected static native NSString VertexValue();
+    public static native NSString VertexValue();
     @GlobalConstant("SCNGeometrySourceSemanticNormal")
-    protected static native NSString NormalValue();
+    public static native NSString NormalValue();
     @GlobalConstant("SCNGeometrySourceSemanticColor")
-    protected static native NSString ColorValue();
+    public static native NSString ColorValue();
     @GlobalConstant("SCNGeometrySourceSemanticTexcoord")
-    protected static native NSString TexcoordValue();
+    public static native NSString TexcoordValue();
     @GlobalConstant("SCNGeometrySourceSemanticVertexCrease")
-    protected static native NSString VertexCreaseValue();
+    public static native NSString VertexCreaseValue();
     @GlobalConstant("SCNGeometrySourceSemanticEdgeCrease")
-    protected static native NSString EdgeCreaseValue();
+    public static native NSString EdgeCreaseValue();
     @GlobalConstant("SCNGeometrySourceSemanticBoneWeights")
-    protected static native NSString BoneWeightsValue();
+    public static native NSString BoneWeightsValue();
     @GlobalConstant("SCNGeometrySourceSemanticBoneIndices")
-    protected static native NSString BoneIndicesValue();
+    public static native NSString BoneIndicesValue();
     
 }

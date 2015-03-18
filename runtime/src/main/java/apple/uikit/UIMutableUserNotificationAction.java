@@ -31,7 +31,8 @@ public class UIMutableUserNotificationAction
 
     
     
-    public UIMutableUserNotificationAction() {}
+    @Mapping("init")
+    public UIMutableUserNotificationAction() { }
     
     
     @Mapping("identifier")

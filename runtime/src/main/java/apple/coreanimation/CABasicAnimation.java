@@ -27,7 +27,8 @@ public class CABasicAnimation
 
     
     
-    public CABasicAnimation() {}
+    @Mapping("init")
+    public CABasicAnimation() { }
     
     
     @Mapping("fromValue")

@@ -24,7 +24,7 @@ public class CFStreamClientContext
      {
 
     
-    protected CFStreamClientContext() {}
+    private CFStreamClientContext() {}
     
     
     @DotMapping("version")

@@ -30,6 +30,6 @@ public class CGImageMetadataEnumerationOptions
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("kCGImageMetadataEnumerateRecursively")
-    protected static native CFString EnumerateRecursivelyKey();
+    public static native CFString EnumerateRecursivelyKey();
     
 }

@@ -24,7 +24,7 @@ public class CFBinaryHeapCompareContext
      {
 
     
-    protected CFBinaryHeapCompareContext() {}
+    private CFBinaryHeapCompareContext() {}
     
     
     @DotMapping("version")

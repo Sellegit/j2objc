@@ -32,7 +32,8 @@ public class AVMetadataObject
 
     
     
-    public AVMetadataObject() {}
+    @Mapping("init")
+    public AVMetadataObject() { }
     
     
     @Mapping("time")

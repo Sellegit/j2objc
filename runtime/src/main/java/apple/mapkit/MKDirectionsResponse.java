@@ -29,7 +29,8 @@ public class MKDirectionsResponse
 
     
     
-    public MKDirectionsResponse() {}
+    @Mapping("init")
+    public MKDirectionsResponse() { }
     
     
     @Mapping("source")

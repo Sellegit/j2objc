@@ -27,7 +27,7 @@ public class CMSampleTimingInfo
      {
 
     
-    protected CMSampleTimingInfo() {}
+    private CMSampleTimingInfo() {}
     
     
     @DotMapping("duration")

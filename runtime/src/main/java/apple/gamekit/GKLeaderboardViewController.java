@@ -29,11 +29,12 @@ public class GKLeaderboardViewController
 
     
     
-    public GKLeaderboardViewController() {}
     @Mapping("initWithRootViewController:")
     public GKLeaderboardViewController(UIViewController rootViewController) { }
     @Mapping("initWithNibName:bundle:")
     public GKLeaderboardViewController(String nibNameOrNil, NSBundle nibBundleOrNil) { }
+    @Mapping("init")
+    public GKLeaderboardViewController() { }
     
     
     @Mapping("timeScope")

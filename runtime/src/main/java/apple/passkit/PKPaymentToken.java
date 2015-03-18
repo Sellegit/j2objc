@@ -28,7 +28,8 @@ public class PKPaymentToken
 
     
     
-    public PKPaymentToken() {}
+    @Mapping("init")
+    public PKPaymentToken() { }
     
     
     @Mapping("paymentInstrumentName")

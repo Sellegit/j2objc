@@ -28,9 +28,9 @@ public class CFMutableBitVector
     
     
     @GlobalFunction("CFBitVectorCreateMutable")
-    protected static native CFMutableBitVector createMutable(CFAllocator allocator, @MachineSizedSInt long capacity);
+    public static native CFMutableBitVector createMutable(CFAllocator allocator, @MachineSizedSInt long capacity);
     @GlobalFunction("CFBitVectorCreateMutableCopy")
-    protected static native CFMutableBitVector createMutableCopy(CFAllocator allocator, @MachineSizedSInt long capacity, CFBitVector bv);
+    public static native CFMutableBitVector createMutableCopy(CFAllocator allocator, @MachineSizedSInt long capacity, CFBitVector bv);
     @GlobalFunction("CFBitVectorSetCount")
     public static native void setCount(CFBitVector bv, @MachineSizedSInt long count);
     @GlobalFunction("CFBitVectorFlipBitAtIndex")

@@ -31,7 +31,8 @@ public class NSMutableAttributedString
 
     
     
-    public NSMutableAttributedString() {}
+    @Mapping("init")
+    public NSMutableAttributedString() { }
     
     
     @Mapping("mutableString")

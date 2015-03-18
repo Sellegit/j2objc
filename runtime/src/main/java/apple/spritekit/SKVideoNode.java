@@ -31,7 +31,6 @@ public class SKVideoNode
 
     
     
-    public SKVideoNode() {}
     @Mapping("initWithAVPlayer:")
     public SKVideoNode(AVPlayer player) { }
     @Mapping("initWithVideoFileNamed:")
@@ -40,6 +39,8 @@ public class SKVideoNode
     public SKVideoNode(NSURL url) { }
     @Mapping("initWithCoder:")
     public SKVideoNode(NSCoder aDecoder) { }
+    @Mapping("init")
+    public SKVideoNode() { }
     
     
     @Mapping("size")

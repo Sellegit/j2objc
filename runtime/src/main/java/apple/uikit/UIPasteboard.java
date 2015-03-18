@@ -31,7 +31,8 @@ public class UIPasteboard
 
     
     
-    public UIPasteboard() {}
+    @Mapping("init")
+    public UIPasteboard() { }
     
     
     @Mapping("name")
@@ -45,9 +46,9 @@ public class UIPasteboard
     @Mapping("numberOfItems")
     public native @MachineSizedSInt long getNumberOfItems();
     @Mapping("items")
-    private native NSArray<NSDictionary<NSString, NSObject>> getItems0();
+    public native NSArray<NSDictionary<NSString, NSObject>> getItems0();
     @Mapping("setItems:")
-    private native void setItems0(NSArray<NSDictionary<NSString, NSObject>> v);
+    public native void setItems0(NSArray<NSDictionary<NSString, NSObject>> v);
     @Mapping("string")
     public native String getString();
     @Mapping("setString:")
@@ -84,7 +85,7 @@ public class UIPasteboard
     
     
     @GlobalConstant("UIPasteboardNameFind")
-    private static native String PasteboardNameFind();
+    public static native String PasteboardNameFind();
     @GlobalConstant("UIPasteboardChangedNotification")
     public static native NSString ChangedNotification();
     @GlobalConstant("UIPasteboardRemovedNotification")
@@ -111,7 +112,7 @@ public class UIPasteboard
     @Mapping("setData:forPasteboardType:")
     public native void setData(NSData data, String pasteboardType);
     @Mapping("pasteboardTypesForItemSet:")
-    private native NSArray<NSArray<NSString>> getTypes0(NSIndexSet itemSet);
+    public native NSArray<NSArray<NSString>> getTypes0(NSIndexSet itemSet);
     @Mapping("containsPasteboardTypes:inItemSet:")
     public native boolean contains(NSArray<?> pasteboardTypes, NSIndexSet itemSet);
     @Mapping("itemSetWithPasteboardTypes:")
@@ -121,7 +122,7 @@ public class UIPasteboard
     @Mapping("dataForPasteboardType:inItemSet:")
     public native NSArray<NSData> getData(String pasteboardType, NSIndexSet itemSet);
     @Mapping("addItems:")
-    private native void addItems(NSArray<?> items);
+    public native void addItems(NSArray<?> items);
     @Mapping("generalPasteboard")
     public static native UIPasteboard getGeneralPasteboard();
     @Mapping("pasteboardWithName:create:")

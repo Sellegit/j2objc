@@ -26,7 +26,8 @@ public class NSPropertyDescription
 
     
     
-    public NSPropertyDescription() {}
+    @Mapping("init")
+    public NSPropertyDescription() { }
     
     
     @Mapping("entity")

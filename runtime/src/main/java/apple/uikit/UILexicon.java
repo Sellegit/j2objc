@@ -31,7 +31,8 @@ public class UILexicon
 
     
     
-    public UILexicon() {}
+    @Mapping("init")
+    public UILexicon() { }
     
     
     @Mapping("entries")

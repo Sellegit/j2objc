@@ -35,6 +35,6 @@ public class UIApplicationExtensionPointIdentifier
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("UIApplicationKeyboardExtensionPointIdentifier")
-    protected static native NSString KeyboardValue();
+    public static native NSString KeyboardValue();
     
 }

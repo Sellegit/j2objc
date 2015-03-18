@@ -32,9 +32,9 @@ public class CFMachPort
     @GlobalFunction("CFMachPortGetTypeID")
     public static native @MachineSizedUInt long getClassTypeID();
     @GlobalFunction("CFMachPortCreate")
-    protected static native CFMachPort create(CFAllocator allocator, FunctionPtr callout, CFMachPortContext context, Todo shouldFreeInfo);
+    public static native CFMachPort create(CFAllocator allocator, FunctionPtr callout, CFMachPortContext context, Todo shouldFreeInfo);
     @GlobalFunction("CFMachPortCreateWithPort")
-    protected static native CFMachPort create(CFAllocator allocator, int portNum, FunctionPtr callout, CFMachPortContext context, Todo shouldFreeInfo);
+    public static native CFMachPort create(CFAllocator allocator, int portNum, FunctionPtr callout, CFMachPortContext context, Todo shouldFreeInfo);
     @GlobalFunction("CFMachPortGetPort")
     public static native int getPort(CFMachPort port);
     @GlobalFunction("CFMachPortInvalidate")
@@ -42,10 +42,10 @@ public class CFMachPort
     @GlobalFunction("CFMachPortIsValid")
     public static native boolean isValid(CFMachPort port);
     @GlobalFunction("CFMachPortGetInvalidationCallBack")
-    private static native FunctionPtr getInvalidationCallBack0(CFMachPort port);
+    public static native FunctionPtr getInvalidationCallBack0(CFMachPort port);
     @GlobalFunction("CFMachPortSetInvalidationCallBack")
-    private static native void setInvalidationCallBack0(CFMachPort port, FunctionPtr callout);
+    public static native void setInvalidationCallBack0(CFMachPort port, FunctionPtr callout);
     @GlobalFunction("CFMachPortCreateRunLoopSource")
-    protected static native CFRunLoopSource createRunLoopSource(CFAllocator allocator, CFMachPort port, @MachineSizedSInt long order);
+    public static native CFRunLoopSource createRunLoopSource(CFAllocator allocator, CFMachPort port, @MachineSizedSInt long order);
     
 }

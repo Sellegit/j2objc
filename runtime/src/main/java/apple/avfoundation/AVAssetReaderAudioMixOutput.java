@@ -32,9 +32,10 @@ public class AVAssetReaderAudioMixOutput
 
     
     
-    public AVAssetReaderAudioMixOutput() {}
     @Mapping("initWithAudioTracks:audioSettings:")
     public AVAssetReaderAudioMixOutput(NSArray<?> audioTracks, NSDictionary<?, ?> audioSettings) { }
+    @Mapping("init")
+    public AVAssetReaderAudioMixOutput() { }
     
     
     @Mapping("audioTracks")

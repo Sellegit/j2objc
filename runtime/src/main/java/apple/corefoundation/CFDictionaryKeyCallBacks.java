@@ -24,7 +24,7 @@ import apple.foundation.*;
      {
 
     
-    protected CFDictionaryKeyCallBacks() {}
+    private CFDictionaryKeyCallBacks() {}
     
     
     @DotMapping("version")

@@ -36,7 +36,7 @@ public class CMBufferQueue
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMBufferQueueCreate")
-    private static native CMBufferQueueError create(CFAllocator allocator, @MachineSizedSInt long capacity, CMBufferCallbacksStruct callbacks, Todo queueOut);
+    public static native CMBufferQueueError create(CFAllocator allocator, @MachineSizedSInt long capacity, CMBufferCallbacksStruct callbacks, Todo queueOut);
     /**
      * @since Available in iOS 4.0 and later.
      */
@@ -91,7 +91,7 @@ public class CMBufferQueue
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMBufferQueueResetWithCallback")
-    private static native CMBufferQueueError reset(CMBufferQueue queue, FunctionPtr callback, Todo refcon);
+    public static native CMBufferQueueError reset(CMBufferQueue queue, FunctionPtr callback, Todo refcon);
     /**
      * @since Available in iOS 4.0 and later.
      */
@@ -141,12 +141,12 @@ public class CMBufferQueue
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMBufferQueueInstallTrigger")
-    private static native CMBufferQueueError installTrigger(CMBufferQueue queue, FunctionPtr triggerCallback, Todo triggerRefcon, CMBufferQueueTriggerCondition triggerCondition, CMTime triggerTime, Todo triggerTokenOut);
+    public static native CMBufferQueueError installTrigger(CMBufferQueue queue, FunctionPtr triggerCallback, Todo triggerRefcon, CMBufferQueueTriggerCondition triggerCondition, CMTime triggerTime, Todo triggerTokenOut);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMBufferQueueInstallTriggerWithIntegerThreshold")
-    private static native CMBufferQueueError installTrigger(CMBufferQueue queue, FunctionPtr triggerCallback, Todo triggerRefcon, CMBufferQueueTriggerCondition triggerCondition, @MachineSizedSInt long triggerThreshold, Todo triggerTokenOut);
+    public static native CMBufferQueueError installTrigger(CMBufferQueue queue, FunctionPtr triggerCallback, Todo triggerRefcon, CMBufferQueueTriggerCondition triggerCondition, @MachineSizedSInt long triggerThreshold, Todo triggerTokenOut);
     /**
      * @since Available in iOS 4.0 and later.
      */
@@ -161,11 +161,11 @@ public class CMBufferQueue
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMBufferQueueCallForEachBuffer")
-    private static native CMBufferQueueError callForEachBuffer(CMBufferQueue queue, FunctionPtr callback, Todo refcon);
+    public static native CMBufferQueueError callForEachBuffer(CMBufferQueue queue, FunctionPtr callback, Todo refcon);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMBufferQueueSetValidationCallback")
-    private static native CMBufferQueueError setValidationCallback(CMBufferQueue queue, FunctionPtr validationCallback, Todo validationRefCon);
+    public static native CMBufferQueueError setValidationCallback(CMBufferQueue queue, FunctionPtr validationCallback, Todo validationRefCon);
     
 }

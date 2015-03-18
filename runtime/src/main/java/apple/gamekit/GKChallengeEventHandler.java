@@ -29,7 +29,8 @@ public class GKChallengeEventHandler
 
     
     
-    public GKChallengeEventHandler() {}
+    @Mapping("init")
+    public GKChallengeEventHandler() { }
     
     
     /**

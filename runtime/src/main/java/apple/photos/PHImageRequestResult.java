@@ -33,26 +33,26 @@ public class PHImageRequestResult
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("PHImageResultIsInCloudKey")
-    protected static native NSString ResultIsInCloudKey();
+    public static native NSString ResultIsInCloudKey();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("PHImageResultIsDegradedKey")
-    protected static native NSString ResultIsDegradedKey();
+    public static native NSString ResultIsDegradedKey();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("PHImageResultRequestIDKey")
-    protected static native NSString ResultRequestIDKey();
+    public static native NSString ResultRequestIDKey();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("PHImageCancelledKey")
-    protected static native NSString CancelledKey();
+    public static native NSString CancelledKey();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("PHImageErrorKey")
-    protected static native NSString ErrorKey();
+    public static native NSString ErrorKey();
     
 }

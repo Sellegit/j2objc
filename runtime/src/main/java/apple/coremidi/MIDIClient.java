@@ -32,7 +32,7 @@ public class MIDIClient
      * @since Available in iOS 4.2 and later.
      */
     @GlobalFunction("MIDIClientCreate")
-    protected static native MIDIError create(String name, FunctionPtr notifyProc, Todo notifyRefCon, Todo outClient);
+    public static native MIDIError create(String name, FunctionPtr notifyProc, Todo notifyRefCon, Todo outClient);
     /**
      * @since Available in iOS 4.2 and later.
      */

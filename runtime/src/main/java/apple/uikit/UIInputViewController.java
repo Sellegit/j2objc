@@ -31,9 +31,10 @@ public class UIInputViewController
 
     
     
-    public UIInputViewController() {}
     @Mapping("initWithNibName:bundle:")
     public UIInputViewController(String nibNameOrNil, NSBundle nibBundleOrNil) { }
+    @Mapping("init")
+    public UIInputViewController() { }
     
     
     @Mapping("inputView")

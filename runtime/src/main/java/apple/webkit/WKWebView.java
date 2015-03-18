@@ -27,13 +27,14 @@ public class WKWebView
 
     
     
-    public WKWebView() {}
     @Mapping("initWithFrame:configuration:")
     public WKWebView(CGRect frame, WKWebViewConfiguration configuration) { }
     @Mapping("initWithCoder:")
     public WKWebView(NSCoder coder) { }
     @Mapping("initWithFrame:")
     public WKWebView(CGRect frame) { }
+    @Mapping("init")
+    public WKWebView() { }
     
     
     @Mapping("configuration")

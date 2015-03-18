@@ -35,11 +35,11 @@ public class NSStreamSOCKSProxyVersion
      * @since Available in iOS 2.0 and later.
      */
     @GlobalConstant("NSStreamSOCKSProxyVersion4")
-    protected static native NSString _4Value();
+    public static native NSString _4Value();
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalConstant("NSStreamSOCKSProxyVersion5")
-    protected static native NSString _5Value();
+    public static native NSString _5Value();
     
 }

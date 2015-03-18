@@ -33,7 +33,8 @@ public class SKLightNode
 
     
     
-    public SKLightNode() {}
+    @Mapping("init")
+    public SKLightNode() { }
     @Mapping("initWithCoder:")
     public SKLightNode(NSCoder aDecoder) { }
     

@@ -29,7 +29,8 @@ public class NSInvocation
 
     
     
-    public NSInvocation() {}
+    @Mapping("init")
+    public NSInvocation() { }
     
     
     @Mapping("methodSignature")

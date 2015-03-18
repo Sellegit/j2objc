@@ -29,11 +29,12 @@ public class MKPinAnnotationView
 
     
     
-    public MKPinAnnotationView() {}
     @Mapping("initWithAnnotation:reuseIdentifier:")
     public MKPinAnnotationView(MKAnnotation annotation, String reuseIdentifier) { }
     @Mapping("initWithFrame:")
     public MKPinAnnotationView(CGRect frame) { }
+    @Mapping("init")
+    public MKPinAnnotationView() { }
     
     
     @Mapping("pinColor")

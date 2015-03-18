@@ -29,7 +29,8 @@ public class CAMetalLayer
 
     
     
-    public CAMetalLayer() {}
+    @Mapping("init")
+    public CAMetalLayer() { }
     @Mapping("initWithLayer:")
     public CAMetalLayer(Object layer) { }
     

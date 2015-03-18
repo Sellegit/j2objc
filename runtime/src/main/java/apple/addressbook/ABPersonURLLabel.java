@@ -27,6 +27,6 @@ public class ABPersonURLLabel
     
     
     @GlobalConstant("kABPersonHomePageLabel")
-    protected static native CFString HomePageLabel();
+    public static native CFString HomePageLabel();
     
 }

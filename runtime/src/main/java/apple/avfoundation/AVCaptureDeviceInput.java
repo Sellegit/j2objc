@@ -32,7 +32,8 @@ public class AVCaptureDeviceInput
 
     
     
-    public AVCaptureDeviceInput() {}
+    @Mapping("init")
+    public AVCaptureDeviceInput() { }
     
     
     @Mapping("device")

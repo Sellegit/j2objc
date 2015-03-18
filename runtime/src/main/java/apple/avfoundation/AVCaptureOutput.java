@@ -32,7 +32,8 @@ public class AVCaptureOutput
 
     
     
-    public AVCaptureOutput() {}
+    @Mapping("init")
+    public AVCaptureOutput() { }
     
     
     @Mapping("connections")

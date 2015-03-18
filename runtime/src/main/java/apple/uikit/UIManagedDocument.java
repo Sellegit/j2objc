@@ -31,9 +31,10 @@ public class UIManagedDocument
 
     
     
-    public UIManagedDocument() {}
     @Mapping("initWithFileURL:")
     public UIManagedDocument(NSURL url) { }
+    @Mapping("init")
+    public UIManagedDocument() { }
     
     
     @Mapping("managedObjectContext")
@@ -52,15 +53,15 @@ public class UIManagedDocument
     
     
     @Mapping("configurePersistentStoreCoordinatorForURL:ofType:modelConfiguration:storeOptions:error:")
-    protected native boolean configurePersistentStoreCoordinator(NSURL storeURL, String fileType, String configuration, NSDictionary<?, ?> storeOptions, Todo error);
+    public native boolean configurePersistentStoreCoordinator(NSURL storeURL, String fileType, String configuration, NSDictionary<?, ?> storeOptions, Todo error);
     @Mapping("persistentStoreTypeForFileType:")
     public native String getPersistentStoreType(String fileType);
     @Mapping("readAdditionalContentFromURL:error:")
-    protected native boolean readAdditionalContent(NSURL absoluteURL, Todo error);
+    public native boolean readAdditionalContent(NSURL absoluteURL, Todo error);
     @Mapping("additionalContentForURL:error:")
-    protected native Object getAdditionalContent(NSURL absoluteURL, Todo error);
+    public native Object getAdditionalContent(NSURL absoluteURL, Todo error);
     @Mapping("writeAdditionalContent:toURL:originalContentsURL:error:")
-    protected native boolean writeAdditionalContent(Object content, NSURL absoluteURL, NSURL absoluteOriginalContentsURL, Todo error);
+    public native boolean writeAdditionalContent(Object content, NSURL absoluteURL, NSURL absoluteOriginalContentsURL, Todo error);
     @Mapping("persistentStoreName")
     public static native String getPersistentStoreName();
     

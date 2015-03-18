@@ -27,7 +27,8 @@ public class GKLocalPlayer
 
     
     
-    public GKLocalPlayer() {}
+    @Mapping("init")
+    public GKLocalPlayer() { }
     
     
     @Mapping("isAuthenticated")

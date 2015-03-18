@@ -32,9 +32,10 @@ public class AVAudioUnitReverb
 
     
     
-    public AVAudioUnitReverb() {}
     @Mapping("initWithAudioComponentDescription:")
     public AVAudioUnitReverb(AudioComponentDescription audioComponentDescription) { }
+    @Mapping("init")
+    public AVAudioUnitReverb() { }
     
     
     @Mapping("wetDryMix")

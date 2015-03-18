@@ -23,7 +23,7 @@ public class MIDIControlTransform
      {
 
     
-    protected MIDIControlTransform() {}
+    private MIDIControlTransform() {}
     
     
     @DotMapping("controlType")

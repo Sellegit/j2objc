@@ -31,7 +31,8 @@ public class NSLengthFormatter
 
     
     
-    public NSLengthFormatter() {}
+    @Mapping("init")
+    public NSLengthFormatter() { }
     
     
     @Mapping("numberFormatter")
@@ -56,6 +57,6 @@ public class NSLengthFormatter
     @Mapping("unitStringFromValue:unit:")
     public native String formatUnit(double value, @Representing("NSLengthFormatterUnit") @MachineSizedSInt long unit);
     @Mapping("unitStringFromMeters:usedUnit:")
-    protected native String formatUnitMeters(double numberInMeters, Todo unitp);
+    public native String formatUnitMeters(double numberInMeters, Todo unitp);
     
 }

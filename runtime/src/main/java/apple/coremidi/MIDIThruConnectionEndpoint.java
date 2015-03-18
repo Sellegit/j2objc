@@ -23,7 +23,7 @@ public class MIDIThruConnectionEndpoint
      {
 
     
-    protected MIDIThruConnectionEndpoint() {}
+    private MIDIThruConnectionEndpoint() {}
     
     
     @DotMapping("endpointRef")

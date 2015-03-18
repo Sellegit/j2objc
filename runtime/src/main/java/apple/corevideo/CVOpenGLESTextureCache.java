@@ -37,12 +37,12 @@ public class CVOpenGLESTextureCache
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("CVOpenGLESTextureCacheCreate")
-    protected static native CVReturn create(CFAllocator allocator, CFDictionary cacheAttributes, EAGLContext eaglContext, CFDictionary textureAttributes, Todo cacheOut);
+    public static native CVReturn create(CFAllocator allocator, CFDictionary cacheAttributes, EAGLContext eaglContext, CFDictionary textureAttributes, Todo cacheOut);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("CVOpenGLESTextureCacheCreateTextureFromImage")
-    protected static native CVReturn createTexture(CFAllocator allocator, CVOpenGLESTextureCache textureCache, CVImageBuffer sourceImage, CFDictionary textureAttributes, int target, int internalFormat, int width, int height, int format, int type, @MachineSizedUInt long planeIndex, Todo textureOut);
+    public static native CVReturn createTexture(CFAllocator allocator, CVOpenGLESTextureCache textureCache, CVImageBuffer sourceImage, CFDictionary textureAttributes, int target, int internalFormat, int width, int height, int format, int type, @MachineSizedUInt long planeIndex, Todo textureOut);
     /**
      * @since Available in iOS 5.0 and later.
      */

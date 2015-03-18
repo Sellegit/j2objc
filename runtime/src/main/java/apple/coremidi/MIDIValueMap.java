@@ -23,7 +23,7 @@ public class MIDIValueMap
      {
 
     
-    protected MIDIValueMap() {}
+    private MIDIValueMap() {}
     
     
     

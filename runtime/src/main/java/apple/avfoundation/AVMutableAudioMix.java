@@ -32,7 +32,8 @@ public class AVMutableAudioMix
 
     
     
-    public AVMutableAudioMix() {}
+    @Mapping("init")
+    public AVMutableAudioMix() { }
     
     
     @Mapping("inputParameters")

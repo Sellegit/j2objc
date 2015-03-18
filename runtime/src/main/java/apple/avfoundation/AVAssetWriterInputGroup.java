@@ -32,9 +32,10 @@ public class AVAssetWriterInputGroup
 
     
     
-    public AVAssetWriterInputGroup() {}
     @Mapping("initWithInputs:defaultInput:")
     public AVAssetWriterInputGroup(NSArray<?> inputs, AVAssetWriterInput defaultInput) { }
+    @Mapping("init")
+    public AVAssetWriterInputGroup() { }
     
     
     @Mapping("inputs")

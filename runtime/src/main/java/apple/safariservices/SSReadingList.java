@@ -37,7 +37,7 @@ public class SSReadingList
      * @since Available in iOS 7.0 and later.
      */
     @Mapping("addReadingListItemWithURL:title:previewText:error:")
-    protected native boolean addReadingListItem(NSURL URL, String title, String previewText, Todo error);
+    public native boolean addReadingListItem(NSURL URL, String title, String previewText, Todo error);
     @Mapping("defaultReadingList")
     public static native SSReadingList getDefaultReadingList();
     @Mapping("supportsURL:")

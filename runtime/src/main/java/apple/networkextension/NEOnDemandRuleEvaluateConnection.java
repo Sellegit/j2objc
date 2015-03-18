@@ -26,7 +26,8 @@ public class NEOnDemandRuleEvaluateConnection
 
     
     
-    public NEOnDemandRuleEvaluateConnection() {}
+    @Mapping("init")
+    public NEOnDemandRuleEvaluateConnection() { }
     
     
     /**

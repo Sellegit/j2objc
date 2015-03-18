@@ -29,7 +29,7 @@ public class AVCaptureWhiteBalanceTemperatureAndTintValues
      {
 
     
-    protected AVCaptureWhiteBalanceTemperatureAndTintValues() {}
+    private AVCaptureWhiteBalanceTemperatureAndTintValues() {}
     
     
     @DotMapping("temperature")

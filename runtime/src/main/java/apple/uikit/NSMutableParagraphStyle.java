@@ -31,7 +31,8 @@ public class NSMutableParagraphStyle
 
     
     
-    public NSMutableParagraphStyle() {}
+    @Mapping("init")
+    public NSMutableParagraphStyle() { }
     
     
     @Mapping("lineSpacing")

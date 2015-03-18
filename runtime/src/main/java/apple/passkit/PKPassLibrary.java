@@ -28,7 +28,8 @@ public class PKPassLibrary
 
     
     
-    public PKPassLibrary() {}
+    @Mapping("init")
+    public PKPassLibrary() { }
     
     
     

@@ -31,6 +31,8 @@ public class NSException
     
     @Mapping("initWithName:reason:userInfo:")
     public NSException(String aName, String aReason, NSDictionary<?, ?> aUserInfo) { }
+    @Mapping("init")
+    public NSException() { }
     
     
     @Mapping("name")
@@ -53,7 +55,7 @@ public class NSException
     
     
     @GlobalFunction("NSSetUncaughtExceptionHandler")
-    private static native void setUncaughtExceptionHandler(FunctionPtr p0);
+    public static native void setUncaughtExceptionHandler(FunctionPtr p0);
     
     @Mapping("raise")
     public native void raise();

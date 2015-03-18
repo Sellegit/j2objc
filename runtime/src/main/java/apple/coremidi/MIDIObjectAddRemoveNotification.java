@@ -23,7 +23,7 @@ public class MIDIObjectAddRemoveNotification
      {
 
     
-    protected MIDIObjectAddRemoveNotification() {}
+    private MIDIObjectAddRemoveNotification() {}
     
     
     @DotMapping("messageID")

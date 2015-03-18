@@ -27,7 +27,8 @@ public class CKQueryCursor
 
     
     
-    public CKQueryCursor() {}
+    @Mapping("init")
+    public CKQueryCursor() { }
     
     
     

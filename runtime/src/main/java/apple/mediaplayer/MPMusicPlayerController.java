@@ -27,7 +27,8 @@ public class MPMusicPlayerController
 
     
     
-    public MPMusicPlayerController() {}
+    @Mapping("init")
+    public MPMusicPlayerController() { }
     
     
     @Mapping("playbackState")

@@ -26,7 +26,8 @@ public class CTCall
 
     
     
-    public CTCall() {}
+    @Mapping("init")
+    public CTCall() { }
     
     
     /**

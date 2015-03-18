@@ -31,7 +31,8 @@ public class NSExtensionItem
 
     
     
-    public NSExtensionItem() {}
+    @Mapping("init")
+    public NSExtensionItem() { }
     
     
     @Mapping("attributedTitle")

@@ -26,7 +26,8 @@ public class CMLogItem
 
     
     
-    public CMLogItem() {}
+    @Mapping("init")
+    public CMLogItem() { }
     
     
     @Mapping("timestamp")

@@ -29,9 +29,10 @@ public class NSKeyedArchiver
 
     
     
-    public NSKeyedArchiver() {}
     @Mapping("initForWritingWithMutableData:")
     public NSKeyedArchiver(NSMutableData data) { }
+    @Mapping("init")
+    public NSKeyedArchiver() { }
     
     
     @Mapping("delegate")
@@ -61,6 +62,6 @@ public class NSKeyedArchiver
     @Mapping("archivedDataWithRootObject:")
     public static native NSData archive(Object rootObject);
     @Mapping("archiveRootObject:toFile:")
-    private static native boolean archiveRootObject(Object rootObject, String path);
+    public static native boolean archiveRootObject(Object rootObject, String path);
     
 }

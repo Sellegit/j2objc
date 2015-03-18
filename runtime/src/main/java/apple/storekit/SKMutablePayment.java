@@ -28,7 +28,8 @@ public class SKMutablePayment
 
     
     
-    public SKMutablePayment() {}
+    @Mapping("init")
+    public SKMutablePayment() { }
     
     
     /**

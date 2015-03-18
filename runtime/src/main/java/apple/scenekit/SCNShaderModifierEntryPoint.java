@@ -33,12 +33,12 @@ public class SCNShaderModifierEntryPoint
     
     
     @GlobalConstant("SCNShaderModifierEntryPointGeometry")
-    protected static native NSString GeometryValue();
+    public static native NSString GeometryValue();
     @GlobalConstant("SCNShaderModifierEntryPointSurface")
-    protected static native NSString SurfaceValue();
+    public static native NSString SurfaceValue();
     @GlobalConstant("SCNShaderModifierEntryPointLightingModel")
-    protected static native NSString LightingModelValue();
+    public static native NSString LightingModelValue();
     @GlobalConstant("SCNShaderModifierEntryPointFragment")
-    protected static native NSString FragmentValue();
+    public static native NSString FragmentValue();
     
 }

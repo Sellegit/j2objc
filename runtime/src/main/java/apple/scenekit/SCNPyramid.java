@@ -30,7 +30,8 @@ public class SCNPyramid
 
     
     
-    public SCNPyramid() {}
+    @Mapping("init")
+    public SCNPyramid() { }
     
     
     @Mapping("width")

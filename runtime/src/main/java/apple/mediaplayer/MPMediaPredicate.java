@@ -27,7 +27,8 @@ public class MPMediaPredicate
 
     
     
-    public MPMediaPredicate() {}
+    @Mapping("init")
+    public MPMediaPredicate() { }
     
     
     

@@ -30,31 +30,31 @@ public class ABPersonAlternateBirthday
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("kABPersonAlternateBirthdayCalendarIdentifierKey")
-    protected static native CFString CalendarIdentifierKey();
+    public static native CFString CalendarIdentifierKey();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("kABPersonAlternateBirthdayEraKey")
-    protected static native CFString EraKey();
+    public static native CFString EraKey();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("kABPersonAlternateBirthdayYearKey")
-    protected static native CFString YearKey();
+    public static native CFString YearKey();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("kABPersonAlternateBirthdayMonthKey")
-    protected static native CFString MonthKey();
+    public static native CFString MonthKey();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("kABPersonAlternateBirthdayIsLeapMonthKey")
-    protected static native CFString IsLeapMonthKey();
+    public static native CFString IsLeapMonthKey();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("kABPersonAlternateBirthdayDayKey")
-    protected static native CFString DayKey();
+    public static native CFString DayKey();
     
 }

@@ -36,7 +36,7 @@ public class CMFormatDescription
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMFormatDescriptionCreate")
-    protected static native int create(CFAllocator allocator, CMMediaType mediaType, int mediaSubtype, NSDictionary<?, ?> extensions, Todo descOut);
+    public static native int create(CFAllocator allocator, CMMediaType mediaType, int mediaSubtype, NSDictionary<?, ?> extensions, Todo descOut);
     /**
      * @since Available in iOS 4.0 and later.
      */
@@ -51,7 +51,7 @@ public class CMFormatDescription
      * @since Available in iOS 4.3 and later.
      */
     @GlobalFunction("CMFormatDescriptionEqualIgnoringExtensionKeys")
-    private static native boolean equalsTo(CMFormatDescription desc1, CMFormatDescription desc2, CFType formatDescriptionExtensionKeysToIgnore, CFType sampleDescriptionExtensionAtomKeysToIgnore);
+    public static native boolean equalsTo(CMFormatDescription desc1, CMFormatDescription desc2, CFType formatDescriptionExtensionKeysToIgnore, CFType sampleDescriptionExtensionAtomKeysToIgnore);
     /**
      * @since Available in iOS 4.0 and later.
      */

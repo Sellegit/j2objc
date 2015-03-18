@@ -31,9 +31,10 @@ public class UIRotationGestureRecognizer
 
     
     
-    public UIRotationGestureRecognizer() {}
     @Mapping("initWithTarget:action:")
     public UIRotationGestureRecognizer(Object target, Selector action) { }
+    @Mapping("init")
+    public UIRotationGestureRecognizer() { }
     
     
     @Mapping("rotation")

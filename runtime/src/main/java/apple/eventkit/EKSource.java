@@ -28,7 +28,8 @@ public class EKSource
 
     
     
-    public EKSource() {}
+    @Mapping("init")
+    public EKSource() { }
     
     
     @Mapping("sourceIdentifier")

@@ -28,7 +28,8 @@ public class EKParticipant
 
     
     
-    public EKParticipant() {}
+    @Mapping("init")
+    public EKParticipant() { }
     
     
     @Mapping("URL")

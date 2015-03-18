@@ -29,9 +29,10 @@ public class NSScanner
 
     
     
-    public NSScanner() {}
     @Mapping("initWithString:")
     public NSScanner(String string) { }
+    @Mapping("init")
+    public NSScanner() { }
     
     
     @Mapping("string")
@@ -58,46 +59,46 @@ public class NSScanner
     
     
     @Mapping("scanInt:")
-    private native boolean scanInt(Todo result);
+    public native boolean scanInt(Todo result);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @Mapping("scanInteger:")
-    private native boolean scanInteger(Todo result);
+    public native boolean scanInteger(Todo result);
     @Mapping("scanLongLong:")
-    private native boolean scanLongLong(Todo result);
+    public native boolean scanLongLong(Todo result);
     /**
      * @since Available in iOS 7.0 and later.
      */
     @Mapping("scanUnsignedLongLong:")
-    private native boolean scanUnsignedLongLong(Todo result);
+    public native boolean scanUnsignedLongLong(Todo result);
     @Mapping("scanFloat:")
-    private native boolean scanFloat(Todo result);
+    public native boolean scanFloat(Todo result);
     @Mapping("scanDouble:")
-    private native boolean scanDouble(Todo result);
+    public native boolean scanDouble(Todo result);
     @Mapping("scanHexInt:")
-    private native boolean scanHexInt(Todo result);
+    public native boolean scanHexInt(Todo result);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @Mapping("scanHexLongLong:")
-    private native boolean scanHexLongLong(Todo result);
+    public native boolean scanHexLongLong(Todo result);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @Mapping("scanHexFloat:")
-    private native boolean scanHexFloat(Todo result);
+    public native boolean scanHexFloat(Todo result);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @Mapping("scanHexDouble:")
-    private native boolean scanHexDouble(Todo result);
+    public native boolean scanHexDouble(Todo result);
     @Mapping("scannerWithString:")
     public static native NSScanner create(String string);
     @Mapping("localizedScannerWithString:")
     public static native NSScanner createLocalized(String string);
     @Mapping("scanDecimal:")
-    private native boolean scanDecimal(NSDecimal dcm);
+    public native boolean scanDecimal(NSDecimal dcm);
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
     

@@ -33,11 +33,11 @@ public class ABRecord
     @GlobalFunction("ABRecordGetRecordType")
     public static native ABRecordType getRecordType(ABRecord record);
     @GlobalFunction("ABRecordCopyValue")
-    protected static native CFType getValue(ABRecord record, int property);
+    public static native CFType getValue(ABRecord record, int property);
     @GlobalFunction("ABRecordSetValue")
-    protected static native boolean setValue(ABRecord record, int property, CFType value, Todo error);
+    public static native boolean setValue(ABRecord record, int property, CFType value, Todo error);
     @GlobalFunction("ABRecordRemoveValue")
-    protected static native boolean removeValue(ABRecord record, int property, Todo error);
+    public static native boolean removeValue(ABRecord record, int property, Todo error);
     @GlobalFunction("ABRecordCopyCompositeName")
     public static native String getCompositeName(ABRecord record);
     

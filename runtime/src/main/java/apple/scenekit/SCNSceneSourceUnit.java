@@ -33,8 +33,8 @@ public class SCNSceneSourceUnit
     
     
     @GlobalConstant("SCNSceneSourceAssetUnitNameKey")
-    protected static native NSString UnitNameKey();
+    public static native NSString UnitNameKey();
     @GlobalConstant("SCNSceneSourceAssetUnitMeterKey")
-    protected static native NSString UnitMeterKey();
+    public static native NSString UnitMeterKey();
     
 }

@@ -26,7 +26,7 @@ public class MKMapPoint
      {
 
     
-    protected MKMapPoint() {}
+    private MKMapPoint() {}
     
     
     @DotMapping("x")

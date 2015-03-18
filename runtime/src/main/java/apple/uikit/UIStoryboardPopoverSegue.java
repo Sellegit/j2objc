@@ -31,9 +31,10 @@ public class UIStoryboardPopoverSegue
 
     
     
-    public UIStoryboardPopoverSegue() {}
     @Mapping("initWithIdentifier:source:destination:")
     public UIStoryboardPopoverSegue(String identifier, UIViewController source, UIViewController destination) { }
+    @Mapping("init")
+    public UIStoryboardPopoverSegue() { }
     
     
     @Mapping("popoverController")

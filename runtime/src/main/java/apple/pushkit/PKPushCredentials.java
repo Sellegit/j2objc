@@ -27,7 +27,8 @@ public class PKPushCredentials
 
     
     
-    public PKPushCredentials() {}
+    @Mapping("init")
+    public PKPushCredentials() { }
     
     
     @Mapping("type")

@@ -23,7 +23,7 @@ public class AudioStreamBasicDescription
      {
 
     
-    protected AudioStreamBasicDescription() {}
+    private AudioStreamBasicDescription() {}
     
     
     @DotMapping("mSampleRate")

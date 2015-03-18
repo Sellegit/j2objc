@@ -26,7 +26,8 @@ public class LAContext
 
     
     
-    public LAContext() {}
+    @Mapping("init")
+    public LAContext() { }
     
     
     @Mapping("localizedFallbackTitle")
@@ -37,7 +38,7 @@ public class LAContext
     
     
     @Mapping("canEvaluatePolicy:error:")
-    protected native boolean canEvaluatePolicy(@Representing("LAPolicy") @MachineSizedSInt long policy, Todo error);
+    public native boolean canEvaluatePolicy(@Representing("LAPolicy") @MachineSizedSInt long policy, Todo error);
     @Mapping("evaluatePolicy:localizedReason:reply:")
     public native void evaluatePolicy(@Representing("LAPolicy") @MachineSizedSInt long policy, String localizedReason, @Block VoidBlock2<Boolean, NSError> reply);
     

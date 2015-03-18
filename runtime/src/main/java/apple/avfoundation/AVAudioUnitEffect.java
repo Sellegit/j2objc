@@ -32,9 +32,10 @@ public class AVAudioUnitEffect
 
     
     
-    public AVAudioUnitEffect() {}
     @Mapping("initWithAudioComponentDescription:")
     public AVAudioUnitEffect(AudioComponentDescription audioComponentDescription) { }
+    @Mapping("init")
+    public AVAudioUnitEffect() { }
     
     
     @Mapping("bypass")

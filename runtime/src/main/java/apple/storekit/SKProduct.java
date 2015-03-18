@@ -28,7 +28,8 @@ public class SKProduct
 
     
     
-    public SKProduct() {}
+    @Mapping("init")
+    public SKProduct() { }
     
     
     /**

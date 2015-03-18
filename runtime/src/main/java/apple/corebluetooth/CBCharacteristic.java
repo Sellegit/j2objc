@@ -27,7 +27,8 @@ public class CBCharacteristic
 
     
     
-    public CBCharacteristic() {}
+    @Mapping("init")
+    public CBCharacteristic() { }
     
     
     @Mapping("service")

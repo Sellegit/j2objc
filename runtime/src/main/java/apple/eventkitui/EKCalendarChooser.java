@@ -28,13 +28,14 @@ public class EKCalendarChooser
 
     
     
-    public EKCalendarChooser() {}
     @Mapping("initWithSelectionStyle:displayStyle:eventStore:")
     public EKCalendarChooser(EKCalendarChooserSelectionStyle selectionStyle, EKCalendarChooserDisplayStyle displayStyle, EKEventStore eventStore) { }
     @Mapping("initWithSelectionStyle:displayStyle:entityType:eventStore:")
     public EKCalendarChooser(EKCalendarChooserSelectionStyle style, EKCalendarChooserDisplayStyle displayStyle, @Representing("EKEntityType") int entityType, EKEventStore eventStore) { }
     @Mapping("initWithNibName:bundle:")
     public EKCalendarChooser(String nibNameOrNil, NSBundle nibBundleOrNil) { }
+    @Mapping("init")
+    public EKCalendarChooser() { }
     
     
     @Mapping("selectionStyle")

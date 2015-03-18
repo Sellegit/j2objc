@@ -31,9 +31,10 @@ public class TWTweetComposeViewController
 
     
     
-    public TWTweetComposeViewController() {}
     @Mapping("initWithNibName:bundle:")
     public TWTweetComposeViewController(String nibNameOrNil, NSBundle nibBundleOrNil) { }
+    @Mapping("init")
+    public TWTweetComposeViewController() { }
     
     
     @Mapping("completionHandler")

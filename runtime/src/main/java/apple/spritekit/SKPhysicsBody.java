@@ -31,7 +31,8 @@ public class SKPhysicsBody
 
     
     
-    public SKPhysicsBody() {}
+    @Mapping("init")
+    public SKPhysicsBody() { }
     
     
     @Mapping("isDynamic")

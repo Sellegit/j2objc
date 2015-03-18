@@ -29,7 +29,8 @@ public class NSRunLoop
 
     
     
-    public NSRunLoop() {}
+    @Mapping("init")
+    public NSRunLoop() { }
     
     
     @Mapping("currentMode")
@@ -40,11 +41,11 @@ public class NSRunLoop
     @Mapping("getCFRunLoop")
     public native CFRunLoop asCFRunLoop();
     @Mapping("addTimer:forMode:")
-    private native void addTimer0(NSTimer timer, String mode);
+    public native void addTimer0(NSTimer timer, String mode);
     @Mapping("addPort:forMode:")
-    private native void addPort0(NSPort aPort, String mode);
+    public native void addPort0(NSPort aPort, String mode);
     @Mapping("removePort:forMode:")
-    private native void removePort0(NSPort aPort, String mode);
+    public native void removePort0(NSPort aPort, String mode);
     @Mapping("limitDateForMode:")
     public native NSDate getDateLimit(String mode);
     @Mapping("acceptInputForMode:beforeDate:")

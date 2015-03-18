@@ -27,7 +27,8 @@ public class GKAchievementChallenge
 
     
     
-    public GKAchievementChallenge() {}
+    @Mapping("init")
+    public GKAchievementChallenge() { }
     
     
     @Mapping("achievement")

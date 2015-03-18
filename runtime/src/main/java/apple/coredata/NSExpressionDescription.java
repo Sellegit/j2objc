@@ -26,7 +26,8 @@ public class NSExpressionDescription
 
     
     
-    public NSExpressionDescription() {}
+    @Mapping("init")
+    public NSExpressionDescription() { }
     
     
     @Mapping("expression")

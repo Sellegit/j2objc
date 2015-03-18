@@ -28,9 +28,10 @@ public class PKPaymentPass
 
     
     
-    public PKPaymentPass() {}
     @Mapping("initWithData:error:")
     public PKPaymentPass(NSData data, Todo error) { }
+    @Mapping("init")
+    public PKPaymentPass() { }
     
     
     @Mapping("primaryAccountIdentifier")

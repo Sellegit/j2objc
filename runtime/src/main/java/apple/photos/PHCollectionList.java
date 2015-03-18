@@ -29,7 +29,8 @@ public class PHCollectionList
 
     
     
-    public PHCollectionList() {}
+    @Mapping("init")
+    public PHCollectionList() { }
     
     
     @Mapping("collectionListType")

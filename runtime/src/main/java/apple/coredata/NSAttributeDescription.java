@@ -26,7 +26,8 @@ public class NSAttributeDescription
 
     
     
-    public NSAttributeDescription() {}
+    @Mapping("init")
+    public NSAttributeDescription() { }
     
     
     @Mapping("attributeType")

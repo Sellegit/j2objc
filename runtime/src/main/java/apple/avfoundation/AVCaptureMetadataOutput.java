@@ -32,7 +32,8 @@ public class AVCaptureMetadataOutput
 
     
     
-    public AVCaptureMetadataOutput() {}
+    @Mapping("init")
+    public AVCaptureMetadataOutput() { }
     
     
     @Mapping("metadataObjectsDelegate")

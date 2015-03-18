@@ -31,7 +31,8 @@ public class SKCropNode
 
     
     
-    public SKCropNode() {}
+    @Mapping("init")
+    public SKCropNode() { }
     @Mapping("initWithCoder:")
     public SKCropNode(NSCoder aDecoder) { }
     

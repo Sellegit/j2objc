@@ -30,16 +30,16 @@ public class ACFacebookAudience
      * @since Available in iOS 6.0 and later.
      */
     @GlobalConstant("ACFacebookAudienceEveryone")
-    protected static native NSString EveryoneValue();
+    public static native NSString EveryoneValue();
     /**
      * @since Available in iOS 6.0 and later.
      */
     @GlobalConstant("ACFacebookAudienceFriends")
-    protected static native NSString FriendsValue();
+    public static native NSString FriendsValue();
     /**
      * @since Available in iOS 6.0 and later.
      */
     @GlobalConstant("ACFacebookAudienceOnlyMe")
-    protected static native NSString OnlyMeValue();
+    public static native NSString OnlyMeValue();
     
 }

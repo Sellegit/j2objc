@@ -29,7 +29,7 @@ public class AVAudio3DPoint
      {
 
     
-    protected AVAudio3DPoint() {}
+    private AVAudio3DPoint() {}
     
     
     @DotMapping("x")

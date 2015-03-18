@@ -29,9 +29,10 @@ public class MKDirections
 
     
     
-    public MKDirections() {}
     @Mapping("initWithRequest:")
     public MKDirections(MKDirectionsRequest request) { }
+    @Mapping("init")
+    public MKDirections() { }
     
     
     @Mapping("isCalculating")

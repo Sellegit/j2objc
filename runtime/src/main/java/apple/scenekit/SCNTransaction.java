@@ -30,7 +30,8 @@ public class SCNTransaction
 
     
     
-    public SCNTransaction() {}
+    @Mapping("init")
+    public SCNTransaction() { }
     
     
     

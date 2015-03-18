@@ -27,11 +27,12 @@ public class CKReference
 
     
     
-    public CKReference() {}
     @Mapping("initWithRecordID:action:")
     public CKReference(CKRecordID recordID, @Representing("CKReferenceAction") @MachineSizedUInt long action) { }
     @Mapping("initWithRecord:action:")
     public CKReference(CKRecord record, @Representing("CKReferenceAction") @MachineSizedUInt long action) { }
+    @Mapping("init")
+    public CKReference() { }
     
     
     @Mapping("referenceAction")

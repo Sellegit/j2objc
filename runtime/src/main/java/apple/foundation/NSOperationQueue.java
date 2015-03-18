@@ -33,7 +33,8 @@ public class NSOperationQueue
     public static final int DefaultMaxConcurrentOperationCount = -1;
     
     
-    public NSOperationQueue() {}
+    @Mapping("init")
+    public NSOperationQueue() { }
     
     
     @Mapping("operations")

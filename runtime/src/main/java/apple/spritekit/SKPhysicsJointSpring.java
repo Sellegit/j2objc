@@ -31,7 +31,8 @@ public class SKPhysicsJointSpring
 
     
     
-    public SKPhysicsJointSpring() {}
+    @Mapping("init")
+    public SKPhysicsJointSpring() { }
     
     
     @Mapping("damping")

@@ -29,13 +29,14 @@ public class NSIndexSet
 
     
     
-    public NSIndexSet() {}
     @Mapping("initWithIndexesInRange:")
     public NSIndexSet(NSRange range) { }
     @Mapping("initWithIndexSet:")
     public NSIndexSet(NSIndexSet indexSet) { }
     @Mapping("initWithIndex:")
     public NSIndexSet(@MachineSizedUInt long value) { }
+    @Mapping("init")
+    public NSIndexSet() { }
     
     
     @Mapping("count")

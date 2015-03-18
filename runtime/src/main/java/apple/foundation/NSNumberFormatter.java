@@ -29,7 +29,8 @@ public class NSNumberFormatter
 
     
     
-    public NSNumberFormatter() {}
+    @Mapping("init")
+    public NSNumberFormatter() { }
     
     
     /**

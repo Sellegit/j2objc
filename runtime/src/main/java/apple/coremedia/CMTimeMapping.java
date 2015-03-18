@@ -27,7 +27,7 @@ public class CMTimeMapping
      {
 
     
-    protected CMTimeMapping() {}
+    private CMTimeMapping() {}
     
     
     @DotMapping("source")

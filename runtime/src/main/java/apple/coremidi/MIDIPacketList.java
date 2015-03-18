@@ -23,7 +23,7 @@ public class MIDIPacketList
      {
 
     
-    protected MIDIPacketList() {}
+    private MIDIPacketList() {}
     
     
     @DotMapping("numPackets")
@@ -41,6 +41,6 @@ public class MIDIPacketList
      * @since Available in iOS 4.2 and later.
      */
     @GlobalFunction("MIDIPacketListAdd")
-    protected static native MIDIPacket add(MIDIPacketList pktlist, @MachineSizedUInt long listSize, MIDIPacket curPacket, long time, @MachineSizedUInt long nData, Todo data);
+    public static native MIDIPacket add(MIDIPacketList pktlist, @MachineSizedUInt long listSize, MIDIPacket curPacket, long time, @MachineSizedUInt long nData, Todo data);
     
 }

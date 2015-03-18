@@ -27,7 +27,8 @@ public class GKScoreChallenge
 
     
     
-    public GKScoreChallenge() {}
+    @Mapping("init")
+    public GKScoreChallenge() { }
     
     
     @Mapping("score")

@@ -32,7 +32,8 @@ public class AVSynchronizedLayer
 
     
     
-    public AVSynchronizedLayer() {}
+    @Mapping("init")
+    public AVSynchronizedLayer() { }
     @Mapping("initWithLayer:")
     public AVSynchronizedLayer(Object layer) { }
     

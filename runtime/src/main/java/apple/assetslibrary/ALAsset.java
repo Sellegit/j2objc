@@ -27,7 +27,8 @@ public class ALAsset
 
     
     
-    public ALAsset() {}
+    @Mapping("init")
+    public ALAsset() { }
     
     
     /**

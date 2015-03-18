@@ -29,7 +29,8 @@ public class MKDirectionsRequest
 
     
     
-    public MKDirectionsRequest() {}
+    @Mapping("init")
+    public MKDirectionsRequest() { }
     /**
      * @since Available in iOS 6.0 and later.
      */

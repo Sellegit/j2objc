@@ -28,9 +28,10 @@ public class EKRecurrenceDayOfWeek
 
     
     
-    public EKRecurrenceDayOfWeek() {}
     @Mapping("initWithDayOfTheWeek:weekNumber:")
     public EKRecurrenceDayOfWeek(@MachineSizedSInt long dayOfTheWeek, @MachineSizedSInt long weekNumber) { }
+    @Mapping("init")
+    public EKRecurrenceDayOfWeek() { }
     
     
     @Mapping("dayOfTheWeek")

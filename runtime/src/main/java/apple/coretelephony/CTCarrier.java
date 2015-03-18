@@ -26,7 +26,8 @@ public class CTCarrier
 
     
     
-    public CTCarrier() {}
+    @Mapping("init")
+    public CTCarrier() { }
     
     
     /**

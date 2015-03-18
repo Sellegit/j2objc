@@ -23,7 +23,7 @@ public class CTError
      {
 
     
-    protected CTError() {}
+    private CTError() {}
     
     
     @DotMapping("domain")

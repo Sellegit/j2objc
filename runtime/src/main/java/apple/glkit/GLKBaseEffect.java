@@ -29,7 +29,8 @@ public class GLKBaseEffect
 
     
     
-    public GLKBaseEffect() {}
+    @Mapping("init")
+    public GLKBaseEffect() { }
     
     
     @Mapping("colorMaterialEnabled")

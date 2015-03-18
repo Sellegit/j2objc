@@ -27,7 +27,8 @@ public class ALAssetsLibrary
 
     
     
-    public ALAssetsLibrary() {}
+    @Mapping("init")
+    public ALAssetsLibrary() { }
     
     
     

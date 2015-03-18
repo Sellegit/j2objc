@@ -32,7 +32,8 @@ public class AVMediaSelectionGroup
 
     
     
-    public AVMediaSelectionGroup() {}
+    @Mapping("init")
+    public AVMediaSelectionGroup() { }
     
     
     @Mapping("options")

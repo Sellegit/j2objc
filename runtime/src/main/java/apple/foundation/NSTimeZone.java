@@ -29,7 +29,8 @@ public class NSTimeZone
 
     
     
-    public NSTimeZone() {}
+    @Mapping("init")
+    public NSTimeZone() { }
     @Mapping("initWithName:")
     public NSTimeZone(String tzName) { }
     @Mapping("initWithName:data:")

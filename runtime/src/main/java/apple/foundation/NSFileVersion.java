@@ -31,7 +31,8 @@ public class NSFileVersion
 
     
     
-    public NSFileVersion() {}
+    @Mapping("init")
+    public NSFileVersion() { }
     
     
     @Mapping("URL")
@@ -64,9 +65,9 @@ public class NSFileVersion
     
     
     @Mapping("replaceItemAtURL:options:error:")
-    protected native NSURL replaceItemAtURL(NSURL url, @Representing("NSFileVersionReplacingOptions") @MachineSizedUInt long options, Todo error);
+    public native NSURL replaceItemAtURL(NSURL url, @Representing("NSFileVersionReplacingOptions") @MachineSizedUInt long options, Todo error);
     @Mapping("removeAndReturnError:")
-    protected native boolean remove(Todo outError);
+    public native boolean remove(Todo outError);
     @Mapping("currentVersionOfItemAtURL:")
     public static native NSFileVersion getCurrentItemVersionAtURL(NSURL url);
     @Mapping("otherVersionsOfItemAtURL:")
@@ -81,6 +82,6 @@ public class NSFileVersion
     @Mapping("versionOfItemAtURL:forPersistentIdentifier:")
     public static native NSFileVersion getItemVersionAtURL(NSURL url, Object persistentIdentifier);
     @Mapping("removeOtherVersionsOfItemAtURL:error:")
-    protected static native boolean removeOtherItemVersionsAtURL(NSURL url, Todo outError);
+    public static native boolean removeOtherItemVersionsAtURL(NSURL url, Todo outError);
     
 }

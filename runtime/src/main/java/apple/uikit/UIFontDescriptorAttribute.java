@@ -35,61 +35,61 @@ public class UIFontDescriptorAttribute
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("UIFontDescriptorFamilyAttribute")
-    protected static native NSString FamilyValue();
+    public static native NSString FamilyValue();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("UIFontDescriptorNameAttribute")
-    protected static native NSString NameValue();
+    public static native NSString NameValue();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("UIFontDescriptorFaceAttribute")
-    protected static native NSString FaceValue();
+    public static native NSString FaceValue();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("UIFontDescriptorSizeAttribute")
-    protected static native NSString SizeValue();
+    public static native NSString SizeValue();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("UIFontDescriptorVisibleNameAttribute")
-    protected static native NSString VisibleNameValue();
+    public static native NSString VisibleNameValue();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("UIFontDescriptorMatrixAttribute")
-    protected static native NSString MatrixValue();
+    public static native NSString MatrixValue();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("UIFontDescriptorCharacterSetAttribute")
-    protected static native NSString CharacterSetValue();
+    public static native NSString CharacterSetValue();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("UIFontDescriptorCascadeListAttribute")
-    protected static native NSString CascadeListValue();
+    public static native NSString CascadeListValue();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("UIFontDescriptorTraitsAttribute")
-    protected static native NSString TraitsValue();
+    public static native NSString TraitsValue();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("UIFontDescriptorFixedAdvanceAttribute")
-    protected static native NSString FixedAdvanceValue();
+    public static native NSString FixedAdvanceValue();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("UIFontDescriptorFeatureSettingsAttribute")
-    protected static native NSString FeatureSettingsValue();
+    public static native NSString FeatureSettingsValue();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("UIFontDescriptorTextStyleAttribute")
-    protected static native NSString TextStyleValue();
+    public static native NSString TextStyleValue();
     
 }

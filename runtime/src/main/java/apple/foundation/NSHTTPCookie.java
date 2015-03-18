@@ -29,9 +29,10 @@ public class NSHTTPCookie
 
     
     
-    public NSHTTPCookie() {}
     @Mapping("initWithProperties:")
     public NSHTTPCookie(NSDictionary<?, ?> properties) { }
+    @Mapping("init")
+    public NSHTTPCookie() { }
     
     
     @Mapping("properties")

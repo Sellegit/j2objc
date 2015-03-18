@@ -27,11 +27,12 @@ public class MFMessageComposeViewController
 
     
     
-    public MFMessageComposeViewController() {}
     @Mapping("initWithRootViewController:")
     public MFMessageComposeViewController(UIViewController rootViewController) { }
     @Mapping("initWithNibName:bundle:")
     public MFMessageComposeViewController(String nibNameOrNil, NSBundle nibBundleOrNil) { }
+    @Mapping("init")
+    public MFMessageComposeViewController() { }
     
     
     @Mapping("messageComposeDelegate")
@@ -64,7 +65,7 @@ public class MFMessageComposeViewController
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("MFMessageComposeViewControllerTextMessageAvailabilityKey")
-    protected static native NSString TextMessageAvailabilityKey();
+    public static native NSString TextMessageAvailabilityKey();
     
     /**
      * @since Available in iOS 7.0 and later.

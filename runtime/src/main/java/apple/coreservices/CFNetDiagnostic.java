@@ -32,12 +32,12 @@ public class CFNetDiagnostic
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFNetDiagnosticCreateWithStreams")
-    protected static native CFNetDiagnostic create(CFAllocator alloc, CFReadStream readStream, CFWriteStream writeStream);
+    public static native CFNetDiagnostic create(CFAllocator alloc, CFReadStream readStream, CFWriteStream writeStream);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFNetDiagnosticCreateWithURL")
-    protected static native CFNetDiagnostic create(CFAllocator alloc, NSURL url);
+    public static native CFNetDiagnostic create(CFAllocator alloc, NSURL url);
     /**
      * @since Available in iOS 2.0 and later.
      */
@@ -52,6 +52,6 @@ public class CFNetDiagnostic
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFNetDiagnosticCopyNetworkStatusPassively")
-    protected static native CFNetDiagnosticStatus getNetworkStatusPassively(CFNetDiagnostic details, Todo description);
+    public static native CFNetDiagnosticStatus getNetworkStatusPassively(CFNetDiagnostic details, Todo description);
     
 }

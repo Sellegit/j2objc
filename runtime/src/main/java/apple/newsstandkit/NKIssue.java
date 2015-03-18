@@ -26,7 +26,8 @@ public class NKIssue
 
     
     
-    public NKIssue() {}
+    @Mapping("init")
+    public NKIssue() { }
     
     
     @Mapping("downloadingAssets")

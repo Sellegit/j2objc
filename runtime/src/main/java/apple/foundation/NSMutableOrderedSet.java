@@ -41,14 +41,14 @@ public class NSMutableOrderedSet
     
     
     @Mapping("insertObject:atIndex:")
-    protected native void insertObject(Object object, @MachineSizedUInt long idx);
+    public native void insertObject(Object object, @MachineSizedUInt long idx);
     @Mapping("removeObjectAtIndex:")
-    protected native void removeObject(@MachineSizedUInt long idx);
+    public native void removeObject(@MachineSizedUInt long idx);
     @Mapping("replaceObjectAtIndex:withObject:")
-    protected native void replaceObject(@MachineSizedUInt long idx, Object object);
+    public native void replaceObject(@MachineSizedUInt long idx, Object object);
     @Mapping("removeAllObjects")
-    protected native void removeAllObjects();
+    public native void removeAllObjects();
     @Mapping("removeObject:")
-    protected native void removeObject(Object object);
+    public native void removeObject(Object object);
     
 }

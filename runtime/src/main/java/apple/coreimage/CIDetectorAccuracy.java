@@ -33,11 +33,11 @@ public class CIDetectorAccuracy
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("CIDetectorAccuracyLow")
-    protected static native NSString LowValue();
+    public static native NSString LowValue();
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("CIDetectorAccuracyHigh")
-    protected static native NSString HighValue();
+    public static native NSString HighValue();
     
 }

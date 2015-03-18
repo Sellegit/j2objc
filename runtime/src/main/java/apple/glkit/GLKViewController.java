@@ -29,9 +29,10 @@ public class GLKViewController
 
     
     
-    public GLKViewController() {}
     @Mapping("initWithNibName:bundle:")
     public GLKViewController(String nibNameOrNil, NSBundle nibBundleOrNil) { }
+    @Mapping("init")
+    public GLKViewController() { }
     
     
     @Mapping("delegate")

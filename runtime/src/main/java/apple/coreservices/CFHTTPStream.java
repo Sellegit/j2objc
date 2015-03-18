@@ -30,11 +30,11 @@ public class CFHTTPStream
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFReadStreamCreateForHTTPRequest")
-    protected static native CFReadStream create(CFAllocator alloc, CFHTTPMessage request);
+    public static native CFReadStream create(CFAllocator alloc, CFHTTPMessage request);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFReadStreamCreateForStreamedHTTPRequest")
-    protected static native CFReadStream create(CFAllocator alloc, CFHTTPMessage requestHeaders, CFReadStream requestBody);
+    public static native CFReadStream create(CFAllocator alloc, CFHTTPMessage requestHeaders, CFReadStream requestBody);
     
 }

@@ -57,6 +57,6 @@ public class CTFontCollection
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTFontCollectionCreateMatchingFontDescriptorsSortedWithCallback")
-    protected static native List<CTFontDescriptor> getMatchingFontDescriptorsSorted(CTFontCollection collection, FunctionPtr sortCallback, Todo refCon);
+    public static native List<CTFontDescriptor> getMatchingFontDescriptorsSorted(CTFontCollection collection, FunctionPtr sortCallback, Todo refCon);
     
 }

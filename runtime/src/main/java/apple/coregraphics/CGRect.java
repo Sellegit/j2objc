@@ -24,7 +24,7 @@ public class CGRect
      {
 
     
-    protected CGRect() {}
+    private CGRect() {}
     
     
     @DotMapping("origin")
@@ -183,7 +183,7 @@ public class CGRect
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGRectMakeWithDictionaryRepresentation")
-    private static native boolean fromDictionary(NSDictionary<?, ?> dict, CGRect rect);
+    public static native boolean fromDictionary(NSDictionary<?, ?> dict, CGRect rect);
     /**
      * @since Available in iOS 2.0 and later.
      */

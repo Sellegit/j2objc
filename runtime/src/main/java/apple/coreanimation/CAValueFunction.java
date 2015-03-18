@@ -27,7 +27,8 @@ public class CAValueFunction
 
     
     
-    
+    @Mapping("init")
+    public CAValueFunction() { }
     
     
     @Mapping("name")

@@ -30,16 +30,16 @@ public class HKWorkoutSortIdentifier
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("HKWorkoutSortIdentifierDuration")
-    protected static native String DurationValue();
+    public static native String DurationValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("HKWorkoutSortIdentifierTotalDistance")
-    protected static native String TotalDistanceValue();
+    public static native String TotalDistanceValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("HKWorkoutSortIdentifierTotalEnergyBurned")
-    protected static native String TotalEnergyBurnedValue();
+    public static native String TotalEnergyBurnedValue();
     
 }

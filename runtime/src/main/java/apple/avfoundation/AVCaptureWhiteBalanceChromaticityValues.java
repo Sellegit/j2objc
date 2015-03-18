@@ -29,7 +29,7 @@ public class AVCaptureWhiteBalanceChromaticityValues
      {
 
     
-    protected AVCaptureWhiteBalanceChromaticityValues() {}
+    private AVCaptureWhiteBalanceChromaticityValues() {}
     
     
     @DotMapping("x")

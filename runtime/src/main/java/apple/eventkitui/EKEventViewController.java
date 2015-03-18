@@ -28,9 +28,10 @@ public class EKEventViewController
 
     
     
-    public EKEventViewController() {}
     @Mapping("initWithNibName:bundle:")
     public EKEventViewController(String nibNameOrNil, NSBundle nibBundleOrNil) { }
+    @Mapping("init")
+    public EKEventViewController() { }
     
     
     /**

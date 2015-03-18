@@ -29,7 +29,8 @@ public class NSPort
 
     
     
-    public NSPort() {}
+    @Mapping("init")
+    public NSPort() { }
     
     
     @Mapping("isValid")

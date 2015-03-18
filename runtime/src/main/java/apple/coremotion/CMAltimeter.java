@@ -26,7 +26,8 @@ public class CMAltimeter
 
     
     
-    public CMAltimeter() {}
+    @Mapping("init")
+    public CMAltimeter() { }
     
     
     

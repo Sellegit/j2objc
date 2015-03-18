@@ -32,9 +32,10 @@ public class AVCaptureVideoPreviewLayer
 
     
     
-    public AVCaptureVideoPreviewLayer() {}
     @Mapping("initWithSession:")
     public AVCaptureVideoPreviewLayer(AVCaptureSession session) { }
+    @Mapping("init")
+    public AVCaptureVideoPreviewLayer() { }
     @Mapping("initWithLayer:")
     public AVCaptureVideoPreviewLayer(Object layer) { }
     

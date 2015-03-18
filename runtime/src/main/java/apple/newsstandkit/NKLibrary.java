@@ -26,7 +26,8 @@ public class NKLibrary
 
     
     
-    public NKLibrary() {}
+    @Mapping("init")
+    public NKLibrary() { }
     
     
     @Mapping("issues")

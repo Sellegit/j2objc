@@ -28,9 +28,10 @@ public class MCNearbyServiceAdvertiser
 
     
     
-    public MCNearbyServiceAdvertiser() {}
     @Mapping("initWithPeer:discoveryInfo:serviceType:")
     public MCNearbyServiceAdvertiser(MCPeerID myPeerID, NSDictionary<?, ?> info, String serviceType) { }
+    @Mapping("init")
+    public MCNearbyServiceAdvertiser() { }
     
     
     @Mapping("delegate")

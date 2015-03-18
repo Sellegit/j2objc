@@ -27,7 +27,8 @@ public class CBPeripheral
 
     
     
-    public CBPeripheral() {}
+    @Mapping("init")
+    public CBPeripheral() { }
     
     
     @Mapping("delegate")

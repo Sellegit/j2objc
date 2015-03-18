@@ -37,26 +37,26 @@ public class NSDictionary <K, V>
     
     
     @Mapping("count")
-    protected native @MachineSizedUInt long getCount();
+    public native @MachineSizedUInt long getCount();
     @Mapping("allKeys")
-    protected native NSArray<K> getAllKeys();
+    public native NSArray<K> getAllKeys();
     @Mapping("allValues")
-    protected native NSArray<V> getAllValues();
+    public native NSArray<V> getAllValues();
     @Mapping("descriptionInStringsFileFormat")
     public native String toFileFormatString();
     
     
     
     @Mapping("objectForKey:")
-    protected native V getObject(Object aKey);
+    public native V getObject(Object aKey);
     @Mapping("isEqualToDictionary:")
-    protected native boolean equalsTo(NSDictionary<?, ?> otherDictionary);
+    public native boolean equalsTo(NSDictionary<?, ?> otherDictionary);
     @Mapping("writeToFile:atomically:")
-    protected native boolean writeFile(String path, boolean useAuxiliaryFile);
+    public native boolean writeFile(String path, boolean useAuxiliaryFile);
     @Mapping("writeToURL:atomically:")
     public native boolean write(NSURL url, boolean atomically);
     @Mapping("dictionaryWithContentsOfFile:")
-    protected static native NSDictionary<?, ?> read(String path);
+    public static native NSDictionary<?, ?> read(String path);
     @Mapping("dictionaryWithContentsOfURL:")
     public static native NSDictionary<?, ?> read(NSURL url);
     

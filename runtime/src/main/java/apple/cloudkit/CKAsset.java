@@ -27,9 +27,10 @@ public class CKAsset
 
     
     
-    public CKAsset() {}
     @Mapping("initWithFileURL:")
     public CKAsset(NSURL fileURL) { }
+    @Mapping("init")
+    public CKAsset() { }
     
     
     @Mapping("fileURL")

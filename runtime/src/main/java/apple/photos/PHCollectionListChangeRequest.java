@@ -29,7 +29,8 @@ public class PHCollectionListChangeRequest
 
     
     
-    public PHCollectionListChangeRequest() {}
+    @Mapping("init")
+    public PHCollectionListChangeRequest() { }
     
     
     @Mapping("placeholderForCreatedCollectionList")

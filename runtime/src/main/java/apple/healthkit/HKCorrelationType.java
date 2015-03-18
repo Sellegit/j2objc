@@ -26,7 +26,8 @@ public class HKCorrelationType
 
     
     
-    public HKCorrelationType() {}
+    @Mapping("init")
+    public HKCorrelationType() { }
     
     
     

@@ -33,21 +33,21 @@ public class CATransitionSubType
      * @since Available in iOS 2.0 and later.
      */
     @GlobalConstant("kCATransitionFromRight")
-    protected static native NSString FromRightValue();
+    public static native NSString FromRightValue();
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalConstant("kCATransitionFromLeft")
-    protected static native NSString FromLeftValue();
+    public static native NSString FromLeftValue();
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalConstant("kCATransitionFromTop")
-    protected static native NSString FromTopValue();
+    public static native NSString FromTopValue();
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalConstant("kCATransitionFromBottom")
-    protected static native NSString FromBottomValue();
+    public static native NSString FromBottomValue();
     
 }

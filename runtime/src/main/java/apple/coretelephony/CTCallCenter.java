@@ -26,7 +26,8 @@ public class CTCallCenter
 
     
     
-    public CTCallCenter() {}
+    @Mapping("init")
+    public CTCallCenter() { }
     
     
     /**

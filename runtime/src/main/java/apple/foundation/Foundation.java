@@ -39,17 +39,17 @@ public class Foundation
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("NSURLVolumeURLKey")
-    protected static native NSString VolumeURLValue();
+    public static native NSString VolumeURLValue();
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("NSURLVolumeIdentifierKey")
-    protected static native NSString VolumeIdentifierValue();
+    public static native NSString VolumeIdentifierValue();
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("NSURLFileResourceTypeKey")
-    protected static native NSString FileResourceTypeValue();
+    public static native NSString FileResourceTypeValue();
     /**
      * @since Available in iOS 8.2 and later.
      */

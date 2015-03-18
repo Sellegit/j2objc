@@ -32,7 +32,8 @@ public class AVAudioIONode
 
     
     
-    public AVAudioIONode() {}
+    @Mapping("init")
+    public AVAudioIONode() { }
     
     
     @Mapping("presentationLatency")

@@ -77,6 +77,6 @@ public class CGImageDestination
      * @since Available in iOS 7.0 and later.
      */
     @GlobalFunction("CGImageDestinationCopyImageSource")
-    protected static native boolean copyImageSource(CGImageDestination idst, CGImageSource isrc, NSDictionary<?, ?> options, Todo err);
+    public static native boolean copyImageSource(CGImageDestination idst, CGImageSource isrc, NSDictionary<?, ?> options, Todo err);
     
 }

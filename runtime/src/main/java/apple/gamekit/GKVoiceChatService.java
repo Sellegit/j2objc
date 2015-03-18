@@ -29,7 +29,8 @@ public class GKVoiceChatService
 
     
     
-    public GKVoiceChatService() {}
+    @Mapping("init")
+    public GKVoiceChatService() { }
     
     
     @Mapping("client")
@@ -60,11 +61,11 @@ public class GKVoiceChatService
     
     
     @Mapping("startVoiceChatWithParticipantID:error:")
-    protected native boolean startVoiceChat(String participantID, Todo error);
+    public native boolean startVoiceChat(String participantID, Todo error);
     @Mapping("stopVoiceChatWithParticipantID:")
     public native void stopVoiceChat(String participantID);
     @Mapping("acceptCallID:error:")
-    protected native boolean acceptCallID(@MachineSizedSInt long callID, Todo error);
+    public native boolean acceptCallID(@MachineSizedSInt long callID, Todo error);
     @Mapping("denyCallID:")
     public native void denyCallID(@MachineSizedSInt long callID);
     @Mapping("receivedRealTimeData:fromParticipantID:")

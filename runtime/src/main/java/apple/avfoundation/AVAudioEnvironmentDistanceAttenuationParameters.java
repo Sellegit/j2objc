@@ -32,7 +32,8 @@ public class AVAudioEnvironmentDistanceAttenuationParameters
 
     
     
-    public AVAudioEnvironmentDistanceAttenuationParameters() {}
+    @Mapping("init")
+    public AVAudioEnvironmentDistanceAttenuationParameters() { }
     
     
     @Mapping("distanceAttenuationModel")

@@ -27,26 +27,26 @@ public class ABPersonRelatedNameLabel
     
     
     @GlobalConstant("kABPersonFatherLabel")
-    protected static native CFString FatherLabel();
+    public static native CFString FatherLabel();
     @GlobalConstant("kABPersonMotherLabel")
-    protected static native CFString MotherLabel();
+    public static native CFString MotherLabel();
     @GlobalConstant("kABPersonParentLabel")
-    protected static native CFString ParentLabel();
+    public static native CFString ParentLabel();
     @GlobalConstant("kABPersonBrotherLabel")
-    protected static native CFString BrotherLabel();
+    public static native CFString BrotherLabel();
     @GlobalConstant("kABPersonSisterLabel")
-    protected static native CFString SisterLabel();
+    public static native CFString SisterLabel();
     @GlobalConstant("kABPersonChildLabel")
-    protected static native CFString ChildLabel();
+    public static native CFString ChildLabel();
     @GlobalConstant("kABPersonFriendLabel")
-    protected static native CFString FriendLabel();
+    public static native CFString FriendLabel();
     @GlobalConstant("kABPersonSpouseLabel")
-    protected static native CFString SpouseLabel();
+    public static native CFString SpouseLabel();
     @GlobalConstant("kABPersonPartnerLabel")
-    protected static native CFString PartnerLabel();
+    public static native CFString PartnerLabel();
     @GlobalConstant("kABPersonAssistantLabel")
-    protected static native CFString AssistantLabel();
+    public static native CFString AssistantLabel();
     @GlobalConstant("kABPersonManagerLabel")
-    protected static native CFString ManagerLabel();
+    public static native CFString ManagerLabel();
     
 }

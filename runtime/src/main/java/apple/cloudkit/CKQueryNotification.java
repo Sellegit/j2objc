@@ -27,7 +27,8 @@ public class CKQueryNotification
 
     
     
-    public CKQueryNotification() {}
+    @Mapping("init")
+    public CKQueryNotification() { }
     
     
     @Mapping("queryNotificationReason")

@@ -29,9 +29,10 @@ public class PHAdjustmentData
 
     
     
-    public PHAdjustmentData() {}
     @Mapping("initWithFormatIdentifier:formatVersion:data:")
     public PHAdjustmentData(String formatIdentifier, String formatVersion, NSData data) { }
+    @Mapping("init")
+    public PHAdjustmentData() { }
     
     
     @Mapping("formatIdentifier")

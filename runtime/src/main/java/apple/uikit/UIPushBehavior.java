@@ -31,9 +31,10 @@ public class UIPushBehavior
 
     
     
-    public UIPushBehavior() {}
     @Mapping("initWithItems:mode:")
     public UIPushBehavior(NSArray<?> items, @Representing("UIPushBehaviorMode") @MachineSizedSInt long mode) { }
+    @Mapping("init")
+    public UIPushBehavior() { }
     
     
     @Mapping("items")

@@ -31,11 +31,11 @@ public class CBCentralManagerOptions
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("CBCentralManagerOptionShowPowerAlertKey")
-    protected static native NSString ShowPowerAlertKey();
+    public static native NSString ShowPowerAlertKey();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("CBCentralManagerOptionRestoreIdentifierKey")
-    protected static native NSString RestoreIdentifierKey();
+    public static native NSString RestoreIdentifierKey();
     
 }

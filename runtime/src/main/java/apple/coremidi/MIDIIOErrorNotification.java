@@ -23,7 +23,7 @@ public class MIDIIOErrorNotification
      {
 
     
-    protected MIDIIOErrorNotification() {}
+    private MIDIIOErrorNotification() {}
     
     
     @DotMapping("messageID")

@@ -33,6 +33,8 @@ public class NSRegularExpression
     
     @Mapping("initWithPattern:options:error:")
     public NSRegularExpression(String pattern, @Representing("NSRegularExpressionOptions") @MachineSizedUInt long options, Todo error) { }
+    @Mapping("init")
+    public NSRegularExpression() { }
     
     
     @Mapping("pattern")

@@ -93,7 +93,7 @@ public class CGContext
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGContextSetLineDash")
-    protected static native void setLineDash(CGContext c, @MachineSizedFloat double phase, Todo lengths, @MachineSizedUInt long count);
+    public static native void setLineDash(CGContext c, @MachineSizedFloat double phase, Todo lengths, @MachineSizedUInt long count);
     /**
      * @since Available in iOS 2.0 and later.
      */
@@ -148,12 +148,12 @@ public class CGContext
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGContextAddRects")
-    protected static native void addRects(CGContext c, CGRect rects, @MachineSizedUInt long count);
+    public static native void addRects(CGContext c, CGRect rects, @MachineSizedUInt long count);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGContextAddLines")
-    protected static native void addLines(CGContext c, CGPoint points, @MachineSizedUInt long count);
+    public static native void addLines(CGContext c, CGPoint points, @MachineSizedUInt long count);
     /**
      * @since Available in iOS 2.0 and later.
      */
@@ -233,7 +233,7 @@ public class CGContext
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGContextFillRects")
-    protected static native void fillRects(CGContext c, CGRect rects, @MachineSizedUInt long count);
+    public static native void fillRects(CGContext c, CGRect rects, @MachineSizedUInt long count);
     /**
      * @since Available in iOS 2.0 and later.
      */
@@ -263,7 +263,7 @@ public class CGContext
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGContextStrokeLineSegments")
-    protected static native void strokeLineSegments(CGContext c, CGPoint points, @MachineSizedUInt long count);
+    public static native void strokeLineSegments(CGContext c, CGPoint points, @MachineSizedUInt long count);
     /**
      * @since Available in iOS 2.0 and later.
      */
@@ -293,7 +293,7 @@ public class CGContext
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGContextClipToRects")
-    protected static native void clipToRects(CGContext c, CGRect rects, @MachineSizedUInt long count);
+    public static native void clipToRects(CGContext c, CGRect rects, @MachineSizedUInt long count);
     /**
      * @since Available in iOS 2.0 and later.
      */
@@ -318,22 +318,22 @@ public class CGContext
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGContextSetFillColor")
-    protected static native void setFillColor(CGContext context, Todo components);
+    public static native void setFillColor(CGContext context, Todo components);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGContextSetStrokeColor")
-    protected static native void setStrokeColor(CGContext context, Todo components);
+    public static native void setStrokeColor(CGContext context, Todo components);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGContextSetFillPattern")
-    protected static native void setFillPattern(CGContext context, CGPattern pattern, Todo components);
+    public static native void setFillPattern(CGContext context, CGPattern pattern, Todo components);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGContextSetStrokePattern")
-    protected static native void setStrokePattern(CGContext context, CGPattern pattern, Todo components);
+    public static native void setStrokePattern(CGContext context, CGPattern pattern, Todo components);
     /**
      * @since Available in iOS 2.0 and later.
      */
@@ -463,7 +463,7 @@ public class CGContext
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGContextShowGlyphsAtPositions")
-    protected static native void showGlyphsAtPositions(CGContext context, Todo glyphs, CGPoint positions, @MachineSizedUInt long count);
+    public static native void showGlyphsAtPositions(CGContext context, Todo glyphs, CGPoint positions, @MachineSizedUInt long count);
     /**
      * @since Available in iOS 2.0 and later.
      */
@@ -585,42 +585,42 @@ public class CGContext
      */
     @Deprecated
     @GlobalFunction("CGContextSelectFont")
-    protected static native void selectFont(CGContext c, Todo name, @MachineSizedFloat double size, CGTextEncoding textEncoding);
+    public static native void selectFont(CGContext c, Todo name, @MachineSizedFloat double size, CGTextEncoding textEncoding);
     /**
      * @since Available in iOS 2.0 and later.
      * @deprecated Deprecated in iOS 7.0.
      */
     @Deprecated
     @GlobalFunction("CGContextShowText")
-    protected static native void showText(CGContext c, Todo string, @MachineSizedUInt long length);
+    public static native void showText(CGContext c, Todo string, @MachineSizedUInt long length);
     /**
      * @since Available in iOS 2.0 and later.
      * @deprecated Deprecated in iOS 7.0.
      */
     @Deprecated
     @GlobalFunction("CGContextShowTextAtPoint")
-    protected static native void showTextAtPoint(CGContext c, @MachineSizedFloat double x, @MachineSizedFloat double y, Todo string, @MachineSizedUInt long length);
+    public static native void showTextAtPoint(CGContext c, @MachineSizedFloat double x, @MachineSizedFloat double y, Todo string, @MachineSizedUInt long length);
     /**
      * @since Available in iOS 2.0 and later.
      * @deprecated Deprecated in iOS 7.0.
      */
     @Deprecated
     @GlobalFunction("CGContextShowGlyphs")
-    protected static native void showGlyphs(CGContext c, Todo g, @MachineSizedUInt long count);
+    public static native void showGlyphs(CGContext c, Todo g, @MachineSizedUInt long count);
     /**
      * @since Available in iOS 2.0 and later.
      * @deprecated Deprecated in iOS 7.0.
      */
     @Deprecated
     @GlobalFunction("CGContextShowGlyphsAtPoint")
-    protected static native void showGlyphsAtPoint(CGContext context, @MachineSizedFloat double x, @MachineSizedFloat double y, Todo glyphs, @MachineSizedUInt long count);
+    public static native void showGlyphsAtPoint(CGContext context, @MachineSizedFloat double x, @MachineSizedFloat double y, Todo glyphs, @MachineSizedUInt long count);
     /**
      * @since Available in iOS 2.0 and later.
      * @deprecated Deprecated in iOS 7.0.
      */
     @Deprecated
     @GlobalFunction("CGContextShowGlyphsWithAdvances")
-    protected static native void showGlyphsWithAdvances(CGContext context, Todo glyphs, CGSize advances, @MachineSizedUInt long count);
+    public static native void showGlyphsWithAdvances(CGContext context, Todo glyphs, CGSize advances, @MachineSizedUInt long count);
     /**
      * @since Available in iOS 2.0 and later.
      */

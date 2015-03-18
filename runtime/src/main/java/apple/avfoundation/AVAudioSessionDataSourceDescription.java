@@ -32,7 +32,8 @@ public class AVAudioSessionDataSourceDescription
 
     
     
-    public AVAudioSessionDataSourceDescription() {}
+    @Mapping("init")
+    public AVAudioSessionDataSourceDescription() { }
     
     
     @Mapping("dataSourceID")

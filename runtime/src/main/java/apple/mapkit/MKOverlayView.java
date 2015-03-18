@@ -29,7 +29,6 @@ public class MKOverlayView
 
     
     
-    public MKOverlayView() {}
     /**
      * @since Available in iOS 4.0 and later.
      * @deprecated Deprecated in iOS 7.0.
@@ -39,6 +38,8 @@ public class MKOverlayView
     public MKOverlayView(MKOverlay overlay) { }
     @Mapping("initWithFrame:")
     public MKOverlayView(CGRect frame) { }
+    @Mapping("init")
+    public MKOverlayView() { }
     
     
     /**

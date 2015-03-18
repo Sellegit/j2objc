@@ -29,7 +29,6 @@ public class MKUserTrackingBarButtonItem
 
     
     
-    public MKUserTrackingBarButtonItem() {}
     @Mapping("initWithMapView:")
     public MKUserTrackingBarButtonItem(MKMapView mapView) { }
     @Mapping("initWithImage:style:target:action:")
@@ -45,6 +44,8 @@ public class MKUserTrackingBarButtonItem
     public MKUserTrackingBarButtonItem(@Representing("UIBarButtonSystemItem") @MachineSizedSInt long systemItem, Object target, Selector action) { }
     @Mapping("initWithCustomView:")
     public MKUserTrackingBarButtonItem(UIView customView) { }
+    @Mapping("init")
+    public MKUserTrackingBarButtonItem() { }
     
     
     @Mapping("mapView")

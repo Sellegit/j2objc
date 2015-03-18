@@ -30,7 +30,8 @@ public class SCNParticlePropertyController
 
     
     
-    public SCNParticlePropertyController() {}
+    @Mapping("init")
+    public SCNParticlePropertyController() { }
     
     
     @Mapping("animation")

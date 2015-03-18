@@ -31,7 +31,8 @@ public class NSJSONSerialization
 
     
     
-    public NSJSONSerialization() {}
+    @Mapping("init")
+    public NSJSONSerialization() { }
     
     
     
@@ -41,12 +42,12 @@ public class NSJSONSerialization
     @Mapping("isValidJSONObject:")
     public static native boolean isValidJSONObject(Object obj);
     @Mapping("dataWithJSONObject:options:error:")
-    protected static native NSData createJSONData(Object obj, @Representing("NSJSONWritingOptions") @MachineSizedUInt long opt, Todo error);
+    public static native NSData createJSONData(Object obj, @Representing("NSJSONWritingOptions") @MachineSizedUInt long opt, Todo error);
     @Mapping("JSONObjectWithData:options:error:")
-    protected static native Object createJSONObject(NSData data, @Representing("NSJSONReadingOptions") @MachineSizedUInt long opt, Todo error);
+    public static native Object createJSONObject(NSData data, @Representing("NSJSONReadingOptions") @MachineSizedUInt long opt, Todo error);
     @Mapping("writeJSONObject:toStream:options:error:")
-    protected static native @MachineSizedSInt long writeJSONObject(Object obj, NSOutputStream stream, @Representing("NSJSONWritingOptions") @MachineSizedUInt long opt, Todo error);
+    public static native @MachineSizedSInt long writeJSONObject(Object obj, NSOutputStream stream, @Representing("NSJSONWritingOptions") @MachineSizedUInt long opt, Todo error);
     @Mapping("JSONObjectWithStream:options:error:")
-    protected static native Object readJSONObject(NSInputStream stream, @Representing("NSJSONReadingOptions") @MachineSizedUInt long opt, Todo error);
+    public static native Object readJSONObject(NSInputStream stream, @Representing("NSJSONReadingOptions") @MachineSizedUInt long opt, Todo error);
     
 }

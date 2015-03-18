@@ -31,9 +31,10 @@ public class NSURLResponse
     public static final int UnknownLength = -1;
     
     
-    public NSURLResponse() {}
     @Mapping("initWithURL:MIMEType:expectedContentLength:textEncodingName:")
     public NSURLResponse(NSURL URL, String MIMEType, @MachineSizedSInt long length, String name) { }
+    @Mapping("init")
+    public NSURLResponse() { }
     
     
     @Mapping("URL")

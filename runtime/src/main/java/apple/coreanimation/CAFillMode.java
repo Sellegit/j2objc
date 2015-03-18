@@ -33,21 +33,21 @@ public class CAFillMode
      * @since Available in iOS 2.0 and later.
      */
     @GlobalConstant("kCAFillModeForwards")
-    protected static native NSString ForwardsValue();
+    public static native NSString ForwardsValue();
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalConstant("kCAFillModeBackwards")
-    protected static native NSString BackwardsValue();
+    public static native NSString BackwardsValue();
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalConstant("kCAFillModeBoth")
-    protected static native NSString BothValue();
+    public static native NSString BothValue();
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalConstant("kCAFillModeRemoved")
-    protected static native NSString RemovedValue();
+    public static native NSString RemovedValue();
     
 }

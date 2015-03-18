@@ -31,7 +31,8 @@ public class SKShapeNode
 
     
     
-    public SKShapeNode() {}
+    @Mapping("init")
+    public SKShapeNode() { }
     @Mapping("initWithCoder:")
     public SKShapeNode(NSCoder aDecoder) { }
     

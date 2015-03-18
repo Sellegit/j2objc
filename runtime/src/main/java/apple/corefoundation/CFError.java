@@ -38,7 +38,7 @@ public class CFError
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFErrorCreate")
-    protected static native CFError create(CFAllocator allocator, String domain, @MachineSizedSInt long code, CFDictionary userInfo);
+    public static native CFError create(CFAllocator allocator, String domain, @MachineSizedSInt long code, CFDictionary userInfo);
     /**
      * @since Available in iOS 2.0 and later.
      */

@@ -27,9 +27,10 @@ public class MPContentItem
 
     
     
-    public MPContentItem() {}
     @Mapping("initWithIdentifier:")
     public MPContentItem(String identifier) { }
+    @Mapping("init")
+    public MPContentItem() { }
     
     
     @Mapping("identifier")

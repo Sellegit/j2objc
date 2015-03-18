@@ -29,7 +29,6 @@ public class MKPolygonView
 
     
     
-    public MKPolygonView() {}
     /**
      * @since Available in iOS 4.0 and later.
      * @deprecated Deprecated in iOS 7.0.
@@ -46,6 +45,8 @@ public class MKPolygonView
     public MKPolygonView(MKOverlay overlay) { }
     @Mapping("initWithFrame:")
     public MKPolygonView(CGRect frame) { }
+    @Mapping("init")
+    public MKPolygonView() { }
     
     
     /**

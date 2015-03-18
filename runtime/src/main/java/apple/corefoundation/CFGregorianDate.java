@@ -24,7 +24,7 @@ public class CFGregorianDate
      {
 
     
-    protected CFGregorianDate() {}
+    private CFGregorianDate() {}
     
     
     @DotMapping("year")

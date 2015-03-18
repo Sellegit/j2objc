@@ -32,11 +32,12 @@ public class AVCompositionTrackSegment
 
     
     
-    public AVCompositionTrackSegment() {}
     @Mapping("initWithURL:trackID:sourceTimeRange:targetTimeRange:")
     public AVCompositionTrackSegment(NSURL URL, int trackID, CMTimeRange sourceTimeRange, CMTimeRange targetTimeRange) { }
     @Mapping("initWithTimeRange:")
     public AVCompositionTrackSegment(CMTimeRange timeRange) { }
+    @Mapping("init")
+    public AVCompositionTrackSegment() { }
     
     
     @Mapping("isEmpty")

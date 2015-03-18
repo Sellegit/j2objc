@@ -23,7 +23,7 @@ public class GCQuaternion
      {
 
     
-    protected GCQuaternion() {}
+    private GCQuaternion() {}
     
     
     @DotMapping("x")

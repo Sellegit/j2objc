@@ -30,20 +30,20 @@ public class CIContextOptions
     
     
     @GlobalConstant("kCIContextOutputColorSpace")
-    protected static native NSString OutputColorSpaceKey();
+    public static native NSString OutputColorSpaceKey();
     @GlobalConstant("kCIContextWorkingColorSpace")
-    protected static native NSString WorkingColorSpaceKey();
+    public static native NSString WorkingColorSpaceKey();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("kCIContextWorkingFormat")
-    protected static native NSString WorkingFormatKey();
+    public static native NSString WorkingFormatKey();
     @GlobalConstant("kCIContextUseSoftwareRenderer")
-    protected static native NSString UseSoftwareRendererKey();
+    public static native NSString UseSoftwareRendererKey();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("kCIContextPriorityRequestLow")
-    protected static native NSString PriorityRequestLowKey();
+    public static native NSString PriorityRequestLowKey();
     
 }

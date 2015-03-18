@@ -32,7 +32,8 @@ public class AVCaptureAutoExposureBracketedStillImageSettings
 
     
     
-    public AVCaptureAutoExposureBracketedStillImageSettings() {}
+    @Mapping("init")
+    public AVCaptureAutoExposureBracketedStillImageSettings() { }
     
     
     @Mapping("exposureTargetBias")

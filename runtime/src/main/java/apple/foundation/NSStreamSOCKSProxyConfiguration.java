@@ -35,26 +35,26 @@ public class NSStreamSOCKSProxyConfiguration
      * @since Available in iOS 2.0 and later.
      */
     @GlobalConstant("NSStreamSOCKSProxyHostKey")
-    protected static native NSString HostKey();
+    public static native NSString HostKey();
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalConstant("NSStreamSOCKSProxyPortKey")
-    protected static native NSString PortKey();
+    public static native NSString PortKey();
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalConstant("NSStreamSOCKSProxyVersionKey")
-    protected static native NSString VersionKey();
+    public static native NSString VersionKey();
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalConstant("NSStreamSOCKSProxyUserKey")
-    protected static native NSString UserKey();
+    public static native NSString UserKey();
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalConstant("NSStreamSOCKSProxyPasswordKey")
-    protected static native NSString PasswordKey();
+    public static native NSString PasswordKey();
     
 }

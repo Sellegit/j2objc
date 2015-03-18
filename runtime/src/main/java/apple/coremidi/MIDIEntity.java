@@ -52,7 +52,7 @@ public class MIDIEntity
      * @since Available in iOS 4.2 and later.
      */
     @GlobalFunction("MIDIEntityGetDevice")
-    protected static native MIDIError getDevice(MIDIEntity inEntity, Todo outDevice);
+    public static native MIDIError getDevice(MIDIEntity inEntity, Todo outDevice);
     /**
      * @since Available in iOS 4.2 and later.
      */

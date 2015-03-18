@@ -27,7 +27,8 @@ public class CIKernel
 
     
     
-    public CIKernel() {}
+    @Mapping("init")
+    public CIKernel() { }
     
     
     

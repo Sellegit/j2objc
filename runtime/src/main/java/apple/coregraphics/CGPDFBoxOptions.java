@@ -31,26 +31,26 @@ public class CGPDFBoxOptions
      * @since Available in iOS 2.0 and later.
      */
     @GlobalConstant("kCGPDFContextMediaBox")
-    protected static native CFString MediaBoxKey();
+    public static native CFString MediaBoxKey();
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalConstant("kCGPDFContextCropBox")
-    protected static native CFString CropBoxKey();
+    public static native CFString CropBoxKey();
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalConstant("kCGPDFContextBleedBox")
-    protected static native CFString BleedBoxKey();
+    public static native CFString BleedBoxKey();
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalConstant("kCGPDFContextTrimBox")
-    protected static native CFString TrimBoxKey();
+    public static native CFString TrimBoxKey();
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalConstant("kCGPDFContextArtBox")
-    protected static native CFString ArtBoxKey();
+    public static native CFString ArtBoxKey();
     
 }

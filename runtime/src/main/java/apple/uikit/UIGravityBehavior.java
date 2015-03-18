@@ -31,9 +31,10 @@ public class UIGravityBehavior
 
     
     
-    public UIGravityBehavior() {}
     @Mapping("initWithItems:")
     public UIGravityBehavior(NSArray<?> items) { }
+    @Mapping("init")
+    public UIGravityBehavior() { }
     
     
     @Mapping("items")

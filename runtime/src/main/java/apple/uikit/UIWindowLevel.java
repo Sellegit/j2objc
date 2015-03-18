@@ -32,10 +32,10 @@ public class UIWindowLevel
     
     
     @GlobalConstant("UIWindowLevelNormal")
-    protected static native @MachineSizedFloat double LevelNormal();
+    public static native @MachineSizedFloat double LevelNormal();
     @GlobalConstant("UIWindowLevelAlert")
-    protected static native @MachineSizedFloat double LevelAlert();
+    public static native @MachineSizedFloat double LevelAlert();
     @GlobalConstant("UIWindowLevelStatusBar")
-    protected static native @MachineSizedFloat double LevelStatusBar();
+    public static native @MachineSizedFloat double LevelStatusBar();
     
 }

@@ -31,16 +31,16 @@ public class MPMoviePlayerThumbnailRequest
      * @since Available in iOS 3.2 and later.
      */
     @GlobalConstant("MPMoviePlayerThumbnailImageKey")
-    protected static native NSString ImageKey();
+    public static native NSString ImageKey();
     /**
      * @since Available in iOS 3.2 and later.
      */
     @GlobalConstant("MPMoviePlayerThumbnailTimeKey")
-    protected static native NSString TimeKey();
+    public static native NSString TimeKey();
     /**
      * @since Available in iOS 3.2 and later.
      */
     @GlobalConstant("MPMoviePlayerThumbnailErrorKey")
-    protected static native NSString ErrorKey();
+    public static native NSString ErrorKey();
     
 }

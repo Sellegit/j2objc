@@ -28,12 +28,12 @@ public class MPMediaPlaylistProperty
     
     
     @GlobalConstant("MPMediaPlaylistPropertyPersistentID")
-    protected static native NSString PlaylistPersistendIDValue();
+    public static native NSString PlaylistPersistendIDValue();
     @GlobalConstant("MPMediaPlaylistPropertyName")
-    protected static native NSString NameValue();
+    public static native NSString NameValue();
     @GlobalConstant("MPMediaPlaylistPropertyPlaylistAttributes")
-    protected static native NSString PlaylistAttributesValue();
+    public static native NSString PlaylistAttributesValue();
     @GlobalConstant("MPMediaPlaylistPropertySeedItems")
-    protected static native NSString SeedItemsValue();
+    public static native NSString SeedItemsValue();
     
 }

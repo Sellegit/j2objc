@@ -31,6 +31,6 @@ public class MPMediaEntityProperty
      * @since Available in iOS 4.2 and later.
      */
     @GlobalConstant("MPMediaEntityPropertyPersistentID")
-    protected static native NSString EntityPersistentIDValue();
+    public static native NSString EntityPersistentIDValue();
     
 }

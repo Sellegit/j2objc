@@ -32,7 +32,8 @@ public class AVMetadataItem
 
     
     
-    public AVMetadataItem() {}
+    @Mapping("init")
+    public AVMetadataItem() { }
     
     
     /**

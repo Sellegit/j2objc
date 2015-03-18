@@ -27,7 +27,8 @@ public class WKNavigationAction
 
     
     
-    public WKNavigationAction() {}
+    @Mapping("init")
+    public WKNavigationAction() { }
     
     
     @Mapping("sourceFrame")

@@ -112,12 +112,12 @@ public class CGFont
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGFontGetGlyphAdvances")
-    protected static native boolean getGlyphAdvances(CGFont font, Todo glyphs, @MachineSizedUInt long count, Todo advances);
+    public static native boolean getGlyphAdvances(CGFont font, Todo glyphs, @MachineSizedUInt long count, Todo advances);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGFontGetGlyphBBoxes")
-    protected static native boolean getGlyphBBoxes(CGFont font, Todo glyphs, @MachineSizedUInt long count, CGRect bboxes);
+    public static native boolean getGlyphBBoxes(CGFont font, Todo glyphs, @MachineSizedUInt long count, CGRect bboxes);
     /**
      * @since Available in iOS 2.0 and later.
      */

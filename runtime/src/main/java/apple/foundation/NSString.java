@@ -35,14 +35,14 @@ public class NSString
     
     
     @Mapping("length")
-    protected native @MachineSizedUInt long length();
+    public native @MachineSizedUInt long length();
     
     
     
     @Mapping("characterAtIndex:")
-    protected native short getCharactersAt(@MachineSizedUInt long index);
+    public native short getCharactersAt(@MachineSizedUInt long index);
     @Mapping("getCharacters:range:")
-    protected native void getCharacters(Todo buffer, NSRange aRange);
+    public native void getCharacters(Todo buffer, NSRange aRange);
     @Mapping("hasPrefix:")
     public native boolean hasPrefix(String aString);
     @Mapping("hasSuffix:")
@@ -52,13 +52,13 @@ public class NSString
     @Mapping("dataUsingEncoding:")
     public native NSData toData(@Representing("NSStringEncoding") int encoding);
     @Mapping("writeToURL:atomically:encoding:error:")
-    protected native boolean writeURL(NSURL url, boolean useAuxiliaryFile, @Representing("NSStringEncoding") int enc, Todo error);
+    public native boolean writeURL(NSURL url, boolean useAuxiliaryFile, @Representing("NSStringEncoding") int enc, Todo error);
     @Mapping("writeToFile:atomically:encoding:error:")
-    protected native boolean writeFile(String path, boolean useAuxiliaryFile, @Representing("NSStringEncoding") int enc, Todo error);
+    public native boolean writeFile(String path, boolean useAuxiliaryFile, @Representing("NSStringEncoding") int enc, Todo error);
     @Mapping("stringWithContentsOfURL:encoding:error:")
-    protected static native String readURL(NSURL url, @Representing("NSStringEncoding") int enc, Todo error);
+    public static native String readURL(NSURL url, @Representing("NSStringEncoding") int enc, Todo error);
     @Mapping("stringWithContentsOfFile:encoding:error:")
-    protected static native String readFile(String path, @Representing("NSStringEncoding") int enc, Todo error);
+    public static native String readFile(String path, @Representing("NSStringEncoding") int enc, Todo error);
     @Mapping("stringByAppendingPathComponent:")
     public native String appendPathComponent(String str);
     @Mapping("stringByAppendingPathExtension:")

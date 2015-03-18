@@ -26,7 +26,7 @@ public class MKMapSize
      {
 
     
-    protected MKMapSize() {}
+    private MKMapSize() {}
     
     
     @DotMapping("width")

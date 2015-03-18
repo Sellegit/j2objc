@@ -30,36 +30,36 @@ public class HKFitnessQuantityTypeIdentifier
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("HKQuantityTypeIdentifierStepCount")
-    protected static native NSString StepCountValue();
+    public static native NSString StepCountValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("HKQuantityTypeIdentifierDistanceWalkingRunning")
-    protected static native NSString DistanceWalkingRunningValue();
+    public static native NSString DistanceWalkingRunningValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("HKQuantityTypeIdentifierDistanceCycling")
-    protected static native NSString DistanceCyclingValue();
+    public static native NSString DistanceCyclingValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("HKQuantityTypeIdentifierBasalEnergyBurned")
-    protected static native NSString BasalEnergyBurnedValue();
+    public static native NSString BasalEnergyBurnedValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("HKQuantityTypeIdentifierActiveEnergyBurned")
-    protected static native NSString ActiveEnergyBurnedValue();
+    public static native NSString ActiveEnergyBurnedValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("HKQuantityTypeIdentifierFlightsClimbed")
-    protected static native NSString FlightsClimbedValue();
+    public static native NSString FlightsClimbedValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("HKQuantityTypeIdentifierNikeFuel")
-    protected static native NSString NikeFuelValue();
+    public static native NSString NikeFuelValue();
     
 }

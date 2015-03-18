@@ -29,7 +29,8 @@ public class NSURLSessionDataTask
 
     
     
-    public NSURLSessionDataTask() {}
+    @Mapping("init")
+    public NSURLSessionDataTask() { }
     
     
     

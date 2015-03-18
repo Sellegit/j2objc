@@ -30,11 +30,11 @@ public class HKSampleSortIdentifier
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("HKSampleSortIdentifierStartDate")
-    protected static native String StartDateValue();
+    public static native String StartDateValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("HKSampleSortIdentifierEndDate")
-    protected static native String EndDateValue();
+    public static native String EndDateValue();
     
 }

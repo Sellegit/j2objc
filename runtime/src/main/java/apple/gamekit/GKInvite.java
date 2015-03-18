@@ -27,7 +27,8 @@ public class GKInvite
 
     
     
-    public GKInvite() {}
+    @Mapping("init")
+    public GKInvite() { }
     
     
     /**

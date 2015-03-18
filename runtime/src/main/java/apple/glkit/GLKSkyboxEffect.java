@@ -29,7 +29,8 @@ public class GLKSkyboxEffect
 
     
     
-    public GLKSkyboxEffect() {}
+    @Mapping("init")
+    public GLKSkyboxEffect() { }
     
     
     @Mapping("center")

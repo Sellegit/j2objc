@@ -26,7 +26,8 @@ public class NEOnDemandRuleConnect
 
     
     
-    public NEOnDemandRuleConnect() {}
+    @Mapping("init")
+    public NEOnDemandRuleConnect() { }
     
     
     

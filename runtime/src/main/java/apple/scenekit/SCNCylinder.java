@@ -30,7 +30,8 @@ public class SCNCylinder
 
     
     
-    public SCNCylinder() {}
+    @Mapping("init")
+    public SCNCylinder() { }
     
     
     @Mapping("radius")

@@ -26,7 +26,8 @@ public class HMHomeManager
 
     
     
-    public HMHomeManager() {}
+    @Mapping("init")
+    public HMHomeManager() { }
     
     
     @Mapping("delegate")

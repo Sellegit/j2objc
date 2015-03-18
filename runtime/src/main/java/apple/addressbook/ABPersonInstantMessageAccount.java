@@ -27,8 +27,8 @@ public class ABPersonInstantMessageAccount
     
     
     @GlobalConstant("kABPersonInstantMessageServiceKey")
-    protected static native CFString ServiceKey();
+    public static native CFString ServiceKey();
     @GlobalConstant("kABPersonInstantMessageUsernameKey")
-    protected static native CFString UsernameKey();
+    public static native CFString UsernameKey();
     
 }

@@ -33,26 +33,26 @@ public class CIFormat
      * @since Available in iOS 6.0 and later.
      */
     @GlobalConstant("kCIFormatARGB8")
-    protected static native int ARGB8Value();
+    public static native int ARGB8Value();
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("kCIFormatBGRA8")
-    protected static native int BGRA8Value();
+    public static native int BGRA8Value();
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("kCIFormatRGBA8")
-    protected static native int RGBA8Value();
+    public static native int RGBA8Value();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("kCIFormatRGBAf")
-    protected static native int RGBAfValue();
+    public static native int RGBAfValue();
     /**
      * @since Available in iOS 6.0 and later.
      */
     @GlobalConstant("kCIFormatRGBAh")
-    protected static native int RGBAhValue();
+    public static native int RGBAhValue();
     
 }

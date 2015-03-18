@@ -49,7 +49,7 @@ public class CFType
     @GlobalFunction("CFHash")
     public static native @MachineSizedUInt long hash(CFType cf);
     @GlobalFunction("CFCopyDescription")
-    protected static native CFString getDescription(CFType cf);
+    public static native CFString getDescription(CFType cf);
     @GlobalFunction("CFGetAllocator")
     public static native CFAllocator getAllocator(CFType cf);
     @GlobalFunction("CFMakeCollectable")

@@ -33,16 +33,16 @@ public class SCNRenderingTransform
     
     
     @GlobalConstant("SCNModelTransform")
-    protected static native NSString ModelValue();
+    public static native NSString ModelValue();
     @GlobalConstant("SCNViewTransform")
-    protected static native NSString ViewValue();
+    public static native NSString ViewValue();
     @GlobalConstant("SCNProjectionTransform")
-    protected static native NSString ProjectionValue();
+    public static native NSString ProjectionValue();
     @GlobalConstant("SCNNormalTransform")
-    protected static native NSString NormalValue();
+    public static native NSString NormalValue();
     @GlobalConstant("SCNModelViewTransform")
-    protected static native NSString ModelViewValue();
+    public static native NSString ModelViewValue();
     @GlobalConstant("SCNModelViewProjectionTransform")
-    protected static native NSString ModelViewProjectionValue();
+    public static native NSString ModelViewProjectionValue();
     
 }

@@ -31,9 +31,10 @@ public class UINavigationItem
 
     
     
-    public UINavigationItem() {}
     @Mapping("initWithTitle:")
     public UINavigationItem(String title) { }
+    @Mapping("init")
+    public UINavigationItem() { }
     
     
     @Mapping("title")

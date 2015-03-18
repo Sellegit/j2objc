@@ -26,7 +26,8 @@ public class NEOnDemandRule
 
     
     
-    public NEOnDemandRule() {}
+    @Mapping("init")
+    public NEOnDemandRule() { }
     
     
     /**

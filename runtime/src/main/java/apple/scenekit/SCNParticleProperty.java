@@ -33,36 +33,36 @@ public class SCNParticleProperty
     
     
     @GlobalConstant("SCNParticlePropertyPosition")
-    protected static native NSString PositionValue();
+    public static native NSString PositionValue();
     @GlobalConstant("SCNParticlePropertyAngle")
-    protected static native NSString AngleValue();
+    public static native NSString AngleValue();
     @GlobalConstant("SCNParticlePropertyRotationAxis")
-    protected static native NSString RotationAxisValue();
+    public static native NSString RotationAxisValue();
     @GlobalConstant("SCNParticlePropertyVelocity")
-    protected static native NSString VelocityValue();
+    public static native NSString VelocityValue();
     @GlobalConstant("SCNParticlePropertyAngularVelocity")
-    protected static native NSString AngularVelocityValue();
+    public static native NSString AngularVelocityValue();
     @GlobalConstant("SCNParticlePropertyLife")
-    protected static native NSString LifeValue();
+    public static native NSString LifeValue();
     @GlobalConstant("SCNParticlePropertyColor")
-    protected static native NSString ColorValue();
+    public static native NSString ColorValue();
     @GlobalConstant("SCNParticlePropertyOpacity")
-    protected static native NSString OpacityValue();
+    public static native NSString OpacityValue();
     @GlobalConstant("SCNParticlePropertySize")
-    protected static native NSString SizeValue();
+    public static native NSString SizeValue();
     @GlobalConstant("SCNParticlePropertyFrame")
-    protected static native NSString FrameValue();
+    public static native NSString FrameValue();
     @GlobalConstant("SCNParticlePropertyFrameRate")
-    protected static native NSString FrameRateValue();
+    public static native NSString FrameRateValue();
     @GlobalConstant("SCNParticlePropertyBounce")
-    protected static native NSString BounceValue();
+    public static native NSString BounceValue();
     @GlobalConstant("SCNParticlePropertyCharge")
-    protected static native NSString ChargeValue();
+    public static native NSString ChargeValue();
     @GlobalConstant("SCNParticlePropertyFriction")
-    protected static native NSString FrictionValue();
+    public static native NSString FrictionValue();
     @GlobalConstant("SCNParticlePropertyContactPoint")
-    protected static native NSString ContactPointValue();
+    public static native NSString ContactPointValue();
     @GlobalConstant("SCNParticlePropertyContactNormal")
-    protected static native NSString ContactNormalValue();
+    public static native NSString ContactNormalValue();
     
 }

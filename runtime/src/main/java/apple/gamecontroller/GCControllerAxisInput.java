@@ -24,7 +24,8 @@ public class GCControllerAxisInput
 
     
     
-    public GCControllerAxisInput() {}
+    @Mapping("init")
+    public GCControllerAxisInput() { }
     
     
     @Mapping("valueChangedHandler")

@@ -28,7 +28,8 @@ public class CLVisit
 
     
     
-    public CLVisit() {}
+    @Mapping("init")
+    public CLVisit() { }
     
     
     @Mapping("arrivalDate")

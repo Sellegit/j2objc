@@ -33,56 +33,56 @@ public class CAValueFunctionName
      * @since Available in iOS 3.0 and later.
      */
     @GlobalConstant("kCAValueFunctionRotateX")
-    protected static native NSString RotateXValue();
+    public static native NSString RotateXValue();
     /**
      * @since Available in iOS 3.0 and later.
      */
     @GlobalConstant("kCAValueFunctionRotateY")
-    protected static native NSString RotateYValue();
+    public static native NSString RotateYValue();
     /**
      * @since Available in iOS 3.0 and later.
      */
     @GlobalConstant("kCAValueFunctionRotateZ")
-    protected static native NSString RotateZValue();
+    public static native NSString RotateZValue();
     /**
      * @since Available in iOS 3.0 and later.
      */
     @GlobalConstant("kCAValueFunctionScale")
-    protected static native NSString ScaleValue();
+    public static native NSString ScaleValue();
     /**
      * @since Available in iOS 3.0 and later.
      */
     @GlobalConstant("kCAValueFunctionScaleX")
-    protected static native NSString ScaleXValue();
+    public static native NSString ScaleXValue();
     /**
      * @since Available in iOS 3.0 and later.
      */
     @GlobalConstant("kCAValueFunctionScaleY")
-    protected static native NSString ScaleYValue();
+    public static native NSString ScaleYValue();
     /**
      * @since Available in iOS 3.0 and later.
      */
     @GlobalConstant("kCAValueFunctionScaleZ")
-    protected static native NSString ScaleZValue();
+    public static native NSString ScaleZValue();
     /**
      * @since Available in iOS 3.0 and later.
      */
     @GlobalConstant("kCAValueFunctionTranslate")
-    protected static native NSString TranslateValue();
+    public static native NSString TranslateValue();
     /**
      * @since Available in iOS 3.0 and later.
      */
     @GlobalConstant("kCAValueFunctionTranslateX")
-    protected static native NSString TranslateXValue();
+    public static native NSString TranslateXValue();
     /**
      * @since Available in iOS 3.0 and later.
      */
     @GlobalConstant("kCAValueFunctionTranslateY")
-    protected static native NSString TranslateYValue();
+    public static native NSString TranslateYValue();
     /**
      * @since Available in iOS 3.0 and later.
      */
     @GlobalConstant("kCAValueFunctionTranslateZ")
-    protected static native NSString TranslateZValue();
+    public static native NSString TranslateZValue();
     
 }

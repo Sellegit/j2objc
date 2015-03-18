@@ -31,9 +31,10 @@ public class UIMenuItem
 
     
     
-    public UIMenuItem() {}
     @Mapping("initWithTitle:action:")
     public UIMenuItem(String title, Selector action) { }
+    @Mapping("init")
+    public UIMenuItem() { }
     
     
     @Mapping("title")

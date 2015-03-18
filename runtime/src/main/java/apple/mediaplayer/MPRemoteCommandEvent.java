@@ -27,7 +27,8 @@ public class MPRemoteCommandEvent
 
     
     
-    public MPRemoteCommandEvent() {}
+    @Mapping("init")
+    public MPRemoteCommandEvent() { }
     
     
     @Mapping("command")

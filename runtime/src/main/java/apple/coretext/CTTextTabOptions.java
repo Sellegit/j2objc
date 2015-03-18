@@ -30,6 +30,6 @@ public class CTTextTabOptions
      * @since Available in iOS 3.2 and later.
      */
     @GlobalConstant("kCTTabColumnTerminatorsAttributeName")
-    protected static native CFString TerminatorsAttributeName();
+    public static native CFString TerminatorsAttributeName();
     
 }

@@ -31,6 +31,8 @@ public class NSError
     
     @Mapping("initWithDomain:code:userInfo:")
     public NSError(String domain, @MachineSizedSInt long code, NSDictionary<?, ?> dict) { }
+    @Mapping("init")
+    public NSError() { }
     
     
     @Mapping("domain")

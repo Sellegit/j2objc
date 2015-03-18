@@ -31,7 +31,8 @@ public class NSURLSession
 
     
     
-    public NSURLSession() {}
+    @Mapping("init")
+    public NSURLSession() { }
     
     
     @Mapping("delegateQueue")

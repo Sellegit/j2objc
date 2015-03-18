@@ -30,7 +30,8 @@ public class SCNLight
 
     
     
-    public SCNLight() {}
+    @Mapping("init")
+    public SCNLight() { }
     
     
     @Mapping("type")

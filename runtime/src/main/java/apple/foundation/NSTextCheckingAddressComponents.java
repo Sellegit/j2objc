@@ -35,46 +35,46 @@ public class NSTextCheckingAddressComponents
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("NSTextCheckingNameKey")
-    protected static native NSString NameKey();
+    public static native NSString NameKey();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("NSTextCheckingJobTitleKey")
-    protected static native NSString JobTitleKey();
+    public static native NSString JobTitleKey();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("NSTextCheckingOrganizationKey")
-    protected static native NSString OrganizationKey();
+    public static native NSString OrganizationKey();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("NSTextCheckingStreetKey")
-    protected static native NSString StreetKey();
+    public static native NSString StreetKey();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("NSTextCheckingCityKey")
-    protected static native NSString CityKey();
+    public static native NSString CityKey();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("NSTextCheckingStateKey")
-    protected static native NSString StateKey();
+    public static native NSString StateKey();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("NSTextCheckingZIPKey")
-    protected static native NSString ZIPKey();
+    public static native NSString ZIPKey();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("NSTextCheckingCountryKey")
-    protected static native NSString CountryKey();
+    public static native NSString CountryKey();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("NSTextCheckingPhoneKey")
-    protected static native NSString PhoneKey();
+    public static native NSString PhoneKey();
     
 }

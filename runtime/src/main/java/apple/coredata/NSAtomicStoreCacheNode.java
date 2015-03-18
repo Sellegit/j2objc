@@ -26,9 +26,10 @@ public class NSAtomicStoreCacheNode
 
     
     
-    public NSAtomicStoreCacheNode() {}
     @Mapping("initWithObjectID:")
     public NSAtomicStoreCacheNode(NSManagedObjectID moid) { }
+    @Mapping("init")
+    public NSAtomicStoreCacheNode() { }
     
     
     @Mapping("objectID")
@@ -43,6 +44,6 @@ public class NSAtomicStoreCacheNode
     @Mapping("valueForKey:")
     public native Object getValue(String key);
     @Mapping("setValue:forKey:")
-    private native void setValue(Object value, String key);
+    public native void setValue(Object value, String key);
     
 }

@@ -26,7 +26,8 @@ public class CMMotionManager
 
     
     
-    public CMMotionManager() {}
+    @Mapping("init")
+    public CMMotionManager() { }
     
     
     @Mapping("accelerometerUpdateInterval")

@@ -31,7 +31,8 @@ public class UITextInputMode
 
     
     
-    public UITextInputMode() {}
+    @Mapping("init")
+    public UITextInputMode() { }
     
     
     @Mapping("primaryLanguage")

@@ -27,9 +27,10 @@ public class CKRecordZoneID
 
     
     
-    public CKRecordZoneID() {}
     @Mapping("initWithZoneName:ownerName:")
     public CKRecordZoneID(String zoneName, String ownerName) { }
+    @Mapping("init")
+    public CKRecordZoneID() { }
     
     
     @Mapping("zoneName")

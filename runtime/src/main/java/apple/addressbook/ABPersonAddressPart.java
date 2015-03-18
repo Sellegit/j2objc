@@ -27,16 +27,16 @@ public class ABPersonAddressPart
     
     
     @GlobalConstant("kABPersonAddressStreetKey")
-    protected static native CFString StreetValue();
+    public static native CFString StreetValue();
     @GlobalConstant("kABPersonAddressCityKey")
-    protected static native CFString CityValue();
+    public static native CFString CityValue();
     @GlobalConstant("kABPersonAddressStateKey")
-    protected static native CFString StateValue();
+    public static native CFString StateValue();
     @GlobalConstant("kABPersonAddressZIPKey")
-    protected static native CFString ZIPValue();
+    public static native CFString ZIPValue();
     @GlobalConstant("kABPersonAddressCountryKey")
-    protected static native CFString CountryValue();
+    public static native CFString CountryValue();
     @GlobalConstant("kABPersonAddressCountryCodeKey")
-    protected static native CFString CountryCodeValue();
+    public static native CFString CountryCodeValue();
     
 }

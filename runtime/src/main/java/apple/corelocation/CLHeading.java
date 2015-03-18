@@ -28,7 +28,8 @@ public class CLHeading
 
     
     
-    public CLHeading() {}
+    @Mapping("init")
+    public CLHeading() { }
     
     
     @Mapping("magneticHeading")

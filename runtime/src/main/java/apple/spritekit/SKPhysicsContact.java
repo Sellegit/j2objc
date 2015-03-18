@@ -31,7 +31,8 @@ public class SKPhysicsContact
 
     
     
-    public SKPhysicsContact() {}
+    @Mapping("init")
+    public SKPhysicsContact() { }
     
     
     @Mapping("bodyA")

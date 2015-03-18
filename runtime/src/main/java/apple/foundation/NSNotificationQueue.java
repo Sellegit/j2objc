@@ -31,6 +31,8 @@ public class NSNotificationQueue
     
     @Mapping("initWithNotificationCenter:")
     public NSNotificationQueue(NSNotificationCenter notificationCenter) { }
+    @Mapping("init")
+    public NSNotificationQueue() { }
     
     
     

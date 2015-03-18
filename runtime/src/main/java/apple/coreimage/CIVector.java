@@ -27,7 +27,6 @@ public class CIVector
 
     
     
-    public CIVector() {}
     @Mapping("initWithX:")
     public CIVector(@MachineSizedFloat double x) { }
     @Mapping("initWithX:Y:")
@@ -53,6 +52,8 @@ public class CIVector
     public CIVector(CGAffineTransform r) { }
     @Mapping("initWithString:")
     public CIVector(String representation) { }
+    @Mapping("init")
+    public CIVector() { }
     
     
     

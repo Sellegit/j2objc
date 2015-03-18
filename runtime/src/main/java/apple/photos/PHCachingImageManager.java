@@ -29,7 +29,8 @@ public class PHCachingImageManager
 
     
     
-    public PHCachingImageManager() {}
+    @Mapping("init")
+    public PHCachingImageManager() { }
     
     
     @Mapping("allowsCachingHighQualityImages")

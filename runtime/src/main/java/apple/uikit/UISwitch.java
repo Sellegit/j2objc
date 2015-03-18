@@ -31,9 +31,10 @@ public class UISwitch
 
     
     
-    public UISwitch() {}
     @Mapping("initWithFrame:")
     public UISwitch(CGRect frame) { }
+    @Mapping("init")
+    public UISwitch() { }
     
     
     /**

@@ -31,9 +31,10 @@ public class UIStepper
 
     
     
-    public UIStepper() {}
     @Mapping("initWithFrame:")
     public UIStepper(CGRect frame) { }
+    @Mapping("init")
+    public UIStepper() { }
     
     
     @Mapping("isContinuous")

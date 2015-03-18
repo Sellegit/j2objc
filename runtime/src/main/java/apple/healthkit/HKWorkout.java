@@ -26,7 +26,8 @@ public class HKWorkout
 
     
     
-    public HKWorkout() {}
+    @Mapping("init")
+    public HKWorkout() { }
     
     
     @Mapping("workoutActivityType")

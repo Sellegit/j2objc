@@ -29,7 +29,8 @@ public class GKPeerPickerController
 
     
     
-    public GKPeerPickerController() {}
+    @Mapping("init")
+    public GKPeerPickerController() { }
     
     
     @Mapping("connectionTypesMask")

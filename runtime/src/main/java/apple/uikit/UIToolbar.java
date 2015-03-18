@@ -31,9 +31,10 @@ public class UIToolbar
 
     
     
-    public UIToolbar() {}
     @Mapping("initWithFrame:")
     public UIToolbar(CGRect frame) { }
+    @Mapping("init")
+    public UIToolbar() { }
     
     
     @Mapping("barStyle")

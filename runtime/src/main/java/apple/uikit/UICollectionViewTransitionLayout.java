@@ -31,9 +31,10 @@ public class UICollectionViewTransitionLayout
 
     
     
-    public UICollectionViewTransitionLayout() {}
     @Mapping("initWithCurrentLayout:nextLayout:")
     public UICollectionViewTransitionLayout(UICollectionViewLayout currentLayout, UICollectionViewLayout newLayout) { }
+    @Mapping("init")
+    public UICollectionViewTransitionLayout() { }
     
     
     @Mapping("transitionProgress")

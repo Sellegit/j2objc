@@ -28,7 +28,8 @@ public class EKEvent
 
     
     
-    public EKEvent() {}
+    @Mapping("init")
+    public EKEvent() { }
     
     
     @Mapping("eventIdentifier")

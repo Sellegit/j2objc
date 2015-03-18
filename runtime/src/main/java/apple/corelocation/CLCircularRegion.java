@@ -28,9 +28,10 @@ public class CLCircularRegion
 
     
     
-    public CLCircularRegion() {}
     @Mapping("initWithCenter:radius:identifier:")
     public CLCircularRegion(CLLocationCoordinate2D center, double radius, String identifier) { }
+    @Mapping("init")
+    public CLCircularRegion() { }
     
     
     @Mapping("center")

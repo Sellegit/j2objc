@@ -29,7 +29,8 @@ public class GLKTextureInfo
 
     
     
-    public GLKTextureInfo() {}
+    @Mapping("init")
+    public GLKTextureInfo() { }
     
     
     @Mapping("name")

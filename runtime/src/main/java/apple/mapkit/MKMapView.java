@@ -29,9 +29,10 @@ public class MKMapView
 
     
     
-    public MKMapView() {}
     @Mapping("initWithFrame:")
     public MKMapView(CGRect frame) { }
+    @Mapping("init")
+    public MKMapView() { }
     
     
     @Mapping("delegate")

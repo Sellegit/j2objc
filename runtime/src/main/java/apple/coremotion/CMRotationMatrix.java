@@ -23,7 +23,7 @@ public class CMRotationMatrix
      {
 
     
-    protected CMRotationMatrix() {}
+    private CMRotationMatrix() {}
     
     
     @DotMapping("m11")

@@ -30,7 +30,8 @@ public class SCNText
 
     
     
-    public SCNText() {}
+    @Mapping("init")
+    public SCNText() { }
     
     
     @Mapping("extrusionDepth")

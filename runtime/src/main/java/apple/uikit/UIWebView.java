@@ -31,9 +31,10 @@ public class UIWebView
 
     
     
-    public UIWebView() {}
     @Mapping("initWithFrame:")
     public UIWebView(CGRect frame) { }
+    @Mapping("init")
+    public UIWebView() { }
     
     
     @Mapping("delegate")

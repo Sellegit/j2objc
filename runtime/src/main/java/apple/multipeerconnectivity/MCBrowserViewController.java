@@ -28,13 +28,14 @@ public class MCBrowserViewController
 
     
     
-    public MCBrowserViewController() {}
     @Mapping("initWithServiceType:session:")
     public MCBrowserViewController(String serviceType, MCSession session) { }
     @Mapping("initWithBrowser:session:")
     public MCBrowserViewController(MCNearbyServiceBrowser browser, MCSession session) { }
     @Mapping("initWithNibName:bundle:")
     public MCBrowserViewController(String nibNameOrNil, NSBundle nibBundleOrNil) { }
+    @Mapping("init")
+    public MCBrowserViewController() { }
     
     
     @Mapping("delegate")

@@ -33,12 +33,12 @@ public class SCNSceneAttribute
     
     
     @GlobalConstant("SCNSceneStartTimeAttributeKey")
-    protected static native NSString StartTimeValue();
+    public static native NSString StartTimeValue();
     @GlobalConstant("SCNSceneEndTimeAttributeKey")
-    protected static native NSString EndTimeValue();
+    public static native NSString EndTimeValue();
     @GlobalConstant("SCNSceneFrameRateAttributeKey")
-    protected static native NSString FrameRateValue();
+    public static native NSString FrameRateValue();
     @GlobalConstant("SCNSceneUpAxisAttributeKey")
-    protected static native NSString UpAxisValue();
+    public static native NSString UpAxisValue();
     
 }

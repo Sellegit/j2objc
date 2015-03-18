@@ -32,7 +32,8 @@ public class AVAudioSessionRouteDescription
 
     
     
-    public AVAudioSessionRouteDescription() {}
+    @Mapping("init")
+    public AVAudioSessionRouteDescription() { }
     
     
     @Mapping("inputs")

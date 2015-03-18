@@ -32,7 +32,8 @@ public class AVAssetResourceLoader
 
     
     
-    public AVAssetResourceLoader() {}
+    @Mapping("init")
+    public AVAssetResourceLoader() { }
     
     
     @Mapping("delegate")

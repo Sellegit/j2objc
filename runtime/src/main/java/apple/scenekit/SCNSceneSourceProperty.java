@@ -33,14 +33,14 @@ public class SCNSceneSourceProperty
     
     
     @GlobalConstant("SCNSceneSourceAssetContributorsKey")
-    protected static native NSString ContributorsValue();
+    public static native NSString ContributorsValue();
     @GlobalConstant("SCNSceneSourceAssetCreatedDateKey")
-    protected static native NSString CreatedDateValue();
+    public static native NSString CreatedDateValue();
     @GlobalConstant("SCNSceneSourceAssetModifiedDateKey")
-    protected static native NSString ModifiedDateValue();
+    public static native NSString ModifiedDateValue();
     @GlobalConstant("SCNSceneSourceAssetUpAxisKey")
-    protected static native NSString UpAxisValue();
+    public static native NSString UpAxisValue();
     @GlobalConstant("SCNSceneSourceAssetUnitKey")
-    protected static native NSString UnitValue();
+    public static native NSString UnitValue();
     
 }

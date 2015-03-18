@@ -25,7 +25,7 @@ public class CVPlanarComponentInfo
      {
 
     
-    protected CVPlanarComponentInfo() {}
+    private CVPlanarComponentInfo() {}
     
     
     @DotMapping("offset")

@@ -26,7 +26,8 @@ public class NSAsynchronousFetchResult
 
     
     
-    public NSAsynchronousFetchResult() {}
+    @Mapping("init")
+    public NSAsynchronousFetchResult() { }
     
     
     @Mapping("fetchRequest")

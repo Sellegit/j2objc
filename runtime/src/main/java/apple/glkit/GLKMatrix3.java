@@ -26,7 +26,7 @@ public class GLKMatrix3
      {
 
     
-    protected GLKMatrix3() {}
+    private GLKMatrix3() {}
     
     
     

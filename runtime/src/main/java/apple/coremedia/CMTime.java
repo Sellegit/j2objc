@@ -29,7 +29,7 @@ public class CMTime
     
     public static final long MaxTimescale = 0x7fffffffL;
     
-    protected CMTime() {}
+    private CMTime() {}
     
     
     @DotMapping("value")
@@ -179,7 +179,7 @@ public class CMTime
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMTimeCopyDescription")
-    private static native String getDescription(CFAllocator allocator, CMTime time);
+    public static native String getDescription(CFAllocator allocator, CMTime time);
     /**
      * @since Available in iOS 4.0 and later.
      */

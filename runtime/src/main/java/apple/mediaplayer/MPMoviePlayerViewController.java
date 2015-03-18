@@ -27,11 +27,12 @@ public class MPMoviePlayerViewController
 
     
     
-    public MPMoviePlayerViewController() {}
     @Mapping("initWithContentURL:")
     public MPMoviePlayerViewController(NSURL contentURL) { }
     @Mapping("initWithNibName:bundle:")
     public MPMoviePlayerViewController(String nibNameOrNil, NSBundle nibBundleOrNil) { }
+    @Mapping("init")
+    public MPMoviePlayerViewController() { }
     
     
     @Mapping("moviePlayer")

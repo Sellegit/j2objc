@@ -26,7 +26,8 @@ public class HKBloodTypeObject
 
     
     
-    public HKBloodTypeObject() {}
+    @Mapping("init")
+    public HKBloodTypeObject() { }
     
     
     @Mapping("bloodType")

@@ -31,7 +31,8 @@ public class NSLayoutConstraint
 
     
     
-    public NSLayoutConstraint() {}
+    @Mapping("init")
+    public NSLayoutConstraint() { }
     
     
     @Mapping("priority")

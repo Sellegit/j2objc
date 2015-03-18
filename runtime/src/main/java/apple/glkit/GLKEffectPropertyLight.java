@@ -29,7 +29,8 @@ public class GLKEffectPropertyLight
 
     
     
-    public GLKEffectPropertyLight() {}
+    @Mapping("init")
+    public GLKEffectPropertyLight() { }
     
     
     @Mapping("enabled")

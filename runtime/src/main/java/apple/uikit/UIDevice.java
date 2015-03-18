@@ -31,7 +31,8 @@ public class UIDevice
 
     
     
-    public UIDevice() {}
+    @Mapping("init")
+    public UIDevice() { }
     
     
     @Mapping("name")

@@ -29,7 +29,6 @@ public class NSXMLParser
 
     
     
-    public NSXMLParser() {}
     @Mapping("initWithContentsOfURL:")
     public NSXMLParser(NSURL url) { }
     @Mapping("initWithData:")
@@ -39,6 +38,8 @@ public class NSXMLParser
      */
     @Mapping("initWithStream:")
     public NSXMLParser(NSInputStream stream) { }
+    @Mapping("init")
+    public NSXMLParser() { }
     
     
     @Mapping("delegate")

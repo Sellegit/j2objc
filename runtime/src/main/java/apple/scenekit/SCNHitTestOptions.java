@@ -33,20 +33,20 @@ public class SCNHitTestOptions
     
     
     @GlobalConstant("SCNHitTestFirstFoundOnlyKey")
-    protected static native NSString FirstFoundOnlyKey();
+    public static native NSString FirstFoundOnlyKey();
     @GlobalConstant("SCNHitTestSortResultsKey")
-    protected static native NSString SortResultsKey();
+    public static native NSString SortResultsKey();
     @GlobalConstant("SCNHitTestClipToZRangeKey")
-    protected static native NSString ClipToZRangeKey();
+    public static native NSString ClipToZRangeKey();
     @GlobalConstant("SCNHitTestBackFaceCullingKey")
-    protected static native NSString BackFaceCullingKey();
+    public static native NSString BackFaceCullingKey();
     @GlobalConstant("SCNHitTestBoundingBoxOnlyKey")
-    protected static native NSString BoundingBoxOnlyKey();
+    public static native NSString BoundingBoxOnlyKey();
     @GlobalConstant("SCNHitTestIgnoreChildNodesKey")
-    protected static native NSString IgnoreChildNodesKey();
+    public static native NSString IgnoreChildNodesKey();
     @GlobalConstant("SCNHitTestRootNodeKey")
-    protected static native NSString RootNodeKey();
+    public static native NSString RootNodeKey();
     @GlobalConstant("SCNHitTestIgnoreHiddenNodesKey")
-    protected static native NSString IgnoreHiddenNodesKey();
+    public static native NSString IgnoreHiddenNodesKey();
     
 }

@@ -27,7 +27,8 @@ public class CIQRCodeFeature
 
     
     
-    public CIQRCodeFeature() {}
+    @Mapping("init")
+    public CIQRCodeFeature() { }
     
     
     @Mapping("bounds")

@@ -31,7 +31,8 @@ public class UIDocumentInteractionController
 
     
     
-    public UIDocumentInteractionController() {}
+    @Mapping("init")
+    public UIDocumentInteractionController() { }
     
     
     @Mapping("delegate")

@@ -29,11 +29,12 @@ public class NSURLRequest
 
     
     
-    public NSURLRequest() {}
     @Mapping("initWithURL:")
     public NSURLRequest(NSURL URL) { }
     @Mapping("initWithURL:cachePolicy:timeoutInterval:")
     public NSURLRequest(NSURL URL, @Representing("NSURLRequestCachePolicy") @MachineSizedUInt long cachePolicy, double timeoutInterval) { }
+    @Mapping("init")
+    public NSURLRequest() { }
     
     
     @Mapping("URL")

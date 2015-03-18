@@ -37,6 +37,6 @@ public class NSCountedSet
     
     
     @Mapping("countForObject:")
-    protected native @MachineSizedUInt long countForObject(Object object);
+    public native @MachineSizedUInt long countForObject(Object object);
     
 }

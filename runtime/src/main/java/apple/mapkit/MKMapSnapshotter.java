@@ -29,9 +29,10 @@ public class MKMapSnapshotter
 
     
     
-    public MKMapSnapshotter() {}
     @Mapping("initWithOptions:")
     public MKMapSnapshotter(MKMapSnapshotOptions options) { }
+    @Mapping("init")
+    public MKMapSnapshotter() { }
     
     
     @Mapping("isLoading")

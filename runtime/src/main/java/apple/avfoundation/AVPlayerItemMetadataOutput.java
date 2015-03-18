@@ -32,9 +32,10 @@ public class AVPlayerItemMetadataOutput
 
     
     
-    public AVPlayerItemMetadataOutput() {}
     @Mapping("initWithIdentifiers:")
     public AVPlayerItemMetadataOutput(NSArray<?> identifiers) { }
+    @Mapping("init")
+    public AVPlayerItemMetadataOutput() { }
     
     
     @Mapping("delegate")

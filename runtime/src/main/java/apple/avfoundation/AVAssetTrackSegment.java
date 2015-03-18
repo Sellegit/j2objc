@@ -32,7 +32,8 @@ public class AVAssetTrackSegment
 
     
     
-    public AVAssetTrackSegment() {}
+    @Mapping("init")
+    public AVAssetTrackSegment() { }
     
     
     @Mapping("timeMapping")

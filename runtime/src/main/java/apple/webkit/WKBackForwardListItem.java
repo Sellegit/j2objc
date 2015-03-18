@@ -27,7 +27,8 @@ public class WKBackForwardListItem
 
     
     
-    public WKBackForwardListItem() {}
+    @Mapping("init")
+    public WKBackForwardListItem() { }
     
     
     @Mapping("URL")

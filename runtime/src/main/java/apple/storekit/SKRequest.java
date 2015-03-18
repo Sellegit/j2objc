@@ -28,7 +28,8 @@ public class SKRequest
 
     
     
-    public SKRequest() {}
+    @Mapping("init")
+    public SKRequest() { }
     
     
     /**

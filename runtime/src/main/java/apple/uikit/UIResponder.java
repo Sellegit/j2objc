@@ -31,7 +31,8 @@ public class UIResponder
 
     
     
-    public UIResponder() {}
+    @Mapping("init")
+    public UIResponder() { }
     
     
     /**

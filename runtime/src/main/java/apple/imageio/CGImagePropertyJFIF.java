@@ -30,26 +30,26 @@ public class CGImagePropertyJFIF
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("kCGImagePropertyJFIFVersion")
-    protected static native CFString VersionKey();
+    public static native CFString VersionKey();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("kCGImagePropertyJFIFXDensity")
-    protected static native CFString XDensityKey();
+    public static native CFString XDensityKey();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("kCGImagePropertyJFIFYDensity")
-    protected static native CFString YDensityKey();
+    public static native CFString YDensityKey();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("kCGImagePropertyJFIFDensityUnit")
-    protected static native CFString DensityUnitKey();
+    public static native CFString DensityUnitKey();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("kCGImagePropertyJFIFIsProgressive")
-    protected static native CFString IsProgressiveKey();
+    public static native CFString IsProgressiveKey();
     
 }

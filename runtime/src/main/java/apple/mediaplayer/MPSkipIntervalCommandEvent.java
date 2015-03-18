@@ -27,7 +27,8 @@ public class MPSkipIntervalCommandEvent
 
     
     
-    public MPSkipIntervalCommandEvent() {}
+    @Mapping("init")
+    public MPSkipIntervalCommandEvent() { }
     
     
     @Mapping("interval")

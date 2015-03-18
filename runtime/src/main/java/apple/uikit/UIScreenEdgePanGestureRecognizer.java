@@ -31,9 +31,10 @@ public class UIScreenEdgePanGestureRecognizer
 
     
     
-    public UIScreenEdgePanGestureRecognizer() {}
     @Mapping("initWithTarget:action:")
     public UIScreenEdgePanGestureRecognizer(Object target, Selector action) { }
+    @Mapping("init")
+    public UIScreenEdgePanGestureRecognizer() { }
     
     
     @Mapping("edges")

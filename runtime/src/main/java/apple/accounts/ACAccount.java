@@ -26,9 +26,10 @@ public class ACAccount
 
     
     
-    public ACAccount() {}
     @Mapping("initWithAccountType:")
     public ACAccount(ACAccountType type) { }
+    @Mapping("init")
+    public ACAccount() { }
     
     
     @Mapping("identifier")

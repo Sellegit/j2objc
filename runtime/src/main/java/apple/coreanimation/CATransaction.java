@@ -27,7 +27,8 @@ public class CATransaction
 
     
     
-    public CATransaction() {}
+    @Mapping("init")
+    public CATransaction() { }
     
     
     
@@ -63,6 +64,6 @@ public class CATransaction
     @Mapping("valueForKey:")
     public static native Object get(String key);
     @Mapping("setValue:forKey:")
-    protected static native void set(Object anObject, String key);
+    public static native void set(Object anObject, String key);
     
 }

@@ -32,9 +32,10 @@ public class AVURLAsset
 
     
     
-    public AVURLAsset() {}
     @Mapping("initWithURL:options:")
     public AVURLAsset(NSURL URL, NSDictionary<?, ?> options) { }
+    @Mapping("init")
+    public AVURLAsset() { }
     
     
     @Mapping("URL")

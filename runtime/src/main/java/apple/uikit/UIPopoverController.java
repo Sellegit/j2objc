@@ -31,9 +31,10 @@ public class UIPopoverController
 
     
     
-    public UIPopoverController() {}
     @Mapping("initWithContentViewController:")
     public UIPopoverController(UIViewController viewController) { }
+    @Mapping("init")
+    public UIPopoverController() { }
     
     
     @Mapping("delegate")

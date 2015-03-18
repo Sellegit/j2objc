@@ -27,6 +27,6 @@ public class OpenGLES
     
     
     @GlobalFunction("EAGLGetVersion")
-    private static native void getVersion(Todo major, Todo minor);
+    public static native void getVersion(Todo major, Todo minor);
     
 }

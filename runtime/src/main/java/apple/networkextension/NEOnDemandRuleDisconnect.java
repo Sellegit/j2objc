@@ -26,7 +26,8 @@ public class NEOnDemandRuleDisconnect
 
     
     
-    public NEOnDemandRuleDisconnect() {}
+    @Mapping("init")
+    public NEOnDemandRuleDisconnect() { }
     
     
     

@@ -31,9 +31,10 @@ public class UIDocument
 
     
     
-    public UIDocument() {}
     @Mapping("initWithFileURL:")
     public UIDocument(NSURL url) { }
+    @Mapping("init")
+    public UIDocument() { }
     
     
     @Mapping("fileURL")
@@ -85,9 +86,9 @@ public class UIDocument
     @Mapping("closeWithCompletionHandler:")
     public native void close(@Block VoidBooleanBlock completionHandler);
     @Mapping("loadFromContents:ofType:error:")
-    protected native boolean loadFromContents(Object contents, String typeName, Todo outError);
+    public native boolean loadFromContents(Object contents, String typeName, Todo outError);
     @Mapping("contentsForType:error:")
-    protected native Object getContentsForType(String typeName, Todo outError);
+    public native Object getContentsForType(String typeName, Todo outError);
     @Mapping("disableEditing")
     public native void disableEditing();
     @Mapping("enableEditing")
@@ -109,13 +110,13 @@ public class UIDocument
     @Mapping("fileNameExtensionForType:saveOperation:")
     public native String getFileNameExtension(String typeName, @Representing("UIDocumentSaveOperation") @MachineSizedSInt long saveOperation);
     @Mapping("writeContents:andAttributes:safelyToURL:forSaveOperation:error:")
-    protected native boolean writeContents(Object contents, NSDictionary<?, ?> additionalFileAttributes, NSURL url, @Representing("UIDocumentSaveOperation") @MachineSizedSInt long saveOperation, Todo outError);
+    public native boolean writeContents(Object contents, NSDictionary<?, ?> additionalFileAttributes, NSURL url, @Representing("UIDocumentSaveOperation") @MachineSizedSInt long saveOperation, Todo outError);
     @Mapping("writeContents:toURL:forSaveOperation:originalContentsURL:error:")
-    protected native boolean writeContents(Object contents, NSURL url, @Representing("UIDocumentSaveOperation") @MachineSizedSInt long saveOperation, NSURL originalContentsURL, Todo outError);
+    public native boolean writeContents(Object contents, NSURL url, @Representing("UIDocumentSaveOperation") @MachineSizedSInt long saveOperation, NSURL originalContentsURL, Todo outError);
     @Mapping("fileAttributesToWriteToURL:forSaveOperation:error:")
-    protected native NSDictionary<?, ?> getFileAttributesToWrite(NSURL url, @Representing("UIDocumentSaveOperation") @MachineSizedSInt long saveOperation, Todo outError);
+    public native NSDictionary<?, ?> getFileAttributesToWrite(NSURL url, @Representing("UIDocumentSaveOperation") @MachineSizedSInt long saveOperation, Todo outError);
     @Mapping("readFromURL:error:")
-    protected native boolean read(NSURL url, Todo outError);
+    public native boolean read(NSURL url, Todo outError);
     @Mapping("performAsynchronousFileAccessUsingBlock:")
     public native void performAsynchronousFileAccess(@Block Runnable block);
     @Mapping("handleError:userInteractionPermitted:")

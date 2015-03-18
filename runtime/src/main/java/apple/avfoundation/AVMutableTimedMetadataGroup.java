@@ -32,9 +32,10 @@ public class AVMutableTimedMetadataGroup
 
     
     
-    public AVMutableTimedMetadataGroup() {}
     @Mapping("initWithItems:timeRange:")
     public AVMutableTimedMetadataGroup(NSArray<?> items, CMTimeRange timeRange) { }
+    @Mapping("init")
+    public AVMutableTimedMetadataGroup() { }
     
     
     @Mapping("timeRange")

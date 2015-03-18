@@ -34,16 +34,16 @@ public class CMClosedCaptionFormatDescription
      * @since Available in iOS 8.0 and later.
      */
     @GlobalFunction("CMClosedCaptionFormatDescriptionCreateFromBigEndianClosedCaptionDescriptionData")
-    private static native int createFromBigEndianClosedCaptionDescriptionData(CFAllocator allocator, Todo closedCaptionDescriptionData, @MachineSizedUInt long closedCaptionDescriptionSize, String closedCaptionDescriptionFlavor, Todo closedCaptionFormatDescriptionOut);
+    public static native int createFromBigEndianClosedCaptionDescriptionData(CFAllocator allocator, Todo closedCaptionDescriptionData, @MachineSizedUInt long closedCaptionDescriptionSize, String closedCaptionDescriptionFlavor, Todo closedCaptionFormatDescriptionOut);
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalFunction("CMClosedCaptionFormatDescriptionCreateFromBigEndianClosedCaptionDescriptionBlockBuffer")
-    private static native int createFromBigEndianClosedCaptionDescriptionBlockBuffer(CFAllocator allocator, CMBlockBuffer closedCaptionDescriptionBlockBuffer, String closedCaptionDescriptionFlavor, Todo closedCaptionFormatDescriptionOut);
+    public static native int createFromBigEndianClosedCaptionDescriptionBlockBuffer(CFAllocator allocator, CMBlockBuffer closedCaptionDescriptionBlockBuffer, String closedCaptionDescriptionFlavor, Todo closedCaptionFormatDescriptionOut);
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalFunction("CMClosedCaptionFormatDescriptionCopyAsBigEndianClosedCaptionDescriptionBlockBuffer")
-    private static native int copyAsBigEndianClosedCaptionDescriptionBlockBuffer(CFAllocator allocator, CMFormatDescription closedCaptionFormatDescription, String closedCaptionDescriptionFlavor, Todo closedCaptionDescriptionBlockBufferOut);
+    public static native int copyAsBigEndianClosedCaptionDescriptionBlockBuffer(CFAllocator allocator, CMFormatDescription closedCaptionFormatDescription, String closedCaptionDescriptionFlavor, Todo closedCaptionDescriptionBlockBufferOut);
     
 }

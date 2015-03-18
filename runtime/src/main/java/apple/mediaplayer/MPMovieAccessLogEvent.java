@@ -27,7 +27,8 @@ public class MPMovieAccessLogEvent
 
     
     
-    public MPMovieAccessLogEvent() {}
+    @Mapping("init")
+    public MPMovieAccessLogEvent() { }
     
     
     @Mapping("numberOfSegmentsDownloaded")

@@ -29,9 +29,10 @@ public class PHContentEditingOutput
 
     
     
-    public PHContentEditingOutput() {}
     @Mapping("initWithContentEditingInput:")
     public PHContentEditingOutput(PHContentEditingInput contentEditingInput) { }
+    @Mapping("init")
+    public PHContentEditingOutput() { }
     @Mapping("initWithPlaceholderForCreatedAsset:")
     public PHContentEditingOutput(PHObjectPlaceholder placeholderForCreatedAsset) { }
     

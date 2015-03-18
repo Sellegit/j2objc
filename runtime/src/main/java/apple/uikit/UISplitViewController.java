@@ -31,9 +31,10 @@ public class UISplitViewController
 
     
     
-    public UISplitViewController() {}
     @Mapping("initWithNibName:bundle:")
     public UISplitViewController(String nibNameOrNil, NSBundle nibBundleOrNil) { }
+    @Mapping("init")
+    public UISplitViewController() { }
     
     
     @Mapping("viewControllers")

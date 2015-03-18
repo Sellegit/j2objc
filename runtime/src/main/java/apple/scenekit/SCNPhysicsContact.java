@@ -30,7 +30,8 @@ public class SCNPhysicsContact
 
     
     
-    public SCNPhysicsContact() {}
+    @Mapping("init")
+    public SCNPhysicsContact() { }
     
     
     @Mapping("nodeA")

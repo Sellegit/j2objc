@@ -32,7 +32,8 @@ public class AVMetadataFaceObject
 
     
     
-    public AVMetadataFaceObject() {}
+    @Mapping("init")
+    public AVMetadataFaceObject() { }
     
     
     @Mapping("faceID")

@@ -27,7 +27,7 @@ public class CMVideoDimensions
      {
 
     
-    protected CMVideoDimensions() {}
+    private CMVideoDimensions() {}
     
     
     @DotMapping("width")

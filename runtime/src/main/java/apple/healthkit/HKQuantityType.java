@@ -26,7 +26,8 @@ public class HKQuantityType
 
     
     
-    public HKQuantityType() {}
+    @Mapping("init")
+    public HKQuantityType() { }
     
     
     @Mapping("aggregationStyle")

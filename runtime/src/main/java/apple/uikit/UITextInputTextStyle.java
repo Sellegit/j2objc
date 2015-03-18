@@ -37,20 +37,20 @@ public class UITextInputTextStyle
      */
     @Deprecated
     @GlobalConstant("UITextInputTextBackgroundColorKey")
-    protected static native NSString BackgroundColorKey();
+    public static native NSString BackgroundColorKey();
     /**
      * @since Available in iOS 3.2 and later.
      * @deprecated Deprecated in iOS 8.0.
      */
     @Deprecated
     @GlobalConstant("UITextInputTextColorKey")
-    protected static native NSString ColorKey();
+    public static native NSString ColorKey();
     /**
      * @since Available in iOS 3.2 and later.
      * @deprecated Deprecated in iOS 8.0.
      */
     @Deprecated
     @GlobalConstant("UITextInputTextFontKey")
-    protected static native NSString FontKey();
+    public static native NSString FontKey();
     
 }

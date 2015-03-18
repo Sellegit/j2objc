@@ -28,7 +28,8 @@ public class SLRequest
 
     
     
-    public SLRequest() {}
+    @Mapping("init")
+    public SLRequest() { }
     
     
     @Mapping("account")

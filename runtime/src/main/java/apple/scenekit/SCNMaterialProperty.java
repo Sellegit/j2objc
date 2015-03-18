@@ -30,7 +30,8 @@ public class SCNMaterialProperty
 
     
     
-    public SCNMaterialProperty() {}
+    @Mapping("init")
+    public SCNMaterialProperty() { }
     
     
     @Mapping("contents")

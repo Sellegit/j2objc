@@ -24,7 +24,7 @@ import apple.uikit.*;
      {
 
     
-    protected CGPathElement() {}
+    private CGPathElement() {}
     
     
     @DotMapping("type")

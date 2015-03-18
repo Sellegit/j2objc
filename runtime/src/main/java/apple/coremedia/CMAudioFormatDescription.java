@@ -34,7 +34,7 @@ public class CMAudioFormatDescription
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMAudioFormatDescriptionCreate")
-    private static native int create(CFAllocator allocator, AudioStreamBasicDescription asbd, @MachineSizedUInt long layoutSize, AudioChannelLayout layout, @MachineSizedUInt long magicCookieSize, Todo magicCookie, NSDictionary<?, ?> extensions, Todo outDesc);
+    public static native int create(CFAllocator allocator, AudioStreamBasicDescription asbd, @MachineSizedUInt long layoutSize, AudioChannelLayout layout, @MachineSizedUInt long magicCookieSize, Todo magicCookie, NSDictionary<?, ?> extensions, Todo outDesc);
     /**
      * @since Available in iOS 4.0 and later.
      */
@@ -44,17 +44,17 @@ public class CMAudioFormatDescription
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMAudioFormatDescriptionGetMagicCookie")
-    private static native Todo getMagicCookie(CMAudioFormatDescription desc, Todo cookieSizeOut);
+    public static native Todo getMagicCookie(CMAudioFormatDescription desc, Todo cookieSizeOut);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMAudioFormatDescriptionGetChannelLayout")
-    private static native AudioChannelLayout getChannelLayout(CMAudioFormatDescription desc, Todo layoutSize);
+    public static native AudioChannelLayout getChannelLayout(CMAudioFormatDescription desc, Todo layoutSize);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMAudioFormatDescriptionGetFormatList")
-    private static native Todo getFormatList(CMAudioFormatDescription desc, Todo formatListSize);
+    public static native Todo getFormatList(CMAudioFormatDescription desc, Todo formatListSize);
     /**
      * @since Available in iOS 4.0 and later.
      */
@@ -69,26 +69,26 @@ public class CMAudioFormatDescription
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMAudioFormatDescriptionCreateSummary")
-    private static native int createSummary(CFAllocator allocator, NSArray<?> formatDescriptionArray, int flags, Todo summaryFormatDescriptionOut);
+    public static native int createSummary(CFAllocator allocator, NSArray<?> formatDescriptionArray, int flags, Todo summaryFormatDescriptionOut);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMAudioFormatDescriptionEqual")
-    private static native boolean equalsTo(CMAudioFormatDescription desc1, CMAudioFormatDescription desc2, CMAudioFormatDescriptionMask equalityMask, Todo equalityMaskOut);
+    public static native boolean equalsTo(CMAudioFormatDescription desc1, CMAudioFormatDescription desc2, CMAudioFormatDescriptionMask equalityMask, Todo equalityMaskOut);
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalFunction("CMAudioFormatDescriptionCreateFromBigEndianSoundDescriptionData")
-    private static native int createFromBigEndianSoundDescriptionData(CFAllocator allocator, Todo soundDescriptionData, @MachineSizedUInt long soundDescriptionSize, String soundDescriptionFlavor, Todo audioFormatDescriptionOut);
+    public static native int createFromBigEndianSoundDescriptionData(CFAllocator allocator, Todo soundDescriptionData, @MachineSizedUInt long soundDescriptionSize, String soundDescriptionFlavor, Todo audioFormatDescriptionOut);
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalFunction("CMAudioFormatDescriptionCreateFromBigEndianSoundDescriptionBlockBuffer")
-    private static native int createFromBigEndianSoundDescriptionBlockBuffer(CFAllocator allocator, CMBlockBuffer soundDescriptionBlockBuffer, String soundDescriptionFlavor, Todo audioFormatDescriptionOut);
+    public static native int createFromBigEndianSoundDescriptionBlockBuffer(CFAllocator allocator, CMBlockBuffer soundDescriptionBlockBuffer, String soundDescriptionFlavor, Todo audioFormatDescriptionOut);
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalFunction("CMAudioFormatDescriptionCopyAsBigEndianSoundDescriptionBlockBuffer")
-    private static native int copyAsBigEndianSoundDescriptionBlockBuffer(CFAllocator allocator, CMAudioFormatDescription audioFormatDescription, String soundDescriptionFlavor, Todo soundDescriptionBlockBufferOut);
+    public static native int copyAsBigEndianSoundDescriptionBlockBuffer(CFAllocator allocator, CMAudioFormatDescription audioFormatDescription, String soundDescriptionFlavor, Todo soundDescriptionBlockBufferOut);
     
 }

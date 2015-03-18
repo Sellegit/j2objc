@@ -30,7 +30,8 @@ public class SCNConstraint
 
     
     
-    public SCNConstraint() {}
+    @Mapping("init")
+    public SCNConstraint() { }
     
     
     @Mapping("influenceFactor")

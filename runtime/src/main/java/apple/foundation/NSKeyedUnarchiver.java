@@ -29,9 +29,10 @@ public class NSKeyedUnarchiver
 
     
     
-    public NSKeyedUnarchiver() {}
     @Mapping("initForReadingWithData:")
     public NSKeyedUnarchiver(NSData data) { }
+    @Mapping("init")
+    public NSKeyedUnarchiver() { }
     
     
     @Mapping("delegate")
@@ -51,6 +52,6 @@ public class NSKeyedUnarchiver
     @Mapping("unarchiveObjectWithData:")
     public static native Object unarchive(NSData data);
     @Mapping("unarchiveObjectWithFile:")
-    private static native Object unarchiveObject(String path);
+    public static native Object unarchiveObject(String path);
     
 }

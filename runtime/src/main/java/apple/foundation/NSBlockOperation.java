@@ -31,7 +31,8 @@ public class NSBlockOperation
 
     
     
-    
+    @Mapping("init")
+    public NSBlockOperation() { }
     
     
     

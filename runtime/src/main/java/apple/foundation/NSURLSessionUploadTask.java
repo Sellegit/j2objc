@@ -29,7 +29,8 @@ public class NSURLSessionUploadTask
 
     
     
-    public NSURLSessionUploadTask() {}
+    @Mapping("init")
+    public NSURLSessionUploadTask() { }
     
     
     

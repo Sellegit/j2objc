@@ -31,11 +31,12 @@ public class NSUUID
 
     
     
-    public NSUUID() {}
     @Mapping("initWithUUIDString:")
     public NSUUID(String string) { }
     @Mapping("initWithUUIDBytes:")
     public NSUUID(Todo bytes) { }
+    @Mapping("init")
+    public NSUUID() { }
     
     
     @Mapping("UUIDString")
@@ -44,7 +45,7 @@ public class NSUUID
     
     
     @Mapping("getUUIDBytes:")
-    protected native void getUUIDBytes(Todo uuid);
+    public native void getUUIDBytes(Todo uuid);
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
     

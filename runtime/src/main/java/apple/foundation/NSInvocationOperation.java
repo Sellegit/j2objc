@@ -31,11 +31,12 @@ public class NSInvocationOperation
 
     
     
-    public NSInvocationOperation() {}
     @Mapping("initWithTarget:selector:object:")
     public NSInvocationOperation(Object target, Selector sel, Object arg) { }
     @Mapping("initWithInvocation:")
     public NSInvocationOperation(NSInvocation inv) { }
+    @Mapping("init")
+    public NSInvocationOperation() { }
     
     
     @Mapping("invocation")

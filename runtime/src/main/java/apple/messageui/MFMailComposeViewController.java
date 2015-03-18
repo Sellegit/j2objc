@@ -25,11 +25,12 @@ public class MFMailComposeViewController
 
     
     
-    public MFMailComposeViewController() {}
     @Mapping("initWithRootViewController:")
     public MFMailComposeViewController(UIViewController rootViewController) { }
     @Mapping("initWithNibName:bundle:")
     public MFMailComposeViewController(String nibNameOrNil, NSBundle nibBundleOrNil) { }
+    @Mapping("init")
+    public MFMailComposeViewController() { }
     
     
     @Mapping("mailComposeDelegate")

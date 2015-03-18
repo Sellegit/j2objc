@@ -30,24 +30,24 @@ public class CIFilterAttribute
     
     
     @GlobalConstant("kCIAttributeClass")
-    protected static native NSString ClassKey();
+    public static native NSString ClassKey();
     @GlobalConstant("kCIAttributeType")
-    protected static native NSString TypeKey();
+    public static native NSString TypeKey();
     @GlobalConstant("kCIAttributeMin")
-    protected static native NSString MinKey();
+    public static native NSString MinKey();
     @GlobalConstant("kCIAttributeMax")
-    protected static native NSString MaxKey();
+    public static native NSString MaxKey();
     @GlobalConstant("kCIAttributeSliderMin")
-    protected static native NSString SliderMinKey();
+    public static native NSString SliderMinKey();
     @GlobalConstant("kCIAttributeSliderMax")
-    protected static native NSString SliderMaxKey();
+    public static native NSString SliderMaxKey();
     @GlobalConstant("kCIAttributeDefault")
-    protected static native NSString DefaultKey();
+    public static native NSString DefaultKey();
     @GlobalConstant("kCIAttributeIdentity")
-    protected static native NSString IdentityKey();
+    public static native NSString IdentityKey();
     @GlobalConstant("kCIAttributeName")
-    protected static native NSString NameKey();
+    public static native NSString NameKey();
     @GlobalConstant("kCIAttributeDisplayName")
-    protected static native NSString DisplayNameKey();
+    public static native NSString DisplayNameKey();
     
 }

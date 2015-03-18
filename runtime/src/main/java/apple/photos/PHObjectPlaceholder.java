@@ -29,7 +29,8 @@ public class PHObjectPlaceholder
 
     
     
-    public PHObjectPlaceholder() {}
+    @Mapping("init")
+    public PHObjectPlaceholder() { }
     
     
     

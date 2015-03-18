@@ -35,6 +35,6 @@ public class NSURLCredentialStorageRemovalOptions
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("NSURLCredentialStorageRemoveSynchronizableCredentials")
-    protected static native NSString RemoveSynchronizableCredentials();
+    public static native NSString RemoveSynchronizableCredentials();
     
 }

@@ -28,7 +28,6 @@ public class PKAddPassesViewController
 
     
     
-    public PKAddPassesViewController() {}
     @Mapping("initWithPass:")
     public PKAddPassesViewController(Object pass) { }
     /**
@@ -38,6 +37,8 @@ public class PKAddPassesViewController
     public PKAddPassesViewController(NSArray<?> passes) { }
     @Mapping("initWithNibName:bundle:")
     public PKAddPassesViewController(String nibNameOrNil, NSBundle nibBundleOrNil) { }
+    @Mapping("init")
+    public PKAddPassesViewController() { }
     
     
     @Mapping("delegate")

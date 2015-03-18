@@ -31,7 +31,6 @@ public class UIColor
 
     
     
-    public UIColor() {}
     @Mapping("initWithRed:green:blue:alpha:")
     public UIColor(@MachineSizedFloat double red, @MachineSizedFloat double green, @MachineSizedFloat double blue, @MachineSizedFloat double alpha) { }
     @Mapping("initWithCGColor:")
@@ -41,6 +40,8 @@ public class UIColor
      */
     @Mapping("initWithCIColor:")
     public UIColor(CIColor ciColor) { }
+    @Mapping("init")
+    public UIColor() { }
     
     
     @Mapping("CGColor")
@@ -63,17 +64,17 @@ public class UIColor
      * @since Available in iOS 5.0 and later.
      */
     @Mapping("getWhite:alpha:")
-    protected native boolean getWhiteAlpha(Todo white, Todo alpha);
+    public native boolean getWhiteAlpha(Todo white, Todo alpha);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @Mapping("getHue:saturation:brightness:alpha:")
-    protected native boolean getHSBA(Todo hue, Todo saturation, Todo brightness, Todo alpha);
+    public native boolean getHSBA(Todo hue, Todo saturation, Todo brightness, Todo alpha);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @Mapping("getRed:green:blue:alpha:")
-    protected native boolean getRGBA(Todo red, Todo green, Todo blue, Todo alpha);
+    public native boolean getRGBA(Todo red, Todo green, Todo blue, Todo alpha);
     @Mapping("colorWithAlphaComponent:")
     public native UIColor addAlpha(@MachineSizedFloat double alpha);
     @Mapping("colorWithWhite:alpha:")

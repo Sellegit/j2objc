@@ -26,7 +26,8 @@ public class CMMotionActivity
 
     
     
-    public CMMotionActivity() {}
+    @Mapping("init")
+    public CMMotionActivity() { }
     
     
     @Mapping("confidence")

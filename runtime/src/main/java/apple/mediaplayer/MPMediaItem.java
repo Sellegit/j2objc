@@ -27,7 +27,8 @@ public class MPMediaItem
 
     
     
-    public MPMediaItem() {}
+    @Mapping("init")
+    public MPMediaItem() { }
     
     
     /**

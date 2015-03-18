@@ -29,9 +29,10 @@ public class NSConditionLock
 
     
     
-    public NSConditionLock() {}
     @Mapping("initWithCondition:")
     public NSConditionLock(@MachineSizedSInt long condition) { }
+    @Mapping("init")
+    public NSConditionLock() { }
     
     
     @Mapping("condition")

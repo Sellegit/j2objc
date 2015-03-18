@@ -24,7 +24,7 @@ public class CFAllocatorContext
      {
 
     
-    protected CFAllocatorContext() {}
+    private CFAllocatorContext() {}
     
     
     @DotMapping("version")

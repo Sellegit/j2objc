@@ -31,9 +31,10 @@ public class NSTextContainer
 
     
     
-    public NSTextContainer() {}
     @Mapping("initWithSize:")
     public NSTextContainer(CGSize size) { }
+    @Mapping("init")
+    public NSTextContainer() { }
     
     
     @Mapping("layoutManager")

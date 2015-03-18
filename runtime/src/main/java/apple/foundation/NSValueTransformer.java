@@ -31,7 +31,8 @@ public class NSValueTransformer
 
     
     
-    public NSValueTransformer() {}
+    @Mapping("init")
+    public NSValueTransformer() { }
     
     
     

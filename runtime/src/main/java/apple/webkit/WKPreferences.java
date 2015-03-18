@@ -27,7 +27,8 @@ public class WKPreferences
 
     
     
-    public WKPreferences() {}
+    @Mapping("init")
+    public WKPreferences() { }
     
     
     @Mapping("minimumFontSize")

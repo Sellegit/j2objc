@@ -30,21 +30,21 @@ public class ACAccountTypeIdentifier
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("ACAccountTypeIdentifierTwitter")
-    protected static native NSString TwitterValue();
+    public static native NSString TwitterValue();
     /**
      * @since Available in iOS 6.0 and later.
      */
     @GlobalConstant("ACAccountTypeIdentifierFacebook")
-    protected static native NSString FacebookValue();
+    public static native NSString FacebookValue();
     /**
      * @since Available in iOS 6.0 and later.
      */
     @GlobalConstant("ACAccountTypeIdentifierSinaWeibo")
-    protected static native NSString SinaWeiboValue();
+    public static native NSString SinaWeiboValue();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("ACAccountTypeIdentifierTencentWeibo")
-    protected static native NSString TencentWeiboValue();
+    public static native NSString TencentWeiboValue();
     
 }

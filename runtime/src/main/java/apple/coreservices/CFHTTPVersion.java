@@ -30,11 +30,11 @@ public class CFHTTPVersion
      * @since Available in iOS 2.0 and later.
      */
     @GlobalConstant("kCFHTTPVersion1_0")
-    protected static native CFString Version1_0Value();
+    public static native CFString Version1_0Value();
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalConstant("kCFHTTPVersion1_1")
-    protected static native CFString Version1_1Value();
+    public static native CFString Version1_1Value();
     
 }

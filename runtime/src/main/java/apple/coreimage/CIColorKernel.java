@@ -27,7 +27,8 @@ public class CIColorKernel
 
     
     
-    public CIColorKernel() {}
+    @Mapping("init")
+    public CIColorKernel() { }
     
     
     

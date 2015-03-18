@@ -27,7 +27,8 @@ public class CBPeer
 
     
     
-    public CBPeer() {}
+    @Mapping("init")
+    public CBPeer() { }
     
     
     /**

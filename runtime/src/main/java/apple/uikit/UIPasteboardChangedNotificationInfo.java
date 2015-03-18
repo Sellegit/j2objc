@@ -32,8 +32,8 @@ public class UIPasteboardChangedNotificationInfo
     
     
     @GlobalConstant("UIPasteboardChangedTypesAddedKey")
-    protected static native NSString TypesAddedKey();
+    public static native NSString TypesAddedKey();
     @GlobalConstant("UIPasteboardChangedTypesRemovedKey")
-    protected static native NSString TypesRemovedKey();
+    public static native NSString TypesRemovedKey();
     
 }

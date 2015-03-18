@@ -30,41 +30,41 @@ public class CGImagePropertyCanon
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("kCGImagePropertyMakerCanonOwnerName")
-    protected static native CFString OwnerNameKey();
+    public static native CFString OwnerNameKey();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("kCGImagePropertyMakerCanonCameraSerialNumber")
-    protected static native CFString CameraSerialNumberKey();
+    public static native CFString CameraSerialNumberKey();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("kCGImagePropertyMakerCanonImageSerialNumber")
-    protected static native CFString ImageSerialNumberKey();
+    public static native CFString ImageSerialNumberKey();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("kCGImagePropertyMakerCanonFlashExposureComp")
-    protected static native CFString FlashExposureCompKey();
+    public static native CFString FlashExposureCompKey();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("kCGImagePropertyMakerCanonContinuousDrive")
-    protected static native CFString ContinuousDriveKey();
+    public static native CFString ContinuousDriveKey();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("kCGImagePropertyMakerCanonLensModel")
-    protected static native CFString LensModelKey();
+    public static native CFString LensModelKey();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("kCGImagePropertyMakerCanonFirmware")
-    protected static native CFString FirmwareKey();
+    public static native CFString FirmwareKey();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("kCGImagePropertyMakerCanonAspectRatioInfo")
-    protected static native CFString AspectRatioInfoKey();
+    public static native CFString AspectRatioInfoKey();
     
 }

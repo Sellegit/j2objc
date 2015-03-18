@@ -26,11 +26,12 @@ public class NSBatchUpdateRequest
 
     
     
-    public NSBatchUpdateRequest() {}
     @Mapping("initWithEntityName:")
     public NSBatchUpdateRequest(String entityName) { }
     @Mapping("initWithEntity:")
     public NSBatchUpdateRequest(NSEntityDescription entity) { }
+    @Mapping("init")
+    public NSBatchUpdateRequest() { }
     
     
     @Mapping("entityName")

@@ -30,56 +30,56 @@ public class CTRadioAccessTechnology
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("CTRadioAccessTechnologyGPRS")
-    protected static native NSString GPRSValue();
+    public static native NSString GPRSValue();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("CTRadioAccessTechnologyEdge")
-    protected static native NSString EdgeValue();
+    public static native NSString EdgeValue();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("CTRadioAccessTechnologyWCDMA")
-    protected static native NSString WCDMAValue();
+    public static native NSString WCDMAValue();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("CTRadioAccessTechnologyHSDPA")
-    protected static native NSString HSDPAValue();
+    public static native NSString HSDPAValue();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("CTRadioAccessTechnologyHSUPA")
-    protected static native NSString HSUPAValue();
+    public static native NSString HSUPAValue();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("CTRadioAccessTechnologyCDMA1x")
-    protected static native NSString CDMA1xValue();
+    public static native NSString CDMA1xValue();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("CTRadioAccessTechnologyCDMAEVDORev0")
-    protected static native NSString CDMAEVDORev0Value();
+    public static native NSString CDMAEVDORev0Value();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("CTRadioAccessTechnologyCDMAEVDORevA")
-    protected static native NSString CDMAEVDORevAValue();
+    public static native NSString CDMAEVDORevAValue();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("CTRadioAccessTechnologyCDMAEVDORevB")
-    protected static native NSString CDMAEVDORevBValue();
+    public static native NSString CDMAEVDORevBValue();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("CTRadioAccessTechnologyeHRPD")
-    protected static native NSString eHRPDValue();
+    public static native NSString eHRPDValue();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("CTRadioAccessTechnologyLTE")
-    protected static native NSString LTEValue();
+    public static native NSString LTEValue();
     
 }

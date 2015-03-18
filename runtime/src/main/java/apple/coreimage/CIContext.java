@@ -27,7 +27,8 @@ public class CIContext
 
     
     
-    public CIContext() {}
+    @Mapping("init")
+    public CIContext() { }
     
     
     

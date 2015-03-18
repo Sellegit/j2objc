@@ -30,7 +30,8 @@ public class SCNTube
 
     
     
-    public SCNTube() {}
+    @Mapping("init")
+    public SCNTube() { }
     
     
     @Mapping("innerRadius")

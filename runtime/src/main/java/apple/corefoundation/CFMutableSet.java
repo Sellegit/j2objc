@@ -28,18 +28,18 @@ public class CFMutableSet
     
     
     @GlobalFunction("CFSetCreateMutable")
-    protected static native CFMutableSet createMutable(CFAllocator allocator, @MachineSizedSInt long capacity, CFSetCallBacks callBacks);
+    public static native CFMutableSet createMutable(CFAllocator allocator, @MachineSizedSInt long capacity, CFSetCallBacks callBacks);
     @GlobalFunction("CFSetCreateMutableCopy")
-    protected static native CFMutableSet createMutableCopy(CFAllocator allocator, @MachineSizedSInt long capacity, CFSet theSet);
+    public static native CFMutableSet createMutableCopy(CFAllocator allocator, @MachineSizedSInt long capacity, CFSet theSet);
     @GlobalFunction("CFSetAddValue")
-    protected static native void addValue(CFSet theSet, Todo value);
+    public static native void addValue(CFSet theSet, Todo value);
     @GlobalFunction("CFSetReplaceValue")
-    protected static native void replaceValue(CFSet theSet, Todo value);
+    public static native void replaceValue(CFSet theSet, Todo value);
     @GlobalFunction("CFSetSetValue")
-    protected static native void setValue(CFSet theSet, Todo value);
+    public static native void setValue(CFSet theSet, Todo value);
     @GlobalFunction("CFSetRemoveValue")
-    protected static native void removeValue(CFSet theSet, Todo value);
+    public static native void removeValue(CFSet theSet, Todo value);
     @GlobalFunction("CFSetRemoveAllValues")
-    protected static native void removeAllValues(CFSet theSet);
+    public static native void removeAllValues(CFSet theSet);
     
 }

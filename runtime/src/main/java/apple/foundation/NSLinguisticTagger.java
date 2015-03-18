@@ -31,12 +31,13 @@ public class NSLinguisticTagger
 
     
     
-    public NSLinguisticTagger() {}
     /**
      * @since Available in iOS 5.0 and later.
      */
     @Mapping("initWithTagSchemes:options:")
     public NSLinguisticTagger(NSArray<?> tagSchemes, @MachineSizedUInt long opts) { }
+    @Mapping("init")
+    public NSLinguisticTagger() { }
     
     
     /**

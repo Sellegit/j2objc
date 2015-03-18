@@ -41,7 +41,7 @@ public class CMAttachmentBearer
      * @since Available in iOS 4.0  and later.
      */
     @GlobalFunction("CMGetAttachment")
-    private static native CFType getAttachment(CMAttachmentBearer target, String key, Todo attachmentModeOut);
+    public static native CFType getAttachment(CMAttachmentBearer target, String key, Todo attachmentModeOut);
     /**
      * @since Available in iOS 4.0  and later.
      */
@@ -56,7 +56,7 @@ public class CMAttachmentBearer
      * @since Available in iOS 4.0  and later.
      */
     @GlobalFunction("CMCopyDictionaryOfAttachments")
-    private static native CFDictionary getAttachments(CFAllocator allocator, CMAttachmentBearer target, CMAttachmentMode attachmentMode);
+    public static native CFDictionary getAttachments(CFAllocator allocator, CMAttachmentBearer target, CMAttachmentMode attachmentMode);
     /**
      * @since Available in iOS 4.0  and later.
      */

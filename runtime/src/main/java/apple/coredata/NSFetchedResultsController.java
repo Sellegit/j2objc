@@ -26,9 +26,10 @@ public class NSFetchedResultsController
 
     
     
-    public NSFetchedResultsController() {}
     @Mapping("initWithFetchRequest:managedObjectContext:sectionNameKeyPath:cacheName:")
     public NSFetchedResultsController(NSFetchRequest fetchRequest, NSManagedObjectContext context, String sectionNameKeyPath, String name) { }
+    @Mapping("init")
+    public NSFetchedResultsController() { }
     
     
     @Mapping("fetchRequest")
@@ -53,7 +54,7 @@ public class NSFetchedResultsController
     
     
     @Mapping("performFetch:")
-    protected native boolean performFetch(Todo error);
+    public native boolean performFetch(Todo error);
     @Mapping("objectAtIndexPath:")
     public native Object getObjectAtIndexPath(NSIndexPath indexPath);
     @Mapping("indexPathForObject:")

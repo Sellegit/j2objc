@@ -30,7 +30,8 @@ public class SCNRenderer
 
     
     
-    public SCNRenderer() {}
+    @Mapping("init")
+    public SCNRenderer() { }
     
     
     @Mapping("scene")

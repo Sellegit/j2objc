@@ -23,7 +23,7 @@ public class CMMagneticField
      {
 
     
-    protected CMMagneticField() {}
+    private CMMagneticField() {}
     
     
     @DotMapping("x")

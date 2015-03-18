@@ -29,7 +29,8 @@ public class NSURLCredentialStorage
 
     
     
-    public NSURLCredentialStorage() {}
+    @Mapping("init")
+    public NSURLCredentialStorage() { }
     
     
     @Mapping("allCredentials")

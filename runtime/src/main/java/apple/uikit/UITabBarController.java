@@ -31,9 +31,10 @@ public class UITabBarController
 
     
     
-    public UITabBarController() {}
     @Mapping("initWithNibName:bundle:")
     public UITabBarController(String nibNameOrNil, NSBundle nibBundleOrNil) { }
+    @Mapping("init")
+    public UITabBarController() { }
     
     
     @Mapping("viewControllers")

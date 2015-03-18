@@ -33,7 +33,8 @@ public class SKFieldNode
 
     
     
-    public SKFieldNode() {}
+    @Mapping("init")
+    public SKFieldNode() { }
     @Mapping("initWithCoder:")
     public SKFieldNode(NSCoder aDecoder) { }
     

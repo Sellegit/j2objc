@@ -39,16 +39,16 @@ public class NSSet <T>
     
     
     @Mapping("count")
-    protected native @MachineSizedUInt long getCount();
+    public native @MachineSizedUInt long getCount();
     @Mapping("allObjects")
     public native NSArray<T> getValues();
     
     
     
     @Mapping("member:")
-    protected native Object isMember(Object object);
+    public native Object isMember(Object object);
     @Mapping("objectEnumerator")
-    protected native NSEnumerator<T> objectEnumerator();
+    public native NSEnumerator<T> objectEnumerator();
     @Mapping("anyObject")
     public native T any();
     

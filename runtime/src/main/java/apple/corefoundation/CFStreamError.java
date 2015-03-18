@@ -24,7 +24,7 @@ public class CFStreamError
      {
 
     
-    protected CFStreamError() {}
+    private CFStreamError() {}
     
     
     @DotMapping("domain")

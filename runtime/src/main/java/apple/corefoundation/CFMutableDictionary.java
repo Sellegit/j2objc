@@ -28,18 +28,18 @@ public class CFMutableDictionary
     
     
     @GlobalFunction("CFDictionaryCreateMutable")
-    protected static native CFMutableDictionary createMutable(CFAllocator allocator, @MachineSizedSInt long capacity, CFDictionaryKeyCallBacks keyCallBacks, CFDictionaryValueCallBacks valueCallBacks);
+    public static native CFMutableDictionary createMutable(CFAllocator allocator, @MachineSizedSInt long capacity, CFDictionaryKeyCallBacks keyCallBacks, CFDictionaryValueCallBacks valueCallBacks);
     @GlobalFunction("CFDictionaryCreateMutableCopy")
-    protected static native CFMutableDictionary createMutableCopy(CFAllocator allocator, @MachineSizedSInt long capacity, CFDictionary theDict);
+    public static native CFMutableDictionary createMutableCopy(CFAllocator allocator, @MachineSizedSInt long capacity, CFDictionary theDict);
     @GlobalFunction("CFDictionaryAddValue")
-    protected static native void addValue(CFDictionary theDict, Todo key, Todo value);
+    public static native void addValue(CFDictionary theDict, Todo key, Todo value);
     @GlobalFunction("CFDictionarySetValue")
-    protected static native void setValue(CFDictionary theDict, Todo key, Todo value);
+    public static native void setValue(CFDictionary theDict, Todo key, Todo value);
     @GlobalFunction("CFDictionaryReplaceValue")
-    protected static native void replaceValue(CFDictionary theDict, Todo key, Todo value);
+    public static native void replaceValue(CFDictionary theDict, Todo key, Todo value);
     @GlobalFunction("CFDictionaryRemoveValue")
-    protected static native void removeValue(CFDictionary theDict, Todo key);
+    public static native void removeValue(CFDictionary theDict, Todo key);
     @GlobalFunction("CFDictionaryRemoveAllValues")
-    protected static native void removeAllValues(CFDictionary theDict);
+    public static native void removeAllValues(CFDictionary theDict);
     
 }

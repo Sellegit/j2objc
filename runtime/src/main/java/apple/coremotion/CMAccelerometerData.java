@@ -26,7 +26,8 @@ public class CMAccelerometerData
 
     
     
-    public CMAccelerometerData() {}
+    @Mapping("init")
+    public CMAccelerometerData() { }
     
     
     @Mapping("acceleration")

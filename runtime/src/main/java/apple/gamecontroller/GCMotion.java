@@ -26,7 +26,8 @@ public class GCMotion
 
     
     
-    public GCMotion() {}
+    @Mapping("init")
+    public GCMotion() { }
     
     
     @Mapping("controller")

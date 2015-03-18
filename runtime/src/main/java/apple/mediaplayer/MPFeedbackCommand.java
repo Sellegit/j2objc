@@ -27,7 +27,8 @@ public class MPFeedbackCommand
 
     
     
-    public MPFeedbackCommand() {}
+    @Mapping("init")
+    public MPFeedbackCommand() { }
     
     
     @Mapping("isActive")

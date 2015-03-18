@@ -27,7 +27,6 @@ public class CBCentralManager
 
     
     
-    public CBCentralManager() {}
     @Mapping("initWithDelegate:queue:")
     public CBCentralManager(CBCentralManagerDelegate delegate, DispatchQueue queue) { }
     /**
@@ -35,6 +34,8 @@ public class CBCentralManager
      */
     @Mapping("initWithDelegate:queue:options:")
     public CBCentralManager(CBCentralManagerDelegate delegate, DispatchQueue queue, NSDictionary<?, ?> options) { }
+    @Mapping("init")
+    public CBCentralManager() { }
     
     
     @Mapping("delegate")

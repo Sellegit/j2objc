@@ -32,7 +32,8 @@ public class AVAudioEnvironmentNode
 
     
     
-    public AVAudioEnvironmentNode() {}
+    @Mapping("init")
+    public AVAudioEnvironmentNode() { }
     
     
     @Mapping("outputVolume")

@@ -32,9 +32,10 @@ public class AVAudioUnitVarispeed
 
     
     
-    public AVAudioUnitVarispeed() {}
     @Mapping("initWithAudioComponentDescription:")
     public AVAudioUnitVarispeed(AudioComponentDescription audioComponentDescription) { }
+    @Mapping("init")
+    public AVAudioUnitVarispeed() { }
     
     
     @Mapping("rate")

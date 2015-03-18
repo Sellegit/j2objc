@@ -27,7 +27,8 @@ public class WKScriptMessage
 
     
     
-    public WKScriptMessage() {}
+    @Mapping("init")
+    public WKScriptMessage() { }
     
     
     @Mapping("body")

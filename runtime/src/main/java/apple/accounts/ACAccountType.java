@@ -26,7 +26,8 @@ public class ACAccountType
 
     
     
-    public ACAccountType() {}
+    @Mapping("init")
+    public ACAccountType() { }
     
     
     @Mapping("accountTypeDescription")

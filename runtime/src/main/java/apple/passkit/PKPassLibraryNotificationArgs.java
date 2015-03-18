@@ -32,16 +32,16 @@ public class PKPassLibraryNotificationArgs
      * @since Available in iOS 6.0 and later.
      */
     @GlobalConstant("PKPassLibraryAddedPassesUserInfoKey")
-    protected static native NSString AddedPassesKey();
+    public static native NSString AddedPassesKey();
     /**
      * @since Available in iOS 6.0 and later.
      */
     @GlobalConstant("PKPassLibraryReplacementPassesUserInfoKey")
-    protected static native NSString ReplacementPassesKey();
+    public static native NSString ReplacementPassesKey();
     /**
      * @since Available in iOS 6.0 and later.
      */
     @GlobalConstant("PKPassLibraryRemovedPassInfosUserInfoKey")
-    protected static native NSString RemovedPassInfosKey();
+    public static native NSString RemovedPassInfosKey();
     
 }

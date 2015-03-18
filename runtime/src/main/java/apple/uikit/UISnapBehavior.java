@@ -31,9 +31,10 @@ public class UISnapBehavior
 
     
     
-    public UISnapBehavior() {}
     @Mapping("initWithItem:snapToPoint:")
     public UISnapBehavior(UIDynamicItem item, CGPoint point) { }
+    @Mapping("init")
+    public UISnapBehavior() { }
     
     
     @Mapping("damping")

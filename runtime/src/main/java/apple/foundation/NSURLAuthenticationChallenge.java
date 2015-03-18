@@ -29,11 +29,12 @@ public class NSURLAuthenticationChallenge
 
     
     
-    public NSURLAuthenticationChallenge() {}
     @Mapping("initWithProtectionSpace:proposedCredential:previousFailureCount:failureResponse:error:sender:")
     public NSURLAuthenticationChallenge(NSURLProtectionSpace space, NSURLCredential credential, @MachineSizedSInt long previousFailureCount, NSURLResponse response, NSError error, NSURLAuthenticationChallengeSender sender) { }
     @Mapping("initWithAuthenticationChallenge:sender:")
     public NSURLAuthenticationChallenge(NSURLAuthenticationChallenge challenge, NSURLAuthenticationChallengeSender sender) { }
+    @Mapping("init")
+    public NSURLAuthenticationChallenge() { }
     
     
     @Mapping("protectionSpace")

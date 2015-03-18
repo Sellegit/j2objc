@@ -31,11 +31,12 @@ public class UITableViewController
 
     
     
-    public UITableViewController() {}
     @Mapping("initWithStyle:")
     public UITableViewController(@Representing("UITableViewStyle") @MachineSizedSInt long style) { }
     @Mapping("initWithNibName:bundle:")
     public UITableViewController(String nibNameOrNil, NSBundle nibBundleOrNil) { }
+    @Mapping("init")
+    public UITableViewController() { }
     
     
     @Mapping("tableView")

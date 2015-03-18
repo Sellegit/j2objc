@@ -31,9 +31,10 @@ public class UIControl
 
     
     
-    public UIControl() {}
     @Mapping("initWithFrame:")
     public UIControl(CGRect frame) { }
+    @Mapping("init")
+    public UIControl() { }
     
     
     @Mapping("isEnabled")

@@ -29,7 +29,6 @@ public class MKOverlayPathView
 
     
     
-    public MKOverlayPathView() {}
     /**
      * @since Available in iOS 4.0 and later.
      * @deprecated Deprecated in iOS 7.0.
@@ -39,6 +38,8 @@ public class MKOverlayPathView
     public MKOverlayPathView(MKOverlay overlay) { }
     @Mapping("initWithFrame:")
     public MKOverlayPathView(CGRect frame) { }
+    @Mapping("init")
+    public MKOverlayPathView() { }
     
     
     /**

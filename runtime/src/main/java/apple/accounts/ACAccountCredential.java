@@ -26,11 +26,12 @@ public class ACAccountCredential
 
     
     
-    public ACAccountCredential() {}
     @Mapping("initWithOAuthToken:tokenSecret:")
     public ACAccountCredential(String token, String secret) { }
     @Mapping("initWithOAuth2Token:refreshToken:expiryDate:")
     public ACAccountCredential(String token, String refreshToken, NSDate expiryDate) { }
+    @Mapping("init")
+    public ACAccountCredential() { }
     
     
     @Mapping("oauthToken")

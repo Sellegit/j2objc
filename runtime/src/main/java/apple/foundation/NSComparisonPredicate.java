@@ -31,11 +31,12 @@ public class NSComparisonPredicate
 
     
     
-    public NSComparisonPredicate() {}
     @Mapping("initWithLeftExpression:rightExpression:modifier:type:options:")
     public NSComparisonPredicate(NSExpression lhs, NSExpression rhs, @Representing("NSComparisonPredicateModifier") @MachineSizedUInt long modifier, @Representing("NSPredicateOperatorType") @MachineSizedUInt long type, @Representing("NSComparisonPredicateOptions") @MachineSizedUInt long options) { }
     @Mapping("initWithLeftExpression:rightExpression:customSelector:")
     public NSComparisonPredicate(NSExpression lhs, NSExpression rhs, Selector selector) { }
+    @Mapping("init")
+    public NSComparisonPredicate() { }
     
     
     @Mapping("predicateOperatorType")

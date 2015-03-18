@@ -37,7 +37,7 @@ public class CFNetServiceBrowser
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFNetServiceBrowserCreate")
-    protected static native CFNetServiceBrowser create(CFAllocator alloc, FunctionPtr clientCB, CFNetServiceClientContext clientContext);
+    public static native CFNetServiceBrowser create(CFAllocator alloc, FunctionPtr clientCB, CFNetServiceClientContext clientContext);
     /**
      * @since Available in iOS 2.0 and later.
      */
@@ -47,17 +47,17 @@ public class CFNetServiceBrowser
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFNetServiceBrowserSearchForDomains")
-    protected static native boolean searchForDomains(CFNetServiceBrowser browser, boolean registrationDomains, Todo error);
+    public static native boolean searchForDomains(CFNetServiceBrowser browser, boolean registrationDomains, Todo error);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFNetServiceBrowserSearchForServices")
-    protected static native boolean searchForServices(CFNetServiceBrowser browser, String domain, String serviceType, Todo error);
+    public static native boolean searchForServices(CFNetServiceBrowser browser, String domain, String serviceType, Todo error);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFNetServiceBrowserStopSearch")
-    protected static native void stopSearch(CFNetServiceBrowser browser, Todo error);
+    public static native void stopSearch(CFNetServiceBrowser browser, Todo error);
     /**
      * @since Available in iOS 2.0 and later.
      */

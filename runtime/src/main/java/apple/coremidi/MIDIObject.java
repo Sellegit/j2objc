@@ -30,7 +30,7 @@ public class MIDIObject
      * @since Available in iOS 4.2 and later.
      */
     @GlobalFunction("MIDIObjectGetIntegerProperty")
-    protected static native MIDIError getIntegerProperty(MIDIObject obj, String propertyID, Todo outValue);
+    public static native MIDIError getIntegerProperty(MIDIObject obj, String propertyID, Todo outValue);
     /**
      * @since Available in iOS 4.2 and later.
      */
@@ -40,7 +40,7 @@ public class MIDIObject
      * @since Available in iOS 4.2 and later.
      */
     @GlobalFunction("MIDIObjectGetStringProperty")
-    protected static native MIDIError getStringProperty(MIDIObject obj, String propertyID, Todo str);
+    public static native MIDIError getStringProperty(MIDIObject obj, String propertyID, Todo str);
     /**
      * @since Available in iOS 4.2 and later.
      */
@@ -50,7 +50,7 @@ public class MIDIObject
      * @since Available in iOS 4.2 and later.
      */
     @GlobalFunction("MIDIObjectGetDataProperty")
-    protected static native MIDIError getDataProperty(MIDIObject obj, String propertyID, NSData outData);
+    public static native MIDIError getDataProperty(MIDIObject obj, String propertyID, NSData outData);
     /**
      * @since Available in iOS 4.2 and later.
      */
@@ -60,7 +60,7 @@ public class MIDIObject
      * @since Available in iOS 4.2 and later.
      */
     @GlobalFunction("MIDIObjectGetDictionaryProperty")
-    protected static native MIDIError getDictionaryProperty(MIDIObject obj, String propertyID, Todo outDict);
+    public static native MIDIError getDictionaryProperty(MIDIObject obj, String propertyID, Todo outDict);
     /**
      * @since Available in iOS 4.2 and later.
      */
@@ -70,7 +70,7 @@ public class MIDIObject
      * @since Available in iOS 4.2 and later.
      */
     @GlobalFunction("MIDIObjectGetProperties")
-    protected static native MIDIError getProperties(MIDIObject obj, Todo outProperties, boolean deep);
+    public static native MIDIError getProperties(MIDIObject obj, Todo outProperties, boolean deep);
     /**
      * @since Available in iOS 4.2 and later.
      */
@@ -80,6 +80,6 @@ public class MIDIObject
      * @since Available in iOS 4.2 and later.
      */
     @GlobalFunction("MIDIObjectFindByUniqueID")
-    protected static native MIDIError findByUniqueID(int inUniqueID, Todo outObject, Todo outObjectType);
+    public static native MIDIError findByUniqueID(int inUniqueID, Todo outObject, Todo outObjectType);
     
 }

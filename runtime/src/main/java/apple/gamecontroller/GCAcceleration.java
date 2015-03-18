@@ -23,7 +23,7 @@ public class GCAcceleration
      {
 
     
-    protected GCAcceleration() {}
+    private GCAcceleration() {}
     
     
     @DotMapping("x")

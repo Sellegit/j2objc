@@ -30,7 +30,6 @@ public class ADBannerView
 
     
     
-    public ADBannerView() {}
     /**
      * @since Available in iOS 6.0 and later.
      */
@@ -38,6 +37,8 @@ public class ADBannerView
     public ADBannerView(@Representing("ADAdType") @MachineSizedSInt long type) { }
     @Mapping("initWithFrame:")
     public ADBannerView(CGRect frame) { }
+    @Mapping("init")
+    public ADBannerView() { }
     
     
     /**
@@ -96,6 +97,6 @@ public class ADBannerView
      */
     @Deprecated
     @Mapping("sizeFromBannerContentSizeIdentifier:")
-    protected static native CGSize getSizeForIdentifier(String contentSizeIdentifier);
+    public static native CGSize getSizeForIdentifier(String contentSizeIdentifier);
     
 }

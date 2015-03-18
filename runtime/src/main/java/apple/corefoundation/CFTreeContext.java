@@ -24,7 +24,7 @@ import apple.foundation.*;
      {
 
     
-    protected CFTreeContext() {}
+    private CFTreeContext() {}
     
     
     @DotMapping("version")

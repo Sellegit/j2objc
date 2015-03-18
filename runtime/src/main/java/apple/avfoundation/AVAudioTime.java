@@ -32,15 +32,16 @@ public class AVAudioTime
 
     
     
-    public AVAudioTime() {}
     @Mapping("initWithAudioTimeStamp:sampleRate:")
-    public AVAudioTime(AudioTimeStamp ts, double sampleRate) { }
+    public AVAudioTime(Todo ts, double sampleRate) { }
     @Mapping("initWithHostTime:")
     public AVAudioTime(long hostTime) { }
     @Mapping("initWithSampleTime:atRate:")
     public AVAudioTime(long sampleTime, double sampleRate) { }
     @Mapping("initWithHostTime:sampleTime:atRate:")
     public AVAudioTime(long hostTime, long sampleTime, double sampleRate) { }
+    @Mapping("init")
+    public AVAudioTime() { }
     
     
     @Mapping("isHostTimeValid")
@@ -54,14 +55,14 @@ public class AVAudioTime
     @Mapping("sampleRate")
     public native double getSampleRate();
     @Mapping("audioTimeStamp")
-    public native AudioTimeStamp getAudioTimeStamp();
+    public native Todo getAudioTimeStamp();
     
     
     
     @Mapping("extrapolateTimeFromAnchor:")
     public native AVAudioTime extrapolateTimeFromAnchor(AVAudioTime anchorTime);
     @Mapping("timeWithAudioTimeStamp:sampleRate:")
-    public static native AVAudioTime create(AudioTimeStamp ts, double sampleRate);
+    public static native AVAudioTime create(Todo ts, double sampleRate);
     @Mapping("timeWithHostTime:")
     public static native AVAudioTime create(long hostTime);
     @Mapping("timeWithSampleTime:atRate:")

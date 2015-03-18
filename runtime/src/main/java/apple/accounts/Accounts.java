@@ -30,21 +30,21 @@ public class Accounts
      * @since Available in iOS 6.0 and later.
      */
     @GlobalConstant("ACFacebookAppIdKey")
-    protected static native NSString ACFacebookAppIdKey();
+    public static native NSString ACFacebookAppIdKey();
     /**
      * @since Available in iOS 6.0 and later.
      */
     @GlobalConstant("ACFacebookPermissionsKey")
-    protected static native NSString ACFacebookPermissionsKey();
+    public static native NSString ACFacebookPermissionsKey();
     /**
      * @since Available in iOS 6.0 and later.
      */
     @GlobalConstant("ACFacebookAudienceKey")
-    protected static native NSString ACFacebookAudienceKey();
+    public static native NSString ACFacebookAudienceKey();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("ACTencentWeiboAppIdKey")
-    protected static native NSString ACTencentWeiboAppIdKey();
+    public static native NSString ACTencentWeiboAppIdKey();
     
 }

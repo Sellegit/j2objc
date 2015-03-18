@@ -30,7 +30,8 @@ public class SCNTorus
 
     
     
-    public SCNTorus() {}
+    @Mapping("init")
+    public SCNTorus() { }
     
     
     @Mapping("ringRadius")

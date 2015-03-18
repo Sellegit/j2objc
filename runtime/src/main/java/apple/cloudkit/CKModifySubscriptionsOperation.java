@@ -27,9 +27,10 @@ public class CKModifySubscriptionsOperation
 
     
     
-    public CKModifySubscriptionsOperation() {}
     @Mapping("initWithSubscriptionsToSave:subscriptionIDsToDelete:")
     public CKModifySubscriptionsOperation(NSArray<?> subscriptionsToSave, NSArray<?> subscriptionIDsToDelete) { }
+    @Mapping("init")
+    public CKModifySubscriptionsOperation() { }
     
     
     @Mapping("subscriptionsToSave")

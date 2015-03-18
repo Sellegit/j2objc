@@ -33,11 +33,12 @@ public class SKMutableTexture
 
     
     
-    public SKMutableTexture() {}
     @Mapping("initWithSize:")
     public SKMutableTexture(CGSize size) { }
     @Mapping("initWithSize:pixelFormat:")
     public SKMutableTexture(CGSize size, int format) { }
+    @Mapping("init")
+    public SKMutableTexture() { }
     
     
     

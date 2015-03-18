@@ -27,7 +27,8 @@ public class MPMediaPropertyPredicate
 
     
     
-    public MPMediaPropertyPredicate() {}
+    @Mapping("init")
+    public MPMediaPropertyPredicate() { }
     
     
     @Mapping("property")
@@ -40,8 +41,8 @@ public class MPMediaPropertyPredicate
     
     
     @Mapping("predicateWithValue:forProperty:")
-    protected static native MPMediaPropertyPredicate create(Object value, String property);
+    public static native MPMediaPropertyPredicate create(Object value, String property);
     @Mapping("predicateWithValue:forProperty:comparisonType:")
-    protected static native MPMediaPropertyPredicate create(Object value, String property, @Representing("MPMediaPredicateComparison") @MachineSizedSInt long comparisonType);
+    public static native MPMediaPropertyPredicate create(Object value, String property, @Representing("MPMediaPredicateComparison") @MachineSizedSInt long comparisonType);
     
 }

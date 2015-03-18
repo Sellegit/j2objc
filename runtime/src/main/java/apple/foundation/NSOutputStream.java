@@ -46,6 +46,6 @@ public class NSOutputStream
     
     
     @Mapping("write:maxLength:")
-    protected native @MachineSizedSInt long write(Todo buffer, @MachineSizedUInt long len);
+    public native @MachineSizedSInt long write(Todo buffer, @MachineSizedUInt long len);
     
 }

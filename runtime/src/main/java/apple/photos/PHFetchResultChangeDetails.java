@@ -29,7 +29,8 @@ public class PHFetchResultChangeDetails
 
     
     
-    public PHFetchResultChangeDetails() {}
+    @Mapping("init")
+    public PHFetchResultChangeDetails() { }
     
     
     @Mapping("fetchResultBeforeChanges")

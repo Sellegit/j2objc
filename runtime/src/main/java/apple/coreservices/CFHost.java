@@ -37,37 +37,37 @@ public class CFHost
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFHostCreateWithName")
-    protected static native CFHost create(CFAllocator allocator, String hostname);
+    public static native CFHost create(CFAllocator allocator, String hostname);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFHostCreateWithAddress")
-    protected static native CFHost create(CFAllocator allocator, NSData addr);
+    public static native CFHost create(CFAllocator allocator, NSData addr);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFHostCreateCopy")
-    protected static native CFHost createCopy(CFAllocator alloc, CFHost host);
+    public static native CFHost createCopy(CFAllocator alloc, CFHost host);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFHostStartInfoResolution")
-    protected static native boolean startInfoResolution(CFHost theHost, CFHostInfoType info, Todo error);
+    public static native boolean startInfoResolution(CFHost theHost, CFHostInfoType info, Todo error);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFHostGetAddressing")
-    protected static native NSArray<NSData> getAddressing(CFHost theHost, Todo hasBeenResolved);
+    public static native NSArray<NSData> getAddressing(CFHost theHost, Todo hasBeenResolved);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFHostGetNames")
-    protected static native List<String> getNames(CFHost theHost, Todo hasBeenResolved);
+    public static native List<String> getNames(CFHost theHost, Todo hasBeenResolved);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFHostGetReachability")
-    protected static native NSData getReachability(CFHost theHost, Todo hasBeenResolved);
+    public static native NSData getReachability(CFHost theHost, Todo hasBeenResolved);
     /**
      * @since Available in iOS 2.0 and later.
      */
@@ -77,7 +77,7 @@ public class CFHost
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFHostSetClient")
-    protected static native boolean setCallback(CFHost theHost, FunctionPtr clientCB, CFHostClientContext clientContext);
+    public static native boolean setCallback(CFHost theHost, FunctionPtr clientCB, CFHostClientContext clientContext);
     /**
      * @since Available in iOS 2.0 and later.
      */
@@ -92,6 +92,6 @@ public class CFHost
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFStreamCreatePairWithSocketToCFHost")
-    protected static native void createSocketStreamPair(CFAllocator alloc, CFHost host, int port, Todo readStream, Todo writeStream);
+    public static native void createSocketStreamPair(CFAllocator alloc, CFHost host, int port, Todo readStream, Todo writeStream);
     
 }

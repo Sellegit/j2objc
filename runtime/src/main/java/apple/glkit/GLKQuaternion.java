@@ -26,7 +26,7 @@ public class GLKQuaternion
      {
 
     
-    protected GLKQuaternion() {}
+    private GLKQuaternion() {}
     
     
     

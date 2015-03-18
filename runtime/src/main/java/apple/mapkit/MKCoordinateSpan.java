@@ -26,7 +26,7 @@ public class MKCoordinateSpan
      {
 
     
-    protected MKCoordinateSpan() {}
+    private MKCoordinateSpan() {}
     
     
     @DotMapping("latitudeDelta")

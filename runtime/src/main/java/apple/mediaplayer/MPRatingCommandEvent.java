@@ -27,7 +27,8 @@ public class MPRatingCommandEvent
 
     
     
-    public MPRatingCommandEvent() {}
+    @Mapping("init")
+    public MPRatingCommandEvent() { }
     
     
     @Mapping("rating")

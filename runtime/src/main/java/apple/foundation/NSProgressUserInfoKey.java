@@ -35,31 +35,31 @@ public class NSProgressUserInfoKey
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("NSProgressEstimatedTimeRemainingKey")
-    protected static native NSString EstimatedTimeRemainingValue();
+    public static native NSString EstimatedTimeRemainingValue();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("NSProgressThroughputKey")
-    protected static native NSString ThroughputValue();
+    public static native NSString ThroughputValue();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("NSProgressFileOperationKindKey")
-    protected static native NSString FileOperationKindValue();
+    public static native NSString FileOperationKindValue();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("NSProgressFileURLKey")
-    protected static native NSString FileURLValue();
+    public static native NSString FileURLValue();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("NSProgressFileTotalCountKey")
-    protected static native NSString FileTotalCountValue();
+    public static native NSString FileTotalCountValue();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("NSProgressFileCompletedCountKey")
-    protected static native NSString FileCompletedCountValue();
+    public static native NSString FileCompletedCountValue();
     
 }

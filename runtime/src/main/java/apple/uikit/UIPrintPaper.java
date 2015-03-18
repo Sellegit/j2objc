@@ -31,7 +31,8 @@ public class UIPrintPaper
 
     
     
-    public UIPrintPaper() {}
+    @Mapping("init")
+    public UIPrintPaper() { }
     
     
     @Mapping("paperSize")

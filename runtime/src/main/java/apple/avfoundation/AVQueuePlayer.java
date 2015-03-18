@@ -32,13 +32,14 @@ public class AVQueuePlayer
 
     
     
-    public AVQueuePlayer() {}
     @Mapping("initWithItems:")
     public AVQueuePlayer(NSArray<?> items) { }
     @Mapping("initWithURL:")
     public AVQueuePlayer(NSURL URL) { }
     @Mapping("initWithPlayerItem:")
     public AVQueuePlayer(AVPlayerItem item) { }
+    @Mapping("init")
+    public AVQueuePlayer() { }
     
     
     

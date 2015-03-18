@@ -25,7 +25,7 @@ public class CVSMPTETime
      {
 
     
-    protected CVSMPTETime() {}
+    private CVSMPTETime() {}
     
     
     @DotMapping("subframes")

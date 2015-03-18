@@ -30,11 +30,11 @@ public class HKCorrelationTypeIdentifier
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("HKCorrelationTypeIdentifierBloodPressure")
-    protected static native NSString BloodPressureValue();
+    public static native NSString BloodPressureValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("HKCorrelationTypeIdentifierFood")
-    protected static native NSString FoodValue();
+    public static native NSString FoodValue();
     
 }

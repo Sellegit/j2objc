@@ -27,11 +27,12 @@ public class GKFriendRequestComposeViewController
 
     
     
-    public GKFriendRequestComposeViewController() {}
     @Mapping("initWithRootViewController:")
     public GKFriendRequestComposeViewController(UIViewController rootViewController) { }
     @Mapping("initWithNibName:bundle:")
     public GKFriendRequestComposeViewController(String nibNameOrNil, NSBundle nibBundleOrNil) { }
+    @Mapping("init")
+    public GKFriendRequestComposeViewController() { }
     
     
     @Mapping("composeViewDelegate")

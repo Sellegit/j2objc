@@ -38,6 +38,6 @@ public class CGFunction
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGFunctionCreate")
-    protected static native CGFunction create(Todo info, @MachineSizedUInt long domainDimension, Todo domain, @MachineSizedUInt long rangeDimension, Todo range, CGFunctionCallbacks callbacks);
+    public static native CGFunction create(Todo info, @MachineSizedUInt long domainDimension, Todo domain, @MachineSizedUInt long rangeDimension, Todo range, CGFunctionCallbacks callbacks);
     
 }

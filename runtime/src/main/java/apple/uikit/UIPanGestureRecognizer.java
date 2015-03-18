@@ -31,9 +31,10 @@ public class UIPanGestureRecognizer
 
     
     
-    public UIPanGestureRecognizer() {}
     @Mapping("initWithTarget:action:")
     public UIPanGestureRecognizer(Object target, Selector action) { }
+    @Mapping("init")
+    public UIPanGestureRecognizer() { }
     
     
     @Mapping("minimumNumberOfTouches")

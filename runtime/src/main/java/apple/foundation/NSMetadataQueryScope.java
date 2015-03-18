@@ -35,16 +35,16 @@ public class NSMetadataQueryScope
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("NSMetadataQueryUbiquitousDocumentsScope")
-    protected static native NSString UbiquitousDocumentsValue();
+    public static native NSString UbiquitousDocumentsValue();
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("NSMetadataQueryUbiquitousDataScope")
-    protected static native NSString UbiquitousDataValue();
+    public static native NSString UbiquitousDataValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("NSMetadataQueryAccessibleUbiquitousExternalDocumentsScope")
-    protected static native NSString AccessibleUbiquitousExternalDocumentsValue();
+    public static native NSString AccessibleUbiquitousExternalDocumentsValue();
     
 }

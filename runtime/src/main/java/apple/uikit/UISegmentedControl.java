@@ -33,11 +33,12 @@ public class UISegmentedControl
     public static final int NoSegment = -1;
     
     
-    public UISegmentedControl() {}
     @Mapping("initWithItems:")
     public UISegmentedControl(NSArray<?> items) { }
     @Mapping("initWithFrame:")
     public UISegmentedControl(CGRect frame) { }
+    @Mapping("init")
+    public UISegmentedControl() { }
     
     
     /**

@@ -29,7 +29,8 @@ public class NSMutableString
 
     
     
-    public NSMutableString() {}
+    @Mapping("init")
+    public NSMutableString() { }
     @Mapping("initWithCoder:")
     public NSMutableString(NSCoder aDecoder) { }
     @Mapping("initWithCapacity:")

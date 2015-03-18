@@ -29,7 +29,8 @@ public class PHObject
 
     
     
-    public PHObject() {}
+    @Mapping("init")
+    public PHObject() { }
     
     
     @Mapping("localIdentifier")

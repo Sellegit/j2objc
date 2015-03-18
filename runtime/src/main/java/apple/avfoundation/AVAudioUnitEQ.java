@@ -32,11 +32,12 @@ public class AVAudioUnitEQ
 
     
     
-    public AVAudioUnitEQ() {}
     @Mapping("initWithNumberOfBands:")
     public AVAudioUnitEQ(@MachineSizedUInt long numberOfBands) { }
     @Mapping("initWithAudioComponentDescription:")
     public AVAudioUnitEQ(AudioComponentDescription audioComponentDescription) { }
+    @Mapping("init")
+    public AVAudioUnitEQ() { }
     
     
     @Mapping("bands")

@@ -31,7 +31,8 @@ public class UIPrintFormatter
 
     
     
-    public UIPrintFormatter() {}
+    @Mapping("init")
+    public UIPrintFormatter() { }
     
     
     @Mapping("printPageRenderer")

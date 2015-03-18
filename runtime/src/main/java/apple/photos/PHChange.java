@@ -29,7 +29,8 @@ public class PHChange
 
     
     
-    public PHChange() {}
+    @Mapping("init")
+    public PHChange() { }
     
     
     

@@ -30,21 +30,21 @@ public class ABPersonSocialProfile
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("kABPersonSocialProfileURLKey")
-    protected static native CFString URLKey();
+    public static native CFString URLKey();
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("kABPersonSocialProfileServiceKey")
-    protected static native CFString ServiceKey();
+    public static native CFString ServiceKey();
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("kABPersonSocialProfileUsernameKey")
-    protected static native CFString UsernameKey();
+    public static native CFString UsernameKey();
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("kABPersonSocialProfileUserIdentifierKey")
-    protected static native CFString UserIdentifierKey();
+    public static native CFString UserIdentifierKey();
     
 }

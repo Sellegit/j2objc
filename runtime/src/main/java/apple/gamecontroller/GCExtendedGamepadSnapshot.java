@@ -24,11 +24,12 @@ public class GCExtendedGamepadSnapshot
 
     
     
-    public GCExtendedGamepadSnapshot() {}
     @Mapping("initWithSnapshotData:")
     public GCExtendedGamepadSnapshot(NSData data) { }
     @Mapping("initWithController:snapshotData:")
     public GCExtendedGamepadSnapshot(GCController controller, NSData data) { }
+    @Mapping("init")
+    public GCExtendedGamepadSnapshot() { }
     
     
     @Mapping("snapshotData")

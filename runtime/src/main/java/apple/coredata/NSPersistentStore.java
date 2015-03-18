@@ -26,9 +26,10 @@ public class NSPersistentStore
 
     
     
-    public NSPersistentStore() {}
     @Mapping("initWithPersistentStoreCoordinator:configurationName:URL:options:")
     public NSPersistentStore(NSPersistentStoreCoordinator root, String name, NSURL url, NSDictionary<?, ?> options) { }
+    @Mapping("init")
+    public NSPersistentStore() { }
     
     
     @Mapping("persistentStoreCoordinator")
@@ -59,15 +60,15 @@ public class NSPersistentStore
     
     
     @Mapping("loadMetadata:")
-    protected native boolean loadMetadata(Todo error);
+    public native boolean loadMetadata(Todo error);
     @Mapping("didAddToPersistentStoreCoordinator:")
     public native void didAddToPersistentStoreCoordinator(NSPersistentStoreCoordinator coordinator);
     @Mapping("willRemoveFromPersistentStoreCoordinator:")
     public native void willRemoveFromPersistentStoreCoordinator(NSPersistentStoreCoordinator coordinator);
     @Mapping("metadataForPersistentStoreWithURL:error:")
-    protected static native NSPersistentStoreMetadata getMetadataForPersistentStore(NSURL url, Todo error);
+    public static native NSPersistentStoreMetadata getMetadataForPersistentStore(NSURL url, Todo error);
     @Mapping("setMetadata:forPersistentStoreWithURL:error:")
-    protected static native boolean setMetadataForPersistentStore(NSDictionary<?, ?> metadata, NSURL url, Todo error);
+    public static native boolean setMetadataForPersistentStore(NSDictionary<?, ?> metadata, NSURL url, Todo error);
     /**
      * @since Available in iOS 3.0 and later.
      */

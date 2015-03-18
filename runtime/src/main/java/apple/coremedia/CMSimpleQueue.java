@@ -41,7 +41,7 @@ public class CMSimpleQueue
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("CMSimpleQueueCreate")
-    private static native CMSimpleQueueError create(CFAllocator allocator, int capacity, Todo queueOut);
+    public static native CMSimpleQueueError create(CFAllocator allocator, int capacity, Todo queueOut);
     /**
      * @since Available in iOS 5.0 and later.
      */

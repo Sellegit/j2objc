@@ -31,11 +31,12 @@ public class UIPageViewController
 
     
     
-    public UIPageViewController() {}
     @Mapping("initWithTransitionStyle:navigationOrientation:options:")
     public UIPageViewController(@Representing("UIPageViewControllerTransitionStyle") @MachineSizedSInt long style, @Representing("UIPageViewControllerNavigationOrientation") @MachineSizedSInt long navigationOrientation, NSDictionary<?, ?> options) { }
     @Mapping("initWithNibName:bundle:")
     public UIPageViewController(String nibNameOrNil, NSBundle nibBundleOrNil) { }
+    @Mapping("init")
+    public UIPageViewController() { }
     
     
     @Mapping("delegate")

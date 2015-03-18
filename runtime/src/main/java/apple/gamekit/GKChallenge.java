@@ -27,7 +27,8 @@ public class GKChallenge
 
     
     
-    public GKChallenge() {}
+    @Mapping("init")
+    public GKChallenge() { }
     
     
     /**

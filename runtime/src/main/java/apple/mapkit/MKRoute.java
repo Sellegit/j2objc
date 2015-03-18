@@ -29,7 +29,8 @@ public class MKRoute
 
     
     
-    public MKRoute() {}
+    @Mapping("init")
+    public MKRoute() { }
     
     
     @Mapping("name")

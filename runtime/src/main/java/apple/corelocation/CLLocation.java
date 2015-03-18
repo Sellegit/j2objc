@@ -28,7 +28,6 @@ public class CLLocation
 
     
     
-    public CLLocation() {}
     @Mapping("initWithLatitude:longitude:")
     public CLLocation(double latitude, double longitude) { }
     @Mapping("initWithCoordinate:altitude:horizontalAccuracy:verticalAccuracy:timestamp:")
@@ -38,6 +37,8 @@ public class CLLocation
      */
     @Mapping("initWithCoordinate:altitude:horizontalAccuracy:verticalAccuracy:course:speed:timestamp:")
     public CLLocation(CLLocationCoordinate2D coordinate, double altitude, double hAccuracy, double vAccuracy, double course, double speed, NSDate timestamp) { }
+    @Mapping("init")
+    public CLLocation() { }
     
     
     @Mapping("coordinate")

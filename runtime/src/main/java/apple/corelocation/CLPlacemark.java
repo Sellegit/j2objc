@@ -28,9 +28,10 @@ public class CLPlacemark
 
     
     
-    public CLPlacemark() {}
     @Mapping("initWithPlacemark:")
     public CLPlacemark(CLPlacemark placemark) { }
+    @Mapping("init")
+    public CLPlacemark() { }
     
     
     @Mapping("location")

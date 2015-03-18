@@ -32,7 +32,8 @@ public class AVCaptureDevice
 
     
     
-    public AVCaptureDevice() {}
+    @Mapping("init")
+    public AVCaptureDevice() { }
     
     
     @Mapping("uniqueID")

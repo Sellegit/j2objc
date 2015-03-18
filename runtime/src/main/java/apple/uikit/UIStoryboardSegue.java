@@ -31,9 +31,10 @@ public class UIStoryboardSegue
 
     
     
-    public UIStoryboardSegue() {}
     @Mapping("initWithIdentifier:source:destination:")
     public UIStoryboardSegue(String identifier, UIViewController source, UIViewController destination) { }
+    @Mapping("init")
+    public UIStoryboardSegue() { }
     
     
     @Mapping("identifier")

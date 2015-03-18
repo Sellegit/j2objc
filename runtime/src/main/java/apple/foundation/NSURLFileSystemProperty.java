@@ -35,186 +35,186 @@ public class NSURLFileSystemProperty
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("NSURLNameKey")
-    protected static native NSString NameValue();
+    public static native NSString NameValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("NSURLLocalizedNameKey")
-    protected static native NSString LocalizedNameValue();
+    public static native NSString LocalizedNameValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("NSURLIsRegularFileKey")
-    protected static native NSString IsRegularFileValue();
+    public static native NSString IsRegularFileValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("NSURLIsDirectoryKey")
-    protected static native NSString IsDirectoryValue();
+    public static native NSString IsDirectoryValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("NSURLIsSymbolicLinkKey")
-    protected static native NSString IsSymbolicLinkValue();
+    public static native NSString IsSymbolicLinkValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("NSURLIsVolumeKey")
-    protected static native NSString IsVolumeValue();
+    public static native NSString IsVolumeValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("NSURLIsPackageKey")
-    protected static native NSString IsPackageValue();
+    public static native NSString IsPackageValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("NSURLIsSystemImmutableKey")
-    protected static native NSString IsSystemImmutableValue();
+    public static native NSString IsSystemImmutableValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("NSURLIsUserImmutableKey")
-    protected static native NSString IsUserImmutableValue();
+    public static native NSString IsUserImmutableValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("NSURLIsHiddenKey")
-    protected static native NSString IsHiddenValue();
+    public static native NSString IsHiddenValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("NSURLHasHiddenExtensionKey")
-    protected static native NSString HasHiddenExtensionValue();
+    public static native NSString HasHiddenExtensionValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("NSURLCreationDateKey")
-    protected static native NSString CreationDateValue();
+    public static native NSString CreationDateValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("NSURLContentAccessDateKey")
-    protected static native NSString ContentAccessDateValue();
+    public static native NSString ContentAccessDateValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("NSURLContentModificationDateKey")
-    protected static native NSString ContentModificationDateValue();
+    public static native NSString ContentModificationDateValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("NSURLAttributeModificationDateKey")
-    protected static native NSString AttributeModificationDateValue();
+    public static native NSString AttributeModificationDateValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("NSURLLinkCountKey")
-    protected static native NSString LinkCountValue();
+    public static native NSString LinkCountValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("NSURLParentDirectoryURLKey")
-    protected static native NSString ParentDirectoryURLValue();
+    public static native NSString ParentDirectoryURLValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("NSURLTypeIdentifierKey")
-    protected static native NSString TypeIdentifierValue();
+    public static native NSString TypeIdentifierValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("NSURLLocalizedTypeDescriptionKey")
-    protected static native NSString LocalizedTypeDescriptionValue();
+    public static native NSString LocalizedTypeDescriptionValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("NSURLLabelNumberKey")
-    protected static native NSString LabelNumberValue();
+    public static native NSString LabelNumberValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("NSURLLabelColorKey")
-    protected static native NSString LabelColorValue();
+    public static native NSString LabelColorValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("NSURLLocalizedLabelKey")
-    protected static native NSString LocalizedLabelValue();
+    public static native NSString LocalizedLabelValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("NSURLEffectiveIconKey")
-    protected static native NSString EffectiveIconValue();
+    public static native NSString EffectiveIconValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("NSURLCustomIconKey")
-    protected static native NSString CustomIconValue();
+    public static native NSString CustomIconValue();
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("NSURLFileResourceIdentifierKey")
-    protected static native NSString FileResourceIdentifierValue();
+    public static native NSString FileResourceIdentifierValue();
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("NSURLPreferredIOBlockSizeKey")
-    protected static native NSString PreferredIOBlockSizeValue();
+    public static native NSString PreferredIOBlockSizeValue();
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("NSURLIsReadableKey")
-    protected static native NSString IsReadableValue();
+    public static native NSString IsReadableValue();
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("NSURLIsWritableKey")
-    protected static native NSString IsWritableValue();
+    public static native NSString IsWritableValue();
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("NSURLIsExecutableKey")
-    protected static native NSString IsExecutableValue();
+    public static native NSString IsExecutableValue();
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("NSURLFileSecurityKey")
-    protected static native NSString FileSecurityValue();
+    public static native NSString FileSecurityValue();
     /**
      * @since Available in iOS 5.1 and later.
      */
     @GlobalConstant("NSURLIsExcludedFromBackupKey")
-    protected static native NSString IsExcludedFromBackupValue();
+    public static native NSString IsExcludedFromBackupValue();
     /**
      * @since Available in iOS 6.0 and later.
      */
     @GlobalConstant("NSURLPathKey")
-    protected static native NSString PathValue();
+    public static native NSString PathValue();
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("NSURLIsMountTriggerKey")
-    protected static native NSString IsMountTriggerValue();
+    public static native NSString IsMountTriggerValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("NSURLGenerationIdentifierKey")
-    protected static native NSString GenerationIdentifierValue();
+    public static native NSString GenerationIdentifierValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("NSURLDocumentIdentifierKey")
-    protected static native NSString DocumentIdentifierValue();
+    public static native NSString DocumentIdentifierValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("NSURLAddedToDirectoryDateKey")
-    protected static native NSString AddedToDirectoryDateValue();
+    public static native NSString AddedToDirectoryDateValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("NSURLThumbnailDictionaryKey")
-    protected static native NSString ThumbnailDictionaryValue();
+    public static native NSString ThumbnailDictionaryValue();
     
 }

@@ -26,7 +26,7 @@ public class MKCoordinateRegion
      {
 
     
-    protected MKCoordinateRegion() {}
+    private MKCoordinateRegion() {}
     
     
     @DotMapping("center")

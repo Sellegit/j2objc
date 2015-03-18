@@ -29,7 +29,8 @@ public class PHFetchOptions
 
     
     
-    public PHFetchOptions() {}
+    @Mapping("init")
+    public PHFetchOptions() { }
     
     
     @Mapping("predicate")

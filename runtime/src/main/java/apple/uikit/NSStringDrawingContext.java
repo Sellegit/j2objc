@@ -31,7 +31,8 @@ public class NSStringDrawingContext
 
     
     
-    public NSStringDrawingContext() {}
+    @Mapping("init")
+    public NSStringDrawingContext() { }
     
     
     @Mapping("minimumScaleFactor")

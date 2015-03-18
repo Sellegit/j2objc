@@ -30,7 +30,8 @@ public class SCNCapsule
 
     
     
-    public SCNCapsule() {}
+    @Mapping("init")
+    public SCNCapsule() { }
     
     
     @Mapping("capRadius")

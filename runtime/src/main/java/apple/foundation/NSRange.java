@@ -28,7 +28,7 @@ public class NSRange
      {
 
     
-    protected NSRange() {}
+    private NSRange() {}
     
     
     @DotMapping("location")
@@ -57,7 +57,7 @@ public class NSRange
     @GlobalFunction("NSIntersectionRange")
     public static native NSRange intersection(NSRange range1, NSRange range2);
     @GlobalFunction("NSStringFromRange")
-    protected static native String toString(NSRange range);
+    public static native String toString(NSRange range);
     @GlobalFunction("NSRangeFromString")
     public static native NSRange fromString(String aString);
     

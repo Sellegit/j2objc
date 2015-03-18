@@ -27,7 +27,8 @@ public class WKNavigationResponse
 
     
     
-    public WKNavigationResponse() {}
+    @Mapping("init")
+    public WKNavigationResponse() { }
     
     
     @Mapping("isForMainFrame")

@@ -31,9 +31,10 @@ public class SKNode
 
     
     
-    public SKNode() {}
     @Mapping("initWithCoder:")
     public SKNode(NSCoder aDecoder) { }
+    @Mapping("init")
+    public SKNode() { }
     
     
     @Mapping("frame")
@@ -161,7 +162,7 @@ public class SKNode
     @Mapping("node")
     public static native SKNode create();
     @Mapping("nodeWithFileNamed:")
-    private static native SKNode create(String filename);
+    public static native SKNode create(String filename);
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
     @Mapping("encodeWithCoder:")

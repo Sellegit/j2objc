@@ -32,7 +32,8 @@ public class AVPlayerItemErrorLog
 
     
     
-    public AVPlayerItemErrorLog() {}
+    @Mapping("init")
+    public AVPlayerItemErrorLog() { }
     
     
     @Mapping("extendedLogDataStringEncoding")

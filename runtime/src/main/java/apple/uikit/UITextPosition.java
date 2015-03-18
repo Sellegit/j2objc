@@ -31,7 +31,8 @@ public class UITextPosition
 
     
     
-    public UITextPosition() {}
+    @Mapping("init")
+    public UITextPosition() { }
     
     
     

@@ -26,7 +26,8 @@ public class HKQuantity
 
     
     
-    public HKQuantity() {}
+    @Mapping("init")
+    public HKQuantity() { }
     
     
     

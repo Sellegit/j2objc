@@ -27,7 +27,6 @@ public class CKSubscription
 
     
     
-    public CKSubscription() {}
     @Mapping("initWithCoder:")
     public CKSubscription(NSCoder aDecoder) { }
     @Mapping("initWithRecordType:predicate:options:")
@@ -38,6 +37,8 @@ public class CKSubscription
     public CKSubscription(CKRecordZoneID zoneID, @Representing("CKSubscriptionOptions") @MachineSizedUInt long subscriptionOptions) { }
     @Mapping("initWithZoneID:subscriptionID:options:")
     public CKSubscription(CKRecordZoneID zoneID, String subscriptionID, @Representing("CKSubscriptionOptions") @MachineSizedUInt long subscriptionOptions) { }
+    @Mapping("init")
+    public CKSubscription() { }
     
     
     @Mapping("subscriptionID")

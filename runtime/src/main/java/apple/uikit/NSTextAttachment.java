@@ -33,9 +33,10 @@ public class NSTextAttachment
     public static final char AttachmentCharacter = 65532;
     
     
-    public NSTextAttachment() {}
     @Mapping("initWithData:ofType:")
     public NSTextAttachment(NSData contentData, String uti) { }
+    @Mapping("init")
+    public NSTextAttachment() { }
     
     
     @Mapping("contents")

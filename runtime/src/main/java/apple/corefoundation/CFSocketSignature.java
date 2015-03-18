@@ -24,7 +24,7 @@ public class CFSocketSignature
      {
 
     
-    protected CFSocketSignature() {}
+    private CFSocketSignature() {}
     
     
     @DotMapping("protocolFamily")

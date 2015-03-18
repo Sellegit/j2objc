@@ -27,7 +27,8 @@ public class CKNotificationID
 
     
     
-    public CKNotificationID() {}
+    @Mapping("init")
+    public CKNotificationID() { }
     
     
     

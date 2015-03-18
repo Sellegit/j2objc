@@ -27,9 +27,10 @@ public class MPVolumeView
 
     
     
-    public MPVolumeView() {}
     @Mapping("initWithFrame:")
     public MPVolumeView(CGRect frame) { }
+    @Mapping("init")
+    public MPVolumeView() { }
     
     
     /**

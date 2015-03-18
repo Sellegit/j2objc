@@ -29,7 +29,8 @@ public class GLKEffectPropertyMaterial
 
     
     
-    public GLKEffectPropertyMaterial() {}
+    @Mapping("init")
+    public GLKEffectPropertyMaterial() { }
     
     
     @Mapping("ambientColor")

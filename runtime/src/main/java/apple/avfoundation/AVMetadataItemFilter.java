@@ -32,7 +32,8 @@ public class AVMetadataItemFilter
 
     
     
-    public AVMetadataItemFilter() {}
+    @Mapping("init")
+    public AVMetadataItemFilter() { }
     
     
     

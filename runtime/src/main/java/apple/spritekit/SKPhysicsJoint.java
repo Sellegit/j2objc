@@ -31,7 +31,8 @@ public class SKPhysicsJoint
 
     
     
-    public SKPhysicsJoint() {}
+    @Mapping("init")
+    public SKPhysicsJoint() { }
     
     
     @Mapping("bodyA")

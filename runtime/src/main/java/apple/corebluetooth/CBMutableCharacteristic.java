@@ -27,9 +27,10 @@ public class CBMutableCharacteristic
 
     
     
-    public CBMutableCharacteristic() {}
     @Mapping("initWithType:properties:value:permissions:")
     public CBMutableCharacteristic(CBUUID UUID, @Representing("CBCharacteristicProperties") @MachineSizedUInt long properties, NSData value, @Representing("CBAttributePermissions") @MachineSizedUInt long permissions) { }
+    @Mapping("init")
+    public CBMutableCharacteristic() { }
     
     
     @Mapping("permissions")

@@ -31,6 +31,8 @@ public class NSLocale
     
     @Mapping("initWithLocaleIdentifier:")
     public NSLocale(String string) { }
+    @Mapping("init")
+    public NSLocale() { }
     
     
     @Mapping("localeIdentifier")

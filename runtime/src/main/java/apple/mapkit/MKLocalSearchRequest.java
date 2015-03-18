@@ -29,7 +29,8 @@ public class MKLocalSearchRequest
 
     
     
-    public MKLocalSearchRequest() {}
+    @Mapping("init")
+    public MKLocalSearchRequest() { }
     
     
     @Mapping("naturalLanguageQuery")

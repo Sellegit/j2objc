@@ -30,7 +30,8 @@ public class SCNIKConstraint
 
     
     
-    public SCNIKConstraint() {}
+    @Mapping("init")
+    public SCNIKConstraint() { }
     
     
     @Mapping("chainRootNode")

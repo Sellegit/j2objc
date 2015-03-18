@@ -35,36 +35,36 @@ public class NSLinguisticTagScheme
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("NSLinguisticTagSchemeTokenType")
-    protected static native NSString TokenTypeValue();
+    public static native NSString TokenTypeValue();
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("NSLinguisticTagSchemeLexicalClass")
-    protected static native NSString LexicalClassValue();
+    public static native NSString LexicalClassValue();
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("NSLinguisticTagSchemeNameType")
-    protected static native NSString NameTypeValue();
+    public static native NSString NameTypeValue();
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("NSLinguisticTagSchemeNameTypeOrLexicalClass")
-    protected static native NSString NameTypeOrLexicalClassValue();
+    public static native NSString NameTypeOrLexicalClassValue();
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("NSLinguisticTagSchemeLemma")
-    protected static native NSString LemmaValue();
+    public static native NSString LemmaValue();
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("NSLinguisticTagSchemeLanguage")
-    protected static native NSString LanguageValue();
+    public static native NSString LanguageValue();
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("NSLinguisticTagSchemeScript")
-    protected static native NSString ScriptValue();
+    public static native NSString ScriptValue();
     
 }

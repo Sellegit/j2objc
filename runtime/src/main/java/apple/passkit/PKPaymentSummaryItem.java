@@ -28,7 +28,8 @@ public class PKPaymentSummaryItem
 
     
     
-    public PKPaymentSummaryItem() {}
+    @Mapping("init")
+    public PKPaymentSummaryItem() { }
     
     
     @Mapping("label")

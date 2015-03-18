@@ -29,11 +29,12 @@ public class MKTileOverlayRenderer
 
     
     
-    public MKTileOverlayRenderer() {}
     @Mapping("initWithTileOverlay:")
     public MKTileOverlayRenderer(MKTileOverlay overlay) { }
     @Mapping("initWithOverlay:")
     public MKTileOverlayRenderer(MKOverlay overlay) { }
+    @Mapping("init")
+    public MKTileOverlayRenderer() { }
     
     
     

@@ -28,7 +28,7 @@ public class NSFastEnumerationState
      {
 
     
-    protected NSFastEnumerationState() {}
+    private NSFastEnumerationState() {}
     
     
     @DotMapping("state")

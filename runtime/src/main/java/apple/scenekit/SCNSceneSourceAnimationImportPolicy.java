@@ -33,12 +33,12 @@ public class SCNSceneSourceAnimationImportPolicy
     
     
     @GlobalConstant("SCNSceneSourceAnimationImportPolicyPlay")
-    protected static native NSString PlayValue();
+    public static native NSString PlayValue();
     @GlobalConstant("SCNSceneSourceAnimationImportPolicyPlayRepeatedly")
-    protected static native NSString PlayRepeatedlyValue();
+    public static native NSString PlayRepeatedlyValue();
     @GlobalConstant("SCNSceneSourceAnimationImportPolicyDoNotPlay")
-    protected static native NSString DoNotPlayValue();
+    public static native NSString DoNotPlayValue();
     @GlobalConstant("SCNSceneSourceAnimationImportPolicyPlayUsingSceneTimeBase")
-    protected static native NSString PlayUsingSceneTimeBaseValue();
+    public static native NSString PlayUsingSceneTimeBaseValue();
     
 }

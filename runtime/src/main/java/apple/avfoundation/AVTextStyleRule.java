@@ -32,11 +32,12 @@ public class AVTextStyleRule
 
     
     
-    public AVTextStyleRule() {}
     @Mapping("initWithTextMarkupAttributes:")
     public AVTextStyleRule(NSDictionary<?, ?> textMarkupAttributes) { }
     @Mapping("initWithTextMarkupAttributes:textSelector:")
     public AVTextStyleRule(NSDictionary<?, ?> textMarkupAttributes, String textSelector) { }
+    @Mapping("init")
+    public AVTextStyleRule() { }
     
     
     @Mapping("textMarkupAttributes")

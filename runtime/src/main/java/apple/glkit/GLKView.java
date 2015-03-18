@@ -29,11 +29,12 @@ public class GLKView
 
     
     
-    public GLKView() {}
     @Mapping("initWithFrame:context:")
     public GLKView(CGRect frame, EAGLContext context) { }
     @Mapping("initWithFrame:")
     public GLKView(CGRect frame) { }
+    @Mapping("init")
+    public GLKView() { }
     
     
     @Mapping("delegate")

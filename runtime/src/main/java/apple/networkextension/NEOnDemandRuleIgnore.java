@@ -26,7 +26,8 @@ public class NEOnDemandRuleIgnore
 
     
     
-    public NEOnDemandRuleIgnore() {}
+    @Mapping("init")
+    public NEOnDemandRuleIgnore() { }
     
     
     

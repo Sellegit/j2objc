@@ -27,7 +27,6 @@ public class CBPeripheralManager
 
     
     
-    public CBPeripheralManager() {}
     @Mapping("initWithDelegate:queue:")
     public CBPeripheralManager(CBPeripheralManagerDelegate delegate, DispatchQueue queue) { }
     /**
@@ -35,6 +34,8 @@ public class CBPeripheralManager
      */
     @Mapping("initWithDelegate:queue:options:")
     public CBPeripheralManager(CBPeripheralManagerDelegate delegate, DispatchQueue queue, NSDictionary<?, ?> options) { }
+    @Mapping("init")
+    public CBPeripheralManager() { }
     
     
     @Mapping("delegate")

@@ -33,12 +33,12 @@ public class SCNLightingModel
     
     
     @GlobalConstant("SCNLightingModelPhong")
-    protected static native NSString PhongValue();
+    public static native NSString PhongValue();
     @GlobalConstant("SCNLightingModelBlinn")
-    protected static native NSString BlinnValue();
+    public static native NSString BlinnValue();
     @GlobalConstant("SCNLightingModelLambert")
-    protected static native NSString LambertValue();
+    public static native NSString LambertValue();
     @GlobalConstant("SCNLightingModelConstant")
-    protected static native NSString ConstantValue();
+    public static native NSString ConstantValue();
     
 }

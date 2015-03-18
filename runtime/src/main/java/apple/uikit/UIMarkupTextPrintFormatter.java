@@ -31,9 +31,10 @@ public class UIMarkupTextPrintFormatter
 
     
     
-    public UIMarkupTextPrintFormatter() {}
     @Mapping("initWithMarkupText:")
     public UIMarkupTextPrintFormatter(String markupText) { }
+    @Mapping("init")
+    public UIMarkupTextPrintFormatter() { }
     
     
     @Mapping("markupText")

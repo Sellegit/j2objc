@@ -29,7 +29,8 @@ public class PHContentEditingInputRequestOptions
 
     
     
-    public PHContentEditingInputRequestOptions() {}
+    @Mapping("init")
+    public PHContentEditingInputRequestOptions() { }
     
     
     @Mapping("canHandleAdjustmentData")

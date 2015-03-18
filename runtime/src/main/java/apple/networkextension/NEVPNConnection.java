@@ -26,7 +26,8 @@ public class NEVPNConnection
 
     
     
-    public NEVPNConnection() {}
+    @Mapping("init")
+    public NEVPNConnection() { }
     
     
     /**
@@ -47,7 +48,7 @@ public class NEVPNConnection
      * @since Available in iOS 8.0 and later.
      */
     @Mapping("startVPNTunnelAndReturnError:")
-    protected native boolean startVPNTunnel(Todo error);
+    public native boolean startVPNTunnel(Todo error);
     /**
      * @since Available in iOS 8.0 and later.
      */

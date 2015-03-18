@@ -33,21 +33,21 @@ public class CATransitionType
      * @since Available in iOS 2.0 and later.
      */
     @GlobalConstant("kCATransitionFade")
-    protected static native NSString FadeValue();
+    public static native NSString FadeValue();
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalConstant("kCATransitionMoveIn")
-    protected static native NSString MoveInValue();
+    public static native NSString MoveInValue();
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalConstant("kCATransitionPush")
-    protected static native NSString PushValue();
+    public static native NSString PushValue();
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalConstant("kCATransitionReveal")
-    protected static native NSString RevealValue();
+    public static native NSString RevealValue();
     
 }

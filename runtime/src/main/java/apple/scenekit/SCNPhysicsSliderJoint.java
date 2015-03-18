@@ -30,7 +30,8 @@ public class SCNPhysicsSliderJoint
 
     
     
-    public SCNPhysicsSliderJoint() {}
+    @Mapping("init")
+    public SCNPhysicsSliderJoint() { }
     
     
     @Mapping("bodyA")

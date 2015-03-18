@@ -35,6 +35,6 @@ public class NSProgressKind
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("NSProgressKindFile")
-    protected static native NSString FileValue();
+    public static native NSString FileValue();
     
 }

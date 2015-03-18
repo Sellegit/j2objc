@@ -35,11 +35,11 @@ public class UITransitionContextViewType
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("UITransitionContextFromViewKey")
-    protected static native NSString FromViewKey();
+    public static native NSString FromViewKey();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("UITransitionContextToViewKey")
-    protected static native NSString ToViewKey();
+    public static native NSString ToViewKey();
     
 }

@@ -29,7 +29,8 @@ public class MKMapCamera
 
     
     
-    public MKMapCamera() {}
+    @Mapping("init")
+    public MKMapCamera() { }
     
     
     @Mapping("centerCoordinate")

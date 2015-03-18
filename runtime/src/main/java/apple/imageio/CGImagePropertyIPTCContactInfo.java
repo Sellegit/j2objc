@@ -30,41 +30,41 @@ public class CGImagePropertyIPTCContactInfo
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("kCGImagePropertyIPTCContactInfoCity")
-    protected static native CFString CityKey();
+    public static native CFString CityKey();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("kCGImagePropertyIPTCContactInfoCountry")
-    protected static native CFString CountryKey();
+    public static native CFString CountryKey();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("kCGImagePropertyIPTCContactInfoAddress")
-    protected static native CFString AddressKey();
+    public static native CFString AddressKey();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("kCGImagePropertyIPTCContactInfoPostalCode")
-    protected static native CFString PostalCodeKey();
+    public static native CFString PostalCodeKey();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("kCGImagePropertyIPTCContactInfoStateProvince")
-    protected static native CFString StateProvinceKey();
+    public static native CFString StateProvinceKey();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("kCGImagePropertyIPTCContactInfoEmails")
-    protected static native CFString EmailsKey();
+    public static native CFString EmailsKey();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("kCGImagePropertyIPTCContactInfoPhones")
-    protected static native CFString PhonesKey();
+    public static native CFString PhonesKey();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("kCGImagePropertyIPTCContactInfoWebURLs")
-    protected static native CFString WebURLsKey();
+    public static native CFString WebURLsKey();
     
 }

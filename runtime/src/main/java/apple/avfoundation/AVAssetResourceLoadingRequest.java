@@ -32,7 +32,8 @@ public class AVAssetResourceLoadingRequest
 
     
     
-    public AVAssetResourceLoadingRequest() {}
+    @Mapping("init")
+    public AVAssetResourceLoadingRequest() { }
     
     
     @Mapping("request")

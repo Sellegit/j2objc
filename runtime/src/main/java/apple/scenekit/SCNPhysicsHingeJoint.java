@@ -30,7 +30,8 @@ public class SCNPhysicsHingeJoint
 
     
     
-    public SCNPhysicsHingeJoint() {}
+    @Mapping("init")
+    public SCNPhysicsHingeJoint() { }
     
     
     @Mapping("bodyA")

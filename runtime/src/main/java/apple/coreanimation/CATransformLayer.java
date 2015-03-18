@@ -27,7 +27,8 @@ public class CATransformLayer
 
     
     
-    public CATransformLayer() {}
+    @Mapping("init")
+    public CATransformLayer() { }
     @Mapping("initWithLayer:")
     public CATransformLayer(Object layer) { }
     

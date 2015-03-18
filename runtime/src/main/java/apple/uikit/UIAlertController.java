@@ -31,9 +31,10 @@ public class UIAlertController
 
     
     
-    public UIAlertController() {}
     @Mapping("initWithNibName:bundle:")
     public UIAlertController(String nibNameOrNil, NSBundle nibBundleOrNil) { }
+    @Mapping("init")
+    public UIAlertController() { }
     
     
     @Mapping("actions")

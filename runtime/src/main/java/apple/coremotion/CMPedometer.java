@@ -26,7 +26,8 @@ public class CMPedometer
 
     
     
-    public CMPedometer() {}
+    @Mapping("init")
+    public CMPedometer() { }
     
     
     

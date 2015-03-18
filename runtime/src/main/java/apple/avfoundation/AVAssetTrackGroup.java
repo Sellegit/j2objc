@@ -32,7 +32,8 @@ public class AVAssetTrackGroup
 
     
     
-    public AVAssetTrackGroup() {}
+    @Mapping("init")
+    public AVAssetTrackGroup() { }
     
     
     @Mapping("trackIDs")

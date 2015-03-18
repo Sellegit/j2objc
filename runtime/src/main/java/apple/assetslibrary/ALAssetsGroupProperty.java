@@ -31,21 +31,21 @@ public class ALAssetsGroupProperty
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("ALAssetsGroupPropertyName")
-    protected static native NSString NameValue();
+    public static native NSString NameValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("ALAssetsGroupPropertyType")
-    protected static native NSString TypeValue();
+    public static native NSString TypeValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("ALAssetsGroupPropertyPersistentID")
-    protected static native NSString PersistentIDValue();
+    public static native NSString PersistentIDValue();
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("ALAssetsGroupPropertyURL")
-    protected static native NSString URLValue();
+    public static native NSString URLValue();
     
 }

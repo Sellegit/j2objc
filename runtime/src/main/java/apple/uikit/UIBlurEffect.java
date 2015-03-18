@@ -31,7 +31,8 @@ public class UIBlurEffect
 
     
     
-    public UIBlurEffect() {}
+    @Mapping("init")
+    public UIBlurEffect() { }
     
     
     

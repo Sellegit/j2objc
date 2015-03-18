@@ -32,7 +32,8 @@ public class AVCaptureInput
 
     
     
-    public AVCaptureInput() {}
+    @Mapping("init")
+    public AVCaptureInput() { }
     
     
     @Mapping("ports")

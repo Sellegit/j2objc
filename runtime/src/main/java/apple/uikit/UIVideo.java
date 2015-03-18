@@ -35,7 +35,7 @@ public class UIVideo
      * @since Available in iOS 3.1 and later.
      */
     @GlobalFunction("UIVideoAtPathIsCompatibleWithSavedPhotosAlbum")
-    protected static native boolean isCompatibleWithSavedPhotosAlbum(String videoPath);
+    public static native boolean isCompatibleWithSavedPhotosAlbum(String videoPath);
     /**
      * @since Available in iOS 3.1 and later.
      */

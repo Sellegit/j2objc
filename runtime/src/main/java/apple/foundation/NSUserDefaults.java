@@ -43,7 +43,7 @@ public class NSUserDefaults
     @Mapping("objectForKey:")
     public native Object get(String defaultName);
     @Mapping("setObject:forKey:")
-    protected native void setObject(Object value, String defaultName);
+    public native void setObject(Object value, String defaultName);
     @Mapping("removeObjectForKey:")
     public native void remove(String defaultName);
     @Mapping("stringForKey:")
@@ -70,18 +70,18 @@ public class NSUserDefaults
     @Mapping("URLForKey:")
     public native NSURL getURL(String defaultName);
     @Mapping("setInteger:forKey:")
-    protected native void setInteger(@MachineSizedSInt long value, String defaultName);
+    public native void setInteger(@MachineSizedSInt long value, String defaultName);
     @Mapping("setFloat:forKey:")
-    protected native void setFloat(float value, String defaultName);
+    public native void setFloat(float value, String defaultName);
     @Mapping("setDouble:forKey:")
-    protected native void setDouble(double value, String defaultName);
+    public native void setDouble(double value, String defaultName);
     @Mapping("setBool:forKey:")
-    protected native void setBool(boolean value, String defaultName);
+    public native void setBool(boolean value, String defaultName);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @Mapping("setURL:forKey:")
-    protected native void setURL(NSURL url, String defaultName);
+    public native void setURL(NSURL url, String defaultName);
     @Mapping("registerDefaults:")
     public native void registerDefaults(NSDictionary<?, ?> registrationDictionary);
     @Mapping("addSuiteNamed:")
@@ -93,7 +93,7 @@ public class NSUserDefaults
     @Mapping("volatileDomainForName:")
     public native NSDictionary<?, ?> getVolatileDomain(String domainName);
     @Mapping("setVolatileDomain:forName:")
-    protected native void setVolatileDomain(NSDictionary<?, ?> domain, String domainName);
+    public native void setVolatileDomain(NSDictionary<?, ?> domain, String domainName);
     @Mapping("removeVolatileDomainForName:")
     public native void removeVolatileDomain(String domainName);
     /**
@@ -106,7 +106,7 @@ public class NSUserDefaults
     @Mapping("persistentDomainForName:")
     public native NSDictionary<?, ?> getPersistentDomain(String domainName);
     @Mapping("setPersistentDomain:forName:")
-    protected native void setPersistentDomain(NSDictionary<?, ?> domain, String domainName);
+    public native void setPersistentDomain(NSDictionary<?, ?> domain, String domainName);
     @Mapping("removePersistentDomainForName:")
     public native void removePersistentDomain(String domainName);
     @Mapping("synchronize")

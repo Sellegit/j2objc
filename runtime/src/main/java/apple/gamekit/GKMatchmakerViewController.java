@@ -27,7 +27,6 @@ public class GKMatchmakerViewController
 
     
     
-    public GKMatchmakerViewController() {}
     @Mapping("initWithMatchRequest:")
     public GKMatchmakerViewController(GKMatchRequest request) { }
     @Mapping("initWithInvite:")
@@ -36,6 +35,8 @@ public class GKMatchmakerViewController
     public GKMatchmakerViewController(UIViewController rootViewController) { }
     @Mapping("initWithNibName:bundle:")
     public GKMatchmakerViewController(String nibNameOrNil, NSBundle nibBundleOrNil) { }
+    @Mapping("init")
+    public GKMatchmakerViewController() { }
     
     
     @Mapping("matchmakerDelegate")

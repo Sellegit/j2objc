@@ -28,11 +28,12 @@ public class PKPaymentAuthorizationViewController
 
     
     
-    public PKPaymentAuthorizationViewController() {}
     @Mapping("initWithPaymentRequest:")
     public PKPaymentAuthorizationViewController(PKPaymentRequest request) { }
     @Mapping("initWithNibName:bundle:")
     public PKPaymentAuthorizationViewController(String nibNameOrNil, NSBundle nibBundleOrNil) { }
+    @Mapping("init")
+    public PKPaymentAuthorizationViewController() { }
     
     
     @Mapping("delegate")

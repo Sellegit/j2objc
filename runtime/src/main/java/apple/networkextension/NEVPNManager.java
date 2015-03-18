@@ -26,7 +26,8 @@ public class NEVPNManager
 
     
     
-    public NEVPNManager() {}
+    @Mapping("init")
+    public NEVPNManager() { }
     
     
     /**

@@ -67,22 +67,22 @@ public class CTFontDescriptor
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTFontDescriptorCreateCopyWithFeature")
-    protected static native CTFontDescriptor createCopy(CTFontDescriptor original, CFNumber featureTypeIdentifier, CFNumber featureSelectorIdentifier);
+    public static native CTFontDescriptor createCopy(CTFontDescriptor original, CFNumber featureTypeIdentifier, CFNumber featureSelectorIdentifier);
     /**
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTFontDescriptorCreateMatchingFontDescriptors")
-    protected static native CFArray getMatchingFontDescriptors(CTFontDescriptor descriptor, CFSet mandatoryAttributes);
+    public static native CFArray getMatchingFontDescriptors(CTFontDescriptor descriptor, CFSet mandatoryAttributes);
     /**
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTFontDescriptorCreateMatchingFontDescriptor")
-    protected static native CTFontDescriptor getMatchingFontDescriptor(CTFontDescriptor descriptor, CFSet mandatoryAttributes);
+    public static native CTFontDescriptor getMatchingFontDescriptor(CTFontDescriptor descriptor, CFSet mandatoryAttributes);
     /**
      * @since Available in iOS 6.0 and later.
      */
     @GlobalFunction("CTFontDescriptorMatchFontDescriptorsWithProgressHandler")
-    protected static native boolean matchFontDescriptors(CFArray descriptors, CFSet mandatoryAttributes, FunctionPtr progressBlock);
+    public static native boolean matchFontDescriptors(CFArray descriptors, CFSet mandatoryAttributes, FunctionPtr progressBlock);
     /**
      * @since Available in iOS 3.2 and later.
      */
@@ -97,6 +97,6 @@ public class CTFontDescriptor
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTFontDescriptorCopyLocalizedAttribute")
-    protected static native CFType getLocalizedAttribute(CTFontDescriptor descriptor, String attribute, Todo language);
+    public static native CFType getLocalizedAttribute(CTFontDescriptor descriptor, String attribute, Todo language);
     
 }

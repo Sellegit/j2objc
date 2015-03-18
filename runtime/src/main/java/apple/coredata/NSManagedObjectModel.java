@@ -26,9 +26,10 @@ public class NSManagedObjectModel
 
     
     
-    public NSManagedObjectModel() {}
     @Mapping("initWithContentsOfURL:")
     public NSManagedObjectModel(NSURL url) { }
+    @Mapping("init")
+    public NSManagedObjectModel() { }
     
     
     @Mapping("entitiesByName")

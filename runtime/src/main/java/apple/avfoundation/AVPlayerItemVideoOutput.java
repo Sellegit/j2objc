@@ -32,7 +32,8 @@ public class AVPlayerItemVideoOutput
 
     
     
-    public AVPlayerItemVideoOutput() {}
+    @Mapping("init")
+    public AVPlayerItemVideoOutput() { }
     
     
     @Mapping("delegate")

@@ -27,7 +27,8 @@ public class CAScrollLayer
 
     
     
-    public CAScrollLayer() {}
+    @Mapping("init")
+    public CAScrollLayer() { }
     @Mapping("initWithLayer:")
     public CAScrollLayer(Object layer) { }
     

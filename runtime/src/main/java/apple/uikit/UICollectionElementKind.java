@@ -35,11 +35,11 @@ public class UICollectionElementKind
      * @since Available in iOS 6.0 and later.
      */
     @GlobalConstant("UICollectionElementKindSectionHeader")
-    protected static native NSString SectionHeaderValue();
+    public static native NSString SectionHeaderValue();
     /**
      * @since Available in iOS 6.0 and later.
      */
     @GlobalConstant("UICollectionElementKindSectionFooter")
-    protected static native NSString SectionFooterValue();
+    public static native NSString SectionFooterValue();
     
 }

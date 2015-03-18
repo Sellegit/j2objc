@@ -39,12 +39,12 @@ public class NSMutableArray <T>
     
     
     @Mapping("insertObject:atIndex:")
-    protected native void insertObject(Object anObject, @MachineSizedUInt long index);
+    public native void insertObject(Object anObject, @MachineSizedUInt long index);
     @Mapping("removeObjectAtIndex:")
-    protected native void removeObject(@MachineSizedUInt long index);
+    public native void removeObject(@MachineSizedUInt long index);
     @Mapping("replaceObjectAtIndex:withObject:")
-    protected native void replaceObject(@MachineSizedUInt long index, Object anObject);
+    public native void replaceObject(@MachineSizedUInt long index, Object anObject);
     @Mapping("removeAllObjects")
-    protected native void removeAllObjects();
+    public native void removeAllObjects();
     
 }

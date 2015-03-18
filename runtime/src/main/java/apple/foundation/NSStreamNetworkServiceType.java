@@ -35,21 +35,21 @@ public class NSStreamNetworkServiceType
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("NSStreamNetworkServiceTypeVoIP")
-    protected static native NSString VoIPValue();
+    public static native NSString VoIPValue();
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("NSStreamNetworkServiceTypeVideo")
-    protected static native NSString VideoValue();
+    public static native NSString VideoValue();
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("NSStreamNetworkServiceTypeBackground")
-    protected static native NSString BackgroundValue();
+    public static native NSString BackgroundValue();
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("NSStreamNetworkServiceTypeVoice")
-    protected static native NSString VoiceValue();
+    public static native NSString VoiceValue();
     
 }

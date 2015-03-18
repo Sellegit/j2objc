@@ -31,16 +31,16 @@ public class ALAssetType
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("ALAssetTypePhoto")
-    protected static native NSString PhotoValue();
+    public static native NSString PhotoValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("ALAssetTypeVideo")
-    protected static native NSString VideoValue();
+    public static native NSString VideoValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("ALAssetTypeUnknown")
-    protected static native NSString UnknownValue();
+    public static native NSString UnknownValue();
     
 }

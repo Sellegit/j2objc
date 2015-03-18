@@ -31,9 +31,10 @@ public class UIPopoverBackgroundView
 
     
     
-    public UIPopoverBackgroundView() {}
     @Mapping("initWithFrame:")
     public UIPopoverBackgroundView(CGRect frame) { }
+    @Mapping("init")
+    public UIPopoverBackgroundView() { }
     
     
     @Mapping("arrowOffset")

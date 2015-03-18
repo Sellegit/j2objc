@@ -27,9 +27,10 @@ public class CKFetchNotificationChangesOperation
 
     
     
-    public CKFetchNotificationChangesOperation() {}
     @Mapping("initWithPreviousServerChangeToken:")
     public CKFetchNotificationChangesOperation(CKServerChangeToken previousServerChangeToken) { }
+    @Mapping("init")
+    public CKFetchNotificationChangesOperation() { }
     
     
     @Mapping("previousServerChangeToken")

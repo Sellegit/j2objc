@@ -31,11 +31,11 @@ public class CBPeripheralManagerOptions
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("CBPeripheralManagerOptionShowPowerAlertKey")
-    protected static native NSString ShowPowerAlertKey();
+    public static native NSString ShowPowerAlertKey();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("CBPeripheralManagerOptionRestoreIdentifierKey")
-    protected static native NSString RestoreIdentifierKey();
+    public static native NSString RestoreIdentifierKey();
     
 }

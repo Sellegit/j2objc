@@ -32,7 +32,8 @@ public class AVCaptureManualExposureBracketedStillImageSettings
 
     
     
-    public AVCaptureManualExposureBracketedStillImageSettings() {}
+    @Mapping("init")
+    public AVCaptureManualExposureBracketedStillImageSettings() { }
     
     
     @Mapping("exposureDuration")

@@ -27,7 +27,8 @@ public class CAGradientLayer
 
     
     
-    public CAGradientLayer() {}
+    @Mapping("init")
+    public CAGradientLayer() { }
     @Mapping("initWithLayer:")
     public CAGradientLayer(Object layer) { }
     

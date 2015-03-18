@@ -27,7 +27,8 @@ public class GKMatchRequest
 
     
     
-    public GKMatchRequest() {}
+    @Mapping("init")
+    public GKMatchRequest() { }
     
     
     @Mapping("minPlayers")

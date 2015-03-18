@@ -25,7 +25,8 @@ public class GKSavedGame
 
     
     
-    public GKSavedGame() {}
+    @Mapping("init")
+    public GKSavedGame() { }
     
     
     @Mapping("name")

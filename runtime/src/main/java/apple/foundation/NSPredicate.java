@@ -31,7 +31,8 @@ public class NSPredicate
 
     
     
-    public NSPredicate() {}
+    @Mapping("init")
+    public NSPredicate() { }
     
     
     @Mapping("predicateFormat")

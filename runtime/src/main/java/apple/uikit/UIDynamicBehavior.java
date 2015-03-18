@@ -31,7 +31,8 @@ public class UIDynamicBehavior
 
     
     
-    public UIDynamicBehavior() {}
+    @Mapping("init")
+    public UIDynamicBehavior() { }
     
     
     @Mapping("childBehaviors")

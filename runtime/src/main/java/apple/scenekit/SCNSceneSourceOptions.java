@@ -33,24 +33,24 @@ public class SCNSceneSourceOptions
     
     
     @GlobalConstant("SCNSceneSourceCreateNormalsIfAbsentKey")
-    protected static native NSString CreateNormalsIfAbsentKey();
+    public static native NSString CreateNormalsIfAbsentKey();
     @GlobalConstant("SCNSceneSourceCheckConsistencyKey")
-    protected static native NSString CheckConsistencyKey();
+    public static native NSString CheckConsistencyKey();
     @GlobalConstant("SCNSceneSourceFlattenSceneKey")
-    protected static native NSString FlattenSceneKey();
+    public static native NSString FlattenSceneKey();
     @GlobalConstant("SCNSceneSourceUseSafeModeKey")
-    protected static native NSString UseSafeModeKey();
+    public static native NSString UseSafeModeKey();
     @GlobalConstant("SCNSceneSourceAssetDirectoryURLsKey")
-    protected static native NSString AssetDirectoryURLsKey();
+    public static native NSString AssetDirectoryURLsKey();
     @GlobalConstant("SCNSceneSourceOverrideAssetURLsKey")
-    protected static native NSString OverrideAssetURLsKey();
+    public static native NSString OverrideAssetURLsKey();
     @GlobalConstant("SCNSceneSourceStrictConformanceKey")
-    protected static native NSString StrictConformanceKey();
+    public static native NSString StrictConformanceKey();
     @GlobalConstant("SCNSceneSourceConvertUnitsToMetersKey")
-    protected static native NSString ConvertUnitsToMetersKey();
+    public static native NSString ConvertUnitsToMetersKey();
     @GlobalConstant("SCNSceneSourceConvertToYUpKey")
-    protected static native NSString ConvertToYUpKey();
+    public static native NSString ConvertToYUpKey();
     @GlobalConstant("SCNSceneSourceAnimationImportPolicyKey")
-    protected static native NSString AnimationImportPolicyKey();
+    public static native NSString AnimationImportPolicyKey();
     
 }

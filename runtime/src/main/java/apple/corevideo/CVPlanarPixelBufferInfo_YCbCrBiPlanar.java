@@ -25,7 +25,7 @@ public class CVPlanarPixelBufferInfo_YCbCrBiPlanar
      {
 
     
-    protected CVPlanarPixelBufferInfo_YCbCrBiPlanar() {}
+    private CVPlanarPixelBufferInfo_YCbCrBiPlanar() {}
     
     
     @DotMapping("componentInfoY")

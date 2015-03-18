@@ -23,7 +23,7 @@ public class MIDISysexSendRequest
      {
 
     
-    protected MIDISysexSendRequest() {}
+    private MIDISysexSendRequest() {}
     
     
     @DotMapping("destination")

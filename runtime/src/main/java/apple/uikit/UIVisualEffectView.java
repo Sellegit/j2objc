@@ -31,11 +31,12 @@ public class UIVisualEffectView
 
     
     
-    public UIVisualEffectView() {}
     @Mapping("initWithEffect:")
     public UIVisualEffectView(UIVisualEffect effect) { }
     @Mapping("initWithFrame:")
     public UIVisualEffectView(CGRect frame) { }
+    @Mapping("init")
+    public UIVisualEffectView() { }
     
     
     @Mapping("contentView")

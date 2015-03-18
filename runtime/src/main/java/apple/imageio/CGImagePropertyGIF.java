@@ -30,26 +30,26 @@ public class CGImagePropertyGIF
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("kCGImagePropertyGIFLoopCount")
-    protected static native CFString LoopCountKey();
+    public static native CFString LoopCountKey();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("kCGImagePropertyGIFDelayTime")
-    protected static native CFString DelayTimeKey();
+    public static native CFString DelayTimeKey();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("kCGImagePropertyGIFImageColorMap")
-    protected static native CFString ImageColorMapKey();
+    public static native CFString ImageColorMapKey();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("kCGImagePropertyGIFHasGlobalColorMap")
-    protected static native CFString HasGlobalColorMapKey();
+    public static native CFString HasGlobalColorMapKey();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("kCGImagePropertyGIFUnclampedDelayTime")
-    protected static native CFString UnclampedDelayTimeKey();
+    public static native CFString UnclampedDelayTimeKey();
     
 }

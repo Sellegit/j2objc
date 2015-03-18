@@ -31,9 +31,10 @@ public class UIViewController
 
     
     
-    public UIViewController() {}
     @Mapping("initWithNibName:bundle:")
     public UIViewController(String nibNameOrNil, NSBundle nibBundleOrNil) { }
+    @Mapping("init")
+    public UIViewController() { }
     
     
     @Mapping("view")

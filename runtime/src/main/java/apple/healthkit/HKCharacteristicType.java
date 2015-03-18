@@ -26,7 +26,8 @@ public class HKCharacteristicType
 
     
     
-    public HKCharacteristicType() {}
+    @Mapping("init")
+    public HKCharacteristicType() { }
     
     
     

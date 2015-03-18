@@ -52,22 +52,22 @@ public class CTRun
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTRunGetGlyphs")
-    protected static native void getGlyphs(CTRun run, CFRange range, Todo buffer);
+    public static native void getGlyphs(CTRun run, CFRange range, Todo buffer);
     /**
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTRunGetPositions")
-    protected static native void getPositions(CTRun run, CFRange range, CGPoint buffer);
+    public static native void getPositions(CTRun run, CFRange range, CGPoint buffer);
     /**
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTRunGetAdvances")
-    protected static native void getAdvances(CTRun run, CFRange range, CGSize buffer);
+    public static native void getAdvances(CTRun run, CFRange range, CGSize buffer);
     /**
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTRunGetStringIndices")
-    protected static native void getStringIndices(CTRun run, CFRange range, Todo buffer);
+    public static native void getStringIndices(CTRun run, CFRange range, Todo buffer);
     /**
      * @since Available in iOS 3.2 and later.
      */
@@ -77,7 +77,7 @@ public class CTRun
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTRunGetTypographicBounds")
-    protected static native double getTypographicBounds(CTRun run, CFRange range, Todo ascent, Todo descent, Todo leading);
+    public static native double getTypographicBounds(CTRun run, CFRange range, Todo ascent, Todo descent, Todo leading);
     /**
      * @since Available in iOS 3.2 and later.
      */

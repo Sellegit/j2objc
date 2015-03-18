@@ -28,7 +28,8 @@ public class HKUnit
     public static final double MolarMassBloodGlucose = 180.15588000005408;
     
     
-    public HKUnit() {}
+    @Mapping("init")
+    public HKUnit() { }
     
     
     @Mapping("unitString")

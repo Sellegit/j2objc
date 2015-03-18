@@ -26,7 +26,8 @@ public class HMAccessory
 
     
     
-    public HMAccessory() {}
+    @Mapping("init")
+    public HMAccessory() { }
     
     
     @Mapping("name")

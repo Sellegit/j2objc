@@ -32,7 +32,7 @@ public class CFRunLoopSource
     @GlobalFunction("CFRunLoopSourceGetTypeID")
     public static native @MachineSizedUInt long getClassTypeID();
     @GlobalFunction("CFRunLoopSourceCreate")
-    protected static native CFRunLoopSource create(CFAllocator allocator, @MachineSizedSInt long order, CFRunLoopSourceContext context);
+    public static native CFRunLoopSource create(CFAllocator allocator, @MachineSizedSInt long order, CFRunLoopSourceContext context);
     @GlobalFunction("CFRunLoopSourceGetOrder")
     public static native @MachineSizedSInt long getOrder(CFRunLoopSource source);
     @GlobalFunction("CFRunLoopSourceInvalidate")
@@ -40,7 +40,7 @@ public class CFRunLoopSource
     @GlobalFunction("CFRunLoopSourceIsValid")
     public static native boolean isValid(CFRunLoopSource source);
     @GlobalFunction("CFRunLoopSourceGetContext")
-    private static native void getContext(CFRunLoopSource source, CFRunLoopSourceContext context);
+    public static native void getContext(CFRunLoopSource source, CFRunLoopSourceContext context);
     @GlobalFunction("CFRunLoopSourceSignal")
     public static native void signal(CFRunLoopSource source);
     

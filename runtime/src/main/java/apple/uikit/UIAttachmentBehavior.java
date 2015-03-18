@@ -31,7 +31,6 @@ public class UIAttachmentBehavior
 
     
     
-    public UIAttachmentBehavior() {}
     @Mapping("initWithItem:attachedToAnchor:")
     public UIAttachmentBehavior(UIDynamicItem item, CGPoint point) { }
     @Mapping("initWithItem:offsetFromCenter:attachedToAnchor:")
@@ -40,6 +39,8 @@ public class UIAttachmentBehavior
     public UIAttachmentBehavior(UIDynamicItem item1, UIDynamicItem item2) { }
     @Mapping("initWithItem:offsetFromCenter:attachedToItem:offsetFromCenter:")
     public UIAttachmentBehavior(UIDynamicItem item1, UIOffset offset1, UIDynamicItem item2, UIOffset offset2) { }
+    @Mapping("init")
+    public UIAttachmentBehavior() { }
     
     
     @Mapping("items")

@@ -32,7 +32,8 @@ public class AVAudioEnvironmentReverbParameters
 
     
     
-    public AVAudioEnvironmentReverbParameters() {}
+    @Mapping("init")
+    public AVAudioEnvironmentReverbParameters() { }
     
     
     @Mapping("enable")

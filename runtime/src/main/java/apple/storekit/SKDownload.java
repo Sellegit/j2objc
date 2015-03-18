@@ -28,7 +28,8 @@ public class SKDownload
 
     
     
-    public SKDownload() {}
+    @Mapping("init")
+    public SKDownload() { }
     
     
     /**

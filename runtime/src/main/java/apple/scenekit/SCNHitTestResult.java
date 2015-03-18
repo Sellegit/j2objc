@@ -30,7 +30,8 @@ public class SCNHitTestResult
 
     
     
-    public SCNHitTestResult() {}
+    @Mapping("init")
+    public SCNHitTestResult() { }
     
     
     @Mapping("node")

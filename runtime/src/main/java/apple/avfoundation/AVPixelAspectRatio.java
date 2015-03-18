@@ -29,7 +29,7 @@ public class AVPixelAspectRatio
      {
 
     
-    protected AVPixelAspectRatio() {}
+    private AVPixelAspectRatio() {}
     
     
     @DotMapping("horizontalSpacing")

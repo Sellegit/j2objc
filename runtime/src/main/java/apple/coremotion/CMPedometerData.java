@@ -26,7 +26,8 @@ public class CMPedometerData
 
     
     
-    public CMPedometerData() {}
+    @Mapping("init")
+    public CMPedometerData() { }
     
     
     @Mapping("startDate")

@@ -24,11 +24,12 @@ public class EAGLContext
 
     
     
-    public EAGLContext() {}
     @Mapping("initWithAPI:")
     public EAGLContext(@Representing("EAGLRenderingAPI") @MachineSizedUInt long api) { }
     @Mapping("initWithAPI:sharegroup:")
     public EAGLContext(@Representing("EAGLRenderingAPI") @MachineSizedUInt long api, EAGLSharegroup sharegroup) { }
+    @Mapping("init")
+    public EAGLContext() { }
     
     
     @Mapping("API")

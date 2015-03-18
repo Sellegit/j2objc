@@ -31,7 +31,8 @@ public class UIApplication
 
     
     
-    public UIApplication() {}
+    @Mapping("init")
+    public UIApplication() { }
     
     
     @Mapping("delegate")
@@ -170,13 +171,13 @@ public class UIApplication
     @GlobalConstant("UIApplicationDidChangeStatusBarOrientationNotification")
     public static native NSString DidChangeStatusBarOrientationNotification();
     @GlobalConstant("UIApplicationStatusBarOrientationUserInfoKey")
-    protected static native NSString StatusBarOrientationUserInfoKey();
+    public static native NSString StatusBarOrientationUserInfoKey();
     @GlobalConstant("UIApplicationWillChangeStatusBarFrameNotification")
     public static native NSString WillChangeStatusBarFrameNotification();
     @GlobalConstant("UIApplicationDidChangeStatusBarFrameNotification")
     public static native NSString DidChangeStatusBarFrameNotification();
     @GlobalConstant("UIApplicationStatusBarFrameUserInfoKey")
-    protected static native NSString StatusBarFrameUserInfoKey();
+    public static native NSString StatusBarFrameUserInfoKey();
     /**
      * @since Available in iOS 7.0 and later.
      */
@@ -206,7 +207,7 @@ public class UIApplication
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("UIContentSizeCategoryNewValueKey")
-    protected static native NSString ContentSizeCategoryNewValueKey();
+    public static native NSString ContentSizeCategoryNewValueKey();
     /**
      * @since Available in iOS 7.0 and later.
      */
@@ -214,7 +215,7 @@ public class UIApplication
     public static native NSString UserDidTakeScreenshotNotification();
     
     @GlobalFunction("UIApplicationMain")
-    protected static native int main(int argc, Todo argv, String principalClassName, String delegateClassName);
+    public static native int main(int argc, Todo argv, String principalClassName, String delegateClassName);
     
     @Mapping("beginIgnoringInteractionEvents")
     public native void beginIgnoringInteractionEvents();

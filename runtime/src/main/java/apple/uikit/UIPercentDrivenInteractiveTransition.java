@@ -31,7 +31,8 @@ public class UIPercentDrivenInteractiveTransition
 
     
     
-    public UIPercentDrivenInteractiveTransition() {}
+    @Mapping("init")
+    public UIPercentDrivenInteractiveTransition() { }
     
     
     @Mapping("duration")

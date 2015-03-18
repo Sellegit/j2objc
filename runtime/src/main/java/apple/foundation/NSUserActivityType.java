@@ -35,6 +35,6 @@ public class NSUserActivityType
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("NSUserActivityTypeBrowsingWeb")
-    protected static native String BrowsingWebValue();
+    public static native String BrowsingWebValue();
     
 }

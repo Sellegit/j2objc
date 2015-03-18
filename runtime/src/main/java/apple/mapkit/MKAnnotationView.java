@@ -29,11 +29,12 @@ public class MKAnnotationView
 
     
     
-    public MKAnnotationView() {}
     @Mapping("initWithAnnotation:reuseIdentifier:")
     public MKAnnotationView(MKAnnotation annotation, String reuseIdentifier) { }
     @Mapping("initWithFrame:")
     public MKAnnotationView(CGRect frame) { }
+    @Mapping("init")
+    public MKAnnotationView() { }
     
     
     @Mapping("reuseIdentifier")

@@ -33,26 +33,26 @@ public class CAMediaTimingFunctionName
      * @since Available in iOS 2.0 and later.
      */
     @GlobalConstant("kCAMediaTimingFunctionLinear")
-    protected static native NSString LinearValue();
+    public static native NSString LinearValue();
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalConstant("kCAMediaTimingFunctionEaseIn")
-    protected static native NSString EaseInValue();
+    public static native NSString EaseInValue();
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalConstant("kCAMediaTimingFunctionEaseOut")
-    protected static native NSString EaseOutValue();
+    public static native NSString EaseOutValue();
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalConstant("kCAMediaTimingFunctionEaseInEaseOut")
-    protected static native NSString EaseInEaseOutValue();
+    public static native NSString EaseInEaseOutValue();
     /**
      * @since Available in iOS 3.0 and later.
      */
     @GlobalConstant("kCAMediaTimingFunctionDefault")
-    protected static native NSString DefaultValue();
+    public static native NSString DefaultValue();
     
 }

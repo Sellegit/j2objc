@@ -35,6 +35,6 @@ public class UINibLoadingOptions
      * @since Available in iOS 3.0 and later.
      */
     @GlobalConstant("UINibExternalObjects")
-    protected static native NSString ExternalObjectsKey();
+    public static native NSString ExternalObjectsKey();
     
 }

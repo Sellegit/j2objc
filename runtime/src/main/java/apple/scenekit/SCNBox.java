@@ -30,7 +30,8 @@ public class SCNBox
 
     
     
-    public SCNBox() {}
+    @Mapping("init")
+    public SCNBox() { }
     
     
     @Mapping("width")

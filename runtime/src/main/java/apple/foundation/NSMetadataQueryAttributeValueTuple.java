@@ -31,7 +31,8 @@ public class NSMetadataQueryAttributeValueTuple
 
     
     
-    public NSMetadataQueryAttributeValueTuple() {}
+    @Mapping("init")
+    public NSMetadataQueryAttributeValueTuple() { }
     
     
     @Mapping("attribute")

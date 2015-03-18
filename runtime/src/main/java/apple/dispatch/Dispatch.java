@@ -22,8 +22,8 @@ public class Dispatch
 
     
     public static final int API_VERSION = 20141121;
-    protected static final long TIME_NOW = 0L;
-    protected static final long TIME_FOREVER = ~0L;
+    public static final long TIME_NOW = 0L;
+    public static final long TIME_FOREVER = ~0L;
     public static final int BLOCK_BARRIER = 1;
     public static final int BLOCK_DETACHED = 2;
     public static final int BLOCK_ASSIGN_CURRENT = 4;
@@ -39,12 +39,12 @@ public class Dispatch
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("dispatch_time")
-    protected static native long time(long when, long delta);
+    public static native long time(long when, long delta);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("dispatch_walltime")
-    protected static native long walltime(timespec when, long delta);
+    public static native long walltime(timespec when, long delta);
     @GlobalFunction("dispatch_wait")
     public static native @MachineSizedSInt long wait(Todo object, long timeout);
     @GlobalFunction("dispatch_notify")

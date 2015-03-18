@@ -27,11 +27,12 @@ public class CKRecordID
 
     
     
-    public CKRecordID() {}
     @Mapping("initWithRecordName:")
     public CKRecordID(String recordName) { }
     @Mapping("initWithRecordName:zoneID:")
     public CKRecordID(String recordName, CKRecordZoneID zoneID) { }
+    @Mapping("init")
+    public CKRecordID() { }
     
     
     @Mapping("recordName")

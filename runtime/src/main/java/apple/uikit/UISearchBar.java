@@ -31,9 +31,10 @@ public class UISearchBar
 
     
     
-    public UISearchBar() {}
     @Mapping("initWithFrame:")
     public UISearchBar(CGRect frame) { }
+    @Mapping("init")
+    public UISearchBar() { }
     
     
     @Mapping("barStyle")

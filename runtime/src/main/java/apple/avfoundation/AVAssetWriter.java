@@ -32,7 +32,8 @@ public class AVAssetWriter
 
     
     
-    public AVAssetWriter() {}
+    @Mapping("init")
+    public AVAssetWriter() { }
     
     
     @Mapping("outputURL")

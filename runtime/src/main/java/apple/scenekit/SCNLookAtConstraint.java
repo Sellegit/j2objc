@@ -30,7 +30,8 @@ public class SCNLookAtConstraint
 
     
     
-    public SCNLookAtConstraint() {}
+    @Mapping("init")
+    public SCNLookAtConstraint() { }
     
     
     @Mapping("target")

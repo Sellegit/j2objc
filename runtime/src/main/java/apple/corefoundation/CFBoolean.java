@@ -30,9 +30,9 @@ public class CFBoolean
     
     
     @GlobalConstant("kCFBooleanTrue")
-    private static native CFBoolean True();
+    public static native CFBoolean True();
     @GlobalConstant("kCFBooleanFalse")
-    private static native CFBoolean False();
+    public static native CFBoolean False();
     
     @GlobalFunction("CFBooleanGetTypeID")
     public static native @MachineSizedUInt long getClassTypeID();

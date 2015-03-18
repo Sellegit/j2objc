@@ -27,7 +27,8 @@ public class CATiledLayer
 
     
     
-    public CATiledLayer() {}
+    @Mapping("init")
+    public CATiledLayer() { }
     @Mapping("initWithLayer:")
     public CATiledLayer(Object layer) { }
     

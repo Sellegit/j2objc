@@ -31,11 +31,12 @@ public class UIReferenceLibraryViewController
 
     
     
-    public UIReferenceLibraryViewController() {}
     @Mapping("initWithTerm:")
     public UIReferenceLibraryViewController(String term) { }
     @Mapping("initWithNibName:bundle:")
     public UIReferenceLibraryViewController(String nibNameOrNil, NSBundle nibBundleOrNil) { }
+    @Mapping("init")
+    public UIReferenceLibraryViewController() { }
     
     
     

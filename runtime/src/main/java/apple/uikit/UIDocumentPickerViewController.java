@@ -31,13 +31,14 @@ public class UIDocumentPickerViewController
 
     
     
-    public UIDocumentPickerViewController() {}
     @Mapping("initWithDocumentTypes:inMode:")
     public UIDocumentPickerViewController(NSArray<?> allowedUTIs, @Representing("UIDocumentPickerMode") @MachineSizedUInt long mode) { }
     @Mapping("initWithURL:inMode:")
     public UIDocumentPickerViewController(NSURL url, @Representing("UIDocumentPickerMode") @MachineSizedUInt long mode) { }
     @Mapping("initWithNibName:bundle:")
     public UIDocumentPickerViewController(String nibNameOrNil, NSBundle nibBundleOrNil) { }
+    @Mapping("init")
+    public UIDocumentPickerViewController() { }
     
     
     @Mapping("delegate")

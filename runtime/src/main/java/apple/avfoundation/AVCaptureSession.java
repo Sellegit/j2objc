@@ -32,7 +32,8 @@ public class AVCaptureSession
 
     
     
-    public AVCaptureSession() {}
+    @Mapping("init")
+    public AVCaptureSession() { }
     
     
     @Mapping("sessionPreset")

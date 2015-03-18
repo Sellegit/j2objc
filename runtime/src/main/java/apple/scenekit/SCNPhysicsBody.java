@@ -30,7 +30,8 @@ public class SCNPhysicsBody
 
     
     
-    public SCNPhysicsBody() {}
+    @Mapping("init")
+    public SCNPhysicsBody() { }
     
     
     @Mapping("type")

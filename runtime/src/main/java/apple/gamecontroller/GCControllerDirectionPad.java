@@ -24,7 +24,8 @@ public class GCControllerDirectionPad
 
     
     
-    public GCControllerDirectionPad() {}
+    @Mapping("init")
+    public GCControllerDirectionPad() { }
     
     
     @Mapping("valueChangedHandler")

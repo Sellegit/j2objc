@@ -27,8 +27,8 @@ public class ABPersonKind
     
     
     @GlobalConstant("kABPersonKindPerson")
-    protected static native CFNumber PersonValue();
+    public static native CFNumber PersonValue();
     @GlobalConstant("kABPersonKindOrganization")
-    protected static native CFNumber OrganizationValue();
+    public static native CFNumber OrganizationValue();
     
 }

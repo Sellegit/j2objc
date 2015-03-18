@@ -26,9 +26,10 @@ public class NSAtomicStore
 
     
     
-    public NSAtomicStore() {}
     @Mapping("initWithPersistentStoreCoordinator:configurationName:URL:options:")
     public NSAtomicStore(NSPersistentStoreCoordinator coordinator, String configurationName, NSURL url, NSDictionary<?, ?> options) { }
+    @Mapping("init")
+    public NSAtomicStore() { }
     
     
     
@@ -36,9 +37,9 @@ public class NSAtomicStore
     
     
     @Mapping("load:")
-    protected native boolean load(Todo error);
+    public native boolean load(Todo error);
     @Mapping("save:")
-    protected native boolean save(Todo error);
+    public native boolean save(Todo error);
     @Mapping("newCacheNodeForManagedObject:")
     public native NSAtomicStoreCacheNode newCacheNode(NSManagedObject managedObject);
     @Mapping("updateCacheNode:fromManagedObject:")

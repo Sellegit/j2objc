@@ -29,9 +29,10 @@ public class MKOverlayPathRenderer
 
     
     
-    public MKOverlayPathRenderer() {}
     @Mapping("initWithOverlay:")
     public MKOverlayPathRenderer(MKOverlay overlay) { }
+    @Mapping("init")
+    public MKOverlayPathRenderer() { }
     
     
     @Mapping("fillColor")

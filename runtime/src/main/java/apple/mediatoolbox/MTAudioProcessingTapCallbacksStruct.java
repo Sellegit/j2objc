@@ -25,7 +25,7 @@ import apple.coreaudio.*;
      {
 
     
-    protected MTAudioProcessingTapCallbacksStruct() {}
+    private MTAudioProcessingTapCallbacksStruct() {}
     
     
     @DotMapping("version")

@@ -26,12 +26,13 @@ public class NSManagedObjectContext
 
     
     
-    public NSManagedObjectContext() {}
     /**
      * @since Available in iOS 5.0 and later.
      */
     @Mapping("initWithConcurrencyType:")
     public NSManagedObjectContext(@Representing("NSManagedObjectContextConcurrencyType") @MachineSizedUInt long ct) { }
+    @Mapping("init")
+    public NSManagedObjectContext() { }
     
     
     @Mapping("persistentStoreCoordinator")
@@ -105,17 +106,17 @@ public class NSManagedObjectContext
      * @since Available in iOS 3.0 and later.
      */
     @GlobalConstant("NSManagedObjectContextWillSaveNotification")
-    protected static native NSString WillSaveNotification();
+    public static native NSString WillSaveNotification();
     /**
      * @since Available in iOS 3.0 and later.
      */
     @GlobalConstant("NSManagedObjectContextDidSaveNotification")
-    protected static native NSString DidSaveNotification();
+    public static native NSString DidSaveNotification();
     /**
      * @since Available in iOS 3.0 and later.
      */
     @GlobalConstant("NSManagedObjectContextObjectsDidChangeNotification")
-    protected static native NSString ObjectsDidChangeNotification();
+    public static native NSString ObjectsDidChangeNotification();
     
     /**
      * @since Available in iOS 5.0 and later.
@@ -135,19 +136,19 @@ public class NSManagedObjectContext
      * @since Available in iOS 3.0 and later.
      */
     @Mapping("existingObjectWithID:error:")
-    protected native NSManagedObject getExistingObjectWithID(NSManagedObjectID objectID, Todo error);
+    public native NSManagedObject getExistingObjectWithID(NSManagedObjectID objectID, Todo error);
     @Mapping("executeFetchRequest:error:")
-    protected native NSArray<NSManagedObject> executeFetchRequest(NSFetchRequest request, Todo error);
+    public native NSArray<NSManagedObject> executeFetchRequest(NSFetchRequest request, Todo error);
     /**
      * @since Available in iOS 3.0 and later.
      */
     @Mapping("countForFetchRequest:error:")
-    protected native @MachineSizedUInt long getCountForFetchRequest(NSFetchRequest request, Todo error);
+    public native @MachineSizedUInt long getCountForFetchRequest(NSFetchRequest request, Todo error);
     /**
      * @since Available in iOS 8.0 and later.
      */
     @Mapping("executeRequest:error:")
-    protected native NSPersistentStoreResult executeRequest(NSPersistentStoreRequest request, Todo error);
+    public native NSPersistentStoreResult executeRequest(NSPersistentStoreRequest request, Todo error);
     @Mapping("insertObject:")
     public native void insertObject(NSManagedObject object);
     @Mapping("deleteObject:")
@@ -169,7 +170,7 @@ public class NSManagedObjectContext
     @Mapping("rollback")
     public native void rollback();
     @Mapping("save:")
-    protected native boolean save(Todo error);
+    public native boolean save(Todo error);
     /**
      * @since Available in iOS 3.0 and later.
      * @deprecated Deprecated in iOS 8.0.
@@ -195,7 +196,7 @@ public class NSManagedObjectContext
      * @since Available in iOS 3.0 and later.
      */
     @Mapping("obtainPermanentIDsForObjects:error:")
-    protected native boolean obtainPermanentIDsForObjects(NSArray<?> objects, Todo error);
+    public native boolean obtainPermanentIDsForObjects(NSArray<?> objects, Todo error);
     /**
      * @since Available in iOS 3.0 and later.
      */

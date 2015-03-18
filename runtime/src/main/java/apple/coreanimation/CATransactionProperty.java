@@ -33,21 +33,21 @@ public class CATransactionProperty
      * @since Available in iOS 2.0 and later.
      */
     @GlobalConstant("kCATransactionAnimationDuration")
-    protected static native NSString AnimationDurationValue();
+    public static native NSString AnimationDurationValue();
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalConstant("kCATransactionDisableActions")
-    protected static native NSString DisableActionsValue();
+    public static native NSString DisableActionsValue();
     /**
      * @since Available in iOS 3.0 and later.
      */
     @GlobalConstant("kCATransactionAnimationTimingFunction")
-    protected static native NSString AnimationTimingFunctionValue();
+    public static native NSString AnimationTimingFunctionValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("kCATransactionCompletionBlock")
-    protected static native NSString CompletionBlockValue();
+    public static native NSString CompletionBlockValue();
     
 }

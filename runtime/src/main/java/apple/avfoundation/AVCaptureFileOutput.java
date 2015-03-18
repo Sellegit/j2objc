@@ -32,7 +32,8 @@ public class AVCaptureFileOutput
 
     
     
-    public AVCaptureFileOutput() {}
+    @Mapping("init")
+    public AVCaptureFileOutput() { }
     
     
     @Mapping("outputFileURL")

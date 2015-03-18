@@ -33,9 +33,10 @@ public class SKRange
 
     
     
-    public SKRange() {}
     @Mapping("initWithLowerLimit:upperLimit:")
     public SKRange(@MachineSizedFloat double lower, @MachineSizedFloat double upper) { }
+    @Mapping("init")
+    public SKRange() { }
     
     
     @Mapping("lowerLimit")

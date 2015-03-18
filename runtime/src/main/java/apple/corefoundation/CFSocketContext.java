@@ -24,7 +24,7 @@ import apple.foundation.*;
      {
 
     
-    protected CFSocketContext() {}
+    private CFSocketContext() {}
     
     
     @DotMapping("version")

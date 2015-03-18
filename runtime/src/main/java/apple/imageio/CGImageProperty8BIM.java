@@ -30,11 +30,11 @@ public class CGImageProperty8BIM
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("kCGImageProperty8BIMLayerNames")
-    protected static native CFString LayerNamesKey();
+    public static native CFString LayerNamesKey();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("kCGImageProperty8BIMVersion")
-    protected static native CFString VersionKey();
+    public static native CFString VersionKey();
     
 }

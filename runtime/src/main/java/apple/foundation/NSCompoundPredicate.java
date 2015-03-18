@@ -31,9 +31,10 @@ public class NSCompoundPredicate
 
     
     
-    public NSCompoundPredicate() {}
     @Mapping("initWithType:subpredicates:")
     public NSCompoundPredicate(@Representing("NSCompoundPredicateType") @MachineSizedUInt long type, NSArray<?> subpredicates) { }
+    @Mapping("init")
+    public NSCompoundPredicate() { }
     
     
     @Mapping("compoundPredicateType")

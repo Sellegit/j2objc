@@ -32,9 +32,10 @@ public class AVAudioUnitTimeEffect
 
     
     
-    public AVAudioUnitTimeEffect() {}
     @Mapping("initWithAudioComponentDescription:")
     public AVAudioUnitTimeEffect(AudioComponentDescription audioComponentDescription) { }
+    @Mapping("init")
+    public AVAudioUnitTimeEffect() { }
     
     
     @Mapping("bypass")

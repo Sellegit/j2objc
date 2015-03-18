@@ -30,7 +30,8 @@ public class SCNAction
 
     
     
-    public SCNAction() {}
+    @Mapping("init")
+    public SCNAction() { }
     
     
     @Mapping("duration")

@@ -33,8 +33,8 @@ public class SCNSceneSourceContributor
     
     
     @GlobalConstant("SCNSceneSourceAssetAuthoringToolKey")
-    protected static native NSString AuthoringToolKey();
+    public static native NSString AuthoringToolKey();
     @GlobalConstant("SCNSceneSourceAssetAuthorKey")
-    protected static native NSString AuthorKey();
+    public static native NSString AuthorKey();
     
 }

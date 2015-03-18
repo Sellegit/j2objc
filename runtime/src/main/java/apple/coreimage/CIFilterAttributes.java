@@ -30,10 +30,10 @@ public class CIFilterAttributes
     
     
     @GlobalConstant("kCIAttributeFilterName")
-    protected static native NSString NameKey();
+    public static native NSString NameKey();
     @GlobalConstant("kCIAttributeFilterDisplayName")
-    protected static native NSString DisplayNameKey();
+    public static native NSString DisplayNameKey();
     @GlobalConstant("kCIAttributeFilterCategories")
-    protected static native NSString CategoriesKey();
+    public static native NSString CategoriesKey();
     
 }

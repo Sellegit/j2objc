@@ -28,8 +28,8 @@ public class CFRunLoopMode
     
     
     @GlobalConstant("kCFRunLoopDefaultMode")
-    protected static native String DefaultValue();
+    public static native String DefaultValue();
     @GlobalConstant("kCFRunLoopCommonModes")
-    protected static native String CommonValue();
+    public static native String CommonValue();
     
 }

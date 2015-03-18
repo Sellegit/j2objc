@@ -31,7 +31,8 @@ public class SKTextureAtlas
 
     
     
-    public SKTextureAtlas() {}
+    @Mapping("init")
+    public SKTextureAtlas() { }
     
     
     @Mapping("textureNames")
@@ -49,7 +50,7 @@ public class SKTextureAtlas
      * @since Available in iOS 8.0 and later.
      */
     @Mapping("atlasWithDictionary:")
-    protected static native SKTextureAtlas create(NSDictionary<?, ?> properties);
+    public static native SKTextureAtlas create(NSDictionary<?, ?> properties);
     @Mapping("preloadTextureAtlases:withCompletionHandler:")
     public static native void preloadTextureAtlases(NSArray<?> textureAtlases, @Block Runnable completionHandler);
     @Mapping("encodeWithCoder:")

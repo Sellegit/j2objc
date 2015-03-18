@@ -32,7 +32,8 @@ public class AVAssetTrack
 
     
     
-    public AVAssetTrack() {}
+    @Mapping("init")
+    public AVAssetTrack() { }
     
     
     @Mapping("asset")

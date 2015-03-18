@@ -31,7 +31,8 @@ public class NSMassFormatter
 
     
     
-    public NSMassFormatter() {}
+    @Mapping("init")
+    public NSMassFormatter() { }
     
     
     @Mapping("numberFormatter")
@@ -56,6 +57,6 @@ public class NSMassFormatter
     @Mapping("unitStringFromValue:unit:")
     public native String formatUnit(double value, @Representing("NSMassFormatterUnit") @MachineSizedSInt long unit);
     @Mapping("unitStringFromKilograms:usedUnit:")
-    protected native String formatUnitKilograms(double numberInKilograms, Todo unitp);
+    public native String formatUnitKilograms(double numberInKilograms, Todo unitp);
     
 }

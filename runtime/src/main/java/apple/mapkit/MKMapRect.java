@@ -26,7 +26,7 @@ public class MKMapRect
      {
 
     
-    protected MKMapRect() {}
+    private MKMapRect() {}
     
     
     @DotMapping("origin")

@@ -33,26 +33,26 @@ public class CIImageAutoAdjustOptions
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("kCIImageAutoAdjustEnhance")
-    protected static native CFString EnhanceKey();
+    public static native CFString EnhanceKey();
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("kCIImageAutoAdjustRedEye")
-    protected static native CFString RedEyeKey();
+    public static native CFString RedEyeKey();
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("kCIImageAutoAdjustFeatures")
-    protected static native CFString FeaturesKey();
+    public static native CFString FeaturesKey();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("kCIImageAutoAdjustCrop")
-    protected static native CFString CropKey();
+    public static native CFString CropKey();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("kCIImageAutoAdjustLevel")
-    protected static native CFString LevelKey();
+    public static native CFString LevelKey();
     
 }

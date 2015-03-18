@@ -28,8 +28,8 @@ public class MFMessageComposeViewControllerAttachment
     
     
     @GlobalConstant("MFMessageComposeViewControllerAttachmentURL")
-    protected static native NSString URLKey();
+    public static native NSString URLKey();
     @GlobalConstant("MFMessageComposeViewControllerAttachmentAlternateFilename")
-    protected static native NSString AlternateFilenameKey();
+    public static native NSString AlternateFilenameKey();
     
 }

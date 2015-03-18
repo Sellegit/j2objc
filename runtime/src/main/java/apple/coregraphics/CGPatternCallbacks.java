@@ -24,7 +24,7 @@ import apple.uikit.*;
      {
 
     
-    protected CGPatternCallbacks() {}
+    private CGPatternCallbacks() {}
     
     
     @DotMapping("version")

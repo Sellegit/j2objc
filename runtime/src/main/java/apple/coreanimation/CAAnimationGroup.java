@@ -27,7 +27,8 @@ public class CAAnimationGroup
 
     
     
-    public CAAnimationGroup() {}
+    @Mapping("init")
+    public CAAnimationGroup() { }
     
     
     @Mapping("animations")

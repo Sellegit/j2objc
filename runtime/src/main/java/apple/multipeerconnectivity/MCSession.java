@@ -28,11 +28,12 @@ public class MCSession
 
     
     
-    public MCSession() {}
     @Mapping("initWithPeer:")
     public MCSession(MCPeerID myPeerID) { }
     @Mapping("initWithPeer:securityIdentity:encryptionPreference:")
     public MCSession(MCPeerID myPeerID, NSArray<?> identity, @Representing("MCEncryptionPreference") @MachineSizedSInt long encryptionPreference) { }
+    @Mapping("init")
+    public MCSession() { }
     
     
     @Mapping("delegate")
@@ -62,13 +63,13 @@ public class MCSession
     public static native @MachineSizedUInt long getMaximumNumberOfPeers();
     
     @Mapping("sendData:toPeers:withMode:error:")
-    protected native boolean sendData(NSData data, NSArray<?> peerIDs, @Representing("MCSessionSendDataMode") @MachineSizedSInt long mode, Todo error);
+    public native boolean sendData(NSData data, NSArray<?> peerIDs, @Representing("MCSessionSendDataMode") @MachineSizedSInt long mode, Todo error);
     @Mapping("disconnect")
     public native void disconnect();
     @Mapping("sendResourceAtURL:withName:toPeer:withCompletionHandler:")
     public native NSProgress sendResource(NSURL resourceURL, String resourceName, MCPeerID peerID, @Block VoidBlock1<NSError> completionHandler);
     @Mapping("startStreamWithName:toPeer:error:")
-    protected native NSOutputStream startStream(String streamName, MCPeerID peerID, Todo error);
+    public native NSOutputStream startStream(String streamName, MCPeerID peerID, Todo error);
     @Mapping("nearbyConnectionDataForPeer:withCompletionHandler:")
     public native void requestNearbyConnectionData(MCPeerID peerID, @Block VoidBlock2<NSData, NSError> completionHandler);
     @Mapping("connectPeer:withNearbyConnectionData:")

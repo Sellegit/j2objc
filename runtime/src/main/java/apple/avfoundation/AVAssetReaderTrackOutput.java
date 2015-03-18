@@ -32,7 +32,8 @@ public class AVAssetReaderTrackOutput
 
     
     
-    public AVAssetReaderTrackOutput() {}
+    @Mapping("init")
+    public AVAssetReaderTrackOutput() { }
     
     
     @Mapping("track")

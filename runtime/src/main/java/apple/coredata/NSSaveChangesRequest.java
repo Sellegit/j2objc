@@ -26,9 +26,10 @@ public class NSSaveChangesRequest
 
     
     
-    public NSSaveChangesRequest() {}
     @Mapping("initWithInsertedObjects:updatedObjects:deletedObjects:lockedObjects:")
     public NSSaveChangesRequest(NSSet<?> insertedObjects, NSSet<?> updatedObjects, NSSet<?> deletedObjects, NSSet<?> lockedObjects) { }
+    @Mapping("init")
+    public NSSaveChangesRequest() { }
     
     
     @Mapping("insertedObjects")

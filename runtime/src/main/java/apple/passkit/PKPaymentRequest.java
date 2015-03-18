@@ -28,7 +28,8 @@ public class PKPaymentRequest
 
     
     
-    public PKPaymentRequest() {}
+    @Mapping("init")
+    public PKPaymentRequest() { }
     
     
     @Mapping("merchantIdentifier")

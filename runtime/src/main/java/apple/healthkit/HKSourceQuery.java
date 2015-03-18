@@ -26,9 +26,10 @@ public class HKSourceQuery
 
     
     
-    public HKSourceQuery() {}
     @Mapping("initWithSampleType:samplePredicate:completionHandler:")
     public HKSourceQuery(HKSampleType sampleType, NSPredicate objectPredicate, Todo completionHandler) { }
+    @Mapping("init")
+    public HKSourceQuery() { }
     
     
     

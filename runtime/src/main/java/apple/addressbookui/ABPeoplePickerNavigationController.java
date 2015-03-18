@@ -28,11 +28,12 @@ public class ABPeoplePickerNavigationController
 
     
     
-    public ABPeoplePickerNavigationController() {}
     @Mapping("initWithRootViewController:")
     public ABPeoplePickerNavigationController(UIViewController rootViewController) { }
     @Mapping("initWithNibName:bundle:")
     public ABPeoplePickerNavigationController(String nibNameOrNil, NSBundle nibBundleOrNil) { }
+    @Mapping("init")
+    public ABPeoplePickerNavigationController() { }
     
     
     @Mapping("peoplePickerDelegate")

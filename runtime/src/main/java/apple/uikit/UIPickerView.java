@@ -31,9 +31,10 @@ public class UIPickerView
 
     
     
-    public UIPickerView() {}
     @Mapping("initWithFrame:")
     public UIPickerView(CGRect frame) { }
+    @Mapping("init")
+    public UIPickerView() { }
     
     
     @Mapping("dataSource")

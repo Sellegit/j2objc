@@ -32,7 +32,6 @@ public class AVPlayerItem
 
     
     
-    public AVPlayerItem() {}
     @Mapping("initWithURL:")
     public AVPlayerItem(NSURL URL) { }
     @Mapping("initWithAsset:")
@@ -42,6 +41,8 @@ public class AVPlayerItem
      */
     @Mapping("initWithAsset:automaticallyLoadedAssetKeys:")
     public AVPlayerItem(AVAsset asset, NSArray<?> automaticallyLoadedAssetKeys) { }
+    @Mapping("init")
+    public AVPlayerItem() { }
     
     
     @Mapping("status")

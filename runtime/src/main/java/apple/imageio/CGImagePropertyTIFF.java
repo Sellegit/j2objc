@@ -30,91 +30,91 @@ public class CGImagePropertyTIFF
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("kCGImagePropertyTIFFCompression")
-    protected static native CFString CompressionKey();
+    public static native CFString CompressionKey();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("kCGImagePropertyTIFFPhotometricInterpretation")
-    protected static native CFString PhotometricInterpretationKey();
+    public static native CFString PhotometricInterpretationKey();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("kCGImagePropertyTIFFDocumentName")
-    protected static native CFString DocumentNameKey();
+    public static native CFString DocumentNameKey();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("kCGImagePropertyTIFFImageDescription")
-    protected static native CFString ImageDescriptionKey();
+    public static native CFString ImageDescriptionKey();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("kCGImagePropertyTIFFMake")
-    protected static native CFString MakeKey();
+    public static native CFString MakeKey();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("kCGImagePropertyTIFFModel")
-    protected static native CFString ModelKey();
+    public static native CFString ModelKey();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("kCGImagePropertyTIFFOrientation")
-    protected static native CFString OrientationKey();
+    public static native CFString OrientationKey();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("kCGImagePropertyTIFFXResolution")
-    protected static native CFString XResolutionKey();
+    public static native CFString XResolutionKey();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("kCGImagePropertyTIFFYResolution")
-    protected static native CFString YResolutionKey();
+    public static native CFString YResolutionKey();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("kCGImagePropertyTIFFResolutionUnit")
-    protected static native CFString ResolutionUnitKey();
+    public static native CFString ResolutionUnitKey();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("kCGImagePropertyTIFFSoftware")
-    protected static native CFString SoftwareKey();
+    public static native CFString SoftwareKey();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("kCGImagePropertyTIFFTransferFunction")
-    protected static native CFString TransferFunctionKey();
+    public static native CFString TransferFunctionKey();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("kCGImagePropertyTIFFDateTime")
-    protected static native CFString DateTimeKey();
+    public static native CFString DateTimeKey();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("kCGImagePropertyTIFFArtist")
-    protected static native CFString ArtistKey();
+    public static native CFString ArtistKey();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("kCGImagePropertyTIFFHostComputer")
-    protected static native CFString HostComputerKey();
+    public static native CFString HostComputerKey();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("kCGImagePropertyTIFFCopyright")
-    protected static native CFString CopyrightKey();
+    public static native CFString CopyrightKey();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("kCGImagePropertyTIFFWhitePoint")
-    protected static native CFString WhitePointKey();
+    public static native CFString WhitePointKey();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("kCGImagePropertyTIFFPrimaryChromaticities")
-    protected static native CFString PrimaryChromaticitiesKey();
+    public static native CFString PrimaryChromaticitiesKey();
     
 }

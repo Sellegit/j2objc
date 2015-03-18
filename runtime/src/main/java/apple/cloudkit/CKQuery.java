@@ -27,11 +27,12 @@ public class CKQuery
 
     
     
-    public CKQuery() {}
     @Mapping("initWithCoder:")
     public CKQuery(NSCoder aDecoder) { }
     @Mapping("initWithRecordType:predicate:")
     public CKQuery(String recordType, NSPredicate predicate) { }
+    @Mapping("init")
+    public CKQuery() { }
     
     
     @Mapping("recordType")

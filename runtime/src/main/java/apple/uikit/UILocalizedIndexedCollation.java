@@ -31,7 +31,8 @@ public class UILocalizedIndexedCollation
 
     
     
-    public UILocalizedIndexedCollation() {}
+    @Mapping("init")
+    public UILocalizedIndexedCollation() { }
     
     
     @Mapping("sectionTitles")

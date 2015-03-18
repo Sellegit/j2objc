@@ -30,7 +30,8 @@ public class SCNTransformConstraint
 
     
     
-    public SCNTransformConstraint() {}
+    @Mapping("init")
+    public SCNTransformConstraint() { }
     
     
     

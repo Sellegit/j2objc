@@ -28,7 +28,8 @@ public class EKRecurrenceEnd
 
     
     
-    public EKRecurrenceEnd() {}
+    @Mapping("init")
+    public EKRecurrenceEnd() { }
     
     
     @Mapping("endDate")

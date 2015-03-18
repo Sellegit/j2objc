@@ -46,7 +46,7 @@ public class CMTimebase
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("kCMTimebaseNotificationKey_EventTime")
-    protected static native NSString EventTimeNotificationKey();
+    public static native NSString EventTimeNotificationKey();
     
     /**
      * @since Available in iOS 6.0 and later.
@@ -57,12 +57,12 @@ public class CMTimebase
      * @since Available in iOS 6.0 and later.
      */
     @GlobalFunction("CMTimebaseCreateWithMasterClock")
-    protected static native int create(CFAllocator allocator, CMClock masterClock, Todo timebaseOut);
+    public static native int create(CFAllocator allocator, CMClock masterClock, Todo timebaseOut);
     /**
      * @since Available in iOS 6.0 and later.
      */
     @GlobalFunction("CMTimebaseCreateWithMasterTimebase")
-    protected static native int create(CFAllocator allocator, CMTimebase masterTimebase, Todo timebaseOut);
+    public static native int create(CFAllocator allocator, CMTimebase masterTimebase, Todo timebaseOut);
     /**
      * @since Available in iOS 6.0 and later.
      */

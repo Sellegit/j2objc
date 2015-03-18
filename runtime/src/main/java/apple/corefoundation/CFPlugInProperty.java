@@ -28,14 +28,14 @@ public class CFPlugInProperty
     
     
     @GlobalConstant("kCFPlugInDynamicRegistrationKey")
-    protected static native CFString DynamicRegistrationValue();
+    public static native CFString DynamicRegistrationValue();
     @GlobalConstant("kCFPlugInDynamicRegisterFunctionKey")
-    protected static native CFString DynamicRegisterFunctionValue();
+    public static native CFString DynamicRegisterFunctionValue();
     @GlobalConstant("kCFPlugInUnloadFunctionKey")
-    protected static native CFString UnloadFunctionValue();
+    public static native CFString UnloadFunctionValue();
     @GlobalConstant("kCFPlugInFactoriesKey")
-    protected static native CFString FactoriesValue();
+    public static native CFString FactoriesValue();
     @GlobalConstant("kCFPlugInTypesKey")
-    protected static native CFString TypesValue();
+    public static native CFString TypesValue();
     
 }

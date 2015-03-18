@@ -33,7 +33,8 @@ public class NSUndoManager
     public static final int CloseGroupingRunLoopOrdering = 350000;
     
     
-    public NSUndoManager() {}
+    @Mapping("init")
+    public NSUndoManager() { }
     
     
     @Mapping("groupingLevel")
@@ -85,7 +86,7 @@ public class NSUndoManager
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("NSUndoManagerGroupIsDiscardableKey")
-    protected static native NSString GroupIsDiscardableKey();
+    public static native NSString GroupIsDiscardableKey();
     /**
      * @since Available in iOS 3.0 and later.
      */

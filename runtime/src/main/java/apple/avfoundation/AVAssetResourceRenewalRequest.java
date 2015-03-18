@@ -32,7 +32,8 @@ public class AVAssetResourceRenewalRequest
 
     
     
-    public AVAssetResourceRenewalRequest() {}
+    @Mapping("init")
+    public AVAssetResourceRenewalRequest() { }
     
     
     

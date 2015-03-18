@@ -35,16 +35,16 @@ public class NSURLProtectionSpaceProtocol
      * @since Available in iOS 2.0 and later.
      */
     @GlobalConstant("NSURLProtectionSpaceHTTP")
-    protected static native NSString HTTPValue();
+    public static native NSString HTTPValue();
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalConstant("NSURLProtectionSpaceHTTPS")
-    protected static native NSString HTTPSValue();
+    public static native NSString HTTPSValue();
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalConstant("NSURLProtectionSpaceFTP")
-    protected static native NSString FTPValue();
+    public static native NSString FTPValue();
     
 }

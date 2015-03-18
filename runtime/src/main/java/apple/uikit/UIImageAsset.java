@@ -31,7 +31,8 @@ public class UIImageAsset
 
     
     
-    public UIImageAsset() {}
+    @Mapping("init")
+    public UIImageAsset() { }
     
     
     

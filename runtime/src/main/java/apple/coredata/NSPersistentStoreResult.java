@@ -26,7 +26,8 @@ public class NSPersistentStoreResult
 
     
     
-    public NSPersistentStoreResult() {}
+    @Mapping("init")
+    public NSPersistentStoreResult() { }
     
     
     

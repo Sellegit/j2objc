@@ -33,11 +33,11 @@ public class CFDateFormatter
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CFDateFormatterCreateDateFormatFromTemplate")
-    protected static native String getDateFormat(CFAllocator allocator, String tmplate, @MachineSizedUInt long options, CFLocale locale);
+    public static native String getDateFormat(CFAllocator allocator, String tmplate, @MachineSizedUInt long options, CFLocale locale);
     @GlobalFunction("CFDateFormatterGetTypeID")
     public static native @MachineSizedUInt long getClassTypeID();
     @GlobalFunction("CFDateFormatterCreate")
-    protected static native CFDateFormatter create(CFAllocator allocator, CFLocale locale, CFDateFormatterStyle dateStyle, CFDateFormatterStyle timeStyle);
+    public static native CFDateFormatter create(CFAllocator allocator, CFLocale locale, CFDateFormatterStyle dateStyle, CFDateFormatterStyle timeStyle);
     @GlobalFunction("CFDateFormatterGetLocale")
     public static native CFLocale getLocale(CFDateFormatter formatter);
     @GlobalFunction("CFDateFormatterGetDateStyle")
@@ -49,13 +49,13 @@ public class CFDateFormatter
     @GlobalFunction("CFDateFormatterSetFormat")
     public static native void setFormat(CFDateFormatter formatter, String formatString);
     @GlobalFunction("CFDateFormatterCreateStringWithDate")
-    protected static native String format(CFAllocator allocator, CFDateFormatter formatter, CFDate date);
+    public static native String format(CFAllocator allocator, CFDateFormatter formatter, CFDate date);
     @GlobalFunction("CFDateFormatterCreateStringWithAbsoluteTime")
-    protected static native String format(CFAllocator allocator, CFDateFormatter formatter, double at);
+    public static native String format(CFAllocator allocator, CFDateFormatter formatter, double at);
     @GlobalFunction("CFDateFormatterCreateDateFromString")
-    protected static native CFDate parse(CFAllocator allocator, CFDateFormatter formatter, String string, CFRange rangep);
+    public static native CFDate parse(CFAllocator allocator, CFDateFormatter formatter, String string, CFRange rangep);
     @GlobalFunction("CFDateFormatterGetAbsoluteTimeFromString")
-    protected static native boolean getAbsoluteTime(CFDateFormatter formatter, String string, CFRange rangep, Todo atp);
+    public static native boolean getAbsoluteTime(CFDateFormatter formatter, String string, CFRange rangep, Todo atp);
     @GlobalFunction("CFDateFormatterSetProperty")
     public static native void setProperty(CFDateFormatter formatter, String key, CFType value);
     @GlobalFunction("CFDateFormatterCopyProperty")

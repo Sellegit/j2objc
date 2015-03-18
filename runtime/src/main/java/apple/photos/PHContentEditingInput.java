@@ -29,7 +29,8 @@ public class PHContentEditingInput
 
     
     
-    public PHContentEditingInput() {}
+    @Mapping("init")
+    public PHContentEditingInput() { }
     
     
     @Mapping("mediaType")

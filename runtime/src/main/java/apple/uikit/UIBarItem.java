@@ -31,7 +31,8 @@ public class UIBarItem
 
     
     
-    public UIBarItem() {}
+    @Mapping("init")
+    public UIBarItem() { }
     
     
     @Mapping("isEnabled")

@@ -43,8 +43,8 @@ public class ABGroup
     @GlobalFunction("ABGroupCopyArrayOfAllMembersWithSortOrdering")
     public static native List<ABPerson> getAllMembers(ABRecord group, ABPersonSortOrdering sortOrdering);
     @GlobalFunction("ABGroupAddMember")
-    protected static native boolean addMember(ABRecord group, ABRecord person, Todo error);
+    public static native boolean addMember(ABRecord group, ABRecord person, Todo error);
     @GlobalFunction("ABGroupRemoveMember")
-    protected static native boolean removeMember(ABRecord group, ABRecord member, Todo error);
+    public static native boolean removeMember(ABRecord group, ABRecord member, Todo error);
     
 }

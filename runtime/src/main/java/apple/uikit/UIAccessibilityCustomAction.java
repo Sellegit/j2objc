@@ -31,9 +31,10 @@ public class UIAccessibilityCustomAction
 
     
     
-    public UIAccessibilityCustomAction() {}
     @Mapping("initWithName:target:selector:")
     public UIAccessibilityCustomAction(String name, Object target, Selector selector) { }
+    @Mapping("init")
+    public UIAccessibilityCustomAction() { }
     
     
     @Mapping("name")

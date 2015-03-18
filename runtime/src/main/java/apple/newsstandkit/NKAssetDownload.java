@@ -26,7 +26,8 @@ public class NKAssetDownload
 
     
     
-    public NKAssetDownload() {}
+    @Mapping("init")
+    public NKAssetDownload() { }
     
     
     @Mapping("issue")

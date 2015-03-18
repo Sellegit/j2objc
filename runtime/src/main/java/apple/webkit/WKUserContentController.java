@@ -27,7 +27,8 @@ public class WKUserContentController
 
     
     
-    public WKUserContentController() {}
+    @Mapping("init")
+    public WKUserContentController() { }
     
     
     @Mapping("userScripts")

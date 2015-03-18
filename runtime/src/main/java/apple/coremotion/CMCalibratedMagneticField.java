@@ -23,7 +23,7 @@ public class CMCalibratedMagneticField
      {
 
     
-    protected CMCalibratedMagneticField() {}
+    private CMCalibratedMagneticField() {}
     
     
     @DotMapping("field")

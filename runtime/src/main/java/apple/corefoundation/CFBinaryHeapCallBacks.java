@@ -24,7 +24,7 @@ import apple.foundation.*;
      {
 
     
-    protected CFBinaryHeapCallBacks() {}
+    private CFBinaryHeapCallBacks() {}
     
     
     @DotMapping("version")

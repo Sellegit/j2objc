@@ -31,7 +31,8 @@ public class NSCache
 
     
     
-    public NSCache() {}
+    @Mapping("init")
+    public NSCache() { }
     
     
     @Mapping("name")
@@ -60,9 +61,9 @@ public class NSCache
     @Mapping("objectForKey:")
     public native Object get(Object key);
     @Mapping("setObject:forKey:")
-    protected native void setObject(Object obj, Object key);
+    public native void setObject(Object obj, Object key);
     @Mapping("setObject:forKey:cost:")
-    protected native void setObject(Object obj, Object key, @MachineSizedUInt long g);
+    public native void setObject(Object obj, Object key, @MachineSizedUInt long g);
     @Mapping("removeObjectForKey:")
     public native void remove(Object key);
     @Mapping("removeAllObjects")

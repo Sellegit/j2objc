@@ -26,7 +26,8 @@ public class PKObject
 
     
     
-    public PKObject() {}
+    @Mapping("init")
+    public PKObject() { }
     
     
     

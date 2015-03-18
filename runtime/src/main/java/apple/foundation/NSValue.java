@@ -31,10 +31,12 @@ public class NSValue
     
     @Mapping("initWithCoder:")
     public NSValue(NSCoder aDecoder) { }
+    @Mapping("init")
+    public NSValue() { }
     
     
     @Mapping("objCType")
-    protected native Todo objCType();
+    public native Todo objCType();
     @Mapping("nonretainedObjectValue")
     public native Object objectValue();
     @Mapping("rangeValue")
@@ -43,7 +45,7 @@ public class NSValue
     
     
     @Mapping("getValue:")
-    protected native void getValue(Todo value);
+    public native void getValue(Todo value);
     @Mapping("valueWithBytes:objCType:")
     public static native NSValue valueOf(Todo value, Todo type);
     @Mapping("pointerValue")

@@ -34,22 +34,22 @@ public class CMMetadataFormatDescription
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMMetadataFormatDescriptionCreateWithKeys")
-    private static native int createWithKeys(CFAllocator allocator, CMMetadataFormatType metadataType, NSArray<?> keys, Todo outDesc);
+    public static native int createWithKeys(CFAllocator allocator, CMMetadataFormatType metadataType, NSArray<?> keys, Todo outDesc);
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalFunction("CMMetadataFormatDescriptionCreateWithMetadataSpecifications")
-    private static native int createWithMetadataSpecifications(CFAllocator allocator, CMMetadataFormatType metadataType, NSArray<?> metadataSpecifications, Todo outDesc);
+    public static native int createWithMetadataSpecifications(CFAllocator allocator, CMMetadataFormatType metadataType, NSArray<?> metadataSpecifications, Todo outDesc);
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalFunction("CMMetadataFormatDescriptionCreateWithMetadataFormatDescriptionAndMetadataSpecifications")
-    private static native int create(CFAllocator allocator, CMFormatDescription srcDesc, NSArray<?> metadataSpecifications, Todo outDesc);
+    public static native int create(CFAllocator allocator, CMFormatDescription srcDesc, NSArray<?> metadataSpecifications, Todo outDesc);
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalFunction("CMMetadataFormatDescriptionCreateByMergingMetadataFormatDescriptions")
-    private static native int createByMergingFormatDescriptions(CFAllocator allocator, CMFormatDescription srcDesc1, CMFormatDescription srcDesc2, Todo outDesc);
+    public static native int createByMergingFormatDescriptions(CFAllocator allocator, CMFormatDescription srcDesc1, CMFormatDescription srcDesc2, Todo outDesc);
     /**
      * @since Available in iOS 4.0 and later.
      */
@@ -64,16 +64,16 @@ public class CMMetadataFormatDescription
      * @since Available in iOS 8.0 and later.
      */
     @GlobalFunction("CMMetadataFormatDescriptionCreateFromBigEndianMetadataDescriptionData")
-    private static native int createFromBigEndianMetadataDescriptionData(CFAllocator allocator, Todo metadataDescriptionData, @MachineSizedUInt long metadataDescriptionSize, String metadataDescriptionFlavor, Todo metadataFormatDescriptionOut);
+    public static native int createFromBigEndianMetadataDescriptionData(CFAllocator allocator, Todo metadataDescriptionData, @MachineSizedUInt long metadataDescriptionSize, String metadataDescriptionFlavor, Todo metadataFormatDescriptionOut);
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalFunction("CMMetadataFormatDescriptionCreateFromBigEndianMetadataDescriptionBlockBuffer")
-    private static native int createFromBigEndianMetadataDescriptionBlockBuffer(CFAllocator allocator, CMBlockBuffer metadataDescriptionBlockBuffer, String metadataDescriptionFlavor, Todo metadataFormatDescriptionOut);
+    public static native int createFromBigEndianMetadataDescriptionBlockBuffer(CFAllocator allocator, CMBlockBuffer metadataDescriptionBlockBuffer, String metadataDescriptionFlavor, Todo metadataFormatDescriptionOut);
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalFunction("CMMetadataFormatDescriptionCopyAsBigEndianMetadataDescriptionBlockBuffer")
-    private static native int copyAsBigEndianMetadataDescriptionBlockBuffer(CFAllocator allocator, CMFormatDescription metadataFormatDescription, String metadataDescriptionFlavor, Todo metadataDescriptionBlockBufferOut);
+    public static native int copyAsBigEndianMetadataDescriptionBlockBuffer(CFAllocator allocator, CMFormatDescription metadataFormatDescription, String metadataDescriptionFlavor, Todo metadataDescriptionBlockBufferOut);
     
 }

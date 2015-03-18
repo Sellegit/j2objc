@@ -31,9 +31,10 @@ public class UICollectionReusableView
 
     
     
-    public UICollectionReusableView() {}
     @Mapping("initWithFrame:")
     public UICollectionReusableView(CGRect frame) { }
+    @Mapping("init")
+    public UICollectionReusableView() { }
     
     
     @Mapping("reuseIdentifier")

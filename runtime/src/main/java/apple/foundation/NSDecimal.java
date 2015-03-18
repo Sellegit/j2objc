@@ -28,7 +28,7 @@ public class NSDecimal
      {
 
     
-    protected NSDecimal() {}
+    private NSDecimal() {}
     
     
     @DotMapping("_exponent")
@@ -64,6 +64,6 @@ public class NSDecimal
     @GlobalFunction("NSDecimalMultiplyByPowerOf10")
     public static native NSCalculationError multiplyByPowerOf10(NSDecimal result, NSDecimal number, short power, NSRoundingMode roundingMode);
     @GlobalFunction("NSDecimalString")
-    protected static native String toString(NSDecimal dcm, Object locale);
+    public static native String toString(NSDecimal dcm, Object locale);
     
 }

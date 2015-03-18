@@ -30,46 +30,46 @@ public class HMServiceType
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("HMServiceTypeLightbulb")
-    protected static native NSString LightbulbValue();
+    public static native NSString LightbulbValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("HMServiceTypeSwitch")
-    protected static native NSString SwitchValue();
+    public static native NSString SwitchValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("HMServiceTypeThermostat")
-    protected static native NSString ThermostatValue();
+    public static native NSString ThermostatValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("HMServiceTypeGarageDoorOpener")
-    protected static native NSString GarageDoorOpenerValue();
+    public static native NSString GarageDoorOpenerValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("HMServiceTypeAccessoryInformation")
-    protected static native NSString AccessoryInformationValue();
+    public static native NSString AccessoryInformationValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("HMServiceTypeFan")
-    protected static native NSString FanValue();
+    public static native NSString FanValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("HMServiceTypeOutlet")
-    protected static native NSString OutletValue();
+    public static native NSString OutletValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("HMServiceTypeLockMechanism")
-    protected static native NSString LockMechanismValue();
+    public static native NSString LockMechanismValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("HMServiceTypeLockManagement")
-    protected static native NSString LockManagementValue();
+    public static native NSString LockManagementValue();
     
 }

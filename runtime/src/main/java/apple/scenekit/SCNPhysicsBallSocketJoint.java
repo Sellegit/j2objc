@@ -30,7 +30,8 @@ public class SCNPhysicsBallSocketJoint
 
     
     
-    public SCNPhysicsBallSocketJoint() {}
+    @Mapping("init")
+    public SCNPhysicsBallSocketJoint() { }
     
     
     @Mapping("bodyA")

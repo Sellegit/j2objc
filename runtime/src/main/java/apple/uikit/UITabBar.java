@@ -31,9 +31,10 @@ public class UITabBar
 
     
     
-    public UITabBar() {}
     @Mapping("initWithFrame:")
     public UITabBar(CGRect frame) { }
+    @Mapping("init")
+    public UITabBar() { }
     
     
     @Mapping("delegate")

@@ -29,9 +29,10 @@ public class AVPlayerViewController
 
     
     
-    public AVPlayerViewController() {}
     @Mapping("initWithNibName:bundle:")
     public AVPlayerViewController(String nibNameOrNil, NSBundle nibBundleOrNil) { }
+    @Mapping("init")
+    public AVPlayerViewController() { }
     
     
     @Mapping("player")

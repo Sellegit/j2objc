@@ -27,7 +27,8 @@ public class MPMovieErrorLog
 
     
     
-    public MPMovieErrorLog() {}
+    @Mapping("init")
+    public MPMovieErrorLog() { }
     
     
     @Mapping("extendedLogData")

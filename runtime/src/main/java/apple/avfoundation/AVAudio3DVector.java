@@ -29,7 +29,7 @@ public class AVAudio3DVector
      {
 
     
-    protected AVAudio3DVector() {}
+    private AVAudio3DVector() {}
     
     
     @DotMapping("x")

@@ -31,7 +31,8 @@ public class NSShadow
 
     
     
-    public NSShadow() {}
+    @Mapping("init")
+    public NSShadow() { }
     
     
     @Mapping("shadowOffset")

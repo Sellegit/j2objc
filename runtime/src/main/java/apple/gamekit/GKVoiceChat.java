@@ -27,7 +27,8 @@ public class GKVoiceChat
 
     
     
-    public GKVoiceChat() {}
+    @Mapping("init")
+    public GKVoiceChat() { }
     
     
     /**

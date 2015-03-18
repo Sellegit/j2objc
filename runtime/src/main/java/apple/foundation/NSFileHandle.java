@@ -29,11 +29,12 @@ public class NSFileHandle
 
     
     
-    public NSFileHandle() {}
     @Mapping("initWithFileDescriptor:closeOnDealloc:")
     public NSFileHandle(int fd, boolean closeopt) { }
     @Mapping("initWithCoder:")
     public NSFileHandle(NSCoder coder) { }
+    @Mapping("init")
+    public NSFileHandle() { }
     @Mapping("initWithFileDescriptor:")
     public NSFileHandle(int fd) { }
     
@@ -76,9 +77,9 @@ public class NSFileHandle
     @GlobalConstant("NSFileHandleDataAvailableNotification")
     public static native NSString DataAvailableNotification();
     @GlobalConstant("NSFileHandleNotificationDataItem")
-    protected static native NSString NotificationDataItem();
+    public static native NSString NotificationDataItem();
     @GlobalConstant("NSFileHandleNotificationFileHandleItem")
-    protected static native NSString NotificationFileHandleItem();
+    public static native NSString NotificationFileHandleItem();
     
     @Mapping("readDataToEndOfFile")
     public native NSData readDataToEndOfFile();
@@ -114,17 +115,17 @@ public class NSFileHandle
      * @since Available in iOS 4.0 and later.
      */
     @Mapping("fileHandleForReadingFromURL:error:")
-    protected static native NSFileHandle createForReading(NSURL url, Todo error);
+    public static native NSFileHandle createForReading(NSURL url, Todo error);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @Mapping("fileHandleForWritingToURL:error:")
-    protected static native NSFileHandle createForWriting(NSURL url, Todo error);
+    public static native NSFileHandle createForWriting(NSURL url, Todo error);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @Mapping("fileHandleForUpdatingURL:error:")
-    protected static native NSFileHandle createForUpdating(NSURL url, Todo error);
+    public static native NSFileHandle createForUpdating(NSURL url, Todo error);
     @Mapping("readInBackgroundAndNotifyForModes:")
     public native void readInBackgroundAndNotify(NSArray<?> modes);
     @Mapping("readInBackgroundAndNotify")

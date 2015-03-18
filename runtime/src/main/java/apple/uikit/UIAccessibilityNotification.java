@@ -32,28 +32,28 @@ public class UIAccessibilityNotification
     
     
     @GlobalConstant("UIAccessibilityScreenChangedNotification")
-    protected static native int ScreenChangedNotification();
+    public static native int ScreenChangedNotification();
     @GlobalConstant("UIAccessibilityLayoutChangedNotification")
-    protected static native int LayoutChangedNotification();
+    public static native int LayoutChangedNotification();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("UIAccessibilityAnnouncementNotification")
-    protected static native int AnnouncementNotification();
+    public static native int AnnouncementNotification();
     /**
      * @since Available in iOS 4.2 and later.
      */
     @GlobalConstant("UIAccessibilityPageScrolledNotification")
-    protected static native int PageScrolledNotification();
+    public static native int PageScrolledNotification();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("UIAccessibilityPauseAssistiveTechnologyNotification")
-    protected static native int PauseAssistiveTechnologyNotification();
+    public static native int PauseAssistiveTechnologyNotification();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("UIAccessibilityResumeAssistiveTechnologyNotification")
-    protected static native int ResumeAssistiveTechnologyNotification();
+    public static native int ResumeAssistiveTechnologyNotification();
     
 }

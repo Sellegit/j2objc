@@ -31,9 +31,10 @@ public class UILabel
 
     
     
-    public UILabel() {}
     @Mapping("initWithFrame:")
     public UILabel(CGRect frame) { }
+    @Mapping("init")
+    public UILabel() { }
     
     
     @Mapping("text")

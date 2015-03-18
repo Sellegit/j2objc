@@ -32,30 +32,30 @@ public class NSHTTPCookieAttribute
     
     
     @GlobalConstant("NSHTTPCookieName")
-    protected static native NSString NameAttribute();
+    public static native NSString NameAttribute();
     @GlobalConstant("NSHTTPCookieValue")
-    protected static native NSString ValueAttribute();
+    public static native NSString ValueAttribute();
     @GlobalConstant("NSHTTPCookieOriginURL")
-    protected static native NSString OriginURLAttribute();
+    public static native NSString OriginURLAttribute();
     @GlobalConstant("NSHTTPCookieVersion")
-    protected static native NSString VersionAttribute();
+    public static native NSString VersionAttribute();
     @GlobalConstant("NSHTTPCookieDomain")
-    protected static native NSString DomainAttribute();
+    public static native NSString DomainAttribute();
     @GlobalConstant("NSHTTPCookiePath")
-    protected static native NSString PathAttribute();
+    public static native NSString PathAttribute();
     @GlobalConstant("NSHTTPCookieSecure")
-    protected static native NSString SecureAttribute();
+    public static native NSString SecureAttribute();
     @GlobalConstant("NSHTTPCookieExpires")
-    protected static native NSString ExpiresAttribute();
+    public static native NSString ExpiresAttribute();
     @GlobalConstant("NSHTTPCookieComment")
-    protected static native NSString CommentAttribute();
+    public static native NSString CommentAttribute();
     @GlobalConstant("NSHTTPCookieCommentURL")
-    protected static native NSString CommentURLAttribute();
+    public static native NSString CommentURLAttribute();
     @GlobalConstant("NSHTTPCookieDiscard")
-    protected static native NSString DiscardAttribute();
+    public static native NSString DiscardAttribute();
     @GlobalConstant("NSHTTPCookieMaximumAge")
-    protected static native NSString MaximumAgeAttribute();
+    public static native NSString MaximumAgeAttribute();
     @GlobalConstant("NSHTTPCookiePort")
-    protected static native NSString PortAttribute();
+    public static native NSString PortAttribute();
     
 }

@@ -31,7 +31,8 @@ public class SKTexture
 
     
     
-    public SKTexture() {}
+    @Mapping("init")
+    public SKTexture() { }
     
     
     @Mapping("filteringMode")

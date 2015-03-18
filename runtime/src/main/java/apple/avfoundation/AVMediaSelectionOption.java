@@ -32,7 +32,8 @@ public class AVMediaSelectionOption
 
     
     
-    public AVMediaSelectionOption() {}
+    @Mapping("init")
+    public AVMediaSelectionOption() { }
     
     
     @Mapping("mediaType")

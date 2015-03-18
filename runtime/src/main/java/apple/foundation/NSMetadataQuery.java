@@ -59,19 +59,19 @@ public class NSMetadataQuery
     @Mapping("setNotificationBatchingInterval:")
     public native void setNotificationBatchingInterval(double v);
     @Mapping("searchScopes")
-    protected native NSArray<?> getSearchScopes0();
+    public native NSArray<?> getSearchScopes0();
     @Mapping("setSearchScopes:")
-    protected native void setSearchScopes0(NSArray<?> v);
+    public native void setSearchScopes0(NSArray<?> v);
     /**
      * @since Available in iOS 7.0 and later.
      */
     @Mapping("searchItems")
-    protected native NSArray<?> getSearchItems0();
+    public native NSArray<?> getSearchItems0();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @Mapping("setSearchItems:")
-    protected native void setSearchItems0(NSArray<?> v);
+    public native void setSearchItems0(NSArray<?> v);
     /**
      * @since Available in iOS 7.0 and later.
      */
@@ -93,7 +93,7 @@ public class NSMetadataQuery
     @Mapping("results")
     public native NSArray<NSMetadataItem> getResults();
     @Mapping("valueLists")
-    protected native NSDictionary<NSString, NSMetadataQueryAttributeValueTuple> getValueLists0();
+    public native NSDictionary<NSString, NSMetadataQueryAttributeValueTuple> getValueLists0();
     @Mapping("groupedResults")
     public native NSArray<NSMetadataQueryResultGroup> getGroupedResults();
     

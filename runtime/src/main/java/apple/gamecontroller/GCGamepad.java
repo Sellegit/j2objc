@@ -24,7 +24,8 @@ public class GCGamepad
 
     
     
-    public GCGamepad() {}
+    @Mapping("init")
+    public GCGamepad() { }
     
     
     @Mapping("controller")

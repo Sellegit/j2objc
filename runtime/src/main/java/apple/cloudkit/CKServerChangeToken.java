@@ -27,7 +27,8 @@ public class CKServerChangeToken
 
     
     
-    public CKServerChangeToken() {}
+    @Mapping("init")
+    public CKServerChangeToken() { }
     
     
     

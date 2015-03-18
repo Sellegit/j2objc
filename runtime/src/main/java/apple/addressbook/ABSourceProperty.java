@@ -30,11 +30,11 @@ public class ABSourceProperty
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("kABSourceNameProperty")
-    protected static native int NameValue();
+    public static native int NameValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("kABSourceTypeProperty")
-    protected static native int TypeValue();
+    public static native int TypeValue();
     
 }

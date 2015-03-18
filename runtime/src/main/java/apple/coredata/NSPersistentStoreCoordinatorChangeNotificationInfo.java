@@ -30,21 +30,21 @@ public class NSPersistentStoreCoordinatorChangeNotificationInfo
      * @since Available in iOS 3.0 and later.
      */
     @GlobalConstant("NSAddedPersistentStoresKey")
-    protected static native NSString AddedKey();
+    public static native NSString AddedKey();
     /**
      * @since Available in iOS 3.0 and later.
      */
     @GlobalConstant("NSRemovedPersistentStoresKey")
-    protected static native NSString RemovedKey();
+    public static native NSString RemovedKey();
     /**
      * @since Available in iOS 3.0 and later.
      */
     @GlobalConstant("NSUUIDChangedPersistentStoresKey")
-    protected static native NSString UUIDChangedKey();
+    public static native NSString UUIDChangedKey();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("NSPersistentStoreUbiquitousTransitionTypeKey")
-    protected static native NSString UbiquitousTransitionTypeKey();
+    public static native NSString UbiquitousTransitionTypeKey();
     
 }

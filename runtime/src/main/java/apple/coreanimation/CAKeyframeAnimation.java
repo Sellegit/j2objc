@@ -27,7 +27,8 @@ public class CAKeyframeAnimation
 
     
     
-    public CAKeyframeAnimation() {}
+    @Mapping("init")
+    public CAKeyframeAnimation() { }
     
     
     @Mapping("values")

@@ -28,12 +28,13 @@ public class SKReceiptRefreshRequest
 
     
     
-    public SKReceiptRefreshRequest() {}
     /**
      * @since Available in iOS 7.0 and later.
      */
     @Mapping("initWithReceiptProperties:")
     public SKReceiptRefreshRequest(NSDictionary<?, ?> properties) { }
+    @Mapping("init")
+    public SKReceiptRefreshRequest() { }
     
     
     /**

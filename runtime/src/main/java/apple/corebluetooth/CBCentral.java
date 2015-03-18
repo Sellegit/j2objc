@@ -27,7 +27,8 @@ public class CBCentral
 
     
     
-    public CBCentral() {}
+    @Mapping("init")
+    public CBCentral() { }
     
     
     @Mapping("maximumUpdateValueLength")

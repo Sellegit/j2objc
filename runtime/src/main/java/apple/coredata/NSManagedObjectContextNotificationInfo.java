@@ -30,31 +30,31 @@ public class NSManagedObjectContextNotificationInfo
      * @since Available in iOS 3.0 and later.
      */
     @GlobalConstant("NSInsertedObjectsKey")
-    protected static native NSString InsertedObjectsKey();
+    public static native NSString InsertedObjectsKey();
     /**
      * @since Available in iOS 3.0 and later.
      */
     @GlobalConstant("NSUpdatedObjectsKey")
-    protected static native NSString UpdatedObjectsKey();
+    public static native NSString UpdatedObjectsKey();
     /**
      * @since Available in iOS 3.0 and later.
      */
     @GlobalConstant("NSDeletedObjectsKey")
-    protected static native NSString DeletedObjectsKey();
+    public static native NSString DeletedObjectsKey();
     /**
      * @since Available in iOS 3.0 and later.
      */
     @GlobalConstant("NSRefreshedObjectsKey")
-    protected static native NSString RefreshedObjectsKey();
+    public static native NSString RefreshedObjectsKey();
     /**
      * @since Available in iOS 3.0 and later.
      */
     @GlobalConstant("NSInvalidatedObjectsKey")
-    protected static native NSString InvalidatedObjectsKey();
+    public static native NSString InvalidatedObjectsKey();
     /**
      * @since Available in iOS 3.0 and later.
      */
     @GlobalConstant("NSInvalidatedAllObjectsKey")
-    protected static native NSString InvalidatedAllObjectsKey();
+    public static native NSString InvalidatedAllObjectsKey();
     
 }

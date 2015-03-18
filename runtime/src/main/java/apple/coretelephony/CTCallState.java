@@ -30,21 +30,21 @@ public class CTCallState
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("CTCallStateDialing")
-    protected static native NSString DialingValue();
+    public static native NSString DialingValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("CTCallStateIncoming")
-    protected static native NSString IncomingValue();
+    public static native NSString IncomingValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("CTCallStateConnected")
-    protected static native NSString ConnectedValue();
+    public static native NSString ConnectedValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("CTCallStateDisconnected")
-    protected static native NSString DisconnectedValue();
+    public static native NSString DisconnectedValue();
     
 }

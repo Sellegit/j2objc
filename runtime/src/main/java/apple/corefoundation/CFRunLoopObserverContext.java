@@ -24,7 +24,7 @@ import apple.foundation.*;
      {
 
     
-    protected CFRunLoopObserverContext() {}
+    private CFRunLoopObserverContext() {}
     
     
     @DotMapping("version")

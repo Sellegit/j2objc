@@ -26,7 +26,8 @@ public class EKObject
 
     
     
-    public EKObject() {}
+    @Mapping("init")
+    public EKObject() { }
     
     
     

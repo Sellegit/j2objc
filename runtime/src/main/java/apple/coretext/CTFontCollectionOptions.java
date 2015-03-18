@@ -30,6 +30,6 @@ public class CTFontCollectionOptions
      * @since Available in iOS 3.2 and later.
      */
     @GlobalConstant("kCTFontCollectionRemoveDuplicatesOption")
-    protected static native CFString RemoveDuplicates();
+    public static native CFString RemoveDuplicates();
     
 }

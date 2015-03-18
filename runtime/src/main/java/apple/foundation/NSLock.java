@@ -29,7 +29,8 @@ public class NSLock
 
     
     
-    public NSLock() {}
+    @Mapping("init")
+    public NSLock() { }
     
     
     /**

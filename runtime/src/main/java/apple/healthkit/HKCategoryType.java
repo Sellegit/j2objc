@@ -26,7 +26,8 @@ public class HKCategoryType
 
     
     
-    public HKCategoryType() {}
+    @Mapping("init")
+    public HKCategoryType() { }
     
     
     

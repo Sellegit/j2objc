@@ -26,9 +26,10 @@ public class HKStatisticsQuery
 
     
     
-    public HKStatisticsQuery() {}
     @Mapping("initWithQuantityType:quantitySamplePredicate:options:completionHandler:")
     public HKStatisticsQuery(HKQuantityType quantityType, NSPredicate quantitySamplePredicate, @Representing("HKStatisticsOptions") @MachineSizedUInt long options, @Block VoidBlock3<HKStatisticsQuery, HKStatistics, NSError> handler) { }
+    @Mapping("init")
+    public HKStatisticsQuery() { }
     
     
     

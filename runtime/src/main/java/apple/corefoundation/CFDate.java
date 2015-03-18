@@ -39,13 +39,13 @@ public class CFDate
     @GlobalFunction("CFDateGetTypeID")
     public static native @MachineSizedUInt long getClassTypeID();
     @GlobalFunction("CFDateCreate")
-    protected static native CFDate create(CFAllocator allocator, double at);
+    public static native CFDate create(CFAllocator allocator, double at);
     @GlobalFunction("CFDateGetAbsoluteTime")
     public static native double getAbsoluteTime(CFDate theDate);
     @GlobalFunction("CFDateGetTimeIntervalSinceDate")
     public static native double getTimeIntervalSinceDate(CFDate theDate, CFDate otherDate);
     @GlobalFunction("CFDateCompare")
-    private static native CFComparisonResult compareTo(CFDate theDate, CFDate otherDate, Todo context);
+    public static native CFComparisonResult compareTo(CFDate theDate, CFDate otherDate, Todo context);
     /**
      * @since Available in iOS 2.0 and later.
      * @deprecated Deprecated in iOS 8.0.

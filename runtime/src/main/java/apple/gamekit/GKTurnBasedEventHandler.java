@@ -29,7 +29,8 @@ public class GKTurnBasedEventHandler
 
     
     
-    public GKTurnBasedEventHandler() {}
+    @Mapping("init")
+    public GKTurnBasedEventHandler() { }
     
     
     /**

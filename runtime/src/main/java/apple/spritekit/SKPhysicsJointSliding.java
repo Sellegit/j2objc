@@ -31,7 +31,8 @@ public class SKPhysicsJointSliding
 
     
     
-    public SKPhysicsJointSliding() {}
+    @Mapping("init")
+    public SKPhysicsJointSliding() { }
     
     
     @Mapping("shouldEnableLimits")

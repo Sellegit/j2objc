@@ -29,7 +29,8 @@ public class NSHTTPCookieStorage
 
     
     
-    public NSHTTPCookieStorage() {}
+    @Mapping("init")
+    public NSHTTPCookieStorage() { }
     
     
     @Mapping("cookies")

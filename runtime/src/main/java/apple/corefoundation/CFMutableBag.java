@@ -28,18 +28,18 @@ public class CFMutableBag
     
     
     @GlobalFunction("CFBagCreateMutable")
-    protected static native CFMutableBag createMutable(CFAllocator allocator, @MachineSizedSInt long capacity, CFBagCallBacks callBacks);
+    public static native CFMutableBag createMutable(CFAllocator allocator, @MachineSizedSInt long capacity, CFBagCallBacks callBacks);
     @GlobalFunction("CFBagCreateMutableCopy")
-    protected static native CFMutableBag createMutableCopy(CFAllocator allocator, @MachineSizedSInt long capacity, CFBag theBag);
+    public static native CFMutableBag createMutableCopy(CFAllocator allocator, @MachineSizedSInt long capacity, CFBag theBag);
     @GlobalFunction("CFBagAddValue")
-    protected static native void addValue(CFBag theBag, Todo value);
+    public static native void addValue(CFBag theBag, Todo value);
     @GlobalFunction("CFBagReplaceValue")
-    protected static native void replaceValue(CFBag theBag, Todo value);
+    public static native void replaceValue(CFBag theBag, Todo value);
     @GlobalFunction("CFBagSetValue")
-    protected static native void setValue(CFBag theBag, Todo value);
+    public static native void setValue(CFBag theBag, Todo value);
     @GlobalFunction("CFBagRemoveValue")
-    protected static native void removeValue(CFBag theBag, Todo value);
+    public static native void removeValue(CFBag theBag, Todo value);
     @GlobalFunction("CFBagRemoveAllValues")
-    protected static native void removeAllValues(CFBag theBag);
+    public static native void removeAllValues(CFBag theBag);
     
 }

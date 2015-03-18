@@ -29,7 +29,8 @@ public class NSURLCredential
 
     
     
-    public NSURLCredential() {}
+    @Mapping("init")
+    public NSURLCredential() { }
     @Mapping("initWithUser:password:persistence:")
     public NSURLCredential(String user, String password, @Representing("NSURLCredentialPersistence") @MachineSizedUInt long persistence) { }
     /**

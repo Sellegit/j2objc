@@ -32,9 +32,10 @@ public class AVSpeechUtterance
 
     
     
-    public AVSpeechUtterance() {}
     @Mapping("initWithString:")
     public AVSpeechUtterance(String string) { }
+    @Mapping("init")
+    public AVSpeechUtterance() { }
     
     
     @Mapping("voice")

@@ -138,7 +138,7 @@ public class UIAccessibilityGlobals
     @GlobalFunction("UIAccessibilityConvertPathToScreenCoordinates")
     public static native UIBezierPath convertPathToScreenCoordinates(UIBezierPath path, UIView view);
     @GlobalFunction("UIAccessibilityPostNotification")
-    protected static native void postNotification(int notification, Object argument);
+    public static native void postNotification(int notification, Object argument);
     /**
      * @since Available in iOS 4.0 and later.
      */

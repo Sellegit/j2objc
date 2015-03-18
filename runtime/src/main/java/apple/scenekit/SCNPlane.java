@@ -30,7 +30,8 @@ public class SCNPlane
 
     
     
-    public SCNPlane() {}
+    @Mapping("init")
+    public SCNPlane() { }
     
     
     @Mapping("width")

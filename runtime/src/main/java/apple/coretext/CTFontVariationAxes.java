@@ -30,26 +30,26 @@ public class CTFontVariationAxes
      * @since Available in iOS 3.2 and later.
      */
     @GlobalConstant("kCTFontVariationAxisIdentifierKey")
-    protected static native CFString IdentifierKey();
+    public static native CFString IdentifierKey();
     /**
      * @since Available in iOS 3.2 and later.
      */
     @GlobalConstant("kCTFontVariationAxisMinimumValueKey")
-    protected static native CFString MinimumValueKey();
+    public static native CFString MinimumValueKey();
     /**
      * @since Available in iOS 3.2 and later.
      */
     @GlobalConstant("kCTFontVariationAxisMaximumValueKey")
-    protected static native CFString MaximumValueKey();
+    public static native CFString MaximumValueKey();
     /**
      * @since Available in iOS 3.2 and later.
      */
     @GlobalConstant("kCTFontVariationAxisDefaultValueKey")
-    protected static native CFString DefaultValueKey();
+    public static native CFString DefaultValueKey();
     /**
      * @since Available in iOS 3.2 and later.
      */
     @GlobalConstant("kCTFontVariationAxisNameKey")
-    protected static native CFString NameKey();
+    public static native CFString NameKey();
     
 }

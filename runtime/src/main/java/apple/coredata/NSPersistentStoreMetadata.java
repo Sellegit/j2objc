@@ -30,26 +30,26 @@ public class NSPersistentStoreMetadata
      * @since Available in iOS 3.0 and later.
      */
     @GlobalConstant("NSStoreTypeKey")
-    protected static native NSString TypeValue();
+    public static native NSString TypeValue();
     /**
      * @since Available in iOS 3.0 and later.
      */
     @GlobalConstant("NSStoreUUIDKey")
-    protected static native NSString UUIDValue();
+    public static native NSString UUIDValue();
     /**
      * @since Available in iOS 3.0 and later.
      */
     @GlobalConstant("NSStoreModelVersionHashesKey")
-    protected static native NSString ModelVersionHashesValue();
+    public static native NSString ModelVersionHashesValue();
     /**
      * @since Available in iOS 3.0 and later.
      */
     @GlobalConstant("NSStoreModelVersionIdentifiersKey")
-    protected static native NSString ModelVersionIdentifiersValue();
+    public static native NSString ModelVersionIdentifiersValue();
     /**
      * @since Available in iOS 3.0 and later.
      */
     @GlobalConstant("NSPersistentStoreOSCompatibility")
-    protected static native NSString OSCompatibilityValue();
+    public static native NSString OSCompatibilityValue();
     
 }

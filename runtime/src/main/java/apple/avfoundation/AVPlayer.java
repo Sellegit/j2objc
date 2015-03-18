@@ -32,11 +32,12 @@ public class AVPlayer
 
     
     
-    public AVPlayer() {}
     @Mapping("initWithURL:")
     public AVPlayer(NSURL URL) { }
     @Mapping("initWithPlayerItem:")
     public AVPlayer(AVPlayerItem item) { }
+    @Mapping("init")
+    public AVPlayer() { }
     
     
     @Mapping("status")

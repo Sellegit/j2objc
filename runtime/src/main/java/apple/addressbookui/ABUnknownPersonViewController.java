@@ -28,9 +28,10 @@ public class ABUnknownPersonViewController
 
     
     
-    public ABUnknownPersonViewController() {}
     @Mapping("initWithNibName:bundle:")
     public ABUnknownPersonViewController(String nibNameOrNil, NSBundle nibBundleOrNil) { }
+    @Mapping("init")
+    public ABUnknownPersonViewController() { }
     
     
     @Mapping("unknownPersonViewDelegate")

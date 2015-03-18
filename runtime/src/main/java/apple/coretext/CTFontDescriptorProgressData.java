@@ -30,41 +30,41 @@ public class CTFontDescriptorProgressData
      * @since Available in iOS 6.0 and later.
      */
     @GlobalConstant("kCTFontDescriptorMatchingSourceDescriptor")
-    protected static native CFString SourceDescriptor();
+    public static native CFString SourceDescriptor();
     /**
      * @since Available in iOS 6.0 and later.
      */
     @GlobalConstant("kCTFontDescriptorMatchingDescriptors")
-    protected static native CFString Descriptors();
+    public static native CFString Descriptors();
     /**
      * @since Available in iOS 6.0 and later.
      */
     @GlobalConstant("kCTFontDescriptorMatchingResult")
-    protected static native CFString Result();
+    public static native CFString Result();
     /**
      * @since Available in iOS 6.0 and later.
      */
     @GlobalConstant("kCTFontDescriptorMatchingPercentage")
-    protected static native CFString Percentage();
+    public static native CFString Percentage();
     /**
      * @since Available in iOS 6.0 and later.
      */
     @GlobalConstant("kCTFontDescriptorMatchingCurrentAssetSize")
-    protected static native CFString CurrentAssetSize();
+    public static native CFString CurrentAssetSize();
     /**
      * @since Available in iOS 6.0 and later.
      */
     @GlobalConstant("kCTFontDescriptorMatchingTotalDownloadedSize")
-    protected static native CFString TotalDownloadedSize();
+    public static native CFString TotalDownloadedSize();
     /**
      * @since Available in iOS 6.0 and later.
      */
     @GlobalConstant("kCTFontDescriptorMatchingTotalAssetSize")
-    protected static native CFString TotalAssetSize();
+    public static native CFString TotalAssetSize();
     /**
      * @since Available in iOS 6.0 and later.
      */
     @GlobalConstant("kCTFontDescriptorMatchingError")
-    protected static native CFString Error();
+    public static native CFString Error();
     
 }

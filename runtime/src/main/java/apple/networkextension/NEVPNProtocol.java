@@ -26,7 +26,8 @@ public class NEVPNProtocol
 
     
     
-    public NEVPNProtocol() {}
+    @Mapping("init")
+    public NEVPNProtocol() { }
     
     
     /**

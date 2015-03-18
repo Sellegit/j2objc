@@ -31,9 +31,10 @@ public class UIActionSheet
 
     
     
-    public UIActionSheet() {}
     @Mapping("initWithFrame:")
     public UIActionSheet(CGRect frame) { }
+    @Mapping("init")
+    public UIActionSheet() { }
     
     
     @Mapping("delegate")

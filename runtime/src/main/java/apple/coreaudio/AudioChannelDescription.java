@@ -23,7 +23,7 @@ public class AudioChannelDescription
      {
 
     
-    protected AudioChannelDescription() {}
+    private AudioChannelDescription() {}
     
     
     @DotMapping("mChannelLabel")

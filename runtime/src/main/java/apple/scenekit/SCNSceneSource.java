@@ -30,11 +30,12 @@ public class SCNSceneSource
 
     
     
-    public SCNSceneSource() {}
     @Mapping("initWithURL:options:")
     public SCNSceneSource(NSURL url, NSDictionary<?, ?> options) { }
     @Mapping("initWithData:options:")
     public SCNSceneSource(NSData data, NSDictionary<?, ?> options) { }
+    @Mapping("init")
+    public SCNSceneSource() { }
     
     
     @Mapping("url")
@@ -45,7 +46,7 @@ public class SCNSceneSource
     
     
     @Mapping("sceneWithOptions:error:")
-    protected native SCNScene newScene(NSDictionary<?, ?> options, Todo error);
+    public native SCNScene newScene(NSDictionary<?, ?> options, Todo error);
     @Mapping("propertyForKey:")
     public native Object getProperty(String key);
     @Mapping("entriesPassingTest:")

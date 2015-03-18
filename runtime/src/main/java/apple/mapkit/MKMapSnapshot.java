@@ -29,7 +29,8 @@ public class MKMapSnapshot
 
     
     
-    public MKMapSnapshot() {}
+    @Mapping("init")
+    public MKMapSnapshot() { }
     
     
     @Mapping("image")

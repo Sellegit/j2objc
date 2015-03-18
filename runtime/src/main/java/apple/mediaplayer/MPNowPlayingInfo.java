@@ -31,36 +31,36 @@ public class MPNowPlayingInfo
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("MPNowPlayingInfoPropertyElapsedPlaybackTime")
-    protected static native NSString ElapsedPlaybackTime();
+    public static native NSString ElapsedPlaybackTime();
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("MPNowPlayingInfoPropertyPlaybackRate")
-    protected static native NSString PlaybackRate();
+    public static native NSString PlaybackRate();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("MPNowPlayingInfoPropertyDefaultPlaybackRate")
-    protected static native NSString DefaultPlaybackRate();
+    public static native NSString DefaultPlaybackRate();
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("MPNowPlayingInfoPropertyPlaybackQueueIndex")
-    protected static native NSString PlaybackQueueIndex();
+    public static native NSString PlaybackQueueIndex();
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("MPNowPlayingInfoPropertyPlaybackQueueCount")
-    protected static native NSString PlaybackQueueCount();
+    public static native NSString PlaybackQueueCount();
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("MPNowPlayingInfoPropertyChapterNumber")
-    protected static native NSString ChapterNumber();
+    public static native NSString ChapterNumber();
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("MPNowPlayingInfoPropertyChapterCount")
-    protected static native NSString ChapterCount();
+    public static native NSString ChapterCount();
     
 }

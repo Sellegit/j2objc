@@ -32,10 +32,10 @@ public class NSUserDefaultsDomain
     
     
     @GlobalConstant("NSGlobalDomain")
-    protected static native String GlobalValue();
+    public static native String GlobalValue();
     @GlobalConstant("NSArgumentDomain")
-    protected static native String ArgumentValue();
+    public static native String ArgumentValue();
     @GlobalConstant("NSRegistrationDomain")
-    protected static native String RegistrationValue();
+    public static native String RegistrationValue();
     
 }

@@ -25,7 +25,7 @@ public class CVPlanarPixelBufferInfo
      {
 
     
-    protected CVPlanarPixelBufferInfo() {}
+    private CVPlanarPixelBufferInfo() {}
     
     
     @DotMapping("componentInfo")

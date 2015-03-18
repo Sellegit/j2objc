@@ -35,26 +35,26 @@ public class NSURLFileProperty
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("NSURLFileSizeKey")
-    protected static native NSString FileSizeValue();
+    public static native NSString FileSizeValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("NSURLFileAllocatedSizeKey")
-    protected static native NSString FileAllocatedSizeValue();
+    public static native NSString FileAllocatedSizeValue();
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("NSURLTotalFileSizeKey")
-    protected static native NSString TotalFileSizeValue();
+    public static native NSString TotalFileSizeValue();
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("NSURLTotalFileAllocatedSizeKey")
-    protected static native NSString TotalFileAllocatedSizeValue();
+    public static native NSString TotalFileAllocatedSizeValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("NSURLIsAliasFileKey")
-    protected static native NSString IsAliasFileValue();
+    public static native NSString IsAliasFileValue();
     
 }

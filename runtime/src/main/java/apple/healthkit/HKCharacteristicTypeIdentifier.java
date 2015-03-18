@@ -30,16 +30,16 @@ public class HKCharacteristicTypeIdentifier
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("HKCharacteristicTypeIdentifierBiologicalSex")
-    protected static native NSString BiologicalSexValue();
+    public static native NSString BiologicalSexValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("HKCharacteristicTypeIdentifierBloodType")
-    protected static native NSString BloodTypeValue();
+    public static native NSString BloodTypeValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("HKCharacteristicTypeIdentifierDateOfBirth")
-    protected static native NSString DateOfBirthValue();
+    public static native NSString DateOfBirthValue();
     
 }

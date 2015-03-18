@@ -30,7 +30,8 @@ public class SCNAnimationEvent
 
     
     
-    public SCNAnimationEvent() {}
+    @Mapping("init")
+    public SCNAnimationEvent() { }
     
     
     

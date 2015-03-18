@@ -29,9 +29,10 @@ public class NSTimer
 
     
     
-    public NSTimer() {}
     @Mapping("initWithFireDate:interval:target:selector:userInfo:repeats:")
     public NSTimer(NSDate date, double ti, Object t, Selector s, Object ui, boolean rep) { }
+    @Mapping("init")
+    public NSTimer() { }
     
     
     @Mapping("fireDate")

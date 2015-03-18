@@ -32,32 +32,32 @@ public class NSURLAuthenticationMethod
     
     
     @GlobalConstant("NSURLAuthenticationMethodDefault")
-    protected static native NSString DefaultValue();
+    public static native NSString DefaultValue();
     @GlobalConstant("NSURLAuthenticationMethodHTTPBasic")
-    protected static native NSString HTTPBasicValue();
+    public static native NSString HTTPBasicValue();
     @GlobalConstant("NSURLAuthenticationMethodHTTPDigest")
-    protected static native NSString HTTPDigestValue();
+    public static native NSString HTTPDigestValue();
     @GlobalConstant("NSURLAuthenticationMethodHTMLForm")
-    protected static native NSString HTMLFormValue();
+    public static native NSString HTMLFormValue();
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalConstant("NSURLAuthenticationMethodNTLM")
-    protected static native NSString NTLMValue();
+    public static native NSString NTLMValue();
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalConstant("NSURLAuthenticationMethodNegotiate")
-    protected static native NSString NegotiateValue();
+    public static native NSString NegotiateValue();
     /**
      * @since Available in iOS 3.0 and later.
      */
     @GlobalConstant("NSURLAuthenticationMethodClientCertificate")
-    protected static native NSString ClientCertificateValue();
+    public static native NSString ClientCertificateValue();
     /**
      * @since Available in iOS 3.0 and later.
      */
     @GlobalConstant("NSURLAuthenticationMethodServerTrust")
-    protected static native NSString ServerTrustValue();
+    public static native NSString ServerTrustValue();
     
 }

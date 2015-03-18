@@ -27,7 +27,8 @@ public class CATextLayer
 
     
     
-    public CATextLayer() {}
+    @Mapping("init")
+    public CATextLayer() { }
     @Mapping("initWithLayer:")
     public CATextLayer(Object layer) { }
     

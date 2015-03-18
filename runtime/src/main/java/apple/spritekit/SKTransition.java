@@ -31,7 +31,8 @@ public class SKTransition
 
     
     
-    public SKTransition() {}
+    @Mapping("init")
+    public SKTransition() { }
     
     
     @Mapping("pausesIncomingScene")

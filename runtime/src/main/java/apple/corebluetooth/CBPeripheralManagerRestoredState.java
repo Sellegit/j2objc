@@ -31,11 +31,11 @@ public class CBPeripheralManagerRestoredState
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("CBPeripheralManagerRestoredStateServicesKey")
-    protected static native NSString ServicesKey();
+    public static native NSString ServicesKey();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("CBPeripheralManagerRestoredStateAdvertisementDataKey")
-    protected static native NSString AdvertisementDataKey();
+    public static native NSString AdvertisementDataKey();
     
 }

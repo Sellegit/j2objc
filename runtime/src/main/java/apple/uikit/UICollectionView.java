@@ -31,11 +31,12 @@ public class UICollectionView
 
     
     
-    public UICollectionView() {}
     @Mapping("initWithFrame:collectionViewLayout:")
     public UICollectionView(CGRect frame, UICollectionViewLayout layout) { }
     @Mapping("initWithFrame:")
     public UICollectionView(CGRect frame) { }
+    @Mapping("init")
+    public UICollectionView() { }
     
     
     @Mapping("collectionViewLayout")

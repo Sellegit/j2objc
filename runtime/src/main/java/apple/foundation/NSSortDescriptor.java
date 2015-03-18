@@ -29,11 +29,12 @@ public class NSSortDescriptor
 
     
     
-    public NSSortDescriptor() {}
     @Mapping("initWithKey:ascending:")
     public NSSortDescriptor(String key, boolean ascending) { }
     @Mapping("initWithKey:ascending:selector:")
     public NSSortDescriptor(String key, boolean ascending, Selector selector) { }
+    @Mapping("init")
+    public NSSortDescriptor() { }
     
     
     @Mapping("key")

@@ -23,7 +23,7 @@ import apple.foundation.*;
      {
 
     
-    protected CFHostClientContext() {}
+    private CFHostClientContext() {}
     
     
     @DotMapping("version")

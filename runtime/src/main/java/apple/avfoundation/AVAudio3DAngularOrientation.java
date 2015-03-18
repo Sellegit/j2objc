@@ -29,7 +29,7 @@ public class AVAudio3DAngularOrientation
      {
 
     
-    protected AVAudio3DAngularOrientation() {}
+    private AVAudio3DAngularOrientation() {}
     
     
     @DotMapping("yaw")

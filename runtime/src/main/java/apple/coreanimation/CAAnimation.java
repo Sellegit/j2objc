@@ -27,7 +27,8 @@ public class CAAnimation
 
     
     
-    public CAAnimation() {}
+    @Mapping("init")
+    public CAAnimation() { }
     
     
     @Mapping("timingFunction")

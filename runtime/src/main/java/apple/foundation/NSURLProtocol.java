@@ -29,9 +29,10 @@ public class NSURLProtocol
 
     
     
-    public NSURLProtocol() {}
     @Mapping("initWithRequest:cachedResponse:client:")
     public NSURLProtocol(NSURLRequest request, NSCachedURLResponse cachedResponse, NSURLProtocolClient client) { }
+    @Mapping("init")
+    public NSURLProtocol() { }
     /**
      * @since Available in iOS 8.0 and later.
      */
@@ -66,7 +67,7 @@ public class NSURLProtocol
     @Mapping("propertyForKey:inRequest:")
     public static native Object getPropertyInRequest(String key, NSURLRequest request);
     @Mapping("setProperty:forKey:inRequest:")
-    protected static native void setPropertyInRequest(Object value, String key, NSMutableURLRequest request);
+    public static native void setPropertyInRequest(Object value, String key, NSMutableURLRequest request);
     @Mapping("removePropertyForKey:inRequest:")
     public static native void removePropertyInRequest(String key, NSMutableURLRequest request);
     /**

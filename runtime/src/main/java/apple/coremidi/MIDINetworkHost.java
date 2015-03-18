@@ -26,7 +26,8 @@ public class MIDINetworkHost
 
     
     
-    public MIDINetworkHost() {}
+    @Mapping("init")
+    public MIDINetworkHost() { }
     
     
     @Mapping("name")

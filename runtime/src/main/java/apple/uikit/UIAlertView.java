@@ -31,9 +31,10 @@ public class UIAlertView
 
     
     
-    public UIAlertView() {}
     @Mapping("initWithFrame:")
     public UIAlertView(CGRect frame) { }
+    @Mapping("init")
+    public UIAlertView() { }
     
     
     @Mapping("delegate")

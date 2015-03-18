@@ -31,7 +31,8 @@ public class SKEffectNode
 
     
     
-    public SKEffectNode() {}
+    @Mapping("init")
+    public SKEffectNode() { }
     @Mapping("initWithCoder:")
     public SKEffectNode(NSCoder aDecoder) { }
     

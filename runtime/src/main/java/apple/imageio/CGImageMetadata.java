@@ -59,7 +59,7 @@ public class CGImageMetadata
      * @since Available in iOS 7.0 and later.
      */
     @GlobalFunction("CGImageMetadataRegisterNamespaceForPrefix")
-    protected static native boolean registerNamespaceForPrefix(CGImageMetadata metadata, String xmlns, String prefix, Todo err);
+    public static native boolean registerNamespaceForPrefix(CGImageMetadata metadata, String xmlns, String prefix, Todo err);
     /**
      * @since Available in iOS 7.0 and later.
      */

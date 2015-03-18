@@ -31,7 +31,8 @@ public class UIUserNotificationCategory
 
     
     
-    public UIUserNotificationCategory() {}
+    @Mapping("init")
+    public UIUserNotificationCategory() { }
     
     
     @Mapping("identifier")

@@ -32,7 +32,8 @@ public class AVCaptureBracketedStillImageSettings
 
     
     
-    public AVCaptureBracketedStillImageSettings() {}
+    @Mapping("init")
+    public AVCaptureBracketedStillImageSettings() { }
     
     
     

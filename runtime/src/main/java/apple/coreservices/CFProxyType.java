@@ -30,36 +30,36 @@ public class CFProxyType
      * @since Available in iOS 2.0 and later.
      */
     @GlobalConstant("kCFProxyTypeNone")
-    protected static native CFString NoneValue();
+    public static native CFString NoneValue();
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalConstant("kCFProxyTypeHTTP")
-    protected static native CFString HTTPValue();
+    public static native CFString HTTPValue();
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalConstant("kCFProxyTypeHTTPS")
-    protected static native CFString HTTPSValue();
+    public static native CFString HTTPSValue();
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalConstant("kCFProxyTypeSOCKS")
-    protected static native CFString SOCKSValue();
+    public static native CFString SOCKSValue();
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalConstant("kCFProxyTypeFTP")
-    protected static native CFString FTPValue();
+    public static native CFString FTPValue();
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalConstant("kCFProxyTypeAutoConfigurationURL")
-    protected static native CFString AutoConfigurationURLValue();
+    public static native CFString AutoConfigurationURLValue();
     /**
      * @since Available in iOS 3.0 and later.
      */
     @GlobalConstant("kCFProxyTypeAutoConfigurationJavaScript")
-    protected static native CFString AutoConfigurationJavaScriptValue();
+    public static native CFString AutoConfigurationJavaScriptValue();
     
 }

@@ -33,10 +33,10 @@ public class SCNPhysicsTestOptions
     
     
     @GlobalConstant("SCNPhysicsTestCollisionBitMaskKey")
-    protected static native NSString CollisionBitMaskKey();
+    public static native NSString CollisionBitMaskKey();
     @GlobalConstant("SCNPhysicsTestSearchModeKey")
-    protected static native NSString SearchModeKey();
+    public static native NSString SearchModeKey();
     @GlobalConstant("SCNPhysicsTestBackfaceCullingKey")
-    protected static native NSString BackfaceCullingKey();
+    public static native NSString BackfaceCullingKey();
     
 }

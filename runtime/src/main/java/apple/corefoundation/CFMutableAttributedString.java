@@ -28,9 +28,9 @@ public class CFMutableAttributedString
     
     
     @GlobalFunction("CFAttributedStringCreateMutableCopy")
-    protected static native CFMutableAttributedString createMutableCopy(CFAllocator alloc, @MachineSizedSInt long maxLength, CFAttributedString aStr);
+    public static native CFMutableAttributedString createMutableCopy(CFAllocator alloc, @MachineSizedSInt long maxLength, CFAttributedString aStr);
     @GlobalFunction("CFAttributedStringCreateMutable")
-    protected static native CFMutableAttributedString createMutable(CFAllocator alloc, @MachineSizedSInt long maxLength);
+    public static native CFMutableAttributedString createMutable(CFAllocator alloc, @MachineSizedSInt long maxLength);
     @GlobalFunction("CFAttributedStringReplaceString")
     public static native void replaceString(CFAttributedString aStr, CFRange range, String replacement);
     @GlobalFunction("CFAttributedStringSetAttributes")

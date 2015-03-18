@@ -31,7 +31,8 @@ public class NSLayoutManager
 
     
     
-    public NSLayoutManager() {}
+    @Mapping("init")
+    public NSLayoutManager() { }
     
     
     @Mapping("textStorage")
@@ -190,9 +191,9 @@ public class NSLayoutManager
     @Mapping("drawGlyphsForGlyphRange:atPoint:")
     public native void drawGlyphs(NSRange glyphsToShow, CGPoint origin);
     @Mapping("showCGGlyphs:positions:count:font:matrix:attributes:inContext:")
-    protected native void showCGGlyphs(Todo glyphs, CGPoint positions, @MachineSizedUInt long glyphCount, UIFont font, CGAffineTransform textMatrix, NSDictionary<?, ?> attributes, CGContext graphicsContext);
+    public native void showCGGlyphs(Todo glyphs, CGPoint positions, @MachineSizedUInt long glyphCount, UIFont font, CGAffineTransform textMatrix, NSDictionary<?, ?> attributes, CGContext graphicsContext);
     @Mapping("fillBackgroundRectArray:count:forCharacterRange:color:")
-    protected native void fillBackground(CGRect rectArray, @MachineSizedUInt long rectCount, NSRange charRange, UIColor color);
+    public native void fillBackground(CGRect rectArray, @MachineSizedUInt long rectCount, NSRange charRange, UIColor color);
     @Mapping("drawUnderlineForGlyphRange:underlineType:baselineOffset:lineFragmentRect:lineFragmentGlyphRange:containerOrigin:")
     public native void drawUnderline(NSRange glyphRange, @Representing("NSUnderlineStyle") @MachineSizedSInt long underlineVal, @MachineSizedFloat double baselineOffset, CGRect lineRect, NSRange lineGlyphRange, CGPoint containerOrigin);
     @Mapping("underlineGlyphRange:underlineType:lineFragmentRect:lineFragmentGlyphRange:containerOrigin:")

@@ -27,7 +27,8 @@ public class GKAchievementDescription
 
     
     
-    public GKAchievementDescription() {}
+    @Mapping("init")
+    public GKAchievementDescription() { }
     
     
     @Mapping("identifier")

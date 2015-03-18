@@ -35,16 +35,16 @@ public class NSMetadataQueryUpdatedItems
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("NSMetadataQueryUpdateAddedItemsKey")
-    protected static native NSString UpdateAddedItemsKey();
+    public static native NSString UpdateAddedItemsKey();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("NSMetadataQueryUpdateChangedItemsKey")
-    protected static native NSString UpdateChangedItemsKey();
+    public static native NSString UpdateChangedItemsKey();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("NSMetadataQueryUpdateRemovedItemsKey")
-    protected static native NSString UpdateRemovedItemsKey();
+    public static native NSString UpdateRemovedItemsKey();
     
 }

@@ -31,9 +31,10 @@ public class UIDocumentPickerExtensionViewController
 
     
     
-    public UIDocumentPickerExtensionViewController() {}
     @Mapping("initWithNibName:bundle:")
     public UIDocumentPickerExtensionViewController(String nibNameOrNil, NSBundle nibBundleOrNil) { }
+    @Mapping("init")
+    public UIDocumentPickerExtensionViewController() { }
     
     
     @Mapping("documentPickerMode")

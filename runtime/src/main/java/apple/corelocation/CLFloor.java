@@ -28,7 +28,8 @@ public class CLFloor
 
     
     
-    public CLFloor() {}
+    @Mapping("init")
+    public CLFloor() { }
     
     
     @Mapping("level")

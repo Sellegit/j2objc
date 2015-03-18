@@ -31,7 +31,8 @@ public class UITouch
 
     
     
-    public UITouch() {}
+    @Mapping("init")
+    public UITouch() { }
     
     
     @Mapping("timestamp")

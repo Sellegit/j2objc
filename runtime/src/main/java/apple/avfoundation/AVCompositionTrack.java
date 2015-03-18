@@ -32,7 +32,8 @@ public class AVCompositionTrack
 
     
     
-    public AVCompositionTrack() {}
+    @Mapping("init")
+    public AVCompositionTrack() { }
     
     
     @Mapping("segments")

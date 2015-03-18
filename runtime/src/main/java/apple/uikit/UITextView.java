@@ -31,7 +31,6 @@ public class UITextView
 
     
     
-    public UITextView() {}
     /**
      * @since Available in iOS 7.0 and later.
      */
@@ -39,6 +38,8 @@ public class UITextView
     public UITextView(CGRect frame, NSTextContainer textContainer) { }
     @Mapping("initWithFrame:")
     public UITextView(CGRect frame) { }
+    @Mapping("init")
+    public UITextView() { }
     
     
     @Mapping("delegate")

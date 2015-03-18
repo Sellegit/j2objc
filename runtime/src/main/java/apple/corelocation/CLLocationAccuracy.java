@@ -32,16 +32,16 @@ public class CLLocationAccuracy
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("kCLLocationAccuracyBestForNavigation")
-    protected static native double BestForNavigationValue();
+    public static native double BestForNavigationValue();
     @GlobalConstant("kCLLocationAccuracyBest")
-    protected static native double BestValue();
+    public static native double BestValue();
     @GlobalConstant("kCLLocationAccuracyNearestTenMeters")
-    protected static native double NearestTenMetersValue();
+    public static native double NearestTenMetersValue();
     @GlobalConstant("kCLLocationAccuracyHundredMeters")
-    protected static native double HundredMetersValue();
+    public static native double HundredMetersValue();
     @GlobalConstant("kCLLocationAccuracyKilometer")
-    protected static native double KilometerValue();
+    public static native double KilometerValue();
     @GlobalConstant("kCLLocationAccuracyThreeKilometers")
-    protected static native double ThreeKilometersValue();
+    public static native double ThreeKilometersValue();
     
 }

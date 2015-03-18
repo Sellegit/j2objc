@@ -31,11 +31,12 @@ public class NSItemProvider
 
     
     
-    public NSItemProvider() {}
     @Mapping("initWithItem:typeIdentifier:")
     public NSItemProvider(Object item, String typeIdentifier) { }
     @Mapping("initWithContentsOfURL:")
     public NSItemProvider(NSURL fileURL) { }
+    @Mapping("init")
+    public NSItemProvider() { }
     
     
     @Mapping("registeredTypeIdentifiers")

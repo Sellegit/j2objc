@@ -34,53 +34,53 @@ public final class UIAccessibilityTraits
     
     
     @GlobalConstant("UIAccessibilityTraitNone")
-    protected static native long NoneValue();
+    public static native long NoneValue();
     @GlobalConstant("UIAccessibilityTraitButton")
-    protected static native long ButtonValue();
+    public static native long ButtonValue();
     @GlobalConstant("UIAccessibilityTraitLink")
-    protected static native long LinkValue();
+    public static native long LinkValue();
     /**
      * @since Available in iOS 6.0 and later.
      */
     @GlobalConstant("UIAccessibilityTraitHeader")
-    protected static native long HeaderValue();
+    public static native long HeaderValue();
     @GlobalConstant("UIAccessibilityTraitSearchField")
-    protected static native long SearchFieldValue();
+    public static native long SearchFieldValue();
     @GlobalConstant("UIAccessibilityTraitImage")
-    protected static native long ImageValue();
+    public static native long ImageValue();
     @GlobalConstant("UIAccessibilityTraitSelected")
-    protected static native long SelectedValue();
+    public static native long SelectedValue();
     @GlobalConstant("UIAccessibilityTraitPlaysSound")
-    protected static native long PlaysSoundValue();
+    public static native long PlaysSoundValue();
     @GlobalConstant("UIAccessibilityTraitKeyboardKey")
-    protected static native long KeyboardKeyValue();
+    public static native long KeyboardKeyValue();
     @GlobalConstant("UIAccessibilityTraitStaticText")
-    protected static native long StaticTextValue();
+    public static native long StaticTextValue();
     @GlobalConstant("UIAccessibilityTraitSummaryElement")
-    protected static native long SummaryElementValue();
+    public static native long SummaryElementValue();
     @GlobalConstant("UIAccessibilityTraitNotEnabled")
-    protected static native long NotEnabledValue();
+    public static native long NotEnabledValue();
     @GlobalConstant("UIAccessibilityTraitUpdatesFrequently")
-    protected static native long UpdatesFrequentlyValue();
+    public static native long UpdatesFrequentlyValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("UIAccessibilityTraitStartsMediaSession")
-    protected static native long StartsMediaSessionValue();
+    public static native long StartsMediaSessionValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("UIAccessibilityTraitAdjustable")
-    protected static native long AdjustableValue();
+    public static native long AdjustableValue();
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("UIAccessibilityTraitAllowsDirectInteraction")
-    protected static native long AllowsDirectInteractionValue();
+    public static native long AllowsDirectInteractionValue();
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("UIAccessibilityTraitCausesPageTurn")
-    protected static native long CausesPageTurnValue();
+    public static native long CausesPageTurnValue();
     
 }

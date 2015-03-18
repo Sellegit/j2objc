@@ -28,9 +28,10 @@ public class HKAnchoredObjectQuery
     public static final int NoAnchor = 0;
     
     
-    public HKAnchoredObjectQuery() {}
     @Mapping("initWithType:predicate:anchor:limit:completionHandler:")
     public HKAnchoredObjectQuery(HKSampleType type, NSPredicate predicate, @MachineSizedUInt long anchor, @MachineSizedUInt long limit, Todo handler) { }
+    @Mapping("init")
+    public HKAnchoredObjectQuery() { }
     
     
     

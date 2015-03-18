@@ -61,7 +61,7 @@ public class CMClock
      * @since Available in iOS 6.0 and later.
      */
     @GlobalFunction("CMClockGetAnchorTime")
-    protected static native int getAnchorTime(CMClock clock, CMTime outClockTime, CMTime outReferenceClockTime);
+    public static native int getAnchorTime(CMClock clock, CMTime outClockTime, CMTime outReferenceClockTime);
     /**
      * @since Available in iOS 6.0 and later.
      */
@@ -76,6 +76,6 @@ public class CMClock
      * @since Available in iOS 6.0 and later.
      */
     @GlobalFunction("CMAudioClockCreate")
-    protected static native int createAudioClock(CFAllocator allocator, Todo clockOut);
+    public static native int createAudioClock(CFAllocator allocator, Todo clockOut);
     
 }

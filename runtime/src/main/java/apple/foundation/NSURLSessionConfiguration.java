@@ -31,7 +31,8 @@ public class NSURLSessionConfiguration
 
     
     
-    public NSURLSessionConfiguration() {}
+    @Mapping("init")
+    public NSURLSessionConfiguration() { }
     
     
     @Mapping("identifier")

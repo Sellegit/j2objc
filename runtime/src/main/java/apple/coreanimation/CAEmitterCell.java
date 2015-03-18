@@ -27,7 +27,8 @@ public class CAEmitterCell
 
     
     
-    public CAEmitterCell() {}
+    @Mapping("init")
+    public CAEmitterCell() { }
     
     
     @Mapping("name")

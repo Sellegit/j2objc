@@ -35,26 +35,26 @@ public class NSValueTransformerName
      * @since Available in iOS 3.0 and later.
      */
     @GlobalConstant("NSNegateBooleanTransformerName")
-    protected static native String NegateBooleanValue();
+    public static native String NegateBooleanValue();
     /**
      * @since Available in iOS 3.0 and later.
      */
     @GlobalConstant("NSIsNilTransformerName")
-    protected static native String IsNilValue();
+    public static native String IsNilValue();
     /**
      * @since Available in iOS 3.0 and later.
      */
     @GlobalConstant("NSIsNotNilTransformerName")
-    protected static native String IsNotNilValue();
+    public static native String IsNotNilValue();
     /**
      * @since Available in iOS 3.0 and later.
      */
     @GlobalConstant("NSUnarchiveFromDataTransformerName")
-    protected static native String UnarchiveFromDataValue();
+    public static native String UnarchiveFromDataValue();
     /**
      * @since Available in iOS 3.0 and later.
      */
     @GlobalConstant("NSKeyedUnarchiveFromDataTransformerName")
-    protected static native String KeyedUnarchiveFromDataValue();
+    public static native String KeyedUnarchiveFromDataValue();
     
 }

@@ -32,9 +32,9 @@ public class CFWriteStream
     @GlobalFunction("CFWriteStreamGetTypeID")
     public static native @MachineSizedUInt long getClassTypeID();
     @GlobalFunction("CFWriteStreamCreateWithBuffer")
-    protected static native CFWriteStream create(CFAllocator alloc, Todo buffer, @MachineSizedSInt long bufferCapacity);
+    public static native CFWriteStream create(CFAllocator alloc, Todo buffer, @MachineSizedSInt long bufferCapacity);
     @GlobalFunction("CFWriteStreamCreateWithFile")
-    protected static native CFWriteStream create(CFAllocator alloc, CFURL fileURL);
+    public static native CFWriteStream create(CFAllocator alloc, CFURL fileURL);
     @GlobalFunction("CFWriteStreamGetStatus")
     public static native CFStreamStatus getStatus(CFWriteStream stream);
     /**
@@ -49,13 +49,13 @@ public class CFWriteStream
     @GlobalFunction("CFWriteStreamCanAcceptBytes")
     public static native boolean canAcceptBytes(CFWriteStream stream);
     @GlobalFunction("CFWriteStreamWrite")
-    private static native @MachineSizedSInt long write(CFWriteStream stream, Todo buffer, @MachineSizedSInt long bufferLength);
+    public static native @MachineSizedSInt long write(CFWriteStream stream, Todo buffer, @MachineSizedSInt long bufferLength);
     @GlobalFunction("CFWriteStreamCopyProperty")
     public static native CFType getProperty(CFWriteStream stream, String propertyName);
     @GlobalFunction("CFWriteStreamSetProperty")
     public static native boolean setProperty(CFWriteStream stream, String propertyName, CFType propertyValue);
     @GlobalFunction("CFWriteStreamSetClient")
-    private static native boolean setClient(CFWriteStream stream, @MachineSizedUInt long streamEvents, FunctionPtr clientCB, CFStreamClientContext clientContext);
+    public static native boolean setClient(CFWriteStream stream, @MachineSizedUInt long streamEvents, FunctionPtr clientCB, CFStreamClientContext clientContext);
     @GlobalFunction("CFWriteStreamScheduleWithRunLoop")
     public static native void scheduleInRunLoop(CFWriteStream stream, CFRunLoop runLoop, String runLoopMode);
     @GlobalFunction("CFWriteStreamUnscheduleFromRunLoop")

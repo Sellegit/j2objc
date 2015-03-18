@@ -27,6 +27,6 @@ public class ABPersonDateLabel
     
     
     @GlobalConstant("kABPersonAnniversaryLabel")
-    protected static native CFString AnniversaryLabel();
+    public static native CFString AnniversaryLabel();
     
 }

@@ -27,7 +27,8 @@ public class CBATTRequest
 
     
     
-    public CBATTRequest() {}
+    @Mapping("init")
+    public CBATTRequest() { }
     
     
     @Mapping("central")

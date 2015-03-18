@@ -29,7 +29,8 @@ public class GLKEffectPropertyTexture
 
     
     
-    public GLKEffectPropertyTexture() {}
+    @Mapping("init")
+    public GLKEffectPropertyTexture() { }
     
     
     @Mapping("enabled")

@@ -29,11 +29,12 @@ public class NSMutableURLRequest
 
     
     
-    public NSMutableURLRequest() {}
     @Mapping("initWithURL:")
     public NSMutableURLRequest(NSURL URL) { }
     @Mapping("initWithURL:cachePolicy:timeoutInterval:")
     public NSMutableURLRequest(NSURL URL, @Representing("NSURLRequestCachePolicy") @MachineSizedUInt long cachePolicy, double timeoutInterval) { }
+    @Mapping("init")
+    public NSMutableURLRequest() { }
     
     
     @Mapping("URL")
@@ -106,8 +107,8 @@ public class NSMutableURLRequest
     
     
     @Mapping("setValue:forHTTPHeaderField:")
-    protected native void setHTTPHeaderField0(String value, String field);
+    public native void setHTTPHeaderField0(String value, String field);
     @Mapping("addValue:forHTTPHeaderField:")
-    protected native void addHTTPHeaderField0(String value, String field);
+    public native void addHTTPHeaderField0(String value, String field);
     
 }

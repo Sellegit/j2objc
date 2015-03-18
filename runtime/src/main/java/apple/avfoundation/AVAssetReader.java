@@ -32,7 +32,8 @@ public class AVAssetReader
 
     
     
-    public AVAssetReader() {}
+    @Mapping("init")
+    public AVAssetReader() { }
     
     
     @Mapping("asset")

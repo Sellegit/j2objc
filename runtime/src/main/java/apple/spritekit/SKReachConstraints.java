@@ -33,9 +33,10 @@ public class SKReachConstraints
 
     
     
-    public SKReachConstraints() {}
     @Mapping("initWithLowerAngleLimit:upperAngleLimit:")
     public SKReachConstraints(@MachineSizedFloat double lowerAngleLimit, @MachineSizedFloat double upperAngleLimit) { }
+    @Mapping("init")
+    public SKReachConstraints() { }
     
     
     @Mapping("lowerAngleLimit")

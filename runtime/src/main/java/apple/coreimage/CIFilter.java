@@ -27,7 +27,8 @@ public class CIFilter
 
     
     
-    
+    @Mapping("init")
+    public CIFilter() { }
     
     
     @Mapping("outputImage")
@@ -68,7 +69,7 @@ public class CIFilter
      * @since Available in iOS 6.0 and later.
      */
     @Mapping("filterArrayFromSerializedXMP:inputImageExtent:error:")
-    protected static native NSArray<CIFilter> deserializeFromXMP(NSData xmpData, CGRect extent, Todo outError);
+    public static native NSArray<CIFilter> deserializeFromXMP(NSData xmpData, CGRect extent, Todo outError);
     @Mapping("encodeWithCoder:")
     public native void encode(NSCoder aCoder);
     @Mapping("copyWithZone:")

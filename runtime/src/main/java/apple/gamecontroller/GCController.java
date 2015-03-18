@@ -24,7 +24,8 @@ public class GCController
 
     
     
-    public GCController() {}
+    @Mapping("init")
+    public GCController() { }
     
     
     @Mapping("controllerPausedHandler")

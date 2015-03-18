@@ -31,7 +31,8 @@ public class NSDateIntervalFormatter
 
     
     
-    public NSDateIntervalFormatter() {}
+    @Mapping("init")
+    public NSDateIntervalFormatter() { }
     
     
     @Mapping("locale")

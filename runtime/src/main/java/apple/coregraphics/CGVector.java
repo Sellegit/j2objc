@@ -24,7 +24,7 @@ public class CGVector
      {
 
     
-    protected CGVector() {}
+    private CGVector() {}
     
     
     @DotMapping("dx")

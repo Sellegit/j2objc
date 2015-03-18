@@ -32,7 +32,8 @@ public class AVAudioUnitEQFilterParameters
 
     
     
-    public AVAudioUnitEQFilterParameters() {}
+    @Mapping("init")
+    public AVAudioUnitEQFilterParameters() { }
     
     
     @Mapping("filterType")

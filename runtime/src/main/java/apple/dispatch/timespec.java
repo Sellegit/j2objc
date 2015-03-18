@@ -22,7 +22,7 @@ import apple.coreservices.*;
      {
 
     
-    protected timespec() {}
+    private timespec() {}
     
     
     @DotMapping("tv_sec")

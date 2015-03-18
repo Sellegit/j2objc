@@ -29,7 +29,7 @@ public class SCNMatrix4
      {
 
     
-    protected SCNMatrix4() {}
+    private SCNMatrix4() {}
     
     
     @DotMapping("m11")

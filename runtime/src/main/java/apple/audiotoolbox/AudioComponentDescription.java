@@ -26,7 +26,7 @@ public class AudioComponentDescription
      {
 
     
-    protected AudioComponentDescription() {}
+    private AudioComponentDescription() {}
     
     
     @DotMapping("componentType")

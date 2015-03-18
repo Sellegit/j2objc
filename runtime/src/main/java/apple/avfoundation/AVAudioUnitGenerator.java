@@ -32,9 +32,10 @@ public class AVAudioUnitGenerator
 
     
     
-    public AVAudioUnitGenerator() {}
     @Mapping("initWithAudioComponentDescription:")
     public AVAudioUnitGenerator(AudioComponentDescription audioComponentDescription) { }
+    @Mapping("init")
+    public AVAudioUnitGenerator() { }
     
     
     @Mapping("bypass")

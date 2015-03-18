@@ -35,7 +35,7 @@ public class CFRunLoopTimer
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("CFRunLoopTimerCreateWithHandler")
-    protected static native CFRunLoopTimer create(CFAllocator allocator, double fireDate, double interval, @MachineSizedUInt long flags, @MachineSizedSInt long order, @Block VoidBlock1<CFRunLoopTimer> block);
+    public static native CFRunLoopTimer create(CFAllocator allocator, double fireDate, double interval, @MachineSizedUInt long flags, @MachineSizedSInt long order, @Block VoidBlock1<CFRunLoopTimer> block);
     @GlobalFunction("CFRunLoopTimerGetNextFireDate")
     public static native double getNextFireDate(CFRunLoopTimer timer);
     @GlobalFunction("CFRunLoopTimerSetNextFireDate")

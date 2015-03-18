@@ -31,9 +31,10 @@ public class NSTextTab
 
     
     
-    public NSTextTab() {}
     @Mapping("initWithTextAlignment:location:options:")
     public NSTextTab(@Representing("NSTextAlignment") @MachineSizedSInt long alignment, @MachineSizedFloat double loc, NSDictionary<?, ?> options) { }
+    @Mapping("init")
+    public NSTextTab() { }
     
     
     @Mapping("alignment")

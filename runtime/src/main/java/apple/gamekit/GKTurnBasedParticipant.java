@@ -27,7 +27,8 @@ public class GKTurnBasedParticipant
 
     
     
-    public GKTurnBasedParticipant() {}
+    @Mapping("init")
+    public GKTurnBasedParticipant() { }
     
     
     /**

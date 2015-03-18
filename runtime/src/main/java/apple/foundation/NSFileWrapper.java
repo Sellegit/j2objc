@@ -31,7 +31,6 @@ public class NSFileWrapper
 
     
     
-    public NSFileWrapper() {}
     /**
      * @since Available in iOS 4.0 and later.
      */
@@ -48,6 +47,8 @@ public class NSFileWrapper
     public NSFileWrapper(NSURL url) { }
     @Mapping("initWithCoder:")
     public NSFileWrapper(NSCoder inCoder) { }
+    @Mapping("init")
+    public NSFileWrapper() { }
     
     
     @Mapping("isDirectory")
@@ -91,12 +92,12 @@ public class NSFileWrapper
      * @since Available in iOS 4.0 and later.
      */
     @Mapping("readFromURL:options:error:")
-    protected native boolean readFromURL(NSURL url, @Representing("NSFileWrapperReadingOptions") @MachineSizedUInt long options, Todo outError);
+    public native boolean readFromURL(NSURL url, @Representing("NSFileWrapperReadingOptions") @MachineSizedUInt long options, Todo outError);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @Mapping("writeToURL:options:originalContentsURL:error:")
-    protected native boolean writeToURL(NSURL url, @Representing("NSFileWrapperWritingOptions") @MachineSizedUInt long options, NSURL originalContentsURL, Todo outError);
+    public native boolean writeToURL(NSURL url, @Representing("NSFileWrapperWritingOptions") @MachineSizedUInt long options, NSURL originalContentsURL, Todo outError);
     @Mapping("addFileWrapper:")
     public native String addFileWrapper(NSFileWrapper child);
     @Mapping("addRegularFileWithContents:preferredFilename:")

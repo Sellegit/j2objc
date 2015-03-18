@@ -33,16 +33,16 @@ public class CIDetectorType
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("CIDetectorTypeFace")
-    protected static native NSString FaceValue();
+    public static native NSString FaceValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("CIDetectorTypeRectangle")
-    protected static native NSString RectangleValue();
+    public static native NSString RectangleValue();
     /**
      * @since Available in iOS 6.0 and later.
      */
     @GlobalConstant("CIDetectorTypeQRCode")
-    protected static native NSString QRCodeValue();
+    public static native NSString QRCodeValue();
     
 }

@@ -28,12 +28,13 @@ public class EASession
 
     
     
-    public EASession() {}
     /**
      * @since Available in iOS 3.0 and later.
      */
     @Mapping("initWithAccessory:forProtocol:")
     public EASession(EAAccessory accessory, String protocolString) { }
+    @Mapping("init")
+    public EASession() { }
     
     
     /**

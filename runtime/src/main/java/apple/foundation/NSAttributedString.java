@@ -31,7 +31,8 @@ public class NSAttributedString
 
     
     
-    public NSAttributedString() {}
+    @Mapping("init")
+    public NSAttributedString() { }
     @Mapping("initWithString:")
     public NSAttributedString(String str) { }
     @Mapping("initWithString:attributes:")

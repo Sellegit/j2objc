@@ -31,9 +31,10 @@ public class UIInterpolatingMotionEffect
 
     
     
-    public UIInterpolatingMotionEffect() {}
     @Mapping("initWithKeyPath:type:")
     public UIInterpolatingMotionEffect(String keyPath, @Representing("UIInterpolatingMotionEffectType") @MachineSizedSInt long type) { }
+    @Mapping("init")
+    public UIInterpolatingMotionEffect() { }
     
     
     @Mapping("keyPath")

@@ -27,6 +27,6 @@ public class ABGroupProperty
     
     
     @GlobalConstant("kABGroupNameProperty")
-    protected static native int NameValue();
+    public static native int NameValue();
     
 }

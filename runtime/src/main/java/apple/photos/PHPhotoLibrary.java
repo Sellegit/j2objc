@@ -29,7 +29,8 @@ public class PHPhotoLibrary
 
     
     
-    public PHPhotoLibrary() {}
+    @Mapping("init")
+    public PHPhotoLibrary() { }
     
     
     
@@ -39,7 +40,7 @@ public class PHPhotoLibrary
     @Mapping("performChanges:completionHandler:")
     public native void performChanges(@Block Runnable changeBlock, @Block VoidBlock2<Boolean, NSError> completionHandler);
     @Mapping("performChangesAndWait:error:")
-    protected native boolean performChangesAndWait(@Block Runnable changeBlock, Todo error);
+    public native boolean performChangesAndWait(@Block Runnable changeBlock, Todo error);
     @Mapping("registerChangeObserver:")
     public native void registerChangeObserver(PHPhotoLibraryChangeObserver observer);
     @Mapping("unregisterChangeObserver:")

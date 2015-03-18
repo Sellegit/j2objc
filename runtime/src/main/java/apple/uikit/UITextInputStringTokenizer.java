@@ -31,9 +31,10 @@ public class UITextInputStringTokenizer
 
     
     
-    public UITextInputStringTokenizer() {}
     @Mapping("initWithTextInput:")
     public UITextInputStringTokenizer(Todo textInput) { }
+    @Mapping("init")
+    public UITextInputStringTokenizer() { }
     
     
     

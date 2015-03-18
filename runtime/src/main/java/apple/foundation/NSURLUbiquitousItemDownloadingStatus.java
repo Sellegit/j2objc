@@ -35,16 +35,16 @@ public class NSURLUbiquitousItemDownloadingStatus
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("NSURLUbiquitousItemDownloadingStatusNotDownloaded")
-    protected static native NSString NotDownloadedValue();
+    public static native NSString NotDownloadedValue();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("NSURLUbiquitousItemDownloadingStatusDownloaded")
-    protected static native NSString DownloadedValue();
+    public static native NSString DownloadedValue();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("NSURLUbiquitousItemDownloadingStatusCurrent")
-    protected static native NSString CurrentValue();
+    public static native NSString CurrentValue();
     
 }

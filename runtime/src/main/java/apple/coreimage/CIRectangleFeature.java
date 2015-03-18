@@ -27,7 +27,8 @@ public class CIRectangleFeature
 
     
     
-    public CIRectangleFeature() {}
+    @Mapping("init")
+    public CIRectangleFeature() { }
     
     
     @Mapping("bounds")

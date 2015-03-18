@@ -26,7 +26,8 @@ public class HMAction
 
     
     
-    public HMAction() {}
+    @Mapping("init")
+    public HMAction() { }
     
     
     

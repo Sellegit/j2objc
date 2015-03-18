@@ -31,7 +31,8 @@ public class NSCondition
 
     
     
-    public NSCondition() {}
+    @Mapping("init")
+    public NSCondition() { }
     
     
     /**

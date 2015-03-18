@@ -32,7 +32,8 @@ public class AVAudioRecorder
 
     
     
-    public AVAudioRecorder() {}
+    @Mapping("init")
+    public AVAudioRecorder() { }
     
     
     @Mapping("isRecording")

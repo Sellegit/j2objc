@@ -30,7 +30,8 @@ public class SCNPhysicsWorld
 
     
     
-    public SCNPhysicsWorld() {}
+    @Mapping("init")
+    public SCNPhysicsWorld() { }
     
     
     @Mapping("gravity")

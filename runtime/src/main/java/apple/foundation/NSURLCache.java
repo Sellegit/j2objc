@@ -29,9 +29,10 @@ public class NSURLCache
 
     
     
-    public NSURLCache() {}
     @Mapping("initWithMemoryCapacity:diskCapacity:diskPath:")
     public NSURLCache(@MachineSizedUInt long memoryCapacity, @MachineSizedUInt long diskCapacity, String path) { }
+    @Mapping("init")
+    public NSURLCache() { }
     
     
     @Mapping("memoryCapacity")

@@ -35,26 +35,26 @@ public class NSStreamSocketSecurityLevel
      * @since Available in iOS 2.0 and later.
      */
     @GlobalConstant("NSStreamSocketSecurityLevelNone")
-    protected static native NSString NoneValue();
+    public static native NSString NoneValue();
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalConstant("NSStreamSocketSecurityLevelSSLv2")
-    protected static native NSString SSLv2Value();
+    public static native NSString SSLv2Value();
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalConstant("NSStreamSocketSecurityLevelSSLv3")
-    protected static native NSString SSLv3Value();
+    public static native NSString SSLv3Value();
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalConstant("NSStreamSocketSecurityLevelTLSv1")
-    protected static native NSString TLSv1Value();
+    public static native NSString TLSv1Value();
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalConstant("NSStreamSocketSecurityLevelNegotiatedSSL")
-    protected static native NSString NegotiatedSSLValue();
+    public static native NSString NegotiatedSSLValue();
     
 }

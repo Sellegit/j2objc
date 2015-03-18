@@ -52,11 +52,11 @@ public class CFTimeZone
     @GlobalFunction("CFTimeZoneSetAbbreviationDictionary")
     public static native void setAbbreviationDictionary(CFDictionary dict);
     @GlobalFunction("CFTimeZoneCreate")
-    protected static native CFTimeZone create(CFAllocator allocator, String name, CFData data);
+    public static native CFTimeZone create(CFAllocator allocator, String name, CFData data);
     @GlobalFunction("CFTimeZoneCreateWithTimeIntervalFromGMT")
-    protected static native CFTimeZone create(CFAllocator allocator, double ti);
+    public static native CFTimeZone create(CFAllocator allocator, double ti);
     @GlobalFunction("CFTimeZoneCreateWithName")
-    protected static native CFTimeZone create(CFAllocator allocator, String name, boolean tryAbbrev);
+    public static native CFTimeZone create(CFAllocator allocator, String name, boolean tryAbbrev);
     @GlobalFunction("CFTimeZoneGetName")
     public static native String getName(CFTimeZone tz);
     @GlobalFunction("CFTimeZoneGetData")

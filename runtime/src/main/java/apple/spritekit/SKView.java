@@ -31,9 +31,10 @@ public class SKView
 
     
     
-    public SKView() {}
     @Mapping("initWithFrame:")
     public SKView(CGRect frame) { }
+    @Mapping("init")
+    public SKView() { }
     
     
     @Mapping("isPaused")

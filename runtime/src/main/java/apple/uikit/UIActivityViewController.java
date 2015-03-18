@@ -31,11 +31,12 @@ public class UIActivityViewController
 
     
     
-    public UIActivityViewController() {}
     @Mapping("initWithActivityItems:applicationActivities:")
     public UIActivityViewController(NSArray<?> activityItems, NSArray<?> applicationActivities) { }
     @Mapping("initWithNibName:bundle:")
     public UIActivityViewController(String nibNameOrNil, NSBundle nibBundleOrNil) { }
+    @Mapping("init")
+    public UIActivityViewController() { }
     
     
     /**

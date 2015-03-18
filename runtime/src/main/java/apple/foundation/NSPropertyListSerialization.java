@@ -29,7 +29,8 @@ public class NSPropertyListSerialization
 
     
     
-    public NSPropertyListSerialization() {}
+    @Mapping("init")
+    public NSPropertyListSerialization() { }
     
     
     
@@ -42,21 +43,21 @@ public class NSPropertyListSerialization
      * @since Available in iOS 4.0 and later.
      */
     @Mapping("dataWithPropertyList:format:options:error:")
-    protected static native NSData getDataFromPropertyList(Object plist, @Representing("NSPropertyListFormat") @MachineSizedUInt long format, @MachineSizedUInt long opt, Todo error);
+    public static native NSData getDataFromPropertyList(Object plist, @Representing("NSPropertyListFormat") @MachineSizedUInt long format, @MachineSizedUInt long opt, Todo error);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @Mapping("writePropertyList:toStream:format:options:error:")
-    protected static native @MachineSizedSInt long writePropertyListToStream(Object plist, NSOutputStream stream, @Representing("NSPropertyListFormat") @MachineSizedUInt long format, @MachineSizedUInt long opt, Todo error);
+    public static native @MachineSizedSInt long writePropertyListToStream(Object plist, NSOutputStream stream, @Representing("NSPropertyListFormat") @MachineSizedUInt long format, @MachineSizedUInt long opt, Todo error);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @Mapping("propertyListWithData:options:format:error:")
-    protected static native NSPropertyList getPropertyListFromData(NSData data, @MachineSizedUInt long opt, Todo format, Todo error);
+    public static native NSPropertyList getPropertyListFromData(NSData data, @MachineSizedUInt long opt, Todo format, Todo error);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @Mapping("propertyListWithStream:options:format:error:")
-    protected static native NSPropertyList getPropertyListFromStream(NSInputStream stream, @MachineSizedUInt long opt, Todo format, Todo error);
+    public static native NSPropertyList getPropertyListFromStream(NSInputStream stream, @MachineSizedUInt long opt, Todo format, Todo error);
     
 }

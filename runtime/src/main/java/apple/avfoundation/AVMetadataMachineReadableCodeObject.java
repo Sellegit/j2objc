@@ -32,7 +32,8 @@ public class AVMetadataMachineReadableCodeObject
 
     
     
-    public AVMetadataMachineReadableCodeObject() {}
+    @Mapping("init")
+    public AVMetadataMachineReadableCodeObject() { }
     
     
     @Mapping("corners")

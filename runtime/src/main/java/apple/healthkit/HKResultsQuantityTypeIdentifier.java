@@ -30,51 +30,51 @@ public class HKResultsQuantityTypeIdentifier
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("HKQuantityTypeIdentifierOxygenSaturation")
-    protected static native NSString OxygenSaturationValue();
+    public static native NSString OxygenSaturationValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("HKQuantityTypeIdentifierPeripheralPerfusionIndex")
-    protected static native NSString PeripheralPerfusionIndexValue();
+    public static native NSString PeripheralPerfusionIndexValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("HKQuantityTypeIdentifierBloodGlucose")
-    protected static native NSString BloodGlucoseValue();
+    public static native NSString BloodGlucoseValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("HKQuantityTypeIdentifierNumberOfTimesFallen")
-    protected static native NSString NumberOfTimesFallenValue();
+    public static native NSString NumberOfTimesFallenValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("HKQuantityTypeIdentifierElectrodermalActivity")
-    protected static native NSString ElectrodermalActivityValue();
+    public static native NSString ElectrodermalActivityValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("HKQuantityTypeIdentifierInhalerUsage")
-    protected static native NSString InhalerUsageValue();
+    public static native NSString InhalerUsageValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("HKQuantityTypeIdentifierBloodAlcoholContent")
-    protected static native NSString BloodAlcoholContentValue();
+    public static native NSString BloodAlcoholContentValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("HKQuantityTypeIdentifierForcedVitalCapacity")
-    protected static native NSString ForcedVitalCapacityValue();
+    public static native NSString ForcedVitalCapacityValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("HKQuantityTypeIdentifierForcedExpiratoryVolume1")
-    protected static native NSString ForcedExpiratoryVolume1Value();
+    public static native NSString ForcedExpiratoryVolume1Value();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("HKQuantityTypeIdentifierPeakExpiratoryFlowRate")
-    protected static native NSString PeakExpiratoryFlowRateValue();
+    public static native NSString PeakExpiratoryFlowRateValue();
     
 }

@@ -35,21 +35,21 @@ public class NSDocumentType
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("NSPlainTextDocumentType")
-    protected static native NSString PlainValue();
+    public static native NSString PlainValue();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("NSRTFTextDocumentType")
-    protected static native NSString RTFValue();
+    public static native NSString RTFValue();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("NSRTFDTextDocumentType")
-    protected static native NSString RTFDValue();
+    public static native NSString RTFDValue();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("NSHTMLTextDocumentType")
-    protected static native NSString HTMLValue();
+    public static native NSString HTMLValue();
     
 }

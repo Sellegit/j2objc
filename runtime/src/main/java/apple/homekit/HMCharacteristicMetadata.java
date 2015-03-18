@@ -26,7 +26,8 @@ public class HMCharacteristicMetadata
 
     
     
-    public HMCharacteristicMetadata() {}
+    @Mapping("init")
+    public HMCharacteristicMetadata() { }
     
     
     @Mapping("minimumValue")

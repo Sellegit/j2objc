@@ -32,7 +32,8 @@ public class AVVideoCompositionRenderContext
 
     
     
-    public AVVideoCompositionRenderContext() {}
+    @Mapping("init")
+    public AVVideoCompositionRenderContext() { }
     
     
     @Mapping("size")

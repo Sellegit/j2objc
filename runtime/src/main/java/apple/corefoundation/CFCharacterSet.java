@@ -34,13 +34,13 @@ public class CFCharacterSet
     @GlobalFunction("CFCharacterSetGetPredefined")
     public static native CFCharacterSet getPredefined(CFCharacterSetPredefinedSet theSetIdentifier);
     @GlobalFunction("CFCharacterSetCreateWithCharactersInRange")
-    protected static native CFCharacterSet create(CFAllocator alloc, CFRange theRange);
+    public static native CFCharacterSet create(CFAllocator alloc, CFRange theRange);
     @GlobalFunction("CFCharacterSetCreateWithCharactersInString")
-    protected static native CFCharacterSet create(CFAllocator alloc, String theString);
+    public static native CFCharacterSet create(CFAllocator alloc, String theString);
     @GlobalFunction("CFCharacterSetCreateWithBitmapRepresentation")
-    protected static native CFCharacterSet create(CFAllocator alloc, CFData theData);
+    public static native CFCharacterSet create(CFAllocator alloc, CFData theData);
     @GlobalFunction("CFCharacterSetCreateInvertedSet")
-    protected static native CFCharacterSet createInvertedSet(CFAllocator alloc, CFCharacterSet theSet);
+    public static native CFCharacterSet createInvertedSet(CFAllocator alloc, CFCharacterSet theSet);
     @GlobalFunction("CFCharacterSetIsSupersetOfSet")
     public static native boolean isSupersetOfSet(CFCharacterSet theSet, CFCharacterSet theOtherset);
     @GlobalFunction("CFCharacterSetHasMemberInPlane")
@@ -50,6 +50,6 @@ public class CFCharacterSet
     @GlobalFunction("CFCharacterSetIsLongCharacterMember")
     public static native boolean isLongCharacterMember(CFCharacterSet theSet, int theChar);
     @GlobalFunction("CFCharacterSetCreateBitmapRepresentation")
-    protected static native CFData createBitmapRepresentation(CFAllocator alloc, CFCharacterSet theSet);
+    public static native CFData createBitmapRepresentation(CFAllocator alloc, CFCharacterSet theSet);
     
 }

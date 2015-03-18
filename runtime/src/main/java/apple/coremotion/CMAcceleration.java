@@ -23,7 +23,7 @@ public class CMAcceleration
      {
 
     
-    protected CMAcceleration() {}
+    private CMAcceleration() {}
     
     
     @DotMapping("x")

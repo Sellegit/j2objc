@@ -26,12 +26,13 @@ public class NEEvaluateConnectionRule
 
     
     
-    public NEEvaluateConnectionRule() {}
     /**
      * @since Available in iOS 8.0 and later.
      */
     @Mapping("initWithMatchDomains:andAction:")
     public NEEvaluateConnectionRule(NSArray<?> domains, @Representing("NEEvaluateConnectionRuleAction") @MachineSizedSInt long action) { }
+    @Mapping("init")
+    public NEEvaluateConnectionRule() { }
     
     
     /**

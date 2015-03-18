@@ -35,7 +35,7 @@ public class CFRunLoopObserver
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("CFRunLoopObserverCreateWithHandler")
-    protected static native CFRunLoopObserver create(CFAllocator allocator, @MachineSizedUInt long activities, boolean repeats, @MachineSizedSInt long order, @Block VoidBlock2<CFRunLoopObserver, CFRunLoopActivity> block);
+    public static native CFRunLoopObserver create(CFAllocator allocator, @MachineSizedUInt long activities, boolean repeats, @MachineSizedSInt long order, @Block VoidBlock2<CFRunLoopObserver, CFRunLoopActivity> block);
     @GlobalFunction("CFRunLoopObserverGetActivities")
     public static native CFRunLoopActivity getActivities(CFRunLoopObserver observer);
     @GlobalFunction("CFRunLoopObserverDoesRepeat")

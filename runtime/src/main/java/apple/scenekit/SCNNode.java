@@ -30,7 +30,8 @@ public class SCNNode
 
     
     
-    public SCNNode() {}
+    @Mapping("init")
+    public SCNNode() { }
     
     
     @Mapping("name")

@@ -32,7 +32,8 @@ public class AVAudioNode
 
     
     
-    public AVAudioNode() {}
+    @Mapping("init")
+    public AVAudioNode() { }
     
     
     @Mapping("engine")

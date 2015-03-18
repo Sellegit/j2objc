@@ -33,16 +33,16 @@ public class CALineJoin
      * @since Available in iOS 3.0 and later.
      */
     @GlobalConstant("kCALineJoinMiter")
-    protected static native NSString MiterValue();
+    public static native NSString MiterValue();
     /**
      * @since Available in iOS 3.0 and later.
      */
     @GlobalConstant("kCALineJoinRound")
-    protected static native NSString RoundValue();
+    public static native NSString RoundValue();
     /**
      * @since Available in iOS 3.0 and later.
      */
     @GlobalConstant("kCALineJoinBevel")
-    protected static native NSString BevelValue();
+    public static native NSString BevelValue();
     
 }

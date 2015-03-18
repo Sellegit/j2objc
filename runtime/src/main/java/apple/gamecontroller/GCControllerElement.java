@@ -24,7 +24,8 @@ public class GCControllerElement
 
     
     
-    public GCControllerElement() {}
+    @Mapping("init")
+    public GCControllerElement() { }
     
     
     @Mapping("collection")

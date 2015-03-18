@@ -33,21 +33,21 @@ public class CIFilterInputParameters
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("kCIOutputImageKey")
-    protected static native NSString OutputImageKey();
+    public static native NSString OutputImageKey();
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("kCIInputBackgroundImageKey")
-    protected static native NSString BackgroundImageKey();
+    public static native NSString BackgroundImageKey();
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("kCIInputImageKey")
-    protected static native NSString ImageKey();
+    public static native NSString ImageKey();
     /**
      * @since Available in iOS 6.0 and later.
      */
     @GlobalConstant("kCIInputVersionKey")
-    protected static native NSString VersionKey();
+    public static native NSString VersionKey();
     
 }

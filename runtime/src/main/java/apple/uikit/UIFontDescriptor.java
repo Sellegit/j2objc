@@ -31,9 +31,10 @@ public class UIFontDescriptor
 
     
     
-    public UIFontDescriptor() {}
     @Mapping("initWithFontAttributes:")
     public UIFontDescriptor(NSDictionary<?, ?> attributes) { }
+    @Mapping("init")
+    public UIFontDescriptor() { }
     
     
     @Mapping("postscriptName")
@@ -48,11 +49,11 @@ public class UIFontDescriptor
     
     
     @Mapping("objectForKey:")
-    protected native Object getValue(String anAttribute);
+    public native Object getValue(String anAttribute);
     @Mapping("fontAttributes")
     public native UIFontDescriptorAttributes getFontAttributes();
     @Mapping("matchingFontDescriptorsWithMandatoryKeys:")
-    protected native NSArray<UIFontDescriptor> getMatchingFontDescriptors(NSSet<?> mandatoryKeys);
+    public native NSArray<UIFontDescriptor> getMatchingFontDescriptors(NSSet<?> mandatoryKeys);
     @Mapping("fontDescriptorByAddingAttributes:")
     public native UIFontDescriptor newWithAttributes(NSDictionary<?, ?> attributes);
     @Mapping("fontDescriptorWithSymbolicTraits:")
@@ -72,7 +73,7 @@ public class UIFontDescriptor
     @Mapping("fontDescriptorWithName:matrix:")
     public static native UIFontDescriptor create(String fontName, CGAffineTransform matrix);
     @Mapping("preferredFontDescriptorWithTextStyle:")
-    protected static native UIFontDescriptor getPreferredFontDescriptor(String style);
+    public static native UIFontDescriptor getPreferredFontDescriptor(String style);
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
     @Mapping("encodeWithCoder:")

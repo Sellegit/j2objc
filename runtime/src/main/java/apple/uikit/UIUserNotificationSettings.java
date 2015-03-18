@@ -31,7 +31,8 @@ public class UIUserNotificationSettings
 
     
     
-    public UIUserNotificationSettings() {}
+    @Mapping("init")
+    public UIUserNotificationSettings() { }
     
     
     @Mapping("types")

@@ -33,31 +33,31 @@ public class MKLaunchOptions
      * @since Available in iOS 6.0 and later.
      */
     @GlobalConstant("MKLaunchOptionsDirectionsModeKey")
-    protected static native NSString DirectionsModeKey();
+    public static native NSString DirectionsModeKey();
     /**
      * @since Available in iOS 6.0 and later.
      */
     @GlobalConstant("MKLaunchOptionsMapTypeKey")
-    protected static native NSString MapTypeKey();
+    public static native NSString MapTypeKey();
     /**
      * @since Available in iOS 6.0 and later.
      */
     @GlobalConstant("MKLaunchOptionsShowsTrafficKey")
-    protected static native NSString ShowsTrafficKey();
+    public static native NSString ShowsTrafficKey();
     /**
      * @since Available in iOS 6.0 and later.
      */
     @GlobalConstant("MKLaunchOptionsMapCenterKey")
-    protected static native NSString MapCenterKey();
+    public static native NSString MapCenterKey();
     /**
      * @since Available in iOS 6.0 and later.
      */
     @GlobalConstant("MKLaunchOptionsMapSpanKey")
-    protected static native NSString MapSpanKey();
+    public static native NSString MapSpanKey();
     /**
      * @since Available in iOS 7.1 and later.
      */
     @GlobalConstant("MKLaunchOptionsCameraKey")
-    protected static native NSString CameraKey();
+    public static native NSString CameraKey();
     
 }

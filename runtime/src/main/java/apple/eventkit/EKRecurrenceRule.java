@@ -28,11 +28,12 @@ public class EKRecurrenceRule
 
     
     
-    public EKRecurrenceRule() {}
     @Mapping("initRecurrenceWithFrequency:interval:end:")
     public EKRecurrenceRule(EKRecurrenceFrequency type, @MachineSizedSInt long interval, EKRecurrenceEnd end) { }
     @Mapping("initRecurrenceWithFrequency:interval:daysOfTheWeek:daysOfTheMonth:monthsOfTheYear:weeksOfTheYear:daysOfTheYear:setPositions:end:")
     public EKRecurrenceRule(EKRecurrenceFrequency type, @MachineSizedSInt long interval, NSArray<?> days, NSArray<?> monthDays, NSArray<?> months, NSArray<?> weeksOfTheYear, NSArray<?> daysOfTheYear, NSArray<?> setPositions, EKRecurrenceEnd end) { }
+    @Mapping("init")
+    public EKRecurrenceRule() { }
     
     
     @Mapping("calendarIdentifier")

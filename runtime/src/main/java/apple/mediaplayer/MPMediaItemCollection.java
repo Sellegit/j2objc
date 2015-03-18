@@ -27,9 +27,10 @@ public class MPMediaItemCollection
 
     
     
-    public MPMediaItemCollection() {}
     @Mapping("initWithItems:")
     public MPMediaItemCollection(NSArray<?> items) { }
+    @Mapping("init")
+    public MPMediaItemCollection() { }
     
     
     @Mapping("items")

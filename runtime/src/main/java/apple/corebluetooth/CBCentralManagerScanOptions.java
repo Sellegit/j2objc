@@ -28,11 +28,11 @@ public class CBCentralManagerScanOptions
     
     
     @GlobalConstant("CBCentralManagerScanOptionAllowDuplicatesKey")
-    protected static native NSString AllowDuplicatesKey();
+    public static native NSString AllowDuplicatesKey();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("CBCentralManagerScanOptionSolicitedServiceUUIDsKey")
-    protected static native NSString SolicitedServiceUUIDsKey();
+    public static native NSString SolicitedServiceUUIDsKey();
     
 }

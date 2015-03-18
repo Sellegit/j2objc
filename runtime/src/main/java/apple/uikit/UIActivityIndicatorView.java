@@ -31,11 +31,12 @@ public class UIActivityIndicatorView
 
     
     
-    public UIActivityIndicatorView() {}
     @Mapping("initWithActivityIndicatorStyle:")
     public UIActivityIndicatorView(@Representing("UIActivityIndicatorViewStyle") @MachineSizedSInt long style) { }
     @Mapping("initWithFrame:")
     public UIActivityIndicatorView(CGRect frame) { }
+    @Mapping("init")
+    public UIActivityIndicatorView() { }
     
     
     @Mapping("activityIndicatorViewStyle")

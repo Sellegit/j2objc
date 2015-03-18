@@ -31,16 +31,16 @@ public class CBCentralManagerRestoredState
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("CBCentralManagerRestoredStatePeripheralsKey")
-    protected static native NSString PeripheralsKey();
+    public static native NSString PeripheralsKey();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("CBCentralManagerRestoredStateScanServicesKey")
-    protected static native NSString ScanServicesKey();
+    public static native NSString ScanServicesKey();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("CBCentralManagerRestoredStateScanOptionsKey")
-    protected static native NSString ScanOptionsKey();
+    public static native NSString ScanOptionsKey();
     
 }

@@ -31,7 +31,8 @@ public class UIBezierPath
 
     
     
-    public UIBezierPath() {}
+    @Mapping("init")
+    public UIBezierPath() { }
     
     
     @Mapping("CGPath")
@@ -100,9 +101,9 @@ public class UIBezierPath
     @Mapping("containsPoint:")
     public native boolean containsPoint(CGPoint point);
     @Mapping("setLineDash:count:phase:")
-    protected native void setLineDash(Todo pattern, @MachineSizedSInt long count, @MachineSizedFloat double phase);
+    public native void setLineDash(Todo pattern, @MachineSizedSInt long count, @MachineSizedFloat double phase);
     @Mapping("getLineDash:count:phase:")
-    protected native void getLineDash(Todo pattern, Todo count, Todo phase);
+    public native void getLineDash(Todo pattern, Todo count, Todo phase);
     @Mapping("fill")
     public native void fill();
     @Mapping("stroke")

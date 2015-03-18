@@ -31,11 +31,12 @@ public class UITableViewHeaderFooterView
 
     
     
-    public UITableViewHeaderFooterView() {}
     @Mapping("initWithReuseIdentifier:")
     public UITableViewHeaderFooterView(String reuseIdentifier) { }
     @Mapping("initWithFrame:")
     public UITableViewHeaderFooterView(CGRect frame) { }
+    @Mapping("init")
+    public UITableViewHeaderFooterView() { }
     
     
     @Mapping("tintColor")

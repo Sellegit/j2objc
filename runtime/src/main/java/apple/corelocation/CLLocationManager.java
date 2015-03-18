@@ -28,7 +28,8 @@ public class CLLocationManager
 
     
     
-    public CLLocationManager() {}
+    @Mapping("init")
+    public CLLocationManager() { }
     
     
     @Mapping("delegate")

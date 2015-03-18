@@ -24,7 +24,7 @@ import apple.foundation.*;
      {
 
     
-    protected CFMachPortContext() {}
+    private CFMachPortContext() {}
     
     
     @DotMapping("version")

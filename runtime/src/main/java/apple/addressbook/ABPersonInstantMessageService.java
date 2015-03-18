@@ -27,39 +27,39 @@ public class ABPersonInstantMessageService
     
     
     @GlobalConstant("kABPersonInstantMessageServiceYahoo")
-    protected static native CFString YahooValue();
+    public static native CFString YahooValue();
     @GlobalConstant("kABPersonInstantMessageServiceJabber")
-    protected static native CFString JabberValue();
+    public static native CFString JabberValue();
     @GlobalConstant("kABPersonInstantMessageServiceMSN")
-    protected static native CFString MSNValue();
+    public static native CFString MSNValue();
     @GlobalConstant("kABPersonInstantMessageServiceICQ")
-    protected static native CFString ICQValue();
+    public static native CFString ICQValue();
     @GlobalConstant("kABPersonInstantMessageServiceAIM")
-    protected static native CFString AIMValue();
+    public static native CFString AIMValue();
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("kABPersonInstantMessageServiceQQ")
-    protected static native CFString QQValue();
+    public static native CFString QQValue();
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("kABPersonInstantMessageServiceGoogleTalk")
-    protected static native CFString GoogleTalkValue();
+    public static native CFString GoogleTalkValue();
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("kABPersonInstantMessageServiceSkype")
-    protected static native CFString SkypeValue();
+    public static native CFString SkypeValue();
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("kABPersonInstantMessageServiceFacebook")
-    protected static native CFString FacebookValue();
+    public static native CFString FacebookValue();
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("kABPersonInstantMessageServiceGaduGadu")
-    protected static native CFString GaduGaduValue();
+    public static native CFString GaduGaduValue();
     
 }

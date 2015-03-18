@@ -29,7 +29,8 @@ public class MKMultiPoint
 
     
     
-    public MKMultiPoint() {}
+    @Mapping("init")
+    public MKMultiPoint() { }
     
     
     @Mapping("pointCount")
@@ -38,8 +39,8 @@ public class MKMultiPoint
     
     
     @Mapping("points")
-    protected native MKMapPoint getPoints0();
+    public native MKMapPoint getPoints0();
     @Mapping("getCoordinates:range:")
-    protected native void getCoordinates0(CLLocationCoordinate2D coords, NSRange range);
+    public native void getCoordinates0(CLLocationCoordinate2D coords, NSRange range);
     
 }

@@ -31,7 +31,8 @@ public class NSTextStorage
 
     
     
-    public NSTextStorage() {}
+    @Mapping("init")
+    public NSTextStorage() { }
     
     
     @Mapping("layoutManagers")

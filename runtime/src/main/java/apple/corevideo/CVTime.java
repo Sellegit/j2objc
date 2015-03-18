@@ -25,7 +25,7 @@ public class CVTime
      {
 
     
-    protected CVTime() {}
+    private CVTime() {}
     
     
     @DotMapping("timeValue")

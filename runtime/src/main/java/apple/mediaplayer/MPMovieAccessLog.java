@@ -27,7 +27,8 @@ public class MPMovieAccessLog
 
     
     
-    public MPMovieAccessLog() {}
+    @Mapping("init")
+    public MPMovieAccessLog() { }
     
     
     @Mapping("extendedLogData")

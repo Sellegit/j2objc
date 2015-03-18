@@ -27,7 +27,8 @@ public class WKFrameInfo
 
     
     
-    public WKFrameInfo() {}
+    @Mapping("init")
+    public WKFrameInfo() { }
     
     
     @Mapping("isMainFrame")

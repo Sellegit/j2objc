@@ -32,7 +32,8 @@ public class AVCaptureStillImageOutput
 
     
     
-    public AVCaptureStillImageOutput() {}
+    @Mapping("init")
+    public AVCaptureStillImageOutput() { }
     
     
     @Mapping("outputSettings")

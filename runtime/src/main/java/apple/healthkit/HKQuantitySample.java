@@ -26,7 +26,8 @@ public class HKQuantitySample
 
     
     
-    public HKQuantitySample() {}
+    @Mapping("init")
+    public HKQuantitySample() { }
     
     
     @Mapping("quantityType")

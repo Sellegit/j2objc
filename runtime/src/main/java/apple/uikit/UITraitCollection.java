@@ -31,7 +31,8 @@ public class UITraitCollection
 
     
     
-    public UITraitCollection() {}
+    @Mapping("init")
+    public UITraitCollection() { }
     
     
     @Mapping("userInterfaceIdiom")

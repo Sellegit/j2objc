@@ -30,26 +30,26 @@ public class HKBodyQuantityTypeIdentifier
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("HKQuantityTypeIdentifierBodyMassIndex")
-    protected static native NSString BodyMassIndexValue();
+    public static native NSString BodyMassIndexValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("HKQuantityTypeIdentifierBodyFatPercentage")
-    protected static native NSString BodyFatPercentageValue();
+    public static native NSString BodyFatPercentageValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("HKQuantityTypeIdentifierHeight")
-    protected static native NSString HeightValue();
+    public static native NSString HeightValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("HKQuantityTypeIdentifierBodyMass")
-    protected static native NSString BodyMassValue();
+    public static native NSString BodyMassValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("HKQuantityTypeIdentifierLeanBodyMass")
-    protected static native NSString LeanBodyMassValue();
+    public static native NSString LeanBodyMassValue();
     
 }

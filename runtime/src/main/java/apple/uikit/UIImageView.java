@@ -31,7 +31,6 @@ public class UIImageView
 
     
     
-    public UIImageView() {}
     @Mapping("initWithImage:")
     public UIImageView(UIImage image) { }
     /**
@@ -41,6 +40,8 @@ public class UIImageView
     public UIImageView(UIImage image, UIImage highlightedImage) { }
     @Mapping("initWithFrame:")
     public UIImageView(CGRect frame) { }
+    @Mapping("init")
+    public UIImageView() { }
     
     
     @Mapping("image")

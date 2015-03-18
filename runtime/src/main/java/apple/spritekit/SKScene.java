@@ -31,9 +31,10 @@ public class SKScene
 
     
     
-    public SKScene() {}
     @Mapping("initWithSize:")
     public SKScene(CGSize size) { }
+    @Mapping("init")
+    public SKScene() { }
     @Mapping("initWithCoder:")
     public SKScene(NSCoder aDecoder) { }
     

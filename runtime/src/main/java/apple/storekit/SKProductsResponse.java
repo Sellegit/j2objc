@@ -28,7 +28,8 @@ public class SKProductsResponse
 
     
     
-    public SKProductsResponse() {}
+    @Mapping("init")
+    public SKProductsResponse() { }
     
     
     /**

@@ -33,11 +33,11 @@ public class MKDirectionsMode
      * @since Available in iOS 6.0 and later.
      */
     @GlobalConstant("MKLaunchOptionsDirectionsModeDriving")
-    protected static native NSString DrivingValue();
+    public static native NSString DrivingValue();
     /**
      * @since Available in iOS 6.0 and later.
      */
     @GlobalConstant("MKLaunchOptionsDirectionsModeWalking")
-    protected static native NSString WalkingValue();
+    public static native NSString WalkingValue();
     
 }

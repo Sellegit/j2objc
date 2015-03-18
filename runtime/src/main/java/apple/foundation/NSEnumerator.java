@@ -29,7 +29,8 @@ public class NSEnumerator <T>
 
     
     
-    public NSEnumerator() {}
+    @Mapping("init")
+    public NSEnumerator() { }
     
     
     @Mapping("allObjects")

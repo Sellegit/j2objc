@@ -37,7 +37,7 @@ public class CVBuffer
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CVBufferGetAttachment")
-    protected static native CFType getAttachment(CVBuffer buffer, CFString key, Todo attachmentMode);
+    public static native CFType getAttachment(CVBuffer buffer, CFString key, Todo attachmentMode);
     /**
      * @since Available in iOS 4.0 and later.
      */

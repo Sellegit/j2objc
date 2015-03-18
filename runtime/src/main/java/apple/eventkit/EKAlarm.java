@@ -28,7 +28,8 @@ public class EKAlarm
 
     
     
-    public EKAlarm() {}
+    @Mapping("init")
+    public EKAlarm() { }
     
     
     @Mapping("relativeOffset")

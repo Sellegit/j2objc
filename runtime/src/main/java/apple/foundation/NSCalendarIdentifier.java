@@ -35,81 +35,81 @@ public class NSCalendarIdentifier
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("NSCalendarIdentifierGregorian")
-    protected static native NSString GregorianValue();
+    public static native NSString GregorianValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("NSCalendarIdentifierBuddhist")
-    protected static native NSString BuddhistValue();
+    public static native NSString BuddhistValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("NSCalendarIdentifierChinese")
-    protected static native NSString ChineseValue();
+    public static native NSString ChineseValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("NSCalendarIdentifierCoptic")
-    protected static native NSString CopticValue();
+    public static native NSString CopticValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("NSCalendarIdentifierEthiopicAmeteMihret")
-    protected static native NSString EthiopicAmeteMihretValue();
+    public static native NSString EthiopicAmeteMihretValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("NSCalendarIdentifierEthiopicAmeteAlem")
-    protected static native NSString EthiopicAmeteAlemValue();
+    public static native NSString EthiopicAmeteAlemValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("NSCalendarIdentifierHebrew")
-    protected static native NSString HebrewValue();
+    public static native NSString HebrewValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("NSCalendarIdentifierISO8601")
-    protected static native NSString ISO8601Value();
+    public static native NSString ISO8601Value();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("NSCalendarIdentifierIndian")
-    protected static native NSString IndianValue();
+    public static native NSString IndianValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("NSCalendarIdentifierIslamic")
-    protected static native NSString IslamicValue();
+    public static native NSString IslamicValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("NSCalendarIdentifierIslamicCivil")
-    protected static native NSString IslamicCivilValue();
+    public static native NSString IslamicCivilValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("NSCalendarIdentifierJapanese")
-    protected static native NSString JapaneseValue();
+    public static native NSString JapaneseValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("NSCalendarIdentifierPersian")
-    protected static native NSString PersianValue();
+    public static native NSString PersianValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("NSCalendarIdentifierRepublicOfChina")
-    protected static native NSString RepublicOfChinaValue();
+    public static native NSString RepublicOfChinaValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("NSCalendarIdentifierIslamicTabular")
-    protected static native NSString IslamicTabularValue();
+    public static native NSString IslamicTabularValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("NSCalendarIdentifierIslamicUmmAlQura")
-    protected static native NSString IslamicUmmAlQuraValue();
+    public static native NSString IslamicUmmAlQuraValue();
     
 }

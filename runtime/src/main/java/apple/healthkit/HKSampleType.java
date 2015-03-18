@@ -26,7 +26,8 @@ public class HKSampleType
 
     
     
-    public HKSampleType() {}
+    @Mapping("init")
+    public HKSampleType() { }
     
     
     

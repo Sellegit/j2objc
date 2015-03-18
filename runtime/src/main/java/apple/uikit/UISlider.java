@@ -31,9 +31,10 @@ public class UISlider
 
     
     
-    public UISlider() {}
     @Mapping("initWithFrame:")
     public UISlider(CGRect frame) { }
+    @Mapping("init")
+    public UISlider() { }
     
     
     @Mapping("value")

@@ -27,7 +27,8 @@ public class CAEmitterLayer
 
     
     
-    public CAEmitterLayer() {}
+    @Mapping("init")
+    public CAEmitterLayer() { }
     @Mapping("initWithLayer:")
     public CAEmitterLayer(Object layer) { }
     

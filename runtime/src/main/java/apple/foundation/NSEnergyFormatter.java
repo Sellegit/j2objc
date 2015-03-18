@@ -31,7 +31,8 @@ public class NSEnergyFormatter
 
     
     
-    public NSEnergyFormatter() {}
+    @Mapping("init")
+    public NSEnergyFormatter() { }
     
     
     @Mapping("numberFormatter")
@@ -56,6 +57,6 @@ public class NSEnergyFormatter
     @Mapping("unitStringFromValue:unit:")
     public native String formatUnit(double value, @Representing("NSEnergyFormatterUnit") @MachineSizedSInt long unit);
     @Mapping("unitStringFromJoules:usedUnit:")
-    protected native String formatUnitJoules(double numberInJoules, Todo unitp);
+    public native String formatUnitJoules(double numberInJoules, Todo unitp);
     
 }

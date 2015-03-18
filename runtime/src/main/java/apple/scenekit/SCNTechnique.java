@@ -30,7 +30,8 @@ public class SCNTechnique
 
     
     
-    public SCNTechnique() {}
+    @Mapping("init")
+    public SCNTechnique() { }
     
     
     @Mapping("dictionaryRepresentation")

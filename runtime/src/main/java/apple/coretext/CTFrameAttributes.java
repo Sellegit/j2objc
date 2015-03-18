@@ -30,21 +30,21 @@ public class CTFrameAttributes
      * @since Available in iOS 3.2 and later.
      */
     @GlobalConstant("kCTFrameProgressionAttributeName")
-    protected static native CFString Progression();
+    public static native CFString Progression();
     /**
      * @since Available in iOS 4.2 and later.
      */
     @GlobalConstant("kCTFramePathFillRuleAttributeName")
-    protected static native CFString PathFillRule();
+    public static native CFString PathFillRule();
     /**
      * @since Available in iOS 4.2 and later.
      */
     @GlobalConstant("kCTFramePathWidthAttributeName")
-    protected static native CFString PathWidth();
+    public static native CFString PathWidth();
     /**
      * @since Available in iOS 4.3 and later.
      */
     @GlobalConstant("kCTFrameClippingPathsAttributeName")
-    protected static native CFString ClippingPaths();
+    public static native CFString ClippingPaths();
     
 }

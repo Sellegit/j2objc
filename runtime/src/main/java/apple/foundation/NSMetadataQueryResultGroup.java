@@ -31,7 +31,8 @@ public class NSMetadataQueryResultGroup
 
     
     
-    public NSMetadataQueryResultGroup() {}
+    @Mapping("init")
+    public NSMetadataQueryResultGroup() { }
     
     
     @Mapping("attribute")

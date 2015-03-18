@@ -28,95 +28,95 @@ public class CFNumberFormatterProperty
     
     
     @GlobalConstant("kCFNumberFormatterCurrencyCode")
-    protected static native CFString CurrencyCodeValue();
+    public static native CFString CurrencyCodeValue();
     @GlobalConstant("kCFNumberFormatterDecimalSeparator")
-    protected static native CFString DecimalSeparatorValue();
+    public static native CFString DecimalSeparatorValue();
     @GlobalConstant("kCFNumberFormatterCurrencyDecimalSeparator")
-    protected static native CFString CurrencyDecimalSeparatorValue();
+    public static native CFString CurrencyDecimalSeparatorValue();
     @GlobalConstant("kCFNumberFormatterAlwaysShowDecimalSeparator")
-    protected static native CFString AlwaysShowDecimalSeparatorValue();
+    public static native CFString AlwaysShowDecimalSeparatorValue();
     @GlobalConstant("kCFNumberFormatterGroupingSeparator")
-    protected static native CFString GroupingSeparatorValue();
+    public static native CFString GroupingSeparatorValue();
     @GlobalConstant("kCFNumberFormatterUseGroupingSeparator")
-    protected static native CFString UseGroupingSeparatorValue();
+    public static native CFString UseGroupingSeparatorValue();
     @GlobalConstant("kCFNumberFormatterPercentSymbol")
-    protected static native CFString PercentSymbolValue();
+    public static native CFString PercentSymbolValue();
     @GlobalConstant("kCFNumberFormatterZeroSymbol")
-    protected static native CFString ZeroSymbolValue();
+    public static native CFString ZeroSymbolValue();
     @GlobalConstant("kCFNumberFormatterNaNSymbol")
-    protected static native CFString NaNSymbolValue();
+    public static native CFString NaNSymbolValue();
     @GlobalConstant("kCFNumberFormatterInfinitySymbol")
-    protected static native CFString InfinitySymbolValue();
+    public static native CFString InfinitySymbolValue();
     @GlobalConstant("kCFNumberFormatterMinusSign")
-    protected static native CFString MinusSignValue();
+    public static native CFString MinusSignValue();
     @GlobalConstant("kCFNumberFormatterPlusSign")
-    protected static native CFString PlusSignValue();
+    public static native CFString PlusSignValue();
     @GlobalConstant("kCFNumberFormatterCurrencySymbol")
-    protected static native CFString CurrencySymbolValue();
+    public static native CFString CurrencySymbolValue();
     @GlobalConstant("kCFNumberFormatterExponentSymbol")
-    protected static native CFString ExponentSymbolValue();
+    public static native CFString ExponentSymbolValue();
     @GlobalConstant("kCFNumberFormatterMinIntegerDigits")
-    protected static native CFString MinIntegerDigitsValue();
+    public static native CFString MinIntegerDigitsValue();
     @GlobalConstant("kCFNumberFormatterMaxIntegerDigits")
-    protected static native CFString MaxIntegerDigitsValue();
+    public static native CFString MaxIntegerDigitsValue();
     @GlobalConstant("kCFNumberFormatterMinFractionDigits")
-    protected static native CFString MinFractionDigitsValue();
+    public static native CFString MinFractionDigitsValue();
     @GlobalConstant("kCFNumberFormatterMaxFractionDigits")
-    protected static native CFString MaxFractionDigitsValue();
+    public static native CFString MaxFractionDigitsValue();
     @GlobalConstant("kCFNumberFormatterGroupingSize")
-    protected static native CFString GroupingSizeValue();
+    public static native CFString GroupingSizeValue();
     @GlobalConstant("kCFNumberFormatterSecondaryGroupingSize")
-    protected static native CFString SecondaryGroupingSizeValue();
+    public static native CFString SecondaryGroupingSizeValue();
     @GlobalConstant("kCFNumberFormatterRoundingMode")
-    protected static native CFString RoundingModeValue();
+    public static native CFString RoundingModeValue();
     @GlobalConstant("kCFNumberFormatterRoundingIncrement")
-    protected static native CFString RoundingIncrementValue();
+    public static native CFString RoundingIncrementValue();
     @GlobalConstant("kCFNumberFormatterFormatWidth")
-    protected static native CFString FormatWidthValue();
+    public static native CFString FormatWidthValue();
     @GlobalConstant("kCFNumberFormatterPaddingPosition")
-    protected static native CFString PaddingPositionValue();
+    public static native CFString PaddingPositionValue();
     @GlobalConstant("kCFNumberFormatterPaddingCharacter")
-    protected static native CFString PaddingCharacterValue();
+    public static native CFString PaddingCharacterValue();
     @GlobalConstant("kCFNumberFormatterDefaultFormat")
-    protected static native CFString DefaultFormatValue();
+    public static native CFString DefaultFormatValue();
     @GlobalConstant("kCFNumberFormatterMultiplier")
-    protected static native CFString MultiplierValue();
+    public static native CFString MultiplierValue();
     @GlobalConstant("kCFNumberFormatterPositivePrefix")
-    protected static native CFString PositivePrefixValue();
+    public static native CFString PositivePrefixValue();
     @GlobalConstant("kCFNumberFormatterPositiveSuffix")
-    protected static native CFString PositiveSuffixValue();
+    public static native CFString PositiveSuffixValue();
     @GlobalConstant("kCFNumberFormatterNegativePrefix")
-    protected static native CFString NegativePrefixValue();
+    public static native CFString NegativePrefixValue();
     @GlobalConstant("kCFNumberFormatterNegativeSuffix")
-    protected static native CFString NegativeSuffixValue();
+    public static native CFString NegativeSuffixValue();
     @GlobalConstant("kCFNumberFormatterPerMillSymbol")
-    protected static native CFString PerMillSymbolValue();
+    public static native CFString PerMillSymbolValue();
     @GlobalConstant("kCFNumberFormatterInternationalCurrencySymbol")
-    protected static native CFString InternationalCurrencySymbolValue();
+    public static native CFString InternationalCurrencySymbolValue();
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalConstant("kCFNumberFormatterCurrencyGroupingSeparator")
-    protected static native CFString CurrencyGroupingSeparatorValue();
+    public static native CFString CurrencyGroupingSeparatorValue();
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalConstant("kCFNumberFormatterIsLenient")
-    protected static native CFString IsLenientValue();
+    public static native CFString IsLenientValue();
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalConstant("kCFNumberFormatterUseSignificantDigits")
-    protected static native CFString UseSignificantDigitsValue();
+    public static native CFString UseSignificantDigitsValue();
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalConstant("kCFNumberFormatterMinSignificantDigits")
-    protected static native CFString MinSignificantDigitsValue();
+    public static native CFString MinSignificantDigitsValue();
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalConstant("kCFNumberFormatterMaxSignificantDigits")
-    protected static native CFString MaxSignificantDigitsValue();
+    public static native CFString MaxSignificantDigitsValue();
     
 }

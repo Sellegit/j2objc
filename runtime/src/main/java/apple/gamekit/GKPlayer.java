@@ -27,7 +27,8 @@ public class GKPlayer
 
     
     
-    public GKPlayer() {}
+    @Mapping("init")
+    public GKPlayer() { }
     
     
     @Mapping("playerID")

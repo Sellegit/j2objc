@@ -30,7 +30,8 @@ public class SCNParticleSystem
 
     
     
-    public SCNParticleSystem() {}
+    @Mapping("init")
+    public SCNParticleSystem() { }
     
     
     @Mapping("emissionDuration")

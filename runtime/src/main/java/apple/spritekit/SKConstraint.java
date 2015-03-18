@@ -33,7 +33,8 @@ public class SKConstraint
 
     
     
-    public SKConstraint() {}
+    @Mapping("init")
+    public SKConstraint() { }
     
     
     @Mapping("enabled")

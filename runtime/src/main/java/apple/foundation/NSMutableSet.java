@@ -39,10 +39,10 @@ public class NSMutableSet
     
     
     @Mapping("addObject:")
-    protected native void addObject(Object object);
+    public native void addObject(Object object);
     @Mapping("removeObject:")
-    protected native void removeObject(Object object);
+    public native void removeObject(Object object);
     @Mapping("removeAllObjects")
-    protected native void removeAllObjects();
+    public native void removeAllObjects();
     
 }

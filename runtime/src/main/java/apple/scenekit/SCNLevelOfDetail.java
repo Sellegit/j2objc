@@ -30,7 +30,8 @@ public class SCNLevelOfDetail
 
     
     
-    public SCNLevelOfDetail() {}
+    @Mapping("init")
+    public SCNLevelOfDetail() { }
     
     
     @Mapping("geometry")

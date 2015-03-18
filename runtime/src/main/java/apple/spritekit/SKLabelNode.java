@@ -31,9 +31,10 @@ public class SKLabelNode
 
     
     
-    public SKLabelNode() {}
     @Mapping("initWithFontNamed:")
     public SKLabelNode(String fontName) { }
+    @Mapping("init")
+    public SKLabelNode() { }
     @Mapping("initWithCoder:")
     public SKLabelNode(NSCoder aDecoder) { }
     

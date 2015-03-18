@@ -28,39 +28,39 @@ public class CFPreferences
     
     
     @GlobalFunction("CFPreferencesCopyAppValue")
-    protected static native CFType getAppValue(String key, String applicationID);
+    public static native CFType getAppValue(String key, String applicationID);
     @GlobalFunction("CFPreferencesGetAppBooleanValue")
-    protected static native boolean getAppBooleanValue(String key, String applicationID, Todo keyExistsAndHasValidFormat);
+    public static native boolean getAppBooleanValue(String key, String applicationID, Todo keyExistsAndHasValidFormat);
     @GlobalFunction("CFPreferencesGetAppIntegerValue")
-    protected static native @MachineSizedSInt long getAppIntegerValue(String key, String applicationID, Todo keyExistsAndHasValidFormat);
+    public static native @MachineSizedSInt long getAppIntegerValue(String key, String applicationID, Todo keyExistsAndHasValidFormat);
     @GlobalFunction("CFPreferencesSetAppValue")
-    protected static native void setAppValue(String key, CFType value, String applicationID);
+    public static native void setAppValue(String key, CFType value, String applicationID);
     @GlobalFunction("CFPreferencesAddSuitePreferencesToApp")
-    protected static native void addSuitePreferencesToApp(String applicationID, String suiteID);
+    public static native void addSuitePreferencesToApp(String applicationID, String suiteID);
     @GlobalFunction("CFPreferencesRemoveSuitePreferencesFromApp")
-    protected static native void removeSuitePreferencesFromApp(String applicationID, String suiteID);
+    public static native void removeSuitePreferencesFromApp(String applicationID, String suiteID);
     @GlobalFunction("CFPreferencesAppSynchronize")
-    protected static native boolean appSynchronize(String applicationID);
+    public static native boolean appSynchronize(String applicationID);
     @GlobalFunction("CFPreferencesCopyValue")
-    protected static native CFType getValue(String key, String applicationID, String userName, String hostName);
+    public static native CFType getValue(String key, String applicationID, String userName, String hostName);
     @GlobalFunction("CFPreferencesCopyMultiple")
-    protected static native Map<String, ?> getMultiple(CFArray keysToFetch, String applicationID, String userName, String hostName);
+    public static native Map<String, ?> getMultiple(CFArray keysToFetch, String applicationID, String userName, String hostName);
     @GlobalFunction("CFPreferencesSetValue")
-    protected static native void setValue(String key, CFType value, String applicationID, String userName, String hostName);
+    public static native void setValue(String key, CFType value, String applicationID, String userName, String hostName);
     @GlobalFunction("CFPreferencesSetMultiple")
-    protected static native void setMultiple(CFDictionary keysToSet, CFArray keysToRemove, String applicationID, String userName, String hostName);
+    public static native void setMultiple(CFDictionary keysToSet, CFArray keysToRemove, String applicationID, String userName, String hostName);
     @GlobalFunction("CFPreferencesSynchronize")
-    protected static native boolean synchronize(String applicationID, String userName, String hostName);
+    public static native boolean synchronize(String applicationID, String userName, String hostName);
     /**
      * @since Available in iOS 2.0 and later.
      * @deprecated Deprecated in iOS 7.0.
      */
     @Deprecated
     @GlobalFunction("CFPreferencesCopyApplicationList")
-    protected static native List<String> getApplicationList(String userName, String hostName);
+    public static native List<String> getApplicationList(String userName, String hostName);
     @GlobalFunction("CFPreferencesCopyKeyList")
-    protected static native List<String> getKeyList(String applicationID, String userName, String hostName);
+    public static native List<String> getKeyList(String applicationID, String userName, String hostName);
     @GlobalFunction("CFPreferencesAppValueIsForced")
-    protected static native boolean appValueIsForced(String key, String applicationID);
+    public static native boolean appValueIsForced(String key, String applicationID);
     
 }

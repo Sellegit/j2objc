@@ -31,7 +31,8 @@ public class UIUserNotificationAction
 
     
     
-    public UIUserNotificationAction() {}
+    @Mapping("init")
+    public UIUserNotificationAction() { }
     
     
     @Mapping("identifier")

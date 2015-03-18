@@ -30,46 +30,46 @@ public class UTTypeDeclaration
      * @since Available in iOS 3.0 and later.
      */
     @GlobalConstant("kUTExportedTypeDeclarationsKey")
-    protected static native NSString ExportedTypeDeclarationsKey();
+    public static native NSString ExportedTypeDeclarationsKey();
     /**
      * @since Available in iOS 3.0 and later.
      */
     @GlobalConstant("kUTImportedTypeDeclarationsKey")
-    protected static native NSString ImportedTypeDeclarationsKey();
+    public static native NSString ImportedTypeDeclarationsKey();
     /**
      * @since Available in iOS 3.0 and later.
      */
     @GlobalConstant("kUTTypeIdentifierKey")
-    protected static native NSString TypeIdentifierKey();
+    public static native NSString TypeIdentifierKey();
     /**
      * @since Available in iOS 3.0 and later.
      */
     @GlobalConstant("kUTTypeTagSpecificationKey")
-    protected static native NSString TypeTagSpecificationKey();
+    public static native NSString TypeTagSpecificationKey();
     /**
      * @since Available in iOS 3.0 and later.
      */
     @GlobalConstant("kUTTypeConformsToKey")
-    protected static native NSString TypeConformsToKey();
+    public static native NSString TypeConformsToKey();
     /**
      * @since Available in iOS 3.0 and later.
      */
     @GlobalConstant("kUTTypeDescriptionKey")
-    protected static native NSString TypeDescriptionKey();
+    public static native NSString TypeDescriptionKey();
     /**
      * @since Available in iOS 3.0 and later.
      */
     @GlobalConstant("kUTTypeIconFileKey")
-    protected static native NSString TypeIconFileKey();
+    public static native NSString TypeIconFileKey();
     /**
      * @since Available in iOS 3.0 and later.
      */
     @GlobalConstant("kUTTypeReferenceURLKey")
-    protected static native NSString TypeReferenceURLKey();
+    public static native NSString TypeReferenceURLKey();
     /**
      * @since Available in iOS 3.0 and later.
      */
     @GlobalConstant("kUTTypeVersionKey")
-    protected static native NSString TypeVersionKey();
+    public static native NSString TypeVersionKey();
     
 }

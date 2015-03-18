@@ -23,7 +23,7 @@ public class MIDINotification
      {
 
     
-    protected MIDINotification() {}
+    private MIDINotification() {}
     
     
     @DotMapping("messageID")

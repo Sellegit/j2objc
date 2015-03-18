@@ -29,7 +29,8 @@ public class MKCircle
 
     
     
-    public MKCircle() {}
+    @Mapping("init")
+    public MKCircle() { }
     
     
     @Mapping("coordinate")

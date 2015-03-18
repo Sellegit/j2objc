@@ -30,47 +30,47 @@ public class CIFilterCategory
     
     
     @GlobalConstant("kCICategoryDistortionEffect")
-    protected static native NSString DistortionEffectValue();
+    public static native NSString DistortionEffectValue();
     @GlobalConstant("kCICategoryGeometryAdjustment")
-    protected static native NSString GeometryAdjustmentValue();
+    public static native NSString GeometryAdjustmentValue();
     @GlobalConstant("kCICategoryCompositeOperation")
-    protected static native NSString CompositeOperationValue();
+    public static native NSString CompositeOperationValue();
     @GlobalConstant("kCICategoryHalftoneEffect")
-    protected static native NSString HalftoneEffectValue();
+    public static native NSString HalftoneEffectValue();
     @GlobalConstant("kCICategoryColorAdjustment")
-    protected static native NSString ColorAdjustmentValue();
+    public static native NSString ColorAdjustmentValue();
     @GlobalConstant("kCICategoryColorEffect")
-    protected static native NSString ColorEffectValue();
+    public static native NSString ColorEffectValue();
     @GlobalConstant("kCICategoryTransition")
-    protected static native NSString TransitionValue();
+    public static native NSString TransitionValue();
     @GlobalConstant("kCICategoryTileEffect")
-    protected static native NSString TileEffectValue();
+    public static native NSString TileEffectValue();
     @GlobalConstant("kCICategoryGenerator")
-    protected static native NSString GeneratorValue();
+    public static native NSString GeneratorValue();
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("kCICategoryReduction")
-    protected static native NSString ReductionValue();
+    public static native NSString ReductionValue();
     @GlobalConstant("kCICategoryGradient")
-    protected static native NSString GradientValue();
+    public static native NSString GradientValue();
     @GlobalConstant("kCICategoryStylize")
-    protected static native NSString StylizeValue();
+    public static native NSString StylizeValue();
     @GlobalConstant("kCICategorySharpen")
-    protected static native NSString SharpenValue();
+    public static native NSString SharpenValue();
     @GlobalConstant("kCICategoryBlur")
-    protected static native NSString BlurValue();
+    public static native NSString BlurValue();
     @GlobalConstant("kCICategoryVideo")
-    protected static native NSString VideoValue();
+    public static native NSString VideoValue();
     @GlobalConstant("kCICategoryStillImage")
-    protected static native NSString StillImageValue();
+    public static native NSString StillImageValue();
     @GlobalConstant("kCICategoryInterlaced")
-    protected static native NSString InterlacedValue();
+    public static native NSString InterlacedValue();
     @GlobalConstant("kCICategoryNonSquarePixels")
-    protected static native NSString NonSquarePixelsValue();
+    public static native NSString NonSquarePixelsValue();
     @GlobalConstant("kCICategoryHighDynamicRange")
-    protected static native NSString HighDynamicRangeValue();
+    public static native NSString HighDynamicRangeValue();
     @GlobalConstant("kCICategoryBuiltIn")
-    protected static native NSString BuiltInValue();
+    public static native NSString BuiltInValue();
     
 }

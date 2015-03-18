@@ -29,9 +29,10 @@ public class MKOverlayRenderer
 
     
     
-    public MKOverlayRenderer() {}
     @Mapping("initWithOverlay:")
     public MKOverlayRenderer(MKOverlay overlay) { }
+    @Mapping("init")
+    public MKOverlayRenderer() { }
     
     
     @Mapping("overlay")

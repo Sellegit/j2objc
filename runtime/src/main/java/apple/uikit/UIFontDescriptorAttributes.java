@@ -35,11 +35,11 @@ public class UIFontDescriptorAttributes
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("UIFontFeatureTypeIdentifierKey")
-    protected static native NSString TypeIdentifierKey();
+    public static native NSString TypeIdentifierKey();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("UIFontFeatureSelectorIdentifierKey")
-    protected static native NSString SelectorIdentifierKey();
+    public static native NSString SelectorIdentifierKey();
     
 }

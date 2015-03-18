@@ -29,7 +29,8 @@ public class MKPointAnnotation
 
     
     
-    public MKPointAnnotation() {}
+    @Mapping("init")
+    public MKPointAnnotation() { }
     
     
     @Mapping("coordinate")

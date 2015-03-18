@@ -35,21 +35,21 @@ public class NSProgressFileOperationKind
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("NSProgressFileOperationKindDownloading")
-    protected static native NSString DownloadingValue();
+    public static native NSString DownloadingValue();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("NSProgressFileOperationKindDecompressingAfterDownloading")
-    protected static native NSString DecompressingAfterDownloadingValue();
+    public static native NSString DecompressingAfterDownloadingValue();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("NSProgressFileOperationKindReceiving")
-    protected static native NSString ReceivingValue();
+    public static native NSString ReceivingValue();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("NSProgressFileOperationKindCopying")
-    protected static native NSString CopyingValue();
+    public static native NSString CopyingValue();
     
 }

@@ -31,6 +31,8 @@ public class MPMediaPickerController
     public MPMediaPickerController(@Representing("MPMediaType") @MachineSizedUInt long mediaTypes) { }
     @Mapping("initWithNibName:bundle:")
     public MPMediaPickerController(String nibNameOrNil, NSBundle nibBundleOrNil) { }
+    @Mapping("init")
+    public MPMediaPickerController() { }
     
     
     @Mapping("mediaTypes")

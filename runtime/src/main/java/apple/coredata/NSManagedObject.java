@@ -26,9 +26,10 @@ public class NSManagedObject
 
     
     
-    public NSManagedObject() {}
     @Mapping("initWithEntity:insertIntoManagedObjectContext:")
     public NSManagedObject(NSEntityDescription entity, NSManagedObjectContext context) { }
+    @Mapping("init")
+    public NSManagedObject() { }
     
     
     @Mapping("managedObjectContext")
@@ -103,11 +104,11 @@ public class NSManagedObject
     @Mapping("valueForKey:")
     public native Object getValue(String key);
     @Mapping("setValue:forKey:")
-    private native void setValue(Object value, String key);
+    public native void setValue(Object value, String key);
     @Mapping("primitiveValueForKey:")
     public native Object getPrimitiveValue(String key);
     @Mapping("setPrimitiveValue:forKey:")
-    private native void setPrimitiveValue(Object value, String key);
+    public native void setPrimitiveValue(Object value, String key);
     @Mapping("committedValuesForKeys:")
     public native Map<String, NSObject> getCommittedValues(NSArray<?> keys);
     @Mapping("changedValues")
@@ -118,13 +119,13 @@ public class NSManagedObject
     @Mapping("changedValuesForCurrentEvent")
     public native Map<String, NSObject> getChangedValuesForCurrentEvent();
     @Mapping("validateValue:forKey:error:")
-    protected native boolean validateValue(Todo value, String key, Todo error);
+    public native boolean validateValue(Todo value, String key, Todo error);
     @Mapping("validateForDelete:")
-    protected native boolean validateForDelete(Todo error);
+    public native boolean validateForDelete(Todo error);
     @Mapping("validateForInsert:")
-    protected native boolean validateForInsert(Todo error);
+    public native boolean validateForInsert(Todo error);
     @Mapping("validateForUpdate:")
-    protected native boolean validateForUpdate(Todo error);
+    public native boolean validateForUpdate(Todo error);
     /**
      * @since Available in iOS 3.0 and later.
      */

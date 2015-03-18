@@ -27,7 +27,8 @@ public class MPSeekCommandEvent
 
     
     
-    public MPSeekCommandEvent() {}
+    @Mapping("init")
+    public MPSeekCommandEvent() { }
     
     
     @Mapping("type")

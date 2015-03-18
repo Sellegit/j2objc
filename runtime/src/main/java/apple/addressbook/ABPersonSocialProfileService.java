@@ -30,36 +30,36 @@ public class ABPersonSocialProfileService
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("kABPersonSocialProfileServiceTwitter")
-    protected static native CFString TwitterValue();
+    public static native CFString TwitterValue();
     /**
      * @since Available in iOS 6.0 and later.
      */
     @GlobalConstant("kABPersonSocialProfileServiceSinaWeibo")
-    protected static native CFString SinaWeiboValue();
+    public static native CFString SinaWeiboValue();
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("kABPersonSocialProfileServiceGameCenter")
-    protected static native CFString GameCenterValue();
+    public static native CFString GameCenterValue();
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("kABPersonSocialProfileServiceFacebook")
-    protected static native CFString FacebookValue();
+    public static native CFString FacebookValue();
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("kABPersonSocialProfileServiceMyspace")
-    protected static native CFString MyspaceValue();
+    public static native CFString MyspaceValue();
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("kABPersonSocialProfileServiceLinkedIn")
-    protected static native CFString LinkedInValue();
+    public static native CFString LinkedInValue();
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("kABPersonSocialProfileServiceFlickr")
-    protected static native CFString FlickrValue();
+    public static native CFString FlickrValue();
     
 }

@@ -27,7 +27,8 @@ public class CAEAGLLayer
 
     
     
-    public CAEAGLLayer() {}
+    @Mapping("init")
+    public CAEAGLLayer() { }
     @Mapping("initWithLayer:")
     public CAEAGLLayer(Object layer) { }
     

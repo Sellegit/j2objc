@@ -31,7 +31,6 @@ public class UITabBarItem
 
     
     
-    public UITabBarItem() {}
     @Mapping("initWithTitle:image:tag:")
     public UITabBarItem(String title, UIImage image, @MachineSizedSInt long tag) { }
     /**
@@ -41,6 +40,8 @@ public class UITabBarItem
     public UITabBarItem(String title, UIImage image, UIImage selectedImage) { }
     @Mapping("initWithTabBarSystemItem:tag:")
     public UITabBarItem(@Representing("UITabBarSystemItem") @MachineSizedSInt long systemItem, @MachineSizedSInt long tag) { }
+    @Mapping("init")
+    public UITabBarItem() { }
     
     
     /**

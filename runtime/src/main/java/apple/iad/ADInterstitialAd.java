@@ -30,7 +30,8 @@ public final class ADInterstitialAd
 
     
     
-    public ADInterstitialAd() {}
+    @Mapping("init")
+    public ADInterstitialAd() { }
     
     
     @Mapping("delegate")

@@ -31,7 +31,8 @@ public class UICollectionViewUpdateItem
 
     
     
-    public UICollectionViewUpdateItem() {}
+    @Mapping("init")
+    public UICollectionViewUpdateItem() { }
     
     
     @Mapping("indexPathBeforeUpdate")

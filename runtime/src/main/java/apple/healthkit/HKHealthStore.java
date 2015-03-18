@@ -26,7 +26,8 @@ public class HKHealthStore
 
     
     
-    public HKHealthStore() {}
+    @Mapping("init")
+    public HKHealthStore() { }
     
     
     
@@ -48,11 +49,11 @@ public class HKHealthStore
     @Mapping("stopQuery:")
     public native void stopQuery(HKQuery query);
     @Mapping("dateOfBirthWithError:")
-    protected native NSDate getDateOfBirth(Todo error);
+    public native NSDate getDateOfBirth(Todo error);
     @Mapping("biologicalSexWithError:")
-    protected native HKBiologicalSexObject getBiologicalSex(Todo error);
+    public native HKBiologicalSexObject getBiologicalSex(Todo error);
     @Mapping("bloodTypeWithError:")
-    protected native HKBloodTypeObject getBloodType(Todo error);
+    public native HKBloodTypeObject getBloodType(Todo error);
     @Mapping("isHealthDataAvailable")
     public static native boolean isHealthDataAvailable();
     @Mapping("addSamples:toWorkout:completion:")

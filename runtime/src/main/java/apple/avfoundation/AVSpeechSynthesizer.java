@@ -32,7 +32,8 @@ public class AVSpeechSynthesizer
 
     
     
-    public AVSpeechSynthesizer() {}
+    @Mapping("init")
+    public AVSpeechSynthesizer() { }
     
     
     @Mapping("delegate")

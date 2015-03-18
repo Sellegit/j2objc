@@ -32,7 +32,8 @@ public class AVAudioInputNode
 
     
     
-    public AVAudioInputNode() {}
+    @Mapping("init")
+    public AVAudioInputNode() { }
     
     
     @Mapping("volume")

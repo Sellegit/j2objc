@@ -30,7 +30,7 @@ public class CFPlugIn
     @GlobalFunction("CFPlugInGetTypeID")
     public static native @MachineSizedUInt long getClassTypeID();
     @GlobalFunction("CFPlugInCreate")
-    protected static native CFPlugIn create(CFAllocator allocator, CFURL plugInURL);
+    public static native CFPlugIn create(CFAllocator allocator, CFURL plugInURL);
     @GlobalFunction("CFPlugInGetBundle")
     public static native CFBundle getBundle(CFPlugIn plugIn);
     @GlobalFunction("CFPlugInSetLoadOnDemand")

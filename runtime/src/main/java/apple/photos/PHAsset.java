@@ -29,7 +29,8 @@ public class PHAsset
 
     
     
-    public PHAsset() {}
+    @Mapping("init")
+    public PHAsset() { }
     
     
     @Mapping("mediaType")

@@ -57,7 +57,7 @@ public class CFRunLoop
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CFRunLoopPerformBlock")
-    private static native void performBlock(CFRunLoop rl, CFType mode, @Block Runnable block);
+    public static native void performBlock(CFRunLoop rl, CFType mode, @Block Runnable block);
     @GlobalFunction("CFRunLoopContainsSource")
     public static native boolean containsSource(CFRunLoop rl, CFRunLoopSource source, String mode);
     @GlobalFunction("CFRunLoopAddSource")

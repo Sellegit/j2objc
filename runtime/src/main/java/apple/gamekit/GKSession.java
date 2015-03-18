@@ -29,7 +29,6 @@ public class GKSession
 
     
     
-    public GKSession() {}
     /**
      * @since Available in iOS 3.0 and later.
      * @deprecated Deprecated in iOS 7.0.
@@ -37,6 +36,8 @@ public class GKSession
     @Deprecated
     @Mapping("initWithSessionID:displayName:sessionMode:")
     public GKSession(String sessionID, String name, GKSessionMode mode) { }
+    @Mapping("init")
+    public GKSession() { }
     
     
     @Mapping("delegate")
@@ -75,22 +76,22 @@ public class GKSession
      */
     @Deprecated
     @Mapping("sendData:toPeers:withDataMode:error:")
-    protected native boolean sendData(NSData data, NSArray<?> peers, GKSendDataMode mode, Todo error);
+    public native boolean sendData(NSData data, NSArray<?> peers, GKSendDataMode mode, Todo error);
     /**
      * @since Available in iOS 3.0 and later.
      * @deprecated Deprecated in iOS 7.0.
      */
     @Deprecated
     @Mapping("sendDataToAllPeers:withDataMode:error:")
-    protected native boolean sendDataToAllPeers(NSData data, GKSendDataMode mode, Todo error);
+    public native boolean sendDataToAllPeers(NSData data, GKSendDataMode mode, Todo error);
     @Mapping("setDataReceiveHandler:withContext:")
-    protected native void setDataReceiveHandler(Object handler, Todo context);
+    public native void setDataReceiveHandler(Object handler, Todo context);
     @Mapping("connectToPeer:withTimeout:")
     public native void connect(String peerID, double timeout);
     @Mapping("cancelConnectToPeer:")
     public native void cancelConnect(String peerID);
     @Mapping("acceptConnectionFromPeer:error:")
-    protected native boolean acceptConnection(String peerID, Todo error);
+    public native boolean acceptConnection(String peerID, Todo error);
     @Mapping("denyConnectionFromPeer:")
     public native void denyConnection(String peerID);
     @Mapping("disconnectPeerFromAllPeers:")

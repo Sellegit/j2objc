@@ -32,7 +32,8 @@ public class AVCaptureVideoDataOutput
 
     
     
-    public AVCaptureVideoDataOutput() {}
+    @Mapping("init")
+    public AVCaptureVideoDataOutput() { }
     
     
     @Mapping("sampleBufferCallbackQueue")

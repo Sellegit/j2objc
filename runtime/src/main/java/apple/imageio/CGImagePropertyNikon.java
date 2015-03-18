@@ -30,91 +30,91 @@ public class CGImagePropertyNikon
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("kCGImagePropertyMakerNikonISOSetting")
-    protected static native CFString ISOSettingKey();
+    public static native CFString ISOSettingKey();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("kCGImagePropertyMakerNikonColorMode")
-    protected static native CFString ColorModeKey();
+    public static native CFString ColorModeKey();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("kCGImagePropertyMakerNikonQuality")
-    protected static native CFString QualityKey();
+    public static native CFString QualityKey();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("kCGImagePropertyMakerNikonWhiteBalanceMode")
-    protected static native CFString WhiteBalanceModeKey();
+    public static native CFString WhiteBalanceModeKey();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("kCGImagePropertyMakerNikonSharpenMode")
-    protected static native CFString SharpenModeKey();
+    public static native CFString SharpenModeKey();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("kCGImagePropertyMakerNikonFocusMode")
-    protected static native CFString FocusModeKey();
+    public static native CFString FocusModeKey();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("kCGImagePropertyMakerNikonFlashSetting")
-    protected static native CFString FlashSettingKey();
+    public static native CFString FlashSettingKey();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("kCGImagePropertyMakerNikonISOSelection")
-    protected static native CFString ISOSelectionKey();
+    public static native CFString ISOSelectionKey();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("kCGImagePropertyMakerNikonFlashExposureComp")
-    protected static native CFString FlashExposureCompKey();
+    public static native CFString FlashExposureCompKey();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("kCGImagePropertyMakerNikonImageAdjustment")
-    protected static native CFString ImageAdjustmentKey();
+    public static native CFString ImageAdjustmentKey();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("kCGImagePropertyMakerNikonLensAdapter")
-    protected static native CFString LensAdapterKey();
+    public static native CFString LensAdapterKey();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("kCGImagePropertyMakerNikonLensType")
-    protected static native CFString LensTypeKey();
+    public static native CFString LensTypeKey();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("kCGImagePropertyMakerNikonLensInfo")
-    protected static native CFString LensInfoKey();
+    public static native CFString LensInfoKey();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("kCGImagePropertyMakerNikonFocusDistance")
-    protected static native CFString FocusDistanceKey();
+    public static native CFString FocusDistanceKey();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("kCGImagePropertyMakerNikonDigitalZoom")
-    protected static native CFString DigitalZoomKey();
+    public static native CFString DigitalZoomKey();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("kCGImagePropertyMakerNikonShootingMode")
-    protected static native CFString ShootingModeKey();
+    public static native CFString ShootingModeKey();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("kCGImagePropertyMakerNikonCameraSerialNumber")
-    protected static native CFString CameraSerialNumberKey();
+    public static native CFString CameraSerialNumberKey();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("kCGImagePropertyMakerNikonShutterCount")
-    protected static native CFString ShutterCountKey();
+    public static native CFString ShutterCountKey();
     
 }

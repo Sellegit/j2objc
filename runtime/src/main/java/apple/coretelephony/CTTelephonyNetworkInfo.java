@@ -26,7 +26,8 @@ public class CTTelephonyNetworkInfo
 
     
     
-    public CTTelephonyNetworkInfo() {}
+    @Mapping("init")
+    public CTTelephonyNetworkInfo() { }
     
     
     /**

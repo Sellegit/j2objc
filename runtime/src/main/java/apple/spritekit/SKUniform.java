@@ -33,7 +33,6 @@ public class SKUniform
 
     
     
-    public SKUniform() {}
     @Mapping("initWithName:")
     public SKUniform(String name) { }
     @Mapping("initWithName:texture:")
@@ -52,6 +51,8 @@ public class SKUniform
     public SKUniform(String name, GLKMatrix3 value) { }
     @Mapping("initWithName:floatMatrix4:")
     public SKUniform(String name, GLKMatrix4 value) { }
+    @Mapping("init")
+    public SKUniform() { }
     
     
     @Mapping("name")

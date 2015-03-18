@@ -33,31 +33,31 @@ public class CAEmitterShape
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("kCAEmitterLayerPoint")
-    protected static native NSString PointValue();
+    public static native NSString PointValue();
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("kCAEmitterLayerLine")
-    protected static native NSString LineValue();
+    public static native NSString LineValue();
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("kCAEmitterLayerRectangle")
-    protected static native NSString RectangleValue();
+    public static native NSString RectangleValue();
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("kCAEmitterLayerCuboid")
-    protected static native NSString CuboidValue();
+    public static native NSString CuboidValue();
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("kCAEmitterLayerCircle")
-    protected static native NSString CircleValue();
+    public static native NSString CircleValue();
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("kCAEmitterLayerSphere")
-    protected static native NSString SphereValue();
+    public static native NSString SphereValue();
     
 }

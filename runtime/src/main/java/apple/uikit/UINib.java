@@ -31,7 +31,8 @@ public class UINib
 
     
     
-    public UINib() {}
+    @Mapping("init")
+    public UINib() { }
     
     
     

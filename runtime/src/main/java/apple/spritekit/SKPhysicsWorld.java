@@ -31,7 +31,8 @@ public class SKPhysicsWorld
 
     
     
-    public SKPhysicsWorld() {}
+    @Mapping("init")
+    public SKPhysicsWorld() { }
     
     
     @Mapping("gravity")

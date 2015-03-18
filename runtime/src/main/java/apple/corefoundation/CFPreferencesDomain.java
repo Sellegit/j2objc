@@ -28,16 +28,16 @@ public class CFPreferencesDomain
     
     
     @GlobalConstant("kCFPreferencesAnyApplication")
-    protected static native CFString AnyApplicationValue();
+    public static native CFString AnyApplicationValue();
     @GlobalConstant("kCFPreferencesCurrentApplication")
-    protected static native CFString CurrentApplicationValue();
+    public static native CFString CurrentApplicationValue();
     @GlobalConstant("kCFPreferencesAnyHost")
-    protected static native CFString AnyHostValue();
+    public static native CFString AnyHostValue();
     @GlobalConstant("kCFPreferencesCurrentHost")
-    protected static native CFString CurrentHostValue();
+    public static native CFString CurrentHostValue();
     @GlobalConstant("kCFPreferencesAnyUser")
-    protected static native CFString AnyUserValue();
+    public static native CFString AnyUserValue();
     @GlobalConstant("kCFPreferencesCurrentUser")
-    protected static native CFString CurrentUserValue();
+    public static native CFString CurrentUserValue();
     
 }

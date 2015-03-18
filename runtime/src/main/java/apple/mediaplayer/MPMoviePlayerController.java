@@ -27,9 +27,10 @@ public class MPMoviePlayerController
 
     
     
-    public MPMoviePlayerController() {}
     @Mapping("initWithContentURL:")
     public MPMoviePlayerController(NSURL url) { }
+    @Mapping("init")
+    public MPMoviePlayerController() { }
     
     
     @Mapping("contentURL")
@@ -154,7 +155,7 @@ public class MPMoviePlayerController
      * @since Available in iOS 3.2 and later.
      */
     @GlobalConstant("MPMoviePlayerPlaybackDidFinishReasonUserInfoKey")
-    protected static native NSString PlaybackDidFinishReasonUserInfoKey();
+    public static native NSString PlaybackDidFinishReasonUserInfoKey();
     /**
      * @since Available in iOS 3.2 and later.
      */
@@ -234,7 +235,7 @@ public class MPMoviePlayerController
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("MPMoviePlayerTimedMetadataUserInfoKey")
-    protected static native NSString TimedMetadataUserInfoKey();
+    public static native NSString TimedMetadataUserInfoKey();
     
     @Mapping("setFullscreen:animated:")
     public native void setFullscreen(boolean fullscreen, boolean animated);

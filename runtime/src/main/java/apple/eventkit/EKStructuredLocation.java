@@ -28,7 +28,8 @@ public class EKStructuredLocation
 
     
     
-    public EKStructuredLocation() {}
+    @Mapping("init")
+    public EKStructuredLocation() { }
     
     
     @Mapping("title")

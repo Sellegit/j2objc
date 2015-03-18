@@ -24,7 +24,8 @@ public class GCControllerButtonInput
 
     
     
-    public GCControllerButtonInput() {}
+    @Mapping("init")
+    public GCControllerButtonInput() { }
     
     
     @Mapping("valueChangedHandler")

@@ -32,7 +32,6 @@ public class AVCaptureConnection
 
     
     
-    public AVCaptureConnection() {}
     /**
      * @since Available in iOS 8.0 and later.
      */
@@ -43,6 +42,8 @@ public class AVCaptureConnection
      */
     @Mapping("initWithInputPort:videoPreviewLayer:")
     public AVCaptureConnection(AVCaptureInputPort port, AVCaptureVideoPreviewLayer layer) { }
+    @Mapping("init")
+    public AVCaptureConnection() { }
     
     
     @Mapping("inputPorts")

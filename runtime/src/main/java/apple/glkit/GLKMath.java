@@ -30,8 +30,8 @@ public class GLKMath
     
     
     @GlobalFunction("GLKMathProject")
-    private static native GLKVector3 project(GLKVector3 object, GLKMatrix4 model, GLKMatrix4 projection, Todo viewport);
+    public static native GLKVector3 project(GLKVector3 object, GLKMatrix4 model, GLKMatrix4 projection, Todo viewport);
     @GlobalFunction("GLKMathUnproject")
-    private static native GLKVector3 unproject(GLKVector3 window, GLKMatrix4 model, GLKMatrix4 projection, Todo viewport, Todo success);
+    public static native GLKVector3 unproject(GLKVector3 window, GLKMatrix4 model, GLKMatrix4 projection, Todo viewport, Todo success);
     
 }

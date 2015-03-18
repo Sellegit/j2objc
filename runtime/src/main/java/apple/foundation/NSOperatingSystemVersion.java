@@ -28,7 +28,7 @@ public class NSOperatingSystemVersion
      {
 
     
-    protected NSOperatingSystemVersion() {}
+    private NSOperatingSystemVersion() {}
     
     
     @DotMapping("majorVersion")

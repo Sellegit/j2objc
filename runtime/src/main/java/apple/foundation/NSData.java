@@ -54,11 +54,11 @@ public class NSData
     
     
     @Mapping("getBytes:length:")
-    protected native void getBytes(Todo buffer, @MachineSizedUInt long length);
+    public native void getBytes(Todo buffer, @MachineSizedUInt long length);
     @Mapping("subdataWithRange:")
     public native NSData getSubdata(NSRange range);
     @Mapping("writeToFile:atomically:")
-    protected native boolean writeFile(String path, boolean useAuxiliaryFile);
+    public native boolean writeFile(String path, boolean useAuxiliaryFile);
     @Mapping("writeToURL:atomically:")
     public native boolean write(NSURL url, boolean atomically);
     /**
@@ -67,7 +67,7 @@ public class NSData
     @Mapping("rangeOfData:options:range:")
     public native NSRange find(NSData dataToFind, @Representing("NSDataSearchOptions") @MachineSizedUInt long mask, NSRange searchRange);
     @Mapping("dataWithContentsOfFile:")
-    protected static native NSData readFile(String path);
+    public static native NSData readFile(String path);
     @Mapping("dataWithContentsOfURL:")
     public static native NSData read(NSURL url);
     /**
@@ -86,6 +86,6 @@ public class NSData
      */
     @Deprecated
     @Mapping("dataWithContentsOfMappedFile:")
-    protected static native Object readMappedFile(String path);
+    public static native Object readMappedFile(String path);
     
 }

@@ -27,7 +27,8 @@ public class GKLeaderboardSet
 
     
     
-    public GKLeaderboardSet() {}
+    @Mapping("init")
+    public GKLeaderboardSet() { }
     
     
     @Mapping("title")

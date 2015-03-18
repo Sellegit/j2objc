@@ -26,7 +26,8 @@ public class HKBiologicalSexObject
 
     
     
-    public HKBiologicalSexObject() {}
+    @Mapping("init")
+    public HKBiologicalSexObject() { }
     
     
     @Mapping("biologicalSex")

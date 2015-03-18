@@ -27,7 +27,8 @@ public class MPPlayableContentManager
 
     
     
-    public MPPlayableContentManager() {}
+    @Mapping("init")
+    public MPPlayableContentManager() { }
     
     
     @Mapping("dataSource")

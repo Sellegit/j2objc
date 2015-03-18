@@ -27,9 +27,10 @@ public class PKPushRegistry
 
     
     
-    public PKPushRegistry() {}
     @Mapping("initWithQueue:")
     public PKPushRegistry(DispatchQueue queue) { }
+    @Mapping("init")
+    public PKPushRegistry() { }
     
     
     @Mapping("delegate")

@@ -32,9 +32,10 @@ public class AVAssetReaderOutputMetadataAdaptor
 
     
     
-    public AVAssetReaderOutputMetadataAdaptor() {}
     @Mapping("initWithAssetReaderTrackOutput:")
     public AVAssetReaderOutputMetadataAdaptor(AVAssetReaderTrackOutput trackOutput) { }
+    @Mapping("init")
+    public AVAssetReaderOutputMetadataAdaptor() { }
     
     
     @Mapping("assetReaderTrackOutput")

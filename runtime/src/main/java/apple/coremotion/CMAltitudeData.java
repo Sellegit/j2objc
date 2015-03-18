@@ -26,7 +26,8 @@ public class CMAltitudeData
 
     
     
-    public CMAltitudeData() {}
+    @Mapping("init")
+    public CMAltitudeData() { }
     
     
     @Mapping("relativeAltitude")

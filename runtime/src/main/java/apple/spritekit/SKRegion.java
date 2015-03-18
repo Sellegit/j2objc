@@ -33,13 +33,14 @@ public class SKRegion
 
     
     
-    public SKRegion() {}
     @Mapping("initWithRadius:")
     public SKRegion(float radius) { }
     @Mapping("initWithSize:")
     public SKRegion(CGSize size) { }
     @Mapping("initWithPath:")
     public SKRegion(CGPath path) { }
+    @Mapping("init")
+    public SKRegion() { }
     
     
     @Mapping("path")

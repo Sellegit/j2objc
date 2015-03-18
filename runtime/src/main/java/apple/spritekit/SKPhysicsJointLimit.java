@@ -31,7 +31,8 @@ public class SKPhysicsJointLimit
 
     
     
-    public SKPhysicsJointLimit() {}
+    @Mapping("init")
+    public SKPhysicsJointLimit() { }
     
     
     @Mapping("maxLength")

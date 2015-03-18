@@ -60,16 +60,16 @@ public class CFLocale
     @GlobalFunction("CFLocaleCopyPreferredLanguages")
     public static native List<String> getPreferredLanguages();
     @GlobalFunction("CFLocaleCreateCanonicalLanguageIdentifierFromString")
-    protected static native String getCanonicalLanguageIdentifier(CFAllocator allocator, String localeIdentifier);
+    public static native String getCanonicalLanguageIdentifier(CFAllocator allocator, String localeIdentifier);
     @GlobalFunction("CFLocaleCreateCanonicalLocaleIdentifierFromString")
-    protected static native String getCanonicalLocaleIdentifier(CFAllocator allocator, String localeIdentifier);
+    public static native String getCanonicalLocaleIdentifier(CFAllocator allocator, String localeIdentifier);
     @GlobalFunction("CFLocaleCreateCanonicalLocaleIdentifierFromScriptManagerCodes")
-    protected static native String getCanonicalLocaleIdentifier(CFAllocator allocator, short lcode, short rcode);
+    public static native String getCanonicalLocaleIdentifier(CFAllocator allocator, short lcode, short rcode);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CFLocaleCreateLocaleIdentifierFromWindowsLocaleCode")
-    protected static native String getLocaleIdentifierFromWindowsLocaleCode(CFAllocator allocator, int lcid);
+    public static native String getLocaleIdentifierFromWindowsLocaleCode(CFAllocator allocator, int lcid);
     /**
      * @since Available in iOS 4.0 and later.
      */
@@ -86,13 +86,13 @@ public class CFLocale
     @GlobalFunction("CFLocaleGetLanguageLineDirection")
     public static native CFLocaleLanguageDirection getLanguageLineDirection(String isoLangCode);
     @GlobalFunction("CFLocaleCreateComponentsFromLocaleIdentifier")
-    protected static native Map<CFLocaleComponent, NSObject> getComponentsFromLocaleIdentifier(CFAllocator allocator, String localeID);
+    public static native Map<CFLocaleComponent, NSObject> getComponentsFromLocaleIdentifier(CFAllocator allocator, String localeID);
     @GlobalFunction("CFLocaleCreateLocaleIdentifierFromComponents")
-    protected static native String getLocaleIdentifierFromComponents(CFAllocator allocator, CFDictionary dictionary);
+    public static native String getLocaleIdentifierFromComponents(CFAllocator allocator, CFDictionary dictionary);
     @GlobalFunction("CFLocaleCreate")
-    protected static native CFLocale create(CFAllocator allocator, String localeIdentifier);
+    public static native CFLocale create(CFAllocator allocator, String localeIdentifier);
     @GlobalFunction("CFLocaleCreateCopy")
-    protected static native CFLocale createCopy(CFAllocator allocator, CFLocale locale);
+    public static native CFLocale createCopy(CFAllocator allocator, CFLocale locale);
     @GlobalFunction("CFLocaleGetIdentifier")
     public static native String getIdentifier(CFLocale locale);
     @GlobalFunction("CFLocaleGetValue")

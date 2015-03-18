@@ -29,7 +29,7 @@ public class SCNVector3
      {
 
     
-    protected SCNVector3() {}
+    private SCNVector3() {}
     
     
     @DotMapping("x")

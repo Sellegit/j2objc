@@ -35,41 +35,41 @@ public class NSURLFileResourceType
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("NSURLFileResourceTypeNamedPipe")
-    protected static native NSString NamedPipeValue();
+    public static native NSString NamedPipeValue();
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("NSURLFileResourceTypeCharacterSpecial")
-    protected static native NSString CharacterSpecialValue();
+    public static native NSString CharacterSpecialValue();
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("NSURLFileResourceTypeDirectory")
-    protected static native NSString DirectoryValue();
+    public static native NSString DirectoryValue();
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("NSURLFileResourceTypeBlockSpecial")
-    protected static native NSString BlockSpecialValue();
+    public static native NSString BlockSpecialValue();
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("NSURLFileResourceTypeRegular")
-    protected static native NSString RegularValue();
+    public static native NSString RegularValue();
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("NSURLFileResourceTypeSymbolicLink")
-    protected static native NSString SymbolicLinkValue();
+    public static native NSString SymbolicLinkValue();
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("NSURLFileResourceTypeSocket")
-    protected static native NSString SocketValue();
+    public static native NSString SocketValue();
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("NSURLFileResourceTypeUnknown")
-    protected static native NSString UnknownValue();
+    public static native NSString UnknownValue();
     
 }

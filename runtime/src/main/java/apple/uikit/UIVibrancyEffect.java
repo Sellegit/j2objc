@@ -31,7 +31,8 @@ public class UIVibrancyEffect
 
     
     
-    public UIVibrancyEffect() {}
+    @Mapping("init")
+    public UIVibrancyEffect() { }
     
     
     

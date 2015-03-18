@@ -24,7 +24,7 @@ import apple.foundation.*;
      {
 
     
-    protected CFFileDescriptorContext() {}
+    private CFFileDescriptorContext() {}
     
     
     @DotMapping("version")

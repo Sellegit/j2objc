@@ -32,9 +32,10 @@ public class AVAudioUnitSampler
 
     
     
-    public AVAudioUnitSampler() {}
     @Mapping("initWithAudioComponentDescription:")
     public AVAudioUnitSampler(AudioComponentDescription description) { }
+    @Mapping("init")
+    public AVAudioUnitSampler() { }
     
     
     @Mapping("stereoPan")

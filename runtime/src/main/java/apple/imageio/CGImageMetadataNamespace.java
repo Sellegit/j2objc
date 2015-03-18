@@ -30,46 +30,46 @@ public class CGImageMetadataNamespace
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("kCGImageMetadataNamespaceExif")
-    protected static native CFString ExifValue();
+    public static native CFString ExifValue();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("kCGImageMetadataNamespaceExifAux")
-    protected static native CFString ExifAuxValue();
+    public static native CFString ExifAuxValue();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("kCGImageMetadataNamespaceExifEX")
-    protected static native CFString ExifEXValue();
+    public static native CFString ExifEXValue();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("kCGImageMetadataNamespaceDublinCore")
-    protected static native CFString DublinCoreValue();
+    public static native CFString DublinCoreValue();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("kCGImageMetadataNamespaceIPTCCore")
-    protected static native CFString IPTCCoreValue();
+    public static native CFString IPTCCoreValue();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("kCGImageMetadataNamespacePhotoshop")
-    protected static native CFString PhotoshopValue();
+    public static native CFString PhotoshopValue();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("kCGImageMetadataNamespaceTIFF")
-    protected static native CFString TIFFValue();
+    public static native CFString TIFFValue();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("kCGImageMetadataNamespaceXMPBasic")
-    protected static native CFString XMPBasicValue();
+    public static native CFString XMPBasicValue();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("kCGImageMetadataNamespaceXMPRights")
-    protected static native CFString XMPRightsValue();
+    public static native CFString XMPRightsValue();
     
 }

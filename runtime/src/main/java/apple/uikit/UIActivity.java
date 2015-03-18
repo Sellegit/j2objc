@@ -31,7 +31,8 @@ public class UIActivity
 
     
     
-    public UIActivity() {}
+    @Mapping("init")
+    public UIActivity() { }
     
     
     

@@ -24,7 +24,7 @@ public class CFRange
      {
 
     
-    protected CFRange() {}
+    private CFRange() {}
     
     
     @DotMapping("location")

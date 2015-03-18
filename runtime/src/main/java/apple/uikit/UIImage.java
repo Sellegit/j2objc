@@ -31,7 +31,6 @@ public class UIImage
 
     
     
-    public UIImage() {}
     @Mapping("initWithContentsOfFile:")
     public UIImage(String path) { }
     @Mapping("initWithData:")
@@ -58,6 +57,8 @@ public class UIImage
      */
     @Mapping("initWithCIImage:scale:orientation:")
     public UIImage(CIImage ciImage, @MachineSizedFloat double scale, @Representing("UIImageOrientation") @MachineSizedSInt long orientation) { }
+    @Mapping("init")
+    public UIImage() { }
     
     
     @Mapping("size")
@@ -175,7 +176,7 @@ public class UIImage
     @Mapping("imageNamed:inBundle:compatibleWithTraitCollection:")
     public static native UIImage create(String name, NSBundle bundle, UITraitCollection traitCollection);
     @Mapping("imageWithContentsOfFile:")
-    protected static native UIImage createFromFile(String path);
+    public static native UIImage createFromFile(String path);
     @Mapping("imageWithData:")
     public static native UIImage create(NSData data);
     /**

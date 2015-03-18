@@ -23,7 +23,7 @@ import apple.foundation.*;
      {
 
     
-    protected CFNetServiceClientContext() {}
+    private CFNetServiceClientContext() {}
     
     
     @DotMapping("version")

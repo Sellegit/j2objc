@@ -31,9 +31,10 @@ public class NSCharacterSet
     public static final int OpenStepUnicodeReservedBase = 62464;
     
     
-    public NSCharacterSet() {}
     @Mapping("initWithCoder:")
     public NSCharacterSet(NSCoder aDecoder) { }
+    @Mapping("init")
+    public NSCharacterSet() { }
     
     
     @Mapping("bitmapRepresentation")
@@ -91,7 +92,7 @@ public class NSCharacterSet
     @Mapping("characterSetWithBitmapRepresentation:")
     public static native NSCharacterSet create(NSData data);
     @Mapping("characterSetWithContentsOfFile:")
-    private static native NSCharacterSet createWithFile(String fName);
+    public static native NSCharacterSet createWithFile(String fName);
     /**
      * @since Available in iOS 7.0 and later.
      */

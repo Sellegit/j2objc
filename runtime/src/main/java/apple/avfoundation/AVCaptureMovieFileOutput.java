@@ -32,7 +32,8 @@ public class AVCaptureMovieFileOutput
 
     
     
-    public AVCaptureMovieFileOutput() {}
+    @Mapping("init")
+    public AVCaptureMovieFileOutput() { }
     
     
     @Mapping("movieFragmentInterval")

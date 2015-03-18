@@ -31,7 +31,8 @@ public class UITextRange
 
     
     
-    public UITextRange() {}
+    @Mapping("init")
+    public UITextRange() { }
     
     
     @Mapping("isEmpty")

@@ -31,7 +31,8 @@ public class NSMetadataItem
 
     
     
-    public NSMetadataItem() {}
+    @Mapping("init")
+    public NSMetadataItem() { }
     
     
     @Mapping("attributes")

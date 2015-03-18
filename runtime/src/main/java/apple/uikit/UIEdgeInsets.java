@@ -28,7 +28,7 @@ public class UIEdgeInsets
      {
 
     
-    protected UIEdgeInsets() {}
+    private UIEdgeInsets() {}
     
     
     @DotMapping("top")
@@ -72,7 +72,7 @@ public class UIEdgeInsets
     public static native UIEdgeInsets Zero();
     
     @GlobalFunction("NSStringFromUIEdgeInsets")
-    protected static native String toString(UIEdgeInsets insets);
+    public static native String toString(UIEdgeInsets insets);
     @GlobalFunction("UIEdgeInsetsFromString")
     public static native UIEdgeInsets fromString(String string);
     

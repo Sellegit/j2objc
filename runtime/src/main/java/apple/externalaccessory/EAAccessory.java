@@ -30,7 +30,8 @@ public class EAAccessory
     public static final int ConnectionIDNone = 0;
     
     
-    public EAAccessory() {}
+    @Mapping("init")
+    public EAAccessory() { }
     
     
     /**

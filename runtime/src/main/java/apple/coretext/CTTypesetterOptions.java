@@ -32,11 +32,11 @@ public class CTTypesetterOptions
      */
     @Deprecated
     @GlobalConstant("kCTTypesetterOptionDisableBidiProcessing")
-    protected static native CFString DisableBidiProcessing();
+    public static native CFString DisableBidiProcessing();
     /**
      * @since Available in iOS 3.2 and later.
      */
     @GlobalConstant("kCTTypesetterOptionForcedEmbeddingLevel")
-    protected static native CFString ForcedEmbeddingLevel();
+    public static native CFString ForcedEmbeddingLevel();
     
 }

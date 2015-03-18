@@ -35,128 +35,128 @@ public class NSMetadataItemAttribute
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("NSMetadataItemFSNameKey")
-    protected static native NSString FSNameValue();
+    public static native NSString FSNameValue();
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("NSMetadataItemDisplayNameKey")
-    protected static native NSString DisplayNameValue();
+    public static native NSString DisplayNameValue();
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("NSMetadataItemURLKey")
-    protected static native NSString URLValue();
+    public static native NSString URLValue();
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("NSMetadataItemPathKey")
-    protected static native NSString PathValue();
+    public static native NSString PathValue();
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("NSMetadataItemFSSizeKey")
-    protected static native NSString FSSizeValue();
+    public static native NSString FSSizeValue();
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("NSMetadataItemFSCreationDateKey")
-    protected static native NSString FSCreationDateValue();
+    public static native NSString FSCreationDateValue();
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("NSMetadataItemFSContentChangeDateKey")
-    protected static native NSString FSContentChangeDateValue();
+    public static native NSString FSContentChangeDateValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("NSMetadataItemContentTypeKey")
-    protected static native NSString ContentTypeValue();
+    public static native NSString ContentTypeValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("NSMetadataItemContentTypeTreeKey")
-    protected static native NSString ContentTypeTreeValue();
+    public static native NSString ContentTypeTreeValue();
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("NSMetadataItemIsUbiquitousKey")
-    protected static native NSString IsUbiquitousValue();
+    public static native NSString IsUbiquitousValue();
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("NSMetadataUbiquitousItemHasUnresolvedConflictsKey")
-    protected static native NSString HasUnresolvedConflictsValue();
+    public static native NSString HasUnresolvedConflictsValue();
     /**
      * @since Available in iOS 5.0 and later.
      * @deprecated Deprecated in iOS 7.0.
      */
     @Deprecated
     @GlobalConstant("NSMetadataUbiquitousItemIsDownloadedKey")
-    protected static native NSString IsDownloadedValue();
+    public static native NSString IsDownloadedValue();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("NSMetadataUbiquitousItemDownloadingStatusKey")
-    protected static native NSString DownloadingStatusValue();
+    public static native NSString DownloadingStatusValue();
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("NSMetadataUbiquitousItemIsDownloadingKey")
-    protected static native NSString IsDownloadingValue();
+    public static native NSString IsDownloadingValue();
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("NSMetadataUbiquitousItemIsUploadedKey")
-    protected static native NSString IsUploadedValue();
+    public static native NSString IsUploadedValue();
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("NSMetadataUbiquitousItemIsUploadingKey")
-    protected static native NSString IsUploadingValue();
+    public static native NSString IsUploadingValue();
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("NSMetadataUbiquitousItemPercentDownloadedKey")
-    protected static native NSString PercentDownloadedValue();
+    public static native NSString PercentDownloadedValue();
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("NSMetadataUbiquitousItemPercentUploadedKey")
-    protected static native NSString PercentUploadedValue();
+    public static native NSString PercentUploadedValue();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("NSMetadataUbiquitousItemDownloadingErrorKey")
-    protected static native NSString DownloadingErrorValue();
+    public static native NSString DownloadingErrorValue();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("NSMetadataUbiquitousItemUploadingErrorKey")
-    protected static native NSString UploadingErrorValue();
+    public static native NSString UploadingErrorValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("NSMetadataUbiquitousItemDownloadRequestedKey")
-    protected static native NSString DownloadRequestedValue();
+    public static native NSString DownloadRequestedValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("NSMetadataUbiquitousItemIsExternalDocumentKey")
-    protected static native NSString IsExternalDocumentValue();
+    public static native NSString IsExternalDocumentValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("NSMetadataUbiquitousItemContainerDisplayNameKey")
-    protected static native NSString ContainerDisplayNameValue();
+    public static native NSString ContainerDisplayNameValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("NSMetadataUbiquitousItemURLInLocalContainerKey")
-    protected static native NSString URLInLocalContainerValue();
+    public static native NSString URLInLocalContainerValue();
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("NSMetadataQueryResultContentRelevanceAttribute")
-    protected static native NSString ContentRelevanceValue();
+    public static native NSString ContentRelevanceValue();
     
 }

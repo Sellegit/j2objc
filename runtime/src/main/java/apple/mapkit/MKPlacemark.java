@@ -29,11 +29,12 @@ public class MKPlacemark
 
     
     
-    public MKPlacemark() {}
     @Mapping("initWithCoordinate:addressDictionary:")
     public MKPlacemark(CLLocationCoordinate2D coordinate, NSDictionary<?, ?> addressDictionary) { }
     @Mapping("initWithPlacemark:")
     public MKPlacemark(CLPlacemark placemark) { }
+    @Mapping("init")
+    public MKPlacemark() { }
     
     
     @Mapping("countryCode")

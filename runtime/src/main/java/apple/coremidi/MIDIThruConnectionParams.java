@@ -23,7 +23,7 @@ public class MIDIThruConnectionParams
      {
 
     
-    protected MIDIThruConnectionParams() {}
+    private MIDIThruConnectionParams() {}
     
     
     @DotMapping("version")

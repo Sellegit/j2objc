@@ -29,7 +29,8 @@ public class MKLocalSearchResponse
 
     
     
-    public MKLocalSearchResponse() {}
+    @Mapping("init")
+    public MKLocalSearchResponse() { }
     
     
     @Mapping("mapItems")

@@ -26,7 +26,8 @@ public class NSPersistentStoreAsynchronousResult
 
     
     
-    public NSPersistentStoreAsynchronousResult() {}
+    @Mapping("init")
+    public NSPersistentStoreAsynchronousResult() { }
     
     
     @Mapping("managedObjectContext")

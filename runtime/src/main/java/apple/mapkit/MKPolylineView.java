@@ -29,7 +29,6 @@ public class MKPolylineView
 
     
     
-    public MKPolylineView() {}
     /**
      * @since Available in iOS 4.0 and later.
      * @deprecated Deprecated in iOS 7.0.
@@ -46,6 +45,8 @@ public class MKPolylineView
     public MKPolylineView(MKOverlay overlay) { }
     @Mapping("initWithFrame:")
     public MKPolylineView(CGRect frame) { }
+    @Mapping("init")
+    public MKPolylineView() { }
     
     
     /**

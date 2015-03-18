@@ -30,21 +30,21 @@ public class CGImagePropertyColorModel
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("kCGImagePropertyColorModelRGB")
-    protected static native CFString RGBValue();
+    public static native CFString RGBValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("kCGImagePropertyColorModelGray")
-    protected static native CFString GrayValue();
+    public static native CFString GrayValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("kCGImagePropertyColorModelCMYK")
-    protected static native CFString CMYKValue();
+    public static native CFString CMYKValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("kCGImagePropertyColorModelLab")
-    protected static native CFString LabValue();
+    public static native CFString LabValue();
     
 }

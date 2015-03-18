@@ -35,12 +35,12 @@ public class AudioConverter
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("AudioConverterNew")
-    protected static native AudioConverterError create(AudioStreamBasicDescription inSourceFormat, AudioStreamBasicDescription inDestinationFormat, Todo outAudioConverter);
+    public static native AudioConverterError create(AudioStreamBasicDescription inSourceFormat, AudioStreamBasicDescription inDestinationFormat, Todo outAudioConverter);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("AudioConverterNewSpecific")
-    protected static native AudioConverterError create(AudioStreamBasicDescription inSourceFormat, AudioStreamBasicDescription inDestinationFormat, int inNumberClassDescriptions, Todo inClassDescriptions, Todo outAudioConverter);
+    public static native AudioConverterError create(AudioStreamBasicDescription inSourceFormat, AudioStreamBasicDescription inDestinationFormat, int inNumberClassDescriptions, Todo inClassDescriptions, Todo outAudioConverter);
     /**
      * @since Available in iOS 2.0 and later.
      */
@@ -50,31 +50,31 @@ public class AudioConverter
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("AudioConverterGetPropertyInfo")
-    protected static native AudioConverterError getPropertyInfo(AudioConverter inAudioConverter, int inPropertyID, Todo outSize, Todo outWritable);
+    public static native AudioConverterError getPropertyInfo(AudioConverter inAudioConverter, int inPropertyID, Todo outSize, Todo outWritable);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("AudioConverterGetProperty")
-    protected static native AudioConverterError getProperty(AudioConverter inAudioConverter, int inPropertyID, Todo ioPropertyDataSize, Todo outPropertyData);
+    public static native AudioConverterError getProperty(AudioConverter inAudioConverter, int inPropertyID, Todo ioPropertyDataSize, Todo outPropertyData);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("AudioConverterSetProperty")
-    protected static native AudioConverterError setProperty(AudioConverter inAudioConverter, int inPropertyID, int inPropertyDataSize, Todo inPropertyData);
+    public static native AudioConverterError setProperty(AudioConverter inAudioConverter, int inPropertyID, int inPropertyDataSize, Todo inPropertyData);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("AudioConverterConvertBuffer")
-    protected static native AudioConverterError convertBuffer(AudioConverter inAudioConverter, int inInputDataSize, Todo inInputData, Todo ioOutputDataSize, Todo outOutputData);
+    public static native AudioConverterError convertBuffer(AudioConverter inAudioConverter, int inInputDataSize, Todo inInputData, Todo ioOutputDataSize, Todo outOutputData);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("AudioConverterFillComplexBuffer")
-    protected static native AudioConverterError fillComplexBuffer(AudioConverter inAudioConverter, FunctionPtr inInputDataProc, Todo inInputDataProcUserData, Todo ioOutputDataPacketSize, Todo outOutputData, Todo outPacketDescription);
+    public static native AudioConverterError fillComplexBuffer(AudioConverter inAudioConverter, FunctionPtr inInputDataProc, Todo inInputDataProcUserData, Todo ioOutputDataPacketSize, Todo outOutputData, Todo outPacketDescription);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("AudioConverterConvertComplexBuffer")
-    protected static native AudioConverterError convertComplexBuffer(AudioConverter inAudioConverter, int inNumberPCMFrames, Todo inInputData, Todo outOutputData);
+    public static native AudioConverterError convertComplexBuffer(AudioConverter inAudioConverter, int inNumberPCMFrames, Todo inInputData, Todo outOutputData);
     
 }

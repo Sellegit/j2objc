@@ -37,12 +37,12 @@ public class CFNetService
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFNetServiceCreate")
-    protected static native CFNetService create(CFAllocator alloc, String domain, String serviceType, String name, int port);
+    public static native CFNetService create(CFAllocator alloc, String domain, String serviceType, String name, int port);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFNetServiceCreateCopy")
-    protected static native CFNetService createCopy(CFAllocator alloc, CFNetService service);
+    public static native CFNetService createCopy(CFAllocator alloc, CFNetService service);
     /**
      * @since Available in iOS 2.0 and later.
      */
@@ -62,12 +62,12 @@ public class CFNetService
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFNetServiceRegisterWithOptions")
-    protected static native boolean register(CFNetService theService, @MachineSizedUInt long options, Todo error);
+    public static native boolean register(CFNetService theService, @MachineSizedUInt long options, Todo error);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFNetServiceResolveWithTimeout")
-    protected static native boolean resolve(CFNetService theService, double timeout, Todo error);
+    public static native boolean resolve(CFNetService theService, double timeout, Todo error);
     /**
      * @since Available in iOS 2.0 and later.
      */
@@ -102,17 +102,17 @@ public class CFNetService
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFNetServiceCreateDictionaryWithTXTData")
-    protected static native NSDictionary<NSString, NSData> parseTXTData(CFAllocator alloc, NSData txtRecord);
+    public static native NSDictionary<NSString, NSData> parseTXTData(CFAllocator alloc, NSData txtRecord);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFNetServiceCreateTXTDataWithDictionary")
-    protected static native NSData createTXTData(CFAllocator alloc, CFDictionary keyValuePairs);
+    public static native NSData createTXTData(CFAllocator alloc, CFDictionary keyValuePairs);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFNetServiceSetClient")
-    protected static native boolean setCallback(CFNetService theService, FunctionPtr clientCB, CFNetServiceClientContext clientContext);
+    public static native boolean setCallback(CFNetService theService, FunctionPtr clientCB, CFNetServiceClientContext clientContext);
     /**
      * @since Available in iOS 2.0 and later.
      */
@@ -127,6 +127,6 @@ public class CFNetService
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFStreamCreatePairWithSocketToNetService")
-    protected static native void createSocketStreamPair(CFAllocator alloc, CFNetService service, Todo readStream, Todo writeStream);
+    public static native void createSocketStreamPair(CFAllocator alloc, CFNetService service, Todo readStream, Todo writeStream);
     
 }

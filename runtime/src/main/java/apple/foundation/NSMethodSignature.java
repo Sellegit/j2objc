@@ -29,7 +29,8 @@ public class NSMethodSignature
 
     
     
-    public NSMethodSignature() {}
+    @Mapping("init")
+    public NSMethodSignature() { }
     
     
     @Mapping("numberOfArguments")

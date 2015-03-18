@@ -31,7 +31,8 @@ public class NSTextCheckingResult
 
     
     
-    public NSTextCheckingResult() {}
+    @Mapping("init")
+    public NSTextCheckingResult() { }
     
     
     @Mapping("resultType")
@@ -123,7 +124,7 @@ public class NSTextCheckingResult
      * @since Available in iOS 4.0 and later.
      */
     @Mapping("regularExpressionCheckingResultWithRanges:count:regularExpression:")
-    protected static native NSTextCheckingResult createRegularExpressionCheckingResult(NSRange ranges, @MachineSizedUInt long count, NSRegularExpression regularExpression);
+    public static native NSTextCheckingResult createRegularExpressionCheckingResult(NSRange ranges, @MachineSizedUInt long count, NSRegularExpression regularExpression);
     /**
      * @since Available in iOS 4.0 and later.
      */

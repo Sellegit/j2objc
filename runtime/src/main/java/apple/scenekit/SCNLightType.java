@@ -33,12 +33,12 @@ public class SCNLightType
     
     
     @GlobalConstant("SCNLightTypeAmbient")
-    protected static native NSString AmbientValue();
+    public static native NSString AmbientValue();
     @GlobalConstant("SCNLightTypeOmni")
-    protected static native NSString OmniValue();
+    public static native NSString OmniValue();
     @GlobalConstant("SCNLightTypeDirectional")
-    protected static native NSString DirectionalValue();
+    public static native NSString DirectionalValue();
     @GlobalConstant("SCNLightTypeSpot")
-    protected static native NSString SpotValue();
+    public static native NSString SpotValue();
     
 }

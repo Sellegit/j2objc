@@ -32,7 +32,8 @@ public class AVPlayerLayer
 
     
     
-    public AVPlayerLayer() {}
+    @Mapping("init")
+    public AVPlayerLayer() { }
     @Mapping("initWithLayer:")
     public AVPlayerLayer(Object layer) { }
     

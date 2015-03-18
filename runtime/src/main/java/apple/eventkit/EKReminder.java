@@ -28,7 +28,8 @@ public class EKReminder
 
     
     
-    public EKReminder() {}
+    @Mapping("init")
+    public EKReminder() { }
     
     
     @Mapping("startDateComponents")

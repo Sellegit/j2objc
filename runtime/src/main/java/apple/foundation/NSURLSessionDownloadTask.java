@@ -29,7 +29,8 @@ public class NSURLSessionDownloadTask
 
     
     
-    public NSURLSessionDownloadTask() {}
+    @Mapping("init")
+    public NSURLSessionDownloadTask() { }
     
     
     

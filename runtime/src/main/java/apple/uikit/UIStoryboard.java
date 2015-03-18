@@ -31,7 +31,8 @@ public class UIStoryboard
 
     
     
-    public UIStoryboard() {}
+    @Mapping("init")
+    public UIStoryboard() { }
     
     
     

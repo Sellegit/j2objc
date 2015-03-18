@@ -26,7 +26,8 @@ public class NSRelationshipDescription
 
     
     
-    public NSRelationshipDescription() {}
+    @Mapping("init")
+    public NSRelationshipDescription() { }
     
     
     @Mapping("destinationEntity")

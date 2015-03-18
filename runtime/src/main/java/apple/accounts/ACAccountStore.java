@@ -26,7 +26,8 @@ public class ACAccountStore
 
     
     
-    public ACAccountStore() {}
+    @Mapping("init")
+    public ACAccountStore() { }
     
     
     @Mapping("accounts")

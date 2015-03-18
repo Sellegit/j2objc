@@ -31,41 +31,41 @@ public class ALAssetProperty
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("ALAssetPropertyType")
-    protected static native NSString TypeValue();
+    public static native NSString TypeValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("ALAssetPropertyLocation")
-    protected static native NSString LocationValue();
+    public static native NSString LocationValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("ALAssetPropertyDuration")
-    protected static native NSString DurationValue();
+    public static native NSString DurationValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("ALAssetPropertyOrientation")
-    protected static native NSString OrientationValue();
+    public static native NSString OrientationValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("ALAssetPropertyDate")
-    protected static native NSString DateValue();
+    public static native NSString DateValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("ALAssetPropertyRepresentations")
-    protected static native NSString RepresentationsValue();
+    public static native NSString RepresentationsValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("ALAssetPropertyURLs")
-    protected static native NSString URLsValue();
+    public static native NSString URLsValue();
     /**
      * @since Available in iOS 6.0 and later.
      */
     @GlobalConstant("ALAssetPropertyAssetURL")
-    protected static native NSString AssetURLValue();
+    public static native NSString AssetURLValue();
     
 }

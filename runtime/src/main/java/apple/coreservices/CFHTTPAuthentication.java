@@ -37,12 +37,12 @@ public class CFHTTPAuthentication
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFHTTPAuthenticationCreateFromResponse")
-    protected static native CFHTTPAuthentication create(CFAllocator alloc, CFHTTPMessage response);
+    public static native CFHTTPAuthentication create(CFAllocator alloc, CFHTTPMessage response);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFHTTPAuthenticationIsValid")
-    protected static native boolean isValid(CFHTTPAuthentication auth, Todo error);
+    public static native boolean isValid(CFHTTPAuthentication auth, Todo error);
     /**
      * @since Available in iOS 2.0 and later.
      */

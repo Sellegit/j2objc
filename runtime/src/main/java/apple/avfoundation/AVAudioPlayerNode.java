@@ -32,7 +32,8 @@ public class AVAudioPlayerNode
 
     
     
-    public AVAudioPlayerNode() {}
+    @Mapping("init")
+    public AVAudioPlayerNode() { }
     
     
     @Mapping("isPlaying")

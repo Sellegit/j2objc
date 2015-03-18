@@ -26,7 +26,8 @@ public class NSBatchUpdateResult
 
     
     
-    public NSBatchUpdateResult() {}
+    @Mapping("init")
+    public NSBatchUpdateResult() { }
     
     
     @Mapping("result")

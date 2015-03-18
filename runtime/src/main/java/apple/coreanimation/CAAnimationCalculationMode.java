@@ -33,26 +33,26 @@ public class CAAnimationCalculationMode
      * @since Available in iOS 2.0 and later.
      */
     @GlobalConstant("kCAAnimationLinear")
-    protected static native NSString LinearValue();
+    public static native NSString LinearValue();
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalConstant("kCAAnimationDiscrete")
-    protected static native NSString DiscreteValue();
+    public static native NSString DiscreteValue();
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalConstant("kCAAnimationPaced")
-    protected static native NSString PacedValue();
+    public static native NSString PacedValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("kCAAnimationCubic")
-    protected static native NSString CubicValue();
+    public static native NSString CubicValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("kCAAnimationCubicPaced")
-    protected static native NSString CubicPacedValue();
+    public static native NSString CubicPacedValue();
     
 }

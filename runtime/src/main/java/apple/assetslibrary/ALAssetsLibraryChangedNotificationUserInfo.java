@@ -31,21 +31,21 @@ public class ALAssetsLibraryChangedNotificationUserInfo
      * @since Available in iOS 6.0 and later.
      */
     @GlobalConstant("ALAssetLibraryUpdatedAssetsKey")
-    protected static native NSString UpdatedAssetsKey();
+    public static native NSString UpdatedAssetsKey();
     /**
      * @since Available in iOS 6.0 and later.
      */
     @GlobalConstant("ALAssetLibraryInsertedAssetGroupsKey")
-    protected static native NSString InsertedAssetGroupsKey();
+    public static native NSString InsertedAssetGroupsKey();
     /**
      * @since Available in iOS 6.0 and later.
      */
     @GlobalConstant("ALAssetLibraryUpdatedAssetGroupsKey")
-    protected static native NSString UpdatedAssetGroupsKey();
+    public static native NSString UpdatedAssetGroupsKey();
     /**
      * @since Available in iOS 6.0 and later.
      */
     @GlobalConstant("ALAssetLibraryDeletedAssetGroupsKey")
-    protected static native NSString DeletedAssetGroupsKey();
+    public static native NSString DeletedAssetGroupsKey();
     
 }

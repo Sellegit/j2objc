@@ -52,7 +52,7 @@ public class DispatchQueue
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("dispatch_apply")
-    private static native void apply(@MachineSizedUInt long iterations, DispatchQueue queue, @Block("(@MachineSizedUInt)") VoidBlock1<Long> block);
+    public static native void apply(@MachineSizedUInt long iterations, DispatchQueue queue, @Block("(@MachineSizedUInt)") VoidBlock1<Long> block);
     /**
      * @since Available in iOS 4.0 and later.
      * @deprecated Deprecated in iOS 6.0.
@@ -89,7 +89,7 @@ public class DispatchQueue
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("dispatch_after")
-    private static native void after(long when, DispatchQueue queue, @Block Runnable block);
+    public static native void after(long when, DispatchQueue queue, @Block Runnable block);
     /**
      * @since Available in iOS 4.3 and later.
      */

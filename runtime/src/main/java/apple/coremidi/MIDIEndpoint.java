@@ -32,17 +32,17 @@ public class MIDIEndpoint
      * @since Available in iOS 4.2 and later.
      */
     @GlobalFunction("MIDIEndpointGetEntity")
-    protected static native MIDIError getEntity(MIDIEndpoint inEndpoint, Todo outEntity);
+    public static native MIDIError getEntity(MIDIEndpoint inEndpoint, Todo outEntity);
     /**
      * @since Available in iOS 4.2 and later.
      */
     @GlobalFunction("MIDIDestinationCreate")
-    protected static native MIDIError createDestination(MIDIClient client, String name, FunctionPtr readProc, Todo refCon, Todo outDest);
+    public static native MIDIError createDestination(MIDIClient client, String name, FunctionPtr readProc, Todo refCon, Todo outDest);
     /**
      * @since Available in iOS 4.2 and later.
      */
     @GlobalFunction("MIDISourceCreate")
-    protected static native MIDIError createSource(MIDIClient client, String name, Todo outSrc);
+    public static native MIDIError createSource(MIDIClient client, String name, Todo outSrc);
     /**
      * @since Available in iOS 4.2 and later.
      */
@@ -57,6 +57,6 @@ public class MIDIEndpoint
      * @since Available in iOS 4.2 and later.
      */
     @GlobalFunction("MIDIEndpointSetRefCons")
-    protected static native MIDIError setRefCons(MIDIEndpoint endpt, Todo ref1, Todo ref2);
+    public static native MIDIError setRefCons(MIDIEndpoint endpt, Todo ref1, Todo ref2);
     
 }

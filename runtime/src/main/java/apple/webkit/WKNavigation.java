@@ -27,7 +27,8 @@ public class WKNavigation
 
     
     
-    public WKNavigation() {}
+    @Mapping("init")
+    public WKNavigation() { }
     
     
     

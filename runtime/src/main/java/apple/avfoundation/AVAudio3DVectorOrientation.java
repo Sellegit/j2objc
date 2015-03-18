@@ -29,7 +29,7 @@ public class AVAudio3DVectorOrientation
      {
 
     
-    protected AVAudio3DVectorOrientation() {}
+    private AVAudio3DVectorOrientation() {}
     
     
     @DotMapping("forward")

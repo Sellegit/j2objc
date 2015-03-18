@@ -29,7 +29,8 @@ public class NSRecursiveLock
 
     
     
-    public NSRecursiveLock() {}
+    @Mapping("init")
+    public NSRecursiveLock() { }
     
     
     /**

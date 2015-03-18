@@ -33,10 +33,10 @@ public class SCNConsistencyErrorUserInfo
     
     
     @GlobalConstant("SCNConsistencyElementIDErrorKey")
-    protected static native NSString ConsistencyElementIDErrorKey();
+    public static native NSString ConsistencyElementIDErrorKey();
     @GlobalConstant("SCNConsistencyElementTypeErrorKey")
-    protected static native NSString ConsistencyElementTypeErrorKey();
+    public static native NSString ConsistencyElementTypeErrorKey();
     @GlobalConstant("SCNConsistencyLineNumberErrorKey")
-    protected static native NSString ConsistencyLineNumberErrorKey();
+    public static native NSString ConsistencyLineNumberErrorKey();
     
 }

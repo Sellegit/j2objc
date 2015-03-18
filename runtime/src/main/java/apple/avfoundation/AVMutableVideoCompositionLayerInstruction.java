@@ -32,7 +32,8 @@ public class AVMutableVideoCompositionLayerInstruction
 
     
     
-    public AVMutableVideoCompositionLayerInstruction() {}
+    @Mapping("init")
+    public AVMutableVideoCompositionLayerInstruction() { }
     
     
     @Mapping("trackID")

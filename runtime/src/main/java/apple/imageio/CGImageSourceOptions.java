@@ -30,41 +30,41 @@ public class CGImageSourceOptions
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("kCGImageSourceTypeIdentifierHint")
-    protected static native CFString TypeIdentifierHintKey();
+    public static native CFString TypeIdentifierHintKey();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("kCGImageSourceShouldCache")
-    protected static native CFString ShouldCacheKey();
+    public static native CFString ShouldCacheKey();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("kCGImageSourceShouldCacheImmediately")
-    protected static native CFString ShouldCacheImmediatelyKey();
+    public static native CFString ShouldCacheImmediatelyKey();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("kCGImageSourceShouldAllowFloat")
-    protected static native CFString ShouldAllowFloatKey();
+    public static native CFString ShouldAllowFloatKey();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("kCGImageSourceCreateThumbnailFromImageIfAbsent")
-    protected static native CFString CreateThumbnailFromImageIfAbsentKey();
+    public static native CFString CreateThumbnailFromImageIfAbsentKey();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("kCGImageSourceCreateThumbnailFromImageAlways")
-    protected static native CFString CreateThumbnailFromImageAlwaysKey();
+    public static native CFString CreateThumbnailFromImageAlwaysKey();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("kCGImageSourceThumbnailMaxPixelSize")
-    protected static native CFString ThumbnailMaxPixelSizeKey();
+    public static native CFString ThumbnailMaxPixelSizeKey();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("kCGImageSourceCreateThumbnailWithTransform")
-    protected static native CFString CreateThumbnailWithTransformKey();
+    public static native CFString CreateThumbnailWithTransformKey();
     
 }

@@ -32,16 +32,16 @@ public class SKReceiptRefreshRequestOptions
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("SKReceiptPropertyIsExpired")
-    protected static native NSString IsExpiredKey();
+    public static native NSString IsExpiredKey();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("SKReceiptPropertyIsRevoked")
-    protected static native NSString IsRevokedKey();
+    public static native NSString IsRevokedKey();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("SKReceiptPropertyIsVolumePurchase")
-    protected static native NSString IsVolumePurchaseKey();
+    public static native NSString IsVolumePurchaseKey();
     
 }

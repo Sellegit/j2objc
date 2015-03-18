@@ -27,7 +27,8 @@ public class ALAssetsGroup
 
     
     
-    public ALAssetsGroup() {}
+    @Mapping("init")
+    public ALAssetsGroup() { }
     
     
     /**

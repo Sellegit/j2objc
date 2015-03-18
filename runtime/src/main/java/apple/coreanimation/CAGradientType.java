@@ -33,6 +33,6 @@ public class CAGradientType
      * @since Available in iOS 3.0 and later.
      */
     @GlobalConstant("kCAGradientLayerAxial")
-    protected static native NSString AxialValue();
+    public static native NSString AxialValue();
     
 }

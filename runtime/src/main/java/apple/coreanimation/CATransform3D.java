@@ -26,7 +26,7 @@ public class CATransform3D
      {
 
     
-    protected CATransform3D() {}
+    private CATransform3D() {}
     
     
     @DotMapping("m11")

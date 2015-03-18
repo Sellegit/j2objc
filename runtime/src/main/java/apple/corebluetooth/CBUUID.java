@@ -27,7 +27,8 @@ public class CBUUID
 
     
     
-    public CBUUID() {}
+    @Mapping("init")
+    public CBUUID() { }
     
     
     @Mapping("data")

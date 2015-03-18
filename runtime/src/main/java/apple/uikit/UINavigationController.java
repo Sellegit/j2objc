@@ -31,11 +31,12 @@ public class UINavigationController
 
     
     
-    public UINavigationController() {}
     @Mapping("initWithRootViewController:")
     public UINavigationController(UIViewController rootViewController) { }
     @Mapping("initWithNibName:bundle:")
     public UINavigationController(String nibNameOrNil, NSBundle nibBundleOrNil) { }
+    @Mapping("init")
+    public UINavigationController() { }
     
     
     @Mapping("topViewController")

@@ -27,9 +27,10 @@ public class CKFetchRecordChangesOperation
 
     
     
-    public CKFetchRecordChangesOperation() {}
     @Mapping("initWithRecordZoneID:previousServerChangeToken:")
     public CKFetchRecordChangesOperation(CKRecordZoneID recordZoneID, CKServerChangeToken previousServerChangeToken) { }
+    @Mapping("init")
+    public CKFetchRecordChangesOperation() { }
     
     
     @Mapping("recordZoneID")

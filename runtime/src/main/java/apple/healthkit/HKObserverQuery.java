@@ -26,9 +26,10 @@ public class HKObserverQuery
 
     
     
-    public HKObserverQuery() {}
     @Mapping("initWithSampleType:predicate:updateHandler:")
     public HKObserverQuery(HKSampleType sampleType, NSPredicate predicate, Todo updateHandler) { }
+    @Mapping("init")
+    public HKObserverQuery() { }
     
     
     

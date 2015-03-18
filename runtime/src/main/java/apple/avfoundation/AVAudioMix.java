@@ -32,7 +32,8 @@ public class AVAudioMix
 
     
     
-    public AVAudioMix() {}
+    @Mapping("init")
+    public AVAudioMix() { }
     
     
     @Mapping("inputParameters")

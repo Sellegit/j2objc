@@ -32,14 +32,14 @@ public class NSFileSystemAttribute
     
     
     @GlobalConstant("NSFileSystemNumber")
-    protected static native NSString NumberAttribute();
+    public static native NSString NumberAttribute();
     @GlobalConstant("NSFileSystemSize")
-    protected static native NSString SizeAttribute();
+    public static native NSString SizeAttribute();
     @GlobalConstant("NSFileSystemFreeSize")
-    protected static native NSString FreeSizeAttribute();
+    public static native NSString FreeSizeAttribute();
     @GlobalConstant("NSFileSystemNodes")
-    protected static native NSString NodesAttribute();
+    public static native NSString NodesAttribute();
     @GlobalConstant("NSFileSystemFreeNodes")
-    protected static native NSString FreeNodesAttribute();
+    public static native NSString FreeNodesAttribute();
     
 }

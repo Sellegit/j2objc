@@ -33,26 +33,26 @@ public class CAEmitterRenderMode
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("kCAEmitterLayerUnordered")
-    protected static native NSString UnorderedValue();
+    public static native NSString UnorderedValue();
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("kCAEmitterLayerOldestFirst")
-    protected static native NSString OldestFirstValue();
+    public static native NSString OldestFirstValue();
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("kCAEmitterLayerOldestLast")
-    protected static native NSString OldestLastValue();
+    public static native NSString OldestLastValue();
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("kCAEmitterLayerBackToFront")
-    protected static native NSString BackToFrontValue();
+    public static native NSString BackToFrontValue();
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("kCAEmitterLayerAdditive")
-    protected static native NSString AdditiveValue();
+    public static native NSString AdditiveValue();
     
 }

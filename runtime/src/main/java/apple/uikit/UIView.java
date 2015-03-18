@@ -31,9 +31,10 @@ public class UIView
 
     
     
-    public UIView() {}
     @Mapping("initWithFrame:")
     public UIView(CGRect frame) { }
+    @Mapping("init")
+    public UIView() { }
     
     
     @Mapping("isUserInteractionEnabled")

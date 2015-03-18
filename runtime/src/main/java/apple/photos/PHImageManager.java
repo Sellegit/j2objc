@@ -29,7 +29,8 @@ public class PHImageManager
 
     
     
-    public PHImageManager() {}
+    @Mapping("init")
+    public PHImageManager() { }
     
     
     

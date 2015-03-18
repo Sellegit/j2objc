@@ -26,7 +26,8 @@ public class HKSource
 
     
     
-    public HKSource() {}
+    @Mapping("init")
+    public HKSource() { }
     
     
     @Mapping("name")

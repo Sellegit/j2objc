@@ -26,7 +26,8 @@ public class NEVPNProtocolIPSec
 
     
     
-    public NEVPNProtocolIPSec() {}
+    @Mapping("init")
+    public NEVPNProtocolIPSec() { }
     
     
     /**

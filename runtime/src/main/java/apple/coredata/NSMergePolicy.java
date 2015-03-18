@@ -26,9 +26,10 @@ public class NSMergePolicy
 
     
     
-    public NSMergePolicy() {}
     @Mapping("initWithMergeType:")
     public NSMergePolicy(@Representing("NSMergePolicyType") @MachineSizedUInt long ty) { }
+    @Mapping("init")
+    public NSMergePolicy() { }
     
     
     @Mapping("mergeType")
@@ -63,6 +64,6 @@ public class NSMergePolicy
     public static native NSMergePolicy getRollbackMergePolicy();
     
     @Mapping("resolveConflicts:error:")
-    protected native boolean resolveConflicts(NSArray<?> list, Todo error);
+    public native boolean resolveConflicts(NSArray<?> list, Todo error);
     
 }

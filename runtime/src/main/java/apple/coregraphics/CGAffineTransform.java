@@ -24,7 +24,7 @@ public class CGAffineTransform
      {
 
     
-    protected CGAffineTransform() {}
+    private CGAffineTransform() {}
     
     
     @DotMapping("a")

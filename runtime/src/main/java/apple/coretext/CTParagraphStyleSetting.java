@@ -23,7 +23,7 @@ public class CTParagraphStyleSetting
      {
 
     
-    protected CTParagraphStyleSetting() {}
+    private CTParagraphStyleSetting() {}
     
     
     @DotMapping("spec")

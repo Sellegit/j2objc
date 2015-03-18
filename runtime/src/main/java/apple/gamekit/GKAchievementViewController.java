@@ -29,11 +29,12 @@ public class GKAchievementViewController
 
     
     
-    public GKAchievementViewController() {}
     @Mapping("initWithRootViewController:")
     public GKAchievementViewController(UIViewController rootViewController) { }
     @Mapping("initWithNibName:bundle:")
     public GKAchievementViewController(String nibNameOrNil, NSBundle nibBundleOrNil) { }
+    @Mapping("init")
+    public GKAchievementViewController() { }
     
     
     @Mapping("achievementDelegate")

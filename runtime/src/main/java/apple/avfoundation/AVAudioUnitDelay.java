@@ -32,9 +32,10 @@ public class AVAudioUnitDelay
 
     
     
-    public AVAudioUnitDelay() {}
     @Mapping("initWithAudioComponentDescription:")
     public AVAudioUnitDelay(AudioComponentDescription audioComponentDescription) { }
+    @Mapping("init")
+    public AVAudioUnitDelay() { }
     
     
     @Mapping("delayTime")

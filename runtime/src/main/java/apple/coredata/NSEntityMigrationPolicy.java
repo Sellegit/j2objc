@@ -26,7 +26,8 @@ public class NSEntityMigrationPolicy
 
     
     
-    public NSEntityMigrationPolicy() {}
+    @Mapping("init")
+    public NSEntityMigrationPolicy() { }
     
     
     
@@ -34,18 +35,18 @@ public class NSEntityMigrationPolicy
     
     
     @Mapping("beginEntityMapping:manager:error:")
-    protected native boolean beginEntityMapping(NSEntityMapping mapping, NSMigrationManager manager, Todo error);
+    public native boolean beginEntityMapping(NSEntityMapping mapping, NSMigrationManager manager, Todo error);
     @Mapping("createDestinationInstancesForSourceInstance:entityMapping:manager:error:")
-    protected native boolean createDestinationInstances(NSManagedObject sInstance, NSEntityMapping mapping, NSMigrationManager manager, Todo error);
+    public native boolean createDestinationInstances(NSManagedObject sInstance, NSEntityMapping mapping, NSMigrationManager manager, Todo error);
     @Mapping("endInstanceCreationForEntityMapping:manager:error:")
-    protected native boolean endInstanceCreation(NSEntityMapping mapping, NSMigrationManager manager, Todo error);
+    public native boolean endInstanceCreation(NSEntityMapping mapping, NSMigrationManager manager, Todo error);
     @Mapping("createRelationshipsForDestinationInstance:entityMapping:manager:error:")
-    protected native boolean createRelationships(NSManagedObject dInstance, NSEntityMapping mapping, NSMigrationManager manager, Todo error);
+    public native boolean createRelationships(NSManagedObject dInstance, NSEntityMapping mapping, NSMigrationManager manager, Todo error);
     @Mapping("endRelationshipCreationForEntityMapping:manager:error:")
-    protected native boolean endRelationshipCreation(NSEntityMapping mapping, NSMigrationManager manager, Todo error);
+    public native boolean endRelationshipCreation(NSEntityMapping mapping, NSMigrationManager manager, Todo error);
     @Mapping("performCustomValidationForEntityMapping:manager:error:")
-    protected native boolean performCustomValidation(NSEntityMapping mapping, NSMigrationManager manager, Todo error);
+    public native boolean performCustomValidation(NSEntityMapping mapping, NSMigrationManager manager, Todo error);
     @Mapping("endEntityMapping:manager:error:")
-    protected native boolean endEntityMapping(NSEntityMapping mapping, NSMigrationManager manager, Todo error);
+    public native boolean endEntityMapping(NSEntityMapping mapping, NSMigrationManager manager, Todo error);
     
 }

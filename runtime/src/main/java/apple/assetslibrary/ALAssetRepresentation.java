@@ -27,7 +27,8 @@ public class ALAssetRepresentation
 
     
     
-    public ALAssetRepresentation() {}
+    @Mapping("init")
+    public ALAssetRepresentation() { }
     
     
     
@@ -41,7 +42,7 @@ public class ALAssetRepresentation
     @Mapping("size")
     public native long getSize();
     @Mapping("getBytes:fromOffset:length:error:")
-    protected native @MachineSizedUInt long getBytes(Todo buffer, long offset, @MachineSizedUInt long length, Todo error);
+    public native @MachineSizedUInt long getBytes(Todo buffer, long offset, @MachineSizedUInt long length, Todo error);
     @Mapping("fullResolutionImage")
     public native CGImage getFullResolutionImage();
     @Mapping("CGImageWithOptions:")

@@ -29,7 +29,8 @@ public class NSDateFormatter
 
     
     
-    public NSDateFormatter() {}
+    @Mapping("init")
+    public NSDateFormatter() { }
     
     
     /**

@@ -31,9 +31,10 @@ public class NSExpression
 
     
     
-    public NSExpression() {}
     @Mapping("initWithExpressionType:")
     public NSExpression(@Representing("NSExpressionType") @MachineSizedUInt long type) { }
+    @Mapping("init")
+    public NSExpression() { }
     
     
     @Mapping("expressionType")

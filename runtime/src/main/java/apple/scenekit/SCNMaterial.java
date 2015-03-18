@@ -30,7 +30,8 @@ public class SCNMaterial
 
     
     
-    public SCNMaterial() {}
+    @Mapping("init")
+    public SCNMaterial() { }
     
     
     @Mapping("name")

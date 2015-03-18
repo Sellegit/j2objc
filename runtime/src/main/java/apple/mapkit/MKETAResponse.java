@@ -29,7 +29,8 @@ public class MKETAResponse
 
     
     
-    public MKETAResponse() {}
+    @Mapping("init")
+    public MKETAResponse() { }
     
     
     @Mapping("source")

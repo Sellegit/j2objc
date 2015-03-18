@@ -26,7 +26,8 @@ public class NSManagedObjectID
 
     
     
-    public NSManagedObjectID() {}
+    @Mapping("init")
+    public NSManagedObjectID() { }
     
     
     @Mapping("entity")

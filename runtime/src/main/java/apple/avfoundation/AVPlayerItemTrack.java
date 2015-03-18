@@ -32,7 +32,8 @@ public class AVPlayerItemTrack
 
     
     
-    public AVPlayerItemTrack() {}
+    @Mapping("init")
+    public AVPlayerItemTrack() { }
     
     
     @Mapping("assetTrack")

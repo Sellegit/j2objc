@@ -27,7 +27,8 @@ public class MPMediaLibrary
 
     
     
-    public MPMediaLibrary() {}
+    @Mapping("init")
+    public MPMediaLibrary() { }
     
     
     @Mapping("lastModifiedDate")

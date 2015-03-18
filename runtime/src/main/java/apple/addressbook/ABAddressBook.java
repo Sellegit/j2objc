@@ -35,7 +35,7 @@ public class ABAddressBook
      * @since Available in iOS 6.0 and later.
      */
     @GlobalFunction("ABAddressBookCreateWithOptions")
-    protected static native ABAddressBook create(NSDictionary<?, ?> options, Todo error);
+    public static native ABAddressBook create(NSDictionary<?, ?> options, Todo error);
     /**
      * @since Available in iOS 2.0 and later.
      * @deprecated Deprecated in iOS 6.0.
@@ -49,19 +49,19 @@ public class ABAddressBook
     @GlobalFunction("ABAddressBookRequestAccessWithCompletion")
     public static native void requestAccess(ABAddressBook addressBook, FunctionPtr completion);
     @GlobalFunction("ABAddressBookSave")
-    protected static native boolean save(ABAddressBook addressBook, Todo error);
+    public static native boolean save(ABAddressBook addressBook, Todo error);
     @GlobalFunction("ABAddressBookHasUnsavedChanges")
     public static native boolean hasUnsavedChanges(ABAddressBook addressBook);
     @GlobalFunction("ABAddressBookAddRecord")
-    protected static native boolean addRecord(ABAddressBook addressBook, ABRecord record, Todo error);
+    public static native boolean addRecord(ABAddressBook addressBook, ABRecord record, Todo error);
     @GlobalFunction("ABAddressBookRemoveRecord")
-    protected static native boolean removeRecord(ABAddressBook addressBook, ABRecord record, Todo error);
+    public static native boolean removeRecord(ABAddressBook addressBook, ABRecord record, Todo error);
     @GlobalFunction("ABAddressBookCopyLocalizedLabel")
     public static native String getLocalizedLabel(String label);
     @GlobalFunction("ABAddressBookRegisterExternalChangeCallback")
-    protected static native void registerExternalChangeCallback(ABAddressBook addressBook, FunctionPtr callback, Todo context);
+    public static native void registerExternalChangeCallback(ABAddressBook addressBook, FunctionPtr callback, Todo context);
     @GlobalFunction("ABAddressBookUnregisterExternalChangeCallback")
-    protected static native void unregisterExternalChangeCallback(ABAddressBook addressBook, FunctionPtr callback, Todo context);
+    public static native void unregisterExternalChangeCallback(ABAddressBook addressBook, FunctionPtr callback, Todo context);
     @GlobalFunction("ABAddressBookRevert")
     public static native void revert(ABAddressBook addressBook);
     /**

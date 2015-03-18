@@ -32,7 +32,8 @@ public class AVOutputSettingsAssistant
 
     
     
-    public AVOutputSettingsAssistant() {}
+    @Mapping("init")
+    public AVOutputSettingsAssistant() { }
     
     
     @Mapping("audioSettings")

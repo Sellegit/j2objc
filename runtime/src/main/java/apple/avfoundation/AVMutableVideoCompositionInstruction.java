@@ -32,7 +32,8 @@ public class AVMutableVideoCompositionInstruction
 
     
     
-    public AVMutableVideoCompositionInstruction() {}
+    @Mapping("init")
+    public AVMutableVideoCompositionInstruction() { }
     
     
     @Mapping("timeRange")

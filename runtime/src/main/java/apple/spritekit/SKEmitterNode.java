@@ -31,7 +31,8 @@ public class SKEmitterNode
 
     
     
-    public SKEmitterNode() {}
+    @Mapping("init")
+    public SKEmitterNode() { }
     @Mapping("initWithCoder:")
     public SKEmitterNode(NSCoder aDecoder) { }
     

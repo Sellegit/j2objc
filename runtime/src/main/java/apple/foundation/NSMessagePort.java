@@ -29,7 +29,8 @@ public class NSMessagePort
 
     
     
-    public NSMessagePort() {}
+    @Mapping("init")
+    public NSMessagePort() { }
     
     
     

@@ -32,7 +32,8 @@ public class AVPlayerItemErrorLogEvent
 
     
     
-    public AVPlayerItemErrorLogEvent() {}
+    @Mapping("init")
+    public AVPlayerItemErrorLogEvent() { }
     
     
     @Mapping("date")

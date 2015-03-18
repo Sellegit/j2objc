@@ -33,10 +33,10 @@ public class SCNPhysicsShapeType
     
     
     @GlobalConstant("SCNPhysicsShapeTypeBoundingBox")
-    protected static native NSString BoundingBoxValue();
+    public static native NSString BoundingBoxValue();
     @GlobalConstant("SCNPhysicsShapeTypeConvexHull")
-    protected static native NSString ConvexHullValue();
+    public static native NSString ConvexHullValue();
     @GlobalConstant("SCNPhysicsShapeTypeConcavePolyhedron")
-    protected static native NSString ConcavePolyhedronValue();
+    public static native NSString ConcavePolyhedronValue();
     
 }

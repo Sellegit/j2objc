@@ -24,7 +24,8 @@ public class EAGLSharegroup
 
     
     
-    public EAGLSharegroup() {}
+    @Mapping("init")
+    public EAGLSharegroup() { }
     
     
     /**

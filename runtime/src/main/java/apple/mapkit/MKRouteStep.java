@@ -29,7 +29,8 @@ public class MKRouteStep
 
     
     
-    public MKRouteStep() {}
+    @Mapping("init")
+    public MKRouteStep() { }
     
     
     @Mapping("instructions")

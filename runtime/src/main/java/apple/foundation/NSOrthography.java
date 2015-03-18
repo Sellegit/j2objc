@@ -31,7 +31,6 @@ public class NSOrthography
 
     
     
-    public NSOrthography() {}
     /**
      * @since Available in iOS 4.0 and later.
      */
@@ -39,6 +38,8 @@ public class NSOrthography
     public NSOrthography(String script, NSDictionary<?, ?> map) { }
     @Mapping("initWithCoder:")
     public NSOrthography(NSCoder aDecoder) { }
+    @Mapping("init")
+    public NSOrthography() { }
     
     
     @Mapping("dominantScript")

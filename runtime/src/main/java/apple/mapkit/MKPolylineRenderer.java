@@ -29,11 +29,12 @@ public class MKPolylineRenderer
 
     
     
-    public MKPolylineRenderer() {}
     @Mapping("initWithPolyline:")
     public MKPolylineRenderer(MKPolyline polyline) { }
     @Mapping("initWithOverlay:")
     public MKPolylineRenderer(MKOverlay overlay) { }
+    @Mapping("init")
+    public MKPolylineRenderer() { }
     
     
     @Mapping("polyline")

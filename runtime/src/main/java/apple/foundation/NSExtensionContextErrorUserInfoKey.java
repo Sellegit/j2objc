@@ -35,6 +35,6 @@ public class NSExtensionContextErrorUserInfoKey
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("NSExtensionItemsAndErrorsKey")
-    protected static native NSString ExtensionItemsAndErrorsKey();
+    public static native NSString ExtensionItemsAndErrorsKey();
     
 }

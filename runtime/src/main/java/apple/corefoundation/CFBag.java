@@ -37,22 +37,22 @@ public class CFBag
     @GlobalFunction("CFBagGetTypeID")
     public static native @MachineSizedUInt long getClassTypeID();
     @GlobalFunction("CFBagCreate")
-    protected static native CFBag create(CFAllocator allocator, Todo values, @MachineSizedSInt long numValues, CFBagCallBacks callBacks);
+    public static native CFBag create(CFAllocator allocator, Todo values, @MachineSizedSInt long numValues, CFBagCallBacks callBacks);
     @GlobalFunction("CFBagCreateCopy")
-    protected static native CFBag createCopy(CFAllocator allocator, CFBag theBag);
+    public static native CFBag createCopy(CFAllocator allocator, CFBag theBag);
     @GlobalFunction("CFBagGetCount")
-    protected static native @MachineSizedSInt long getCount(CFBag theBag);
+    public static native @MachineSizedSInt long getCount(CFBag theBag);
     @GlobalFunction("CFBagGetCountOfValue")
-    protected static native @MachineSizedSInt long getCountOfValue(CFBag theBag, Todo value);
+    public static native @MachineSizedSInt long getCountOfValue(CFBag theBag, Todo value);
     @GlobalFunction("CFBagContainsValue")
-    protected static native boolean containsValue(CFBag theBag, Todo value);
+    public static native boolean containsValue(CFBag theBag, Todo value);
     @GlobalFunction("CFBagGetValue")
-    protected static native Todo getValue(CFBag theBag, Todo value);
+    public static native Todo getValue(CFBag theBag, Todo value);
     @GlobalFunction("CFBagGetValueIfPresent")
-    protected static native boolean getValueIfPresent(CFBag theBag, Todo candidate, Todo value);
+    public static native boolean getValueIfPresent(CFBag theBag, Todo candidate, Todo value);
     @GlobalFunction("CFBagGetValues")
-    protected static native void getValues(CFBag theBag, Todo values);
+    public static native void getValues(CFBag theBag, Todo values);
     @GlobalFunction("CFBagApplyFunction")
-    protected static native void applyFunction(CFBag theBag, FunctionPtr applier, Todo context);
+    public static native void applyFunction(CFBag theBag, FunctionPtr applier, Todo context);
     
 }

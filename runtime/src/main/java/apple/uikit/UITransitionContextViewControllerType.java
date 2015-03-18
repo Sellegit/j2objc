@@ -35,11 +35,11 @@ public class UITransitionContextViewControllerType
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("UITransitionContextFromViewControllerKey")
-    protected static native NSString FromViewControllerKey();
+    public static native NSString FromViewControllerKey();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("UITransitionContextToViewControllerKey")
-    protected static native NSString ToViewControllerKey();
+    public static native NSString ToViewControllerKey();
     
 }

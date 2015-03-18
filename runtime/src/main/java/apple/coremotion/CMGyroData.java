@@ -26,7 +26,8 @@ public class CMGyroData
 
     
     
-    public CMGyroData() {}
+    @Mapping("init")
+    public CMGyroData() { }
     
     
     @Mapping("rotationRate")

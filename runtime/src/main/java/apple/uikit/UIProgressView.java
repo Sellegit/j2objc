@@ -31,11 +31,12 @@ public class UIProgressView
 
     
     
-    public UIProgressView() {}
     @Mapping("initWithProgressViewStyle:")
     public UIProgressView(@Representing("UIProgressViewStyle") @MachineSizedSInt long style) { }
     @Mapping("initWithFrame:")
     public UIProgressView(CGRect frame) { }
+    @Mapping("init")
+    public UIProgressView() { }
     
     
     @Mapping("progressViewStyle")

@@ -32,7 +32,8 @@ public class AVCaptureAudioDataOutput
 
     
     
-    public AVCaptureAudioDataOutput() {}
+    @Mapping("init")
+    public AVCaptureAudioDataOutput() { }
     
     
     @Mapping("sampleBufferCallbackQueue")

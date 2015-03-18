@@ -30,7 +30,8 @@ public class SCNMorpher
 
     
     
-    public SCNMorpher() {}
+    @Mapping("init")
+    public SCNMorpher() { }
     
     
     @Mapping("targets")

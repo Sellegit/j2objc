@@ -32,18 +32,18 @@ public class NSFileType
     
     
     @GlobalConstant("NSFileTypeDirectory")
-    protected static native NSString DirectoryValue();
+    public static native NSString DirectoryValue();
     @GlobalConstant("NSFileTypeRegular")
-    protected static native NSString RegularValue();
+    public static native NSString RegularValue();
     @GlobalConstant("NSFileTypeSymbolicLink")
-    protected static native NSString SymbolicLinkValue();
+    public static native NSString SymbolicLinkValue();
     @GlobalConstant("NSFileTypeSocket")
-    protected static native NSString SocketValue();
+    public static native NSString SocketValue();
     @GlobalConstant("NSFileTypeCharacterSpecial")
-    protected static native NSString CharacterSpecialValue();
+    public static native NSString CharacterSpecialValue();
     @GlobalConstant("NSFileTypeBlockSpecial")
-    protected static native NSString BlockSpecialValue();
+    public static native NSString BlockSpecialValue();
     @GlobalConstant("NSFileTypeUnknown")
-    protected static native NSString UnknownValue();
+    public static native NSString UnknownValue();
     
 }

@@ -30,7 +30,8 @@ public class SCNPhysicsField
 
     
     
-    public SCNPhysicsField() {}
+    @Mapping("init")
+    public SCNPhysicsField() { }
     
     
     @Mapping("strength")

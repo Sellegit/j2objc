@@ -37,7 +37,7 @@ public class NSArray <T>
     
     
     @Mapping("count")
-    protected native @MachineSizedUInt long getCount();
+    public native @MachineSizedUInt long getCount();
     /**
      * @since Available in iOS 4.0 and later.
      */
@@ -51,19 +51,19 @@ public class NSArray <T>
     
     
     @Mapping("objectAtIndex:")
-    protected native T getObjectAt(@MachineSizedUInt long index);
+    public native T getObjectAt(@MachineSizedUInt long index);
     @Mapping("containsObject:")
-    protected native boolean containsObject(Object anObject);
+    public native boolean containsObject(Object anObject);
     @Mapping("indexOfObject:")
-    protected native @MachineSizedUInt long indexOfObject(Object anObject);
+    public native @MachineSizedUInt long indexOfObject(Object anObject);
     @Mapping("subarrayWithRange:")
-    protected native NSArray<T> getSubarray(NSRange range);
+    public native NSArray<T> getSubarray(NSRange range);
     @Mapping("writeToFile:atomically:")
-    protected native boolean writeFile(String path, boolean useAuxiliaryFile);
+    public native boolean writeFile(String path, boolean useAuxiliaryFile);
     @Mapping("writeToURL:atomically:")
     public native boolean write(NSURL url, boolean atomically);
     @Mapping("arrayWithContentsOfFile:")
-    protected static native NSArray<?> readFile(String path);
+    public static native NSArray<?> readFile(String path);
     @Mapping("arrayWithContentsOfURL:")
     public static native NSArray<?> read(NSURL url);
     @Mapping("addObserver:toObjectsAtIndexes:forKeyPath:options:context:")

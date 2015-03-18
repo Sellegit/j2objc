@@ -26,7 +26,8 @@ public class NEVPNIKEv2SecurityAssociationParameters
 
     
     
-    public NEVPNIKEv2SecurityAssociationParameters() {}
+    @Mapping("init")
+    public NEVPNIKEv2SecurityAssociationParameters() { }
     
     
     /**

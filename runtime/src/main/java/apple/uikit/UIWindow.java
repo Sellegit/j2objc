@@ -31,9 +31,10 @@ public class UIWindow
 
     
     
-    public UIWindow() {}
     @Mapping("initWithFrame:")
     public UIWindow(CGRect frame) { }
+    @Mapping("init")
+    public UIWindow() { }
     
     
     /**

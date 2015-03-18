@@ -28,7 +28,6 @@ public class CLRegion
 
     
     
-    public CLRegion() {}
     /**
      * @since Available in iOS 4.0 and later.
      * @deprecated Deprecated in iOS 7.0.
@@ -36,6 +35,8 @@ public class CLRegion
     @Deprecated
     @Mapping("initCircularRegionWithCenter:radius:identifier:")
     public CLRegion(CLLocationCoordinate2D center, double radius, String identifier) { }
+    @Mapping("init")
+    public CLRegion() { }
     
     
     /**

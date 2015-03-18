@@ -32,81 +32,81 @@ public class CVPixelBufferAttributes
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("kCVPixelBufferPixelFormatTypeKey")
-    protected static native CFString PixelFormatTypeKey();
+    public static native CFString PixelFormatTypeKey();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("kCVPixelBufferMemoryAllocatorKey")
-    protected static native CFString MemoryAllocatorKey();
+    public static native CFString MemoryAllocatorKey();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("kCVPixelBufferWidthKey")
-    protected static native CFString WidthKey();
+    public static native CFString WidthKey();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("kCVPixelBufferHeightKey")
-    protected static native CFString HeightKey();
+    public static native CFString HeightKey();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("kCVPixelBufferExtendedPixelsLeftKey")
-    protected static native CFString ExtendedPixelsLeftKey();
+    public static native CFString ExtendedPixelsLeftKey();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("kCVPixelBufferExtendedPixelsTopKey")
-    protected static native CFString ExtendedPixelsTopKey();
+    public static native CFString ExtendedPixelsTopKey();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("kCVPixelBufferExtendedPixelsRightKey")
-    protected static native CFString ExtendedPixelsRightKey();
+    public static native CFString ExtendedPixelsRightKey();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("kCVPixelBufferExtendedPixelsBottomKey")
-    protected static native CFString ExtendedPixelsBottomKey();
+    public static native CFString ExtendedPixelsBottomKey();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("kCVPixelBufferBytesPerRowAlignmentKey")
-    protected static native CFString BytesPerRowAlignmentKey();
+    public static native CFString BytesPerRowAlignmentKey();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("kCVPixelBufferCGBitmapContextCompatibilityKey")
-    protected static native CFString CGBitmapContextCompatibilityKey();
+    public static native CFString CGBitmapContextCompatibilityKey();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("kCVPixelBufferCGImageCompatibilityKey")
-    protected static native CFString CGImageCompatibilityKey();
+    public static native CFString CGImageCompatibilityKey();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("kCVPixelBufferOpenGLCompatibilityKey")
-    protected static native CFString OpenGLCompatibilityKey();
+    public static native CFString OpenGLCompatibilityKey();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("kCVPixelBufferPlaneAlignmentKey")
-    protected static native CFString PlaneAlignmentKey();
+    public static native CFString PlaneAlignmentKey();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("kCVPixelBufferIOSurfacePropertiesKey")
-    protected static native CFString IOSurfacePropertiesKey();
+    public static native CFString IOSurfacePropertiesKey();
     /**
      * @since Available in iOS 6.0 and later.
      */
     @GlobalConstant("kCVPixelBufferOpenGLESCompatibilityKey")
-    protected static native CFString OpenGLESCompatibilityKey();
+    public static native CFString OpenGLESCompatibilityKey();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("kCVPixelBufferMetalCompatibilityKey")
-    protected static native CFString MetalCompatibilityKey();
+    public static native CFString MetalCompatibilityKey();
     
 }

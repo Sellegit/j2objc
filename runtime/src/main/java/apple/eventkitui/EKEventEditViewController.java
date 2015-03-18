@@ -28,11 +28,12 @@ public class EKEventEditViewController
 
     
     
-    public EKEventEditViewController() {}
     @Mapping("initWithRootViewController:")
     public EKEventEditViewController(UIViewController rootViewController) { }
     @Mapping("initWithNibName:bundle:")
     public EKEventEditViewController(String nibNameOrNil, NSBundle nibBundleOrNil) { }
+    @Mapping("init")
+    public EKEventEditViewController() { }
     
     
     @Mapping("editViewDelegate")

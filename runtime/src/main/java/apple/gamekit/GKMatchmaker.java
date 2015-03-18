@@ -27,7 +27,8 @@ public class GKMatchmaker
 
     
     
-    public GKMatchmaker() {}
+    @Mapping("init")
+    public GKMatchmaker() { }
     
     
     /**

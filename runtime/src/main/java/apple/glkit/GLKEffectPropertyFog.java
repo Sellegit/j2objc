@@ -29,7 +29,8 @@ public class GLKEffectPropertyFog
 
     
     
-    public GLKEffectPropertyFog() {}
+    @Mapping("init")
+    public GLKEffectPropertyFog() { }
     
     
     @Mapping("enabled")

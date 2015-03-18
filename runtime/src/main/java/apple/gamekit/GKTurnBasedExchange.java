@@ -27,7 +27,8 @@ public class GKTurnBasedExchange
 
     
     
-    public GKTurnBasedExchange() {}
+    @Mapping("init")
+    public GKTurnBasedExchange() { }
     
     
     @Mapping("exchangeID")

@@ -31,7 +31,8 @@ public class UIDictationPhrase
 
     
     
-    public UIDictationPhrase() {}
+    @Mapping("init")
+    public UIDictationPhrase() { }
     
     
     @Mapping("text")

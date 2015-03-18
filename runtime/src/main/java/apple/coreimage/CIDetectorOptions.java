@@ -33,16 +33,16 @@ public class CIDetectorOptions
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("CIDetectorAccuracy")
-    protected static native NSString AccuracyKey();
+    public static native NSString AccuracyKey();
     /**
      * @since Available in iOS 6.0 and later.
      */
     @GlobalConstant("CIDetectorTracking")
-    protected static native NSString TrackingKey();
+    public static native NSString TrackingKey();
     /**
      * @since Available in iOS 6.0 and later.
      */
     @GlobalConstant("CIDetectorMinFeatureSize")
-    protected static native NSString MinFeatureSizeKey();
+    public static native NSString MinFeatureSizeKey();
     
 }

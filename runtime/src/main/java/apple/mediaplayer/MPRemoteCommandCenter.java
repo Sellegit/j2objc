@@ -27,7 +27,8 @@ public class MPRemoteCommandCenter
 
     
     
-    public MPRemoteCommandCenter() {}
+    @Mapping("init")
+    public MPRemoteCommandCenter() { }
     
     
     @Mapping("pauseCommand")

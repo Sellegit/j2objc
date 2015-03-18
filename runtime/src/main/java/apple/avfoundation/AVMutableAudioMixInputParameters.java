@@ -32,7 +32,8 @@ public class AVMutableAudioMixInputParameters
 
     
     
-    public AVMutableAudioMixInputParameters() {}
+    @Mapping("init")
+    public AVMutableAudioMixInputParameters() { }
     
     
     @Mapping("trackID")

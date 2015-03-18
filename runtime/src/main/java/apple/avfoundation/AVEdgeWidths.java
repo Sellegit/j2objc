@@ -29,7 +29,7 @@ public class AVEdgeWidths
      {
 
     
-    protected AVEdgeWidths() {}
+    private AVEdgeWidths() {}
     
     
     @DotMapping("left")

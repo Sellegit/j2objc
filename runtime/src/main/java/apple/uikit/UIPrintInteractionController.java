@@ -31,7 +31,8 @@ public class UIPrintInteractionController
 
     
     
-    public UIPrintInteractionController() {}
+    @Mapping("init")
+    public UIPrintInteractionController() { }
     
     
     @Mapping("printInfo")

@@ -31,9 +31,10 @@ public class UISwipeGestureRecognizer
 
     
     
-    public UISwipeGestureRecognizer() {}
     @Mapping("initWithTarget:action:")
     public UISwipeGestureRecognizer(Object target, Selector action) { }
+    @Mapping("init")
+    public UISwipeGestureRecognizer() { }
     
     
     @Mapping("numberOfTouchesRequired")

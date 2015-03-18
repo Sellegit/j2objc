@@ -28,7 +28,8 @@ public class EKCalendar
 
     
     
-    public EKCalendar() {}
+    @Mapping("init")
+    public EKCalendar() { }
     
     
     @Mapping("source")

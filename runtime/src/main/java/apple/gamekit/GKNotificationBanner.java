@@ -27,7 +27,8 @@ public class GKNotificationBanner
 
     
     
-    public GKNotificationBanner() {}
+    @Mapping("init")
+    public GKNotificationBanner() { }
     
     
     

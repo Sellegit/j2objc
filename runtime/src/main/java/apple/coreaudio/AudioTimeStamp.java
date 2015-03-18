@@ -23,7 +23,7 @@ public class AudioTimeStamp
      {
 
     
-    protected AudioTimeStamp() {}
+    private AudioTimeStamp() {}
     
     
     @DotMapping("mSampleTime")

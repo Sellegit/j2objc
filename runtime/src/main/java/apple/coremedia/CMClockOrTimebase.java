@@ -39,7 +39,7 @@ public class CMClockOrTimebase
      * @since Available in iOS 6.0 and later.
      */
     @GlobalFunction("CMSyncGetRelativeRateAndAnchorTime")
-    private static native int getRelativeRateAndAnchorTime(CFType ofClockOrTimebase, CFType relativeToClockOrTimebase, Todo outRelativeRate, CMTime outOfClockOrTimebaseAnchorTime, CMTime outRelativeToClockOrTimebaseAnchorTime);
+    public static native int getRelativeRateAndAnchorTime(CFType ofClockOrTimebase, CFType relativeToClockOrTimebase, Todo outRelativeRate, CMTime outOfClockOrTimebaseAnchorTime, CMTime outRelativeToClockOrTimebaseAnchorTime);
     /**
      * @since Available in iOS 6.0 and later.
      */

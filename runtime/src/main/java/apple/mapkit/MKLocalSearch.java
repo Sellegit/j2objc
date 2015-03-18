@@ -29,9 +29,10 @@ public class MKLocalSearch
 
     
     
-    public MKLocalSearch() {}
     @Mapping("initWithRequest:")
     public MKLocalSearch(MKLocalSearchRequest request) { }
+    @Mapping("init")
+    public MKLocalSearch() { }
     
     
     @Mapping("isSearching")

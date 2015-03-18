@@ -32,12 +32,12 @@ public class NSURLProtectionSpaceProxyType
     
     
     @GlobalConstant("NSURLProtectionSpaceHTTPProxy")
-    protected static native NSString HTTPValue();
+    public static native NSString HTTPValue();
     @GlobalConstant("NSURLProtectionSpaceHTTPSProxy")
-    protected static native NSString HTTPSValue();
+    public static native NSString HTTPSValue();
     @GlobalConstant("NSURLProtectionSpaceFTPProxy")
-    protected static native NSString FTPValue();
+    public static native NSString FTPValue();
     @GlobalConstant("NSURLProtectionSpaceSOCKSProxy")
-    protected static native NSString SOCKSValue();
+    public static native NSString SOCKSValue();
     
 }

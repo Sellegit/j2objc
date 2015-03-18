@@ -23,7 +23,7 @@ public class CMQuaternion
      {
 
     
-    protected CMQuaternion() {}
+    private CMQuaternion() {}
     
     
     @DotMapping("x")

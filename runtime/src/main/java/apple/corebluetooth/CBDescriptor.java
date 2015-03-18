@@ -27,7 +27,8 @@ public class CBDescriptor
 
     
     
-    public CBDescriptor() {}
+    @Mapping("init")
+    public CBDescriptor() { }
     
     
     @Mapping("characteristic")

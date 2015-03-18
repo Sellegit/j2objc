@@ -29,6 +29,8 @@ public class NSMutableDictionary <K, V>
 
     
     
+    @Mapping("init")
+    public NSMutableDictionary() { }
     @Mapping("initWithCapacity:")
     public NSMutableDictionary(@MachineSizedUInt long numItems) { }
     
@@ -38,10 +40,10 @@ public class NSMutableDictionary <K, V>
     
     
     @Mapping("removeObjectForKey:")
-    protected native void removeObject(Object aKey);
+    public native void removeObject(Object aKey);
     @Mapping("setObject:forKey:")
-    protected native void setObject(Object anObject, Cloneable aKey);
+    public native void setObject(Object anObject, Cloneable aKey);
     @Mapping("removeAllObjects")
-    protected native void removeAllObjects();
+    public native void removeAllObjects();
     
 }

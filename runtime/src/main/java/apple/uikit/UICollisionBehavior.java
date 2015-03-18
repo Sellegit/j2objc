@@ -31,9 +31,10 @@ public class UICollisionBehavior
 
     
     
-    public UICollisionBehavior() {}
     @Mapping("initWithItems:")
     public UICollisionBehavior(NSArray<?> items) { }
+    @Mapping("init")
+    public UICollisionBehavior() { }
     
     
     @Mapping("items")
