@@ -31,6 +31,8 @@ public class NSLengthFormatter
 
     
     
+    @Mapping("initWithCoder:")
+    public NSLengthFormatter(NSCoder aDecoder) { }
     @Mapping("init")
     public NSLengthFormatter() { }
     

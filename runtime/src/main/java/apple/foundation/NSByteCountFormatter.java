@@ -31,6 +31,8 @@ public class NSByteCountFormatter
 
     
     
+    @Mapping("initWithCoder:")
+    public NSByteCountFormatter(NSCoder aDecoder) { }
     @Mapping("init")
     public NSByteCountFormatter() { }
     

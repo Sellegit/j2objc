@@ -33,6 +33,26 @@ public class NSMutableString
     public NSMutableString() { }
     @Mapping("initWithCoder:")
     public NSMutableString(NSCoder aDecoder) { }
+    @Mapping("initWithCharacters:length:")
+    public NSMutableString(Todo characters, @MachineSizedUInt long length) { }
+    @Mapping("initWithUTF8String:")
+    public NSMutableString(Todo nullTerminatedCString) { }
+    @Mapping("initWithString:")
+    public NSMutableString(String aString) { }
+    @Mapping("initWithData:encoding:")
+    public NSMutableString(NSData data, @Representing("NSStringEncoding") int encoding) { }
+    @Mapping("initWithBytes:length:encoding:")
+    public NSMutableString(Todo bytes, @MachineSizedUInt long len, @Representing("NSStringEncoding") int encoding) { }
+    @Mapping("initWithCString:encoding:")
+    public NSMutableString(Todo nullTerminatedCString, @Representing("NSStringEncoding") int encoding) { }
+    @Mapping("initWithContentsOfURL:encoding:error:")
+    public NSMutableString(NSURL url, @Representing("NSStringEncoding") int enc, Todo error) { }
+    @Mapping("initWithContentsOfFile:encoding:error:")
+    public NSMutableString(String path, @Representing("NSStringEncoding") int enc, Todo error) { }
+    @Mapping("initWithContentsOfURL:usedEncoding:error:")
+    public NSMutableString(NSURL url, Todo enc, Todo error) { }
+    @Mapping("initWithContentsOfFile:usedEncoding:error:")
+    public NSMutableString(String path, Todo enc, Todo error) { }
     @Mapping("initWithCapacity:")
     public NSMutableString(@MachineSizedUInt long capacity) { }
     

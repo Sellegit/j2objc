@@ -36,6 +36,8 @@ public class NSMachPort
      */
     @Mapping("initWithMachPort:options:")
     public NSMachPort(int machPort, @MachineSizedUInt long f) { }
+    @Mapping("initWithCoder:")
+    public NSMachPort(NSCoder aDecoder) { }
     @Mapping("init")
     public NSMachPort() { }
     

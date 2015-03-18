@@ -29,6 +29,8 @@ public class NSNumberFormatter
 
     
     
+    @Mapping("initWithCoder:")
+    public NSNumberFormatter(NSCoder aDecoder) { }
     @Mapping("init")
     public NSNumberFormatter() { }
     

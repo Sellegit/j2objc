@@ -31,6 +31,8 @@ public class NSDateIntervalFormatter
 
     
     
+    @Mapping("initWithCoder:")
+    public NSDateIntervalFormatter(NSCoder aDecoder) { }
     @Mapping("init")
     public NSDateIntervalFormatter() { }
     

@@ -31,6 +31,8 @@ public class NSEnergyFormatter
 
     
     
+    @Mapping("initWithCoder:")
+    public NSEnergyFormatter(NSCoder aDecoder) { }
     @Mapping("init")
     public NSEnergyFormatter() { }
     

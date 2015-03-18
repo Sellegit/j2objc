@@ -31,6 +31,12 @@ public class NSMutableAttributedString
 
     
     
+    @Mapping("initWithString:")
+    public NSMutableAttributedString(String str) { }
+    @Mapping("initWithString:attributes:")
+    public NSMutableAttributedString(String str, NSDictionary<?, ?> attrs) { }
+    @Mapping("initWithAttributedString:")
+    public NSMutableAttributedString(NSAttributedString attrStr) { }
     @Mapping("init")
     public NSMutableAttributedString() { }
     

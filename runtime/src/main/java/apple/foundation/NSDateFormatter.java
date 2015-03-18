@@ -29,6 +29,8 @@ public class NSDateFormatter
 
     
     
+    @Mapping("initWithCoder:")
+    public NSDateFormatter(NSCoder aDecoder) { }
     @Mapping("init")
     public NSDateFormatter() { }
     

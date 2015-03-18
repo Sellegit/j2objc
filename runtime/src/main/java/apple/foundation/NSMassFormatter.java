@@ -31,6 +31,8 @@ public class NSMassFormatter
 
     
     
+    @Mapping("initWithCoder:")
+    public NSMassFormatter(NSCoder aDecoder) { }
     @Mapping("init")
     public NSMassFormatter() { }
     

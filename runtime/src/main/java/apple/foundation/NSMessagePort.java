@@ -29,6 +29,8 @@ public class NSMessagePort
 
     
     
+    @Mapping("initWithCoder:")
+    public NSMessagePort(NSCoder aDecoder) { }
     @Mapping("init")
     public NSMessagePort() { }
     
