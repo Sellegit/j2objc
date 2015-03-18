@@ -44,7 +44,8 @@ FAT_LIB_MACOSX_FLAGS = $(FAT_LIB_OSX_FLAGS) -isysroot $(FAT_LIB_MACOSX_SDK_DIR)
 FAT_LIB_IPHONE_FLAGS = -arch armv7 -miphoneos-version-min=5.0 -isysroot $(FAT_LIB_IPHONE_SDK_DIR)
 FAT_LIB_IPHONE64_FLAGS = -arch arm64 -miphoneos-version-min=5.0 -isysroot $(FAT_LIB_IPHONE_SDK_DIR)
 FAT_LIB_IPHONEV7S_FLAGS = -arch armv7s -miphoneos-version-min=5.0 -isysroot $(FAT_LIB_IPHONE_SDK_DIR)
-FAT_LIB_SIMULATOR_FLAGS = -arch i386 -miphoneos-version-min=5.0 -isysroot $(FAT_LIB_SIMULATOR_SDK_DIR) -arch x86_64 -miphoneos-version-min=5.0 -isysroot $(FAT_LIB_SIMULATOR_SDK_DIR)
+FAT_LIB_SIMULATOR_FLAGS = -arch i386 -miphoneos-version-min=5.0 -isysroot $(FAT_LIB_SIMULATOR_SDK_DIR)
+FAT_LIB_SIMULATOR64_FLAGS = -arch x86_64 -miphoneos-version-min=5.0 -isysroot $(FAT_LIB_SIMULATOR_SDK_DIR)
 FAT_LIB_XCODE_FLAGS = $(ARCH_FLAGS) -miphoneos-version-min=5.0 -isysroot $(SDKROOT)
 
 ifdef FAT_LIB_PRECOMPILED_HEADER
@@ -64,7 +65,8 @@ arch_flags = $(strip \
   $(patsubst iphone,$(FAT_LIB_IPHONE_FLAGS),\
   $(patsubst iphone64,$(FAT_LIB_IPHONE64_FLAGS),\
   $(patsubst iphonev7s,$(FAT_LIB_IPHONEV7S_FLAGS),\
-  $(patsubst simulator,$(FAT_LIB_SIMULATOR_FLAGS),$(1))))))
+  $(patsubst simulator64,$(FAT_LIB_SIMULATOR64_FLAGS),\
+  $(patsubst simulator,$(FAT_LIB_SIMULATOR_FLAGS),$(1)))))))
 
 fat_lib_dependencies:
 	@:
