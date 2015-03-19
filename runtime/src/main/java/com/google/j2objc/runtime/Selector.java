@@ -7,7 +7,7 @@ import com.google.j2objc.annotations.Library;
 import com.google.j2objc.annotations.Mapping;
 
 @Library("Foundation/Foundation.h") @Mapping("SEL")
-public final class Selector {
+public final class Selector extends ValueType {
   private Selector() {}
 
   @GlobalFunction("NSSelectorFromString")
