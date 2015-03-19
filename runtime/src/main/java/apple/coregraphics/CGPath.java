@@ -68,7 +68,7 @@ public class CGPath
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("CGPathCreateCopyByStrokingPath")
-    public static native CGPath createCopyByStrokingPath(CGPath path, CGAffineTransform transform, @MachineSizedFloat double lineWidth, CGLineCap lineCap, CGLineJoin lineJoin, @MachineSizedFloat double miterLimit);
+    public static native CGPath createCopyByStrokingPath(CGPath path, CGAffineTransform transform, @MachineSizedFloat double lineWidth, @Representing("CGLineCap") long lineCap, @Representing("CGLineJoin") long lineJoin, @MachineSizedFloat double miterLimit);
     /**
      * @since Available in iOS 2.0 and later.
      */

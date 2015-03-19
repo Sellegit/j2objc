@@ -30,10 +30,54 @@ public final class UIViewControllerExtensions
     private UIViewControllerExtensions() {}
     
     
+    /**
+     * @since Available in iOS 7.0 and later.
+     */
+    @ExtensionMapping("interstitialPresentationPolicy")
+    public static native @Representing("ADInterstitialPresentationPolicy") long getInterstitialPresentationPolicy(UIViewController thiz);
+    /**
+     * @since Available in iOS 7.0 and later.
+     */
+    @Mapping("setInterstitialPresentationPolicy:")
+    public static native void setInterstitialPresentationPolicy(UIViewController thiz, @Representing("ADInterstitialPresentationPolicy") long v);
+    /**
+     * @since Available in iOS 7.0 and later.
+     */
+    @ExtensionMapping("canDisplayBannerAds")
+    public static native boolean canDisplayBannerAds(UIViewController thiz);
+    /**
+     * @since Available in iOS 7.0 and later.
+     */
+    @Mapping("setCanDisplayBannerAds:")
+    public static native void setCanDisplayBannerAds(UIViewController thiz, boolean v);
+    /**
+     * @since Available in iOS 7.0 and later.
+     */
+    @ExtensionMapping("originalContentView")
+    public static native UIView getOriginalContentView(UIViewController thiz);
+    /**
+     * @since Available in iOS 7.0 and later.
+     */
+    @ExtensionMapping("isPresentingFullScreenAd")
+    public static native boolean isPresentingFullScreenAd(UIViewController thiz);
+    /**
+     * @since Available in iOS 7.0 and later.
+     */
+    @ExtensionMapping("isDisplayingBannerAd")
+    public static native boolean isDisplayingBannerAd(UIViewController thiz);
+    /**
+     * @since Available in iOS 7.0 and later.
+     */
+    @ExtensionMapping("shouldPresentInterstitialAd")
+    public static native boolean shouldPresentInterstitialAd(UIViewController thiz);
     
     
     
-    
+    /**
+     * @since Available in iOS 7.0 and later.
+     */
+    @ExtensionMapping("requestInterstitialAdPresentation")
+    public static native boolean requestInterstitialAdPresentation(UIViewController thiz);
     /**
      * @since Available in iOS 7.0 and later.
      */

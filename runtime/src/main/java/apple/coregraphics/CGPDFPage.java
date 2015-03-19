@@ -43,7 +43,7 @@ public class CGPDFPage
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGPDFPageGetBoxRect")
-    public static native CGRect getBoxRect(CGPDFPage page, CGPDFBox box);
+    public static native CGRect getBoxRect(CGPDFPage page, @Representing("CGPDFBox") long box);
     /**
      * @since Available in iOS 2.0 and later.
      */
@@ -53,7 +53,7 @@ public class CGPDFPage
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGPDFPageGetDrawingTransform")
-    public static native CGAffineTransform getDrawingTransform(CGPDFPage page, CGPDFBox box, CGRect rect, int rotate, boolean preserveAspectRatio);
+    public static native CGAffineTransform getDrawingTransform(CGPDFPage page, @Representing("CGPDFBox") long box, CGRect rect, int rotate, boolean preserveAspectRatio);
     /**
      * @since Available in iOS 2.0 and later.
      */

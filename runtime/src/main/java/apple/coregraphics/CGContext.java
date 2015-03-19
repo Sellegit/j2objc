@@ -78,12 +78,12 @@ public class CGContext
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGContextSetLineCap")
-    public static native void setLineCap(CGContext c, CGLineCap cap);
+    public static native void setLineCap(CGContext c, @Representing("CGLineCap") long cap);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGContextSetLineJoin")
-    public static native void setLineJoin(CGContext c, CGLineJoin join);
+    public static native void setLineJoin(CGContext c, @Representing("CGLineJoin") long join);
     /**
      * @since Available in iOS 2.0 and later.
      */
@@ -108,7 +108,7 @@ public class CGContext
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGContextSetBlendMode")
-    public static native void setBlendMode(CGContext context, CGBlendMode mode);
+    public static native void setBlendMode(CGContext context, @Representing("CGBlendMode") long mode);
     /**
      * @since Available in iOS 2.0 and later.
      */
@@ -203,12 +203,12 @@ public class CGContext
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGContextPathContainsPoint")
-    public static native boolean pathContainsPoint(CGContext context, CGPoint point, CGPathDrawingMode mode);
+    public static native boolean pathContainsPoint(CGContext context, CGPoint point, @Representing("CGPathDrawingMode") long mode);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGContextDrawPath")
-    public static native void drawPath(CGContext c, CGPathDrawingMode mode);
+    public static native void drawPath(CGContext c, @Representing("CGPathDrawingMode") long mode);
     /**
      * @since Available in iOS 2.0 and later.
      */
@@ -373,7 +373,7 @@ public class CGContext
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGContextSetRenderingIntent")
-    public static native void setRenderingIntent(CGContext context, CGColorRenderingIntent intent);
+    public static native void setRenderingIntent(CGContext context, @Representing("CGColorRenderingIntent") long intent);
     /**
      * @since Available in iOS 2.0 and later.
      */
@@ -393,7 +393,7 @@ public class CGContext
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGContextSetInterpolationQuality")
-    public static native void setInterpolationQuality(CGContext context, CGInterpolationQuality quality);
+    public static native void setInterpolationQuality(CGContext context, @Representing("CGInterpolationQuality") long quality);
     /**
      * @since Available in iOS 2.0 and later.
      */
@@ -408,12 +408,12 @@ public class CGContext
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGContextDrawLinearGradient")
-    public static native void drawLinearGradient(CGContext context, CGGradient gradient, CGPoint startPoint, CGPoint endPoint, CGGradientDrawingOptions options);
+    public static native void drawLinearGradient(CGContext context, CGGradient gradient, CGPoint startPoint, CGPoint endPoint, @Representing("CGGradientDrawingOptions") long options);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGContextDrawRadialGradient")
-    public static native void drawRadialGradient(CGContext context, CGGradient gradient, CGPoint startCenter, @MachineSizedFloat double startRadius, CGPoint endCenter, @MachineSizedFloat double endRadius, CGGradientDrawingOptions options);
+    public static native void drawRadialGradient(CGContext context, CGGradient gradient, CGPoint startCenter, @MachineSizedFloat double startRadius, CGPoint endCenter, @MachineSizedFloat double endRadius, @Representing("CGGradientDrawingOptions") long options);
     /**
      * @since Available in iOS 2.0 and later.
      */
@@ -448,7 +448,7 @@ public class CGContext
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGContextSetTextDrawingMode")
-    public static native void setTextDrawingMode(CGContext c, CGTextDrawingMode mode);
+    public static native void setTextDrawingMode(CGContext c, @Representing("CGTextDrawingMode") long mode);
     /**
      * @since Available in iOS 2.0 and later.
      */
@@ -585,7 +585,7 @@ public class CGContext
      */
     @Deprecated
     @GlobalFunction("CGContextSelectFont")
-    public static native void selectFont(CGContext c, Todo name, @MachineSizedFloat double size, CGTextEncoding textEncoding);
+    public static native void selectFont(CGContext c, Todo name, @MachineSizedFloat double size, @Representing("CGTextEncoding") long textEncoding);
     /**
      * @since Available in iOS 2.0 and later.
      * @deprecated Deprecated in iOS 7.0.

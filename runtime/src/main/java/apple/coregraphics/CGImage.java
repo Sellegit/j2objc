@@ -38,7 +38,7 @@ public class CGImage
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGImageCreate")
-    public static native CGImage create(@MachineSizedUInt long width, @MachineSizedUInt long height, @MachineSizedUInt long bitsPerComponent, @MachineSizedUInt long bitsPerPixel, @MachineSizedUInt long bytesPerRow, CGColorSpace space, CGBitmapInfo bitmapInfo, CGDataProvider provider, Todo decode, boolean shouldInterpolate, CGColorRenderingIntent intent);
+    public static native CGImage create(@MachineSizedUInt long width, @MachineSizedUInt long height, @MachineSizedUInt long bitsPerComponent, @MachineSizedUInt long bitsPerPixel, @MachineSizedUInt long bytesPerRow, CGColorSpace space, @Representing("CGBitmapInfo") long bitmapInfo, CGDataProvider provider, Todo decode, boolean shouldInterpolate, @Representing("CGColorRenderingIntent") long intent);
     /**
      * @since Available in iOS 2.0 and later.
      */
@@ -53,12 +53,12 @@ public class CGImage
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGImageCreateWithJPEGDataProvider")
-    public static native CGImage createWithJPEGDataProvider(CGDataProvider source, Todo decode, boolean shouldInterpolate, CGColorRenderingIntent intent);
+    public static native CGImage createWithJPEGDataProvider(CGDataProvider source, Todo decode, boolean shouldInterpolate, @Representing("CGColorRenderingIntent") long intent);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGImageCreateWithPNGDataProvider")
-    public static native CGImage createWithPNGDataProvider(CGDataProvider source, Todo decode, boolean shouldInterpolate, CGColorRenderingIntent intent);
+    public static native CGImage createWithPNGDataProvider(CGDataProvider source, Todo decode, boolean shouldInterpolate, @Representing("CGColorRenderingIntent") long intent);
     /**
      * @since Available in iOS 2.0 and later.
      */

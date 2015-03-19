@@ -37,6 +37,9 @@ public final class UITouchExtensions
     
     
     
-    
+    @ExtensionMapping("locationInNode:")
+    public static native CGPoint getLocationInNode(UITouch thiz, SKNode node);
+    @ExtensionMapping("previousLocationInNode:")
+    public static native CGPoint getPreviousLocationInNode(UITouch thiz, SKNode node);
     
 }

@@ -158,7 +158,7 @@ public class CGRect
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGRectDivide")
-    public static native void divide(CGRect rect, CGRect slice, CGRect remainder, @MachineSizedFloat double amount, CGRectEdge edge);
+    public static native void divide(CGRect rect, CGRect slice, CGRect remainder, @MachineSizedFloat double amount, @Representing("CGRectEdge") long edge);
     /**
      * @since Available in iOS 2.0 and later.
      */

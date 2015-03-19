@@ -31,12 +31,12 @@ public class CGBitmapContext
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CGBitmapContextCreateWithData")
-    public static native CGBitmapContext create(Todo data, @MachineSizedUInt long width, @MachineSizedUInt long height, @MachineSizedUInt long bitsPerComponent, @MachineSizedUInt long bytesPerRow, CGColorSpace space, CGBitmapInfo bitmapInfo, FunctionPtr releaseCallback, Todo releaseInfo);
+    public static native CGBitmapContext create(Todo data, @MachineSizedUInt long width, @MachineSizedUInt long height, @MachineSizedUInt long bitsPerComponent, @MachineSizedUInt long bytesPerRow, CGColorSpace space, @Representing("CGBitmapInfo") long bitmapInfo, FunctionPtr releaseCallback, Todo releaseInfo);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGBitmapContextCreate")
-    public static native CGBitmapContext create(Todo data, @MachineSizedUInt long width, @MachineSizedUInt long height, @MachineSizedUInt long bitsPerComponent, @MachineSizedUInt long bytesPerRow, CGColorSpace space, CGBitmapInfo bitmapInfo);
+    public static native CGBitmapContext create(Todo data, @MachineSizedUInt long width, @MachineSizedUInt long height, @MachineSizedUInt long bitsPerComponent, @MachineSizedUInt long bytesPerRow, CGColorSpace space, @Representing("CGBitmapInfo") long bitmapInfo);
     /**
      * @since Available in iOS 2.0 and later.
      */

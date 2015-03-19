@@ -32,7 +32,12 @@ public final class NSValueExtensions
     private NSValueExtensions() {}
     
     
-    
+    @ExtensionMapping("SCNVector3Value")
+    public static native SCNVector3 getSCNVector3Value(NSValue thiz);
+    @ExtensionMapping("SCNVector4Value")
+    public static native SCNVector4 getSCNVector4Value(NSValue thiz);
+    @ExtensionMapping("SCNMatrix4Value")
+    public static native SCNMatrix4 getSCNMatrix4Value(NSValue thiz);
     
     
     

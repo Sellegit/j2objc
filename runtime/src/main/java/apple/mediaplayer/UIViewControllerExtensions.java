@@ -31,6 +31,9 @@ public final class UIViewControllerExtensions
     
     
     
-    
+    @ExtensionMapping("presentMoviePlayerViewControllerAnimated:")
+    public static native void presentMoviePlayerViewController(UIViewController thiz, MPMoviePlayerViewController moviePlayerViewController);
+    @ExtensionMapping("dismissMoviePlayerViewControllerAnimated")
+    public static native void dismissMoviePlayerViewController(UIViewController thiz);
     
 }

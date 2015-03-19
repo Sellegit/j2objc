@@ -37,6 +37,16 @@ public final class AVPlayerViewControllerExtensions
     /**
      * @since Available in iOS 8.0 and later.
      */
+    @ExtensionMapping("playPrerollAdWithCompletionHandler:")
+    public static native void playPrerollAd(AVPlayerViewController thiz, @Block VoidBlock1<NSError> completionHandler);
+    /**
+     * @since Available in iOS 8.0 and later.
+     */
+    @ExtensionMapping("cancelPreroll")
+    public static native void cancelPreroll(AVPlayerViewController thiz);
+    /**
+     * @since Available in iOS 8.0 and later.
+     */
     @Mapping("preparePrerollAds")
     public static native void preparePrerollAds();
     

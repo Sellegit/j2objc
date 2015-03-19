@@ -29,7 +29,10 @@ public final class NSValueExtensions
     private NSValueExtensions() {}
     
     
-    
+    @ExtensionMapping("MKCoordinateValue")
+    public static native CLLocationCoordinate2D getMKCoordinateValue(NSValue thiz);
+    @ExtensionMapping("MKCoordinateSpanValue")
+    public static native MKCoordinateSpan getMKCoordinateSpanValue(NSValue thiz);
     
     
     

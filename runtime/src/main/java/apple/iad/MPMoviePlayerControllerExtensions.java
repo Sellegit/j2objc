@@ -37,6 +37,16 @@ public final class MPMoviePlayerControllerExtensions
     /**
      * @since Available in iOS 7.0 and later.
      */
+    @ExtensionMapping("playPrerollAdWithCompletionHandler:")
+    public static native void playPrerollAd(MPMoviePlayerController thiz, @Block VoidBlock1<NSError> completionHandler);
+    /**
+     * @since Available in iOS 8.0 and later.
+     */
+    @ExtensionMapping("cancelPreroll")
+    public static native void cancelPreroll(MPMoviePlayerController thiz);
+    /**
+     * @since Available in iOS 7.0 and later.
+     */
     @Mapping("preparePrerollAds")
     public static native void preparePrerollAds();
     

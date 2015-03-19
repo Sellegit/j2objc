@@ -38,6 +38,6 @@ public class CGPattern
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGPatternCreate")
-    public static native CGPattern create(Todo info, CGRect bounds, CGAffineTransform matrix, @MachineSizedFloat double xStep, @MachineSizedFloat double yStep, CGPatternTiling tiling, boolean isColored, CGPatternCallbacks callbacks);
+    public static native CGPattern create(Todo info, CGRect bounds, CGAffineTransform matrix, @MachineSizedFloat double xStep, @MachineSizedFloat double yStep, @Representing("CGPatternTiling") long tiling, boolean isColored, CGPatternCallbacks callbacks);
     
 }
