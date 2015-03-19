@@ -50,6 +50,6 @@ public class AVAudioUnitDistortion
     
     
     @Mapping("loadFactoryPreset:")
-    public native void loadFactoryPreset(@Representing("AVAudioUnitDistortionPreset") @MachineSizedSInt long preset);
+    public native void loadFactoryPreset(@Representing("AVAudioUnitDistortionPreset") long preset);
     
 }

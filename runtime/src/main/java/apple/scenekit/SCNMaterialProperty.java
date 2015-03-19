@@ -43,29 +43,29 @@ public class SCNMaterialProperty
     @Mapping("setIntensity:")
     public native void setIntensity(@MachineSizedFloat double v);
     @Mapping("minificationFilter")
-    public native @Representing("SCNFilterMode") @MachineSizedSInt long getMinificationFilter();
+    public native @Representing("SCNFilterMode") long getMinificationFilter();
     @Mapping("setMinificationFilter:")
-    public native void setMinificationFilter(@Representing("SCNFilterMode") @MachineSizedSInt long v);
+    public native void setMinificationFilter(@Representing("SCNFilterMode") long v);
     @Mapping("magnificationFilter")
-    public native @Representing("SCNFilterMode") @MachineSizedSInt long getMagnificationFilter();
+    public native @Representing("SCNFilterMode") long getMagnificationFilter();
     @Mapping("setMagnificationFilter:")
-    public native void setMagnificationFilter(@Representing("SCNFilterMode") @MachineSizedSInt long v);
+    public native void setMagnificationFilter(@Representing("SCNFilterMode") long v);
     @Mapping("mipFilter")
-    public native @Representing("SCNFilterMode") @MachineSizedSInt long getMipFilter();
+    public native @Representing("SCNFilterMode") long getMipFilter();
     @Mapping("setMipFilter:")
-    public native void setMipFilter(@Representing("SCNFilterMode") @MachineSizedSInt long v);
+    public native void setMipFilter(@Representing("SCNFilterMode") long v);
     @Mapping("contentsTransform")
     public native SCNMatrix4 getContentsTransform();
     @Mapping("setContentsTransform:")
     public native void setContentsTransform(SCNMatrix4 v);
     @Mapping("wrapS")
-    public native @Representing("SCNWrapMode") @MachineSizedSInt long getWrapS();
+    public native @Representing("SCNWrapMode") long getWrapS();
     @Mapping("setWrapS:")
-    public native void setWrapS(@Representing("SCNWrapMode") @MachineSizedSInt long v);
+    public native void setWrapS(@Representing("SCNWrapMode") long v);
     @Mapping("wrapT")
-    public native @Representing("SCNWrapMode") @MachineSizedSInt long getWrapT();
+    public native @Representing("SCNWrapMode") long getWrapT();
     @Mapping("setWrapT:")
-    public native void setWrapT(@Representing("SCNWrapMode") @MachineSizedSInt long v);
+    public native void setWrapT(@Representing("SCNWrapMode") long v);
     @Mapping("borderColor")
     public native Object getBorderColor();
     @Mapping("setBorderColor:")

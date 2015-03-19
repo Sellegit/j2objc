@@ -32,15 +32,17 @@ public class UITableView
     
     
     @Mapping("initWithFrame:style:")
-    public UITableView(CGRect frame, @Representing("UITableViewStyle") @MachineSizedSInt long style) { }
+    public UITableView(CGRect frame, @Representing("UITableViewStyle") long style) { }
     @Mapping("initWithFrame:")
     public UITableView(CGRect frame) { }
+    @Mapping("initWithCoder:")
+    public UITableView(NSCoder aDecoder) { }
     @Mapping("init")
     public UITableView() { }
     
     
     @Mapping("style")
-    public native @Representing("UITableViewStyle") @MachineSizedSInt long getStyle();
+    public native @Representing("UITableViewStyle") long getStyle();
     @Mapping("dataSource")
     public native UITableViewDataSource getDataSource();
     @Mapping("setDataSource:")
@@ -184,9 +186,9 @@ public class UITableView
     @Mapping("setSectionIndexTrackingBackgroundColor:")
     public native void setSectionIndexTrackingBackgroundColor(UIColor v);
     @Mapping("separatorStyle")
-    public native @Representing("UITableViewCellSeparatorStyle") @MachineSizedSInt long getSeparatorStyle();
+    public native @Representing("UITableViewCellSeparatorStyle") long getSeparatorStyle();
     @Mapping("setSeparatorStyle:")
-    public native void setSeparatorStyle(@Representing("UITableViewCellSeparatorStyle") @MachineSizedSInt long v);
+    public native void setSeparatorStyle(@Representing("UITableViewCellSeparatorStyle") long v);
     @Mapping("separatorColor")
     public native UIColor getSeparatorColor();
     @Mapping("setSeparatorColor:")
@@ -267,36 +269,36 @@ public class UITableView
     @Mapping("footerViewForSection:")
     public native UITableViewHeaderFooterView getFooterViewForSection(@MachineSizedSInt long section);
     @Mapping("scrollToRowAtIndexPath:atScrollPosition:animated:")
-    public native void scrollToRow(NSIndexPath indexPath, @Representing("UITableViewScrollPosition") @MachineSizedSInt long scrollPosition, boolean animated);
+    public native void scrollToRow(NSIndexPath indexPath, @Representing("UITableViewScrollPosition") long scrollPosition, boolean animated);
     @Mapping("scrollToNearestSelectedRowAtScrollPosition:animated:")
-    public native void scrollToNearestSelectedRow(@Representing("UITableViewScrollPosition") @MachineSizedSInt long scrollPosition, boolean animated);
+    public native void scrollToNearestSelectedRow(@Representing("UITableViewScrollPosition") long scrollPosition, boolean animated);
     @Mapping("beginUpdates")
     public native void beginUpdates();
     @Mapping("endUpdates")
     public native void endUpdates();
     @Mapping("insertSections:withRowAnimation:")
-    public native void insertSections(NSIndexSet sections, @Representing("UITableViewRowAnimation") @MachineSizedSInt long animation);
+    public native void insertSections(NSIndexSet sections, @Representing("UITableViewRowAnimation") long animation);
     @Mapping("deleteSections:withRowAnimation:")
-    public native void deleteSections(NSIndexSet sections, @Representing("UITableViewRowAnimation") @MachineSizedSInt long animation);
+    public native void deleteSections(NSIndexSet sections, @Representing("UITableViewRowAnimation") long animation);
     /**
      * @since Available in iOS 3.0 and later.
      */
     @Mapping("reloadSections:withRowAnimation:")
-    public native void reloadSections(NSIndexSet sections, @Representing("UITableViewRowAnimation") @MachineSizedSInt long animation);
+    public native void reloadSections(NSIndexSet sections, @Representing("UITableViewRowAnimation") long animation);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @Mapping("moveSection:toSection:")
     public native void moveSection(@MachineSizedSInt long section, @MachineSizedSInt long newSection);
     @Mapping("insertRowsAtIndexPaths:withRowAnimation:")
-    public native void insertRows(NSArray<?> indexPaths, @Representing("UITableViewRowAnimation") @MachineSizedSInt long animation);
+    public native void insertRows(NSArray<?> indexPaths, @Representing("UITableViewRowAnimation") long animation);
     @Mapping("deleteRowsAtIndexPaths:withRowAnimation:")
-    public native void deleteRows(NSArray<?> indexPaths, @Representing("UITableViewRowAnimation") @MachineSizedSInt long animation);
+    public native void deleteRows(NSArray<?> indexPaths, @Representing("UITableViewRowAnimation") long animation);
     /**
      * @since Available in iOS 3.0 and later.
      */
     @Mapping("reloadRowsAtIndexPaths:withRowAnimation:")
-    public native void reloadRows(NSArray<?> indexPaths, @Representing("UITableViewRowAnimation") @MachineSizedSInt long animation);
+    public native void reloadRows(NSArray<?> indexPaths, @Representing("UITableViewRowAnimation") long animation);
     /**
      * @since Available in iOS 5.0 and later.
      */
@@ -312,7 +314,7 @@ public class UITableView
     @Mapping("indexPathsForSelectedRows")
     public native NSArray<NSIndexPath> getIndexPathsForSelectedRows();
     @Mapping("selectRowAtIndexPath:animated:scrollPosition:")
-    public native void selectRow(NSIndexPath indexPath, boolean animated, @Representing("UITableViewScrollPosition") @MachineSizedSInt long scrollPosition);
+    public native void selectRow(NSIndexPath indexPath, boolean animated, @Representing("UITableViewScrollPosition") long scrollPosition);
     @Mapping("deselectRowAtIndexPath:animated:")
     public native void deselectRow(NSIndexPath indexPath, boolean animated);
     @Mapping("dequeueReusableCellWithIdentifier:")

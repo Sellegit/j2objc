@@ -33,6 +33,8 @@ public class UIActionSheet
     
     @Mapping("initWithFrame:")
     public UIActionSheet(CGRect frame) { }
+    @Mapping("initWithCoder:")
+    public UIActionSheet(NSCoder aDecoder) { }
     @Mapping("init")
     public UIActionSheet() { }
     
@@ -46,9 +48,9 @@ public class UIActionSheet
     @Mapping("setTitle:")
     public native void setTitle(String v);
     @Mapping("actionSheetStyle")
-    public native @Representing("UIActionSheetStyle") @MachineSizedSInt long getActionSheetStyle();
+    public native @Representing("UIActionSheetStyle") long getActionSheetStyle();
     @Mapping("setActionSheetStyle:")
-    public native void setActionSheetStyle(@Representing("UIActionSheetStyle") @MachineSizedSInt long v);
+    public native void setActionSheetStyle(@Representing("UIActionSheetStyle") long v);
     @Mapping("numberOfButtons")
     public native @MachineSizedSInt long getNumberOfButtons();
     @Mapping("cancelButtonIndex")

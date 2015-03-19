@@ -34,10 +34,10 @@ public abstract class NSDecimalNumberBehaviorsAdapter
     
     
     @NotImplemented("roundingMode")
-    public @Representing("NSRoundingMode") @MachineSizedUInt long getRoundingMode() { throw new UnsupportedOperationException(); }
+    public @Representing("NSRoundingMode") long getRoundingMode() { throw new UnsupportedOperationException(); }
     @NotImplemented("scale")
     public short getScale() { throw new UnsupportedOperationException(); }
     @NotImplemented("exceptionDuringOperation:error:leftOperand:rightOperand:")
-    public NSDecimalNumber exceptionDuringOperation(Selector operation, @Representing("NSCalculationError") @MachineSizedUInt long error, NSDecimalNumber leftOperand, NSDecimalNumber rightOperand) { throw new UnsupportedOperationException(); }
+    public NSDecimalNumber exceptionDuringOperation(Selector operation, @Representing("NSCalculationError") long error, NSDecimalNumber leftOperand, NSDecimalNumber rightOperand) { throw new UnsupportedOperationException(); }
     
 }

@@ -30,9 +30,9 @@ public interface AVAudio3DMixing
     
     
     @Mapping("renderingAlgorithm")
-    @Representing("AVAudio3DMixingRenderingAlgorithm") @MachineSizedSInt long getRenderingAlgorithm();
+    @Representing("AVAudio3DMixingRenderingAlgorithm") long getRenderingAlgorithm();
     @Mapping("setRenderingAlgorithm:")
-    void setRenderingAlgorithm(@Representing("AVAudio3DMixingRenderingAlgorithm") @MachineSizedSInt long v);
+    void setRenderingAlgorithm(@Representing("AVAudio3DMixingRenderingAlgorithm") long v);
     @Mapping("rate")
     float getRate();
     @Mapping("setRate:")

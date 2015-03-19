@@ -1,4 +1,4 @@
-package apple.mediaplayer;
+package apple.scenekit;
 
 
 import java.io.*;
@@ -13,26 +13,23 @@ import apple.coregraphics.*;
 import apple.coreservices.*;
 import apple.foundation.*;
 import apple.uikit.*;
+import apple.coreanimation.*;
+import apple.dispatch.*;
+import apple.glkit.*;
+import apple.spritekit.*;
+import apple.opengles.*;
 
 
 
-/**
- * @since Available in iOS 7.1 and later.
- */
 
-@Library("MediaPlayer/MediaPlayer.h") @Mapping("MPSeekCommandEvent")
-public class MPSeekCommandEvent 
-    extends MPRemoteCommandEvent 
+
+@Mapping("matrix_float4x4") @Library("SceneKit/SceneKit.h")
+public class matrix_float4x4 
+    extends Struct 
      {
 
     
-    
-    @Mapping("init")
-    public MPSeekCommandEvent() { }
-    
-    
-    @Mapping("type")
-    public native @Representing("MPSeekCommandEventType") long getType();
+    private matrix_float4x4() {}
     
     
     

@@ -31,6 +31,8 @@ public class UICollectionViewFlowLayout
 
     
     
+    @Mapping("initWithCoder:")
+    public UICollectionViewFlowLayout(NSCoder aDecoder) { }
     @Mapping("init")
     public UICollectionViewFlowLayout() { }
     
@@ -58,9 +60,9 @@ public class UICollectionViewFlowLayout
     @Mapping("setEstimatedItemSize:")
     public native void setEstimatedItemSize(CGSize v);
     @Mapping("scrollDirection")
-    public native @Representing("UICollectionViewScrollDirection") @MachineSizedSInt long getScrollDirection();
+    public native @Representing("UICollectionViewScrollDirection") long getScrollDirection();
     @Mapping("setScrollDirection:")
-    public native void setScrollDirection(@Representing("UICollectionViewScrollDirection") @MachineSizedSInt long v);
+    public native void setScrollDirection(@Representing("UICollectionViewScrollDirection") long v);
     @Mapping("headerReferenceSize")
     public native CGSize getHeaderReferenceSize();
     @Mapping("setHeaderReferenceSize:")
@@ -76,6 +78,11 @@ public class UICollectionViewFlowLayout
     
     
     
-    
+    @Mapping("initialLayoutAttributesForAppearingItemAtIndexPath:")
+    public native UICollectionViewLayoutAttributes initialLayoutAttributesForAppearingItemAtIndexPath$(NSIndexPath itemIndexPath);
+    @Mapping("initialLayoutAttributesForAppearingSupplementaryElementOfKind:atIndexPath:")
+    public native UICollectionViewLayoutAttributes initialLayoutAttributesForAppearingSupplementaryElementOfKind$atIndexPath$(String elementKind, NSIndexPath elementIndexPath);
+    @Mapping("initialLayoutAttributesForAppearingDecorationElementOfKind:atIndexPath:")
+    public native UICollectionViewLayoutAttributes initialLayoutAttributesForAppearingDecorationElementOfKind$atIndexPath$(String elementKind, NSIndexPath decorationIndexPath);
     
 }

@@ -34,9 +34,9 @@ public class PHContentEditingInput
     
     
     @Mapping("mediaType")
-    public native @Representing("PHAssetMediaType") @MachineSizedSInt long getMediaType();
+    public native @Representing("PHAssetMediaType") long getMediaType();
     @Mapping("mediaSubtypes")
-    public native @Representing("PHAssetMediaSubtype") @MachineSizedUInt long getMediaSubtypes();
+    public native @Representing("PHAssetMediaSubtype") long getMediaSubtypes();
     @Mapping("creationDate")
     public native NSDate getCreationDate();
     @Mapping("location")

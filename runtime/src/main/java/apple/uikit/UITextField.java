@@ -33,6 +33,8 @@ public class UITextField
     
     @Mapping("initWithFrame:")
     public UITextField(CGRect frame) { }
+    @Mapping("initWithCoder:")
+    public UITextField(NSCoder aDecoder) { }
     @Mapping("init")
     public UITextField() { }
     
@@ -60,13 +62,13 @@ public class UITextField
     @Mapping("setFont:")
     public native void setFont(UIFont v);
     @Mapping("textAlignment")
-    public native @Representing("NSTextAlignment") @MachineSizedSInt long getTextAlignment();
+    public native @Representing("NSTextAlignment") long getTextAlignment();
     @Mapping("setTextAlignment:")
-    public native void setTextAlignment(@Representing("NSTextAlignment") @MachineSizedSInt long v);
+    public native void setTextAlignment(@Representing("NSTextAlignment") long v);
     @Mapping("borderStyle")
-    public native @Representing("UITextBorderStyle") @MachineSizedSInt long getBorderStyle();
+    public native @Representing("UITextBorderStyle") long getBorderStyle();
     @Mapping("setBorderStyle:")
-    public native void setBorderStyle(@Representing("UITextBorderStyle") @MachineSizedSInt long v);
+    public native void setBorderStyle(@Representing("UITextBorderStyle") long v);
     /**
      * @since Available in iOS 7.0 and later.
      */
@@ -138,25 +140,25 @@ public class UITextField
     @Mapping("setTypingAttributes:")
     public native void setTypingAttributes(NSDictionary<?, ?> v);
     @Mapping("clearButtonMode")
-    public native @Representing("UITextFieldViewMode") @MachineSizedSInt long getClearButtonMode();
+    public native @Representing("UITextFieldViewMode") long getClearButtonMode();
     @Mapping("setClearButtonMode:")
-    public native void setClearButtonMode(@Representing("UITextFieldViewMode") @MachineSizedSInt long v);
+    public native void setClearButtonMode(@Representing("UITextFieldViewMode") long v);
     @Mapping("leftView")
     public native UIView getLeftView();
     @Mapping("setLeftView:")
     public native void setLeftView(UIView v);
     @Mapping("leftViewMode")
-    public native @Representing("UITextFieldViewMode") @MachineSizedSInt long getLeftViewMode();
+    public native @Representing("UITextFieldViewMode") long getLeftViewMode();
     @Mapping("setLeftViewMode:")
-    public native void setLeftViewMode(@Representing("UITextFieldViewMode") @MachineSizedSInt long v);
+    public native void setLeftViewMode(@Representing("UITextFieldViewMode") long v);
     @Mapping("rightView")
     public native UIView getRightView();
     @Mapping("setRightView:")
     public native void setRightView(UIView v);
     @Mapping("rightViewMode")
-    public native @Representing("UITextFieldViewMode") @MachineSizedSInt long getRightViewMode();
+    public native @Representing("UITextFieldViewMode") long getRightViewMode();
     @Mapping("setRightViewMode:")
-    public native void setRightViewMode(@Representing("UITextFieldViewMode") @MachineSizedSInt long v);
+    public native void setRightViewMode(@Representing("UITextFieldViewMode") long v);
     @Mapping("inputView")
     public native UIView getInputView();
     @Mapping("setInputView:")
@@ -198,39 +200,39 @@ public class UITextField
     @Mapping("textInputView")
     public native UIView getTextInputView();
     @Mapping("selectionAffinity")
-    public native @Representing("UITextStorageDirection") @MachineSizedSInt long getSelectionAffinity();
+    public native @Representing("UITextStorageDirection") long getSelectionAffinity();
     @Mapping("setSelectionAffinity:")
-    public native void setSelectionAffinity(@Representing("UITextStorageDirection") @MachineSizedSInt long v);
+    public native void setSelectionAffinity(@Representing("UITextStorageDirection") long v);
     @Mapping("autocapitalizationType")
-    public native @Representing("UITextAutocapitalizationType") @MachineSizedSInt long getAutocapitalizationType();
+    public native @Representing("UITextAutocapitalizationType") long getAutocapitalizationType();
     @Mapping("setAutocapitalizationType:")
-    public native void setAutocapitalizationType(@Representing("UITextAutocapitalizationType") @MachineSizedSInt long v);
+    public native void setAutocapitalizationType(@Representing("UITextAutocapitalizationType") long v);
     @Mapping("autocorrectionType")
-    public native @Representing("UITextAutocorrectionType") @MachineSizedSInt long getAutocorrectionType();
+    public native @Representing("UITextAutocorrectionType") long getAutocorrectionType();
     @Mapping("setAutocorrectionType:")
-    public native void setAutocorrectionType(@Representing("UITextAutocorrectionType") @MachineSizedSInt long v);
+    public native void setAutocorrectionType(@Representing("UITextAutocorrectionType") long v);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @Mapping("spellCheckingType")
-    public native @Representing("UITextSpellCheckingType") @MachineSizedSInt long getSpellCheckingType();
+    public native @Representing("UITextSpellCheckingType") long getSpellCheckingType();
     /**
      * @since Available in iOS 5.0 and later.
      */
     @Mapping("setSpellCheckingType:")
-    public native void setSpellCheckingType(@Representing("UITextSpellCheckingType") @MachineSizedSInt long v);
+    public native void setSpellCheckingType(@Representing("UITextSpellCheckingType") long v);
     @Mapping("keyboardType")
-    public native @Representing("UIKeyboardType") @MachineSizedSInt long getKeyboardType();
+    public native @Representing("UIKeyboardType") long getKeyboardType();
     @Mapping("setKeyboardType:")
-    public native void setKeyboardType(@Representing("UIKeyboardType") @MachineSizedSInt long v);
+    public native void setKeyboardType(@Representing("UIKeyboardType") long v);
     @Mapping("keyboardAppearance")
-    public native @Representing("UIKeyboardAppearance") @MachineSizedSInt long getKeyboardAppearance();
+    public native @Representing("UIKeyboardAppearance") long getKeyboardAppearance();
     @Mapping("setKeyboardAppearance:")
-    public native void setKeyboardAppearance(@Representing("UIKeyboardAppearance") @MachineSizedSInt long v);
+    public native void setKeyboardAppearance(@Representing("UIKeyboardAppearance") long v);
     @Mapping("returnKeyType")
-    public native @Representing("UIReturnKeyType") @MachineSizedSInt long getReturnKeyType();
+    public native @Representing("UIReturnKeyType") long getReturnKeyType();
     @Mapping("setReturnKeyType:")
-    public native void setReturnKeyType(@Representing("UIReturnKeyType") @MachineSizedSInt long v);
+    public native void setReturnKeyType(@Representing("UIReturnKeyType") long v);
     @Mapping("enablesReturnKeyAutomatically")
     public native boolean enablesReturnKeyAutomatically();
     @Mapping("setEnablesReturnKeyAutomatically:")
@@ -280,19 +282,19 @@ public class UITextField
     @Mapping("positionFromPosition:offset:")
     public native UITextPosition getPositionFromPosition(UITextPosition position, @MachineSizedSInt long offset);
     @Mapping("positionFromPosition:inDirection:offset:")
-    public native UITextPosition getPositionFromPosition(UITextPosition position, @Representing("UITextLayoutDirection") @MachineSizedSInt long direction, @MachineSizedSInt long offset);
+    public native UITextPosition getPositionFromPosition(UITextPosition position, @Representing("UITextLayoutDirection") long direction, @MachineSizedSInt long offset);
     @Mapping("comparePosition:toPosition:")
-    public native @Representing("NSComparisonResult") @MachineSizedSInt long comparePositions(UITextPosition position, UITextPosition other);
+    public native @Representing("NSComparisonResult") long comparePositions(UITextPosition position, UITextPosition other);
     @Mapping("offsetFromPosition:toPosition:")
     public native @MachineSizedSInt long getOffset(UITextPosition from, UITextPosition toPosition);
     @Mapping("positionWithinRange:farthestInDirection:")
-    public native UITextPosition getPositionWithinRangeFarthestInDirection(UITextRange range, @Representing("UITextLayoutDirection") @MachineSizedSInt long direction);
+    public native UITextPosition getPositionWithinRangeFarthestInDirection(UITextRange range, @Representing("UITextLayoutDirection") long direction);
     @Mapping("characterRangeByExtendingPosition:inDirection:")
-    public native UITextRange getCharacterRange(UITextPosition position, @Representing("UITextLayoutDirection") @MachineSizedSInt long direction);
+    public native UITextRange getCharacterRange(UITextPosition position, @Representing("UITextLayoutDirection") long direction);
     @Mapping("baseWritingDirectionForPosition:inDirection:")
-    public native @Representing("UITextWritingDirection") @MachineSizedSInt long getBaseWritingDirection(UITextPosition position, @Representing("UITextStorageDirection") @MachineSizedSInt long direction);
+    public native @Representing("UITextWritingDirection") long getBaseWritingDirection(UITextPosition position, @Representing("UITextStorageDirection") long direction);
     @Mapping("setBaseWritingDirection:forRange:")
-    public native void setBaseWritingDirection(@Representing("UITextWritingDirection") @MachineSizedSInt long writingDirection, UITextRange range);
+    public native void setBaseWritingDirection(@Representing("UITextWritingDirection") long writingDirection, UITextRange range);
     @Mapping("firstRectForRange:")
     public native CGRect getFirstRect(UITextRange range);
     @Mapping("caretRectForPosition:")
@@ -314,7 +316,7 @@ public class UITextField
     @Mapping("shouldChangeTextInRange:replacementText:")
     public native boolean shouldChangeText(UITextRange range, String text);
     @Mapping("textStylingAtPosition:inDirection:")
-    public native UITextInputTextStyle getTextStyling(UITextPosition position, @Representing("UITextStorageDirection") @MachineSizedSInt long direction);
+    public native UITextInputTextStyle getTextStyling(UITextPosition position, @Representing("UITextStorageDirection") long direction);
     @Mapping("positionWithinRange:atCharacterOffset:")
     public native UITextPosition getPositionWithinRangeAtCharacterOffset(UITextRange range, @MachineSizedSInt long offset);
     @Mapping("characterOffsetOfPosition:withinRange:")

@@ -36,13 +36,13 @@ public class MPMediaPropertyPredicate
     @Mapping("value")
     public native Object getValue();
     @Mapping("comparisonType")
-    public native @Representing("MPMediaPredicateComparison") @MachineSizedSInt long getComparisonType();
+    public native @Representing("MPMediaPredicateComparison") long getComparisonType();
     
     
     
     @Mapping("predicateWithValue:forProperty:")
     public static native MPMediaPropertyPredicate create(Object value, String property);
     @Mapping("predicateWithValue:forProperty:comparisonType:")
-    public static native MPMediaPropertyPredicate create(Object value, String property, @Representing("MPMediaPredicateComparison") @MachineSizedSInt long comparisonType);
+    public static native MPMediaPropertyPredicate create(Object value, String property, @Representing("MPMediaPredicateComparison") long comparisonType);
     
 }

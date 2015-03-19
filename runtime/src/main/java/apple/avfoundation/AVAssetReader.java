@@ -39,7 +39,7 @@ public class AVAssetReader
     @Mapping("asset")
     public native AVAsset getAsset();
     @Mapping("status")
-    public native @Representing("AVAssetReaderStatus") @MachineSizedSInt long getStatus();
+    public native @Representing("AVAssetReaderStatus") long getStatus();
     @Mapping("error")
     public native NSError getError();
     @Mapping("timeRange")

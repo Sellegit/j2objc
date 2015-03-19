@@ -31,7 +31,7 @@ public class EKCalendarChooser
     @Mapping("initWithSelectionStyle:displayStyle:eventStore:")
     public EKCalendarChooser(EKCalendarChooserSelectionStyle selectionStyle, EKCalendarChooserDisplayStyle displayStyle, EKEventStore eventStore) { }
     @Mapping("initWithSelectionStyle:displayStyle:entityType:eventStore:")
-    public EKCalendarChooser(EKCalendarChooserSelectionStyle style, EKCalendarChooserDisplayStyle displayStyle, @Representing("EKEntityType") int entityType, EKEventStore eventStore) { }
+    public EKCalendarChooser(EKCalendarChooserSelectionStyle style, EKCalendarChooserDisplayStyle displayStyle, @Representing("EKEntityType") long entityType, EKEventStore eventStore) { }
     @Mapping("initWithNibName:bundle:")
     public EKCalendarChooser(String nibNameOrNil, NSBundle nibBundleOrNil) { }
     @Mapping("init")

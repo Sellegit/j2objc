@@ -30,35 +30,35 @@ public abstract class UITextInputTraitsAdapter
     
     
     @NotImplemented("autocapitalizationType")
-    public @Representing("UITextAutocapitalizationType") @MachineSizedSInt long getAutocapitalizationType() { throw new UnsupportedOperationException(); }
+    public @Representing("UITextAutocapitalizationType") long getAutocapitalizationType() { throw new UnsupportedOperationException(); }
     @Mapping("setAutocapitalizationType:")
-    public void setAutocapitalizationType(@Representing("UITextAutocapitalizationType") @MachineSizedSInt long v) { throw new UnsupportedOperationException(); }
+    public void setAutocapitalizationType(@Representing("UITextAutocapitalizationType") long v) { throw new UnsupportedOperationException(); }
     @NotImplemented("autocorrectionType")
-    public @Representing("UITextAutocorrectionType") @MachineSizedSInt long getAutocorrectionType() { throw new UnsupportedOperationException(); }
+    public @Representing("UITextAutocorrectionType") long getAutocorrectionType() { throw new UnsupportedOperationException(); }
     @Mapping("setAutocorrectionType:")
-    public void setAutocorrectionType(@Representing("UITextAutocorrectionType") @MachineSizedSInt long v) { throw new UnsupportedOperationException(); }
+    public void setAutocorrectionType(@Representing("UITextAutocorrectionType") long v) { throw new UnsupportedOperationException(); }
     /**
      * @since Available in iOS 5.0 and later.
      */
     @NotImplemented("spellCheckingType")
-    public @Representing("UITextSpellCheckingType") @MachineSizedSInt long getSpellCheckingType() { throw new UnsupportedOperationException(); }
+    public @Representing("UITextSpellCheckingType") long getSpellCheckingType() { throw new UnsupportedOperationException(); }
     /**
      * @since Available in iOS 5.0 and later.
      */
     @Mapping("setSpellCheckingType:")
-    public void setSpellCheckingType(@Representing("UITextSpellCheckingType") @MachineSizedSInt long v) { throw new UnsupportedOperationException(); }
+    public void setSpellCheckingType(@Representing("UITextSpellCheckingType") long v) { throw new UnsupportedOperationException(); }
     @NotImplemented("keyboardType")
-    public @Representing("UIKeyboardType") @MachineSizedSInt long getKeyboardType() { throw new UnsupportedOperationException(); }
+    public @Representing("UIKeyboardType") long getKeyboardType() { throw new UnsupportedOperationException(); }
     @Mapping("setKeyboardType:")
-    public void setKeyboardType(@Representing("UIKeyboardType") @MachineSizedSInt long v) { throw new UnsupportedOperationException(); }
+    public void setKeyboardType(@Representing("UIKeyboardType") long v) { throw new UnsupportedOperationException(); }
     @NotImplemented("keyboardAppearance")
-    public @Representing("UIKeyboardAppearance") @MachineSizedSInt long getKeyboardAppearance() { throw new UnsupportedOperationException(); }
+    public @Representing("UIKeyboardAppearance") long getKeyboardAppearance() { throw new UnsupportedOperationException(); }
     @Mapping("setKeyboardAppearance:")
-    public void setKeyboardAppearance(@Representing("UIKeyboardAppearance") @MachineSizedSInt long v) { throw new UnsupportedOperationException(); }
+    public void setKeyboardAppearance(@Representing("UIKeyboardAppearance") long v) { throw new UnsupportedOperationException(); }
     @NotImplemented("returnKeyType")
-    public @Representing("UIReturnKeyType") @MachineSizedSInt long getReturnKeyType() { throw new UnsupportedOperationException(); }
+    public @Representing("UIReturnKeyType") long getReturnKeyType() { throw new UnsupportedOperationException(); }
     @Mapping("setReturnKeyType:")
-    public void setReturnKeyType(@Representing("UIReturnKeyType") @MachineSizedSInt long v) { throw new UnsupportedOperationException(); }
+    public void setReturnKeyType(@Representing("UIReturnKeyType") long v) { throw new UnsupportedOperationException(); }
     @NotImplemented("enablesReturnKeyAutomatically")
     public boolean enablesReturnKeyAutomatically() { throw new UnsupportedOperationException(); }
     @Mapping("setEnablesReturnKeyAutomatically:")

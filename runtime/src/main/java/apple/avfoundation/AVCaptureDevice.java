@@ -80,7 +80,7 @@ public class AVCaptureDevice
     @Mapping("setActiveVideoMaxFrameDuration:")
     public native void setActiveVideoMaxFrameDuration(CMTime v);
     @Mapping("position")
-    public native @Representing("AVCaptureDevicePosition") @MachineSizedSInt long getPosition();
+    public native @Representing("AVCaptureDevicePosition") long getPosition();
     @Mapping("hasFlash")
     public native boolean hasFlash();
     /**
@@ -94,9 +94,9 @@ public class AVCaptureDevice
     @Mapping("isFlashActive")
     public native boolean isFlashActive();
     @Mapping("flashMode")
-    public native @Representing("AVCaptureFlashMode") @MachineSizedSInt long getFlashMode();
+    public native @Representing("AVCaptureFlashMode") long getFlashMode();
     @Mapping("setFlashMode:")
-    public native void setFlashMode(@Representing("AVCaptureFlashMode") @MachineSizedSInt long v);
+    public native void setFlashMode(@Representing("AVCaptureFlashMode") long v);
     @Mapping("hasTorch")
     public native boolean hasTorch();
     /**
@@ -115,13 +115,13 @@ public class AVCaptureDevice
     @Mapping("torchLevel")
     public native float getTorchLevel();
     @Mapping("torchMode")
-    public native @Representing("AVCaptureTorchMode") @MachineSizedSInt long getTorchMode();
+    public native @Representing("AVCaptureTorchMode") long getTorchMode();
     @Mapping("setTorchMode:")
-    public native void setTorchMode(@Representing("AVCaptureTorchMode") @MachineSizedSInt long v);
+    public native void setTorchMode(@Representing("AVCaptureTorchMode") long v);
     @Mapping("focusMode")
-    public native @Representing("AVCaptureFocusMode") @MachineSizedSInt long getFocusMode();
+    public native @Representing("AVCaptureFocusMode") long getFocusMode();
     @Mapping("setFocusMode:")
-    public native void setFocusMode(@Representing("AVCaptureFocusMode") @MachineSizedSInt long v);
+    public native void setFocusMode(@Representing("AVCaptureFocusMode") long v);
     @Mapping("isFocusPointOfInterestSupported")
     public native boolean isFocusPointOfInterestSupported();
     @Mapping("focusPointOfInterest")
@@ -139,12 +139,12 @@ public class AVCaptureDevice
      * @since Available in iOS 7.0 and later.
      */
     @Mapping("autoFocusRangeRestriction")
-    public native @Representing("AVCaptureAutoFocusRangeRestriction") @MachineSizedSInt long getAutoFocusRangeRestriction();
+    public native @Representing("AVCaptureAutoFocusRangeRestriction") long getAutoFocusRangeRestriction();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @Mapping("setAutoFocusRangeRestriction:")
-    public native void setAutoFocusRangeRestriction(@Representing("AVCaptureAutoFocusRangeRestriction") @MachineSizedSInt long v);
+    public native void setAutoFocusRangeRestriction(@Representing("AVCaptureAutoFocusRangeRestriction") long v);
     /**
      * @since Available in iOS 7.0 and later.
      */
@@ -166,9 +166,9 @@ public class AVCaptureDevice
     @Mapping("lensPosition")
     public native float getLensPosition();
     @Mapping("exposureMode")
-    public native @Representing("AVCaptureExposureMode") @MachineSizedSInt long getExposureMode();
+    public native @Representing("AVCaptureExposureMode") long getExposureMode();
     @Mapping("setExposureMode:")
-    public native void setExposureMode(@Representing("AVCaptureExposureMode") @MachineSizedSInt long v);
+    public native void setExposureMode(@Representing("AVCaptureExposureMode") long v);
     @Mapping("isExposurePointOfInterestSupported")
     public native boolean isExposurePointOfInterestSupported();
     @Mapping("exposurePointOfInterest")
@@ -213,9 +213,9 @@ public class AVCaptureDevice
     @Mapping("maxExposureTargetBias")
     public native float getMaxExposureTargetBias();
     @Mapping("whiteBalanceMode")
-    public native @Representing("AVCaptureWhiteBalanceMode") @MachineSizedSInt long getWhiteBalanceMode();
+    public native @Representing("AVCaptureWhiteBalanceMode") long getWhiteBalanceMode();
     @Mapping("setWhiteBalanceMode:")
-    public native void setWhiteBalanceMode(@Representing("AVCaptureWhiteBalanceMode") @MachineSizedSInt long v);
+    public native void setWhiteBalanceMode(@Representing("AVCaptureWhiteBalanceMode") long v);
     @Mapping("isAdjustingWhiteBalance")
     public native boolean isAdjustingWhiteBalance();
     /**
@@ -361,23 +361,23 @@ public class AVCaptureDevice
     @Mapping("deviceWithUniqueID:")
     public static native AVCaptureDevice getDeviceWithUniqueID(String deviceUniqueID);
     @Mapping("isFlashModeSupported:")
-    public native boolean isFlashModeSupported(@Representing("AVCaptureFlashMode") @MachineSizedSInt long flashMode);
+    public native boolean isFlashModeSupported(@Representing("AVCaptureFlashMode") long flashMode);
     @Mapping("isTorchModeSupported:")
-    public native boolean isTorchModeSupported(@Representing("AVCaptureTorchMode") @MachineSizedSInt long torchMode);
+    public native boolean isTorchModeSupported(@Representing("AVCaptureTorchMode") long torchMode);
     /**
      * @since Available in iOS 6.0 and later.
      */
     @Mapping("setTorchModeOnWithLevel:error:")
     public native boolean setTorchModeOn(float torchLevel, Todo outError);
     @Mapping("isFocusModeSupported:")
-    public native boolean isFocusModeSupported(@Representing("AVCaptureFocusMode") @MachineSizedSInt long focusMode);
+    public native boolean isFocusModeSupported(@Representing("AVCaptureFocusMode") long focusMode);
     /**
      * @since Available in iOS 8.0 and later.
      */
     @Mapping("setFocusModeLockedWithLensPosition:completionHandler:")
     public native void setFocusModeLocked(float lensPosition, @Block VoidBlock1<CMTime> handler);
     @Mapping("isExposureModeSupported:")
-    public native boolean isExposureModeSupported(@Representing("AVCaptureExposureMode") @MachineSizedSInt long exposureMode);
+    public native boolean isExposureModeSupported(@Representing("AVCaptureExposureMode") long exposureMode);
     /**
      * @since Available in iOS 8.0 and later.
      */
@@ -389,7 +389,7 @@ public class AVCaptureDevice
     @Mapping("setExposureTargetBias:completionHandler:")
     public native void setExposureTargetBias(float bias, @Block VoidBlock1<CMTime> handler);
     @Mapping("isWhiteBalanceModeSupported:")
-    public native boolean isWhiteBalanceModeSupported(@Representing("AVCaptureWhiteBalanceMode") @MachineSizedSInt long whiteBalanceMode);
+    public native boolean isWhiteBalanceModeSupported(@Representing("AVCaptureWhiteBalanceMode") long whiteBalanceMode);
     /**
      * @since Available in iOS 8.0 and later.
      */
@@ -429,7 +429,7 @@ public class AVCaptureDevice
      * @since Available in iOS 7.0 and later.
      */
     @Mapping("authorizationStatusForMediaType:")
-    public static native @Representing("AVAuthorizationStatus") @MachineSizedSInt long getAuthorizationStatusForMediaType(String mediaType);
+    public static native @Representing("AVAuthorizationStatus") long getAuthorizationStatusForMediaType(String mediaType);
     /**
      * @since Available in iOS 7.0 and later.
      */

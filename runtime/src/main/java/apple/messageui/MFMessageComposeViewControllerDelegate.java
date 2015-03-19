@@ -28,7 +28,7 @@ public interface MFMessageComposeViewControllerDelegate
     
     
     @Mapping("messageComposeViewController:didFinishWithResult:")
-    void didFinish(MFMessageComposeViewController controller, @Representing("MessageComposeResult") int result);
+    void didFinish(MFMessageComposeViewController controller, @Representing("MessageComposeResult") long result);
     
     /*<adapter>*/
     /*</adapter>*/

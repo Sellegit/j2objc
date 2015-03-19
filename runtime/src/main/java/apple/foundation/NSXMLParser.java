@@ -58,12 +58,12 @@ public class NSXMLParser
      * @since Available in iOS 8.0 and later.
      */
     @Mapping("externalEntityResolvingPolicy")
-    public native @Representing("NSXMLParserExternalEntityResolvingPolicy") @MachineSizedUInt long getExternalEntityResolvingPolicy();
+    public native @Representing("NSXMLParserExternalEntityResolvingPolicy") long getExternalEntityResolvingPolicy();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @Mapping("setExternalEntityResolvingPolicy:")
-    public native void setExternalEntityResolvingPolicy(@Representing("NSXMLParserExternalEntityResolvingPolicy") @MachineSizedUInt long v);
+    public native void setExternalEntityResolvingPolicy(@Representing("NSXMLParserExternalEntityResolvingPolicy") long v);
     /**
      * @since Available in iOS 8.0 and later.
      */

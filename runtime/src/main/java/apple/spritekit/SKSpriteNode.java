@@ -102,9 +102,9 @@ public class SKSpriteNode
     @Mapping("setColor:")
     public native void setColor(UIColor v);
     @Mapping("blendMode")
-    public native @Representing("SKBlendMode") @MachineSizedSInt long getBlendMode();
+    public native @Representing("SKBlendMode") long getBlendMode();
     @Mapping("setBlendMode:")
-    public native void setBlendMode(@Representing("SKBlendMode") @MachineSizedSInt long v);
+    public native void setBlendMode(@Representing("SKBlendMode") long v);
     @Mapping("anchorPoint")
     public native CGPoint getAnchorPoint();
     @Mapping("setAnchorPoint:")

@@ -38,7 +38,7 @@ public class UIGestureRecognizer
     
     
     @Mapping("state")
-    public native @Representing("UIGestureRecognizerState") @MachineSizedSInt long getState();
+    public native @Representing("UIGestureRecognizerState") long getState();
     @Mapping("delegate")
     public native UIGestureRecognizerDelegate getDelegate();
     @Mapping("setDelegate:")

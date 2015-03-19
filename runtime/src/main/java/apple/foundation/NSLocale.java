@@ -99,12 +99,12 @@ public class NSLocale
      * @since Available in iOS 4.0 and later.
      */
     @Mapping("characterDirectionForLanguage:")
-    public static native @Representing("NSLocaleLanguageDirection") @MachineSizedUInt long getCharacterDirection(String isoLangCode);
+    public static native @Representing("NSLocaleLanguageDirection") long getCharacterDirection(String isoLangCode);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @Mapping("lineDirectionForLanguage:")
-    public static native @Representing("NSLocaleLanguageDirection") @MachineSizedUInt long getLineDirection(String isoLangCode);
+    public static native @Representing("NSLocaleLanguageDirection") long getLineDirection(String isoLangCode);
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
     

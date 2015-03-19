@@ -35,6 +35,8 @@ public class UIReferenceLibraryViewController
     public UIReferenceLibraryViewController(String term) { }
     @Mapping("initWithNibName:bundle:")
     public UIReferenceLibraryViewController(String nibNameOrNil, NSBundle nibBundleOrNil) { }
+    @Mapping("initWithCoder:")
+    public UIReferenceLibraryViewController(NSCoder aDecoder) { }
     @Mapping("init")
     public UIReferenceLibraryViewController() { }
     

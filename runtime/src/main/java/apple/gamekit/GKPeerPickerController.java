@@ -34,9 +34,9 @@ public class GKPeerPickerController
     
     
     @Mapping("connectionTypesMask")
-    public native @Representing("GKPeerPickerConnectionType") int getConnectionTypesMask();
+    public native @Representing("GKPeerPickerConnectionType") long getConnectionTypesMask();
     @Mapping("setConnectionTypesMask:")
-    public native void setConnectionTypesMask(@Representing("GKPeerPickerConnectionType") int v);
+    public native void setConnectionTypesMask(@Representing("GKPeerPickerConnectionType") long v);
     @Mapping("delegate")
     public native GKPeerPickerControllerDelegate getDelegate();
     @Mapping("setDelegate:")

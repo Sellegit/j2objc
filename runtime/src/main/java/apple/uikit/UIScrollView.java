@@ -33,6 +33,8 @@ public class UIScrollView
     
     @Mapping("initWithFrame:")
     public UIScrollView(CGRect frame) { }
+    @Mapping("initWithCoder:")
+    public UIScrollView(NSCoder aDecoder) { }
     @Mapping("init")
     public UIScrollView() { }
     
@@ -90,9 +92,9 @@ public class UIScrollView
     @Mapping("setScrollIndicatorInsets:")
     public native void setScrollIndicatorInsets(UIEdgeInsets v);
     @Mapping("indicatorStyle")
-    public native @Representing("UIScrollViewIndicatorStyle") @MachineSizedSInt long getIndicatorStyle();
+    public native @Representing("UIScrollViewIndicatorStyle") long getIndicatorStyle();
     @Mapping("setIndicatorStyle:")
-    public native void setIndicatorStyle(@Representing("UIScrollViewIndicatorStyle") @MachineSizedSInt long v);
+    public native void setIndicatorStyle(@Representing("UIScrollViewIndicatorStyle") long v);
     /**
      * @since Available in iOS 3.0 and later.
      */
@@ -161,12 +163,12 @@ public class UIScrollView
      * @since Available in iOS 7.0 and later.
      */
     @Mapping("keyboardDismissMode")
-    public native @Representing("UIScrollViewKeyboardDismissMode") @MachineSizedSInt long getKeyboardDismissMode();
+    public native @Representing("UIScrollViewKeyboardDismissMode") long getKeyboardDismissMode();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @Mapping("setKeyboardDismissMode:")
-    public native void setKeyboardDismissMode(@Representing("UIScrollViewKeyboardDismissMode") @MachineSizedSInt long v);
+    public native void setKeyboardDismissMode(@Representing("UIScrollViewKeyboardDismissMode") long v);
     
     
     

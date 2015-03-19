@@ -31,6 +31,8 @@ public class CATiledLayer
     public CATiledLayer() { }
     @Mapping("initWithLayer:")
     public CATiledLayer(Object layer) { }
+    @Mapping("initWithCoder:")
+    public CATiledLayer(NSCoder aDecoder) { }
     
     
     @Mapping("levelsOfDetail")

@@ -50,7 +50,7 @@ public interface UITableViewDataSource
     @Mapping("tableView:sectionForSectionIndexTitle:atIndex:")
     @MachineSizedSInt long getSectionForSectionIndexTitle(UITableView tableView, String title, @MachineSizedSInt long index);
     @Mapping("tableView:commitEditingStyle:forRowAtIndexPath:")
-    void commitEditingStyleForRow(UITableView tableView, @Representing("UITableViewCellEditingStyle") @MachineSizedSInt long editingStyle, NSIndexPath indexPath);
+    void commitEditingStyleForRow(UITableView tableView, @Representing("UITableViewCellEditingStyle") long editingStyle, NSIndexPath indexPath);
     @Mapping("tableView:moveRowAtIndexPath:toIndexPath:")
     void moveRow(UITableView tableView, NSIndexPath sourceIndexPath, NSIndexPath destinationIndexPath);
     

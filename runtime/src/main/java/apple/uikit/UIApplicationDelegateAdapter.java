@@ -72,9 +72,9 @@ public abstract class UIApplicationDelegateAdapter
     @NotImplemented("applicationSignificantTimeChange:")
     public void significantTimeChange(UIApplication application) { throw new UnsupportedOperationException(); }
     @NotImplemented("application:willChangeStatusBarOrientation:duration:")
-    public void willChangeStatusBarOrientation(UIApplication application, @Representing("UIInterfaceOrientation") @MachineSizedSInt long newStatusBarOrientation, double duration) { throw new UnsupportedOperationException(); }
+    public void willChangeStatusBarOrientation(UIApplication application, @Representing("UIInterfaceOrientation") long newStatusBarOrientation, double duration) { throw new UnsupportedOperationException(); }
     @NotImplemented("application:didChangeStatusBarOrientation:")
-    public void didChangStatusBarOrientation(UIApplication application, @Representing("UIInterfaceOrientation") @MachineSizedSInt long oldStatusBarOrientation) { throw new UnsupportedOperationException(); }
+    public void didChangStatusBarOrientation(UIApplication application, @Representing("UIInterfaceOrientation") long oldStatusBarOrientation) { throw new UnsupportedOperationException(); }
     @NotImplemented("application:willChangeStatusBarFrame:")
     public void willChangeStatusBarFrame(UIApplication application, CGRect newStatusBarFrame) { throw new UnsupportedOperationException(); }
     @NotImplemented("application:didChangeStatusBarFrame:")

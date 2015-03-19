@@ -90,28 +90,28 @@ public class MKOverlayPathView
      */
     @Deprecated
     @Mapping("lineJoin")
-    public native @Representing("CGLineJoin") int getLineJoin();
+    public native @Representing("CGLineJoin") long getLineJoin();
     /**
      * @since Available in iOS 4.0 and later.
      * @deprecated Deprecated in iOS 7.0.
      */
     @Deprecated
     @Mapping("setLineJoin:")
-    public native void setLineJoin(@Representing("CGLineJoin") int v);
+    public native void setLineJoin(@Representing("CGLineJoin") long v);
     /**
      * @since Available in iOS 4.0 and later.
      * @deprecated Deprecated in iOS 7.0.
      */
     @Deprecated
     @Mapping("lineCap")
-    public native @Representing("CGLineCap") int getLineCap();
+    public native @Representing("CGLineCap") long getLineCap();
     /**
      * @since Available in iOS 4.0 and later.
      * @deprecated Deprecated in iOS 7.0.
      */
     @Deprecated
     @Mapping("setLineCap:")
-    public native void setLineCap(@Representing("CGLineCap") int v);
+    public native void setLineCap(@Representing("CGLineCap") long v);
     /**
      * @since Available in iOS 4.0 and later.
      * @deprecated Deprecated in iOS 7.0.

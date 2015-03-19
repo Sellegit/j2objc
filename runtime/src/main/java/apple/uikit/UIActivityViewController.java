@@ -35,6 +35,8 @@ public class UIActivityViewController
     public UIActivityViewController(NSArray<?> activityItems, NSArray<?> applicationActivities) { }
     @Mapping("initWithNibName:bundle:")
     public UIActivityViewController(String nibNameOrNil, NSBundle nibBundleOrNil) { }
+    @Mapping("initWithCoder:")
+    public UIActivityViewController(NSCoder aDecoder) { }
     @Mapping("init")
     public UIActivityViewController() { }
     

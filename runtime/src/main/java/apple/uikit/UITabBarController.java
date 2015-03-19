@@ -33,6 +33,8 @@ public class UITabBarController
     
     @Mapping("initWithNibName:bundle:")
     public UITabBarController(String nibNameOrNil, NSBundle nibBundleOrNil) { }
+    @Mapping("initWithCoder:")
+    public UITabBarController(NSCoder aDecoder) { }
     @Mapping("init")
     public UITabBarController() { }
     

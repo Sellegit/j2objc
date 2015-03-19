@@ -40,7 +40,7 @@ public interface UIViewControllerContextTransitioning
     @Mapping("transitionWasCancelled")
     boolean transitionWasCancelled();
     @Mapping("presentationStyle")
-    @Representing("UIModalPresentationStyle") @MachineSizedSInt long getPresentationStyle();
+    @Representing("UIModalPresentationStyle") long getPresentationStyle();
     @Mapping("updateInteractiveTransition:")
     void updateInteractiveTransition(@MachineSizedFloat double percentComplete);
     @Mapping("finishInteractiveTransition")

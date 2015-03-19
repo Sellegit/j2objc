@@ -36,7 +36,7 @@ public interface UIViewControllerInteractiveTransitioning
     @Mapping("completionSpeed")
     @MachineSizedFloat double getCompletionSpeed();
     @Mapping("completionCurve")
-    @Representing("UIViewAnimationCurve") @MachineSizedSInt long getCompletionCurve();
+    @Representing("UIViewAnimationCurve") long getCompletionCurve();
     
     /*<adapter>*/
     /*</adapter>*/

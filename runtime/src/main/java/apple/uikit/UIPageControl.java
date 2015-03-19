@@ -33,6 +33,8 @@ public class UIPageControl
     
     @Mapping("initWithFrame:")
     public UIPageControl(CGRect frame) { }
+    @Mapping("initWithCoder:")
+    public UIPageControl(NSCoder aDecoder) { }
     @Mapping("init")
     public UIPageControl() { }
     

@@ -39,7 +39,7 @@ public class HKQuantity
     @Mapping("doubleValueForUnit:")
     public native double getDoubleValueForUnit(HKUnit unit);
     @Mapping("compare:")
-    public native @Representing("NSComparisonResult") @MachineSizedSInt long compare(HKQuantity quantity);
+    public native @Representing("NSComparisonResult") long compare(HKQuantity quantity);
     @Mapping("quantityWithUnit:doubleValue:")
     public static native HKQuantity create(HKUnit unit, double value);
     @Mapping("copyWithZone:")

@@ -40,7 +40,7 @@ public class MPMediaItemCollection
     @Mapping("count")
     public native @MachineSizedUInt long getCount();
     @Mapping("mediaTypes")
-    public native @Representing("MPMediaType") @MachineSizedUInt long getMediaTypes();
+    public native @Representing("MPMediaType") long getMediaTypes();
     
     
     

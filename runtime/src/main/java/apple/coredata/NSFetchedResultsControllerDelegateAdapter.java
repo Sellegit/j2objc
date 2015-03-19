@@ -29,9 +29,9 @@ public abstract class NSFetchedResultsControllerDelegateAdapter
     
     
     @NotImplemented("controller:didChangeObject:atIndexPath:forChangeType:newIndexPath:")
-    public void didChangeObject(NSFetchedResultsController controller, Object anObject, NSIndexPath indexPath, @Representing("NSFetchedResultsChangeType") @MachineSizedUInt long type, NSIndexPath newIndexPath) { throw new UnsupportedOperationException(); }
+    public void didChangeObject(NSFetchedResultsController controller, Object anObject, NSIndexPath indexPath, @Representing("NSFetchedResultsChangeType") long type, NSIndexPath newIndexPath) { throw new UnsupportedOperationException(); }
     @NotImplemented("controller:didChangeSection:atIndex:forChangeType:")
-    public void didChangeSection(NSFetchedResultsController controller, NSFetchedResultsSectionInfo sectionInfo, @MachineSizedUInt long sectionIndex, @Representing("NSFetchedResultsChangeType") @MachineSizedUInt long type) { throw new UnsupportedOperationException(); }
+    public void didChangeSection(NSFetchedResultsController controller, NSFetchedResultsSectionInfo sectionInfo, @MachineSizedUInt long sectionIndex, @Representing("NSFetchedResultsChangeType") long type) { throw new UnsupportedOperationException(); }
     @NotImplemented("controllerWillChangeContent:")
     public void willChangeContent(NSFetchedResultsController controller) { throw new UnsupportedOperationException(); }
     @NotImplemented("controllerDidChangeContent:")

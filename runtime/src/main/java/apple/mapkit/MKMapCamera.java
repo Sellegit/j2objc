@@ -53,9 +53,9 @@ public class MKMapCamera
     
     
     @Mapping("camera")
-    public static native MKMapCamera create();
+    public static native MKMapCamera createPrime();
     @Mapping("cameraLookingAtCenterCoordinate:fromEyeCoordinate:eyeAltitude:")
-    public static native MKMapCamera create(CLLocationCoordinate2D centerCoordinate, CLLocationCoordinate2D eyeCoordinate, double eyeAltitude);
+    public static native MKMapCamera createPrime(CLLocationCoordinate2D centerCoordinate, CLLocationCoordinate2D eyeCoordinate, double eyeAltitude);
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
     

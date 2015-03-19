@@ -63,7 +63,7 @@ public class NSDate
     @Mapping("laterDate:")
     public native NSDate laterDate(NSDate anotherDate);
     @Mapping("compare:")
-    public native @Representing("NSComparisonResult") @MachineSizedSInt long compare(NSDate other);
+    public native @Representing("NSComparisonResult") long compare(NSDate other);
     @Mapping("isEqualToDate:")
     public native boolean isEqualTo(NSDate otherDate);
     @Mapping("descriptionWithLocale:")

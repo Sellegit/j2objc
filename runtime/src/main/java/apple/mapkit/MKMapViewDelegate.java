@@ -89,12 +89,12 @@ public interface MKMapViewDelegate
      * @since Available in iOS 4.0 and later.
      */
     @Mapping("mapView:annotationView:didChangeDragState:fromOldState:")
-    void didChangeDragState(MKMapView mapView, MKAnnotationView view, @Representing("MKAnnotationViewDragState") @MachineSizedUInt long newState, @Representing("MKAnnotationViewDragState") @MachineSizedUInt long oldState);
+    void didChangeDragState(MKMapView mapView, MKAnnotationView view, @Representing("MKAnnotationViewDragState") long newState, @Representing("MKAnnotationViewDragState") long oldState);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @Mapping("mapView:didChangeUserTrackingMode:animated:")
-    void didChangeUserTrackingMode(MKMapView mapView, @Representing("MKUserTrackingMode") @MachineSizedSInt long mode, boolean animated);
+    void didChangeUserTrackingMode(MKMapView mapView, @Representing("MKUserTrackingMode") long mode, boolean animated);
     /**
      * @since Available in iOS 7.0 and later.
      */

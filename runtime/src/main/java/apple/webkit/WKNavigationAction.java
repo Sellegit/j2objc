@@ -36,7 +36,7 @@ public class WKNavigationAction
     @Mapping("targetFrame")
     public native WKFrameInfo getTargetFrame();
     @Mapping("navigationType")
-    public native @Representing("WKNavigationType") @MachineSizedSInt long getNavigationType();
+    public native @Representing("WKNavigationType") long getNavigationType();
     @Mapping("request")
     public native NSURLRequest getRequest();
     

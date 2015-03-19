@@ -31,6 +31,8 @@ public class CAShapeLayer
     public CAShapeLayer() { }
     @Mapping("initWithLayer:")
     public CAShapeLayer(Object layer) { }
+    @Mapping("initWithCoder:")
+    public CAShapeLayer(NSCoder aDecoder) { }
     
     
     @Mapping("path")

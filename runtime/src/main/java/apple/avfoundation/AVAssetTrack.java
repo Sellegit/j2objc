@@ -118,7 +118,7 @@ public class AVAssetTrack
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
     @Mapping("statusOfValueForKey:error:")
-    public native @Representing("AVKeyValueStatus") @MachineSizedSInt long getStatusOfValue(String key, Todo outError);
+    public native @Representing("AVKeyValueStatus") long getStatusOfValue(String key, Todo outError);
     @Mapping("loadValuesAsynchronouslyForKeys:completionHandler:")
     public native void loadValuesAsynchronously(NSArray<?> keys, @Block Runnable handler);
     

@@ -42,7 +42,7 @@ public class UIPrinter
     @Mapping("displayLocation")
     public native String getDisplayLocation();
     @Mapping("supportedJobTypes")
-    public native @Representing("UIPrinterJobTypes") @MachineSizedSInt long getSupportedJobTypes();
+    public native @Representing("UIPrinterJobTypes") long getSupportedJobTypes();
     @Mapping("makeAndModel")
     public native String getMakeAndModel();
     @Mapping("supportsColor")

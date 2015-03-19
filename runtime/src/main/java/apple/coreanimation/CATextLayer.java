@@ -31,6 +31,8 @@ public class CATextLayer
     public CATextLayer() { }
     @Mapping("initWithLayer:")
     public CATextLayer(Object layer) { }
+    @Mapping("initWithCoder:")
+    public CATextLayer(NSCoder aDecoder) { }
     
     
     @Mapping("fontSize")

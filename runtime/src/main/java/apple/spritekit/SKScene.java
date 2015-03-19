@@ -44,9 +44,9 @@ public class SKScene
     @Mapping("setSize:")
     public native void setSize(CGSize v);
     @Mapping("scaleMode")
-    public native @Representing("SKSceneScaleMode") @MachineSizedSInt long getScaleMode();
+    public native @Representing("SKSceneScaleMode") long getScaleMode();
     @Mapping("setScaleMode:")
-    public native void setScaleMode(@Representing("SKSceneScaleMode") @MachineSizedSInt long v);
+    public native void setScaleMode(@Representing("SKSceneScaleMode") long v);
     @Mapping("backgroundColor")
     public native UIColor getBackgroundColor();
     @Mapping("setBackgroundColor:")

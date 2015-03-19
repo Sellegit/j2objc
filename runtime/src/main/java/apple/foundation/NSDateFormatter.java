@@ -39,24 +39,24 @@ public class NSDateFormatter
      * @since Available in iOS 8.0 and later.
      */
     @Mapping("formattingContext")
-    public native @Representing("NSFormattingContext") @MachineSizedSInt long getFormattingContext();
+    public native @Representing("NSFormattingContext") long getFormattingContext();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @Mapping("setFormattingContext:")
-    public native void setFormattingContext(@Representing("NSFormattingContext") @MachineSizedSInt long v);
+    public native void setFormattingContext(@Representing("NSFormattingContext") long v);
     @Mapping("dateFormat")
     public native String getDateFormat();
     @Mapping("setDateFormat:")
     public native void setDateFormat(String v);
     @Mapping("dateStyle")
-    public native @Representing("NSDateFormatterStyle") @MachineSizedUInt long getDateStyle();
+    public native @Representing("NSDateFormatterStyle") long getDateStyle();
     @Mapping("setDateStyle:")
-    public native void setDateStyle(@Representing("NSDateFormatterStyle") @MachineSizedUInt long v);
+    public native void setDateStyle(@Representing("NSDateFormatterStyle") long v);
     @Mapping("timeStyle")
-    public native @Representing("NSDateFormatterStyle") @MachineSizedUInt long getTimeStyle();
+    public native @Representing("NSDateFormatterStyle") long getTimeStyle();
     @Mapping("setTimeStyle:")
-    public native void setTimeStyle(@Representing("NSDateFormatterStyle") @MachineSizedUInt long v);
+    public native void setTimeStyle(@Representing("NSDateFormatterStyle") long v);
     @Mapping("locale")
     public native NSLocale getLocale();
     @Mapping("setLocale:")
@@ -66,9 +66,9 @@ public class NSDateFormatter
     @Mapping("setGeneratesCalendarDates:")
     public native void setGeneratesCalendarDates(boolean v);
     @Mapping("formatterBehavior")
-    public native @Representing("NSDateFormatterBehavior") @MachineSizedUInt long getFormatterBehavior();
+    public native @Representing("NSDateFormatterBehavior") long getFormatterBehavior();
     @Mapping("setFormatterBehavior:")
-    public native void setFormatterBehavior(@Representing("NSDateFormatterBehavior") @MachineSizedUInt long v);
+    public native void setFormatterBehavior(@Representing("NSDateFormatterBehavior") long v);
     @Mapping("timeZone")
     public native NSTimeZone getTimeZone();
     @Mapping("setTimeZone:")
@@ -283,15 +283,15 @@ public class NSDateFormatter
      * @since Available in iOS 4.0 and later.
      */
     @Mapping("localizedStringFromDate:dateStyle:timeStyle:")
-    public static native String format(NSDate date, @Representing("NSDateFormatterStyle") @MachineSizedUInt long dstyle, @Representing("NSDateFormatterStyle") @MachineSizedUInt long tstyle);
+    public static native String format(NSDate date, @Representing("NSDateFormatterStyle") long dstyle, @Representing("NSDateFormatterStyle") long tstyle);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @Mapping("dateFormatFromTemplate:options:locale:")
     public static native String getDateFormatFromTemplate(String tmplate, @MachineSizedUInt long opts, NSLocale locale);
     @Mapping("defaultFormatterBehavior")
-    public static native @Representing("NSDateFormatterBehavior") @MachineSizedUInt long getDefaultFormatterBehavior();
+    public static native @Representing("NSDateFormatterBehavior") long getDefaultFormatterBehavior();
     @Mapping("setDefaultFormatterBehavior:")
-    public static native void setDefaultFormatterBehavior(@Representing("NSDateFormatterBehavior") @MachineSizedUInt long behavior);
+    public static native void setDefaultFormatterBehavior(@Representing("NSDateFormatterBehavior") long behavior);
     
 }

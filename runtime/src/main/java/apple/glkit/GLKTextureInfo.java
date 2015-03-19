@@ -42,9 +42,9 @@ public class GLKTextureInfo
     @Mapping("height")
     public native int getHeight();
     @Mapping("alphaState")
-    public native @Representing("GLKTextureInfoAlphaState") int getAlphaState();
+    public native @Representing("GLKTextureInfoAlphaState") long getAlphaState();
     @Mapping("textureOrigin")
-    public native @Representing("GLKTextureInfoOrigin") int getTextureOrigin();
+    public native @Representing("GLKTextureInfoOrigin") long getTextureOrigin();
     @Mapping("containsMipmaps")
     public native boolean containsMipmaps();
     

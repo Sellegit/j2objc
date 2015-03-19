@@ -52,17 +52,17 @@ public class UIApplication
     @Mapping("setNetworkActivityIndicatorVisible:")
     public native void setNetworkActivityIndicatorVisible(boolean v);
     @Mapping("statusBarStyle")
-    public native @Representing("UIStatusBarStyle") @MachineSizedSInt long getStatusBarStyle();
+    public native @Representing("UIStatusBarStyle") long getStatusBarStyle();
     @Mapping("setStatusBarStyle:")
-    public native void setStatusBarStyle(@Representing("UIStatusBarStyle") @MachineSizedSInt long v);
+    public native void setStatusBarStyle(@Representing("UIStatusBarStyle") long v);
     @Mapping("isStatusBarHidden")
     public native boolean isStatusBarHidden();
     @Mapping("setStatusBarHidden:")
     public native void setStatusBarHidden(boolean v);
     @Mapping("statusBarOrientation")
-    public native @Representing("UIInterfaceOrientation") @MachineSizedSInt long getStatusBarOrientation();
+    public native @Representing("UIInterfaceOrientation") long getStatusBarOrientation();
     @Mapping("setStatusBarOrientation:")
-    public native void setStatusBarOrientation(@Representing("UIInterfaceOrientation") @MachineSizedSInt long v);
+    public native void setStatusBarOrientation(@Representing("UIInterfaceOrientation") long v);
     @Mapping("statusBarOrientationAnimationDuration")
     public native double getStatusBarOrientationAnimationDuration();
     @Mapping("statusBarFrame")
@@ -85,7 +85,7 @@ public class UIApplication
      * @since Available in iOS 4.0 and later.
      */
     @Mapping("applicationState")
-    public native @Representing("UIApplicationState") @MachineSizedSInt long getApplicationState();
+    public native @Representing("UIApplicationState") long getApplicationState();
     /**
      * @since Available in iOS 4.0 and later.
      */
@@ -95,7 +95,7 @@ public class UIApplication
      * @since Available in iOS 7.0 and later.
      */
     @Mapping("backgroundRefreshStatus")
-    public native @Representing("UIBackgroundRefreshStatus") @MachineSizedSInt long getBackgroundRefreshStatus();
+    public native @Representing("UIBackgroundRefreshStatus") long getBackgroundRefreshStatus();
     /**
      * @since Available in iOS 4.0 and later.
      */
@@ -105,7 +105,7 @@ public class UIApplication
      * @since Available in iOS 5.0 and later.
      */
     @Mapping("userInterfaceLayoutDirection")
-    public native @Representing("UIUserInterfaceLayoutDirection") @MachineSizedSInt long getUserInterfaceLayoutDirection();
+    public native @Representing("UIUserInterfaceLayoutDirection") long getUserInterfaceLayoutDirection();
     /**
      * @since Available in iOS 7.0 and later.
      */
@@ -235,14 +235,14 @@ public class UIApplication
     @Mapping("sendAction:to:from:forEvent:")
     public native boolean sendAction(Selector action, Object target, Object sender, UIEvent event);
     @Mapping("setStatusBarStyle:animated:")
-    public native void setStatusBarStyle(@Representing("UIStatusBarStyle") @MachineSizedSInt long statusBarStyle, boolean animated);
+    public native void setStatusBarStyle(@Representing("UIStatusBarStyle") long statusBarStyle, boolean animated);
     /**
      * @since Available in iOS 3.2 and later.
      */
     @Mapping("setStatusBarHidden:withAnimation:")
-    public native void setStatusBarHidden(boolean hidden, @Representing("UIStatusBarAnimation") @MachineSizedSInt long animation);
+    public native void setStatusBarHidden(boolean hidden, @Representing("UIStatusBarAnimation") long animation);
     @Mapping("setStatusBarOrientation:animated:")
-    public native void setStatusBarOrientation(@Representing("UIInterfaceOrientation") @MachineSizedSInt long interfaceOrientation, boolean animated);
+    public native void setStatusBarOrientation(@Representing("UIInterfaceOrientation") long interfaceOrientation, boolean animated);
     /**
      * @since Available in iOS 6.0 and later.
      */
@@ -301,14 +301,14 @@ public class UIApplication
      */
     @Deprecated
     @Mapping("registerForRemoteNotificationTypes:")
-    public native void registerForRemoteNotificationTypes(@Representing("UIRemoteNotificationType") @MachineSizedUInt long types);
+    public native void registerForRemoteNotificationTypes(@Representing("UIRemoteNotificationType") long types);
     /**
      * @since Available in iOS 3.0 and later.
      * @deprecated Deprecated in iOS 8.0.
      */
     @Deprecated
     @Mapping("enabledRemoteNotificationTypes")
-    public native @Representing("UIRemoteNotificationType") @MachineSizedUInt long getEnabledRemoteNotificationTypes();
+    public native @Representing("UIRemoteNotificationType") long getEnabledRemoteNotificationTypes();
     /**
      * @since Available in iOS 4.0 and later.
      */

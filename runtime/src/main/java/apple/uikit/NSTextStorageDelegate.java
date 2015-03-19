@@ -35,12 +35,12 @@ public interface NSTextStorageDelegate
      * @since Available in iOS 7.0 and later.
      */
     @Mapping("textStorage:willProcessEditing:range:changeInLength:")
-    void willProcessEditing(NSTextStorage textStorage, @Representing("NSTextStorageEditActions") @MachineSizedUInt long editedMask, NSRange editedRange, @MachineSizedSInt long delta);
+    void willProcessEditing(NSTextStorage textStorage, @Representing("NSTextStorageEditActions") long editedMask, NSRange editedRange, @MachineSizedSInt long delta);
     /**
      * @since Available in iOS 7.0 and later.
      */
     @Mapping("textStorage:didProcessEditing:range:changeInLength:")
-    void didProcessEditing(NSTextStorage textStorage, @Representing("NSTextStorageEditActions") @MachineSizedUInt long editedMask, NSRange editedRange, @MachineSizedSInt long delta);
+    void didProcessEditing(NSTextStorage textStorage, @Representing("NSTextStorageEditActions") long editedMask, NSRange editedRange, @MachineSizedSInt long delta);
     
     /*<adapter>*/
     /*</adapter>*/

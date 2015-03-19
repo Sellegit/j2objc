@@ -32,7 +32,7 @@ public class NSRegularExpression
     
     
     @Mapping("initWithPattern:options:error:")
-    public NSRegularExpression(String pattern, @Representing("NSRegularExpressionOptions") @MachineSizedUInt long options, Todo error) { }
+    public NSRegularExpression(String pattern, @Representing("NSRegularExpressionOptions") long options, Todo error) { }
     @Mapping("init")
     public NSRegularExpression() { }
     
@@ -40,7 +40,7 @@ public class NSRegularExpression
     @Mapping("pattern")
     public native String getPattern();
     @Mapping("options")
-    public native @Representing("NSRegularExpressionOptions") @MachineSizedUInt long getOptions();
+    public native @Representing("NSRegularExpressionOptions") long getOptions();
     @Mapping("numberOfCaptureGroups")
     public native @MachineSizedUInt long getNumberOfCaptureGroups();
     
@@ -49,19 +49,19 @@ public class NSRegularExpression
     @Mapping("escapedPatternForString:")
     public static native String getEscapedPattern(String string);
     @Mapping("enumerateMatchesInString:options:range:usingBlock:")
-    public native void enumerateMatches(String string, @Representing("NSMatchingOptions") @MachineSizedUInt long options, NSRange range, @Block VoidBlock3<NSTextCheckingResult, NSMatchingFlags, Todo> block);
+    public native void enumerateMatches(String string, @Representing("NSMatchingOptions") long options, NSRange range, @Block VoidBlock3<NSTextCheckingResult, NSMatchingFlags, Todo> block);
     @Mapping("matchesInString:options:range:")
-    public native NSArray<NSTextCheckingResult> getMatches(String string, @Representing("NSMatchingOptions") @MachineSizedUInt long options, NSRange range);
+    public native NSArray<NSTextCheckingResult> getMatches(String string, @Representing("NSMatchingOptions") long options, NSRange range);
     @Mapping("numberOfMatchesInString:options:range:")
-    public native @MachineSizedUInt long getNumberOfMatches(String string, @Representing("NSMatchingOptions") @MachineSizedUInt long options, NSRange range);
+    public native @MachineSizedUInt long getNumberOfMatches(String string, @Representing("NSMatchingOptions") long options, NSRange range);
     @Mapping("firstMatchInString:options:range:")
-    public native NSTextCheckingResult getFirstMatch(String string, @Representing("NSMatchingOptions") @MachineSizedUInt long options, NSRange range);
+    public native NSTextCheckingResult getFirstMatch(String string, @Representing("NSMatchingOptions") long options, NSRange range);
     @Mapping("rangeOfFirstMatchInString:options:range:")
-    public native NSRange getRangeOfFirstMatch(String string, @Representing("NSMatchingOptions") @MachineSizedUInt long options, NSRange range);
+    public native NSRange getRangeOfFirstMatch(String string, @Representing("NSMatchingOptions") long options, NSRange range);
     @Mapping("stringByReplacingMatchesInString:options:range:withTemplate:")
-    public native String newStringByReplacingMatches(String string, @Representing("NSMatchingOptions") @MachineSizedUInt long options, NSRange range, String templ);
+    public native String newStringByReplacingMatches(String string, @Representing("NSMatchingOptions") long options, NSRange range, String templ);
     @Mapping("replaceMatchesInString:options:range:withTemplate:")
-    public native @MachineSizedUInt long replaceMatches(NSMutableString string, @Representing("NSMatchingOptions") @MachineSizedUInt long options, NSRange range, String templ);
+    public native @MachineSizedUInt long replaceMatches(NSMutableString string, @Representing("NSMatchingOptions") long options, NSRange range, String templ);
     @Mapping("replacementStringForResult:inString:offset:template:")
     public native String getReplacementString(NSTextCheckingResult result, String string, @MachineSizedSInt long offset, String templ);
     @Mapping("escapedTemplateForString:")

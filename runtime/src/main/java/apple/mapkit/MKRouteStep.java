@@ -42,7 +42,7 @@ public class MKRouteStep
     @Mapping("distance")
     public native double getDistance();
     @Mapping("transportType")
-    public native @Representing("MKDirectionsTransportType") @MachineSizedUInt long getTransportType();
+    public native @Representing("MKDirectionsTransportType") long getTransportType();
     
     
     

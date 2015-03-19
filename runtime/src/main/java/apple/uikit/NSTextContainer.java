@@ -50,9 +50,9 @@ public class NSTextContainer
     @Mapping("setExclusionPaths:")
     public native void setExclusionPaths(NSArray<UIBezierPath> v);
     @Mapping("lineBreakMode")
-    public native @Representing("NSLineBreakMode") @MachineSizedSInt long getLineBreakMode();
+    public native @Representing("NSLineBreakMode") long getLineBreakMode();
     @Mapping("setLineBreakMode:")
-    public native void setLineBreakMode(@Representing("NSLineBreakMode") @MachineSizedSInt long v);
+    public native void setLineBreakMode(@Representing("NSLineBreakMode") long v);
     @Mapping("lineFragmentPadding")
     public native @MachineSizedFloat double getLineFragmentPadding();
     @Mapping("setLineFragmentPadding:")
@@ -73,17 +73,17 @@ public class NSTextContainer
      * @since Available in iOS 7.0 and later.
      */
     @Mapping("layoutOrientation")
-    public native @Representing("NSTextLayoutOrientation") @MachineSizedSInt long getLayoutOrientation();
+    public native @Representing("NSTextLayoutOrientation") long getLayoutOrientation();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @Mapping("setLayoutOrientation:")
-    public native void setLayoutOrientation(@Representing("NSTextLayoutOrientation") @MachineSizedSInt long v);
+    public native void setLayoutOrientation(@Representing("NSTextLayoutOrientation") long v);
     
     
     
     @Mapping("lineFragmentRectForProposedRect:atIndex:writingDirection:remainingRect:")
-    public native CGRect getLineFragmentRect(CGRect proposedRect, @MachineSizedUInt long characterIndex, @Representing("NSWritingDirection") @MachineSizedSInt long baseWritingDirection, CGRect remainingRect);
+    public native CGRect getLineFragmentRect(CGRect proposedRect, @MachineSizedUInt long characterIndex, @Representing("NSWritingDirection") long baseWritingDirection, CGRect remainingRect);
     @Mapping("encodeWithCoder:")
     public native void encode(NSCoder aCoder);
     

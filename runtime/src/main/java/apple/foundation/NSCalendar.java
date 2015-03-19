@@ -163,26 +163,26 @@ public class NSCalendar
     public static native NSString DayChangedNotification();
     
     @Mapping("minimumRangeOfUnit:")
-    public native NSRange getMinimumRange(@Representing("NSCalendarUnit") @MachineSizedUInt long unit);
+    public native NSRange getMinimumRange(@Representing("NSCalendarUnit") long unit);
     @Mapping("maximumRangeOfUnit:")
-    public native NSRange getMaximumRange(@Representing("NSCalendarUnit") @MachineSizedUInt long unit);
+    public native NSRange getMaximumRange(@Representing("NSCalendarUnit") long unit);
     @Mapping("rangeOfUnit:inUnit:forDate:")
-    public native NSRange getRange(@Representing("NSCalendarUnit") @MachineSizedUInt long smaller, @Representing("NSCalendarUnit") @MachineSizedUInt long larger, NSDate date);
+    public native NSRange getRange(@Representing("NSCalendarUnit") long smaller, @Representing("NSCalendarUnit") long larger, NSDate date);
     @Mapping("ordinalityOfUnit:inUnit:forDate:")
-    public native @MachineSizedUInt long getOrdinality(@Representing("NSCalendarUnit") @MachineSizedUInt long smaller, @Representing("NSCalendarUnit") @MachineSizedUInt long larger, NSDate date);
+    public native @MachineSizedUInt long getOrdinality(@Representing("NSCalendarUnit") long smaller, @Representing("NSCalendarUnit") long larger, NSDate date);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @Mapping("rangeOfUnit:startDate:interval:forDate:")
-    public native boolean getRange(@Representing("NSCalendarUnit") @MachineSizedUInt long unit, Todo datep, Todo tip, NSDate date);
+    public native boolean getRange(@Representing("NSCalendarUnit") long unit, Todo datep, Todo tip, NSDate date);
     @Mapping("dateFromComponents:")
     public native NSDate newDateFromComponents(NSDateComponents comps);
     @Mapping("components:fromDate:")
-    public native NSDateComponents getComponents(@Representing("NSCalendarUnit") @MachineSizedUInt long unitFlags, NSDate date);
+    public native NSDateComponents getComponents(@Representing("NSCalendarUnit") long unitFlags, NSDate date);
     @Mapping("dateByAddingComponents:toDate:options:")
-    public native NSDate newDateByAddingComponents(NSDateComponents comps, NSDate date, @Representing("NSCalendarOptions") @MachineSizedUInt long opts);
+    public native NSDate newDateByAddingComponents(NSDateComponents comps, NSDate date, @Representing("NSCalendarOptions") long opts);
     @Mapping("components:fromDate:toDate:options:")
-    public native NSDateComponents getComponents(@Representing("NSCalendarUnit") @MachineSizedUInt long unitFlags, NSDate startingDate, NSDate resultDate, @Representing("NSCalendarOptions") @MachineSizedUInt long opts);
+    public native NSDateComponents getComponents(@Representing("NSCalendarUnit") long unitFlags, NSDate startingDate, NSDate resultDate, @Representing("NSCalendarOptions") long opts);
     @Mapping("currentCalendar")
     public static native NSCalendar getCurrentCalendar();
     /**

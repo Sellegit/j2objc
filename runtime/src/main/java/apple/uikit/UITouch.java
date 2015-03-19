@@ -38,7 +38,7 @@ public class UITouch
     @Mapping("timestamp")
     public native double getTimestamp();
     @Mapping("phase")
-    public native @Representing("UITouchPhase") @MachineSizedSInt long getPhase();
+    public native @Representing("UITouchPhase") long getPhase();
     @Mapping("tapCount")
     public native @MachineSizedUInt long getTapCount();
     /**

@@ -39,9 +39,9 @@ public class SCNAction
     @Mapping("setDuration:")
     public native void setDuration(double v);
     @Mapping("timingMode")
-    public native @Representing("SCNActionTimingMode") @MachineSizedSInt long getTimingMode();
+    public native @Representing("SCNActionTimingMode") long getTimingMode();
     @Mapping("setTimingMode:")
-    public native void setTimingMode(@Representing("SCNActionTimingMode") @MachineSizedSInt long v);
+    public native void setTimingMode(@Representing("SCNActionTimingMode") long v);
     @Mapping("timingFunction")
     public native @Block Block1<Float, Float> getTimingFunction();
     @Mapping("setTimingFunction:")

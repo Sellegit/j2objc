@@ -63,22 +63,22 @@ public class NSFileManager
      * @since Available in iOS 4.0 and later.
      */
     @Mapping("mountedVolumeURLsIncludingResourceValuesForKeys:options:")
-    public native NSArray<NSURL> getMountedVolumeURLsIncludingResourceValues(NSArray<?> propertyKeys, @Representing("NSVolumeEnumerationOptions") @MachineSizedUInt long options);
+    public native NSArray<NSURL> getMountedVolumeURLsIncludingResourceValues(NSArray<?> propertyKeys, @Representing("NSVolumeEnumerationOptions") long options);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @Mapping("contentsOfDirectoryAtURL:includingPropertiesForKeys:options:error:")
-    public native NSArray<NSURL> getContentsOfDirectoryAtURL(NSURL url, NSArray<?> keys, @Representing("NSDirectoryEnumerationOptions") @MachineSizedUInt long mask, Todo error);
+    public native NSArray<NSURL> getContentsOfDirectoryAtURL(NSURL url, NSArray<?> keys, @Representing("NSDirectoryEnumerationOptions") long mask, Todo error);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @Mapping("URLsForDirectory:inDomains:")
-    public native NSArray<NSURL> getURLsForDirectory(@Representing("NSSearchPathDirectory") @MachineSizedUInt long directory, @Representing("NSSearchPathDomainMask") @MachineSizedUInt long domainMask);
+    public native NSArray<NSURL> getURLsForDirectory(@Representing("NSSearchPathDirectory") long directory, @Representing("NSSearchPathDomainMask") long domainMask);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @Mapping("URLForDirectory:inDomain:appropriateForURL:create:error:")
-    public native NSURL getURLForDirectory(@Representing("NSSearchPathDirectory") @MachineSizedUInt long directory, @Representing("NSSearchPathDomainMask") @MachineSizedUInt long domain, NSURL url, boolean shouldCreate, Todo error);
+    public native NSURL getURLForDirectory(@Representing("NSSearchPathDirectory") long directory, @Representing("NSSearchPathDomainMask") long domain, NSURL url, boolean shouldCreate, Todo error);
     /**
      * @since Available in iOS 8.0 and later.
      */
@@ -88,7 +88,7 @@ public class NSFileManager
      * @since Available in iOS 8.0 and later.
      */
     @Mapping("getRelationship:ofDirectory:inDomain:toItemAtURL:error:")
-    public native boolean getRelationshipOfDirectoryToItem(Todo outRelationship, @Representing("NSSearchPathDirectory") @MachineSizedUInt long directory, @Representing("NSSearchPathDomainMask") @MachineSizedUInt long domainMask, NSURL url, Todo error);
+    public native boolean getRelationshipOfDirectoryToItem(Todo outRelationship, @Representing("NSSearchPathDirectory") long directory, @Representing("NSSearchPathDomainMask") long domainMask, NSURL url, Todo error);
     /**
      * @since Available in iOS 5.0 and later.
      */
@@ -203,7 +203,7 @@ public class NSFileManager
      * @since Available in iOS 4.0 and later.
      */
     @Mapping("enumeratorAtURL:includingPropertiesForKeys:options:errorHandler:")
-    public native NSDirectoryEnumerator getEnumeratorAtURL(NSURL url, NSArray<?> keys, @Representing("NSDirectoryEnumerationOptions") @MachineSizedUInt long mask, @Block Block2<NSURL, NSError, Boolean> handler);
+    public native NSDirectoryEnumerator getEnumeratorAtURL(NSURL url, NSArray<?> keys, @Representing("NSDirectoryEnumerationOptions") long mask, @Block Block2<NSURL, NSError, Boolean> handler);
     @Mapping("subpathsAtPath:")
     public native List<String> getSubpathsAtPath(String path);
     @Mapping("contentsAtPath:")
@@ -218,7 +218,7 @@ public class NSFileManager
      * @since Available in iOS 4.0 and later.
      */
     @Mapping("replaceItemAtURL:withItemAtURL:backupItemName:options:resultingItemURL:error:")
-    public native boolean replaceItemAtURL(NSURL originalItemURL, NSURL newItemURL, String backupItemName, @Representing("NSFileManagerItemReplacementOptions") @MachineSizedUInt long options, Todo resultingURL, Todo error);
+    public native boolean replaceItemAtURL(NSURL originalItemURL, NSURL newItemURL, String backupItemName, @Representing("NSFileManagerItemReplacementOptions") long options, Todo resultingURL, Todo error);
     /**
      * @since Available in iOS 5.0 and later.
      */

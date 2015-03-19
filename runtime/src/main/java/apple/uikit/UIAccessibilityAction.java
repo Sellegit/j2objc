@@ -59,7 +59,7 @@ public interface UIAccessibilityAction
      * @since Available in iOS 4.2 and later.
      */
     @Mapping("accessibilityScroll:")
-    boolean scroll(@Representing("UIAccessibilityScrollDirection") @MachineSizedSInt long direction);
+    boolean scroll(@Representing("UIAccessibilityScrollDirection") long direction);
     /**
      * @since Available in iOS 5.0 and later.
      */

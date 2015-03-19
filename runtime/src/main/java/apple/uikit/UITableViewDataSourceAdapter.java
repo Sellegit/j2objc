@@ -52,7 +52,7 @@ public abstract class UITableViewDataSourceAdapter
     @NotImplemented("tableView:sectionForSectionIndexTitle:atIndex:")
     public @MachineSizedSInt long getSectionForSectionIndexTitle(UITableView tableView, String title, @MachineSizedSInt long index) { throw new UnsupportedOperationException(); }
     @NotImplemented("tableView:commitEditingStyle:forRowAtIndexPath:")
-    public void commitEditingStyleForRow(UITableView tableView, @Representing("UITableViewCellEditingStyle") @MachineSizedSInt long editingStyle, NSIndexPath indexPath) { throw new UnsupportedOperationException(); }
+    public void commitEditingStyleForRow(UITableView tableView, @Representing("UITableViewCellEditingStyle") long editingStyle, NSIndexPath indexPath) { throw new UnsupportedOperationException(); }
     @NotImplemented("tableView:moveRowAtIndexPath:toIndexPath:")
     public void moveRow(UITableView tableView, NSIndexPath sourceIndexPath, NSIndexPath destinationIndexPath) { throw new UnsupportedOperationException(); }
     

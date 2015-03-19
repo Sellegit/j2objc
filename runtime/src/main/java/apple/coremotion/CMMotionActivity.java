@@ -31,7 +31,7 @@ public class CMMotionActivity
     
     
     @Mapping("confidence")
-    public native @Representing("CMMotionActivityConfidence") @MachineSizedSInt long getConfidence();
+    public native @Representing("CMMotionActivityConfidence") long getConfidence();
     @Mapping("startDate")
     public native NSDate getStartDate();
     @Mapping("unknown")

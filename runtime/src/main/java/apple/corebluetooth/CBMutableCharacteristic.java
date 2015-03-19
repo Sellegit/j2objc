@@ -28,15 +28,15 @@ public class CBMutableCharacteristic
     
     
     @Mapping("initWithType:properties:value:permissions:")
-    public CBMutableCharacteristic(CBUUID UUID, @Representing("CBCharacteristicProperties") @MachineSizedUInt long properties, NSData value, @Representing("CBAttributePermissions") @MachineSizedUInt long permissions) { }
+    public CBMutableCharacteristic(CBUUID UUID, @Representing("CBCharacteristicProperties") long properties, NSData value, @Representing("CBAttributePermissions") long permissions) { }
     @Mapping("init")
     public CBMutableCharacteristic() { }
     
     
     @Mapping("permissions")
-    public native @Representing("CBAttributePermissions") @MachineSizedUInt long getPermissions();
+    public native @Representing("CBAttributePermissions") long getPermissions();
     @Mapping("setPermissions:")
-    public native void setPermissions(@Representing("CBAttributePermissions") @MachineSizedUInt long v);
+    public native void setPermissions(@Representing("CBAttributePermissions") long v);
     /**
      * @since Available in iOS 7.0 and later.
      */
@@ -47,9 +47,9 @@ public class CBMutableCharacteristic
     @Mapping("setUUID:")
     public native void setUUID(CBUUID v);
     @Mapping("properties")
-    public native @Representing("CBCharacteristicProperties") @MachineSizedUInt long getProperties();
+    public native @Representing("CBCharacteristicProperties") long getProperties();
     @Mapping("setProperties:")
-    public native void setProperties(@Representing("CBCharacteristicProperties") @MachineSizedUInt long v);
+    public native void setProperties(@Representing("CBCharacteristicProperties") long v);
     @Mapping("value")
     public native NSData getValue();
     @Mapping("setValue:")

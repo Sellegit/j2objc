@@ -32,7 +32,7 @@ public interface EAWiFiUnconfiguredAccessoryBrowserDelegate
      * @since Available in iOS 8.0 and later.
      */
     @Mapping("accessoryBrowser:didUpdateState:")
-    void didUpdateState(EAWiFiUnconfiguredAccessoryBrowser browser, @Representing("EAWiFiUnconfiguredAccessoryBrowserState") @MachineSizedSInt long state);
+    void didUpdateState(EAWiFiUnconfiguredAccessoryBrowser browser, @Representing("EAWiFiUnconfiguredAccessoryBrowserState") long state);
     /**
      * @since Available in iOS 8.0 and later.
      */
@@ -47,7 +47,7 @@ public interface EAWiFiUnconfiguredAccessoryBrowserDelegate
      * @since Available in iOS 8.0 and later.
      */
     @Mapping("accessoryBrowser:didFinishConfiguringAccessory:withStatus:")
-    void didFinishConfiguringAccessory(EAWiFiUnconfiguredAccessoryBrowser browser, EAWiFiUnconfiguredAccessory accessory, @Representing("EAWiFiUnconfiguredAccessoryConfigurationStatus") @MachineSizedSInt long status);
+    void didFinishConfiguringAccessory(EAWiFiUnconfiguredAccessoryBrowser browser, EAWiFiUnconfiguredAccessory accessory, @Representing("EAWiFiUnconfiguredAccessoryConfigurationStatus") long status);
     
     /*<adapter>*/
     /*</adapter>*/

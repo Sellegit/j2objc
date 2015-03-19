@@ -32,13 +32,13 @@ public class NSTextTab
     
     
     @Mapping("initWithTextAlignment:location:options:")
-    public NSTextTab(@Representing("NSTextAlignment") @MachineSizedSInt long alignment, @MachineSizedFloat double loc, NSDictionary<?, ?> options) { }
+    public NSTextTab(@Representing("NSTextAlignment") long alignment, @MachineSizedFloat double loc, NSDictionary<?, ?> options) { }
     @Mapping("init")
     public NSTextTab() { }
     
     
     @Mapping("alignment")
-    public native @Representing("NSTextAlignment") @MachineSizedSInt long getAlignment();
+    public native @Representing("NSTextAlignment") long getAlignment();
     @Mapping("location")
     public native @MachineSizedFloat double getLocation();
     @Mapping("options")

@@ -32,9 +32,11 @@ public class UITableViewController
     
     
     @Mapping("initWithStyle:")
-    public UITableViewController(@Representing("UITableViewStyle") @MachineSizedSInt long style) { }
+    public UITableViewController(@Representing("UITableViewStyle") long style) { }
     @Mapping("initWithNibName:bundle:")
     public UITableViewController(String nibNameOrNil, NSBundle nibBundleOrNil) { }
+    @Mapping("initWithCoder:")
+    public UITableViewController(NSCoder aDecoder) { }
     @Mapping("init")
     public UITableViewController() { }
     
@@ -150,7 +152,7 @@ public class UITableViewController
     @Mapping("tableView:didDeselectRowAtIndexPath:")
     public native void didDeselectRow(UITableView tableView, NSIndexPath indexPath);
     @Mapping("tableView:editingStyleForRowAtIndexPath:")
-    public native @Representing("UITableViewCellEditingStyle") @MachineSizedSInt long getEditingStyleForRow(UITableView tableView, NSIndexPath indexPath);
+    public native @Representing("UITableViewCellEditingStyle") long getEditingStyleForRow(UITableView tableView, NSIndexPath indexPath);
     /**
      * @since Available in iOS 3.0 and later.
      */
@@ -240,7 +242,7 @@ public class UITableViewController
     @Mapping("tableView:sectionForSectionIndexTitle:atIndex:")
     public native @MachineSizedSInt long getSectionForSectionIndexTitle(UITableView tableView, String title, @MachineSizedSInt long index);
     @Mapping("tableView:commitEditingStyle:forRowAtIndexPath:")
-    public native void commitEditingStyleForRow(UITableView tableView, @Representing("UITableViewCellEditingStyle") @MachineSizedSInt long editingStyle, NSIndexPath indexPath);
+    public native void commitEditingStyleForRow(UITableView tableView, @Representing("UITableViewCellEditingStyle") long editingStyle, NSIndexPath indexPath);
     @Mapping("tableView:moveRowAtIndexPath:toIndexPath:")
     public native void moveRow(UITableView tableView, NSIndexPath sourceIndexPath, NSIndexPath destinationIndexPath);
     

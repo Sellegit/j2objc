@@ -33,12 +33,14 @@ public class UIDocumentPickerExtensionViewController
     
     @Mapping("initWithNibName:bundle:")
     public UIDocumentPickerExtensionViewController(String nibNameOrNil, NSBundle nibBundleOrNil) { }
+    @Mapping("initWithCoder:")
+    public UIDocumentPickerExtensionViewController(NSCoder aDecoder) { }
     @Mapping("init")
     public UIDocumentPickerExtensionViewController() { }
     
     
     @Mapping("documentPickerMode")
-    public native @Representing("UIDocumentPickerMode") @MachineSizedUInt long getDocumentPickerMode();
+    public native @Representing("UIDocumentPickerMode") long getDocumentPickerMode();
     @Mapping("originalURL")
     public native NSURL getOriginalURL();
     @Mapping("validTypes")
@@ -53,6 +55,6 @@ public class UIDocumentPickerExtensionViewController
     @Mapping("dismissGrantingAccessToURL:")
     public native void dismissGrantingAccessToURL(NSURL url);
     @Mapping("prepareForPresentationInMode:")
-    public native void prepareForPresentation(@Representing("UIDocumentPickerMode") @MachineSizedUInt long mode);
+    public native void prepareForPresentation(@Representing("UIDocumentPickerMode") long mode);
     
 }

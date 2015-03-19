@@ -115,7 +115,7 @@ public interface UITableViewDelegate
     @Mapping("tableView:didDeselectRowAtIndexPath:")
     void didDeselectRow(UITableView tableView, NSIndexPath indexPath);
     @Mapping("tableView:editingStyleForRowAtIndexPath:")
-    @Representing("UITableViewCellEditingStyle") @MachineSizedSInt long getEditingStyleForRow(UITableView tableView, NSIndexPath indexPath);
+    @Representing("UITableViewCellEditingStyle") long getEditingStyleForRow(UITableView tableView, NSIndexPath indexPath);
     /**
      * @since Available in iOS 3.0 and later.
      */

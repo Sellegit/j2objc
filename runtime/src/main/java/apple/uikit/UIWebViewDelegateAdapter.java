@@ -34,7 +34,7 @@ public abstract class UIWebViewDelegateAdapter
     
     
     @NotImplemented("webView:shouldStartLoadWithRequest:navigationType:")
-    public boolean shouldStartLoad(UIWebView webView, NSURLRequest request, @Representing("UIWebViewNavigationType") @MachineSizedSInt long navigationType) { throw new UnsupportedOperationException(); }
+    public boolean shouldStartLoad(UIWebView webView, NSURLRequest request, @Representing("UIWebViewNavigationType") long navigationType) { throw new UnsupportedOperationException(); }
     @NotImplemented("webViewDidStartLoad:")
     public void didStartLoad(UIWebView webView) { throw new UnsupportedOperationException(); }
     @NotImplemented("webViewDidFinishLoad:")

@@ -32,7 +32,7 @@ public class NSURLRequest
     @Mapping("initWithURL:")
     public NSURLRequest(NSURL URL) { }
     @Mapping("initWithURL:cachePolicy:timeoutInterval:")
-    public NSURLRequest(NSURL URL, @Representing("NSURLRequestCachePolicy") @MachineSizedUInt long cachePolicy, double timeoutInterval) { }
+    public NSURLRequest(NSURL URL, @Representing("NSURLRequestCachePolicy") long cachePolicy, double timeoutInterval) { }
     @Mapping("init")
     public NSURLRequest() { }
     
@@ -40,7 +40,7 @@ public class NSURLRequest
     @Mapping("URL")
     public native NSURL getURL();
     @Mapping("cachePolicy")
-    public native @Representing("NSURLRequestCachePolicy") @MachineSizedUInt long getCachePolicy();
+    public native @Representing("NSURLRequestCachePolicy") long getCachePolicy();
     @Mapping("timeoutInterval")
     public native double getTimeoutInterval();
     @Mapping("mainDocumentURL")
@@ -49,7 +49,7 @@ public class NSURLRequest
      * @since Available in iOS 4.0 and later.
      */
     @Mapping("networkServiceType")
-    public native @Representing("NSURLRequestNetworkServiceType") @MachineSizedUInt long getNetworkServiceType();
+    public native @Representing("NSURLRequestNetworkServiceType") long getNetworkServiceType();
     /**
      * @since Available in iOS 6.0 and later.
      */

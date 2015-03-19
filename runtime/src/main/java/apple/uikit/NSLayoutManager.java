@@ -95,7 +95,7 @@ public class NSLayoutManager
     @Mapping("invalidateDisplayForGlyphRange:")
     public native void invalidateDisplayForGlyphRange(NSRange glyphRange);
     @Mapping("processEditingForTextStorage:edited:range:changeInLength:invalidatedRange:")
-    public native void processEditing(NSTextStorage textStorage, @Representing("NSTextStorageEditActions") @MachineSizedUInt long editMask, NSRange newCharRange, @MachineSizedSInt long delta, NSRange invalidatedCharRange);
+    public native void processEditing(NSTextStorage textStorage, @Representing("NSTextStorageEditActions") long editMask, NSRange newCharRange, @MachineSizedSInt long delta, NSRange invalidatedCharRange);
     @Mapping("ensureGlyphsForCharacterRange:")
     public native void ensureGlyphsForCharacterRange(NSRange charRange);
     @Mapping("ensureGlyphsForGlyphRange:")
@@ -115,7 +115,7 @@ public class NSLayoutManager
     @Mapping("isValidGlyphIndex:")
     public native boolean isValidGlyphIndex(@MachineSizedUInt long glyphIndex);
     @Mapping("propertyForGlyphAtIndex:")
-    public native @Representing("NSGlyphProperty") @MachineSizedSInt long getPropertyForGlyph(@MachineSizedUInt long glyphIndex);
+    public native @Representing("NSGlyphProperty") long getPropertyForGlyph(@MachineSizedUInt long glyphIndex);
     @Mapping("characterIndexForGlyphAtIndex:")
     public native @MachineSizedUInt long getCharacterIndexForGlyph(@MachineSizedUInt long glyphIndex);
     @Mapping("glyphIndexForCharacterAtIndex:")
@@ -195,13 +195,13 @@ public class NSLayoutManager
     @Mapping("fillBackgroundRectArray:count:forCharacterRange:color:")
     public native void fillBackground(CGRect rectArray, @MachineSizedUInt long rectCount, NSRange charRange, UIColor color);
     @Mapping("drawUnderlineForGlyphRange:underlineType:baselineOffset:lineFragmentRect:lineFragmentGlyphRange:containerOrigin:")
-    public native void drawUnderline(NSRange glyphRange, @Representing("NSUnderlineStyle") @MachineSizedSInt long underlineVal, @MachineSizedFloat double baselineOffset, CGRect lineRect, NSRange lineGlyphRange, CGPoint containerOrigin);
+    public native void drawUnderline(NSRange glyphRange, @Representing("NSUnderlineStyle") long underlineVal, @MachineSizedFloat double baselineOffset, CGRect lineRect, NSRange lineGlyphRange, CGPoint containerOrigin);
     @Mapping("underlineGlyphRange:underlineType:lineFragmentRect:lineFragmentGlyphRange:containerOrigin:")
-    public native void underline(NSRange glyphRange, @Representing("NSUnderlineStyle") @MachineSizedSInt long underlineVal, CGRect lineRect, NSRange lineGlyphRange, CGPoint containerOrigin);
+    public native void underline(NSRange glyphRange, @Representing("NSUnderlineStyle") long underlineVal, CGRect lineRect, NSRange lineGlyphRange, CGPoint containerOrigin);
     @Mapping("drawStrikethroughForGlyphRange:strikethroughType:baselineOffset:lineFragmentRect:lineFragmentGlyphRange:containerOrigin:")
-    public native void drawStrikethrough(NSRange glyphRange, @Representing("NSUnderlineStyle") @MachineSizedSInt long strikethroughVal, @MachineSizedFloat double baselineOffset, CGRect lineRect, NSRange lineGlyphRange, CGPoint containerOrigin);
+    public native void drawStrikethrough(NSRange glyphRange, @Representing("NSUnderlineStyle") long strikethroughVal, @MachineSizedFloat double baselineOffset, CGRect lineRect, NSRange lineGlyphRange, CGPoint containerOrigin);
     @Mapping("strikethroughGlyphRange:strikethroughType:lineFragmentRect:lineFragmentGlyphRange:containerOrigin:")
-    public native void strikethrough(NSRange glyphRange, @Representing("NSUnderlineStyle") @MachineSizedSInt long strikethroughVal, CGRect lineRect, NSRange lineGlyphRange, CGPoint containerOrigin);
+    public native void strikethrough(NSRange glyphRange, @Representing("NSUnderlineStyle") long strikethroughVal, CGRect lineRect, NSRange lineGlyphRange, CGPoint containerOrigin);
     @Mapping("encodeWithCoder:")
     public native void encode(NSCoder aCoder);
     

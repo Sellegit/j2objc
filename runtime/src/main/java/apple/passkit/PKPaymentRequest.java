@@ -45,9 +45,9 @@ public class PKPaymentRequest
     @Mapping("setSupportedNetworks:")
     public native void setSupportedNetworks(List<PKPaymentNetwork> v);
     @Mapping("merchantCapabilities")
-    public native @Representing("PKMerchantCapability") @MachineSizedUInt long getMerchantCapabilities();
+    public native @Representing("PKMerchantCapability") long getMerchantCapabilities();
     @Mapping("setMerchantCapabilities:")
-    public native void setMerchantCapabilities(@Representing("PKMerchantCapability") @MachineSizedUInt long v);
+    public native void setMerchantCapabilities(@Representing("PKMerchantCapability") long v);
     @Mapping("paymentSummaryItems")
     public native NSArray<PKPaymentSummaryItem> getPaymentSummaryItems();
     @Mapping("setPaymentSummaryItems:")
@@ -57,17 +57,17 @@ public class PKPaymentRequest
     @Mapping("setCurrencyCode:")
     public native void setCurrencyCode(String v);
     @Mapping("requiredBillingAddressFields")
-    public native @Representing("PKAddressField") @MachineSizedUInt long getRequiredBillingAddressFields();
+    public native @Representing("PKAddressField") long getRequiredBillingAddressFields();
     @Mapping("setRequiredBillingAddressFields:")
-    public native void setRequiredBillingAddressFields(@Representing("PKAddressField") @MachineSizedUInt long v);
+    public native void setRequiredBillingAddressFields(@Representing("PKAddressField") long v);
     @Mapping("billingAddress")
     public native ABRecord getBillingAddress();
     @Mapping("setBillingAddress:")
     public native void setBillingAddress(ABRecord v);
     @Mapping("requiredShippingAddressFields")
-    public native @Representing("PKAddressField") @MachineSizedUInt long getRequiredShippingAddressFields();
+    public native @Representing("PKAddressField") long getRequiredShippingAddressFields();
     @Mapping("setRequiredShippingAddressFields:")
-    public native void setRequiredShippingAddressFields(@Representing("PKAddressField") @MachineSizedUInt long v);
+    public native void setRequiredShippingAddressFields(@Representing("PKAddressField") long v);
     @Mapping("shippingAddress")
     public native ABRecord getShippingAddress();
     @Mapping("setShippingAddress:")

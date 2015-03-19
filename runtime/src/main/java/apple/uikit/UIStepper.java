@@ -33,6 +33,8 @@ public class UIStepper
     
     @Mapping("initWithFrame:")
     public UIStepper(CGRect frame) { }
+    @Mapping("initWithCoder:")
+    public UIStepper(NSCoder aDecoder) { }
     @Mapping("init")
     public UIStepper() { }
     
@@ -82,41 +84,41 @@ public class UIStepper
      * @since Available in iOS 6.0 and later.
      */
     @Mapping("setBackgroundImage:forState:")
-    public native void setBackgroundImage(UIImage image, @Representing("UIControlState") @MachineSizedUInt long state);
+    public native void setBackgroundImage(UIImage image, @Representing("UIControlState") long state);
     /**
      * @since Available in iOS 6.0 and later.
      */
     @Mapping("backgroundImageForState:")
-    public native UIImage getBackgroundImage(@Representing("UIControlState") @MachineSizedUInt long state);
+    public native UIImage getBackgroundImage(@Representing("UIControlState") long state);
     /**
      * @since Available in iOS 6.0 and later.
      */
     @Mapping("setDividerImage:forLeftSegmentState:rightSegmentState:")
-    public native void setDividerImage(UIImage image, @Representing("UIControlState") @MachineSizedUInt long leftState, @Representing("UIControlState") @MachineSizedUInt long rightState);
+    public native void setDividerImage(UIImage image, @Representing("UIControlState") long leftState, @Representing("UIControlState") long rightState);
     /**
      * @since Available in iOS 6.0 and later.
      */
     @Mapping("dividerImageForLeftSegmentState:rightSegmentState:")
-    public native UIImage getDividerImage(@Representing("UIControlState") @MachineSizedUInt long leftState, @Representing("UIControlState") @MachineSizedUInt long rightState);
+    public native UIImage getDividerImage(@Representing("UIControlState") long leftState, @Representing("UIControlState") long rightState);
     /**
      * @since Available in iOS 6.0 and later.
      */
     @Mapping("setIncrementImage:forState:")
-    public native void setIncrementImage(UIImage image, @Representing("UIControlState") @MachineSizedUInt long state);
+    public native void setIncrementImage(UIImage image, @Representing("UIControlState") long state);
     /**
      * @since Available in iOS 6.0 and later.
      */
     @Mapping("incrementImageForState:")
-    public native UIImage getIncrementImage(@Representing("UIControlState") @MachineSizedUInt long state);
+    public native UIImage getIncrementImage(@Representing("UIControlState") long state);
     /**
      * @since Available in iOS 6.0 and later.
      */
     @Mapping("setDecrementImage:forState:")
-    public native void setDecrementImage(UIImage image, @Representing("UIControlState") @MachineSizedUInt long state);
+    public native void setDecrementImage(UIImage image, @Representing("UIControlState") long state);
     /**
      * @since Available in iOS 6.0 and later.
      */
     @Mapping("decrementImageForState:")
-    public native UIImage getDecrementImage(@Representing("UIControlState") @MachineSizedUInt long state);
+    public native UIImage getDecrementImage(@Representing("UIControlState") long state);
     
 }

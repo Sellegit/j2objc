@@ -31,6 +31,8 @@ public class NSMutableParagraphStyle
 
     
     
+    @Mapping("initWithCoder:")
+    public NSMutableParagraphStyle(NSCoder aDecoder) { }
     @Mapping("init")
     public NSMutableParagraphStyle() { }
     
@@ -44,9 +46,9 @@ public class NSMutableParagraphStyle
     @Mapping("setParagraphSpacing:")
     public native void setParagraphSpacing(@MachineSizedFloat double v);
     @Mapping("alignment")
-    public native @Representing("NSTextAlignment") @MachineSizedSInt long getAlignment();
+    public native @Representing("NSTextAlignment") long getAlignment();
     @Mapping("setAlignment:")
-    public native void setAlignment(@Representing("NSTextAlignment") @MachineSizedSInt long v);
+    public native void setAlignment(@Representing("NSTextAlignment") long v);
     @Mapping("firstLineHeadIndent")
     public native @MachineSizedFloat double getFirstLineHeadIndent();
     @Mapping("setFirstLineHeadIndent:")
@@ -60,9 +62,9 @@ public class NSMutableParagraphStyle
     @Mapping("setTailIndent:")
     public native void setTailIndent(@MachineSizedFloat double v);
     @Mapping("lineBreakMode")
-    public native @Representing("NSLineBreakMode") @MachineSizedSInt long getLineBreakMode();
+    public native @Representing("NSLineBreakMode") long getLineBreakMode();
     @Mapping("setLineBreakMode:")
-    public native void setLineBreakMode(@Representing("NSLineBreakMode") @MachineSizedSInt long v);
+    public native void setLineBreakMode(@Representing("NSLineBreakMode") long v);
     @Mapping("minimumLineHeight")
     public native @MachineSizedFloat double getMinimumLineHeight();
     @Mapping("setMinimumLineHeight:")
@@ -72,9 +74,9 @@ public class NSMutableParagraphStyle
     @Mapping("setMaximumLineHeight:")
     public native void setMaximumLineHeight(@MachineSizedFloat double v);
     @Mapping("baseWritingDirection")
-    public native @Representing("NSWritingDirection") @MachineSizedSInt long getBaseWritingDirection();
+    public native @Representing("NSWritingDirection") long getBaseWritingDirection();
     @Mapping("setBaseWritingDirection:")
-    public native void setBaseWritingDirection(@Representing("NSWritingDirection") @MachineSizedSInt long v);
+    public native void setBaseWritingDirection(@Representing("NSWritingDirection") long v);
     @Mapping("lineHeightMultiple")
     public native @MachineSizedFloat double getLineHeightMultiple();
     @Mapping("setLineHeightMultiple:")

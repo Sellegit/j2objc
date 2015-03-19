@@ -46,6 +46,6 @@ public class AVAudioUnitReverb
     
     
     @Mapping("loadFactoryPreset:")
-    public native void loadFactoryPreset(@Representing("AVAudioUnitReverbPreset") @MachineSizedSInt long preset);
+    public native void loadFactoryPreset(@Representing("AVAudioUnitReverbPreset") long preset);
     
 }

@@ -54,9 +54,9 @@ public class GLKBaseEffect
     @Mapping("light2")
     public native GLKEffectPropertyLight getLight2();
     @Mapping("lightingType")
-    public native @Representing("GLKLightingType") int getLightingType();
+    public native @Representing("GLKLightingType") long getLightingType();
     @Mapping("setLightingType:")
-    public native void setLightingType(@Representing("GLKLightingType") int v);
+    public native void setLightingType(@Representing("GLKLightingType") long v);
     @Mapping("lightModelAmbientColor")
     public native GLKVector4 getLightModelAmbientColor();
     @Mapping("setLightModelAmbientColor:")

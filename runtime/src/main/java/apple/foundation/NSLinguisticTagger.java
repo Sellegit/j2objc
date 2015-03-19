@@ -77,7 +77,7 @@ public class NSLinguisticTagger
      * @since Available in iOS 5.0 and later.
      */
     @Mapping("enumerateTagsInRange:scheme:options:usingBlock:")
-    public native void enumerateTagsInRange(NSRange range, String tagScheme, @Representing("NSLinguisticTaggerOptions") @MachineSizedUInt long opts, Todo block);
+    public native void enumerateTagsInRange(NSRange range, String tagScheme, @Representing("NSLinguisticTaggerOptions") long opts, Todo block);
     /**
      * @since Available in iOS 5.0 and later.
      */

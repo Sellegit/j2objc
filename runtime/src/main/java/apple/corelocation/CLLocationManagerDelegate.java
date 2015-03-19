@@ -54,7 +54,7 @@ public interface CLLocationManagerDelegate
      * @since Available in iOS 7.0 and later.
      */
     @Mapping("locationManager:didDetermineState:forRegion:")
-    void didDetermineState(CLLocationManager manager, @Representing("CLRegionState") @MachineSizedSInt long state, CLRegion region);
+    void didDetermineState(CLLocationManager manager, @Representing("CLRegionState") long state, CLRegion region);
     /**
      * @since Available in iOS 7.0 and later.
      */
@@ -86,7 +86,7 @@ public interface CLLocationManagerDelegate
      * @since Available in iOS 4.2 and later.
      */
     @Mapping("locationManager:didChangeAuthorizationStatus:")
-    void didChangeAuthorizationStatus(CLLocationManager manager, @Representing("CLAuthorizationStatus") int status);
+    void didChangeAuthorizationStatus(CLLocationManager manager, @Representing("CLAuthorizationStatus") long status);
     /**
      * @since Available in iOS 5.0 and later.
      */

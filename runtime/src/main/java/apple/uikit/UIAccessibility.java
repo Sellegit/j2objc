@@ -110,12 +110,12 @@ public interface UIAccessibility
      * @since Available in iOS 8.0 and later.
      */
     @Mapping("accessibilityNavigationStyle")
-    @Representing("UIAccessibilityNavigationStyle") @MachineSizedSInt long getAccessibilityNavigationStyle();
+    @Representing("UIAccessibilityNavigationStyle") long getAccessibilityNavigationStyle();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @Mapping("setAccessibilityNavigationStyle:")
-    void setAccessibilityNavigationStyle(@Representing("UIAccessibilityNavigationStyle") @MachineSizedSInt long v);
+    void setAccessibilityNavigationStyle(@Representing("UIAccessibilityNavigationStyle") long v);
     
     
     

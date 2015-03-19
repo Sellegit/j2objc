@@ -30,13 +30,13 @@ public class HKWorkoutEvent
     
     
     @Mapping("type")
-    public native @Representing("HKWorkoutEventType") @MachineSizedSInt long getType();
+    public native @Representing("HKWorkoutEventType") long getType();
     @Mapping("date")
     public native NSDate getDate();
     
     
     
     @Mapping("workoutEventWithType:date:")
-    public static native HKWorkoutEvent create(@Representing("HKWorkoutEventType") @MachineSizedSInt long type, NSDate date);
+    public static native HKWorkoutEvent create(@Representing("HKWorkoutEventType") long type, NSDate date);
     
 }

@@ -55,11 +55,11 @@ public class PHFetchResult
     @Mapping("enumerateObjectsUsingBlock:")
     public native void enumerateObjects(@Block("(,@MachineSizedUInt,)") VoidBlock3<NSObject, Long, Todo> block);
     @Mapping("enumerateObjectsWithOptions:usingBlock:")
-    public native void enumerateObjects(@Representing("NSEnumerationOptions") @MachineSizedUInt long opts, @Block("(,@MachineSizedUInt,)") VoidBlock3<NSObject, Long, Todo> block);
+    public native void enumerateObjects(@Representing("NSEnumerationOptions") long opts, @Block("(,@MachineSizedUInt,)") VoidBlock3<NSObject, Long, Todo> block);
     @Mapping("enumerateObjectsAtIndexes:options:usingBlock:")
-    public native void enumerateObjects(NSIndexSet s, @Representing("NSEnumerationOptions") @MachineSizedUInt long opts, @Block("(,@MachineSizedUInt,)") VoidBlock3<NSObject, Long, Todo> block);
+    public native void enumerateObjects(NSIndexSet s, @Representing("NSEnumerationOptions") long opts, @Block("(,@MachineSizedUInt,)") VoidBlock3<NSObject, Long, Todo> block);
     @Mapping("countOfAssetsWithMediaType:")
-    public native @MachineSizedUInt long getCountOfAssetsWithMediaType(@Representing("PHAssetMediaType") @MachineSizedSInt long mediaType);
+    public native @MachineSizedUInt long getCountOfAssetsWithMediaType(@Representing("PHAssetMediaType") long mediaType);
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
     

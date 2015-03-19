@@ -37,6 +37,8 @@ public class UISegmentedControl
     public UISegmentedControl(NSArray<?> items) { }
     @Mapping("initWithFrame:")
     public UISegmentedControl(CGRect frame) { }
+    @Mapping("initWithCoder:")
+    public UISegmentedControl(NSCoder aDecoder) { }
     @Mapping("init")
     public UISegmentedControl() { }
     
@@ -47,14 +49,14 @@ public class UISegmentedControl
      */
     @Deprecated
     @Mapping("segmentedControlStyle")
-    public native @Representing("UISegmentedControlStyle") @MachineSizedSInt long getControlStyle();
+    public native @Representing("UISegmentedControlStyle") long getControlStyle();
     /**
      * @since Available in iOS 2.0 and later.
      * @deprecated Deprecated in iOS 7.0.
      */
     @Deprecated
     @Mapping("setSegmentedControlStyle:")
-    public native void setControlStyle(@Representing("UISegmentedControlStyle") @MachineSizedSInt long v);
+    public native void setControlStyle(@Representing("UISegmentedControlStyle") long v);
     @Mapping("isMomentary")
     public native boolean isMomentary();
     @Mapping("setMomentary:")
@@ -114,41 +116,41 @@ public class UISegmentedControl
      * @since Available in iOS 5.0 and later.
      */
     @Mapping("setBackgroundImage:forState:barMetrics:")
-    public native void setBackgroundImage(UIImage backgroundImage, @Representing("UIControlState") @MachineSizedUInt long state, @Representing("UIBarMetrics") @MachineSizedSInt long barMetrics);
+    public native void setBackgroundImage(UIImage backgroundImage, @Representing("UIControlState") long state, @Representing("UIBarMetrics") long barMetrics);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @Mapping("backgroundImageForState:barMetrics:")
-    public native UIImage getBackgroundImage(@Representing("UIControlState") @MachineSizedUInt long state, @Representing("UIBarMetrics") @MachineSizedSInt long barMetrics);
+    public native UIImage getBackgroundImage(@Representing("UIControlState") long state, @Representing("UIBarMetrics") long barMetrics);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @Mapping("setDividerImage:forLeftSegmentState:rightSegmentState:barMetrics:")
-    public native void setDividerImage(UIImage dividerImage, @Representing("UIControlState") @MachineSizedUInt long leftState, @Representing("UIControlState") @MachineSizedUInt long rightState, @Representing("UIBarMetrics") @MachineSizedSInt long barMetrics);
+    public native void setDividerImage(UIImage dividerImage, @Representing("UIControlState") long leftState, @Representing("UIControlState") long rightState, @Representing("UIBarMetrics") long barMetrics);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @Mapping("dividerImageForLeftSegmentState:rightSegmentState:barMetrics:")
-    public native UIImage getDividerImage(@Representing("UIControlState") @MachineSizedUInt long leftState, @Representing("UIControlState") @MachineSizedUInt long rightState, @Representing("UIBarMetrics") @MachineSizedSInt long barMetrics);
+    public native UIImage getDividerImage(@Representing("UIControlState") long leftState, @Representing("UIControlState") long rightState, @Representing("UIBarMetrics") long barMetrics);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @Mapping("setTitleTextAttributes:forState:")
-    public native void setTitleTextAttributes(NSDictionary<?, ?> attributes, @Representing("UIControlState") @MachineSizedUInt long state);
+    public native void setTitleTextAttributes(NSDictionary<?, ?> attributes, @Representing("UIControlState") long state);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @Mapping("titleTextAttributesForState:")
-    public native NSDictionary<?, ?> getTitleTextAttributes(@Representing("UIControlState") @MachineSizedUInt long state);
+    public native NSDictionary<?, ?> getTitleTextAttributes(@Representing("UIControlState") long state);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @Mapping("setContentPositionAdjustment:forSegmentType:barMetrics:")
-    public native void setContentPositionAdjustment(UIOffset adjustment, @Representing("UISegmentedControlSegment") @MachineSizedSInt long leftCenterRightOrAlone, @Representing("UIBarMetrics") @MachineSizedSInt long barMetrics);
+    public native void setContentPositionAdjustment(UIOffset adjustment, @Representing("UISegmentedControlSegment") long leftCenterRightOrAlone, @Representing("UIBarMetrics") long barMetrics);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @Mapping("contentPositionAdjustmentForSegmentType:barMetrics:")
-    public native UIOffset getContentPositionAdjustment(@Representing("UISegmentedControlSegment") @MachineSizedSInt long leftCenterRightOrAlone, @Representing("UIBarMetrics") @MachineSizedSInt long barMetrics);
+    public native UIOffset getContentPositionAdjustment(@Representing("UISegmentedControlSegment") long leftCenterRightOrAlone, @Representing("UIBarMetrics") long barMetrics);
     
 }

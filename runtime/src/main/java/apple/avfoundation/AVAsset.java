@@ -50,7 +50,7 @@ public class AVAsset
      * @since Available in iOS 5.0 and later.
      */
     @Mapping("referenceRestrictions")
-    public native @Representing("AVAssetReferenceRestrictions") @MachineSizedUInt long getReferenceRestrictions();
+    public native @Representing("AVAssetReferenceRestrictions") long getReferenceRestrictions();
     @Mapping("tracks")
     public native NSArray<AVAssetTrack> getTracks();
     /**
@@ -149,7 +149,7 @@ public class AVAsset
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
     @Mapping("statusOfValueForKey:error:")
-    public native @Representing("AVKeyValueStatus") @MachineSizedSInt long getStatusOfValue(String key, Todo outError);
+    public native @Representing("AVKeyValueStatus") long getStatusOfValue(String key, Todo outError);
     @Mapping("loadValuesAsynchronouslyForKeys:completionHandler:")
     public native void loadValuesAsynchronously(NSArray<?> keys, @Block Runnable handler);
     

@@ -35,6 +35,8 @@ public class UICollectionViewController
     public UICollectionViewController(UICollectionViewLayout layout) { }
     @Mapping("initWithNibName:bundle:")
     public UICollectionViewController(String nibNameOrNil, NSBundle nibBundleOrNil) { }
+    @Mapping("initWithCoder:")
+    public UICollectionViewController(NSCoder aDecoder) { }
     @Mapping("init")
     public UICollectionViewController() { }
     

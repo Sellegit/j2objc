@@ -31,6 +31,8 @@ public class CATransformLayer
     public CATransformLayer() { }
     @Mapping("initWithLayer:")
     public CATransformLayer(Object layer) { }
+    @Mapping("initWithCoder:")
+    public CATransformLayer(NSCoder aDecoder) { }
     
     
     

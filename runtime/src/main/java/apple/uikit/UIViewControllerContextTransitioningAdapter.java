@@ -42,7 +42,7 @@ public abstract class UIViewControllerContextTransitioningAdapter
     @NotImplemented("transitionWasCancelled")
     public boolean transitionWasCancelled() { throw new UnsupportedOperationException(); }
     @NotImplemented("presentationStyle")
-    public @Representing("UIModalPresentationStyle") @MachineSizedSInt long getPresentationStyle() { throw new UnsupportedOperationException(); }
+    public @Representing("UIModalPresentationStyle") long getPresentationStyle() { throw new UnsupportedOperationException(); }
     @NotImplemented("updateInteractiveTransition:")
     public void updateInteractiveTransition(@MachineSizedFloat double percentComplete) { throw new UnsupportedOperationException(); }
     @NotImplemented("finishInteractiveTransition")

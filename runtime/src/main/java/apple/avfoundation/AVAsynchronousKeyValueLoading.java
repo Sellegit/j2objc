@@ -33,7 +33,7 @@ public interface AVAsynchronousKeyValueLoading
     
     
     @Mapping("statusOfValueForKey:error:")
-    @Representing("AVKeyValueStatus") @MachineSizedSInt long getStatusOfValue(String key, Todo outError);
+    @Representing("AVKeyValueStatus") long getStatusOfValue(String key, Todo outError);
     @Mapping("loadValuesAsynchronouslyForKeys:completionHandler:")
     void loadValuesAsynchronously(NSArray<?> keys, @Block Runnable handler);
     

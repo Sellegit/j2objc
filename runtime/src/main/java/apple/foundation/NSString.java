@@ -48,17 +48,17 @@ public class NSString
     @Mapping("hasSuffix:")
     public native boolean hasSuffix(String aString);
     @Mapping("dataUsingEncoding:allowLossyConversion:")
-    public native NSData toData(@Representing("NSStringEncoding") int encoding, boolean lossy);
+    public native NSData toData(@Representing("NSStringEncoding") long encoding, boolean lossy);
     @Mapping("dataUsingEncoding:")
-    public native NSData toData(@Representing("NSStringEncoding") int encoding);
+    public native NSData toData(@Representing("NSStringEncoding") long encoding);
     @Mapping("writeToURL:atomically:encoding:error:")
-    public native boolean writeURL(NSURL url, boolean useAuxiliaryFile, @Representing("NSStringEncoding") int enc, Todo error);
+    public native boolean writeURL(NSURL url, boolean useAuxiliaryFile, @Representing("NSStringEncoding") long enc, Todo error);
     @Mapping("writeToFile:atomically:encoding:error:")
-    public native boolean writeFile(String path, boolean useAuxiliaryFile, @Representing("NSStringEncoding") int enc, Todo error);
+    public native boolean writeFile(String path, boolean useAuxiliaryFile, @Representing("NSStringEncoding") long enc, Todo error);
     @Mapping("stringWithContentsOfURL:encoding:error:")
-    public static native String readURL(NSURL url, @Representing("NSStringEncoding") int enc, Todo error);
+    public static native String readURL(NSURL url, @Representing("NSStringEncoding") long enc, Todo error);
     @Mapping("stringWithContentsOfFile:encoding:error:")
-    public static native String readFile(String path, @Representing("NSStringEncoding") int enc, Todo error);
+    public static native String readFile(String path, @Representing("NSStringEncoding") long enc, Todo error);
     @Mapping("stringByAppendingPathComponent:")
     public native String appendPathComponent(String str);
     @Mapping("stringByAppendingPathExtension:")
@@ -69,8 +69,8 @@ public class NSString
     @Mapping("stringByAddingPercentEncodingWithAllowedCharacters:")
     public native String addPercentEncoding(NSCharacterSet allowedCharacters);
     @Mapping("stringByAddingPercentEscapesUsingEncoding:")
-    public native String addPercentEscapes(@Representing("NSStringEncoding") int enc);
+    public native String addPercentEscapes(@Representing("NSStringEncoding") long enc);
     @Mapping("stringByReplacingPercentEscapesUsingEncoding:")
-    public native String replacePercentEscapes(@Representing("NSStringEncoding") int enc);
+    public native String replacePercentEscapes(@Representing("NSStringEncoding") long enc);
     
 }

@@ -31,6 +31,8 @@ public class CAEmitterLayer
     public CAEmitterLayer() { }
     @Mapping("initWithLayer:")
     public CAEmitterLayer(Object layer) { }
+    @Mapping("initWithCoder:")
+    public CAEmitterLayer(NSCoder aDecoder) { }
     
     
     @Mapping("emitterCells")

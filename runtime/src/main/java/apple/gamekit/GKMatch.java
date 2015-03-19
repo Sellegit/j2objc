@@ -56,9 +56,9 @@ public class GKMatch
      * @since Available in iOS 8.0 and later.
      */
     @Mapping("sendData:toPlayers:dataMode:error:")
-    public native boolean sendDataToPlayersDataMode(NSData data, NSArray<?> players, @Representing("GKMatchSendDataMode") @MachineSizedSInt long mode, Todo error);
+    public native boolean sendDataToPlayersDataMode(NSData data, NSArray<?> players, @Representing("GKMatchSendDataMode") long mode, Todo error);
     @Mapping("sendDataToAllPlayers:withDataMode:error:")
-    public native boolean sendDataToAllPlayers(NSData data, @Representing("GKMatchSendDataMode") @MachineSizedSInt long mode, Todo error);
+    public native boolean sendDataToAllPlayers(NSData data, @Representing("GKMatchSendDataMode") long mode, Todo error);
     @Mapping("disconnect")
     public native void disconnect();
     @Mapping("voiceChatWithName:")
@@ -86,6 +86,6 @@ public class GKMatch
      */
     @Deprecated
     @Mapping("sendData:toPlayers:withDataMode:error:")
-    public native boolean sendDataToPlayersWithDataMod(NSData data, NSArray<?> playerIDs, @Representing("GKMatchSendDataMode") @MachineSizedSInt long mode, Todo error);
+    public native boolean sendDataToPlayersWithDataMod(NSData data, NSArray<?> playerIDs, @Representing("GKMatchSendDataMode") long mode, Todo error);
     
 }

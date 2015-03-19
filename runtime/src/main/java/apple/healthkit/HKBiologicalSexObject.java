@@ -31,7 +31,7 @@ public class HKBiologicalSexObject
     
     
     @Mapping("biologicalSex")
-    public native @Representing("HKBiologicalSex") @MachineSizedSInt long getBiologicalSex();
+    public native @Representing("HKBiologicalSex") long getBiologicalSex();
     
     
     

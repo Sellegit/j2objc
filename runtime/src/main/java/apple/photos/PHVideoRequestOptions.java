@@ -38,13 +38,13 @@ public class PHVideoRequestOptions
     @Mapping("setNetworkAccessAllowed:")
     public native void setNetworkAccessAllowed(boolean v);
     @Mapping("version")
-    public native @Representing("PHVideoRequestOptionsVersion") @MachineSizedSInt long getVersion();
+    public native @Representing("PHVideoRequestOptionsVersion") long getVersion();
     @Mapping("setVersion:")
-    public native void setVersion(@Representing("PHVideoRequestOptionsVersion") @MachineSizedSInt long v);
+    public native void setVersion(@Representing("PHVideoRequestOptionsVersion") long v);
     @Mapping("deliveryMode")
-    public native @Representing("PHVideoRequestOptionsDeliveryMode") @MachineSizedSInt long getDeliveryMode();
+    public native @Representing("PHVideoRequestOptionsDeliveryMode") long getDeliveryMode();
     @Mapping("setDeliveryMode:")
-    public native void setDeliveryMode(@Representing("PHVideoRequestOptionsDeliveryMode") @MachineSizedSInt long v);
+    public native void setDeliveryMode(@Representing("PHVideoRequestOptionsDeliveryMode") long v);
     @Mapping("progressHandler")
     public native @Block VoidBlock3<Double, NSError, Todo> getProgressHandler();
     @Mapping("setProgressHandler:")

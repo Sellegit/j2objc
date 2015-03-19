@@ -30,7 +30,7 @@ public class NSManagedObjectContext
      * @since Available in iOS 5.0 and later.
      */
     @Mapping("initWithConcurrencyType:")
-    public NSManagedObjectContext(@Representing("NSManagedObjectContextConcurrencyType") @MachineSizedUInt long ct) { }
+    public NSManagedObjectContext(@Representing("NSManagedObjectContextConcurrencyType") long ct) { }
     @Mapping("init")
     public NSManagedObjectContext() { }
     
@@ -74,7 +74,7 @@ public class NSManagedObjectContext
      * @since Available in iOS 5.0 and later.
      */
     @Mapping("concurrencyType")
-    public native @Representing("NSManagedObjectContextConcurrencyType") @MachineSizedUInt long getConcurrencyType();
+    public native @Representing("NSManagedObjectContextConcurrencyType") long getConcurrencyType();
     @Mapping("insertedObjects")
     public native NSSet<NSManagedObject> getInsertedObjects();
     @Mapping("updatedObjects")

@@ -52,7 +52,7 @@ public class CBPeripheral
     @Mapping("isConnected")
     public native boolean isConnected();
     @Mapping("state")
-    public native @Representing("CBPeripheralState") @MachineSizedSInt long getState();
+    public native @Representing("CBPeripheralState") long getState();
     @Mapping("services")
     public native NSArray<CBService> getServices();
     
@@ -69,7 +69,7 @@ public class CBPeripheral
     @Mapping("readValueForCharacteristic:")
     public native void readValue(CBCharacteristic characteristic);
     @Mapping("writeValue:forCharacteristic:type:")
-    public native void writeValue(NSData data, CBCharacteristic characteristic, @Representing("CBCharacteristicWriteType") @MachineSizedSInt long type);
+    public native void writeValue(NSData data, CBCharacteristic characteristic, @Representing("CBCharacteristicWriteType") long type);
     @Mapping("setNotifyValue:forCharacteristic:")
     public native void setNotifyValue(boolean enabled, CBCharacteristic characteristic);
     @Mapping("discoverDescriptorsForCharacteristic:")

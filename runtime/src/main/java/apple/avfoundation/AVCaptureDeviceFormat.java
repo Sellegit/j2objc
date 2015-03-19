@@ -103,7 +103,7 @@ public class AVCaptureDeviceFormat
      * @since Available in iOS 8.0 and later.
      */
     @Mapping("autoFocusSystem")
-    public native @Representing("AVCaptureAutoFocusSystem") @MachineSizedSInt long getAutoFocusSystem();
+    public native @Representing("AVCaptureAutoFocusSystem") long getAutoFocusSystem();
     
     
     
@@ -111,6 +111,6 @@ public class AVCaptureDeviceFormat
      * @since Available in iOS 8.0 and later.
      */
     @Mapping("isVideoStabilizationModeSupported:")
-    public native boolean isVideoStabilizationModeSupported(@Representing("AVCaptureVideoStabilizationMode") @MachineSizedSInt long videoStabilizationMode);
+    public native boolean isVideoStabilizationModeSupported(@Representing("AVCaptureVideoStabilizationMode") long videoStabilizationMode);
     
 }

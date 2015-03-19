@@ -42,7 +42,7 @@ public class AVAudioSession
      * @since Available in iOS 6.0 and later.
      */
     @Mapping("categoryOptions")
-    public native @Representing("AVAudioSessionCategoryOptions") @MachineSizedUInt long getCategoryOptions();
+    public native @Representing("AVAudioSessionCategoryOptions") long getCategoryOptions();
     /**
      * @since Available in iOS 5.0 and later.
      */
@@ -252,16 +252,16 @@ public class AVAudioSession
      * @since Available in iOS 6.0 and later.
      */
     @Mapping("setActive:withOptions:error:")
-    public native boolean setActive$withOptions$error$(boolean active, @Representing("AVAudioSessionSetActiveOptions") @MachineSizedUInt long options, Todo outError);
+    public native boolean setActive$withOptions$error$(boolean active, @Representing("AVAudioSessionSetActiveOptions") long options, Todo outError);
     @Mapping("setCategory:error:")
     public native boolean setCategory(String category, Todo outError);
     /**
      * @since Available in iOS 6.0 and later.
      */
     @Mapping("setCategory:withOptions:error:")
-    public native boolean setCategory(String category, @Representing("AVAudioSessionCategoryOptions") @MachineSizedUInt long options, Todo outError);
+    public native boolean setCategory(String category, @Representing("AVAudioSessionCategoryOptions") long options, Todo outError);
     @Mapping("recordPermission")
-    public native @Representing("AVAudioSessionRecordPermission") @MachineSizedUInt long getRecordPermission();
+    public native @Representing("AVAudioSessionRecordPermission") long getRecordPermission();
     /**
      * @since Available in iOS 5.0 and later.
      */
@@ -271,7 +271,7 @@ public class AVAudioSession
      * @since Available in iOS 6.0 and later.
      */
     @Mapping("overrideOutputAudioPort:error:")
-    public native boolean overrideOutputAudioPort(@Representing("AVAudioSessionPortOverride") @MachineSizedUInt long portOverride, Todo outError);
+    public native boolean overrideOutputAudioPort(@Representing("AVAudioSessionPortOverride") long portOverride, Todo outError);
     /**
      * @since Available in iOS 7.0 and later.
      */

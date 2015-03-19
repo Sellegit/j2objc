@@ -67,7 +67,7 @@ public class NSArray <T>
     @Mapping("arrayWithContentsOfURL:")
     public static native NSArray<?> read(NSURL url);
     @Mapping("addObserver:toObjectsAtIndexes:forKeyPath:options:context:")
-    public native void addObserver(NSObject observer, NSIndexSet indexes, String keyPath, @Representing("NSKeyValueObservingOptions") @MachineSizedUInt long options, Todo context);
+    public native void addObserver(NSObject observer, NSIndexSet indexes, String keyPath, @Representing("NSKeyValueObservingOptions") long options, Todo context);
     /**
      * @since Available in iOS 5.0 and later.
      */

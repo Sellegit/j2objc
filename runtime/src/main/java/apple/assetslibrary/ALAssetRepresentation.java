@@ -54,7 +54,7 @@ public class ALAssetRepresentation
     @Mapping("metadata")
     public native CGImageProperties getMetadata();
     @Mapping("orientation")
-    public native @Representing("ALAssetOrientation") @MachineSizedSInt long getOrientation();
+    public native @Representing("ALAssetOrientation") long getOrientation();
     @Mapping("scale")
     public native float getScale();
     /**

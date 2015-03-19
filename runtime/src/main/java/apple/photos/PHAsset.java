@@ -34,9 +34,9 @@ public class PHAsset
     
     
     @Mapping("mediaType")
-    public native @Representing("PHAssetMediaType") @MachineSizedSInt long getMediaType();
+    public native @Representing("PHAssetMediaType") long getMediaType();
     @Mapping("mediaSubtypes")
-    public native @Representing("PHAssetMediaSubtype") @MachineSizedUInt long getMediaSubtypes();
+    public native @Representing("PHAssetMediaSubtype") long getMediaSubtypes();
     @Mapping("pixelWidth")
     public native @MachineSizedUInt long getPixelWidth();
     @Mapping("pixelHeight")
@@ -56,18 +56,18 @@ public class PHAsset
     @Mapping("burstIdentifier")
     public native String getBurstIdentifier();
     @Mapping("burstSelectionTypes")
-    public native @Representing("PHAssetBurstSelectionType") @MachineSizedUInt long getBurstSelectionTypes();
+    public native @Representing("PHAssetBurstSelectionType") long getBurstSelectionTypes();
     @Mapping("representsBurst")
     public native boolean representsBurst();
     
     
     
     @Mapping("canPerformEditOperation:")
-    public native boolean canPerformEditOperation(@Representing("PHAssetEditOperation") @MachineSizedSInt long editOperation);
+    public native boolean canPerformEditOperation(@Representing("PHAssetEditOperation") long editOperation);
     @Mapping("fetchAssetsInAssetCollection:options:")
     public static native PHFetchResult fetchAssetsInAssetCollection(PHAssetCollection assetCollection, PHFetchOptions options);
     @Mapping("fetchAssetsWithMediaType:options:")
-    public static native PHFetchResult fetchAssetsWithMediaType(@Representing("PHAssetMediaType") @MachineSizedSInt long mediaType, PHFetchOptions options);
+    public static native PHFetchResult fetchAssetsWithMediaType(@Representing("PHAssetMediaType") long mediaType, PHFetchOptions options);
     @Mapping("fetchAssetsWithLocalIdentifiers:options:")
     public static native PHFetchResult fetchAssetsWithLocalIdentifiers(NSArray<?> identifiers, PHFetchOptions options);
     @Mapping("fetchKeyAssetsInAssetCollection:options:")

@@ -41,9 +41,9 @@ public class MKPolyline
     
     
     @Mapping("polylineWithPoints:count:")
-    public static native MKPolyline create(MKMapPoint points, @MachineSizedUInt long count);
+    public static native MKPolyline createPrime(MKMapPoint points, @MachineSizedUInt long count);
     @Mapping("polylineWithCoordinates:count:")
-    public static native MKPolyline create(CLLocationCoordinate2D coords, @MachineSizedUInt long count);
+    public static native MKPolyline createPrime(CLLocationCoordinate2D coords, @MachineSizedUInt long count);
     @Mapping("intersectsMapRect:")
     public native boolean intersects(MKMapRect mapRect);
     /**

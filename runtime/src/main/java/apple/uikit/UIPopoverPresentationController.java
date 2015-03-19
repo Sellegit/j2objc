@@ -42,9 +42,9 @@ public class UIPopoverPresentationController
     @Mapping("setDelegate:")
     public native void setPopoverPresentationDelegate(UIPopoverPresentationControllerDelegate v);
     @Mapping("permittedArrowDirections")
-    public native @Representing("UIPopoverArrowDirection") @MachineSizedUInt long getPermittedArrowDirections();
+    public native @Representing("UIPopoverArrowDirection") long getPermittedArrowDirections();
     @Mapping("setPermittedArrowDirections:")
-    public native void setPermittedArrowDirections(@Representing("UIPopoverArrowDirection") @MachineSizedUInt long v);
+    public native void setPermittedArrowDirections(@Representing("UIPopoverArrowDirection") long v);
     @Mapping("sourceView")
     public native UIView getSourceView();
     @Mapping("setSourceView:")
@@ -58,7 +58,7 @@ public class UIPopoverPresentationController
     @Mapping("setBarButtonItem:")
     public native void setBarButtonItem(UIBarButtonItem v);
     @Mapping("arrowDirection")
-    public native @Representing("UIPopoverArrowDirection") @MachineSizedUInt long getArrowDirection();
+    public native @Representing("UIPopoverArrowDirection") long getArrowDirection();
     @Mapping("passthroughViews")
     public native NSArray<UIView> getPassthroughViews();
     @Mapping("setPassthroughViews:")

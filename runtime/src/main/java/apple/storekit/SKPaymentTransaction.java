@@ -73,7 +73,7 @@ public class SKPaymentTransaction
      * @since Available in iOS 3.0 and later.
      */
     @Mapping("transactionState")
-    public native @Representing("SKPaymentTransactionState") @MachineSizedSInt long getTransactionState();
+    public native @Representing("SKPaymentTransactionState") long getTransactionState();
     
     
     

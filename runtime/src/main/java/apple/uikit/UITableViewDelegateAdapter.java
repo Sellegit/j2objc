@@ -117,7 +117,7 @@ public abstract class UITableViewDelegateAdapter
     @NotImplemented("tableView:didDeselectRowAtIndexPath:")
     public void didDeselectRow(UITableView tableView, NSIndexPath indexPath) { throw new UnsupportedOperationException(); }
     @NotImplemented("tableView:editingStyleForRowAtIndexPath:")
-    public @Representing("UITableViewCellEditingStyle") @MachineSizedSInt long getEditingStyleForRow(UITableView tableView, NSIndexPath indexPath) { throw new UnsupportedOperationException(); }
+    public @Representing("UITableViewCellEditingStyle") long getEditingStyleForRow(UITableView tableView, NSIndexPath indexPath) { throw new UnsupportedOperationException(); }
     /**
      * @since Available in iOS 3.0 and later.
      */

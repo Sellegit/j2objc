@@ -44,9 +44,9 @@ public class UILocalNotification
     @Mapping("setTimeZone:")
     public native void setTimeZone(NSTimeZone v);
     @Mapping("repeatInterval")
-    public native @Representing("NSCalendarUnit") @MachineSizedUInt long getRepeatInterval();
+    public native @Representing("NSCalendarUnit") long getRepeatInterval();
     @Mapping("setRepeatInterval:")
-    public native void setRepeatInterval(@Representing("NSCalendarUnit") @MachineSizedUInt long v);
+    public native void setRepeatInterval(@Representing("NSCalendarUnit") long v);
     @Mapping("repeatCalendar")
     public native NSCalendar getRepeatCalendar();
     @Mapping("setRepeatCalendar:")

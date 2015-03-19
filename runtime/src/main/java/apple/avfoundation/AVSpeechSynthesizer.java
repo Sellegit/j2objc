@@ -50,9 +50,9 @@ public class AVSpeechSynthesizer
     @Mapping("speakUtterance:")
     public native void enqueueSpeakUtterance(AVSpeechUtterance utterance);
     @Mapping("stopSpeakingAtBoundary:")
-    public native boolean stopSpeaking(@Representing("AVSpeechBoundary") @MachineSizedSInt long boundary);
+    public native boolean stopSpeaking(@Representing("AVSpeechBoundary") long boundary);
     @Mapping("pauseSpeakingAtBoundary:")
-    public native boolean pauseSpeaking(@Representing("AVSpeechBoundary") @MachineSizedSInt long boundary);
+    public native boolean pauseSpeaking(@Representing("AVSpeechBoundary") long boundary);
     @Mapping("continueSpeaking")
     public native boolean continueSpeaking();
     

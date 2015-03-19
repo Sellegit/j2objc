@@ -42,13 +42,13 @@ public class SKKeyframeSequence
     
     
     @Mapping("interpolationMode")
-    public native @Representing("SKInterpolationMode") @MachineSizedSInt long getInterpolationMode();
+    public native @Representing("SKInterpolationMode") long getInterpolationMode();
     @Mapping("setInterpolationMode:")
-    public native void setInterpolationMode(@Representing("SKInterpolationMode") @MachineSizedSInt long v);
+    public native void setInterpolationMode(@Representing("SKInterpolationMode") long v);
     @Mapping("repeatMode")
-    public native @Representing("SKRepeatMode") @MachineSizedSInt long getRepeatMode();
+    public native @Representing("SKRepeatMode") long getRepeatMode();
     @Mapping("setRepeatMode:")
-    public native void setRepeatMode(@Representing("SKRepeatMode") @MachineSizedSInt long v);
+    public native void setRepeatMode(@Representing("SKRepeatMode") long v);
     
     
     

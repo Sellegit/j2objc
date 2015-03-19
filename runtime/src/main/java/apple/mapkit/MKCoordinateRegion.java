@@ -51,11 +51,11 @@ public class MKCoordinateRegion
 
     
     @GlobalFunction("MKCoordinateRegionMakeWithDistance")
-    public static native MKCoordinateRegion create(CLLocationCoordinate2D centerCoordinate, double latitudinalMeters, double longitudinalMeters);
+    public static native MKCoordinateRegion createPrime(CLLocationCoordinate2D centerCoordinate, double latitudinalMeters, double longitudinalMeters);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("MKCoordinateRegionForMapRect")
-    public static native MKCoordinateRegion create(MKMapRect rect);
+    public static native MKCoordinateRegion createPrime(MKMapRect rect);
     
 }

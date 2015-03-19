@@ -31,6 +31,8 @@ public class SKPhysicsJointFixed
 
     
     
+    @Mapping("initWithCoder:")
+    public SKPhysicsJointFixed(NSCoder aDecoder) { }
     @Mapping("init")
     public SKPhysicsJointFixed() { }
     

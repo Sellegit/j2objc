@@ -50,7 +50,7 @@ public class PKPassLibrary
      * @since Available in iOS 8.0 and later.
      */
     @Mapping("passesOfType:")
-    public native NSArray<PKPass> getPassesOfType(@Representing("PKPassType") @MachineSizedUInt long passType);
+    public native NSArray<PKPass> getPassesOfType(@Representing("PKPassType") long passType);
     @Mapping("removePass:")
     public native void removePass(PKPass pass);
     @Mapping("containsPass:")

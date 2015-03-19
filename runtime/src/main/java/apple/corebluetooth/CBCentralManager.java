@@ -43,7 +43,7 @@ public class CBCentralManager
     @Mapping("setDelegate:")
     public native void setDelegate(CBCentralManagerDelegate v);
     @Mapping("state")
-    public native @Representing("CBCentralManagerState") @MachineSizedSInt long getState();
+    public native @Representing("CBCentralManagerState") long getState();
     
     
     

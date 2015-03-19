@@ -59,6 +59,6 @@ public class UIActivity
      * @since Available in iOS 7.0 and later.
      */
     @Mapping("activityCategory")
-    public static native @Representing("UIActivityCategory") @MachineSizedSInt long getActivityCategory();
+    public static native @Representing("UIActivityCategory") long getActivityCategory();
     
 }

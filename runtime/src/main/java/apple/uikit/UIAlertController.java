@@ -33,6 +33,8 @@ public class UIAlertController
     
     @Mapping("initWithNibName:bundle:")
     public UIAlertController(String nibNameOrNil, NSBundle nibBundleOrNil) { }
+    @Mapping("initWithCoder:")
+    public UIAlertController(NSCoder aDecoder) { }
     @Mapping("init")
     public UIAlertController() { }
     
@@ -50,7 +52,7 @@ public class UIAlertController
     @Mapping("setMessage:")
     public native void setMessage(String v);
     @Mapping("preferredStyle")
-    public native @Representing("UIAlertControllerStyle") @MachineSizedSInt long getPreferredStyle();
+    public native @Representing("UIAlertControllerStyle") long getPreferredStyle();
     
     
     
@@ -59,6 +61,6 @@ public class UIAlertController
     @Mapping("addTextFieldWithConfigurationHandler:")
     public native void addTextField(@Block VoidBlock1<UITextField> configurationHandler);
     @Mapping("alertControllerWithTitle:message:preferredStyle:")
-    public static native UIAlertController create(String title, String message, @Representing("UIAlertControllerStyle") @MachineSizedSInt long preferredStyle);
+    public static native UIAlertController create(String title, String message, @Representing("UIAlertControllerStyle") long preferredStyle);
     
 }

@@ -86,9 +86,9 @@ public class UIView
     @Mapping("setAutoresizesSubviews:")
     public native void setAutoresizesSubviews(boolean v);
     @Mapping("autoresizingMask")
-    public native @Representing("UIViewAutoresizing") @MachineSizedUInt long getAutoresizingMask();
+    public native @Representing("UIViewAutoresizing") long getAutoresizingMask();
     @Mapping("setAutoresizingMask:")
-    public native void setAutoresizingMask(@Representing("UIViewAutoresizing") @MachineSizedUInt long v);
+    public native void setAutoresizingMask(@Representing("UIViewAutoresizing") long v);
     @Mapping("superview")
     public native UIView getSuperview();
     @Mapping("subviews")
@@ -140,9 +140,9 @@ public class UIView
     @Mapping("setHidden:")
     public native void setHidden(boolean v);
     @Mapping("contentMode")
-    public native @Representing("UIViewContentMode") @MachineSizedSInt long getContentMode();
+    public native @Representing("UIViewContentMode") long getContentMode();
     @Mapping("setContentMode:")
-    public native void setContentMode(@Representing("UIViewContentMode") @MachineSizedSInt long v);
+    public native void setContentMode(@Representing("UIViewContentMode") long v);
     /**
      * @since Available in iOS 3.0 and later.
      * @deprecated Deprecated in iOS 6.0.
@@ -181,12 +181,12 @@ public class UIView
      * @since Available in iOS 7.0 and later.
      */
     @Mapping("tintAdjustmentMode")
-    public native @Representing("UIViewTintAdjustmentMode") @MachineSizedSInt long getTintAdjustmentMode();
+    public native @Representing("UIViewTintAdjustmentMode") long getTintAdjustmentMode();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @Mapping("setTintAdjustmentMode:")
-    public native void setTintAdjustmentMode(@Representing("UIViewTintAdjustmentMode") @MachineSizedSInt long v);
+    public native void setTintAdjustmentMode(@Representing("UIViewTintAdjustmentMode") long v);
     /**
      * @since Available in iOS 3.2 and later.
      */
@@ -325,7 +325,7 @@ public class UIView
     @Mapping("setAnimationStartDate:")
     public static native void setAnimationStartDate(NSDate startDate);
     @Mapping("setAnimationCurve:")
-    public static native void setAnimationCurve(@Representing("UIViewAnimationCurve") @MachineSizedSInt long curve);
+    public static native void setAnimationCurve(@Representing("UIViewAnimationCurve") long curve);
     @Mapping("setAnimationRepeatCount:")
     public static native void setAnimationRepeatCount(float repeatCount);
     @Mapping("setAnimationRepeatAutoreverses:")
@@ -333,7 +333,7 @@ public class UIView
     @Mapping("setAnimationBeginsFromCurrentState:")
     public static native void setAnimationBeginsFromCurrentState(boolean fromCurrentState);
     @Mapping("setAnimationTransition:forView:cache:")
-    public static native void setAnimationTransition(@Representing("UIViewAnimationTransition") @MachineSizedSInt long transition, UIView view, boolean cache);
+    public static native void setAnimationTransition(@Representing("UIViewAnimationTransition") long transition, UIView view, boolean cache);
     @Mapping("setAnimationsEnabled:")
     public static native void setAnimationsEnabled(boolean enabled);
     @Mapping("areAnimationsEnabled")
@@ -347,7 +347,7 @@ public class UIView
      * @since Available in iOS 4.0 and later.
      */
     @Mapping("animateWithDuration:delay:options:animations:completion:")
-    public static native void animate(double duration, double delay, @Representing("UIViewAnimationOptions") @MachineSizedUInt long options, @Block Runnable animations, @Block VoidBooleanBlock completion);
+    public static native void animate(double duration, double delay, @Representing("UIViewAnimationOptions") long options, @Block Runnable animations, @Block VoidBooleanBlock completion);
     /**
      * @since Available in iOS 4.0 and later.
      */
@@ -362,27 +362,27 @@ public class UIView
      * @since Available in iOS 7.0 and later.
      */
     @Mapping("animateWithDuration:delay:usingSpringWithDamping:initialSpringVelocity:options:animations:completion:")
-    public static native void animate(double duration, double delay, @MachineSizedFloat double dampingRatio, @MachineSizedFloat double velocity, @Representing("UIViewAnimationOptions") @MachineSizedUInt long options, @Block Runnable animations, @Block VoidBooleanBlock completion);
+    public static native void animate(double duration, double delay, @MachineSizedFloat double dampingRatio, @MachineSizedFloat double velocity, @Representing("UIViewAnimationOptions") long options, @Block Runnable animations, @Block VoidBooleanBlock completion);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @Mapping("transitionWithView:duration:options:animations:completion:")
-    public static native void transition(UIView view, double duration, @Representing("UIViewAnimationOptions") @MachineSizedUInt long options, @Block Runnable animations, @Block VoidBooleanBlock completion);
+    public static native void transition(UIView view, double duration, @Representing("UIViewAnimationOptions") long options, @Block Runnable animations, @Block VoidBooleanBlock completion);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @Mapping("transitionFromView:toView:duration:options:completion:")
-    public static native void transition(UIView fromView, UIView toView, double duration, @Representing("UIViewAnimationOptions") @MachineSizedUInt long options, @Block VoidBooleanBlock completion);
+    public static native void transition(UIView fromView, UIView toView, double duration, @Representing("UIViewAnimationOptions") long options, @Block VoidBooleanBlock completion);
     /**
      * @since Available in iOS 7.0 and later.
      */
     @Mapping("performSystemAnimation:onViews:options:animations:completion:")
-    public static native void performSystemAnimation(@Representing("UISystemAnimation") @MachineSizedUInt long animation, NSArray<?> views, @Representing("UIViewAnimationOptions") @MachineSizedUInt long options, @Block Runnable parallelAnimations, @Block VoidBooleanBlock completion);
+    public static native void performSystemAnimation(@Representing("UISystemAnimation") long animation, NSArray<?> views, @Representing("UIViewAnimationOptions") long options, @Block Runnable parallelAnimations, @Block VoidBooleanBlock completion);
     /**
      * @since Available in iOS 7.0 and later.
      */
     @Mapping("animateKeyframesWithDuration:delay:options:animations:completion:")
-    public static native void animateKeyframes(double duration, double delay, @Representing("UIViewKeyframeAnimationOptions") @MachineSizedUInt long options, @Block Runnable animations, @Block VoidBooleanBlock completion);
+    public static native void animateKeyframes(double duration, double delay, @Representing("UIViewKeyframeAnimationOptions") long options, @Block Runnable animations, @Block VoidBooleanBlock completion);
     /**
      * @since Available in iOS 7.0 and later.
      */
@@ -507,22 +507,22 @@ public class UIView
      * @since Available in iOS 6.0 and later.
      */
     @Mapping("contentHuggingPriorityForAxis:")
-    public native float getContentHuggingPriority(@Representing("UILayoutConstraintAxis") @MachineSizedSInt long axis);
+    public native float getContentHuggingPriority(@Representing("UILayoutConstraintAxis") long axis);
     /**
      * @since Available in iOS 6.0 and later.
      */
     @Mapping("setContentHuggingPriority:forAxis:")
-    public native void setContentHuggingPriority(float priority, @Representing("UILayoutConstraintAxis") @MachineSizedSInt long axis);
+    public native void setContentHuggingPriority(float priority, @Representing("UILayoutConstraintAxis") long axis);
     /**
      * @since Available in iOS 6.0 and later.
      */
     @Mapping("contentCompressionResistancePriorityForAxis:")
-    public native float getContentCompressionResistancePriority(@Representing("UILayoutConstraintAxis") @MachineSizedSInt long axis);
+    public native float getContentCompressionResistancePriority(@Representing("UILayoutConstraintAxis") long axis);
     /**
      * @since Available in iOS 6.0 and later.
      */
     @Mapping("setContentCompressionResistancePriority:forAxis:")
-    public native void setContentCompressionResistancePriority(float priority, @Representing("UILayoutConstraintAxis") @MachineSizedSInt long axis);
+    public native void setContentCompressionResistancePriority(float priority, @Representing("UILayoutConstraintAxis") long axis);
     /**
      * @since Available in iOS 6.0 and later.
      */
@@ -537,7 +537,7 @@ public class UIView
      * @since Available in iOS 6.0 and later.
      */
     @Mapping("constraintsAffectingLayoutForAxis:")
-    public native NSArray<NSLayoutConstraint> getConstraintsAffectingLayout(@Representing("UILayoutConstraintAxis") @MachineSizedSInt long axis);
+    public native NSArray<NSLayoutConstraint> getConstraintsAffectingLayout(@Representing("UILayoutConstraintAxis") long axis);
     /**
      * @since Available in iOS 6.0 and later.
      */

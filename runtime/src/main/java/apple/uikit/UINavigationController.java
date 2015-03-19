@@ -35,6 +35,8 @@ public class UINavigationController
     public UINavigationController(UIViewController rootViewController) { }
     @Mapping("initWithNibName:bundle:")
     public UINavigationController(String nibNameOrNil, NSBundle nibBundleOrNil) { }
+    @Mapping("initWithCoder:")
+    public UINavigationController(NSCoder aDecoder) { }
     @Mapping("init")
     public UINavigationController() { }
     

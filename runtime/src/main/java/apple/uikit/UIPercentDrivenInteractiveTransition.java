@@ -44,9 +44,9 @@ public class UIPercentDrivenInteractiveTransition
     @Mapping("setCompletionSpeed:")
     public native void setCompletionSpeed(@MachineSizedFloat double v);
     @Mapping("completionCurve")
-    public native @Representing("UIViewAnimationCurve") @MachineSizedSInt long getCompletionCurve();
+    public native @Representing("UIViewAnimationCurve") long getCompletionCurve();
     @Mapping("setCompletionCurve:")
-    public native void setCompletionCurve(@Representing("UIViewAnimationCurve") @MachineSizedSInt long v);
+    public native void setCompletionCurve(@Representing("UIViewAnimationCurve") long v);
     
     
     

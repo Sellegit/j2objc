@@ -43,12 +43,12 @@ public class NSThread
      * @since Available in iOS 8.0 and later.
      */
     @Mapping("qualityOfService")
-    public native @Representing("NSQualityOfService") @MachineSizedSInt long getQualityOfService();
+    public native @Representing("NSQualityOfService") long getQualityOfService();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @Mapping("setQualityOfService:")
-    public native void setQualityOfService(@Representing("NSQualityOfService") @MachineSizedSInt long v);
+    public native void setQualityOfService(@Representing("NSQualityOfService") long v);
     /**
      * @since Available in iOS 2.0 and later.
      */

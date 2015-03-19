@@ -32,7 +32,7 @@ public class TWRequest
     
     
     @Mapping("initWithURL:parameters:requestMethod:")
-    public TWRequest(NSURL url, NSDictionary<?, ?> parameters, @Representing("TWRequestMethod") int requestMethod) { }
+    public TWRequest(NSURL url, NSDictionary<?, ?> parameters, @Representing("TWRequestMethod") long requestMethod) { }
     @Mapping("init")
     public TWRequest() { }
     
@@ -42,7 +42,7 @@ public class TWRequest
     @Mapping("setAccount:")
     public native void setAccount(ACAccount v);
     @Mapping("requestMethod")
-    public native @Representing("TWRequestMethod") int getRequestMethod();
+    public native @Representing("TWRequestMethod") long getRequestMethod();
     @Mapping("URL")
     public native NSURL getURL();
     @Mapping("parameters")

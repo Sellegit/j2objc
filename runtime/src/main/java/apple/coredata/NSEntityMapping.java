@@ -35,9 +35,9 @@ public class NSEntityMapping
     @Mapping("setName:")
     public native void setName(String v);
     @Mapping("mappingType")
-    public native @Representing("NSEntityMappingType") @MachineSizedUInt long getMappingType();
+    public native @Representing("NSEntityMappingType") long getMappingType();
     @Mapping("setMappingType:")
-    public native void setMappingType(@Representing("NSEntityMappingType") @MachineSizedUInt long v);
+    public native void setMappingType(@Representing("NSEntityMappingType") long v);
     @Mapping("sourceEntityName")
     public native String getSourceEntityName();
     @Mapping("setSourceEntityName:")

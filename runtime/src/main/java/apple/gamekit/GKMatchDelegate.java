@@ -43,14 +43,14 @@ public interface GKMatchDelegate
      * @since Available in iOS 4.1 and later.
      */
     @Mapping("match:player:didChangeConnectionState:")
-    void didChangeConnectionState(GKMatch match, GKPlayer player, @Representing("GKPlayerConnectionState") @MachineSizedSInt long state);
+    void didChangeConnectionState(GKMatch match, GKPlayer player, @Representing("GKPlayerConnectionState") long state);
     /**
      * @since Available in iOS 4.1 and later.
      * @deprecated Deprecated in iOS 8.0.
      */
     @Deprecated
     @Mapping("match:player:didChangeState:")
-    void didChangeState(GKMatch match, String playerID, @Representing("GKPlayerConnectionState") @MachineSizedSInt long state);
+    void didChangeState(GKMatch match, String playerID, @Representing("GKPlayerConnectionState") long state);
     /**
      * @since Available in iOS 4.1 and later.
      */

@@ -31,7 +31,7 @@ public class HKQuantityType
     
     
     @Mapping("aggregationStyle")
-    public native @Representing("HKQuantityAggregationStyle") @MachineSizedSInt long getAggregationStyle();
+    public native @Representing("HKQuantityAggregationStyle") long getAggregationStyle();
     
     
     

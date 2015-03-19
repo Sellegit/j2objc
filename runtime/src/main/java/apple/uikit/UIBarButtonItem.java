@@ -32,16 +32,16 @@ public class UIBarButtonItem
     
     
     @Mapping("initWithImage:style:target:action:")
-    public UIBarButtonItem(UIImage image, @Representing("UIBarButtonItemStyle") @MachineSizedSInt long style, Object target, Selector action) { }
+    public UIBarButtonItem(UIImage image, @Representing("UIBarButtonItemStyle") long style, Object target, Selector action) { }
     /**
      * @since Available in iOS 5.0 and later.
      */
     @Mapping("initWithImage:landscapeImagePhone:style:target:action:")
-    public UIBarButtonItem(UIImage image, UIImage landscapeImagePhone, @Representing("UIBarButtonItemStyle") @MachineSizedSInt long style, Object target, Selector action) { }
+    public UIBarButtonItem(UIImage image, UIImage landscapeImagePhone, @Representing("UIBarButtonItemStyle") long style, Object target, Selector action) { }
     @Mapping("initWithTitle:style:target:action:")
-    public UIBarButtonItem(String title, @Representing("UIBarButtonItemStyle") @MachineSizedSInt long style, Object target, Selector action) { }
+    public UIBarButtonItem(String title, @Representing("UIBarButtonItemStyle") long style, Object target, Selector action) { }
     @Mapping("initWithBarButtonSystemItem:target:action:")
-    public UIBarButtonItem(@Representing("UIBarButtonSystemItem") @MachineSizedSInt long systemItem, Object target, Selector action) { }
+    public UIBarButtonItem(@Representing("UIBarButtonSystemItem") long systemItem, Object target, Selector action) { }
     @Mapping("initWithCustomView:")
     public UIBarButtonItem(UIView customView) { }
     @Mapping("init")
@@ -49,9 +49,9 @@ public class UIBarButtonItem
     
     
     @Mapping("style")
-    public native @Representing("UIBarButtonItemStyle") @MachineSizedSInt long getStyle();
+    public native @Representing("UIBarButtonItemStyle") long getStyle();
     @Mapping("setStyle:")
-    public native void setStyle(@Representing("UIBarButtonItemStyle") @MachineSizedSInt long v);
+    public native void setStyle(@Representing("UIBarButtonItemStyle") long v);
     @Mapping("width")
     public native @MachineSizedFloat double getWidth();
     @Mapping("setWidth:")
@@ -89,72 +89,72 @@ public class UIBarButtonItem
      * @since Available in iOS 5.0 and later.
      */
     @Mapping("setBackgroundImage:forState:barMetrics:")
-    public native void setBackgroundImage(UIImage backgroundImage, @Representing("UIControlState") @MachineSizedUInt long state, @Representing("UIBarMetrics") @MachineSizedSInt long barMetrics);
+    public native void setBackgroundImage(UIImage backgroundImage, @Representing("UIControlState") long state, @Representing("UIBarMetrics") long barMetrics);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @Mapping("backgroundImageForState:barMetrics:")
-    public native UIImage getBackgroundImage(@Representing("UIControlState") @MachineSizedUInt long state, @Representing("UIBarMetrics") @MachineSizedSInt long barMetrics);
+    public native UIImage getBackgroundImage(@Representing("UIControlState") long state, @Representing("UIBarMetrics") long barMetrics);
     /**
      * @since Available in iOS 6.0 and later.
      */
     @Mapping("setBackgroundImage:forState:style:barMetrics:")
-    public native void setBackgroundImage(UIImage backgroundImage, @Representing("UIControlState") @MachineSizedUInt long state, @Representing("UIBarButtonItemStyle") @MachineSizedSInt long style, @Representing("UIBarMetrics") @MachineSizedSInt long barMetrics);
+    public native void setBackgroundImage(UIImage backgroundImage, @Representing("UIControlState") long state, @Representing("UIBarButtonItemStyle") long style, @Representing("UIBarMetrics") long barMetrics);
     /**
      * @since Available in iOS 6.0 and later.
      */
     @Mapping("backgroundImageForState:style:barMetrics:")
-    public native UIImage getBackgroundImage(@Representing("UIControlState") @MachineSizedUInt long state, @Representing("UIBarButtonItemStyle") @MachineSizedSInt long style, @Representing("UIBarMetrics") @MachineSizedSInt long barMetrics);
+    public native UIImage getBackgroundImage(@Representing("UIControlState") long state, @Representing("UIBarButtonItemStyle") long style, @Representing("UIBarMetrics") long barMetrics);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @Mapping("setBackgroundVerticalPositionAdjustment:forBarMetrics:")
-    public native void setBackgroundVerticalPositionAdjustment(@MachineSizedFloat double adjustment, @Representing("UIBarMetrics") @MachineSizedSInt long barMetrics);
+    public native void setBackgroundVerticalPositionAdjustment(@MachineSizedFloat double adjustment, @Representing("UIBarMetrics") long barMetrics);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @Mapping("backgroundVerticalPositionAdjustmentForBarMetrics:")
-    public native @MachineSizedFloat double getBackgroundVerticalPositionAdjustment(@Representing("UIBarMetrics") @MachineSizedSInt long barMetrics);
+    public native @MachineSizedFloat double getBackgroundVerticalPositionAdjustment(@Representing("UIBarMetrics") long barMetrics);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @Mapping("setTitlePositionAdjustment:forBarMetrics:")
-    public native void setTitlePositionAdjustment(UIOffset adjustment, @Representing("UIBarMetrics") @MachineSizedSInt long barMetrics);
+    public native void setTitlePositionAdjustment(UIOffset adjustment, @Representing("UIBarMetrics") long barMetrics);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @Mapping("titlePositionAdjustmentForBarMetrics:")
-    public native UIOffset getTitlePositionAdjustment(@Representing("UIBarMetrics") @MachineSizedSInt long barMetrics);
+    public native UIOffset getTitlePositionAdjustment(@Representing("UIBarMetrics") long barMetrics);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @Mapping("setBackButtonBackgroundImage:forState:barMetrics:")
-    public native void setBackButtonBackgroundImage(UIImage backgroundImage, @Representing("UIControlState") @MachineSizedUInt long state, @Representing("UIBarMetrics") @MachineSizedSInt long barMetrics);
+    public native void setBackButtonBackgroundImage(UIImage backgroundImage, @Representing("UIControlState") long state, @Representing("UIBarMetrics") long barMetrics);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @Mapping("backButtonBackgroundImageForState:barMetrics:")
-    public native UIImage getBackButtonBackgroundImage(@Representing("UIControlState") @MachineSizedUInt long state, @Representing("UIBarMetrics") @MachineSizedSInt long barMetrics);
+    public native UIImage getBackButtonBackgroundImage(@Representing("UIControlState") long state, @Representing("UIBarMetrics") long barMetrics);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @Mapping("setBackButtonTitlePositionAdjustment:forBarMetrics:")
-    public native void setBackButtonTitlePositionAdjustment(UIOffset adjustment, @Representing("UIBarMetrics") @MachineSizedSInt long barMetrics);
+    public native void setBackButtonTitlePositionAdjustment(UIOffset adjustment, @Representing("UIBarMetrics") long barMetrics);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @Mapping("backButtonTitlePositionAdjustmentForBarMetrics:")
-    public native UIOffset getBackButtonTitlePositionAdjustment(@Representing("UIBarMetrics") @MachineSizedSInt long barMetrics);
+    public native UIOffset getBackButtonTitlePositionAdjustment(@Representing("UIBarMetrics") long barMetrics);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @Mapping("setBackButtonBackgroundVerticalPositionAdjustment:forBarMetrics:")
-    public native void setBackButtonBackgroundVerticalPositionAdjustment(@MachineSizedFloat double adjustment, @Representing("UIBarMetrics") @MachineSizedSInt long barMetrics);
+    public native void setBackButtonBackgroundVerticalPositionAdjustment(@MachineSizedFloat double adjustment, @Representing("UIBarMetrics") long barMetrics);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @Mapping("backButtonBackgroundVerticalPositionAdjustmentForBarMetrics:")
-    public native @MachineSizedFloat double getBackButtonBackgroundVerticalPositionAdjustment(@Representing("UIBarMetrics") @MachineSizedSInt long barMetrics);
+    public native @MachineSizedFloat double getBackButtonBackgroundVerticalPositionAdjustment(@Representing("UIBarMetrics") long barMetrics);
     @Mapping("encodeWithCoder:")
     public native void encode(NSCoder aCoder);
     

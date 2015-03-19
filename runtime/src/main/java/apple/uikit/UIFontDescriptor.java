@@ -44,7 +44,7 @@ public class UIFontDescriptor
     @Mapping("matrix")
     public native CGAffineTransform getMatrix();
     @Mapping("symbolicTraits")
-    public native @Representing("UIFontDescriptorSymbolicTraits") int getSymbolicTraits();
+    public native @Representing("UIFontDescriptorSymbolicTraits") long getSymbolicTraits();
     
     
     
@@ -57,7 +57,7 @@ public class UIFontDescriptor
     @Mapping("fontDescriptorByAddingAttributes:")
     public native UIFontDescriptor newWithAttributes(NSDictionary<?, ?> attributes);
     @Mapping("fontDescriptorWithSymbolicTraits:")
-    public native UIFontDescriptor newWithSymbolicTraits(@Representing("UIFontDescriptorSymbolicTraits") int symbolicTraits);
+    public native UIFontDescriptor newWithSymbolicTraits(@Representing("UIFontDescriptorSymbolicTraits") long symbolicTraits);
     @Mapping("fontDescriptorWithSize:")
     public native UIFontDescriptor newWithSize(@MachineSizedFloat double newPointSize);
     @Mapping("fontDescriptorWithMatrix:")

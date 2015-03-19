@@ -39,7 +39,7 @@ public interface UIPageViewControllerDelegate
     @Mapping("pageViewController:didFinishAnimating:previousViewControllers:transitionCompleted:")
     void didFinishAnimating(UIPageViewController pageViewController, boolean finished, NSArray<?> previousViewControllers, boolean completed);
     @Mapping("pageViewController:spineLocationForInterfaceOrientation:")
-    @Representing("UIPageViewControllerSpineLocation") @MachineSizedSInt long getSpineLocation(UIPageViewController pageViewController, @Representing("UIInterfaceOrientation") @MachineSizedSInt long orientation);
+    @Representing("UIPageViewControllerSpineLocation") long getSpineLocation(UIPageViewController pageViewController, @Representing("UIInterfaceOrientation") long orientation);
     /**
      * @since Available in iOS 7.0 and later.
      */
@@ -49,7 +49,7 @@ public interface UIPageViewControllerDelegate
      * @since Available in iOS 7.0 and later.
      */
     @Mapping("pageViewControllerPreferredInterfaceOrientationForPresentation:")
-    @Representing("UIInterfaceOrientation") @MachineSizedSInt long getPreferredInterfaceOrientation(UIPageViewController pageViewController);
+    @Representing("UIInterfaceOrientation") long getPreferredInterfaceOrientation(UIPageViewController pageViewController);
     
     /*<adapter>*/
     /*</adapter>*/

@@ -38,9 +38,9 @@ public class NSURLSessionConfiguration
     @Mapping("identifier")
     public native String getIdentifier();
     @Mapping("requestCachePolicy")
-    public native @Representing("NSURLRequestCachePolicy") @MachineSizedUInt long getRequestCachePolicy();
+    public native @Representing("NSURLRequestCachePolicy") long getRequestCachePolicy();
     @Mapping("setRequestCachePolicy:")
-    public native void setRequestCachePolicy(@Representing("NSURLRequestCachePolicy") @MachineSizedUInt long v);
+    public native void setRequestCachePolicy(@Representing("NSURLRequestCachePolicy") long v);
     @Mapping("timeoutIntervalForRequest")
     public native double getTimeoutIntervalForRequest();
     @Mapping("setTimeoutIntervalForRequest:")
@@ -50,9 +50,9 @@ public class NSURLSessionConfiguration
     @Mapping("setTimeoutIntervalForResource:")
     public native void setTimeoutIntervalForResource(double v);
     @Mapping("networkServiceType")
-    public native @Representing("NSURLRequestNetworkServiceType") @MachineSizedUInt long getNetworkServiceType();
+    public native @Representing("NSURLRequestNetworkServiceType") long getNetworkServiceType();
     @Mapping("setNetworkServiceType:")
-    public native void setNetworkServiceType(@Representing("NSURLRequestNetworkServiceType") @MachineSizedUInt long v);
+    public native void setNetworkServiceType(@Representing("NSURLRequestNetworkServiceType") long v);
     @Mapping("allowsCellularAccess")
     public native boolean allowsCellularAccess();
     @Mapping("setAllowsCellularAccess:")
@@ -108,9 +108,9 @@ public class NSURLSessionConfiguration
     @Mapping("setHTTPShouldSetCookies:")
     public native void setShouldSetHTTPCookies(boolean v);
     @Mapping("HTTPCookieAcceptPolicy")
-    public native @Representing("NSHTTPCookieAcceptPolicy") @MachineSizedUInt long getHTTPCookieAcceptPolicy();
+    public native @Representing("NSHTTPCookieAcceptPolicy") long getHTTPCookieAcceptPolicy();
     @Mapping("setHTTPCookieAcceptPolicy:")
-    public native void setHTTPCookieAcceptPolicy(@Representing("NSHTTPCookieAcceptPolicy") @MachineSizedUInt long v);
+    public native void setHTTPCookieAcceptPolicy(@Representing("NSHTTPCookieAcceptPolicy") long v);
     @Mapping("HTTPAdditionalHeaders")
     public native Map<String, String> getGetAdditionalHTTPHeaders();
     @Mapping("setHTTPAdditionalHeaders:")

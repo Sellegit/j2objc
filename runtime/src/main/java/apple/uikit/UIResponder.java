@@ -112,17 +112,17 @@ public class UIResponder
      * @since Available in iOS 3.0 and later.
      */
     @Mapping("motionBegan:withEvent:")
-    public native void motionBegan(@Representing("UIEventSubtype") @MachineSizedSInt long motion, UIEvent event);
+    public native void motionBegan(@Representing("UIEventSubtype") long motion, UIEvent event);
     /**
      * @since Available in iOS 3.0 and later.
      */
     @Mapping("motionEnded:withEvent:")
-    public native void motionEnded(@Representing("UIEventSubtype") @MachineSizedSInt long motion, UIEvent event);
+    public native void motionEnded(@Representing("UIEventSubtype") long motion, UIEvent event);
     /**
      * @since Available in iOS 3.0 and later.
      */
     @Mapping("motionCancelled:withEvent:")
-    public native void motionCancelled(@Representing("UIEventSubtype") @MachineSizedSInt long motion, UIEvent event);
+    public native void motionCancelled(@Representing("UIEventSubtype") long motion, UIEvent event);
     /**
      * @since Available in iOS 4.0 and later.
      */

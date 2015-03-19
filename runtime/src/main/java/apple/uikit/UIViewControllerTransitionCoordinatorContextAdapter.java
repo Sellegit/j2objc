@@ -36,7 +36,7 @@ public abstract class UIViewControllerTransitionCoordinatorContextAdapter
     @NotImplemented("isAnimated")
     public boolean isAnimated() { throw new UnsupportedOperationException(); }
     @NotImplemented("presentationStyle")
-    public @Representing("UIModalPresentationStyle") @MachineSizedSInt long getPresentationStyle() { throw new UnsupportedOperationException(); }
+    public @Representing("UIModalPresentationStyle") long getPresentationStyle() { throw new UnsupportedOperationException(); }
     @NotImplemented("initiallyInteractive")
     public boolean isInitiallyInteractive() { throw new UnsupportedOperationException(); }
     @NotImplemented("isInteractive")
@@ -50,7 +50,7 @@ public abstract class UIViewControllerTransitionCoordinatorContextAdapter
     @NotImplemented("completionVelocity")
     public @MachineSizedFloat double getCompletionVelocity() { throw new UnsupportedOperationException(); }
     @NotImplemented("completionCurve")
-    public @Representing("UIViewAnimationCurve") @MachineSizedSInt long getCompletionCurve() { throw new UnsupportedOperationException(); }
+    public @Representing("UIViewAnimationCurve") long getCompletionCurve() { throw new UnsupportedOperationException(); }
     @NotImplemented("viewControllerForKey:")
     public UIViewController getViewController(String key) { throw new UnsupportedOperationException(); }
     /**

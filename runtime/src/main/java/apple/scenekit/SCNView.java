@@ -55,9 +55,9 @@ public class SCNView
     @Mapping("setPreferredFramesPerSecond:")
     public native void setPreferredFramesPerSecond(@MachineSizedSInt long v);
     @Mapping("antialiasingMode")
-    public native @Representing("SCNAntialiasingMode") @MachineSizedUInt long getAntialiasingMode();
+    public native @Representing("SCNAntialiasingMode") long getAntialiasingMode();
     @Mapping("setAntialiasingMode:")
-    public native void setAntialiasingMode(@Representing("SCNAntialiasingMode") @MachineSizedUInt long v);
+    public native void setAntialiasingMode(@Representing("SCNAntialiasingMode") long v);
     @Mapping("sceneTime")
     public native double getSceneTime();
     @Mapping("setSceneTime:")

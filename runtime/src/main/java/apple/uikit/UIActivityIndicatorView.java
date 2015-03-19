@@ -32,17 +32,19 @@ public class UIActivityIndicatorView
     
     
     @Mapping("initWithActivityIndicatorStyle:")
-    public UIActivityIndicatorView(@Representing("UIActivityIndicatorViewStyle") @MachineSizedSInt long style) { }
+    public UIActivityIndicatorView(@Representing("UIActivityIndicatorViewStyle") long style) { }
     @Mapping("initWithFrame:")
     public UIActivityIndicatorView(CGRect frame) { }
+    @Mapping("initWithCoder:")
+    public UIActivityIndicatorView(NSCoder aDecoder) { }
     @Mapping("init")
     public UIActivityIndicatorView() { }
     
     
     @Mapping("activityIndicatorViewStyle")
-    public native @Representing("UIActivityIndicatorViewStyle") @MachineSizedSInt long getActivityIndicatorViewStyle();
+    public native @Representing("UIActivityIndicatorViewStyle") long getActivityIndicatorViewStyle();
     @Mapping("setActivityIndicatorViewStyle:")
-    public native void setActivityIndicatorViewStyle(@Representing("UIActivityIndicatorViewStyle") @MachineSizedSInt long v);
+    public native void setActivityIndicatorViewStyle(@Representing("UIActivityIndicatorViewStyle") long v);
     @Mapping("hidesWhenStopped")
     public native boolean hidesWhenStopped();
     @Mapping("setHidesWhenStopped:")

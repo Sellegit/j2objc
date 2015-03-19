@@ -32,7 +32,7 @@ public interface NSStreamDelegate
     
     
     @Mapping("stream:handleEvent:")
-    void handleEvent(NSStream aStream, @Representing("NSStreamEvent") @MachineSizedUInt long eventCode);
+    void handleEvent(NSStream aStream, @Representing("NSStreamEvent") long eventCode);
     
     /*<adapter>*/
     /*</adapter>*/

@@ -36,13 +36,13 @@ public class UITraitCollection
     
     
     @Mapping("userInterfaceIdiom")
-    public native @Representing("UIUserInterfaceIdiom") @MachineSizedSInt long getUserInterfaceIdiom();
+    public native @Representing("UIUserInterfaceIdiom") long getUserInterfaceIdiom();
     @Mapping("displayScale")
     public native @MachineSizedFloat double getDisplayScale();
     @Mapping("horizontalSizeClass")
-    public native @Representing("UIUserInterfaceSizeClass") @MachineSizedSInt long getHorizontalSizeClass();
+    public native @Representing("UIUserInterfaceSizeClass") long getHorizontalSizeClass();
     @Mapping("verticalSizeClass")
-    public native @Representing("UIUserInterfaceSizeClass") @MachineSizedSInt long getVerticalSizeClass();
+    public native @Representing("UIUserInterfaceSizeClass") long getVerticalSizeClass();
     
     
     
@@ -51,13 +51,13 @@ public class UITraitCollection
     @Mapping("traitCollectionWithTraitsFromCollections:")
     public static native UITraitCollection createWithTraits(NSArray<?> traitCollections);
     @Mapping("traitCollectionWithUserInterfaceIdiom:")
-    public static native UITraitCollection createWithUserInterfaceIdiom(@Representing("UIUserInterfaceIdiom") @MachineSizedSInt long idiom);
+    public static native UITraitCollection createWithUserInterfaceIdiom(@Representing("UIUserInterfaceIdiom") long idiom);
     @Mapping("traitCollectionWithDisplayScale:")
     public static native UITraitCollection createWithDisplayScale(@MachineSizedFloat double scale);
     @Mapping("traitCollectionWithHorizontalSizeClass:")
-    public static native UITraitCollection createWithHorizontalSizeClass(@Representing("UIUserInterfaceSizeClass") @MachineSizedSInt long horizontalSizeClass);
+    public static native UITraitCollection createWithHorizontalSizeClass(@Representing("UIUserInterfaceSizeClass") long horizontalSizeClass);
     @Mapping("traitCollectionWithVerticalSizeClass:")
-    public static native UITraitCollection createWithVerticalSizeClass(@Representing("UIUserInterfaceSizeClass") @MachineSizedSInt long verticalSizeClass);
+    public static native UITraitCollection createWithVerticalSizeClass(@Representing("UIUserInterfaceSizeClass") long verticalSizeClass);
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
     

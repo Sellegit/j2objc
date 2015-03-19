@@ -35,6 +35,8 @@ public class UIVisualEffectView
     public UIVisualEffectView(UIVisualEffect effect) { }
     @Mapping("initWithFrame:")
     public UIVisualEffectView(CGRect frame) { }
+    @Mapping("initWithCoder:")
+    public UIVisualEffectView(NSCoder aDecoder) { }
     @Mapping("init")
     public UIVisualEffectView() { }
     

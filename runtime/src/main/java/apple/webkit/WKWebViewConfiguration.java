@@ -60,9 +60,9 @@ public class WKWebViewConfiguration
     @Mapping("setMediaPlaybackAllowsAirPlay:")
     public native void setMediaPlaybackAllowsAirPlay(boolean v);
     @Mapping("selectionGranularity")
-    public native @Representing("WKSelectionGranularity") @MachineSizedSInt long getSelectionGranularity();
+    public native @Representing("WKSelectionGranularity") long getSelectionGranularity();
     @Mapping("setSelectionGranularity:")
-    public native void setSelectionGranularity(@Representing("WKSelectionGranularity") @MachineSizedSInt long v);
+    public native void setSelectionGranularity(@Representing("WKSelectionGranularity") long v);
     
     
     

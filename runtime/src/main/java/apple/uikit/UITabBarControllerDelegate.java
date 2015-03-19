@@ -59,7 +59,7 @@ public interface UITabBarControllerDelegate
      * @since Available in iOS 7.0 and later.
      */
     @Mapping("tabBarControllerPreferredInterfaceOrientationForPresentation:")
-    @Representing("UIInterfaceOrientation") @MachineSizedSInt long getPreferredInterfaceOrientation(UITabBarController tabBarController);
+    @Representing("UIInterfaceOrientation") long getPreferredInterfaceOrientation(UITabBarController tabBarController);
     /**
      * @since Available in iOS 7.0 and later.
      */

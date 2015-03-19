@@ -33,14 +33,16 @@ public class UIDatePicker
     
     @Mapping("initWithFrame:")
     public UIDatePicker(CGRect frame) { }
+    @Mapping("initWithCoder:")
+    public UIDatePicker(NSCoder aDecoder) { }
     @Mapping("init")
     public UIDatePicker() { }
     
     
     @Mapping("datePickerMode")
-    public native @Representing("UIDatePickerMode") @MachineSizedSInt long getDatePickerMode();
+    public native @Representing("UIDatePickerMode") long getDatePickerMode();
     @Mapping("setDatePickerMode:")
-    public native void setDatePickerMode(@Representing("UIDatePickerMode") @MachineSizedSInt long v);
+    public native void setDatePickerMode(@Representing("UIDatePickerMode") long v);
     @Mapping("locale")
     public native NSLocale getLocale();
     @Mapping("setLocale:")

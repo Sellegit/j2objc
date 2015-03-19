@@ -27,7 +27,7 @@ public class HKStatisticsCollectionQuery
     
     
     @Mapping("initWithQuantityType:quantitySamplePredicate:options:anchorDate:intervalComponents:")
-    public HKStatisticsCollectionQuery(HKQuantityType quantityType, NSPredicate quantitySamplePredicate, @Representing("HKStatisticsOptions") @MachineSizedUInt long options, NSDate anchorDate, NSDateComponents intervalComponents) { }
+    public HKStatisticsCollectionQuery(HKQuantityType quantityType, NSPredicate quantitySamplePredicate, @Representing("HKStatisticsOptions") long options, NSDate anchorDate, NSDateComponents intervalComponents) { }
     @Mapping("init")
     public HKStatisticsCollectionQuery() { }
     
@@ -35,7 +35,7 @@ public class HKStatisticsCollectionQuery
     @Mapping("anchorDate")
     public native NSDate getAnchorDate();
     @Mapping("options")
-    public native @Representing("HKStatisticsOptions") @MachineSizedUInt long getOptions();
+    public native @Representing("HKStatisticsOptions") long getOptions();
     @Mapping("intervalComponents")
     public native NSDateComponents getIntervalComponents();
     @Mapping("initialResultsHandler")

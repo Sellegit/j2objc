@@ -29,35 +29,35 @@ public interface UITextInputTraits
     
     
     @Mapping("autocapitalizationType")
-    @Representing("UITextAutocapitalizationType") @MachineSizedSInt long getAutocapitalizationType();
+    @Representing("UITextAutocapitalizationType") long getAutocapitalizationType();
     @Mapping("setAutocapitalizationType:")
-    void setAutocapitalizationType(@Representing("UITextAutocapitalizationType") @MachineSizedSInt long v);
+    void setAutocapitalizationType(@Representing("UITextAutocapitalizationType") long v);
     @Mapping("autocorrectionType")
-    @Representing("UITextAutocorrectionType") @MachineSizedSInt long getAutocorrectionType();
+    @Representing("UITextAutocorrectionType") long getAutocorrectionType();
     @Mapping("setAutocorrectionType:")
-    void setAutocorrectionType(@Representing("UITextAutocorrectionType") @MachineSizedSInt long v);
+    void setAutocorrectionType(@Representing("UITextAutocorrectionType") long v);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @Mapping("spellCheckingType")
-    @Representing("UITextSpellCheckingType") @MachineSizedSInt long getSpellCheckingType();
+    @Representing("UITextSpellCheckingType") long getSpellCheckingType();
     /**
      * @since Available in iOS 5.0 and later.
      */
     @Mapping("setSpellCheckingType:")
-    void setSpellCheckingType(@Representing("UITextSpellCheckingType") @MachineSizedSInt long v);
+    void setSpellCheckingType(@Representing("UITextSpellCheckingType") long v);
     @Mapping("keyboardType")
-    @Representing("UIKeyboardType") @MachineSizedSInt long getKeyboardType();
+    @Representing("UIKeyboardType") long getKeyboardType();
     @Mapping("setKeyboardType:")
-    void setKeyboardType(@Representing("UIKeyboardType") @MachineSizedSInt long v);
+    void setKeyboardType(@Representing("UIKeyboardType") long v);
     @Mapping("keyboardAppearance")
-    @Representing("UIKeyboardAppearance") @MachineSizedSInt long getKeyboardAppearance();
+    @Representing("UIKeyboardAppearance") long getKeyboardAppearance();
     @Mapping("setKeyboardAppearance:")
-    void setKeyboardAppearance(@Representing("UIKeyboardAppearance") @MachineSizedSInt long v);
+    void setKeyboardAppearance(@Representing("UIKeyboardAppearance") long v);
     @Mapping("returnKeyType")
-    @Representing("UIReturnKeyType") @MachineSizedSInt long getReturnKeyType();
+    @Representing("UIReturnKeyType") long getReturnKeyType();
     @Mapping("setReturnKeyType:")
-    void setReturnKeyType(@Representing("UIReturnKeyType") @MachineSizedSInt long v);
+    void setReturnKeyType(@Representing("UIReturnKeyType") long v);
     @Mapping("enablesReturnKeyAutomatically")
     boolean enablesReturnKeyAutomatically();
     @Mapping("setEnablesReturnKeyAutomatically:")

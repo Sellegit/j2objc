@@ -32,13 +32,13 @@ public class NSExpression
     
     
     @Mapping("initWithExpressionType:")
-    public NSExpression(@Representing("NSExpressionType") @MachineSizedUInt long type) { }
+    public NSExpression(@Representing("NSExpressionType") long type) { }
     @Mapping("init")
     public NSExpression() { }
     
     
     @Mapping("expressionType")
-    public native @Representing("NSExpressionType") @MachineSizedUInt long getExpressionType();
+    public native @Representing("NSExpressionType") long getExpressionType();
     @Mapping("constantValue")
     public native Object getConstantValue();
     @Mapping("keyPath")

@@ -41,7 +41,7 @@ public class HKQuery
     @Mapping("predicateForObjectsWithMetadataKey:allowedValues:")
     public static native NSPredicate createPredicateForObjectsWithMetadata(String key, NSArray<?> allowedValues);
     @Mapping("predicateForObjectsWithMetadataKey:operatorType:value:")
-    public static native NSPredicate createPredicateForObjectsWithMetadata(String key, @Representing("NSPredicateOperatorType") @MachineSizedUInt long operatorType, Object value);
+    public static native NSPredicate createPredicateForObjectsWithMetadata(String key, @Representing("NSPredicateOperatorType") long operatorType, Object value);
     @Mapping("predicateForObjectsFromSource:")
     public static native NSPredicate createPredicateForObjectsFromSource(HKSource source);
     @Mapping("predicateForObjectsFromSources:")
@@ -55,18 +55,18 @@ public class HKQuery
     @Mapping("predicateForObjectsFromWorkout:")
     public static native NSPredicate createPredicateForObjectsFromWorkout(HKWorkout workout);
     @Mapping("predicateForSamplesWithStartDate:endDate:options:")
-    public static native NSPredicate createPredicateForSamplesWithDate(NSDate startDate, NSDate endDate, @Representing("HKQueryOptions") @MachineSizedUInt long options);
+    public static native NSPredicate createPredicateForSamplesWithDate(NSDate startDate, NSDate endDate, @Representing("HKQueryOptions") long options);
     @Mapping("predicateForQuantitySamplesWithOperatorType:quantity:")
-    public static native NSPredicate createPredicateForQuantitySamplesWithQuantity(@Representing("NSPredicateOperatorType") @MachineSizedUInt long operatorType, HKQuantity quantity);
+    public static native NSPredicate createPredicateForQuantitySamplesWithQuantity(@Representing("NSPredicateOperatorType") long operatorType, HKQuantity quantity);
     @Mapping("predicateForCategorySamplesWithOperatorType:value:")
-    public static native NSPredicate createPredicateForCategorySamplesWithValue(@Representing("NSPredicateOperatorType") @MachineSizedUInt long operatorType, @MachineSizedSInt long value);
+    public static native NSPredicate createPredicateForCategorySamplesWithValue(@Representing("NSPredicateOperatorType") long operatorType, @MachineSizedSInt long value);
     @Mapping("predicateForWorkoutsWithWorkoutActivityType:")
-    public static native NSPredicate createPredicateForWorkoutsWithActivityType(@Representing("HKWorkoutActivityType") @MachineSizedUInt long workoutActivityType);
+    public static native NSPredicate createPredicateForWorkoutsWithActivityType(@Representing("HKWorkoutActivityType") long workoutActivityType);
     @Mapping("predicateForWorkoutsWithOperatorType:duration:")
-    public static native NSPredicate createPredicateForWorkoutsWithDuration(@Representing("NSPredicateOperatorType") @MachineSizedUInt long operatorType, double duration);
+    public static native NSPredicate createPredicateForWorkoutsWithDuration(@Representing("NSPredicateOperatorType") long operatorType, double duration);
     @Mapping("predicateForWorkoutsWithOperatorType:totalEnergyBurned:")
-    public static native NSPredicate createPredicateForWorkoutsWithTotalEnergyBurned(@Representing("NSPredicateOperatorType") @MachineSizedUInt long operatorType, HKQuantity totalEnergyBurned);
+    public static native NSPredicate createPredicateForWorkoutsWithTotalEnergyBurned(@Representing("NSPredicateOperatorType") long operatorType, HKQuantity totalEnergyBurned);
     @Mapping("predicateForWorkoutsWithOperatorType:totalDistance:")
-    public static native NSPredicate createPredicateForWorkoutsWithTotalDistance(@Representing("NSPredicateOperatorType") @MachineSizedUInt long operatorType, HKQuantity totalDistance);
+    public static native NSPredicate createPredicateForWorkoutsWithTotalDistance(@Representing("NSPredicateOperatorType") long operatorType, HKQuantity totalDistance);
     
 }

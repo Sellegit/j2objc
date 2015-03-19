@@ -34,7 +34,7 @@ public class NEVPNConnection
      * @since Available in iOS 8.0 and later.
      */
     @Mapping("status")
-    public native @Representing("NEVPNStatus") @MachineSizedSInt long getStatus();
+    public native @Representing("NEVPNStatus") long getStatus();
     
     
     

@@ -44,9 +44,9 @@ public class UIMutableUserNotificationAction
     @Mapping("setTitle:")
     public native void setTitle(String v);
     @Mapping("activationMode")
-    public native @Representing("UIUserNotificationActivationMode") @MachineSizedUInt long getActivationMode();
+    public native @Representing("UIUserNotificationActivationMode") long getActivationMode();
     @Mapping("setActivationMode:")
-    public native void setActivationMode(@Representing("UIUserNotificationActivationMode") @MachineSizedUInt long v);
+    public native void setActivationMode(@Representing("UIUserNotificationActivationMode") long v);
     @Mapping("isAuthenticationRequired")
     public native boolean isAuthenticationRequired();
     @Mapping("setAuthenticationRequired:")

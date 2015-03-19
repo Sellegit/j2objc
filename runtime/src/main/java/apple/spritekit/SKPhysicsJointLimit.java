@@ -31,6 +31,8 @@ public class SKPhysicsJointLimit
 
     
     
+    @Mapping("initWithCoder:")
+    public SKPhysicsJointLimit(NSCoder aDecoder) { }
     @Mapping("init")
     public SKPhysicsJointLimit() { }
     

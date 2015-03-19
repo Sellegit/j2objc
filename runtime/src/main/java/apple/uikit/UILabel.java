@@ -33,6 +33,8 @@ public class UILabel
     
     @Mapping("initWithFrame:")
     public UILabel(CGRect frame) { }
+    @Mapping("initWithCoder:")
+    public UILabel(NSCoder aDecoder) { }
     @Mapping("init")
     public UILabel() { }
     
@@ -58,13 +60,13 @@ public class UILabel
     @Mapping("setShadowOffset:")
     public native void setShadowOffset(CGSize v);
     @Mapping("textAlignment")
-    public native @Representing("NSTextAlignment") @MachineSizedSInt long getTextAlignment();
+    public native @Representing("NSTextAlignment") long getTextAlignment();
     @Mapping("setTextAlignment:")
-    public native void setTextAlignment(@Representing("NSTextAlignment") @MachineSizedSInt long v);
+    public native void setTextAlignment(@Representing("NSTextAlignment") long v);
     @Mapping("lineBreakMode")
-    public native @Representing("NSLineBreakMode") @MachineSizedSInt long getLineBreakMode();
+    public native @Representing("NSLineBreakMode") long getLineBreakMode();
     @Mapping("setLineBreakMode:")
-    public native void setLineBreakMode(@Representing("NSLineBreakMode") @MachineSizedSInt long v);
+    public native void setLineBreakMode(@Representing("NSLineBreakMode") long v);
     /**
      * @since Available in iOS 6.0 and later.
      */
@@ -128,9 +130,9 @@ public class UILabel
     @Mapping("setMinimumFontSize:")
     public native void setMinimumFontSize(@MachineSizedFloat double v);
     @Mapping("baselineAdjustment")
-    public native @Representing("UIBaselineAdjustment") @MachineSizedSInt long getBaselineAdjustment();
+    public native @Representing("UIBaselineAdjustment") long getBaselineAdjustment();
     @Mapping("setBaselineAdjustment:")
-    public native void setBaselineAdjustment(@Representing("UIBaselineAdjustment") @MachineSizedSInt long v);
+    public native void setBaselineAdjustment(@Representing("UIBaselineAdjustment") long v);
     /**
      * @since Available in iOS 6.0 and later.
      */

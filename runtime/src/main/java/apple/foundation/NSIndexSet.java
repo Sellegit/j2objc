@@ -80,12 +80,12 @@ public class NSIndexSet
      * @since Available in iOS 4.0 and later.
      */
     @Mapping("enumerateIndexesWithOptions:usingBlock:")
-    public native void enumerateIndexes(@Representing("NSEnumerationOptions") @MachineSizedUInt long opts, @Block("(@MachineSizedUInt,)") VoidBlock2<Long, Todo> block);
+    public native void enumerateIndexes(@Representing("NSEnumerationOptions") long opts, @Block("(@MachineSizedUInt,)") VoidBlock2<Long, Todo> block);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @Mapping("enumerateIndexesInRange:options:usingBlock:")
-    public native void enumerateIndexesInRange(NSRange range, @Representing("NSEnumerationOptions") @MachineSizedUInt long opts, @Block("(@MachineSizedUInt,)") VoidBlock2<Long, Todo> block);
+    public native void enumerateIndexesInRange(NSRange range, @Representing("NSEnumerationOptions") long opts, @Block("(@MachineSizedUInt,)") VoidBlock2<Long, Todo> block);
     @Mapping("indexSet")
     public static native NSIndexSet create();
     @Mapping("indexSetWithIndex:")

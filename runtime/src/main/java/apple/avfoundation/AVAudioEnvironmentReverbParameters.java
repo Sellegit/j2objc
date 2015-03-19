@@ -50,6 +50,6 @@ public class AVAudioEnvironmentReverbParameters
     
     
     @Mapping("loadFactoryReverbPreset:")
-    public native void loadFactoryReverbPreset(@Representing("AVAudioUnitReverbPreset") @MachineSizedSInt long preset);
+    public native void loadFactoryReverbPreset(@Representing("AVAudioUnitReverbPreset") long preset);
     
 }

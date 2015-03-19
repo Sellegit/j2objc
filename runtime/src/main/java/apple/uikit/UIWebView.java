@@ -33,6 +33,8 @@ public class UIWebView
     
     @Mapping("initWithFrame:")
     public UIWebView(CGRect frame) { }
+    @Mapping("initWithCoder:")
+    public UIWebView(NSCoder aDecoder) { }
     @Mapping("init")
     public UIWebView() { }
     
@@ -62,12 +64,12 @@ public class UIWebView
      * @since Available in iOS 3.0 and later.
      */
     @Mapping("dataDetectorTypes")
-    public native @Representing("UIDataDetectorTypes") @MachineSizedUInt long getDataDetectorTypes();
+    public native @Representing("UIDataDetectorTypes") long getDataDetectorTypes();
     /**
      * @since Available in iOS 3.0 and later.
      */
     @Mapping("setDataDetectorTypes:")
-    public native void setDataDetectorTypes(@Representing("UIDataDetectorTypes") @MachineSizedUInt long v);
+    public native void setDataDetectorTypes(@Representing("UIDataDetectorTypes") long v);
     /**
      * @since Available in iOS 4.0 and later.
      */
@@ -122,22 +124,22 @@ public class UIWebView
      * @since Available in iOS 7.0 and later.
      */
     @Mapping("paginationMode")
-    public native @Representing("UIWebPaginationMode") @MachineSizedSInt long getPaginationMode();
+    public native @Representing("UIWebPaginationMode") long getPaginationMode();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @Mapping("setPaginationMode:")
-    public native void setPaginationMode(@Representing("UIWebPaginationMode") @MachineSizedSInt long v);
+    public native void setPaginationMode(@Representing("UIWebPaginationMode") long v);
     /**
      * @since Available in iOS 7.0 and later.
      */
     @Mapping("paginationBreakingMode")
-    public native @Representing("UIWebPaginationBreakingMode") @MachineSizedSInt long getPaginationBreakingMode();
+    public native @Representing("UIWebPaginationBreakingMode") long getPaginationBreakingMode();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @Mapping("setPaginationBreakingMode:")
-    public native void setPaginationBreakingMode(@Representing("UIWebPaginationBreakingMode") @MachineSizedSInt long v);
+    public native void setPaginationBreakingMode(@Representing("UIWebPaginationBreakingMode") long v);
     /**
      * @since Available in iOS 7.0 and later.
      */

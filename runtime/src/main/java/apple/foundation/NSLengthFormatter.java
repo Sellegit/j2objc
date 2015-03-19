@@ -42,9 +42,9 @@ public class NSLengthFormatter
     @Mapping("setNumberFormatter:")
     public native void setNumberFormatter(NSNumberFormatter v);
     @Mapping("unitStyle")
-    public native @Representing("NSFormattingUnitStyle") @MachineSizedSInt long getUnitStyle();
+    public native @Representing("NSFormattingUnitStyle") long getUnitStyle();
     @Mapping("setUnitStyle:")
-    public native void setUnitStyle(@Representing("NSFormattingUnitStyle") @MachineSizedSInt long v);
+    public native void setUnitStyle(@Representing("NSFormattingUnitStyle") long v);
     @Mapping("isForPersonHeightUse")
     public native boolean isForPersonHeightUse();
     @Mapping("setForPersonHeightUse:")
@@ -53,11 +53,11 @@ public class NSLengthFormatter
     
     
     @Mapping("stringFromValue:unit:")
-    public native String format(double value, @Representing("NSLengthFormatterUnit") @MachineSizedSInt long unit);
+    public native String format(double value, @Representing("NSLengthFormatterUnit") long unit);
     @Mapping("stringFromMeters:")
     public native String formatMeters(double numberInMeters);
     @Mapping("unitStringFromValue:unit:")
-    public native String formatUnit(double value, @Representing("NSLengthFormatterUnit") @MachineSizedSInt long unit);
+    public native String formatUnit(double value, @Representing("NSLengthFormatterUnit") long unit);
     @Mapping("unitStringFromMeters:usedUnit:")
     public native String formatUnitMeters(double numberInMeters, Todo unitp);
     

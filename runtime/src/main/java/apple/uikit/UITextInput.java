@@ -51,9 +51,9 @@ public interface UITextInput
     @Mapping("textInputView")
     UIView getTextInputView();
     @Mapping("selectionAffinity")
-    @Representing("UITextStorageDirection") @MachineSizedSInt long getSelectionAffinity();
+    @Representing("UITextStorageDirection") long getSelectionAffinity();
     @Mapping("setSelectionAffinity:")
-    void setSelectionAffinity(@Representing("UITextStorageDirection") @MachineSizedSInt long v);
+    void setSelectionAffinity(@Representing("UITextStorageDirection") long v);
     
     
     @Mapping("textInRange:")
@@ -69,19 +69,19 @@ public interface UITextInput
     @Mapping("positionFromPosition:offset:")
     UITextPosition getPositionFromPosition(UITextPosition position, @MachineSizedSInt long offset);
     @Mapping("positionFromPosition:inDirection:offset:")
-    UITextPosition getPositionFromPosition(UITextPosition position, @Representing("UITextLayoutDirection") @MachineSizedSInt long direction, @MachineSizedSInt long offset);
+    UITextPosition getPositionFromPosition(UITextPosition position, @Representing("UITextLayoutDirection") long direction, @MachineSizedSInt long offset);
     @Mapping("comparePosition:toPosition:")
-    @Representing("NSComparisonResult") @MachineSizedSInt long comparePositions(UITextPosition position, UITextPosition other);
+    @Representing("NSComparisonResult") long comparePositions(UITextPosition position, UITextPosition other);
     @Mapping("offsetFromPosition:toPosition:")
     @MachineSizedSInt long getOffset(UITextPosition from, UITextPosition toPosition);
     @Mapping("positionWithinRange:farthestInDirection:")
-    UITextPosition getPositionWithinRangeFarthestInDirection(UITextRange range, @Representing("UITextLayoutDirection") @MachineSizedSInt long direction);
+    UITextPosition getPositionWithinRangeFarthestInDirection(UITextRange range, @Representing("UITextLayoutDirection") long direction);
     @Mapping("characterRangeByExtendingPosition:inDirection:")
-    UITextRange getCharacterRange(UITextPosition position, @Representing("UITextLayoutDirection") @MachineSizedSInt long direction);
+    UITextRange getCharacterRange(UITextPosition position, @Representing("UITextLayoutDirection") long direction);
     @Mapping("baseWritingDirectionForPosition:inDirection:")
-    @Representing("UITextWritingDirection") @MachineSizedSInt long getBaseWritingDirection(UITextPosition position, @Representing("UITextStorageDirection") @MachineSizedSInt long direction);
+    @Representing("UITextWritingDirection") long getBaseWritingDirection(UITextPosition position, @Representing("UITextStorageDirection") long direction);
     @Mapping("setBaseWritingDirection:forRange:")
-    void setBaseWritingDirection(@Representing("UITextWritingDirection") @MachineSizedSInt long writingDirection, UITextRange range);
+    void setBaseWritingDirection(@Representing("UITextWritingDirection") long writingDirection, UITextRange range);
     @Mapping("firstRectForRange:")
     CGRect getFirstRect(UITextRange range);
     @Mapping("caretRectForPosition:")
@@ -103,7 +103,7 @@ public interface UITextInput
     @Mapping("shouldChangeTextInRange:replacementText:")
     boolean shouldChangeText(UITextRange range, String text);
     @Mapping("textStylingAtPosition:inDirection:")
-    UITextInputTextStyle getTextStyling(UITextPosition position, @Representing("UITextStorageDirection") @MachineSizedSInt long direction);
+    UITextInputTextStyle getTextStyling(UITextPosition position, @Representing("UITextStorageDirection") long direction);
     @Mapping("positionWithinRange:atCharacterOffset:")
     UITextPosition getPositionWithinRangeAtCharacterOffset(UITextRange range, @MachineSizedSInt long offset);
     @Mapping("characterOffsetOfPosition:withinRange:")

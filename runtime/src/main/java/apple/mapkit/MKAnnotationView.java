@@ -93,12 +93,12 @@ public class MKAnnotationView
      * @since Available in iOS 4.0 and later.
      */
     @Mapping("dragState")
-    public native @Representing("MKAnnotationViewDragState") @MachineSizedUInt long getDragState();
+    public native @Representing("MKAnnotationViewDragState") long getDragState();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @Mapping("setDragState:")
-    public native void setDragState(@Representing("MKAnnotationViewDragState") @MachineSizedUInt long v);
+    public native void setDragState(@Representing("MKAnnotationViewDragState") long v);
     
     
     
@@ -110,6 +110,6 @@ public class MKAnnotationView
      * @since Available in iOS 4.2 and later.
      */
     @Mapping("setDragState:animated:")
-    public native void setDragState(@Representing("MKAnnotationViewDragState") @MachineSizedUInt long newDragState, boolean animated);
+    public native void setDragState(@Representing("MKAnnotationViewDragState") long newDragState, boolean animated);
     
 }

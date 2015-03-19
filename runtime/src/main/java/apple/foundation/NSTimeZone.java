@@ -88,7 +88,7 @@ public class NSTimeZone
      * @since Available in iOS 2.0 and later.
      */
     @Mapping("localizedName:locale:")
-    public native String getLocalizedName(@Representing("NSTimeZoneNameStyle") @MachineSizedSInt long style, NSLocale locale);
+    public native String getLocalizedName(@Representing("NSTimeZoneNameStyle") long style, NSLocale locale);
     @Mapping("systemTimeZone")
     public static native NSTimeZone getSystemTimeZone();
     @Mapping("resetSystemTimeZone")

@@ -33,6 +33,8 @@ public class UIAlertView
     
     @Mapping("initWithFrame:")
     public UIAlertView(CGRect frame) { }
+    @Mapping("initWithCoder:")
+    public UIAlertView(NSCoder aDecoder) { }
     @Mapping("init")
     public UIAlertView() { }
     
@@ -63,12 +65,12 @@ public class UIAlertView
      * @since Available in iOS 5.0 and later.
      */
     @Mapping("alertViewStyle")
-    public native @Representing("UIAlertViewStyle") @MachineSizedSInt long getAlertViewStyle();
+    public native @Representing("UIAlertViewStyle") long getAlertViewStyle();
     /**
      * @since Available in iOS 5.0 and later.
      */
     @Mapping("setAlertViewStyle:")
-    public native void setAlertViewStyle(@Representing("UIAlertViewStyle") @MachineSizedSInt long v);
+    public native void setAlertViewStyle(@Representing("UIAlertViewStyle") long v);
     
     
     

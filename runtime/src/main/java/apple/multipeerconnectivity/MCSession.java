@@ -31,7 +31,7 @@ public class MCSession
     @Mapping("initWithPeer:")
     public MCSession(MCPeerID myPeerID) { }
     @Mapping("initWithPeer:securityIdentity:encryptionPreference:")
-    public MCSession(MCPeerID myPeerID, NSArray<?> identity, @Representing("MCEncryptionPreference") @MachineSizedSInt long encryptionPreference) { }
+    public MCSession(MCPeerID myPeerID, NSArray<?> identity, @Representing("MCEncryptionPreference") long encryptionPreference) { }
     @Mapping("init")
     public MCSession() { }
     
@@ -45,7 +45,7 @@ public class MCSession
     @Mapping("securityIdentity")
     public native List<SecIdentity> getSecurityIdentity();
     @Mapping("encryptionPreference")
-    public native @Representing("MCEncryptionPreference") @MachineSizedSInt long getEncryptionPreference();
+    public native @Representing("MCEncryptionPreference") long getEncryptionPreference();
     @Mapping("connectedPeers")
     public native NSArray<MCPeerID> getConnectedPeers();
     
@@ -63,7 +63,7 @@ public class MCSession
     public static native @MachineSizedUInt long getMaximumNumberOfPeers();
     
     @Mapping("sendData:toPeers:withMode:error:")
-    public native boolean sendData(NSData data, NSArray<?> peerIDs, @Representing("MCSessionSendDataMode") @MachineSizedSInt long mode, Todo error);
+    public native boolean sendData(NSData data, NSArray<?> peerIDs, @Representing("MCSessionSendDataMode") long mode, Todo error);
     @Mapping("disconnect")
     public native void disconnect();
     @Mapping("sendResourceAtURL:withName:toPeer:withCompletionHandler:")

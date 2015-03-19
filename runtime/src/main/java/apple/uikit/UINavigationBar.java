@@ -33,14 +33,16 @@ public class UINavigationBar
     
     @Mapping("initWithFrame:")
     public UINavigationBar(CGRect frame) { }
+    @Mapping("initWithCoder:")
+    public UINavigationBar(NSCoder aDecoder) { }
     @Mapping("init")
     public UINavigationBar() { }
     
     
     @Mapping("barStyle")
-    public native @Representing("UIBarStyle") @MachineSizedSInt long getBarStyle();
+    public native @Representing("UIBarStyle") long getBarStyle();
     @Mapping("setBarStyle:")
-    public native void setBarStyle(@Representing("UIBarStyle") @MachineSizedSInt long v);
+    public native void setBarStyle(@Representing("UIBarStyle") long v);
     @Mapping("delegate")
     public native UINavigationBarDelegate getDelegate();
     @Mapping("setDelegate:")
@@ -118,7 +120,7 @@ public class UINavigationBar
     @Mapping("setBackIndicatorTransitionMaskImage:")
     public native void setBackIndicatorTransitionMaskImage(UIImage v);
     @Mapping("barPosition")
-    public native @Representing("UIBarPosition") @MachineSizedSInt long getBarPosition();
+    public native @Representing("UIBarPosition") long getBarPosition();
     
     
     
@@ -132,31 +134,31 @@ public class UINavigationBar
      * @since Available in iOS 7.0 and later.
      */
     @Mapping("setBackgroundImage:forBarPosition:barMetrics:")
-    public native void setBackgroundImage(UIImage backgroundImage, @Representing("UIBarPosition") @MachineSizedSInt long barPosition, @Representing("UIBarMetrics") @MachineSizedSInt long barMetrics);
+    public native void setBackgroundImage(UIImage backgroundImage, @Representing("UIBarPosition") long barPosition, @Representing("UIBarMetrics") long barMetrics);
     /**
      * @since Available in iOS 7.0 and later.
      */
     @Mapping("backgroundImageForBarPosition:barMetrics:")
-    public native UIImage getBackgroundImage(@Representing("UIBarPosition") @MachineSizedSInt long barPosition, @Representing("UIBarMetrics") @MachineSizedSInt long barMetrics);
+    public native UIImage getBackgroundImage(@Representing("UIBarPosition") long barPosition, @Representing("UIBarMetrics") long barMetrics);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @Mapping("setBackgroundImage:forBarMetrics:")
-    public native void setBackgroundImage(UIImage backgroundImage, @Representing("UIBarMetrics") @MachineSizedSInt long barMetrics);
+    public native void setBackgroundImage(UIImage backgroundImage, @Representing("UIBarMetrics") long barMetrics);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @Mapping("backgroundImageForBarMetrics:")
-    public native UIImage getBackgroundImage(@Representing("UIBarMetrics") @MachineSizedSInt long barMetrics);
+    public native UIImage getBackgroundImage(@Representing("UIBarMetrics") long barMetrics);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @Mapping("setTitleVerticalPositionAdjustment:forBarMetrics:")
-    public native void setTitleVerticalPositionAdjustment(@MachineSizedFloat double adjustment, @Representing("UIBarMetrics") @MachineSizedSInt long barMetrics);
+    public native void setTitleVerticalPositionAdjustment(@MachineSizedFloat double adjustment, @Representing("UIBarMetrics") long barMetrics);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @Mapping("titleVerticalPositionAdjustmentForBarMetrics:")
-    public native @MachineSizedFloat double getTitleVerticalPositionAdjustment(@Representing("UIBarMetrics") @MachineSizedSInt long barMetrics);
+    public native @MachineSizedFloat double getTitleVerticalPositionAdjustment(@Representing("UIBarMetrics") long barMetrics);
     
 }

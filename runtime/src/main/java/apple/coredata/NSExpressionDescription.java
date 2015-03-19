@@ -26,6 +26,8 @@ public class NSExpressionDescription
 
     
     
+    @Mapping("initWithCoder:")
+    public NSExpressionDescription(NSCoder aDecoder) { }
     @Mapping("init")
     public NSExpressionDescription() { }
     
@@ -35,9 +37,9 @@ public class NSExpressionDescription
     @Mapping("setExpression:")
     public native void setExpression(NSExpression v);
     @Mapping("expressionResultType")
-    public native @Representing("NSAttributeType") @MachineSizedUInt long getExpressionResultType();
+    public native @Representing("NSAttributeType") long getExpressionResultType();
     @Mapping("setExpressionResultType:")
-    public native void setExpressionResultType(@Representing("NSAttributeType") @MachineSizedUInt long v);
+    public native void setExpressionResultType(@Representing("NSAttributeType") long v);
     
     
     

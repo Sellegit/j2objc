@@ -33,6 +33,8 @@ public class UISplitViewController
     
     @Mapping("initWithNibName:bundle:")
     public UISplitViewController(String nibNameOrNil, NSBundle nibBundleOrNil) { }
+    @Mapping("initWithCoder:")
+    public UISplitViewController(NSCoder aDecoder) { }
     @Mapping("init")
     public UISplitViewController() { }
     
@@ -64,17 +66,17 @@ public class UISplitViewController
      * @since Available in iOS 8.0 and later.
      */
     @Mapping("preferredDisplayMode")
-    public native @Representing("UISplitViewControllerDisplayMode") @MachineSizedSInt long getPreferredDisplayMode();
+    public native @Representing("UISplitViewControllerDisplayMode") long getPreferredDisplayMode();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @Mapping("setPreferredDisplayMode:")
-    public native void setPreferredDisplayMode(@Representing("UISplitViewControllerDisplayMode") @MachineSizedSInt long v);
+    public native void setPreferredDisplayMode(@Representing("UISplitViewControllerDisplayMode") long v);
     /**
      * @since Available in iOS 8.0 and later.
      */
     @Mapping("displayMode")
-    public native @Representing("UISplitViewControllerDisplayMode") @MachineSizedSInt long getDisplayMode();
+    public native @Representing("UISplitViewControllerDisplayMode") long getDisplayMode();
     /**
      * @since Available in iOS 8.0 and later.
      */

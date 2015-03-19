@@ -36,7 +36,7 @@ public abstract class UIGuidedAccessRestrictionDelegateAdapter
     @NotImplemented("guidedAccessRestrictionIdentifiers")
     public List<String> getIdentifiers() { throw new UnsupportedOperationException(); }
     @NotImplemented("guidedAccessRestrictionWithIdentifier:didChangeState:")
-    public void didChangeState(String restrictionIdentifier, @Representing("UIGuidedAccessRestrictionState") @MachineSizedSInt long newRestrictionState) { throw new UnsupportedOperationException(); }
+    public void didChangeState(String restrictionIdentifier, @Representing("UIGuidedAccessRestrictionState") long newRestrictionState) { throw new UnsupportedOperationException(); }
     @NotImplemented("textForGuidedAccessRestrictionWithIdentifier:")
     public String getText(String restrictionIdentifier) { throw new UnsupportedOperationException(); }
     @NotImplemented("detailTextForGuidedAccessRestrictionWithIdentifier:")

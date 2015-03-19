@@ -35,7 +35,7 @@ public abstract class AVAsynchronousKeyValueLoadingAdapter
     
     
     @NotImplemented("statusOfValueForKey:error:")
-    public @Representing("AVKeyValueStatus") @MachineSizedSInt long getStatusOfValue(String key, Todo outError) { throw new UnsupportedOperationException(); }
+    public @Representing("AVKeyValueStatus") long getStatusOfValue(String key, Todo outError) { throw new UnsupportedOperationException(); }
     @NotImplemented("loadValuesAsynchronouslyForKeys:completionHandler:")
     public void loadValuesAsynchronously(NSArray<?> keys, @Block Runnable handler) { throw new UnsupportedOperationException(); }
     

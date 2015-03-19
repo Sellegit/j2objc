@@ -43,7 +43,7 @@ public class AVAssetWriter
     @Mapping("availableMediaTypes")
     public native List<AVMediaType> getAvailableMediaTypes();
     @Mapping("status")
-    public native @Representing("AVAssetWriterStatus") @MachineSizedSInt long getStatus();
+    public native @Representing("AVAssetWriterStatus") long getStatus();
     @Mapping("error")
     public native NSError getError();
     @Mapping("metadata")

@@ -64,12 +64,12 @@ public class EKCalendar
     @Mapping("setCGColor:")
     public native void setCGColor(CGColor v);
     @Mapping("supportedEventAvailabilities")
-    public native @Representing("EKCalendarEventAvailabilityMask") int getSupportedEventAvailabilities();
+    public native @Representing("EKCalendarEventAvailabilityMask") long getSupportedEventAvailabilities();
     /**
      * @since Available in iOS 6.0 and later.
      */
     @Mapping("allowedEntityTypes")
-    public native @Representing("EKEntityMask") int getAllowedEntityTypes();
+    public native @Representing("EKEntityMask") long getAllowedEntityTypes();
     
     
     
@@ -84,6 +84,6 @@ public class EKCalendar
      * @since Available in iOS 6.0 and later.
      */
     @Mapping("calendarForEntityType:eventStore:")
-    public static native EKCalendar create(@Representing("EKEntityType") int entityType, EKEventStore eventStore);
+    public static native EKCalendar create(@Representing("EKEntityType") long entityType, EKEventStore eventStore);
     
 }

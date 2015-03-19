@@ -65,9 +65,9 @@ public class UISimpleTextPrintFormatter
     @Mapping("setColor:")
     public native void setColor(UIColor v);
     @Mapping("textAlignment")
-    public native @Representing("NSTextAlignment") @MachineSizedSInt long getTextAlignment();
+    public native @Representing("NSTextAlignment") long getTextAlignment();
     @Mapping("setTextAlignment:")
-    public native void setTextAlignment(@Representing("NSTextAlignment") @MachineSizedSInt long v);
+    public native void setTextAlignment(@Representing("NSTextAlignment") long v);
     
     
     

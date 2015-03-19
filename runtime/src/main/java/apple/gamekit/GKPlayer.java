@@ -59,6 +59,6 @@ public class GKPlayer
      * @since Available in iOS 5.0 and later.
      */
     @Mapping("loadPhotoForSize:withCompletionHandler:")
-    public native void loadPhoto(@Representing("GKPhotoSize") int size, @Block VoidBlock2<UIImage, NSError> completionHandler);
+    public native void loadPhoto(@Representing("GKPhotoSize") long size, @Block VoidBlock2<UIImage, NSError> completionHandler);
     
 }

@@ -34,7 +34,7 @@ public interface UIViewControllerTransitionCoordinatorContext
     @Mapping("isAnimated")
     boolean isAnimated();
     @Mapping("presentationStyle")
-    @Representing("UIModalPresentationStyle") @MachineSizedSInt long getPresentationStyle();
+    @Representing("UIModalPresentationStyle") long getPresentationStyle();
     @Mapping("initiallyInteractive")
     boolean isInitiallyInteractive();
     @Mapping("isInteractive")
@@ -48,7 +48,7 @@ public interface UIViewControllerTransitionCoordinatorContext
     @Mapping("completionVelocity")
     @MachineSizedFloat double getCompletionVelocity();
     @Mapping("completionCurve")
-    @Representing("UIViewAnimationCurve") @MachineSizedSInt long getCompletionCurve();
+    @Representing("UIViewAnimationCurve") long getCompletionCurve();
     @Mapping("viewControllerForKey:")
     UIViewController getViewController(String key);
     /**

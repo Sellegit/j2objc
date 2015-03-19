@@ -64,12 +64,12 @@ public class NSFetchRequest
      * @since Available in iOS 3.0 and later.
      */
     @Mapping("resultType")
-    public native @Representing("NSFetchRequestResultType") @MachineSizedUInt long getResultType();
+    public native @Representing("NSFetchRequestResultType") long getResultType();
     /**
      * @since Available in iOS 3.0 and later.
      */
     @Mapping("setResultType:")
-    public native void setResultType(@Representing("NSFetchRequestResultType") @MachineSizedUInt long v);
+    public native void setResultType(@Representing("NSFetchRequestResultType") long v);
     /**
      * @since Available in iOS 3.0 and later.
      */

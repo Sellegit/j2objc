@@ -34,7 +34,7 @@ public class PKPass
      * @since Available in iOS 8.0 and later.
      */
     @Mapping("passType")
-    public native @Representing("PKPassType") @MachineSizedUInt long getPassType();
+    public native @Representing("PKPassType") long getPassType();
     /**
      * @since Available in iOS 8.0 and later.
      */

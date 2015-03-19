@@ -29,7 +29,7 @@ public interface MCSessionDelegate
     
     
     @Mapping("session:peer:didChangeState:")
-    void didChangeState(MCSession session, MCPeerID peerID, @Representing("MCSessionState") @MachineSizedSInt long state);
+    void didChangeState(MCSession session, MCPeerID peerID, @Representing("MCSessionState") long state);
     @Mapping("session:didReceiveData:fromPeer:")
     void didReceiveData(MCSession session, NSData data, MCPeerID peerID);
     @Mapping("session:didReceiveStream:withName:fromPeer:")

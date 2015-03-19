@@ -27,6 +27,8 @@ public class CATransition
 
     
     
+    @Mapping("initWithCoder:")
+    public CATransition(NSCoder aDecoder) { }
     @Mapping("init")
     public CATransition() { }
     

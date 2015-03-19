@@ -32,13 +32,13 @@ public interface UITextInputTokenizer
     
     
     @Mapping("rangeEnclosingPosition:withGranularity:inDirection:")
-    UITextRange getRangeEnclosingPosition(UITextPosition position, @Representing("UITextGranularity") @MachineSizedSInt long granularity, @MachineSizedSInt long direction);
+    UITextRange getRangeEnclosingPosition(UITextPosition position, @Representing("UITextGranularity") long granularity, @MachineSizedSInt long direction);
     @Mapping("isPosition:atBoundary:inDirection:")
-    boolean isPositionAtBoundary(UITextPosition position, @Representing("UITextGranularity") @MachineSizedSInt long granularity, @MachineSizedSInt long direction);
+    boolean isPositionAtBoundary(UITextPosition position, @Representing("UITextGranularity") long granularity, @MachineSizedSInt long direction);
     @Mapping("positionFromPosition:toBoundary:inDirection:")
-    UITextPosition getPosition(UITextPosition position, @Representing("UITextGranularity") @MachineSizedSInt long granularity, @MachineSizedSInt long direction);
+    UITextPosition getPosition(UITextPosition position, @Representing("UITextGranularity") long granularity, @MachineSizedSInt long direction);
     @Mapping("isPosition:withinTextUnit:inDirection:")
-    boolean isPositionWithinTextUnit(UITextPosition position, @Representing("UITextGranularity") @MachineSizedSInt long granularity, @MachineSizedSInt long direction);
+    boolean isPositionWithinTextUnit(UITextPosition position, @Representing("UITextGranularity") long granularity, @MachineSizedSInt long direction);
     
     /*<adapter>*/
     /*</adapter>*/

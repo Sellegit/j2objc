@@ -38,7 +38,7 @@ public class GKTurnBasedMatch
     @Mapping("participants")
     public native NSArray<GKTurnBasedParticipant> getParticipants();
     @Mapping("status")
-    public native @Representing("GKTurnBasedMatchStatus") @MachineSizedSInt long getStatus();
+    public native @Representing("GKTurnBasedMatchStatus") long getStatus();
     @Mapping("currentParticipant")
     public native GKTurnBasedParticipant getCurrentParticipant();
     @Mapping("matchData")
@@ -124,9 +124,9 @@ public class GKTurnBasedMatch
      * @since Available in iOS 6.0 and later.
      */
     @Mapping("participantQuitInTurnWithOutcome:nextParticipants:turnTimeout:matchData:completionHandler:")
-    public native void participantQuitInTurn(@Representing("GKTurnBasedMatchOutcome") @MachineSizedSInt long matchOutcome, NSArray<?> nextParticipants, double timeout, NSData matchData, @Block VoidBlock1<NSError> completionHandler);
+    public native void participantQuitInTurn(@Representing("GKTurnBasedMatchOutcome") long matchOutcome, NSArray<?> nextParticipants, double timeout, NSData matchData, @Block VoidBlock1<NSError> completionHandler);
     @Mapping("participantQuitOutOfTurnWithOutcome:withCompletionHandler:")
-    public native void participantQuitOutOfTurn(@Representing("GKTurnBasedMatchOutcome") @MachineSizedSInt long matchOutcome, @Block VoidBlock1<NSError> completionHandler);
+    public native void participantQuitOutOfTurn(@Representing("GKTurnBasedMatchOutcome") long matchOutcome, @Block VoidBlock1<NSError> completionHandler);
     @Mapping("endMatchInTurnWithMatchData:completionHandler:")
     public native void endMatch(NSData matchData, @Block VoidBlock1<NSError> completionHandler);
     /**
@@ -167,7 +167,7 @@ public class GKTurnBasedMatch
      */
     @Deprecated
     @Mapping("participantQuitInTurnWithOutcome:nextParticipant:matchData:completionHandler:")
-    public native void participantQuitInTurn(@Representing("GKTurnBasedMatchOutcome") @MachineSizedSInt long matchOutcome, GKTurnBasedParticipant nextParticipant, NSData matchData, @Block VoidBlock1<NSError> completionHandler);
+    public native void participantQuitInTurn(@Representing("GKTurnBasedMatchOutcome") long matchOutcome, GKTurnBasedParticipant nextParticipant, NSData matchData, @Block VoidBlock1<NSError> completionHandler);
     @Mapping("findMatchForRequest:withCompletionHandler:")
     public static native void findMatch(GKMatchRequest request, @Block VoidBlock2<GKTurnBasedMatch, NSError> completionHandler);
     @Mapping("loadMatchesWithCompletionHandler:")

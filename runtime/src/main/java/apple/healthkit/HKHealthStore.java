@@ -35,7 +35,7 @@ public class HKHealthStore
     
     
     @Mapping("authorizationStatusForType:")
-    public native @Representing("HKAuthorizationStatus") @MachineSizedSInt long getAuthorizationStatusForType(HKObjectType type);
+    public native @Representing("HKAuthorizationStatus") long getAuthorizationStatusForType(HKObjectType type);
     @Mapping("requestAuthorizationToShareTypes:readTypes:completion:")
     public native void requestAuthorizationToTypes(NSSet<?> typesToShare, NSSet<?> typesToRead, @Block VoidBlock2<Boolean, NSError> completion);
     @Mapping("saveObject:withCompletion:")
@@ -59,7 +59,7 @@ public class HKHealthStore
     @Mapping("addSamples:toWorkout:completion:")
     public native void addSamplesToWorkout(NSArray<?> samples, HKWorkout workout, @Block VoidBlock2<Boolean, NSError> completion);
     @Mapping("enableBackgroundDeliveryForType:frequency:withCompletion:")
-    public native void enableBackgroundDeliveryForType(HKObjectType type, @Representing("HKUpdateFrequency") @MachineSizedSInt long frequency, @Block VoidBlock2<Boolean, NSError> completion);
+    public native void enableBackgroundDeliveryForType(HKObjectType type, @Representing("HKUpdateFrequency") long frequency, @Block VoidBlock2<Boolean, NSError> completion);
     @Mapping("disableBackgroundDeliveryForType:withCompletion:")
     public native void disableBackgroundDeliveryForType(HKObjectType type, @Block VoidBlock2<Boolean, NSError> completion);
     @Mapping("disableAllBackgroundDeliveryWithCompletion:")

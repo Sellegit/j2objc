@@ -37,9 +37,9 @@ public class AVAudioUnitEQFilterParameters
     
     
     @Mapping("filterType")
-    public native @Representing("AVAudioUnitEQFilterType") @MachineSizedSInt long getFilterType();
+    public native @Representing("AVAudioUnitEQFilterType") long getFilterType();
     @Mapping("setFilterType:")
-    public native void setFilterType(@Representing("AVAudioUnitEQFilterType") @MachineSizedSInt long v);
+    public native void setFilterType(@Representing("AVAudioUnitEQFilterType") long v);
     @Mapping("frequency")
     public native float getFrequency();
     @Mapping("setFrequency:")

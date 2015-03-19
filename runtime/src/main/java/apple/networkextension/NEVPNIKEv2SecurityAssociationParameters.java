@@ -34,32 +34,32 @@ public class NEVPNIKEv2SecurityAssociationParameters
      * @since Available in iOS 8.0 and later.
      */
     @Mapping("encryptionAlgorithm")
-    public native @Representing("NEVPNIKEv2EncryptionAlgorithm") @MachineSizedSInt long getEncryptionAlgorithm();
+    public native @Representing("NEVPNIKEv2EncryptionAlgorithm") long getEncryptionAlgorithm();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @Mapping("setEncryptionAlgorithm:")
-    public native void setEncryptionAlgorithm(@Representing("NEVPNIKEv2EncryptionAlgorithm") @MachineSizedSInt long v);
+    public native void setEncryptionAlgorithm(@Representing("NEVPNIKEv2EncryptionAlgorithm") long v);
     /**
      * @since Available in iOS 8.0 and later.
      */
     @Mapping("integrityAlgorithm")
-    public native @Representing("NEVPNIKEv2IntegrityAlgorithm") @MachineSizedSInt long getIntegrityAlgorithm();
+    public native @Representing("NEVPNIKEv2IntegrityAlgorithm") long getIntegrityAlgorithm();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @Mapping("setIntegrityAlgorithm:")
-    public native void setIntegrityAlgorithm(@Representing("NEVPNIKEv2IntegrityAlgorithm") @MachineSizedSInt long v);
+    public native void setIntegrityAlgorithm(@Representing("NEVPNIKEv2IntegrityAlgorithm") long v);
     /**
      * @since Available in iOS 8.0 and later.
      */
     @Mapping("diffieHellmanGroup")
-    public native @Representing("NEVPNIKEv2DiffieHellmanGroup") @MachineSizedSInt long getDiffieHellmanGroup();
+    public native @Representing("NEVPNIKEv2DiffieHellmanGroup") long getDiffieHellmanGroup();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @Mapping("setDiffieHellmanGroup:")
-    public native void setDiffieHellmanGroup(@Representing("NEVPNIKEv2DiffieHellmanGroup") @MachineSizedSInt long v);
+    public native void setDiffieHellmanGroup(@Representing("NEVPNIKEv2DiffieHellmanGroup") long v);
     /**
      * @since Available in iOS 8.0 and later.
      */

@@ -27,13 +27,13 @@ public class NSMergePolicy
     
     
     @Mapping("initWithMergeType:")
-    public NSMergePolicy(@Representing("NSMergePolicyType") @MachineSizedUInt long ty) { }
+    public NSMergePolicy(@Representing("NSMergePolicyType") long ty) { }
     @Mapping("init")
     public NSMergePolicy() { }
     
     
     @Mapping("mergeType")
-    public native @Representing("NSMergePolicyType") @MachineSizedUInt long getMergeType();
+    public native @Representing("NSMergePolicyType") long getMergeType();
     
     
     

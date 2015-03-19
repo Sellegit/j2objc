@@ -79,7 +79,7 @@ public class NSNetService
      * @since Available in iOS 2.0 and later.
      */
     @Mapping("publishWithOptions:")
-    public native void publish(@Representing("NSNetServiceOptions") @MachineSizedUInt long options);
+    public native void publish(@Representing("NSNetServiceOptions") long options);
     @Mapping("stop")
     public native void stop();
     @Mapping("resolveWithTimeout:")

@@ -50,13 +50,13 @@ public class UIBezierPath
     @Mapping("setLineWidth:")
     public native void setLineWidth(@MachineSizedFloat double v);
     @Mapping("lineCapStyle")
-    public native @Representing("CGLineCap") int getLineCapStyle();
+    public native @Representing("CGLineCap") long getLineCapStyle();
     @Mapping("setLineCapStyle:")
-    public native void setLineCapStyle(@Representing("CGLineCap") int v);
+    public native void setLineCapStyle(@Representing("CGLineCap") long v);
     @Mapping("lineJoinStyle")
-    public native @Representing("CGLineJoin") int getLineJoinStyle();
+    public native @Representing("CGLineJoin") long getLineJoinStyle();
     @Mapping("setLineJoinStyle:")
-    public native void setLineJoinStyle(@Representing("CGLineJoin") int v);
+    public native void setLineJoinStyle(@Representing("CGLineJoin") long v);
     @Mapping("miterLimit")
     public native @MachineSizedFloat double getMiterLimit();
     @Mapping("setMiterLimit:")
@@ -109,9 +109,9 @@ public class UIBezierPath
     @Mapping("stroke")
     public native void stroke();
     @Mapping("fillWithBlendMode:alpha:")
-    public native void fill(@Representing("CGBlendMode") int blendMode, @MachineSizedFloat double alpha);
+    public native void fill(@Representing("CGBlendMode") long blendMode, @MachineSizedFloat double alpha);
     @Mapping("strokeWithBlendMode:alpha:")
-    public native void stroke(@Representing("CGBlendMode") int blendMode, @MachineSizedFloat double alpha);
+    public native void stroke(@Representing("CGBlendMode") long blendMode, @MachineSizedFloat double alpha);
     @Mapping("addClip")
     public native void addClip();
     @Mapping("bezierPathWithRect:")
@@ -121,7 +121,7 @@ public class UIBezierPath
     @Mapping("bezierPathWithRoundedRect:cornerRadius:")
     public static native UIBezierPath createFromRoundedRect(CGRect rect, @MachineSizedFloat double cornerRadius);
     @Mapping("bezierPathWithRoundedRect:byRoundingCorners:cornerRadii:")
-    public static native UIBezierPath createFromRoundedRect(CGRect rect, @Representing("UIRectCorner") @MachineSizedUInt long corners, CGSize cornerRadii);
+    public static native UIBezierPath createFromRoundedRect(CGRect rect, @Representing("UIRectCorner") long corners, CGSize cornerRadii);
     @Mapping("bezierPathWithArcCenter:radius:startAngle:endAngle:clockwise:")
     public static native UIBezierPath createFromArc(CGPoint center, @MachineSizedFloat double radius, @MachineSizedFloat double startAngle, @MachineSizedFloat double endAngle, boolean clockwise);
     @Mapping("bezierPathWithCGPath:")

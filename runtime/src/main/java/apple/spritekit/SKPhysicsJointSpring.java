@@ -31,6 +31,8 @@ public class SKPhysicsJointSpring
 
     
     
+    @Mapping("initWithCoder:")
+    public SKPhysicsJointSpring(NSCoder aDecoder) { }
     @Mapping("init")
     public SKPhysicsJointSpring() { }
     

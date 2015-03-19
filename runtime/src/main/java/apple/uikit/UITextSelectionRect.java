@@ -38,7 +38,7 @@ public class UITextSelectionRect
     @Mapping("rect")
     public native CGRect getRect();
     @Mapping("writingDirection")
-    public native @Representing("UITextWritingDirection") @MachineSizedSInt long getWritingDirection();
+    public native @Representing("UITextWritingDirection") long getWritingDirection();
     @Mapping("containsStart")
     public native boolean containsStart();
     @Mapping("containsEnd")

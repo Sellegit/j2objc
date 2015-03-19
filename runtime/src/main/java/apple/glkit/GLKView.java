@@ -50,21 +50,21 @@ public class GLKView
     @Mapping("drawableHeight")
     public native @MachineSizedSInt long getDrawableHeight();
     @Mapping("drawableColorFormat")
-    public native @Representing("GLKViewDrawableColorFormat") int getDrawableColorFormat();
+    public native @Representing("GLKViewDrawableColorFormat") long getDrawableColorFormat();
     @Mapping("setDrawableColorFormat:")
-    public native void setDrawableColorFormat(@Representing("GLKViewDrawableColorFormat") int v);
+    public native void setDrawableColorFormat(@Representing("GLKViewDrawableColorFormat") long v);
     @Mapping("drawableDepthFormat")
-    public native @Representing("GLKViewDrawableDepthFormat") int getDrawableDepthFormat();
+    public native @Representing("GLKViewDrawableDepthFormat") long getDrawableDepthFormat();
     @Mapping("setDrawableDepthFormat:")
-    public native void setDrawableDepthFormat(@Representing("GLKViewDrawableDepthFormat") int v);
+    public native void setDrawableDepthFormat(@Representing("GLKViewDrawableDepthFormat") long v);
     @Mapping("drawableStencilFormat")
-    public native @Representing("GLKViewDrawableStencilFormat") int getDrawableStencilFormat();
+    public native @Representing("GLKViewDrawableStencilFormat") long getDrawableStencilFormat();
     @Mapping("setDrawableStencilFormat:")
-    public native void setDrawableStencilFormat(@Representing("GLKViewDrawableStencilFormat") int v);
+    public native void setDrawableStencilFormat(@Representing("GLKViewDrawableStencilFormat") long v);
     @Mapping("drawableMultisample")
-    public native @Representing("GLKViewDrawableMultisample") int getDrawableMultisample();
+    public native @Representing("GLKViewDrawableMultisample") long getDrawableMultisample();
     @Mapping("setDrawableMultisample:")
-    public native void setDrawableMultisample(@Representing("GLKViewDrawableMultisample") int v);
+    public native void setDrawableMultisample(@Representing("GLKViewDrawableMultisample") long v);
     @Mapping("snapshot")
     public native UIImage getSnapshot();
     @Mapping("enableSetNeedsDisplay")

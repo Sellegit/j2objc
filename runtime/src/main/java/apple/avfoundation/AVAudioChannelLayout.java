@@ -33,7 +33,7 @@ public class AVAudioChannelLayout
     
     
     @Mapping("initWithLayoutTag:")
-    public AVAudioChannelLayout(@Representing("AudioChannelLayoutTag") int layoutTag) { }
+    public AVAudioChannelLayout(@Representing("AudioChannelLayoutTag") long layoutTag) { }
     @Mapping("initWithLayout:")
     public AVAudioChannelLayout(AudioChannelLayout layout) { }
     @Mapping("init")
@@ -41,7 +41,7 @@ public class AVAudioChannelLayout
     
     
     @Mapping("layoutTag")
-    public native @Representing("AudioChannelLayoutTag") int getLayoutTag();
+    public native @Representing("AudioChannelLayoutTag") long getLayoutTag();
     @Mapping("layout")
     public native AudioChannelLayout getLayout();
     @Mapping("channelCount")
@@ -52,7 +52,7 @@ public class AVAudioChannelLayout
     @Mapping("isEqual:")
     public native boolean equalsTo(Object object);
     @Mapping("layoutWithLayoutTag:")
-    public static native AVAudioChannelLayout create(@Representing("AudioChannelLayoutTag") int layoutTag);
+    public static native AVAudioChannelLayout create(@Representing("AudioChannelLayoutTag") long layoutTag);
     @Mapping("layoutWithLayout:")
     public static native AVAudioChannelLayout create(AudioChannelLayout layout);
     

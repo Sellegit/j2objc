@@ -182,12 +182,12 @@ public class NSDateComponents
      * @since Available in iOS 8.0 and later.
      */
     @Mapping("setValue:forComponent:")
-    public native void setValue(@MachineSizedSInt long value, @Representing("NSCalendarUnit") @MachineSizedUInt long unit);
+    public native void setValue(@MachineSizedSInt long value, @Representing("NSCalendarUnit") long unit);
     /**
      * @since Available in iOS 8.0 and later.
      */
     @Mapping("valueForComponent:")
-    public native @MachineSizedSInt long getValue(@Representing("NSCalendarUnit") @MachineSizedUInt long unit);
+    public native @MachineSizedSInt long getValue(@Representing("NSCalendarUnit") long unit);
     /**
      * @since Available in iOS 8.0 and later.
      */

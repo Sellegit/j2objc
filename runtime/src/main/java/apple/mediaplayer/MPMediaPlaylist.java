@@ -47,7 +47,7 @@ public class MPMediaPlaylist
      * @since Available in iOS 7.0 and later.
      */
     @Mapping("playlistAttributes")
-    public native @Representing("MPMediaPlaylistAttribute") @MachineSizedUInt long getPlaylistAttributes();
+    public native @Representing("MPMediaPlaylistAttribute") long getPlaylistAttributes();
     /**
      * @since Available in iOS 8.0 and later.
      */

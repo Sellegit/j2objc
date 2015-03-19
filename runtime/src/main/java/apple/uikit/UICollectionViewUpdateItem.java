@@ -40,7 +40,7 @@ public class UICollectionViewUpdateItem
     @Mapping("indexPathAfterUpdate")
     public native NSIndexPath getIndexPathAfterUpdate();
     @Mapping("updateAction")
-    public native @Representing("UICollectionUpdateAction") @MachineSizedSInt long getUpdateAction();
+    public native @Representing("UICollectionUpdateAction") long getUpdateAction();
     
     
     

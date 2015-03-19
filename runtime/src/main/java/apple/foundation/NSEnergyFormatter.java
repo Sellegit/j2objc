@@ -42,9 +42,9 @@ public class NSEnergyFormatter
     @Mapping("setNumberFormatter:")
     public native void setNumberFormatter(NSNumberFormatter v);
     @Mapping("unitStyle")
-    public native @Representing("NSFormattingUnitStyle") @MachineSizedSInt long getUnitStyle();
+    public native @Representing("NSFormattingUnitStyle") long getUnitStyle();
     @Mapping("setUnitStyle:")
-    public native void setUnitStyle(@Representing("NSFormattingUnitStyle") @MachineSizedSInt long v);
+    public native void setUnitStyle(@Representing("NSFormattingUnitStyle") long v);
     @Mapping("isForFoodEnergyUse")
     public native boolean isForFoodEnergyUse();
     @Mapping("setForFoodEnergyUse:")
@@ -53,11 +53,11 @@ public class NSEnergyFormatter
     
     
     @Mapping("stringFromValue:unit:")
-    public native String format(double value, @Representing("NSEnergyFormatterUnit") @MachineSizedSInt long unit);
+    public native String format(double value, @Representing("NSEnergyFormatterUnit") long unit);
     @Mapping("stringFromJoules:")
     public native String formatJoules(double numberInJoules);
     @Mapping("unitStringFromValue:unit:")
-    public native String formatUnit(double value, @Representing("NSEnergyFormatterUnit") @MachineSizedSInt long unit);
+    public native String formatUnit(double value, @Representing("NSEnergyFormatterUnit") long unit);
     @Mapping("unitStringFromJoules:usedUnit:")
     public native String formatUnitJoules(double numberInJoules, Todo unitp);
     

@@ -43,6 +43,6 @@ public class UIMutableUserNotificationCategory
     
     
     @Mapping("setActions:forContext:")
-    public native void setActions(NSArray<?> actions, @Representing("UIUserNotificationActionContext") @MachineSizedUInt long context);
+    public native void setActions(NSArray<?> actions, @Representing("UIUserNotificationActionContext") long context);
     
 }

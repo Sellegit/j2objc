@@ -36,7 +36,7 @@ public interface NSURLProtocolClient
     @Mapping("URLProtocol:cachedResponseIsValid:")
     void cachedResponseIsValid(NSURLProtocol protocol, NSCachedURLResponse cachedResponse);
     @Mapping("URLProtocol:didReceiveResponse:cacheStoragePolicy:")
-    void didReceiveResponse(NSURLProtocol protocol, NSURLResponse response, @Representing("NSURLCacheStoragePolicy") @MachineSizedUInt long policy);
+    void didReceiveResponse(NSURLProtocol protocol, NSURLResponse response, @Representing("NSURLCacheStoragePolicy") long policy);
     @Mapping("URLProtocol:didLoadData:")
     void didLoadData(NSURLProtocol protocol, NSData data);
     @Mapping("URLProtocolDidFinishLoading:")

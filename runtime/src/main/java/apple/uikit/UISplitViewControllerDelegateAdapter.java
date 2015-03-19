@@ -37,12 +37,12 @@ public abstract class UISplitViewControllerDelegateAdapter
      * @since Available in iOS 8.0 and later.
      */
     @NotImplemented("splitViewController:willChangeToDisplayMode:")
-    public void willChangeToDisplayMode(UISplitViewController svc, @Representing("UISplitViewControllerDisplayMode") @MachineSizedSInt long displayMode) { throw new UnsupportedOperationException(); }
+    public void willChangeToDisplayMode(UISplitViewController svc, @Representing("UISplitViewControllerDisplayMode") long displayMode) { throw new UnsupportedOperationException(); }
     /**
      * @since Available in iOS 8.0 and later.
      */
     @NotImplemented("targetDisplayModeForActionInSplitViewController:")
-    public @Representing("UISplitViewControllerDisplayMode") @MachineSizedSInt long getTargetDisplayMode(UISplitViewController svc) { throw new UnsupportedOperationException(); }
+    public @Representing("UISplitViewControllerDisplayMode") long getTargetDisplayMode(UISplitViewController svc) { throw new UnsupportedOperationException(); }
     /**
      * @since Available in iOS 8.0 and later.
      */
@@ -82,7 +82,7 @@ public abstract class UISplitViewControllerDelegateAdapter
      * @since Available in iOS 7.0 and later.
      */
     @NotImplemented("splitViewControllerPreferredInterfaceOrientationForPresentation:")
-    public @Representing("UIInterfaceOrientation") @MachineSizedSInt long getPreferredInterfaceOrientation(UISplitViewController splitViewController) { throw new UnsupportedOperationException(); }
+    public @Representing("UIInterfaceOrientation") long getPreferredInterfaceOrientation(UISplitViewController splitViewController) { throw new UnsupportedOperationException(); }
     /**
      * @since Available in iOS 2.0 and later.
      * @deprecated Deprecated in iOS 8.0.
@@ -110,6 +110,6 @@ public abstract class UISplitViewControllerDelegateAdapter
      */
     @Deprecated
     @NotImplemented("splitViewController:shouldHideViewController:inOrientation:")
-    public boolean shouldHideViewController(UISplitViewController svc, UIViewController vc, @Representing("UIInterfaceOrientation") @MachineSizedSInt long orientation) { throw new UnsupportedOperationException(); }
+    public boolean shouldHideViewController(UISplitViewController svc, UIViewController vc, @Representing("UIInterfaceOrientation") long orientation) { throw new UnsupportedOperationException(); }
     
 }

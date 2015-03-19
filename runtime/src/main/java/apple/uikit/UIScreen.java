@@ -68,12 +68,12 @@ public class UIScreen
      * @since Available in iOS 5.0 and later.
      */
     @Mapping("overscanCompensation")
-    public native @Representing("UIScreenOverscanCompensation") @MachineSizedSInt long getOverscanCompensation();
+    public native @Representing("UIScreenOverscanCompensation") long getOverscanCompensation();
     /**
      * @since Available in iOS 5.0 and later.
      */
     @Mapping("setOverscanCompensation:")
-    public native void setOverscanCompensation(@Representing("UIScreenOverscanCompensation") @MachineSizedSInt long v);
+    public native void setOverscanCompensation(@Representing("UIScreenOverscanCompensation") long v);
     /**
      * @since Available in iOS 4.3 and later.
      */

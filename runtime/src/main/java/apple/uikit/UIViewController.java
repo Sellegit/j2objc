@@ -97,22 +97,22 @@ public class UIViewController
      * @since Available in iOS 3.0 and later.
      */
     @Mapping("modalTransitionStyle")
-    public native @Representing("UIModalTransitionStyle") @MachineSizedSInt long getModalTransitionStyle();
+    public native @Representing("UIModalTransitionStyle") long getModalTransitionStyle();
     /**
      * @since Available in iOS 3.0 and later.
      */
     @Mapping("setModalTransitionStyle:")
-    public native void setModalTransitionStyle(@Representing("UIModalTransitionStyle") @MachineSizedSInt long v);
+    public native void setModalTransitionStyle(@Representing("UIModalTransitionStyle") long v);
     /**
      * @since Available in iOS 3.2 and later.
      */
     @Mapping("modalPresentationStyle")
-    public native @Representing("UIModalPresentationStyle") @MachineSizedSInt long getModalPresentationStyle();
+    public native @Representing("UIModalPresentationStyle") long getModalPresentationStyle();
     /**
      * @since Available in iOS 3.2 and later.
      */
     @Mapping("setModalPresentationStyle:")
-    public native void setModalPresentationStyle(@Representing("UIModalPresentationStyle") @MachineSizedSInt long v);
+    public native void setModalPresentationStyle(@Representing("UIModalPresentationStyle") long v);
     /**
      * @since Available in iOS 7.0 and later.
      */
@@ -141,12 +141,12 @@ public class UIViewController
      * @since Available in iOS 7.0 and later.
      */
     @Mapping("edgesForExtendedLayout")
-    public native @Representing("UIRectEdge") @MachineSizedUInt long getEdgesForExtendedLayout();
+    public native @Representing("UIRectEdge") long getEdgesForExtendedLayout();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @Mapping("setEdgesForExtendedLayout:")
-    public native void setEdgesForExtendedLayout(@Representing("UIRectEdge") @MachineSizedUInt long v);
+    public native void setEdgesForExtendedLayout(@Representing("UIRectEdge") long v);
     /**
      * @since Available in iOS 7.0 and later.
      */
@@ -183,7 +183,7 @@ public class UIViewController
      */
     @Deprecated
     @Mapping("interfaceOrientation")
-    public native @Representing("UIInterfaceOrientation") @MachineSizedSInt long getInterfaceOrientation();
+    public native @Representing("UIInterfaceOrientation") long getInterfaceOrientation();
     @Mapping("isEditing")
     public native boolean isEditing();
     @Mapping("setEditing:")
@@ -444,7 +444,7 @@ public class UIViewController
      * @since Available in iOS 7.0 and later.
      */
     @Mapping("preferredStatusBarStyle")
-    public native @Representing("UIStatusBarStyle") @MachineSizedSInt long getPreferredStatusBarStyle();
+    public native @Representing("UIStatusBarStyle") long getPreferredStatusBarStyle();
     /**
      * @since Available in iOS 7.0 and later.
      */
@@ -454,7 +454,7 @@ public class UIViewController
      * @since Available in iOS 7.0 and later.
      */
     @Mapping("preferredStatusBarUpdateAnimation")
-    public native @Representing("UIStatusBarAnimation") @MachineSizedSInt long getPreferredStatusBarUpdateAnimation();
+    public native @Representing("UIStatusBarAnimation") long getPreferredStatusBarUpdateAnimation();
     /**
      * @since Available in iOS 7.0 and later.
      */
@@ -481,7 +481,7 @@ public class UIViewController
      */
     @Deprecated
     @Mapping("shouldAutorotateToInterfaceOrientation:")
-    public native boolean shouldAutorotate(@Representing("UIInterfaceOrientation") @MachineSizedSInt long toInterfaceOrientation);
+    public native boolean shouldAutorotate(@Representing("UIInterfaceOrientation") long toInterfaceOrientation);
     /**
      * @since Available in iOS 6.0 and later.
      */
@@ -496,7 +496,7 @@ public class UIViewController
      * @since Available in iOS 6.0 and later.
      */
     @Mapping("preferredInterfaceOrientationForPresentation")
-    public native @Representing("UIInterfaceOrientation") @MachineSizedSInt long getPreferredInterfaceOrientation();
+    public native @Representing("UIInterfaceOrientation") long getPreferredInterfaceOrientation();
     /**
      * @since Available in iOS 2.0 and later.
      * @deprecated Deprecated in iOS 8.0.
@@ -517,21 +517,21 @@ public class UIViewController
      */
     @Deprecated
     @Mapping("willRotateToInterfaceOrientation:duration:")
-    public native void willRotate(@Representing("UIInterfaceOrientation") @MachineSizedSInt long toInterfaceOrientation, double duration);
+    public native void willRotate(@Representing("UIInterfaceOrientation") long toInterfaceOrientation, double duration);
     /**
      * @since Available in iOS 2.0 and later.
      * @deprecated Deprecated in iOS 8.0.
      */
     @Deprecated
     @Mapping("didRotateFromInterfaceOrientation:")
-    public native void didRotate(@Representing("UIInterfaceOrientation") @MachineSizedSInt long fromInterfaceOrientation);
+    public native void didRotate(@Representing("UIInterfaceOrientation") long fromInterfaceOrientation);
     /**
      * @since Available in iOS 3.0 and later.
      * @deprecated Deprecated in iOS 8.0.
      */
     @Deprecated
     @Mapping("willAnimateRotationToInterfaceOrientation:duration:")
-    public native void willAnimateRotation(@Representing("UIInterfaceOrientation") @MachineSizedSInt long toInterfaceOrientation, double duration);
+    public native void willAnimateRotation(@Representing("UIInterfaceOrientation") long toInterfaceOrientation, double duration);
     /**
      * @since Available in iOS 5.0 and later.
      */
@@ -555,7 +555,7 @@ public class UIViewController
      * @since Available in iOS 5.0 and later.
      */
     @Mapping("transitionFromViewController:toViewController:duration:options:animations:completion:")
-    public native void transition(UIViewController fromViewController, UIViewController toViewController, double duration, @Representing("UIViewAnimationOptions") @MachineSizedUInt long options, @Block Runnable animations, @Block VoidBooleanBlock completion);
+    public native void transition(UIViewController fromViewController, UIViewController toViewController, double duration, @Representing("UIViewAnimationOptions") long options, @Block Runnable animations, @Block VoidBooleanBlock completion);
     /**
      * @since Available in iOS 5.0 and later.
      */

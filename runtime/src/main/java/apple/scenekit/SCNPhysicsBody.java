@@ -35,9 +35,9 @@ public class SCNPhysicsBody
     
     
     @Mapping("type")
-    public native @Representing("SCNPhysicsBodyType") @MachineSizedSInt long getType();
+    public native @Representing("SCNPhysicsBodyType") long getType();
     @Mapping("setType:")
-    public native void setType(@Representing("SCNPhysicsBodyType") @MachineSizedSInt long v);
+    public native void setType(@Representing("SCNPhysicsBodyType") long v);
     @Mapping("mass")
     public native @MachineSizedFloat double getMass();
     @Mapping("setMass:")
@@ -120,7 +120,7 @@ public class SCNPhysicsBody
     @Mapping("kinematicBody")
     public static native SCNPhysicsBody createKinematicBody();
     @Mapping("bodyWithType:shape:")
-    public static native SCNPhysicsBody create(@Representing("SCNPhysicsBodyType") @MachineSizedSInt long type, SCNPhysicsShape shape);
+    public static native SCNPhysicsBody create(@Representing("SCNPhysicsBodyType") long type, SCNPhysicsShape shape);
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
     

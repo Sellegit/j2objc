@@ -32,7 +32,7 @@ public interface UIWebViewDelegate
     
     
     @Mapping("webView:shouldStartLoadWithRequest:navigationType:")
-    boolean shouldStartLoad(UIWebView webView, NSURLRequest request, @Representing("UIWebViewNavigationType") @MachineSizedSInt long navigationType);
+    boolean shouldStartLoad(UIWebView webView, NSURLRequest request, @Representing("UIWebViewNavigationType") long navigationType);
     @Mapping("webViewDidStartLoad:")
     void didStartLoad(UIWebView webView);
     @Mapping("webViewDidFinishLoad:")

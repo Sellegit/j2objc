@@ -40,9 +40,9 @@ public class SKAction
     @Mapping("setDuration:")
     public native void setDuration(double v);
     @Mapping("timingMode")
-    public native @Representing("SKActionTimingMode") @MachineSizedSInt long getTimingMode();
+    public native @Representing("SKActionTimingMode") long getTimingMode();
     @Mapping("setTimingMode:")
-    public native void setTimingMode(@Representing("SKActionTimingMode") @MachineSizedSInt long v);
+    public native void setTimingMode(@Representing("SKActionTimingMode") long v);
     /**
      * @since Available in iOS 8.0 and later.
      */

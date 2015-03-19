@@ -48,7 +48,7 @@ public class UIDocument
     @Mapping("setFileModificationDate:")
     public native void setFileModificationDate(NSDate v);
     @Mapping("documentState")
-    public native @Representing("UIDocumentState") @MachineSizedUInt long getDocumentState();
+    public native @Representing("UIDocumentState") long getDocumentState();
     @Mapping("undoManager")
     public native NSUndoManager getUndoManager();
     @Mapping("setUndoManager:")
@@ -96,25 +96,25 @@ public class UIDocument
     @Mapping("hasUnsavedChanges")
     public native boolean hasUnsavedChanges();
     @Mapping("updateChangeCount:")
-    public native void updateChangeCount(@Representing("UIDocumentChangeKind") @MachineSizedSInt long change);
+    public native void updateChangeCount(@Representing("UIDocumentChangeKind") long change);
     @Mapping("changeCountTokenForSaveOperation:")
-    public native Object getChangeCountToken(@Representing("UIDocumentSaveOperation") @MachineSizedSInt long saveOperation);
+    public native Object getChangeCountToken(@Representing("UIDocumentSaveOperation") long saveOperation);
     @Mapping("updateChangeCountWithToken:forSaveOperation:")
-    public native void updateChangeCount(Object changeCountToken, @Representing("UIDocumentSaveOperation") @MachineSizedSInt long saveOperation);
+    public native void updateChangeCount(Object changeCountToken, @Representing("UIDocumentSaveOperation") long saveOperation);
     @Mapping("saveToURL:forSaveOperation:completionHandler:")
-    public native void save(NSURL url, @Representing("UIDocumentSaveOperation") @MachineSizedSInt long saveOperation, @Block VoidBooleanBlock completionHandler);
+    public native void save(NSURL url, @Representing("UIDocumentSaveOperation") long saveOperation, @Block VoidBooleanBlock completionHandler);
     @Mapping("autosaveWithCompletionHandler:")
     public native void autoSave(@Block VoidBooleanBlock completionHandler);
     @Mapping("savingFileType")
     public native String getSavingFileType();
     @Mapping("fileNameExtensionForType:saveOperation:")
-    public native String getFileNameExtension(String typeName, @Representing("UIDocumentSaveOperation") @MachineSizedSInt long saveOperation);
+    public native String getFileNameExtension(String typeName, @Representing("UIDocumentSaveOperation") long saveOperation);
     @Mapping("writeContents:andAttributes:safelyToURL:forSaveOperation:error:")
-    public native boolean writeContents(Object contents, NSDictionary<?, ?> additionalFileAttributes, NSURL url, @Representing("UIDocumentSaveOperation") @MachineSizedSInt long saveOperation, Todo outError);
+    public native boolean writeContents(Object contents, NSDictionary<?, ?> additionalFileAttributes, NSURL url, @Representing("UIDocumentSaveOperation") long saveOperation, Todo outError);
     @Mapping("writeContents:toURL:forSaveOperation:originalContentsURL:error:")
-    public native boolean writeContents(Object contents, NSURL url, @Representing("UIDocumentSaveOperation") @MachineSizedSInt long saveOperation, NSURL originalContentsURL, Todo outError);
+    public native boolean writeContents(Object contents, NSURL url, @Representing("UIDocumentSaveOperation") long saveOperation, NSURL originalContentsURL, Todo outError);
     @Mapping("fileAttributesToWriteToURL:forSaveOperation:error:")
-    public native NSDictionary<?, ?> getFileAttributesToWrite(NSURL url, @Representing("UIDocumentSaveOperation") @MachineSizedSInt long saveOperation, Todo outError);
+    public native NSDictionary<?, ?> getFileAttributesToWrite(NSURL url, @Representing("UIDocumentSaveOperation") long saveOperation, Todo outError);
     @Mapping("readFromURL:error:")
     public native boolean read(NSURL url, Todo outError);
     @Mapping("performAsynchronousFileAccessUsingBlock:")

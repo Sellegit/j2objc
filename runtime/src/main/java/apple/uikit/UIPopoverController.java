@@ -52,7 +52,7 @@ public class UIPopoverController
     @Mapping("isPopoverVisible")
     public native boolean isPopoverVisible();
     @Mapping("popoverArrowDirection")
-    public native @Representing("UIPopoverArrowDirection") @MachineSizedUInt long getPopoverArrowDirection();
+    public native @Representing("UIPopoverArrowDirection") long getPopoverArrowDirection();
     @Mapping("passthroughViews")
     public native NSArray<UIView> getPassthroughViews();
     @Mapping("setPassthroughViews:")
@@ -85,9 +85,9 @@ public class UIPopoverController
     @Mapping("setPopoverContentSize:animated:")
     public native void setPopoverContentSize(CGSize size, boolean animated);
     @Mapping("presentPopoverFromRect:inView:permittedArrowDirections:animated:")
-    public native void presentFromRectInView(CGRect rect, UIView view, @Representing("UIPopoverArrowDirection") @MachineSizedUInt long arrowDirections, boolean animated);
+    public native void presentFromRectInView(CGRect rect, UIView view, @Representing("UIPopoverArrowDirection") long arrowDirections, boolean animated);
     @Mapping("presentPopoverFromBarButtonItem:permittedArrowDirections:animated:")
-    public native void presentFromBarButtonItem(UIBarButtonItem item, @Representing("UIPopoverArrowDirection") @MachineSizedUInt long arrowDirections, boolean animated);
+    public native void presentFromBarButtonItem(UIBarButtonItem item, @Representing("UIPopoverArrowDirection") long arrowDirections, boolean animated);
     @Mapping("dismissPopoverAnimated:")
     public native void dismiss(boolean animated);
     

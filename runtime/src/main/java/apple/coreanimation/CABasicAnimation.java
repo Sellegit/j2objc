@@ -27,6 +27,8 @@ public class CABasicAnimation
 
     
     
+    @Mapping("initWithCoder:")
+    public CABasicAnimation(NSCoder aDecoder) { }
     @Mapping("init")
     public CABasicAnimation() { }
     

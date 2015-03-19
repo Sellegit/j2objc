@@ -46,7 +46,7 @@ public class AVPlayerItem
     
     
     @Mapping("status")
-    public native @Representing("AVPlayerItemStatus") @MachineSizedSInt long getStatus();
+    public native @Representing("AVPlayerItemStatus") long getStatus();
     @Mapping("error")
     public native NSError getError();
     @Mapping("asset")

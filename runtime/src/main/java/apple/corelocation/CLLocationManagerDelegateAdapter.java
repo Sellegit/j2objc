@@ -56,7 +56,7 @@ public abstract class CLLocationManagerDelegateAdapter
      * @since Available in iOS 7.0 and later.
      */
     @NotImplemented("locationManager:didDetermineState:forRegion:")
-    public void didDetermineState(CLLocationManager manager, @Representing("CLRegionState") @MachineSizedSInt long state, CLRegion region) { throw new UnsupportedOperationException(); }
+    public void didDetermineState(CLLocationManager manager, @Representing("CLRegionState") long state, CLRegion region) { throw new UnsupportedOperationException(); }
     /**
      * @since Available in iOS 7.0 and later.
      */
@@ -88,7 +88,7 @@ public abstract class CLLocationManagerDelegateAdapter
      * @since Available in iOS 4.2 and later.
      */
     @NotImplemented("locationManager:didChangeAuthorizationStatus:")
-    public void didChangeAuthorizationStatus(CLLocationManager manager, @Representing("CLAuthorizationStatus") int status) { throw new UnsupportedOperationException(); }
+    public void didChangeAuthorizationStatus(CLLocationManager manager, @Representing("CLAuthorizationStatus") long status) { throw new UnsupportedOperationException(); }
     /**
      * @since Available in iOS 5.0 and later.
      */

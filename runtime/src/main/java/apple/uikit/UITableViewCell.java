@@ -35,9 +35,11 @@ public class UITableViewCell
      * @since Available in iOS 3.0 and later.
      */
     @Mapping("initWithStyle:reuseIdentifier:")
-    public UITableViewCell(@Representing("UITableViewCellStyle") @MachineSizedSInt long style, String reuseIdentifier) { }
+    public UITableViewCell(@Representing("UITableViewCellStyle") long style, String reuseIdentifier) { }
     @Mapping("initWithFrame:")
     public UITableViewCell(CGRect frame) { }
+    @Mapping("initWithCoder:")
+    public UITableViewCell(NSCoder aDecoder) { }
     @Mapping("init")
     public UITableViewCell() { }
     
@@ -80,9 +82,9 @@ public class UITableViewCell
     @Mapping("reuseIdentifier")
     public native String getReuseIdentifier();
     @Mapping("selectionStyle")
-    public native @Representing("UITableViewCellSelectionStyle") @MachineSizedSInt long getSelectionStyle();
+    public native @Representing("UITableViewCellSelectionStyle") long getSelectionStyle();
     @Mapping("setSelectionStyle:")
-    public native void setSelectionStyle(@Representing("UITableViewCellSelectionStyle") @MachineSizedSInt long v);
+    public native void setSelectionStyle(@Representing("UITableViewCellSelectionStyle") long v);
     @Mapping("isSelected")
     public native boolean isSelected();
     @Mapping("setSelected:")
@@ -92,7 +94,7 @@ public class UITableViewCell
     @Mapping("setHighlighted:")
     public native void setHighlighted(boolean v);
     @Mapping("editingStyle")
-    public native @Representing("UITableViewCellEditingStyle") @MachineSizedSInt long getEditingStyle();
+    public native @Representing("UITableViewCellEditingStyle") long getEditingStyle();
     @Mapping("showsReorderControl")
     public native boolean showsReorderControl();
     @Mapping("setShowsReorderControl:")
@@ -102,17 +104,17 @@ public class UITableViewCell
     @Mapping("setShouldIndentWhileEditing:")
     public native void setShouldIndentWhileEditing(boolean v);
     @Mapping("accessoryType")
-    public native @Representing("UITableViewCellAccessoryType") @MachineSizedSInt long getAccessoryType();
+    public native @Representing("UITableViewCellAccessoryType") long getAccessoryType();
     @Mapping("setAccessoryType:")
-    public native void setAccessoryType(@Representing("UITableViewCellAccessoryType") @MachineSizedSInt long v);
+    public native void setAccessoryType(@Representing("UITableViewCellAccessoryType") long v);
     @Mapping("accessoryView")
     public native UIView getAccessoryView();
     @Mapping("setAccessoryView:")
     public native void setAccessoryView(UIView v);
     @Mapping("editingAccessoryType")
-    public native @Representing("UITableViewCellAccessoryType") @MachineSizedSInt long getEditingAccessoryType();
+    public native @Representing("UITableViewCellAccessoryType") long getEditingAccessoryType();
     @Mapping("setEditingAccessoryType:")
-    public native void setEditingAccessoryType(@Representing("UITableViewCellAccessoryType") @MachineSizedSInt long v);
+    public native void setEditingAccessoryType(@Representing("UITableViewCellAccessoryType") long v);
     @Mapping("editingAccessoryView")
     public native UIView getEditingAccessoryView();
     @Mapping("setEditingAccessoryView:")
@@ -156,12 +158,12 @@ public class UITableViewCell
      * @since Available in iOS 3.0 and later.
      */
     @Mapping("willTransitionToState:")
-    public native void willTransitionToState(@Representing("UITableViewCellStateMask") @MachineSizedUInt long state);
+    public native void willTransitionToState(@Representing("UITableViewCellStateMask") long state);
     /**
      * @since Available in iOS 3.0 and later.
      */
     @Mapping("didTransitionToState:")
-    public native void didTransitionToState(@Representing("UITableViewCellStateMask") @MachineSizedUInt long state);
+    public native void didTransitionToState(@Representing("UITableViewCellStateMask") long state);
     @Mapping("gestureRecognizerShouldBegin:")
     public native boolean shouldBegin(UIGestureRecognizer gestureRecognizer);
     @Mapping("gestureRecognizer:shouldRecognizeSimultaneouslyWithGestureRecognizer:")

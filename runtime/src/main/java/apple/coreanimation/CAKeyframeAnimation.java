@@ -27,6 +27,8 @@ public class CAKeyframeAnimation
 
     
     
+    @Mapping("initWithCoder:")
+    public CAKeyframeAnimation(NSCoder aDecoder) { }
     @Mapping("init")
     public CAKeyframeAnimation() { }
     

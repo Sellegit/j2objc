@@ -31,7 +31,7 @@ public class HKWorkout
     
     
     @Mapping("workoutActivityType")
-    public native @Representing("HKWorkoutActivityType") @MachineSizedUInt long getWorkoutActivityType();
+    public native @Representing("HKWorkoutActivityType") long getWorkoutActivityType();
     @Mapping("workoutEvents")
     public native NSArray<HKWorkoutEvent> getWorkoutEvents();
     @Mapping("duration")
@@ -44,10 +44,10 @@ public class HKWorkout
     
     
     @Mapping("workoutWithActivityType:startDate:endDate:")
-    public static native HKWorkout create(@Representing("HKWorkoutActivityType") @MachineSizedUInt long workoutActivityType, NSDate startDate, NSDate endDate);
+    public static native HKWorkout create(@Representing("HKWorkoutActivityType") long workoutActivityType, NSDate startDate, NSDate endDate);
     @Mapping("workoutWithActivityType:startDate:endDate:workoutEvents:totalEnergyBurned:totalDistance:metadata:")
-    public static native HKWorkout create(@Representing("HKWorkoutActivityType") @MachineSizedUInt long workoutActivityType, NSDate startDate, NSDate endDate, NSArray<?> workoutEvents, HKQuantity totalEnergyBurned, HKQuantity totalDistance, NSDictionary<?, ?> metadata);
+    public static native HKWorkout create(@Representing("HKWorkoutActivityType") long workoutActivityType, NSDate startDate, NSDate endDate, NSArray<?> workoutEvents, HKQuantity totalEnergyBurned, HKQuantity totalDistance, NSDictionary<?, ?> metadata);
     @Mapping("workoutWithActivityType:startDate:endDate:duration:totalEnergyBurned:totalDistance:metadata:")
-    public static native HKWorkout create(@Representing("HKWorkoutActivityType") @MachineSizedUInt long workoutActivityType, NSDate startDate, NSDate endDate, double duration, HKQuantity totalEnergyBurned, HKQuantity totalDistance, NSDictionary<?, ?> metadata);
+    public static native HKWorkout create(@Representing("HKWorkoutActivityType") long workoutActivityType, NSDate startDate, NSDate endDate, double duration, HKQuantity totalEnergyBurned, HKQuantity totalDistance, NSDictionary<?, ?> metadata);
     
 }

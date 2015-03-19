@@ -82,11 +82,11 @@ public class UIBarItem
      * @since Available in iOS 5.0 and later.
      */
     @Mapping("setTitleTextAttributes:forState:")
-    public native void setTitleTextAttributes(NSDictionary<?, ?> attributes, @Representing("UIControlState") @MachineSizedUInt long state);
+    public native void setTitleTextAttributes(NSDictionary<?, ?> attributes, @Representing("UIControlState") long state);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @Mapping("titleTextAttributesForState:")
-    public native NSDictionary<?, ?> getTitleTextAttributes(@Representing("UIControlState") @MachineSizedUInt long state);
+    public native NSDictionary<?, ?> getTitleTextAttributes(@Representing("UIControlState") long state);
     
 }

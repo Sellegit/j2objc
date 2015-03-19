@@ -33,12 +33,14 @@ public class CAMetalLayer
     public CAMetalLayer() { }
     @Mapping("initWithLayer:")
     public CAMetalLayer(Object layer) { }
+    @Mapping("initWithCoder:")
+    public CAMetalLayer(NSCoder aDecoder) { }
     
     
     @Mapping("pixelFormat")
-    public native @Representing("MTLPixelFormat") @MachineSizedUInt long getPixelFormat();
+    public native @Representing("MTLPixelFormat") long getPixelFormat();
     @Mapping("setPixelFormat:")
-    public native void setPixelFormat(@Representing("MTLPixelFormat") @MachineSizedUInt long v);
+    public native void setPixelFormat(@Representing("MTLPixelFormat") long v);
     @Mapping("framebufferOnly")
     public native boolean isFramebufferOnly();
     @Mapping("setFramebufferOnly:")

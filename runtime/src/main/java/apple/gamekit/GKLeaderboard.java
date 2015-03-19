@@ -36,13 +36,13 @@ public class GKLeaderboard
     
     
     @Mapping("timeScope")
-    public native @Representing("GKLeaderboardTimeScope") @MachineSizedSInt long getTimeScope();
+    public native @Representing("GKLeaderboardTimeScope") long getTimeScope();
     @Mapping("setTimeScope:")
-    public native void setTimeScope(@Representing("GKLeaderboardTimeScope") @MachineSizedSInt long v);
+    public native void setTimeScope(@Representing("GKLeaderboardTimeScope") long v);
     @Mapping("playerScope")
-    public native @Representing("GKLeaderboardPlayerScope") @MachineSizedSInt long getPlayerScope();
+    public native @Representing("GKLeaderboardPlayerScope") long getPlayerScope();
     @Mapping("setPlayerScope:")
-    public native void setPlayerScope(@Representing("GKLeaderboardPlayerScope") @MachineSizedSInt long v);
+    public native void setPlayerScope(@Representing("GKLeaderboardPlayerScope") long v);
     /**
      * @since Available in iOS 7.0 and later.
      */

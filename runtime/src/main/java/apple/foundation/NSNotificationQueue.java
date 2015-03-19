@@ -40,9 +40,9 @@ public class NSNotificationQueue
     
     
     @Mapping("enqueueNotification:postingStyle:")
-    public native void enqueueNotification(NSNotification notification, @Representing("NSPostingStyle") @MachineSizedUInt long postingStyle);
+    public native void enqueueNotification(NSNotification notification, @Representing("NSPostingStyle") long postingStyle);
     @Mapping("enqueueNotification:postingStyle:coalesceMask:forModes:")
-    public native void enqueueNotification(NSNotification notification, @Representing("NSPostingStyle") @MachineSizedUInt long postingStyle, @MachineSizedUInt long coalesceMask, NSArray<?> modes);
+    public native void enqueueNotification(NSNotification notification, @Representing("NSPostingStyle") long postingStyle, @MachineSizedUInt long coalesceMask, NSArray<?> modes);
     @Mapping("dequeueNotificationsMatching:coalesceMask:")
     public native void dequeueNotificationsMatching(NSNotification notification, @MachineSizedUInt long coalesceMask);
     @Mapping("defaultQueue")

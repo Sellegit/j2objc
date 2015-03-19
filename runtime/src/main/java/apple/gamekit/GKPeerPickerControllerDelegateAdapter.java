@@ -30,9 +30,9 @@ public abstract class GKPeerPickerControllerDelegateAdapter
     
     
     @NotImplemented("peerPickerController:didSelectConnectionType:")
-    public void didSelectConnectionType(GKPeerPickerController picker, @Representing("GKPeerPickerConnectionType") int type) { throw new UnsupportedOperationException(); }
+    public void didSelectConnectionType(GKPeerPickerController picker, @Representing("GKPeerPickerConnectionType") long type) { throw new UnsupportedOperationException(); }
     @NotImplemented("peerPickerController:sessionForConnectionType:")
-    public GKSession getSession(GKPeerPickerController picker, @Representing("GKPeerPickerConnectionType") int type) { throw new UnsupportedOperationException(); }
+    public GKSession getSession(GKPeerPickerController picker, @Representing("GKPeerPickerConnectionType") long type) { throw new UnsupportedOperationException(); }
     @NotImplemented("peerPickerController:didConnectPeer:toSession:")
     public void didConnectPeer(GKPeerPickerController picker, String peerID, GKSession session) { throw new UnsupportedOperationException(); }
     @NotImplemented("peerPickerControllerDidCancel:")

@@ -38,7 +38,7 @@ public class UIAlertAction
     @Mapping("title")
     public native String getTitle();
     @Mapping("style")
-    public native @Representing("UIAlertActionStyle") @MachineSizedSInt long getStyle();
+    public native @Representing("UIAlertActionStyle") long getStyle();
     @Mapping("isEnabled")
     public native boolean isEnabled();
     @Mapping("setEnabled:")
@@ -47,7 +47,7 @@ public class UIAlertAction
     
     
     @Mapping("actionWithTitle:style:handler:")
-    public static native UIAlertAction create(String title, @Representing("UIAlertActionStyle") @MachineSizedSInt long style, @Block VoidBlock1<UIAlertAction> handler);
+    public static native UIAlertAction create(String title, @Representing("UIAlertActionStyle") long style, @Block VoidBlock1<UIAlertAction> handler);
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
     

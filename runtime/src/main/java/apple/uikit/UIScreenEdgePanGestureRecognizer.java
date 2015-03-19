@@ -38,9 +38,9 @@ public class UIScreenEdgePanGestureRecognizer
     
     
     @Mapping("edges")
-    public native @Representing("UIRectEdge") @MachineSizedUInt long getEdges();
+    public native @Representing("UIRectEdge") long getEdges();
     @Mapping("setEdges:")
-    public native void setEdges(@Representing("UIRectEdge") @MachineSizedUInt long v);
+    public native void setEdges(@Representing("UIRectEdge") long v);
     
     
     

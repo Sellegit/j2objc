@@ -56,7 +56,7 @@ public class NSNumber
     
     
     @Mapping("compare:")
-    public native @Representing("NSComparisonResult") @MachineSizedSInt long compare(NSNumber otherNumber);
+    public native @Representing("NSComparisonResult") long compare(NSNumber otherNumber);
     @Mapping("isEqualToNumber:")
     public native boolean isEqualTo(NSNumber number);
     @Mapping("descriptionWithLocale:")

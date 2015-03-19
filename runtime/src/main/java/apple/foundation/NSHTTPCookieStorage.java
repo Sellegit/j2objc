@@ -36,9 +36,9 @@ public class NSHTTPCookieStorage
     @Mapping("cookies")
     public native NSArray<NSHTTPCookie> getCookies();
     @Mapping("cookieAcceptPolicy")
-    public native @Representing("NSHTTPCookieAcceptPolicy") @MachineSizedUInt long getCookieAcceptPolicy();
+    public native @Representing("NSHTTPCookieAcceptPolicy") long getCookieAcceptPolicy();
     @Mapping("setCookieAcceptPolicy:")
-    public native void setCookieAcceptPolicy(@Representing("NSHTTPCookieAcceptPolicy") @MachineSizedUInt long v);
+    public native void setCookieAcceptPolicy(@Representing("NSHTTPCookieAcceptPolicy") long v);
     
     
     

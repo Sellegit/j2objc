@@ -35,17 +35,17 @@ public class NSDateComponentsFormatter
     
     
     @Mapping("unitsStyle")
-    public native @Representing("NSDateComponentsFormatterUnitsStyle") @MachineSizedSInt long getUnitsStyle();
+    public native @Representing("NSDateComponentsFormatterUnitsStyle") long getUnitsStyle();
     @Mapping("setUnitsStyle:")
-    public native void setUnitsStyle(@Representing("NSDateComponentsFormatterUnitsStyle") @MachineSizedSInt long v);
+    public native void setUnitsStyle(@Representing("NSDateComponentsFormatterUnitsStyle") long v);
     @Mapping("allowedUnits")
-    public native @Representing("NSCalendarUnit") @MachineSizedUInt long getAllowedUnits();
+    public native @Representing("NSCalendarUnit") long getAllowedUnits();
     @Mapping("setAllowedUnits:")
-    public native void setAllowedUnits(@Representing("NSCalendarUnit") @MachineSizedUInt long v);
+    public native void setAllowedUnits(@Representing("NSCalendarUnit") long v);
     @Mapping("zeroFormattingBehavior")
-    public native @Representing("NSDateComponentsFormatterZeroFormattingBehavior") @MachineSizedUInt long getZeroFormattingBehavior();
+    public native @Representing("NSDateComponentsFormatterZeroFormattingBehavior") long getZeroFormattingBehavior();
     @Mapping("setZeroFormattingBehavior:")
-    public native void setZeroFormattingBehavior(@Representing("NSDateComponentsFormatterZeroFormattingBehavior") @MachineSizedUInt long v);
+    public native void setZeroFormattingBehavior(@Representing("NSDateComponentsFormatterZeroFormattingBehavior") long v);
     @Mapping("calendar")
     public native NSCalendar getCalendar();
     @Mapping("setCalendar:")
@@ -71,9 +71,9 @@ public class NSDateComponentsFormatter
     @Mapping("setIncludesTimeRemainingPhrase:")
     public native void setIncludesTimeRemainingPhrase(boolean v);
     @Mapping("formattingContext")
-    public native @Representing("NSFormattingContext") @MachineSizedSInt long getFormattingContext();
+    public native @Representing("NSFormattingContext") long getFormattingContext();
     @Mapping("setFormattingContext:")
-    public native void setFormattingContext(@Representing("NSFormattingContext") @MachineSizedSInt long v);
+    public native void setFormattingContext(@Representing("NSFormattingContext") long v);
     
     
     

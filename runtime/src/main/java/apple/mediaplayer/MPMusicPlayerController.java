@@ -32,15 +32,15 @@ public class MPMusicPlayerController
     
     
     @Mapping("playbackState")
-    public native @Representing("MPMusicPlaybackState") @MachineSizedSInt long getPlaybackState();
+    public native @Representing("MPMusicPlaybackState") long getPlaybackState();
     @Mapping("repeatMode")
-    public native @Representing("MPMusicRepeatMode") @MachineSizedSInt long getRepeatMode();
+    public native @Representing("MPMusicRepeatMode") long getRepeatMode();
     @Mapping("setRepeatMode:")
-    public native void setRepeatMode(@Representing("MPMusicRepeatMode") @MachineSizedSInt long v);
+    public native void setRepeatMode(@Representing("MPMusicRepeatMode") long v);
     @Mapping("shuffleMode")
-    public native @Representing("MPMusicShuffleMode") @MachineSizedSInt long getShuffleMode();
+    public native @Representing("MPMusicShuffleMode") long getShuffleMode();
     @Mapping("setShuffleMode:")
-    public native void setShuffleMode(@Representing("MPMusicShuffleMode") @MachineSizedSInt long v);
+    public native void setShuffleMode(@Representing("MPMusicShuffleMode") long v);
     /**
      * @since Available in iOS 3.0 and later.
      * @deprecated Deprecated in iOS 7.0.

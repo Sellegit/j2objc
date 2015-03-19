@@ -34,6 +34,6 @@ public abstract class NSStreamDelegateAdapter
     
     
     @NotImplemented("stream:handleEvent:")
-    public void handleEvent(NSStream aStream, @Representing("NSStreamEvent") @MachineSizedUInt long eventCode) { throw new UnsupportedOperationException(); }
+    public void handleEvent(NSStream aStream, @Representing("NSStreamEvent") long eventCode) { throw new UnsupportedOperationException(); }
     
 }

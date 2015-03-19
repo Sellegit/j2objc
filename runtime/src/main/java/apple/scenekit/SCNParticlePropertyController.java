@@ -39,9 +39,9 @@ public class SCNParticlePropertyController
     @Mapping("setAnimation:")
     public native void setAnimation(CAAnimation v);
     @Mapping("inputMode")
-    public native @Representing("SCNParticleInputMode") @MachineSizedSInt long getInputMode();
+    public native @Representing("SCNParticleInputMode") long getInputMode();
     @Mapping("setInputMode:")
-    public native void setInputMode(@Representing("SCNParticleInputMode") @MachineSizedSInt long v);
+    public native void setInputMode(@Representing("SCNParticleInputMode") long v);
     @Mapping("inputScale")
     public native @MachineSizedFloat double getInputScale();
     @Mapping("setInputScale:")

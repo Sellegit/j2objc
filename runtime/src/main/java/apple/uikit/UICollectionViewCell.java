@@ -33,6 +33,8 @@ public class UICollectionViewCell
     
     @Mapping("initWithFrame:")
     public UICollectionViewCell(CGRect frame) { }
+    @Mapping("initWithCoder:")
+    public UICollectionViewCell(NSCoder aDecoder) { }
     @Mapping("init")
     public UICollectionViewCell() { }
     

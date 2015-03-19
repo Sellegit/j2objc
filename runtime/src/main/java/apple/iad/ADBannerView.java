@@ -34,7 +34,7 @@ public class ADBannerView
      * @since Available in iOS 6.0 and later.
      */
     @Mapping("initWithAdType:")
-    public ADBannerView(@Representing("ADAdType") @MachineSizedSInt long type) { }
+    public ADBannerView(@Representing("ADAdType") long type) { }
     @Mapping("initWithFrame:")
     public ADBannerView(CGRect frame) { }
     @Mapping("init")
@@ -45,7 +45,7 @@ public class ADBannerView
      * @since Available in iOS 6.0 and later.
      */
     @Mapping("adType")
-    public native @Representing("ADAdType") @MachineSizedSInt long getAdType();
+    public native @Representing("ADAdType") long getAdType();
     @Mapping("delegate")
     public native ADBannerViewDelegate getDelegate();
     @Mapping("setDelegate:")

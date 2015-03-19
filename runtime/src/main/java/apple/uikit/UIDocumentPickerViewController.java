@@ -32,11 +32,13 @@ public class UIDocumentPickerViewController
     
     
     @Mapping("initWithDocumentTypes:inMode:")
-    public UIDocumentPickerViewController(NSArray<?> allowedUTIs, @Representing("UIDocumentPickerMode") @MachineSizedUInt long mode) { }
+    public UIDocumentPickerViewController(NSArray<?> allowedUTIs, @Representing("UIDocumentPickerMode") long mode) { }
     @Mapping("initWithURL:inMode:")
-    public UIDocumentPickerViewController(NSURL url, @Representing("UIDocumentPickerMode") @MachineSizedUInt long mode) { }
+    public UIDocumentPickerViewController(NSURL url, @Representing("UIDocumentPickerMode") long mode) { }
     @Mapping("initWithNibName:bundle:")
     public UIDocumentPickerViewController(String nibNameOrNil, NSBundle nibBundleOrNil) { }
+    @Mapping("initWithCoder:")
+    public UIDocumentPickerViewController(NSCoder aDecoder) { }
     @Mapping("init")
     public UIDocumentPickerViewController() { }
     
@@ -46,7 +48,7 @@ public class UIDocumentPickerViewController
     @Mapping("setDelegate:")
     public native void setDelegate(UIDocumentPickerDelegate v);
     @Mapping("documentPickerMode")
-    public native @Representing("UIDocumentPickerMode") @MachineSizedUInt long getDocumentPickerMode();
+    public native @Representing("UIDocumentPickerMode") long getDocumentPickerMode();
     
     
     

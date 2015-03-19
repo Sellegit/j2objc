@@ -32,17 +32,19 @@ public class UIProgressView
     
     
     @Mapping("initWithProgressViewStyle:")
-    public UIProgressView(@Representing("UIProgressViewStyle") @MachineSizedSInt long style) { }
+    public UIProgressView(@Representing("UIProgressViewStyle") long style) { }
     @Mapping("initWithFrame:")
     public UIProgressView(CGRect frame) { }
+    @Mapping("initWithCoder:")
+    public UIProgressView(NSCoder aDecoder) { }
     @Mapping("init")
     public UIProgressView() { }
     
     
     @Mapping("progressViewStyle")
-    public native @Representing("UIProgressViewStyle") @MachineSizedSInt long getProgressViewStyle();
+    public native @Representing("UIProgressViewStyle") long getProgressViewStyle();
     @Mapping("setProgressViewStyle:")
-    public native void setProgressViewStyle(@Representing("UIProgressViewStyle") @MachineSizedSInt long v);
+    public native void setProgressViewStyle(@Representing("UIProgressViewStyle") long v);
     @Mapping("progress")
     public native float getProgress();
     @Mapping("setProgress:")

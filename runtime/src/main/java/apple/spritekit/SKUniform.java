@@ -58,7 +58,7 @@ public class SKUniform
     @Mapping("name")
     public native String getName();
     @Mapping("uniformType")
-    public native @Representing("SKUniformType") @MachineSizedSInt long getUniformType();
+    public native @Representing("SKUniformType") long getUniformType();
     @Mapping("textureValue")
     public native SKTexture getTextureValue();
     @Mapping("setTextureValue:")

@@ -88,7 +88,7 @@ public class UICollectionViewLayoutAttributes
     @Mapping("setIndexPath:")
     public native void setIndexPath(NSIndexPath v);
     @Mapping("representedElementCategory")
-    public native @Representing("UICollectionElementCategory") @MachineSizedUInt long getRepresentedElementCategory();
+    public native @Representing("UICollectionElementCategory") long getRepresentedElementCategory();
     @Mapping("representedElementKind")
     public native String getRepresentedElementKind();
     

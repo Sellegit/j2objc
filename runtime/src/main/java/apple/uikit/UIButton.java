@@ -33,6 +33,8 @@ public class UIButton
     
     @Mapping("initWithFrame:")
     public UIButton(CGRect frame) { }
+    @Mapping("initWithCoder:")
+    public UIButton(NSCoder aDecoder) { }
     @Mapping("init")
     public UIButton() { }
     
@@ -76,7 +78,7 @@ public class UIButton
     @Mapping("setTintColor:")
     public native void setTintColor(UIColor v);
     @Mapping("buttonType")
-    public native @Representing("UIButtonType") @MachineSizedSInt long getButtonType();
+    public native @Representing("UIButtonType") long getButtonType();
     @Mapping("currentTitle")
     public native String getCurrentTitle();
     @Mapping("currentTitleColor")
@@ -106,35 +108,35 @@ public class UIButton
     
     
     @Mapping("setTitle:forState:")
-    public native void setTitle(String title, @Representing("UIControlState") @MachineSizedUInt long state);
+    public native void setTitle(String title, @Representing("UIControlState") long state);
     @Mapping("setTitleColor:forState:")
-    public native void setTitleColor(UIColor color, @Representing("UIControlState") @MachineSizedUInt long state);
+    public native void setTitleColor(UIColor color, @Representing("UIControlState") long state);
     @Mapping("setTitleShadowColor:forState:")
-    public native void setTitleShadowColor(UIColor color, @Representing("UIControlState") @MachineSizedUInt long state);
+    public native void setTitleShadowColor(UIColor color, @Representing("UIControlState") long state);
     @Mapping("setImage:forState:")
-    public native void setImage(UIImage image, @Representing("UIControlState") @MachineSizedUInt long state);
+    public native void setImage(UIImage image, @Representing("UIControlState") long state);
     @Mapping("setBackgroundImage:forState:")
-    public native void setBackgroundImage(UIImage image, @Representing("UIControlState") @MachineSizedUInt long state);
+    public native void setBackgroundImage(UIImage image, @Representing("UIControlState") long state);
     /**
      * @since Available in iOS 6.0 and later.
      */
     @Mapping("setAttributedTitle:forState:")
-    public native void setAttributedTitle(NSAttributedString title, @Representing("UIControlState") @MachineSizedUInt long state);
+    public native void setAttributedTitle(NSAttributedString title, @Representing("UIControlState") long state);
     @Mapping("titleForState:")
-    public native String getTitle(@Representing("UIControlState") @MachineSizedUInt long state);
+    public native String getTitle(@Representing("UIControlState") long state);
     @Mapping("titleColorForState:")
-    public native UIColor getTitleColor(@Representing("UIControlState") @MachineSizedUInt long state);
+    public native UIColor getTitleColor(@Representing("UIControlState") long state);
     @Mapping("titleShadowColorForState:")
-    public native UIColor getTitleShadowColor(@Representing("UIControlState") @MachineSizedUInt long state);
+    public native UIColor getTitleShadowColor(@Representing("UIControlState") long state);
     @Mapping("imageForState:")
-    public native UIImage getImage(@Representing("UIControlState") @MachineSizedUInt long state);
+    public native UIImage getImage(@Representing("UIControlState") long state);
     @Mapping("backgroundImageForState:")
-    public native UIImage getBackgroundImage(@Representing("UIControlState") @MachineSizedUInt long state);
+    public native UIImage getBackgroundImage(@Representing("UIControlState") long state);
     /**
      * @since Available in iOS 6.0 and later.
      */
     @Mapping("attributedTitleForState:")
-    public native NSAttributedString getAttributedTitle(@Representing("UIControlState") @MachineSizedUInt long state);
+    public native NSAttributedString getAttributedTitle(@Representing("UIControlState") long state);
     @Mapping("backgroundRectForBounds:")
     public native CGRect getBackgroundRect(CGRect bounds);
     @Mapping("contentRectForBounds:")
@@ -144,6 +146,6 @@ public class UIButton
     @Mapping("imageRectForContentRect:")
     public native CGRect getImageRect(CGRect contentRect);
     @Mapping("buttonWithType:")
-    public static native UIButton create(@Representing("UIButtonType") @MachineSizedSInt long buttonType);
+    public static native UIButton create(@Representing("UIButtonType") long buttonType);
     
 }

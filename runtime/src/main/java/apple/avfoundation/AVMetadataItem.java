@@ -85,7 +85,7 @@ public class AVMetadataItem
      * @since Available in iOS 4.2 and later.
      */
     @Mapping("statusOfValueForKey:error:")
-    public native @Representing("AVKeyValueStatus") @MachineSizedSInt long getStatusOfValue(String key, Todo outError);
+    public native @Representing("AVKeyValueStatus") long getStatusOfValue(String key, Todo outError);
     /**
      * @since Available in iOS 4.2 and later.
      */

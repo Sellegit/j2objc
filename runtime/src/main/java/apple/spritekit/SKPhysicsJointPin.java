@@ -31,6 +31,8 @@ public class SKPhysicsJointPin
 
     
     
+    @Mapping("initWithCoder:")
+    public SKPhysicsJointPin(NSCoder aDecoder) { }
     @Mapping("init")
     public SKPhysicsJointPin() { }
     

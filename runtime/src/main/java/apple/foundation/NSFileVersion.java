@@ -65,7 +65,7 @@ public class NSFileVersion
     
     
     @Mapping("replaceItemAtURL:options:error:")
-    public native NSURL replaceItemAtURL(NSURL url, @Representing("NSFileVersionReplacingOptions") @MachineSizedUInt long options, Todo error);
+    public native NSURL replaceItemAtURL(NSURL url, @Representing("NSFileVersionReplacingOptions") long options, Todo error);
     @Mapping("removeAndReturnError:")
     public native boolean remove(Todo outError);
     @Mapping("currentVersionOfItemAtURL:")

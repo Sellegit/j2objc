@@ -54,13 +54,13 @@ public class NSDateIntervalFormatter
     @Mapping("setDateTemplate:")
     public native void setDateTemplate(String v);
     @Mapping("dateStyle")
-    public native @Representing("NSDateIntervalFormatterStyle") @MachineSizedUInt long getDateStyle();
+    public native @Representing("NSDateIntervalFormatterStyle") long getDateStyle();
     @Mapping("setDateStyle:")
-    public native void setDateStyle(@Representing("NSDateIntervalFormatterStyle") @MachineSizedUInt long v);
+    public native void setDateStyle(@Representing("NSDateIntervalFormatterStyle") long v);
     @Mapping("timeStyle")
-    public native @Representing("NSDateIntervalFormatterStyle") @MachineSizedUInt long getTimeStyle();
+    public native @Representing("NSDateIntervalFormatterStyle") long getTimeStyle();
     @Mapping("setTimeStyle:")
-    public native void setTimeStyle(@Representing("NSDateIntervalFormatterStyle") @MachineSizedUInt long v);
+    public native void setTimeStyle(@Representing("NSDateIntervalFormatterStyle") long v);
     
     
     

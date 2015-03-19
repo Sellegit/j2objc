@@ -46,13 +46,13 @@ public class NSLayoutConstraint
     @Mapping("firstItem")
     public native Object getFirstItem();
     @Mapping("firstAttribute")
-    public native @Representing("NSLayoutAttribute") @MachineSizedSInt long getFirstAttribute();
+    public native @Representing("NSLayoutAttribute") long getFirstAttribute();
     @Mapping("relation")
-    public native @Representing("NSLayoutRelation") @MachineSizedSInt long getRelation();
+    public native @Representing("NSLayoutRelation") long getRelation();
     @Mapping("secondItem")
     public native Object getSecondItem();
     @Mapping("secondAttribute")
-    public native @Representing("NSLayoutAttribute") @MachineSizedSInt long getSecondAttribute();
+    public native @Representing("NSLayoutAttribute") long getSecondAttribute();
     @Mapping("multiplier")
     public native @MachineSizedFloat double getMultiplier();
     @Mapping("constant")
@@ -83,9 +83,9 @@ public class NSLayoutConstraint
     
     
     @Mapping("constraintsWithVisualFormat:options:metrics:views:")
-    public static native NSArray<NSLayoutConstraint> create(String format, @Representing("NSLayoutFormatOptions") @MachineSizedUInt long opts, NSDictionary<?, ?> metrics, NSDictionary<?, ?> views);
+    public static native NSArray<NSLayoutConstraint> create(String format, @Representing("NSLayoutFormatOptions") long opts, NSDictionary<?, ?> metrics, NSDictionary<?, ?> views);
     @Mapping("constraintWithItem:attribute:relatedBy:toItem:attribute:multiplier:constant:")
-    public static native NSLayoutConstraint create(Object view1, @Representing("NSLayoutAttribute") @MachineSizedSInt long attr1, @Representing("NSLayoutRelation") @MachineSizedSInt long relation, Object view2, @Representing("NSLayoutAttribute") @MachineSizedSInt long attr2, @MachineSizedFloat double multiplier, @MachineSizedFloat double c);
+    public static native NSLayoutConstraint create(Object view1, @Representing("NSLayoutAttribute") long attr1, @Representing("NSLayoutRelation") long relation, Object view2, @Representing("NSLayoutAttribute") long attr2, @MachineSizedFloat double multiplier, @MachineSizedFloat double c);
     /**
      * @since Available in iOS 8.0 and later.
      */

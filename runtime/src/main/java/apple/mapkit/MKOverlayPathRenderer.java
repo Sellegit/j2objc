@@ -48,13 +48,13 @@ public class MKOverlayPathRenderer
     @Mapping("setLineWidth:")
     public native void setLineWidth(@MachineSizedFloat double v);
     @Mapping("lineJoin")
-    public native @Representing("CGLineJoin") int getLineJoin();
+    public native @Representing("CGLineJoin") long getLineJoin();
     @Mapping("setLineJoin:")
-    public native void setLineJoin(@Representing("CGLineJoin") int v);
+    public native void setLineJoin(@Representing("CGLineJoin") long v);
     @Mapping("lineCap")
-    public native @Representing("CGLineCap") int getLineCap();
+    public native @Representing("CGLineCap") long getLineCap();
     @Mapping("setLineCap:")
-    public native void setLineCap(@Representing("CGLineCap") int v);
+    public native void setLineCap(@Representing("CGLineCap") long v);
     @Mapping("miterLimit")
     public native @MachineSizedFloat double getMiterLimit();
     @Mapping("setMiterLimit:")

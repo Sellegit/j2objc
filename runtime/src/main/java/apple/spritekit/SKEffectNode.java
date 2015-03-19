@@ -54,9 +54,9 @@ public class SKEffectNode
     @Mapping("setShouldRasterize:")
     public native void setShouldRasterize(boolean v);
     @Mapping("blendMode")
-    public native @Representing("SKBlendMode") @MachineSizedSInt long getBlendMode();
+    public native @Representing("SKBlendMode") long getBlendMode();
     @Mapping("setBlendMode:")
-    public native void setBlendMode(@Representing("SKBlendMode") @MachineSizedSInt long v);
+    public native void setBlendMode(@Representing("SKBlendMode") long v);
     @Mapping("shader")
     public native SKShader getShader();
     @Mapping("setShader:")

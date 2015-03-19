@@ -34,6 +34,6 @@ public abstract class UIBarPositioningDelegateAdapter
     
     
     @NotImplemented("positionForBar:")
-    public @Representing("UIBarPosition") @MachineSizedSInt long getPosition(UIBarPositioning bar) { throw new UnsupportedOperationException(); }
+    public @Representing("UIBarPosition") long getPosition(UIBarPositioning bar) { throw new UnsupportedOperationException(); }
     
 }

@@ -57,7 +57,7 @@ public abstract class NSLayoutManagerDelegateAdapter
      * @since Available in iOS 7.0 and later.
      */
     @NotImplemented("layoutManager:shouldUseAction:forControlCharacterAtIndex:")
-    public @Representing("NSControlCharacterAction") @MachineSizedSInt long shouldUseAction(NSLayoutManager layoutManager, @Representing("NSControlCharacterAction") @MachineSizedSInt long action, @MachineSizedUInt long charIndex) { throw new UnsupportedOperationException(); }
+    public @Representing("NSControlCharacterAction") long shouldUseAction(NSLayoutManager layoutManager, @Representing("NSControlCharacterAction") long action, @MachineSizedUInt long charIndex) { throw new UnsupportedOperationException(); }
     /**
      * @since Available in iOS 7.0 and later.
      */

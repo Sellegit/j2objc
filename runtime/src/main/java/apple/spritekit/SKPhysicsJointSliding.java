@@ -31,6 +31,8 @@ public class SKPhysicsJointSliding
 
     
     
+    @Mapping("initWithCoder:")
+    public SKPhysicsJointSliding(NSCoder aDecoder) { }
     @Mapping("init")
     public SKPhysicsJointSliding() { }
     

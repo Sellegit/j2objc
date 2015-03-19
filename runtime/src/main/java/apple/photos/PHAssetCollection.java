@@ -34,9 +34,9 @@ public class PHAssetCollection
     
     
     @Mapping("assetCollectionType")
-    public native @Representing("PHAssetCollectionType") @MachineSizedSInt long getAssetCollectionType();
+    public native @Representing("PHAssetCollectionType") long getAssetCollectionType();
     @Mapping("assetCollectionSubtype")
-    public native @Representing("PHAssetCollectionSubtype") @MachineSizedSInt long getAssetCollectionSubtype();
+    public native @Representing("PHAssetCollectionSubtype") long getAssetCollectionSubtype();
     @Mapping("estimatedAssetCount")
     public native @MachineSizedUInt long getEstimatedAssetCount();
     @Mapping("startDate")
@@ -53,9 +53,9 @@ public class PHAssetCollection
     @Mapping("fetchAssetCollectionsWithLocalIdentifiers:options:")
     public static native PHFetchResult fetchAssetCollectionsWithLocalIdentifiers(NSArray<?> identifiers, PHFetchOptions options);
     @Mapping("fetchAssetCollectionsWithType:subtype:options:")
-    public static native PHFetchResult fetchAssetCollectionsWithType(@Representing("PHAssetCollectionType") @MachineSizedSInt long type, @Representing("PHAssetCollectionSubtype") @MachineSizedSInt long subtype, PHFetchOptions options);
+    public static native PHFetchResult fetchAssetCollectionsWithType(@Representing("PHAssetCollectionType") long type, @Representing("PHAssetCollectionSubtype") long subtype, PHFetchOptions options);
     @Mapping("fetchAssetCollectionsContainingAsset:withType:options:")
-    public static native PHFetchResult fetchAssetCollectionsContainingAsset(PHAsset asset, @Representing("PHAssetCollectionType") @MachineSizedSInt long type, PHFetchOptions options);
+    public static native PHFetchResult fetchAssetCollectionsContainingAsset(PHAsset asset, @Representing("PHAssetCollectionType") long type, PHFetchOptions options);
     @Mapping("fetchAssetCollectionsWithALAssetGroupURLs:options:")
     public static native PHFetchResult fetchAssetCollectionsWithALAssetGroupURLs(NSArray<?> assetGroupURLs, PHFetchOptions options);
     @Mapping("fetchMomentsInMomentList:options:")

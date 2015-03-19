@@ -33,14 +33,16 @@ public class UIToolbar
     
     @Mapping("initWithFrame:")
     public UIToolbar(CGRect frame) { }
+    @Mapping("initWithCoder:")
+    public UIToolbar(NSCoder aDecoder) { }
     @Mapping("init")
     public UIToolbar() { }
     
     
     @Mapping("barStyle")
-    public native @Representing("UIBarStyle") @MachineSizedSInt long getBarStyle();
+    public native @Representing("UIBarStyle") long getBarStyle();
     @Mapping("setBarStyle:")
-    public native void setBarStyle(@Representing("UIBarStyle") @MachineSizedSInt long v);
+    public native void setBarStyle(@Representing("UIBarStyle") long v);
     @Mapping("items")
     public native NSArray<UIBarButtonItem> getItems();
     @Mapping("setItems:")
@@ -80,7 +82,7 @@ public class UIToolbar
     @Mapping("setDelegate:")
     public native void setDelegate(UIToolbarDelegate v);
     @Mapping("barPosition")
-    public native @Representing("UIBarPosition") @MachineSizedSInt long getBarPosition();
+    public native @Representing("UIBarPosition") long getBarPosition();
     
     
     
@@ -90,21 +92,21 @@ public class UIToolbar
      * @since Available in iOS 5.0 and later.
      */
     @Mapping("setBackgroundImage:forToolbarPosition:barMetrics:")
-    public native void setBackgroundImage(UIImage backgroundImage, @Representing("UIBarPosition") @MachineSizedSInt long topOrBottom, @Representing("UIBarMetrics") @MachineSizedSInt long barMetrics);
+    public native void setBackgroundImage(UIImage backgroundImage, @Representing("UIBarPosition") long topOrBottom, @Representing("UIBarMetrics") long barMetrics);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @Mapping("backgroundImageForToolbarPosition:barMetrics:")
-    public native UIImage getBackgroundImage(@Representing("UIBarPosition") @MachineSizedSInt long topOrBottom, @Representing("UIBarMetrics") @MachineSizedSInt long barMetrics);
+    public native UIImage getBackgroundImage(@Representing("UIBarPosition") long topOrBottom, @Representing("UIBarMetrics") long barMetrics);
     /**
      * @since Available in iOS 6.0 and later.
      */
     @Mapping("setShadowImage:forToolbarPosition:")
-    public native void setShadowImage(UIImage shadowImage, @Representing("UIBarPosition") @MachineSizedSInt long topOrBottom);
+    public native void setShadowImage(UIImage shadowImage, @Representing("UIBarPosition") long topOrBottom);
     /**
      * @since Available in iOS 6.0 and later.
      */
     @Mapping("shadowImageForToolbarPosition:")
-    public native UIImage getShadowImage(@Representing("UIBarPosition") @MachineSizedSInt long topOrBottom);
+    public native UIImage getShadowImage(@Representing("UIBarPosition") long topOrBottom);
     
 }

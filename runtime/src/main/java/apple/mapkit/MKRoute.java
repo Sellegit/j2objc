@@ -42,7 +42,7 @@ public class MKRoute
     @Mapping("expectedTravelTime")
     public native double getExpectedTravelTime();
     @Mapping("transportType")
-    public native @Representing("MKDirectionsTransportType") @MachineSizedUInt long getTransportType();
+    public native @Representing("MKDirectionsTransportType") long getTransportType();
     @Mapping("polyline")
     public native MKPolyline getPolyline();
     @Mapping("steps")

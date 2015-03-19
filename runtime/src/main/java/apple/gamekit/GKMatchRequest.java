@@ -122,6 +122,6 @@ public class GKMatchRequest
      * @since Available in iOS 6.0 and later.
      */
     @Mapping("maxPlayersAllowedForMatchOfType:")
-    public static native @MachineSizedUInt long getMaxPlayersAllowedForMatchType(@Representing("GKMatchType") @MachineSizedUInt long matchType);
+    public static native @MachineSizedUInt long getMaxPlayersAllowedForMatchType(@Representing("GKMatchType") long matchType);
     
 }

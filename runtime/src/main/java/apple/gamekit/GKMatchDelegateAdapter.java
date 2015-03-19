@@ -45,14 +45,14 @@ public abstract class GKMatchDelegateAdapter
      * @since Available in iOS 4.1 and later.
      */
     @NotImplemented("match:player:didChangeConnectionState:")
-    public void didChangeConnectionState(GKMatch match, GKPlayer player, @Representing("GKPlayerConnectionState") @MachineSizedSInt long state) { throw new UnsupportedOperationException(); }
+    public void didChangeConnectionState(GKMatch match, GKPlayer player, @Representing("GKPlayerConnectionState") long state) { throw new UnsupportedOperationException(); }
     /**
      * @since Available in iOS 4.1 and later.
      * @deprecated Deprecated in iOS 8.0.
      */
     @Deprecated
     @NotImplemented("match:player:didChangeState:")
-    public void didChangeState(GKMatch match, String playerID, @Representing("GKPlayerConnectionState") @MachineSizedSInt long state) { throw new UnsupportedOperationException(); }
+    public void didChangeState(GKMatch match, String playerID, @Representing("GKPlayerConnectionState") long state) { throw new UnsupportedOperationException(); }
     /**
      * @since Available in iOS 4.1 and later.
      */

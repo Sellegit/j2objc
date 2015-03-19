@@ -32,7 +32,7 @@ public class NSComparisonPredicate
     
     
     @Mapping("initWithLeftExpression:rightExpression:modifier:type:options:")
-    public NSComparisonPredicate(NSExpression lhs, NSExpression rhs, @Representing("NSComparisonPredicateModifier") @MachineSizedUInt long modifier, @Representing("NSPredicateOperatorType") @MachineSizedUInt long type, @Representing("NSComparisonPredicateOptions") @MachineSizedUInt long options) { }
+    public NSComparisonPredicate(NSExpression lhs, NSExpression rhs, @Representing("NSComparisonPredicateModifier") long modifier, @Representing("NSPredicateOperatorType") long type, @Representing("NSComparisonPredicateOptions") long options) { }
     @Mapping("initWithLeftExpression:rightExpression:customSelector:")
     public NSComparisonPredicate(NSExpression lhs, NSExpression rhs, Selector selector) { }
     @Mapping("init")
@@ -40,9 +40,9 @@ public class NSComparisonPredicate
     
     
     @Mapping("predicateOperatorType")
-    public native @Representing("NSPredicateOperatorType") @MachineSizedUInt long getPredicateOperatorType();
+    public native @Representing("NSPredicateOperatorType") long getPredicateOperatorType();
     @Mapping("comparisonPredicateModifier")
-    public native @Representing("NSComparisonPredicateModifier") @MachineSizedUInt long getComparisonPredicateModifier();
+    public native @Representing("NSComparisonPredicateModifier") long getComparisonPredicateModifier();
     @Mapping("leftExpression")
     public native NSExpression getLeftExpression();
     @Mapping("rightExpression")
@@ -50,7 +50,7 @@ public class NSComparisonPredicate
     @Mapping("customSelector")
     public native Selector getCustomSelector();
     @Mapping("options")
-    public native @Representing("NSComparisonPredicateOptions") @MachineSizedUInt long getOptions();
+    public native @Representing("NSComparisonPredicateOptions") long getOptions();
     
     
     

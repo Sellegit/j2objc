@@ -32,11 +32,13 @@ public class UIDocumentMenuViewController
     
     
     @Mapping("initWithDocumentTypes:inMode:")
-    public UIDocumentMenuViewController(NSArray<?> allowedUTIs, @Representing("UIDocumentPickerMode") @MachineSizedUInt long mode) { }
+    public UIDocumentMenuViewController(NSArray<?> allowedUTIs, @Representing("UIDocumentPickerMode") long mode) { }
     @Mapping("initWithURL:inMode:")
-    public UIDocumentMenuViewController(NSURL url, @Representing("UIDocumentPickerMode") @MachineSizedUInt long mode) { }
+    public UIDocumentMenuViewController(NSURL url, @Representing("UIDocumentPickerMode") long mode) { }
     @Mapping("initWithNibName:bundle:")
     public UIDocumentMenuViewController(String nibNameOrNil, NSBundle nibBundleOrNil) { }
+    @Mapping("initWithCoder:")
+    public UIDocumentMenuViewController(NSCoder aDecoder) { }
     @Mapping("init")
     public UIDocumentMenuViewController() { }
     
@@ -49,6 +51,6 @@ public class UIDocumentMenuViewController
     
     
     @Mapping("addOptionWithTitle:image:order:handler:")
-    public native void addOption(String title, UIImage image, @Representing("UIDocumentMenuOrder") @MachineSizedUInt long order, @Block Runnable handler);
+    public native void addOption(String title, UIImage image, @Representing("UIDocumentMenuOrder") long order, @Block Runnable handler);
     
 }

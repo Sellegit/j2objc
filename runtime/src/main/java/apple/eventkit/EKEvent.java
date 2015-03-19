@@ -65,7 +65,7 @@ public class EKEvent
     
     
     @Mapping("compareStartDateWithEvent:")
-    public native @Representing("NSComparisonResult") @MachineSizedSInt long compareStartDateWithEvent(EKEvent other);
+    public native @Representing("NSComparisonResult") long compareStartDateWithEvent(EKEvent other);
     @Mapping("refresh")
     public native boolean refresh();
     @Mapping("eventWithEventStore:")

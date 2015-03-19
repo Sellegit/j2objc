@@ -37,11 +37,11 @@ public abstract class NSTextStorageDelegateAdapter
      * @since Available in iOS 7.0 and later.
      */
     @NotImplemented("textStorage:willProcessEditing:range:changeInLength:")
-    public void willProcessEditing(NSTextStorage textStorage, @Representing("NSTextStorageEditActions") @MachineSizedUInt long editedMask, NSRange editedRange, @MachineSizedSInt long delta) { throw new UnsupportedOperationException(); }
+    public void willProcessEditing(NSTextStorage textStorage, @Representing("NSTextStorageEditActions") long editedMask, NSRange editedRange, @MachineSizedSInt long delta) { throw new UnsupportedOperationException(); }
     /**
      * @since Available in iOS 7.0 and later.
      */
     @NotImplemented("textStorage:didProcessEditing:range:changeInLength:")
-    public void didProcessEditing(NSTextStorage textStorage, @Representing("NSTextStorageEditActions") @MachineSizedUInt long editedMask, NSRange editedRange, @MachineSizedSInt long delta) { throw new UnsupportedOperationException(); }
+    public void didProcessEditing(NSTextStorage textStorage, @Representing("NSTextStorageEditActions") long editedMask, NSRange editedRange, @MachineSizedSInt long delta) { throw new UnsupportedOperationException(); }
     
 }

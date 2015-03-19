@@ -54,9 +54,9 @@ public class SKEmitterNode
     @Mapping("setParticleZPositionSpeed:")
     public native void setParticleZPositionSpeed(@MachineSizedFloat double v);
     @Mapping("particleBlendMode")
-    public native @Representing("SKBlendMode") @MachineSizedSInt long getParticleBlendMode();
+    public native @Representing("SKBlendMode") long getParticleBlendMode();
     @Mapping("setParticleBlendMode:")
-    public native void setParticleBlendMode(@Representing("SKBlendMode") @MachineSizedSInt long v);
+    public native void setParticleBlendMode(@Representing("SKBlendMode") long v);
     @Mapping("particleColor")
     public native UIColor getParticleColor();
     @Mapping("setParticleColor:")

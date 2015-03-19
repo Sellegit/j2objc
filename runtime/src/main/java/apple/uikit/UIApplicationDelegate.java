@@ -70,9 +70,9 @@ public interface UIApplicationDelegate
     @Mapping("applicationSignificantTimeChange:")
     void significantTimeChange(UIApplication application);
     @Mapping("application:willChangeStatusBarOrientation:duration:")
-    void willChangeStatusBarOrientation(UIApplication application, @Representing("UIInterfaceOrientation") @MachineSizedSInt long newStatusBarOrientation, double duration);
+    void willChangeStatusBarOrientation(UIApplication application, @Representing("UIInterfaceOrientation") long newStatusBarOrientation, double duration);
     @Mapping("application:didChangeStatusBarOrientation:")
-    void didChangStatusBarOrientation(UIApplication application, @Representing("UIInterfaceOrientation") @MachineSizedSInt long oldStatusBarOrientation);
+    void didChangStatusBarOrientation(UIApplication application, @Representing("UIInterfaceOrientation") long oldStatusBarOrientation);
     @Mapping("application:willChangeStatusBarFrame:")
     void willChangeStatusBarFrame(UIApplication application, CGRect newStatusBarFrame);
     @Mapping("application:didChangeStatusBarFrame:")

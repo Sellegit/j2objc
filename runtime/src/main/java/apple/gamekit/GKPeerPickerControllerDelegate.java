@@ -28,9 +28,9 @@ public interface GKPeerPickerControllerDelegate
     
     
     @Mapping("peerPickerController:didSelectConnectionType:")
-    void didSelectConnectionType(GKPeerPickerController picker, @Representing("GKPeerPickerConnectionType") int type);
+    void didSelectConnectionType(GKPeerPickerController picker, @Representing("GKPeerPickerConnectionType") long type);
     @Mapping("peerPickerController:sessionForConnectionType:")
-    GKSession getSession(GKPeerPickerController picker, @Representing("GKPeerPickerConnectionType") int type);
+    GKSession getSession(GKPeerPickerController picker, @Representing("GKPeerPickerConnectionType") long type);
     @Mapping("peerPickerController:didConnectPeer:toSession:")
     void didConnectPeer(GKPeerPickerController picker, String peerID, GKSession session);
     @Mapping("peerPickerControllerDidCancel:")

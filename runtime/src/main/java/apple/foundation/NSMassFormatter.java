@@ -42,9 +42,9 @@ public class NSMassFormatter
     @Mapping("setNumberFormatter:")
     public native void setNumberFormatter(NSNumberFormatter v);
     @Mapping("unitStyle")
-    public native @Representing("NSFormattingUnitStyle") @MachineSizedSInt long getUnitStyle();
+    public native @Representing("NSFormattingUnitStyle") long getUnitStyle();
     @Mapping("setUnitStyle:")
-    public native void setUnitStyle(@Representing("NSFormattingUnitStyle") @MachineSizedSInt long v);
+    public native void setUnitStyle(@Representing("NSFormattingUnitStyle") long v);
     @Mapping("isForPersonMassUse")
     public native boolean isForPersonMassUse();
     @Mapping("setForPersonMassUse:")
@@ -53,11 +53,11 @@ public class NSMassFormatter
     
     
     @Mapping("stringFromValue:unit:")
-    public native String format(double value, @Representing("NSMassFormatterUnit") @MachineSizedSInt long unit);
+    public native String format(double value, @Representing("NSMassFormatterUnit") long unit);
     @Mapping("stringFromKilograms:")
     public native String formatKilograms(double numberInKilograms);
     @Mapping("unitStringFromValue:unit:")
-    public native String formatUnit(double value, @Representing("NSMassFormatterUnit") @MachineSizedSInt long unit);
+    public native String formatUnit(double value, @Representing("NSMassFormatterUnit") long unit);
     @Mapping("unitStringFromKilograms:usedUnit:")
     public native String formatUnitKilograms(double numberInKilograms, Todo unitp);
     

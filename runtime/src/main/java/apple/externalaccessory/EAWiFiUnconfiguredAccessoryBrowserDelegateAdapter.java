@@ -34,7 +34,7 @@ public abstract class EAWiFiUnconfiguredAccessoryBrowserDelegateAdapter
      * @since Available in iOS 8.0 and later.
      */
     @NotImplemented("accessoryBrowser:didUpdateState:")
-    public void didUpdateState(EAWiFiUnconfiguredAccessoryBrowser browser, @Representing("EAWiFiUnconfiguredAccessoryBrowserState") @MachineSizedSInt long state) { throw new UnsupportedOperationException(); }
+    public void didUpdateState(EAWiFiUnconfiguredAccessoryBrowser browser, @Representing("EAWiFiUnconfiguredAccessoryBrowserState") long state) { throw new UnsupportedOperationException(); }
     /**
      * @since Available in iOS 8.0 and later.
      */
@@ -49,6 +49,6 @@ public abstract class EAWiFiUnconfiguredAccessoryBrowserDelegateAdapter
      * @since Available in iOS 8.0 and later.
      */
     @NotImplemented("accessoryBrowser:didFinishConfiguringAccessory:withStatus:")
-    public void didFinishConfiguringAccessory(EAWiFiUnconfiguredAccessoryBrowser browser, EAWiFiUnconfiguredAccessory accessory, @Representing("EAWiFiUnconfiguredAccessoryConfigurationStatus") @MachineSizedSInt long status) { throw new UnsupportedOperationException(); }
+    public void didFinishConfiguringAccessory(EAWiFiUnconfiguredAccessoryBrowser browser, EAWiFiUnconfiguredAccessory accessory, @Representing("EAWiFiUnconfiguredAccessoryConfigurationStatus") long status) { throw new UnsupportedOperationException(); }
     
 }

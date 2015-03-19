@@ -56,7 +56,7 @@ public class GKChallenge
     @Mapping("receivingPlayer")
     public native GKPlayer getReceivingPlayer();
     @Mapping("state")
-    public native @Representing("GKChallengeState") @MachineSizedSInt long getState();
+    public native @Representing("GKChallengeState") long getState();
     @Mapping("issueDate")
     public native NSDate getIssueDate();
     @Mapping("completionDate")

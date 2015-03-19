@@ -43,7 +43,7 @@ public class CBPeripheralManager
     @Mapping("setDelegate:")
     public native void setDelegate(CBPeripheralManagerDelegate v);
     @Mapping("state")
-    public native @Representing("CBPeripheralManagerState") @MachineSizedSInt long getState();
+    public native @Representing("CBPeripheralManagerState") long getState();
     @Mapping("isAdvertising")
     public native boolean isAdvertising();
     
@@ -54,7 +54,7 @@ public class CBPeripheralManager
     @Mapping("stopAdvertising")
     public native void stopAdvertising();
     @Mapping("setDesiredConnectionLatency:forCentral:")
-    public native void setDesiredConnectionLatency(@Representing("CBPeripheralManagerConnectionLatency") @MachineSizedSInt long latency, CBCentral central);
+    public native void setDesiredConnectionLatency(@Representing("CBPeripheralManagerConnectionLatency") long latency, CBCentral central);
     @Mapping("addService:")
     public native void addService(CBMutableService service);
     @Mapping("removeService:")
@@ -69,6 +69,6 @@ public class CBPeripheralManager
      * @since Available in iOS 7.0 and later.
      */
     @Mapping("authorizationStatus")
-    public static native @Representing("CBPeripheralManagerAuthorizationStatus") @MachineSizedSInt long authorizationStatus();
+    public static native @Representing("CBPeripheralManagerAuthorizationStatus") long authorizationStatus();
     
 }

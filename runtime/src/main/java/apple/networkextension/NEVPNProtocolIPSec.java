@@ -34,12 +34,12 @@ public class NEVPNProtocolIPSec
      * @since Available in iOS 8.0 and later.
      */
     @Mapping("authenticationMethod")
-    public native @Representing("NEVPNIKEAuthenticationMethod") @MachineSizedSInt long getAuthenticationMethod();
+    public native @Representing("NEVPNIKEAuthenticationMethod") long getAuthenticationMethod();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @Mapping("setAuthenticationMethod:")
-    public native void setAuthenticationMethod(@Representing("NEVPNIKEAuthenticationMethod") @MachineSizedSInt long v);
+    public native void setAuthenticationMethod(@Representing("NEVPNIKEAuthenticationMethod") long v);
     /**
      * @since Available in iOS 8.0 and later.
      */

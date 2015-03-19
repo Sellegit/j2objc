@@ -43,9 +43,9 @@ public class MKCircle
     
     
     @Mapping("circleWithCenterCoordinate:radius:")
-    public static native MKCircle create(CLLocationCoordinate2D coord, double radius);
+    public static native MKCircle createPrime(CLLocationCoordinate2D coord, double radius);
     @Mapping("circleWithMapRect:")
-    public static native MKCircle create(MKMapRect mapRect);
+    public static native MKCircle createPrime(MKMapRect mapRect);
     @Mapping("intersectsMapRect:")
     public native boolean intersects(MKMapRect mapRect);
     /**

@@ -32,12 +32,12 @@ public interface NSTextLayoutOrientationProvider
      * @since Available in iOS 7.0 and later.
      */
     @Mapping("layoutOrientation")
-    @Representing("NSTextLayoutOrientation") @MachineSizedSInt long getLayoutOrientation();
+    @Representing("NSTextLayoutOrientation") long getLayoutOrientation();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @Mapping("setLayoutOrientation:")
-    void setLayoutOrientation(@Representing("NSTextLayoutOrientation") @MachineSizedSInt long v);
+    void setLayoutOrientation(@Representing("NSTextLayoutOrientation") long v);
     
     
     

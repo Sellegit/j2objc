@@ -33,6 +33,8 @@ public class UIInputViewController
     
     @Mapping("initWithNibName:bundle:")
     public UIInputViewController(String nibNameOrNil, NSBundle nibBundleOrNil) { }
+    @Mapping("initWithCoder:")
+    public UIInputViewController(NSCoder aDecoder) { }
     @Mapping("init")
     public UIInputViewController() { }
     

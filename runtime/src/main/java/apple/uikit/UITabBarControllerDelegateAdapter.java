@@ -61,7 +61,7 @@ public abstract class UITabBarControllerDelegateAdapter
      * @since Available in iOS 7.0 and later.
      */
     @NotImplemented("tabBarControllerPreferredInterfaceOrientationForPresentation:")
-    public @Representing("UIInterfaceOrientation") @MachineSizedSInt long getPreferredInterfaceOrientation(UITabBarController tabBarController) { throw new UnsupportedOperationException(); }
+    public @Representing("UIInterfaceOrientation") long getPreferredInterfaceOrientation(UITabBarController tabBarController) { throw new UnsupportedOperationException(); }
     /**
      * @since Available in iOS 7.0 and later.
      */

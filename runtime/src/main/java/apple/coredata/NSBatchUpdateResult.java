@@ -33,7 +33,7 @@ public class NSBatchUpdateResult
     @Mapping("result")
     public native Object getResult();
     @Mapping("resultType")
-    public native @Representing("NSBatchUpdateRequestResultType") @MachineSizedUInt long getResultType();
+    public native @Representing("NSBatchUpdateRequestResultType") long getResultType();
     
     
     

@@ -32,7 +32,7 @@ public interface UIBarPositioningDelegate
     
     
     @Mapping("positionForBar:")
-    @Representing("UIBarPosition") @MachineSizedSInt long getPosition(UIBarPositioning bar);
+    @Representing("UIBarPosition") long getPosition(UIBarPositioning bar);
     
     /*<adapter>*/
     /*</adapter>*/

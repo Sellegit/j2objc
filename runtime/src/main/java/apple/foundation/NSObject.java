@@ -52,7 +52,7 @@ public class NSObject
     @Mapping("mutableCopy")
     public native Object mutableCopy();
     @Mapping("addObserver:forKeyPath:options:context:")
-    public native void addObserver(NSObject observer, String keyPath, @Representing("NSKeyValueObservingOptions") @MachineSizedUInt long options, Todo context);
+    public native void addObserver(NSObject observer, String keyPath, @Representing("NSKeyValueObservingOptions") long options, Todo context);
     /**
      * @since Available in iOS 5.0 and later.
      */
@@ -63,13 +63,13 @@ public class NSObject
     @Mapping("didChangeValueForKey:")
     public native void didChangeValue(String key);
     @Mapping("willChange:valuesAtIndexes:forKey:")
-    public native void willChangeValues(@Representing("NSKeyValueChange") @MachineSizedUInt long changeKind, NSIndexSet indexes, String key);
+    public native void willChangeValues(@Representing("NSKeyValueChange") long changeKind, NSIndexSet indexes, String key);
     @Mapping("didChange:valuesAtIndexes:forKey:")
-    public native void didChangeValues(@Representing("NSKeyValueChange") @MachineSizedUInt long changeKind, NSIndexSet indexes, String key);
+    public native void didChangeValues(@Representing("NSKeyValueChange") long changeKind, NSIndexSet indexes, String key);
     @Mapping("willChangeValueForKey:withSetMutation:usingObjects:")
-    public native void willChangeValue(String key, @Representing("NSKeyValueSetMutationKind") @MachineSizedUInt long mutationKind, NSSet<?> objects);
+    public native void willChangeValue(String key, @Representing("NSKeyValueSetMutationKind") long mutationKind, NSSet<?> objects);
     @Mapping("didChangeValueForKey:withSetMutation:usingObjects:")
-    public native void didChangeValue(String key, @Representing("NSKeyValueSetMutationKind") @MachineSizedUInt long mutationKind, NSSet<?> objects);
+    public native void didChangeValue(String key, @Representing("NSKeyValueSetMutationKind") long mutationKind, NSSet<?> objects);
     @Mapping("performSelector:withObject:afterDelay:inModes:")
     public final native void performSelector(Selector aSelector, Object anArgument, double delay, NSArray<?> modes);
     @Mapping("performSelector:withObject:afterDelay:")

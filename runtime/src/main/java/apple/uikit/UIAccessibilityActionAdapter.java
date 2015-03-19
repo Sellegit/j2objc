@@ -61,7 +61,7 @@ public abstract class UIAccessibilityActionAdapter
      * @since Available in iOS 4.2 and later.
      */
     @NotImplemented("accessibilityScroll:")
-    public boolean scroll(@Representing("UIAccessibilityScrollDirection") @MachineSizedSInt long direction) { throw new UnsupportedOperationException(); }
+    public boolean scroll(@Representing("UIAccessibilityScrollDirection") long direction) { throw new UnsupportedOperationException(); }
     /**
      * @since Available in iOS 5.0 and later.
      */

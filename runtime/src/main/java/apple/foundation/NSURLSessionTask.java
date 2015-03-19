@@ -56,7 +56,7 @@ public class NSURLSessionTask
     @Mapping("setTaskDescription:")
     public native void setTaskDescription(String v);
     @Mapping("state")
-    public native @Representing("NSURLSessionTaskState") @MachineSizedSInt long getState();
+    public native @Representing("NSURLSessionTaskState") long getState();
     @Mapping("error")
     public native NSError getError();
     /**

@@ -40,9 +40,9 @@ public class UICollisionBehavior
     @Mapping("items")
     public native List<UIDynamicItem> getItems();
     @Mapping("collisionMode")
-    public native @Representing("UICollisionBehaviorMode") @MachineSizedUInt long getCollisionMode();
+    public native @Representing("UICollisionBehaviorMode") long getCollisionMode();
     @Mapping("setCollisionMode:")
-    public native void setCollisionMode(@Representing("UICollisionBehaviorMode") @MachineSizedUInt long v);
+    public native void setCollisionMode(@Representing("UICollisionBehaviorMode") long v);
     @Mapping("translatesReferenceBoundsIntoBoundary")
     public native boolean isTranslatesReferenceBoundsIntoBoundary();
     @Mapping("setTranslatesReferenceBoundsIntoBoundary:")

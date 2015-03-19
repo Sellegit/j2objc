@@ -37,7 +37,7 @@ public class SCNGeometryElement
     @Mapping("data")
     public native NSData getData();
     @Mapping("primitiveType")
-    public native @Representing("SCNGeometryPrimitiveType") @MachineSizedSInt long getPrimitiveType();
+    public native @Representing("SCNGeometryPrimitiveType") long getPrimitiveType();
     @Mapping("primitiveCount")
     public native @MachineSizedSInt long getPrimitiveCount();
     @Mapping("bytesPerIndex")
@@ -46,6 +46,6 @@ public class SCNGeometryElement
     
     
     @Mapping("geometryElementWithData:primitiveType:primitiveCount:bytesPerIndex:")
-    public static native SCNGeometryElement create(NSData data, @Representing("SCNGeometryPrimitiveType") @MachineSizedSInt long primitiveType, @MachineSizedSInt long primitiveCount, @MachineSizedSInt long bytesPerIndex);
+    public static native SCNGeometryElement create(NSData data, @Representing("SCNGeometryPrimitiveType") long primitiveType, @MachineSizedSInt long primitiveCount, @MachineSizedSInt long bytesPerIndex);
     
 }

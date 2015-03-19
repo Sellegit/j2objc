@@ -35,6 +35,8 @@ public class UIImagePickerController
     public UIImagePickerController(UIViewController rootViewController) { }
     @Mapping("initWithNibName:bundle:")
     public UIImagePickerController(String nibNameOrNil, NSBundle nibBundleOrNil) { }
+    @Mapping("initWithCoder:")
+    public UIImagePickerController(NSCoder aDecoder) { }
     @Mapping("init")
     public UIImagePickerController() { }
     
@@ -44,9 +46,9 @@ public class UIImagePickerController
     @Mapping("setDelegate:")
     public native void setDelegate(UIImagePickerControllerDelegate v);
     @Mapping("sourceType")
-    public native @Representing("UIImagePickerControllerSourceType") @MachineSizedSInt long getSourceType();
+    public native @Representing("UIImagePickerControllerSourceType") long getSourceType();
     @Mapping("setSourceType:")
-    public native void setSourceType(@Representing("UIImagePickerControllerSourceType") @MachineSizedSInt long v);
+    public native void setSourceType(@Representing("UIImagePickerControllerSourceType") long v);
     @Mapping("mediaTypes")
     public native List<String> getMediaTypes();
     @Mapping("setMediaTypes:")
@@ -75,12 +77,12 @@ public class UIImagePickerController
      * @since Available in iOS 3.1 and later.
      */
     @Mapping("videoQuality")
-    public native @Representing("UIImagePickerControllerQualityType") @MachineSizedSInt long getVideoQuality();
+    public native @Representing("UIImagePickerControllerQualityType") long getVideoQuality();
     /**
      * @since Available in iOS 3.1 and later.
      */
     @Mapping("setVideoQuality:")
-    public native void setVideoQuality(@Representing("UIImagePickerControllerQualityType") @MachineSizedSInt long v);
+    public native void setVideoQuality(@Representing("UIImagePickerControllerQualityType") long v);
     /**
      * @since Available in iOS 3.1 and later.
      */
@@ -115,32 +117,32 @@ public class UIImagePickerController
      * @since Available in iOS 4.0 and later.
      */
     @Mapping("cameraCaptureMode")
-    public native @Representing("UIImagePickerControllerCameraCaptureMode") @MachineSizedSInt long getCameraCaptureMode();
+    public native @Representing("UIImagePickerControllerCameraCaptureMode") long getCameraCaptureMode();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @Mapping("setCameraCaptureMode:")
-    public native void setCameraCaptureMode(@Representing("UIImagePickerControllerCameraCaptureMode") @MachineSizedSInt long v);
+    public native void setCameraCaptureMode(@Representing("UIImagePickerControllerCameraCaptureMode") long v);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @Mapping("cameraDevice")
-    public native @Representing("UIImagePickerControllerCameraDevice") @MachineSizedSInt long getCameraDevice();
+    public native @Representing("UIImagePickerControllerCameraDevice") long getCameraDevice();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @Mapping("setCameraDevice:")
-    public native void setCameraDevice(@Representing("UIImagePickerControllerCameraDevice") @MachineSizedSInt long v);
+    public native void setCameraDevice(@Representing("UIImagePickerControllerCameraDevice") long v);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @Mapping("cameraFlashMode")
-    public native @Representing("UIImagePickerControllerCameraFlashMode") @MachineSizedSInt long getCameraFlashMode();
+    public native @Representing("UIImagePickerControllerCameraFlashMode") long getCameraFlashMode();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @Mapping("setCameraFlashMode:")
-    public native void setCameraFlashMode(@Representing("UIImagePickerControllerCameraFlashMode") @MachineSizedSInt long v);
+    public native void setCameraFlashMode(@Representing("UIImagePickerControllerCameraFlashMode") long v);
     
     
     
@@ -160,23 +162,23 @@ public class UIImagePickerController
     @Mapping("stopVideoCapture")
     public native void stopVideoCapture();
     @Mapping("isSourceTypeAvailable:")
-    public static native boolean isSourceTypeAvailable(@Representing("UIImagePickerControllerSourceType") @MachineSizedSInt long sourceType);
+    public static native boolean isSourceTypeAvailable(@Representing("UIImagePickerControllerSourceType") long sourceType);
     @Mapping("availableMediaTypesForSourceType:")
-    public static native List<String> getAvailableMediaTypes(@Representing("UIImagePickerControllerSourceType") @MachineSizedSInt long sourceType);
+    public static native List<String> getAvailableMediaTypes(@Representing("UIImagePickerControllerSourceType") long sourceType);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @Mapping("isCameraDeviceAvailable:")
-    public static native boolean isCameraDeviceAvailable(@Representing("UIImagePickerControllerCameraDevice") @MachineSizedSInt long cameraDevice);
+    public static native boolean isCameraDeviceAvailable(@Representing("UIImagePickerControllerCameraDevice") long cameraDevice);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @Mapping("isFlashAvailableForCameraDevice:")
-    public static native boolean isFlashAvailableForCameraDevice(@Representing("UIImagePickerControllerCameraDevice") @MachineSizedSInt long cameraDevice);
+    public static native boolean isFlashAvailableForCameraDevice(@Representing("UIImagePickerControllerCameraDevice") long cameraDevice);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @Mapping("availableCaptureModesForCameraDevice:")
-    public static native List<UIImagePickerControllerCameraCaptureMode> getAvailableCaptureModes(@Representing("UIImagePickerControllerCameraDevice") @MachineSizedSInt long cameraDevice);
+    public static native List<UIImagePickerControllerCameraCaptureMode> getAvailableCaptureModes(@Representing("UIImagePickerControllerCameraDevice") long cameraDevice);
     
 }

@@ -34,6 +34,8 @@ public class UIRefreshControl
     public UIRefreshControl() {}
     @Mapping("initWithFrame:")
     public UIRefreshControl(CGRect frame) { }
+    @Mapping("initWithCoder:")
+    public UIRefreshControl(NSCoder aDecoder) { }
     
     
     @Mapping("isRefreshing")

@@ -35,12 +35,12 @@ public interface UISplitViewControllerDelegate
      * @since Available in iOS 8.0 and later.
      */
     @Mapping("splitViewController:willChangeToDisplayMode:")
-    void willChangeToDisplayMode(UISplitViewController svc, @Representing("UISplitViewControllerDisplayMode") @MachineSizedSInt long displayMode);
+    void willChangeToDisplayMode(UISplitViewController svc, @Representing("UISplitViewControllerDisplayMode") long displayMode);
     /**
      * @since Available in iOS 8.0 and later.
      */
     @Mapping("targetDisplayModeForActionInSplitViewController:")
-    @Representing("UISplitViewControllerDisplayMode") @MachineSizedSInt long getTargetDisplayMode(UISplitViewController svc);
+    @Representing("UISplitViewControllerDisplayMode") long getTargetDisplayMode(UISplitViewController svc);
     /**
      * @since Available in iOS 8.0 and later.
      */
@@ -80,7 +80,7 @@ public interface UISplitViewControllerDelegate
      * @since Available in iOS 7.0 and later.
      */
     @Mapping("splitViewControllerPreferredInterfaceOrientationForPresentation:")
-    @Representing("UIInterfaceOrientation") @MachineSizedSInt long getPreferredInterfaceOrientation(UISplitViewController splitViewController);
+    @Representing("UIInterfaceOrientation") long getPreferredInterfaceOrientation(UISplitViewController splitViewController);
     /**
      * @since Available in iOS 2.0 and later.
      * @deprecated Deprecated in iOS 8.0.
@@ -108,7 +108,7 @@ public interface UISplitViewControllerDelegate
      */
     @Deprecated
     @Mapping("splitViewController:shouldHideViewController:inOrientation:")
-    boolean shouldHideViewController(UISplitViewController svc, UIViewController vc, @Representing("UIInterfaceOrientation") @MachineSizedSInt long orientation);
+    boolean shouldHideViewController(UISplitViewController svc, UIViewController vc, @Representing("UIInterfaceOrientation") long orientation);
     
     /*<adapter>*/
     /*</adapter>*/

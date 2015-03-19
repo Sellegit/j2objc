@@ -40,12 +40,12 @@ public class NSData
      * @since Available in iOS 7.0 and later.
      */
     @Mapping("initWithBase64EncodedString:options:")
-    public NSData(String base64String, @Representing("NSDataBase64DecodingOptions") @MachineSizedUInt long options) { }
+    public NSData(String base64String, @Representing("NSDataBase64DecodingOptions") long options) { }
     /**
      * @since Available in iOS 7.0 and later.
      */
     @Mapping("initWithBase64EncodedData:options:")
-    public NSData(NSData base64Data, @Representing("NSDataBase64DecodingOptions") @MachineSizedUInt long options) { }
+    public NSData(NSData base64Data, @Representing("NSDataBase64DecodingOptions") long options) { }
     
     
     @Mapping("length")
@@ -65,7 +65,7 @@ public class NSData
      * @since Available in iOS 4.0 and later.
      */
     @Mapping("rangeOfData:options:range:")
-    public native NSRange find(NSData dataToFind, @Representing("NSDataSearchOptions") @MachineSizedUInt long mask, NSRange searchRange);
+    public native NSRange find(NSData dataToFind, @Representing("NSDataSearchOptions") long mask, NSRange searchRange);
     @Mapping("dataWithContentsOfFile:")
     public static native NSData readFile(String path);
     @Mapping("dataWithContentsOfURL:")
@@ -74,12 +74,12 @@ public class NSData
      * @since Available in iOS 7.0 and later.
      */
     @Mapping("base64EncodedStringWithOptions:")
-    public native String toBase64EncodedString(@Representing("NSDataBase64EncodingOptions") @MachineSizedUInt long options);
+    public native String toBase64EncodedString(@Representing("NSDataBase64EncodingOptions") long options);
     /**
      * @since Available in iOS 7.0 and later.
      */
     @Mapping("base64EncodedDataWithOptions:")
-    public native NSData toBase64EncodedData(@Representing("NSDataBase64EncodingOptions") @MachineSizedUInt long options);
+    public native NSData toBase64EncodedData(@Representing("NSDataBase64EncodingOptions") long options);
     /**
      * @since Available in iOS 2.0 and later.
      * @deprecated Deprecated in iOS 8.0.

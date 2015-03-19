@@ -34,7 +34,7 @@ public class NEOnDemandRule
      * @since Available in iOS 8.0 and later.
      */
     @Mapping("action")
-    public native @Representing("NEOnDemandRuleAction") @MachineSizedSInt long getAction();
+    public native @Representing("NEOnDemandRuleAction") long getAction();
     /**
      * @since Available in iOS 8.0 and later.
      */
@@ -59,12 +59,12 @@ public class NEOnDemandRule
      * @since Available in iOS 8.0 and later.
      */
     @Mapping("interfaceTypeMatch")
-    public native @Representing("NEOnDemandRuleInterfaceType") @MachineSizedSInt long getInterfaceTypeMatch();
+    public native @Representing("NEOnDemandRuleInterfaceType") long getInterfaceTypeMatch();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @Mapping("setInterfaceTypeMatch:")
-    public native void setInterfaceTypeMatch(@Representing("NEOnDemandRuleInterfaceType") @MachineSizedSInt long v);
+    public native void setInterfaceTypeMatch(@Representing("NEOnDemandRuleInterfaceType") long v);
     /**
      * @since Available in iOS 8.0 and later.
      */

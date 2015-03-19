@@ -34,17 +34,17 @@ public class PHImageRequestOptions
     
     
     @Mapping("version")
-    public native @Representing("PHImageRequestOptionsVersion") @MachineSizedSInt long getVersion();
+    public native @Representing("PHImageRequestOptionsVersion") long getVersion();
     @Mapping("setVersion:")
-    public native void setVersion(@Representing("PHImageRequestOptionsVersion") @MachineSizedSInt long v);
+    public native void setVersion(@Representing("PHImageRequestOptionsVersion") long v);
     @Mapping("deliveryMode")
-    public native @Representing("PHImageRequestOptionsDeliveryMode") @MachineSizedSInt long getDeliveryMode();
+    public native @Representing("PHImageRequestOptionsDeliveryMode") long getDeliveryMode();
     @Mapping("setDeliveryMode:")
-    public native void setDeliveryMode(@Representing("PHImageRequestOptionsDeliveryMode") @MachineSizedSInt long v);
+    public native void setDeliveryMode(@Representing("PHImageRequestOptionsDeliveryMode") long v);
     @Mapping("resizeMode")
-    public native @Representing("PHImageRequestOptionsResizeMode") @MachineSizedSInt long getResizeMode();
+    public native @Representing("PHImageRequestOptionsResizeMode") long getResizeMode();
     @Mapping("setResizeMode:")
-    public native void setResizeMode(@Representing("PHImageRequestOptionsResizeMode") @MachineSizedSInt long v);
+    public native void setResizeMode(@Representing("PHImageRequestOptionsResizeMode") long v);
     @Mapping("normalizedCropRect")
     public native CGRect getNormalizedCropRect();
     @Mapping("setNormalizedCropRect:")

@@ -38,17 +38,17 @@ public class NSPropertyListSerialization
     
     
     @Mapping("propertyList:isValidForFormat:")
-    public static native boolean isPropertyListValidForFormat(Object plist, @Representing("NSPropertyListFormat") @MachineSizedUInt long format);
+    public static native boolean isPropertyListValidForFormat(Object plist, @Representing("NSPropertyListFormat") long format);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @Mapping("dataWithPropertyList:format:options:error:")
-    public static native NSData getDataFromPropertyList(Object plist, @Representing("NSPropertyListFormat") @MachineSizedUInt long format, @MachineSizedUInt long opt, Todo error);
+    public static native NSData getDataFromPropertyList(Object plist, @Representing("NSPropertyListFormat") long format, @MachineSizedUInt long opt, Todo error);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @Mapping("writePropertyList:toStream:format:options:error:")
-    public static native @MachineSizedSInt long writePropertyListToStream(Object plist, NSOutputStream stream, @Representing("NSPropertyListFormat") @MachineSizedUInt long format, @MachineSizedUInt long opt, Todo error);
+    public static native @MachineSizedSInt long writePropertyListToStream(Object plist, NSOutputStream stream, @Representing("NSPropertyListFormat") long format, @MachineSizedUInt long opt, Todo error);
     /**
      * @since Available in iOS 4.0 and later.
      */

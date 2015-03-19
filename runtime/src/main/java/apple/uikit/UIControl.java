@@ -33,6 +33,8 @@ public class UIControl
     
     @Mapping("initWithFrame:")
     public UIControl(CGRect frame) { }
+    @Mapping("initWithCoder:")
+    public UIControl(NSCoder aDecoder) { }
     @Mapping("init")
     public UIControl() { }
     
@@ -50,15 +52,15 @@ public class UIControl
     @Mapping("setHighlighted:")
     public native void setHighlighted(boolean v);
     @Mapping("contentVerticalAlignment")
-    public native @Representing("UIControlContentVerticalAlignment") @MachineSizedSInt long getContentVerticalAlignment();
+    public native @Representing("UIControlContentVerticalAlignment") long getContentVerticalAlignment();
     @Mapping("setContentVerticalAlignment:")
-    public native void setContentVerticalAlignment(@Representing("UIControlContentVerticalAlignment") @MachineSizedSInt long v);
+    public native void setContentVerticalAlignment(@Representing("UIControlContentVerticalAlignment") long v);
     @Mapping("contentHorizontalAlignment")
-    public native @Representing("UIControlContentHorizontalAlignment") @MachineSizedSInt long getContentHorizontalAlignment();
+    public native @Representing("UIControlContentHorizontalAlignment") long getContentHorizontalAlignment();
     @Mapping("setContentHorizontalAlignment:")
-    public native void setContentHorizontalAlignment(@Representing("UIControlContentHorizontalAlignment") @MachineSizedSInt long v);
+    public native void setContentHorizontalAlignment(@Representing("UIControlContentHorizontalAlignment") long v);
     @Mapping("state")
-    public native @Representing("UIControlState") @MachineSizedUInt long getState();
+    public native @Representing("UIControlState") long getState();
     @Mapping("isTracking")
     public native boolean isTracking();
     @Mapping("isTouchInside")
@@ -75,18 +77,18 @@ public class UIControl
     @Mapping("cancelTrackingWithEvent:")
     public native void cancelTracking(UIEvent event);
     @Mapping("addTarget:action:forControlEvents:")
-    public native void addTarget(Object target, Selector action, @Representing("UIControlEvents") @MachineSizedUInt long controlEvents);
+    public native void addTarget(Object target, Selector action, @Representing("UIControlEvents") long controlEvents);
     @Mapping("removeTarget:action:forControlEvents:")
-    public native void removeTarget(Object target, Selector action, @Representing("UIControlEvents") @MachineSizedUInt long controlEvents);
+    public native void removeTarget(Object target, Selector action, @Representing("UIControlEvents") long controlEvents);
     @Mapping("allTargets")
     public native NSSet<?> getAllTargets();
     @Mapping("allControlEvents")
-    public native @Representing("UIControlEvents") @MachineSizedUInt long getAllControlEvents();
+    public native @Representing("UIControlEvents") long getAllControlEvents();
     @Mapping("actionsForTarget:forControlEvent:")
-    public native List<String> getActions(Object target, @Representing("UIControlEvents") @MachineSizedUInt long controlEvent);
+    public native List<String> getActions(Object target, @Representing("UIControlEvents") long controlEvent);
     @Mapping("sendAction:to:forEvent:")
     public native void sendAction(Selector action, Object target, UIEvent event);
     @Mapping("sendActionsForControlEvents:")
-    public native void sendControlEventsActions(@Representing("UIControlEvents") @MachineSizedUInt long controlEvents);
+    public native void sendControlEventsActions(@Representing("UIControlEvents") long controlEvents);
     
 }

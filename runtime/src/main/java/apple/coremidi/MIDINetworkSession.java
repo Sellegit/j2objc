@@ -41,9 +41,9 @@ public class MIDINetworkSession
     @Mapping("localName")
     public native String getLocalName();
     @Mapping("connectionPolicy")
-    public native @Representing("MIDINetworkConnectionPolicy") int getConnectionPolicy();
+    public native @Representing("MIDINetworkConnectionPolicy") long getConnectionPolicy();
     @Mapping("setConnectionPolicy:")
-    public native void setConnectionPolicy(@Representing("MIDINetworkConnectionPolicy") int v);
+    public native void setConnectionPolicy(@Representing("MIDINetworkConnectionPolicy") long v);
     
     
     

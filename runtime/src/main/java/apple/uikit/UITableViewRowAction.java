@@ -36,7 +36,7 @@ public class UITableViewRowAction
     
     
     @Mapping("style")
-    public native @Representing("UITableViewRowActionStyle") @MachineSizedSInt long getStyle();
+    public native @Representing("UITableViewRowActionStyle") long getStyle();
     @Mapping("title")
     public native String getTitle();
     @Mapping("setTitle:")
@@ -53,7 +53,7 @@ public class UITableViewRowAction
     
     
     @Mapping("rowActionWithStyle:title:handler:")
-    public static native UITableViewRowAction create(@Representing("UITableViewRowActionStyle") @MachineSizedSInt long style, String title, @Block VoidBlock2<UITableViewRowAction, NSIndexPath> handler);
+    public static native UITableViewRowAction create(@Representing("UITableViewRowActionStyle") long style, String title, @Block VoidBlock2<UITableViewRowAction, NSIndexPath> handler);
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
     

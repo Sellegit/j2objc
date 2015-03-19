@@ -170,7 +170,7 @@ public class NSURL
      * @since Available in iOS 4.0 and later.
      */
     @Mapping("bookmarkDataWithOptions:includingResourceValuesForKeys:relativeToURL:error:")
-    public native NSData toBookmarkData(@Representing("NSURLBookmarkCreationOptions") @MachineSizedUInt long options, NSArray<?> keys, NSURL relativeURL, Todo error);
+    public native NSData toBookmarkData(@Representing("NSURLBookmarkCreationOptions") long options, NSArray<?> keys, NSURL relativeURL, Todo error);
     /**
      * @since Available in iOS 8.0 and later.
      */

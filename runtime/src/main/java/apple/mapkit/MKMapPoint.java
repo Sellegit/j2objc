@@ -54,7 +54,7 @@ public class MKMapPoint
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("MKMapPointForCoordinate")
-    public static native MKMapPoint create(CLLocationCoordinate2D coordinate);
+    public static native MKMapPoint createPrime(CLLocationCoordinate2D coordinate);
     /**
      * @since Available in iOS 4.0 and later.
      */

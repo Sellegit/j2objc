@@ -52,9 +52,9 @@ public class NSOperation
     @Mapping("dependencies")
     public native NSArray<NSOperation> getDependencies();
     @Mapping("queuePriority")
-    public native @Representing("NSOperationQueuePriority") @MachineSizedSInt long getQueuePriority();
+    public native @Representing("NSOperationQueuePriority") long getQueuePriority();
     @Mapping("setQueuePriority:")
-    public native void setQueuePriority(@Representing("NSOperationQueuePriority") @MachineSizedSInt long v);
+    public native void setQueuePriority(@Representing("NSOperationQueuePriority") long v);
     /**
      * @since Available in iOS 4.0 and later.
      */
@@ -83,12 +83,12 @@ public class NSOperation
      * @since Available in iOS 8.0 and later.
      */
     @Mapping("qualityOfService")
-    public native @Representing("NSQualityOfService") @MachineSizedSInt long getQualityOfService();
+    public native @Representing("NSQualityOfService") long getQualityOfService();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @Mapping("setQualityOfService:")
-    public native void setQualityOfService(@Representing("NSQualityOfService") @MachineSizedSInt long v);
+    public native void setQualityOfService(@Representing("NSQualityOfService") long v);
     /**
      * @since Available in iOS 8.0 and later.
      */

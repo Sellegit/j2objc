@@ -42,12 +42,12 @@ public class UITextInputStringTokenizer
     
     
     @Mapping("rangeEnclosingPosition:withGranularity:inDirection:")
-    public native UITextRange getRangeEnclosingPosition(UITextPosition position, @Representing("UITextGranularity") @MachineSizedSInt long granularity, @MachineSizedSInt long direction);
+    public native UITextRange getRangeEnclosingPosition(UITextPosition position, @Representing("UITextGranularity") long granularity, @MachineSizedSInt long direction);
     @Mapping("isPosition:atBoundary:inDirection:")
-    public native boolean isPositionAtBoundary(UITextPosition position, @Representing("UITextGranularity") @MachineSizedSInt long granularity, @MachineSizedSInt long direction);
+    public native boolean isPositionAtBoundary(UITextPosition position, @Representing("UITextGranularity") long granularity, @MachineSizedSInt long direction);
     @Mapping("positionFromPosition:toBoundary:inDirection:")
-    public native UITextPosition getPosition(UITextPosition position, @Representing("UITextGranularity") @MachineSizedSInt long granularity, @MachineSizedSInt long direction);
+    public native UITextPosition getPosition(UITextPosition position, @Representing("UITextGranularity") long granularity, @MachineSizedSInt long direction);
     @Mapping("isPosition:withinTextUnit:inDirection:")
-    public native boolean isPositionWithinTextUnit(UITextPosition position, @Representing("UITextGranularity") @MachineSizedSInt long granularity, @MachineSizedSInt long direction);
+    public native boolean isPositionWithinTextUnit(UITextPosition position, @Representing("UITextGranularity") long granularity, @MachineSizedSInt long direction);
     
 }

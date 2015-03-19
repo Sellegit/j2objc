@@ -28,7 +28,7 @@ public class MPMediaPickerController
     
     
     @Mapping("initWithMediaTypes:")
-    public MPMediaPickerController(@Representing("MPMediaType") @MachineSizedUInt long mediaTypes) { }
+    public MPMediaPickerController(@Representing("MPMediaType") long mediaTypes) { }
     @Mapping("initWithNibName:bundle:")
     public MPMediaPickerController(String nibNameOrNil, NSBundle nibBundleOrNil) { }
     @Mapping("init")
@@ -36,7 +36,7 @@ public class MPMediaPickerController
     
     
     @Mapping("mediaTypes")
-    public native @Representing("MPMediaType") @MachineSizedUInt long getMediaTypes();
+    public native @Representing("MPMediaType") long getMediaTypes();
     @Mapping("delegate")
     public native MPMediaPickerControllerDelegate getDelegate();
     @Mapping("setDelegate:")

@@ -44,7 +44,7 @@ public class PHImageManager
     public static native CGSize getMaximumSize();
     
     @Mapping("requestImageForAsset:targetSize:contentMode:options:resultHandler:")
-    public native int requestImageForAsset(PHAsset asset, CGSize targetSize, @Representing("PHImageContentMode") @MachineSizedSInt long contentMode, PHImageRequestOptions options, @Block VoidBlock2<UIImage, NSDictionary<NSString, NSObject>> resultHandler);
+    public native int requestImageForAsset(PHAsset asset, CGSize targetSize, @Representing("PHImageContentMode") long contentMode, PHImageRequestOptions options, @Block VoidBlock2<UIImage, NSDictionary<NSString, NSObject>> resultHandler);
     @Mapping("requestImageDataForAsset:options:resultHandler:")
     public native int requestImageDataForAsset(PHAsset asset, PHImageRequestOptions options, @Block VoidBlock4<NSData, String, UIImageOrientation, NSDictionary<NSString, NSObject>> resultHandler);
     @Mapping("cancelImageRequest:")

@@ -41,7 +41,7 @@ public class AVPlayer
     
     
     @Mapping("status")
-    public native @Representing("AVPlayerStatus") @MachineSizedSInt long getStatus();
+    public native @Representing("AVPlayerStatus") long getStatus();
     @Mapping("error")
     public native NSError getError();
     @Mapping("rate")
@@ -51,9 +51,9 @@ public class AVPlayer
     @Mapping("currentItem")
     public native AVPlayerItem getCurrentItem();
     @Mapping("actionAtItemEnd")
-    public native @Representing("AVPlayerActionAtItemEnd") @MachineSizedSInt long getActionAtItemEnd();
+    public native @Representing("AVPlayerActionAtItemEnd") long getActionAtItemEnd();
     @Mapping("setActionAtItemEnd:")
-    public native void setActionAtItemEnd(@Representing("AVPlayerActionAtItemEnd") @MachineSizedSInt long v);
+    public native void setActionAtItemEnd(@Representing("AVPlayerActionAtItemEnd") long v);
     /**
      * @since Available in iOS 6.0 and later.
      */

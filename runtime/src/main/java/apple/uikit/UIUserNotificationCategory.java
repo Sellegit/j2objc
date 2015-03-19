@@ -41,7 +41,7 @@ public class UIUserNotificationCategory
     
     
     @Mapping("actionsForContext:")
-    public native NSArray<UIUserNotificationAction> getActions(@Representing("UIUserNotificationActionContext") @MachineSizedUInt long context);
+    public native NSArray<UIUserNotificationAction> getActions(@Representing("UIUserNotificationActionContext") long context);
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
     

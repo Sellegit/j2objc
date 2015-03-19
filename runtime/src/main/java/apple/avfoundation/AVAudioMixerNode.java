@@ -51,9 +51,9 @@ public class AVAudioMixerNode
     @Mapping("setPan:")
     public native void setPan(float v);
     @Mapping("renderingAlgorithm")
-    public native @Representing("AVAudio3DMixingRenderingAlgorithm") @MachineSizedSInt long getRenderingAlgorithm();
+    public native @Representing("AVAudio3DMixingRenderingAlgorithm") long getRenderingAlgorithm();
     @Mapping("setRenderingAlgorithm:")
-    public native void setRenderingAlgorithm(@Representing("AVAudio3DMixingRenderingAlgorithm") @MachineSizedSInt long v);
+    public native void setRenderingAlgorithm(@Representing("AVAudio3DMixingRenderingAlgorithm") long v);
     @Mapping("rate")
     public native float getRate();
     @Mapping("setRate:")

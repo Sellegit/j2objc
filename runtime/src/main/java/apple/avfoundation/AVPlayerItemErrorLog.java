@@ -37,7 +37,7 @@ public class AVPlayerItemErrorLog
     
     
     @Mapping("extendedLogDataStringEncoding")
-    public native @Representing("NSStringEncoding") int getExtendedLogDataStringEncoding();
+    public native @Representing("NSStringEncoding") long getExtendedLogDataStringEncoding();
     @Mapping("events")
     public native NSArray<AVPlayerItemErrorLogEvent> getEvents();
     

@@ -75,13 +75,13 @@ public class SCNMaterial
     @Mapping("setDoubleSided:")
     public native void setDoubleSided(boolean v);
     @Mapping("cullMode")
-    public native @Representing("SCNCullMode") @MachineSizedSInt long getCullMode();
+    public native @Representing("SCNCullMode") long getCullMode();
     @Mapping("setCullMode:")
-    public native void setCullMode(@Representing("SCNCullMode") @MachineSizedSInt long v);
+    public native void setCullMode(@Representing("SCNCullMode") long v);
     @Mapping("transparencyMode")
-    public native @Representing("SCNTransparencyMode") @MachineSizedSInt long getTransparencyMode();
+    public native @Representing("SCNTransparencyMode") long getTransparencyMode();
     @Mapping("setTransparencyMode:")
-    public native void setTransparencyMode(@Representing("SCNTransparencyMode") @MachineSizedSInt long v);
+    public native void setTransparencyMode(@Representing("SCNTransparencyMode") long v);
     @Mapping("locksAmbientWithDiffuse")
     public native boolean locksAmbientWithDiffuse();
     @Mapping("setLocksAmbientWithDiffuse:")

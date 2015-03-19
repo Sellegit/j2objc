@@ -43,7 +43,7 @@ public class AVAudioSessionChannelDescription
     @Mapping("channelNumber")
     public native @MachineSizedUInt long getChannelNumber();
     @Mapping("channelLabel")
-    public native @Representing("AudioChannelLabel") int getChannelLabel();
+    public native @Representing("AudioChannelLabel") long getChannelLabel();
     
     
     

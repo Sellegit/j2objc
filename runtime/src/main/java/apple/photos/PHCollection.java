@@ -43,7 +43,7 @@ public class PHCollection
     
     
     @Mapping("canPerformEditOperation:")
-    public native boolean canPerformEditOperation(@Representing("PHCollectionEditOperation") @MachineSizedSInt long anOperation);
+    public native boolean canPerformEditOperation(@Representing("PHCollectionEditOperation") long anOperation);
     @Mapping("fetchCollectionsInCollectionList:options:")
     public static native PHFetchResult fetchCollectionsInCollectionList(PHCollectionList collectionList, PHFetchOptions options);
     @Mapping("fetchTopLevelUserCollectionsWithOptions:")

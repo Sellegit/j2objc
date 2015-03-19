@@ -30,7 +30,7 @@ public class NSDecimalNumberHandler
     
     
     @Mapping("initWithRoundingMode:scale:raiseOnExactness:raiseOnOverflow:raiseOnUnderflow:raiseOnDivideByZero:")
-    public NSDecimalNumberHandler(@Representing("NSRoundingMode") @MachineSizedUInt long roundingMode, short scale, boolean exact, boolean overflow, boolean underflow, boolean divideByZero) { }
+    public NSDecimalNumberHandler(@Representing("NSRoundingMode") long roundingMode, short scale, boolean exact, boolean overflow, boolean underflow, boolean divideByZero) { }
     @Mapping("init")
     public NSDecimalNumberHandler() { }
     
@@ -42,11 +42,11 @@ public class NSDecimalNumberHandler
     @Mapping("defaultDecimalNumberHandler")
     public static native NSDecimalNumberHandler getDefaultDecimalNumberHandler();
     @Mapping("roundingMode")
-    public native @Representing("NSRoundingMode") @MachineSizedUInt long getRoundingMode();
+    public native @Representing("NSRoundingMode") long getRoundingMode();
     @Mapping("scale")
     public native short getScale();
     @Mapping("exceptionDuringOperation:error:leftOperand:rightOperand:")
-    public native NSDecimalNumber exceptionDuringOperation(Selector operation, @Representing("NSCalculationError") @MachineSizedUInt long error, NSDecimalNumber leftOperand, NSDecimalNumber rightOperand);
+    public native NSDecimalNumber exceptionDuringOperation(Selector operation, @Representing("NSCalculationError") long error, NSDecimalNumber leftOperand, NSDecimalNumber rightOperand);
     @Mapping("encodeWithCoder:")
     public native void encode(NSCoder aCoder);
     

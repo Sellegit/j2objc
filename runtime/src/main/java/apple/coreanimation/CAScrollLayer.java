@@ -31,6 +31,8 @@ public class CAScrollLayer
     public CAScrollLayer() { }
     @Mapping("initWithLayer:")
     public CAScrollLayer(Object layer) { }
+    @Mapping("initWithCoder:")
+    public CAScrollLayer(NSCoder aDecoder) { }
     
     
     @Mapping("scrollMode")

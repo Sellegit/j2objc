@@ -45,9 +45,9 @@ public class EKAlarm
     @Mapping("setStructuredLocation:")
     public native void setStructuredLocation(EKStructuredLocation v);
     @Mapping("proximity")
-    public native @Representing("EKAlarmProximity") int getProximity();
+    public native @Representing("EKAlarmProximity") long getProximity();
     @Mapping("setProximity:")
-    public native void setProximity(@Representing("EKAlarmProximity") int v);
+    public native void setProximity(@Representing("EKAlarmProximity") long v);
     
     
     

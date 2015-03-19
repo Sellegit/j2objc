@@ -33,14 +33,16 @@ public class UISearchBar
     
     @Mapping("initWithFrame:")
     public UISearchBar(CGRect frame) { }
+    @Mapping("initWithCoder:")
+    public UISearchBar(NSCoder aDecoder) { }
     @Mapping("init")
     public UISearchBar() { }
     
     
     @Mapping("barStyle")
-    public native @Representing("UIBarStyle") @MachineSizedSInt long getBarStyle();
+    public native @Representing("UIBarStyle") long getBarStyle();
     @Mapping("setBarStyle:")
-    public native void setBarStyle(@Representing("UIBarStyle") @MachineSizedSInt long v);
+    public native void setBarStyle(@Representing("UIBarStyle") long v);
     @Mapping("delegate")
     public native UISearchBarDelegate getDelegate();
     @Mapping("setDelegate:")
@@ -103,12 +105,12 @@ public class UISearchBar
      * @since Available in iOS 7.0 and later.
      */
     @Mapping("searchBarStyle")
-    public native @Representing("UISearchBarStyle") @MachineSizedUInt long getSearchBarStyle();
+    public native @Representing("UISearchBarStyle") long getSearchBarStyle();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @Mapping("setSearchBarStyle:")
-    public native void setSearchBarStyle(@Representing("UISearchBarStyle") @MachineSizedUInt long v);
+    public native void setSearchBarStyle(@Representing("UISearchBarStyle") long v);
     /**
      * @since Available in iOS 3.0 and later.
      */
@@ -194,37 +196,37 @@ public class UISearchBar
     @Mapping("setSearchTextPositionAdjustment:")
     public native void setSearchTextPositionAdjustment(UIOffset v);
     @Mapping("barPosition")
-    public native @Representing("UIBarPosition") @MachineSizedSInt long getBarPosition();
+    public native @Representing("UIBarPosition") long getBarPosition();
     @Mapping("autocapitalizationType")
-    public native @Representing("UITextAutocapitalizationType") @MachineSizedSInt long getAutocapitalizationType();
+    public native @Representing("UITextAutocapitalizationType") long getAutocapitalizationType();
     @Mapping("setAutocapitalizationType:")
-    public native void setAutocapitalizationType(@Representing("UITextAutocapitalizationType") @MachineSizedSInt long v);
+    public native void setAutocapitalizationType(@Representing("UITextAutocapitalizationType") long v);
     @Mapping("autocorrectionType")
-    public native @Representing("UITextAutocorrectionType") @MachineSizedSInt long getAutocorrectionType();
+    public native @Representing("UITextAutocorrectionType") long getAutocorrectionType();
     @Mapping("setAutocorrectionType:")
-    public native void setAutocorrectionType(@Representing("UITextAutocorrectionType") @MachineSizedSInt long v);
+    public native void setAutocorrectionType(@Representing("UITextAutocorrectionType") long v);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @Mapping("spellCheckingType")
-    public native @Representing("UITextSpellCheckingType") @MachineSizedSInt long getSpellCheckingType();
+    public native @Representing("UITextSpellCheckingType") long getSpellCheckingType();
     /**
      * @since Available in iOS 5.0 and later.
      */
     @Mapping("setSpellCheckingType:")
-    public native void setSpellCheckingType(@Representing("UITextSpellCheckingType") @MachineSizedSInt long v);
+    public native void setSpellCheckingType(@Representing("UITextSpellCheckingType") long v);
     @Mapping("keyboardType")
-    public native @Representing("UIKeyboardType") @MachineSizedSInt long getKeyboardType();
+    public native @Representing("UIKeyboardType") long getKeyboardType();
     @Mapping("setKeyboardType:")
-    public native void setKeyboardType(@Representing("UIKeyboardType") @MachineSizedSInt long v);
+    public native void setKeyboardType(@Representing("UIKeyboardType") long v);
     @Mapping("keyboardAppearance")
-    public native @Representing("UIKeyboardAppearance") @MachineSizedSInt long getKeyboardAppearance();
+    public native @Representing("UIKeyboardAppearance") long getKeyboardAppearance();
     @Mapping("setKeyboardAppearance:")
-    public native void setKeyboardAppearance(@Representing("UIKeyboardAppearance") @MachineSizedSInt long v);
+    public native void setKeyboardAppearance(@Representing("UIKeyboardAppearance") long v);
     @Mapping("returnKeyType")
-    public native @Representing("UIReturnKeyType") @MachineSizedSInt long getReturnKeyType();
+    public native @Representing("UIReturnKeyType") long getReturnKeyType();
     @Mapping("setReturnKeyType:")
-    public native void setReturnKeyType(@Representing("UIReturnKeyType") @MachineSizedSInt long v);
+    public native void setReturnKeyType(@Representing("UIReturnKeyType") long v);
     @Mapping("enablesReturnKeyAutomatically")
     public native boolean enablesReturnKeyAutomatically();
     @Mapping("setEnablesReturnKeyAutomatically:")
@@ -245,71 +247,71 @@ public class UISearchBar
      * @since Available in iOS 7.0 and later.
      */
     @Mapping("setBackgroundImage:forBarPosition:barMetrics:")
-    public native void setBackgroundImage(UIImage backgroundImage, @Representing("UIBarPosition") @MachineSizedSInt long barPosition, @Representing("UIBarMetrics") @MachineSizedSInt long barMetrics);
+    public native void setBackgroundImage(UIImage backgroundImage, @Representing("UIBarPosition") long barPosition, @Representing("UIBarMetrics") long barMetrics);
     /**
      * @since Available in iOS 7.0 and later.
      */
     @Mapping("backgroundImageForBarPosition:barMetrics:")
-    public native UIImage getBackgroundImage(@Representing("UIBarPosition") @MachineSizedSInt long barPosition, @Representing("UIBarMetrics") @MachineSizedSInt long barMetrics);
+    public native UIImage getBackgroundImage(@Representing("UIBarPosition") long barPosition, @Representing("UIBarMetrics") long barMetrics);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @Mapping("setSearchFieldBackgroundImage:forState:")
-    public native void setSearchFieldBackgroundImage(UIImage backgroundImage, @Representing("UIControlState") @MachineSizedUInt long state);
+    public native void setSearchFieldBackgroundImage(UIImage backgroundImage, @Representing("UIControlState") long state);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @Mapping("searchFieldBackgroundImageForState:")
-    public native UIImage getSearchFieldBackgroundImage(@Representing("UIControlState") @MachineSizedUInt long state);
+    public native UIImage getSearchFieldBackgroundImage(@Representing("UIControlState") long state);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @Mapping("setImage:forSearchBarIcon:state:")
-    public native void setImageForSearchBarIcon(UIImage iconImage, @Representing("UISearchBarIcon") @MachineSizedSInt long icon, @Representing("UIControlState") @MachineSizedUInt long state);
+    public native void setImageForSearchBarIcon(UIImage iconImage, @Representing("UISearchBarIcon") long icon, @Representing("UIControlState") long state);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @Mapping("imageForSearchBarIcon:state:")
-    public native UIImage getImageForSearchBarIcon(@Representing("UISearchBarIcon") @MachineSizedSInt long icon, @Representing("UIControlState") @MachineSizedUInt long state);
+    public native UIImage getImageForSearchBarIcon(@Representing("UISearchBarIcon") long icon, @Representing("UIControlState") long state);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @Mapping("setScopeBarButtonBackgroundImage:forState:")
-    public native void setScopeBarButtonBackgroundImage(UIImage backgroundImage, @Representing("UIControlState") @MachineSizedUInt long state);
+    public native void setScopeBarButtonBackgroundImage(UIImage backgroundImage, @Representing("UIControlState") long state);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @Mapping("scopeBarButtonBackgroundImageForState:")
-    public native UIImage getScopeBarButtonBackgroundImage(@Representing("UIControlState") @MachineSizedUInt long state);
+    public native UIImage getScopeBarButtonBackgroundImage(@Representing("UIControlState") long state);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @Mapping("setScopeBarButtonDividerImage:forLeftSegmentState:rightSegmentState:")
-    public native void setScopeBarButtonDividerImage(UIImage dividerImage, @Representing("UIControlState") @MachineSizedUInt long leftState, @Representing("UIControlState") @MachineSizedUInt long rightState);
+    public native void setScopeBarButtonDividerImage(UIImage dividerImage, @Representing("UIControlState") long leftState, @Representing("UIControlState") long rightState);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @Mapping("scopeBarButtonDividerImageForLeftSegmentState:rightSegmentState:")
-    public native UIImage getScopeBarButtonDividerImage(@Representing("UIControlState") @MachineSizedUInt long leftState, @Representing("UIControlState") @MachineSizedUInt long rightState);
+    public native UIImage getScopeBarButtonDividerImage(@Representing("UIControlState") long leftState, @Representing("UIControlState") long rightState);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @Mapping("setScopeBarButtonTitleTextAttributes:forState:")
-    public native void setScopeBarButtonTitleTextAttributes(NSDictionary<?, ?> attributes, @Representing("UIControlState") @MachineSizedUInt long state);
+    public native void setScopeBarButtonTitleTextAttributes(NSDictionary<?, ?> attributes, @Representing("UIControlState") long state);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @Mapping("scopeBarButtonTitleTextAttributesForState:")
-    public native NSDictionary<?, ?> getScopeBarButtonTitleTextAttributes(@Representing("UIControlState") @MachineSizedUInt long state);
+    public native NSDictionary<?, ?> getScopeBarButtonTitleTextAttributes(@Representing("UIControlState") long state);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @Mapping("setPositionAdjustment:forSearchBarIcon:")
-    public native void setPositionAdjustmentForSearchBarIcon(UIOffset adjustment, @Representing("UISearchBarIcon") @MachineSizedSInt long icon);
+    public native void setPositionAdjustmentForSearchBarIcon(UIOffset adjustment, @Representing("UISearchBarIcon") long icon);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @Mapping("positionAdjustmentForSearchBarIcon:")
-    public native UIOffset getPositionAdjustmentForSearchBarIcon(@Representing("UISearchBarIcon") @MachineSizedSInt long icon);
+    public native UIOffset getPositionAdjustmentForSearchBarIcon(@Representing("UISearchBarIcon") long icon);
     
 }

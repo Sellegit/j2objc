@@ -32,7 +32,9 @@ public class UIInterpolatingMotionEffect
     
     
     @Mapping("initWithKeyPath:type:")
-    public UIInterpolatingMotionEffect(String keyPath, @Representing("UIInterpolatingMotionEffectType") @MachineSizedSInt long type) { }
+    public UIInterpolatingMotionEffect(String keyPath, @Representing("UIInterpolatingMotionEffectType") long type) { }
+    @Mapping("initWithCoder:")
+    public UIInterpolatingMotionEffect(NSCoder aDecoder) { }
     @Mapping("init")
     public UIInterpolatingMotionEffect() { }
     
@@ -40,7 +42,7 @@ public class UIInterpolatingMotionEffect
     @Mapping("keyPath")
     public native String getKeyPath();
     @Mapping("type")
-    public native @Representing("UIInterpolatingMotionEffectType") @MachineSizedSInt long getType();
+    public native @Representing("UIInterpolatingMotionEffectType") long getType();
     @Mapping("minimumRelativeValue")
     public native NSValue getMinimumRelativeValue();
     @Mapping("setMinimumRelativeValue:")

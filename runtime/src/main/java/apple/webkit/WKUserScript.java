@@ -28,7 +28,7 @@ public class WKUserScript
     
     
     @Mapping("initWithSource:injectionTime:forMainFrameOnly:")
-    public WKUserScript(String source, @Representing("WKUserScriptInjectionTime") @MachineSizedSInt long injectionTime, boolean forMainFrameOnly) { }
+    public WKUserScript(String source, @Representing("WKUserScriptInjectionTime") long injectionTime, boolean forMainFrameOnly) { }
     @Mapping("init")
     public WKUserScript() { }
     
@@ -36,7 +36,7 @@ public class WKUserScript
     @Mapping("source")
     public native String getSource();
     @Mapping("injectionTime")
-    public native @Representing("WKUserScriptInjectionTime") @MachineSizedSInt long getInjectionTime();
+    public native @Representing("WKUserScriptInjectionTime") long getInjectionTime();
     @Mapping("isForMainFrameOnly")
     public native boolean isForMainFrameOnly();
     

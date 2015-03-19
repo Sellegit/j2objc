@@ -33,6 +33,8 @@ public class UIPickerView
     
     @Mapping("initWithFrame:")
     public UIPickerView(CGRect frame) { }
+    @Mapping("initWithCoder:")
+    public UIPickerView(NSCoder aDecoder) { }
     @Mapping("init")
     public UIPickerView() { }
     
@@ -87,7 +89,7 @@ public class UIPickerView
     @Mapping("tableView:sectionForSectionIndexTitle:atIndex:")
     public native @MachineSizedSInt long getSectionForSectionIndexTitle(UITableView tableView, String title, @MachineSizedSInt long index);
     @Mapping("tableView:commitEditingStyle:forRowAtIndexPath:")
-    public native void commitEditingStyleForRow(UITableView tableView, @Representing("UITableViewCellEditingStyle") @MachineSizedSInt long editingStyle, NSIndexPath indexPath);
+    public native void commitEditingStyleForRow(UITableView tableView, @Representing("UITableViewCellEditingStyle") long editingStyle, NSIndexPath indexPath);
     @Mapping("tableView:moveRowAtIndexPath:toIndexPath:")
     public native void moveRow(UITableView tableView, NSIndexPath sourceIndexPath, NSIndexPath destinationIndexPath);
     

@@ -46,7 +46,7 @@ public abstract class UINavigationControllerDelegateAdapter
      * @since Available in iOS 7.0 and later.
      */
     @NotImplemented("navigationControllerPreferredInterfaceOrientationForPresentation:")
-    public @Representing("UIInterfaceOrientation") @MachineSizedSInt long getPreferredInterfaceOrientation(UINavigationController navigationController) { throw new UnsupportedOperationException(); }
+    public @Representing("UIInterfaceOrientation") long getPreferredInterfaceOrientation(UINavigationController navigationController) { throw new UnsupportedOperationException(); }
     /**
      * @since Available in iOS 7.0 and later.
      */
@@ -56,6 +56,6 @@ public abstract class UINavigationControllerDelegateAdapter
      * @since Available in iOS 7.0 and later.
      */
     @NotImplemented("navigationController:animationControllerForOperation:fromViewController:toViewController:")
-    public UIViewControllerAnimatedTransitioning getAnimationController(UINavigationController navigationController, @Representing("UINavigationControllerOperation") @MachineSizedSInt long operation, UIViewController fromVC, UIViewController toVC) { throw new UnsupportedOperationException(); }
+    public UIViewControllerAnimatedTransitioning getAnimationController(UINavigationController navigationController, @Representing("UINavigationControllerOperation") long operation, UIViewController fromVC, UIViewController toVC) { throw new UnsupportedOperationException(); }
     
 }

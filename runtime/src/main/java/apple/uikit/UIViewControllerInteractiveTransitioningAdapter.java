@@ -38,6 +38,6 @@ public abstract class UIViewControllerInteractiveTransitioningAdapter
     @NotImplemented("completionSpeed")
     public @MachineSizedFloat double getCompletionSpeed() { throw new UnsupportedOperationException(); }
     @NotImplemented("completionCurve")
-    public @Representing("UIViewAnimationCurve") @MachineSizedSInt long getCompletionCurve() { throw new UnsupportedOperationException(); }
+    public @Representing("UIViewAnimationCurve") long getCompletionCurve() { throw new UnsupportedOperationException(); }
     
 }

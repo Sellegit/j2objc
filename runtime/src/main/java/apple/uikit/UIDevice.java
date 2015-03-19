@@ -46,7 +46,7 @@ public class UIDevice
     @Mapping("systemVersion")
     public native String getSystemVersion();
     @Mapping("orientation")
-    public native @Representing("UIDeviceOrientation") @MachineSizedSInt long getOrientation();
+    public native @Representing("UIDeviceOrientation") long getOrientation();
     /**
      * @since Available in iOS 6.0 and later.
      */
@@ -68,7 +68,7 @@ public class UIDevice
      * @since Available in iOS 3.0 and later.
      */
     @Mapping("batteryState")
-    public native @Representing("UIDeviceBatteryState") @MachineSizedSInt long getBatteryState();
+    public native @Representing("UIDeviceBatteryState") long getBatteryState();
     /**
      * @since Available in iOS 3.0 and later.
      */
@@ -98,7 +98,7 @@ public class UIDevice
      * @since Available in iOS 3.2 and later.
      */
     @Mapping("userInterfaceIdiom")
-    public native @Representing("UIUserInterfaceIdiom") @MachineSizedSInt long getUserInterfaceIdiom();
+    public native @Representing("UIUserInterfaceIdiom") long getUserInterfaceIdiom();
     
     
     

@@ -27,6 +27,8 @@ public class CAAnimationGroup
 
     
     
+    @Mapping("initWithCoder:")
+    public CAAnimationGroup(NSCoder aDecoder) { }
     @Mapping("init")
     public CAAnimationGroup() { }
     

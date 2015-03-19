@@ -47,9 +47,9 @@ public class NSBatchUpdateRequest
     @Mapping("setIncludesSubentities:")
     public native void setIncludesSubentities(boolean v);
     @Mapping("resultType")
-    public native @Representing("NSBatchUpdateRequestResultType") @MachineSizedUInt long getResultType();
+    public native @Representing("NSBatchUpdateRequestResultType") long getResultType();
     @Mapping("setResultType:")
-    public native void setResultType(@Representing("NSBatchUpdateRequestResultType") @MachineSizedUInt long v);
+    public native void setResultType(@Representing("NSBatchUpdateRequestResultType") long v);
     @Mapping("propertiesToUpdate")
     public native Map<String, NSExpression> getPropertiesToUpdate();
     @Mapping("setPropertiesToUpdate:")

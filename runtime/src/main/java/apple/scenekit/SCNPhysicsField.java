@@ -63,9 +63,9 @@ public class SCNPhysicsField
     @Mapping("setUsesEllipsoidalExtent:")
     public native void setUsesEllipsoidalExtent(boolean v);
     @Mapping("scope")
-    public native @Representing("SCNPhysicsFieldScope") @MachineSizedSInt long getScope();
+    public native @Representing("SCNPhysicsFieldScope") long getScope();
     @Mapping("setScope:")
-    public native void setScope(@Representing("SCNPhysicsFieldScope") @MachineSizedSInt long v);
+    public native void setScope(@Representing("SCNPhysicsFieldScope") long v);
     @Mapping("offset")
     public native SCNVector3 getOffset();
     @Mapping("setOffset:")

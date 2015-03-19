@@ -25,15 +25,15 @@ public class EAGLContext
     
     
     @Mapping("initWithAPI:")
-    public EAGLContext(@Representing("EAGLRenderingAPI") @MachineSizedUInt long api) { }
+    public EAGLContext(@Representing("EAGLRenderingAPI") long api) { }
     @Mapping("initWithAPI:sharegroup:")
-    public EAGLContext(@Representing("EAGLRenderingAPI") @MachineSizedUInt long api, EAGLSharegroup sharegroup) { }
+    public EAGLContext(@Representing("EAGLRenderingAPI") long api, EAGLSharegroup sharegroup) { }
     @Mapping("init")
     public EAGLContext() { }
     
     
     @Mapping("API")
-    public native @Representing("EAGLRenderingAPI") @MachineSizedUInt long getAPI();
+    public native @Representing("EAGLRenderingAPI") long getAPI();
     @Mapping("sharegroup")
     public native EAGLSharegroup getSharegroup();
     /**

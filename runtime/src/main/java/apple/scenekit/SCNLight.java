@@ -67,9 +67,9 @@ public class SCNLight
     @Mapping("setShadowSampleCount:")
     public native void setShadowSampleCount(@MachineSizedUInt long v);
     @Mapping("shadowMode")
-    public native @Representing("SCNShadowMode") @MachineSizedSInt long getShadowMode();
+    public native @Representing("SCNShadowMode") long getShadowMode();
     @Mapping("setShadowMode:")
-    public native void setShadowMode(@Representing("SCNShadowMode") @MachineSizedSInt long v);
+    public native void setShadowMode(@Representing("SCNShadowMode") long v);
     @Mapping("shadowBias")
     public native @MachineSizedFloat double getShadowBias();
     @Mapping("setShadowBias:")

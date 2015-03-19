@@ -42,9 +42,9 @@ public class MPMediaQuery
     @Mapping("collections")
     public native NSArray<MPMediaItemCollection> getCollections();
     @Mapping("groupingType")
-    public native @Representing("MPMediaGrouping") @MachineSizedSInt long getGroupingType();
+    public native @Representing("MPMediaGrouping") long getGroupingType();
     @Mapping("setGroupingType:")
-    public native void setGroupingType(@Representing("MPMediaGrouping") @MachineSizedSInt long v);
+    public native void setGroupingType(@Representing("MPMediaGrouping") long v);
     /**
      * @since Available in iOS 4.2 and later.
      */

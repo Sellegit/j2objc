@@ -39,7 +39,7 @@ public class CLBeacon
     @Mapping("minor")
     public native NSNumber getMinor();
     @Mapping("proximity")
-    public native @Representing("CLProximity") @MachineSizedSInt long getProximity();
+    public native @Representing("CLProximity") long getProximity();
     @Mapping("accuracy")
     public native double getAccuracy();
     @Mapping("rssi")

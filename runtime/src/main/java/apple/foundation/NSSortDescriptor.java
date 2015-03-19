@@ -59,7 +59,7 @@ public class NSSortDescriptor
     @Mapping("allowEvaluation")
     public native void allowEvaluation();
     @Mapping("compareObject:toObject:")
-    public native @Representing("NSComparisonResult") @MachineSizedSInt long compare(Object object1, Object object2);
+    public native @Representing("NSComparisonResult") long compare(Object object1, Object object2);
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
     

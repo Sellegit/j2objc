@@ -26,6 +26,8 @@ public class NSRelationshipDescription
 
     
     
+    @Mapping("initWithCoder:")
+    public NSRelationshipDescription(NSCoder aDecoder) { }
     @Mapping("init")
     public NSRelationshipDescription() { }
     
@@ -47,9 +49,9 @@ public class NSRelationshipDescription
     @Mapping("setMinCount:")
     public native void setMinCount(@MachineSizedUInt long v);
     @Mapping("deleteRule")
-    public native @Representing("NSDeleteRule") @MachineSizedUInt long getDeleteRule();
+    public native @Representing("NSDeleteRule") long getDeleteRule();
     @Mapping("setDeleteRule:")
-    public native void setDeleteRule(@Representing("NSDeleteRule") @MachineSizedUInt long v);
+    public native void setDeleteRule(@Representing("NSDeleteRule") long v);
     @Mapping("isToMany")
     public native boolean isToMany();
     /**

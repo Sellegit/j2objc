@@ -34,8 +34,8 @@ public abstract class UIAdaptivePresentationControllerDelegateAdapter
     
     
     @NotImplemented("adaptivePresentationStyleForPresentationController:")
-    public @Representing("UIModalPresentationStyle") @MachineSizedSInt long getAdaptivePresentationStyle(UIPresentationController controller) { throw new UnsupportedOperationException(); }
+    public @Representing("UIModalPresentationStyle") long getAdaptivePresentationStyle(UIPresentationController controller) { throw new UnsupportedOperationException(); }
     @NotImplemented("presentationController:viewControllerForAdaptivePresentationStyle:")
-    public UIViewController getViewController(UIPresentationController controller, @Representing("UIModalPresentationStyle") @MachineSizedSInt long style) { throw new UnsupportedOperationException(); }
+    public UIViewController getViewController(UIPresentationController controller, @Representing("UIModalPresentationStyle") long style) { throw new UnsupportedOperationException(); }
     
 }

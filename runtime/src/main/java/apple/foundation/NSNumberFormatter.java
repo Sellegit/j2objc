@@ -39,16 +39,16 @@ public class NSNumberFormatter
      * @since Available in iOS 8.0 and later.
      */
     @Mapping("formattingContext")
-    public native @Representing("NSFormattingContext") @MachineSizedSInt long getFormattingContext();
+    public native @Representing("NSFormattingContext") long getFormattingContext();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @Mapping("setFormattingContext:")
-    public native void setFormattingContext(@Representing("NSFormattingContext") @MachineSizedSInt long v);
+    public native void setFormattingContext(@Representing("NSFormattingContext") long v);
     @Mapping("numberStyle")
-    public native @Representing("NSNumberFormatterStyle") @MachineSizedUInt long getNumberStyle();
+    public native @Representing("NSNumberFormatterStyle") long getNumberStyle();
     @Mapping("setNumberStyle:")
-    public native void setNumberStyle(@Representing("NSNumberFormatterStyle") @MachineSizedUInt long v);
+    public native void setNumberStyle(@Representing("NSNumberFormatterStyle") long v);
     @Mapping("locale")
     public native NSLocale getLocale();
     @Mapping("setLocale:")
@@ -58,9 +58,9 @@ public class NSNumberFormatter
     @Mapping("setGeneratesDecimalNumbers:")
     public native void setGeneratesDecimalNumbers(boolean v);
     @Mapping("formatterBehavior")
-    public native @Representing("NSNumberFormatterBehavior") @MachineSizedUInt long getFormatterBehavior();
+    public native @Representing("NSNumberFormatterBehavior") long getFormatterBehavior();
     @Mapping("setFormatterBehavior:")
-    public native void setFormatterBehavior(@Representing("NSNumberFormatterBehavior") @MachineSizedUInt long v);
+    public native void setFormatterBehavior(@Representing("NSNumberFormatterBehavior") long v);
     @Mapping("negativeFormat")
     public native String getNegativeFormat();
     @Mapping("setNegativeFormat:")
@@ -210,13 +210,13 @@ public class NSNumberFormatter
     @Mapping("setPaddingCharacter:")
     public native void setPaddingCharacter(String v);
     @Mapping("paddingPosition")
-    public native @Representing("NSNumberFormatterPadPosition") @MachineSizedUInt long getPaddingPosition();
+    public native @Representing("NSNumberFormatterPadPosition") long getPaddingPosition();
     @Mapping("setPaddingPosition:")
-    public native void setPaddingPosition(@Representing("NSNumberFormatterPadPosition") @MachineSizedUInt long v);
+    public native void setPaddingPosition(@Representing("NSNumberFormatterPadPosition") long v);
     @Mapping("roundingMode")
-    public native @Representing("NSNumberFormatterRoundingMode") @MachineSizedUInt long getRoundingMode();
+    public native @Representing("NSNumberFormatterRoundingMode") long getRoundingMode();
     @Mapping("setRoundingMode:")
-    public native void setRoundingMode(@Representing("NSNumberFormatterRoundingMode") @MachineSizedUInt long v);
+    public native void setRoundingMode(@Representing("NSNumberFormatterRoundingMode") long v);
     @Mapping("roundingIncrement")
     public native NSNumber getRoundingIncrement();
     @Mapping("setRoundingIncrement:")
@@ -316,10 +316,10 @@ public class NSNumberFormatter
      * @since Available in iOS 4.0 and later.
      */
     @Mapping("localizedStringFromNumber:numberStyle:")
-    public static native String formatLocalized(NSNumber num, @Representing("NSNumberFormatterStyle") @MachineSizedUInt long nstyle);
+    public static native String formatLocalized(NSNumber num, @Representing("NSNumberFormatterStyle") long nstyle);
     @Mapping("defaultFormatterBehavior")
-    public static native @Representing("NSNumberFormatterBehavior") @MachineSizedUInt long getDefaultFormatterBehavior();
+    public static native @Representing("NSNumberFormatterBehavior") long getDefaultFormatterBehavior();
     @Mapping("setDefaultFormatterBehavior:")
-    public static native void setDefaultFormatterBehavior(@Representing("NSNumberFormatterBehavior") @MachineSizedUInt long behavior);
+    public static native void setDefaultFormatterBehavior(@Representing("NSNumberFormatterBehavior") long behavior);
     
 }

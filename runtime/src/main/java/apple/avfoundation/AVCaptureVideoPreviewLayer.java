@@ -66,14 +66,14 @@ public class AVCaptureVideoPreviewLayer
      */
     @Deprecated
     @Mapping("orientation")
-    public native @Representing("AVCaptureVideoOrientation") @MachineSizedSInt long getOrientation();
+    public native @Representing("AVCaptureVideoOrientation") long getOrientation();
     /**
      * @since Available in iOS 4.0 and later.
      * @deprecated Deprecated in iOS 6.0.
      */
     @Deprecated
     @Mapping("setOrientation:")
-    public native void setOrientation(@Representing("AVCaptureVideoOrientation") @MachineSizedSInt long v);
+    public native void setOrientation(@Representing("AVCaptureVideoOrientation") long v);
     /**
      * @since Available in iOS 4.0 and later.
      * @deprecated Deprecated in iOS 6.0.

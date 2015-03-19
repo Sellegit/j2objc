@@ -66,7 +66,7 @@ public class EKEventStore
      * @since Available in iOS 6.0 and later.
      */
     @Mapping("calendarsForEntityType:")
-    public native NSArray<EKCalendar> getCalendars(@Representing("EKEntityType") int entityType);
+    public native NSArray<EKCalendar> getCalendars(@Representing("EKEntityType") long entityType);
     /**
      * @since Available in iOS 6.0 and later.
      */
@@ -177,6 +177,6 @@ public class EKEventStore
      * @since Available in iOS 6.0 and later.
      */
     @Mapping("authorizationStatusForEntityType:")
-    public static native @Representing("EKAuthorizationStatus") @MachineSizedSInt long getAuthorizationStatusForEntityType(@Representing("EKEntityType") int entityType);
+    public static native @Representing("EKAuthorizationStatus") long getAuthorizationStatusForEntityType(@Representing("EKEntityType") long entityType);
     
 }

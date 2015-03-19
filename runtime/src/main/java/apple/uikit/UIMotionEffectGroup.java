@@ -31,6 +31,8 @@ public class UIMotionEffectGroup
 
     
     
+    @Mapping("initWithCoder:")
+    public UIMotionEffectGroup(NSCoder aDecoder) { }
     @Mapping("init")
     public UIMotionEffectGroup() { }
     

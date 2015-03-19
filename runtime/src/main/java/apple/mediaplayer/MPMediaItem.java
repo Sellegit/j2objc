@@ -40,7 +40,7 @@ public class MPMediaItem
      * @since Available in iOS 7.0 and later.
      */
     @Mapping("mediaType")
-    public native @Representing("MPMediaType") @MachineSizedUInt long getMediaType();
+    public native @Representing("MPMediaType") long getMediaType();
     /**
      * @since Available in iOS 7.0 and later.
      */
@@ -208,11 +208,11 @@ public class MPMediaItem
      * @since Available in iOS 4.2 and later.
      */
     @Mapping("persistentIDPropertyForGroupingType:")
-    public static native MPMediaEntityProperty getPersistentIDProperty(@Representing("MPMediaGrouping") @MachineSizedSInt long groupingType);
+    public static native MPMediaEntityProperty getPersistentIDProperty(@Representing("MPMediaGrouping") long groupingType);
     /**
      * @since Available in iOS 4.2 and later.
      */
     @Mapping("titlePropertyForGroupingType:")
-    public static native MPMediaEntityProperty getTitleProperty(@Representing("MPMediaGrouping") @MachineSizedSInt long groupingType);
+    public static native MPMediaEntityProperty getTitleProperty(@Representing("MPMediaGrouping") long groupingType);
     
 }

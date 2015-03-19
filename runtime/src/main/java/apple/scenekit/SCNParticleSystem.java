@@ -71,13 +71,13 @@ public class SCNParticleSystem
     @Mapping("setEmitterShape:")
     public native void setEmitterShape(SCNGeometry v);
     @Mapping("birthLocation")
-    public native @Representing("SCNParticleBirthLocation") @MachineSizedSInt long getBirthLocation();
+    public native @Representing("SCNParticleBirthLocation") long getBirthLocation();
     @Mapping("setBirthLocation:")
-    public native void setBirthLocation(@Representing("SCNParticleBirthLocation") @MachineSizedSInt long v);
+    public native void setBirthLocation(@Representing("SCNParticleBirthLocation") long v);
     @Mapping("birthDirection")
-    public native @Representing("SCNParticleBirthDirection") @MachineSizedSInt long getBirthDirection();
+    public native @Representing("SCNParticleBirthDirection") long getBirthDirection();
     @Mapping("setBirthDirection:")
-    public native void setBirthDirection(@Representing("SCNParticleBirthDirection") @MachineSizedSInt long v);
+    public native void setBirthDirection(@Representing("SCNParticleBirthDirection") long v);
     @Mapping("spreadingAngle")
     public native @MachineSizedFloat double getSpreadingAngle();
     @Mapping("setSpreadingAngle:")
@@ -167,9 +167,9 @@ public class SCNParticleSystem
     @Mapping("setImageSequenceFrameRateVariation:")
     public native void setImageSequenceFrameRateVariation(@MachineSizedFloat double v);
     @Mapping("imageSequenceAnimationMode")
-    public native @Representing("SCNParticleImageSequenceAnimationMode") @MachineSizedSInt long getImageSequenceAnimationMode();
+    public native @Representing("SCNParticleImageSequenceAnimationMode") long getImageSequenceAnimationMode();
     @Mapping("setImageSequenceAnimationMode:")
-    public native void setImageSequenceAnimationMode(@Representing("SCNParticleImageSequenceAnimationMode") @MachineSizedSInt long v);
+    public native void setImageSequenceAnimationMode(@Representing("SCNParticleImageSequenceAnimationMode") long v);
     @Mapping("particleColor")
     public native UIColor getParticleColor();
     @Mapping("setParticleColor:")
@@ -187,21 +187,21 @@ public class SCNParticleSystem
     @Mapping("setParticleSizeVariation:")
     public native void setParticleSizeVariation(@MachineSizedFloat double v);
     @Mapping("blendMode")
-    public native @Representing("SCNParticleBlendMode") @MachineSizedSInt long getBlendMode();
+    public native @Representing("SCNParticleBlendMode") long getBlendMode();
     @Mapping("setBlendMode:")
-    public native void setBlendMode(@Representing("SCNParticleBlendMode") @MachineSizedSInt long v);
+    public native void setBlendMode(@Representing("SCNParticleBlendMode") long v);
     @Mapping("isBlackPassEnabled")
     public native boolean isBlackPassEnabled();
     @Mapping("setBlackPassEnabled:")
     public native void setBlackPassEnabled(boolean v);
     @Mapping("orientationMode")
-    public native @Representing("SCNParticleOrientationMode") @MachineSizedSInt long getOrientationMode();
+    public native @Representing("SCNParticleOrientationMode") long getOrientationMode();
     @Mapping("setOrientationMode:")
-    public native void setOrientationMode(@Representing("SCNParticleOrientationMode") @MachineSizedSInt long v);
+    public native void setOrientationMode(@Representing("SCNParticleOrientationMode") long v);
     @Mapping("sortingMode")
-    public native @Representing("SCNParticleSortingMode") @MachineSizedSInt long getSortingMode();
+    public native @Representing("SCNParticleSortingMode") long getSortingMode();
     @Mapping("setSortingMode:")
-    public native void setSortingMode(@Representing("SCNParticleSortingMode") @MachineSizedSInt long v);
+    public native void setSortingMode(@Representing("SCNParticleSortingMode") long v);
     @Mapping("isLightingEnabled")
     public native boolean isLightingEnabled();
     @Mapping("setLightingEnabled:")
@@ -280,7 +280,7 @@ public class SCNParticleSystem
     @Mapping("reset")
     public native void reset();
     @Mapping("removeModifiersOfStage:")
-    public native void removeModifiersOfStage(@Representing("SCNParticleModifierStage") @MachineSizedSInt long stage);
+    public native void removeModifiersOfStage(@Representing("SCNParticleModifierStage") long stage);
     @Mapping("removeAllModifiers")
     public native void removeAllModifiers();
     @Mapping("particleSystem")

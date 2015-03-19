@@ -36,7 +36,7 @@ public interface UIGuidedAccessRestrictionDelegate
     @Mapping("guidedAccessRestrictionIdentifiers")
     List<String> getIdentifiers();
     @Mapping("guidedAccessRestrictionWithIdentifier:didChangeState:")
-    void didChangeState(String restrictionIdentifier, @Representing("UIGuidedAccessRestrictionState") @MachineSizedSInt long newRestrictionState);
+    void didChangeState(String restrictionIdentifier, @Representing("UIGuidedAccessRestrictionState") long newRestrictionState);
     @Mapping("textForGuidedAccessRestrictionWithIdentifier:")
     String getText(String restrictionIdentifier);
     @Mapping("detailTextForGuidedAccessRestrictionWithIdentifier:")

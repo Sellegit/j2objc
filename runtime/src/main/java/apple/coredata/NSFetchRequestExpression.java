@@ -27,7 +27,7 @@ public class NSFetchRequestExpression
     
     
     @Mapping("initWithExpressionType:")
-    public NSFetchRequestExpression(@Representing("NSExpressionType") @MachineSizedUInt long type) { }
+    public NSFetchRequestExpression(@Representing("NSExpressionType") long type) { }
     @Mapping("init")
     public NSFetchRequestExpression() { }
     

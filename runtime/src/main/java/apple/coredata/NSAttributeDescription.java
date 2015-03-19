@@ -26,14 +26,16 @@ public class NSAttributeDescription
 
     
     
+    @Mapping("initWithCoder:")
+    public NSAttributeDescription(NSCoder aDecoder) { }
     @Mapping("init")
     public NSAttributeDescription() { }
     
     
     @Mapping("attributeType")
-    public native @Representing("NSAttributeType") @MachineSizedUInt long getAttributeType();
+    public native @Representing("NSAttributeType") long getAttributeType();
     @Mapping("setAttributeType:")
-    public native void setAttributeType(@Representing("NSAttributeType") @MachineSizedUInt long v);
+    public native void setAttributeType(@Representing("NSAttributeType") long v);
     @Mapping("attributeValueClassName")
     public native String getAttributeValueClassName();
     @Mapping("setAttributeValueClassName:")

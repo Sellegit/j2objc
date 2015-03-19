@@ -42,7 +42,7 @@ public class UIPresentationController
     @Mapping("presentedViewController")
     public native UIViewController getPresentedViewController();
     @Mapping("presentationStyle")
-    public native @Representing("UIModalPresentationStyle") @MachineSizedSInt long getPresentationStyle();
+    public native @Representing("UIModalPresentationStyle") long getPresentationStyle();
     @Mapping("containerView")
     public native UIView getContainerView();
     @Mapping("delegate")
@@ -59,7 +59,7 @@ public class UIPresentationController
     
     
     @Mapping("adaptivePresentationStyle")
-    public native @Representing("UIModalPresentationStyle") @MachineSizedSInt long getAdaptivePresentationStyle();
+    public native @Representing("UIModalPresentationStyle") long getAdaptivePresentationStyle();
     @Mapping("containerViewWillLayoutSubviews")
     public native void containerViewWillLayoutSubviews();
     @Mapping("containerViewDidLayoutSubviews")

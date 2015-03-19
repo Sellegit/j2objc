@@ -32,15 +32,17 @@ public class UIInputView
     
     
     @Mapping("initWithFrame:inputViewStyle:")
-    public UIInputView(CGRect frame, @Representing("UIInputViewStyle") @MachineSizedSInt long inputViewStyle) { }
+    public UIInputView(CGRect frame, @Representing("UIInputViewStyle") long inputViewStyle) { }
     @Mapping("initWithFrame:")
     public UIInputView(CGRect frame) { }
+    @Mapping("initWithCoder:")
+    public UIInputView(NSCoder aDecoder) { }
     @Mapping("init")
     public UIInputView() { }
     
     
     @Mapping("inputViewStyle")
-    public native @Representing("UIInputViewStyle") @MachineSizedSInt long getInputViewStyle();
+    public native @Representing("UIInputViewStyle") long getInputViewStyle();
     
     
     

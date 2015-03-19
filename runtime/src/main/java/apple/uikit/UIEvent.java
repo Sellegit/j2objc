@@ -39,12 +39,12 @@ public class UIEvent
      * @since Available in iOS 3.0 and later.
      */
     @Mapping("type")
-    public native @Representing("UIEventType") @MachineSizedSInt long getType();
+    public native @Representing("UIEventType") long getType();
     /**
      * @since Available in iOS 3.0 and later.
      */
     @Mapping("subtype")
-    public native @Representing("UIEventSubtype") @MachineSizedSInt long getSubtype();
+    public native @Representing("UIEventSubtype") long getSubtype();
     @Mapping("timestamp")
     public native double getTimestamp();
     

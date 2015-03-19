@@ -40,7 +40,7 @@ public class NSParagraphStyle
     @Mapping("paragraphSpacing")
     public native @MachineSizedFloat double getParagraphSpacing();
     @Mapping("alignment")
-    public native @Representing("NSTextAlignment") @MachineSizedSInt long getAlignment();
+    public native @Representing("NSTextAlignment") long getAlignment();
     @Mapping("headIndent")
     public native @MachineSizedFloat double getHeadIndent();
     @Mapping("tailIndent")
@@ -52,9 +52,9 @@ public class NSParagraphStyle
     @Mapping("maximumLineHeight")
     public native @MachineSizedFloat double getMaximumLineHeight();
     @Mapping("lineBreakMode")
-    public native @Representing("NSLineBreakMode") @MachineSizedSInt long getLineBreakMode();
+    public native @Representing("NSLineBreakMode") long getLineBreakMode();
     @Mapping("baseWritingDirection")
-    public native @Representing("NSWritingDirection") @MachineSizedSInt long getBaseWritingDirection();
+    public native @Representing("NSWritingDirection") long getBaseWritingDirection();
     @Mapping("lineHeightMultiple")
     public native @MachineSizedFloat double getLineHeightMultiple();
     @Mapping("paragraphSpacingBefore")
@@ -77,7 +77,7 @@ public class NSParagraphStyle
     @Mapping("defaultParagraphStyle")
     public static native NSParagraphStyle getDefaultParagraphStyle();
     @Mapping("defaultWritingDirectionForLanguage:")
-    public static native @Representing("NSWritingDirection") @MachineSizedSInt long getDefaultWritingDirection(String languageName);
+    public static native @Representing("NSWritingDirection") long getDefaultWritingDirection(String languageName);
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
     @Mapping("encodeWithCoder:")

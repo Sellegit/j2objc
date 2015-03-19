@@ -27,9 +27,9 @@ public interface NSFetchedResultsControllerDelegate
     
     
     @Mapping("controller:didChangeObject:atIndexPath:forChangeType:newIndexPath:")
-    void didChangeObject(NSFetchedResultsController controller, Object anObject, NSIndexPath indexPath, @Representing("NSFetchedResultsChangeType") @MachineSizedUInt long type, NSIndexPath newIndexPath);
+    void didChangeObject(NSFetchedResultsController controller, Object anObject, NSIndexPath indexPath, @Representing("NSFetchedResultsChangeType") long type, NSIndexPath newIndexPath);
     @Mapping("controller:didChangeSection:atIndex:forChangeType:")
-    void didChangeSection(NSFetchedResultsController controller, NSFetchedResultsSectionInfo sectionInfo, @MachineSizedUInt long sectionIndex, @Representing("NSFetchedResultsChangeType") @MachineSizedUInt long type);
+    void didChangeSection(NSFetchedResultsController controller, NSFetchedResultsSectionInfo sectionInfo, @MachineSizedUInt long sectionIndex, @Representing("NSFetchedResultsChangeType") long type);
     @Mapping("controllerWillChangeContent:")
     void willChangeContent(NSFetchedResultsController controller);
     @Mapping("controllerDidChangeContent:")

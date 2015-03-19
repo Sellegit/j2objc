@@ -44,17 +44,17 @@ public class UIPrintInfo
     @Mapping("setJobName:")
     public native void setJobName(String v);
     @Mapping("outputType")
-    public native @Representing("UIPrintInfoOutputType") @MachineSizedSInt long getOutputType();
+    public native @Representing("UIPrintInfoOutputType") long getOutputType();
     @Mapping("setOutputType:")
-    public native void setOutputType(@Representing("UIPrintInfoOutputType") @MachineSizedSInt long v);
+    public native void setOutputType(@Representing("UIPrintInfoOutputType") long v);
     @Mapping("orientation")
-    public native @Representing("UIPrintInfoOrientation") @MachineSizedSInt long getOrientation();
+    public native @Representing("UIPrintInfoOrientation") long getOrientation();
     @Mapping("setOrientation:")
-    public native void setOrientation(@Representing("UIPrintInfoOrientation") @MachineSizedSInt long v);
+    public native void setOrientation(@Representing("UIPrintInfoOrientation") long v);
     @Mapping("duplex")
-    public native @Representing("UIPrintInfoDuplex") @MachineSizedSInt long getDuplex();
+    public native @Representing("UIPrintInfoDuplex") long getDuplex();
     @Mapping("setDuplex:")
-    public native void setDuplex(@Representing("UIPrintInfoDuplex") @MachineSizedSInt long v);
+    public native void setDuplex(@Representing("UIPrintInfoDuplex") long v);
     
     
     

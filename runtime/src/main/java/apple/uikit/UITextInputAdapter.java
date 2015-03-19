@@ -52,9 +52,9 @@ public abstract class UITextInputAdapter
     @NotImplemented("textInputView")
     public UIView getTextInputView() { throw new UnsupportedOperationException(); }
     @NotImplemented("selectionAffinity")
-    public @Representing("UITextStorageDirection") @MachineSizedSInt long getSelectionAffinity() { throw new UnsupportedOperationException(); }
+    public @Representing("UITextStorageDirection") long getSelectionAffinity() { throw new UnsupportedOperationException(); }
     @Mapping("setSelectionAffinity:")
-    public void setSelectionAffinity(@Representing("UITextStorageDirection") @MachineSizedSInt long v) { throw new UnsupportedOperationException(); }
+    public void setSelectionAffinity(@Representing("UITextStorageDirection") long v) { throw new UnsupportedOperationException(); }
     
     
     
@@ -71,19 +71,19 @@ public abstract class UITextInputAdapter
     @NotImplemented("positionFromPosition:offset:")
     public UITextPosition getPositionFromPosition(UITextPosition position, @MachineSizedSInt long offset) { throw new UnsupportedOperationException(); }
     @NotImplemented("positionFromPosition:inDirection:offset:")
-    public UITextPosition getPositionFromPosition(UITextPosition position, @Representing("UITextLayoutDirection") @MachineSizedSInt long direction, @MachineSizedSInt long offset) { throw new UnsupportedOperationException(); }
+    public UITextPosition getPositionFromPosition(UITextPosition position, @Representing("UITextLayoutDirection") long direction, @MachineSizedSInt long offset) { throw new UnsupportedOperationException(); }
     @NotImplemented("comparePosition:toPosition:")
-    public @Representing("NSComparisonResult") @MachineSizedSInt long comparePositions(UITextPosition position, UITextPosition other) { throw new UnsupportedOperationException(); }
+    public @Representing("NSComparisonResult") long comparePositions(UITextPosition position, UITextPosition other) { throw new UnsupportedOperationException(); }
     @NotImplemented("offsetFromPosition:toPosition:")
     public @MachineSizedSInt long getOffset(UITextPosition from, UITextPosition toPosition) { throw new UnsupportedOperationException(); }
     @NotImplemented("positionWithinRange:farthestInDirection:")
-    public UITextPosition getPositionWithinRangeFarthestInDirection(UITextRange range, @Representing("UITextLayoutDirection") @MachineSizedSInt long direction) { throw new UnsupportedOperationException(); }
+    public UITextPosition getPositionWithinRangeFarthestInDirection(UITextRange range, @Representing("UITextLayoutDirection") long direction) { throw new UnsupportedOperationException(); }
     @NotImplemented("characterRangeByExtendingPosition:inDirection:")
-    public UITextRange getCharacterRange(UITextPosition position, @Representing("UITextLayoutDirection") @MachineSizedSInt long direction) { throw new UnsupportedOperationException(); }
+    public UITextRange getCharacterRange(UITextPosition position, @Representing("UITextLayoutDirection") long direction) { throw new UnsupportedOperationException(); }
     @NotImplemented("baseWritingDirectionForPosition:inDirection:")
-    public @Representing("UITextWritingDirection") @MachineSizedSInt long getBaseWritingDirection(UITextPosition position, @Representing("UITextStorageDirection") @MachineSizedSInt long direction) { throw new UnsupportedOperationException(); }
+    public @Representing("UITextWritingDirection") long getBaseWritingDirection(UITextPosition position, @Representing("UITextStorageDirection") long direction) { throw new UnsupportedOperationException(); }
     @NotImplemented("setBaseWritingDirection:forRange:")
-    public void setBaseWritingDirection(@Representing("UITextWritingDirection") @MachineSizedSInt long writingDirection, UITextRange range) { throw new UnsupportedOperationException(); }
+    public void setBaseWritingDirection(@Representing("UITextWritingDirection") long writingDirection, UITextRange range) { throw new UnsupportedOperationException(); }
     @NotImplemented("firstRectForRange:")
     public CGRect getFirstRect(UITextRange range) { throw new UnsupportedOperationException(); }
     @NotImplemented("caretRectForPosition:")
@@ -105,7 +105,7 @@ public abstract class UITextInputAdapter
     @NotImplemented("shouldChangeTextInRange:replacementText:")
     public boolean shouldChangeText(UITextRange range, String text) { throw new UnsupportedOperationException(); }
     @NotImplemented("textStylingAtPosition:inDirection:")
-    public UITextInputTextStyle getTextStyling(UITextPosition position, @Representing("UITextStorageDirection") @MachineSizedSInt long direction) { throw new UnsupportedOperationException(); }
+    public UITextInputTextStyle getTextStyling(UITextPosition position, @Representing("UITextStorageDirection") long direction) { throw new UnsupportedOperationException(); }
     @NotImplemented("positionWithinRange:atCharacterOffset:")
     public UITextPosition getPositionWithinRangeAtCharacterOffset(UITextRange range, @MachineSizedSInt long offset) { throw new UnsupportedOperationException(); }
     @NotImplemented("characterOffsetOfPosition:withinRange:")

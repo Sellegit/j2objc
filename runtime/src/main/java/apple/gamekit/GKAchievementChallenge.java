@@ -27,6 +27,8 @@ public class GKAchievementChallenge
 
     
     
+    @Mapping("initWithCoder:")
+    public GKAchievementChallenge(NSCoder aDecoder) { }
     @Mapping("init")
     public GKAchievementChallenge() { }
     

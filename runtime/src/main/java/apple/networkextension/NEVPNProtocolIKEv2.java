@@ -34,12 +34,12 @@ public class NEVPNProtocolIKEv2
      * @since Available in iOS 8.0 and later.
      */
     @Mapping("deadPeerDetectionRate")
-    public native @Representing("NEVPNIKEv2DeadPeerDetectionRate") @MachineSizedSInt long getDeadPeerDetectionRate();
+    public native @Representing("NEVPNIKEv2DeadPeerDetectionRate") long getDeadPeerDetectionRate();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @Mapping("setDeadPeerDetectionRate:")
-    public native void setDeadPeerDetectionRate(@Representing("NEVPNIKEv2DeadPeerDetectionRate") @MachineSizedSInt long v);
+    public native void setDeadPeerDetectionRate(@Representing("NEVPNIKEv2DeadPeerDetectionRate") long v);
     /**
      * @since Available in iOS 8.0 and later.
      */

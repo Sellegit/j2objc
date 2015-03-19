@@ -33,6 +33,8 @@ public class UISlider
     
     @Mapping("initWithFrame:")
     public UISlider(CGRect frame) { }
+    @Mapping("initWithCoder:")
+    public UISlider(NSCoder aDecoder) { }
     @Mapping("init")
     public UISlider() { }
     
@@ -103,17 +105,17 @@ public class UISlider
     @Mapping("setValue:animated:")
     public native void setValue(float value, boolean animated);
     @Mapping("setThumbImage:forState:")
-    public native void setThumbImage(UIImage image, @Representing("UIControlState") @MachineSizedUInt long state);
+    public native void setThumbImage(UIImage image, @Representing("UIControlState") long state);
     @Mapping("setMinimumTrackImage:forState:")
-    public native void setMinimumTrackImage(UIImage image, @Representing("UIControlState") @MachineSizedUInt long state);
+    public native void setMinimumTrackImage(UIImage image, @Representing("UIControlState") long state);
     @Mapping("setMaximumTrackImage:forState:")
-    public native void setMaximumTrackImage(UIImage image, @Representing("UIControlState") @MachineSizedUInt long state);
+    public native void setMaximumTrackImage(UIImage image, @Representing("UIControlState") long state);
     @Mapping("thumbImageForState:")
-    public native UIImage getThumbImage(@Representing("UIControlState") @MachineSizedUInt long state);
+    public native UIImage getThumbImage(@Representing("UIControlState") long state);
     @Mapping("minimumTrackImageForState:")
-    public native UIImage getMinimumTrackImage(@Representing("UIControlState") @MachineSizedUInt long state);
+    public native UIImage getMinimumTrackImage(@Representing("UIControlState") long state);
     @Mapping("maximumTrackImageForState:")
-    public native UIImage getMaximumTrackImage(@Representing("UIControlState") @MachineSizedUInt long state);
+    public native UIImage getMaximumTrackImage(@Representing("UIControlState") long state);
     @Mapping("minimumValueImageRectForBounds:")
     public native CGRect getMinimumValueImageRect(CGRect bounds);
     @Mapping("maximumValueImageRectForBounds:")

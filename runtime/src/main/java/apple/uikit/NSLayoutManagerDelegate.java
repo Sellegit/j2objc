@@ -55,7 +55,7 @@ public interface NSLayoutManagerDelegate
      * @since Available in iOS 7.0 and later.
      */
     @Mapping("layoutManager:shouldUseAction:forControlCharacterAtIndex:")
-    @Representing("NSControlCharacterAction") @MachineSizedSInt long shouldUseAction(NSLayoutManager layoutManager, @Representing("NSControlCharacterAction") @MachineSizedSInt long action, @MachineSizedUInt long charIndex);
+    @Representing("NSControlCharacterAction") long shouldUseAction(NSLayoutManager layoutManager, @Representing("NSControlCharacterAction") long action, @MachineSizedUInt long charIndex);
     /**
      * @since Available in iOS 7.0 and later.
      */

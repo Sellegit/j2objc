@@ -56,7 +56,7 @@ public class AVAssetExportSession
     @Mapping("setOutputURL:")
     public native void setOutputURL(NSURL v);
     @Mapping("status")
-    public native @Representing("AVAssetExportSessionStatus") @MachineSizedSInt long getStatus();
+    public native @Representing("AVAssetExportSessionStatus") long getStatus();
     @Mapping("error")
     public native NSError getError();
     @Mapping("progress")

@@ -26,6 +26,8 @@ public class NSFetchedPropertyDescription
 
     
     
+    @Mapping("initWithCoder:")
+    public NSFetchedPropertyDescription(NSCoder aDecoder) { }
     @Mapping("init")
     public NSFetchedPropertyDescription() { }
     

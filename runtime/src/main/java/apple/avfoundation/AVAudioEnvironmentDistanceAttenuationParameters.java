@@ -37,9 +37,9 @@ public class AVAudioEnvironmentDistanceAttenuationParameters
     
     
     @Mapping("distanceAttenuationModel")
-    public native @Representing("AVAudioEnvironmentDistanceAttenuationModel") @MachineSizedSInt long getDistanceAttenuationModel();
+    public native @Representing("AVAudioEnvironmentDistanceAttenuationModel") long getDistanceAttenuationModel();
     @Mapping("setDistanceAttenuationModel:")
-    public native void setDistanceAttenuationModel(@Representing("AVAudioEnvironmentDistanceAttenuationModel") @MachineSizedSInt long v);
+    public native void setDistanceAttenuationModel(@Representing("AVAudioEnvironmentDistanceAttenuationModel") long v);
     @Mapping("referenceDistance")
     public native float getReferenceDistance();
     @Mapping("setReferenceDistance:")

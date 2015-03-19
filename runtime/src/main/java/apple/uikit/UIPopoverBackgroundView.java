@@ -33,6 +33,8 @@ public class UIPopoverBackgroundView
     
     @Mapping("initWithFrame:")
     public UIPopoverBackgroundView(CGRect frame) { }
+    @Mapping("initWithCoder:")
+    public UIPopoverBackgroundView(NSCoder aDecoder) { }
     @Mapping("init")
     public UIPopoverBackgroundView() { }
     
@@ -42,9 +44,9 @@ public class UIPopoverBackgroundView
     @Mapping("setArrowOffset:")
     public native void setArrowOffset(@MachineSizedFloat double v);
     @Mapping("arrowDirection")
-    public native @Representing("UIPopoverArrowDirection") @MachineSizedUInt long getArrowDirection();
+    public native @Representing("UIPopoverArrowDirection") long getArrowDirection();
     @Mapping("setArrowDirection:")
-    public native void setArrowDirection(@Representing("UIPopoverArrowDirection") @MachineSizedUInt long v);
+    public native void setArrowDirection(@Representing("UIPopoverArrowDirection") long v);
     
     
     

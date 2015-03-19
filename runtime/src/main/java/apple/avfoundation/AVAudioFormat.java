@@ -41,9 +41,9 @@ public class AVAudioFormat
     @Mapping("initStandardFormatWithSampleRate:channelLayout:")
     public AVAudioFormat(double sampleRate, AVAudioChannelLayout layout) { }
     @Mapping("initWithCommonFormat:sampleRate:channels:interleaved:")
-    public AVAudioFormat(@Representing("AVAudioCommonFormat") @MachineSizedUInt long format, double sampleRate, int channels, boolean interleaved) { }
+    public AVAudioFormat(@Representing("AVAudioCommonFormat") long format, double sampleRate, int channels, boolean interleaved) { }
     @Mapping("initWithCommonFormat:sampleRate:interleaved:channelLayout:")
-    public AVAudioFormat(@Representing("AVAudioCommonFormat") @MachineSizedUInt long format, double sampleRate, boolean interleaved, AVAudioChannelLayout layout) { }
+    public AVAudioFormat(@Representing("AVAudioCommonFormat") long format, double sampleRate, boolean interleaved, AVAudioChannelLayout layout) { }
     @Mapping("initWithSettings:")
     public AVAudioFormat(NSDictionary<?, ?> settings) { }
     @Mapping("init")
@@ -53,7 +53,7 @@ public class AVAudioFormat
     @Mapping("isStandard")
     public native boolean isStandard();
     @Mapping("commonFormat")
-    public native @Representing("AVAudioCommonFormat") @MachineSizedUInt long getCommonFormat();
+    public native @Representing("AVAudioCommonFormat") long getCommonFormat();
     @Mapping("channelCount")
     public native int getChannelCount();
     @Mapping("sampleRate")

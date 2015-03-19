@@ -39,9 +39,9 @@ public class SCNMorpher
     @Mapping("setTargets:")
     public native void setTargets(NSArray<SCNGeometry> v);
     @Mapping("calculationMode")
-    public native @Representing("SCNMorpherCalculationMode") @MachineSizedSInt long getCalculationMode();
+    public native @Representing("SCNMorpherCalculationMode") long getCalculationMode();
     @Mapping("setCalculationMode:")
-    public native void setCalculationMode(@Representing("SCNMorpherCalculationMode") @MachineSizedSInt long v);
+    public native void setCalculationMode(@Representing("SCNMorpherCalculationMode") long v);
     
     
     

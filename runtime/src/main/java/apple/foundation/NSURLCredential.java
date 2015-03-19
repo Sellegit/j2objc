@@ -32,12 +32,12 @@ public class NSURLCredential
     @Mapping("init")
     public NSURLCredential() { }
     @Mapping("initWithUser:password:persistence:")
-    public NSURLCredential(String user, String password, @Representing("NSURLCredentialPersistence") @MachineSizedUInt long persistence) { }
+    public NSURLCredential(String user, String password, @Representing("NSURLCredentialPersistence") long persistence) { }
     /**
      * @since Available in iOS 3.0 and later.
      */
     @Mapping("initWithIdentity:certificates:persistence:")
-    public NSURLCredential(SecIdentity identity, NSArray<?> certArray, @Representing("NSURLCredentialPersistence") @MachineSizedUInt long persistence) { }
+    public NSURLCredential(SecIdentity identity, NSArray<?> certArray, @Representing("NSURLCredentialPersistence") long persistence) { }
     /**
      * @since Available in iOS 3.0 and later.
      */
@@ -46,7 +46,7 @@ public class NSURLCredential
     
     
     @Mapping("persistence")
-    public native @Representing("NSURLCredentialPersistence") @MachineSizedUInt long getPersistence();
+    public native @Representing("NSURLCredentialPersistence") long getPersistence();
     @Mapping("user")
     public native String getUser();
     @Mapping("password")

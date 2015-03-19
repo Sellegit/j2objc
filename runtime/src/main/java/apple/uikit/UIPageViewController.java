@@ -32,9 +32,11 @@ public class UIPageViewController
     
     
     @Mapping("initWithTransitionStyle:navigationOrientation:options:")
-    public UIPageViewController(@Representing("UIPageViewControllerTransitionStyle") @MachineSizedSInt long style, @Representing("UIPageViewControllerNavigationOrientation") @MachineSizedSInt long navigationOrientation, NSDictionary<?, ?> options) { }
+    public UIPageViewController(@Representing("UIPageViewControllerTransitionStyle") long style, @Representing("UIPageViewControllerNavigationOrientation") long navigationOrientation, NSDictionary<?, ?> options) { }
     @Mapping("initWithNibName:bundle:")
     public UIPageViewController(String nibNameOrNil, NSBundle nibBundleOrNil) { }
+    @Mapping("initWithCoder:")
+    public UIPageViewController(NSCoder aDecoder) { }
     @Mapping("init")
     public UIPageViewController() { }
     
@@ -48,11 +50,11 @@ public class UIPageViewController
     @Mapping("setDataSource:")
     public native void setDataSource(UIPageViewControllerDataSource v);
     @Mapping("transitionStyle")
-    public native @Representing("UIPageViewControllerTransitionStyle") @MachineSizedSInt long getTransitionStyle();
+    public native @Representing("UIPageViewControllerTransitionStyle") long getTransitionStyle();
     @Mapping("navigationOrientation")
-    public native @Representing("UIPageViewControllerNavigationOrientation") @MachineSizedSInt long getNavigationOrientation();
+    public native @Representing("UIPageViewControllerNavigationOrientation") long getNavigationOrientation();
     @Mapping("spineLocation")
-    public native @Representing("UIPageViewControllerSpineLocation") @MachineSizedSInt long getSpineLocation();
+    public native @Representing("UIPageViewControllerSpineLocation") long getSpineLocation();
     @Mapping("isDoubleSided")
     public native boolean isDoubleSided();
     @Mapping("setDoubleSided:")
@@ -65,6 +67,6 @@ public class UIPageViewController
     
     
     @Mapping("setViewControllers:direction:animated:completion:")
-    public native void setViewControllers(NSArray<?> viewControllers, @Representing("UIPageViewControllerNavigationDirection") @MachineSizedSInt long direction, boolean animated, @Block VoidBooleanBlock completion);
+    public native void setViewControllers(NSArray<?> viewControllers, @Representing("UIPageViewControllerNavigationDirection") long direction, boolean animated, @Block VoidBooleanBlock completion);
     
 }

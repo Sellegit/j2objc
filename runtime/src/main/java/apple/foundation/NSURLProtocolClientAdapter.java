@@ -38,7 +38,7 @@ public abstract class NSURLProtocolClientAdapter
     @NotImplemented("URLProtocol:cachedResponseIsValid:")
     public void cachedResponseIsValid(NSURLProtocol protocol, NSCachedURLResponse cachedResponse) { throw new UnsupportedOperationException(); }
     @NotImplemented("URLProtocol:didReceiveResponse:cacheStoragePolicy:")
-    public void didReceiveResponse(NSURLProtocol protocol, NSURLResponse response, @Representing("NSURLCacheStoragePolicy") @MachineSizedUInt long policy) { throw new UnsupportedOperationException(); }
+    public void didReceiveResponse(NSURLProtocol protocol, NSURLResponse response, @Representing("NSURLCacheStoragePolicy") long policy) { throw new UnsupportedOperationException(); }
     @NotImplemented("URLProtocol:didLoadData:")
     public void didLoadData(NSURLProtocol protocol, NSData data) { throw new UnsupportedOperationException(); }
     @NotImplemented("URLProtocolDidFinishLoading:")

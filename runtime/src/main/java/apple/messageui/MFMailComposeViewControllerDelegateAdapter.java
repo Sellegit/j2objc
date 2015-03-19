@@ -33,6 +33,6 @@ public abstract class MFMailComposeViewControllerDelegateAdapter
      * @since Available in iOS 3.0 and later.
      */
     @NotImplemented("mailComposeController:didFinishWithResult:error:")
-    public void didFinish(MFMailComposeViewController controller, @Representing("MFMailComposeResult") int result, NSError error) { throw new UnsupportedOperationException(); }
+    public void didFinish(MFMailComposeViewController controller, @Representing("MFMailComposeResult") long result, NSError error) { throw new UnsupportedOperationException(); }
     
 }

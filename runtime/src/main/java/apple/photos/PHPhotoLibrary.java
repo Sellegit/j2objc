@@ -48,7 +48,7 @@ public class PHPhotoLibrary
     @Mapping("sharedPhotoLibrary")
     public static native PHPhotoLibrary getSharedPhotoLibrary();
     @Mapping("authorizationStatus")
-    public static native @Representing("PHAuthorizationStatus") @MachineSizedSInt long getAuthorizationStatus();
+    public static native @Representing("PHAuthorizationStatus") long getAuthorizationStatus();
     @Mapping("requestAuthorization:")
     public static native void requestAuthorization(@Block VoidBlock1<PHAuthorizationStatus> handler);
     

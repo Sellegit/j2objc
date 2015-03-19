@@ -51,7 +51,7 @@ public class NSIndexPath
     @Mapping("getIndexes:")
     public native void getIndexes(Todo indexes);
     @Mapping("compare:")
-    public native @Representing("NSComparisonResult") @MachineSizedSInt long compare(NSIndexPath otherObject);
+    public native @Representing("NSComparisonResult") long compare(NSIndexPath otherObject);
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
     

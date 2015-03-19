@@ -43,7 +43,7 @@ public class PKPaymentPass
     @Mapping("deviceAccountNumberSuffix")
     public native String getDeviceAccountNumberSuffix();
     @Mapping("activationState")
-    public native @Representing("PKPaymentPassActivationState") @MachineSizedUInt long getActivationState();
+    public native @Representing("PKPaymentPassActivationState") long getActivationState();
     
     
     

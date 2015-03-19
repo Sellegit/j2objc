@@ -52,6 +52,6 @@ public class EKSource
      * @since Available in iOS 6.0 and later.
      */
     @Mapping("calendarsForEntityType:")
-    public native NSSet<EKCalendar> getCalendars(@Representing("EKEntityType") int entityType);
+    public native NSSet<EKCalendar> getCalendars(@Representing("EKEntityType") long entityType);
     
 }

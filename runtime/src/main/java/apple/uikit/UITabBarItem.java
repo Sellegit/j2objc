@@ -39,7 +39,7 @@ public class UITabBarItem
     @Mapping("initWithTitle:image:selectedImage:")
     public UITabBarItem(String title, UIImage image, UIImage selectedImage) { }
     @Mapping("initWithTabBarSystemItem:tag:")
-    public UITabBarItem(@Representing("UITabBarSystemItem") @MachineSizedSInt long systemItem, @MachineSizedSInt long tag) { }
+    public UITabBarItem(@Representing("UITabBarSystemItem") long systemItem, @MachineSizedSInt long tag) { }
     @Mapping("init")
     public UITabBarItem() { }
     

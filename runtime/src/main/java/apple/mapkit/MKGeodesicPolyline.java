@@ -38,8 +38,8 @@ public class MKGeodesicPolyline
     
     
     @Mapping("polylineWithPoints:count:")
-    public static native MKGeodesicPolyline create(MKMapPoint points, @MachineSizedUInt long count);
+    public static native MKGeodesicPolyline createPrime(MKMapPoint points, @MachineSizedUInt long count);
     @Mapping("polylineWithCoordinates:count:")
-    public static native MKGeodesicPolyline create(CLLocationCoordinate2D coords, @MachineSizedUInt long count);
+    public static native MKGeodesicPolyline createPrime(CLLocationCoordinate2D coords, @MachineSizedUInt long count);
     
 }

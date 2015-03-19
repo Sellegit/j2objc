@@ -35,7 +35,7 @@ public class NKIssue
     @Mapping("contentURL")
     public native NSURL getContentURL();
     @Mapping("status")
-    public native @Representing("NKIssueContentStatus") @MachineSizedSInt long getStatus();
+    public native @Representing("NKIssueContentStatus") long getStatus();
     @Mapping("name")
     public native String getName();
     @Mapping("date")

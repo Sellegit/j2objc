@@ -40,9 +40,9 @@ public class MKMapView
     @Mapping("setDelegate:")
     public native void setDelegate(MKMapViewDelegate v);
     @Mapping("mapType")
-    public native @Representing("MKMapType") @MachineSizedUInt long getMapType();
+    public native @Representing("MKMapType") long getMapType();
     @Mapping("setMapType:")
-    public native void setMapType(@Representing("MKMapType") @MachineSizedUInt long v);
+    public native void setMapType(@Representing("MKMapType") long v);
     @Mapping("region")
     public native MKCoordinateRegion getRegion();
     @Mapping("setRegion:")
@@ -123,12 +123,12 @@ public class MKMapView
      * @since Available in iOS 5.0 and later.
      */
     @Mapping("userTrackingMode")
-    public native @Representing("MKUserTrackingMode") @MachineSizedSInt long getUserTrackingMode();
+    public native @Representing("MKUserTrackingMode") long getUserTrackingMode();
     /**
      * @since Available in iOS 5.0 and later.
      */
     @Mapping("setUserTrackingMode:")
-    public native void setUserTrackingMode(@Representing("MKUserTrackingMode") @MachineSizedSInt long v);
+    public native void setUserTrackingMode(@Representing("MKUserTrackingMode") long v);
     @Mapping("isUserLocationVisible")
     public native boolean isUserLocationVisible();
     @Mapping("annotations")
@@ -178,7 +178,7 @@ public class MKMapView
      * @since Available in iOS 5.0 and later.
      */
     @Mapping("setUserTrackingMode:animated:")
-    public native void setUserTrackingMode(@Representing("MKUserTrackingMode") @MachineSizedSInt long mode, boolean animated);
+    public native void setUserTrackingMode(@Representing("MKUserTrackingMode") long mode, boolean animated);
     @Mapping("addAnnotation:")
     public native void addAnnotation(MKAnnotation annotation);
     @Mapping("addAnnotations:")
@@ -209,12 +209,12 @@ public class MKMapView
      * @since Available in iOS 7.0 and later.
      */
     @Mapping("addOverlay:level:")
-    public native void addOverlay(MKOverlay overlay, @Representing("MKOverlayLevel") @MachineSizedSInt long level);
+    public native void addOverlay(MKOverlay overlay, @Representing("MKOverlayLevel") long level);
     /**
      * @since Available in iOS 7.0 and later.
      */
     @Mapping("addOverlays:level:")
-    public native void addOverlays(NSArray<?> overlays, @Representing("MKOverlayLevel") @MachineSizedSInt long level);
+    public native void addOverlays(NSArray<?> overlays, @Representing("MKOverlayLevel") long level);
     /**
      * @since Available in iOS 4.0 and later.
      */
@@ -229,7 +229,7 @@ public class MKMapView
      * @since Available in iOS 7.0 and later.
      */
     @Mapping("insertOverlay:atIndex:level:")
-    public native void insertOverlay(MKOverlay overlay, @MachineSizedUInt long index, @Representing("MKOverlayLevel") @MachineSizedSInt long level);
+    public native void insertOverlay(MKOverlay overlay, @MachineSizedUInt long index, @Representing("MKOverlayLevel") long level);
     /**
      * @since Available in iOS 4.0 and later.
      */
@@ -249,7 +249,7 @@ public class MKMapView
      * @since Available in iOS 7.0 and later.
      */
     @Mapping("overlaysInLevel:")
-    public native List<? extends MKOverlay> getOverlays(@Representing("MKOverlayLevel") @MachineSizedSInt long level);
+    public native List<? extends MKOverlay> getOverlays(@Representing("MKOverlayLevel") long level);
     /**
      * @since Available in iOS 7.0 and later.
      */

@@ -36,13 +36,13 @@ public class UIUserNotificationSettings
     
     
     @Mapping("types")
-    public native @Representing("UIUserNotificationType") @MachineSizedUInt long getTypes();
+    public native @Representing("UIUserNotificationType") long getTypes();
     @Mapping("categories")
     public native NSSet<UIUserNotificationCategory> getCategories();
     
     
     
     @Mapping("settingsForTypes:categories:")
-    public static native UIUserNotificationSettings create(@Representing("UIUserNotificationType") @MachineSizedUInt long types, NSSet<?> categories);
+    public static native UIUserNotificationSettings create(@Representing("UIUserNotificationType") long types, NSSet<?> categories);
     
 }

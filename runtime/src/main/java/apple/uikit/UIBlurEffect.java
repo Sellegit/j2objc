@@ -40,6 +40,6 @@ public class UIBlurEffect
     
     
     @Mapping("effectWithStyle:")
-    public static native UIBlurEffect create(@Representing("UIBlurEffectStyle") @MachineSizedSInt long style);
+    public static native UIBlurEffect create(@Representing("UIBlurEffectStyle") long style);
     
 }

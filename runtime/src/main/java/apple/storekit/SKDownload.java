@@ -36,7 +36,7 @@ public class SKDownload
      * @since Available in iOS 6.0 and later.
      */
     @Mapping("downloadState")
-    public native @Representing("SKDownloadState") @MachineSizedSInt long getDownloadState();
+    public native @Representing("SKDownloadState") long getDownloadState();
     /**
      * @since Available in iOS 6.0 and later.
      */

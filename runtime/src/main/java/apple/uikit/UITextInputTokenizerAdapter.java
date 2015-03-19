@@ -34,12 +34,12 @@ public abstract class UITextInputTokenizerAdapter
     
     
     @NotImplemented("rangeEnclosingPosition:withGranularity:inDirection:")
-    public UITextRange getRangeEnclosingPosition(UITextPosition position, @Representing("UITextGranularity") @MachineSizedSInt long granularity, @MachineSizedSInt long direction) { throw new UnsupportedOperationException(); }
+    public UITextRange getRangeEnclosingPosition(UITextPosition position, @Representing("UITextGranularity") long granularity, @MachineSizedSInt long direction) { throw new UnsupportedOperationException(); }
     @NotImplemented("isPosition:atBoundary:inDirection:")
-    public boolean isPositionAtBoundary(UITextPosition position, @Representing("UITextGranularity") @MachineSizedSInt long granularity, @MachineSizedSInt long direction) { throw new UnsupportedOperationException(); }
+    public boolean isPositionAtBoundary(UITextPosition position, @Representing("UITextGranularity") long granularity, @MachineSizedSInt long direction) { throw new UnsupportedOperationException(); }
     @NotImplemented("positionFromPosition:toBoundary:inDirection:")
-    public UITextPosition getPosition(UITextPosition position, @Representing("UITextGranularity") @MachineSizedSInt long granularity, @MachineSizedSInt long direction) { throw new UnsupportedOperationException(); }
+    public UITextPosition getPosition(UITextPosition position, @Representing("UITextGranularity") long granularity, @MachineSizedSInt long direction) { throw new UnsupportedOperationException(); }
     @NotImplemented("isPosition:withinTextUnit:inDirection:")
-    public boolean isPositionWithinTextUnit(UITextPosition position, @Representing("UITextGranularity") @MachineSizedSInt long granularity, @MachineSizedSInt long direction) { throw new UnsupportedOperationException(); }
+    public boolean isPositionWithinTextUnit(UITextPosition position, @Representing("UITextGranularity") long granularity, @MachineSizedSInt long direction) { throw new UnsupportedOperationException(); }
     
 }

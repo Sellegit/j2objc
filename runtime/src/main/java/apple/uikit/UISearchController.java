@@ -35,6 +35,8 @@ public class UISearchController
     public UISearchController(UIViewController searchResultsController) { }
     @Mapping("initWithNibName:bundle:")
     public UISearchController(String nibNameOrNil, NSBundle nibBundleOrNil) { }
+    @Mapping("initWithCoder:")
+    public UISearchController(NSCoder aDecoder) { }
     @Mapping("init")
     public UISearchController() { }
     

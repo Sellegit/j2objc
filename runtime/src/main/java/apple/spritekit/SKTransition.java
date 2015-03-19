@@ -57,11 +57,11 @@ public class SKTransition
     @Mapping("flipVerticalWithDuration:")
     public static native SKTransition flipVertical(double sec);
     @Mapping("revealWithDirection:duration:")
-    public static native SKTransition reveal(@Representing("SKTransitionDirection") @MachineSizedSInt long direction, double sec);
+    public static native SKTransition reveal(@Representing("SKTransitionDirection") long direction, double sec);
     @Mapping("moveInWithDirection:duration:")
-    public static native SKTransition moveIn(@Representing("SKTransitionDirection") @MachineSizedSInt long direction, double sec);
+    public static native SKTransition moveIn(@Representing("SKTransitionDirection") long direction, double sec);
     @Mapping("pushWithDirection:duration:")
-    public static native SKTransition push(@Representing("SKTransitionDirection") @MachineSizedSInt long direction, double sec);
+    public static native SKTransition push(@Representing("SKTransitionDirection") long direction, double sec);
     @Mapping("doorsOpenHorizontalWithDuration:")
     public static native SKTransition doorsOpenHorizontal(double sec);
     @Mapping("doorsOpenVerticalWithDuration:")

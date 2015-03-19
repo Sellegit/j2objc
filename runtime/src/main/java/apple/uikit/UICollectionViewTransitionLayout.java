@@ -33,6 +33,8 @@ public class UICollectionViewTransitionLayout
     
     @Mapping("initWithCurrentLayout:nextLayout:")
     public UICollectionViewTransitionLayout(UICollectionViewLayout currentLayout, UICollectionViewLayout newLayout) { }
+    @Mapping("initWithCoder:")
+    public UICollectionViewTransitionLayout(NSCoder aDecoder) { }
     @Mapping("init")
     public UICollectionViewTransitionLayout() { }
     
@@ -52,5 +54,11 @@ public class UICollectionViewTransitionLayout
     public native void updateValue(@MachineSizedFloat double value, String key);
     @Mapping("valueForAnimatedKey:")
     public native @MachineSizedFloat double getValue(String key);
+    @Mapping("initialLayoutAttributesForAppearingItemAtIndexPath:")
+    public native UICollectionViewLayoutAttributes initialLayoutAttributesForAppearingItemAtIndexPath$(NSIndexPath itemIndexPath);
+    @Mapping("initialLayoutAttributesForAppearingSupplementaryElementOfKind:atIndexPath:")
+    public native UICollectionViewLayoutAttributes initialLayoutAttributesForAppearingSupplementaryElementOfKind$atIndexPath$(String elementKind, NSIndexPath elementIndexPath);
+    @Mapping("initialLayoutAttributesForAppearingDecorationElementOfKind:atIndexPath:")
+    public native UICollectionViewLayoutAttributes initialLayoutAttributesForAppearingDecorationElementOfKind$atIndexPath$(String elementKind, NSIndexPath decorationIndexPath);
     
 }

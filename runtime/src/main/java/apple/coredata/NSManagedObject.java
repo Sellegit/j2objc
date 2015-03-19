@@ -73,9 +73,9 @@ public class NSManagedObject
     @Mapping("didChangeValueForKey:")
     public native void didChangeValue(String key);
     @Mapping("willChangeValueForKey:withSetMutation:usingObjects:")
-    public native void willChangeValue(String inKey, @Representing("NSKeyValueSetMutationKind") @MachineSizedUInt long inMutationKind, NSSet<?> inObjects);
+    public native void willChangeValue(String inKey, @Representing("NSKeyValueSetMutationKind") long inMutationKind, NSSet<?> inObjects);
     @Mapping("didChangeValueForKey:withSetMutation:usingObjects:")
-    public native void didChangeValue(String inKey, @Representing("NSKeyValueSetMutationKind") @MachineSizedUInt long inMutationKind, NSSet<?> inObjects);
+    public native void didChangeValue(String inKey, @Representing("NSKeyValueSetMutationKind") long inMutationKind, NSSet<?> inObjects);
     @Mapping("awakeFromFetch")
     public native void awakeFromFetch();
     @Mapping("awakeFromInsert")
@@ -84,7 +84,7 @@ public class NSManagedObject
      * @since Available in iOS 3.0 and later.
      */
     @Mapping("awakeFromSnapshotEvents:")
-    public native void awakeFromSnapshotEvents(@Representing("NSSnapshotEventType") @MachineSizedUInt long flags);
+    public native void awakeFromSnapshotEvents(@Representing("NSSnapshotEventType") long flags);
     /**
      * @since Available in iOS 3.0 and later.
      */

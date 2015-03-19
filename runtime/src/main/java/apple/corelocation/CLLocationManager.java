@@ -54,12 +54,12 @@ public class CLLocationManager
      * @since Available in iOS 6.0 and later.
      */
     @Mapping("activityType")
-    public native @Representing("CLActivityType") @MachineSizedSInt long getActivityType();
+    public native @Representing("CLActivityType") long getActivityType();
     /**
      * @since Available in iOS 6.0 and later.
      */
     @Mapping("setActivityType:")
-    public native void setActivityType(@Representing("CLActivityType") @MachineSizedSInt long v);
+    public native void setActivityType(@Representing("CLActivityType") long v);
     @Mapping("distanceFilter")
     public native double getDistanceFilter();
     @Mapping("setDistanceFilter:")
@@ -94,12 +94,12 @@ public class CLLocationManager
      * @since Available in iOS 4.0 and later.
      */
     @Mapping("headingOrientation")
-    public native @Representing("CLDeviceOrientation") int getHeadingOrientation();
+    public native @Representing("CLDeviceOrientation") long getHeadingOrientation();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @Mapping("setHeadingOrientation:")
-    public native void setHeadingOrientation(@Representing("CLDeviceOrientation") int v);
+    public native void setHeadingOrientation(@Representing("CLDeviceOrientation") long v);
     /**
      * @since Available in iOS 4.0 and later.
      */
@@ -245,7 +245,7 @@ public class CLLocationManager
      * @since Available in iOS 4.2 and later.
      */
     @Mapping("authorizationStatus")
-    public static native @Representing("CLAuthorizationStatus") int getAuthorizationStatus();
+    public static native @Representing("CLAuthorizationStatus") long getAuthorizationStatus();
     /**
      * @since Available in iOS 6.0 and later.
      */

@@ -31,7 +31,7 @@ public class HKBloodTypeObject
     
     
     @Mapping("bloodType")
-    public native @Representing("HKBloodType") @MachineSizedSInt long getBloodType();
+    public native @Representing("HKBloodType") long getBloodType();
     
     
     

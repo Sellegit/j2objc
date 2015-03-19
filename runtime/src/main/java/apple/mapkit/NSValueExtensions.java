@@ -34,8 +34,8 @@ public final class NSValueExtensions
     
     
     @Mapping("valueWithMKCoordinate:")
-    public static native NSValue create(CLLocationCoordinate2D coordinate);
+    public static native NSValue createPrime(CLLocationCoordinate2D coordinate);
     @Mapping("valueWithMKCoordinateSpan:")
-    public static native NSValue create(MKCoordinateSpan span);
+    public static native NSValue createPrime(MKCoordinateSpan span);
     
 }

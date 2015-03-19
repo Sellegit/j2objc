@@ -33,6 +33,8 @@ public class UIWindow
     
     @Mapping("initWithFrame:")
     public UIWindow(CGRect frame) { }
+    @Mapping("initWithCoder:")
+    public UIWindow(NSCoder aDecoder) { }
     @Mapping("init")
     public UIWindow() { }
     

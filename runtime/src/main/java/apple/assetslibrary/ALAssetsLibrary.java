@@ -47,7 +47,7 @@ public class ALAssetsLibrary
      * @since Available in iOS 6.0 and later.
      */
     @Mapping("authorizationStatus")
-    public static native @Representing("ALAuthorizationStatus") @MachineSizedSInt long getAuthorizationStatus();
+    public static native @Representing("ALAuthorizationStatus") long getAuthorizationStatus();
     /**
      * @since Available in iOS 6.0 and later.
      */

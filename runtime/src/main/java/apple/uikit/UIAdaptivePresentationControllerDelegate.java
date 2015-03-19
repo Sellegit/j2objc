@@ -32,9 +32,9 @@ public interface UIAdaptivePresentationControllerDelegate
     
     
     @Mapping("adaptivePresentationStyleForPresentationController:")
-    @Representing("UIModalPresentationStyle") @MachineSizedSInt long getAdaptivePresentationStyle(UIPresentationController controller);
+    @Representing("UIModalPresentationStyle") long getAdaptivePresentationStyle(UIPresentationController controller);
     @Mapping("presentationController:viewControllerForAdaptivePresentationStyle:")
-    UIViewController getViewController(UIPresentationController controller, @Representing("UIModalPresentationStyle") @MachineSizedSInt long style);
+    UIViewController getViewController(UIPresentationController controller, @Representing("UIModalPresentationStyle") long style);
     
     /*<adapter>*/
     /*</adapter>*/

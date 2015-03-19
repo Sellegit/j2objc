@@ -32,11 +32,11 @@ public interface NSDecimalNumberBehaviors
     
     
     @Mapping("roundingMode")
-    @Representing("NSRoundingMode") @MachineSizedUInt long getRoundingMode();
+    @Representing("NSRoundingMode") long getRoundingMode();
     @Mapping("scale")
     short getScale();
     @Mapping("exceptionDuringOperation:error:leftOperand:rightOperand:")
-    NSDecimalNumber exceptionDuringOperation(Selector operation, @Representing("NSCalculationError") @MachineSizedUInt long error, NSDecimalNumber leftOperand, NSDecimalNumber rightOperand);
+    NSDecimalNumber exceptionDuringOperation(Selector operation, @Representing("NSCalculationError") long error, NSDecimalNumber leftOperand, NSDecimalNumber rightOperand);
     
     /*<adapter>*/
     /*</adapter>*/

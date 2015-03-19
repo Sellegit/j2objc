@@ -34,9 +34,9 @@ public class PHCollectionList
     
     
     @Mapping("collectionListType")
-    public native @Representing("PHCollectionListType") @MachineSizedSInt long getCollectionListType();
+    public native @Representing("PHCollectionListType") long getCollectionListType();
     @Mapping("collectionListSubtype")
-    public native @Representing("PHCollectionListSubtype") @MachineSizedSInt long getCollectionListSubtype();
+    public native @Representing("PHCollectionListSubtype") long getCollectionListSubtype();
     @Mapping("startDate")
     public native NSDate getStartDate();
     @Mapping("endDate")
@@ -51,11 +51,11 @@ public class PHCollectionList
     @Mapping("fetchCollectionListsWithLocalIdentifiers:options:")
     public static native PHFetchResult fetchCollectionListsWithLocalIdentifiers(NSArray<?> identifiers, PHFetchOptions options);
     @Mapping("fetchCollectionListsWithType:subtype:options:")
-    public static native PHFetchResult fetchCollectionListsWithType(@Representing("PHCollectionListType") @MachineSizedSInt long collectionListType, @Representing("PHCollectionListSubtype") @MachineSizedSInt long subtype, PHFetchOptions options);
+    public static native PHFetchResult fetchCollectionListsWithType(@Representing("PHCollectionListType") long collectionListType, @Representing("PHCollectionListSubtype") long subtype, PHFetchOptions options);
     @Mapping("fetchMomentListsWithSubtype:containingMoment:options:")
-    public static native PHFetchResult fetchMomentListsWithSubtypeContainingMoment(@Representing("PHCollectionListSubtype") @MachineSizedSInt long momentListSubtype, PHAssetCollection moment, PHFetchOptions options);
+    public static native PHFetchResult fetchMomentListsWithSubtypeContainingMoment(@Representing("PHCollectionListSubtype") long momentListSubtype, PHAssetCollection moment, PHFetchOptions options);
     @Mapping("fetchMomentListsWithSubtype:options:")
-    public static native PHFetchResult fetchMomentListsWithSubtype(@Representing("PHCollectionListSubtype") @MachineSizedSInt long momentListSubtype, PHFetchOptions options);
+    public static native PHFetchResult fetchMomentListsWithSubtype(@Representing("PHCollectionListSubtype") long momentListSubtype, PHFetchOptions options);
     @Mapping("transientCollectionListWithCollections:title:")
     public static native PHCollectionList createTransientCollectionList(NSArray<?> collections, String title);
     @Mapping("transientCollectionListWithCollectionsFetchResult:title:")

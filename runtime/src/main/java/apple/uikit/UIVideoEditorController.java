@@ -35,6 +35,8 @@ public class UIVideoEditorController
     public UIVideoEditorController(UIViewController rootViewController) { }
     @Mapping("initWithNibName:bundle:")
     public UIVideoEditorController(String nibNameOrNil, NSBundle nibBundleOrNil) { }
+    @Mapping("initWithCoder:")
+    public UIVideoEditorController(NSCoder aDecoder) { }
     @Mapping("init")
     public UIVideoEditorController() { }
     
@@ -52,9 +54,9 @@ public class UIVideoEditorController
     @Mapping("setVideoMaximumDuration:")
     public native void setVideoMaximumDuration(double v);
     @Mapping("videoQuality")
-    public native @Representing("UIImagePickerControllerQualityType") @MachineSizedSInt long getVideoQuality();
+    public native @Representing("UIImagePickerControllerQualityType") long getVideoQuality();
     @Mapping("setVideoQuality:")
-    public native void setVideoQuality(@Representing("UIImagePickerControllerQualityType") @MachineSizedSInt long v);
+    public native void setVideoQuality(@Representing("UIImagePickerControllerQualityType") long v);
     
     
     

@@ -43,9 +43,9 @@ public class SCNShape
     @Mapping("setExtrusionDepth:")
     public native void setExtrusionDepth(@MachineSizedFloat double v);
     @Mapping("chamferMode")
-    public native @Representing("SCNChamferMode") @MachineSizedSInt long getChamferMode();
+    public native @Representing("SCNChamferMode") long getChamferMode();
     @Mapping("setChamferMode:")
-    public native void setChamferMode(@Representing("SCNChamferMode") @MachineSizedSInt long v);
+    public native void setChamferMode(@Representing("SCNChamferMode") long v);
     @Mapping("chamferRadius")
     public native @MachineSizedFloat double getChamferRadius();
     @Mapping("setChamferRadius:")

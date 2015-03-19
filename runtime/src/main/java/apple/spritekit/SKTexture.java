@@ -36,9 +36,9 @@ public class SKTexture
     
     
     @Mapping("filteringMode")
-    public native @Representing("SKTextureFilteringMode") @MachineSizedSInt long getFilteringMode();
+    public native @Representing("SKTextureFilteringMode") long getFilteringMode();
     @Mapping("setFilteringMode:")
-    public native void setFilteringMode(@Representing("SKTextureFilteringMode") @MachineSizedSInt long v);
+    public native void setFilteringMode(@Representing("SKTextureFilteringMode") long v);
     @Mapping("usesMipmaps")
     public native boolean usesMipmaps();
     @Mapping("setUsesMipmaps:")

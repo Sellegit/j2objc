@@ -37,7 +37,7 @@ public class SLRequest
     @Mapping("setAccount:")
     public native void setAccount(ACAccount v);
     @Mapping("requestMethod")
-    public native @Representing("SLRequestMethod") @MachineSizedSInt long getRequestMethod();
+    public native @Representing("SLRequestMethod") long getRequestMethod();
     @Mapping("URL")
     public native NSURL getURL();
     @Mapping("parameters")
@@ -50,6 +50,6 @@ public class SLRequest
     @Mapping("preparedURLRequest")
     public native NSURLRequest getPreparedURLRequest();
     @Mapping("requestForServiceType:requestMethod:URL:parameters:")
-    public static native SLRequest create(String serviceType, @Representing("SLRequestMethod") @MachineSizedSInt long requestMethod, NSURL url, NSDictionary<?, ?> parameters);
+    public static native SLRequest create(String serviceType, @Representing("SLRequestMethod") long requestMethod, NSURL url, NSDictionary<?, ?> parameters);
     
 }

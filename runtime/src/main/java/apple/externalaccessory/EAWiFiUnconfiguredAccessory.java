@@ -43,7 +43,7 @@ public class EAWiFiUnconfiguredAccessory
     @Mapping("macAddress")
     public native String getMacAddress();
     @Mapping("properties")
-    public native @Representing("EAWiFiUnconfiguredAccessoryProperties") @MachineSizedUInt long getProperties();
+    public native @Representing("EAWiFiUnconfiguredAccessoryProperties") long getProperties();
     
     
     

@@ -91,12 +91,12 @@ public abstract class MKMapViewDelegateAdapter
      * @since Available in iOS 4.0 and later.
      */
     @NotImplemented("mapView:annotationView:didChangeDragState:fromOldState:")
-    public void didChangeDragState(MKMapView mapView, MKAnnotationView view, @Representing("MKAnnotationViewDragState") @MachineSizedUInt long newState, @Representing("MKAnnotationViewDragState") @MachineSizedUInt long oldState) { throw new UnsupportedOperationException(); }
+    public void didChangeDragState(MKMapView mapView, MKAnnotationView view, @Representing("MKAnnotationViewDragState") long newState, @Representing("MKAnnotationViewDragState") long oldState) { throw new UnsupportedOperationException(); }
     /**
      * @since Available in iOS 5.0 and later.
      */
     @NotImplemented("mapView:didChangeUserTrackingMode:animated:")
-    public void didChangeUserTrackingMode(MKMapView mapView, @Representing("MKUserTrackingMode") @MachineSizedSInt long mode, boolean animated) { throw new UnsupportedOperationException(); }
+    public void didChangeUserTrackingMode(MKMapView mapView, @Representing("MKUserTrackingMode") long mode, boolean animated) { throw new UnsupportedOperationException(); }
     /**
      * @since Available in iOS 7.0 and later.
      */

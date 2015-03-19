@@ -35,6 +35,8 @@ public class UICollectionView
     public UICollectionView(CGRect frame, UICollectionViewLayout layout) { }
     @Mapping("initWithFrame:")
     public UICollectionView(CGRect frame) { }
+    @Mapping("initWithCoder:")
+    public UICollectionView(NSCoder aDecoder) { }
     @Mapping("init")
     public UICollectionView() { }
     
@@ -77,7 +79,7 @@ public class UICollectionView
     @Mapping("indexPathsForSelectedItems")
     public native NSArray<NSIndexPath> getIndexPathsForSelectedItems();
     @Mapping("selectItemAtIndexPath:animated:scrollPosition:")
-    public native void selectItem(NSIndexPath indexPath, boolean animated, @Representing("UICollectionViewScrollPosition") @MachineSizedUInt long scrollPosition);
+    public native void selectItem(NSIndexPath indexPath, boolean animated, @Representing("UICollectionViewScrollPosition") long scrollPosition);
     @Mapping("deselectItemAtIndexPath:animated:")
     public native void deselectItem(NSIndexPath indexPath, boolean animated);
     @Mapping("reloadData")
@@ -118,7 +120,7 @@ public class UICollectionView
     @Mapping("indexPathsForVisibleItems")
     public native NSArray<NSIndexPath> getIndexPathsForVisibleItems();
     @Mapping("scrollToItemAtIndexPath:atScrollPosition:animated:")
-    public native void scrollToItem(NSIndexPath indexPath, @Representing("UICollectionViewScrollPosition") @MachineSizedUInt long scrollPosition, boolean animated);
+    public native void scrollToItem(NSIndexPath indexPath, @Representing("UICollectionViewScrollPosition") long scrollPosition, boolean animated);
     @Mapping("insertSections:")
     public native void insertSections(NSIndexSet sections);
     @Mapping("deleteSections:")

@@ -31,7 +31,7 @@ public abstract class MCSessionDelegateAdapter
     
     
     @NotImplemented("session:peer:didChangeState:")
-    public void didChangeState(MCSession session, MCPeerID peerID, @Representing("MCSessionState") @MachineSizedSInt long state) { throw new UnsupportedOperationException(); }
+    public void didChangeState(MCSession session, MCPeerID peerID, @Representing("MCSessionState") long state) { throw new UnsupportedOperationException(); }
     @NotImplemented("session:didReceiveData:fromPeer:")
     public void didReceiveData(MCSession session, NSData data, MCPeerID peerID) { throw new UnsupportedOperationException(); }
     @NotImplemented("session:didReceiveStream:withName:fromPeer:")

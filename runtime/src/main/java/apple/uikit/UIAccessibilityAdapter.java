@@ -111,12 +111,12 @@ public abstract class UIAccessibilityAdapter
      * @since Available in iOS 8.0 and later.
      */
     @NotImplemented("accessibilityNavigationStyle")
-    public @Representing("UIAccessibilityNavigationStyle") @MachineSizedSInt long getAccessibilityNavigationStyle() { throw new UnsupportedOperationException(); }
+    public @Representing("UIAccessibilityNavigationStyle") long getAccessibilityNavigationStyle() { throw new UnsupportedOperationException(); }
     /**
      * @since Available in iOS 8.0 and later.
      */
     @Mapping("setAccessibilityNavigationStyle:")
-    public void setAccessibilityNavigationStyle(@Representing("UIAccessibilityNavigationStyle") @MachineSizedSInt long v) { throw new UnsupportedOperationException(); }
+    public void setAccessibilityNavigationStyle(@Representing("UIAccessibilityNavigationStyle") long v) { throw new UnsupportedOperationException(); }
     
     
     

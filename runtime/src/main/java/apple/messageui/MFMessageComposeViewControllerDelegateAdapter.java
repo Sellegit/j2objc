@@ -30,6 +30,6 @@ public abstract class MFMessageComposeViewControllerDelegateAdapter
     
     
     @NotImplemented("messageComposeViewController:didFinishWithResult:")
-    public void didFinish(MFMessageComposeViewController controller, @Representing("MessageComposeResult") int result) { throw new UnsupportedOperationException(); }
+    public void didFinish(MFMessageComposeViewController controller, @Representing("MessageComposeResult") long result) { throw new UnsupportedOperationException(); }
     
 }

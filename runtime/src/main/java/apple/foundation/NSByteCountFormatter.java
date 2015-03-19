@@ -38,13 +38,13 @@ public class NSByteCountFormatter
     
     
     @Mapping("allowedUnits")
-    public native @Representing("NSByteCountFormatterUnits") @MachineSizedUInt long getAllowedUnits();
+    public native @Representing("NSByteCountFormatterUnits") long getAllowedUnits();
     @Mapping("setAllowedUnits:")
-    public native void setAllowedUnits(@Representing("NSByteCountFormatterUnits") @MachineSizedUInt long v);
+    public native void setAllowedUnits(@Representing("NSByteCountFormatterUnits") long v);
     @Mapping("countStyle")
-    public native @Representing("NSByteCountFormatterCountStyle") @MachineSizedSInt long getCountStyle();
+    public native @Representing("NSByteCountFormatterCountStyle") long getCountStyle();
     @Mapping("setCountStyle:")
-    public native void setCountStyle(@Representing("NSByteCountFormatterCountStyle") @MachineSizedSInt long v);
+    public native void setCountStyle(@Representing("NSByteCountFormatterCountStyle") long v);
     @Mapping("allowsNonnumericFormatting")
     public native boolean allowsNonnumericFormatting();
     @Mapping("setAllowsNonnumericFormatting:")
@@ -73,18 +73,18 @@ public class NSByteCountFormatter
      * @since Available in iOS 8.0 and later.
      */
     @Mapping("formattingContext")
-    public native @Representing("NSFormattingContext") @MachineSizedSInt long getFormattingContext();
+    public native @Representing("NSFormattingContext") long getFormattingContext();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @Mapping("setFormattingContext:")
-    public native void setFormattingContext(@Representing("NSFormattingContext") @MachineSizedSInt long v);
+    public native void setFormattingContext(@Representing("NSFormattingContext") long v);
     
     
     
     @Mapping("stringFromByteCount:")
     public native String format(long byteCount);
     @Mapping("stringFromByteCount:countStyle:")
-    public static native String format(long byteCount, @Representing("NSByteCountFormatterCountStyle") @MachineSizedSInt long countStyle);
+    public static native String format(long byteCount, @Representing("NSByteCountFormatterCountStyle") long countStyle);
     
 }

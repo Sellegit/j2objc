@@ -27,6 +27,8 @@ public class GKScoreChallenge
 
     
     
+    @Mapping("initWithCoder:")
+    public GKScoreChallenge(NSCoder aDecoder) { }
     @Mapping("init")
     public GKScoreChallenge() { }
     

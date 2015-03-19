@@ -40,15 +40,13 @@ public class NSMutableString
     @Mapping("initWithString:")
     public NSMutableString(String aString) { }
     @Mapping("initWithData:encoding:")
-    public NSMutableString(NSData data, @Representing("NSStringEncoding") int encoding) { }
+    public NSMutableString(NSData data, @Representing("NSStringEncoding") long encoding) { }
     @Mapping("initWithBytes:length:encoding:")
-    public NSMutableString(Todo bytes, @MachineSizedUInt long len, @Representing("NSStringEncoding") int encoding) { }
-    @Mapping("initWithCString:encoding:")
-    public NSMutableString(Todo nullTerminatedCString, @Representing("NSStringEncoding") int encoding) { }
+    public NSMutableString(Todo bytes, @MachineSizedUInt long len, @Representing("NSStringEncoding") long encoding) { }
     @Mapping("initWithContentsOfURL:encoding:error:")
-    public NSMutableString(NSURL url, @Representing("NSStringEncoding") int enc, Todo error) { }
+    public NSMutableString(NSURL url, @Representing("NSStringEncoding") long enc, Todo error) { }
     @Mapping("initWithContentsOfFile:encoding:error:")
-    public NSMutableString(String path, @Representing("NSStringEncoding") int enc, Todo error) { }
+    public NSMutableString(String path, @Representing("NSStringEncoding") long enc, Todo error) { }
     @Mapping("initWithContentsOfURL:usedEncoding:error:")
     public NSMutableString(NSURL url, Todo enc, Todo error) { }
     @Mapping("initWithContentsOfFile:usedEncoding:error:")
@@ -72,6 +70,6 @@ public class NSMutableString
     @Mapping("setString:")
     public native void setString(String aString);
     @Mapping("replaceOccurrencesOfString:withString:options:range:")
-    public native @MachineSizedUInt long replaceAll(String target, String replacement, @Representing("NSStringCompareOptions") @MachineSizedUInt long options, NSRange searchRange);
+    public native @MachineSizedUInt long replaceAll(String target, String replacement, @Representing("NSStringCompareOptions") long options, NSRange searchRange);
     
 }

@@ -29,7 +29,7 @@ public interface UIBarPositioning
     
     
     @Mapping("barPosition")
-    @Representing("UIBarPosition") @MachineSizedSInt long getBarPosition();
+    @Representing("UIBarPosition") long getBarPosition();
     
     
     

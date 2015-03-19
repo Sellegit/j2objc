@@ -38,9 +38,9 @@ public class NSTextStorage
     @Mapping("layoutManagers")
     public native NSArray<NSLayoutManager> getLayoutManagers();
     @Mapping("editedMask")
-    public native @Representing("NSTextStorageEditActions") @MachineSizedUInt long getEditedMask();
+    public native @Representing("NSTextStorageEditActions") long getEditedMask();
     @Mapping("setEditedMask:")
-    public native void setEditedMask(@Representing("NSTextStorageEditActions") @MachineSizedUInt long v);
+    public native void setEditedMask(@Representing("NSTextStorageEditActions") long v);
     @Mapping("editedRange")
     public native NSRange getEditedRange();
     @Mapping("setEditedRange:")
@@ -74,7 +74,7 @@ public class NSTextStorage
     @Mapping("removeLayoutManager:")
     public native void removeLayoutManager(NSLayoutManager aLayoutManager);
     @Mapping("edited:range:changeInLength:")
-    public native void edited(@Representing("NSTextStorageEditActions") @MachineSizedUInt long editedMask, NSRange editedRange, @MachineSizedSInt long delta);
+    public native void edited(@Representing("NSTextStorageEditActions") long editedMask, NSRange editedRange, @MachineSizedSInt long delta);
     @Mapping("processEditing")
     public native void processEditing();
     @Mapping("invalidateAttributesInRange:")

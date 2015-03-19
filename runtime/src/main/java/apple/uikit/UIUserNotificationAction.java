@@ -40,7 +40,7 @@ public class UIUserNotificationAction
     @Mapping("title")
     public native String getTitle();
     @Mapping("activationMode")
-    public native @Representing("UIUserNotificationActivationMode") @MachineSizedUInt long getActivationMode();
+    public native @Representing("UIUserNotificationActivationMode") long getActivationMode();
     @Mapping("isAuthenticationRequired")
     public native boolean isAuthenticationRequired();
     @Mapping("isDestructive")

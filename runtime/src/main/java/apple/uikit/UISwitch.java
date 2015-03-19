@@ -33,6 +33,8 @@ public class UISwitch
     
     @Mapping("initWithFrame:")
     public UISwitch(CGRect frame) { }
+    @Mapping("initWithCoder:")
+    public UISwitch(NSCoder aDecoder) { }
     @Mapping("init")
     public UISwitch() { }
     

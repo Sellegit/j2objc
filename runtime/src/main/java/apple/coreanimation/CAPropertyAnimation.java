@@ -27,6 +27,8 @@ public class CAPropertyAnimation
 
     
     
+    @Mapping("initWithCoder:")
+    public CAPropertyAnimation(NSCoder aDecoder) { }
     @Mapping("init")
     public CAPropertyAnimation() { }
     

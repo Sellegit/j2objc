@@ -42,19 +42,19 @@ public class HKUnit
     @Mapping("unitFromString:")
     public static native HKUnit fromString(String string);
     @Mapping("unitFromMassFormatterUnit:")
-    public static native HKUnit fromMassFormatterUnit(@Representing("NSMassFormatterUnit") @MachineSizedSInt long massFormatterUnit);
+    public static native HKUnit fromMassFormatterUnit(@Representing("NSMassFormatterUnit") long massFormatterUnit);
     @Mapping("massFormatterUnitFromUnit:")
-    public static native @Representing("NSMassFormatterUnit") @MachineSizedSInt long createMassFormatterUnit(HKUnit unit);
+    public static native @Representing("NSMassFormatterUnit") long createMassFormatterUnit(HKUnit unit);
     @Mapping("unitFromLengthFormatterUnit:")
-    public static native HKUnit fromLengthFormatterUnit(@Representing("NSLengthFormatterUnit") @MachineSizedSInt long lengthFormatterUnit);
+    public static native HKUnit fromLengthFormatterUnit(@Representing("NSLengthFormatterUnit") long lengthFormatterUnit);
     @Mapping("lengthFormatterUnitFromUnit:")
-    public static native @Representing("NSLengthFormatterUnit") @MachineSizedSInt long createLengthFormatterUnit(HKUnit unit);
+    public static native @Representing("NSLengthFormatterUnit") long createLengthFormatterUnit(HKUnit unit);
     @Mapping("unitFromEnergyFormatterUnit:")
-    public static native HKUnit fromEnergyFormatterUnit(@Representing("NSEnergyFormatterUnit") @MachineSizedSInt long energyFormatterUnit);
+    public static native HKUnit fromEnergyFormatterUnit(@Representing("NSEnergyFormatterUnit") long energyFormatterUnit);
     @Mapping("energyFormatterUnitFromUnit:")
-    public static native @Representing("NSEnergyFormatterUnit") @MachineSizedSInt long createEnergyFormatterUnit(HKUnit unit);
+    public static native @Representing("NSEnergyFormatterUnit") long createEnergyFormatterUnit(HKUnit unit);
     @Mapping("gramUnitWithMetricPrefix:")
-    public static native HKUnit gram(@Representing("HKMetricPrefix") @MachineSizedSInt long prefix);
+    public static native HKUnit gram(@Representing("HKMetricPrefix") long prefix);
     @Mapping("gramUnit")
     public static native HKUnit gram();
     @Mapping("ounceUnit")
@@ -64,11 +64,11 @@ public class HKUnit
     @Mapping("stoneUnit")
     public static native HKUnit stone();
     @Mapping("moleUnitWithMetricPrefix:molarMass:")
-    public static native HKUnit mole(@Representing("HKMetricPrefix") @MachineSizedSInt long prefix, double gramsPerMole);
+    public static native HKUnit mole(@Representing("HKMetricPrefix") long prefix, double gramsPerMole);
     @Mapping("moleUnitWithMolarMass:")
     public static native HKUnit mole(double gramsPerMole);
     @Mapping("meterUnitWithMetricPrefix:")
-    public static native HKUnit meter(@Representing("HKMetricPrefix") @MachineSizedSInt long prefix);
+    public static native HKUnit meter(@Representing("HKMetricPrefix") long prefix);
     @Mapping("meterUnit")
     public static native HKUnit meter();
     @Mapping("inchUnit")
@@ -78,7 +78,7 @@ public class HKUnit
     @Mapping("mileUnit")
     public static native HKUnit mile();
     @Mapping("literUnitWithMetricPrefix:")
-    public static native HKUnit liter(@Representing("HKMetricPrefix") @MachineSizedSInt long prefix);
+    public static native HKUnit liter(@Representing("HKMetricPrefix") long prefix);
     @Mapping("literUnit")
     public static native HKUnit liter();
     @Mapping("fluidOunceUSUnit")
@@ -90,7 +90,7 @@ public class HKUnit
     @Mapping("pintImperialUnit")
     public static native HKUnit pintImperial();
     @Mapping("pascalUnitWithMetricPrefix:")
-    public static native HKUnit pascal(@Representing("HKMetricPrefix") @MachineSizedSInt long prefix);
+    public static native HKUnit pascal(@Representing("HKMetricPrefix") long prefix);
     @Mapping("pascalUnit")
     public static native HKUnit pascal();
     @Mapping("millimeterOfMercuryUnit")
@@ -100,7 +100,7 @@ public class HKUnit
     @Mapping("atmosphereUnit")
     public static native HKUnit atmosphere();
     @Mapping("secondUnitWithMetricPrefix:")
-    public static native HKUnit second(@Representing("HKMetricPrefix") @MachineSizedSInt long prefix);
+    public static native HKUnit second(@Representing("HKMetricPrefix") long prefix);
     @Mapping("secondUnit")
     public static native HKUnit second();
     @Mapping("minuteUnit")
@@ -110,7 +110,7 @@ public class HKUnit
     @Mapping("dayUnit")
     public static native HKUnit day();
     @Mapping("jouleUnitWithMetricPrefix:")
-    public static native HKUnit joule(@Representing("HKMetricPrefix") @MachineSizedSInt long prefix);
+    public static native HKUnit joule(@Representing("HKMetricPrefix") long prefix);
     @Mapping("jouleUnit")
     public static native HKUnit joule();
     @Mapping("calorieUnit")
@@ -124,7 +124,7 @@ public class HKUnit
     @Mapping("kelvinUnit")
     public static native HKUnit kelvin();
     @Mapping("siemenUnitWithMetricPrefix:")
-    public static native HKUnit siemen(@Representing("HKMetricPrefix") @MachineSizedSInt long prefix);
+    public static native HKUnit siemen(@Representing("HKMetricPrefix") long prefix);
     @Mapping("siemenUnit")
     public static native HKUnit siemen();
     @Mapping("countUnit")

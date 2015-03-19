@@ -91,32 +91,32 @@ public class MPVolumeView
      * @since Available in iOS 6.0 and later.
      */
     @Mapping("setMinimumVolumeSliderImage:forState:")
-    public native void setMinimumVolumeSliderImage(UIImage image, @Representing("UIControlState") @MachineSizedUInt long state);
+    public native void setMinimumVolumeSliderImage(UIImage image, @Representing("UIControlState") long state);
     /**
      * @since Available in iOS 6.0 and later.
      */
     @Mapping("setMaximumVolumeSliderImage:forState:")
-    public native void setMaximumVolumeSliderImage(UIImage image, @Representing("UIControlState") @MachineSizedUInt long state);
+    public native void setMaximumVolumeSliderImage(UIImage image, @Representing("UIControlState") long state);
     /**
      * @since Available in iOS 6.0 and later.
      */
     @Mapping("setVolumeThumbImage:forState:")
-    public native void setVolumeThumbImage(UIImage image, @Representing("UIControlState") @MachineSizedUInt long state);
+    public native void setVolumeThumbImage(UIImage image, @Representing("UIControlState") long state);
     /**
      * @since Available in iOS 6.0 and later.
      */
     @Mapping("minimumVolumeSliderImageForState:")
-    public native UIImage getMinimumVolumeSliderImage(@Representing("UIControlState") @MachineSizedUInt long state);
+    public native UIImage getMinimumVolumeSliderImage(@Representing("UIControlState") long state);
     /**
      * @since Available in iOS 6.0 and later.
      */
     @Mapping("maximumVolumeSliderImageForState:")
-    public native UIImage getMaximumVolumeSliderImage(@Representing("UIControlState") @MachineSizedUInt long state);
+    public native UIImage getMaximumVolumeSliderImage(@Representing("UIControlState") long state);
     /**
      * @since Available in iOS 6.0 and later.
      */
     @Mapping("volumeThumbImageForState:")
-    public native UIImage getVolumeThumbImage(@Representing("UIControlState") @MachineSizedUInt long state);
+    public native UIImage getVolumeThumbImage(@Representing("UIControlState") long state);
     /**
      * @since Available in iOS 6.0 and later.
      */
@@ -131,12 +131,12 @@ public class MPVolumeView
      * @since Available in iOS 6.0 and later.
      */
     @Mapping("setRouteButtonImage:forState:")
-    public native void setRouteButtonImage(UIImage image, @Representing("UIControlState") @MachineSizedUInt long state);
+    public native void setRouteButtonImage(UIImage image, @Representing("UIControlState") long state);
     /**
      * @since Available in iOS 6.0 and later.
      */
     @Mapping("routeButtonImageForState:")
-    public native UIImage getRouteButtonImage(@Representing("UIControlState") @MachineSizedUInt long state);
+    public native UIImage getRouteButtonImage(@Representing("UIControlState") long state);
     /**
      * @since Available in iOS 6.0 and later.
      */

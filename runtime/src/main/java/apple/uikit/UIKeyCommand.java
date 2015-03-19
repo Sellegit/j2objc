@@ -38,7 +38,7 @@ public class UIKeyCommand
     @Mapping("input")
     public native String getInput();
     @Mapping("modifierFlags")
-    public native @Representing("UIKeyModifierFlags") @MachineSizedSInt long getModifierFlags();
+    public native @Representing("UIKeyModifierFlags") long getModifierFlags();
     
     
     
@@ -69,7 +69,7 @@ public class UIKeyCommand
     public static native String Escape();
     
     @Mapping("keyCommandWithInput:modifierFlags:action:")
-    public static native UIKeyCommand create(String input, @Representing("UIKeyModifierFlags") @MachineSizedSInt long modifierFlags, Selector action);
+    public static native UIKeyCommand create(String input, @Representing("UIKeyModifierFlags") long modifierFlags, Selector action);
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
     

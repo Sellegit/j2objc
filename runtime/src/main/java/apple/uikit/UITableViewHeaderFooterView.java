@@ -35,6 +35,8 @@ public class UITableViewHeaderFooterView
     public UITableViewHeaderFooterView(String reuseIdentifier) { }
     @Mapping("initWithFrame:")
     public UITableViewHeaderFooterView(CGRect frame) { }
+    @Mapping("initWithCoder:")
+    public UITableViewHeaderFooterView(NSCoder aDecoder) { }
     @Mapping("init")
     public UITableViewHeaderFooterView() { }
     

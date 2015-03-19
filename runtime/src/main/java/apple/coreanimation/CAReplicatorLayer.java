@@ -31,6 +31,8 @@ public class CAReplicatorLayer
     public CAReplicatorLayer() { }
     @Mapping("initWithLayer:")
     public CAReplicatorLayer(Object layer) { }
+    @Mapping("initWithCoder:")
+    public CAReplicatorLayer(NSCoder aDecoder) { }
     
     
     @Mapping("instanceCount")

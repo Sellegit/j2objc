@@ -31,6 +31,8 @@ public class CAEAGLLayer
     public CAEAGLLayer() { }
     @Mapping("initWithLayer:")
     public CAEAGLLayer(Object layer) { }
+    @Mapping("initWithCoder:")
+    public CAEAGLLayer(NSCoder aDecoder) { }
     
     
     @Mapping("drawableProperties")

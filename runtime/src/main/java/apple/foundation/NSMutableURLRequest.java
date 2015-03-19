@@ -32,7 +32,7 @@ public class NSMutableURLRequest
     @Mapping("initWithURL:")
     public NSMutableURLRequest(NSURL URL) { }
     @Mapping("initWithURL:cachePolicy:timeoutInterval:")
-    public NSMutableURLRequest(NSURL URL, @Representing("NSURLRequestCachePolicy") @MachineSizedUInt long cachePolicy, double timeoutInterval) { }
+    public NSMutableURLRequest(NSURL URL, @Representing("NSURLRequestCachePolicy") long cachePolicy, double timeoutInterval) { }
     @Mapping("init")
     public NSMutableURLRequest() { }
     
@@ -42,9 +42,9 @@ public class NSMutableURLRequest
     @Mapping("setURL:")
     public native void setURL(NSURL v);
     @Mapping("cachePolicy")
-    public native @Representing("NSURLRequestCachePolicy") @MachineSizedUInt long getCachePolicy();
+    public native @Representing("NSURLRequestCachePolicy") long getCachePolicy();
     @Mapping("setCachePolicy:")
-    public native void setCachePolicy(@Representing("NSURLRequestCachePolicy") @MachineSizedUInt long v);
+    public native void setCachePolicy(@Representing("NSURLRequestCachePolicy") long v);
     @Mapping("timeoutInterval")
     public native double getTimeoutInterval();
     @Mapping("setTimeoutInterval:")
@@ -57,12 +57,12 @@ public class NSMutableURLRequest
      * @since Available in iOS 4.0 and later.
      */
     @Mapping("networkServiceType")
-    public native @Representing("NSURLRequestNetworkServiceType") @MachineSizedUInt long getNetworkServiceType();
+    public native @Representing("NSURLRequestNetworkServiceType") long getNetworkServiceType();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @Mapping("setNetworkServiceType:")
-    public native void setNetworkServiceType(@Representing("NSURLRequestNetworkServiceType") @MachineSizedUInt long v);
+    public native void setNetworkServiceType(@Representing("NSURLRequestNetworkServiceType") long v);
     /**
      * @since Available in iOS 6.0 and later.
      */

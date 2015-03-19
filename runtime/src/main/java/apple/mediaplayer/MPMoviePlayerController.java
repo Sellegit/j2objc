@@ -42,17 +42,17 @@ public class MPMoviePlayerController
     @Mapping("backgroundView")
     public native UIView getBackgroundView();
     @Mapping("playbackState")
-    public native @Representing("MPMoviePlaybackState") @MachineSizedSInt long getPlaybackState();
+    public native @Representing("MPMoviePlaybackState") long getPlaybackState();
     @Mapping("loadState")
-    public native @Representing("MPMovieLoadState") @MachineSizedUInt long getLoadState();
+    public native @Representing("MPMovieLoadState") long getLoadState();
     @Mapping("controlStyle")
-    public native @Representing("MPMovieControlStyle") @MachineSizedSInt long getControlStyle();
+    public native @Representing("MPMovieControlStyle") long getControlStyle();
     @Mapping("setControlStyle:")
-    public native void setControlStyle(@Representing("MPMovieControlStyle") @MachineSizedSInt long v);
+    public native void setControlStyle(@Representing("MPMovieControlStyle") long v);
     @Mapping("repeatMode")
-    public native @Representing("MPMovieRepeatMode") @MachineSizedSInt long getRepeatMode();
+    public native @Representing("MPMovieRepeatMode") long getRepeatMode();
     @Mapping("setRepeatMode:")
-    public native void setRepeatMode(@Representing("MPMovieRepeatMode") @MachineSizedSInt long v);
+    public native void setRepeatMode(@Representing("MPMovieRepeatMode") long v);
     @Mapping("shouldAutoplay")
     public native boolean shouldAutoplay();
     @Mapping("setShouldAutoplay:")
@@ -62,20 +62,20 @@ public class MPMoviePlayerController
     @Mapping("setFullscreen:")
     public native void setFullscreen(boolean v);
     @Mapping("scalingMode")
-    public native @Representing("MPMovieScalingMode") @MachineSizedSInt long getScalingMode();
+    public native @Representing("MPMovieScalingMode") long getScalingMode();
     @Mapping("setScalingMode:")
-    public native void setScalingMode(@Representing("MPMovieScalingMode") @MachineSizedSInt long v);
+    public native void setScalingMode(@Representing("MPMovieScalingMode") long v);
     /**
      * @since Available in iOS 6.0 and later.
      */
     @Mapping("readyForDisplay")
     public native boolean isReadyForDisplay();
     @Mapping("movieMediaTypes")
-    public native @Representing("MPMovieMediaTypeMask") @MachineSizedUInt long getMovieMediaTypes();
+    public native @Representing("MPMovieMediaTypeMask") long getMovieMediaTypes();
     @Mapping("movieSourceType")
-    public native @Representing("MPMovieSourceType") @MachineSizedSInt long getMovieSourceType();
+    public native @Representing("MPMovieSourceType") long getMovieSourceType();
     @Mapping("setMovieSourceType:")
-    public native void setMovieSourceType(@Representing("MPMovieSourceType") @MachineSizedSInt long v);
+    public native void setMovieSourceType(@Representing("MPMovieSourceType") long v);
     @Mapping("duration")
     public native double getDuration();
     @Mapping("playableDuration")
@@ -245,12 +245,12 @@ public class MPMoviePlayerController
      */
     @Deprecated
     @Mapping("thumbnailImageAtTime:timeOption:")
-    public native UIImage getThumbnailImage(double playbackTime, @Representing("MPMovieTimeOption") @MachineSizedSInt long option);
+    public native UIImage getThumbnailImage(double playbackTime, @Representing("MPMovieTimeOption") long option);
     /**
      * @since Available in iOS 3.2 and later.
      */
     @Mapping("requestThumbnailImagesAtTimes:timeOption:")
-    public native void requestThumbnailImages(NSArray<?> playbackTimes, @Representing("MPMovieTimeOption") @MachineSizedSInt long option);
+    public native void requestThumbnailImages(NSArray<?> playbackTimes, @Representing("MPMovieTimeOption") long option);
     /**
      * @since Available in iOS 3.2 and later.
      */

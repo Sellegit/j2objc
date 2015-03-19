@@ -82,9 +82,9 @@ public class AVCaptureConnection
     @Mapping("isVideoOrientationSupported")
     public native boolean supportsVideoOrientation();
     @Mapping("videoOrientation")
-    public native @Representing("AVCaptureVideoOrientation") @MachineSizedSInt long getVideoOrientation();
+    public native @Representing("AVCaptureVideoOrientation") long getVideoOrientation();
     @Mapping("setVideoOrientation:")
-    public native void setVideoOrientation(@Representing("AVCaptureVideoOrientation") @MachineSizedSInt long v);
+    public native void setVideoOrientation(@Representing("AVCaptureVideoOrientation") long v);
     /**
      * @since Available in iOS 5.0 and later.
      * @deprecated Deprecated in iOS 7.0.
@@ -146,17 +146,17 @@ public class AVCaptureConnection
      * @since Available in iOS 8.0 and later.
      */
     @Mapping("preferredVideoStabilizationMode")
-    public native @Representing("AVCaptureVideoStabilizationMode") @MachineSizedSInt long getPreferredVideoStabilizationMode();
+    public native @Representing("AVCaptureVideoStabilizationMode") long getPreferredVideoStabilizationMode();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @Mapping("setPreferredVideoStabilizationMode:")
-    public native void setPreferredVideoStabilizationMode(@Representing("AVCaptureVideoStabilizationMode") @MachineSizedSInt long v);
+    public native void setPreferredVideoStabilizationMode(@Representing("AVCaptureVideoStabilizationMode") long v);
     /**
      * @since Available in iOS 8.0 and later.
      */
     @Mapping("activeVideoStabilizationMode")
-    public native @Representing("AVCaptureVideoStabilizationMode") @MachineSizedSInt long getActiveVideoStabilizationMode();
+    public native @Representing("AVCaptureVideoStabilizationMode") long getActiveVideoStabilizationMode();
     /**
      * @since Available in iOS 6.0 and later.
      */

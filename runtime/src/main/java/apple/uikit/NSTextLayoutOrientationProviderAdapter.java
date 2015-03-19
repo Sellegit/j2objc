@@ -33,12 +33,12 @@ public abstract class NSTextLayoutOrientationProviderAdapter
      * @since Available in iOS 7.0 and later.
      */
     @NotImplemented("layoutOrientation")
-    public @Representing("NSTextLayoutOrientation") @MachineSizedSInt long getLayoutOrientation() { throw new UnsupportedOperationException(); }
+    public @Representing("NSTextLayoutOrientation") long getLayoutOrientation() { throw new UnsupportedOperationException(); }
     /**
      * @since Available in iOS 7.0 and later.
      */
     @Mapping("setLayoutOrientation:")
-    public void setLayoutOrientation(@Representing("NSTextLayoutOrientation") @MachineSizedSInt long v) { throw new UnsupportedOperationException(); }
+    public void setLayoutOrientation(@Representing("NSTextLayoutOrientation") long v) { throw new UnsupportedOperationException(); }
     
     
     

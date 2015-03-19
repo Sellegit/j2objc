@@ -17,7 +17,7 @@ import apple.coreservices.*;
 
 
 @Mapping("timespec") @Library("dispatch/dispatch.h")
- class timespec 
+public class timespec 
     extends Struct 
      {
 

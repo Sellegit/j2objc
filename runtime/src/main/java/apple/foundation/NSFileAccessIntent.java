@@ -41,8 +41,8 @@ public class NSFileAccessIntent
     
     
     @Mapping("readingIntentWithURL:options:")
-    public static native NSFileAccessIntent createReadingIntent(NSURL url, @Representing("NSFileCoordinatorReadingOptions") @MachineSizedUInt long options);
+    public static native NSFileAccessIntent createReadingIntent(NSURL url, @Representing("NSFileCoordinatorReadingOptions") long options);
     @Mapping("writingIntentWithURL:options:")
-    public static native NSFileAccessIntent createWritingIntent(NSURL url, @Representing("NSFileCoordinatorWritingOptions") @MachineSizedUInt long options);
+    public static native NSFileAccessIntent createWritingIntent(NSURL url, @Representing("NSFileCoordinatorWritingOptions") long options);
     
 }

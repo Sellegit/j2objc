@@ -31,9 +31,9 @@ public abstract class AVAudio3DMixingAdapter
     
     
     @NotImplemented("renderingAlgorithm")
-    public @Representing("AVAudio3DMixingRenderingAlgorithm") @MachineSizedSInt long getRenderingAlgorithm() { throw new UnsupportedOperationException(); }
+    public @Representing("AVAudio3DMixingRenderingAlgorithm") long getRenderingAlgorithm() { throw new UnsupportedOperationException(); }
     @Mapping("setRenderingAlgorithm:")
-    public void setRenderingAlgorithm(@Representing("AVAudio3DMixingRenderingAlgorithm") @MachineSizedSInt long v) { throw new UnsupportedOperationException(); }
+    public void setRenderingAlgorithm(@Representing("AVAudio3DMixingRenderingAlgorithm") long v) { throw new UnsupportedOperationException(); }
     @NotImplemented("rate")
     public float getRate() { throw new UnsupportedOperationException(); }
     @Mapping("setRate:")

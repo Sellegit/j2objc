@@ -42,12 +42,12 @@ public class MKDirectionsRequest
      * @since Available in iOS 7.0 and later.
      */
     @Mapping("transportType")
-    public native @Representing("MKDirectionsTransportType") @MachineSizedUInt long getTransportType();
+    public native @Representing("MKDirectionsTransportType") long getTransportType();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @Mapping("setTransportType:")
-    public native void setTransportType(@Representing("MKDirectionsTransportType") @MachineSizedUInt long v);
+    public native void setTransportType(@Representing("MKDirectionsTransportType") long v);
     /**
      * @since Available in iOS 7.0 and later.
      */

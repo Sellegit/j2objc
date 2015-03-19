@@ -33,6 +33,8 @@ public class UITabBar
     
     @Mapping("initWithFrame:")
     public UITabBar(CGRect frame) { }
+    @Mapping("initWithCoder:")
+    public UITabBar(NSCoder aDecoder) { }
     @Mapping("init")
     public UITabBar() { }
     
@@ -117,12 +119,12 @@ public class UITabBar
      * @since Available in iOS 7.0 and later.
      */
     @Mapping("itemPositioning")
-    public native @Representing("UITabBarItemPositioning") @MachineSizedSInt long getItemPositioning();
+    public native @Representing("UITabBarItemPositioning") long getItemPositioning();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @Mapping("setItemPositioning:")
-    public native void setItemPositioning(@Representing("UITabBarItemPositioning") @MachineSizedSInt long v);
+    public native void setItemPositioning(@Representing("UITabBarItemPositioning") long v);
     /**
      * @since Available in iOS 7.0 and later.
      */
@@ -147,12 +149,12 @@ public class UITabBar
      * @since Available in iOS 7.0 and later.
      */
     @Mapping("barStyle")
-    public native @Representing("UIBarStyle") @MachineSizedSInt long getBarStyle();
+    public native @Representing("UIBarStyle") long getBarStyle();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @Mapping("setBarStyle:")
-    public native void setBarStyle(@Representing("UIBarStyle") @MachineSizedSInt long v);
+    public native void setBarStyle(@Representing("UIBarStyle") long v);
     /**
      * @since Available in iOS 7.0 and later.
      */

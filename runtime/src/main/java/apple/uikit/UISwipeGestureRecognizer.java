@@ -42,9 +42,9 @@ public class UISwipeGestureRecognizer
     @Mapping("setNumberOfTouchesRequired:")
     public native void setNumberOfTouchesRequired(@MachineSizedUInt long v);
     @Mapping("direction")
-    public native @Representing("UISwipeGestureRecognizerDirection") @MachineSizedUInt long getDirection();
+    public native @Representing("UISwipeGestureRecognizerDirection") long getDirection();
     @Mapping("setDirection:")
-    public native void setDirection(@Representing("UISwipeGestureRecognizerDirection") @MachineSizedUInt long v);
+    public native void setDirection(@Representing("UISwipeGestureRecognizerDirection") long v);
     
     
     

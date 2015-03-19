@@ -39,11 +39,11 @@ public class GKTurnBasedParticipant
     @Mapping("lastTurnDate")
     public native NSDate getLastTurnDate();
     @Mapping("status")
-    public native @Representing("GKTurnBasedParticipantStatus") @MachineSizedSInt long getStatus();
+    public native @Representing("GKTurnBasedParticipantStatus") long getStatus();
     @Mapping("matchOutcome")
-    public native @Representing("GKTurnBasedMatchOutcome") @MachineSizedSInt long getMatchOutcome();
+    public native @Representing("GKTurnBasedMatchOutcome") long getMatchOutcome();
     @Mapping("setMatchOutcome:")
-    public native void setMatchOutcome(@Representing("GKTurnBasedMatchOutcome") @MachineSizedSInt long v);
+    public native void setMatchOutcome(@Representing("GKTurnBasedMatchOutcome") long v);
     /**
      * @since Available in iOS 6.0 and later.
      */

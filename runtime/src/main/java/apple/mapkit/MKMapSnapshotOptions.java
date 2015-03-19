@@ -46,9 +46,9 @@ public class MKMapSnapshotOptions
     @Mapping("setRegion:")
     public native void setRegion(MKCoordinateRegion v);
     @Mapping("mapType")
-    public native @Representing("MKMapType") @MachineSizedUInt long getMapType();
+    public native @Representing("MKMapType") long getMapType();
     @Mapping("setMapType:")
-    public native void setMapType(@Representing("MKMapType") @MachineSizedUInt long v);
+    public native void setMapType(@Representing("MKMapType") long v);
     @Mapping("showsPointsOfInterest")
     public native boolean showsPointsOfInterest();
     @Mapping("setShowsPointsOfInterest:")

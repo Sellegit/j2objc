@@ -32,16 +32,16 @@ public class MKUserTrackingBarButtonItem
     @Mapping("initWithMapView:")
     public MKUserTrackingBarButtonItem(MKMapView mapView) { }
     @Mapping("initWithImage:style:target:action:")
-    public MKUserTrackingBarButtonItem(UIImage image, @Representing("UIBarButtonItemStyle") @MachineSizedSInt long style, Object target, Selector action) { }
+    public MKUserTrackingBarButtonItem(UIImage image, @Representing("UIBarButtonItemStyle") long style, Object target, Selector action) { }
     /**
      * @since Available in iOS 5.0 and later.
      */
     @Mapping("initWithImage:landscapeImagePhone:style:target:action:")
-    public MKUserTrackingBarButtonItem(UIImage image, UIImage landscapeImagePhone, @Representing("UIBarButtonItemStyle") @MachineSizedSInt long style, Object target, Selector action) { }
+    public MKUserTrackingBarButtonItem(UIImage image, UIImage landscapeImagePhone, @Representing("UIBarButtonItemStyle") long style, Object target, Selector action) { }
     @Mapping("initWithTitle:style:target:action:")
-    public MKUserTrackingBarButtonItem(String title, @Representing("UIBarButtonItemStyle") @MachineSizedSInt long style, Object target, Selector action) { }
+    public MKUserTrackingBarButtonItem(String title, @Representing("UIBarButtonItemStyle") long style, Object target, Selector action) { }
     @Mapping("initWithBarButtonSystemItem:target:action:")
-    public MKUserTrackingBarButtonItem(@Representing("UIBarButtonSystemItem") @MachineSizedSInt long systemItem, Object target, Selector action) { }
+    public MKUserTrackingBarButtonItem(@Representing("UIBarButtonSystemItem") long systemItem, Object target, Selector action) { }
     @Mapping("initWithCustomView:")
     public MKUserTrackingBarButtonItem(UIView customView) { }
     @Mapping("init")

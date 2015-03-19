@@ -33,6 +33,8 @@ public class UICollectionReusableView
     
     @Mapping("initWithFrame:")
     public UICollectionReusableView(CGRect frame) { }
+    @Mapping("initWithCoder:")
+    public UICollectionReusableView(NSCoder aDecoder) { }
     @Mapping("init")
     public UICollectionReusableView() { }
     

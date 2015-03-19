@@ -43,12 +43,12 @@ public class UIMenuController
      * @since Available in iOS 3.2 and later.
      */
     @Mapping("arrowDirection")
-    public native @Representing("UIMenuControllerArrowDirection") @MachineSizedSInt long getArrowDirection();
+    public native @Representing("UIMenuControllerArrowDirection") long getArrowDirection();
     /**
      * @since Available in iOS 3.2 and later.
      */
     @Mapping("setArrowDirection:")
-    public native void setArrowDirection(@Representing("UIMenuControllerArrowDirection") @MachineSizedSInt long v);
+    public native void setArrowDirection(@Representing("UIMenuControllerArrowDirection") long v);
     /**
      * @since Available in iOS 3.2 and later.
      */

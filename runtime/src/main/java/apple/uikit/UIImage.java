@@ -46,7 +46,7 @@ public class UIImage
      * @since Available in iOS 4.0 and later.
      */
     @Mapping("initWithCGImage:scale:orientation:")
-    public UIImage(CGImage cgImage, @MachineSizedFloat double scale, @Representing("UIImageOrientation") @MachineSizedSInt long orientation) { }
+    public UIImage(CGImage cgImage, @MachineSizedFloat double scale, @Representing("UIImageOrientation") long orientation) { }
     /**
      * @since Available in iOS 5.0 and later.
      */
@@ -56,7 +56,7 @@ public class UIImage
      * @since Available in iOS 6.0 and later.
      */
     @Mapping("initWithCIImage:scale:orientation:")
-    public UIImage(CIImage ciImage, @MachineSizedFloat double scale, @Representing("UIImageOrientation") @MachineSizedSInt long orientation) { }
+    public UIImage(CIImage ciImage, @MachineSizedFloat double scale, @Representing("UIImageOrientation") long orientation) { }
     @Mapping("init")
     public UIImage() { }
     
@@ -71,7 +71,7 @@ public class UIImage
     @Mapping("CIImage")
     public native CIImage getCIImage();
     @Mapping("imageOrientation")
-    public native @Representing("UIImageOrientation") @MachineSizedSInt long getOrientation();
+    public native @Representing("UIImageOrientation") long getOrientation();
     /**
      * @since Available in iOS 4.0 and later.
      */
@@ -96,7 +96,7 @@ public class UIImage
      * @since Available in iOS 6.0 and later.
      */
     @Mapping("resizingMode")
-    public native @Representing("UIImageResizingMode") @MachineSizedSInt long getResizingMode();
+    public native @Representing("UIImageResizingMode") long getResizingMode();
     /**
      * @since Available in iOS 6.0 and later.
      */
@@ -106,7 +106,7 @@ public class UIImage
      * @since Available in iOS 7.0 and later.
      */
     @Mapping("renderingMode")
-    public native @Representing("UIImageRenderingMode") @MachineSizedSInt long getRenderingMode();
+    public native @Representing("UIImageRenderingMode") long getRenderingMode();
     /**
      * @since Available in iOS 8.0 and later.
      */
@@ -144,11 +144,11 @@ public class UIImage
     @Mapping("drawAtPoint:")
     public native void draw(CGPoint point);
     @Mapping("drawAtPoint:blendMode:alpha:")
-    public native void draw(CGPoint point, @Representing("CGBlendMode") int blendMode, @MachineSizedFloat double alpha);
+    public native void draw(CGPoint point, @Representing("CGBlendMode") long blendMode, @MachineSizedFloat double alpha);
     @Mapping("drawInRect:")
     public native void draw(CGRect rect);
     @Mapping("drawInRect:blendMode:alpha:")
-    public native void draw(CGRect rect, @Representing("CGBlendMode") int blendMode, @MachineSizedFloat double alpha);
+    public native void draw(CGRect rect, @Representing("CGBlendMode") long blendMode, @MachineSizedFloat double alpha);
     @Mapping("drawAsPatternInRect:")
     public native void drawAsPattern(CGRect rect);
     /**
@@ -160,7 +160,7 @@ public class UIImage
      * @since Available in iOS 6.0 and later.
      */
     @Mapping("resizableImageWithCapInsets:resizingMode:")
-    public native UIImage createResizable(UIEdgeInsets capInsets, @Representing("UIImageResizingMode") @MachineSizedSInt long resizingMode);
+    public native UIImage createResizable(UIEdgeInsets capInsets, @Representing("UIImageResizingMode") long resizingMode);
     /**
      * @since Available in iOS 6.0 and later.
      */
@@ -170,7 +170,7 @@ public class UIImage
      * @since Available in iOS 7.0 and later.
      */
     @Mapping("imageWithRenderingMode:")
-    public native UIImage create(@Representing("UIImageRenderingMode") @MachineSizedSInt long renderingMode);
+    public native UIImage create(@Representing("UIImageRenderingMode") long renderingMode);
     @Mapping("imageNamed:")
     public static native UIImage create(String name);
     @Mapping("imageNamed:inBundle:compatibleWithTraitCollection:")
@@ -190,7 +190,7 @@ public class UIImage
      * @since Available in iOS 4.0 and later.
      */
     @Mapping("imageWithCGImage:scale:orientation:")
-    public static native UIImage create(CGImage cgImage, @MachineSizedFloat double scale, @Representing("UIImageOrientation") @MachineSizedSInt long orientation);
+    public static native UIImage create(CGImage cgImage, @MachineSizedFloat double scale, @Representing("UIImageOrientation") long orientation);
     /**
      * @since Available in iOS 5.0 and later.
      */
@@ -200,7 +200,7 @@ public class UIImage
      * @since Available in iOS 6.0 and later.
      */
     @Mapping("imageWithCIImage:scale:orientation:")
-    public static native UIImage create(CIImage ciImage, @MachineSizedFloat double scale, @Representing("UIImageOrientation") @MachineSizedSInt long orientation);
+    public static native UIImage create(CIImage ciImage, @MachineSizedFloat double scale, @Representing("UIImageOrientation") long orientation);
     /**
      * @since Available in iOS 5.0 and later.
      */
@@ -215,7 +215,7 @@ public class UIImage
      * @since Available in iOS 6.0 and later.
      */
     @Mapping("animatedResizableImageNamed:capInsets:resizingMode:duration:")
-    public static native UIImage createAnimatedResizable(String name, UIEdgeInsets capInsets, @Representing("UIImageResizingMode") @MachineSizedSInt long resizingMode, double duration);
+    public static native UIImage createAnimatedResizable(String name, UIEdgeInsets capInsets, @Representing("UIImageResizingMode") long resizingMode, double duration);
     /**
      * @since Available in iOS 5.0 and later.
      */

@@ -50,9 +50,9 @@ public class SKShapeNode
     @Mapping("setFillColor:")
     public native void setFillColor(UIColor v);
     @Mapping("blendMode")
-    public native @Representing("SKBlendMode") @MachineSizedSInt long getBlendMode();
+    public native @Representing("SKBlendMode") long getBlendMode();
     @Mapping("setBlendMode:")
-    public native void setBlendMode(@Representing("SKBlendMode") @MachineSizedSInt long v);
+    public native void setBlendMode(@Representing("SKBlendMode") long v);
     @Mapping("isAntialiased")
     public native boolean isAntialiased();
     @Mapping("setAntialiased:")
@@ -66,13 +66,13 @@ public class SKShapeNode
     @Mapping("setGlowWidth:")
     public native void setGlowWidth(@MachineSizedFloat double v);
     @Mapping("lineCap")
-    public native @Representing("CGLineCap") int getLineCap();
+    public native @Representing("CGLineCap") long getLineCap();
     @Mapping("setLineCap:")
-    public native void setLineCap(@Representing("CGLineCap") int v);
+    public native void setLineCap(@Representing("CGLineCap") long v);
     @Mapping("lineJoin")
-    public native @Representing("CGLineJoin") int getLineJoin();
+    public native @Representing("CGLineJoin") long getLineJoin();
     @Mapping("setLineJoin:")
-    public native void setLineJoin(@Representing("CGLineJoin") int v);
+    public native void setLineJoin(@Representing("CGLineJoin") long v);
     @Mapping("miterLimit")
     public native @MachineSizedFloat double getMiterLimit();
     @Mapping("setMiterLimit:")

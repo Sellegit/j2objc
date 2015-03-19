@@ -38,7 +38,7 @@ public class NSStream
     @Mapping("setDelegate:")
     public native void setDelegate(NSStreamDelegate v);
     @Mapping("streamStatus")
-    public native @Representing("NSStreamStatus") @MachineSizedUInt long getStreamStatus();
+    public native @Representing("NSStreamStatus") long getStreamStatus();
     @Mapping("streamError")
     public native NSError getStreamError();
     

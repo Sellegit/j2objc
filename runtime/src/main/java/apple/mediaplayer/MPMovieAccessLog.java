@@ -34,7 +34,7 @@ public class MPMovieAccessLog
     @Mapping("extendedLogData")
     public native NSData getExtendedLogData();
     @Mapping("extendedLogDataStringEncoding")
-    public native @Representing("NSStringEncoding") int getExtendedLogDataStringEncoding();
+    public native @Representing("NSStringEncoding") long getExtendedLogDataStringEncoding();
     @Mapping("events")
     public native NSArray<MPMovieAccessLogEvent> getEvents();
     

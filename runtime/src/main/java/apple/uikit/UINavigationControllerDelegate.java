@@ -44,7 +44,7 @@ public interface UINavigationControllerDelegate
      * @since Available in iOS 7.0 and later.
      */
     @Mapping("navigationControllerPreferredInterfaceOrientationForPresentation:")
-    @Representing("UIInterfaceOrientation") @MachineSizedSInt long getPreferredInterfaceOrientation(UINavigationController navigationController);
+    @Representing("UIInterfaceOrientation") long getPreferredInterfaceOrientation(UINavigationController navigationController);
     /**
      * @since Available in iOS 7.0 and later.
      */
@@ -54,7 +54,7 @@ public interface UINavigationControllerDelegate
      * @since Available in iOS 7.0 and later.
      */
     @Mapping("navigationController:animationControllerForOperation:fromViewController:toViewController:")
-    UIViewControllerAnimatedTransitioning getAnimationController(UINavigationController navigationController, @Representing("UINavigationControllerOperation") @MachineSizedSInt long operation, UIViewController fromVC, UIViewController toVC);
+    UIViewControllerAnimatedTransitioning getAnimationController(UINavigationController navigationController, @Representing("UINavigationControllerOperation") long operation, UIViewController fromVC, UIViewController toVC);
     
     /*<adapter>*/
     /*</adapter>*/

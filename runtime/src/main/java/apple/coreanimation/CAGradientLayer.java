@@ -31,6 +31,8 @@ public class CAGradientLayer
     public CAGradientLayer() { }
     @Mapping("initWithLayer:")
     public CAGradientLayer(Object layer) { }
+    @Mapping("initWithCoder:")
+    public CAGradientLayer(NSCoder aDecoder) { }
     
     
     @Mapping("colors")

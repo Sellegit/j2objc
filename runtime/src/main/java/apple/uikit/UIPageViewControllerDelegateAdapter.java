@@ -41,7 +41,7 @@ public abstract class UIPageViewControllerDelegateAdapter
     @NotImplemented("pageViewController:didFinishAnimating:previousViewControllers:transitionCompleted:")
     public void didFinishAnimating(UIPageViewController pageViewController, boolean finished, NSArray<?> previousViewControllers, boolean completed) { throw new UnsupportedOperationException(); }
     @NotImplemented("pageViewController:spineLocationForInterfaceOrientation:")
-    public @Representing("UIPageViewControllerSpineLocation") @MachineSizedSInt long getSpineLocation(UIPageViewController pageViewController, @Representing("UIInterfaceOrientation") @MachineSizedSInt long orientation) { throw new UnsupportedOperationException(); }
+    public @Representing("UIPageViewControllerSpineLocation") long getSpineLocation(UIPageViewController pageViewController, @Representing("UIInterfaceOrientation") long orientation) { throw new UnsupportedOperationException(); }
     /**
      * @since Available in iOS 7.0 and later.
      */
@@ -51,6 +51,6 @@ public abstract class UIPageViewControllerDelegateAdapter
      * @since Available in iOS 7.0 and later.
      */
     @NotImplemented("pageViewControllerPreferredInterfaceOrientationForPresentation:")
-    public @Representing("UIInterfaceOrientation") @MachineSizedSInt long getPreferredInterfaceOrientation(UIPageViewController pageViewController) { throw new UnsupportedOperationException(); }
+    public @Representing("UIInterfaceOrientation") long getPreferredInterfaceOrientation(UIPageViewController pageViewController) { throw new UnsupportedOperationException(); }
     
 }

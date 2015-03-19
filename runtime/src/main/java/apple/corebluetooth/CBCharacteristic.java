@@ -34,7 +34,7 @@ public class CBCharacteristic
     @Mapping("service")
     public native CBService getService();
     @Mapping("properties")
-    public native @Representing("CBCharacteristicProperties") @MachineSizedUInt long getProperties();
+    public native @Representing("CBCharacteristicProperties") long getProperties();
     @Mapping("value")
     public native NSData getValue();
     @Mapping("descriptors")

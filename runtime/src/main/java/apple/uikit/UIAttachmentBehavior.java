@@ -46,7 +46,7 @@ public class UIAttachmentBehavior
     @Mapping("items")
     public native List<UIDynamicItem> getItems();
     @Mapping("attachedBehaviorType")
-    public native @Representing("UIAttachmentBehaviorType") @MachineSizedSInt long getAttachedBehaviorType();
+    public native @Representing("UIAttachmentBehaviorType") long getAttachedBehaviorType();
     @Mapping("anchorPoint")
     public native CGPoint getAnchorPoint();
     @Mapping("setAnchorPoint:")
