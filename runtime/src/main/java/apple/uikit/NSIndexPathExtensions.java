@@ -31,7 +31,15 @@ public final class NSIndexPathExtensions
     private NSIndexPathExtensions() {}
     
     
-    
+    @ExtensionMapping("section")
+    public static native @MachineSizedSInt long getSection(NSIndexPath thiz);
+    @ExtensionMapping("row")
+    public static native @MachineSizedSInt long getRow(NSIndexPath thiz);
+    /**
+     * @since Available in iOS 6.0 and later.
+     */
+    @ExtensionMapping("item")
+    public static native @MachineSizedSInt long getItem(NSIndexPath thiz);
     
     
     

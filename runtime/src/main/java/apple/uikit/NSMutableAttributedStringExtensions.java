@@ -35,6 +35,10 @@ public final class NSMutableAttributedStringExtensions
     
     
     
-    
+    /**
+     * @since Available in iOS 7.0 and later.
+     */
+    @ExtensionMapping("fixAttributesInRange:")
+    public static native void fixAttributesInRange(NSMutableAttributedString thiz, NSRange range);
     
 }

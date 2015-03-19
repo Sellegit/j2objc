@@ -38,6 +38,41 @@ public final class NSAttributedStringExtensions
     /**
      * @since Available in iOS 7.0 and later.
      */
+    @ExtensionMapping("dataFromRange:documentAttributes:error:")
+    public static native NSData getData(NSAttributedString thiz, NSRange range, NSDictionary<?, ?> dict, Todo error);
+    /**
+     * @since Available in iOS 7.0 and later.
+     */
+    @ExtensionMapping("fileWrapperFromRange:documentAttributes:error:")
+    public static native NSFileWrapper getFileWrapper(NSAttributedString thiz, NSRange range, NSDictionary<?, ?> dict, Todo error);
+    /**
+     * @since Available in iOS 6.0 and later.
+     */
+    @ExtensionMapping("size")
+    public static native CGSize getSize(NSAttributedString thiz);
+    /**
+     * @since Available in iOS 6.0 and later.
+     */
+    @ExtensionMapping("drawAtPoint:")
+    public static native void draw(NSAttributedString thiz, CGPoint point);
+    /**
+     * @since Available in iOS 6.0 and later.
+     */
+    @ExtensionMapping("drawInRect:")
+    public static native void draw(NSAttributedString thiz, CGRect rect);
+    /**
+     * @since Available in iOS 6.0 and later.
+     */
+    @ExtensionMapping("drawWithRect:options:context:")
+    public static native void draw(NSAttributedString thiz, CGRect rect, @Representing("NSStringDrawingOptions") long options, NSStringDrawingContext context);
+    /**
+     * @since Available in iOS 6.0 and later.
+     */
+    @ExtensionMapping("boundingRectWithSize:options:context:")
+    public static native CGRect getBoundingRect(NSAttributedString thiz, CGSize size, @Representing("NSStringDrawingOptions") long options, NSStringDrawingContext context);
+    /**
+     * @since Available in iOS 7.0 and later.
+     */
     @Mapping("attributedStringWithAttachment:")
     public static native NSAttributedString create(NSTextAttachment attachment);
     

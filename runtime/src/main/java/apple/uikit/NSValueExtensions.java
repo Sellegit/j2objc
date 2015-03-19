@@ -35,6 +35,23 @@ public final class NSValueExtensions
     
     
     
+    @ExtensionMapping("CGPointValue")
+    public static native CGPoint getPointValue(NSValue thiz);
+    @ExtensionMapping("CGVectorValue")
+    public static native CGVector getVectorValue(NSValue thiz);
+    @ExtensionMapping("CGSizeValue")
+    public static native CGSize getSizeValue(NSValue thiz);
+    @ExtensionMapping("CGRectValue")
+    public static native CGRect getRectValue(NSValue thiz);
+    @ExtensionMapping("CGAffineTransformValue")
+    public static native CGAffineTransform getAffineTransformValue(NSValue thiz);
+    @ExtensionMapping("UIEdgeInsetsValue")
+    public static native UIEdgeInsets getEdgeInsetsValue(NSValue thiz);
+    /**
+     * @since Available in iOS 5.0 and later.
+     */
+    @ExtensionMapping("UIOffsetValue")
+    public static native UIOffset getOffsetValue(NSValue thiz);
     @Mapping("valueWithCGPoint:")
     public static native NSValue create(CGPoint point);
     @Mapping("valueWithCGVector:")
