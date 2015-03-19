@@ -105,6 +105,7 @@ import org.eclipse.jdt.core.dom.IMethodBinding;
 import org.eclipse.jdt.core.dom.ITypeBinding;
 import org.eclipse.jdt.core.dom.IVariableBinding;
 
+import java.lang.reflect.Modifier;
 import java.util.Iterator;
 import java.util.List;
 import java.util.regex.Pattern;
@@ -816,6 +817,30 @@ public class StatementGenerator extends TreeVisitor {
       return false;
     }
 
+    // Note: we dont move extension method mapping to JavaToIOSMethodTranslator bcuz
+    //    we want to preserve the extension class in source code so that appropriate
+    //     dependency will be picked up by import collector
+    // TODO: clean this up when there is time
+    IOSMethod mapped = BindingUtil.getMappedMethod(binding, /* extension */ true);
+    if (mapped != null) {
+      List<Expression> args = node.getArguments();
+      Expression newReceiver = args.remove(0);
+//      node.setExpression(newReceiver);
+      receiver = newReceiver;
+
+      IOSMethodBinding newBinding = IOSMethodBinding.newMappedMethod(mapped, binding);
+      newBinding.setModifiers(Modifier.PUBLIC); // do away static modifier
+//      node.setMethodBinding(newBinding);
+      binding = newBinding;
+
+      methodName = NameTable.getName(binding);
+
+      System.err.println("passing to printMethod: " + binding);
+      System.err.println(methodName);
+      System.err.println(receiver);
+      System.err.println(node.getArguments());
+    }
+
     if (methodName.equals("isAssignableFrom")
         && binding.getDeclaringClass().equals(Types.getIOSClass())) {
       printIsAssignableFromExpression(node);
@@ -838,6 +863,7 @@ public class StatementGenerator extends TreeVisitor {
     buffer.append('[');
 
     if (BindingUtil.isStatic(binding)) {
+      System.err.println(binding + " is static");
       buffer.append(NameTable.getFullName(binding.getDeclaringClass()));
     } else if (receiver != null) {
       receiver.accept(this);

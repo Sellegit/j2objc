@@ -23,6 +23,7 @@ import com.google.devtools.j2objc.types.IOSMethod;
 import com.google.devtools.j2objc.types.IOSParameter;
 import com.google.j2objc.annotations.Adapter;
 import com.google.j2objc.annotations.DotMapping;
+import com.google.j2objc.annotations.ExtensionMapping;
 import com.google.j2objc.annotations.GlobalConstant;
 import com.google.j2objc.annotations.GlobalFunction;
 import com.google.j2objc.annotations.Library;
@@ -31,7 +32,6 @@ import com.google.j2objc.annotations.Representing;
 import com.google.j2objc.annotations.Weak;
 import com.google.j2objc.annotations.WeakOuter;
 
-import org.eclipse.jdt.core.IAnnotation;
 import org.eclipse.jdt.core.dom.IAnnotationBinding;
 import org.eclipse.jdt.core.dom.IBinding;
 import org.eclipse.jdt.core.dom.IMemberValuePairBinding;
@@ -39,9 +39,9 @@ import org.eclipse.jdt.core.dom.IMethodBinding;
 import org.eclipse.jdt.core.dom.ITypeBinding;
 import org.eclipse.jdt.core.dom.IVariableBinding;
 import org.eclipse.jdt.core.dom.Modifier;
-import org.eclipse.osgi.framework.debug.Debug;
 
 import java.lang.annotation.RetentionPolicy;
+import java.security.cert.Extension;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.Deque;
@@ -412,6 +412,19 @@ public final class BindingUtil {
     }
   }
 
+  public static String extractExtensionMappingName(IBinding binding) {
+    if (binding == null) {
+      return null;
+    }
+
+    IAnnotationBinding annotation = BindingUtil.getAnnotation(binding, ExtensionMapping.class);
+    if (annotation != null) {
+      return (String) BindingUtil.getAnnotationValue(annotation, "value");
+    } else {
+      return null;
+    }
+  }
+
   public static String extractDotMappingName(IBinding binding) {
     if (binding == null) {
       return null;
@@ -474,9 +487,10 @@ public final class BindingUtil {
 
   public static boolean isMappedToNative(IBinding binding) {
     return extractMappingName(binding) != null
-        || extractDotMappingName(binding) != null
-        || extractGlobalConstantName(binding) != null
-        || extractGlobalFunctionName(binding) != null;
+           || extractExtensionMappingName(binding) != null
+           || extractDotMappingName(binding) != null
+           || extractGlobalConstantName(binding) != null
+           || extractGlobalFunctionName(binding) != null;
   }
 
   static final Splitter IOS_METHOD_PART_SPLITTER =
@@ -492,6 +506,10 @@ public final class BindingUtil {
    *   will return. Otherwise an exception will be thrown. Returns null if no such mapping is found.
    */
   public static IOSMethod getMappedMethod(IMethodBinding method) {
+    return getMappedMethod(method, false);
+  }
+
+  public static IOSMethod getMappedMethod(IMethodBinding method, boolean isExtension) {
     if (method == null) {
       return null;
     }
@@ -501,44 +519,45 @@ public final class BindingUtil {
     ITypeBinding currentCls = method.getDeclaringClass();
 
     // this is a hack to work around binding info being inconsistent
-    String mappingName = extractMappingName(method);
-    if (mappingName != null) {
-      candidates.add(mappingName);
-      methodCandidates.add(method);
-    }
-//    while (!currentCls.isEqualTo(Types.resolveJavaType("java.lang.Object"))) {
-    while (currentCls != null) { // jdt's system has been messed up, so one cant do it in usual way
-      for (IMethodBinding binding : currentCls.getDeclaredMethods()) {
-        if (binding.isEqualTo(method) || method.overrides(binding)) {
-          mappingName = extractMappingName(binding);
-          if (mappingName != null) {
-            candidates.add(mappingName);
-            methodCandidates.add(binding);
+    String mappingName = null;
+    if (!isExtension) {
+      mappingName = extractMappingName(method);
+      while (currentCls != null) { // jdt's system has been messed up, so one cant do it in usual way
+        for (IMethodBinding binding : currentCls.getDeclaredMethods()) {
+          if (binding.isEqualTo(method) || method.overrides(binding)) {
+            mappingName = extractMappingName(binding);
+            if (mappingName != null) {
+              candidates.add(mappingName);
+              methodCandidates.add(binding);
+            }
           }
         }
-      }
 
-      for (ITypeBinding directInterface : currentCls.getInterfaces()) {
-        for (ITypeBinding interfaze : flattenInterface(directInterface)) {
-          for (IMethodBinding binding : interfaze.getDeclaredMethods()) {
-            // TODO: check if this is the way jdt handles interface implementation
-            if (method.isSubsignature(binding)) {
-              mappingName = extractMappingName(binding);
-              if (mappingName != null) {
-                candidates.add(mappingName);
-                methodCandidates.add(binding);
+        for (ITypeBinding directInterface : currentCls.getInterfaces()) {
+          for (ITypeBinding interfaze : flattenInterface(directInterface)) {
+            for (IMethodBinding binding : interfaze.getDeclaredMethods()) {
+              // TODO: check if this is the way jdt handles interface implementation
+              if (method.isSubsignature(binding)) {
+                mappingName = extractMappingName(binding);
+                if (mappingName != null) {
+                  candidates.add(mappingName);
+                  methodCandidates.add(binding);
+                }
               }
             }
           }
         }
-      }
 
-//      if (currentCls.getSuperclass() == null) {
-//        ErrorUtil.error(currentCls.getName() + "'s super class is null.");
-//      }
-      currentCls = currentCls.getSuperclass();
+        currentCls = currentCls.getSuperclass();
+      }
+    } else {
+      mappingName = extractExtensionMappingName(method);
     }
 
+    if (mappingName != null) {
+      candidates.add(mappingName);
+      methodCandidates.add(method);
+    }
     assert candidates.size() == methodCandidates.size();
 
     if (candidates.size() == 0) {
@@ -590,6 +609,15 @@ public final class BindingUtil {
       }
       List<String> methodParts = Lists.newArrayList(IOS_METHOD_PART_SPLITTER.split(methodName));
       ITypeBinding[] paramTypes = method.getParameterTypes();
+      if (isExtension) {
+        if (paramTypes.length < 1) {
+          ErrorUtil.error(
+              "Extension method doesnt have this: " + method);
+        }
+
+        List<ITypeBinding> newParams = Arrays.asList(paramTypes).subList(1, paramTypes.length);
+        paramTypes = newParams.toArray(new ITypeBinding[newParams.size()]);
+      }
       if (methodName.endsWith(":")) {
         // has arguments
         if (methodParts.size() != paramTypes.length + 1) {

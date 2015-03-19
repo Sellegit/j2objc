@@ -19,12 +19,7 @@ public class MappedNativeMethodRemover extends TreeVisitor {
         MethodDeclaration method = (MethodDeclaration) decl;
         IMethodBinding binding = method.getMethodBinding();
         if (BindingUtil.isNative(binding)) {
-          if (BindingUtil.extractMappingName(binding) != null
-              || BindingUtil.extractDotMappingName(binding) != null
-              || BindingUtil.extractGlobalConstantName(binding) != null
-              || BindingUtil.extractGlobalFunctionName(binding) != null) {
-            // NOTE: this again messes up the binding system so this is expected to be the last
-            //     transformation to run
+          if (BindingUtil.isMappedToNative(binding)) {
             TreeUtil.remove(decl);
           }
         }
