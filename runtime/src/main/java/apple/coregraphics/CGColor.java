@@ -17,7 +17,7 @@ import apple.uikit.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreGraphics/CoreGraphics.h")
+@Mapping("CGColorRef") @Library("CoreGraphics/CoreGraphics.h")
 public class CGColor 
     extends CFType 
      {

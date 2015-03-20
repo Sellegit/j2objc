@@ -17,7 +17,7 @@ import apple.uikit.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreGraphics/CoreGraphics.h")
+@Mapping("CGContextRef") @Library("CoreGraphics/CoreGraphics.h")
 public class CGContext 
     extends CFType 
      {

@@ -17,9 +17,9 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreFoundation/CoreFoundation.h")
+@Mapping("CFTypeRef") @Library("CoreFoundation/CoreFoundation.h")
 public class CFType 
-    extends Object 
+    extends ValueType 
      {
 
     

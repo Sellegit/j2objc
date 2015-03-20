@@ -17,7 +17,7 @@ import apple.uikit.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreGraphics/CoreGraphics.h")
+@Mapping("CGFunctionRef") @Library("CoreGraphics/CoreGraphics.h")
 public class CGFunction 
     extends CFType 
      {

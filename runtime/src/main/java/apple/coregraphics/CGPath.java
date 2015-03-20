@@ -17,7 +17,7 @@ import apple.uikit.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreGraphics/CoreGraphics.h")
+@Mapping("CGPathRef") @Library("CoreGraphics/CoreGraphics.h")
 public class CGPath 
     extends CFType 
      {

@@ -17,7 +17,7 @@ import apple.uikit.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreGraphics/CoreGraphics.h")
+@Mapping("CGMutablePathRef") @Library("CoreGraphics/CoreGraphics.h")
 public class CGMutablePath 
     extends CGPath 
      {
