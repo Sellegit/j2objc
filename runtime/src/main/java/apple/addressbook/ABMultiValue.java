@@ -18,7 +18,7 @@ import apple.foundation.*;
 /*</javadoc>*/
 @Library("AddressBook/AddressBook.h")
 public class ABMultiValue 
-    extends CFType 
+    extends Object 
      {
 
     
@@ -29,20 +29,20 @@ public class ABMultiValue
     
     
     @GlobalFunction("ABMultiValueGetPropertyType")
-    public static native ABPropertyType getPropertyType(ABMultiValue multiValue);
+    public static native ABPropertyType getPropertyType(ABMultiValueRef multiValue);
     @GlobalFunction("ABMultiValueGetCount")
-    public static native @MachineSizedSInt long getCount(ABMultiValue multiValue);
+    public static native @MachineSizedSInt long getCount(ABMultiValueRef multiValue);
     @GlobalFunction("ABMultiValueCopyValueAtIndex")
-    public static native CFType getValue(ABMultiValue multiValue, @MachineSizedSInt long index);
+    public static native CFType getValue(ABMultiValueRef multiValue, @MachineSizedSInt long index);
     @GlobalFunction("ABMultiValueCopyArrayOfAllValues")
-    public static native List<CFType> getAllValues(ABMultiValue multiValue);
+    public static native List<CFType> getAllValues(ABMultiValueRef multiValue);
     @GlobalFunction("ABMultiValueCopyLabelAtIndex")
-    public static native CFString getLabel(ABMultiValue multiValue, @MachineSizedSInt long index);
+    public static native CFString getLabel(ABMultiValueRef multiValue, @MachineSizedSInt long index);
     @GlobalFunction("ABMultiValueGetIndexForIdentifier")
-    public static native @MachineSizedSInt long indexOf(ABMultiValue multiValue, int identifier);
+    public static native @MachineSizedSInt long indexOf(ABMultiValueRef multiValue, int identifier);
     @GlobalFunction("ABMultiValueGetIdentifierAtIndex")
-    public static native int getIdentifier(ABMultiValue multiValue, @MachineSizedSInt long index);
+    public static native int getIdentifier(ABMultiValueRef multiValue, @MachineSizedSInt long index);
     @GlobalFunction("ABMultiValueGetFirstIndexOfValue")
-    public static native @MachineSizedSInt long indexOf(ABMultiValue multiValue, CFType value);
+    public static native @MachineSizedSInt long indexOf(ABMultiValueRef multiValue, CFType value);
     
 }

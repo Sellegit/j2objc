@@ -18,7 +18,7 @@ import apple.foundation.*;
 /*</javadoc>*/
 @Library("AddressBook/AddressBook.h")
 public class ABRecord 
-    extends CFType 
+    extends Object 
      {
 
     
@@ -29,16 +29,16 @@ public class ABRecord
     
     
     @GlobalFunction("ABRecordGetRecordID")
-    public static native int getRecordID(ABRecord record);
+    public static native int getRecordID(ABRecordRef record);
     @GlobalFunction("ABRecordGetRecordType")
-    public static native ABRecordType getRecordType(ABRecord record);
+    public static native ABRecordType getRecordType(ABRecordRef record);
     @GlobalFunction("ABRecordCopyValue")
-    public static native CFType getValue(ABRecord record, int property);
+    public static native CFType getValue(ABRecordRef record, int property);
     @GlobalFunction("ABRecordSetValue")
-    public static native boolean setValue(ABRecord record, int property, CFType value, Todo error);
+    public static native boolean setValue(ABRecordRef record, int property, CFType value, Todo error);
     @GlobalFunction("ABRecordRemoveValue")
-    public static native boolean removeValue(ABRecord record, int property, Todo error);
+    public static native boolean removeValue(ABRecordRef record, int property, Todo error);
     @GlobalFunction("ABRecordCopyCompositeName")
-    public static native String getCompositeName(ABRecord record);
+    public static native String getCompositeName(ABRecordRef record);
     
 }

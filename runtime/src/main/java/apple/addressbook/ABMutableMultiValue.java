@@ -27,18 +27,18 @@ public class ABMutableMultiValue
     
     
     @GlobalFunction("ABMultiValueCreateMutable")
-    public static native ABMutableMultiValue create(@Representing("ABPropertyType") long type);
+    public static native CFType create(@Representing("ABPropertyType") long type);
     @GlobalFunction("ABMultiValueCreateMutableCopy")
-    public static native ABMutableMultiValue create(ABMultiValue multiValue);
+    public static native CFType create(ABMultiValueRef multiValue);
     @GlobalFunction("ABMultiValueAddValueAndLabel")
-    public static native boolean addValueAndLabel(ABMutableMultiValue multiValue, CFType value, String label, Todo outIdentifier);
+    public static native boolean addValueAndLabel(CFType multiValue, CFType value, String label, Todo outIdentifier);
     @GlobalFunction("ABMultiValueInsertValueAndLabelAtIndex")
-    public static native boolean insertValueAndLabel(ABMutableMultiValue multiValue, CFType value, String label, @MachineSizedSInt long index, Todo outIdentifier);
+    public static native boolean insertValueAndLabel(CFType multiValue, CFType value, String label, @MachineSizedSInt long index, Todo outIdentifier);
     @GlobalFunction("ABMultiValueRemoveValueAndLabelAtIndex")
-    public static native boolean removeValueAndLabel(ABMutableMultiValue multiValue, @MachineSizedSInt long index);
+    public static native boolean removeValueAndLabel(CFType multiValue, @MachineSizedSInt long index);
     @GlobalFunction("ABMultiValueReplaceValueAtIndex")
-    public static native boolean replaceValue(ABMutableMultiValue multiValue, CFType value, @MachineSizedSInt long index);
+    public static native boolean replaceValue(CFType multiValue, CFType value, @MachineSizedSInt long index);
     @GlobalFunction("ABMultiValueReplaceLabelAtIndex")
-    public static native boolean replaceLabel(ABMutableMultiValue multiValue, String label, @MachineSizedSInt long index);
+    public static native boolean replaceLabel(CFType multiValue, String label, @MachineSizedSInt long index);
     
 }

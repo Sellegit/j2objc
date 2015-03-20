@@ -32,17 +32,17 @@ public class ABPerson
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("ABPersonCreateInSource")
-    public static native ABPerson create(ABRecord source);
+    public static native ABPerson create(ABRecordRef source);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("ABPersonCopySource")
-    public static native ABRecord getSource(ABRecord person);
+    public static native ABRecordRef getSource(ABRecordRef person);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("ABPersonCopyArrayOfAllLinkedPeople")
-    public static native List<ABPerson> getAllLinkedPeople(ABRecord person);
+    public static native List<ABPerson> getAllLinkedPeople(ABRecordRef person);
     @GlobalFunction("ABPersonGetSortOrdering")
     public static native ABPersonSortOrdering getSortOrdering();
     /**
@@ -56,32 +56,32 @@ public class ABPerson
      * @since Available in iOS 7.0 and later.
      */
     @GlobalFunction("ABPersonGetCompositeNameFormatForRecord")
-    public static native ABPersonCompositeNameFormat getCompositeNameFormat(ABRecord record);
+    public static native ABPersonCompositeNameFormat getCompositeNameFormat(ABRecordRef record);
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalFunction("ABPersonCopyCompositeNameDelimiterForRecord")
-    public static native String getCompositeNameDelimiter(ABRecord record);
+    public static native String getCompositeNameDelimiter(ABRecordRef record);
     @GlobalFunction("ABPersonSetImageData")
-    public static native boolean setImageData(ABRecord person, NSData imageData, Todo error);
+    public static native boolean setImageData(ABRecordRef person, NSData imageData, Todo error);
     @GlobalFunction("ABPersonCopyImageData")
-    public static native NSData getImageData(ABRecord person);
+    public static native NSData getImageData(ABRecordRef person);
     /**
      * @since Available in iOS 4.1 and later.
      */
     @GlobalFunction("ABPersonCopyImageDataWithFormat")
-    public static native NSData getImageData(ABRecord person, ABPersonImageFormat format);
+    public static native NSData getImageData(ABRecordRef person, ABPersonImageFormat format);
     @GlobalFunction("ABPersonHasImageData")
-    public static native boolean hasImageData(ABRecord person);
+    public static native boolean hasImageData(ABRecordRef person);
     @GlobalFunction("ABPersonRemoveImageData")
-    public static native boolean removeImageData(ABRecord person, Todo error);
+    public static native boolean removeImageData(ABRecordRef person, Todo error);
     @GlobalFunction("ABPersonComparePeopleByName")
-    public static native CFComparisonResult compareTo(ABRecord person1, ABRecord person2, @Representing("ABPersonSortOrdering") long ordering);
+    public static native CFComparisonResult compareTo(ABRecordRef person1, ABRecordRef person2, @Representing("ABPersonSortOrdering") long ordering);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("ABPersonCreatePeopleInSourceWithVCardRepresentation")
-    public static native List<ABPerson> createPeopleInSource(ABRecord source, NSData vCardData);
+    public static native List<ABPerson> createPeopleInSource(ABRecordRef source, NSData vCardData);
     /**
      * @since Available in iOS 5.0 and later.
      */
