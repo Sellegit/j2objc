@@ -47,17 +47,17 @@ public class CTFont
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTFontCreateWithNameAndOptions")
-    public static native CTFont create(String name, @MachineSizedFloat double size, CGAffineTransform matrix, CTFontOptions options);
+    public static native CTFont create(String name, @MachineSizedFloat double size, CGAffineTransform matrix, @Representing("CTFontOptions") long options);
     /**
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTFontCreateWithFontDescriptorAndOptions")
-    public static native CTFont create(CTFontDescriptor descriptor, @MachineSizedFloat double size, CGAffineTransform matrix, CTFontOptions options);
+    public static native CTFont create(CTFontDescriptor descriptor, @MachineSizedFloat double size, CGAffineTransform matrix, @Representing("CTFontOptions") long options);
     /**
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTFontCreateUIFontForLanguage")
-    public static native CTFont create(CTFontUIFontType uiType, @MachineSizedFloat double size, String language);
+    public static native CTFont create(@Representing("CTFontUIFontType") long uiType, @MachineSizedFloat double size, String language);
     /**
      * @since Available in iOS 3.2 and later.
      */
@@ -67,7 +67,7 @@ public class CTFont
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTFontCreateCopyWithSymbolicTraits")
-    public static native CTFont createCopy(CTFont font, @MachineSizedFloat double size, CGAffineTransform matrix, CTFontSymbolicTraits symTraitValue, CTFontSymbolicTraits symTraitMask);
+    public static native CTFont createCopy(CTFont font, @MachineSizedFloat double size, CGAffineTransform matrix, @Representing("CTFontSymbolicTraits") long symTraitValue, @Representing("CTFontSymbolicTraits") long symTraitMask);
     /**
      * @since Available in iOS 3.2 and later.
      */
@@ -222,7 +222,7 @@ public class CTFont
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTFontGetBoundingRectsForGlyphs")
-    public static native CGRect getBoundingRects(CTFont font, CTFontOrientation orientation, Todo glyphs, CGRect boundingRects, @MachineSizedSInt long count);
+    public static native CGRect getBoundingRects(CTFont font, @Representing("CTFontOrientation") long orientation, Todo glyphs, CGRect boundingRects, @MachineSizedSInt long count);
     /**
      * @since Available in iOS 6.0 and later.
      */
@@ -232,7 +232,7 @@ public class CTFont
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTFontGetAdvancesForGlyphs")
-    public static native double getAdvances(CTFont font, CTFontOrientation orientation, Todo glyphs, CGSize advances, @MachineSizedSInt long count);
+    public static native double getAdvances(CTFont font, @Representing("CTFontOrientation") long orientation, Todo glyphs, CGSize advances, @MachineSizedSInt long count);
     /**
      * @since Available in iOS 3.2 and later.
      */
@@ -277,12 +277,12 @@ public class CTFont
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTFontCopyAvailableTables")
-    public static native CFArray getAvailableTables(CTFont font, CTFontTableOptions options);
+    public static native CFArray getAvailableTables(CTFont font, @Representing("CTFontTableOptions") long options);
     /**
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTFontCopyTable")
-    public static native NSData getTable(CTFont font, CTFontTableTag table, CTFontTableOptions options);
+    public static native NSData getTable(CTFont font, @Representing("CTFontTableTag") long table, @Representing("CTFontTableOptions") long options);
     /**
      * @since Available in iOS 4.2 and later.
      */

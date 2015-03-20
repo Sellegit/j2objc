@@ -37,7 +37,7 @@ public class CFDateFormatter
     @GlobalFunction("CFDateFormatterGetTypeID")
     public static native @MachineSizedUInt long getClassTypeID();
     @GlobalFunction("CFDateFormatterCreate")
-    public static native CFDateFormatter create(CFAllocator allocator, CFLocale locale, CFDateFormatterStyle dateStyle, CFDateFormatterStyle timeStyle);
+    public static native CFDateFormatter create(CFAllocator allocator, CFLocale locale, @Representing("CFDateFormatterStyle") long dateStyle, @Representing("CFDateFormatterStyle") long timeStyle);
     @GlobalFunction("CFDateFormatterGetLocale")
     public static native CFLocale getLocale(CFDateFormatter formatter);
     @GlobalFunction("CFDateFormatterGetDateStyle")

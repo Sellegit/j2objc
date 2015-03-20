@@ -98,6 +98,6 @@ public class CFFileSecurity
      * @since Available in iOS 6.0 and later.
      */
     @GlobalFunction("CFFileSecurityClearProperties")
-    public static native boolean clearProperties(CFFileSecurity fileSec, CFFileSecurityClearOptions clearPropertyMask);
+    public static native boolean clearProperties(CFFileSecurity fileSec, @Representing("CFFileSecurityClearOptions") long clearPropertyMask);
     
 }

@@ -50,7 +50,7 @@ public class CFMutableString
     @GlobalFunction("CFStringReplaceAll")
     public static native void replaceAll(String theString, String replacement);
     @GlobalFunction("CFStringFindAndReplace")
-    public static native @MachineSizedSInt long findAndReplace(String theString, String stringToFind, String replacementString, CFRange rangeToSearch, CFStringCompareFlags compareOptions);
+    public static native @MachineSizedSInt long findAndReplace(String theString, String stringToFind, String replacementString, CFRange rangeToSearch, @Representing("CFStringCompareFlags") long compareOptions);
     @GlobalFunction("CFStringSetExternalCharactersNoCopy")
     public static native void setExternalCharactersNoCopy(String theString, Todo chars, @MachineSizedSInt long length, @MachineSizedSInt long capacity);
     @GlobalFunction("CFStringPad")
@@ -66,12 +66,12 @@ public class CFMutableString
     @GlobalFunction("CFStringCapitalize")
     public static native void capitalize(String theString, CFLocale locale);
     @GlobalFunction("CFStringNormalize")
-    public static native void normalize(String theString, CFStringNormalizationForm theForm);
+    public static native void normalize(String theString, @Representing("CFStringNormalizationForm") long theForm);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFStringFold")
-    public static native void fold(String theString, CFStringCompareFlags theFlags, CFLocale theLocale);
+    public static native void fold(String theString, @Representing("CFStringCompareFlags") long theFlags, CFLocale theLocale);
     @GlobalFunction("CFStringTransform")
     public static native boolean transform(String string, CFRange range, String transform, boolean reverse);
     

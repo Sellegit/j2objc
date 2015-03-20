@@ -54,6 +54,8 @@ public class DispatchQueue
     @Deprecated
     @GlobalFunction("dispatch_get_current_queue")
     public static native DispatchQueue getCurrentQueue();
+    @GlobalFunction("dispatch_get_main_queue")
+    public static native DispatchQueue getMainQueue();
     /**
      * @since Available in iOS 4.0 and later.
      */

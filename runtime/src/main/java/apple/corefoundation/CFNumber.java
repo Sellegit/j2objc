@@ -39,7 +39,7 @@ public class CFNumber
     @GlobalFunction("CFNumberGetTypeID")
     public static native @MachineSizedUInt long getClassTypeID();
     @GlobalFunction("CFNumberCreate")
-    public static native CFNumber create(CFAllocator allocator, CFNumberType theType, Todo valuePtr);
+    public static native CFNumber create(CFAllocator allocator, @Representing("CFNumberType") long theType, Todo valuePtr);
     @GlobalFunction("CFNumberGetType")
     public static native CFNumberType getType(CFNumber number);
     @GlobalFunction("CFNumberGetByteSize")
@@ -47,7 +47,7 @@ public class CFNumber
     @GlobalFunction("CFNumberIsFloatType")
     public static native boolean isFloatType(CFNumber number);
     @GlobalFunction("CFNumberGetValue")
-    public static native boolean getValue(CFNumber number, CFNumberType theType, Todo valuePtr);
+    public static native boolean getValue(CFNumber number, @Representing("CFNumberType") long theType, Todo valuePtr);
     @GlobalFunction("CFNumberCompare")
     public static native CFComparisonResult compareTo(CFNumber number, CFNumber otherNumber, Todo context);
     

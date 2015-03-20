@@ -40,11 +40,11 @@ public class CFURL
     @GlobalFunction("CFURLCreateAbsoluteURLWithBytes")
     public static native CFURL createAbsoluteURLWithBytes(CFAllocator alloc, Todo relativeURLBytes, @MachineSizedSInt long length, int encoding, CFURL baseURL, boolean useCompatibilityMode);
     @GlobalFunction("CFURLCreateWithFileSystemPath")
-    public static native CFURL createWithFileSystemPath(CFAllocator allocator, String filePath, CFURLPathStyle pathStyle, boolean isDirectory);
+    public static native CFURL createWithFileSystemPath(CFAllocator allocator, String filePath, @Representing("CFURLPathStyle") long pathStyle, boolean isDirectory);
     @GlobalFunction("CFURLCreateFromFileSystemRepresentation")
     public static native CFURL createFromFileSystemRepresentation(CFAllocator allocator, Todo buffer, @MachineSizedSInt long bufLen, boolean isDirectory);
     @GlobalFunction("CFURLCreateWithFileSystemPathRelativeToBase")
-    public static native CFURL createWithFileSystemPathRelativeToBase(CFAllocator allocator, String filePath, CFURLPathStyle pathStyle, boolean isDirectory, CFURL baseURL);
+    public static native CFURL createWithFileSystemPathRelativeToBase(CFAllocator allocator, String filePath, @Representing("CFURLPathStyle") long pathStyle, boolean isDirectory, CFURL baseURL);
     @GlobalFunction("CFURLCreateFromFileSystemRepresentationRelativeToBase")
     public static native CFURL createFromFileSystemRepresentationRelativeToBase(CFAllocator allocator, Todo buffer, @MachineSizedSInt long bufLen, boolean isDirectory, CFURL baseURL);
     @GlobalFunction("CFURLGetFileSystemRepresentation")
@@ -66,7 +66,7 @@ public class CFURL
     @GlobalFunction("CFURLCopyStrictPath")
     public static native String copyStrictPath(CFURL anURL, Todo isAbsolute);
     @GlobalFunction("CFURLCopyFileSystemPath")
-    public static native String copyFileSystemPath(CFURL anURL, CFURLPathStyle pathStyle);
+    public static native String copyFileSystemPath(CFURL anURL, @Representing("CFURLPathStyle") long pathStyle);
     @GlobalFunction("CFURLHasDirectoryPath")
     public static native boolean hasDirectoryPath(CFURL anURL);
     @GlobalFunction("CFURLCopyResourceSpecifier")
@@ -100,7 +100,7 @@ public class CFURL
     @GlobalFunction("CFURLGetBytes")
     public static native @MachineSizedSInt long getBytes(CFURL url, Todo buffer, @MachineSizedSInt long bufferLength);
     @GlobalFunction("CFURLGetByteRangeForComponent")
-    public static native CFRange getByteRangeForComponent(CFURL url, CFURLComponentType component, CFRange rangeIncludingSeparators);
+    public static native CFRange getByteRangeForComponent(CFURL url, @Representing("CFURLComponentType") long component, CFRange rangeIncludingSeparators);
     @GlobalFunction("CFURLCreateStringByReplacingPercentEscapes")
     public static native String createStringByReplacingPercentEscapes(CFAllocator allocator, String originalString, String charactersToLeaveEscaped);
     @GlobalFunction("CFURLCreateStringByReplacingPercentEscapesUsingEncoding")
@@ -166,12 +166,12 @@ public class CFURL
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CFURLCreateBookmarkData")
-    public static native CFData createBookmarkData(CFAllocator allocator, CFURL url, CFURLBookmarkCreationOptions options, CFArray resourcePropertiesToInclude, CFURL relativeToURL, Todo error);
+    public static native CFData createBookmarkData(CFAllocator allocator, CFURL url, @Representing("CFURLBookmarkCreationOptions") long options, CFArray resourcePropertiesToInclude, CFURL relativeToURL, Todo error);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CFURLCreateByResolvingBookmarkData")
-    public static native CFURL createByResolvingBookmarkData(CFAllocator allocator, CFData bookmark, CFURLBookmarkResolutionOptions options, CFURL relativeToURL, CFArray resourcePropertiesToInclude, Todo isStale, Todo error);
+    public static native CFURL createByResolvingBookmarkData(CFAllocator allocator, CFData bookmark, @Representing("CFURLBookmarkResolutionOptions") long options, CFURL relativeToURL, CFArray resourcePropertiesToInclude, Todo isStale, Todo error);
     /**
      * @since Available in iOS 4.0 and later.
      */

@@ -91,22 +91,22 @@ public class CFString
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFStringCompareWithOptionsAndLocale")
-    public static native CFComparisonResult compareWithOptionsAndLocale(String theString1, String theString2, CFRange rangeToCompare, CFStringCompareFlags compareOptions, CFLocale locale);
+    public static native CFComparisonResult compareWithOptionsAndLocale(String theString1, String theString2, CFRange rangeToCompare, @Representing("CFStringCompareFlags") long compareOptions, CFLocale locale);
     @GlobalFunction("CFStringCompareWithOptions")
-    public static native CFComparisonResult compareWithOptions(String theString1, String theString2, CFRange rangeToCompare, CFStringCompareFlags compareOptions);
+    public static native CFComparisonResult compareWithOptions(String theString1, String theString2, CFRange rangeToCompare, @Representing("CFStringCompareFlags") long compareOptions);
     @GlobalFunction("CFStringCompare")
-    public static native CFComparisonResult compare(String theString1, String theString2, CFStringCompareFlags compareOptions);
+    public static native CFComparisonResult compare(String theString1, String theString2, @Representing("CFStringCompareFlags") long compareOptions);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFStringFindWithOptionsAndLocale")
-    public static native boolean findWithOptionsAndLocale(String theString, String stringToFind, CFRange rangeToSearch, CFStringCompareFlags searchOptions, CFLocale locale, CFRange result);
+    public static native boolean findWithOptionsAndLocale(String theString, String stringToFind, CFRange rangeToSearch, @Representing("CFStringCompareFlags") long searchOptions, CFLocale locale, CFRange result);
     @GlobalFunction("CFStringFindWithOptions")
-    public static native boolean findWithOptions(String theString, String stringToFind, CFRange rangeToSearch, CFStringCompareFlags searchOptions, CFRange result);
+    public static native boolean findWithOptions(String theString, String stringToFind, CFRange rangeToSearch, @Representing("CFStringCompareFlags") long searchOptions, CFRange result);
     @GlobalFunction("CFStringCreateArrayWithFindResults")
-    public static native CFArray createArrayWithFindResults(CFAllocator alloc, String theString, String stringToFind, CFRange rangeToSearch, CFStringCompareFlags compareOptions);
+    public static native CFArray createArrayWithFindResults(CFAllocator alloc, String theString, String stringToFind, CFRange rangeToSearch, @Representing("CFStringCompareFlags") long compareOptions);
     @GlobalFunction("CFStringFind")
-    public static native CFRange find(String theString, String stringToFind, CFStringCompareFlags compareOptions);
+    public static native CFRange find(String theString, String stringToFind, @Representing("CFStringCompareFlags") long compareOptions);
     @GlobalFunction("CFStringHasPrefix")
     public static native boolean hasPrefix(String theString, String prefix);
     @GlobalFunction("CFStringHasSuffix")
@@ -114,7 +114,7 @@ public class CFString
     @GlobalFunction("CFStringGetRangeOfComposedCharactersAtIndex")
     public static native CFRange getRangeOfComposedCharactersAtIndex(String theString, @MachineSizedSInt long theIndex);
     @GlobalFunction("CFStringFindCharacterFromSet")
-    public static native boolean findCharacterFromSet(String theString, CFCharacterSet theSet, CFRange rangeToSearch, CFStringCompareFlags searchOptions, CFRange result);
+    public static native boolean findCharacterFromSet(String theString, CFCharacterSet theSet, CFRange rangeToSearch, @Representing("CFStringCompareFlags") long searchOptions, CFRange result);
     @GlobalFunction("CFStringGetLineBounds")
     public static native void getLineBounds(String theString, CFRange range, Todo lineBeginIndex, Todo lineEndIndex, Todo contentsEndIndex);
     /**

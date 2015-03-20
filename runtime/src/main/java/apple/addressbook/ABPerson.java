@@ -76,7 +76,7 @@ public class ABPerson
     @GlobalFunction("ABPersonRemoveImageData")
     public static native boolean removeImageData(ABRecord person, Todo error);
     @GlobalFunction("ABPersonComparePeopleByName")
-    public static native CFComparisonResult compareTo(ABRecord person1, ABRecord person2, ABPersonSortOrdering ordering);
+    public static native CFComparisonResult compareTo(ABRecord person1, ABRecord person2, @Representing("ABPersonSortOrdering") long ordering);
     /**
      * @since Available in iOS 5.0 and later.
      */

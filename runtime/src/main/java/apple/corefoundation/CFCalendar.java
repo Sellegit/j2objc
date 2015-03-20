@@ -54,17 +54,17 @@ public class CFCalendar
     @GlobalFunction("CFCalendarSetMinimumDaysInFirstWeek")
     public static native void setMinimumDaysInFirstWeek(CFCalendar calendar, @MachineSizedSInt long mwd);
     @GlobalFunction("CFCalendarGetMinimumRangeOfUnit")
-    public static native CFRange getMinimumRangeOfUnit(CFCalendar calendar, CFCalendarUnit unit);
+    public static native CFRange getMinimumRangeOfUnit(CFCalendar calendar, @Representing("CFCalendarUnit") long unit);
     @GlobalFunction("CFCalendarGetMaximumRangeOfUnit")
-    public static native CFRange getMaximumRangeOfUnit(CFCalendar calendar, CFCalendarUnit unit);
+    public static native CFRange getMaximumRangeOfUnit(CFCalendar calendar, @Representing("CFCalendarUnit") long unit);
     @GlobalFunction("CFCalendarGetRangeOfUnit")
-    public static native CFRange getRangeOfUnit(CFCalendar calendar, CFCalendarUnit smallerUnit, CFCalendarUnit biggerUnit, double at);
+    public static native CFRange getRangeOfUnit(CFCalendar calendar, @Representing("CFCalendarUnit") long smallerUnit, @Representing("CFCalendarUnit") long biggerUnit, double at);
     @GlobalFunction("CFCalendarGetOrdinalityOfUnit")
-    public static native @MachineSizedSInt long getOrdinalityOfUnit(CFCalendar calendar, CFCalendarUnit smallerUnit, CFCalendarUnit biggerUnit, double at);
+    public static native @MachineSizedSInt long getOrdinalityOfUnit(CFCalendar calendar, @Representing("CFCalendarUnit") long smallerUnit, @Representing("CFCalendarUnit") long biggerUnit, double at);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFCalendarGetTimeRangeOfUnit")
-    public static native boolean getTimeRangeOfUnit(CFCalendar calendar, CFCalendarUnit unit, double at, Todo startp, Todo tip);
+    public static native boolean getTimeRangeOfUnit(CFCalendar calendar, @Representing("CFCalendarUnit") long unit, double at, Todo startp, Todo tip);
     
 }

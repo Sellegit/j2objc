@@ -52,7 +52,7 @@ public class CFHost
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFHostStartInfoResolution")
-    public static native boolean startInfoResolution(CFHost theHost, CFHostInfoType info, Todo error);
+    public static native boolean startInfoResolution(CFHost theHost, @Representing("CFHostInfoType") long info, Todo error);
     /**
      * @since Available in iOS 2.0 and later.
      */
@@ -72,7 +72,7 @@ public class CFHost
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFHostCancelInfoResolution")
-    public static native void cancelInfoResolution(CFHost theHost, CFHostInfoType info);
+    public static native void cancelInfoResolution(CFHost theHost, @Representing("CFHostInfoType") long info);
     /**
      * @since Available in iOS 2.0 and later.
      */

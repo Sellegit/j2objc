@@ -92,7 +92,7 @@ public class CMTimebase
      * @since Available in iOS 6.0 and later.
      */
     @GlobalFunction("CMTimebaseGetTimeWithTimeScale")
-    public static native CMTime getTime(CMTimebase timebase, int timescale, CMTimeRoundingMethod method);
+    public static native CMTime getTime(CMTimebase timebase, int timescale, @Representing("CMTimeRoundingMethod") long method);
     /**
      * @since Available in iOS 6.0 and later.
      */

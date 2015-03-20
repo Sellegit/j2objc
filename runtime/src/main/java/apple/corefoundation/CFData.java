@@ -49,6 +49,6 @@ public class CFData
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CFDataFind")
-    public static native CFRange find(CFData theData, CFData dataToFind, CFRange searchRange, CFDataSearchFlags compareOptions);
+    public static native CFRange find(CFData theData, CFData dataToFind, CFRange searchRange, @Representing("CFDataSearchFlags") long compareOptions);
     
 }

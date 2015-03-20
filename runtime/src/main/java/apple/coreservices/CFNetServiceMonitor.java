@@ -47,7 +47,7 @@ public class CFNetServiceMonitor
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFNetServiceMonitorStart")
-    public static native boolean start(CFNetServiceMonitor monitor, CFNetServiceMonitorType recordType, Todo error);
+    public static native boolean start(CFNetServiceMonitor monitor, @Representing("CFNetServiceMonitorType") long recordType, Todo error);
     /**
      * @since Available in iOS 2.0 and later.
      */

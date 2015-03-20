@@ -85,7 +85,7 @@ public class MKMapRect
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("MKMapRectDivide")
-    public static native void divide(MKMapRect rect, MKMapRect slice, MKMapRect remainder, double amount, CGRectEdge edge);
+    public static native void divide(MKMapRect rect, MKMapRect slice, MKMapRect remainder, double amount, @Representing("CGRectEdge") long edge);
     /**
      * @since Available in iOS 4.0 and later.
      */

@@ -48,21 +48,21 @@ public class NSDecimal
     @GlobalFunction("NSDecimalCompare")
     public static native NSComparisonResult compare(NSDecimal leftOperand, NSDecimal rightOperand);
     @GlobalFunction("NSDecimalRound")
-    public static native void round(NSDecimal result, NSDecimal number, @MachineSizedSInt long scale, NSRoundingMode roundingMode);
+    public static native void round(NSDecimal result, NSDecimal number, @MachineSizedSInt long scale, @Representing("NSRoundingMode") long roundingMode);
     @GlobalFunction("NSDecimalNormalize")
-    public static native NSCalculationError normalize(NSDecimal number1, NSDecimal number2, NSRoundingMode roundingMode);
+    public static native NSCalculationError normalize(NSDecimal number1, NSDecimal number2, @Representing("NSRoundingMode") long roundingMode);
     @GlobalFunction("NSDecimalAdd")
-    public static native NSCalculationError add(NSDecimal result, NSDecimal leftOperand, NSDecimal rightOperand, NSRoundingMode roundingMode);
+    public static native NSCalculationError add(NSDecimal result, NSDecimal leftOperand, NSDecimal rightOperand, @Representing("NSRoundingMode") long roundingMode);
     @GlobalFunction("NSDecimalSubtract")
-    public static native NSCalculationError subtract(NSDecimal result, NSDecimal leftOperand, NSDecimal rightOperand, NSRoundingMode roundingMode);
+    public static native NSCalculationError subtract(NSDecimal result, NSDecimal leftOperand, NSDecimal rightOperand, @Representing("NSRoundingMode") long roundingMode);
     @GlobalFunction("NSDecimalMultiply")
-    public static native NSCalculationError multiply(NSDecimal result, NSDecimal leftOperand, NSDecimal rightOperand, NSRoundingMode roundingMode);
+    public static native NSCalculationError multiply(NSDecimal result, NSDecimal leftOperand, NSDecimal rightOperand, @Representing("NSRoundingMode") long roundingMode);
     @GlobalFunction("NSDecimalDivide")
-    public static native NSCalculationError divide(NSDecimal result, NSDecimal leftOperand, NSDecimal rightOperand, NSRoundingMode roundingMode);
+    public static native NSCalculationError divide(NSDecimal result, NSDecimal leftOperand, NSDecimal rightOperand, @Representing("NSRoundingMode") long roundingMode);
     @GlobalFunction("NSDecimalPower")
-    public static native NSCalculationError power(NSDecimal result, NSDecimal number, @MachineSizedUInt long power, NSRoundingMode roundingMode);
+    public static native NSCalculationError power(NSDecimal result, NSDecimal number, @MachineSizedUInt long power, @Representing("NSRoundingMode") long roundingMode);
     @GlobalFunction("NSDecimalMultiplyByPowerOf10")
-    public static native NSCalculationError multiplyByPowerOf10(NSDecimal result, NSDecimal number, short power, NSRoundingMode roundingMode);
+    public static native NSCalculationError multiplyByPowerOf10(NSDecimal result, NSDecimal number, short power, @Representing("NSRoundingMode") long roundingMode);
     @GlobalFunction("NSDecimalString")
     public static native String toString(NSDecimal dcm, Object locale);
     

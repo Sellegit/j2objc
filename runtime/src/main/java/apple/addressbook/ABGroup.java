@@ -41,7 +41,7 @@ public class ABGroup
     @GlobalFunction("ABGroupCopyArrayOfAllMembers")
     public static native List<ABPerson> getAllMembers(ABRecord group);
     @GlobalFunction("ABGroupCopyArrayOfAllMembersWithSortOrdering")
-    public static native List<ABPerson> getAllMembers(ABRecord group, ABPersonSortOrdering sortOrdering);
+    public static native List<ABPerson> getAllMembers(ABRecord group, @Representing("ABPersonSortOrdering") long sortOrdering);
     @GlobalFunction("ABGroupAddMember")
     public static native boolean addMember(ABRecord group, ABRecord person, Todo error);
     @GlobalFunction("ABGroupRemoveMember")

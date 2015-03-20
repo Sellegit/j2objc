@@ -44,6 +44,6 @@ public class NSPathUtilities
     @GlobalFunction("NSOpenStepRootDirectory")
     public static native String getOpenStepRootDirectory();
     @GlobalFunction("NSSearchPathForDirectoriesInDomains")
-    public static native List<String> getSearchPathForDirectoriesInDomains(NSSearchPathDirectory directory, NSSearchPathDomainMask domainMask, boolean expandTilde);
+    public static native List<String> getSearchPathForDirectoriesInDomains(@Representing("NSSearchPathDirectory") long directory, @Representing("NSSearchPathDomainMask") long domainMask, boolean expandTilde);
     
 }

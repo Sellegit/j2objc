@@ -78,7 +78,7 @@ public class MusicSequence
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("MusicSequenceSetSequenceType")
-    public static native int setSequenceType(OpaqueMusicSequence inSequence, MusicSequenceType inType);
+    public static native int setSequenceType(OpaqueMusicSequence inSequence, @Representing("MusicSequenceType") long inType);
     /**
      * @since Available in iOS 5.0 and later.
      */

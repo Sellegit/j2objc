@@ -40,12 +40,12 @@ public class CTFontManager
      * @since Available in iOS 4.1 and later.
      */
     @GlobalFunction("CTFontManagerRegisterFontsForURL")
-    public static native boolean registerFonts(NSURL fontURL, CTFontManagerScope scope, Todo error);
+    public static native boolean registerFonts(NSURL fontURL, @Representing("CTFontManagerScope") long scope, Todo error);
     /**
      * @since Available in iOS 4.1 and later.
      */
     @GlobalFunction("CTFontManagerUnregisterFontsForURL")
-    public static native boolean unregisterFonts(NSURL fontURL, CTFontManagerScope scope, Todo error);
+    public static native boolean unregisterFonts(NSURL fontURL, @Representing("CTFontManagerScope") long scope, Todo error);
     /**
      * @since Available in iOS 4.1 and later.
      */
@@ -60,11 +60,11 @@ public class CTFontManager
      * @since Available in iOS 4.1 and later.
      */
     @GlobalFunction("CTFontManagerRegisterFontsForURLs")
-    public static native boolean registerFonts(CFArray fontURLs, CTFontManagerScope scope, Todo errors);
+    public static native boolean registerFonts(CFArray fontURLs, @Representing("CTFontManagerScope") long scope, Todo errors);
     /**
      * @since Available in iOS 4.1 and later.
      */
     @GlobalFunction("CTFontManagerUnregisterFontsForURLs")
-    public static native boolean unregisterFonts(CFArray fontURLs, CTFontManagerScope scope, Todo errors);
+    public static native boolean unregisterFonts(CFArray fontURLs, @Representing("CTFontManagerScope") long scope, Todo errors);
     
 }

@@ -63,7 +63,7 @@ public class MusicEventIterator
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("MusicEventIteratorSetEventInfo")
-    public static native int setEventInfo(OpaqueMusicEventIterator inIterator, MusicEventType inEventType, Todo inEventData);
+    public static native int setEventInfo(OpaqueMusicEventIterator inIterator, @Representing("MusicEventType") long inEventType, Todo inEventData);
     /**
      * @since Available in iOS 5.0 and later.
      */

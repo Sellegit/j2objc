@@ -32,7 +32,7 @@ public class CFNumberFormatter
     @GlobalFunction("CFNumberFormatterGetTypeID")
     public static native @MachineSizedUInt long getClassTypeID();
     @GlobalFunction("CFNumberFormatterCreate")
-    public static native CFNumberFormatter create(CFAllocator allocator, CFLocale locale, CFNumberFormatterStyle style);
+    public static native CFNumberFormatter create(CFAllocator allocator, CFLocale locale, @Representing("CFNumberFormatterStyle") long style);
     @GlobalFunction("CFNumberFormatterGetLocale")
     public static native CFLocale getLocale(CFNumberFormatter formatter);
     @GlobalFunction("CFNumberFormatterGetStyle")
@@ -44,11 +44,11 @@ public class CFNumberFormatter
     @GlobalFunction("CFNumberFormatterCreateStringWithNumber")
     public static native String format(CFAllocator allocator, CFNumberFormatter formatter, CFNumber number);
     @GlobalFunction("CFNumberFormatterCreateStringWithValue")
-    public static native String formatValue(CFAllocator allocator, CFNumberFormatter formatter, CFNumberType numberType, Todo valuePtr);
+    public static native String formatValue(CFAllocator allocator, CFNumberFormatter formatter, @Representing("CFNumberType") long numberType, Todo valuePtr);
     @GlobalFunction("CFNumberFormatterCreateNumberFromString")
     public static native CFNumber parse(CFAllocator allocator, CFNumberFormatter formatter, String string, CFRange rangep, @MachineSizedUInt long options);
     @GlobalFunction("CFNumberFormatterGetValueFromString")
-    public static native boolean parseValue(CFNumberFormatter formatter, String string, CFRange rangep, CFNumberType numberType, Todo valuePtr);
+    public static native boolean parseValue(CFNumberFormatter formatter, String string, CFRange rangep, @Representing("CFNumberType") long numberType, Todo valuePtr);
     @GlobalFunction("CFNumberFormatterSetProperty")
     public static native void setProperty(CFNumberFormatter formatter, String key, CFType value);
     @GlobalFunction("CFNumberFormatterCopyProperty")

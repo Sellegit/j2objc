@@ -119,7 +119,7 @@ public class CMTime
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMTimeConvertScale")
-    public static native CMTime convertScale(CMTime time, int newTimescale, CMTimeRoundingMethod method);
+    public static native CMTime convertScale(CMTime time, int newTimescale, @Representing("CMTimeRoundingMethod") long method);
     /**
      * @since Available in iOS 4.0 and later.
      */

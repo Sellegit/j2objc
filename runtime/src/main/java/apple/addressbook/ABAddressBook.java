@@ -94,7 +94,7 @@ public class ABAddressBook
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("ABAddressBookCopyArrayOfAllPeopleInSourceWithSortOrdering")
-    public static native List<ABPerson> getAllPeopleInSource(ABAddressBook addressBook, ABRecord source, ABPersonSortOrdering sortOrdering);
+    public static native List<ABPerson> getAllPeopleInSource(ABAddressBook addressBook, ABRecord source, @Representing("ABPersonSortOrdering") long sortOrdering);
     @GlobalFunction("ABAddressBookCopyPeopleWithName")
     public static native List<ABPerson> getPeople(ABAddressBook addressBook, String name);
     @GlobalFunction("ABAddressBookGetGroupWithRecordID")

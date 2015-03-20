@@ -30,7 +30,7 @@ public class CFPropertyList
     @GlobalFunction("CFPropertyListCreateDeepCopy")
     public static native CFType createDeepCopy(CFAllocator allocator, CFType propertyList, @MachineSizedUInt long mutabilityOption);
     @GlobalFunction("CFPropertyListIsValid")
-    public static native boolean isValid(CFType plist, CFPropertyListFormat format);
+    public static native boolean isValid(CFType plist, @Representing("CFPropertyListFormat") long format);
     /**
      * @since Available in iOS 4.0 and later.
      */
@@ -45,11 +45,11 @@ public class CFPropertyList
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CFPropertyListWrite")
-    public static native @MachineSizedSInt long write(CFType propertyList, CFWriteStream stream, CFPropertyListFormat format, @MachineSizedUInt long options, Todo error);
+    public static native @MachineSizedSInt long write(CFType propertyList, CFWriteStream stream, @Representing("CFPropertyListFormat") long format, @MachineSizedUInt long options, Todo error);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CFPropertyListCreateData")
-    public static native CFData createData(CFAllocator allocator, CFType propertyList, CFPropertyListFormat format, @MachineSizedUInt long options, Todo error);
+    public static native CFData createData(CFAllocator allocator, CFType propertyList, @Representing("CFPropertyListFormat") long format, @MachineSizedUInt long options, Todo error);
     
 }

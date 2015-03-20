@@ -57,7 +57,7 @@ public class CTFontDescriptor
      * @since Available in iOS 7.0 and later.
      */
     @GlobalFunction("CTFontDescriptorCreateCopyWithSymbolicTraits")
-    public static native CTFontDescriptor createCopy(CTFontDescriptor original, CTFontSymbolicTraits symTraitValue, CTFontSymbolicTraits symTraitMask);
+    public static native CTFontDescriptor createCopy(CTFontDescriptor original, @Representing("CTFontSymbolicTraits") long symTraitValue, @Representing("CTFontSymbolicTraits") long symTraitMask);
     /**
      * @since Available in iOS 3.2 and later.
      */

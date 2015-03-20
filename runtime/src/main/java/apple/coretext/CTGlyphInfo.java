@@ -47,7 +47,7 @@ public class CTGlyphInfo
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTGlyphInfoCreateWithCharacterIdentifier")
-    public static native CTGlyphInfo create(short cid, CTCharacterCollection collection, String baseString);
+    public static native CTGlyphInfo create(short cid, @Representing("CTCharacterCollection") long collection, String baseString);
     /**
      * @since Available in iOS 3.2 and later.
      */

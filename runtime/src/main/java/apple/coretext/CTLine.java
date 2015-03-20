@@ -42,7 +42,7 @@ public class CTLine
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTLineCreateTruncatedLine")
-    public static native CTLine createTruncatedLine(CTLine line, double width, CTLineTruncationType truncationType, CTLine truncationToken);
+    public static native CTLine createTruncatedLine(CTLine line, double width, @Representing("CTLineTruncationType") long truncationType, CTLine truncationToken);
     /**
      * @since Available in iOS 3.2 and later.
      */
@@ -82,7 +82,7 @@ public class CTLine
      * @since Available in iOS 6.0 and later.
      */
     @GlobalFunction("CTLineGetBoundsWithOptions")
-    public static native CGRect getBounds(CTLine line, CTLineBoundsOptions options);
+    public static native CGRect getBounds(CTLine line, @Representing("CTLineBoundsOptions") long options);
     /**
      * @since Available in iOS 3.2 and later.
      */

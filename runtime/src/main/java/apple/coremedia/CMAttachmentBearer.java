@@ -36,7 +36,7 @@ public class CMAttachmentBearer
      * @since Available in iOS 4.0  and later.
      */
     @GlobalFunction("CMSetAttachment")
-    public static native void setAttachment(CMAttachmentBearer target, String key, CFType value, CMAttachmentMode attachmentMode);
+    public static native void setAttachment(CMAttachmentBearer target, String key, CFType value, @Representing("CMAttachmentMode") long attachmentMode);
     /**
      * @since Available in iOS 4.0  and later.
      */
@@ -56,12 +56,12 @@ public class CMAttachmentBearer
      * @since Available in iOS 4.0  and later.
      */
     @GlobalFunction("CMCopyDictionaryOfAttachments")
-    public static native CFDictionary getAttachments(CFAllocator allocator, CMAttachmentBearer target, CMAttachmentMode attachmentMode);
+    public static native CFDictionary getAttachments(CFAllocator allocator, CMAttachmentBearer target, @Representing("CMAttachmentMode") long attachmentMode);
     /**
      * @since Available in iOS 4.0  and later.
      */
     @GlobalFunction("CMSetAttachments")
-    public static native void setAttachments(CMAttachmentBearer target, NSDictionary<?, ?> theAttachments, CMAttachmentMode attachmentMode);
+    public static native void setAttachments(CMAttachmentBearer target, NSDictionary<?, ?> theAttachments, @Representing("CMAttachmentMode") long attachmentMode);
     /**
      * @since Available in iOS 4.0  and later.
      */

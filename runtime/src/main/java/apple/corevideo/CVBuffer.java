@@ -32,7 +32,7 @@ public class CVBuffer
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CVBufferSetAttachment")
-    public static native void setAttachment(CVBuffer buffer, CFString key, CFType value, CVAttachmentMode attachmentMode);
+    public static native void setAttachment(CVBuffer buffer, CFString key, CFType value, @Representing("CVAttachmentMode") long attachmentMode);
     /**
      * @since Available in iOS 4.0 and later.
      */
@@ -52,12 +52,12 @@ public class CVBuffer
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CVBufferGetAttachments")
-    public static native NSDictionary<NSString, ?> getAttachments(CVBuffer buffer, CVAttachmentMode attachmentMode);
+    public static native NSDictionary<NSString, ?> getAttachments(CVBuffer buffer, @Representing("CVAttachmentMode") long attachmentMode);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CVBufferSetAttachments")
-    public static native void setAttachments(CVBuffer buffer, CFDictionary theAttachments, CVAttachmentMode attachmentMode);
+    public static native void setAttachments(CVBuffer buffer, CFDictionary theAttachments, @Representing("CVAttachmentMode") long attachmentMode);
     /**
      * @since Available in iOS 4.0 and later.
      */

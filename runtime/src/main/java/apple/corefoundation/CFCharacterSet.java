@@ -32,7 +32,7 @@ public class CFCharacterSet
     @GlobalFunction("CFCharacterSetGetTypeID")
     public static native @MachineSizedUInt long getClassTypeID();
     @GlobalFunction("CFCharacterSetGetPredefined")
-    public static native CFCharacterSet getPredefined(CFCharacterSetPredefinedSet theSetIdentifier);
+    public static native CFCharacterSet getPredefined(@Representing("CFCharacterSetPredefinedSet") long theSetIdentifier);
     @GlobalFunction("CFCharacterSetCreateWithCharactersInRange")
     public static native CFCharacterSet create(CFAllocator alloc, CFRange theRange);
     @GlobalFunction("CFCharacterSetCreateWithCharactersInString")

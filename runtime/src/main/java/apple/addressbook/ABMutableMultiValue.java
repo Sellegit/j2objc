@@ -27,7 +27,7 @@ public class ABMutableMultiValue
     
     
     @GlobalFunction("ABMultiValueCreateMutable")
-    public static native ABMutableMultiValue create(ABPropertyType type);
+    public static native ABMutableMultiValue create(@Representing("ABPropertyType") long type);
     @GlobalFunction("ABMultiValueCreateMutableCopy")
     public static native ABMutableMultiValue create(ABMultiValue multiValue);
     @GlobalFunction("ABMultiValueAddValueAndLabel")

@@ -47,6 +47,6 @@ public class CTParagraphStyle
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTParagraphStyleGetValueForSpecifier")
-    public static native boolean getValueForSpecifier(CTParagraphStyle paragraphStyle, CTParagraphStyleSpecifier spec, @MachineSizedUInt long valueBufferSize, Todo valueBuffer);
+    public static native boolean getValueForSpecifier(CTParagraphStyle paragraphStyle, @Representing("CTParagraphStyleSpecifier") long spec, @MachineSizedUInt long valueBufferSize, Todo valueBuffer);
     
 }

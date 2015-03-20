@@ -38,12 +38,12 @@ public class CFURLEnumerator
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CFURLEnumeratorCreateForDirectoryURL")
-    public static native CFURLEnumerator createForDirectoryURL(CFAllocator alloc, CFURL directoryURL, CFURLEnumeratorOptions option, CFArray propertyKeys);
+    public static native CFURLEnumerator createForDirectoryURL(CFAllocator alloc, CFURL directoryURL, @Representing("CFURLEnumeratorOptions") long option, CFArray propertyKeys);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CFURLEnumeratorCreateForMountedVolumes")
-    public static native CFURLEnumerator createForMountedVolumes(CFAllocator alloc, CFURLEnumeratorOptions option, CFArray propertyKeys);
+    public static native CFURLEnumerator createForMountedVolumes(CFAllocator alloc, @Representing("CFURLEnumeratorOptions") long option, CFArray propertyKeys);
     /**
      * @since Available in iOS 4.0 and later.
      */

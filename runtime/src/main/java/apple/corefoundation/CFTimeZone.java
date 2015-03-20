@@ -81,6 +81,6 @@ public class CFTimeZone
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFTimeZoneCopyLocalizedName")
-    public static native String getLocalizedName(CFTimeZone tz, CFTimeZoneNameStyle style, CFLocale locale);
+    public static native String getLocalizedName(CFTimeZone tz, @Representing("CFTimeZoneNameStyle") long style, CFLocale locale);
     
 }

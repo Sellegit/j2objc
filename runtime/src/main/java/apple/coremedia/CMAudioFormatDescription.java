@@ -74,7 +74,7 @@ public class CMAudioFormatDescription
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMAudioFormatDescriptionEqual")
-    public static native boolean equalsTo(CMAudioFormatDescription desc1, CMAudioFormatDescription desc2, CMAudioFormatDescriptionMask equalityMask, Todo equalityMaskOut);
+    public static native boolean equalsTo(CMAudioFormatDescription desc1, CMAudioFormatDescription desc2, @Representing("CMAudioFormatDescriptionMask") long equalityMask, Todo equalityMaskOut);
     /**
      * @since Available in iOS 8.0 and later.
      */

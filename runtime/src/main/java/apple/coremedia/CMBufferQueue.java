@@ -141,12 +141,12 @@ public class CMBufferQueue
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMBufferQueueInstallTrigger")
-    public static native CMBufferQueueError installTrigger(CMBufferQueue queue, FunctionPtr triggerCallback, Todo triggerRefcon, CMBufferQueueTriggerCondition triggerCondition, CMTime triggerTime, Todo triggerTokenOut);
+    public static native CMBufferQueueError installTrigger(CMBufferQueue queue, FunctionPtr triggerCallback, Todo triggerRefcon, @Representing("CMBufferQueueTriggerCondition") long triggerCondition, CMTime triggerTime, Todo triggerTokenOut);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMBufferQueueInstallTriggerWithIntegerThreshold")
-    public static native CMBufferQueueError installTrigger(CMBufferQueue queue, FunctionPtr triggerCallback, Todo triggerRefcon, CMBufferQueueTriggerCondition triggerCondition, @MachineSizedSInt long triggerThreshold, Todo triggerTokenOut);
+    public static native CMBufferQueueError installTrigger(CMBufferQueue queue, FunctionPtr triggerCallback, Todo triggerRefcon, @Representing("CMBufferQueueTriggerCondition") long triggerCondition, @MachineSizedSInt long triggerThreshold, Todo triggerTokenOut);
     /**
      * @since Available in iOS 4.0 and later.
      */

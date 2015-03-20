@@ -34,12 +34,12 @@ public class CMMetadataFormatDescription
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMMetadataFormatDescriptionCreateWithKeys")
-    public static native int createWithKeys(CFAllocator allocator, CMMetadataFormatType metadataType, NSArray<?> keys, Todo outDesc);
+    public static native int createWithKeys(CFAllocator allocator, @Representing("CMMetadataFormatType") long metadataType, NSArray<?> keys, Todo outDesc);
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalFunction("CMMetadataFormatDescriptionCreateWithMetadataSpecifications")
-    public static native int createWithMetadataSpecifications(CFAllocator allocator, CMMetadataFormatType metadataType, NSArray<?> metadataSpecifications, Todo outDesc);
+    public static native int createWithMetadataSpecifications(CFAllocator allocator, @Representing("CMMetadataFormatType") long metadataType, NSArray<?> metadataSpecifications, Todo outDesc);
     /**
      * @since Available in iOS 8.0 and later.
      */

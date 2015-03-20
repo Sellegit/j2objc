@@ -59,12 +59,12 @@ public class CMTextFormatDescription
      * @since Available in iOS 8.0 and later.
      */
     @GlobalFunction("CMTextFormatDescriptionCreateFromBigEndianTextDescriptionData")
-    public static native int createFromBigEndianTextDescriptionData(CFAllocator allocator, Todo textDescriptionData, @MachineSizedUInt long textDescriptionSize, String textDescriptionFlavor, CMMediaType mediaType, Todo textFormatDescriptionOut);
+    public static native int createFromBigEndianTextDescriptionData(CFAllocator allocator, Todo textDescriptionData, @MachineSizedUInt long textDescriptionSize, String textDescriptionFlavor, @Representing("CMMediaType") long mediaType, Todo textFormatDescriptionOut);
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalFunction("CMTextFormatDescriptionCreateFromBigEndianTextDescriptionBlockBuffer")
-    public static native int createFromBigEndianTextDescriptionBlockBuffer(CFAllocator allocator, CMBlockBuffer textDescriptionBlockBuffer, String textDescriptionFlavor, CMMediaType mediaType, Todo textFormatDescriptionOut);
+    public static native int createFromBigEndianTextDescriptionBlockBuffer(CFAllocator allocator, CMBlockBuffer textDescriptionBlockBuffer, String textDescriptionFlavor, @Representing("CMMediaType") long mediaType, Todo textFormatDescriptionOut);
     /**
      * @since Available in iOS 8.0 and later.
      */
