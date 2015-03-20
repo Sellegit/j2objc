@@ -121,7 +121,7 @@ public class UIAccessibilityGlobals
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("UIAccessibilityZoomFocusChanged")
-    public static native void zoomFocusChanged(UIAccessibilityZoomType type, CGRect frame, UIView view);
+    public static native void zoomFocusChanged(@Representing("UIAccessibilityZoomType") long type, CGRect frame, UIView view);
     /**
      * @since Available in iOS 5.0 and later.
      */

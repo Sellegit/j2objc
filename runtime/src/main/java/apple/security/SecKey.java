@@ -53,22 +53,22 @@ public class SecKey
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("SecKeyRawSign")
-    public static native int rawSign(SecKey key, SecPadding padding, Todo dataToSign, @MachineSizedUInt long dataToSignLen, Todo sig, Todo sigLen);
+    public static native int rawSign(SecKey key, @Representing("SecPadding") long padding, Todo dataToSign, @MachineSizedUInt long dataToSignLen, Todo sig, Todo sigLen);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("SecKeyRawVerify")
-    public static native int rawVerify(SecKey key, SecPadding padding, Todo signedData, @MachineSizedUInt long signedDataLen, Todo sig, @MachineSizedUInt long sigLen);
+    public static native int rawVerify(SecKey key, @Representing("SecPadding") long padding, Todo signedData, @MachineSizedUInt long signedDataLen, Todo sig, @MachineSizedUInt long sigLen);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("SecKeyEncrypt")
-    public static native int encrypt(SecKey key, SecPadding padding, Todo plainText, @MachineSizedUInt long plainTextLen, Todo cipherText, Todo cipherTextLen);
+    public static native int encrypt(SecKey key, @Representing("SecPadding") long padding, Todo plainText, @MachineSizedUInt long plainTextLen, Todo cipherText, Todo cipherTextLen);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("SecKeyDecrypt")
-    public static native int decrypt(SecKey key, SecPadding padding, Todo cipherText, @MachineSizedUInt long cipherTextLen, Todo plainText, Todo plainTextLen);
+    public static native int decrypt(SecKey key, @Representing("SecPadding") long padding, Todo cipherText, @MachineSizedUInt long cipherTextLen, Todo plainText, Todo plainTextLen);
     /**
      * @since Available in iOS 2.0 and later.
      */

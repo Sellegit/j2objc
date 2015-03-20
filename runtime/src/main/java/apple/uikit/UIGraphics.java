@@ -38,11 +38,11 @@ public class UIGraphics
     @GlobalFunction("UIGraphicsPopContext")
     public static native void popContext();
     @GlobalFunction("UIRectFillUsingBlendMode")
-    public static native void rectFill(CGRect rect, CGBlendMode blendMode);
+    public static native void rectFill(CGRect rect, @Representing("CGBlendMode") long blendMode);
     @GlobalFunction("UIRectFill")
     public static native void rectFill(CGRect rect);
     @GlobalFunction("UIRectFrameUsingBlendMode")
-    public static native void rectFrame(CGRect rect, CGBlendMode blendMode);
+    public static native void rectFrame(CGRect rect, @Representing("CGBlendMode") long blendMode);
     @GlobalFunction("UIRectFrame")
     public static native void rectFrame(CGRect rect);
     @GlobalFunction("UIRectClip")

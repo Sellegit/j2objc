@@ -34,19 +34,19 @@ public final class CAAnimationExtensions
     
     @ExtensionMapping("usesSceneTimeBase")
     public static native boolean usesSceneTimeBase(CAAnimation thiz);
-    @Mapping("setUsesSceneTimeBase:")
+    @ExtensionMapping("setUsesSceneTimeBase:")
     public static native void setUsesSceneTimeBase(CAAnimation thiz, boolean v);
     @ExtensionMapping("fadeInDuration")
     public static native @MachineSizedFloat double getFadeInDuration(CAAnimation thiz);
-    @Mapping("setFadeInDuration:")
+    @ExtensionMapping("setFadeInDuration:")
     public static native void setFadeInDuration(CAAnimation thiz, @MachineSizedFloat double v);
     @ExtensionMapping("fadeOutDuration")
     public static native @MachineSizedFloat double getFadeOutDuration(CAAnimation thiz);
-    @Mapping("setFadeOutDuration:")
+    @ExtensionMapping("setFadeOutDuration:")
     public static native void setFadeOutDuration(CAAnimation thiz, @MachineSizedFloat double v);
     @ExtensionMapping("animationEvents")
     public static native NSArray<SCNAnimationEvent> getAnimationEvents(CAAnimation thiz);
-    @Mapping("setAnimationEvents:")
+    @ExtensionMapping("setAnimationEvents:")
     public static native void setAnimationEvents(CAAnimation thiz, NSArray<SCNAnimationEvent> v);
     
     
