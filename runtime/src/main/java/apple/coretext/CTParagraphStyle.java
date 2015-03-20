@@ -16,7 +16,7 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreText/CoreText.h")
+@Mapping("CTParagraphStyleRef") @Library("CoreText/CoreText.h")
 public class CTParagraphStyle 
     extends CFType 
      {

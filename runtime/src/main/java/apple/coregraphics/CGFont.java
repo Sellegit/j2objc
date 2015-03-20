@@ -17,7 +17,7 @@ import apple.uikit.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreGraphics/CoreGraphics.h")
+@Mapping("CGFontRef") @Library("CoreGraphics/CoreGraphics.h")
 public class CGFont 
     extends CFType 
      {
@@ -47,7 +47,7 @@ public class CGFont
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGFontCreateWithFontName")
-    public static native CGFont create(String name);
+    public static native CGFont create(CFString name);
     /**
      * @since Available in iOS 2.0 and later.
      */
@@ -122,7 +122,7 @@ public class CGFont
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGFontGetGlyphWithGlyphName")
-    public static native char getGlyphWithGlyphName(CGFont font, String name);
+    public static native char getGlyphWithGlyphName(CGFont font, CFString name);
     /**
      * @since Available in iOS 2.0 and later.
      */

@@ -20,12 +20,14 @@ import apple.corevideo.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreMedia/CoreMedia.h")
+@Mapping("CMClockOrTimebaseRef") @Library("CoreMedia/CoreMedia.h")
 public class CMClockOrTimebase 
     extends CFType 
      {
 
     
+    
+    protected CMClockOrTimebase() {}
     
     
     
@@ -34,26 +36,26 @@ public class CMClockOrTimebase
      * @since Available in iOS 6.0 and later.
      */
     @GlobalFunction("CMSyncGetRelativeRate")
-    public static native double getRelativeRate(CFType ofClockOrTimebase, CFType relativeToClockOrTimebase);
+    public static native double getRelativeRate(CMClockOrTimebase ofClockOrTimebase, CMClockOrTimebase relativeToClockOrTimebase);
     /**
      * @since Available in iOS 6.0 and later.
      */
     @GlobalFunction("CMSyncGetRelativeRateAndAnchorTime")
-    public static native int getRelativeRateAndAnchorTime(CFType ofClockOrTimebase, CFType relativeToClockOrTimebase, Todo outRelativeRate, CMTime outOfClockOrTimebaseAnchorTime, CMTime outRelativeToClockOrTimebaseAnchorTime);
+    public static native int getRelativeRateAndAnchorTime(CMClockOrTimebase ofClockOrTimebase, CMClockOrTimebase relativeToClockOrTimebase, Todo outRelativeRate, CMTime outOfClockOrTimebaseAnchorTime, CMTime outRelativeToClockOrTimebaseAnchorTime);
     /**
      * @since Available in iOS 6.0 and later.
      */
     @GlobalFunction("CMSyncConvertTime")
-    public static native CMTime convertTime(CMTime time, CFType fromClockOrTimebase, CFType toClockOrTimebase);
+    public static native CMTime convertTime(CMTime time, CMClockOrTimebase fromClockOrTimebase, CMClockOrTimebase toClockOrTimebase);
     /**
      * @since Available in iOS 6.0 and later.
      */
     @GlobalFunction("CMSyncMightDrift")
-    public static native boolean mightDrift(CFType clockOrTimebase1, CFType clockOrTimebase2);
+    public static native boolean mightDrift(CMClockOrTimebase clockOrTimebase1, CMClockOrTimebase clockOrTimebase2);
     /**
      * @since Available in iOS 6.0 and later.
      */
     @GlobalFunction("CMSyncGetTime")
-    public static native CMTime getTime(CFType clockOrTimebase);
+    public static native CMTime getTime(CMClockOrTimebase clockOrTimebase);
     
 }

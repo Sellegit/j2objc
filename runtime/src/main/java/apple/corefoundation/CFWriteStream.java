@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreFoundation/CoreFoundation.h")
+@Mapping("CFWriteStreamRef") @Library("CoreFoundation/CoreFoundation.h")
 public class CFWriteStream 
     extends CFType 
      {
@@ -51,15 +51,15 @@ public class CFWriteStream
     @GlobalFunction("CFWriteStreamWrite")
     public static native @MachineSizedSInt long write(CFWriteStream stream, Todo buffer, @MachineSizedSInt long bufferLength);
     @GlobalFunction("CFWriteStreamCopyProperty")
-    public static native CFType getProperty(CFWriteStream stream, String propertyName);
+    public static native CFType getProperty(CFWriteStream stream, CFString propertyName);
     @GlobalFunction("CFWriteStreamSetProperty")
-    public static native boolean setProperty(CFWriteStream stream, String propertyName, CFType propertyValue);
+    public static native boolean setProperty(CFWriteStream stream, CFString propertyName, CFType propertyValue);
     @GlobalFunction("CFWriteStreamSetClient")
     public static native boolean setClient(CFWriteStream stream, @MachineSizedUInt long streamEvents, FunctionPtr clientCB, CFStreamClientContext clientContext);
     @GlobalFunction("CFWriteStreamScheduleWithRunLoop")
-    public static native void scheduleInRunLoop(CFWriteStream stream, CFRunLoop runLoop, String runLoopMode);
+    public static native void scheduleInRunLoop(CFWriteStream stream, CFRunLoop runLoop, CFString runLoopMode);
     @GlobalFunction("CFWriteStreamUnscheduleFromRunLoop")
-    public static native void unscheduleFromRunLoop(CFWriteStream stream, CFRunLoop runLoop, String runLoopMode);
+    public static native void unscheduleFromRunLoop(CFWriteStream stream, CFRunLoop runLoop, CFString runLoopMode);
     /**
      * @since Available in iOS 7.0 and later.
      */

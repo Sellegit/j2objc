@@ -18,7 +18,7 @@ import apple.coreaudio.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("MediaToolbox/MediaToolbox.h")
+@Mapping("MTAudioProcessingTapRef") @Library("MediaToolbox/MediaToolbox.h")
 public class MTAudioProcessingTap 
     extends CFType 
      {

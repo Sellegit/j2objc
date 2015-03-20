@@ -16,7 +16,7 @@ import apple.dispatch.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("Security/Security.h")
+@Mapping("SecCertificateRef") @Library("Security/Security.h")
 public class SecCertificate 
     extends CFType 
      {

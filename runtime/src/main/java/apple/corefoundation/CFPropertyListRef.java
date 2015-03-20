@@ -17,22 +17,16 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Mapping("CFNullRef") @Library("CoreFoundation/CoreFoundation.h")
-public class CFNull 
+@Mapping("CFPropertyListRef")
+public class CFPropertyListRef 
     extends CFType 
      {
 
     
     
-    protected CFNull() {}
+    protected CFPropertyListRef() {}
     
     
     
-    
-    @GlobalConstant("kCFNull")
-    public static native CFNull getNull();
-    
-    @GlobalFunction("CFNullGetTypeID")
-    public static native @MachineSizedUInt long getClassTypeID();
     
 }

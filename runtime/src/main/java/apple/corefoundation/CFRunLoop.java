@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreFoundation/CoreFoundation.h")
+@Mapping("CFRunLoopRef") @Library("CoreFoundation/CoreFoundation.h")
 public class CFRunLoop 
     extends CFType 
      {
@@ -36,17 +36,17 @@ public class CFRunLoop
     @GlobalFunction("CFRunLoopGetMain")
     public static native CFRunLoop getMain();
     @GlobalFunction("CFRunLoopCopyCurrentMode")
-    public static native String getCurrentMode(CFRunLoop rl);
+    public static native CFString getCurrentMode(CFRunLoop rl);
     @GlobalFunction("CFRunLoopCopyAllModes")
     public static native List<String> getAllModes(CFRunLoop rl);
     @GlobalFunction("CFRunLoopAddCommonMode")
-    public static native void addCommonMode(CFRunLoop rl, String mode);
+    public static native void addCommonMode(CFRunLoop rl, CFString mode);
     @GlobalFunction("CFRunLoopGetNextTimerFireDate")
-    public static native double getNextTimerFireDate(CFRunLoop rl, String mode);
+    public static native double getNextTimerFireDate(CFRunLoop rl, CFString mode);
     @GlobalFunction("CFRunLoopRun")
     public static native void run();
     @GlobalFunction("CFRunLoopRunInMode")
-    public static native CFRunLoopExitReason runInMode(String mode, double seconds, boolean returnAfterSourceHandled);
+    public static native CFRunLoopExitReason runInMode(CFString mode, double seconds, boolean returnAfterSourceHandled);
     @GlobalFunction("CFRunLoopIsWaiting")
     public static native boolean isWaiting(CFRunLoop rl);
     @GlobalFunction("CFRunLoopWakeUp")
@@ -59,22 +59,22 @@ public class CFRunLoop
     @GlobalFunction("CFRunLoopPerformBlock")
     public static native void performBlock(CFRunLoop rl, CFType mode, @Block Runnable block);
     @GlobalFunction("CFRunLoopContainsSource")
-    public static native boolean containsSource(CFRunLoop rl, CFRunLoopSource source, String mode);
+    public static native boolean containsSource(CFRunLoop rl, CFRunLoopSource source, CFString mode);
     @GlobalFunction("CFRunLoopAddSource")
-    public static native void addSource(CFRunLoop rl, CFRunLoopSource source, String mode);
+    public static native void addSource(CFRunLoop rl, CFRunLoopSource source, CFString mode);
     @GlobalFunction("CFRunLoopRemoveSource")
-    public static native void removeSource(CFRunLoop rl, CFRunLoopSource source, String mode);
+    public static native void removeSource(CFRunLoop rl, CFRunLoopSource source, CFString mode);
     @GlobalFunction("CFRunLoopContainsObserver")
-    public static native boolean containsObserver(CFRunLoop rl, CFRunLoopObserver observer, String mode);
+    public static native boolean containsObserver(CFRunLoop rl, CFRunLoopObserver observer, CFString mode);
     @GlobalFunction("CFRunLoopAddObserver")
-    public static native void addObserver(CFRunLoop rl, CFRunLoopObserver observer, String mode);
+    public static native void addObserver(CFRunLoop rl, CFRunLoopObserver observer, CFString mode);
     @GlobalFunction("CFRunLoopRemoveObserver")
-    public static native void removeObserver(CFRunLoop rl, CFRunLoopObserver observer, String mode);
+    public static native void removeObserver(CFRunLoop rl, CFRunLoopObserver observer, CFString mode);
     @GlobalFunction("CFRunLoopContainsTimer")
-    public static native boolean containsTimer(CFRunLoop rl, CFRunLoopTimer timer, String mode);
+    public static native boolean containsTimer(CFRunLoop rl, CFRunLoopTimer timer, CFString mode);
     @GlobalFunction("CFRunLoopAddTimer")
-    public static native void addTimer(CFRunLoop rl, CFRunLoopTimer timer, String mode);
+    public static native void addTimer(CFRunLoop rl, CFRunLoopTimer timer, CFString mode);
     @GlobalFunction("CFRunLoopRemoveTimer")
-    public static native void removeTimer(CFRunLoop rl, CFRunLoopTimer timer, String mode);
+    public static native void removeTimer(CFRunLoop rl, CFRunLoopTimer timer, CFString mode);
     
 }

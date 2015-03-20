@@ -68,7 +68,7 @@ public class CGSize
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGSizeMakeWithDictionaryRepresentation")
-    public static native boolean fromDictionary(NSDictionary<?, ?> dict, CGSize size);
+    public static native boolean fromDictionary(CFDictionary dict, CGSize size);
     /**
      * @since Available in iOS 2.0 and later.
      */

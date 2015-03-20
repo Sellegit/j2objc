@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreFoundation/CoreFoundation.h")
+@Mapping("CFMessagePortRef") @Library("CoreFoundation/CoreFoundation.h")
 public class CFMessagePort 
     extends CFType 
      {
@@ -32,15 +32,15 @@ public class CFMessagePort
     @GlobalFunction("CFMessagePortGetTypeID")
     public static native @MachineSizedUInt long getClassTypeID();
     @GlobalFunction("CFMessagePortCreateLocal")
-    public static native CFMessagePort createLocal(CFAllocator allocator, String name, FunctionPtr callout, CFMessagePortContext context, Todo shouldFreeInfo);
+    public static native CFMessagePort createLocal(CFAllocator allocator, CFString name, FunctionPtr callout, CFMessagePortContext context, Todo shouldFreeInfo);
     @GlobalFunction("CFMessagePortCreateRemote")
-    public static native CFMessagePort createRemote(CFAllocator allocator, String name);
+    public static native CFMessagePort createRemote(CFAllocator allocator, CFString name);
     @GlobalFunction("CFMessagePortIsRemote")
     public static native boolean isRemote(CFMessagePort ms);
     @GlobalFunction("CFMessagePortGetName")
-    public static native String getName(CFMessagePort ms);
+    public static native CFString getName(CFMessagePort ms);
     @GlobalFunction("CFMessagePortSetName")
-    public static native boolean setName(CFMessagePort ms, String newName);
+    public static native boolean setName(CFMessagePort ms, CFString newName);
     @GlobalFunction("CFMessagePortInvalidate")
     public static native void invalidate(CFMessagePort ms);
     @GlobalFunction("CFMessagePortIsValid")
@@ -50,7 +50,7 @@ public class CFMessagePort
     @GlobalFunction("CFMessagePortSetInvalidationCallBack")
     public static native void setInvalidationCallBack0(CFMessagePort ms, FunctionPtr callout);
     @GlobalFunction("CFMessagePortSendRequest")
-    public static native CFMessagePortErrorCode sendRequest(CFMessagePort remote, int msgid, CFData data, double sendTimeout, double rcvTimeout, String replyMode, Todo returnData);
+    public static native CFMessagePortErrorCode sendRequest(CFMessagePort remote, int msgid, CFData data, double sendTimeout, double rcvTimeout, CFString replyMode, Todo returnData);
     @GlobalFunction("CFMessagePortCreateRunLoopSource")
     public static native CFRunLoopSource createRunLoopSource(CFAllocator allocator, CFMessagePort local, @MachineSizedSInt long order);
     /**

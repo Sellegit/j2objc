@@ -18,22 +18,18 @@ import apple.coreanimation.*;
 import apple.corevideo.*;
 
 
-
-
-
-@Mapping("CMBufferCallbacksStruct") @Library("CoreMedia/CoreMedia.h")
- class CMBufferCallbacksStruct 
-    extends Struct 
+/*<javadoc>*/
+/*</javadoc>*/
+@Mapping("CMTextFormatDescriptionRef")
+public class CMTextFormatDescriptionRef 
+    extends CMFormatDescription 
      {
 
     
-    private CMBufferCallbacksStruct() {}
+    
+    protected CMTextFormatDescriptionRef() {}
     
     
-    @DotMapping("version")
-    public native int getVersion();
-    @DotMapping("dataBecameReadyNotification")
-    public native CFString getDataBecameReadyNotification();
     
     
 }

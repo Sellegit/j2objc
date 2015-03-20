@@ -32,7 +32,7 @@ public class CFType
     @GlobalFunction("CFGetTypeID")
     public static native @MachineSizedUInt long getTypeID(CFType cf);
     @GlobalFunction("CFCopyTypeIDDescription")
-    public static native String getTypeIDDescription(@MachineSizedUInt long type_id);
+    public static native CFString getTypeIDDescription(@MachineSizedUInt long type_id);
     @GlobalFunction("CFRetain")
     public static native CFType retain(CFType cf);
     @GlobalFunction("CFRelease")

@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreFoundation/CoreFoundation.h")
+@Mapping("CFReadStreamRef") @Library("CoreFoundation/CoreFoundation.h")
 public class CFReadStream 
     extends CFType 
      {
@@ -53,15 +53,15 @@ public class CFReadStream
     @GlobalFunction("CFReadStreamGetBuffer")
     public static native Todo getBuffer(CFReadStream stream, @MachineSizedSInt long maxBytesToRead, Todo numBytesRead);
     @GlobalFunction("CFReadStreamCopyProperty")
-    public static native CFType getProperty(CFReadStream stream, String propertyName);
+    public static native CFType getProperty(CFReadStream stream, CFString propertyName);
     @GlobalFunction("CFReadStreamSetProperty")
-    public static native boolean setProperty(CFReadStream stream, String propertyName, CFType propertyValue);
+    public static native boolean setProperty(CFReadStream stream, CFString propertyName, CFType propertyValue);
     @GlobalFunction("CFReadStreamSetClient")
     public static native boolean setClient(CFReadStream stream, @MachineSizedUInt long streamEvents, FunctionPtr clientCB, CFStreamClientContext clientContext);
     @GlobalFunction("CFReadStreamScheduleWithRunLoop")
-    public static native void scheduleInRunLoop(CFReadStream stream, CFRunLoop runLoop, String runLoopMode);
+    public static native void scheduleInRunLoop(CFReadStream stream, CFRunLoop runLoop, CFString runLoopMode);
     @GlobalFunction("CFReadStreamUnscheduleFromRunLoop")
-    public static native void unscheduleFromRunLoop(CFReadStream stream, CFRunLoop runLoop, String runLoopMode);
+    public static native void unscheduleFromRunLoop(CFReadStream stream, CFRunLoop runLoop, CFString runLoopMode);
     /**
      * @since Available in iOS 7.0 and later.
      */

@@ -32,7 +32,7 @@ public class CFStreamPair
     @GlobalFunction("CFStreamCreatePairWithSocket")
     public static native void create(CFAllocator alloc, int sock, Todo readStream, Todo writeStream);
     @GlobalFunction("CFStreamCreatePairWithSocketToHost")
-    public static native void create(CFAllocator alloc, String host, int port, Todo readStream, Todo writeStream);
+    public static native void create(CFAllocator alloc, CFString host, int port, Todo readStream, Todo writeStream);
     @GlobalFunction("CFStreamCreatePairWithPeerSocketSignature")
     public static native void create(CFAllocator alloc, CFSocketSignature signature, Todo readStream, Todo writeStream);
     

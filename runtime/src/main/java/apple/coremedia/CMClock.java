@@ -20,7 +20,7 @@ import apple.corevideo.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreMedia/CoreMedia.h")
+@Mapping("CMClockRef") @Library("CoreMedia/CoreMedia.h")
 public class CMClock 
     extends CMClockOrTimebase 
      {

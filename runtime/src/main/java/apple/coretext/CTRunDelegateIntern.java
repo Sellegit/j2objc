@@ -16,7 +16,7 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreText/CoreText.h")
+@Mapping("CTRunDelegateRef") @Library("CoreText/CoreText.h")
  class CTRunDelegateIntern 
     extends CFType 
      {

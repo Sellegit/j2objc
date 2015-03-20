@@ -18,12 +18,14 @@ import apple.coremedia.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreVideo/CoreVideo.h")
+@Mapping("CVOpenGLESTextureRef") @Library("CoreVideo/CoreVideo.h")
 public class CVOpenGLESTexture 
     extends CVImageBuffer 
      {
 
     
+    
+    protected CVOpenGLESTexture() {}
     
     
     

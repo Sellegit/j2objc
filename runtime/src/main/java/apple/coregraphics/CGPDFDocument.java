@@ -17,7 +17,7 @@ import apple.uikit.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreGraphics/CoreGraphics.h")
+@Mapping("CGPDFDocumentRef") @Library("CoreGraphics/CoreGraphics.h")
 public class CGPDFDocument 
     extends CFType 
      {
@@ -38,7 +38,7 @@ public class CGPDFDocument
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGPDFDocumentCreateWithURL")
-    public static native CGPDFDocument createWithURL(NSURL url);
+    public static native CGPDFDocument createWithURL(CFURL url);
     /**
      * @since Available in iOS 2.0 and later.
      */

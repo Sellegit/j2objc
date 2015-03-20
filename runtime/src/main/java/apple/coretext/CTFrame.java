@@ -16,7 +16,7 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreText/CoreText.h")
+@Mapping("CTFrameRef") @Library("CoreText/CoreText.h")
 public class CTFrame 
     extends CFType 
      {

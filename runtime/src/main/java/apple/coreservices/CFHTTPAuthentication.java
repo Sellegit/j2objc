@@ -16,7 +16,7 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CFNetwork/CFNetwork.h")
+@Mapping("CFHTTPAuthenticationRef") @Library("CFNetwork/CFNetwork.h")
 public class CFHTTPAuthentication 
     extends CFType 
      {
@@ -57,7 +57,7 @@ public class CFHTTPAuthentication
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFHTTPAuthenticationCopyRealm")
-    public static native String getRealm(CFHTTPAuthentication auth);
+    public static native CFString getRealm(CFHTTPAuthentication auth);
     /**
      * @since Available in iOS 2.0 and later.
      */
@@ -67,7 +67,7 @@ public class CFHTTPAuthentication
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFHTTPAuthenticationCopyMethod")
-    public static native String getMethod(CFHTTPAuthentication auth);
+    public static native CFString getMethod(CFHTTPAuthentication auth);
     /**
      * @since Available in iOS 2.0 and later.
      */

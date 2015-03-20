@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreFoundation/CoreFoundation.h")
+@Mapping("CFBagRef") @Library("CoreFoundation/CoreFoundation.h")
 public class CFBag 
     extends CFType 
      {

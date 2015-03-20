@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreFoundation/CoreFoundation.h")
+@Mapping("CFRunLoopObserverRef") @Library("CoreFoundation/CoreFoundation.h")
 public class CFRunLoopObserver 
     extends CFType 
      {

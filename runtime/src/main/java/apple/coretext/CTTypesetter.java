@@ -16,7 +16,7 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreText/CoreText.h")
+@Mapping("CTTypesetterRef") @Library("CoreText/CoreText.h")
 public class CTTypesetter 
     extends CFType 
      {
@@ -37,12 +37,12 @@ public class CTTypesetter
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTTypesetterCreateWithAttributedString")
-    public static native CTTypesetter create(NSAttributedString string);
+    public static native CTTypesetter create(CFAttributedString string);
     /**
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTTypesetterCreateWithAttributedStringAndOptions")
-    public static native CTTypesetter create(NSAttributedString string, CFDictionary options);
+    public static native CTTypesetter create(CFAttributedString string, CFDictionary options);
     /**
      * @since Available in iOS 3.2 and later.
      */

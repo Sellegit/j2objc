@@ -18,12 +18,14 @@ import apple.coremedia.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreVideo/CoreVideo.h")
+@Mapping("CVPixelBufferPoolRef") @Library("CoreVideo/CoreVideo.h")
 public class CVPixelBufferPool 
     extends CFType 
      {
 
     
+    
+    protected CVPixelBufferPool() {}
     
     
     

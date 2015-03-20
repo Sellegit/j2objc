@@ -16,7 +16,7 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreText/CoreText.h")
+@Mapping("CTLineRef") @Library("CoreText/CoreText.h")
 public class CTLine 
     extends CFType 
      {
@@ -37,7 +37,7 @@ public class CTLine
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTLineCreateWithAttributedString")
-    public static native CTLine create(NSAttributedString string);
+    public static native CTLine create(CFAttributedString string);
     /**
      * @since Available in iOS 3.2 and later.
      */

@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreFoundation/CoreFoundation.h")
+@Mapping("CFBitVectorRef") @Library("CoreFoundation/CoreFoundation.h")
 public class CFBitVector 
     extends CFType 
      {

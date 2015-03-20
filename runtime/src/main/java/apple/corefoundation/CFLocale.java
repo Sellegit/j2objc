@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreFoundation/CoreFoundation.h")
+@Mapping("CFLocaleRef") @Library("CoreFoundation/CoreFoundation.h")
 public class CFLocale 
     extends CFType 
      {
@@ -60,44 +60,44 @@ public class CFLocale
     @GlobalFunction("CFLocaleCopyPreferredLanguages")
     public static native List<String> getPreferredLanguages();
     @GlobalFunction("CFLocaleCreateCanonicalLanguageIdentifierFromString")
-    public static native String getCanonicalLanguageIdentifier(CFAllocator allocator, String localeIdentifier);
+    public static native CFString getCanonicalLanguageIdentifier(CFAllocator allocator, CFString localeIdentifier);
     @GlobalFunction("CFLocaleCreateCanonicalLocaleIdentifierFromString")
-    public static native String getCanonicalLocaleIdentifier(CFAllocator allocator, String localeIdentifier);
+    public static native CFString getCanonicalLocaleIdentifier(CFAllocator allocator, CFString localeIdentifier);
     @GlobalFunction("CFLocaleCreateCanonicalLocaleIdentifierFromScriptManagerCodes")
-    public static native String getCanonicalLocaleIdentifier(CFAllocator allocator, short lcode, short rcode);
+    public static native CFString getCanonicalLocaleIdentifier(CFAllocator allocator, short lcode, short rcode);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CFLocaleCreateLocaleIdentifierFromWindowsLocaleCode")
-    public static native String getLocaleIdentifierFromWindowsLocaleCode(CFAllocator allocator, int lcid);
+    public static native CFString getLocaleIdentifierFromWindowsLocaleCode(CFAllocator allocator, int lcid);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CFLocaleGetWindowsLocaleCodeFromLocaleIdentifier")
-    public static native int getWindowsLocaleCodeFromLocaleIdentifier(String localeIdentifier);
+    public static native int getWindowsLocaleCodeFromLocaleIdentifier(CFString localeIdentifier);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CFLocaleGetLanguageCharacterDirection")
-    public static native CFLocaleLanguageDirection getLanguageCharacterDirection(String isoLangCode);
+    public static native CFLocaleLanguageDirection getLanguageCharacterDirection(CFString isoLangCode);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CFLocaleGetLanguageLineDirection")
-    public static native CFLocaleLanguageDirection getLanguageLineDirection(String isoLangCode);
+    public static native CFLocaleLanguageDirection getLanguageLineDirection(CFString isoLangCode);
     @GlobalFunction("CFLocaleCreateComponentsFromLocaleIdentifier")
-    public static native Map<CFLocaleComponent, NSObject> getComponentsFromLocaleIdentifier(CFAllocator allocator, String localeID);
+    public static native Map<CFLocaleComponent, NSObject> getComponentsFromLocaleIdentifier(CFAllocator allocator, CFString localeID);
     @GlobalFunction("CFLocaleCreateLocaleIdentifierFromComponents")
-    public static native String getLocaleIdentifierFromComponents(CFAllocator allocator, CFDictionary dictionary);
+    public static native CFString getLocaleIdentifierFromComponents(CFAllocator allocator, CFDictionary dictionary);
     @GlobalFunction("CFLocaleCreate")
-    public static native CFLocale create(CFAllocator allocator, String localeIdentifier);
+    public static native CFLocale create(CFAllocator allocator, CFString localeIdentifier);
     @GlobalFunction("CFLocaleCreateCopy")
     public static native CFLocale createCopy(CFAllocator allocator, CFLocale locale);
     @GlobalFunction("CFLocaleGetIdentifier")
-    public static native String getIdentifier(CFLocale locale);
+    public static native CFString getIdentifier(CFLocale locale);
     @GlobalFunction("CFLocaleGetValue")
-    public static native CFType getComponent(CFLocale locale, String key);
+    public static native CFType getComponent(CFLocale locale, CFString key);
     @GlobalFunction("CFLocaleCopyDisplayNameForPropertyValue")
-    public static native String getComponentDisplayName(CFLocale displayLocale, String key, String value);
+    public static native CFString getComponentDisplayName(CFLocale displayLocale, CFString key, CFString value);
     
 }

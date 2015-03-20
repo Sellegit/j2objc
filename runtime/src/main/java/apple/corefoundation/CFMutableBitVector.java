@@ -17,12 +17,14 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreFoundation/CoreFoundation.h")
+@Mapping("CFMutableBitVectorRef") @Library("CoreFoundation/CoreFoundation.h")
 public class CFMutableBitVector 
     extends CFBitVector 
      {
 
     
+    
+    protected CFMutableBitVector() {}
     
     
     
@@ -32,16 +34,16 @@ public class CFMutableBitVector
     @GlobalFunction("CFBitVectorCreateMutableCopy")
     public static native CFMutableBitVector createMutableCopy(CFAllocator allocator, @MachineSizedSInt long capacity, CFBitVector bv);
     @GlobalFunction("CFBitVectorSetCount")
-    public static native void setCount(CFBitVector bv, @MachineSizedSInt long count);
+    public static native void setCount(CFMutableBitVector bv, @MachineSizedSInt long count);
     @GlobalFunction("CFBitVectorFlipBitAtIndex")
-    public static native void flipBitAtIndex(CFBitVector bv, @MachineSizedSInt long idx);
+    public static native void flipBitAtIndex(CFMutableBitVector bv, @MachineSizedSInt long idx);
     @GlobalFunction("CFBitVectorFlipBits")
-    public static native void flipBits(CFBitVector bv, CFRange range);
+    public static native void flipBits(CFMutableBitVector bv, CFRange range);
     @GlobalFunction("CFBitVectorSetBitAtIndex")
-    public static native void setBitAtIndex(CFBitVector bv, @MachineSizedSInt long idx, int value);
+    public static native void setBitAtIndex(CFMutableBitVector bv, @MachineSizedSInt long idx, int value);
     @GlobalFunction("CFBitVectorSetBits")
-    public static native void setBits(CFBitVector bv, CFRange range, int value);
+    public static native void setBits(CFMutableBitVector bv, CFRange range, int value);
     @GlobalFunction("CFBitVectorSetAllBits")
-    public static native void setAllBits(CFBitVector bv, int value);
+    public static native void setAllBits(CFMutableBitVector bv, int value);
     
 }

@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreFoundation/CoreFoundation.h")
+@Mapping("CFDictionaryRef") @Library("CoreFoundation/CoreFoundation.h")
 public class CFDictionary 
     extends CFPropertyList 
      {

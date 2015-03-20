@@ -17,12 +17,14 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreFoundation/CoreFoundation.h")
+@Mapping("CFPlugInRef") @Library("CoreFoundation/CoreFoundation.h")
 public class CFPlugIn 
     extends CFType 
      {
 
     
+    
+    protected CFPlugIn() {}
     
     
     
@@ -44,7 +46,7 @@ public class CFPlugIn
     @GlobalFunction("CFPlugInRegisterFactoryFunction")
     public static native boolean registerFactoryFunction(CFUUID factoryUUID, FunctionPtr func);
     @GlobalFunction("CFPlugInRegisterFactoryFunctionByName")
-    public static native boolean registerFactoryFunctionByName(CFUUID factoryUUID, CFPlugIn plugIn, String functionName);
+    public static native boolean registerFactoryFunctionByName(CFUUID factoryUUID, CFPlugIn plugIn, CFString functionName);
     @GlobalFunction("CFPlugInUnregisterFactory")
     public static native boolean unregisterFactory(CFUUID factoryUUID);
     @GlobalFunction("CFPlugInRegisterPlugInType")

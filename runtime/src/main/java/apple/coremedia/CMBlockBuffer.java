@@ -20,7 +20,7 @@ import apple.corevideo.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreMedia/CoreMedia.h")
+@Mapping("CMBlockBufferRef") @Library("CoreMedia/CoreMedia.h")
 public class CMBlockBuffer 
     extends CFType 
      {

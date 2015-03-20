@@ -16,7 +16,7 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreText/CoreText.h")
+@Mapping("CTFontCollectionRef") @Library("CoreText/CoreText.h")
 public class CTFontCollection 
     extends CFType 
      {

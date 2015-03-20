@@ -18,7 +18,7 @@ import apple.foundation.*;
 /*</javadoc>*/
 @Library("CFNetwork/CFNetwork.h")
 public class CFHTTPStream 
-    extends CFReadStream 
+    extends Object 
      {
 
     

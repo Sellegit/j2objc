@@ -16,7 +16,7 @@ import apple.dispatch.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("Security/Security.h")
+@Mapping("SSLContextRef") @Library("Security/Security.h")
 public class SSLContext 
     extends CFType 
      {

@@ -16,7 +16,7 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreText/CoreText.h")
+@Mapping("CTFontDescriptorRef") @Library("CoreText/CoreText.h")
 public class CTFontDescriptor 
     extends CFType 
      {
@@ -37,7 +37,7 @@ public class CTFontDescriptor
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTFontDescriptorCreateWithNameAndSize")
-    public static native CTFontDescriptor create(String name, @MachineSizedFloat double size);
+    public static native CTFontDescriptor create(CFString name, @MachineSizedFloat double size);
     /**
      * @since Available in iOS 3.2 and later.
      */
@@ -52,7 +52,7 @@ public class CTFontDescriptor
      * @since Available in iOS 7.0 and later.
      */
     @GlobalFunction("CTFontDescriptorCreateCopyWithFamily")
-    public static native CTFontDescriptor createCopy(CTFontDescriptor original, String family);
+    public static native CTFontDescriptor createCopy(CTFontDescriptor original, CFString family);
     /**
      * @since Available in iOS 7.0 and later.
      */
@@ -92,11 +92,11 @@ public class CTFontDescriptor
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTFontDescriptorCopyAttribute")
-    public static native CFType getAttribute(CTFontDescriptor descriptor, String attribute);
+    public static native CFType getAttribute(CTFontDescriptor descriptor, CFString attribute);
     /**
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTFontDescriptorCopyLocalizedAttribute")
-    public static native CFType getLocalizedAttribute(CTFontDescriptor descriptor, String attribute, Todo language);
+    public static native CFType getLocalizedAttribute(CTFontDescriptor descriptor, CFString attribute, Todo language);
     
 }

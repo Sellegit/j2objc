@@ -183,7 +183,7 @@ public class CGRect
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGRectMakeWithDictionaryRepresentation")
-    public static native boolean fromDictionary(NSDictionary<?, ?> dict, CGRect rect);
+    public static native boolean fromDictionary(CFDictionary dict, CGRect rect);
     /**
      * @since Available in iOS 2.0 and later.
      */

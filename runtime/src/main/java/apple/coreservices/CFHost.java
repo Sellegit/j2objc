@@ -16,7 +16,7 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CFNetwork/CFNetwork.h")
+@Mapping("CFHostRef") @Library("CFNetwork/CFNetwork.h")
 public class CFHost 
     extends CFType 
      {
@@ -37,12 +37,12 @@ public class CFHost
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFHostCreateWithName")
-    public static native CFHost create(CFAllocator allocator, String hostname);
+    public static native CFHost create(CFAllocator allocator, CFString hostname);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFHostCreateWithAddress")
-    public static native CFHost create(CFAllocator allocator, NSData addr);
+    public static native CFHost create(CFAllocator allocator, CFData addr);
     /**
      * @since Available in iOS 2.0 and later.
      */
@@ -67,7 +67,7 @@ public class CFHost
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFHostGetReachability")
-    public static native NSData getReachability(CFHost theHost, Todo hasBeenResolved);
+    public static native CFData getReachability(CFHost theHost, Todo hasBeenResolved);
     /**
      * @since Available in iOS 2.0 and later.
      */
@@ -82,12 +82,12 @@ public class CFHost
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFHostScheduleWithRunLoop")
-    public static native void schedule(CFHost theHost, CFRunLoop runLoop, String runLoopMode);
+    public static native void schedule(CFHost theHost, CFRunLoop runLoop, CFString runLoopMode);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFHostUnscheduleFromRunLoop")
-    public static native void unschedule(CFHost theHost, CFRunLoop runLoop, String runLoopMode);
+    public static native void unschedule(CFHost theHost, CFRunLoop runLoop, CFString runLoopMode);
     /**
      * @since Available in iOS 2.0 and later.
      */

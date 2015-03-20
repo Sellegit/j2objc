@@ -17,7 +17,7 @@ import apple.uikit.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreGraphics/CoreGraphics.h")
+@Mapping("CGDataProviderRef") @Library("CoreGraphics/CoreGraphics.h")
 public class CGDataProvider 
     extends CFType 
      {
@@ -38,12 +38,12 @@ public class CGDataProvider
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGDataProviderCreateWithCFData")
-    public static native CGDataProvider create(NSData data);
+    public static native CGDataProvider create(CFData data);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGDataProviderCreateWithURL")
-    public static native CGDataProvider create(NSURL url);
+    public static native CGDataProvider create(CFURL url);
     /**
      * @since Available in iOS 2.0 and later.
      */

@@ -16,7 +16,7 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreText/CoreText.h")
+@Mapping("CTFramesetterRef") @Library("CoreText/CoreText.h")
 public class CTFramesetter 
     extends CFType 
      {
@@ -37,7 +37,7 @@ public class CTFramesetter
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTFramesetterCreateWithAttributedString")
-    public static native CTFramesetter create(NSAttributedString string);
+    public static native CTFramesetter create(CFAttributedString string);
     /**
      * @since Available in iOS 3.2 and later.
      */

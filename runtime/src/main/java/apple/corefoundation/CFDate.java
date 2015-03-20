@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreFoundation/CoreFoundation.h")
+@Mapping("CFDateRef") @Library("CoreFoundation/CoreFoundation.h")
 public class CFDate 
     extends CFPropertyList 
      {

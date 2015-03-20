@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreFoundation/CoreFoundation.h")
+@Mapping("CFStringTokenizerRef") @Library("CoreFoundation/CoreFoundation.h")
 public class CFStringTokenizer 
     extends CFType 
      {
@@ -33,7 +33,7 @@ public class CFStringTokenizer
      * @since Available in iOS 3.0 and later.
      */
     @GlobalFunction("CFStringTokenizerCopyBestStringLanguage")
-    public static native String getBestStringLanguage(String string, CFRange range);
+    public static native CFString getBestStringLanguage(CFString string, CFRange range);
     /**
      * @since Available in iOS 3.0 and later.
      */
@@ -43,12 +43,12 @@ public class CFStringTokenizer
      * @since Available in iOS 3.0 and later.
      */
     @GlobalFunction("CFStringTokenizerCreate")
-    public static native CFStringTokenizer create(CFAllocator alloc, String string, CFRange range, @MachineSizedUInt long options, CFLocale locale);
+    public static native CFStringTokenizer create(CFAllocator alloc, CFString string, CFRange range, @MachineSizedUInt long options, CFLocale locale);
     /**
      * @since Available in iOS 3.0 and later.
      */
     @GlobalFunction("CFStringTokenizerSetString")
-    public static native void setString(CFStringTokenizer tokenizer, String string, CFRange range);
+    public static native void setString(CFStringTokenizer tokenizer, CFString string, CFRange range);
     /**
      * @since Available in iOS 3.0 and later.
      */
@@ -73,6 +73,6 @@ public class CFStringTokenizer
      * @since Available in iOS 3.0 and later.
      */
     @GlobalFunction("CFStringTokenizerGetCurrentSubTokens")
-    public static native @MachineSizedSInt long getCurrentSubTokens(CFStringTokenizer tokenizer, CFRange ranges, @MachineSizedSInt long maxRangeLength, CFArray derivedSubTokens);
+    public static native @MachineSizedSInt long getCurrentSubTokens(CFStringTokenizer tokenizer, CFRange ranges, @MachineSizedSInt long maxRangeLength, CFMutableArray derivedSubTokens);
     
 }

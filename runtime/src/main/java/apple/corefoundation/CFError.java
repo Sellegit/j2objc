@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreFoundation/CoreFoundation.h")
+@Mapping("CFErrorRef") @Library("CoreFoundation/CoreFoundation.h")
 public class CFError 
     extends CFType 
      {
@@ -38,12 +38,12 @@ public class CFError
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFErrorCreate")
-    public static native CFError create(CFAllocator allocator, String domain, @MachineSizedSInt long code, CFDictionary userInfo);
+    public static native CFError create(CFAllocator allocator, CFString domain, @MachineSizedSInt long code, CFDictionary userInfo);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFErrorGetDomain")
-    public static native String getDomain(CFError err);
+    public static native CFString getDomain(CFError err);
     /**
      * @since Available in iOS 2.0 and later.
      */
@@ -58,11 +58,11 @@ public class CFError
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFErrorCopyFailureReason")
-    public static native String getFailureReason(CFError err);
+    public static native CFString getFailureReason(CFError err);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFErrorCopyRecoverySuggestion")
-    public static native String getRecoverySuggestion(CFError err);
+    public static native CFString getRecoverySuggestion(CFError err);
     
 }

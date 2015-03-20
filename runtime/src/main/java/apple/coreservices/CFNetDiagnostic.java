@@ -16,7 +16,7 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CFNetwork/CFNetwork.h")
+@Mapping("CFNetDiagnosticRef") @Library("CFNetwork/CFNetwork.h")
 public class CFNetDiagnostic 
     extends CFType 
      {
@@ -37,12 +37,12 @@ public class CFNetDiagnostic
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFNetDiagnosticCreateWithURL")
-    public static native CFNetDiagnostic create(CFAllocator alloc, NSURL url);
+    public static native CFNetDiagnostic create(CFAllocator alloc, CFURL url);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFNetDiagnosticSetName")
-    public static native void setName(CFNetDiagnostic details, String name);
+    public static native void setName(CFNetDiagnostic details, CFString name);
     /**
      * @since Available in iOS 2.0 and later.
      */

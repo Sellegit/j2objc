@@ -20,7 +20,7 @@ import apple.corevideo.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreMedia/CoreMedia.h")
+@Mapping("CMAttachmentBearerRef") @Library("CoreMedia/CoreMedia.h")
 public class CMAttachmentBearer 
     extends CFType 
      {
@@ -36,17 +36,17 @@ public class CMAttachmentBearer
      * @since Available in iOS 4.0  and later.
      */
     @GlobalFunction("CMSetAttachment")
-    public static native void setAttachment(CMAttachmentBearer target, String key, CFType value, @Representing("CMAttachmentMode") long attachmentMode);
+    public static native void setAttachment(CMAttachmentBearer target, CFString key, CFType value, @Representing("CMAttachmentMode") long attachmentMode);
     /**
      * @since Available in iOS 4.0  and later.
      */
     @GlobalFunction("CMGetAttachment")
-    public static native CFType getAttachment(CMAttachmentBearer target, String key, Todo attachmentModeOut);
+    public static native CFType getAttachment(CMAttachmentBearer target, CFString key, Todo attachmentModeOut);
     /**
      * @since Available in iOS 4.0  and later.
      */
     @GlobalFunction("CMRemoveAttachment")
-    public static native void removeAttachment(CMAttachmentBearer target, String key);
+    public static native void removeAttachment(CMAttachmentBearer target, CFString key);
     /**
      * @since Available in iOS 4.0  and later.
      */
@@ -61,7 +61,7 @@ public class CMAttachmentBearer
      * @since Available in iOS 4.0  and later.
      */
     @GlobalFunction("CMSetAttachments")
-    public static native void setAttachments(CMAttachmentBearer target, NSDictionary<?, ?> theAttachments, @Representing("CMAttachmentMode") long attachmentMode);
+    public static native void setAttachments(CMAttachmentBearer target, CFDictionary theAttachments, @Representing("CMAttachmentMode") long attachmentMode);
     /**
      * @since Available in iOS 4.0  and later.
      */

@@ -20,12 +20,14 @@ import apple.corevideo.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreMedia/CoreMedia.h")
+@Mapping("CMClosedCaptionFormatDescriptionRef") @Library("CoreMedia/CoreMedia.h")
 public class CMClosedCaptionFormatDescription 
     extends CMFormatDescription 
      {
 
     
+    
+    protected CMClosedCaptionFormatDescription() {}
     
     
     
@@ -34,16 +36,16 @@ public class CMClosedCaptionFormatDescription
      * @since Available in iOS 8.0 and later.
      */
     @GlobalFunction("CMClosedCaptionFormatDescriptionCreateFromBigEndianClosedCaptionDescriptionData")
-    public static native int createFromBigEndianClosedCaptionDescriptionData(CFAllocator allocator, Todo closedCaptionDescriptionData, @MachineSizedUInt long closedCaptionDescriptionSize, String closedCaptionDescriptionFlavor, Todo closedCaptionFormatDescriptionOut);
+    public static native int createFromBigEndianClosedCaptionDescriptionData(CFAllocator allocator, Todo closedCaptionDescriptionData, @MachineSizedUInt long closedCaptionDescriptionSize, CFString closedCaptionDescriptionFlavor, Todo closedCaptionFormatDescriptionOut);
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalFunction("CMClosedCaptionFormatDescriptionCreateFromBigEndianClosedCaptionDescriptionBlockBuffer")
-    public static native int createFromBigEndianClosedCaptionDescriptionBlockBuffer(CFAllocator allocator, CMBlockBuffer closedCaptionDescriptionBlockBuffer, String closedCaptionDescriptionFlavor, Todo closedCaptionFormatDescriptionOut);
+    public static native int createFromBigEndianClosedCaptionDescriptionBlockBuffer(CFAllocator allocator, CMBlockBuffer closedCaptionDescriptionBlockBuffer, CFString closedCaptionDescriptionFlavor, Todo closedCaptionFormatDescriptionOut);
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalFunction("CMClosedCaptionFormatDescriptionCopyAsBigEndianClosedCaptionDescriptionBlockBuffer")
-    public static native int copyAsBigEndianClosedCaptionDescriptionBlockBuffer(CFAllocator allocator, CMFormatDescription closedCaptionFormatDescription, String closedCaptionDescriptionFlavor, Todo closedCaptionDescriptionBlockBufferOut);
+    public static native int copyAsBigEndianClosedCaptionDescriptionBlockBuffer(CFAllocator allocator, CMClosedCaptionFormatDescription closedCaptionFormatDescription, CFString closedCaptionDescriptionFlavor, Todo closedCaptionDescriptionBlockBufferOut);
     
 }

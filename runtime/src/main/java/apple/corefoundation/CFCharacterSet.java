@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreFoundation/CoreFoundation.h")
+@Mapping("CFCharacterSetRef") @Library("CoreFoundation/CoreFoundation.h")
 public class CFCharacterSet 
     extends CFType 
      {
@@ -36,7 +36,7 @@ public class CFCharacterSet
     @GlobalFunction("CFCharacterSetCreateWithCharactersInRange")
     public static native CFCharacterSet create(CFAllocator alloc, CFRange theRange);
     @GlobalFunction("CFCharacterSetCreateWithCharactersInString")
-    public static native CFCharacterSet create(CFAllocator alloc, String theString);
+    public static native CFCharacterSet create(CFAllocator alloc, CFString theString);
     @GlobalFunction("CFCharacterSetCreateWithBitmapRepresentation")
     public static native CFCharacterSet create(CFAllocator alloc, CFData theData);
     @GlobalFunction("CFCharacterSetCreateInvertedSet")

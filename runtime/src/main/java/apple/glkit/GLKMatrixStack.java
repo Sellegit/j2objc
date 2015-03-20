@@ -19,7 +19,7 @@ import apple.dispatch.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("GLKit/GLKit.h")
+@Mapping("GLKMatrixStackRef") @Library("GLKit/GLKit.h")
 public class GLKMatrixStack 
     extends CFType 
      {

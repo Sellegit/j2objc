@@ -22,7 +22,7 @@ import apple.corevideo.*;
 /*</javadoc>*/
 @Library("CoreMedia/CoreMedia.h")
 public class CMTextFormatDescription 
-    extends CMFormatDescription 
+    extends Object 
      {
 
     
@@ -59,16 +59,16 @@ public class CMTextFormatDescription
      * @since Available in iOS 8.0 and later.
      */
     @GlobalFunction("CMTextFormatDescriptionCreateFromBigEndianTextDescriptionData")
-    public static native int createFromBigEndianTextDescriptionData(CFAllocator allocator, Todo textDescriptionData, @MachineSizedUInt long textDescriptionSize, String textDescriptionFlavor, @Representing("CMMediaType") long mediaType, Todo textFormatDescriptionOut);
+    public static native int createFromBigEndianTextDescriptionData(CFAllocator allocator, Todo textDescriptionData, @MachineSizedUInt long textDescriptionSize, CFString textDescriptionFlavor, @Representing("CMMediaType") long mediaType, Todo textFormatDescriptionOut);
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalFunction("CMTextFormatDescriptionCreateFromBigEndianTextDescriptionBlockBuffer")
-    public static native int createFromBigEndianTextDescriptionBlockBuffer(CFAllocator allocator, CMBlockBuffer textDescriptionBlockBuffer, String textDescriptionFlavor, @Representing("CMMediaType") long mediaType, Todo textFormatDescriptionOut);
+    public static native int createFromBigEndianTextDescriptionBlockBuffer(CFAllocator allocator, CMBlockBuffer textDescriptionBlockBuffer, CFString textDescriptionFlavor, @Representing("CMMediaType") long mediaType, Todo textFormatDescriptionOut);
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalFunction("CMTextFormatDescriptionCopyAsBigEndianTextDescriptionBlockBuffer")
-    public static native int copyAsBigEndianTextDescriptionBlockBuffer(CFAllocator allocator, CMTextFormatDescription textFormatDescription, String textDescriptionFlavor, Todo textDescriptionBlockBufferOut);
+    public static native int copyAsBigEndianTextDescriptionBlockBuffer(CFAllocator allocator, CMTextFormatDescription textFormatDescription, CFString textDescriptionFlavor, Todo textDescriptionBlockBufferOut);
     
 }

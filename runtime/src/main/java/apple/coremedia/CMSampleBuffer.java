@@ -20,7 +20,7 @@ import apple.corevideo.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreMedia/CoreMedia.h")
+@Mapping("CMSampleBufferRef") @Library("CoreMedia/CoreMedia.h")
 public class CMSampleBuffer 
     extends CFType 
      {

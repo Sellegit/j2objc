@@ -17,7 +17,7 @@ import apple.uikit.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreGraphics/CoreGraphics.h")
+@Mapping("CGImageRef") @Library("CoreGraphics/CoreGraphics.h")
 public class CGImage 
     extends CFType 
      {

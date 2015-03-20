@@ -34,27 +34,27 @@ public class CMMetadataDataType
      * @since Available in iOS 8.0 and later.
      */
     @GlobalFunction("CMMetadataDataTypeRegistryRegisterDataType")
-    public static native CMMetadataDataTypeRegistryError registerDataType(String dataType, String description, NSArray<?> conformingDataTypes);
+    public static native CMMetadataDataTypeRegistryError registerDataType(CFString dataType, CFString description, CFArray conformingDataTypes);
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalFunction("CMMetadataDataTypeRegistryDataTypeIsRegistered")
-    public static native boolean isDataTypeRegistered(String dataType);
+    public static native boolean isDataTypeRegistered(CFString dataType);
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalFunction("CMMetadataDataTypeRegistryGetDataTypeDescription")
-    public static native String getDataTypeDescription(String dataType);
+    public static native CFString getDataTypeDescription(CFString dataType);
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalFunction("CMMetadataDataTypeRegistryGetConformingDataTypes")
-    public static native List<String> getConformingDataTypes(String dataType);
+    public static native List<String> getConformingDataTypes(CFString dataType);
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalFunction("CMMetadataDataTypeRegistryDataTypeConformsToDataType")
-    public static native boolean doesDataTypeConformToDataType(String dataType, String conformsToDataType);
+    public static native boolean doesDataTypeConformToDataType(CFString dataType, CFString conformsToDataType);
     /**
      * @since Available in iOS 8.0 and later.
      */
@@ -64,11 +64,11 @@ public class CMMetadataDataType
      * @since Available in iOS 8.0 and later.
      */
     @GlobalFunction("CMMetadataDataTypeRegistryDataTypeIsBaseDataType")
-    public static native boolean isDataTypeBaseDataType(String dataType);
+    public static native boolean isDataTypeBaseDataType(CFString dataType);
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalFunction("CMMetadataDataTypeRegistryGetBaseDataTypeForConformingDataType")
-    public static native CMMetadataBaseDataType getBaseDataTypeForConformingDataType(String dataType);
+    public static native CMMetadataBaseDataType getBaseDataTypeForConformingDataType(CFString dataType);
     
 }

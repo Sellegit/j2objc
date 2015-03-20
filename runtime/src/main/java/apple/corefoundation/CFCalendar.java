@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreFoundation/CoreFoundation.h")
+@Mapping("CFCalendarRef") @Library("CoreFoundation/CoreFoundation.h")
 public class CFCalendar 
     extends CFType 
      {
@@ -34,7 +34,7 @@ public class CFCalendar
     @GlobalFunction("CFCalendarCopyCurrent")
     public static native CFCalendar getCurrent();
     @GlobalFunction("CFCalendarCreateWithIdentifier")
-    public static native CFCalendar create(CFAllocator allocator, String identifier);
+    public static native CFCalendar create(CFAllocator allocator, CFString identifier);
     @GlobalFunction("CFCalendarGetIdentifier")
     public static native CFCalendarIdentifier getIdentifier(CFCalendar calendar);
     @GlobalFunction("CFCalendarCopyLocale")

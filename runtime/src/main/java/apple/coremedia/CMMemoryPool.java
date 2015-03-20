@@ -20,7 +20,7 @@ import apple.corevideo.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreMedia/CoreMedia.h")
+@Mapping("CMMemoryPoolRef") @Library("CoreMedia/CoreMedia.h")
 public class CMMemoryPool 
     extends CFType 
      {
@@ -41,7 +41,7 @@ public class CMMemoryPool
      * @since Available in iOS 6.0 and later.
      */
     @GlobalFunction("CMMemoryPoolCreate")
-    public static native CMMemoryPool create(NSDictionary<?, ?> options);
+    public static native CMMemoryPool create(CFDictionary options);
     /**
      * @since Available in iOS 6.0 and later.
      */

@@ -533,12 +533,12 @@ public class CGContext
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGContextBeginTransparencyLayer")
-    public static native void beginTransparencyLayer(CGContext context, NSDictionary<?, ?> auxiliaryInfo);
+    public static native void beginTransparencyLayer(CGContext context, CFDictionary auxiliaryInfo);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGContextBeginTransparencyLayerWithRect")
-    public static native void beginTransparencyLayerWithRect(CGContext context, CGRect rect, NSDictionary<?, ?> auxiliaryInfo);
+    public static native void beginTransparencyLayerWithRect(CGContext context, CGRect rect, CFDictionary auxiliaryInfo);
     /**
      * @since Available in iOS 2.0 and later.
      */

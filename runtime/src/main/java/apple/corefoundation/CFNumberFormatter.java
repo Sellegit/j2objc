@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreFoundation/CoreFoundation.h")
+@Mapping("CFNumberFormatterRef") @Library("CoreFoundation/CoreFoundation.h")
 public class CFNumberFormatter 
     extends CFType 
      {
@@ -38,22 +38,22 @@ public class CFNumberFormatter
     @GlobalFunction("CFNumberFormatterGetStyle")
     public static native CFNumberFormatterStyle getStyle(CFNumberFormatter formatter);
     @GlobalFunction("CFNumberFormatterGetFormat")
-    public static native String getFormat(CFNumberFormatter formatter);
+    public static native CFString getFormat(CFNumberFormatter formatter);
     @GlobalFunction("CFNumberFormatterSetFormat")
-    public static native void setFormat(CFNumberFormatter formatter, String formatString);
+    public static native void setFormat(CFNumberFormatter formatter, CFString formatString);
     @GlobalFunction("CFNumberFormatterCreateStringWithNumber")
-    public static native String format(CFAllocator allocator, CFNumberFormatter formatter, CFNumber number);
+    public static native CFString format(CFAllocator allocator, CFNumberFormatter formatter, CFNumber number);
     @GlobalFunction("CFNumberFormatterCreateStringWithValue")
-    public static native String formatValue(CFAllocator allocator, CFNumberFormatter formatter, @Representing("CFNumberType") long numberType, Todo valuePtr);
+    public static native CFString formatValue(CFAllocator allocator, CFNumberFormatter formatter, @Representing("CFNumberType") long numberType, Todo valuePtr);
     @GlobalFunction("CFNumberFormatterCreateNumberFromString")
-    public static native CFNumber parse(CFAllocator allocator, CFNumberFormatter formatter, String string, CFRange rangep, @MachineSizedUInt long options);
+    public static native CFNumber parse(CFAllocator allocator, CFNumberFormatter formatter, CFString string, CFRange rangep, @MachineSizedUInt long options);
     @GlobalFunction("CFNumberFormatterGetValueFromString")
-    public static native boolean parseValue(CFNumberFormatter formatter, String string, CFRange rangep, @Representing("CFNumberType") long numberType, Todo valuePtr);
+    public static native boolean parseValue(CFNumberFormatter formatter, CFString string, CFRange rangep, @Representing("CFNumberType") long numberType, Todo valuePtr);
     @GlobalFunction("CFNumberFormatterSetProperty")
-    public static native void setProperty(CFNumberFormatter formatter, String key, CFType value);
+    public static native void setProperty(CFNumberFormatter formatter, CFString key, CFType value);
     @GlobalFunction("CFNumberFormatterCopyProperty")
-    public static native CFType getProperty(CFNumberFormatter formatter, String key);
+    public static native CFType getProperty(CFNumberFormatter formatter, CFString key);
     @GlobalFunction("CFNumberFormatterGetDecimalInfoForCurrencyCode")
-    public static native boolean getDecimalInfoForCurrencyCode(String currencyCode, Todo defaultFractionDigits, Todo roundingIncrement);
+    public static native boolean getDecimalInfoForCurrencyCode(CFString currencyCode, Todo defaultFractionDigits, Todo roundingIncrement);
     
 }

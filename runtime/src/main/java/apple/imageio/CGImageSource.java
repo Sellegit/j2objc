@@ -16,7 +16,7 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("ImageIO/ImageIO.h")
+@Mapping("CGImageSourceRef") @Library("ImageIO/ImageIO.h")
 public class CGImageSource 
     extends CFType 
      {
@@ -42,22 +42,22 @@ public class CGImageSource
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CGImageSourceCreateWithDataProvider")
-    public static native CGImageSource create(CGDataProvider provider, NSDictionary<?, ?> options);
+    public static native CGImageSource create(CGDataProvider provider, CFDictionary options);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CGImageSourceCreateWithData")
-    public static native CGImageSource create(NSData data, NSDictionary<?, ?> options);
+    public static native CGImageSource create(CFData data, CFDictionary options);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CGImageSourceCreateWithURL")
-    public static native CGImageSource create(NSURL url, NSDictionary<?, ?> options);
+    public static native CGImageSource create(CFURL url, CFDictionary options);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CGImageSourceGetType")
-    public static native String getType(CGImageSource isrc);
+    public static native CFString getType(CGImageSource isrc);
     /**
      * @since Available in iOS 4.0 and later.
      */
@@ -67,22 +67,22 @@ public class CGImageSource
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CGImageSourceCopyProperties")
-    public static native CGImageProperties getProperties(CGImageSource isrc, NSDictionary<?, ?> options);
+    public static native CGImageProperties getProperties(CGImageSource isrc, CFDictionary options);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CGImageSourceCopyPropertiesAtIndex")
-    public static native CGImageProperties getProperties(CGImageSource isrc, @MachineSizedUInt long index, NSDictionary<?, ?> options);
+    public static native CGImageProperties getProperties(CGImageSource isrc, @MachineSizedUInt long index, CFDictionary options);
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalFunction("CGImageSourceCopyMetadataAtIndex")
-    public static native CGImageMetadata getMetadata(CGImageSource isrc, @MachineSizedUInt long index, NSDictionary<?, ?> options);
+    public static native CGImageMetadata getMetadata(CGImageSource isrc, @MachineSizedUInt long index, CFDictionary options);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CGImageSourceCreateImageAtIndex")
-    public static native CGImage createImage(CGImageSource isrc, @MachineSizedUInt long index, NSDictionary<?, ?> options);
+    public static native CGImage createImage(CGImageSource isrc, @MachineSizedUInt long index, CFDictionary options);
     /**
      * @since Available in iOS 7.0 and later.
      */
@@ -92,17 +92,17 @@ public class CGImageSource
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CGImageSourceCreateThumbnailAtIndex")
-    public static native CGImage createThumbnail(CGImageSource isrc, @MachineSizedUInt long index, NSDictionary<?, ?> options);
+    public static native CGImage createThumbnail(CGImageSource isrc, @MachineSizedUInt long index, CFDictionary options);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CGImageSourceCreateIncremental")
-    public static native CGImageSource createIncremental(NSDictionary<?, ?> options);
+    public static native CGImageSource createIncremental(CFDictionary options);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CGImageSourceUpdateData")
-    public static native void updateData(CGImageSource isrc, NSData data, boolean isFinal);
+    public static native void updateData(CGImageSource isrc, CFData data, boolean isFinal);
     /**
      * @since Available in iOS 4.0 and later.
      */

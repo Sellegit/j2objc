@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreFoundation/CoreFoundation.h")
+@Mapping("CFNotificationCenterRef") @Library("CoreFoundation/CoreFoundation.h")
 public class CFNotificationCenter 
     extends CFType 
      {
@@ -36,14 +36,14 @@ public class CFNotificationCenter
     @GlobalFunction("CFNotificationCenterGetDarwinNotifyCenter")
     public static native CFNotificationCenter getDarwinNotifyCenter();
     @GlobalFunction("CFNotificationCenterAddObserver")
-    public static native void addObserver(CFNotificationCenter center, Todo observer, FunctionPtr callBack, String name, Todo object, @Representing("CFNotificationSuspensionBehavior") long suspensionBehavior);
+    public static native void addObserver(CFNotificationCenter center, Todo observer, FunctionPtr callBack, CFString name, Todo object, @Representing("CFNotificationSuspensionBehavior") long suspensionBehavior);
     @GlobalFunction("CFNotificationCenterRemoveObserver")
-    public static native void removeObserver(CFNotificationCenter center, Todo observer, String name, Todo object);
+    public static native void removeObserver(CFNotificationCenter center, Todo observer, CFString name, Todo object);
     @GlobalFunction("CFNotificationCenterRemoveEveryObserver")
     public static native void removeEveryObserver(CFNotificationCenter center, Todo observer);
     @GlobalFunction("CFNotificationCenterPostNotification")
-    public static native void postNotification(CFNotificationCenter center, String name, Todo object, CFDictionary userInfo, boolean deliverImmediately);
+    public static native void postNotification(CFNotificationCenter center, CFString name, Todo object, CFDictionary userInfo, boolean deliverImmediately);
     @GlobalFunction("CFNotificationCenterPostNotificationWithOptions")
-    public static native void postNotification(CFNotificationCenter center, String name, Todo object, CFDictionary userInfo, @MachineSizedUInt long options);
+    public static native void postNotification(CFNotificationCenter center, CFString name, Todo object, CFDictionary userInfo, @MachineSizedUInt long options);
     
 }

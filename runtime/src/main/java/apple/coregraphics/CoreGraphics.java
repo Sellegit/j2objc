@@ -40,21 +40,21 @@ import apple.uikit.*;
      * @since Available in iOS 2.0 and later.
      */
     @GlobalConstant("kCGFontVariationAxisName")
-    public static native String kCGFontVariationAxisName();
+    public static native CFString kCGFontVariationAxisName();
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalConstant("kCGFontVariationAxisMinValue")
-    public static native String kCGFontVariationAxisMinValue();
+    public static native CFString kCGFontVariationAxisMinValue();
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalConstant("kCGFontVariationAxisMaxValue")
-    public static native String kCGFontVariationAxisMaxValue();
+    public static native CFString kCGFontVariationAxisMaxValue();
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalConstant("kCGFontVariationAxisDefaultValue")
-    public static native String kCGFontVariationAxisDefaultValue();
+    public static native CFString kCGFontVariationAxisDefaultValue();
     
 }

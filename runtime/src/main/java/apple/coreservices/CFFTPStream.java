@@ -30,7 +30,7 @@ public class CFFTPStream
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFReadStreamCreateWithFTPURL")
-    public static native CFReadStream createReadStream(CFAllocator alloc, NSURL ftpURL);
+    public static native CFReadStream createReadStream(CFAllocator alloc, CFURL ftpURL);
     /**
      * @since Available in iOS 2.0 and later.
      */
@@ -40,6 +40,6 @@ public class CFFTPStream
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFWriteStreamCreateWithFTPURL")
-    public static native CFWriteStream createWriteStream(CFAllocator alloc, NSURL ftpURL);
+    public static native CFWriteStream createWriteStream(CFAllocator alloc, CFURL ftpURL);
     
 }

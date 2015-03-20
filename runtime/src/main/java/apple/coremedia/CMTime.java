@@ -169,17 +169,17 @@ public class CMTime
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMTimeCopyAsDictionary")
-    public static native NSDictionary<?, ?> asDictionary(CMTime time, CFAllocator allocator);
+    public static native CFDictionary asDictionary(CMTime time, CFAllocator allocator);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMTimeMakeFromDictionary")
-    public static native CMTime create(NSDictionary<?, ?> dict);
+    public static native CMTime create(CFDictionary dict);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMTimeCopyDescription")
-    public static native String getDescription(CFAllocator allocator, CMTime time);
+    public static native CFString getDescription(CFAllocator allocator, CMTime time);
     /**
      * @since Available in iOS 4.0 and later.
      */

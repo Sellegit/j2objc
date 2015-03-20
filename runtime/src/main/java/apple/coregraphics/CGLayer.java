@@ -17,7 +17,7 @@ import apple.uikit.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreGraphics/CoreGraphics.h")
+@Mapping("CGLayerRef") @Library("CoreGraphics/CoreGraphics.h")
 public class CGLayer 
     extends CFType 
      {
@@ -33,7 +33,7 @@ public class CGLayer
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGLayerCreateWithContext")
-    public static native CGLayer create(CGContext context, CGSize size, NSDictionary<?, ?> auxiliaryInfo);
+    public static native CGLayer create(CGContext context, CGSize size, CFDictionary auxiliaryInfo);
     /**
      * @since Available in iOS 2.0 and later.
      */

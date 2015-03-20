@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreFoundation/CoreFoundation.h")
+@Mapping("CFSetRef") @Library("CoreFoundation/CoreFoundation.h")
 public class CFSet 
     extends CFType 
      {

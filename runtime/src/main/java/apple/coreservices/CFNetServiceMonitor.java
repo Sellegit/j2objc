@@ -16,7 +16,7 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CFNetwork/CFNetwork.h")
+@Mapping("CFNetServiceMonitorRef") @Library("CFNetwork/CFNetwork.h")
 public class CFNetServiceMonitor 
     extends CFType 
      {
@@ -57,11 +57,11 @@ public class CFNetServiceMonitor
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFNetServiceMonitorScheduleWithRunLoop")
-    public static native void schedule(CFNetServiceMonitor monitor, CFRunLoop runLoop, String runLoopMode);
+    public static native void schedule(CFNetServiceMonitor monitor, CFRunLoop runLoop, CFString runLoopMode);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFNetServiceMonitorUnscheduleFromRunLoop")
-    public static native void unschedule(CFNetServiceMonitor monitor, CFRunLoop runLoop, String runLoopMode);
+    public static native void unschedule(CFNetServiceMonitor monitor, CFRunLoop runLoop, CFString runLoopMode);
     
 }

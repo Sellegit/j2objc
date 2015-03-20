@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreFoundation/CoreFoundation.h")
+@Mapping("CFDataRef") @Library("CoreFoundation/CoreFoundation.h")
 public class CFData 
     extends CFPropertyList 
      {
@@ -42,7 +42,7 @@ public class CFData
     @GlobalFunction("CFDataGetBytePtr")
     public static native Todo getBytePtr(CFData theData);
     @GlobalFunction("CFDataGetMutableBytePtr")
-    public static native Todo getMutableBytePtr(CFData theData);
+    public static native Todo getMutableBytePtr(CFMutableData theData);
     @GlobalFunction("CFDataGetBytes")
     public static native void getBytes(CFData theData, CFRange range, Todo buffer);
     /**

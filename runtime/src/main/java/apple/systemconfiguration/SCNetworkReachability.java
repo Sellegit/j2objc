@@ -17,7 +17,7 @@ import apple.dispatch.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("SystemConfiguration/SystemConfiguration.h")
+@Mapping("SCNetworkReachabilityRef") @Library("SystemConfiguration/SystemConfiguration.h")
 public class SCNetworkReachability 
     extends CFType 
      {
@@ -63,12 +63,12 @@ public class SCNetworkReachability
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("SCNetworkReachabilityScheduleWithRunLoop")
-    public static native boolean schedule(SCNetworkReachability target, CFRunLoop runLoop, String runLoopMode);
+    public static native boolean schedule(SCNetworkReachability target, CFRunLoop runLoop, CFString runLoopMode);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("SCNetworkReachabilityUnscheduleFromRunLoop")
-    public static native boolean unschedule(SCNetworkReachability target, CFRunLoop runLoop, String runLoopMode);
+    public static native boolean unschedule(SCNetworkReachability target, CFRunLoop runLoop, CFString runLoopMode);
     /**
      * @since Available in iOS 4.0 and later.
      */

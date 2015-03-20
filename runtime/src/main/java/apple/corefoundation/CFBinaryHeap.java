@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreFoundation/CoreFoundation.h")
+@Mapping("CFBinaryHeapRef") @Library("CoreFoundation/CoreFoundation.h")
 public class CFBinaryHeap 
     extends CFType 
      {

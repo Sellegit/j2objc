@@ -30,22 +30,22 @@ public class CTFontManager
      * @since Available in iOS 7.0 and later.
      */
     @GlobalFunction("CTFontManagerCreateFontDescriptorsFromURL")
-    public static native List<CTFontDescriptor> createFontDescriptors0(NSURL fileURL);
+    public static native List<CTFontDescriptor> createFontDescriptors0(CFURL fileURL);
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalFunction("CTFontManagerCreateFontDescriptorFromData")
-    public static native CTFontDescriptor createFontDescriptor(NSData data);
+    public static native CTFontDescriptor createFontDescriptor(CFData data);
     /**
      * @since Available in iOS 4.1 and later.
      */
     @GlobalFunction("CTFontManagerRegisterFontsForURL")
-    public static native boolean registerFonts(NSURL fontURL, @Representing("CTFontManagerScope") long scope, Todo error);
+    public static native boolean registerFonts(CFURL fontURL, @Representing("CTFontManagerScope") long scope, Todo error);
     /**
      * @since Available in iOS 4.1 and later.
      */
     @GlobalFunction("CTFontManagerUnregisterFontsForURL")
-    public static native boolean unregisterFonts(NSURL fontURL, @Representing("CTFontManagerScope") long scope, Todo error);
+    public static native boolean unregisterFonts(CFURL fontURL, @Representing("CTFontManagerScope") long scope, Todo error);
     /**
      * @since Available in iOS 4.1 and later.
      */

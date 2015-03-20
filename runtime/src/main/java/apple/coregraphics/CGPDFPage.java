@@ -17,7 +17,7 @@ import apple.uikit.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreGraphics/CoreGraphics.h")
+@Mapping("CGPDFPageRef") @Library("CoreGraphics/CoreGraphics.h")
 public class CGPDFPage 
     extends CFType 
      {

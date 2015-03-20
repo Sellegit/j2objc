@@ -16,7 +16,7 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreText/CoreText.h")
+@Mapping("CTTextTabRef") @Library("CoreText/CoreText.h")
 public class CTTextTab 
     extends CFType 
      {

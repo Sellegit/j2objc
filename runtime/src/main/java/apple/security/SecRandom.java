@@ -16,7 +16,7 @@ import apple.dispatch.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("Security/Security.h")
+@Mapping("SecRandomRef") @Library("Security/Security.h")
 public class SecRandom 
     extends Object 
      {

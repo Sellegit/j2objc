@@ -17,7 +17,7 @@ import apple.uikit.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreGraphics/CoreGraphics.h")
+@Mapping("CGPatternRef") @Library("CoreGraphics/CoreGraphics.h")
 public class CGPattern 
     extends CFType 
      {

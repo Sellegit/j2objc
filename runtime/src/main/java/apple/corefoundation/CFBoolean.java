@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreFoundation/CoreFoundation.h")
+@Mapping("CFBooleanRef") @Library("CoreFoundation/CoreFoundation.h")
 public class CFBoolean 
     extends CFPropertyList 
      {

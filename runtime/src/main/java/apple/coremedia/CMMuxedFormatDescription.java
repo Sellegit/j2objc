@@ -20,12 +20,14 @@ import apple.corevideo.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreMedia/CoreMedia.h")
+@Mapping("CMMuxedFormatDescriptionRef") @Library("CoreMedia/CoreMedia.h")
 public class CMMuxedFormatDescription 
     extends CMFormatDescription 
      {
 
     
+    
+    protected CMMuxedFormatDescription() {}
     
     
     
@@ -34,6 +36,6 @@ public class CMMuxedFormatDescription
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMMuxedFormatDescriptionCreate")
-    public static native int create(CFAllocator allocator, @Representing("CMMuxedStreamType") long muxType, NSDictionary<?, ?> extensions, Todo outDesc);
+    public static native int create(CFAllocator allocator, @Representing("CMMuxedStreamType") long muxType, CFDictionary extensions, Todo outDesc);
     
 }

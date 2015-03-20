@@ -16,7 +16,7 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CFNetwork/CFNetwork.h")
+@Mapping("CFNetServiceBrowserRef") @Library("CFNetwork/CFNetwork.h")
 public class CFNetServiceBrowser 
     extends CFType 
      {
@@ -52,7 +52,7 @@ public class CFNetServiceBrowser
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFNetServiceBrowserSearchForServices")
-    public static native boolean searchForServices(CFNetServiceBrowser browser, String domain, String serviceType, Todo error);
+    public static native boolean searchForServices(CFNetServiceBrowser browser, CFString domain, CFString serviceType, Todo error);
     /**
      * @since Available in iOS 2.0 and later.
      */
@@ -62,11 +62,11 @@ public class CFNetServiceBrowser
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFNetServiceBrowserScheduleWithRunLoop")
-    public static native void schedule(CFNetServiceBrowser browser, CFRunLoop runLoop, String runLoopMode);
+    public static native void schedule(CFNetServiceBrowser browser, CFRunLoop runLoop, CFString runLoopMode);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFNetServiceBrowserUnscheduleFromRunLoop")
-    public static native void unschedule(CFNetServiceBrowser browser, CFRunLoop runLoop, String runLoopMode);
+    public static native void unschedule(CFNetServiceBrowser browser, CFRunLoop runLoop, CFString runLoopMode);
     
 }

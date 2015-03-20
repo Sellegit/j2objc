@@ -16,7 +16,7 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("ImageIO/ImageIO.h")
+@Mapping("CGImageMetadataTagRef") @Library("ImageIO/ImageIO.h")
 public class CGImageMetadataTag 
     extends CFType 
      {
@@ -37,22 +37,22 @@ public class CGImageMetadataTag
      * @since Available in iOS 7.0 and later.
      */
     @GlobalFunction("CGImageMetadataTagCreate")
-    public static native CGImageMetadataTag create(String xmlns, String prefix, String name, CGImageMetadataType type, CFType value);
+    public static native CGImageMetadataTag create(CFString xmlns, CFString prefix, CFString name, CGImageMetadataType type, CFType value);
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalFunction("CGImageMetadataTagCopyNamespace")
-    public static native String getNamespace(CGImageMetadataTag tag);
+    public static native CFString getNamespace(CGImageMetadataTag tag);
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalFunction("CGImageMetadataTagCopyPrefix")
-    public static native String getPrefix(CGImageMetadataTag tag);
+    public static native CFString getPrefix(CGImageMetadataTag tag);
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalFunction("CGImageMetadataTagCopyName")
-    public static native String getName(CGImageMetadataTag tag);
+    public static native CFString getName(CGImageMetadataTag tag);
     /**
      * @since Available in iOS 7.0 and later.
      */

@@ -17,7 +17,7 @@ import apple.uikit.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreGraphics/CoreGraphics.h")
+@Mapping("CGShadingRef") @Library("CoreGraphics/CoreGraphics.h")
 public class CGShading 
     extends CFType 
      {

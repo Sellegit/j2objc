@@ -101,17 +101,17 @@ public class CMTimeRange
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMTimeRangeCopyAsDictionary")
-    public static native NSDictionary<?, ?> asDictionary(CMTimeRange range, CFAllocator allocator);
+    public static native CFDictionary asDictionary(CMTimeRange range, CFAllocator allocator);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMTimeRangeMakeFromDictionary")
-    public static native CMTimeRange create(NSDictionary<?, ?> dict);
+    public static native CMTimeRange create(CFDictionary dict);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMTimeRangeCopyDescription")
-    public static native String getDescription(CFAllocator allocator, CMTimeRange range);
+    public static native CFString getDescription(CFAllocator allocator, CMTimeRange range);
     /**
      * @since Available in iOS 4.0 and later.
      */

@@ -16,7 +16,7 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CFNetwork/CFNetwork.h")
+@Mapping("CFNetServiceRef") @Library("CFNetwork/CFNetwork.h")
 public class CFNetService 
     extends CFType 
      {
@@ -37,7 +37,7 @@ public class CFNetService
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFNetServiceCreate")
-    public static native CFNetService create(CFAllocator alloc, String domain, String serviceType, String name, int port);
+    public static native CFNetService create(CFAllocator alloc, CFString domain, CFString serviceType, CFString name, int port);
     /**
      * @since Available in iOS 2.0 and later.
      */
@@ -47,17 +47,17 @@ public class CFNetService
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFNetServiceGetDomain")
-    public static native String getDomain(CFNetService theService);
+    public static native CFString getDomain(CFNetService theService);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFNetServiceGetType")
-    public static native String getType(CFNetService theService);
+    public static native CFString getType(CFNetService theService);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFNetServiceGetName")
-    public static native String getName(CFNetService theService);
+    public static native CFString getName(CFNetService theService);
     /**
      * @since Available in iOS 2.0 and later.
      */
@@ -77,7 +77,7 @@ public class CFNetService
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFNetServiceGetTargetHost")
-    public static native String getTargetHost(CFNetService theService);
+    public static native CFString getTargetHost(CFNetService theService);
     /**
      * @since Available in iOS 2.0 and later.
      */
@@ -92,22 +92,22 @@ public class CFNetService
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFNetServiceGetTXTData")
-    public static native NSData getTXTData(CFNetService theService);
+    public static native CFData getTXTData(CFNetService theService);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFNetServiceSetTXTData")
-    public static native boolean setTXTData(CFNetService theService, NSData txtRecord);
+    public static native boolean setTXTData(CFNetService theService, CFData txtRecord);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFNetServiceCreateDictionaryWithTXTData")
-    public static native NSDictionary<NSString, NSData> parseTXTData(CFAllocator alloc, NSData txtRecord);
+    public static native NSDictionary<NSString, NSData> parseTXTData(CFAllocator alloc, CFData txtRecord);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFNetServiceCreateTXTDataWithDictionary")
-    public static native NSData createTXTData(CFAllocator alloc, CFDictionary keyValuePairs);
+    public static native CFData createTXTData(CFAllocator alloc, CFDictionary keyValuePairs);
     /**
      * @since Available in iOS 2.0 and later.
      */
@@ -117,12 +117,12 @@ public class CFNetService
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFNetServiceScheduleWithRunLoop")
-    public static native void schedule(CFNetService theService, CFRunLoop runLoop, String runLoopMode);
+    public static native void schedule(CFNetService theService, CFRunLoop runLoop, CFString runLoopMode);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFNetServiceUnscheduleFromRunLoop")
-    public static native void unschedule(CFNetService theService, CFRunLoop runLoop, String runLoopMode);
+    public static native void unschedule(CFNetService theService, CFRunLoop runLoop, CFString runLoopMode);
     /**
      * @since Available in iOS 2.0 and later.
      */

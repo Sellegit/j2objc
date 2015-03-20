@@ -16,7 +16,7 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CFNetwork/CFNetwork.h")
+@Mapping("CFHTTPMessageRef") @Library("CFNetwork/CFNetwork.h")
 public class CFHTTPMessage 
     extends CFType 
      {
@@ -53,12 +53,12 @@ public class CFHTTPMessage
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFHTTPMessageCreateRequest")
-    public static native CFHTTPMessage createRequest(CFAllocator alloc, String requestMethod, NSURL url, String httpVersion);
+    public static native CFHTTPMessage createRequest(CFAllocator alloc, CFString requestMethod, CFURL url, CFString httpVersion);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFHTTPMessageCreateResponse")
-    public static native CFHTTPMessage createResponse(CFAllocator alloc, @MachineSizedSInt long statusCode, String statusDescription, String httpVersion);
+    public static native CFHTTPMessage createResponse(CFAllocator alloc, @MachineSizedSInt long statusCode, CFString statusDescription, CFString httpVersion);
     /**
      * @since Available in iOS 2.0 and later.
      */
@@ -83,17 +83,17 @@ public class CFHTTPMessage
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFHTTPMessageCopyBody")
-    public static native NSData getBody(CFHTTPMessage message);
+    public static native CFData getBody(CFHTTPMessage message);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFHTTPMessageSetBody")
-    public static native void setBody(CFHTTPMessage message, NSData bodyData);
+    public static native void setBody(CFHTTPMessage message, CFData bodyData);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFHTTPMessageCopyHeaderFieldValue")
-    public static native String getHeaderFieldValue(CFHTTPMessage message, String headerField);
+    public static native CFString getHeaderFieldValue(CFHTTPMessage message, CFString headerField);
     /**
      * @since Available in iOS 2.0 and later.
      */
@@ -103,7 +103,7 @@ public class CFHTTPMessage
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFHTTPMessageSetHeaderFieldValue")
-    public static native void setHeaderFieldValue(CFHTTPMessage message, String headerField, String value);
+    public static native void setHeaderFieldValue(CFHTTPMessage message, CFString headerField, CFString value);
     /**
      * @since Available in iOS 2.0 and later.
      */
@@ -118,22 +118,22 @@ public class CFHTTPMessage
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFHTTPMessageCopySerializedMessage")
-    public static native NSData getSerializedMessage(CFHTTPMessage message);
+    public static native CFData getSerializedMessage(CFHTTPMessage message);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFHTTPMessageCopyRequestURL")
-    public static native NSURL getRequestURL(CFHTTPMessage request);
+    public static native CFURL getRequestURL(CFHTTPMessage request);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFHTTPMessageCopyRequestMethod")
-    public static native String getRequestMethod(CFHTTPMessage request);
+    public static native CFString getRequestMethod(CFHTTPMessage request);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFHTTPMessageAddAuthentication")
-    public static native boolean addAuthentication(CFHTTPMessage request, CFHTTPMessage authenticationFailureResponse, String username, String password, String authenticationScheme, boolean forProxy);
+    public static native boolean addAuthentication(CFHTTPMessage request, CFHTTPMessage authenticationFailureResponse, CFString username, CFString password, CFString authenticationScheme, boolean forProxy);
     /**
      * @since Available in iOS 2.0 and later.
      */
@@ -143,12 +143,12 @@ public class CFHTTPMessage
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFHTTPMessageCopyResponseStatusLine")
-    public static native String getResponseStatusLine(CFHTTPMessage response);
+    public static native CFString getResponseStatusLine(CFHTTPMessage response);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFHTTPMessageApplyCredentials")
-    public static native boolean applyCredentials(CFHTTPMessage request, CFHTTPAuthentication auth, String username, String password, Todo error);
+    public static native boolean applyCredentials(CFHTTPMessage request, CFHTTPAuthentication auth, CFString username, CFString password, Todo error);
     /**
      * @since Available in iOS 2.0 and later.
      */

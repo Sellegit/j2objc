@@ -16,7 +16,7 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreText/CoreText.h")
+@Mapping("CTFontRef") @Library("CoreText/CoreText.h")
 public class CTFont 
     extends CFType 
      {
@@ -37,7 +37,7 @@ public class CTFont
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTFontCreateWithName")
-    public static native CTFont create(String name, @MachineSizedFloat double size, CGAffineTransform matrix);
+    public static native CTFont create(CFString name, @MachineSizedFloat double size, CGAffineTransform matrix);
     /**
      * @since Available in iOS 3.2 and later.
      */
@@ -47,7 +47,7 @@ public class CTFont
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTFontCreateWithNameAndOptions")
-    public static native CTFont create(String name, @MachineSizedFloat double size, CGAffineTransform matrix, @Representing("CTFontOptions") long options);
+    public static native CTFont create(CFString name, @MachineSizedFloat double size, CGAffineTransform matrix, @Representing("CTFontOptions") long options);
     /**
      * @since Available in iOS 3.2 and later.
      */
@@ -57,7 +57,7 @@ public class CTFont
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTFontCreateUIFontForLanguage")
-    public static native CTFont create(@Representing("CTFontUIFontType") long uiType, @MachineSizedFloat double size, String language);
+    public static native CTFont create(@Representing("CTFontUIFontType") long uiType, @MachineSizedFloat double size, CFString language);
     /**
      * @since Available in iOS 3.2 and later.
      */
@@ -72,12 +72,12 @@ public class CTFont
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTFontCreateCopyWithFamily")
-    public static native CTFont createCopy(CTFont font, @MachineSizedFloat double size, CGAffineTransform matrix, String family);
+    public static native CTFont createCopy(CTFont font, @MachineSizedFloat double size, CGAffineTransform matrix, CFString family);
     /**
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTFontCreateForString")
-    public static native CTFont create(CTFont currentFont, String string, CFRange range);
+    public static native CTFont create(CTFont currentFont, CFString string, CFRange range);
     /**
      * @since Available in iOS 3.2 and later.
      */
@@ -87,7 +87,7 @@ public class CTFont
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTFontCopyAttribute")
-    public static native CFType getAttribute(CTFont font, String attribute);
+    public static native CFType getAttribute(CTFont font, CFString attribute);
     /**
      * @since Available in iOS 3.2 and later.
      */
@@ -112,37 +112,37 @@ public class CTFont
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTFontCopyPostScriptName")
-    public static native String getPostScriptName(CTFont font);
+    public static native CFString getPostScriptName(CTFont font);
     /**
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTFontCopyFamilyName")
-    public static native String getFamilyName(CTFont font);
+    public static native CFString getFamilyName(CTFont font);
     /**
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTFontCopyFullName")
-    public static native String getFullName(CTFont font);
+    public static native CFString getFullName(CTFont font);
     /**
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTFontCopyDisplayName")
-    public static native String getDisplayName(CTFont font);
+    public static native CFString getDisplayName(CTFont font);
     /**
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTFontCopyName")
-    public static native String getName(CTFont font, String nameKey);
+    public static native CFString getName(CTFont font, CFString nameKey);
     /**
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTFontCopyLocalizedName")
-    public static native String getLocalizedName(CTFont font, String nameKey, Todo actualLanguage);
+    public static native CFString getLocalizedName(CTFont font, CFString nameKey, Todo actualLanguage);
     /**
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTFontCopyCharacterSet")
-    public static native NSCharacterSet getCharacterSet(CTFont font);
+    public static native CFCharacterSet getCharacterSet(CTFont font);
     /**
      * @since Available in iOS 3.2 and later.
      */
@@ -217,7 +217,7 @@ public class CTFont
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTFontGetGlyphWithName")
-    public static native short getGlyph(CTFont font, String glyphName);
+    public static native short getGlyph(CTFont font, CFString glyphName);
     /**
      * @since Available in iOS 3.2 and later.
      */
@@ -282,7 +282,7 @@ public class CTFont
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTFontCopyTable")
-    public static native NSData getTable(CTFont font, @Representing("CTFontTableTag") long table, @Representing("CTFontTableOptions") long options);
+    public static native CFData getTable(CTFont font, @Representing("CTFontTableTag") long table, @Representing("CTFontTableOptions") long options);
     /**
      * @since Available in iOS 4.2 and later.
      */

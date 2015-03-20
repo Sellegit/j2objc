@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreFoundation/CoreFoundation.h")
+@Mapping("CFSocketRef") @Library("CoreFoundation/CoreFoundation.h")
 public class CFSocket 
     extends CFType 
      {
@@ -68,15 +68,15 @@ public class CFSocket
     @GlobalFunction("CFSocketSendData")
     public static native CFSocketError sendData(CFSocket s, CFData address, CFData data, double timeout);
     @GlobalFunction("CFSocketRegisterValue")
-    public static native CFSocketError registerValue(CFSocketSignature nameServerSignature, double timeout, String name, CFType value);
+    public static native CFSocketError registerValue(CFSocketSignature nameServerSignature, double timeout, CFString name, CFPropertyListRef value);
     @GlobalFunction("CFSocketCopyRegisteredValue")
-    public static native CFSocketError copyRegisteredValue(CFSocketSignature nameServerSignature, double timeout, String name, Todo value, Todo nameServerAddress);
+    public static native CFSocketError copyRegisteredValue(CFSocketSignature nameServerSignature, double timeout, CFString name, Todo value, Todo nameServerAddress);
     @GlobalFunction("CFSocketRegisterSocketSignature")
-    public static native CFSocketError registerSocketSignature(CFSocketSignature nameServerSignature, double timeout, String name, CFSocketSignature signature);
+    public static native CFSocketError registerSocketSignature(CFSocketSignature nameServerSignature, double timeout, CFString name, CFSocketSignature signature);
     @GlobalFunction("CFSocketCopyRegisteredSocketSignature")
-    public static native CFSocketError copyRegisteredSocketSignature(CFSocketSignature nameServerSignature, double timeout, String name, CFSocketSignature signature, Todo nameServerAddress);
+    public static native CFSocketError copyRegisteredSocketSignature(CFSocketSignature nameServerSignature, double timeout, CFString name, CFSocketSignature signature, Todo nameServerAddress);
     @GlobalFunction("CFSocketUnregister")
-    public static native CFSocketError unregister(CFSocketSignature nameServerSignature, double timeout, String name);
+    public static native CFSocketError unregister(CFSocketSignature nameServerSignature, double timeout, CFString name);
     @GlobalFunction("CFSocketSetDefaultNameRegistryPortNumber")
     public static native void setDefaultNameRegistryPortNumber(short port);
     @GlobalFunction("CFSocketGetDefaultNameRegistryPortNumber")

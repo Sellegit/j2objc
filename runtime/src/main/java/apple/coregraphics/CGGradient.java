@@ -17,7 +17,7 @@ import apple.uikit.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreGraphics/CoreGraphics.h")
+@Mapping("CGGradientRef") @Library("CoreGraphics/CoreGraphics.h")
 public class CGGradient 
     extends CFType 
      {
@@ -43,6 +43,6 @@ public class CGGradient
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGGradientCreateWithColors")
-    public static native CGGradient create(CGColorSpace space, NSArray<?> colors, Todo locations);
+    public static native CGGradient create(CGColorSpace space, CFArray colors, Todo locations);
     
 }

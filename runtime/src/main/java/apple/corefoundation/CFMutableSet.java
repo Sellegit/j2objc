@@ -17,12 +17,14 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreFoundation/CoreFoundation.h")
+@Mapping("CFMutableSetRef") @Library("CoreFoundation/CoreFoundation.h")
 public class CFMutableSet 
     extends CFSet 
      {
 
     
+    
+    protected CFMutableSet() {}
     
     
     
@@ -32,14 +34,14 @@ public class CFMutableSet
     @GlobalFunction("CFSetCreateMutableCopy")
     public static native CFMutableSet createMutableCopy(CFAllocator allocator, @MachineSizedSInt long capacity, CFSet theSet);
     @GlobalFunction("CFSetAddValue")
-    public static native void addValue(CFSet theSet, Todo value);
+    public static native void addValue(CFMutableSet theSet, Todo value);
     @GlobalFunction("CFSetReplaceValue")
-    public static native void replaceValue(CFSet theSet, Todo value);
+    public static native void replaceValue(CFMutableSet theSet, Todo value);
     @GlobalFunction("CFSetSetValue")
-    public static native void setValue(CFSet theSet, Todo value);
+    public static native void setValue(CFMutableSet theSet, Todo value);
     @GlobalFunction("CFSetRemoveValue")
-    public static native void removeValue(CFSet theSet, Todo value);
+    public static native void removeValue(CFMutableSet theSet, Todo value);
     @GlobalFunction("CFSetRemoveAllValues")
-    public static native void removeAllValues(CFSet theSet);
+    public static native void removeAllValues(CFMutableSet theSet);
     
 }

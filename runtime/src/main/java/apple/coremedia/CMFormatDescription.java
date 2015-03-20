@@ -20,7 +20,7 @@ import apple.corevideo.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreMedia/CoreMedia.h")
+@Mapping("CMFormatDescriptionRef") @Library("CoreMedia/CoreMedia.h")
 public class CMFormatDescription 
     extends CFType 
      {
@@ -36,7 +36,7 @@ public class CMFormatDescription
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMFormatDescriptionCreate")
-    public static native int create(CFAllocator allocator, @Representing("CMMediaType") long mediaType, int mediaSubtype, NSDictionary<?, ?> extensions, Todo descOut);
+    public static native int create(CFAllocator allocator, @Representing("CMMediaType") long mediaType, int mediaSubtype, CFDictionary extensions, Todo descOut);
     /**
      * @since Available in iOS 4.0 and later.
      */
@@ -71,6 +71,6 @@ public class CMFormatDescription
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMFormatDescriptionGetExtension")
-    public static native CFType getExtension(CMFormatDescription desc, String extensionKey);
+    public static native CFPropertyListRef getExtension(CMFormatDescription desc, CFString extensionKey);
     
 }

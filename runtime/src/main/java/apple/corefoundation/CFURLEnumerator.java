@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreFoundation/CoreFoundation.h")
+@Mapping("CFURLEnumeratorRef") @Library("CoreFoundation/CoreFoundation.h")
 public class CFURLEnumerator 
     extends CFType 
      {

@@ -28,16 +28,16 @@ public class CFStreamProperty
     
     
     @GlobalConstant("kCFStreamPropertyDataWritten")
-    public static native String DataWrittenValue();
+    public static native CFString DataWrittenValue();
     @GlobalConstant("kCFStreamPropertyAppendToFile")
-    public static native String AppendToFileValue();
+    public static native CFString AppendToFileValue();
     @GlobalConstant("kCFStreamPropertyFileCurrentOffset")
-    public static native String FileCurrentOffsetValue();
+    public static native CFString FileCurrentOffsetValue();
     @GlobalConstant("kCFStreamPropertySocketNativeHandle")
-    public static native String SocketNativeHandleValue();
+    public static native CFString SocketNativeHandleValue();
     @GlobalConstant("kCFStreamPropertySocketRemoteHostName")
-    public static native String SocketRemoteHostNameValue();
+    public static native CFString SocketRemoteHostNameValue();
     @GlobalConstant("kCFStreamPropertySocketRemotePortNumber")
-    public static native String SocketRemotePortNumberValue();
+    public static native CFString SocketRemotePortNumberValue();
     
 }

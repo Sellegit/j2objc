@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreFoundation/CoreFoundation.h")
+@Mapping("CFUUIDRef") @Library("CoreFoundation/CoreFoundation.h")
 public class CFUUID 
     extends CFType 
      {
@@ -36,9 +36,9 @@ public class CFUUID
     @GlobalFunction("CFUUIDCreateWithBytes")
     public static native CFUUID create(CFAllocator alloc, byte byte0, byte byte1, byte byte2, byte byte3, byte byte4, byte byte5, byte byte6, byte byte7, byte byte8, byte byte9, byte byte10, byte byte11, byte byte12, byte byte13, byte byte14, byte byte15);
     @GlobalFunction("CFUUIDCreateFromString")
-    public static native CFUUID create(CFAllocator alloc, String uuidStr);
+    public static native CFUUID create(CFAllocator alloc, CFString uuidStr);
     @GlobalFunction("CFUUIDCreateString")
-    public static native String asString(CFAllocator alloc, CFUUID uuid);
+    public static native CFString asString(CFAllocator alloc, CFUUID uuid);
     @GlobalFunction("CFUUIDGetConstantUUIDWithBytes")
     public static native CFUUID getConstantUUID(CFAllocator alloc, byte byte0, byte byte1, byte byte2, byte byte3, byte byte4, byte byte5, byte byte6, byte byte7, byte byte8, byte byte9, byte byte10, byte byte11, byte byte12, byte byte13, byte byte14, byte byte15);
     @GlobalFunction("CFUUIDGetUUIDBytes")

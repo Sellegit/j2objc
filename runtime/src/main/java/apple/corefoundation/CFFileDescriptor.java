@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreFoundation/CoreFoundation.h")
+@Mapping("CFFileDescriptorRef") @Library("CoreFoundation/CoreFoundation.h")
 public class CFFileDescriptor 
     extends CFType 
      {

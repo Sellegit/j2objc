@@ -35,16 +35,16 @@ public class CFProxySupport
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFNetworkCopyProxiesForAutoConfigurationScript")
-    public static native CFArray getProxies0(String proxyAutoConfigurationScript, NSURL targetURL, Todo error);
+    public static native CFArray getProxies0(CFString proxyAutoConfigurationScript, CFURL targetURL, Todo error);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFNetworkExecuteProxyAutoConfigurationScript")
-    public static native CFRunLoopSource executeProxyAutoConfigurationScript(String proxyAutoConfigurationScript, NSURL targetURL, FunctionPtr cb, CFStreamClientContext clientContext);
+    public static native CFRunLoopSource executeProxyAutoConfigurationScript(CFString proxyAutoConfigurationScript, CFURL targetURL, FunctionPtr cb, CFStreamClientContext clientContext);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CFNetworkExecuteProxyAutoConfigurationURL")
-    public static native CFRunLoopSource executeProxyAutoConfigurationURL(NSURL proxyAutoConfigURL, NSURL targetURL, FunctionPtr cb, CFStreamClientContext clientContext);
+    public static native CFRunLoopSource executeProxyAutoConfigurationURL(CFURL proxyAutoConfigURL, CFURL targetURL, FunctionPtr cb, CFStreamClientContext clientContext);
     
 }

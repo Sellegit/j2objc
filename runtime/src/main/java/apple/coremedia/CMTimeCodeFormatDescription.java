@@ -20,12 +20,14 @@ import apple.corevideo.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreMedia/CoreMedia.h")
+@Mapping("CMTimeCodeFormatDescriptionRef") @Library("CoreMedia/CoreMedia.h")
 public class CMTimeCodeFormatDescription 
     extends CMFormatDescription 
      {
 
     
+    
+    protected CMTimeCodeFormatDescription() {}
     
     
     
@@ -34,7 +36,7 @@ public class CMTimeCodeFormatDescription
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMTimeCodeFormatDescriptionCreate")
-    public static native int create(CFAllocator allocator, @Representing("CMTimeCodeFormatType") long timeCodeFormatType, CMTime frameDuration, int frameQuanta, int tcFlags, NSDictionary<?, ?> extensions, Todo descOut);
+    public static native int create(CFAllocator allocator, @Representing("CMTimeCodeFormatType") long timeCodeFormatType, CMTime frameDuration, int frameQuanta, int tcFlags, CFDictionary extensions, Todo descOut);
     /**
      * @since Available in iOS 4.0 and later.
      */
@@ -54,16 +56,16 @@ public class CMTimeCodeFormatDescription
      * @since Available in iOS 8.0 and later.
      */
     @GlobalFunction("CMTimeCodeFormatDescriptionCreateFromBigEndianTimeCodeDescriptionData")
-    public static native int createFromBigEndianTimeCodeDescriptionData(CFAllocator allocator, Todo timeCodeDescriptionData, @MachineSizedUInt long timeCodeDescriptionSize, String timeCodeDescriptionFlavor, Todo timeCodeFormatDescriptionOut);
+    public static native int createFromBigEndianTimeCodeDescriptionData(CFAllocator allocator, Todo timeCodeDescriptionData, @MachineSizedUInt long timeCodeDescriptionSize, CFString timeCodeDescriptionFlavor, Todo timeCodeFormatDescriptionOut);
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalFunction("CMTimeCodeFormatDescriptionCreateFromBigEndianTimeCodeDescriptionBlockBuffer")
-    public static native int createFromBigEndianTimeCodeDescriptionBlockBuffer(CFAllocator allocator, CMBlockBuffer timeCodeDescriptionBlockBuffer, String timeCodeDescriptionFlavor, Todo timeCodeFormatDescriptionOut);
+    public static native int createFromBigEndianTimeCodeDescriptionBlockBuffer(CFAllocator allocator, CMBlockBuffer timeCodeDescriptionBlockBuffer, CFString timeCodeDescriptionFlavor, Todo timeCodeFormatDescriptionOut);
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalFunction("CMTimeCodeFormatDescriptionCopyAsBigEndianTimeCodeDescriptionBlockBuffer")
-    public static native int copyAsBigEndianTimeCodeDescriptionBlockBuffer(CFAllocator allocator, CMTimeCodeFormatDescription timeCodeFormatDescription, String timeCodeDescriptionFlavor, Todo timeCodeDescriptionBlockBufferOut);
+    public static native int copyAsBigEndianTimeCodeDescriptionBlockBuffer(CFAllocator allocator, CMTimeCodeFormatDescription timeCodeFormatDescription, CFString timeCodeDescriptionFlavor, Todo timeCodeDescriptionBlockBufferOut);
     
 }

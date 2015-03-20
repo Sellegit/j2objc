@@ -17,7 +17,7 @@ import apple.uikit.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreGraphics/CoreGraphics.h")
+@Mapping("CGColorSpaceRef") @Library("CoreGraphics/CoreGraphics.h")
 public class CGColorSpace 
     extends CFType 
      {
@@ -63,7 +63,7 @@ public class CGColorSpace
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGColorSpaceCreateWithICCProfile")
-    public static native CGColorSpace createWithICCProfile(NSData data);
+    public static native CGColorSpace createWithICCProfile(CFData data);
     /**
      * @since Available in iOS 2.0 and later.
      */
@@ -83,7 +83,7 @@ public class CGColorSpace
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGColorSpaceCreateWithName")
-    public static native CGColorSpace createWithName(String name);
+    public static native CGColorSpace createWithName(CFString name);
     /**
      * @since Available in iOS 2.0 and later.
      */
@@ -118,6 +118,6 @@ public class CGColorSpace
      * @since Available in iOS 6.0 and later.
      */
     @GlobalFunction("CGColorSpaceCopyICCProfile")
-    public static native NSData copyICCProfile(CGColorSpace space);
+    public static native CFData copyICCProfile(CGColorSpace space);
     
 }

@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreFoundation/CoreFoundation.h")
+@Mapping("CFRunLoopTimerRef") @Library("CoreFoundation/CoreFoundation.h")
 public class CFRunLoopTimer 
     extends CFType 
      {

@@ -16,7 +16,7 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreText/CoreText.h")
+@Mapping("CTGlyphInfoRef") @Library("CoreText/CoreText.h")
 public class CTGlyphInfo 
     extends CFType 
      {
@@ -37,22 +37,22 @@ public class CTGlyphInfo
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTGlyphInfoCreateWithGlyphName")
-    public static native CTGlyphInfo create(String glyphName, CTFont font, String baseString);
+    public static native CTGlyphInfo create(CFString glyphName, CTFont font, CFString baseString);
     /**
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTGlyphInfoCreateWithGlyph")
-    public static native CTGlyphInfo create(short glyph, CTFont font, String baseString);
+    public static native CTGlyphInfo create(short glyph, CTFont font, CFString baseString);
     /**
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTGlyphInfoCreateWithCharacterIdentifier")
-    public static native CTGlyphInfo create(short cid, @Representing("CTCharacterCollection") long collection, String baseString);
+    public static native CTGlyphInfo create(short cid, @Representing("CTCharacterCollection") long collection, CFString baseString);
     /**
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTGlyphInfoGetGlyphName")
-    public static native String getGlyphName(CTGlyphInfo glyphInfo);
+    public static native CFString getGlyphName(CTGlyphInfo glyphInfo);
     /**
      * @since Available in iOS 3.2 and later.
      */

@@ -20,7 +20,7 @@ import apple.corevideo.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreMedia/CoreMedia.h")
+@Mapping("CMBufferQueueRef") @Library("CoreMedia/CoreMedia.h")
 public class CMBufferQueue 
     extends CFType 
      {

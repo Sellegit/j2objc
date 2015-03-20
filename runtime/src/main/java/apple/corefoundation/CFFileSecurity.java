@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreFoundation/CoreFoundation.h")
+@Mapping("CFFileSecurityRef") @Library("CoreFoundation/CoreFoundation.h")
 public class CFFileSecurity 
     extends CFType 
      {

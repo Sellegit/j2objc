@@ -17,12 +17,14 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreFoundation/CoreFoundation.h")
+@Mapping("CFMutableAttributedStringRef") @Library("CoreFoundation/CoreFoundation.h")
 public class CFMutableAttributedString 
     extends CFAttributedString 
      {
 
     
+    
+    protected CFMutableAttributedString() {}
     
     
     
@@ -32,18 +34,18 @@ public class CFMutableAttributedString
     @GlobalFunction("CFAttributedStringCreateMutable")
     public static native CFMutableAttributedString createMutable(CFAllocator alloc, @MachineSizedSInt long maxLength);
     @GlobalFunction("CFAttributedStringReplaceString")
-    public static native void replaceString(CFAttributedString aStr, CFRange range, String replacement);
+    public static native void replaceString(CFMutableAttributedString aStr, CFRange range, CFString replacement);
     @GlobalFunction("CFAttributedStringSetAttributes")
-    public static native void setAttributes(CFAttributedString aStr, CFRange range, CFDictionary replacement, boolean clearOtherAttributes);
+    public static native void setAttributes(CFMutableAttributedString aStr, CFRange range, CFDictionary replacement, boolean clearOtherAttributes);
     @GlobalFunction("CFAttributedStringSetAttribute")
-    public static native void setAttribute(CFAttributedString aStr, CFRange range, String attrName, CFType value);
+    public static native void setAttribute(CFMutableAttributedString aStr, CFRange range, CFString attrName, CFType value);
     @GlobalFunction("CFAttributedStringRemoveAttribute")
-    public static native void removeAttribute(CFAttributedString aStr, CFRange range, String attrName);
+    public static native void removeAttribute(CFMutableAttributedString aStr, CFRange range, CFString attrName);
     @GlobalFunction("CFAttributedStringReplaceAttributedString")
-    public static native void replaceAttributedString(CFAttributedString aStr, CFRange range, CFAttributedString replacement);
+    public static native void replaceAttributedString(CFMutableAttributedString aStr, CFRange range, CFAttributedString replacement);
     @GlobalFunction("CFAttributedStringBeginEditing")
-    public static native void beginEditing(CFAttributedString aStr);
+    public static native void beginEditing(CFMutableAttributedString aStr);
     @GlobalFunction("CFAttributedStringEndEditing")
-    public static native void endEditing(CFAttributedString aStr);
+    public static native void endEditing(CFMutableAttributedString aStr);
     
 }

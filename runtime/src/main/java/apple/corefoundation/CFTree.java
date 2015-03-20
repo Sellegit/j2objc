@@ -17,7 +17,7 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreFoundation/CoreFoundation.h")
+@Mapping("CFTreeRef") @Library("CoreFoundation/CoreFoundation.h")
 public class CFTree 
     extends CFType 
      {

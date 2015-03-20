@@ -17,12 +17,14 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreFoundation/CoreFoundation.h")
+@Mapping("CFMutableCharacterSetRef") @Library("CoreFoundation/CoreFoundation.h")
 public class CFMutableCharacterSet 
     extends CFCharacterSet 
      {
 
     
+    
+    protected CFMutableCharacterSet() {}
     
     
     
@@ -32,18 +34,18 @@ public class CFMutableCharacterSet
     @GlobalFunction("CFCharacterSetCreateMutableCopy")
     public static native CFMutableCharacterSet createMutableCopy(CFAllocator alloc, CFCharacterSet theSet);
     @GlobalFunction("CFCharacterSetAddCharactersInRange")
-    public static native void addCharactersInRange(CFCharacterSet theSet, CFRange theRange);
+    public static native void addCharactersInRange(CFMutableCharacterSet theSet, CFRange theRange);
     @GlobalFunction("CFCharacterSetRemoveCharactersInRange")
-    public static native void removeCharactersInRange(CFCharacterSet theSet, CFRange theRange);
+    public static native void removeCharactersInRange(CFMutableCharacterSet theSet, CFRange theRange);
     @GlobalFunction("CFCharacterSetAddCharactersInString")
-    public static native void addCharactersInString(CFCharacterSet theSet, String theString);
+    public static native void addCharactersInString(CFMutableCharacterSet theSet, CFString theString);
     @GlobalFunction("CFCharacterSetRemoveCharactersInString")
-    public static native void removeCharactersInString(CFCharacterSet theSet, String theString);
+    public static native void removeCharactersInString(CFMutableCharacterSet theSet, CFString theString);
     @GlobalFunction("CFCharacterSetUnion")
-    public static native void union(CFCharacterSet theSet, CFCharacterSet theOtherSet);
+    public static native void union(CFMutableCharacterSet theSet, CFCharacterSet theOtherSet);
     @GlobalFunction("CFCharacterSetIntersect")
-    public static native void intersect(CFCharacterSet theSet, CFCharacterSet theOtherSet);
+    public static native void intersect(CFMutableCharacterSet theSet, CFCharacterSet theOtherSet);
     @GlobalFunction("CFCharacterSetInvert")
-    public static native void invert(CFCharacterSet theSet);
+    public static native void invert(CFMutableCharacterSet theSet);
     
 }

@@ -20,12 +20,14 @@ import apple.corevideo.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreMedia/CoreMedia.h")
+@Mapping("CMVideoFormatDescriptionRef") @Library("CoreMedia/CoreMedia.h")
 public class CMVideoFormatDescription 
     extends CMFormatDescription 
      {
 
     
+    
+    protected CMVideoFormatDescription() {}
     
     
     
@@ -34,7 +36,7 @@ public class CMVideoFormatDescription
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("CMVideoFormatDescriptionCreate")
-    public static native int create(CFAllocator allocator, @Representing("CMVideoCodecType") long codecType, int width, int height, NSDictionary<?, ?> extensions, Todo outDesc);
+    public static native int create(CFAllocator allocator, @Representing("CMVideoCodecType") long codecType, int width, int height, CFDictionary extensions, Todo outDesc);
     /**
      * @since Available in iOS 4.0 and later.
      */
@@ -69,16 +71,16 @@ public class CMVideoFormatDescription
      * @since Available in iOS 8.0 and later.
      */
     @GlobalFunction("CMVideoFormatDescriptionCreateFromBigEndianImageDescriptionData")
-    public static native int createFromBigEndianImageDescriptionData(CFAllocator allocator, Todo imageDescriptionData, @MachineSizedUInt long imageDescriptionSize, int imageDescriptionStringEncoding, String imageDescriptionFlavor, Todo videoFormatDescriptionOut);
+    public static native int createFromBigEndianImageDescriptionData(CFAllocator allocator, Todo imageDescriptionData, @MachineSizedUInt long imageDescriptionSize, int imageDescriptionStringEncoding, CFString imageDescriptionFlavor, Todo videoFormatDescriptionOut);
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalFunction("CMVideoFormatDescriptionCreateFromBigEndianImageDescriptionBlockBuffer")
-    public static native int createFromBigEndianImageDescriptionBlockBuffer(CFAllocator allocator, CMBlockBuffer imageDescriptionBlockBuffer, int imageDescriptionStringEncoding, String imageDescriptionFlavor, Todo videoFormatDescriptionOut);
+    public static native int createFromBigEndianImageDescriptionBlockBuffer(CFAllocator allocator, CMBlockBuffer imageDescriptionBlockBuffer, int imageDescriptionStringEncoding, CFString imageDescriptionFlavor, Todo videoFormatDescriptionOut);
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalFunction("CMVideoFormatDescriptionCopyAsBigEndianImageDescriptionBlockBuffer")
-    public static native int copyAsBigEndianImageDescriptionBlockBuffer(CFAllocator allocator, CMVideoFormatDescription videoFormatDescription, int imageDescriptionStringEncoding, String imageDescriptionFlavor, Todo imageDescriptionBlockBufferOut);
+    public static native int copyAsBigEndianImageDescriptionBlockBuffer(CFAllocator allocator, CMVideoFormatDescription videoFormatDescription, int imageDescriptionStringEncoding, CFString imageDescriptionFlavor, Todo imageDescriptionBlockBufferOut);
     
 }

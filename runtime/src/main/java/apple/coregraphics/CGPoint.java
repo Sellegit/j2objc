@@ -68,7 +68,7 @@ public class CGPoint
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGPointMakeWithDictionaryRepresentation")
-    public static native boolean fromDictionary(NSDictionary<?, ?> dict, CGPoint point);
+    public static native boolean fromDictionary(CFDictionary dict, CGPoint point);
     /**
      * @since Available in iOS 2.0 and later.
      */

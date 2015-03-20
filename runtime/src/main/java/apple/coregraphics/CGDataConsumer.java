@@ -17,7 +17,7 @@ import apple.uikit.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("CoreGraphics/CoreGraphics.h")
+@Mapping("CGDataConsumerRef") @Library("CoreGraphics/CoreGraphics.h")
 public class CGDataConsumer 
     extends CFType 
      {
@@ -38,11 +38,11 @@ public class CGDataConsumer
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGDataConsumerCreateWithURL")
-    public static native CGDataConsumer create(NSURL url);
+    public static native CGDataConsumer create(CFURL url);
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("CGDataConsumerCreateWithCFData")
-    public static native CGDataConsumer create(NSData data);
+    public static native CGDataConsumer create(CFMutableData data);
     
 }
