@@ -70,8 +70,9 @@ public class HeaderImportCollector extends TreeVisitor {
   }
 
   private void addForwardDecl(ITypeBinding type) {
-    // TODO ?no need for it
     if (BindingUtil.extractMappingName(type) != null) {
+      // HACK! So we dont do @class for a struct type say
+      addSuperType(type);
       return;
     } else if (type instanceof IOSBlockTypeBinding) {
       return;

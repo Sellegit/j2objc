@@ -284,6 +284,17 @@ public final class BindingUtil {
     return getAnnotation(binding, annotationClass) != null;
   }
 
+  public static List<IAnnotationBinding> getAnnotations(IBinding binding, Class<?> annotationClass) {
+    List<IAnnotationBinding> out = Lists.newArrayList();
+    for (IAnnotationBinding annotation : binding.getAnnotations()) {
+      if (typeEqualsClass(annotation.getAnnotationType(), annotationClass)) {
+        out.add(annotation);
+      }
+    }
+
+    return out;
+  }
+
   public static IAnnotationBinding getAnnotation(IBinding binding, Class<?> annotationClass) {
     return getAnnotation(binding.getAnnotations(), annotationClass);
   }

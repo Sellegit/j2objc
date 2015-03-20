@@ -834,11 +834,6 @@ public class StatementGenerator extends TreeVisitor {
       binding = newBinding;
 
       methodName = NameTable.getName(binding);
-
-      System.err.println("passing to printMethod: " + binding);
-      System.err.println(methodName);
-      System.err.println(receiver);
-      System.err.println(node.getArguments());
     }
 
     if (methodName.equals("isAssignableFrom")
@@ -863,7 +858,6 @@ public class StatementGenerator extends TreeVisitor {
     buffer.append('[');
 
     if (BindingUtil.isStatic(binding)) {
-      System.err.println(binding + " is static");
       buffer.append(NameTable.getFullName(binding.getDeclaringClass()));
     } else if (receiver != null) {
       receiver.accept(this);
