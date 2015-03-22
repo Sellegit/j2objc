@@ -279,6 +279,13 @@ public class NameTable {
     }
 
     // Annotation-based mapping
+    if (binding instanceof IMethodBinding) {
+      IOSMethod method = BindingUtil.getMappedMethod((IMethodBinding) binding);
+      if (method != null) {
+        return method.getName();
+      }
+    }
+
     String annoName = BindingUtil.extractMappingName(binding);
     if (annoName != null) {
       return annoName;
