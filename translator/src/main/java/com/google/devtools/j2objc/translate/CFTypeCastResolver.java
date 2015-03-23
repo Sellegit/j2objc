@@ -17,6 +17,7 @@ import com.google.devtools.j2objc.ast.SingleVariableDeclaration;
 import com.google.devtools.j2objc.ast.SuperMethodInvocation;
 import com.google.devtools.j2objc.ast.TreeUtil;
 import com.google.devtools.j2objc.ast.TreeVisitor;
+import com.google.devtools.j2objc.ast.Type;
 import com.google.devtools.j2objc.ast.VariableDeclaration;
 import com.google.devtools.j2objc.ast.VariableDeclarationFragment;
 import com.google.devtools.j2objc.types.IOSMethod;
@@ -60,6 +61,12 @@ public class CFTypeCastResolver extends TreeVisitor {
 
     ITypeBinding[] formals = binding.getParameterTypes();
     List<Expression> args = node.getArguments();
+    if (args.size() != formals.length) {
+      System.err.println(Arrays.toString(formals));
+      System.err.println(args);
+    }
+    assert args.size() == formals.length : "Formal arguments differ from actual arguments";
+
     for (int i = 0; i < formals.length; i++) {
       ITypeBinding expected = binding.getParameterTypes()[i];
       maybeAddCastToId(args.get(i), expected);
@@ -80,13 +87,16 @@ public class CFTypeCastResolver extends TreeVisitor {
 
   @Override
   public void endVisit(MethodDeclaration node) {
-    final ITypeBinding returnTpe = node.getReturnType().getTypeBinding();
-    node.accept(new TreeVisitor() {
-      @Override
-      public void endVisit(ReturnStatement ret) {
-        maybeAddCastToId(ret.getExpression(), returnTpe);
-      }
-    });
+    Type type = node.getReturnType();
+    if (type != null) {
+      final ITypeBinding returnTpe = type.getTypeBinding();
+      node.accept(new TreeVisitor() {
+        @Override
+        public void endVisit(ReturnStatement ret) {
+          maybeAddCastToId(ret.getExpression(), returnTpe);
+        }
+      });
+    }
   }
 
   @Override
