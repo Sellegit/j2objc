@@ -30,6 +30,7 @@ import com.google.devtools.j2objc.translate.AnonymousClassConverter;
 import com.google.devtools.j2objc.translate.ArrayRewriter;
 import com.google.devtools.j2objc.translate.Autoboxer;
 import com.google.devtools.j2objc.translate.BlockRewriter;
+import com.google.devtools.j2objc.translate.CFTypeCastResolver;
 import com.google.devtools.j2objc.translate.CastResolver;
 import com.google.devtools.j2objc.translate.ComplexExpressionExtractor;
 import com.google.devtools.j2objc.translate.ConstantBranchPruner;
@@ -281,6 +282,10 @@ class TranslationProcessor extends FileProcessor {
 
     new AdapterRewriter().run(unit);
     ticker.tick("AdapterRewriter");
+
+    // run before functionizer
+    new CFTypeCastResolver().run(unit);
+    ticker.tick("CFTypeCastResolver");
 
     OuterReferenceResolver.resolve(unit);
     ticker.tick("OuterReferenceResolver");

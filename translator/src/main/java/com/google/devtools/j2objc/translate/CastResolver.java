@@ -50,6 +50,7 @@ import java.util.List;
  * Adds casts as needed for Objective-C compilation. Usually this occurs when a
  * method has a declared return type that is more generic than the resolved type
  * of the expression.
+ * Adds casts to make sure value types like CFTypes get properly casted to id
  */
 public class CastResolver extends TreeVisitor {
 
@@ -137,6 +138,12 @@ public class CastResolver extends TreeVisitor {
       expr.replaceWith(ParenthesizedExpression.parenthesize(castExpr));
       castExpr.setExpression(expr);
     }
+  }
+
+  private void addCastToId(Expression expr) {
+    CastExpression castExpr = new CastExpression(Types.resolveIOSType("id"), null);
+    expr.replaceWith(ParenthesizedExpression.parenthesize(castExpr));
+    castExpr.setExpression(expr);
   }
 
   private boolean needsCast(Expression expr, boolean shouldCastFromId) {
@@ -327,3 +334,4 @@ public class CastResolver extends TreeVisitor {
     }
   }
 }
+
