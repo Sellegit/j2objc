@@ -48,7 +48,7 @@ public class CFTypeCastResolver extends TreeVisitor {
 
   private static void maybeAddCastToId(Expression expr, ITypeBinding binding) {
     if (expr != null) {
-      if (NameTable.getObjCType(binding).equals(NameTable.ID_TYPE)
+      if (NameTable.getObjCType(binding.getErasure()).equals(NameTable.ID_TYPE)
           && BindingUtil.isCFType(expr.getTypeBinding())) {
         addCastToId(expr);
       }
@@ -57,25 +57,26 @@ public class CFTypeCastResolver extends TreeVisitor {
 
   @Override
   public void endVisit(MethodInvocation node) {
-    IMethodBinding binding = node.getMethodBinding();
+    IMethodBinding binding = node.getMethodBinding().getMethodDeclaration();
 
     ITypeBinding[] formals = binding.getParameterTypes();
     List<Expression> args = node.getArguments();
-    if (args.size() != formals.length) {
-      System.err.println(Arrays.toString(formals));
-      System.err.println(args);
-    }
-    assert args.size() == formals.length : "Formal arguments differ from actual arguments";
+    for (int i = 0; i < args.size(); i++) {
+      ITypeBinding expected;
+      if (binding.isVarargs()) {
+        expected = formals.length > i ? formals[i]
+                                      : formals[formals.length - 1].getComponentType();
+      } else {
+        expected = formals[i];
+      }
 
-    for (int i = 0; i < formals.length; i++) {
-      ITypeBinding expected = binding.getParameterTypes()[i];
       maybeAddCastToId(args.get(i), expected);
     }
   }
 
   @Override
   public void endVisit(SuperMethodInvocation node) {
-    IMethodBinding binding = node.getMethodBinding();
+    IMethodBinding binding = node.getMethodBinding().getMethodDeclaration();
 
     ITypeBinding[] formals = binding.getParameterTypes();
     List<Expression> args = node.getArguments();
