@@ -29,6 +29,7 @@ import com.google.devtools.j2objc.ast.SimpleName;
 import com.google.devtools.j2objc.ast.SingleVariableDeclaration;
 import com.google.devtools.j2objc.ast.Statement;
 import com.google.devtools.j2objc.ast.StringLiteral;
+import com.google.devtools.j2objc.ast.SuperConstructorInvocation;
 import com.google.devtools.j2objc.ast.SuperMethodInvocation;
 import com.google.devtools.j2objc.ast.TreeUtil;
 import com.google.devtools.j2objc.ast.TreeVisitor;
@@ -332,6 +333,18 @@ public class JavaToIOSMethodTranslator extends TreeVisitor {
     // copy remaining arguments
     for (Expression oldArg : oldArgs) {
       newArgs.add(oldArg.copy());
+    }
+  }
+
+  @Override
+  public void endVisit(SuperConstructorInvocation node) {
+    IMethodBinding binding = node.getMethodBinding();
+
+    // Annotation-based logic:
+    IOSMethod mapped = BindingUtil.getMappedMethod(binding);
+    if (mapped != null) {
+      IOSMethodBinding newBinding = IOSMethodBinding.newMappedMethod(mapped, binding);
+      node.setMethodBinding(newBinding);
     }
   }
 

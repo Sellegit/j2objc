@@ -1130,7 +1130,13 @@ public class StatementGenerator extends TreeVisitor {
   @Override
   public boolean visit(SuperConstructorInvocation node) {
     IMethodBinding binding = node.getMethodBinding();
-    buffer.append("[super init");
+
+    buffer.append("[super ");
+    if (binding instanceof IOSMethodBinding) {
+      buffer.append(binding.getName());
+    } else {
+      buffer.append("init");
+    }
     List<Expression> args = node.getArguments();
     printArguments(binding, args);
     buffer.append(']');
