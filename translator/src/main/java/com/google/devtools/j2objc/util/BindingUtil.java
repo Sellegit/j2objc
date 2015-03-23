@@ -32,6 +32,7 @@ import com.google.j2objc.annotations.Representing;
 import com.google.j2objc.annotations.Weak;
 import com.google.j2objc.annotations.WeakOuter;
 
+import org.eclipse.jdt.core.IType;
 import org.eclipse.jdt.core.dom.IAnnotationBinding;
 import org.eclipse.jdt.core.dom.IBinding;
 import org.eclipse.jdt.core.dom.IMemberValuePairBinding;
@@ -695,21 +696,33 @@ public final class BindingUtil {
     return nativeBlockType;
   }
 
-  public static boolean isValueType(ITypeBinding type) {
-    ITypeBinding currentCls = type;
+  public static ITypeBinding lookupSuperTypeByName(ITypeBinding tpe, String superType) {
+    ITypeBinding currentCls = tpe;
 
     if (currentCls.isInterface()) {
-      return false;
+      return null;
     }
 
     while (currentCls != null) { // jdt's system has been messed up, so one cant do it in usual way
       // TODO: change to qualified name
-      if (currentCls.getName().equals("ValueType")) {
-        return true;
+      if (currentCls.getName().equals(superType)) {
+        return currentCls;
       }
       currentCls = currentCls.getSuperclass();
     }
 
-    return false;
+    return null;
+  }
+
+  public static boolean isValueType(ITypeBinding type) {
+    return lookupSuperTypeByName(type, "ValueType") != null;
+  }
+
+  public static boolean isObjCType(ITypeBinding tpe) {
+    return !BindingUtil.isValueType(tpe);
+  }
+
+  public static boolean isCFType(ITypeBinding type) {
+    return lookupSuperTypeByName(type, "CFType") != null;
   }
 }

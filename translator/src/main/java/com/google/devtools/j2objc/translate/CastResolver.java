@@ -87,6 +87,14 @@ public class CastResolver extends TreeVisitor {
       // else fall-through.
     }
 
+    if (BindingUtil.isCFType(exprType)) {
+      return;
+    }
+
+    if (BindingUtil.isValueType(type)) {
+      return;
+    }
+
     FunctionInvocation castCheck = createCastCheck(type, expr);
     if (castCheck != null) {
       node.setExpression(castCheck);

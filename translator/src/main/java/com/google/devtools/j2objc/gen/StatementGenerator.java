@@ -454,6 +454,12 @@ public class StatementGenerator extends TreeVisitor {
   public boolean visit(CastExpression node) {
     ITypeBinding type = node.getType().getTypeBinding();
     buffer.append("(");
+    if (Options.useARC()) {
+      if (BindingUtil.isObjCType(type) &&
+          BindingUtil.isCFType(node.getExpression().getTypeBinding())) {
+        buffer.append("__bridge ");
+      }
+    }
     buffer.append(NameTable.getSpecificObjCType(type));
     buffer.append(") ");
     node.getExpression().accept(this);
