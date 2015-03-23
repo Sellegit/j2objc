@@ -40,6 +40,8 @@ import com.google.devtools.j2objc.types.IOSMethod;
 import com.google.devtools.j2objc.types.IOSMethodBinding;
 import com.google.devtools.j2objc.types.IOSTypeBinding;
 import com.google.devtools.j2objc.types.Types;
+import com.google.devtools.j2objc.util.BindingUtil;
+import com.google.devtools.j2objc.util.ErrorUtil;
 
 import org.eclipse.jdt.core.dom.ITypeBinding;
 import org.eclipse.jdt.core.dom.Modifier;
@@ -102,6 +104,10 @@ public class ArrayRewriter extends TreeVisitor {
   private MethodInvocation createInvocation(ArrayCreation node) {
     ITypeBinding arrayType = node.getTypeBinding();
     assert arrayType.isArray();
+    if (BindingUtil.isValueType(arrayType.getComponentType())) {
+      ErrorUtil.error(node, "Value type cannot be used with array");
+    }
+
     boolean retainedResult = node.hasRetainedResult() || Options.useARC();
     ArrayInitializer initializer = node.getInitializer();
     if (initializer != null) {
@@ -250,7 +256,12 @@ public class ArrayRewriter extends TreeVisitor {
   public boolean visit(Assignment node) {
     Expression lhs = node.getLeftHandSide();
     ITypeBinding lhsType = lhs.getTypeBinding();
+
     if (lhs instanceof ArrayAccess && !lhsType.isPrimitive()) {
+      if (BindingUtil.isValueType(node.getRightHandSide().getTypeBinding())) {
+        ErrorUtil.error(node, "Value type cannot be used with array");
+      }
+
       FunctionInvocation newAssignment = newArrayAssignment(node, (ArrayAccess) lhs, lhsType);
       node.replaceWith(newAssignment);
       newAssignment.accept(this);
@@ -262,6 +273,11 @@ public class ArrayRewriter extends TreeVisitor {
   @Override
   public void endVisit(ArrayAccess node) {
     ITypeBinding componentType = node.getTypeBinding();
+
+    if (BindingUtil.isValueType(componentType)) {
+      ErrorUtil.error(node, "Value type cannot be used with array");
+    }
+
     IOSTypeBinding iosArrayBinding = Types.resolveArrayType(componentType);
 
     boolean assignable = needsAssignableAccess(node);

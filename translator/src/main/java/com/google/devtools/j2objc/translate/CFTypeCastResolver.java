@@ -80,8 +80,15 @@ public class CFTypeCastResolver extends TreeVisitor {
 
     ITypeBinding[] formals = binding.getParameterTypes();
     List<Expression> args = node.getArguments();
-    for (int i = 0; i < formals.length; i++) {
-      ITypeBinding expected = binding.getParameterTypes()[i];
+    for (int i = 0; i < args.size(); i++) {
+      ITypeBinding expected;
+      if (binding.isVarargs()) {
+        expected = formals.length > i ? formals[i]
+                                      : formals[formals.length - 1].getComponentType();
+      } else {
+        expected = formals[i];
+      }
+
       maybeAddCastToId(args.get(i), expected);
     }
   }
