@@ -15,9 +15,6 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
-
-
 @Library("CoreGraphics/CoreGraphics.h")
 @Mapping("CGPDFBox")
 public final class CGPDFBox extends ObjCEnum {
@@ -32,6 +29,6 @@ public final class CGPDFBox extends ObjCEnum {
     public static final long TrimBox = 3L;
     @GlobalConstant("kCGPDFArtBox")
     public static final long ArtBox = 4L;
-    
+
 
 }

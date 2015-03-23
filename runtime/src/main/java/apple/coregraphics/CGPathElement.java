@@ -15,9 +15,6 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
-
-
 @Mapping("CGPathElement") @Library("CoreGraphics/CoreGraphics.h")
  class CGPathElement 
     extends Struct 
@@ -31,6 +28,6 @@ import apple.uikit.*;
     public native CGPathElementType getType();
     @DotMapping("points")
     public native CGPoint getPoints();
-    
+
     
 }

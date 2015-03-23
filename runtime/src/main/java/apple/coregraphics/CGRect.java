@@ -15,9 +15,6 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
-
-
 @Mapping("CGRect") @Library("CoreGraphics/CoreGraphics.h")
 public class CGRect 
     extends Struct 
@@ -31,7 +28,7 @@ public class CGRect
     public native CGPoint getOrigin();
     @DotMapping("size")
     public native CGSize getSize();
-    
+
     public static native CGRect create(CGPoint origin, CGSize size) /*-[
         CGRect __new = { .origin = origin, .size = size };
         return __new;
@@ -41,13 +38,29 @@ public class CGRect
         return __new;
     ]-*/;
 
-    
+
     public static native CGRect copyWithsize(CGRect original, CGSize size) /*-[
         CGRect __new = { .origin = original.origin, .size = size };
         return __new;
     ]-*/;
 
-    
+
+    public static final class Adapter {
+
+        public CGPoint origin;
+        public CGSize size;
+        public Adapter(CGPoint origin, CGSize size) {
+            this.origin = origin;
+            this.size = size;
+        }
+        public Adapter(CGRect original) {
+            this.origin = original.getOrigin();
+            this.size = original.getSize();
+        }
+        public CGRect convert() {
+            return create(origin, size);
+        }
+    }
     /**
      * @since Available in iOS 2.0 and later.
      */
@@ -63,7 +76,7 @@ public class CGRect
      */
     @GlobalConstant("CGRectInfinite")
     public static native CGRect Infinite();
-    
+
     /**
      * @since Available in iOS 2.0 and later.
      */
@@ -189,5 +202,5 @@ public class CGRect
      */
     @GlobalFunction("CGRectApplyAffineTransform")
     public static native CGRect apply(CGRect rect, CGAffineTransform t);
-    
+
 }

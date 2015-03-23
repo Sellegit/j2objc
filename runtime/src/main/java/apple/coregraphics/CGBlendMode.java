@@ -15,9 +15,6 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
-
-
 @Library("CoreGraphics/CoreGraphics.h")
 @Mapping("CGBlendMode")
 public final class CGBlendMode extends ObjCEnum {
@@ -78,6 +75,6 @@ public final class CGBlendMode extends ObjCEnum {
     public static final long PlusDarker = 26L;
     @GlobalConstant("kCGBlendModePlusLighter")
     public static final long PlusLighter = 27L;
-    
+
 
 }

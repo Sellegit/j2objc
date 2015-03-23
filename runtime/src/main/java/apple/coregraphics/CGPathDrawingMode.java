@@ -15,9 +15,6 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
-
-
 @Library("CoreGraphics/CoreGraphics.h")
 @Mapping("CGPathDrawingMode")
 public final class CGPathDrawingMode extends ObjCEnum {
@@ -32,6 +29,6 @@ public final class CGPathDrawingMode extends ObjCEnum {
     public static final long FillStroke = 3L;
     @GlobalConstant("kCGPathEOFillStroke")
     public static final long EOFillStroke = 4L;
-    
+
 
 }

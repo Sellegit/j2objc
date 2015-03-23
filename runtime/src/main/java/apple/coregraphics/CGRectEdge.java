@@ -15,9 +15,6 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
-
-
 @Library("CoreGraphics/CoreGraphics.h")
 @Mapping("CGRectEdge")
 public final class CGRectEdge extends ObjCEnum {
@@ -30,6 +27,6 @@ public final class CGRectEdge extends ObjCEnum {
     public static final long MaxXEdge = 2L;
     @GlobalConstant("CGRectMaxYEdge")
     public static final long MaxYEdge = 3L;
-    
+
 
 }

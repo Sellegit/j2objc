@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 import apple.uikit.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Mapping("CGGradientRef") @Library("CoreGraphics/CoreGraphics.h")
@@ -25,7 +24,7 @@ public class CGGradient
     
     
     protected CGGradient() {}
-    
+
     
     
     
@@ -44,5 +43,5 @@ public class CGGradient
      */
     @GlobalFunction("CGGradientCreateWithColors")
     public static native CGGradient create(CGColorSpace space, CFArray colors, Todo locations);
-    
+
 }

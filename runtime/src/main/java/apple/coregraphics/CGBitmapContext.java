@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 import apple.uikit.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("CoreGraphics/CoreGraphics.h")
@@ -87,5 +86,5 @@ public class CGBitmapContext
      */
     @GlobalFunction("CGBitmapContextCreateImage")
     public static native CGImage toImage(CGContext context);
-    
+
 }

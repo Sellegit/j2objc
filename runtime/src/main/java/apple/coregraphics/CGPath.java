@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 import apple.uikit.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Mapping("CGPathRef") @Library("CoreGraphics/CoreGraphics.h")
@@ -25,7 +24,7 @@ public class CGPath
     
     
     protected CGPath() {}
-    
+
     
     
     
@@ -109,5 +108,5 @@ public class CGPath
      */
     @GlobalFunction("CGPathApply")
     public static native void apply(CGPath path, Todo info, FunctionPtr function);
-    
+
 }

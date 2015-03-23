@@ -15,9 +15,6 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
-
-
 @Library("CoreGraphics/CoreGraphics.h")
 @Mapping("CGLineCap")
 public final class CGLineCap extends ObjCEnum {
@@ -28,6 +25,6 @@ public final class CGLineCap extends ObjCEnum {
     public static final long Round = 1L;
     @GlobalConstant("kCGLineCapSquare")
     public static final long Square = 2L;
-    
+
 
 }

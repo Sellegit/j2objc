@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 import apple.uikit.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Mapping("CGFunctionRef") @Library("CoreGraphics/CoreGraphics.h")
@@ -25,7 +24,7 @@ public class CGFunction
     
     
     protected CGFunction() {}
-    
+
     
     
     
@@ -39,5 +38,5 @@ public class CGFunction
      */
     @GlobalFunction("CGFunctionCreate")
     public static native CGFunction create(Todo info, @MachineSizedUInt long domainDimension, Todo domain, @MachineSizedUInt long rangeDimension, Todo range, CGFunctionCallbacks callbacks);
-    
+
 }

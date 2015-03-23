@@ -15,9 +15,6 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
-
-
 @Library("CoreGraphics/CoreGraphics.h")
 @Mapping("CGInterpolationQuality")
 public final class CGInterpolationQuality extends ObjCEnum {
@@ -32,6 +29,6 @@ public final class CGInterpolationQuality extends ObjCEnum {
     public static final long Medium = 4L;
     @GlobalConstant("kCGInterpolationHigh")
     public static final long High = 3L;
-    
+
 
 }

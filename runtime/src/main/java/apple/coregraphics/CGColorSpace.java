@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 import apple.uikit.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Mapping("CGColorSpaceRef") @Library("CoreGraphics/CoreGraphics.h")
@@ -25,7 +24,7 @@ public class CGColorSpace
     
     
     protected CGColorSpace() {}
-    
+
     
     
     
@@ -119,5 +118,5 @@ public class CGColorSpace
      */
     @GlobalFunction("CGColorSpaceCopyICCProfile")
     public static native CFData copyICCProfile(CGColorSpace space);
-    
+
 }

@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 import apple.uikit.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Mapping("CGContextRef") @Library("CoreGraphics/CoreGraphics.h")
@@ -25,7 +24,7 @@ public class CGContext
     
     
     protected CGContext() {}
-    
+
     
     
     
@@ -631,5 +630,5 @@ public class CGContext
      */
     @GlobalFunction("CGContextDrawLayerAtPoint")
     public static native void drawLayerAtPoint(CGContext context, CGPoint point, CGLayer layer);
-    
+
 }

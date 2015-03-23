@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 import apple.uikit.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("CoreGraphics/CoreGraphics.h")
@@ -52,5 +51,5 @@ public class CGPDFBoxOptions
      */
     @GlobalConstant("kCGPDFContextArtBox")
     public static native CFString ArtBoxKey();
-    
+
 }

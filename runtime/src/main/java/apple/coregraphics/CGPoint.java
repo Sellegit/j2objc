@@ -15,9 +15,6 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
-
-
 @Mapping("CGPoint") @Library("CoreGraphics/CoreGraphics.h")
 public class CGPoint 
     extends Struct 
@@ -31,7 +28,7 @@ public class CGPoint
     public native @MachineSizedFloat double getX();
     @DotMapping("y")
     public native @MachineSizedFloat double getY();
-    
+
     public static native CGPoint create(@MachineSizedFloat double x, @MachineSizedFloat double y) /*-[
         CGPoint __new = { .x = x, .y = y };
         return __new;
@@ -41,19 +38,35 @@ public class CGPoint
         return __new;
     ]-*/;
 
-    
+
     public static native CGPoint copyWithy(CGPoint original, @MachineSizedFloat double y) /*-[
         CGPoint __new = { .x = original.x, .y = y };
         return __new;
     ]-*/;
 
-    
+
+    public static final class Adapter {
+
+        public @MachineSizedFloat double x;
+        public @MachineSizedFloat double y;
+        public Adapter(@MachineSizedFloat double x, @MachineSizedFloat double y) {
+            this.x = x;
+            this.y = y;
+        }
+        public Adapter(CGPoint original) {
+            this.x = original.getX();
+            this.y = original.getY();
+        }
+        public CGPoint convert() {
+            return create(x, y);
+        }
+    }
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalConstant("CGPointZero")
     public static native CGPoint Zero();
-    
+
     /**
      * @since Available in iOS 2.0 and later.
      */
@@ -74,5 +87,5 @@ public class CGPoint
      */
     @GlobalFunction("CGPointApplyAffineTransform")
     public static native CGPoint apply(CGPoint point, CGAffineTransform t);
-    
+
 }

@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 import apple.uikit.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("CoreGraphics/CoreGraphics.h")
@@ -77,5 +76,5 @@ public class CGPDFContextOptions
      */
     @GlobalConstant("kCGPDFContextAllowsCopying")
     public static native CFString AllowsCopyingKey();
-    
+
 }

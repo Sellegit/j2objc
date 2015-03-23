@@ -15,11 +15,9 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
 /**
  * @since Available in iOS 2.0 and later.
  */
-
 @Library("CoreGraphics/CoreGraphics.h")
 @Mapping("CGBitmapInfo")
 public final class CGBitmapInfo extends ObjCEnum {
@@ -40,6 +38,6 @@ public final class CGBitmapInfo extends ObjCEnum {
     public static final long ByteOrder16Big = 12288L;
     @GlobalConstant("kCGBitmapByteOrder32Big")
     public static final long ByteOrder32Big = 16384L;
-    
+
 
 }

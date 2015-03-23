@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 import apple.uikit.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Mapping("CGMutablePathRef") @Library("CoreGraphics/CoreGraphics.h")
@@ -25,7 +24,7 @@ public class CGMutablePath
     
     
     protected CGMutablePath() {}
-    
+
     
     
     
@@ -114,5 +113,5 @@ public class CGMutablePath
      */
     @GlobalFunction("CGPathAddPath")
     public static native void addPath(CGMutablePath path1, CGAffineTransform m, CGPath path2);
-    
+
 }

@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 import apple.uikit.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("CoreGraphics/CoreGraphics.h")
@@ -31,7 +30,7 @@ import apple.uikit.*;
     public static final int CGPDFDataFormatRaw = 0;
     public static final int CGPDFDataFormatJPEGEncoded = 1;
     public static final int CGPDFDataFormatJPEG2000 = 2;
-    
+
     
     
     
@@ -56,5 +55,5 @@ import apple.uikit.*;
      */
     @GlobalConstant("kCGFontVariationAxisDefaultValue")
     public static native CFString kCGFontVariationAxisDefaultValue();
-    
+
 }

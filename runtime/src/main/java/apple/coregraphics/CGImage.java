@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 import apple.uikit.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Mapping("CGImageRef") @Library("CoreGraphics/CoreGraphics.h")
@@ -25,7 +24,7 @@ public class CGImage
     
     
     protected CGImage() {}
-    
+
     
     
     
@@ -144,5 +143,5 @@ public class CGImage
      */
     @GlobalFunction("CGImageGetBitmapInfo")
     public static native CGBitmapInfo getBitmapInfo(CGImage image);
-    
+
 }

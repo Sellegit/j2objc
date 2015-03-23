@@ -15,9 +15,6 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
-
-
 @Library("CoreGraphics/CoreGraphics.h")
 @Mapping("CGPatternTiling")
 public final class CGPatternTiling extends ObjCEnum {
@@ -28,6 +25,6 @@ public final class CGPatternTiling extends ObjCEnum {
     public static final long ConstantSpacingMinimalDistortion = 1L;
     @GlobalConstant("kCGPatternTilingConstantSpacing")
     public static final long ConstantSpacing = 2L;
-    
+
 
 }

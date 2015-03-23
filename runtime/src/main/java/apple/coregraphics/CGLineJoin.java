@@ -15,9 +15,6 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
-
-
 @Library("CoreGraphics/CoreGraphics.h")
 @Mapping("CGLineJoin")
 public final class CGLineJoin extends ObjCEnum {
@@ -28,6 +25,6 @@ public final class CGLineJoin extends ObjCEnum {
     public static final long Round = 1L;
     @GlobalConstant("kCGLineJoinBevel")
     public static final long Bevel = 2L;
-    
+
 
 }

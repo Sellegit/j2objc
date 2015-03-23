@@ -15,9 +15,6 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
-
-
 @Library("CoreGraphics/CoreGraphics.h")
 @Mapping("CGTextDrawingMode")
 public final class CGTextDrawingMode extends ObjCEnum {
@@ -38,6 +35,6 @@ public final class CGTextDrawingMode extends ObjCEnum {
     public static final long FillStrokeClip = 6L;
     @GlobalConstant("kCGTextClip")
     public static final long Clip = 7L;
-    
+
 
 }

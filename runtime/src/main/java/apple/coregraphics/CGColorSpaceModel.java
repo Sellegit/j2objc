@@ -15,9 +15,6 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
-
-
 @Library("CoreGraphics/CoreGraphics.h")
 @Mapping("CGColorSpaceModel")
 public final class CGColorSpaceModel extends ObjCEnum {
@@ -38,6 +35,6 @@ public final class CGColorSpaceModel extends ObjCEnum {
     public static final long Indexed = 5L;
     @GlobalConstant("kCGColorSpaceModelPattern")
     public static final long Pattern = 6L;
-    
+
 
 }

@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 import apple.uikit.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Mapping("CGColorRef") @Library("CoreGraphics/CoreGraphics.h")
@@ -25,7 +24,7 @@ public class CGColor
     
     
     protected CGColor() {}
-    
+
     
     
     
@@ -84,5 +83,5 @@ public class CGColor
      */
     @GlobalFunction("CGColorGetTypeID")
     public static native @MachineSizedUInt long getClassTypeID();
-    
+
 }

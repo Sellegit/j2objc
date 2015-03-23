@@ -15,9 +15,6 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
-
-
 @Library("CoreGraphics/CoreGraphics.h")
 @Mapping("CGImageAlphaInfo")
 public final class CGImageAlphaInfo extends ObjCEnum {
@@ -38,6 +35,6 @@ public final class CGImageAlphaInfo extends ObjCEnum {
     public static final long NoneSkipFirst = 6L;
     @GlobalConstant("kCGImageAlphaOnly")
     public static final long Only = 7L;
-    
+
 
 }

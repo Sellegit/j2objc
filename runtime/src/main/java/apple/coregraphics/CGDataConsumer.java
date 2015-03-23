@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 import apple.uikit.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Mapping("CGDataConsumerRef") @Library("CoreGraphics/CoreGraphics.h")
@@ -25,7 +24,7 @@ public class CGDataConsumer
     
     
     protected CGDataConsumer() {}
-    
+
     
     
     
@@ -44,5 +43,5 @@ public class CGDataConsumer
      */
     @GlobalFunction("CGDataConsumerCreateWithCFData")
     public static native CGDataConsumer create(CFMutableData data);
-    
+
 }

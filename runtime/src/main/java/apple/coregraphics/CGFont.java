@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 import apple.uikit.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Mapping("CGFontRef") @Library("CoreGraphics/CoreGraphics.h")
@@ -26,10 +25,10 @@ public class CGFont
     public static final int FontIndexMax = 65534;
     public static final int FontIndexInvalid = 65535;
     public static final int GlyphMax = 65534;
-    
+
     
     protected CGFont() {}
-    
+
     
     
     
@@ -128,5 +127,5 @@ public class CGFont
      */
     @GlobalFunction("CGFontCopyGlyphNameForGlyph")
     public static native String getGlyphNameForGlyph(CGFont font, short glyph);
-    
+
 }

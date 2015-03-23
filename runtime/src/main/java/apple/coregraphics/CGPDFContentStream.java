@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 import apple.uikit.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 
@@ -25,7 +24,7 @@ public class CGPDFContentStream
     
     
     protected CGPDFContentStream() {}
-    
+
     
     
     

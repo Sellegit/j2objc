@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 import apple.uikit.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Mapping("CGLayerRef") @Library("CoreGraphics/CoreGraphics.h")
@@ -25,7 +24,7 @@ public class CGLayer
     
     
     protected CGLayer() {}
-    
+
     
     
     
@@ -49,5 +48,5 @@ public class CGLayer
      */
     @GlobalFunction("CGLayerGetTypeID")
     public static native @MachineSizedUInt long getClassTypeID();
-    
+
 }

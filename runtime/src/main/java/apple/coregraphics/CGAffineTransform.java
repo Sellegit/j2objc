@@ -15,9 +15,6 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
-
-
 @Mapping("CGAffineTransform") @Library("CoreGraphics/CoreGraphics.h")
 public class CGAffineTransform 
     extends Struct 
@@ -39,7 +36,7 @@ public class CGAffineTransform
     public native @MachineSizedFloat double getTx();
     @DotMapping("ty")
     public native @MachineSizedFloat double getTy();
-    
+
     public static native CGAffineTransform create(@MachineSizedFloat double a, @MachineSizedFloat double b, @MachineSizedFloat double c, @MachineSizedFloat double d, @MachineSizedFloat double tx, @MachineSizedFloat double ty) /*-[
         CGAffineTransform __new = { .a = a, .b = b, .c = c, .d = d, .tx = tx, .ty = ty };
         return __new;
@@ -49,43 +46,71 @@ public class CGAffineTransform
         return __new;
     ]-*/;
 
-    
+
     public static native CGAffineTransform copyWithb(CGAffineTransform original, @MachineSizedFloat double b) /*-[
         CGAffineTransform __new = { .a = original.a, .b = b, .c = original.c, .d = original.d, .tx = original.tx, .ty = original.ty };
         return __new;
     ]-*/;
 
-    
+
     public static native CGAffineTransform copyWithc(CGAffineTransform original, @MachineSizedFloat double c) /*-[
         CGAffineTransform __new = { .a = original.a, .b = original.b, .c = c, .d = original.d, .tx = original.tx, .ty = original.ty };
         return __new;
     ]-*/;
 
-    
+
     public static native CGAffineTransform copyWithd(CGAffineTransform original, @MachineSizedFloat double d) /*-[
         CGAffineTransform __new = { .a = original.a, .b = original.b, .c = original.c, .d = d, .tx = original.tx, .ty = original.ty };
         return __new;
     ]-*/;
 
-    
+
     public static native CGAffineTransform copyWithtx(CGAffineTransform original, @MachineSizedFloat double tx) /*-[
         CGAffineTransform __new = { .a = original.a, .b = original.b, .c = original.c, .d = original.d, .tx = tx, .ty = original.ty };
         return __new;
     ]-*/;
 
-    
+
     public static native CGAffineTransform copyWithty(CGAffineTransform original, @MachineSizedFloat double ty) /*-[
         CGAffineTransform __new = { .a = original.a, .b = original.b, .c = original.c, .d = original.d, .tx = original.tx, .ty = ty };
         return __new;
     ]-*/;
 
-    
+
+    public static final class Adapter {
+
+        public @MachineSizedFloat double a;
+        public @MachineSizedFloat double b;
+        public @MachineSizedFloat double c;
+        public @MachineSizedFloat double d;
+        public @MachineSizedFloat double tx;
+        public @MachineSizedFloat double ty;
+        public Adapter(@MachineSizedFloat double a, @MachineSizedFloat double b, @MachineSizedFloat double c, @MachineSizedFloat double d, @MachineSizedFloat double tx, @MachineSizedFloat double ty) {
+            this.a = a;
+            this.b = b;
+            this.c = c;
+            this.d = d;
+            this.tx = tx;
+            this.ty = ty;
+        }
+        public Adapter(CGAffineTransform original) {
+            this.a = original.getA();
+            this.b = original.getB();
+            this.c = original.getC();
+            this.d = original.getD();
+            this.tx = original.getTx();
+            this.ty = original.getTy();
+        }
+        public CGAffineTransform convert() {
+            return create(a, b, c, d, tx, ty);
+        }
+    }
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalConstant("CGAffineTransformIdentity")
     public static native CGAffineTransform Identity();
-    
+
     /**
      * @since Available in iOS 2.0 and later.
      */
@@ -136,5 +161,5 @@ public class CGAffineTransform
      */
     @GlobalFunction("CGAffineTransformEqualToTransform")
     public static native boolean equalToTransform(CGAffineTransform t1, CGAffineTransform t2);
-    
+
 }

@@ -15,9 +15,6 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
-
-
 @Library("CoreGraphics/CoreGraphics.h")
 @Mapping("CGPDFObjectType")
 public final class CGPDFObjectType extends ObjCEnum {
@@ -40,6 +37,6 @@ public final class CGPDFObjectType extends ObjCEnum {
     public static final long Dictionary = 8L;
     @GlobalConstant("kCGPDFObjectTypeStream")
     public static final long Stream = 9L;
-    
+
 
 }

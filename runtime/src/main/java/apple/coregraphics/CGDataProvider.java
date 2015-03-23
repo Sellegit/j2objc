@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 import apple.uikit.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Mapping("CGDataProviderRef") @Library("CoreGraphics/CoreGraphics.h")
@@ -25,7 +24,7 @@ public class CGDataProvider
     
     
     protected CGDataProvider() {}
-    
+
     
     
     
@@ -54,5 +53,5 @@ public class CGDataProvider
      */
     @GlobalFunction("CGDataProviderCopyData")
     public static native NSData getData(CGDataProvider provider);
-    
+
 }

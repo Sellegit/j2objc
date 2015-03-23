@@ -15,9 +15,6 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
-
-
 @Library("CoreGraphics/CoreGraphics.h")
 @Mapping("CGGradientDrawingOptions")
 public final class CGGradientDrawingOptions extends ObjCEnum {
@@ -26,6 +23,6 @@ public final class CGGradientDrawingOptions extends ObjCEnum {
     public static final long BeforeStartLocation = 1L;
     @GlobalConstant("kCGGradientDrawsAfterEndLocation")
     public static final long AfterEndLocation = 2L;
-    
+
 
 }

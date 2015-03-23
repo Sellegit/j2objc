@@ -15,9 +15,6 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
-
-
 @Library("CoreGraphics/CoreGraphics.h")
 @Mapping("CGColorRenderingIntent")
 public final class CGColorRenderingIntent extends ObjCEnum {
@@ -32,6 +29,6 @@ public final class CGColorRenderingIntent extends ObjCEnum {
     public static final long Perceptual = 3L;
     @GlobalConstant("kCGRenderingIntentSaturation")
     public static final long Saturation = 4L;
-    
+
 
 }

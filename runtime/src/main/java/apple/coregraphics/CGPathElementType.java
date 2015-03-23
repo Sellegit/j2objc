@@ -15,9 +15,6 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
-
-
 @Library("CoreGraphics/CoreGraphics.h")
 @Mapping("CGPathElementType")
 public final class CGPathElementType extends ObjCEnum {
@@ -32,6 +29,6 @@ public final class CGPathElementType extends ObjCEnum {
     public static final long AddCurveToPoint = 3L;
     @GlobalConstant("kCGPathElementCloseSubpath")
     public static final long CloseSubpath = 4L;
-    
+
 
 }

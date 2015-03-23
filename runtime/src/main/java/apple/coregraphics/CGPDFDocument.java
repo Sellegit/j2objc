@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 import apple.uikit.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Mapping("CGPDFDocumentRef") @Library("CoreGraphics/CoreGraphics.h")
@@ -25,7 +24,7 @@ public class CGPDFDocument
     
     
     protected CGPDFDocument() {}
-    
+
     
     
     
@@ -84,5 +83,5 @@ public class CGPDFDocument
      */
     @GlobalFunction("CGPDFDocumentGetTypeID")
     public static native @MachineSizedUInt long getClassTypeID();
-    
+
 }

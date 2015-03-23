@@ -15,9 +15,6 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
-
-
 @Library("CoreGraphics/CoreGraphics.h")
 @Mapping("CGFontPostScriptFormat")
 public final class CGFontPostScriptFormat extends ObjCEnum {
@@ -28,6 +25,6 @@ public final class CGFontPostScriptFormat extends ObjCEnum {
     public static final long _3 = 3L;
     @GlobalConstant("kCGFontPostScriptFormatType42")
     public static final long _42 = 42L;
-    
+
 
 }

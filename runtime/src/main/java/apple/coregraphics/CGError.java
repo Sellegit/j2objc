@@ -15,9 +15,6 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
-
-
 @Library("CoreGraphics/CoreGraphics.h")
 @Mapping("CGError")
 public final class CGError extends ObjCEnum {
@@ -44,6 +41,6 @@ public final class CGError extends ObjCEnum {
     public static final long InvalidOperation = 1010L;
     @GlobalConstant("kCGErrorNoneAvailable")
     public static final long NoneAvailable = 1011L;
-    
+
 
 }

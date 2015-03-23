@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 import apple.uikit.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Mapping("CGShadingRef") @Library("CoreGraphics/CoreGraphics.h")
@@ -25,7 +24,7 @@ public class CGShading
     
     
     protected CGShading() {}
-    
+
     
     
     
@@ -44,5 +43,5 @@ public class CGShading
      */
     @GlobalFunction("CGShadingCreateRadial")
     public static native CGShading createRadial(CGColorSpace space, CGPoint start, @MachineSizedFloat double startRadius, CGPoint end, @MachineSizedFloat double endRadius, CGFunction function, boolean extendStart, boolean extendEnd);
-    
+
 }

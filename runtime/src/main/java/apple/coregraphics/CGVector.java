@@ -15,9 +15,6 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
-
-
 @Mapping("CGVector") @Library("CoreGraphics/CoreGraphics.h")
 public class CGVector 
     extends Struct 
@@ -31,7 +28,7 @@ public class CGVector
     public native @MachineSizedFloat double getDx();
     @DotMapping("dy")
     public native @MachineSizedFloat double getDy();
-    
+
     public static native CGVector create(@MachineSizedFloat double dx, @MachineSizedFloat double dy) /*-[
         CGVector __new = { .dx = dx, .dy = dy };
         return __new;
@@ -41,11 +38,27 @@ public class CGVector
         return __new;
     ]-*/;
 
-    
+
     public static native CGVector copyWithdy(CGVector original, @MachineSizedFloat double dy) /*-[
         CGVector __new = { .dx = original.dx, .dy = dy };
         return __new;
     ]-*/;
 
-    
+
+    public static final class Adapter {
+
+        public @MachineSizedFloat double dx;
+        public @MachineSizedFloat double dy;
+        public Adapter(@MachineSizedFloat double dx, @MachineSizedFloat double dy) {
+            this.dx = dx;
+            this.dy = dy;
+        }
+        public Adapter(CGVector original) {
+            this.dx = original.getDx();
+            this.dy = original.getDy();
+        }
+        public CGVector convert() {
+            return create(dx, dy);
+        }
+    }
 }

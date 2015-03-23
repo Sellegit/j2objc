@@ -15,9 +15,6 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
-
-
 @Mapping("CGSize") @Library("CoreGraphics/CoreGraphics.h")
 public class CGSize 
     extends Struct 
@@ -31,7 +28,7 @@ public class CGSize
     public native @MachineSizedFloat double getWidth();
     @DotMapping("height")
     public native @MachineSizedFloat double getHeight();
-    
+
     public static native CGSize create(@MachineSizedFloat double width, @MachineSizedFloat double height) /*-[
         CGSize __new = { .width = width, .height = height };
         return __new;
@@ -41,19 +38,35 @@ public class CGSize
         return __new;
     ]-*/;
 
-    
+
     public static native CGSize copyWithheight(CGSize original, @MachineSizedFloat double height) /*-[
         CGSize __new = { .width = original.width, .height = height };
         return __new;
     ]-*/;
 
-    
+
+    public static final class Adapter {
+
+        public @MachineSizedFloat double width;
+        public @MachineSizedFloat double height;
+        public Adapter(@MachineSizedFloat double width, @MachineSizedFloat double height) {
+            this.width = width;
+            this.height = height;
+        }
+        public Adapter(CGSize original) {
+            this.width = original.getWidth();
+            this.height = original.getHeight();
+        }
+        public CGSize convert() {
+            return create(width, height);
+        }
+    }
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalConstant("CGSizeZero")
     public static native CGSize Zero();
-    
+
     /**
      * @since Available in iOS 2.0 and later.
      */
@@ -74,5 +87,5 @@ public class CGSize
      */
     @GlobalFunction("CGSizeApplyAffineTransform")
     public static native CGSize apply(CGSize size, CGAffineTransform t);
-    
+
 }

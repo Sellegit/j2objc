@@ -15,9 +15,6 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
-
-
 @Library("CoreGraphics/CoreGraphics.h")
 @Mapping("CGTextEncoding")
 public final class CGTextEncoding extends ObjCEnum {
@@ -26,6 +23,6 @@ public final class CGTextEncoding extends ObjCEnum {
     public static final long FontSpecific = 0L;
     @GlobalConstant("kCGEncodingMacRoman")
     public static final long MacRoman = 1L;
-    
+
 
 }

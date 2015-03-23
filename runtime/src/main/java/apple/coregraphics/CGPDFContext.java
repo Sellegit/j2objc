@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 import apple.uikit.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("CoreGraphics/CoreGraphics.h")
@@ -72,5 +71,5 @@ public class CGPDFContext
      */
     @GlobalFunction("CGPDFContextSetDestinationForRect")
     public static native void setDestinationForRect(CGContext context, CFString name, CGRect rect);
-    
+
 }

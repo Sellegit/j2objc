@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 import apple.uikit.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Mapping("CGPatternRef") @Library("CoreGraphics/CoreGraphics.h")
@@ -25,7 +24,7 @@ public class CGPattern
     
     
     protected CGPattern() {}
-    
+
     
     
     
@@ -39,5 +38,5 @@ public class CGPattern
      */
     @GlobalFunction("CGPatternCreate")
     public static native CGPattern create(Todo info, CGRect bounds, CGAffineTransform matrix, @MachineSizedFloat double xStep, @MachineSizedFloat double yStep, @Representing("CGPatternTiling") long tiling, boolean isColored, CGPatternCallbacks callbacks);
-    
+
 }

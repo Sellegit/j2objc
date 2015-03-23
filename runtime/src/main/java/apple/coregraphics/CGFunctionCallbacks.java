@@ -15,9 +15,6 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
-
-
 @Mapping("CGFunctionCallbacks") @Library("CoreGraphics/CoreGraphics.h")
  class CGFunctionCallbacks 
     extends Struct 
@@ -29,6 +26,6 @@ import apple.uikit.*;
     
     @DotMapping("version")
     public native int getVersion();
-    
+
     
 }
