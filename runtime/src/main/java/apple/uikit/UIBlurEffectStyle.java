@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("UIKit/UIKit.h")
 @Mapping("UIBlurEffectStyle")
 public final class UIBlurEffectStyle extends ObjCEnum {
@@ -34,6 +32,6 @@ public final class UIBlurEffectStyle extends ObjCEnum {
     public static final long Light = 1L;
     @GlobalConstant("UIBlurEffectStyleDark")
     public static final long Dark = 2L;
-    
+
 
 }

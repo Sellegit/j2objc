@@ -15,11 +15,9 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
 /**
  * @since Available in iOS 3.0 and later.
  */
-
 @Library("MediaPlayer/MediaPlayer.h") @Mapping("MPMediaPickerController")
 public class MPMediaPickerController 
     extends UIViewController 
@@ -33,7 +31,7 @@ public class MPMediaPickerController
     public MPMediaPickerController(String nibNameOrNil, NSBundle nibBundleOrNil) { }
     @Mapping("init")
     public MPMediaPickerController() { }
-    
+
     
     @Mapping("mediaTypes")
     public native @Representing("MPMediaType") long getMediaTypes();
@@ -59,9 +57,9 @@ public class MPMediaPickerController
     public native String getPrompt();
     @Mapping("setPrompt:")
     public native void setPrompt(String v);
+
     
     
-    
-    
-    
+
+
 }

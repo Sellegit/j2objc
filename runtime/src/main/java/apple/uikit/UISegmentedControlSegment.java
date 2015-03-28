@@ -19,9 +19,6 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h")
 @Mapping("UISegmentedControlSegment")
 public final class UISegmentedControlSegment extends ObjCEnum {
@@ -36,6 +33,6 @@ public final class UISegmentedControlSegment extends ObjCEnum {
     public static final long Right = 3L;
     @GlobalConstant("UISegmentedControlSegmentAlone")
     public static final long Alone = 4L;
-    
+
 
 }

@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 import apple.dispatch.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("CoreBluetooth/CoreBluetooth.h")
@@ -37,5 +36,5 @@ public class CBPeripheralManagerRestoredState
      */
     @GlobalConstant("CBPeripheralManagerRestoredStateAdvertisementDataKey")
     public static native NSString AdvertisementDataKey();
-    
+
 }

@@ -20,9 +20,6 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
-
-
 @Mapping("AVAudio3DPoint") @Library("AVFoundation/AVFoundation.h")
 public class AVAudio3DPoint 
     extends Struct 
@@ -38,7 +35,7 @@ public class AVAudio3DPoint
     public native float getY();
     @DotMapping("z")
     public native float getZ();
-    
+
     public static native AVAudio3DPoint create(float x, float y, float z) /*-[
         AVAudio3DPoint __new = { .x = x, .y = y, .z = z };
         return __new;
@@ -48,17 +45,36 @@ public class AVAudio3DPoint
         return __new;
     ]-*/;
 
-    
+
     public static native AVAudio3DPoint copyWithy(AVAudio3DPoint original, float y) /*-[
         AVAudio3DPoint __new = { .x = original.x, .y = y, .z = original.z };
         return __new;
     ]-*/;
 
-    
+
     public static native AVAudio3DPoint copyWithz(AVAudio3DPoint original, float z) /*-[
         AVAudio3DPoint __new = { .x = original.x, .y = original.y, .z = z };
         return __new;
     ]-*/;
 
-    
+
+    public static final class Adapter {
+
+        public float x;
+        public float y;
+        public float z;
+        public Adapter(float x, float y, float z) {
+            this.x = x;
+            this.y = y;
+            this.z = z;
+        }
+        public Adapter(AVAudio3DPoint original) {
+            this.x = original.getX();
+            this.y = original.getY();
+            this.z = original.getZ();
+        }
+        public AVAudio3DPoint convert() {
+            return create(x, y, z);
+        }
+    }
 }

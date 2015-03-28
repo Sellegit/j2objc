@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h") @Mapping("AVAudioUnitGenerator")
 public class AVAudioUnitGenerator 
     extends AVAudioUnit 
@@ -36,7 +34,7 @@ public class AVAudioUnitGenerator
     public AVAudioUnitGenerator(AudioComponentDescription audioComponentDescription) { }
     @Mapping("init")
     public AVAudioUnitGenerator() { }
-    
+
     
     @Mapping("bypass")
     public native boolean isBypass();
@@ -74,9 +72,9 @@ public class AVAudioUnitGenerator
     public native AVAudio3DPoint getPosition();
     @Mapping("setPosition:")
     public native void setPosition(AVAudio3DPoint v);
+
     
     
-    
-    
-    
+
+
 }

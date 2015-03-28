@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 2.0 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UIWindow")
 public class UIWindow 
     extends UIView 
@@ -37,7 +35,7 @@ public class UIWindow
     public UIWindow(NSCoder aDecoder) { }
     @Mapping("init")
     public UIWindow() { }
-    
+
     
     /**
      * @since Available in iOS 3.2 and later.
@@ -65,7 +63,7 @@ public class UIWindow
      */
     @Mapping("setRootViewController:")
     public native void setRootViewController(UIViewController v);
-    
+
     
     
     @GlobalConstant("UIWindowDidBecomeVisibleNotification")
@@ -94,7 +92,7 @@ public class UIWindow
      */
     @GlobalConstant("UIKeyboardDidChangeFrameNotification")
     public static native NSString KeyboardDidChangeFrameNotification();
-    
+
     @Mapping("becomeKeyWindow")
     public native void becomeKeyWindow();
     @Mapping("resignKeyWindow")
@@ -113,5 +111,5 @@ public class UIWindow
     public native CGRect convertRectToWindow(CGRect rect, UIWindow window);
     @Mapping("convertRect:fromWindow:")
     public native CGRect convertRectFromWindow(CGRect rect, UIWindow window);
-    
+
 }

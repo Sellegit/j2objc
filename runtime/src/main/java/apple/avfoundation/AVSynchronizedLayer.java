@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 4.0 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h") @Mapping("AVSynchronizedLayer")
 public class AVSynchronizedLayer 
     extends CALayer 
@@ -36,16 +34,16 @@ public class AVSynchronizedLayer
     public AVSynchronizedLayer() { }
     @Mapping("initWithLayer:")
     public AVSynchronizedLayer(Object layer) { }
-    
+
     
     @Mapping("playerItem")
     public native AVPlayerItem getPlayerItem();
     @Mapping("setPlayerItem:")
     public native void setPlayerItem(AVPlayerItem v);
-    
+
     
     
     @Mapping("synchronizedLayerWithPlayerItem:")
     public static native AVSynchronizedLayer create(AVPlayerItem playerItem);
-    
+
 }

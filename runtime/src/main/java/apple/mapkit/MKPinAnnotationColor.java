@@ -17,11 +17,9 @@ import apple.uikit.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 3.0 and later.
  */
-
 @Library("MapKit/MapKit.h")
 @Mapping("MKPinAnnotationColor")
 public final class MKPinAnnotationColor extends ObjCEnum {
@@ -32,6 +30,6 @@ public final class MKPinAnnotationColor extends ObjCEnum {
     public static final long Green = 1L;
     @GlobalConstant("MKPinAnnotationColorPurple")
     public static final long Purple = 2L;
-    
+
 
 }

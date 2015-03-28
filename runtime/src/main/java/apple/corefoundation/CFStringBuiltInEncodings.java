@@ -15,9 +15,6 @@ import apple.dispatch.*;
 import apple.foundation.*;
 
 
-
-
-
 @Library("CoreFoundation/CoreFoundation.h")
 @Mapping("CFStringBuiltInEncodings")
 public final class CFStringBuiltInEncodings extends ObjCEnum {
@@ -50,6 +47,6 @@ public final class CFStringBuiltInEncodings extends ObjCEnum {
     public static final long UTF32BE = 402653440L;
     @GlobalConstant("kCFStringEncodingUTF32LE")
     public static final long UTF32LE = 469762304L;
-    
+
 
 }

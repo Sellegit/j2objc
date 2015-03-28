@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 2.0 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UITableViewController")
 public class UITableViewController 
     extends UIViewController 
@@ -39,7 +37,7 @@ public class UITableViewController
     public UITableViewController(NSCoder aDecoder) { }
     @Mapping("init")
     public UITableViewController() { }
-    
+
     
     @Mapping("tableView")
     public native UITableView getTableView();
@@ -65,7 +63,7 @@ public class UITableViewController
      */
     @Mapping("setRefreshControl:")
     public native void setRefreshControl(UIRefreshControl v);
-    
+
     
     
     @Mapping("tableView:willDisplayCell:forRowAtIndexPath:")
@@ -245,5 +243,5 @@ public class UITableViewController
     public native void commitEditingStyleForRow(UITableView tableView, @Representing("UITableViewCellEditingStyle") long editingStyle, NSIndexPath indexPath);
     @Mapping("tableView:moveRowAtIndexPath:toIndexPath:")
     public native void moveRow(UITableView tableView, NSIndexPath sourceIndexPath, NSIndexPath destinationIndexPath);
-    
+
 }

@@ -20,9 +20,6 @@ import apple.spritekit.*;
 import apple.opengles.*;
 
 
-
-
-
 @Library("SceneKit/SceneKit.h")
 @Mapping("SCNTransparencyMode")
 public final class SCNTransparencyMode extends ObjCEnum {
@@ -31,6 +28,6 @@ public final class SCNTransparencyMode extends ObjCEnum {
     public static final long AOne = 0L;
     @GlobalConstant("SCNTransparencyModeRGBZero")
     public static final long RGBZero = 1L;
-    
+
 
 }

@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 4.0 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h") @Mapping("AVPlayerItem")
 public class AVPlayerItem 
     extends NSObject 
@@ -43,7 +41,7 @@ public class AVPlayerItem
     public AVPlayerItem(AVAsset asset, NSArray<?> automaticallyLoadedAssetKeys) { }
     @Mapping("init")
     public AVPlayerItem() { }
-    
+
     
     @Mapping("status")
     public native @Representing("AVPlayerItemStatus") long getStatus();
@@ -183,7 +181,7 @@ public class AVPlayerItem
      */
     @Mapping("outputs")
     public native NSArray<AVPlayerItemOutput> getOutputs();
-    
+
     
     
     /**
@@ -221,7 +219,7 @@ public class AVPlayerItem
      */
     @GlobalConstant("AVPlayerItemFailedToPlayToEndTimeErrorKey")
     public static native NSString FailedToPlayToEndTimeErrorKey();
-    
+
     @Mapping("playerItemWithURL:")
     public static native AVPlayerItem create(NSURL URL);
     @Mapping("playerItemWithAsset:")
@@ -300,5 +298,5 @@ public class AVPlayerItem
     public native void removeOutput(AVPlayerItemOutput output);
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
-    
+
 }

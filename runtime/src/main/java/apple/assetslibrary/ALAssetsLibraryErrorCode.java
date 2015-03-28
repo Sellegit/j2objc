@@ -15,9 +15,6 @@ import apple.foundation.*;
 import apple.imageio.*;
 
 
-
-
-
 @Library("AssetsLibrary/AssetsLibrary.h")
 @Mapping("ALAssetsLibraryErrorCode")
 public final class ALAssetsLibraryErrorCode extends ObjCEnum {
@@ -42,6 +39,6 @@ public final class ALAssetsLibraryErrorCode extends ObjCEnum {
     public static final long AccessUserDenied = -3311L;
     @GlobalConstant("ALAssetsLibraryAccessGloballyDeniedError")
     public static final long AccessGloballyDenied = -3312L;
-    
+
 
 }

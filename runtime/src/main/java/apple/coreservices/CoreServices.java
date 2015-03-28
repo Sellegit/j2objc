@@ -13,7 +13,6 @@ import apple.coregraphics.*;
 import apple.coreservices.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("CFNetwork/CFNetwork.h")
@@ -34,7 +33,7 @@ public class CoreServices
     public static final int Constant__kCFStreamErrorHTTPAuthenticationTypeUnsupported = -1000;
     public static final int Constant__kCFStreamErrorHTTPAuthenticationBadUserName = -1001;
     public static final int Constant__kCFStreamErrorHTTPAuthenticationBadPassword = -1002;
-    
+
     
     
     
@@ -454,5 +453,5 @@ public class CoreServices
      */
     @GlobalConstant("kCFStreamPropertyHTTPRequestBytesWrittenCount")
     public static native CFString Value__kCFStreamPropertyHTTPRequestBytesWrittenCount();
-    
+
 }

@@ -20,17 +20,14 @@ import apple.spritekit.*;
 import apple.opengles.*;
 
 
-
-
-
 @Library("SceneKit/SceneKit.h") @Mapping("SCNAnimatable")
 public interface SCNAnimatable 
     extends NSObjectProtocol {
 
     
     
-    
-    
+
+
     
     @Mapping("addAnimation:forKey:")
     void addAnimation(CAAnimation animation, String key);
@@ -50,7 +47,7 @@ public interface SCNAnimatable
     boolean isAnimationPaused(String key);
     @Mapping("removeAnimationForKey:fadeOutDuration:")
     void removeAnimation(String key, @MachineSizedFloat double duration);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

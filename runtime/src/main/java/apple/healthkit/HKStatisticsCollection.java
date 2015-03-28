@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("HealthKit/HealthKit.h") @Mapping("HKStatisticsCollection")
 public class HKStatisticsCollection 
     extends NSObject 
@@ -27,10 +25,10 @@ public class HKStatisticsCollection
     
     
     public HKStatisticsCollection() {}
+
     
-    
-    
-    
+
+
     
     
     @Mapping("statisticsForDate:")
@@ -41,5 +39,5 @@ public class HKStatisticsCollection
     public native NSArray<HKStatistics> getStatistics();
     @Mapping("sources")
     public native NSSet<HKSource> getSources();
-    
+
 }

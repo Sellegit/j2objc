@@ -19,17 +19,14 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h") @Mapping("UITextViewDelegate")
 public interface UITextViewDelegate 
     extends NSObjectProtocol, UIScrollViewDelegate {
 
     
     
-    
-    
+
+
     
     @Mapping("textViewShouldBeginEditing:")
     boolean shouldBeginEditing(UITextView textView);
@@ -55,7 +52,7 @@ public interface UITextViewDelegate
      */
     @Mapping("textView:shouldInteractWithTextAttachment:inRange:")
     boolean shouldInteractWithTextAttachment(UITextView textView, NSTextAttachment textAttachment, NSRange characterRange);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

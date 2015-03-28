@@ -14,9 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
-
-
 @Library("CoreText/CoreText.h")
 @Mapping("CTFontSymbolicTraits")
 public final class CTFontSymbolicTraits extends ObjCEnum {
@@ -61,6 +58,6 @@ public final class CTFontSymbolicTraits extends ObjCEnum {
     public static final long CompositeTrait = 16384L;
     @GlobalConstant("kCTFontClassMaskTrait")
     public static final long ClassMaskTrait = -268435456L;
-    
+
 
 }

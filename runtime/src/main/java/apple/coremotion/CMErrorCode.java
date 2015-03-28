@@ -14,9 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
-
-
 @Library("CoreMotion/CoreMotion.h")
 @Mapping("CMErrorCode")
 public final class CMErrorCode extends ObjCEnum {
@@ -45,6 +42,6 @@ public final class CMErrorCode extends ObjCEnum {
     public static final long NotEntitled = 110L;
     @GlobalConstant("CMErrorNotAuthorized")
     public static final long NotAuthorized = 111L;
-    
+
 
 }

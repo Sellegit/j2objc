@@ -19,9 +19,6 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h")
 @Mapping("UIUserInterfaceIdiom")
 public final class UIUserInterfaceIdiom extends ObjCEnum {
@@ -32,6 +29,6 @@ public final class UIUserInterfaceIdiom extends ObjCEnum {
     public static final long Phone = 0L;
     @GlobalConstant("UIUserInterfaceIdiomPad")
     public static final long Pad = 1L;
-    
+
 
 }

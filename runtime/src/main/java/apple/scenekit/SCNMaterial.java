@@ -20,9 +20,6 @@ import apple.spritekit.*;
 import apple.opengles.*;
 
 
-
-
-
 @Library("SceneKit/SceneKit.h") @Mapping("SCNMaterial")
 public class SCNMaterial 
     extends NSObject 
@@ -32,7 +29,7 @@ public class SCNMaterial
     
     @Mapping("init")
     public SCNMaterial() { }
-    
+
     
     @Mapping("name")
     public native String getName();
@@ -106,7 +103,7 @@ public class SCNMaterial
     public native SCNProgram getProgram();
     @Mapping("setProgram:")
     public native void setProgram(SCNProgram v);
-    
+
     
     
     @Mapping("material")
@@ -131,5 +128,5 @@ public class SCNMaterial
     public native void removeAnimation(String key, @MachineSizedFloat double duration);
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
-    
+
 }

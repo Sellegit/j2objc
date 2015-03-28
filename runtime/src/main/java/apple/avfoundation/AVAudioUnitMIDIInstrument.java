@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h") @Mapping("AVAudioUnitMIDIInstrument")
 public class AVAudioUnitMIDIInstrument 
     extends AVAudioUnit 
@@ -36,10 +34,10 @@ public class AVAudioUnitMIDIInstrument
     public AVAudioUnitMIDIInstrument(AudioComponentDescription description) { }
     @Mapping("init")
     public AVAudioUnitMIDIInstrument() { }
+
     
-    
-    
-    
+
+
     
     
     @Mapping("startNote:withVelocity:onChannel:")
@@ -64,5 +62,5 @@ public class AVAudioUnitMIDIInstrument
     public native void sendMIDIEvent(byte midiStatus, byte data1);
     @Mapping("sendMIDISysExEvent:")
     public native void sendMIDISysExEvent(NSData midiData);
-    
+
 }

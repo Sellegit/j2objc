@@ -20,9 +20,6 @@ import apple.spritekit.*;
 import apple.opengles.*;
 
 
-
-
-
 @Library("SceneKit/SceneKit.h") @Mapping("SCNLight")
 public class SCNLight 
     extends NSObject 
@@ -32,7 +29,7 @@ public class SCNLight
     
     @Mapping("init")
     public SCNLight() { }
-    
+
     
     @Mapping("type")
     public native SCNLightType getType();
@@ -116,7 +113,7 @@ public class SCNLight
     public native SCNTechnique getTechnique();
     @Mapping("setTechnique:")
     public native void setTechnique(SCNTechnique v);
-    
+
     
     
     @Mapping("light")
@@ -141,5 +138,5 @@ public class SCNLight
     public native void removeAnimation(String key, @MachineSizedFloat double duration);
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
-    
+
 }

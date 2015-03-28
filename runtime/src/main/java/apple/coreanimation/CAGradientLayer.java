@@ -17,9 +17,6 @@ import apple.coretext.*;
 import apple.opengles.*;
 
 
-
-
-
 @Library("QuartzCore/QuartzCore.h") @Mapping("CAGradientLayer")
 public class CAGradientLayer 
     extends CALayer 
@@ -33,7 +30,7 @@ public class CAGradientLayer
     public CAGradientLayer(Object layer) { }
     @Mapping("initWithCoder:")
     public CAGradientLayer(NSCoder aDecoder) { }
-    
+
     
     @Mapping("colors")
     public native List<CGColor> getColors();
@@ -55,9 +52,9 @@ public class CAGradientLayer
     public native CAGradientType getType();
     @Mapping("setType:")
     public native void setType(CAGradientType v);
+
     
     
-    
-    
-    
+
+
 }

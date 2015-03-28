@@ -18,7 +18,6 @@ import apple.coreimage.*;
 import apple.coretext.*;
 import apple.corelocation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -29,8 +28,8 @@ public abstract class UIAlertViewDelegateAdapter
     
     
     
-    
-    
+
+
     
     
     @NotImplemented("alertView:clickedButtonAtIndex:")
@@ -47,5 +46,5 @@ public abstract class UIAlertViewDelegateAdapter
     public void didDismiss(UIAlertView alertView, @MachineSizedSInt long buttonIndex) { throw new UnsupportedOperationException(); }
     @NotImplemented("alertViewShouldEnableFirstOtherButton:")
     public boolean shouldEnableFirstOtherButton(UIAlertView alertView) { throw new UnsupportedOperationException(); }
-    
+
 }

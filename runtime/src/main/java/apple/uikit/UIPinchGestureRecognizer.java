@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 3.2 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UIPinchGestureRecognizer")
 public class UIPinchGestureRecognizer 
     extends UIGestureRecognizer 
@@ -35,7 +33,7 @@ public class UIPinchGestureRecognizer
     public UIPinchGestureRecognizer(Object target, Selector action) { }
     @Mapping("init")
     public UIPinchGestureRecognizer() { }
-    
+
     
     @Mapping("scale")
     public native @MachineSizedFloat double getScale();
@@ -43,9 +41,9 @@ public class UIPinchGestureRecognizer
     public native void setScale(@MachineSizedFloat double v);
     @Mapping("velocity")
     public native @MachineSizedFloat double getVelocity();
+
     
     
-    
-    
-    
+
+
 }

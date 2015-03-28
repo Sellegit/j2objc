@@ -19,9 +19,6 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h") @Mapping("UITextDocumentProxy")
 public interface UITextDocumentProxy 
     extends UIKeyInput {
@@ -32,11 +29,11 @@ public interface UITextDocumentProxy
     String getDocumentContextBeforeInput();
     @Mapping("documentContextAfterInput")
     String getDocumentContextAfterInput();
-    
+
     
     @Mapping("adjustTextPositionByCharacterOffset:")
     void adjustTextPosition(@MachineSizedSInt long offset);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

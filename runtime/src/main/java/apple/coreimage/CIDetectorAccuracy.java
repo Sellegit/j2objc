@@ -16,7 +16,6 @@ import apple.opengles.*;
 import apple.corevideo.*;
 import apple.imageio.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("CoreImage/CoreImage.h")
@@ -39,5 +38,5 @@ public class CIDetectorAccuracy
      */
     @GlobalConstant("CIDetectorAccuracyHigh")
     public static native NSString HighValue();
-    
+
 }

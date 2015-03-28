@@ -17,11 +17,9 @@ import apple.uikit.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 3.0 and later.
  */
-
 @Library("MapKit/MapKit.h") @Mapping("MKUserLocation")
 public class MKUserLocation 
     extends NSObject 
@@ -31,7 +29,7 @@ public class MKUserLocation
     
     @Mapping("init")
     public MKUserLocation() { }
-    
+
     
     @Mapping("isUpdating")
     public native boolean isUpdating();
@@ -54,9 +52,9 @@ public class MKUserLocation
     public native CLLocationCoordinate2D getCoordinate();
     @Mapping("setCoordinate:")
     public native void setCoordinate(CLLocationCoordinate2D v);
+
     
     
-    
-    
-    
+
+
 }

@@ -15,11 +15,9 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("WebKit/WebKit.h")
 @Mapping("WKNavigationType")
 public final class WKNavigationType extends ObjCEnum {
@@ -36,6 +34,6 @@ public final class WKNavigationType extends ObjCEnum {
     public static final long FormResubmitted = 4L;
     @GlobalConstant("WKNavigationTypeOther")
     public static final long Other = -1L;
-    
+
 
 }

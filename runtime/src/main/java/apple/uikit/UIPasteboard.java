@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 3.0 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UIPasteboard")
 public class UIPasteboard 
     extends NSObject 
@@ -33,7 +31,7 @@ public class UIPasteboard
     
     @Mapping("init")
     public UIPasteboard() { }
-    
+
     
     @Mapping("name")
     public native String getName();
@@ -81,7 +79,7 @@ public class UIPasteboard
     public native NSArray<UIColor> getColors();
     @Mapping("setColors:")
     public native void setColors(NSArray<UIColor> v);
-    
+
     
     
     @GlobalConstant("UIPasteboardNameFind")
@@ -98,7 +96,7 @@ public class UIPasteboard
     public static native List<String> getImageTypeList();
     @GlobalConstant("UIPasteboardTypeListColor")
     public static native List<String> getColorTypeList();
-    
+
     @Mapping("pasteboardTypes")
     public native List<String> getTypes();
     @Mapping("containsPasteboardTypes:")
@@ -131,5 +129,5 @@ public class UIPasteboard
     public static native UIPasteboard getUniquePasteboard();
     @Mapping("removePasteboardWithName:")
     public static native void removePasteboard(String pasteboardName);
-    
+
 }

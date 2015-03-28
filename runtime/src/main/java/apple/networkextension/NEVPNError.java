@@ -13,7 +13,6 @@ import apple.coregraphics.*;
 import apple.coreservices.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("NetworkExtension/NetworkExtension.h")
@@ -24,7 +23,7 @@ public class NEVPNError
     
     
     protected NEVPNError() {}
-    
+
     
     
     
@@ -33,5 +32,5 @@ public class NEVPNError
      */
     @GlobalConstant("NEVPNErrorDomain")
     public static native String getClassDomain();
-    
+
 }

@@ -13,7 +13,6 @@ import apple.coregraphics.*;
 import apple.coreservices.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("HomeKit/HomeKit.h")
@@ -86,5 +85,5 @@ public class HMCharacteristicMetadataFormat
      */
     @GlobalConstant("HMCharacteristicMetadataFormatTLV8")
     public static native NSString TLV8Value();
-    
+
 }

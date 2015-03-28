@@ -18,9 +18,6 @@ import apple.coreanimation.*;
 import apple.corevideo.*;
 
 
-
-
-
 @Library("CoreMedia/CoreMedia.h")
 @Mapping("CMTimeFlags")
 public final class CMTimeFlags extends ObjCEnum {
@@ -37,6 +34,6 @@ public final class CMTimeFlags extends ObjCEnum {
     public static final long Indefinite = 16L;
     @GlobalConstant("kCMTimeFlags_ImpliedValueFlagsMask")
     public static final long ImpliedValueFlagsMask = 28L;
-    
+
 
 }

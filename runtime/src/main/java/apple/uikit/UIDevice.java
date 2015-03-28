@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 2.0 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UIDevice")
 public class UIDevice 
     extends NSObject 
@@ -33,7 +31,7 @@ public class UIDevice
     
     @Mapping("init")
     public UIDevice() { }
-    
+
     
     @Mapping("name")
     public native String getName();
@@ -99,7 +97,7 @@ public class UIDevice
      */
     @Mapping("userInterfaceIdiom")
     public native @Representing("UIUserInterfaceIdiom") long getUserInterfaceIdiom();
-    
+
     
     
     @GlobalConstant("UIDeviceOrientationDidChangeNotification")
@@ -119,7 +117,7 @@ public class UIDevice
      */
     @GlobalConstant("UIDeviceProximityStateDidChangeNotification")
     public static native NSString ProximityStateDidChangeNotification();
-    
+
     @Mapping("beginGeneratingDeviceOrientationNotifications")
     public native void beginGeneratingDeviceOrientationNotifications();
     @Mapping("endGeneratingDeviceOrientationNotifications")
@@ -131,5 +129,5 @@ public class UIDevice
     public native void playInputClick();
     @Mapping("currentDevice")
     public static native UIDevice getCurrentDevice();
-    
+
 }

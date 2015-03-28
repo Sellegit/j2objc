@@ -20,9 +20,6 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
-
-
 @Library("AVFoundation/AVFoundation.h")
 @Mapping("AVErrorCode")
 public final class AVErrorCode extends ObjCEnum {
@@ -142,6 +139,6 @@ public final class AVErrorCode extends ObjCEnum {
      */
     @GlobalConstant("AVErrorUndecodableMediaData")
     public static final long UndecodableMediaData = -11855L;
-    
+
 
 }

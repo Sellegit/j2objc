@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("HealthKit/HealthKit.h") @Mapping("HKStatistics")
 public class HKStatistics 
     extends NSObject 
@@ -28,7 +26,7 @@ public class HKStatistics
     
     @Mapping("init")
     public HKStatistics() { }
-    
+
     
     @Mapping("quantityType")
     public native HKQuantityType getQuantityType();
@@ -38,7 +36,7 @@ public class HKStatistics
     public native NSDate getEndDate();
     @Mapping("sources")
     public native NSArray<HKSource> getSources();
-    
+
     
     
     @Mapping("averageQuantityForSource:")
@@ -59,5 +57,5 @@ public class HKStatistics
     public native HKQuantity getSumQuantity();
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
-    
+
 }

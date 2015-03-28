@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 4.0 and later.
  */
-
 @Library("UIKit/UIKit.h")
 @Mapping("UIApplicationState")
 public final class UIApplicationState extends ObjCEnum {
@@ -34,6 +32,6 @@ public final class UIApplicationState extends ObjCEnum {
     public static final long Inactive = 1L;
     @GlobalConstant("UIApplicationStateBackground")
     public static final long Background = 2L;
-    
+
 
 }

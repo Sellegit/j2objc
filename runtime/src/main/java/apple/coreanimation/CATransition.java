@@ -17,9 +17,6 @@ import apple.coretext.*;
 import apple.opengles.*;
 
 
-
-
-
 @Library("QuartzCore/QuartzCore.h") @Mapping("CATransition")
 public class CATransition 
     extends CAAnimation 
@@ -31,7 +28,7 @@ public class CATransition
     public CATransition(NSCoder aDecoder) { }
     @Mapping("init")
     public CATransition() { }
-    
+
     
     @Mapping("type")
     public native CATransitionType getType();
@@ -53,9 +50,9 @@ public class CATransition
     public native CIFilter getFilter();
     @Mapping("setFilter:")
     public native void setFilter(CIFilter v);
+
     
     
-    
-    
-    
+
+
 }

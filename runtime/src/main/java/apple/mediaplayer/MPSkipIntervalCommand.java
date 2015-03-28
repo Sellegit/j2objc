@@ -15,11 +15,9 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
 /**
  * @since Available in iOS 7.1 and later.
  */
-
 @Library("MediaPlayer/MediaPlayer.h") @Mapping("MPSkipIntervalCommand")
 public class MPSkipIntervalCommand 
     extends MPRemoteCommand 
@@ -29,15 +27,15 @@ public class MPSkipIntervalCommand
     
     @Mapping("init")
     public MPSkipIntervalCommand() { }
-    
+
     
     @Mapping("preferredIntervals")
     public native List<Double> getPreferredIntervals();
     @Mapping("setPreferredIntervals:")
     public native void setPreferredIntervals(List<Double> v);
+
     
     
-    
-    
-    
+
+
 }

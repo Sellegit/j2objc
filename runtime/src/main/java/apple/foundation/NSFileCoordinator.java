@@ -19,11 +19,9 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 5.0 and later.
  */
-
 @Library("Foundation/Foundation.h") @Mapping("NSFileCoordinator")
 public class NSFileCoordinator 
     extends NSObject 
@@ -35,7 +33,7 @@ public class NSFileCoordinator
     public NSFileCoordinator(NSFilePresenter filePresenterOrNil) { }
     @Mapping("init")
     public NSFileCoordinator() { }
-    
+
     
     /**
      * @since Available in iOS 5.0 and later.
@@ -47,7 +45,7 @@ public class NSFileCoordinator
      */
     @Mapping("setPurposeIdentifier:")
     public native void setPurposeIdentifier(String v);
-    
+
     
     
     /**
@@ -80,5 +78,5 @@ public class NSFileCoordinator
     public static native void removeFilePresenter(NSFilePresenter filePresenter);
     @Mapping("filePresenters")
     public static native List<NSFilePresenter> getFilePresenters();
-    
+
 }

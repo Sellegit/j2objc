@@ -19,17 +19,14 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h") @Mapping("UIVideoEditorControllerDelegate")
 public interface UIVideoEditorControllerDelegate 
     extends UINavigationControllerDelegate {
 
     
     
-    
-    
+
+
     
     @Mapping("videoEditorController:didSaveEditedVideoToPath:")
     void didSave(UIVideoEditorController editor, String editedVideoPath);
@@ -37,7 +34,7 @@ public interface UIVideoEditorControllerDelegate
     void didFail(UIVideoEditorController editor, NSError error);
     @Mapping("videoEditorControllerDidCancel:")
     void didCancel(UIVideoEditorController editor);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

@@ -15,7 +15,6 @@ import apple.foundation.*;
 import apple.uikit.*;
 import apple.addressbook.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("PassKit/PassKit.h")
@@ -43,5 +42,5 @@ public class PKPassLibraryNotificationArgs
      */
     @GlobalConstant("PKPassLibraryRemovedPassInfosUserInfoKey")
     public static native NSString RemovedPassInfosKey();
-    
+
 }

@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.dispatch.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Mapping("CFSetRef") @Library("CoreFoundation/CoreFoundation.h")
@@ -25,7 +24,7 @@ public class CFSet
     
     
     protected CFSet() {}
-    
+
     
     
     
@@ -33,7 +32,7 @@ public class CFSet
     public static native CFSetCallBacks getTypeCallBacks();
     @GlobalConstant("kCFCopyStringSetCallBacks")
     public static native CFSetCallBacks getCopyStringCallBacks();
-    
+
     @GlobalFunction("CFSetGetTypeID")
     public static native @MachineSizedUInt long getClassTypeID();
     @GlobalFunction("CFSetCreate")
@@ -54,5 +53,5 @@ public class CFSet
     public static native void getValues(CFSet theSet, Todo values);
     @GlobalFunction("CFSetApplyFunction")
     public static native void applyFunction(CFSet theSet, FunctionPtr applier, Todo context);
-    
+
 }

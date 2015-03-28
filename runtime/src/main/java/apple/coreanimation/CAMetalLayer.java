@@ -17,11 +17,9 @@ import apple.coretext.*;
 import apple.opengles.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("QuartzCore/QuartzCore.h") @Mapping("CAMetalLayer")
 public class CAMetalLayer 
     extends CALayer 
@@ -35,7 +33,7 @@ public class CAMetalLayer
     public CAMetalLayer(Object layer) { }
     @Mapping("initWithCoder:")
     public CAMetalLayer(NSCoder aDecoder) { }
-    
+
     
     @Mapping("pixelFormat")
     public native @Representing("MTLPixelFormat") long getPixelFormat();
@@ -53,12 +51,12 @@ public class CAMetalLayer
     public native boolean presentsWithTransaction();
     @Mapping("setPresentsWithTransaction:")
     public native void setPresentsWithTransaction(boolean v);
-    
+
     
     
     @Mapping("nextDrawable")
     public native Todo nextDrawable();
     @Mapping("newDrawable")
     public native Todo newDrawable();
-    
+
 }

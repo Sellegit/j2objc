@@ -16,7 +16,6 @@ import apple.opengles.*;
 import apple.corevideo.*;
 import apple.imageio.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("CoreImage/CoreImage.h")
@@ -69,5 +68,5 @@ public class CIFilterAttributeType
      */
     @GlobalConstant("kCIAttributeTypeTransform")
     public static native NSString TransformValue();
-    
+
 }

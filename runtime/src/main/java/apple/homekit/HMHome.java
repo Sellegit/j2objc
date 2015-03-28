@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("HomeKit/HomeKit.h") @Mapping("HMHome")
 public class HMHome 
     extends NSObject 
@@ -27,7 +25,7 @@ public class HMHome
     
     
     public HMHome() {}
-    
+
     
     @Mapping("delegate")
     public native HMHomeDelegate getDelegate();
@@ -51,7 +49,7 @@ public class HMHome
     public native NSArray<HMActionSet> getActionSets();
     @Mapping("triggers")
     public native NSArray<HMTrigger> getTriggers();
-    
+
     
     
     @Mapping("updateName:completionHandler:")
@@ -94,5 +92,5 @@ public class HMHome
     public native void addTrigger(HMTrigger trigger, @Block VoidBlock1<NSError> completion);
     @Mapping("removeTrigger:completionHandler:")
     public native void removeTrigger(HMTrigger trigger, @Block VoidBlock1<NSError> completion);
-    
+
 }

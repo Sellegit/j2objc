@@ -18,9 +18,6 @@ import apple.coreanimation.*;
 import apple.corevideo.*;
 
 
-
-
-
 @Library("CoreMedia/CoreMedia.h")
 @Mapping("CMMediaType")
 public final class CMMediaType extends ObjCEnum {
@@ -41,6 +38,6 @@ public final class CMMediaType extends ObjCEnum {
     public static final long TimeCode = 1953325924L;
     @GlobalConstant("kCMMediaType_Metadata")
     public static final long Metadata = 1835365473L;
-    
+
 
 }

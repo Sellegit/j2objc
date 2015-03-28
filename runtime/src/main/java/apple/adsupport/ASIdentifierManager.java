@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 6.0 and later.
  */
-
 @Library("AdSupport/AdSupport.h") @Mapping("ASIdentifierManager")
 public class ASIdentifierManager 
     extends NSObject 
@@ -28,16 +26,16 @@ public class ASIdentifierManager
     
     @Mapping("init")
     public ASIdentifierManager() { }
-    
+
     
     @Mapping("advertisingIdentifier")
     public native NSUUID getAdvertisingIdentifier();
     @Mapping("isAdvertisingTrackingEnabled")
     public native boolean isAdvertisingTrackingEnabled();
-    
+
     
     
     @Mapping("sharedManager")
     public static native ASIdentifierManager getSharedManager();
-    
+
 }

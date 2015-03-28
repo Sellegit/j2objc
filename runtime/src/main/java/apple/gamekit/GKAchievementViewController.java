@@ -15,13 +15,11 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
 /**
  * @since Available in iOS 4.1 and later.
  * @deprecated Deprecated in iOS 7.0.
  */
 @Deprecated
-
 @Library("GameKit/GameKit.h") @Mapping("GKAchievementViewController")
 public class GKAchievementViewController 
     extends GKGameCenterViewController 
@@ -35,15 +33,15 @@ public class GKAchievementViewController
     public GKAchievementViewController(String nibNameOrNil, NSBundle nibBundleOrNil) { }
     @Mapping("init")
     public GKAchievementViewController() { }
-    
+
     
     @Mapping("achievementDelegate")
     public native GKAchievementViewControllerDelegate getAchievementDelegate();
     @Mapping("setAchievementDelegate:")
     public native void setAchievementDelegate(GKAchievementViewControllerDelegate v);
+
     
     
-    
-    
-    
+
+
 }

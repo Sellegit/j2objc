@@ -15,9 +15,6 @@ import apple.dispatch.*;
 import apple.foundation.*;
 
 
-
-
-
 @Mapping("CFRunLoopSourceContext") @Library("CoreFoundation/CoreFoundation.h")
 public class CFRunLoopSourceContext 
     extends Struct 
@@ -31,6 +28,6 @@ public class CFRunLoopSourceContext
     public native @MachineSizedSInt long getVersion();
     @DotMapping("info")
     public native Todo getInfo();
-    
+
     
 }

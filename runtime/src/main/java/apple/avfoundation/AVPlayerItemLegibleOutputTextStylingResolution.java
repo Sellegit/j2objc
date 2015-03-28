@@ -19,7 +19,6 @@ import apple.coremedia.*;
 import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("AVFoundation/AVFoundation.h")
@@ -42,5 +41,5 @@ public class AVPlayerItemLegibleOutputTextStylingResolution
      */
     @GlobalConstant("AVPlayerItemLegibleOutputTextStylingResolutionSourceAndRulesOnly")
     public static native NSString SourceAndRulesOnlyValue();
-    
+
 }

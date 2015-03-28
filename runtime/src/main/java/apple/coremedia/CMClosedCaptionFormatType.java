@@ -18,9 +18,6 @@ import apple.coreanimation.*;
 import apple.corevideo.*;
 
 
-
-
-
 @Library("CoreMedia/CoreMedia.h")
 @Mapping("CMClosedCaptionFormatType")
 public final class CMClosedCaptionFormatType extends ObjCEnum {
@@ -31,6 +28,6 @@ public final class CMClosedCaptionFormatType extends ObjCEnum {
     public static final long _CEA708 = 1664561208L;
     @GlobalConstant("kCMClosedCaptionFormatType_ATSC")
     public static final long _ATSC = 1635017571L;
-    
+
 
 }

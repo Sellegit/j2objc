@@ -18,7 +18,6 @@ import apple.coreimage.*;
 import apple.coretext.*;
 import apple.corelocation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -29,8 +28,8 @@ public abstract class UITextInputDelegateAdapter
     
     
     
-    
-    
+
+
     
     
     @NotImplemented("selectionWillChange:")
@@ -41,5 +40,5 @@ public abstract class UITextInputDelegateAdapter
     public void textWillChange(UITextInput textInput) { throw new UnsupportedOperationException(); }
     @NotImplemented("textDidChange:")
     public void textDidChange(UITextInput textInput) { throw new UnsupportedOperationException(); }
-    
+
 }

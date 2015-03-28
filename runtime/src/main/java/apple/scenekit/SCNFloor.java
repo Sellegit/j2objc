@@ -20,9 +20,6 @@ import apple.spritekit.*;
 import apple.opengles.*;
 
 
-
-
-
 @Library("SceneKit/SceneKit.h") @Mapping("SCNFloor")
 public class SCNFloor 
     extends SCNGeometry 
@@ -32,7 +29,7 @@ public class SCNFloor
     
     @Mapping("init")
     public SCNFloor() { }
-    
+
     
     @Mapping("reflectivity")
     public native @MachineSizedFloat double getReflectivity();
@@ -50,10 +47,10 @@ public class SCNFloor
     public native @MachineSizedFloat double getReflectionResolutionScaleFactor();
     @Mapping("setReflectionResolutionScaleFactor:")
     public native void setReflectionResolutionScaleFactor(@MachineSizedFloat double v);
-    
+
     
     
     @Mapping("floor")
     public static native SCNFloor create();
-    
+
 }

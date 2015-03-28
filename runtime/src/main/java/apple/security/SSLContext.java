@@ -13,7 +13,6 @@ import apple.coregraphics.*;
 import apple.coreservices.*;
 import apple.dispatch.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Mapping("SSLContextRef") @Library("Security/Security.h")
@@ -24,7 +23,7 @@ public class SSLContext
     
     
     protected SSLContext() {}
-    
+
     
     
     
@@ -228,5 +227,5 @@ public class SSLContext
      */
     @GlobalFunction("SSLClose")
     public static native int closeContext(SSLContext context);
-    
+
 }

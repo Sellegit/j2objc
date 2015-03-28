@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 5.0 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h") @Mapping("AVMediaSelectionOption")
 public class AVMediaSelectionOption 
     extends NSObject 
@@ -34,7 +32,7 @@ public class AVMediaSelectionOption
     
     @Mapping("init")
     public AVMediaSelectionOption() { }
-    
+
     
     @Mapping("mediaType")
     public native AVMediaType getMediaType();
@@ -58,7 +56,7 @@ public class AVMediaSelectionOption
      */
     @Mapping("displayName")
     public native String getDisplayName();
-    
+
     
     
     @Mapping("hasMediaCharacteristic:")
@@ -76,5 +74,5 @@ public class AVMediaSelectionOption
     public native String getDisplayName(NSLocale locale);
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
-    
+
 }

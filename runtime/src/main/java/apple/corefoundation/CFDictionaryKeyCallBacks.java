@@ -15,9 +15,6 @@ import apple.dispatch.*;
 import apple.foundation.*;
 
 
-
-
-
 @Mapping("CFDictionaryKeyCallBacks") @Library("CoreFoundation/CoreFoundation.h")
  class CFDictionaryKeyCallBacks 
     extends Struct 
@@ -29,6 +26,6 @@ import apple.foundation.*;
     
     @DotMapping("version")
     public native @MachineSizedSInt long getVersion();
-    
+
     
 }

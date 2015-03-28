@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h")
 @Mapping("AVAudio3DMixingRenderingAlgorithm")
 public final class AVAudio3DMixingRenderingAlgorithm extends ObjCEnum {
@@ -39,6 +37,6 @@ public final class AVAudio3DMixingRenderingAlgorithm extends ObjCEnum {
     public static final long SoundField = 3L;
     @GlobalConstant("AVAudio3DMixingRenderingAlgorithmStereoPassThrough")
     public static final long StereoPassThrough = 5L;
-    
+
 
 }

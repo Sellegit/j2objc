@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.dispatch.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Mapping("CFMutableBagRef") @Library("CoreFoundation/CoreFoundation.h")
@@ -25,7 +24,7 @@ public class CFMutableBag
     
     
     protected CFMutableBag() {}
-    
+
     
     
     
@@ -43,5 +42,5 @@ public class CFMutableBag
     public static native void removeValue(CFMutableBag theBag, Todo value);
     @GlobalFunction("CFBagRemoveAllValues")
     public static native void removeAllValues(CFMutableBag theBag);
-    
+
 }

@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 7.0 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("NSTextAttachment")
 public class NSTextAttachment 
     extends NSObject 
@@ -31,13 +29,13 @@ public class NSTextAttachment
 
     
     public static final char AttachmentCharacter = 65532;
-    
+
     
     @Mapping("initWithData:ofType:")
     public NSTextAttachment(NSData contentData, String uti) { }
     @Mapping("init")
     public NSTextAttachment() { }
-    
+
     
     @Mapping("contents")
     public native NSData getContents();
@@ -59,7 +57,7 @@ public class NSTextAttachment
     public native CGRect getBounds();
     @Mapping("setBounds:")
     public native void setBounds(CGRect v);
-    
+
     
     
     /**
@@ -74,5 +72,5 @@ public class NSTextAttachment
     public native CGRect getAttachmentBounds(NSTextContainer textContainer, CGRect lineFrag, CGPoint position, @MachineSizedUInt long charIndex);
     @Mapping("encodeWithCoder:")
     public native void encode(NSCoder aCoder);
-    
+
 }

@@ -14,9 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
-
-
 @Library("CoreText/CoreText.h")
 @Mapping("CTLineBreakMode")
 public final class CTLineBreakMode extends ObjCEnum {
@@ -33,6 +30,6 @@ public final class CTLineBreakMode extends ObjCEnum {
     public static final long TruncatingTail = 4L;
     @GlobalConstant("kCTLineBreakByTruncatingMiddle")
     public static final long TruncatingMiddle = 5L;
-    
+
 
 }

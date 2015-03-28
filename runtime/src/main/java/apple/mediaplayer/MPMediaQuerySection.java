@@ -15,11 +15,9 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
 /**
  * @since Available in iOS 4.2 and later.
  */
-
 @Library("MediaPlayer/MediaPlayer.h") @Mapping("MPMediaQuerySection")
 public class MPMediaQuerySection 
     extends NSObject 
@@ -29,16 +27,16 @@ public class MPMediaQuerySection
     
     @Mapping("init")
     public MPMediaQuerySection() { }
-    
+
     
     @Mapping("title")
     public native String getTitle();
     @Mapping("range")
     public native NSRange getRange();
-    
+
     
     
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
-    
+
 }

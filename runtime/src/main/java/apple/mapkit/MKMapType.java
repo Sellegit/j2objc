@@ -17,11 +17,9 @@ import apple.uikit.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 3.0 and later.
  */
-
 @Library("MapKit/MapKit.h")
 @Mapping("MKMapType")
 public final class MKMapType extends ObjCEnum {
@@ -32,6 +30,6 @@ public final class MKMapType extends ObjCEnum {
     public static final long Satellite = 1L;
     @GlobalConstant("MKMapTypeHybrid")
     public static final long Hybrid = 2L;
-    
+
 
 }

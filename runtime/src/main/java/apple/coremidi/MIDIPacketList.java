@@ -14,9 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
-
-
 @Mapping("MIDIPacketList") @Library("CoreMIDI/CoreMIDI.h")
 public class MIDIPacketList 
     extends Struct 
@@ -30,7 +27,7 @@ public class MIDIPacketList
     public native int getNumPackets();
     @DotMapping("packet")
     public native MIDIPacket getPacket();
-    
+
     
     /**
      * @since Available in iOS 4.2 and later.
@@ -42,5 +39,5 @@ public class MIDIPacketList
      */
     @GlobalFunction("MIDIPacketListAdd")
     public static native MIDIPacket add(MIDIPacketList pktlist, @MachineSizedUInt long listSize, MIDIPacket curPacket, long time, @MachineSizedUInt long nData, Todo data);
-    
+
 }

@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.dispatch.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Mapping("CFURLRef") @Library("CoreFoundation/CoreFoundation.h")
@@ -25,7 +24,7 @@ public class CFURL
     
     
     protected CFURL() {}
-    
+
     
     
     
@@ -235,5 +234,5 @@ public class CFURL
      */
     @GlobalFunction("CFCopyHomeDirectoryURL")
     public static native CFURL copyHomeDirectoryURL();
-    
+
 }

@@ -15,11 +15,9 @@ import apple.foundation.*;
 import apple.imageio.*;
 
 
-
 /**
  * @since Available in iOS 4.0 and later.
  */
-
 @Library("AssetsLibrary/AssetsLibrary.h") @Mapping("ALAssetsGroup")
 public class ALAssetsGroup 
     extends NSObject 
@@ -29,14 +27,14 @@ public class ALAssetsGroup
     
     @Mapping("init")
     public ALAssetsGroup() { }
-    
+
     
     /**
      * @since Available in iOS 5.0 and later.
      */
     @Mapping("isEditable")
     public native boolean isEditable();
-    
+
     
     
     @Mapping("valueForProperty:")
@@ -52,5 +50,5 @@ public class ALAssetsGroup
      */
     @Mapping("addAsset:")
     public native boolean addAsset(ALAsset asset);
-    
+
 }

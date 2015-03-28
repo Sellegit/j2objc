@@ -20,9 +20,6 @@ import apple.spritekit.*;
 import apple.opengles.*;
 
 
-
-
-
 @Library("SceneKit/SceneKit.h") @Mapping("SCNPhysicsVehicleWheel")
 public class SCNPhysicsVehicleWheel 
     extends NSObject 
@@ -32,7 +29,7 @@ public class SCNPhysicsVehicleWheel
     
     @Mapping("init")
     public SCNPhysicsVehicleWheel() { }
-    
+
     
     @Mapping("node")
     public native SCNNode getNode();
@@ -80,12 +77,12 @@ public class SCNPhysicsVehicleWheel
     public native @MachineSizedFloat double getSuspensionRestLength();
     @Mapping("setSuspensionRestLength:")
     public native void setSuspensionRestLength(@MachineSizedFloat double v);
-    
+
     
     
     @Mapping("wheelWithNode:")
     public static native SCNPhysicsVehicleWheel create(SCNNode node);
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
-    
+
 }

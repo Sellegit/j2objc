@@ -13,7 +13,6 @@ import apple.coregraphics.*;
 import apple.coreservices.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("CFNetwork/CFNetwork.h")
@@ -46,5 +45,5 @@ public class CFProxySupport
      */
     @GlobalFunction("CFNetworkExecuteProxyAutoConfigurationURL")
     public static native CFRunLoopSource executeProxyAutoConfigurationURL(CFURL proxyAutoConfigURL, CFURL targetURL, FunctionPtr cb, CFStreamClientContext clientContext);
-    
+
 }

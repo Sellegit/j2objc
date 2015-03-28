@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h") @Mapping("NSURLProtectionSpace")
 public class NSURLProtectionSpace 
     extends NSObject 
@@ -35,7 +32,7 @@ public class NSURLProtectionSpace
     public NSURLProtectionSpace(String host, @MachineSizedSInt long port, Todo type, String realm, Todo authenticationMethod) { }
     @Mapping("init")
     public NSURLProtectionSpace() { }
-    
+
     
     @Mapping("realm")
     public native String getRealm();
@@ -63,10 +60,10 @@ public class NSURLProtectionSpace
      */
     @Mapping("serverTrust")
     public native SecTrust getServerTrust();
-    
+
     
     
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
-    
+
 }

@@ -16,7 +16,6 @@ import apple.coreimage.*;
 import apple.coretext.*;
 import apple.opengles.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("QuartzCore/QuartzCore.h")
@@ -89,5 +88,5 @@ public class CAGravity
      */
     @GlobalConstant("kCAGravityResizeAspectFill")
     public static native NSString ResizeAspectFillValue();
-    
+
 }

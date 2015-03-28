@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("CoreData/CoreData.h") @Mapping("NSPersistentStoreResult")
 public class NSPersistentStoreResult 
     extends NSObject 
@@ -28,12 +26,12 @@ public class NSPersistentStoreResult
     
     @Mapping("init")
     public NSPersistentStoreResult() { }
+
+    
+
+
     
     
-    
-    
-    
-    
-    
-    
+
+
 }

@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 3.0 and later.
  */
-
 @Library("CoreData/CoreData.h") @Mapping("NSFetchRequestExpression")
 public class NSFetchRequestExpression 
     extends NSExpression 
@@ -30,7 +28,7 @@ public class NSFetchRequestExpression
     public NSFetchRequestExpression(@Representing("NSExpressionType") long type) { }
     @Mapping("init")
     public NSFetchRequestExpression() { }
-    
+
     
     @Mapping("requestExpression")
     public native NSExpression getRequestExpression();
@@ -38,10 +36,10 @@ public class NSFetchRequestExpression
     public native NSExpression getContextExpression();
     @Mapping("isCountOnlyRequest")
     public native boolean isCountOnlyRequest();
-    
+
     
     
     @Mapping("expressionForFetch:context:countOnly:")
     public static native NSExpression create(NSExpression fetch, NSExpression context, boolean countFlag);
-    
+
 }

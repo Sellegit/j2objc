@@ -13,7 +13,6 @@ import apple.coregraphics.*;
 import apple.coreservices.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("CFNetwork/CFNetwork.h")
@@ -36,5 +35,5 @@ public class CFHTTPVersion
      */
     @GlobalConstant("kCFHTTPVersion1_1")
     public static native CFString Version1_1Value();
-    
+
 }

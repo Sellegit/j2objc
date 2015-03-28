@@ -13,7 +13,6 @@ import apple.coregraphics.*;
 import apple.coreservices.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 
@@ -71,7 +70,7 @@ public class CoreAudio
     public static final int MPEG4Object_TwinVQ = 7;
     public static final int MPEG4Object_CELP = 8;
     public static final int MPEG4Object_HVXC = 9;
-    
+
     
     
     

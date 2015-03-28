@@ -20,9 +20,6 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
-
-
 @Library("AVFoundation/AVFoundation.h")
 @Mapping("AVVideoFieldMode")
 public final class AVVideoFieldMode extends ObjCEnum {
@@ -35,6 +32,6 @@ public final class AVVideoFieldMode extends ObjCEnum {
     public static final long BottomOnly = 2L;
     @GlobalConstant("AVVideoFieldModeDeinterlace")
     public static final long Deinterlace = 3L;
-    
+
 
 }

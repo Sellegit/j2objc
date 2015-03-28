@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h")
 @Mapping("NSURLErrorCode")
 public final class NSURLErrorCode extends ObjCEnum {
@@ -144,6 +141,6 @@ public final class NSURLErrorCode extends ObjCEnum {
      */
     @GlobalConstant("NSURLErrorBackgroundSessionWasDisconnected")
     public static final long BackgroundSessionWasDisconnected = -997L;
-    
+
 
 }

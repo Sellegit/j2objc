@@ -17,11 +17,9 @@ import apple.uikit.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 3.0 and later.
  */
-
 @Library("MapKit/MapKit.h") @Mapping("MKMapView")
 public class MKMapView 
     extends UIView 
@@ -33,7 +31,7 @@ public class MKMapView
     public MKMapView(CGRect frame) { }
     @Mapping("init")
     public MKMapView() { }
-    
+
     
     @Mapping("delegate")
     public native MKMapViewDelegate getDelegate();
@@ -144,7 +142,7 @@ public class MKMapView
      */
     @Mapping("overlays")
     public native List<? extends MKOverlay> getOverlays();
-    
+
     
     
     @Mapping("setRegion:animated:")
@@ -282,5 +280,5 @@ public class MKMapView
      */
     @Mapping("exchangeOverlayAtIndex:withOverlayAtIndex:")
     public native void exchangeOverlay(@MachineSizedUInt long index1, @MachineSizedUInt long index2);
-    
+
 }

@@ -13,7 +13,6 @@ import apple.coregraphics.*;
 import apple.coreservices.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("NewsstandKit/NewsstandKit.h")
@@ -24,16 +23,16 @@ public final class NSURLConnectionExtensions
     
     
     private NSURLConnectionExtensions() {}
-    
+
     
     /**
      * @since Available in iOS 5.0 and later.
      */
     @ExtensionMapping("newsstandAssetDownload")
     public static native NKAssetDownload getNewsstandAssetDownload(NSURLConnection thiz);
+
     
     
-    
-    
-    
+
+
 }

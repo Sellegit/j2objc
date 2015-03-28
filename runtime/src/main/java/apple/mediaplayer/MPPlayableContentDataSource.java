@@ -15,17 +15,14 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
-
-
 @Library("MediaPlayer/MediaPlayer.h") @Mapping("MPPlayableContentDataSource")
 public interface MPPlayableContentDataSource 
     extends NSObjectProtocol {
 
     
     
-    
-    
+
+
     
     @Mapping("beginLoadingChildItemsAtIndexPath:completionHandler:")
     void beginLoadingChildItems(NSIndexPath indexPath, @Block VoidBlock1<NSError> completionHandler);
@@ -35,7 +32,7 @@ public interface MPPlayableContentDataSource
     @MachineSizedSInt long getNumberOfChildItems(NSIndexPath indexPath);
     @Mapping("contentItemAtIndexPath:")
     MPContentItem getContentItem(NSIndexPath indexPath);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

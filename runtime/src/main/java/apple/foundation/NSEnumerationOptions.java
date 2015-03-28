@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h")
 @Mapping("NSEnumerationOptions")
 public final class NSEnumerationOptions extends ObjCEnum {
@@ -30,6 +27,6 @@ public final class NSEnumerationOptions extends ObjCEnum {
     public static final long Concurrent = 1L;
     @GlobalConstant("NSEnumerationReverse")
     public static final long Reverse = 2L;
-    
+
 
 }

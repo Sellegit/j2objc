@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UIAccessibilityCustomAction")
 public class UIAccessibilityCustomAction 
     extends NSObject 
@@ -35,7 +33,7 @@ public class UIAccessibilityCustomAction
     public UIAccessibilityCustomAction(String name, Object target, Selector selector) { }
     @Mapping("init")
     public UIAccessibilityCustomAction() { }
-    
+
     
     @Mapping("name")
     public native String getName();
@@ -49,9 +47,9 @@ public class UIAccessibilityCustomAction
     public native Selector getSelector();
     @Mapping("setSelector:")
     public native void setSelector(Selector v);
+
     
     
-    
-    
-    
+
+
 }

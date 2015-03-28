@@ -18,7 +18,6 @@ import apple.coreimage.*;
 import apple.coretext.*;
 import apple.corelocation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -39,7 +38,7 @@ public abstract class UIAccessibilityContainerAdapter
      */
     @Mapping("setAccessibilityElements:")
     public void setAccessibilityElements(NSArray<UIAccessibilityElement> v) { throw new UnsupportedOperationException(); }
-    
+
     
     
     @NotImplemented("accessibilityElementCount")
@@ -48,5 +47,5 @@ public abstract class UIAccessibilityContainerAdapter
     public UIAccessibilityElement getAccessibilityElement(@MachineSizedSInt long index) { throw new UnsupportedOperationException(); }
     @NotImplemented("indexOfAccessibilityElement:")
     public @MachineSizedSInt long indexOfAccessibilityElement(Object element) { throw new UnsupportedOperationException(); }
-    
+
 }

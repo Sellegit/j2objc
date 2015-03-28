@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 2.0 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UILabel")
 public class UILabel 
     extends UIView 
@@ -37,7 +35,7 @@ public class UILabel
     public UILabel(NSCoder aDecoder) { }
     @Mapping("init")
     public UILabel() { }
-    
+
     
     @Mapping("text")
     public native String getText();
@@ -153,12 +151,12 @@ public class UILabel
      */
     @Mapping("setPreferredMaxLayoutWidth:")
     public native void setPreferredMaxLayoutWidth(@MachineSizedFloat double v);
-    
+
     
     
     @Mapping("textRectForBounds:limitedToNumberOfLines:")
     public native CGRect getTextRect(CGRect bounds, @MachineSizedSInt long numberOfLines);
     @Mapping("drawTextInRect:")
     public native void drawText(CGRect rect);
-    
+
 }

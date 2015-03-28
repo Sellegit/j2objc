@@ -15,11 +15,9 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("WebKit/WebKit.h")
 @Mapping("WKErrorCode")
 public final class WKErrorCode extends ObjCEnum {
@@ -32,6 +30,6 @@ public final class WKErrorCode extends ObjCEnum {
     public static final long WebViewInvalidated = 3L;
     @GlobalConstant("WKErrorJavaScriptExceptionOccurred")
     public static final long JavaScriptExceptionOccurred = 4L;
-    
+
 
 }

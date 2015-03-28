@@ -17,9 +17,6 @@ import apple.corevideo.*;
 import apple.imageio.*;
 
 
-
-
-
 @Library("CoreImage/CoreImage.h") @Mapping("CIContext")
 public class CIContext 
     extends NSObject 
@@ -29,10 +26,10 @@ public class CIContext
     
     @Mapping("init")
     public CIContext() { }
+
     
-    
-    
-    
+
+
     
     
     /**
@@ -60,5 +57,5 @@ public class CIContext
      */
     @Mapping("outputImageMaximumSize")
     public native CGSize getOutputImageMaximumSize();
-    
+
 }

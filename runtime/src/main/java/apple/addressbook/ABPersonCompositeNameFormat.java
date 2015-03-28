@@ -14,9 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
-
-
 @Library("AddressBook/AddressBook.h")
 @Mapping("ABPersonCompositeNameFormat")
 public final class ABPersonCompositeNameFormat extends ObjCEnum {
@@ -25,6 +22,6 @@ public final class ABPersonCompositeNameFormat extends ObjCEnum {
     public static final long FirstNameFirst = 0L;
     @GlobalConstant("kABPersonCompositeNameFormatLastNameFirst")
     public static final long LastNameFirst = 1L;
-    
+
 
 }

@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("NetworkExtension/NetworkExtension.h") @Mapping("NEVPNProtocolIKEv2")
 public class NEVPNProtocolIKEv2 
     extends NEVPNProtocolIPSec 
@@ -28,7 +26,7 @@ public class NEVPNProtocolIKEv2
     
     @Mapping("init")
     public NEVPNProtocolIKEv2() { }
-    
+
     
     /**
      * @since Available in iOS 8.0 and later.
@@ -70,9 +68,9 @@ public class NEVPNProtocolIKEv2
      */
     @Mapping("childSecurityAssociationParameters")
     public native NEVPNIKEv2SecurityAssociationParameters getChildSecurityAssociationParameters();
+
     
     
-    
-    
-    
+
+
 }

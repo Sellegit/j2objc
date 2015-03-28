@@ -17,11 +17,9 @@ import apple.uikit.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 4.0 and later.
  */
-
 @Library("MapKit/MapKit.h")
 @Mapping("MKAnnotationViewDragState")
 public final class MKAnnotationViewDragState extends ObjCEnum {
@@ -36,6 +34,6 @@ public final class MKAnnotationViewDragState extends ObjCEnum {
     public static final long Canceling = 3L;
     @GlobalConstant("MKAnnotationViewDragStateEnding")
     public static final long Ending = 4L;
-    
+
 
 }

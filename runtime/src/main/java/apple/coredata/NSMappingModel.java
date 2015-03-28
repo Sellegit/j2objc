@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 3.0 and later.
  */
-
 @Library("CoreData/CoreData.h") @Mapping("NSMappingModel")
 public class NSMappingModel 
     extends NSObject 
@@ -30,7 +28,7 @@ public class NSMappingModel
     public NSMappingModel(NSURL url) { }
     @Mapping("init")
     public NSMappingModel() { }
-    
+
     
     @Mapping("entityMappings")
     public native NSArray<NSEntityMapping> getEntityMappings();
@@ -38,7 +36,7 @@ public class NSMappingModel
     public native void setEntityMappings(NSArray<NSEntityMapping> v);
     @Mapping("entityMappingsByName")
     public native Map<String, NSEntityMapping> getEntityMappingsByName();
-    
+
     
     
     @Mapping("mappingModelFromBundles:forSourceModel:destinationModel:")
@@ -48,5 +46,5 @@ public class NSMappingModel
      */
     @Mapping("inferredMappingModelForSourceModel:destinationModel:error:")
     public static native NSMappingModel createInferred(NSManagedObjectModel sourceModel, NSManagedObjectModel destinationModel, Todo error);
-    
+
 }

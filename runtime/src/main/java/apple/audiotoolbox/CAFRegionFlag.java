@@ -17,9 +17,6 @@ import apple.coreaudio.*;
 import apple.coremedia.*;
 
 
-
-
-
 @Library("AudioToolbox/AudioToolbox.h")
 @Mapping("CAFRegionFlag")
 public final class CAFRegionFlag extends ObjCEnum {
@@ -30,6 +27,6 @@ public final class CAFRegionFlag extends ObjCEnum {
     public static final long PlayForward = 2L;
     @GlobalConstant("kCAFRegionFlag_PlayBackward")
     public static final long PlayBackward = 4L;
-    
+
 
 }

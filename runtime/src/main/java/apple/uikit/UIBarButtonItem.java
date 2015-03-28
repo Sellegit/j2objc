@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 2.0 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UIBarButtonItem")
 public class UIBarButtonItem 
     extends UIBarItem 
@@ -46,7 +44,7 @@ public class UIBarButtonItem
     public UIBarButtonItem(UIView customView) { }
     @Mapping("init")
     public UIBarButtonItem() { }
-    
+
     
     @Mapping("style")
     public native @Representing("UIBarButtonItemStyle") long getStyle();
@@ -82,7 +80,7 @@ public class UIBarButtonItem
      */
     @Mapping("setTintColor:")
     public native void setTintColor(UIColor v);
-    
+
     
     
     /**
@@ -157,5 +155,5 @@ public class UIBarButtonItem
     public native @MachineSizedFloat double getBackButtonBackgroundVerticalPositionAdjustment(@Representing("UIBarMetrics") long barMetrics);
     @Mapping("encodeWithCoder:")
     public native void encode(NSCoder aCoder);
-    
+
 }

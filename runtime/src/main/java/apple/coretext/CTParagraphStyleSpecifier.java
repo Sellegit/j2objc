@@ -14,9 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
-
-
 @Library("CoreText/CoreText.h")
 @Mapping("CTParagraphStyleSpecifier")
 public final class CTParagraphStyleSpecifier extends ObjCEnum {
@@ -59,6 +56,6 @@ public final class CTParagraphStyleSpecifier extends ObjCEnum {
     public static final long LineBoundsOptions = 17L;
     @GlobalConstant("kCTParagraphStyleSpecifierCount")
     public static final long Count = 18L;
-    
+
 
 }

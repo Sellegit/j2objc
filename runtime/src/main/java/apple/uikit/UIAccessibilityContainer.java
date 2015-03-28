@@ -19,9 +19,6 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h") @Mapping("UIAccessibilityContainer")
 public interface UIAccessibilityContainer 
      {
@@ -38,7 +35,7 @@ public interface UIAccessibilityContainer
      */
     @Mapping("setAccessibilityElements:")
     void setAccessibilityElements(NSArray<UIAccessibilityElement> v);
-    
+
     
     @Mapping("accessibilityElementCount")
     @MachineSizedSInt long getAccessibilityElementCount();
@@ -46,7 +43,7 @@ public interface UIAccessibilityContainer
     UIAccessibilityElement getAccessibilityElement(@MachineSizedSInt long index);
     @Mapping("indexOfAccessibilityElement:")
     @MachineSizedSInt long indexOfAccessibilityElement(Object element);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

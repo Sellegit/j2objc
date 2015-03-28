@@ -16,23 +16,20 @@ import apple.uikit.*;
 import apple.security.*;
 
 
-
-
-
 @Library("MultipeerConnectivity/MultipeerConnectivity.h") @Mapping("MCNearbyServiceAdvertiserDelegate")
 public interface MCNearbyServiceAdvertiserDelegate 
     extends NSObjectProtocol {
 
     
     
-    
-    
+
+
     
     @Mapping("advertiser:didReceiveInvitationFromPeer:withContext:invitationHandler:")
     void didReceiveInvitation(MCNearbyServiceAdvertiser advertiser, MCPeerID peerID, NSData context, @Block VoidBlock2<Boolean, MCSession> invitationHandler);
     @Mapping("advertiser:didNotStartAdvertisingPeer:")
     void didNotStart(MCNearbyServiceAdvertiser advertiser, NSError error);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

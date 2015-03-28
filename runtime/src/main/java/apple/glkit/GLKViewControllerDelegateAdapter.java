@@ -16,7 +16,6 @@ import apple.opengles.*;
 import apple.uikit.*;
 import apple.dispatch.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -27,13 +26,13 @@ public abstract class GLKViewControllerDelegateAdapter
     
     
     
-    
-    
+
+
     
     
     @NotImplemented("glkViewControllerUpdate:")
     public void update(GLKViewController controller) { throw new UnsupportedOperationException(); }
     @NotImplemented("glkViewController:willPause:")
     public void willPause(GLKViewController controller, boolean pause) { throw new UnsupportedOperationException(); }
-    
+
 }

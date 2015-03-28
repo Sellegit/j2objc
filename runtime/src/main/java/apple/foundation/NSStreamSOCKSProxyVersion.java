@@ -18,7 +18,6 @@ import apple.coremedia.*;
 import apple.security.*;
 import apple.dispatch.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("Foundation/Foundation.h")
@@ -41,5 +40,5 @@ public class NSStreamSOCKSProxyVersion
      */
     @GlobalConstant("NSStreamSOCKSProxyVersion5")
     public static native NSString _5Value();
-    
+
 }

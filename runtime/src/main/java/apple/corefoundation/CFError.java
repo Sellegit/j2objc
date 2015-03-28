@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.dispatch.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Mapping("CFErrorRef") @Library("CoreFoundation/CoreFoundation.h")
@@ -25,7 +24,7 @@ public class CFError
     
     
     protected CFError() {}
-    
+
     
     
     
@@ -64,5 +63,5 @@ public class CFError
      */
     @GlobalFunction("CFErrorCopyRecoverySuggestion")
     public static native CFString getRecoverySuggestion(CFError err);
-    
+
 }

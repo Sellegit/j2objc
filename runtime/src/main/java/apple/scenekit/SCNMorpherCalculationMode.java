@@ -20,9 +20,6 @@ import apple.spritekit.*;
 import apple.opengles.*;
 
 
-
-
-
 @Library("SceneKit/SceneKit.h")
 @Mapping("SCNMorpherCalculationMode")
 public final class SCNMorpherCalculationMode extends ObjCEnum {
@@ -31,6 +28,6 @@ public final class SCNMorpherCalculationMode extends ObjCEnum {
     public static final long Normalized = 0L;
     @GlobalConstant("SCNMorpherCalculationModeAdditive")
     public static final long Additive = 1L;
-    
+
 
 }

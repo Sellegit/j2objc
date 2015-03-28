@@ -14,9 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
-
-
 @Library("CoreAudio/CoreAudioTypes.h")
 @Mapping("AudioError")
 public final class AudioError extends ObjCEnum {
@@ -35,6 +32,6 @@ public final class AudioError extends ObjCEnum {
     public static final long Param = -50L;
     @GlobalConstant("kAudio_MemFullError")
     public static final long MemFull = -108L;
-    
+
 
 }

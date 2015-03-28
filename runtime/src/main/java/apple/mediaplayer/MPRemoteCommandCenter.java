@@ -15,11 +15,9 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
 /**
  * @since Available in iOS 7.1 and later.
  */
-
 @Library("MediaPlayer/MediaPlayer.h") @Mapping("MPRemoteCommandCenter")
 public class MPRemoteCommandCenter 
     extends NSObject 
@@ -29,7 +27,7 @@ public class MPRemoteCommandCenter
     
     @Mapping("init")
     public MPRemoteCommandCenter() { }
-    
+
     
     @Mapping("pauseCommand")
     public native MPRemoteCommand getPauseCommand();
@@ -61,10 +59,10 @@ public class MPRemoteCommandCenter
     public native MPFeedbackCommand getDislikeCommand();
     @Mapping("bookmarkCommand")
     public native MPFeedbackCommand getBookmarkCommand();
-    
+
     
     
     @Mapping("sharedCommandCenter")
     public static native MPRemoteCommandCenter getSharedCommandCenter();
-    
+
 }

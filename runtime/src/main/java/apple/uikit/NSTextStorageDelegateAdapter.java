@@ -18,7 +18,6 @@ import apple.coreimage.*;
 import apple.coretext.*;
 import apple.corelocation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -29,8 +28,8 @@ public abstract class NSTextStorageDelegateAdapter
     
     
     
-    
-    
+
+
     
     
     /**
@@ -43,5 +42,5 @@ public abstract class NSTextStorageDelegateAdapter
      */
     @NotImplemented("textStorage:didProcessEditing:range:changeInLength:")
     public void didProcessEditing(NSTextStorage textStorage, @Representing("NSTextStorageEditActions") long editedMask, NSRange editedRange, @MachineSizedSInt long delta) { throw new UnsupportedOperationException(); }
-    
+
 }

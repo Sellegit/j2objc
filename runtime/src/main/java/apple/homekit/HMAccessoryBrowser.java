@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("HomeKit/HomeKit.h") @Mapping("HMAccessoryBrowser")
 public class HMAccessoryBrowser 
     extends NSObject 
@@ -28,7 +26,7 @@ public class HMAccessoryBrowser
     
     @Mapping("init")
     public HMAccessoryBrowser() { }
-    
+
     
     @Mapping("delegate")
     public native HMAccessoryBrowserDelegate getDelegate();
@@ -36,12 +34,12 @@ public class HMAccessoryBrowser
     public native void setDelegate(HMAccessoryBrowserDelegate v);
     @Mapping("discoveredAccessories")
     public native NSArray<HMAccessory> getDiscoveredAccessories();
-    
+
     
     
     @Mapping("startSearchingForNewAccessories")
     public native void startSearchingForNewAccessories();
     @Mapping("stopSearchingForNewAccessories")
     public native void stopSearchingForNewAccessories();
-    
+
 }

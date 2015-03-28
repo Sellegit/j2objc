@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 4.0 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h") @Mapping("AVCaptureMovieFileOutput")
 public class AVCaptureMovieFileOutput 
     extends AVCaptureFileOutput 
@@ -34,7 +32,7 @@ public class AVCaptureMovieFileOutput
     
     @Mapping("init")
     public AVCaptureMovieFileOutput() { }
-    
+
     
     @Mapping("movieFragmentInterval")
     public native CMTime getMovieFragmentInterval();
@@ -44,9 +42,9 @@ public class AVCaptureMovieFileOutput
     public native NSArray<AVMetadataItem> getMetadata();
     @Mapping("setMetadata:")
     public native void setMetadata(NSArray<AVMetadataItem> v);
+
     
     
-    
-    
-    
+
+
 }

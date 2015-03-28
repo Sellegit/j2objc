@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 4.0 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h") @Mapping("AVComposition")
 public class AVComposition 
     extends AVAsset 
@@ -34,15 +32,15 @@ public class AVComposition
     
     @Mapping("init")
     public AVComposition() { }
-    
+
     
     @Mapping("tracks")
     public native NSArray<AVAssetTrack> getTracks();
     @Mapping("naturalSize")
     public native CGSize getNaturalSize();
+
     
     
-    
-    
-    
+
+
 }

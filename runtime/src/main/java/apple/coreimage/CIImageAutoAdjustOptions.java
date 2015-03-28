@@ -16,7 +16,6 @@ import apple.opengles.*;
 import apple.corevideo.*;
 import apple.imageio.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("CoreImage/CoreImage.h")
@@ -54,5 +53,5 @@ public class CIImageAutoAdjustOptions
      */
     @GlobalConstant("kCIImageAutoAdjustLevel")
     public static native CFString LevelKey();
-    
+
 }

@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 import apple.uikit.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("MediaPlayer/MediaPlayer.h")
@@ -137,5 +136,5 @@ public class MPMediaItemProperty
      */
     @GlobalConstant("MPMediaItemPropertyBookmarkTime")
     public static native NSString BookmarkTimeValue();
-    
+
 }

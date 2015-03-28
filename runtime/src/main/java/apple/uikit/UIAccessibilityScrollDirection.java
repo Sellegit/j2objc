@@ -19,9 +19,6 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h")
 @Mapping("UIAccessibilityScrollDirection")
 public final class UIAccessibilityScrollDirection extends ObjCEnum {
@@ -38,6 +35,6 @@ public final class UIAccessibilityScrollDirection extends ObjCEnum {
     public static final long Next = 5L;
     @GlobalConstant("UIAccessibilityScrollDirectionPrevious")
     public static final long Previous = 6L;
-    
+
 
 }

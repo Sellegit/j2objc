@@ -18,7 +18,6 @@ import apple.coreimage.*;
 import apple.coretext.*;
 import apple.corelocation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -29,8 +28,8 @@ public abstract class NSLayoutManagerDelegateAdapter
     
     
     
-    
-    
+
+
     
     
     /**
@@ -88,5 +87,5 @@ public abstract class NSLayoutManagerDelegateAdapter
      */
     @NotImplemented("layoutManager:textContainer:didChangeGeometryFromSize:")
     public void didChangeGeometry(NSLayoutManager layoutManager, NSTextContainer textContainer, CGSize oldSize) { throw new UnsupportedOperationException(); }
-    
+
 }

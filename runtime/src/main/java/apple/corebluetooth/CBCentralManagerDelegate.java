@@ -15,17 +15,14 @@ import apple.foundation.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("CoreBluetooth/CoreBluetooth.h") @Mapping("CBCentralManagerDelegate")
 public interface CBCentralManagerDelegate 
     extends NSObjectProtocol {
 
     
     
-    
-    
+
+
     
     @Mapping("centralManagerDidUpdateState:")
     void didUpdateState(CBCentralManager central);
@@ -43,7 +40,7 @@ public interface CBCentralManagerDelegate
     void didFailToConnectPeripheral(CBCentralManager central, CBPeripheral peripheral, NSError error);
     @Mapping("centralManager:didDisconnectPeripheral:error:")
     void didDisconnectPeripheral(CBCentralManager central, CBPeripheral peripheral, NSError error);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

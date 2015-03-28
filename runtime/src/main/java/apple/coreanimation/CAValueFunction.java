@@ -17,9 +17,6 @@ import apple.coretext.*;
 import apple.opengles.*;
 
 
-
-
-
 @Library("QuartzCore/QuartzCore.h") @Mapping("CAValueFunction")
 public class CAValueFunction 
     extends NSObject 
@@ -29,16 +26,16 @@ public class CAValueFunction
     
     @Mapping("init")
     public CAValueFunction() { }
-    
+
     
     @Mapping("name")
     public native CAValueFunctionName getName();
-    
+
     
     
     @Mapping("functionWithName:")
     public static native CAValueFunction create(String name);
     @Mapping("encodeWithCoder:")
     public native void encode(NSCoder aCoder);
-    
+
 }

@@ -19,17 +19,14 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h") @Mapping("NSTextAttachmentContainer")
 public interface NSTextAttachmentContainer 
     extends NSObjectProtocol {
 
     
     
-    
-    
+
+
     
     /**
      * @since Available in iOS 7.0 and later.
@@ -41,7 +38,7 @@ public interface NSTextAttachmentContainer
      */
     @Mapping("attachmentBoundsForTextContainer:proposedLineFragment:glyphPosition:characterIndex:")
     CGRect getAttachmentBounds(NSTextContainer textContainer, CGRect lineFrag, CGPoint position, @MachineSizedUInt long charIndex);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

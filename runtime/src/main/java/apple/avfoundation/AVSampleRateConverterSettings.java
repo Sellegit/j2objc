@@ -19,7 +19,6 @@ import apple.coremedia.*;
 import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("AVFoundation/AVFoundation.h")
@@ -39,5 +38,5 @@ public class AVSampleRateConverterSettings
     public static native NSString AlgorithmKey();
     @GlobalConstant("AVSampleRateConverterAudioQualityKey")
     public static native NSString AudioQualityKey();
-    
+
 }

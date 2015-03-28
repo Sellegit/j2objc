@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 import apple.uikit.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -25,8 +24,8 @@ public abstract class MPPlayableContentDataSourceAdapter
     
     
     
-    
-    
+
+
     
     
     @NotImplemented("beginLoadingChildItemsAtIndexPath:completionHandler:")
@@ -37,5 +36,5 @@ public abstract class MPPlayableContentDataSourceAdapter
     public @MachineSizedSInt long getNumberOfChildItems(NSIndexPath indexPath) { throw new UnsupportedOperationException(); }
     @NotImplemented("contentItemAtIndexPath:")
     public MPContentItem getContentItem(NSIndexPath indexPath) { throw new UnsupportedOperationException(); }
-    
+
 }

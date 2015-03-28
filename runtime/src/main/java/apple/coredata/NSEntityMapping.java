@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 3.0 and later.
  */
-
 @Library("CoreData/CoreData.h") @Mapping("NSEntityMapping")
 public class NSEntityMapping 
     extends NSObject 
@@ -28,7 +26,7 @@ public class NSEntityMapping
     
     @Mapping("init")
     public NSEntityMapping() { }
-    
+
     
     @Mapping("name")
     public native String getName();
@@ -74,9 +72,9 @@ public class NSEntityMapping
     public native String getEntityMigrationPolicyClassName();
     @Mapping("setEntityMigrationPolicyClassName:")
     public native void setEntityMigrationPolicyClassName(String v);
+
     
     
-    
-    
-    
+
+
 }

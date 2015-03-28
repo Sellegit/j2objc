@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UIMutableUserNotificationCategory")
 public class UIMutableUserNotificationCategory 
     extends UIUserNotificationCategory 
@@ -33,16 +31,16 @@ public class UIMutableUserNotificationCategory
     
     @Mapping("init")
     public UIMutableUserNotificationCategory() { }
-    
+
     
     @Mapping("identifier")
     public native String getIdentifier();
     @Mapping("setIdentifier:")
     public native void setIdentifier(String v);
-    
+
     
     
     @Mapping("setActions:forContext:")
     public native void setActions(NSArray<?> actions, @Representing("UIUserNotificationActionContext") long context);
-    
+
 }

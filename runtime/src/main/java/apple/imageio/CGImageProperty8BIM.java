@@ -13,7 +13,6 @@ import apple.coregraphics.*;
 import apple.coreservices.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("ImageIO/ImageIO.h")
@@ -36,5 +35,5 @@ public class CGImageProperty8BIM
      */
     @GlobalConstant("kCGImageProperty8BIMVersion")
     public static native CFString VersionKey();
-    
+
 }

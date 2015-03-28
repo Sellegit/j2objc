@@ -17,7 +17,6 @@ import apple.addressbook.*;
 import apple.mediaplayer.*;
 import apple.avkit.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("iAd/iAd.h")
@@ -28,10 +27,10 @@ public final class AVPlayerViewControllerExtensions
     
     
     private AVPlayerViewControllerExtensions() {}
+
     
-    
-    
-    
+
+
     
     
     /**
@@ -49,5 +48,5 @@ public final class AVPlayerViewControllerExtensions
      */
     @Mapping("preparePrerollAds")
     public static native void preparePrerollAds();
-    
+
 }

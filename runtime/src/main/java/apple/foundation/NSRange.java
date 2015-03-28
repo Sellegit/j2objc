@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Mapping("NSRange") @Library("Foundation/Foundation.h")
 public class NSRange 
     extends Struct 
@@ -35,7 +32,7 @@ public class NSRange
     public native @MachineSizedUInt long getLocation();
     @DotMapping("length")
     public native @MachineSizedUInt long getLength();
-    
+
     public static native NSRange create(@MachineSizedUInt long location, @MachineSizedUInt long length) /*-[
         NSRange __new = { .location = location, .length = length };
         return __new;
@@ -45,13 +42,29 @@ public class NSRange
         return __new;
     ]-*/;
 
-    
+
     public static native NSRange copyWithlength(NSRange original, @MachineSizedUInt long length) /*-[
         NSRange __new = { .location = original.location, .length = length };
         return __new;
     ]-*/;
 
-    
+
+    public static final class Adapter {
+
+        public @MachineSizedUInt long location;
+        public @MachineSizedUInt long length;
+        public Adapter(@MachineSizedUInt long location, @MachineSizedUInt long length) {
+            this.location = location;
+            this.length = length;
+        }
+        public Adapter(NSRange original) {
+            this.location = original.getLocation();
+            this.length = original.getLength();
+        }
+        public NSRange convert() {
+            return create(location, length);
+        }
+    }
     @GlobalFunction("NSUnionRange")
     public static native NSRange union(NSRange range1, NSRange range2);
     @GlobalFunction("NSIntersectionRange")
@@ -60,5 +73,5 @@ public class NSRange
     public static native String toString(NSRange range);
     @GlobalFunction("NSRangeFromString")
     public static native NSRange fromString(String aString);
-    
+
 }

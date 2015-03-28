@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 5.0 and later.
  */
-
 @Library("NewsstandKit/NewsstandKit.h")
 @Mapping("NKIssueContentStatus")
 public final class NKIssueContentStatus extends ObjCEnum {
@@ -29,6 +27,6 @@ public final class NKIssueContentStatus extends ObjCEnum {
     public static final long Downloading = 1L;
     @GlobalConstant("NKIssueContentStatusAvailable")
     public static final long Available = 2L;
-    
+
 
 }

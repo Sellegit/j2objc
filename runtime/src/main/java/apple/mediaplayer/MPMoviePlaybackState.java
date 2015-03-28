@@ -15,9 +15,6 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
-
-
 @Library("MediaPlayer/MediaPlayer.h")
 @Mapping("MPMoviePlaybackState")
 public final class MPMoviePlaybackState extends ObjCEnum {
@@ -34,6 +31,6 @@ public final class MPMoviePlaybackState extends ObjCEnum {
     public static final long SeekingForward = 4L;
     @GlobalConstant("MPMoviePlaybackStateSeekingBackward")
     public static final long SeekingBackward = 5L;
-    
+
 
 }

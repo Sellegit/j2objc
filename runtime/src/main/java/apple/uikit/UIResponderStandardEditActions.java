@@ -19,17 +19,14 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h") @Mapping("UIResponderStandardEditActions")
 public interface UIResponderStandardEditActions 
      {
 
     
     
-    
-    
+
+
     
     /**
      * @since Available in iOS 3.0 and later.
@@ -96,7 +93,7 @@ public interface UIResponderStandardEditActions
      */
     @Mapping("decreaseSize:")
     void decreaseSize(Object sender);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

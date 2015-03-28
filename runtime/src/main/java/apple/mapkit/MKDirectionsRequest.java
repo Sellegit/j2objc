@@ -17,11 +17,9 @@ import apple.uikit.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 6.0 and later.
  */
-
 @Library("MapKit/MapKit.h") @Mapping("MKDirectionsRequest")
 public class MKDirectionsRequest 
     extends NSObject 
@@ -36,7 +34,7 @@ public class MKDirectionsRequest
      */
     @Mapping("initWithContentsOfURL:")
     public MKDirectionsRequest(NSURL url) { }
-    
+
     
     /**
      * @since Available in iOS 7.0 and later.
@@ -78,7 +76,7 @@ public class MKDirectionsRequest
      */
     @Mapping("setArrivalDate:")
     public native void setArrivalDate(NSDate v);
-    
+
     
     
     /**
@@ -106,5 +104,5 @@ public class MKDirectionsRequest
      */
     @Mapping("isDirectionsRequestURL:")
     public static native boolean isDirectionsRequestURL(NSURL url);
-    
+
 }

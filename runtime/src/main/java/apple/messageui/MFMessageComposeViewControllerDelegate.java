@@ -15,21 +15,18 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
-
-
 @Library("MessageUI/MessageUI.h") @Mapping("MFMessageComposeViewControllerDelegate")
 public interface MFMessageComposeViewControllerDelegate 
     extends NSObjectProtocol {
 
     
     
-    
-    
+
+
     
     @Mapping("messageComposeViewController:didFinishWithResult:")
     void didFinish(MFMessageComposeViewController controller, @Representing("MessageComposeResult") long result);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

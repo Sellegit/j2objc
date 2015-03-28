@@ -13,7 +13,6 @@ import apple.coregraphics.*;
 import apple.coreservices.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("AddressBook/AddressBook.h")
@@ -46,5 +45,5 @@ public class ABGroup
     public static native boolean addMember(ABRecordRef group, ABRecordRef person, Todo error);
     @GlobalFunction("ABGroupRemoveMember")
     public static native boolean removeMember(ABRecordRef group, ABRecordRef member, Todo error);
-    
+
 }

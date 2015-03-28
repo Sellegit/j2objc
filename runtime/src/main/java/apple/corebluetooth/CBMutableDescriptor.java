@@ -15,11 +15,9 @@ import apple.foundation.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 6.0 and later.
  */
-
 @Library("CoreBluetooth/CoreBluetooth.h") @Mapping("CBMutableDescriptor")
 public class CBMutableDescriptor 
     extends CBDescriptor 
@@ -31,12 +29,12 @@ public class CBMutableDescriptor
     public CBMutableDescriptor(CBUUID UUID, Object value) { }
     @Mapping("init")
     public CBMutableDescriptor() { }
+
+    
+
+
     
     
-    
-    
-    
-    
-    
-    
+
+
 }

@@ -16,9 +16,6 @@ import apple.addressbook.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("EventKit/EventKit.h")
 @Mapping("EKEntityType")
 public final class EKEntityType extends ObjCEnum {
@@ -27,6 +24,6 @@ public final class EKEntityType extends ObjCEnum {
     public static final long Event = 0L;
     @GlobalConstant("EKEntityTypeReminder")
     public static final long Reminder = 1L;
-    
+
 
 }

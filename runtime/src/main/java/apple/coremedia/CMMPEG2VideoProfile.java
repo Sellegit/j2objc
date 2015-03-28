@@ -18,9 +18,6 @@ import apple.coreanimation.*;
 import apple.corevideo.*;
 
 
-
-
-
 @Library("CoreMedia/CoreMedia.h")
 @Mapping("CMMPEG2VideoProfile")
 public final class CMMPEG2VideoProfile extends ObjCEnum {
@@ -101,6 +98,6 @@ public final class CMMPEG2VideoProfile extends ObjCEnum {
     public static final long XDCAM_HD422_720p30_CBR50 = 2019833137L;
     @GlobalConstant("kCMMPEG2VideoProfile_XF")
     public static final long XF = 2019981873L;
-    
+
 
 }

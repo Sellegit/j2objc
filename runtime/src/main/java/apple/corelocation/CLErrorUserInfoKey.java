@@ -15,7 +15,6 @@ import apple.foundation.*;
 import apple.addressbook.*;
 import apple.corebluetooth.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("CoreLocation/CoreLocation.h")

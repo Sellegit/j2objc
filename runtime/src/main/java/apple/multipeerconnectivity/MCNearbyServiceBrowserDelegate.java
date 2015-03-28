@@ -16,17 +16,14 @@ import apple.uikit.*;
 import apple.security.*;
 
 
-
-
-
 @Library("MultipeerConnectivity/MultipeerConnectivity.h") @Mapping("MCNearbyServiceBrowserDelegate")
 public interface MCNearbyServiceBrowserDelegate 
     extends NSObjectProtocol {
 
     
     
-    
-    
+
+
     
     @Mapping("browser:foundPeer:withDiscoveryInfo:")
     void foundPeer(MCNearbyServiceBrowser browser, MCPeerID peerID, NSDictionary<?, ?> info);
@@ -34,7 +31,7 @@ public interface MCNearbyServiceBrowserDelegate
     void lostPeer(MCNearbyServiceBrowser browser, MCPeerID peerID);
     @Mapping("browser:didNotStartBrowsingForPeers:")
     void didNotStartBrowsing(MCNearbyServiceBrowser browser, NSError error);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

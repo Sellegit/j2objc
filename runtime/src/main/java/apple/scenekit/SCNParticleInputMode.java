@@ -20,9 +20,6 @@ import apple.spritekit.*;
 import apple.opengles.*;
 
 
-
-
-
 @Library("SceneKit/SceneKit.h")
 @Mapping("SCNParticleInputMode")
 public final class SCNParticleInputMode extends ObjCEnum {
@@ -33,6 +30,6 @@ public final class SCNParticleInputMode extends ObjCEnum {
     public static final long Distance = 1L;
     @GlobalConstant("SCNParticleInputModeOverOtherProperty")
     public static final long OtherProperty = 2L;
-    
+
 
 }

@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h")
 @Mapping("NSOperationQueuePriority")
 public final class NSOperationQueuePriority extends ObjCEnum {
@@ -36,6 +33,6 @@ public final class NSOperationQueuePriority extends ObjCEnum {
     public static final long High = 4L;
     @GlobalConstant("NSOperationQueuePriorityVeryHigh")
     public static final long VeryHigh = 8L;
-    
+
 
 }

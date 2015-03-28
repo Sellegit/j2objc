@@ -18,7 +18,6 @@ import apple.coreimage.*;
 import apple.coretext.*;
 import apple.corelocation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -29,8 +28,8 @@ public abstract class UIPageViewControllerDelegateAdapter
     
     
     
-    
-    
+
+
     
     
     /**
@@ -52,5 +51,5 @@ public abstract class UIPageViewControllerDelegateAdapter
      */
     @NotImplemented("pageViewControllerPreferredInterfaceOrientationForPresentation:")
     public @Representing("UIInterfaceOrientation") long getPreferredInterfaceOrientation(UIPageViewController pageViewController) { throw new UnsupportedOperationException(); }
-    
+
 }

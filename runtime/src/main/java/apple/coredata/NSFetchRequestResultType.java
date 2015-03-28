@@ -14,9 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
-
-
 @Library("CoreData/CoreData.h")
 @Mapping("NSFetchRequestResultType")
 public final class NSFetchRequestResultType extends ObjCEnum {
@@ -35,6 +32,6 @@ public final class NSFetchRequestResultType extends ObjCEnum {
      */
     @GlobalConstant("NSCountResultType")
     public static final long Count = 4L;
-    
+
 
 }

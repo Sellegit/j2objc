@@ -19,9 +19,6 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h")
 @Mapping("UITableViewCellStyle")
 public final class UITableViewCellStyle extends ObjCEnum {
@@ -34,6 +31,6 @@ public final class UITableViewCellStyle extends ObjCEnum {
     public static final long Value2 = 2L;
     @GlobalConstant("UITableViewCellStyleSubtitle")
     public static final long Subtitle = 3L;
-    
+
 
 }

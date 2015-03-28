@@ -16,9 +16,6 @@ import apple.coremedia.*;
 import apple.coreaudio.*;
 
 
-
-
-
 @Library("MediaToolbox/MediaToolbox.h")
 @Mapping("MTAudioProcessingTapCreationFlag")
 public final class MTAudioProcessingTapCreationFlag extends ObjCEnum {
@@ -27,6 +24,6 @@ public final class MTAudioProcessingTapCreationFlag extends ObjCEnum {
     public static final long reEffects = 1L;
     @GlobalConstant("kMTAudioProcessingTapCreationFlag_PostEffects")
     public static final long ostEffects = 2L;
-    
+
 
 }

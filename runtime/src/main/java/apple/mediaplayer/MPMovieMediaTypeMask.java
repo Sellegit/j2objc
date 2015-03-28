@@ -15,9 +15,6 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
-
-
 @Library("MediaPlayer/MediaPlayer.h")
 @Mapping("MPMovieMediaTypeMask")
 public final class MPMovieMediaTypeMask extends ObjCEnum {
@@ -28,6 +25,6 @@ public final class MPMovieMediaTypeMask extends ObjCEnum {
     public static final long Video = 1L;
     @GlobalConstant("MPMovieMediaTypeMaskAudio")
     public static final long Audio = 2L;
-    
+
 
 }

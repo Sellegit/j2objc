@@ -18,7 +18,6 @@ import apple.coremedia.*;
 import apple.security.*;
 import apple.dispatch.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("Foundation/Foundation.h")
@@ -76,5 +75,5 @@ public class NSTextCheckingAddressComponents
      */
     @GlobalConstant("NSTextCheckingPhoneKey")
     public static native NSString PhoneKey();
-    
+
 }

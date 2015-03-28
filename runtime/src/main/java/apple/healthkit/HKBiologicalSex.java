@@ -14,9 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
-
-
 @Library("HealthKit/HealthKit.h")
 @Mapping("HKBiologicalSex")
 public final class HKBiologicalSex extends ObjCEnum {
@@ -38,6 +35,6 @@ public final class HKBiologicalSex extends ObjCEnum {
      */
     @GlobalConstant("HKBiologicalSexOther")
     public static final long Other = 3L;
-    
+
 
 }

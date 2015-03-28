@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 5.0 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UIDocument")
 public class UIDocument 
     extends NSObject 
@@ -35,7 +33,7 @@ public class UIDocument
     public UIDocument(NSURL url) { }
     @Mapping("init")
     public UIDocument() { }
-    
+
     
     @Mapping("fileURL")
     public native NSURL getFileURL();
@@ -67,7 +65,7 @@ public class UIDocument
     public native NSURL getPresentedItemURL();
     @Mapping("presentedItemOperationQueue")
     public native NSOperationQueue getPresentedItemOperationQueue();
-    
+
     
     
     /**
@@ -80,7 +78,7 @@ public class UIDocument
      */
     @GlobalConstant("NSUserActivityDocumentURLKey")
     public static native String UserActivityDocumentURLKey();
-    
+
     @Mapping("openWithCompletionHandler:")
     public native void open(@Block VoidBooleanBlock completionHandler);
     @Mapping("closeWithCompletionHandler:")
@@ -169,5 +167,5 @@ public class UIDocument
     public native void presentedSubitemAtURLDidLoseVersion(NSURL url, NSFileVersion version);
     @Mapping("presentedSubitemAtURL:didResolveConflictVersion:")
     public native void presentedSubitemAtURLDidResolveConflictVersion(NSURL url, NSFileVersion version);
-    
+
 }

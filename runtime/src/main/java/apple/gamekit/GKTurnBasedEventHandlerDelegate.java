@@ -15,21 +15,19 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
 /**
  * @since Available in iOS 5.0 and later.
  * @deprecated Deprecated in iOS 7.0.
  */
 @Deprecated
-
 @Library("GameKit/GameKit.h") @Mapping("GKTurnBasedEventHandlerDelegate")
 public interface GKTurnBasedEventHandlerDelegate 
      {
 
     
     
-    
-    
+
+
     
     /**
      * @since Available in iOS 5.0 and later.
@@ -59,7 +57,7 @@ public interface GKTurnBasedEventHandlerDelegate
     @Deprecated
     @Mapping("handleMatchEnded:")
     void handleMatchEnded(GKTurnBasedMatch match);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

@@ -17,9 +17,6 @@ import apple.uikit.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Mapping("MKCoordinateRegion") @Library("MapKit/MapKit.h")
 public class MKCoordinateRegion 
     extends Struct 
@@ -33,7 +30,7 @@ public class MKCoordinateRegion
     public native CLLocationCoordinate2D getCenter();
     @DotMapping("span")
     public native MKCoordinateSpan getSpan();
-    
+
     public static native MKCoordinateRegion create(CLLocationCoordinate2D center, MKCoordinateSpan span) /*-[
         MKCoordinateRegion __new = { .center = center, .span = span };
         return __new;
@@ -43,13 +40,29 @@ public class MKCoordinateRegion
         return __new;
     ]-*/;
 
-    
+
     public static native MKCoordinateRegion copyWithspan(MKCoordinateRegion original, MKCoordinateSpan span) /*-[
         MKCoordinateRegion __new = { .center = original.center, .span = span };
         return __new;
     ]-*/;
 
-    
+
+    public static final class Adapter {
+
+        public CLLocationCoordinate2D center;
+        public MKCoordinateSpan span;
+        public Adapter(CLLocationCoordinate2D center, MKCoordinateSpan span) {
+            this.center = center;
+            this.span = span;
+        }
+        public Adapter(MKCoordinateRegion original) {
+            this.center = original.getCenter();
+            this.span = original.getSpan();
+        }
+        public MKCoordinateRegion convert() {
+            return create(center, span);
+        }
+    }
     @GlobalFunction("MKCoordinateRegionMakeWithDistance")
     public static native MKCoordinateRegion createPrime(CLLocationCoordinate2D centerCoordinate, double latitudinalMeters, double longitudinalMeters);
     /**
@@ -57,5 +70,5 @@ public class MKCoordinateRegion
      */
     @GlobalFunction("MKCoordinateRegionForMapRect")
     public static native MKCoordinateRegion createPrime(MKMapRect rect);
-    
+
 }

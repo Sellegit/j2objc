@@ -13,7 +13,6 @@ import apple.coregraphics.*;
 import apple.coreservices.*;
 import apple.dispatch.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Mapping("SecRandomRef") @Library("Security/Security.h")
@@ -24,7 +23,7 @@ public class SecRandom
     
     
     protected SecRandom() {}
-    
+
     
     
     
@@ -33,11 +32,11 @@ public class SecRandom
      */
     @GlobalConstant("kSecRandomDefault")
     public static native SecRandom Default();
-    
+
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("SecRandomCopyBytes")
     public static native int copyBytes(SecRandom rnd, @MachineSizedUInt long count, Todo bytes);
-    
+
 }

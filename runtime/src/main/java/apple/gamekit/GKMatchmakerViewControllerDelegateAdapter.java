@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 import apple.uikit.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -25,8 +24,8 @@ public abstract class GKMatchmakerViewControllerDelegateAdapter
     
     
     
-    
-    
+
+
     
     
     /**
@@ -68,5 +67,5 @@ public abstract class GKMatchmakerViewControllerDelegateAdapter
     @Deprecated
     @NotImplemented("matchmakerViewController:didReceiveAcceptFromHostedPlayer:")
     public void didReceiveAccept(GKMatchmakerViewController viewController, String playerID) { throw new UnsupportedOperationException(); }
-    
+
 }

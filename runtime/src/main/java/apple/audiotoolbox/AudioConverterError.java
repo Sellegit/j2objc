@@ -17,9 +17,6 @@ import apple.coreaudio.*;
 import apple.coremedia.*;
 
 
-
-
-
 @Library("AudioToolbox/AudioToolbox.h")
 @Mapping("AudioConverterError")
 public final class AudioConverterError extends ObjCEnum {
@@ -44,6 +41,6 @@ public final class AudioConverterError extends ObjCEnum {
     public static final long InputSampleRateOutOfRange = 560558962L;
     @GlobalConstant("kAudioConverterErr_OutputSampleRateOutOfRange")
     public static final long OutputSampleRateOutOfRange = 560952178L;
-    
+
 
 }

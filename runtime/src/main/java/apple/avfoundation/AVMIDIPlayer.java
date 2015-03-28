@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h") @Mapping("AVMIDIPlayer")
 public class AVMIDIPlayer 
     extends NSObject 
@@ -33,7 +31,7 @@ public class AVMIDIPlayer
     
     
     public AVMIDIPlayer() {}
-    
+
     
     @Mapping("duration")
     public native double getDuration();
@@ -47,7 +45,7 @@ public class AVMIDIPlayer
     public native double getCurrentPosition();
     @Mapping("setCurrentPosition:")
     public native void setCurrentPosition(double v);
-    
+
     
     
     @Mapping("prepareToPlay")
@@ -56,5 +54,5 @@ public class AVMIDIPlayer
     public native void play(@Block Runnable completionHandler);
     @Mapping("stop")
     public native void stop();
-    
+
 }

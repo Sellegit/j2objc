@@ -21,11 +21,9 @@ import apple.glkit.*;
 import apple.scenekit.*;
 
 
-
 /**
  * @since Available in iOS 7.0 and later.
  */
-
 @Library("SpriteKit/SpriteKit.h")
 @Mapping("SKSceneScaleMode")
 public final class SKSceneScaleMode extends ObjCEnum {
@@ -38,6 +36,6 @@ public final class SKSceneScaleMode extends ObjCEnum {
     public static final long AspectFit = 2L;
     @GlobalConstant("SKSceneScaleModeResizeFill")
     public static final long ResizeFill = 3L;
-    
+
 
 }

@@ -19,17 +19,14 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h") @Mapping("UIPageViewControllerDataSource")
 public interface UIPageViewControllerDataSource 
     extends NSObjectProtocol {
 
     
     
-    
-    
+
+
     
     @Mapping("pageViewController:viewControllerBeforeViewController:")
     UIViewController getViewControllerBefore(UIPageViewController pageViewController, UIViewController viewController);
@@ -45,7 +42,7 @@ public interface UIPageViewControllerDataSource
      */
     @Mapping("presentationIndexForPageViewController:")
     @MachineSizedSInt long getPresentationIndex(UIPageViewController pageViewController);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

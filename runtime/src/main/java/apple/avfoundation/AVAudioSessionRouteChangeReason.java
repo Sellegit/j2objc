@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 6.0 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h")
 @Mapping("AVAudioSessionRouteChangeReason")
 public final class AVAudioSessionRouteChangeReason extends ObjCEnum {
@@ -48,6 +46,6 @@ public final class AVAudioSessionRouteChangeReason extends ObjCEnum {
      */
     @GlobalConstant("AVAudioSessionRouteChangeReasonRouteConfigurationChange")
     public static final long RouteConfigurationChange = 8L;
-    
+
 
 }

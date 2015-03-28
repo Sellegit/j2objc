@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UIAlertAction")
 public class UIAlertAction 
     extends NSObject 
@@ -33,7 +31,7 @@ public class UIAlertAction
     
     @Mapping("init")
     public UIAlertAction() { }
-    
+
     
     @Mapping("title")
     public native String getTitle();
@@ -43,12 +41,12 @@ public class UIAlertAction
     public native boolean isEnabled();
     @Mapping("setEnabled:")
     public native void setEnabled(boolean v);
-    
+
     
     
     @Mapping("actionWithTitle:style:handler:")
     public static native UIAlertAction create(String title, @Representing("UIAlertActionStyle") long style, @Block VoidBlock1<UIAlertAction> handler);
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
-    
+
 }

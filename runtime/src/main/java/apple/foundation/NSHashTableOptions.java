@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h")
 @Mapping("NSHashTableOptions")
 public final class NSHashTableOptions extends ObjCEnum {
@@ -46,6 +43,6 @@ public final class NSHashTableOptions extends ObjCEnum {
      */
     @GlobalConstant("NSHashTableWeakMemory")
     public static final long WeakMemory = 5L;
-    
+
 
 }

@@ -14,9 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
-
-
 @Library("CoreText/CoreText.h")
 @Mapping("CTFontManagerAutoActivationSetting")
 public final class CTFontManagerAutoActivationSetting extends ObjCEnum {
@@ -29,6 +26,6 @@ public final class CTFontManagerAutoActivationSetting extends ObjCEnum {
     public static final long Enabled = 2L;
     @GlobalConstant("kCTFontManagerAutoActivationPromptUser")
     public static final long PromptUser = 3L;
-    
+
 
 }

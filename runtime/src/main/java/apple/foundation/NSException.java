@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h") @Mapping("NSException")
 public class NSException 
     extends NSObject 
@@ -33,7 +30,7 @@ public class NSException
     public NSException(String aName, String aReason, NSDictionary<?, ?> aUserInfo) { }
     @Mapping("init")
     public NSException() { }
-    
+
     
     @Mapping("name")
     public native String getName();
@@ -51,17 +48,17 @@ public class NSException
      */
     @Mapping("callStackSymbols")
     public native NSArray<NSString> getCallStackSymbols();
-    
+
     
     
     @GlobalFunction("NSSetUncaughtExceptionHandler")
     public static native void setUncaughtExceptionHandler(FunctionPtr p0);
-    
+
     @Mapping("raise")
     public native void raise();
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
     @Mapping("encodeWithCoder:")
     public native void encode(NSCoder aCoder);
-    
+
 }

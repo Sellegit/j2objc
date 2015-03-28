@@ -19,11 +19,9 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("Foundation/Foundation.h") @Mapping("NSDateIntervalFormatter")
 public class NSDateIntervalFormatter 
     extends NSFormatter 
@@ -35,7 +33,7 @@ public class NSDateIntervalFormatter
     public NSDateIntervalFormatter(NSCoder aDecoder) { }
     @Mapping("init")
     public NSDateIntervalFormatter() { }
-    
+
     
     @Mapping("locale")
     public native NSLocale getLocale();
@@ -61,10 +59,10 @@ public class NSDateIntervalFormatter
     public native @Representing("NSDateIntervalFormatterStyle") long getTimeStyle();
     @Mapping("setTimeStyle:")
     public native void setTimeStyle(@Representing("NSDateIntervalFormatterStyle") long v);
-    
+
     
     
     @Mapping("stringFromDate:toDate:")
     public native String format(NSDate fromDate, NSDate toDate);
-    
+
 }

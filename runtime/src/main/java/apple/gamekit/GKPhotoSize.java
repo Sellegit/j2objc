@@ -15,9 +15,6 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
-
-
 @Library("GameKit/GameKit.h")
 @Mapping("GKPhotoSize")
 public final class GKPhotoSize extends ObjCEnum {
@@ -26,6 +23,6 @@ public final class GKPhotoSize extends ObjCEnum {
     public static final long Small = 0L;
     @GlobalConstant("GKPhotoSizeNormal")
     public static final long Normal = 1L;
-    
+
 
 }

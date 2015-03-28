@@ -17,11 +17,9 @@ import apple.uikit.*;
 import apple.avfoundation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("Photos/Photos.h")
 @Mapping("PHCollectionListSubtype")
 public final class PHCollectionListSubtype extends ObjCEnum {
@@ -38,6 +36,6 @@ public final class PHCollectionListSubtype extends ObjCEnum {
     public static final long SmartFolderFaces = 201L;
     @GlobalConstant("PHCollectionListSubtypeAny")
     public static final long Any = 2147483647L;
-    
+
 
 }

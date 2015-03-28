@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 2.0 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UISearchBar")
 public class UISearchBar 
     extends UIView 
@@ -37,7 +35,7 @@ public class UISearchBar
     public UISearchBar(NSCoder aDecoder) { }
     @Mapping("init")
     public UISearchBar() { }
-    
+
     
     @Mapping("barStyle")
     public native @Representing("UIBarStyle") long getBarStyle();
@@ -235,7 +233,7 @@ public class UISearchBar
     public native boolean isSecureTextEntry();
     @Mapping("setSecureTextEntry:")
     public native void setSecureTextEntry(boolean v);
-    
+
     
     
     /**
@@ -313,5 +311,5 @@ public class UISearchBar
      */
     @Mapping("positionAdjustmentForSearchBarIcon:")
     public native UIOffset getPositionAdjustmentForSearchBarIcon(@Representing("UISearchBarIcon") long icon);
-    
+
 }

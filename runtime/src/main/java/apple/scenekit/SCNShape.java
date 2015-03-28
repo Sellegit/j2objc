@@ -20,9 +20,6 @@ import apple.spritekit.*;
 import apple.opengles.*;
 
 
-
-
-
 @Library("SceneKit/SceneKit.h") @Mapping("SCNShape")
 public class SCNShape 
     extends SCNGeometry 
@@ -32,7 +29,7 @@ public class SCNShape
     
     @Mapping("init")
     public SCNShape() { }
-    
+
     
     @Mapping("path")
     public native UIBezierPath getPath();
@@ -54,10 +51,10 @@ public class SCNShape
     public native UIBezierPath getChamferProfile();
     @Mapping("setChamferProfile:")
     public native void setChamferProfile(UIBezierPath v);
-    
+
     
     
     @Mapping("shapeWithPath:extrusionDepth:")
     public static native SCNShape create(UIBezierPath path, @MachineSizedFloat double extrusionDepth);
-    
+
 }

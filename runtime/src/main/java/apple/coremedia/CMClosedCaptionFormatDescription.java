@@ -17,7 +17,6 @@ import apple.coreaudio.*;
 import apple.coreanimation.*;
 import apple.corevideo.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Mapping("CMClosedCaptionFormatDescriptionRef") @Library("CoreMedia/CoreMedia.h")
@@ -28,7 +27,7 @@ public class CMClosedCaptionFormatDescription
     
     
     protected CMClosedCaptionFormatDescription() {}
-    
+
     
     
     
@@ -47,5 +46,5 @@ public class CMClosedCaptionFormatDescription
      */
     @GlobalFunction("CMClosedCaptionFormatDescriptionCopyAsBigEndianClosedCaptionDescriptionBlockBuffer")
     public static native int copyAsBigEndianClosedCaptionDescriptionBlockBuffer(CFAllocator allocator, CMClosedCaptionFormatDescription closedCaptionFormatDescription, CFString closedCaptionDescriptionFlavor, Todo closedCaptionDescriptionBlockBufferOut);
-    
+
 }

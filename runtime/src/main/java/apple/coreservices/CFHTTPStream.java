@@ -13,7 +13,6 @@ import apple.coregraphics.*;
 import apple.coreservices.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("CFNetwork/CFNetwork.h")
@@ -36,5 +35,5 @@ public class CFHTTPStream
      */
     @GlobalFunction("CFReadStreamCreateForStreamedHTTPRequest")
     public static native CFReadStream create(CFAllocator alloc, CFHTTPMessage requestHeaders, CFReadStream requestBody);
-    
+
 }

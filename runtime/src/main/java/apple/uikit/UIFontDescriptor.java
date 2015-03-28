@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 7.0 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UIFontDescriptor")
 public class UIFontDescriptor 
     extends NSObject 
@@ -35,7 +33,7 @@ public class UIFontDescriptor
     public UIFontDescriptor(NSDictionary<?, ?> attributes) { }
     @Mapping("init")
     public UIFontDescriptor() { }
-    
+
     
     @Mapping("postscriptName")
     public native String getPostscriptName();
@@ -45,7 +43,7 @@ public class UIFontDescriptor
     public native CGAffineTransform getMatrix();
     @Mapping("symbolicTraits")
     public native @Representing("UIFontDescriptorSymbolicTraits") long getSymbolicTraits();
-    
+
     
     
     @Mapping("objectForKey:")
@@ -78,5 +76,5 @@ public class UIFontDescriptor
     public native Object copyWithZone$(NSZone zone);
     @Mapping("encodeWithCoder:")
     public native void encode(NSCoder aCoder);
-    
+
 }

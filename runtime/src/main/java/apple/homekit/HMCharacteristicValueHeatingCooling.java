@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("HomeKit/HomeKit.h")
 @Mapping("HMCharacteristicValueHeatingCooling")
 public final class HMCharacteristicValueHeatingCooling extends ObjCEnum {
@@ -31,6 +29,6 @@ public final class HMCharacteristicValueHeatingCooling extends ObjCEnum {
     public static final long Cool = 2L;
     @GlobalConstant("HMCharacteristicValueHeatingCoolingAuto")
     public static final long Auto = 3L;
-    
+
 
 }

@@ -15,7 +15,6 @@ import apple.foundation.*;
 import apple.uikit.*;
 import apple.addressbook.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("PassKit/PassKit.h")
@@ -34,5 +33,5 @@ public class PKPaymentNetwork
     public static native NSString MasterCardValue();
     @GlobalConstant("PKPaymentNetworkVisa")
     public static native NSString VisaValue();
-    
+
 }

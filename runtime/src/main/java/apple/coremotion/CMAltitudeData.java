@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("CoreMotion/CoreMotion.h") @Mapping("CMAltitudeData")
 public class CMAltitudeData 
     extends CMLogItem 
@@ -28,15 +26,15 @@ public class CMAltitudeData
     
     @Mapping("init")
     public CMAltitudeData() { }
-    
+
     
     @Mapping("relativeAltitude")
     public native NSNumber getRelativeAltitude();
     @Mapping("pressure")
     public native NSNumber getPressure();
+
     
     
-    
-    
-    
+
+
 }

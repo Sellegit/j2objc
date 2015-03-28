@@ -13,7 +13,6 @@ import apple.coregraphics.*;
 import apple.coreservices.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("CoreData/CoreData.h")
@@ -31,5 +30,5 @@ public class NSSQLiteError
      */
     @GlobalConstant("NSSQLiteErrorDomain")
     public static native String getClassDomain();
-    
+
 }

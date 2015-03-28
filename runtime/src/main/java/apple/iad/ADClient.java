@@ -18,11 +18,9 @@ import apple.mediaplayer.*;
 import apple.avkit.*;
 
 
-
 /**
  * @since Available in iOS 7.1 and later.
  */
-
 @Library("iAd/iAd.h") @Mapping("ADClient")
 public class ADClient 
     extends NSObject 
@@ -32,10 +30,10 @@ public class ADClient
     
     @Mapping("init")
     public ADClient() { }
+
     
-    
-    
-    
+
+
     
     
     /**
@@ -58,5 +56,5 @@ public class ADClient
      */
     @Mapping("sharedClient")
     public static native ADClient getSharedClient();
-    
+
 }

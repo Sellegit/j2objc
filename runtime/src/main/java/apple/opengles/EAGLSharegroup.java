@@ -14,9 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
-
-
 @Library("OpenGLES/EAGL.h") @Mapping("EAGLSharegroup")
 public class EAGLSharegroup 
     extends NSObject 
@@ -26,7 +23,7 @@ public class EAGLSharegroup
     
     @Mapping("init")
     public EAGLSharegroup() { }
-    
+
     
     /**
      * @since Available in iOS 6.0 and later.
@@ -38,9 +35,9 @@ public class EAGLSharegroup
      */
     @Mapping("setDebugLabel:")
     public native void setDebugLabel(String v);
+
     
     
-    
-    
-    
+
+
 }

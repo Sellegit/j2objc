@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h") @Mapping("NSFileHandle")
 public class NSFileHandle 
     extends NSObject 
@@ -37,7 +34,7 @@ public class NSFileHandle
     public NSFileHandle() { }
     @Mapping("initWithFileDescriptor:")
     public NSFileHandle(int fd) { }
-    
+
     
     @Mapping("availableData")
     public native NSData getAvailableData();
@@ -65,7 +62,7 @@ public class NSFileHandle
     public native void setWriteabilityHandler(@Block VoidBlock1<NSFileHandle> v);
     @Mapping("fileDescriptor")
     public native int getFileDescriptor();
-    
+
     
     
     @GlobalConstant("NSFileHandleReadCompletionNotification")
@@ -80,7 +77,7 @@ public class NSFileHandle
     public static native NSString NotificationDataItem();
     @GlobalConstant("NSFileHandleNotificationFileHandleItem")
     public static native NSString NotificationFileHandleItem();
-    
+
     @Mapping("readDataToEndOfFile")
     public native NSData readDataToEndOfFile();
     @Mapping("readDataOfLength:")
@@ -142,5 +139,5 @@ public class NSFileHandle
     public native void waitForDataInBackgroundAndNotify(NSArray<?> modes);
     @Mapping("waitForDataInBackgroundAndNotify")
     public native void waitForDataInBackgroundAndNotify();
-    
+
 }

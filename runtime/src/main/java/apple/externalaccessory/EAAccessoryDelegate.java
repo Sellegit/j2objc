@@ -16,24 +16,21 @@ import apple.uikit.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("ExternalAccessory/ExternalAccessory.h") @Mapping("EAAccessoryDelegate")
 public interface EAAccessoryDelegate 
     extends NSObjectProtocol {
 
     
     
-    
-    
+
+
     
     /**
      * @since Available in iOS 3.0 and later.
      */
     @Mapping("accessoryDidDisconnect:")
     void didDisconnect(EAAccessory accessory);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

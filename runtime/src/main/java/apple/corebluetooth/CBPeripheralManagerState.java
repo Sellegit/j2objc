@@ -15,11 +15,9 @@ import apple.foundation.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 6.0 and later.
  */
-
 @Library("CoreBluetooth/CoreBluetooth.h")
 @Mapping("CBPeripheralManagerState")
 public final class CBPeripheralManagerState extends ObjCEnum {
@@ -36,6 +34,6 @@ public final class CBPeripheralManagerState extends ObjCEnum {
     public static final long PoweredOff = 4L;
     @GlobalConstant("CBPeripheralManagerStatePoweredOn")
     public static final long PoweredOn = 5L;
-    
+
 
 }

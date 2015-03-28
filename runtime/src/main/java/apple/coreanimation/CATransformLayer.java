@@ -17,9 +17,6 @@ import apple.coretext.*;
 import apple.opengles.*;
 
 
-
-
-
 @Library("QuartzCore/QuartzCore.h") @Mapping("CATransformLayer")
 public class CATransformLayer 
     extends CALayer 
@@ -33,12 +30,12 @@ public class CATransformLayer
     public CATransformLayer(Object layer) { }
     @Mapping("initWithCoder:")
     public CATransformLayer(NSCoder aDecoder) { }
+
+    
+
+
     
     
-    
-    
-    
-    
-    
-    
+
+
 }

@@ -20,9 +20,6 @@ import apple.spritekit.*;
 import apple.opengles.*;
 
 
-
-
-
 @Library("SceneKit/SceneKit.h") @Mapping("SCNCamera")
 public class SCNCamera 
     extends NSObject 
@@ -32,7 +29,7 @@ public class SCNCamera
     
     @Mapping("init")
     public SCNCamera() { }
-    
+
     
     @Mapping("name")
     public native String getName();
@@ -90,7 +87,7 @@ public class SCNCamera
     public native SCNTechnique getTechnique();
     @Mapping("setTechnique:")
     public native void setTechnique(SCNTechnique v);
-    
+
     
     
     @Mapping("projectionTransform")
@@ -119,5 +116,5 @@ public class SCNCamera
     public native void removeAnimation(String key, @MachineSizedFloat double duration);
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
-    
+
 }

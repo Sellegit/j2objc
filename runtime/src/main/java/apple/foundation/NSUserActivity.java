@@ -19,11 +19,9 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("Foundation/Foundation.h") @Mapping("NSUserActivity")
 public class NSUserActivity 
     extends NSObject 
@@ -34,7 +32,7 @@ public class NSUserActivity
     public NSUserActivity() {}
     @Mapping("initWithActivityType:")
     public NSUserActivity(String activityType) { }
-    
+
     
     @Mapping("activityType")
     public native String getActivityType();
@@ -62,7 +60,7 @@ public class NSUserActivity
     public native NSUserActivityDelegate getDelegate();
     @Mapping("setDelegate:")
     public native void setDelegate(NSUserActivityDelegate v);
-    
+
     
     
     @Mapping("addUserInfoEntriesFromDictionary:")
@@ -73,5 +71,5 @@ public class NSUserActivity
     public native void invalidate();
     @Mapping("getContinuationStreamsWithCompletionHandler:")
     public native void getContinuationStreams(@Block VoidBlock3<NSInputStream, NSOutputStream, NSError> completionHandler);
-    
+
 }

@@ -15,11 +15,9 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
 /**
  * @since Available in iOS 3.0 and later.
  */
-
 @Library("MediaPlayer/MediaPlayer.h") @Mapping("MPMediaQuery")
 public class MPMediaQuery 
     extends NSObject 
@@ -31,7 +29,7 @@ public class MPMediaQuery
     public MPMediaQuery(NSSet<?> filterPredicates) { }
     @Mapping("init")
     public MPMediaQuery() { }
-    
+
     
     @Mapping("filterPredicates")
     public native NSSet<MPMediaPredicate> getFilterPredicates();
@@ -55,7 +53,7 @@ public class MPMediaQuery
      */
     @Mapping("collectionSections")
     public native NSArray<MPMediaQuerySection> getCollectionSections();
-    
+
     
     
     @Mapping("addFilterPredicate:")
@@ -82,5 +80,5 @@ public class MPMediaQuery
     public static native MPMediaQuery createGenresQuery();
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
-    
+
 }

@@ -20,17 +20,15 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 6.0 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h")
 @Mapping("AVAudioSessionSetActiveOptions")
 public final class AVAudioSessionSetActiveOptions extends ObjCEnum {
     
     @GlobalConstant("AVAudioSessionSetActiveOptionNotifyOthersOnDeactivation")
     public static final long NotifyOthersOnDeactivation = 1L;
-    
+
 
 }

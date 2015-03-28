@@ -20,23 +20,20 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
-
-
 @Library("AVFoundation/AVFoundation.h") @Mapping("AVCaptureFileOutputRecordingDelegate")
 public interface AVCaptureFileOutputRecordingDelegate 
     extends NSObjectProtocol {
 
     
     
-    
-    
+
+
     
     @Mapping("captureOutput:didStartRecordingToOutputFileAtURL:fromConnections:")
     void didStartRecording(AVCaptureFileOutput captureOutput, NSURL fileURL, NSArray<?> connections);
     @Mapping("captureOutput:didFinishRecordingToOutputFileAtURL:fromConnections:error:")
     void didFinishRecording(AVCaptureFileOutput captureOutput, NSURL outputFileURL, NSArray<?> connections, NSError error);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

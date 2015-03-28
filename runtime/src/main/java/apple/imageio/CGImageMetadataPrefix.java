@@ -13,7 +13,6 @@ import apple.coregraphics.*;
 import apple.coreservices.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("ImageIO/ImageIO.h")
@@ -71,5 +70,5 @@ public class CGImageMetadataPrefix
      */
     @GlobalConstant("kCGImageMetadataPrefixXMPRights")
     public static native CFString XMPRightsValue();
-    
+
 }

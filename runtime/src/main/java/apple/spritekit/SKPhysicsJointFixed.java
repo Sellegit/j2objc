@@ -21,9 +21,6 @@ import apple.glkit.*;
 import apple.scenekit.*;
 
 
-
-
-
 @Library("SpriteKit/SpriteKit.h") @Mapping("SKPhysicsJointFixed")
 public class SKPhysicsJointFixed 
     extends SKPhysicsJoint 
@@ -35,13 +32,13 @@ public class SKPhysicsJointFixed
     public SKPhysicsJointFixed(NSCoder aDecoder) { }
     @Mapping("init")
     public SKPhysicsJointFixed() { }
+
     
-    
-    
-    
+
+
     
     
     @Mapping("jointWithBodyA:bodyB:anchor:")
     public static native SKPhysicsJointFixed create(SKPhysicsBody bodyA, SKPhysicsBody bodyB, CGPoint anchor);
-    
+
 }

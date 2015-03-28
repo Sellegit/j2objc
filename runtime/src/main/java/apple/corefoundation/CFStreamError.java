@@ -15,9 +15,6 @@ import apple.dispatch.*;
 import apple.foundation.*;
 
 
-
-
-
 @Mapping("CFStreamError") @Library("CoreFoundation/CoreFoundation.h")
 public class CFStreamError 
     extends Struct 
@@ -31,7 +28,7 @@ public class CFStreamError
     public native CFStreamErrorDomain getDomain();
     @DotMapping("error")
     public native int getError();
-    
+
     public static native CFStreamError create(CFStreamErrorDomain domain, int error) /*-[
         CFStreamError __new = { .domain = domain, .error = error };
         return __new;
@@ -41,11 +38,27 @@ public class CFStreamError
         return __new;
     ]-*/;
 
-    
+
     public static native CFStreamError copyWitherror(CFStreamError original, int error) /*-[
         CFStreamError __new = { .domain = original.domain, .error = error };
         return __new;
     ]-*/;
 
-    
+
+    public static final class Adapter {
+
+        public CFStreamErrorDomain domain;
+        public int error;
+        public Adapter(CFStreamErrorDomain domain, int error) {
+            this.domain = domain;
+            this.error = error;
+        }
+        public Adapter(CFStreamError original) {
+            this.domain = original.getDomain();
+            this.error = original.getError();
+        }
+        public CFStreamError convert() {
+            return create(domain, error);
+        }
+    }
 }

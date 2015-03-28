@@ -20,9 +20,6 @@ import apple.spritekit.*;
 import apple.opengles.*;
 
 
-
-
-
 @Library("SceneKit/SceneKit.h") @Mapping("SCNSphere")
 public class SCNSphere 
     extends SCNGeometry 
@@ -32,7 +29,7 @@ public class SCNSphere
     
     @Mapping("init")
     public SCNSphere() { }
-    
+
     
     @Mapping("radius")
     public native @MachineSizedFloat double getRadius();
@@ -46,10 +43,10 @@ public class SCNSphere
     public native @MachineSizedSInt long getSegmentCount();
     @Mapping("setSegmentCount:")
     public native void setSegmentCount(@MachineSizedSInt long v);
-    
+
     
     
     @Mapping("sphereWithRadius:")
     public static native SCNSphere create(@MachineSizedFloat double radius);
-    
+
 }

@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 7.0 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UIMotionEffectGroup")
 public class UIMotionEffectGroup 
     extends UIMotionEffect 
@@ -35,15 +33,15 @@ public class UIMotionEffectGroup
     public UIMotionEffectGroup(NSCoder aDecoder) { }
     @Mapping("init")
     public UIMotionEffectGroup() { }
-    
+
     
     @Mapping("motionEffects")
     public native NSArray<UIMotionEffect> getMotionEffects();
     @Mapping("setMotionEffects:")
     public native void setMotionEffects(NSArray<UIMotionEffect> v);
+
     
     
-    
-    
-    
+
+
 }

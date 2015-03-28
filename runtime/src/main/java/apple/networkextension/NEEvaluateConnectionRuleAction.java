@@ -14,9 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
-
-
 @Library("NetworkExtension/NetworkExtension.h")
 @Mapping("NEEvaluateConnectionRuleAction")
 public final class NEEvaluateConnectionRuleAction extends ObjCEnum {
@@ -25,6 +22,6 @@ public final class NEEvaluateConnectionRuleAction extends ObjCEnum {
     public static final long ConnectIfNeeded = 1L;
     @GlobalConstant("NEEvaluateConnectionRuleActionNeverConnect")
     public static final long NeverConnect = 2L;
-    
+
 
 }

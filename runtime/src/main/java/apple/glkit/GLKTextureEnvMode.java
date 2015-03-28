@@ -17,11 +17,9 @@ import apple.uikit.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 5.0 and later.
  */
-
 @Library("GLKit/GLKit.h")
 @Mapping("GLKTextureEnvMode")
 public final class GLKTextureEnvMode extends ObjCEnum {
@@ -32,6 +30,6 @@ public final class GLKTextureEnvMode extends ObjCEnum {
     public static final long Modulate = 1L;
     @GlobalConstant("GLKTextureEnvModeDecal")
     public static final long Decal = 2L;
-    
+
 
 }

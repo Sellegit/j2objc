@@ -19,9 +19,6 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h")
 @Mapping("UISwipeGestureRecognizerDirection")
 public final class UISwipeGestureRecognizerDirection extends ObjCEnum {
@@ -34,6 +31,6 @@ public final class UISwipeGestureRecognizerDirection extends ObjCEnum {
     public static final long Up = 4L;
     @GlobalConstant("UISwipeGestureRecognizerDirectionDown")
     public static final long Down = 8L;
-    
+
 
 }

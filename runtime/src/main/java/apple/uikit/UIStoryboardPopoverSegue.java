@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 5.0 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UIStoryboardPopoverSegue")
 public class UIStoryboardPopoverSegue 
     extends UIStoryboardSegue 
@@ -35,13 +33,13 @@ public class UIStoryboardPopoverSegue
     public UIStoryboardPopoverSegue(String identifier, UIViewController source, UIViewController destination) { }
     @Mapping("init")
     public UIStoryboardPopoverSegue() { }
-    
+
     
     @Mapping("popoverController")
     public native UIPopoverController getPopoverController();
+
     
     
-    
-    
-    
+
+
 }

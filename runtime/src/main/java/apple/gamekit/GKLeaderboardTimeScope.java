@@ -15,9 +15,6 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
-
-
 @Library("GameKit/GameKit.h")
 @Mapping("GKLeaderboardTimeScope")
 public final class GKLeaderboardTimeScope extends ObjCEnum {
@@ -28,6 +25,6 @@ public final class GKLeaderboardTimeScope extends ObjCEnum {
     public static final long Week = 1L;
     @GlobalConstant("GKLeaderboardTimeScopeAllTime")
     public static final long AllTime = 2L;
-    
+
 
 }

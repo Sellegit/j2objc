@@ -15,11 +15,9 @@ import apple.dispatch.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 4.0 and later.
  */
-
 @Library("CoreFoundation/CoreFoundation.h")
 @Mapping("CFDataSearchFlags")
 public final class CFDataSearchFlags extends ObjCEnum {
@@ -28,6 +26,6 @@ public final class CFDataSearchFlags extends ObjCEnum {
     public static final long Backwards = 1L;
     @GlobalConstant("kCFDataSearchAnchored")
     public static final long Anchored = 2L;
-    
+
 
 }

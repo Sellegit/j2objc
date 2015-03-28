@@ -15,9 +15,6 @@ import apple.dispatch.*;
 import apple.foundation.*;
 
 
-
-
-
 @Mapping("CFSocketSignature") @Library("CoreFoundation/CoreFoundation.h")
 public class CFSocketSignature 
     extends Struct 
@@ -35,6 +32,6 @@ public class CFSocketSignature
     public native int getProtocol();
     @DotMapping("address")
     public native CFData getAddress();
-    
+
     
 }

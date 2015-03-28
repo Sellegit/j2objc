@@ -19,9 +19,6 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h")
 @Mapping("UIPrintErrorCode")
 public final class UIPrintErrorCode extends ObjCEnum {
@@ -34,6 +31,6 @@ public final class UIPrintErrorCode extends ObjCEnum {
     public static final long UnknownImageFormat = 3L;
     @GlobalConstant("UIPrintJobFailedError")
     public static final long JobFailed = 4L;
-    
+
 
 }

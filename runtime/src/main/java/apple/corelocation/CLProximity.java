@@ -16,11 +16,9 @@ import apple.addressbook.*;
 import apple.corebluetooth.*;
 
 
-
 /**
  * @since Available in iOS 7.0 and later.
  */
-
 @Library("CoreLocation/CoreLocation.h")
 @Mapping("CLProximity")
 public final class CLProximity extends ObjCEnum {
@@ -33,6 +31,6 @@ public final class CLProximity extends ObjCEnum {
     public static final long Near = 2L;
     @GlobalConstant("CLProximityFar")
     public static final long Far = 3L;
-    
+
 
 }

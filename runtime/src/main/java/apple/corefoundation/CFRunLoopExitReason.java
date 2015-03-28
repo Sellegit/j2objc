@@ -15,9 +15,6 @@ import apple.dispatch.*;
 import apple.foundation.*;
 
 
-
-
-
 @Library("CoreFoundation/CoreFoundation.h")
 @Mapping("CFRunLoopExitReason")
 public final class CFRunLoopExitReason extends ObjCEnum {
@@ -30,6 +27,6 @@ public final class CFRunLoopExitReason extends ObjCEnum {
     public static final long TimedOut = 3L;
     @GlobalConstant("kCFRunLoopRunHandledSource")
     public static final long HandledSource = 4L;
-    
+
 
 }

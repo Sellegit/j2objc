@@ -17,17 +17,14 @@ import apple.coretext.*;
 import apple.opengles.*;
 
 
-
-
-
 @Library("QuartzCore/QuartzCore.h") @Mapping("CALayerDelegate")
 public interface CALayerDelegate 
      {
 
     
     
-    
-    
+
+
     
     @Mapping("displayLayer:")
     void displayLayer(CALayer layer);
@@ -37,7 +34,7 @@ public interface CALayerDelegate
     void layoutSublayers(CALayer layer);
     @Mapping("actionForLayer:forKey:")
     CAAction getAction(CALayer layer, String event);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

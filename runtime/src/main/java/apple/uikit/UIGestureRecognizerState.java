@@ -19,9 +19,6 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h")
 @Mapping("UIGestureRecognizerState")
 public final class UIGestureRecognizerState extends ObjCEnum {
@@ -40,6 +37,6 @@ public final class UIGestureRecognizerState extends ObjCEnum {
     public static final long Failed = 5L;
     @GlobalConstant("UIGestureRecognizerStateRecognized")
     public static final long Recognized = 3L;
-    
+
 
 }

@@ -15,11 +15,9 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
 /**
  * @since Available in iOS 6.0 and later.
  */
-
 @Library("GameKit/GameKit.h") @Mapping("GKScoreChallenge")
 public class GKScoreChallenge 
     extends GKChallenge 
@@ -31,13 +29,13 @@ public class GKScoreChallenge
     public GKScoreChallenge(NSCoder aDecoder) { }
     @Mapping("init")
     public GKScoreChallenge() { }
-    
+
     
     @Mapping("score")
     public native GKScore getScore();
+
     
     
-    
-    
-    
+
+
 }

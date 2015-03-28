@@ -19,17 +19,14 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h") @Mapping("UIPrinterPickerControllerDelegate")
 public interface UIPrinterPickerControllerDelegate 
     extends NSObjectProtocol {
 
     
     
-    
-    
+
+
     
     @Mapping("printerPickerControllerParentViewController:")
     UIViewController getParentViewController(UIPrinterPickerController printerPickerController);
@@ -45,7 +42,7 @@ public interface UIPrinterPickerControllerDelegate
     void didDismiss(UIPrinterPickerController printerPickerController);
     @Mapping("printerPickerControllerDidSelectPrinter:")
     void didSelectPrinter(UIPrinterPickerController printerPickerController);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

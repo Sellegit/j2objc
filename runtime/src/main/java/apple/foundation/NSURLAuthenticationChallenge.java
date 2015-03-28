@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h") @Mapping("NSURLAuthenticationChallenge")
 public class NSURLAuthenticationChallenge 
     extends NSObject 
@@ -35,7 +32,7 @@ public class NSURLAuthenticationChallenge
     public NSURLAuthenticationChallenge(NSURLAuthenticationChallenge challenge, NSURLAuthenticationChallengeSender sender) { }
     @Mapping("init")
     public NSURLAuthenticationChallenge() { }
-    
+
     
     @Mapping("protectionSpace")
     public native NSURLProtectionSpace getProtectionSpace();
@@ -49,9 +46,9 @@ public class NSURLAuthenticationChallenge
     public native NSError getError();
     @Mapping("sender")
     public native NSURLAuthenticationChallengeSender getSender();
+
     
     
-    
-    
-    
+
+
 }

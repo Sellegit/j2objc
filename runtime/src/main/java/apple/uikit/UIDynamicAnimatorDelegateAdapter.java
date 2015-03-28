@@ -18,7 +18,6 @@ import apple.coreimage.*;
 import apple.coretext.*;
 import apple.corelocation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -29,13 +28,13 @@ public abstract class UIDynamicAnimatorDelegateAdapter
     
     
     
-    
-    
+
+
     
     
     @NotImplemented("dynamicAnimatorWillResume:")
     public void willResume(UIDynamicAnimator animator) { throw new UnsupportedOperationException(); }
     @NotImplemented("dynamicAnimatorDidPause:")
     public void didPause(UIDynamicAnimator animator) { throw new UnsupportedOperationException(); }
-    
+
 }

@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 5.0 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UIStoryboardSegue")
 public class UIStoryboardSegue 
     extends NSObject 
@@ -35,7 +33,7 @@ public class UIStoryboardSegue
     public UIStoryboardSegue(String identifier, UIViewController source, UIViewController destination) { }
     @Mapping("init")
     public UIStoryboardSegue() { }
-    
+
     
     @Mapping("identifier")
     public native String getIdentifier();
@@ -43,7 +41,7 @@ public class UIStoryboardSegue
     public native UIViewController getSourceViewController();
     @Mapping("destinationViewController")
     public native UIViewController getDestinationViewController();
-    
+
     
     
     @Mapping("perform")
@@ -53,5 +51,5 @@ public class UIStoryboardSegue
      */
     @Mapping("segueWithIdentifier:source:destination:performHandler:")
     public static native UIStoryboardSegue create(String identifier, UIViewController source, UIViewController destination, @Block Runnable performHandler);
-    
+
 }

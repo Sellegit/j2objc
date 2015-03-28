@@ -14,9 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
-
-
 @Library("CoreData/CoreData.h")
 @Mapping("NSAttributeType")
 public final class NSAttributeType extends ObjCEnum {
@@ -53,6 +50,6 @@ public final class NSAttributeType extends ObjCEnum {
      */
     @GlobalConstant("NSObjectIDAttributeType")
     public static final long ObjectID = 2000L;
-    
+
 
 }

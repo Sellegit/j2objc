@@ -21,11 +21,9 @@ import apple.glkit.*;
 import apple.scenekit.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("SpriteKit/SpriteKit.h") @Mapping("SKUniform")
 public class SKUniform 
     extends NSObject 
@@ -53,7 +51,7 @@ public class SKUniform
     public SKUniform(String name, GLKMatrix4 value) { }
     @Mapping("init")
     public SKUniform() { }
-    
+
     
     @Mapping("name")
     public native String getName();
@@ -91,7 +89,7 @@ public class SKUniform
     public native GLKMatrix4 getFloatMatrix4Value();
     @Mapping("setFloatMatrix4Value:")
     public native void setFloatMatrix4Value(GLKMatrix4 v);
-    
+
     
     
     @Mapping("uniformWithName:")
@@ -116,5 +114,5 @@ public class SKUniform
     public native Object copyWithZone$(NSZone zone);
     @Mapping("encodeWithCoder:")
     public native void encode(NSCoder aCoder);
-    
+
 }

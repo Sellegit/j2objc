@@ -13,7 +13,6 @@ import apple.coregraphics.*;
 import apple.coreservices.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 
@@ -23,7 +22,7 @@ public class ABProperty
 
     
     public static final int InvalidID = -1;
-    
+
     
     
     

@@ -19,9 +19,6 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h")
 @Mapping("UIDocumentSaveOperation")
 public final class UIDocumentSaveOperation extends ObjCEnum {
@@ -30,6 +27,6 @@ public final class UIDocumentSaveOperation extends ObjCEnum {
     public static final long Creating = 0L;
     @GlobalConstant("UIDocumentSaveForOverwriting")
     public static final long Overwriting = 1L;
-    
+
 
 }

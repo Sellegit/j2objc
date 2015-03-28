@@ -18,9 +18,6 @@ import apple.coreanimation.*;
 import apple.corevideo.*;
 
 
-
-
-
 @Library("CoreMedia/CoreMedia.h")
 @Mapping("CMMetadataFormatType")
 public final class CMMetadataFormatType extends ObjCEnum {
@@ -31,6 +28,6 @@ public final class CMMetadataFormatType extends ObjCEnum {
     public static final long ID3 = 1768174368L;
     @GlobalConstant("kCMMetadataFormatType_Boxed")
     public static final long Boxed = 1835360888L;
-    
+
 
 }

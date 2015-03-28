@@ -15,9 +15,6 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
-
-
 @Library("GameKit/GameKit.h")
 @Mapping("GKChallengeState")
 public final class GKChallengeState extends ObjCEnum {
@@ -30,6 +27,6 @@ public final class GKChallengeState extends ObjCEnum {
     public static final long Completed = 2L;
     @GlobalConstant("GKChallengeStateDeclined")
     public static final long Declined = 3L;
-    
+
 
 }

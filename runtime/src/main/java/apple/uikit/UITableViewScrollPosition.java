@@ -19,9 +19,6 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h")
 @Mapping("UITableViewScrollPosition")
 public final class UITableViewScrollPosition extends ObjCEnum {
@@ -34,6 +31,6 @@ public final class UITableViewScrollPosition extends ObjCEnum {
     public static final long Middle = 2L;
     @GlobalConstant("UITableViewScrollPositionBottom")
     public static final long Bottom = 3L;
-    
+
 
 }

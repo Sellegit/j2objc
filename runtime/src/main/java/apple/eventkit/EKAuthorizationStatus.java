@@ -16,11 +16,9 @@ import apple.addressbook.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 6.0 and later.
  */
-
 @Library("EventKit/EventKit.h")
 @Mapping("EKAuthorizationStatus")
 public final class EKAuthorizationStatus extends ObjCEnum {
@@ -33,6 +31,6 @@ public final class EKAuthorizationStatus extends ObjCEnum {
     public static final long Denied = 2L;
     @GlobalConstant("EKAuthorizationStatusAuthorized")
     public static final long Authorized = 3L;
-    
+
 
 }

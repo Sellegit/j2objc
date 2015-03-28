@@ -12,7 +12,6 @@ import apple.corefoundation.*;
 import apple.coregraphics.*;
 import apple.coreservices.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("dispatch/dispatch.h")
@@ -25,10 +24,10 @@ public class DispatchIO
     public static final int RANDOM = 1;
     public static final int STOP = 0x1;
     public static final int STRICT_INTERVAL = 0x1;
-    
+
     
     protected DispatchIO() {}
-    
+
     
     
     
@@ -87,5 +86,5 @@ public class DispatchIO
      */
     @GlobalFunction("dispatch_io_set_interval")
     public static native void setInterval(DispatchIO channel, long interval, @MachineSizedUInt long flags);
-    
+
 }

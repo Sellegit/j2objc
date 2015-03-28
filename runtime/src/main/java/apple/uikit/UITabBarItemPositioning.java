@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 7.0 and later.
  */
-
 @Library("UIKit/UIKit.h")
 @Mapping("UITabBarItemPositioning")
 public final class UITabBarItemPositioning extends ObjCEnum {
@@ -34,6 +32,6 @@ public final class UITabBarItemPositioning extends ObjCEnum {
     public static final long Fill = 1L;
     @GlobalConstant("UITabBarItemPositioningCentered")
     public static final long Centered = 2L;
-    
+
 
 }

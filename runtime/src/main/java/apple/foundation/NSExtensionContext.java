@@ -19,11 +19,9 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("Foundation/Foundation.h") @Mapping("NSExtensionContext")
 public class NSExtensionContext 
     extends NSObject 
@@ -33,11 +31,11 @@ public class NSExtensionContext
     
     @Mapping("init")
     public NSExtensionContext() { }
-    
+
     
     @Mapping("inputItems")
     public native NSArray<NSExtensionItem> getInputItems();
-    
+
     
     
     @Mapping("completeRequestReturningItems:completionHandler:")
@@ -46,5 +44,5 @@ public class NSExtensionContext
     public native void cancelRequest(NSError error);
     @Mapping("openURL:completionHandler:")
     public native void openURL(NSURL URL, @Block VoidBooleanBlock completionHandler);
-    
+
 }

@@ -20,17 +20,14 @@ import apple.spritekit.*;
 import apple.opengles.*;
 
 
-
-
-
 @Library("SceneKit/SceneKit.h") @Mapping("SCNActionable")
 public interface SCNActionable 
     extends NSObjectProtocol {
 
     
     
-    
-    
+
+
     
     @Mapping("runAction:")
     void runAction(SCNAction action);
@@ -48,7 +45,7 @@ public interface SCNActionable
     void removeAction(String key);
     @Mapping("removeAllActions")
     void removeAllActions();
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

@@ -18,7 +18,6 @@ import apple.coreimage.*;
 import apple.coretext.*;
 import apple.corelocation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -29,8 +28,8 @@ public abstract class UITabBarDelegateAdapter
     
     
     
-    
-    
+
+
     
     
     @NotImplemented("tabBar:didSelectItem:")
@@ -43,5 +42,5 @@ public abstract class UITabBarDelegateAdapter
     public void willEndCustomizingItems(UITabBar tabBar, NSArray<?> items, boolean changed) { throw new UnsupportedOperationException(); }
     @NotImplemented("tabBar:didEndCustomizingItems:changed:")
     public void didEndCustomizingItems(UITabBar tabBar, NSArray<?> items, boolean changed) { throw new UnsupportedOperationException(); }
-    
+
 }

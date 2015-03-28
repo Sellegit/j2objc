@@ -15,13 +15,11 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
 /**
  * @since Available in iOS 5.0 and later.
  * @deprecated Deprecated in iOS 7.0.
  */
 @Deprecated
-
 @Library("GameKit/GameKit.h") @Mapping("GKTurnBasedEventHandler")
 public class GKTurnBasedEventHandler 
     extends NSObject 
@@ -31,7 +29,7 @@ public class GKTurnBasedEventHandler
     
     @Mapping("init")
     public GKTurnBasedEventHandler() { }
-    
+
     
     /**
      * @since Available in iOS 5.0 and later.
@@ -47,7 +45,7 @@ public class GKTurnBasedEventHandler
     @Deprecated
     @Mapping("setDelegate:")
     public native void setDelegate(GKTurnBasedEventHandlerDelegate v);
-    
+
     
     
     /**
@@ -57,5 +55,5 @@ public class GKTurnBasedEventHandler
     @Deprecated
     @Mapping("sharedTurnBasedEventHandler")
     public static native GKTurnBasedEventHandler getSharedTurnBasedEventHandler();
-    
+
 }

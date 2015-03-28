@@ -19,17 +19,14 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h") @Mapping("NSKeyedArchiverDelegate")
 public interface NSKeyedArchiverDelegate 
     extends NSObjectProtocol {
 
     
     
-    
-    
+
+
     
     @Mapping("archiver:willEncodeObject:")
     Object willEncodeObject(NSKeyedArchiver archiver, Object object);
@@ -41,7 +38,7 @@ public interface NSKeyedArchiverDelegate
     void willFinish(NSKeyedArchiver archiver);
     @Mapping("archiverDidFinish:")
     void didFinish(NSKeyedArchiver archiver);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

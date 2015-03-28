@@ -20,9 +20,6 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
-
-
 @Library("AVFoundation/AVFoundation.h")
 @Mapping("AVPlayerItemStatus")
 public final class AVPlayerItemStatus extends ObjCEnum {
@@ -33,6 +30,6 @@ public final class AVPlayerItemStatus extends ObjCEnum {
     public static final long ReadyToPlay = 1L;
     @GlobalConstant("AVPlayerItemStatusFailed")
     public static final long Failed = 2L;
-    
+
 
 }

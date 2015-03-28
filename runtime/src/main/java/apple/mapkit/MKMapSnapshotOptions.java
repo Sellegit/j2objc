@@ -17,11 +17,9 @@ import apple.uikit.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 7.0 and later.
  */
-
 @Library("MapKit/MapKit.h") @Mapping("MKMapSnapshotOptions")
 public class MKMapSnapshotOptions 
     extends NSObject 
@@ -31,7 +29,7 @@ public class MKMapSnapshotOptions
     
     @Mapping("init")
     public MKMapSnapshotOptions() { }
-    
+
     
     @Mapping("camera")
     public native MKMapCamera getCamera();
@@ -65,10 +63,10 @@ public class MKMapSnapshotOptions
     public native @MachineSizedFloat double getScale();
     @Mapping("setScale:")
     public native void setScale(@MachineSizedFloat double v);
-    
+
     
     
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
-    
+
 }

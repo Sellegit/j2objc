@@ -18,7 +18,6 @@ import apple.coremedia.*;
 import apple.security.*;
 import apple.dispatch.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -29,8 +28,8 @@ public abstract class NSDecimalNumberBehaviorsAdapter
     
     
     
-    
-    
+
+
     
     
     @NotImplemented("roundingMode")
@@ -39,5 +38,5 @@ public abstract class NSDecimalNumberBehaviorsAdapter
     public short getScale() { throw new UnsupportedOperationException(); }
     @NotImplemented("exceptionDuringOperation:error:leftOperand:rightOperand:")
     public NSDecimalNumber exceptionDuringOperation(Selector operation, @Representing("NSCalculationError") long error, NSDecimalNumber leftOperand, NSDecimalNumber rightOperand) { throw new UnsupportedOperationException(); }
-    
+
 }

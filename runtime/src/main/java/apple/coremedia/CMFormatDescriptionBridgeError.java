@@ -18,9 +18,6 @@ import apple.coreanimation.*;
 import apple.corevideo.*;
 
 
-
-
-
 @Library("CoreMedia/CoreMedia.h")
 @Mapping("CMFormatDescriptionBridgeError")
 public final class CMFormatDescriptionBridgeError extends ObjCEnum {
@@ -39,6 +36,6 @@ public final class CMFormatDescriptionBridgeError extends ObjCEnum {
     public static final long UnsupportedSampleDescriptionFlavor = -12717L;
     @GlobalConstant("kCMFormatDescriptionBridgeError_InvalidSlice")
     public static final long InvalidSlice = -12719L;
-    
+
 
 }

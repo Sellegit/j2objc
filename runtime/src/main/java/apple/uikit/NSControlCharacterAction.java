@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 7.0 and later.
  */
-
 @Library("UIKit/UIKit.h")
 @Mapping("NSControlCharacterAction")
 public final class NSControlCharacterAction extends ObjCEnum {
@@ -40,6 +38,6 @@ public final class NSControlCharacterAction extends ObjCEnum {
     public static final long ParagraphBreakAction = 16L;
     @GlobalConstant("NSControlCharacterContainerBreakAction")
     public static final long ContainerBreakAction = 32L;
-    
+
 
 }

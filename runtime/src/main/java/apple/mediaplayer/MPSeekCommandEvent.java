@@ -15,11 +15,9 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
 /**
  * @since Available in iOS 7.1 and later.
  */
-
 @Library("MediaPlayer/MediaPlayer.h") @Mapping("MPSeekCommandEvent")
 public class MPSeekCommandEvent 
     extends MPRemoteCommandEvent 
@@ -29,13 +27,13 @@ public class MPSeekCommandEvent
     
     @Mapping("init")
     public MPSeekCommandEvent() { }
-    
+
     
     @Mapping("type")
     public native @Representing("MPSeekCommandEventType") long getType();
+
     
     
-    
-    
-    
+
+
 }

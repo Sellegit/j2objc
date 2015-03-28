@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h") @Mapping("NSString")
 public class NSString 
     extends NSObject 
@@ -32,11 +29,11 @@ public class NSString
     public NSString() {}
     @Mapping("initWithCharacters:length:")
     public NSString(Todo characters, @MachineSizedUInt long length) { }
-    
+
     
     @Mapping("length")
     public native @MachineSizedUInt long length();
-    
+
     
     
     @Mapping("characterAtIndex:")
@@ -72,5 +69,5 @@ public class NSString
     public native String addPercentEscapes(@Representing("NSStringEncoding") long enc);
     @Mapping("stringByReplacingPercentEscapesUsingEncoding:")
     public native String replacePercentEscapes(@Representing("NSStringEncoding") long enc);
-    
+
 }

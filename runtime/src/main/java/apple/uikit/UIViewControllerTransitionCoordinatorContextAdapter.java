@@ -18,7 +18,6 @@ import apple.coreimage.*;
 import apple.coretext.*;
 import apple.corelocation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -29,8 +28,8 @@ public abstract class UIViewControllerTransitionCoordinatorContextAdapter
     
     
     
-    
-    
+
+
     
     
     @NotImplemented("isAnimated")
@@ -65,5 +64,5 @@ public abstract class UIViewControllerTransitionCoordinatorContextAdapter
      */
     @NotImplemented("targetTransform")
     public CGAffineTransform getTargetTransform() { throw new UnsupportedOperationException(); }
-    
+
 }

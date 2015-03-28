@@ -18,7 +18,6 @@ import apple.coreimage.*;
 import apple.coretext.*;
 import apple.corelocation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -29,8 +28,8 @@ public abstract class NSTextAttachmentContainerAdapter
     
     
     
-    
-    
+
+
     
     
     /**
@@ -43,5 +42,5 @@ public abstract class NSTextAttachmentContainerAdapter
      */
     @NotImplemented("attachmentBoundsForTextContainer:proposedLineFragment:glyphPosition:characterIndex:")
     public CGRect getAttachmentBounds(NSTextContainer textContainer, CGRect lineFrag, CGPoint position, @MachineSizedUInt long charIndex) { throw new UnsupportedOperationException(); }
-    
+
 }

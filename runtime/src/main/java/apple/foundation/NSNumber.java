@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h") @Mapping("NSNumber")
 public class NSNumber 
     extends Object 
@@ -29,8 +26,8 @@ public class NSNumber
 
     
     
-    
-    
+
+
     
     @Mapping("charValue")
     public native byte byteValue();
@@ -52,7 +49,7 @@ public class NSNumber
     public native String stringValue();
     @Mapping("decimalValue")
     public native NSDecimal decimalValue();
-    
+
     
     
     @Mapping("compare:")
@@ -77,5 +74,5 @@ public class NSNumber
     public static native NSNumber valueOf(double value);
     @Mapping("numberWithBool:")
     public static native NSNumber valueOf(boolean value);
-    
+
 }

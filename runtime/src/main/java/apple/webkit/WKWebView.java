@@ -15,11 +15,9 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("WebKit/WebKit.h") @Mapping("WKWebView")
 public class WKWebView 
     extends UIView 
@@ -35,7 +33,7 @@ public class WKWebView
     public WKWebView(CGRect frame) { }
     @Mapping("init")
     public WKWebView() { }
-    
+
     
     @Mapping("configuration")
     public native WKWebViewConfiguration getConfiguration();
@@ -69,7 +67,7 @@ public class WKWebView
     public native void setAllowsBackForwardNavigationGestures(boolean v);
     @Mapping("scrollView")
     public native UIScrollView getScrollView();
-    
+
     
     
     @Mapping("loadRequest:")
@@ -90,5 +88,5 @@ public class WKWebView
     public native void stopLoading();
     @Mapping("evaluateJavaScript:completionHandler:")
     public native void evaluateJavaScript(String javaScriptString, Todo completionHandler);
-    
+
 }

@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 2.0 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UIImagePickerController")
 public class UIImagePickerController 
     extends UINavigationController 
@@ -39,7 +37,7 @@ public class UIImagePickerController
     public UIImagePickerController(NSCoder aDecoder) { }
     @Mapping("init")
     public UIImagePickerController() { }
-    
+
     
     @Mapping("delegate")
     public native UIImagePickerControllerDelegate getDelegate();
@@ -143,7 +141,7 @@ public class UIImagePickerController
      */
     @Mapping("setCameraFlashMode:")
     public native void setCameraFlashMode(@Representing("UIImagePickerControllerCameraFlashMode") long v);
-    
+
     
     
     /**
@@ -180,5 +178,5 @@ public class UIImagePickerController
      */
     @Mapping("availableCaptureModesForCameraDevice:")
     public static native List<UIImagePickerControllerCameraCaptureMode> getAvailableCaptureModes(@Representing("UIImagePickerControllerCameraDevice") long cameraDevice);
-    
+
 }

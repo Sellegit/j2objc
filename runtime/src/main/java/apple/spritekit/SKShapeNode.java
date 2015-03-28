@@ -21,9 +21,6 @@ import apple.glkit.*;
 import apple.scenekit.*;
 
 
-
-
-
 @Library("SpriteKit/SpriteKit.h") @Mapping("SKShapeNode")
 public class SKShapeNode 
     extends SKNode 
@@ -35,7 +32,7 @@ public class SKShapeNode
     public SKShapeNode() { }
     @Mapping("initWithCoder:")
     public SKShapeNode(NSCoder aDecoder) { }
-    
+
     
     @Mapping("path")
     public native CGPath getPath();
@@ -119,7 +116,7 @@ public class SKShapeNode
      */
     @Mapping("setStrokeShader:")
     public native void setStrokeShader(SKShader v);
-    
+
     
     
     /**
@@ -177,5 +174,5 @@ public class SKShapeNode
      */
     @Mapping("shapeNodeWithSplinePoints:count:")
     public static native SKShapeNode createWithSplinePoints(CGPoint points, @MachineSizedUInt long numPoints);
-    
+
 }

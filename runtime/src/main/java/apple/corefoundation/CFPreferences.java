@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.dispatch.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("CoreFoundation/CoreFoundation.h")
@@ -62,5 +61,5 @@ public class CFPreferences
     public static native List<String> getKeyList(CFString applicationID, CFString userName, CFString hostName);
     @GlobalFunction("CFPreferencesAppValueIsForced")
     public static native boolean appValueIsForced(CFString key, CFString applicationID);
-    
+
 }

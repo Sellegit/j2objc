@@ -19,11 +19,9 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 5.0 and later.
  */
-
 @Library("Foundation/Foundation.h") @Mapping("NSUbiquitousKeyValueStore")
 public class NSUbiquitousKeyValueStore 
     extends NSObject 
@@ -33,11 +31,11 @@ public class NSUbiquitousKeyValueStore
     
     @Mapping("init")
     public NSUbiquitousKeyValueStore() { }
-    
+
     
     @Mapping("dictionaryRepresentation")
     public native NSDictionary<NSString, NSObject> asDictionary();
-    
+
     
     
     /**
@@ -55,7 +53,7 @@ public class NSUbiquitousKeyValueStore
      */
     @GlobalConstant("NSUbiquitousKeyValueStoreChangedKeysKey")
     public static native NSString ChangedKeysKey();
-    
+
     @Mapping("objectForKey:")
     public native Object get(String aKey);
     @Mapping("setObject:forKey:")
@@ -94,5 +92,5 @@ public class NSUbiquitousKeyValueStore
     public native boolean synchronize();
     @Mapping("defaultStore")
     public static native NSUbiquitousKeyValueStore getDefaultStore();
-    
+
 }

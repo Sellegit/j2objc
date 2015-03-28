@@ -20,9 +20,6 @@ import apple.spritekit.*;
 import apple.opengles.*;
 
 
-
-
-
 @Library("SceneKit/SceneKit.h")
 @Mapping("SCNParticleEvent")
 public final class SCNParticleEvent extends ObjCEnum {
@@ -33,6 +30,6 @@ public final class SCNParticleEvent extends ObjCEnum {
     public static final long Death = 1L;
     @GlobalConstant("SCNParticleEventCollision")
     public static final long Collision = 2L;
-    
+
 
 }

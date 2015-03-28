@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h") @Mapping("NSURLCredential")
 public class NSURLCredential 
     extends NSObject 
@@ -43,7 +40,7 @@ public class NSURLCredential
      */
     @Mapping("initWithTrust:")
     public NSURLCredential(SecTrust trust) { }
-    
+
     
     @Mapping("persistence")
     public native @Representing("NSURLCredentialPersistence") long getPersistence();
@@ -60,10 +57,10 @@ public class NSURLCredential
      */
     @Mapping("certificates")
     public native List<SecCertificate> getCertificates();
-    
+
     
     
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
-    
+
 }

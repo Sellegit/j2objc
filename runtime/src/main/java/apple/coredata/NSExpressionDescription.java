@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 3.0 and later.
  */
-
 @Library("CoreData/CoreData.h") @Mapping("NSExpressionDescription")
 public class NSExpressionDescription 
     extends NSPropertyDescription 
@@ -30,7 +28,7 @@ public class NSExpressionDescription
     public NSExpressionDescription(NSCoder aDecoder) { }
     @Mapping("init")
     public NSExpressionDescription() { }
-    
+
     
     @Mapping("expression")
     public native NSExpression getExpression();
@@ -40,9 +38,9 @@ public class NSExpressionDescription
     public native @Representing("NSAttributeType") long getExpressionResultType();
     @Mapping("setExpressionResultType:")
     public native void setExpressionResultType(@Representing("NSAttributeType") long v);
+
     
     
-    
-    
-    
+
+
 }

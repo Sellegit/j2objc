@@ -15,11 +15,9 @@ import apple.foundation.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("CoreBluetooth/CoreBluetooth.h") @Mapping("CBAttribute")
 public class CBAttribute 
     extends NSObject 
@@ -29,13 +27,13 @@ public class CBAttribute
     
     @Mapping("init")
     public CBAttribute() { }
-    
+
     
     @Mapping("UUID")
     public native CBUUID getUUID();
+
     
     
-    
-    
-    
+
+
 }

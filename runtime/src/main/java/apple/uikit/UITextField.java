@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 2.0 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UITextField")
 public class UITextField 
     extends UIControl 
@@ -37,7 +35,7 @@ public class UITextField
     public UITextField(NSCoder aDecoder) { }
     @Mapping("init")
     public UITextField() { }
-    
+
     
     @Mapping("text")
     public native String getText();
@@ -241,7 +239,7 @@ public class UITextField
     public native boolean isSecureTextEntry();
     @Mapping("setSecureTextEntry:")
     public native void setSecureTextEntry(boolean v);
-    
+
     
     
     @GlobalConstant("UITextFieldTextDidBeginEditingNotification")
@@ -250,7 +248,7 @@ public class UITextField
     public static native NSString DidEndEditingNotification();
     @GlobalConstant("UITextFieldTextDidChangeNotification")
     public static native NSString DidChangeNotification();
-    
+
     @Mapping("borderRectForBounds:")
     public native CGRect getBorderRect(CGRect bounds);
     @Mapping("textRectForBounds:")
@@ -339,5 +337,5 @@ public class UITextField
     public native void insertText(String text);
     @Mapping("deleteBackward")
     public native void deleteBackward();
-    
+
 }

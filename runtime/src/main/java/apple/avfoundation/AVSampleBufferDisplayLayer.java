@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h") @Mapping("AVSampleBufferDisplayLayer")
 public class AVSampleBufferDisplayLayer 
     extends CALayer 
@@ -33,7 +31,7 @@ public class AVSampleBufferDisplayLayer
     
     
     public AVSampleBufferDisplayLayer() {}
-    
+
     
     @Mapping("controlTimebase")
     public native CMTimebase getControlTimebase();
@@ -50,7 +48,7 @@ public class AVSampleBufferDisplayLayer
     public native NSError getError();
     @Mapping("isReadyForMoreMediaData")
     public native boolean isReadyForMoreMediaData();
-    
+
     
     
     /**
@@ -63,7 +61,7 @@ public class AVSampleBufferDisplayLayer
      */
     @GlobalConstant("AVSampleBufferDisplayLayerFailedToDecodeNotificationErrorKey")
     public static native NSString FailedToDecodeNotificationErrorKey();
-    
+
     @Mapping("flush")
     public native void flush();
     @Mapping("flushAndRemoveImage")
@@ -72,5 +70,5 @@ public class AVSampleBufferDisplayLayer
     public native void requestMediaDataWhenReadyOnQueue(DispatchQueue queue, @Block Runnable block);
     @Mapping("stopRequestingMediaData")
     public native void stopRequestingMediaData();
-    
+
 }

@@ -17,9 +17,6 @@ import apple.uikit.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Mapping("GLKMatrix2") @Library("GLKit/GLKit.h")
 public class GLKMatrix2 
     extends Struct 
@@ -29,7 +26,7 @@ public class GLKMatrix2
     private GLKMatrix2() {}
     
     
-    
-    
+
+
     
 }

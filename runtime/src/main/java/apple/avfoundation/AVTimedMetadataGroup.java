@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 4.3 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h") @Mapping("AVTimedMetadataGroup")
 public class AVTimedMetadataGroup 
     extends NSObject 
@@ -36,21 +34,21 @@ public class AVTimedMetadataGroup
     public AVTimedMetadataGroup(NSArray<?> items, CMTimeRange timeRange) { }
     @Mapping("init")
     public AVTimedMetadataGroup() { }
-    
+
     
     @Mapping("timeRange")
     public native CMTimeRange getTimeRange();
     @Mapping("items")
     public native NSArray<AVMetadataItem> getItems();
-    
+
     
     
     /**
      * @since Available in iOS 8.0 and later.
      */
     @Mapping("copyFormatDescription")
-    public native CMFormatDescription getFormatDescription();
+    public native CMMetadataFormatDescription getFormatDescription();
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
-    
+
 }

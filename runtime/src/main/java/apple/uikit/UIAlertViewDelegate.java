@@ -19,17 +19,14 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h") @Mapping("UIAlertViewDelegate")
 public interface UIAlertViewDelegate 
     extends NSObjectProtocol {
 
     
     
-    
-    
+
+
     
     @Mapping("alertView:clickedButtonAtIndex:")
     void clicked(UIAlertView alertView, @MachineSizedSInt long buttonIndex);
@@ -45,7 +42,7 @@ public interface UIAlertViewDelegate
     void didDismiss(UIAlertView alertView, @MachineSizedSInt long buttonIndex);
     @Mapping("alertViewShouldEnableFirstOtherButton:")
     boolean shouldEnableFirstOtherButton(UIAlertView alertView);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

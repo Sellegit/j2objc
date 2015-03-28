@@ -19,9 +19,6 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h")
 @Mapping("UITextFieldViewMode")
 public final class UITextFieldViewMode extends ObjCEnum {
@@ -34,6 +31,6 @@ public final class UITextFieldViewMode extends ObjCEnum {
     public static final long UnlessEditing = 2L;
     @GlobalConstant("UITextFieldViewModeAlways")
     public static final long Always = 3L;
-    
+
 
 }

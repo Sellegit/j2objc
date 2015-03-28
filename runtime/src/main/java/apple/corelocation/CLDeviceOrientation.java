@@ -16,9 +16,6 @@ import apple.addressbook.*;
 import apple.corebluetooth.*;
 
 
-
-
-
 @Library("CoreLocation/CoreLocation.h")
 @Mapping("CLDeviceOrientation")
 public final class CLDeviceOrientation extends ObjCEnum {
@@ -37,6 +34,6 @@ public final class CLDeviceOrientation extends ObjCEnum {
     public static final long FaceUp = 5L;
     @GlobalConstant("CLDeviceOrientationFaceDown")
     public static final long FaceDown = 6L;
-    
+
 
 }

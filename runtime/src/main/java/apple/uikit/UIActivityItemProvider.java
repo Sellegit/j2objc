@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 6.0 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UIActivityItemProvider")
 public class UIActivityItemProvider 
     extends NSOperation 
@@ -35,13 +33,13 @@ public class UIActivityItemProvider
     public UIActivityItemProvider(Object placeholderItem) { }
     @Mapping("init")
     public UIActivityItemProvider() { }
-    
+
     
     @Mapping("placeholderItem")
     public native Object getPlaceholderItem();
     @Mapping("activityType")
     public native String getActivityType();
-    
+
     
     
     @Mapping("item")
@@ -56,5 +54,5 @@ public class UIActivityItemProvider
     public native String getDataTypeIdentifier(UIActivityViewController activityViewController, String activityType);
     @Mapping("activityViewController:thumbnailImageForActivityType:suggestedSize:")
     public native UIImage getThumbnailImage(UIActivityViewController activityViewController, String activityType, CGSize size);
-    
+
 }

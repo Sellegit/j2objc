@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("HomeKit/HomeKit.h") @Mapping("HMHomeManager")
 public class HMHomeManager 
     extends NSObject 
@@ -28,7 +26,7 @@ public class HMHomeManager
     
     @Mapping("init")
     public HMHomeManager() { }
-    
+
     
     @Mapping("delegate")
     public native HMHomeManagerDelegate getDelegate();
@@ -38,7 +36,7 @@ public class HMHomeManager
     public native HMHome getPrimaryHome();
     @Mapping("homes")
     public native NSArray<HMHome> getHomes();
-    
+
     
     
     @Mapping("updatePrimaryHome:completionHandler:")
@@ -47,5 +45,5 @@ public class HMHomeManager
     public native void addHome(String homeName, @Block VoidBlock2<HMHome, NSError> completion);
     @Mapping("removeHome:completionHandler:")
     public native void removeHome(HMHome home, @Block VoidBlock1<NSError> completion);
-    
+
 }

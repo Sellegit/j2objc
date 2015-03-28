@@ -19,7 +19,6 @@ import apple.glkit.*;
 import apple.spritekit.*;
 import apple.opengles.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("SceneKit/SceneKit.h")
@@ -44,5 +43,5 @@ public class SCNRenderingTransform
     public static native NSString ModelViewValue();
     @GlobalConstant("SCNModelViewProjectionTransform")
     public static native NSString ModelViewProjectionValue();
-    
+
 }

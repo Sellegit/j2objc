@@ -17,9 +17,6 @@ import apple.coreaudio.*;
 import apple.coremedia.*;
 
 
-
-
-
 @Library("AudioToolbox/AudioToolbox.h")
 @Mapping("AudioConverterPrimeMethod")
 public final class AudioConverterPrimeMethod extends ObjCEnum {
@@ -30,6 +27,6 @@ public final class AudioConverterPrimeMethod extends ObjCEnum {
     public static final long Normal = 1L;
     @GlobalConstant("kConverterPrimeMethod_None")
     public static final long None = 2L;
-    
+
 
 }

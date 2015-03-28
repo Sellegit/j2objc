@@ -15,11 +15,9 @@ import apple.foundation.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("PushKit/PushKit.h") @Mapping("PKPushRegistry")
 public class PKPushRegistry 
     extends NSObject 
@@ -31,7 +29,7 @@ public class PKPushRegistry
     public PKPushRegistry(DispatchQueue queue) { }
     @Mapping("init")
     public PKPushRegistry() { }
-    
+
     
     @Mapping("delegate")
     public native PKPushRegistryDelegate getDelegate();
@@ -41,10 +39,10 @@ public class PKPushRegistry
     public native Set<String> getDesiredPushTypes();
     @Mapping("setDesiredPushTypes:")
     public native void setDesiredPushTypes(Set<String> v);
-    
+
     
     
     @Mapping("pushTokenForType:")
     public native NSData getPushTokenForType(String type);
-    
+
 }

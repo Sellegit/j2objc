@@ -18,9 +18,6 @@ import apple.coreanimation.*;
 import apple.corevideo.*;
 
 
-
-
-
 @Library("CoreMedia/CoreMedia.h")
 @Mapping("CMFormatDescriptionError")
 public final class CMFormatDescriptionError extends ObjCEnum {
@@ -31,6 +28,6 @@ public final class CMFormatDescriptionError extends ObjCEnum {
     public static final long AllocationFailed = -12711L;
     @GlobalConstant("kCMFormatDescriptionError_ValueNotAvailable")
     public static final long ValueNotAvailable = -12718L;
-    
+
 
 }

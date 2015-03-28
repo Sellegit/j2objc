@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h") @Mapping("NSCalendar")
 public class NSCalendar 
     extends NSObject 
@@ -33,7 +30,7 @@ public class NSCalendar
     public NSCalendar(String ident) { }
     @Mapping("init")
     public NSCalendar() { }
-    
+
     
     @Mapping("calendarIdentifier")
     public native NSCalendarIdentifier getCalendarIdentifier();
@@ -153,7 +150,7 @@ public class NSCalendar
      */
     @Mapping("PMSymbol")
     public native String getPMSymbol();
-    
+
     
     
     /**
@@ -161,7 +158,7 @@ public class NSCalendar
      */
     @GlobalConstant("NSCalendarDayChangedNotification")
     public static native NSString DayChangedNotification();
-    
+
     @Mapping("minimumRangeOfUnit:")
     public native NSRange getMinimumRange(@Representing("NSCalendarUnit") long unit);
     @Mapping("maximumRangeOfUnit:")
@@ -192,5 +189,5 @@ public class NSCalendar
     public static native NSCalendar getAutoupdatingCurrentCalendar();
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
-    
+
 }

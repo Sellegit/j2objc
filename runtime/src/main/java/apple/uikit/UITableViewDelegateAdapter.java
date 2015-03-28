@@ -18,7 +18,6 @@ import apple.coreimage.*;
 import apple.coretext.*;
 import apple.corelocation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -29,8 +28,8 @@ public abstract class UITableViewDelegateAdapter
     
     
     
-    
-    
+
+
     
     
     @NotImplemented("tableView:willDisplayCell:forRowAtIndexPath:")
@@ -153,5 +152,5 @@ public abstract class UITableViewDelegateAdapter
      */
     @NotImplemented("tableView:performAction:forRowAtIndexPath:withSender:")
     public void performActionForRow(UITableView tableView, Selector action, NSIndexPath indexPath, Object sender) { throw new UnsupportedOperationException(); }
-    
+
 }

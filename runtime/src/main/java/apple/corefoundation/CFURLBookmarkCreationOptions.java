@@ -15,11 +15,9 @@ import apple.dispatch.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 4.0 and later.
  */
-
 @Library("CoreFoundation/CoreFoundation.h")
 @Mapping("CFURLBookmarkCreationOptions")
 public final class CFURLBookmarkCreationOptions extends ObjCEnum {
@@ -39,6 +37,6 @@ public final class CFURLBookmarkCreationOptions extends ObjCEnum {
     @Deprecated
     @GlobalConstant("kCFURLBookmarkCreationPreferFileIDResolutionMask")
     public static final long PreferFileIDResolutionMask = 256L;
-    
+
 
 }

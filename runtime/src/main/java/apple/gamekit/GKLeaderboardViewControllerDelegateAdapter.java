@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 import apple.uikit.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -25,11 +24,11 @@ public abstract class GKLeaderboardViewControllerDelegateAdapter
     
     
     
-    
-    
+
+
     
     
     @NotImplemented("leaderboardViewControllerDidFinish:")
     public void didFinish(GKLeaderboardViewController viewController) { throw new UnsupportedOperationException(); }
-    
+
 }

@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("HealthKit/HealthKit.h") @Mapping("HKQuery")
 public class HKQuery 
     extends NSObject 
@@ -27,13 +25,13 @@ public class HKQuery
     
     
     public HKQuery() {}
-    
+
     
     @Mapping("sampleType")
     public native HKSampleType getSampleType();
     @Mapping("predicate")
     public native NSPredicate getPredicate();
-    
+
     
     
     @Mapping("predicateForObjectsWithMetadataKey:")
@@ -68,5 +66,5 @@ public class HKQuery
     public static native NSPredicate createPredicateForWorkoutsWithTotalEnergyBurned(@Representing("NSPredicateOperatorType") long operatorType, HKQuantity totalEnergyBurned);
     @Mapping("predicateForWorkoutsWithOperatorType:totalDistance:")
     public static native NSPredicate createPredicateForWorkoutsWithTotalDistance(@Representing("NSPredicateOperatorType") long operatorType, HKQuantity totalDistance);
-    
+
 }

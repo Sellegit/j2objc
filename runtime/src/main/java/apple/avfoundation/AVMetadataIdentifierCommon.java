@@ -19,7 +19,6 @@ import apple.coremedia.*;
 import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("AVFoundation/AVFoundation.h")
@@ -147,5 +146,5 @@ public class AVMetadataIdentifierCommon
      */
     @GlobalConstant("AVMetadataCommonIdentifierSoftware")
     public static native NSString SoftwareValue();
-    
+
 }

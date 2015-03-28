@@ -19,17 +19,15 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 7.0 and later.
  */
-
 @Library("Foundation/Foundation.h")
 @Mapping("NSDataBase64DecodingOptions")
 public final class NSDataBase64DecodingOptions extends ObjCEnum {
     
     @GlobalConstant("NSDataBase64DecodingIgnoreUnknownCharacters")
     public static final long IgnoreUnknownCharacters = 1L;
-    
+
 
 }

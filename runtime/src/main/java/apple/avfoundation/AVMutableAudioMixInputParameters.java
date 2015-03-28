@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 4.0 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h") @Mapping("AVMutableAudioMixInputParameters")
 public class AVMutableAudioMixInputParameters 
     extends AVAudioMixInputParameters 
@@ -34,7 +32,7 @@ public class AVMutableAudioMixInputParameters
     
     @Mapping("init")
     public AVMutableAudioMixInputParameters() { }
-    
+
     
     @Mapping("trackID")
     public native int getTrackID();
@@ -60,7 +58,7 @@ public class AVMutableAudioMixInputParameters
      */
     @Mapping("setAudioTapProcessor:")
     public native void setAudioTapProcessor(MTAudioProcessingTap v);
-    
+
     
     
     @Mapping("setVolumeRampFromStartVolume:toEndVolume:timeRange:")
@@ -71,5 +69,5 @@ public class AVMutableAudioMixInputParameters
     public static native AVMutableAudioMixInputParameters create(AVAssetTrack track);
     @Mapping("audioMixInputParameters")
     public static native AVMutableAudioMixInputParameters create();
-    
+
 }

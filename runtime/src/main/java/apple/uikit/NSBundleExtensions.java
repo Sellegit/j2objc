@@ -18,7 +18,6 @@ import apple.coreimage.*;
 import apple.coretext.*;
 import apple.corelocation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("UIKit/UIKit.h")
@@ -29,13 +28,13 @@ public final class NSBundleExtensions
     
     
     private NSBundleExtensions() {}
+
     
-    
-    
-    
+
+
     
     
     @ExtensionMapping("loadNibNamed:owner:options:")
     public static native NSArray<?> loadNib(NSBundle thiz, String name, Object owner, NSDictionary<?, ?> options);
-    
+
 }

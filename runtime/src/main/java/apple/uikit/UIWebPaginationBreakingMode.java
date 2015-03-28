@@ -19,9 +19,6 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h")
 @Mapping("UIWebPaginationBreakingMode")
 public final class UIWebPaginationBreakingMode extends ObjCEnum {
@@ -30,6 +27,6 @@ public final class UIWebPaginationBreakingMode extends ObjCEnum {
     public static final long Page = 0L;
     @GlobalConstant("UIWebPaginationBreakingModeColumn")
     public static final long Column = 1L;
-    
+
 
 }

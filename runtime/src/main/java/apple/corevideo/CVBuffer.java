@@ -15,7 +15,6 @@ import apple.foundation.*;
 import apple.opengles.*;
 import apple.coremedia.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Mapping("CVBufferRef") @Library("CoreVideo/CoreVideo.h")
@@ -26,7 +25,7 @@ public class CVBuffer
     
     
     protected CVBuffer() {}
-    
+
     
     
     
@@ -65,5 +64,5 @@ public class CVBuffer
      */
     @GlobalFunction("CVBufferPropagateAttachments")
     public static native void propagateAttachments(CVBuffer sourceBuffer, CVBuffer destinationBuffer);
-    
+
 }

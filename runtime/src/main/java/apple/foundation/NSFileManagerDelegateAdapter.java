@@ -18,7 +18,6 @@ import apple.coremedia.*;
 import apple.security.*;
 import apple.dispatch.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -29,8 +28,8 @@ public abstract class NSFileManagerDelegateAdapter
     
     
     
-    
-    
+
+
     
     
     @NotImplemented("fileManager:shouldCopyItemAtPath:toPath:")
@@ -89,5 +88,5 @@ public abstract class NSFileManagerDelegateAdapter
      */
     @NotImplemented("fileManager:shouldProceedAfterError:removingItemAtURL:")
     public boolean shouldProceedRemovingItemAtURL(NSFileManager fileManager, NSError error, NSURL URL) { throw new UnsupportedOperationException(); }
-    
+
 }

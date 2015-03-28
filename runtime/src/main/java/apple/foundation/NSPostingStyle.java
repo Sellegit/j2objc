@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h")
 @Mapping("NSPostingStyle")
 public final class NSPostingStyle extends ObjCEnum {
@@ -32,6 +29,6 @@ public final class NSPostingStyle extends ObjCEnum {
     public static final long ASAP = 2L;
     @GlobalConstant("NSPostNow")
     public static final long Now = 3L;
-    
+
 
 }

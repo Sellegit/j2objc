@@ -18,7 +18,6 @@ import apple.coreimage.*;
 import apple.coretext.*;
 import apple.corelocation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("UIKit/UIKit.h")
@@ -56,5 +55,5 @@ public class UIStateRestorationKey
      */
     @GlobalConstant("UIApplicationStateRestorationSystemVersionKey")
     public static native String ApplicationSystemVersionKey();
-    
+
 }

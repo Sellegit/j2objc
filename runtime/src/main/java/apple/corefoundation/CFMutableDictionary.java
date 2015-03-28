@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.dispatch.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Mapping("CFMutableDictionaryRef") @Library("CoreFoundation/CoreFoundation.h")
@@ -25,7 +24,7 @@ public class CFMutableDictionary
     
     
     protected CFMutableDictionary() {}
-    
+
     
     
     
@@ -43,5 +42,5 @@ public class CFMutableDictionary
     public static native void removeValue(CFMutableDictionary theDict, Todo key);
     @GlobalFunction("CFDictionaryRemoveAllValues")
     public static native void removeAllValues(CFMutableDictionary theDict);
-    
+
 }

@@ -17,11 +17,9 @@ import apple.uikit.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 5.0 and later.
  */
-
 @Library("GLKit/GLKit.h") @Mapping("GLKEffectPropertyLight")
 public class GLKEffectPropertyLight 
     extends GLKEffectProperty 
@@ -31,7 +29,7 @@ public class GLKEffectPropertyLight
     
     @Mapping("init")
     public GLKEffectPropertyLight() { }
-    
+
     
     @Mapping("enabled")
     public native boolean isEnabled();
@@ -81,9 +79,9 @@ public class GLKEffectPropertyLight
     public native GLKEffectPropertyTransform getTransform();
     @Mapping("setTransform:")
     public native void setTransform(GLKEffectPropertyTransform v);
+
     
     
-    
-    
-    
+
+
 }

@@ -17,11 +17,9 @@ import apple.uikit.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 7.0 and later.
  */
-
 @Library("MapKit/MapKit.h") @Mapping("MKDirections")
 public class MKDirections 
     extends NSObject 
@@ -33,14 +31,14 @@ public class MKDirections
     public MKDirections(MKDirectionsRequest request) { }
     @Mapping("init")
     public MKDirections() { }
-    
+
     
     @Mapping("isCalculating")
     public native boolean isCalculating();
-    
+
     
     
     @Mapping("cancel")
     public native void cancel();
-    
+
 }

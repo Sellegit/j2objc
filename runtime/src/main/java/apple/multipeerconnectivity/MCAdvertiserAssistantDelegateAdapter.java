@@ -15,7 +15,6 @@ import apple.foundation.*;
 import apple.uikit.*;
 import apple.security.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -26,13 +25,13 @@ public abstract class MCAdvertiserAssistantDelegateAdapter
     
     
     
-    
-    
+
+
     
     
     @NotImplemented("advertiserAssistantWillPresentInvitation:")
     public void willPresentInvitation(MCAdvertiserAssistant advertiserAssistant) { throw new UnsupportedOperationException(); }
     @NotImplemented("advertiserAssistantDidDismissInvitation:")
     public void didDismissInvitation(MCAdvertiserAssistant advertiserAssistant) { throw new UnsupportedOperationException(); }
-    
+
 }

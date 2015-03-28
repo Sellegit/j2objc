@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("LocalAuthentication/LocalAuthentication.h") @Mapping("LAContext")
 public class LAContext 
     extends NSObject 
@@ -28,18 +26,18 @@ public class LAContext
     
     @Mapping("init")
     public LAContext() { }
-    
+
     
     @Mapping("localizedFallbackTitle")
     public native String getLocalizedFallbackTitle();
     @Mapping("setLocalizedFallbackTitle:")
     public native void setLocalizedFallbackTitle(String v);
-    
+
     
     
     @Mapping("canEvaluatePolicy:error:")
     public native boolean canEvaluatePolicy(@Representing("LAPolicy") long policy, Todo error);
     @Mapping("evaluatePolicy:localizedReason:reply:")
     public native void evaluatePolicy(@Representing("LAPolicy") long policy, String localizedReason, @Block VoidBlock2<Boolean, NSError> reply);
-    
+
 }

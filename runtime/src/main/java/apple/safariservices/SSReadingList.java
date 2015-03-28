@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 7.0 and later.
  */
-
 @Library("SafariServices/SafariServices.h") @Mapping("SSReadingList")
 public class SSReadingList 
     extends NSObject 
@@ -27,10 +25,10 @@ public class SSReadingList
     
     
     public SSReadingList() {}
+
     
-    
-    
-    
+
+
     
     
     /**
@@ -42,5 +40,5 @@ public class SSReadingList
     public static native SSReadingList getDefaultReadingList();
     @Mapping("supportsURL:")
     public static native boolean supportsURL(NSURL URL);
-    
+
 }

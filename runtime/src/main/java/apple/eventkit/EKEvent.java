@@ -16,11 +16,9 @@ import apple.addressbook.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 4.0 and later.
  */
-
 @Library("EventKit/EventKit.h") @Mapping("EKEvent")
 public class EKEvent 
     extends EKCalendarItem 
@@ -30,7 +28,7 @@ public class EKEvent
     
     @Mapping("init")
     public EKEvent() { }
-    
+
     
     @Mapping("eventIdentifier")
     public native String getEventIdentifier();
@@ -61,7 +59,7 @@ public class EKEvent
      */
     @Mapping("birthdayPersonID")
     public native @MachineSizedSInt long getBirthdayPersonID();
-    
+
     
     
     @Mapping("compareStartDateWithEvent:")
@@ -70,5 +68,5 @@ public class EKEvent
     public native boolean refresh();
     @Mapping("eventWithEventStore:")
     public static native EKEvent create(EKEventStore eventStore);
-    
+
 }

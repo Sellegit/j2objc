@@ -14,9 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
-
-
 @Mapping("CFNetServiceClientContext") @Library("CFNetwork/CFNetwork.h")
  class CFNetServiceClientContext 
     extends Struct 
@@ -28,6 +25,6 @@ import apple.foundation.*;
     
     @DotMapping("version")
     public native @MachineSizedSInt long getVersion();
-    
+
     
 }

@@ -18,9 +18,6 @@ import apple.coreanimation.*;
 import apple.corevideo.*;
 
 
-
-
-
 @Library("CoreMedia/CoreMedia.h")
 @Mapping("CMTextDisplayFlag")
 public final class CMTextDisplayFlag extends ObjCEnum {
@@ -51,6 +48,6 @@ public final class CMTextDisplayFlag extends ObjCEnum {
     public static final long forcedSubtitlesPresent = 1073741824L;
     @GlobalConstant("kCMTextDisplayFlag_allSubtitlesForced")
     public static final long allSubtitlesForced = -2147483648L;
-    
+
 
 }

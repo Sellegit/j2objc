@@ -19,17 +19,14 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h") @Mapping("NSNetServiceBrowserDelegate")
 public interface NSNetServiceBrowserDelegate 
     extends NSObjectProtocol {
 
     
     
-    
-    
+
+
     
     @Mapping("netServiceBrowserWillSearch:")
     void willSearch(NSNetServiceBrowser aNetServiceBrowser);
@@ -45,7 +42,7 @@ public interface NSNetServiceBrowserDelegate
     void didRemoveDomain(NSNetServiceBrowser aNetServiceBrowser, String domainString, boolean moreComing);
     @Mapping("netServiceBrowser:didRemoveService:moreComing:")
     void didRemoveService(NSNetServiceBrowser aNetServiceBrowser, NSNetService aNetService, boolean moreComing);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

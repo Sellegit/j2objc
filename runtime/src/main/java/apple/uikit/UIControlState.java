@@ -19,9 +19,6 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h")
 @Mapping("UIControlState")
 public final class UIControlState extends ObjCEnum {
@@ -38,6 +35,6 @@ public final class UIControlState extends ObjCEnum {
     public static final long Application = 16711680L;
     @GlobalConstant("UIControlStateReserved")
     public static final long Reserved = -16777216L;
-    
+
 
 }

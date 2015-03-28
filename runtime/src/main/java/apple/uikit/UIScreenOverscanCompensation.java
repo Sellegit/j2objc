@@ -19,9 +19,6 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h")
 @Mapping("UIScreenOverscanCompensation")
 public final class UIScreenOverscanCompensation extends ObjCEnum {
@@ -32,6 +29,6 @@ public final class UIScreenOverscanCompensation extends ObjCEnum {
     public static final long InsetBounds = 1L;
     @GlobalConstant("UIScreenOverscanCompensationInsetApplicationFrame")
     public static final long InsetApplicationFrame = 2L;
-    
+
 
 }

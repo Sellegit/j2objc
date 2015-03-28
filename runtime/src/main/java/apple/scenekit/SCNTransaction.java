@@ -20,9 +20,6 @@ import apple.spritekit.*;
 import apple.opengles.*;
 
 
-
-
-
 @Library("SceneKit/SceneKit.h") @Mapping("SCNTransaction")
 public class SCNTransaction 
     extends NSObject 
@@ -32,10 +29,10 @@ public class SCNTransaction
     
     @Mapping("init")
     public SCNTransaction() { }
+
     
-    
-    
-    
+
+
     
     
     @Mapping("begin")
@@ -68,5 +65,5 @@ public class SCNTransaction
     public static native Object getValue(String key);
     @Mapping("setValue:forKey:")
     public static native void setValue(Object anObject, String key);
-    
+
 }

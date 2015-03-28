@@ -14,9 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
-
-
 @Library("CoreText/CoreText.h")
 @Mapping("CTFontUIFontType")
 public final class CTFontUIFontType extends ObjCEnum {
@@ -133,6 +130,6 @@ public final class CTFontUIFontType extends ObjCEnum {
     public static final long ToolTipFontType = 25L;
     @GlobalConstant("kCTFontControlContentFontType")
     public static final long ControlContentFontType = 26L;
-    
+
 
 }

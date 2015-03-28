@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("HealthKit/HealthKit.h") @Mapping("HKSample")
 public class HKSample 
     extends HKObject 
@@ -28,7 +26,7 @@ public class HKSample
     
     @Mapping("init")
     public HKSample() { }
-    
+
     
     @Mapping("sampleType")
     public native HKSampleType getSampleType();
@@ -36,9 +34,9 @@ public class HKSample
     public native NSDate getStartDate();
     @Mapping("endDate")
     public native NSDate getEndDate();
+
     
     
-    
-    
-    
+
+
 }

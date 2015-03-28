@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("HealthKit/HealthKit.h") @Mapping("HKSourceQuery")
 public class HKSourceQuery 
     extends HKQuery 
@@ -30,12 +28,12 @@ public class HKSourceQuery
     public HKSourceQuery(HKSampleType sampleType, NSPredicate objectPredicate, Todo completionHandler) { }
     @Mapping("init")
     public HKSourceQuery() { }
+
+    
+
+
     
     
-    
-    
-    
-    
-    
-    
+
+
 }

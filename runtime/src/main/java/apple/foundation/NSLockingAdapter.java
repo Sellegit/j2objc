@@ -18,7 +18,6 @@ import apple.coremedia.*;
 import apple.security.*;
 import apple.dispatch.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -29,13 +28,13 @@ public abstract class NSLockingAdapter
     
     
     
-    
-    
+
+
     
     
     @NotImplemented("lock")
     public void lock() { throw new UnsupportedOperationException(); }
     @NotImplemented("unlock")
     public void unlock() { throw new UnsupportedOperationException(); }
-    
+
 }

@@ -17,11 +17,9 @@ import apple.uikit.*;
 import apple.avfoundation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("Photos/Photos.h") @Mapping("PHContentEditingInput")
 public class PHContentEditingInput 
     extends NSObject 
@@ -31,7 +29,7 @@ public class PHContentEditingInput
     
     @Mapping("init")
     public PHContentEditingInput() { }
-    
+
     
     @Mapping("mediaType")
     public native @Representing("PHAssetMediaType") long getMediaType();
@@ -53,9 +51,9 @@ public class PHContentEditingInput
     public native apple.imageio.CGImagePropertyOrientation getFullSizeImageOrientation();
     @Mapping("avAsset")
     public native AVAsset getAvAsset();
+
     
     
-    
-    
-    
+
+
 }

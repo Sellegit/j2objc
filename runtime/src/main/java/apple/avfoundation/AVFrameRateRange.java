@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 7.0 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h") @Mapping("AVFrameRateRange")
 public class AVFrameRateRange 
     extends NSObject 
@@ -34,7 +32,7 @@ public class AVFrameRateRange
     
     @Mapping("init")
     public AVFrameRateRange() { }
-    
+
     
     @Mapping("minFrameRate")
     public native double getMinFrameRate();
@@ -44,9 +42,9 @@ public class AVFrameRateRange
     public native CMTime getMaxFrameDuration();
     @Mapping("minFrameDuration")
     public native CMTime getMinFrameDuration();
+
     
     
-    
-    
-    
+
+
 }

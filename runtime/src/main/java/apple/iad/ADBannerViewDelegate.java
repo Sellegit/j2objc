@@ -18,17 +18,14 @@ import apple.mediaplayer.*;
 import apple.avkit.*;
 
 
-
-
-
 @Library("iAd/iAd.h") @Mapping("ADBannerViewDelegate")
 public interface ADBannerViewDelegate 
     extends NSObjectProtocol {
 
     
     
-    
-    
+
+
     
     /**
      * @since Available in iOS 5.0 and later.
@@ -43,7 +40,7 @@ public interface ADBannerViewDelegate
     boolean actionShouldBegin(ADBannerView banner, boolean willLeave);
     @Mapping("bannerViewActionDidFinish:")
     void actionDidFinish(ADBannerView banner);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

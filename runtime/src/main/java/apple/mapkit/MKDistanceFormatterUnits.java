@@ -17,11 +17,9 @@ import apple.uikit.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 7.0 and later.
  */
-
 @Library("MapKit/MapKit.h")
 @Mapping("MKDistanceFormatterUnits")
 public final class MKDistanceFormatterUnits extends ObjCEnum {
@@ -34,6 +32,6 @@ public final class MKDistanceFormatterUnits extends ObjCEnum {
     public static final long Imperial = 2L;
     @GlobalConstant("MKDistanceFormatterUnitsImperialWithYards")
     public static final long ImperialWithYards = 3L;
-    
+
 
 }

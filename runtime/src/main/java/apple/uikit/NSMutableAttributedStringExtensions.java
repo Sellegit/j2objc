@@ -18,7 +18,6 @@ import apple.coreimage.*;
 import apple.coretext.*;
 import apple.corelocation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("UIKit/UIKit.h")
@@ -29,10 +28,10 @@ public final class NSMutableAttributedStringExtensions
     
     
     private NSMutableAttributedStringExtensions() {}
+
     
-    
-    
-    
+
+
     
     
     /**
@@ -40,5 +39,5 @@ public final class NSMutableAttributedStringExtensions
      */
     @ExtensionMapping("fixAttributesInRange:")
     public static native void fixAttributesInRange(NSMutableAttributedString thiz, NSRange range);
-    
+
 }

@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 6.0 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h") @Mapping("AVMetadataObject")
 public class AVMetadataObject 
     extends NSObject 
@@ -34,7 +32,7 @@ public class AVMetadataObject
     
     @Mapping("init")
     public AVMetadataObject() { }
-    
+
     
     @Mapping("time")
     public native CMTime getTime();
@@ -44,9 +42,9 @@ public class AVMetadataObject
     public native CGRect getBounds();
     @Mapping("type")
     public native AVMetadataObjectType getType();
+
     
     
-    
-    
-    
+
+
 }

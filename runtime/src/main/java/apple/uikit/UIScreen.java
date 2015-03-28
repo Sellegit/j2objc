@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 2.0 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UIScreen")
 public class UIScreen 
     extends NSObject 
@@ -33,7 +31,7 @@ public class UIScreen
     
     @Mapping("init")
     public UIScreen() { }
-    
+
     
     @Mapping("bounds")
     public native CGRect getBounds();
@@ -121,7 +119,7 @@ public class UIScreen
     public native @MachineSizedFloat double getNativeScale();
     @Mapping("traitCollection")
     public native UITraitCollection getTraitCollection();
-    
+
     
     
     /**
@@ -144,7 +142,7 @@ public class UIScreen
      */
     @GlobalConstant("UIScreenBrightnessDidChangeNotification")
     public static native NSString BrightnessDidChangeNotification();
-    
+
     /**
      * @since Available in iOS 4.0 and later.
      */
@@ -164,5 +162,5 @@ public class UIScreen
     public native UIView snapshotView(boolean afterUpdates);
     @Mapping("traitCollectionDidChange:")
     public native void traitCollectionDidChange(UITraitCollection previousTraitCollection);
-    
+
 }

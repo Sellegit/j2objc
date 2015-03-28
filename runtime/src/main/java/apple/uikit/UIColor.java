@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 2.0 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UIColor")
 public class UIColor 
     extends NSObject 
@@ -42,7 +40,7 @@ public class UIColor
     public UIColor(CIColor ciColor) { }
     @Mapping("init")
     public UIColor() { }
-    
+
     
     @Mapping("CGColor")
     public native CGColor getCGColor();
@@ -51,7 +49,7 @@ public class UIColor
      */
     @Mapping("CIColor")
     public native CIColor getCIColor();
-    
+
     
     
     @Mapping("set")
@@ -151,5 +149,5 @@ public class UIColor
     public static native UIColor underPageBackground();
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
-    
+
 }

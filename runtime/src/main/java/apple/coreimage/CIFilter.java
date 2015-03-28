@@ -17,9 +17,6 @@ import apple.corevideo.*;
 import apple.imageio.*;
 
 
-
-
-
 @Library("CoreImage/CoreImage.h") @Mapping("CIFilter")
 public class CIFilter 
     extends NSObject 
@@ -29,11 +26,11 @@ public class CIFilter
     
     @Mapping("init")
     public CIFilter() { }
-    
+
     
     @Mapping("outputImage")
     public native CIImage getOutputImage();
-    
+
     
     
     /**
@@ -74,5 +71,5 @@ public class CIFilter
     public native void encode(NSCoder aCoder);
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
-    
+
 }

@@ -16,11 +16,9 @@ import apple.uikit.*;
 import apple.addressbook.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("PassKit/PassKit.h")
 @Mapping("PKAddressField")
 public final class PKAddressField extends ObjCEnum {
@@ -35,6 +33,6 @@ public final class PKAddressField extends ObjCEnum {
     public static final long Email = 4L;
     @GlobalConstant("PKAddressFieldAll")
     public static final long All = 7L;
-    
+
 
 }

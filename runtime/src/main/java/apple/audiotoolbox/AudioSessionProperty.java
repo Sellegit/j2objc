@@ -17,9 +17,6 @@ import apple.coreaudio.*;
 import apple.coremedia.*;
 
 
-
-
-
 @Library("AudioToolbox/AudioToolbox.h")
 @Mapping("AudioSessionProperty")
 public final class AudioSessionProperty extends ObjCEnum {
@@ -80,6 +77,6 @@ public final class AudioSessionProperty extends ObjCEnum {
     public static final long InputGainScalar = 1768387427L;
     @GlobalConstant("kAudioSessionProperty_AudioRouteDescription")
     public static final long AudioRouteDescription = 1668440434L;
-    
+
 
 }

@@ -19,7 +19,6 @@ import apple.glkit.*;
 import apple.spritekit.*;
 import apple.opengles.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("SceneKit/SceneKit.h")
@@ -40,5 +39,5 @@ public class SCNSceneSourceAnimationImportPolicy
     public static native NSString DoNotPlayValue();
     @GlobalConstant("SCNSceneSourceAnimationImportPolicyPlayUsingSceneTimeBase")
     public static native NSString PlayUsingSceneTimeBaseValue();
-    
+
 }

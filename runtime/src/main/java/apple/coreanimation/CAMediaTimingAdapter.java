@@ -16,7 +16,6 @@ import apple.coreimage.*;
 import apple.coretext.*;
 import apple.opengles.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -59,9 +58,9 @@ public abstract class CAMediaTimingAdapter
     public CAFillMode getFillMode() { throw new UnsupportedOperationException(); }
     @Mapping("setFillMode:")
     public void setFillMode(CAFillMode v) { throw new UnsupportedOperationException(); }
+
     
     
-    
-    
-    
+
+
 }

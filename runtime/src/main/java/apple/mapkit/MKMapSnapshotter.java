@@ -17,11 +17,9 @@ import apple.uikit.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 7.0 and later.
  */
-
 @Library("MapKit/MapKit.h") @Mapping("MKMapSnapshotter")
 public class MKMapSnapshotter 
     extends NSObject 
@@ -33,14 +31,14 @@ public class MKMapSnapshotter
     public MKMapSnapshotter(MKMapSnapshotOptions options) { }
     @Mapping("init")
     public MKMapSnapshotter() { }
-    
+
     
     @Mapping("isLoading")
     public native boolean isLoading();
-    
+
     
     
     @Mapping("cancel")
     public native void cancel();
-    
+
 }

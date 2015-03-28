@@ -19,9 +19,6 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h")
 @Mapping("UIEventSubtype")
 public final class UIEventSubtype extends ObjCEnum {
@@ -50,6 +47,6 @@ public final class UIEventSubtype extends ObjCEnum {
     public static final long RemoteControlBeginSeekingForward = 108L;
     @GlobalConstant("UIEventSubtypeRemoteControlEndSeekingForward")
     public static final long RemoteControlEndSeekingForward = 109L;
-    
+
 
 }

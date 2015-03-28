@@ -16,11 +16,9 @@ import apple.uikit.*;
 import apple.addressbook.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("PassKit/PassKit.h")
 @Mapping("PKPassType")
 public final class PKPassType extends ObjCEnum {
@@ -31,6 +29,6 @@ public final class PKPassType extends ObjCEnum {
     public static final long Payment = 1L;
     @GlobalConstant("PKPassTypeAny")
     public static final long Any = -1L;
-    
+
 
 }

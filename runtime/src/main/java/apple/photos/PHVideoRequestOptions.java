@@ -17,11 +17,9 @@ import apple.uikit.*;
 import apple.avfoundation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("Photos/Photos.h") @Mapping("PHVideoRequestOptions")
 public class PHVideoRequestOptions 
     extends NSObject 
@@ -31,7 +29,7 @@ public class PHVideoRequestOptions
     
     @Mapping("init")
     public PHVideoRequestOptions() { }
-    
+
     
     @Mapping("isNetworkAccessAllowed")
     public native boolean isNetworkAccessAllowed();
@@ -49,9 +47,9 @@ public class PHVideoRequestOptions
     public native @Block VoidBlock3<Double, NSError, Todo> getProgressHandler();
     @Mapping("setProgressHandler:")
     public native void setProgressHandler(@Block VoidBlock3<Double, NSError, Todo> v);
+
     
     
-    
-    
-    
+
+
 }

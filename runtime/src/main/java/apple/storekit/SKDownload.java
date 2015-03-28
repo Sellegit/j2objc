@@ -16,11 +16,9 @@ import apple.uikit.*;
 import apple.accounts.*;
 
 
-
 /**
  * @since Available in iOS 6.0 and later.
  */
-
 @Library("StoreKit/StoreKit.h") @Mapping("SKDownload")
 public class SKDownload 
     extends NSObject 
@@ -30,7 +28,7 @@ public class SKDownload
     
     @Mapping("init")
     public SKDownload() { }
-    
+
     
     /**
      * @since Available in iOS 6.0 and later.
@@ -77,7 +75,7 @@ public class SKDownload
      */
     @Mapping("transaction")
     public native SKPaymentTransaction getTransaction();
-    
+
     
     
     /**
@@ -85,7 +83,7 @@ public class SKDownload
      */
     @GlobalConstant("SKDownloadTimeRemainingUnknown")
     public static native double getRemainingTimeUnknown();
-    
-    
-    
+
+
+
 }

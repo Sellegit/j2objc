@@ -15,11 +15,9 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
 /**
  * @since Available in iOS 3.0 and later.
  */
-
 @Library("MediaPlayer/MediaPlayer.h")
 @Mapping("MPMediaPredicateComparison")
 public final class MPMediaPredicateComparison extends ObjCEnum {
@@ -28,6 +26,6 @@ public final class MPMediaPredicateComparison extends ObjCEnum {
     public static final long EqualTo = 0L;
     @GlobalConstant("MPMediaPredicateComparisonContains")
     public static final long Contains = 1L;
-    
+
 
 }

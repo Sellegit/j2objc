@@ -19,9 +19,6 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h")
 @Mapping("UIDataDetectorTypes")
 public final class UIDataDetectorTypes extends ObjCEnum {
@@ -38,6 +35,6 @@ public final class UIDataDetectorTypes extends ObjCEnum {
     public static final long None = 0L;
     @GlobalConstant("UIDataDetectorTypeAll")
     public static final long All = -1L;
-    
+
 
 }

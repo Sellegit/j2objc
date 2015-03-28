@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 4.0 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h") @Mapping("AVAssetImageGenerator")
 public class AVAssetImageGenerator 
     extends NSObject 
@@ -36,7 +34,7 @@ public class AVAssetImageGenerator
     public AVAssetImageGenerator(AVAsset asset) { }
     @Mapping("init")
     public AVAssetImageGenerator() { }
-    
+
     
     /**
      * @since Available in iOS 6.0 and later.
@@ -84,7 +82,7 @@ public class AVAssetImageGenerator
      */
     @Mapping("setRequestedTimeToleranceAfter:")
     public native void setRequestedTimeToleranceAfter(CMTime v);
-    
+
     
     
     @Mapping("copyCGImageAtTime:actualTime:error:")
@@ -93,5 +91,5 @@ public class AVAssetImageGenerator
     public native void cancelAllCGImageGeneration();
     @Mapping("assetImageGeneratorWithAsset:")
     public static native AVAssetImageGenerator create(AVAsset asset);
-    
+
 }

@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("HealthKit/HealthKit.h")
 @Mapping("HKWorkoutActivityType")
 public final class HKWorkoutActivityType extends ObjCEnum {
@@ -139,6 +137,6 @@ public final class HKWorkoutActivityType extends ObjCEnum {
     public static final long Yoga = 57L;
     @GlobalConstant("HKWorkoutActivityTypeOther")
     public static final long Other = 3000L;
-    
+
 
 }

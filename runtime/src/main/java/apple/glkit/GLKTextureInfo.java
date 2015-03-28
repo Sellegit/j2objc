@@ -17,11 +17,9 @@ import apple.uikit.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 5.0 and later.
  */
-
 @Library("GLKit/GLKit.h") @Mapping("GLKTextureInfo")
 public class GLKTextureInfo 
     extends NSObject 
@@ -31,7 +29,7 @@ public class GLKTextureInfo
     
     @Mapping("init")
     public GLKTextureInfo() { }
-    
+
     
     @Mapping("name")
     public native int getName();
@@ -47,10 +45,10 @@ public class GLKTextureInfo
     public native @Representing("GLKTextureInfoOrigin") long getTextureOrigin();
     @Mapping("containsMipmaps")
     public native boolean containsMipmaps();
-    
+
     
     
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
-    
+
 }

@@ -19,9 +19,6 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h")
 @Mapping("UIStatusBarAnimation")
 public final class UIStatusBarAnimation extends ObjCEnum {
@@ -32,6 +29,6 @@ public final class UIStatusBarAnimation extends ObjCEnum {
     public static final long Fade = 1L;
     @GlobalConstant("UIStatusBarAnimationSlide")
     public static final long Slide = 2L;
-    
+
 
 }

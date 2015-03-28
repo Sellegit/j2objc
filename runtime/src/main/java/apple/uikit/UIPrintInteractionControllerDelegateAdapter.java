@@ -18,7 +18,6 @@ import apple.coreimage.*;
 import apple.coretext.*;
 import apple.corelocation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -29,8 +28,8 @@ public abstract class UIPrintInteractionControllerDelegateAdapter
     
     
     
-    
-    
+
+
     
     
     @NotImplemented("printInteractionControllerParentViewController:")
@@ -54,5 +53,5 @@ public abstract class UIPrintInteractionControllerDelegateAdapter
      */
     @NotImplemented("printInteractionController:cutLengthForPaper:")
     public @MachineSizedFloat double getCutLength(UIPrintInteractionController printInteractionController, UIPrintPaper paper) { throw new UnsupportedOperationException(); }
-    
+
 }

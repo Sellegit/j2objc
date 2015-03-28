@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 7.0 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h")
 @Mapping("AVAuthorizationStatus")
 public final class AVAuthorizationStatus extends ObjCEnum {
@@ -37,6 +35,6 @@ public final class AVAuthorizationStatus extends ObjCEnum {
     public static final long Denied = 2L;
     @GlobalConstant("AVAuthorizationStatusAuthorized")
     public static final long Authorized = 3L;
-    
+
 
 }

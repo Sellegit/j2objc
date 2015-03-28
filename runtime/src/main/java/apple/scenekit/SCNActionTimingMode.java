@@ -20,11 +20,9 @@ import apple.spritekit.*;
 import apple.opengles.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("SceneKit/SceneKit.h")
 @Mapping("SCNActionTimingMode")
 public final class SCNActionTimingMode extends ObjCEnum {
@@ -37,6 +35,6 @@ public final class SCNActionTimingMode extends ObjCEnum {
     public static final long EaseOut = 2L;
     @GlobalConstant("SCNActionTimingModeEaseInEaseOut")
     public static final long EaseInEaseOut = 3L;
-    
+
 
 }

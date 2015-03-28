@@ -15,9 +15,6 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
-
-
 @Library("MediaPlayer/MediaPlayer.h")
 @Mapping("MPMovieFinishReason")
 public final class MPMovieFinishReason extends ObjCEnum {
@@ -28,6 +25,6 @@ public final class MPMovieFinishReason extends ObjCEnum {
     public static final long PlaybackError = 1L;
     @GlobalConstant("MPMovieFinishReasonUserExited")
     public static final long UserExited = 2L;
-    
+
 
 }

@@ -15,9 +15,6 @@ import apple.dispatch.*;
 import apple.foundation.*;
 
 
-
-
-
 @Library("CoreFoundation/CoreFoundation.h")
 @Mapping("CFStreamStatus")
 public final class CFStreamStatus extends ObjCEnum {
@@ -38,6 +35,6 @@ public final class CFStreamStatus extends ObjCEnum {
     public static final long Closed = 6L;
     @GlobalConstant("kCFStreamStatusError")
     public static final long Error = 7L;
-    
+
 
 }

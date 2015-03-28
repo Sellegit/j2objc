@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 4.0 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h") @Mapping("AVCaptureConnection")
 public class AVCaptureConnection 
     extends NSObject 
@@ -44,7 +42,7 @@ public class AVCaptureConnection
     public AVCaptureConnection(AVCaptureInputPort port, AVCaptureVideoPreviewLayer layer) { }
     @Mapping("init")
     public AVCaptureConnection() { }
-    
+
     
     @Mapping("inputPorts")
     public native NSArray<AVCaptureInputPort> getInputPorts();
@@ -183,7 +181,7 @@ public class AVCaptureConnection
     @Deprecated
     @Mapping("setEnablesVideoStabilizationWhenAvailable:")
     public native void setEnablesVideoStabilizationWhenAvailable(boolean v);
-    
+
     
     
     /**
@@ -196,5 +194,5 @@ public class AVCaptureConnection
      */
     @Mapping("connectionWithInputPort:videoPreviewLayer:")
     public static native AVCaptureConnection create(AVCaptureInputPort port, AVCaptureVideoPreviewLayer layer);
-    
+
 }

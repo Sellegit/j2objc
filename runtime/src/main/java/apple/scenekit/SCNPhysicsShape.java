@@ -20,9 +20,6 @@ import apple.spritekit.*;
 import apple.opengles.*;
 
 
-
-
-
 @Library("SceneKit/SceneKit.h") @Mapping("SCNPhysicsShape")
 public class SCNPhysicsShape 
     extends NSObject 
@@ -32,10 +29,10 @@ public class SCNPhysicsShape
     
     @Mapping("init")
     public SCNPhysicsShape() { }
+
     
-    
-    
-    
+
+
     
     
     @Mapping("shapeWithGeometry:options:")
@@ -46,5 +43,5 @@ public class SCNPhysicsShape
     public static native SCNPhysicsShape create(NSArray<?> shapes, NSArray<?> transforms);
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
-    
+
 }

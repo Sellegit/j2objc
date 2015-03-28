@@ -17,9 +17,6 @@ import apple.coretext.*;
 import apple.opengles.*;
 
 
-
-
-
 @Library("QuartzCore/QuartzCore.h")
 @Mapping("CAEdgeAntialiasingMask")
 public final class CAEdgeAntialiasingMask extends ObjCEnum {
@@ -32,6 +29,6 @@ public final class CAEdgeAntialiasingMask extends ObjCEnum {
     public static final long BottomEdge = 4L;
     @GlobalConstant("kCALayerTopEdge")
     public static final long TopEdge = 8L;
-    
+
 
 }

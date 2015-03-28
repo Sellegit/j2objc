@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("UIKit/UIKit.h")
 @Mapping("UIAccessibilityNavigationStyle")
 public final class UIAccessibilityNavigationStyle extends ObjCEnum {
@@ -34,6 +32,6 @@ public final class UIAccessibilityNavigationStyle extends ObjCEnum {
     public static final long Separate = 1L;
     @GlobalConstant("UIAccessibilityNavigationStyleCombined")
     public static final long Combined = 2L;
-    
+
 
 }

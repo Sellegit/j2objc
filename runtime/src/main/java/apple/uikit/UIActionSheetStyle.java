@@ -19,9 +19,6 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h")
 @Mapping("UIActionSheetStyle")
 public final class UIActionSheetStyle extends ObjCEnum {
@@ -34,6 +31,6 @@ public final class UIActionSheetStyle extends ObjCEnum {
     public static final long BlackTranslucent = 2L;
     @GlobalConstant("UIActionSheetStyleBlackOpaque")
     public static final long BlackOpaque = 1L;
-    
+
 
 }

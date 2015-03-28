@@ -14,9 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
-
-
 @Library("CoreText/CoreText.h")
 @Mapping("CTFontOptions")
 public final class CTFontOptions extends ObjCEnum {
@@ -27,6 +24,6 @@ public final class CTFontOptions extends ObjCEnum {
     public static final long PreventAutoActivation = 1L;
     @GlobalConstant("kCTFontOptionsPreferSystemFont")
     public static final long PreferSystemFont = 4L;
-    
+
 
 }

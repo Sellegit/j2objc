@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h") @Mapping("NSMutableString")
 public class NSMutableString 
     extends NSString 
@@ -53,10 +50,10 @@ public class NSMutableString
     public NSMutableString(String path, Todo enc, Todo error) { }
     @Mapping("initWithCapacity:")
     public NSMutableString(@MachineSizedUInt long capacity) { }
+
     
-    
-    
-    
+
+
     
     
     @Mapping("replaceCharactersInRange:withString:")
@@ -71,5 +68,5 @@ public class NSMutableString
     public native void setString(String aString);
     @Mapping("replaceOccurrencesOfString:withString:options:range:")
     public native @MachineSizedUInt long replaceAll(String target, String replacement, @Representing("NSStringCompareOptions") long options, NSRange searchRange);
-    
+
 }

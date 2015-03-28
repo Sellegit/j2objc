@@ -16,11 +16,9 @@ import apple.uikit.*;
 import apple.addressbook.*;
 
 
-
 /**
  * @since Available in iOS 6.0 and later.
  */
-
 @Library("PassKit/PassKit.h") @Mapping("PKPassLibrary")
 public class PKPassLibrary 
     extends NSObject 
@@ -30,10 +28,10 @@ public class PKPassLibrary
     
     @Mapping("init")
     public PKPassLibrary() { }
+
     
-    
-    
-    
+
+
     
     
     /**
@@ -41,7 +39,7 @@ public class PKPassLibrary
      */
     @GlobalConstant("PKPassLibraryDidChangeNotification")
     public static native NSString DidChangeNotification();
-    
+
     @Mapping("passes")
     public native NSArray<PKPass> getPasses();
     @Mapping("passWithPassTypeIdentifier:serialNumber:")
@@ -79,5 +77,5 @@ public class PKPassLibrary
      */
     @Mapping("isPaymentPassActivationAvailable")
     public static native boolean isPaymentPassActivationAvailable();
-    
+
 }

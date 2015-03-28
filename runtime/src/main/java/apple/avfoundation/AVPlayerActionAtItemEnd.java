@@ -20,9 +20,6 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
-
-
 @Library("AVFoundation/AVFoundation.h")
 @Mapping("AVPlayerActionAtItemEnd")
 public final class AVPlayerActionAtItemEnd extends ObjCEnum {
@@ -33,6 +30,6 @@ public final class AVPlayerActionAtItemEnd extends ObjCEnum {
     public static final long Pause = 1L;
     @GlobalConstant("AVPlayerActionAtItemEndNone")
     public static final long None = 2L;
-    
+
 
 }

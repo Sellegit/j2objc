@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.dispatch.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("CoreFoundation/CoreFoundation.h")
@@ -51,5 +50,5 @@ public class CFPropertyList
      */
     @GlobalFunction("CFPropertyListCreateData")
     public static native CFData createData(CFAllocator allocator, CFPropertyListRef propertyList, @Representing("CFPropertyListFormat") long format, @MachineSizedUInt long options, Todo error);
-    
+
 }

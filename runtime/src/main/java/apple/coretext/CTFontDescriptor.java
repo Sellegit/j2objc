@@ -13,7 +13,6 @@ import apple.coregraphics.*;
 import apple.coreservices.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Mapping("CTFontDescriptorRef") @Library("CoreText/CoreText.h")
@@ -24,7 +23,7 @@ public class CTFontDescriptor
     
     
     protected CTFontDescriptor() {}
-    
+
     
     
     
@@ -98,5 +97,5 @@ public class CTFontDescriptor
      */
     @GlobalFunction("CTFontDescriptorCopyLocalizedAttribute")
     public static native CFType getLocalizedAttribute(CTFontDescriptor descriptor, CFString attribute, Todo language);
-    
+
 }

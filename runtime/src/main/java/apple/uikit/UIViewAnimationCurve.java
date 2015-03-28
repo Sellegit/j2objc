@@ -19,9 +19,6 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h")
 @Mapping("UIViewAnimationCurve")
 public final class UIViewAnimationCurve extends ObjCEnum {
@@ -34,6 +31,6 @@ public final class UIViewAnimationCurve extends ObjCEnum {
     public static final long EaseOut = 2L;
     @GlobalConstant("UIViewAnimationCurveLinear")
     public static final long Linear = 3L;
-    
+
 
 }

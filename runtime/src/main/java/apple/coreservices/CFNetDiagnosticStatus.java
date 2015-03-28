@@ -14,9 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
-
-
 @Library("CFNetwork/CFNetwork.h")
 @Mapping("CFNetDiagnosticStatus")
 public final class CFNetDiagnosticStatus extends ObjCEnum {
@@ -31,6 +28,6 @@ public final class CFNetDiagnosticStatus extends ObjCEnum {
     public static final long ConnectionIndeterminate = -66558L;
     @GlobalConstant("kCFNetDiagnosticConnectionDown")
     public static final long ConnectionDown = -66557L;
-    
+
 
 }

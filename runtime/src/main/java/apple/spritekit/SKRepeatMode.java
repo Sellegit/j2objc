@@ -21,9 +21,6 @@ import apple.glkit.*;
 import apple.scenekit.*;
 
 
-
-
-
 @Library("SpriteKit/SpriteKit.h")
 @Mapping("SKRepeatMode")
 public final class SKRepeatMode extends ObjCEnum {
@@ -32,6 +29,6 @@ public final class SKRepeatMode extends ObjCEnum {
     public static final long Clamp = 1L;
     @GlobalConstant("SKRepeatModeLoop")
     public static final long Loop = 2L;
-    
+
 
 }

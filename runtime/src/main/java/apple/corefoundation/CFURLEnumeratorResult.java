@@ -15,9 +15,6 @@ import apple.dispatch.*;
 import apple.foundation.*;
 
 
-
-
-
 @Library("CoreFoundation/CoreFoundation.h")
 @Mapping("CFURLEnumeratorResult")
 public final class CFURLEnumeratorResult extends ObjCEnum {
@@ -30,6 +27,6 @@ public final class CFURLEnumeratorResult extends ObjCEnum {
     public static final long Error = 3L;
     @GlobalConstant("kCFURLEnumeratorDirectoryPostOrderSuccess")
     public static final long DirectoryPostOrderSuccess = 4L;
-    
+
 
 }

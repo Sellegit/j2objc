@@ -13,7 +13,6 @@ import apple.coregraphics.*;
 import apple.coreservices.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Mapping("CTTextTabRef") @Library("CoreText/CoreText.h")
@@ -24,7 +23,7 @@ public class CTTextTab
     
     
     protected CTTextTab() {}
-    
+
     
     
     
@@ -53,5 +52,5 @@ public class CTTextTab
      */
     @GlobalFunction("CTTextTabGetOptions")
     public static native CTTextTabOptions getOptions(CTTextTab tab);
-    
+
 }

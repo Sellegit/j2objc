@@ -19,17 +19,14 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h") @Mapping("UITextFieldDelegate")
 public interface UITextFieldDelegate 
     extends NSObjectProtocol {
 
     
     
-    
-    
+
+
     
     @Mapping("textFieldShouldBeginEditing:")
     boolean shouldBeginEditing(UITextField textField);
@@ -45,7 +42,7 @@ public interface UITextFieldDelegate
     boolean shouldClear(UITextField textField);
     @Mapping("textFieldShouldReturn:")
     boolean shouldReturn(UITextField textField);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

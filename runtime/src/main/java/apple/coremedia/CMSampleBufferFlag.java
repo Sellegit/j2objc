@@ -18,15 +18,12 @@ import apple.coreanimation.*;
 import apple.corevideo.*;
 
 
-
-
-
 @Library("CoreMedia/CoreMedia.h")
 @Mapping("CMSampleBufferFlag")
 public final class CMSampleBufferFlag extends ObjCEnum {
     
     @GlobalConstant("kCMSampleBufferFlag_AudioBufferList_Assure16ByteAlignment")
     public static final long AudioBufferList_Assure16ByteAlignment = 1L;
-    
+
 
 }

@@ -14,9 +14,6 @@ import apple.coreservices.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Security/Security.h")
 @Mapping("SSLSessionOption")
 public final class SSLSessionOption extends ObjCEnum {
@@ -33,6 +30,6 @@ public final class SSLSessionOption extends ObjCEnum {
     public static final long SendOneByteRecord = 4L;
     @GlobalConstant("kSSLSessionOptionFallback")
     public static final long Fallback = 6L;
-    
+
 
 }

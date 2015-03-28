@@ -18,7 +18,6 @@ import apple.coreimage.*;
 import apple.coretext.*;
 import apple.corelocation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -29,13 +28,13 @@ public abstract class UIDataSourceModelAssociationAdapter
     
     
     
-    
-    
+
+
     
     
     @NotImplemented("modelIdentifierForElementAtIndexPath:inView:")
     public String getElementModelIdentifier(NSIndexPath idx, UIView view) { throw new UnsupportedOperationException(); }
     @NotImplemented("indexPathForElementWithModelIdentifier:inView:")
     public NSIndexPath getElementIndexPath(String identifier, UIView view) { throw new UnsupportedOperationException(); }
-    
+
 }

@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h")
 @Mapping("NSLocaleLanguageDirection")
 public final class NSLocaleLanguageDirection extends ObjCEnum {
@@ -36,6 +33,6 @@ public final class NSLocaleLanguageDirection extends ObjCEnum {
     public static final long TopToBottom = 3L;
     @GlobalConstant("NSLocaleLanguageDirectionBottomToTop")
     public static final long BottomToTop = 4L;
-    
+
 
 }

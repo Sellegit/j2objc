@@ -15,7 +15,6 @@ import apple.foundation.*;
 import apple.addressbook.*;
 import apple.corebluetooth.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -26,8 +25,8 @@ public abstract class CLLocationManagerDelegateAdapter
     
     
     
-    
-    
+
+
     
     
     /**
@@ -111,5 +110,5 @@ public abstract class CLLocationManagerDelegateAdapter
     public void didFinishDeferredUpdates(CLLocationManager manager, NSError error) { throw new UnsupportedOperationException(); }
     @NotImplemented("locationManager:didVisit:")
     public void didVisit(CLLocationManager manager, CLVisit visit) { throw new UnsupportedOperationException(); }
-    
+
 }

@@ -17,11 +17,9 @@ import apple.uikit.*;
 import apple.avfoundation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("Photos/Photos.h") @Mapping("PHCollectionList")
 public class PHCollectionList 
     extends PHCollection 
@@ -31,7 +29,7 @@ public class PHCollectionList
     
     @Mapping("init")
     public PHCollectionList() { }
-    
+
     
     @Mapping("collectionListType")
     public native @Representing("PHCollectionListType") long getCollectionListType();
@@ -43,7 +41,7 @@ public class PHCollectionList
     public native NSDate getEndDate();
     @Mapping("localizedLocationNames")
     public native List<String> getLocalizedLocationNames();
-    
+
     
     
     @Mapping("fetchCollectionListsContainingCollection:options:")
@@ -60,5 +58,5 @@ public class PHCollectionList
     public static native PHCollectionList createTransientCollectionList(NSArray<?> collections, String title);
     @Mapping("transientCollectionListWithCollectionsFetchResult:title:")
     public static native PHCollectionList createTransientCollectionList(PHFetchResult fetchResult, String title);
-    
+
 }

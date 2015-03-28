@@ -15,7 +15,6 @@ import apple.foundation.*;
 import apple.addressbook.*;
 import apple.corebluetooth.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("CoreLocation/CoreLocation.h")
@@ -43,5 +42,5 @@ public class CLLocationAccuracy
     public static native double KilometerValue();
     @GlobalConstant("kCLLocationAccuracyThreeKilometers")
     public static native double ThreeKilometersValue();
-    
+
 }

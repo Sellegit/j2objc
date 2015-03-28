@@ -19,9 +19,6 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h")
 @Mapping("UITableViewCellEditingStyle")
 public final class UITableViewCellEditingStyle extends ObjCEnum {
@@ -32,6 +29,6 @@ public final class UITableViewCellEditingStyle extends ObjCEnum {
     public static final long Delete = 1L;
     @GlobalConstant("UITableViewCellEditingStyleInsert")
     public static final long Insert = 2L;
-    
+
 
 }

@@ -17,9 +17,6 @@ import apple.coreaudio.*;
 import apple.coremedia.*;
 
 
-
-
-
 @Library("AudioToolbox/AudioToolbox.h")
 @Mapping("AudioConverterQuality")
 public final class AudioConverterQuality extends ObjCEnum {
@@ -34,6 +31,6 @@ public final class AudioConverterQuality extends ObjCEnum {
     public static final long Low = 32L;
     @GlobalConstant("kAudioConverterQuality_Min")
     public static final long Min = 0L;
-    
+
 
 }

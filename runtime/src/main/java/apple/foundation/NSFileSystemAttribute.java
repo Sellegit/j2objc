@@ -18,7 +18,6 @@ import apple.coremedia.*;
 import apple.security.*;
 import apple.dispatch.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("Foundation/Foundation.h")
@@ -41,5 +40,5 @@ public class NSFileSystemAttribute
     public static native NSString NodesAttribute();
     @GlobalConstant("NSFileSystemFreeNodes")
     public static native NSString FreeNodesAttribute();
-    
+
 }

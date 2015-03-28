@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 import apple.dispatch.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("PushKit/PushKit.h")
@@ -32,5 +31,5 @@ public class PKPushType
      */
     @GlobalConstant("PKPushTypeVoIP")
     public static native String VoIP();
-    
+
 }

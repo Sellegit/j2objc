@@ -19,7 +19,6 @@ import apple.coremedia.*;
 import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -30,8 +29,8 @@ public abstract class AVVideoCompositionValidationHandlingAdapter
     
     
     
-    
-    
+
+
     
     
     /**
@@ -54,5 +53,5 @@ public abstract class AVVideoCompositionValidationHandlingAdapter
      */
     @NotImplemented("videoComposition:shouldContinueValidatingAfterFindingInvalidTrackIDInInstruction:layerInstruction:asset:")
     public boolean shouldContinueValidatingAfterFindingInvalidTrackID(AVVideoComposition videoComposition, AVVideoCompositionInstruction videoCompositionInstruction, AVVideoCompositionLayerInstruction layerInstruction, AVAsset asset) { throw new UnsupportedOperationException(); }
-    
+
 }

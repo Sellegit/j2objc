@@ -15,9 +15,6 @@ import apple.dispatch.*;
 import apple.foundation.*;
 
 
-
-
-
 @Library("CoreFoundation/CoreFoundation.h")
 @Mapping("CFNumberFormatterStyle")
 public final class CFNumberFormatterStyle extends ObjCEnum {
@@ -34,6 +31,6 @@ public final class CFNumberFormatterStyle extends ObjCEnum {
     public static final long ScientificStyle = 4L;
     @GlobalConstant("kCFNumberFormatterSpellOutStyle")
     public static final long SpellOutStyle = 5L;
-    
+
 
 }

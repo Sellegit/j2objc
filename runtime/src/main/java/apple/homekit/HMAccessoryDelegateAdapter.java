@@ -13,7 +13,6 @@ import apple.coregraphics.*;
 import apple.coreservices.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -24,8 +23,8 @@ public abstract class HMAccessoryDelegateAdapter
     
     
     
-    
-    
+
+
     
     
     @NotImplemented("accessoryDidUpdateName:")
@@ -40,5 +39,5 @@ public abstract class HMAccessoryDelegateAdapter
     public void didUpdateReachability(HMAccessory accessory) { throw new UnsupportedOperationException(); }
     @NotImplemented("accessory:service:didUpdateValueForCharacteristic:")
     public void didUpdateCharacteristicValue(HMAccessory accessory, HMService service, HMCharacteristic characteristic) { throw new UnsupportedOperationException(); }
-    
+
 }

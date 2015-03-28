@@ -18,7 +18,6 @@ import apple.coreimage.*;
 import apple.coretext.*;
 import apple.corelocation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -34,7 +33,7 @@ public abstract class UICoordinateSpaceAdapter
      */
     @NotImplemented("bounds")
     public CGRect getBounds() { throw new UnsupportedOperationException(); }
-    
+
     
     
     /**
@@ -57,5 +56,5 @@ public abstract class UICoordinateSpaceAdapter
      */
     @NotImplemented("convertRect:fromCoordinateSpace:")
     public CGRect convertRectFromCoordinateSpace(CGRect rect, UICoordinateSpace coordinateSpace) { throw new UnsupportedOperationException(); }
-    
+
 }

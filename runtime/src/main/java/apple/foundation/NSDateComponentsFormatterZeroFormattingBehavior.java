@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h")
 @Mapping("NSDateComponentsFormatterZeroFormattingBehavior")
 public final class NSDateComponentsFormatterZeroFormattingBehavior extends ObjCEnum {
@@ -40,6 +37,6 @@ public final class NSDateComponentsFormatterZeroFormattingBehavior extends ObjCE
     public static final long DropAll = 14L;
     @GlobalConstant("NSDateComponentsFormatterZeroFormattingBehaviorPad")
     public static final long Pad = 65536L;
-    
+
 
 }

@@ -17,9 +17,6 @@ import apple.coretext.*;
 import apple.opengles.*;
 
 
-
-
-
 @Library("QuartzCore/QuartzCore.h") @Mapping("CAAnimation")
 public class CAAnimation 
     extends NSObject 
@@ -29,7 +26,7 @@ public class CAAnimation
     
     @Mapping("init")
     public CAAnimation() { }
-    
+
     
     @Mapping("timingFunction")
     public native CAMediaTimingFunction getTimingFunction();
@@ -75,7 +72,7 @@ public class CAAnimation
     public native CAFillMode getFillMode();
     @Mapping("setFillMode:")
     public native void setFillMode(CAFillMode v);
-    
+
     
     
     /**
@@ -83,7 +80,7 @@ public class CAAnimation
      */
     @GlobalFunction("CACurrentMediaTime")
     public static native double getCurrentMediaTime();
-    
+
     @Mapping("shouldArchiveValueForKey:")
     public native boolean shouldArchiveValue(String key);
     @Mapping("animation")
@@ -96,5 +93,5 @@ public class CAAnimation
     public native Object copyWithZone$(NSZone zone);
     @Mapping("runActionForKey:object:arguments:")
     public native void runAction(String event, Object anObject, NSDictionary<?, ?> dict);
-    
+
 }

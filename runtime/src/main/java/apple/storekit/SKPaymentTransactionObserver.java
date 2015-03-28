@@ -16,17 +16,14 @@ import apple.uikit.*;
 import apple.accounts.*;
 
 
-
-
-
 @Library("StoreKit/StoreKit.h") @Mapping("SKPaymentTransactionObserver")
 public interface SKPaymentTransactionObserver 
     extends NSObjectProtocol {
 
     
     
-    
-    
+
+
     
     /**
      * @since Available in iOS 3.0 and later.
@@ -53,7 +50,7 @@ public interface SKPaymentTransactionObserver
      */
     @Mapping("paymentQueue:updatedDownloads:")
     void updatedDownloads(SKPaymentQueue queue, NSArray<?> downloads);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

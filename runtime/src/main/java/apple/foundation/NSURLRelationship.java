@@ -19,11 +19,9 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("Foundation/Foundation.h")
 @Mapping("NSURLRelationship")
 public final class NSURLRelationship extends ObjCEnum {
@@ -34,6 +32,6 @@ public final class NSURLRelationship extends ObjCEnum {
     public static final long Same = 1L;
     @GlobalConstant("NSURLRelationshipOther")
     public static final long Other = 2L;
-    
+
 
 }

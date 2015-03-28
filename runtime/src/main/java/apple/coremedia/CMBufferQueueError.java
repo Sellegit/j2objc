@@ -18,9 +18,6 @@ import apple.coreanimation.*;
 import apple.corevideo.*;
 
 
-
-
-
 @Library("CoreMedia/CoreMedia.h")
 @Mapping("CMBufferQueueError")
 public final class CMBufferQueueError extends ObjCEnum {
@@ -45,6 +42,6 @@ public final class CMBufferQueueError extends ObjCEnum {
     public static final long InvalidTriggerToken = -12768L;
     @GlobalConstant("kCMBufferQueueError_InvalidBuffer")
     public static final long InvalidBuffer = -12769L;
-    
+
 
 }

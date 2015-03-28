@@ -17,11 +17,9 @@ import apple.uikit.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 5.0 and later.
  */
-
 @Library("GLKit/GLKit.h")
 @Mapping("GLKTextureLoaderErrorCode")
 public final class GLKTextureLoaderErrorCode extends ObjCEnum {
@@ -64,6 +62,6 @@ public final class GLKTextureLoaderErrorCode extends ObjCEnum {
     public static final long InvalidEAGLContext = 17L;
     @GlobalConstant("GLKTextureLoaderErrorIncompatibleFormatSRGB")
     public static final long IncompatibleFormatSRGB = 18L;
-    
+
 
 }

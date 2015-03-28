@@ -21,9 +21,6 @@ import apple.glkit.*;
 import apple.scenekit.*;
 
 
-
-
-
 @Library("SpriteKit/SpriteKit.h") @Mapping("SKAction")
 public class SKAction 
     extends NSObject 
@@ -33,7 +30,7 @@ public class SKAction
     
     @Mapping("init")
     public SKAction() { }
-    
+
     
     @Mapping("duration")
     public native double getDuration();
@@ -57,7 +54,7 @@ public class SKAction
     public native @MachineSizedFloat double getSpeed();
     @Mapping("setSpeed:")
     public native void setSpeed(@MachineSizedFloat double v);
-    
+
     
     
     @Mapping("reversedAction")
@@ -202,5 +199,5 @@ public class SKAction
     public native Object copyWithZone$(NSZone zone);
     @Mapping("encodeWithCoder:")
     public native void encode(NSCoder aCoder);
-    
+
 }

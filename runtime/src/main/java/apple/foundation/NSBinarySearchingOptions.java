@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h")
 @Mapping("NSBinarySearchingOptions")
 public final class NSBinarySearchingOptions extends ObjCEnum {
@@ -32,6 +29,6 @@ public final class NSBinarySearchingOptions extends ObjCEnum {
     public static final long LastEqual = 512L;
     @GlobalConstant("NSBinarySearchingInsertionIndex")
     public static final long InsertionIndex = 1024L;
-    
+
 
 }

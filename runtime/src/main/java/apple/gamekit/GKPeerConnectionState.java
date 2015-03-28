@@ -15,9 +15,6 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
-
-
 @Library("GameKit/GameKit.h")
 @Mapping("GKPeerConnectionState")
 public final class GKPeerConnectionState extends ObjCEnum {
@@ -32,6 +29,6 @@ public final class GKPeerConnectionState extends ObjCEnum {
     public static final long Disconnected = 3L;
     @GlobalConstant("GKPeerStateConnecting")
     public static final long Connecting = 4L;
-    
+
 
 }

@@ -17,9 +17,6 @@ import apple.coreaudio.*;
 import apple.coremedia.*;
 
 
-
-
-
 @Library("AudioToolbox/AudioToolbox.h")
 @Mapping("AudioQueueHardwareCodecPolicy")
 public final class AudioQueueHardwareCodecPolicy extends ObjCEnum {
@@ -34,6 +31,6 @@ public final class AudioQueueHardwareCodecPolicy extends ObjCEnum {
     public static final long PreferSoftware = 3L;
     @GlobalConstant("kAudioQueueHardwareCodecPolicy_PreferHardware")
     public static final long PreferHardware = 4L;
-    
+
 
 }

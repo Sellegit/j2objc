@@ -21,9 +21,6 @@ import apple.glkit.*;
 import apple.scenekit.*;
 
 
-
-
-
 @Library("SpriteKit/SpriteKit.h") @Mapping("SKView")
 public class SKView 
     extends UIView 
@@ -35,7 +32,7 @@ public class SKView
     public SKView(CGRect frame) { }
     @Mapping("init")
     public SKView() { }
-    
+
     
     @Mapping("isPaused")
     public native boolean isPaused();
@@ -117,7 +114,7 @@ public class SKView
     public native void setFrameInterval(@MachineSizedSInt long v);
     @Mapping("scene")
     public native SKScene getScene();
-    
+
     
     
     @Mapping("presentScene:")
@@ -132,5 +129,5 @@ public class SKView
     public native CGPoint convertPointToScene(CGPoint point, SKScene scene);
     @Mapping("convertPoint:fromScene:")
     public native CGPoint convertPointFromScene(CGPoint point, SKScene scene);
-    
+
 }

@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("NetworkExtension/NetworkExtension.h")
 @Mapping("NEVPNIKEAuthenticationMethod")
 public final class NEVPNIKEAuthenticationMethod extends ObjCEnum {
@@ -29,6 +27,6 @@ public final class NEVPNIKEAuthenticationMethod extends ObjCEnum {
     public static final long Certificate = 1L;
     @GlobalConstant("NEVPNIKEAuthenticationMethodSharedSecret")
     public static final long SharedSecret = 2L;
-    
+
 
 }

@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 6.0 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("NSMutableParagraphStyle")
 public class NSMutableParagraphStyle 
     extends NSParagraphStyle 
@@ -35,7 +33,7 @@ public class NSMutableParagraphStyle
     public NSMutableParagraphStyle(NSCoder aDecoder) { }
     @Mapping("init")
     public NSMutableParagraphStyle() { }
-    
+
     
     @Mapping("lineSpacing")
     public native @MachineSizedFloat double getLineSpacing();
@@ -109,9 +107,9 @@ public class NSMutableParagraphStyle
      */
     @Mapping("setDefaultTabInterval:")
     public native void setDefaultTabInterval(@MachineSizedFloat double v);
+
     
     
-    
-    
-    
+
+
 }

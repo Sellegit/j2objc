@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 import apple.uikit.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -35,7 +34,7 @@ public abstract class MPMediaPlaybackAdapter
     public float getCurrentPlaybackRate() { throw new UnsupportedOperationException(); }
     @Mapping("setCurrentPlaybackRate:")
     public void setCurrentPlaybackRate(float v) { throw new UnsupportedOperationException(); }
-    
+
     
     
     @NotImplemented("prepareToPlay")
@@ -52,5 +51,5 @@ public abstract class MPMediaPlaybackAdapter
     public void beginSeekingBackward() { throw new UnsupportedOperationException(); }
     @NotImplemented("endSeeking")
     public void endSeeking() { throw new UnsupportedOperationException(); }
-    
+
 }

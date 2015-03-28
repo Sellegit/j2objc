@@ -16,11 +16,9 @@ import apple.uikit.*;
 import apple.accounts.*;
 
 
-
 /**
  * @since Available in iOS 6.0 and later.
  */
-
 @Library("StoreKit/StoreKit.h") @Mapping("SKStoreProductViewController")
 public class SKStoreProductViewController 
     extends UIViewController 
@@ -32,7 +30,7 @@ public class SKStoreProductViewController
     public SKStoreProductViewController(String nibNameOrNil, NSBundle nibBundleOrNil) { }
     @Mapping("init")
     public SKStoreProductViewController() { }
-    
+
     
     /**
      * @since Available in iOS 6.0 and later.
@@ -44,7 +42,7 @@ public class SKStoreProductViewController
      */
     @Mapping("setDelegate:")
     public native void setDelegate(SKStoreProductViewControllerDelegate v);
-    
+
     
     
     /**
@@ -52,5 +50,5 @@ public class SKStoreProductViewController
      */
     @Mapping("loadProductWithParameters:completionBlock:")
     public native void loadProduct(NSDictionary<?, ?> parameters, @Block VoidBlock2<Boolean, NSError> block);
-    
+
 }

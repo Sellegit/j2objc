@@ -19,7 +19,6 @@ import apple.coremedia.*;
 import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -30,8 +29,8 @@ public abstract class AVPlayerItemMetadataOutputPushDelegateAdapter
     
     
     
-    
-    
+
+
     
     
     /**
@@ -39,5 +38,5 @@ public abstract class AVPlayerItemMetadataOutputPushDelegateAdapter
      */
     @NotImplemented("metadataOutput:didOutputTimedMetadataGroups:fromPlayerItemTrack:")
     public void didOutputTimedMetadataGroups(AVPlayerItemMetadataOutput output, NSArray<?> groups, AVPlayerItemTrack track) { throw new UnsupportedOperationException(); }
-    
+
 }

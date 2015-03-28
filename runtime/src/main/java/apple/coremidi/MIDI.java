@@ -13,7 +13,6 @@ import apple.coregraphics.*;
 import apple.coreservices.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("CoreMIDI/CoreMIDI.h")
@@ -106,5 +105,5 @@ public class MIDI
      */
     @GlobalFunction("MIDISetupRemoveExternalDevice")
     public static native MIDIError removeExternalDevice(MIDIDevice device);
-    
+
 }

@@ -14,19 +14,17 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("HomeKit/HomeKit.h") @Mapping("HMHomeManagerDelegate")
 public interface HMHomeManagerDelegate 
     extends NSObjectProtocol {
 
     
     
-    
-    
+
+
     
     @Mapping("homeManagerDidUpdateHomes:")
     void didUpdateHomes(HMHomeManager manager);
@@ -36,7 +34,7 @@ public interface HMHomeManagerDelegate
     void didAddHome(HMHomeManager manager, HMHome home);
     @Mapping("homeManager:didRemoveHome:")
     void didRemoveHome(HMHomeManager manager, HMHome home);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

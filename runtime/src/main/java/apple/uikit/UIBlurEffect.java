@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UIBlurEffect")
 public class UIBlurEffect 
     extends UIVisualEffect 
@@ -33,13 +31,13 @@ public class UIBlurEffect
     
     @Mapping("init")
     public UIBlurEffect() { }
+
     
-    
-    
-    
+
+
     
     
     @Mapping("effectWithStyle:")
     public static native UIBlurEffect create(@Representing("UIBlurEffectStyle") long style);
-    
+
 }

@@ -15,11 +15,9 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
 /**
  * @since Available in iOS 4.1 and later.
  */
-
 @Library("GameKit/GameKit.h") @Mapping("GKLeaderboard")
 public class GKLeaderboard 
     extends NSObject 
@@ -33,7 +31,7 @@ public class GKLeaderboard
      */
     @Mapping("initWithPlayers:")
     public GKLeaderboard(NSArray<?> players) { }
-    
+
     
     @Mapping("timeScope")
     public native @Representing("GKLeaderboardTimeScope") long getTimeScope();
@@ -86,7 +84,7 @@ public class GKLeaderboard
     @Deprecated
     @Mapping("setCategory:")
     public native void setCategory(String v);
-    
+
     
     
     @Mapping("loadScoresWithCompletionHandler:")
@@ -115,5 +113,5 @@ public class GKLeaderboard
      */
     @Mapping("loadImageWithCompletionHandler:")
     public native void loadImage(@Block VoidBlock2<UIImage, NSError> completionHandler);
-    
+
 }

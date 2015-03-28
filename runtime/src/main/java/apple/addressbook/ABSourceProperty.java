@@ -13,7 +13,6 @@ import apple.coregraphics.*;
 import apple.coreservices.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("AddressBook/AddressBook.h")
@@ -36,5 +35,5 @@ public class ABSourceProperty
      */
     @GlobalConstant("kABSourceTypeProperty")
     public static native int TypeValue();
-    
+
 }

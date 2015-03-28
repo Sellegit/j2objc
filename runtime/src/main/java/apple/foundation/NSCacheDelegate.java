@@ -19,21 +19,18 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h") @Mapping("NSCacheDelegate")
 public interface NSCacheDelegate 
     extends NSObjectProtocol {
 
     
     
-    
-    
+
+
     
     @Mapping("cache:willEvictObject:")
     void willEvictObject(NSCache cache, Object obj);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

@@ -19,11 +19,9 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 7.0 and later.
  */
-
 @Library("Foundation/Foundation.h")
 @Mapping("NSURLErrorCancelledReason")
 public final class NSURLErrorCancelledReason extends ObjCEnum {
@@ -37,6 +35,6 @@ public final class NSURLErrorCancelledReason extends ObjCEnum {
      */
     @GlobalConstant("NSURLErrorCancelledReasonInsufficientSystemResources")
     public static final long InsufficientSystemResources = 2L;
-    
+
 
 }

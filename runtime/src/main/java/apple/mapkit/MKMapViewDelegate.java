@@ -17,17 +17,14 @@ import apple.uikit.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("MapKit/MapKit.h") @Mapping("MKMapViewDelegate")
 public interface MKMapViewDelegate 
     extends NSObjectProtocol {
 
     
     
-    
-    
+
+
     
     @Mapping("mapView:regionWillChangeAnimated:")
     void willChangeRegion(MKMapView mapView, boolean animated);
@@ -119,7 +116,7 @@ public interface MKMapViewDelegate
     @Deprecated
     @Mapping("mapView:didAddOverlayViews:")
     void didAddOverlayViews(MKMapView mapView, NSArray<?> overlayViews);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

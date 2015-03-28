@@ -13,7 +13,6 @@ import apple.coregraphics.*;
 import apple.coreservices.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -28,9 +27,9 @@ public abstract class EAGLDrawableAdapter
     public EAGLDrawableProperties getDrawableProperties() { throw new UnsupportedOperationException(); }
     @Mapping("setDrawableProperties:")
     public void setDrawableProperties(EAGLDrawableProperties v) { throw new UnsupportedOperationException(); }
+
     
     
-    
-    
-    
+
+
 }

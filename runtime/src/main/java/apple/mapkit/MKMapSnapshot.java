@@ -17,11 +17,9 @@ import apple.uikit.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 7.0 and later.
  */
-
 @Library("MapKit/MapKit.h") @Mapping("MKMapSnapshot")
 public class MKMapSnapshot 
     extends NSObject 
@@ -31,14 +29,14 @@ public class MKMapSnapshot
     
     @Mapping("init")
     public MKMapSnapshot() { }
-    
+
     
     @Mapping("image")
     public native UIImage getImage();
-    
+
     
     
     @Mapping("pointForCoordinate:")
     public native CGPoint convertCoordinateToPoint(CLLocationCoordinate2D coordinate);
-    
+
 }

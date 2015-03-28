@@ -17,11 +17,9 @@ import apple.uikit.*;
 import apple.avfoundation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("Photos/Photos.h")
 @Mapping("PHImageContentMode")
 public final class PHImageContentMode extends ObjCEnum {
@@ -32,6 +30,6 @@ public final class PHImageContentMode extends ObjCEnum {
     public static final long AspectFill = 1L;
     @GlobalConstant("PHImageContentModeDefault")
     public static final long Default = 0L;
-    
+
 
 }

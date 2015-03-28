@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h") @Mapping("AVAudioFormat")
 public class AVAudioFormat 
     extends NSObject 
@@ -48,7 +46,7 @@ public class AVAudioFormat
     public AVAudioFormat(NSDictionary<?, ?> settings) { }
     @Mapping("init")
     public AVAudioFormat() { }
-    
+
     
     @Mapping("isStandard")
     public native boolean isStandard();
@@ -66,10 +64,10 @@ public class AVAudioFormat
     public native AVAudioChannelLayout getChannelLayout();
     @Mapping("settings")
     public native AVAudioSettings getSettings();
-    
+
     
     
     @Mapping("isEqual:")
     public native boolean equalsTo(Object object);
-    
+
 }

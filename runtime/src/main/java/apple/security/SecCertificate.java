@@ -13,7 +13,6 @@ import apple.coregraphics.*;
 import apple.coreservices.*;
 import apple.dispatch.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Mapping("SecCertificateRef") @Library("Security/Security.h")
@@ -24,7 +23,7 @@ public class SecCertificate
     
     
     protected SecCertificate() {}
-    
+
     
     
     
@@ -38,7 +37,7 @@ public class SecCertificate
      */
     @GlobalConstant("kSecPropertyTypeError")
     public static native CFType PropertyTypeError();
-    
+
     /**
      * @since Available in iOS 2.0 and later.
      */
@@ -59,5 +58,5 @@ public class SecCertificate
      */
     @GlobalFunction("SecCertificateCopySubjectSummary")
     public static native CFString copySubjectSummary(SecCertificate certificate);
-    
+
 }

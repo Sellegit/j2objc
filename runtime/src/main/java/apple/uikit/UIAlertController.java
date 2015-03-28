@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UIAlertController")
 public class UIAlertController 
     extends UIViewController 
@@ -37,7 +35,7 @@ public class UIAlertController
     public UIAlertController(NSCoder aDecoder) { }
     @Mapping("init")
     public UIAlertController() { }
-    
+
     
     @Mapping("actions")
     public native NSArray<UIAlertAction> getActions();
@@ -53,7 +51,7 @@ public class UIAlertController
     public native void setMessage(String v);
     @Mapping("preferredStyle")
     public native @Representing("UIAlertControllerStyle") long getPreferredStyle();
-    
+
     
     
     @Mapping("addAction:")
@@ -62,5 +60,5 @@ public class UIAlertController
     public native void addTextField(@Block VoidBlock1<UITextField> configurationHandler);
     @Mapping("alertControllerWithTitle:message:preferredStyle:")
     public static native UIAlertController create(String title, String message, @Representing("UIAlertControllerStyle") long preferredStyle);
-    
+
 }

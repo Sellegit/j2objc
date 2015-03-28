@@ -17,11 +17,9 @@ import apple.uikit.*;
 import apple.avfoundation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("Photos/Photos.h")
 @Mapping("PHAssetMediaType")
 public final class PHAssetMediaType extends ObjCEnum {
@@ -34,6 +32,6 @@ public final class PHAssetMediaType extends ObjCEnum {
     public static final long Video = 2L;
     @GlobalConstant("PHAssetMediaTypeAudio")
     public static final long Audio = 3L;
-    
+
 
 }

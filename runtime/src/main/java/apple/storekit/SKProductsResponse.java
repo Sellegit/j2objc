@@ -16,11 +16,9 @@ import apple.uikit.*;
 import apple.accounts.*;
 
 
-
 /**
  * @since Available in iOS 3.0 and later.
  */
-
 @Library("StoreKit/StoreKit.h") @Mapping("SKProductsResponse")
 public class SKProductsResponse 
     extends NSObject 
@@ -30,7 +28,7 @@ public class SKProductsResponse
     
     @Mapping("init")
     public SKProductsResponse() { }
-    
+
     
     /**
      * @since Available in iOS 3.0 and later.
@@ -42,9 +40,9 @@ public class SKProductsResponse
      */
     @Mapping("invalidProductIdentifiers")
     public native List<String> getInvalidProductIdentifiers();
+
     
     
-    
-    
-    
+
+
 }

@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h") @Mapping("NSHTTPCookie")
 public class NSHTTPCookie 
     extends NSObject 
@@ -33,7 +30,7 @@ public class NSHTTPCookie
     public NSHTTPCookie(NSDictionary<?, ?> properties) { }
     @Mapping("init")
     public NSHTTPCookie() { }
-    
+
     
     @Mapping("properties")
     public native NSDictionary<?, ?> getProperties();
@@ -61,12 +58,12 @@ public class NSHTTPCookie
     public native NSURL getCommentURL();
     @Mapping("portList")
     public native List<Integer> getPortList();
-    
+
     
     
     @Mapping("requestHeaderFieldsWithCookies:")
     public static native Map<String, String> getRequestHeaderFieldsWithCookies(NSArray<?> cookies);
     @Mapping("cookiesWithResponseHeaderFields:forURL:")
     public static native NSArray<NSHTTPCookie> getCookiesWithResponseHeaderFields(NSDictionary<?, ?> headerFields, NSURL URL);
-    
+
 }

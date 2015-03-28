@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 4.0 and later.
  */
-
 @Library("CoreTelephony/CTCall.h") @Mapping("CTCarrier")
 public class CTCarrier 
     extends NSObject 
@@ -28,7 +26,7 @@ public class CTCarrier
     
     @Mapping("init")
     public CTCarrier() { }
-    
+
     
     /**
      * @since Available in iOS 4.0 and later.
@@ -55,9 +53,9 @@ public class CTCarrier
      */
     @Mapping("allowsVOIP")
     public native boolean allowsVOIP();
+
     
     
-    
-    
-    
+
+
 }

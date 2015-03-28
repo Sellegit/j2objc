@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.dispatch.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Mapping("CFStringTokenizerRef") @Library("CoreFoundation/CoreFoundation.h")
@@ -25,7 +24,7 @@ public class CFStringTokenizer
     
     
     protected CFStringTokenizer() {}
-    
+
     
     
     
@@ -74,5 +73,5 @@ public class CFStringTokenizer
      */
     @GlobalFunction("CFStringTokenizerGetCurrentSubTokens")
     public static native @MachineSizedSInt long getCurrentSubTokens(CFStringTokenizer tokenizer, CFRange ranges, @MachineSizedSInt long maxRangeLength, CFMutableArray derivedSubTokens);
-    
+
 }

@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h")
 @Mapping("NSLinguisticTaggerOptions")
 public final class NSLinguisticTaggerOptions extends ObjCEnum {
@@ -36,6 +33,6 @@ public final class NSLinguisticTaggerOptions extends ObjCEnum {
     public static final long OmitOther = 8L;
     @GlobalConstant("NSLinguisticTaggerJoinNames")
     public static final long JoinNames = 16L;
-    
+
 
 }

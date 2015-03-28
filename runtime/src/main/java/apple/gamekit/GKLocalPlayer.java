@@ -15,11 +15,9 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
 /**
  * @since Available in iOS 4.1 and later.
  */
-
 @Library("GameKit/GameKit.h") @Mapping("GKLocalPlayer")
 public class GKLocalPlayer 
     extends GKPlayer 
@@ -29,7 +27,7 @@ public class GKLocalPlayer
     
     @Mapping("init")
     public GKLocalPlayer() { }
-    
+
     
     @Mapping("isAuthenticated")
     public native boolean isAuthenticated();
@@ -52,7 +50,7 @@ public class GKLocalPlayer
     @Deprecated
     @Mapping("friends")
     public native List<String> getFriends();
-    
+
     
     
     /**
@@ -60,7 +58,7 @@ public class GKLocalPlayer
      */
     @GlobalConstant("GKPlayerAuthenticationDidChangeNotificationName")
     public static native NSString AuthenticationDidChangeNotification();
-    
+
     /**
      * @since Available in iOS 8.0 and later.
      */
@@ -138,5 +136,5 @@ public class GKLocalPlayer
     public native void didModifySavedGame(GKPlayer player, GKSavedGame savedGame);
     @Mapping("player:hasConflictingSavedGames:")
     public native void hasConflictingSavedGames(GKPlayer player, NSArray<?> savedGames);
-    
+
 }

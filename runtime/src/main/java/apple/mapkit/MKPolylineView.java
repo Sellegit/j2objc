@@ -17,11 +17,9 @@ import apple.uikit.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 4.0 and later.
  */
-
 @Library("MapKit/MapKit.h") @Mapping("MKPolylineView")
 public class MKPolylineView 
     extends MKOverlayPathView 
@@ -47,7 +45,7 @@ public class MKPolylineView
     public MKPolylineView(CGRect frame) { }
     @Mapping("init")
     public MKPolylineView() { }
-    
+
     
     /**
      * @since Available in iOS 4.0 and later.
@@ -56,9 +54,9 @@ public class MKPolylineView
     @Deprecated
     @Mapping("polyline")
     public native MKPolyline getPolyline();
+
     
     
-    
-    
-    
+
+
 }

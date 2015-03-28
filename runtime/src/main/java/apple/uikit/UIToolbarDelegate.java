@@ -19,20 +19,17 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h") @Mapping("UIToolbarDelegate")
 public interface UIToolbarDelegate 
     extends UIBarPositioningDelegate {
 
     
     
+
+
     
-    
-    
-    
-    
+
+
     /*<adapter>*/
     /*</adapter>*/
 }

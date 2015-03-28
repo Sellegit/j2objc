@@ -18,7 +18,6 @@ import apple.coreimage.*;
 import apple.coretext.*;
 import apple.corelocation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -29,11 +28,11 @@ public abstract class UISearchResultsUpdatingAdapter
     
     
     
-    
-    
+
+
     
     
     @NotImplemented("updateSearchResultsForSearchController:")
     public void updateSearchResults(UISearchController searchController) { throw new UnsupportedOperationException(); }
-    
+
 }

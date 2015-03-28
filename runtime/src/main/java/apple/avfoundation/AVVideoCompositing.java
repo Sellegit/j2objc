@@ -20,19 +20,17 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 7.0 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h") @Mapping("AVVideoCompositing")
 public interface AVVideoCompositing 
     extends NSObjectProtocol {
 
     
     
-    
-    
+
+
     
     @Mapping("renderContextChanged:")
     void renderContextChanged(AVVideoCompositionRenderContext newRenderContext);
@@ -40,7 +38,7 @@ public interface AVVideoCompositing
     void startVideoCompositionRequest(AVAsynchronousVideoCompositionRequest asyncVideoCompositionRequest);
     @Mapping("cancelAllPendingVideoCompositionRequests")
     void cancelAllPendingVideoCompositionRequests();
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

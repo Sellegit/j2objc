@@ -19,9 +19,6 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h")
 @Mapping("UICollectionElementCategory")
 public final class UICollectionElementCategory extends ObjCEnum {
@@ -32,6 +29,6 @@ public final class UICollectionElementCategory extends ObjCEnum {
     public static final long SupplementaryView = 1L;
     @GlobalConstant("UICollectionElementCategoryDecorationView")
     public static final long DecorationView = 2L;
-    
+
 
 }

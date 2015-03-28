@@ -18,7 +18,6 @@ import apple.coreimage.*;
 import apple.coretext.*;
 import apple.corelocation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("UIKit/UIKit.h")
@@ -29,12 +28,12 @@ public final class CIImageExtensions
     
     
     private CIImageExtensions() {}
+
+    
+
+
     
     
-    
-    
-    
-    
-    
-    
+
+
 }

@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h")
 @Mapping("NSPredicateOperatorType")
 public final class NSPredicateOperatorType extends ObjCEnum {
@@ -60,6 +57,6 @@ public final class NSPredicateOperatorType extends ObjCEnum {
      */
     @GlobalConstant("NSBetweenPredicateOperatorType")
     public static final long Between = 100L;
-    
+
 
 }

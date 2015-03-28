@@ -14,9 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
-
-
 @Library("CoreText/CoreText.h")
 @Mapping("CTWritingDirection")
 public final class CTWritingDirection extends ObjCEnum {
@@ -27,6 +24,6 @@ public final class CTWritingDirection extends ObjCEnum {
     public static final long LeftToRight = 0L;
     @GlobalConstant("kCTWritingDirectionRightToLeft")
     public static final long RightToLeft = 1L;
-    
+
 
 }

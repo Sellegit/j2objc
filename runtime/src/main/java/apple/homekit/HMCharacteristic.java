@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("HomeKit/HomeKit.h") @Mapping("HMCharacteristic")
 public class HMCharacteristic 
     extends NSObject 
@@ -28,7 +26,7 @@ public class HMCharacteristic
     
     @Mapping("init")
     public HMCharacteristic() { }
-    
+
     
     @Mapping("characteristicType")
     public native HMCharacteristicType getCharacteristicType();
@@ -42,7 +40,7 @@ public class HMCharacteristic
     public native Object getValue();
     @Mapping("isNotificationEnabled")
     public native boolean isNotificationEnabled();
-    
+
     
     
     @Mapping("writeValue:completionHandler:")
@@ -53,5 +51,5 @@ public class HMCharacteristic
     public native void enableNotification(boolean enable, @Block VoidBlock1<NSError> completion);
     @Mapping("updateAuthorizationData:completionHandler:")
     public native void updateAuthorizationData(NSData data, @Block VoidBlock1<NSError> completion);
-    
+
 }

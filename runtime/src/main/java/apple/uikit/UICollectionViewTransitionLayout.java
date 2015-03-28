@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 7.0 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UICollectionViewTransitionLayout")
 public class UICollectionViewTransitionLayout 
     extends UICollectionViewLayout 
@@ -37,7 +35,7 @@ public class UICollectionViewTransitionLayout
     public UICollectionViewTransitionLayout(NSCoder aDecoder) { }
     @Mapping("init")
     public UICollectionViewTransitionLayout() { }
-    
+
     
     @Mapping("transitionProgress")
     public native @MachineSizedFloat double getTransitionProgress();
@@ -47,7 +45,7 @@ public class UICollectionViewTransitionLayout
     public native UICollectionViewLayout getCurrentLayout();
     @Mapping("nextLayout")
     public native UICollectionViewLayout getNextLayout();
-    
+
     
     
     @Mapping("updateValue:forAnimatedKey:")
@@ -60,5 +58,5 @@ public class UICollectionViewTransitionLayout
     public native UICollectionViewLayoutAttributes initialLayoutAttributesForAppearingSupplementaryElementOfKind$atIndexPath$(String elementKind, NSIndexPath elementIndexPath);
     @Mapping("initialLayoutAttributesForAppearingDecorationElementOfKind:atIndexPath:")
     public native UICollectionViewLayoutAttributes initialLayoutAttributesForAppearingDecorationElementOfKind$atIndexPath$(String elementKind, NSIndexPath decorationIndexPath);
-    
+
 }

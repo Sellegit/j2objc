@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h")
 @Mapping("NSTextCheckingType")
 public final class NSTextCheckingType extends ObjCEnum {
@@ -61,6 +58,6 @@ public final class NSTextCheckingType extends ObjCEnum {
      */
     @GlobalConstant("NSTextCheckingTypeTransitInformation")
     public static final long TransitInformation = 4096L;
-    
+
 
 }

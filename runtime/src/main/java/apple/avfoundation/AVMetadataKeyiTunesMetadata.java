@@ -19,7 +19,6 @@ import apple.coremedia.*;
 import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("AVFoundation/AVFoundation.h")
@@ -272,5 +271,5 @@ public class AVMetadataKeyiTunesMetadata
      */
     @GlobalConstant("AVMetadataiTunesMetadataKeyExecProducer")
     public static native NSString ExecProducerValue();
-    
+
 }

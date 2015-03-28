@@ -15,11 +15,9 @@ import apple.foundation.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 5.0 and later.
  */
-
 @Library("CoreBluetooth/CoreBluetooth.h") @Mapping("CBCentralManager")
 public class CBCentralManager 
     extends NSObject 
@@ -36,7 +34,7 @@ public class CBCentralManager
     public CBCentralManager(CBCentralManagerDelegate delegate, DispatchQueue queue, NSDictionary<?, ?> options) { }
     @Mapping("init")
     public CBCentralManager() { }
-    
+
     
     @Mapping("delegate")
     public native CBCentralManagerDelegate getDelegate();
@@ -44,7 +42,7 @@ public class CBCentralManager
     public native void setDelegate(CBCentralManagerDelegate v);
     @Mapping("state")
     public native @Representing("CBCentralManagerState") long getState();
-    
+
     
     
     /**
@@ -79,5 +77,5 @@ public class CBCentralManager
     public native void connectPeripheral(CBPeripheral peripheral, NSDictionary<?, ?> options);
     @Mapping("cancelPeripheralConnection:")
     public native void cancelPeripheralConnection(CBPeripheral peripheral);
-    
+
 }

@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 5.0 and later.
  */
-
 @Library("NewsstandKit/NewsstandKit.h") @Mapping("NKAssetDownload")
 public class NKAssetDownload 
     extends NSObject 
@@ -28,7 +26,7 @@ public class NKAssetDownload
     
     @Mapping("init")
     public NKAssetDownload() { }
-    
+
     
     @Mapping("issue")
     public native NKIssue getIssue();
@@ -40,10 +38,10 @@ public class NKAssetDownload
     public native void setUserInfo(NSDictionary<?, ?> v);
     @Mapping("URLRequest")
     public native NSURLRequest getURLRequest();
-    
+
     
     
     @Mapping("downloadWithDelegate:")
     public native NSURLConnection download(NSURLConnectionDownloadDelegate delegate);
-    
+
 }

@@ -16,11 +16,9 @@ import apple.addressbook.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 4.0 and later.
  */
-
 @Library("EventKit/EventKit.h") @Mapping("EKRecurrenceDayOfWeek")
 public class EKRecurrenceDayOfWeek 
     extends NSObject 
@@ -32,13 +30,13 @@ public class EKRecurrenceDayOfWeek
     public EKRecurrenceDayOfWeek(@MachineSizedSInt long dayOfTheWeek, @MachineSizedSInt long weekNumber) { }
     @Mapping("init")
     public EKRecurrenceDayOfWeek() { }
-    
+
     
     @Mapping("dayOfTheWeek")
     public native @MachineSizedSInt long getDayOfTheWeek();
     @Mapping("weekNumber")
     public native @MachineSizedSInt long getWeekNumber();
-    
+
     
     
     @Mapping("dayOfWeek:")
@@ -47,5 +45,5 @@ public class EKRecurrenceDayOfWeek
     public static native EKRecurrenceDayOfWeek create(@MachineSizedSInt long dayOfTheWeek, @MachineSizedSInt long weekNumber);
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
-    
+
 }

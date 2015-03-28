@@ -18,7 +18,6 @@ import apple.coreimage.*;
 import apple.coretext.*;
 import apple.corelocation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -29,13 +28,13 @@ public abstract class UIDocumentMenuDelegateAdapter
     
     
     
-    
-    
+
+
     
     
     @NotImplemented("documentMenu:didPickDocumentPicker:")
     public void didPickDocumentPicker(UIDocumentMenuViewController documentMenu, UIDocumentPickerViewController documentPicker) { throw new UnsupportedOperationException(); }
     @NotImplemented("documentMenuWasCancelled:")
     public void wasCancelled(UIDocumentMenuViewController documentMenu) { throw new UnsupportedOperationException(); }
-    
+
 }

@@ -16,11 +16,9 @@ import apple.uikit.*;
 import apple.addressbook.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("PassKit/PassKit.h") @Mapping("PKPaymentAuthorizationViewController")
 public class PKPaymentAuthorizationViewController 
     extends UIViewController 
@@ -34,18 +32,18 @@ public class PKPaymentAuthorizationViewController
     public PKPaymentAuthorizationViewController(String nibNameOrNil, NSBundle nibBundleOrNil) { }
     @Mapping("init")
     public PKPaymentAuthorizationViewController() { }
-    
+
     
     @Mapping("delegate")
     public native PKPaymentAuthorizationViewControllerDelegate getDelegate();
     @Mapping("setDelegate:")
     public native void setDelegate(PKPaymentAuthorizationViewControllerDelegate v);
-    
+
     
     
     @Mapping("canMakePayments")
     public static native boolean canMakePayments();
     @Mapping("canMakePaymentsUsingNetworks:")
     public static native boolean canMakePaymentsUsingNetworks(NSArray<?> supportedNetworks);
-    
+
 }

@@ -17,9 +17,6 @@ import apple.coreaudio.*;
 import apple.coremedia.*;
 
 
-
-
-
 @Library("AudioToolbox/AudioToolbox.h")
 @Mapping("AudioFormatProperty")
 public final class AudioFormatProperty extends ObjCEnum {
@@ -100,6 +97,6 @@ public final class AudioFormatProperty extends ObjCEnum {
     public static final long ID3TagSize = 1768174451L;
     @GlobalConstant("kAudioFormatProperty_ID3TagToDictionary")
     public static final long ID3TagToDictionary = 1768174436L;
-    
+
 
 }

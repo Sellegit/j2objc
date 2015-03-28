@@ -18,7 +18,6 @@ import apple.coreimage.*;
 import apple.coretext.*;
 import apple.corelocation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("UIKit/UIKit.h")
@@ -29,7 +28,7 @@ public final class NSIndexPathExtensions
     
     
     private NSIndexPathExtensions() {}
-    
+
     
     @ExtensionMapping("section")
     public static native @MachineSizedSInt long getSection(NSIndexPath thiz);
@@ -40,7 +39,7 @@ public final class NSIndexPathExtensions
      */
     @ExtensionMapping("item")
     public static native @MachineSizedSInt long getItem(NSIndexPath thiz);
-    
+
     
     
     @Mapping("indexPathForRow:inSection:")
@@ -50,5 +49,5 @@ public final class NSIndexPathExtensions
      */
     @Mapping("indexPathForItem:inSection:")
     public static native NSIndexPath createIndexPathForItemInSection(@MachineSizedSInt long item, @MachineSizedSInt long section);
-    
+
 }

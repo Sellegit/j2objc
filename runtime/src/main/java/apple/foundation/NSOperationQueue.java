@@ -19,11 +19,9 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 2.0 and later.
  */
-
 @Library("Foundation/Foundation.h") @Mapping("NSOperationQueue")
 public class NSOperationQueue 
     extends NSObject 
@@ -31,11 +29,11 @@ public class NSOperationQueue
 
     
     public static final int DefaultMaxConcurrentOperationCount = -1;
-    
+
     
     @Mapping("init")
     public NSOperationQueue() { }
-    
+
     
     @Mapping("operations")
     public native NSArray<NSOperation> getOperations();
@@ -82,7 +80,7 @@ public class NSOperationQueue
      */
     @Mapping("setUnderlyingQueue:")
     public native void setUnderlyingQueue(DispatchQueue v);
-    
+
     
     
     @Mapping("addOperation:")
@@ -111,5 +109,5 @@ public class NSOperationQueue
      */
     @Mapping("mainQueue")
     public static native NSOperationQueue getMainQueue();
-    
+
 }

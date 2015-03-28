@@ -20,21 +20,18 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
-
-
 @Library("AVFoundation/AVFoundation.h") @Mapping("AVCaptureMetadataOutputObjectsDelegate")
 public interface AVCaptureMetadataOutputObjectsDelegate 
     extends NSObjectProtocol {
 
     
     
-    
-    
+
+
     
     @Mapping("captureOutput:didOutputMetadataObjects:fromConnection:")
     void didOutputMetadataObjects(AVCaptureOutput captureOutput, NSArray<?> metadataObjects, AVCaptureConnection connection);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("NetworkExtension/NetworkExtension.h") @Mapping("NEVPNConnection")
 public class NEVPNConnection 
     extends NSObject 
@@ -28,14 +26,14 @@ public class NEVPNConnection
     
     @Mapping("init")
     public NEVPNConnection() { }
-    
+
     
     /**
      * @since Available in iOS 8.0 and later.
      */
     @Mapping("status")
     public native @Representing("NEVPNStatus") long getStatus();
-    
+
     
     
     /**
@@ -43,7 +41,7 @@ public class NEVPNConnection
      */
     @GlobalConstant("NEVPNStatusDidChangeNotification")
     public static native NSString StatusDidChangeNotification();
-    
+
     /**
      * @since Available in iOS 8.0 and later.
      */
@@ -54,5 +52,5 @@ public class NEVPNConnection
      */
     @Mapping("stopVPNTunnel")
     public native void stopVPNTunnel();
-    
+
 }

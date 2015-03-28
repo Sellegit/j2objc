@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("NetworkExtension/NetworkExtension.h") @Mapping("NEVPNProtocol")
 public class NEVPNProtocol 
     extends NSObject 
@@ -28,7 +26,7 @@ public class NEVPNProtocol
     
     @Mapping("init")
     public NEVPNProtocol() { }
-    
+
     
     /**
      * @since Available in iOS 8.0 and later.
@@ -90,10 +88,10 @@ public class NEVPNProtocol
      */
     @Mapping("setDisconnectOnSleep:")
     public native void setDisconnectsOnSleep(boolean v);
-    
+
     
     
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
-    
+
 }

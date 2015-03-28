@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 6.0 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h")
 @Mapping("AVAudioSessionInterruptionType")
 public final class AVAudioSessionInterruptionType extends ObjCEnum {
@@ -33,6 +31,6 @@ public final class AVAudioSessionInterruptionType extends ObjCEnum {
     public static final long Began = 1L;
     @GlobalConstant("AVAudioSessionInterruptionTypeEnded")
     public static final long Ended = 0L;
-    
+
 
 }

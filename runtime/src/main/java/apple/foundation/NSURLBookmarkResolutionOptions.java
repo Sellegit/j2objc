@@ -19,11 +19,9 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 4.0 and later.
  */
-
 @Library("Foundation/Foundation.h")
 @Mapping("NSURLBookmarkResolutionOptions")
 public final class NSURLBookmarkResolutionOptions extends ObjCEnum {
@@ -34,6 +32,6 @@ public final class NSURLBookmarkResolutionOptions extends ObjCEnum {
     public static final long outMounting = 512L;
     @GlobalConstant("NSURLBookmarkResolutionWithSecurityScope")
     public static final long SecurityScope = 1024L;
-    
+
 
 }

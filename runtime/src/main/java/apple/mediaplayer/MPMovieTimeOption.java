@@ -15,9 +15,6 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
-
-
 @Library("MediaPlayer/MediaPlayer.h")
 @Mapping("MPMovieTimeOption")
 public final class MPMovieTimeOption extends ObjCEnum {
@@ -26,6 +23,6 @@ public final class MPMovieTimeOption extends ObjCEnum {
     public static final long NearestKeyFrame = 0L;
     @GlobalConstant("MPMovieTimeOptionExact")
     public static final long Exact = 1L;
-    
+
 
 }

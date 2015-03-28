@@ -13,7 +13,6 @@ import apple.coregraphics.*;
 import apple.coreservices.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("AddressBook/AddressBook.h")
@@ -61,5 +60,5 @@ public class ABPersonSocialProfileService
      */
     @GlobalConstant("kABPersonSocialProfileServiceFlickr")
     public static native CFString FlickrValue();
-    
+
 }

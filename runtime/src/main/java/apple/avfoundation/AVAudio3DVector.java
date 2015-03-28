@@ -20,9 +20,6 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
-
-
 @Mapping("AVAudio3DVector") @Library("AVFoundation/AVFoundation.h")
 public class AVAudio3DVector 
     extends Struct 
@@ -38,7 +35,7 @@ public class AVAudio3DVector
     public native float getY();
     @DotMapping("z")
     public native float getZ();
-    
+
     public static native AVAudio3DVector create(float x, float y, float z) /*-[
         AVAudio3DVector __new = { .x = x, .y = y, .z = z };
         return __new;
@@ -48,17 +45,36 @@ public class AVAudio3DVector
         return __new;
     ]-*/;
 
-    
+
     public static native AVAudio3DVector copyWithy(AVAudio3DVector original, float y) /*-[
         AVAudio3DVector __new = { .x = original.x, .y = y, .z = original.z };
         return __new;
     ]-*/;
 
-    
+
     public static native AVAudio3DVector copyWithz(AVAudio3DVector original, float z) /*-[
         AVAudio3DVector __new = { .x = original.x, .y = original.y, .z = z };
         return __new;
     ]-*/;
 
-    
+
+    public static final class Adapter {
+
+        public float x;
+        public float y;
+        public float z;
+        public Adapter(float x, float y, float z) {
+            this.x = x;
+            this.y = y;
+            this.z = z;
+        }
+        public Adapter(AVAudio3DVector original) {
+            this.x = original.getX();
+            this.y = original.getY();
+            this.z = original.getZ();
+        }
+        public AVAudio3DVector convert() {
+            return create(x, y, z);
+        }
+    }
 }

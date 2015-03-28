@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h") @Mapping("NSMutableSet")
 public class NSMutableSet 
     extends NSSet 
@@ -32,10 +29,10 @@ public class NSMutableSet
     public NSMutableSet() {}
     @Mapping("initWithCapacity:")
     public NSMutableSet(@MachineSizedUInt long numItems) { }
+
     
-    
-    
-    
+
+
     
     
     @Mapping("addObject:")
@@ -44,5 +41,5 @@ public class NSMutableSet
     public native void removeObject(Object object);
     @Mapping("removeAllObjects")
     public native void removeAllObjects();
-    
+
 }

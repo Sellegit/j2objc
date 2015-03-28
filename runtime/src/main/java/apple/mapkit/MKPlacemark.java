@@ -17,11 +17,9 @@ import apple.uikit.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 3.0 and later.
  */
-
 @Library("MapKit/MapKit.h") @Mapping("MKPlacemark")
 public class MKPlacemark 
     extends CLPlacemark 
@@ -35,7 +33,7 @@ public class MKPlacemark
     public MKPlacemark(CLPlacemark placemark) { }
     @Mapping("init")
     public MKPlacemark() { }
-    
+
     
     @Mapping("countryCode")
     public native String getCountryCode();
@@ -47,9 +45,9 @@ public class MKPlacemark
     public native String getTitle();
     @Mapping("subtitle")
     public native String getSubtitle();
+
     
     
-    
-    
-    
+
+
 }

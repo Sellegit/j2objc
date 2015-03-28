@@ -15,11 +15,9 @@ import apple.foundation.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 7.0 and later.
  */
-
 @Library("CoreBluetooth/CoreBluetooth.h")
 @Mapping("CBPeripheralManagerAuthorizationStatus")
 public final class CBPeripheralManagerAuthorizationStatus extends ObjCEnum {
@@ -32,6 +30,6 @@ public final class CBPeripheralManagerAuthorizationStatus extends ObjCEnum {
     public static final long Denied = 2L;
     @GlobalConstant("CBPeripheralManagerAuthorizationStatusAuthorized")
     public static final long Authorized = 3L;
-    
+
 
 }

@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h") @Mapping("NSSet")
 public class NSSet <T>
     extends NSObject 
@@ -36,13 +33,13 @@ public class NSSet <T>
     public NSSet(NSSet<?> set) { }
     @Mapping("initWithArray:")
     public NSSet(NSArray<?> array) { }
-    
+
     
     @Mapping("count")
     public native @MachineSizedUInt long getCount();
     @Mapping("allObjects")
     public native NSArray<T> getValues();
-    
+
     
     
     @Mapping("member:")
@@ -51,5 +48,5 @@ public class NSSet <T>
     public native NSEnumerator<T> objectEnumerator();
     @Mapping("anyObject")
     public native T any();
-    
+
 }

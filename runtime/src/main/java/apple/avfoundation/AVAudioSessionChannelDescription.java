@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 6.0 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h") @Mapping("AVAudioSessionChannelDescription")
 public class AVAudioSessionChannelDescription 
     extends NSObject 
@@ -34,7 +32,7 @@ public class AVAudioSessionChannelDescription
     
     @Mapping("init")
     public AVAudioSessionChannelDescription() { }
-    
+
     
     @Mapping("channelName")
     public native String getChannelName();
@@ -44,9 +42,9 @@ public class AVAudioSessionChannelDescription
     public native @MachineSizedUInt long getChannelNumber();
     @Mapping("channelLabel")
     public native @Representing("AudioChannelLabel") long getChannelLabel();
+
     
     
-    
-    
-    
+
+
 }

@@ -15,11 +15,9 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
 /**
  * @since Available in iOS 7.0 and later.
  */
-
 @Library("GameKit/GameKit.h") @Mapping("GKLeaderboardSet")
 public class GKLeaderboardSet 
     extends NSObject 
@@ -29,7 +27,7 @@ public class GKLeaderboardSet
     
     @Mapping("init")
     public GKLeaderboardSet() { }
-    
+
     
     @Mapping("title")
     public native String getTitle();
@@ -39,7 +37,7 @@ public class GKLeaderboardSet
     public native String getIdentifier();
     @Mapping("setIdentifier:")
     public native void setIdentifier(String v);
-    
+
     
     
     /**
@@ -56,5 +54,5 @@ public class GKLeaderboardSet
     public native void loadImage(@Block VoidBlock2<UIImage, NSError> completionHandler);
     @Mapping("encodeWithCoder:")
     public native void encode(NSCoder aCoder);
-    
+
 }

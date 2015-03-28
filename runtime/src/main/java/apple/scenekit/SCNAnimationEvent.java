@@ -20,9 +20,6 @@ import apple.spritekit.*;
 import apple.opengles.*;
 
 
-
-
-
 @Library("SceneKit/SceneKit.h") @Mapping("SCNAnimationEvent")
 public class SCNAnimationEvent 
     extends NSObject 
@@ -32,12 +29,12 @@ public class SCNAnimationEvent
     
     @Mapping("init")
     public SCNAnimationEvent() { }
+
+    
+
+
     
     
-    
-    
-    
-    
-    
-    
+
+
 }

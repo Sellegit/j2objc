@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h") @Mapping("NSDecimalNumberHandler")
 public class NSDecimalNumberHandler 
     extends NSObject 
@@ -33,10 +30,10 @@ public class NSDecimalNumberHandler
     public NSDecimalNumberHandler(@Representing("NSRoundingMode") long roundingMode, short scale, boolean exact, boolean overflow, boolean underflow, boolean divideByZero) { }
     @Mapping("init")
     public NSDecimalNumberHandler() { }
+
     
-    
-    
-    
+
+
     
     
     @Mapping("defaultDecimalNumberHandler")
@@ -49,5 +46,5 @@ public class NSDecimalNumberHandler
     public native NSDecimalNumber exceptionDuringOperation(Selector operation, @Representing("NSCalculationError") long error, NSDecimalNumber leftOperand, NSDecimalNumber rightOperand);
     @Mapping("encodeWithCoder:")
     public native void encode(NSCoder aCoder);
-    
+
 }

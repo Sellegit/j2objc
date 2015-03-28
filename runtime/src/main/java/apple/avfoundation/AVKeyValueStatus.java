@@ -20,9 +20,6 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
-
-
 @Library("AVFoundation/AVFoundation.h")
 @Mapping("AVKeyValueStatus")
 public final class AVKeyValueStatus extends ObjCEnum {
@@ -37,6 +34,6 @@ public final class AVKeyValueStatus extends ObjCEnum {
     public static final long Failed = 3L;
     @GlobalConstant("AVKeyValueStatusCancelled")
     public static final long Cancelled = 4L;
-    
+
 
 }

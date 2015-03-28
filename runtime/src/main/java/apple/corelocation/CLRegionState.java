@@ -16,11 +16,9 @@ import apple.addressbook.*;
 import apple.corebluetooth.*;
 
 
-
 /**
  * @since Available in iOS 7.0 and later.
  */
-
 @Library("CoreLocation/CoreLocation.h")
 @Mapping("CLRegionState")
 public final class CLRegionState extends ObjCEnum {
@@ -31,6 +29,6 @@ public final class CLRegionState extends ObjCEnum {
     public static final long Inside = 1L;
     @GlobalConstant("CLRegionStateOutside")
     public static final long Outside = 2L;
-    
+
 
 }

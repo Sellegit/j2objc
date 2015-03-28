@@ -13,7 +13,6 @@ import apple.coregraphics.*;
 import apple.coreservices.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("CoreText/CoreText.h")
@@ -31,5 +30,5 @@ public class CTTextTabOptions
      */
     @GlobalConstant("kCTTabColumnTerminatorsAttributeName")
     public static native CFString TerminatorsAttributeName();
-    
+
 }

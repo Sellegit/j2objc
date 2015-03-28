@@ -18,7 +18,6 @@ import apple.coremedia.*;
 import apple.security.*;
 import apple.dispatch.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("Foundation/Foundation.h")
@@ -29,7 +28,7 @@ public class NSZone
     
     
     protected NSZone() {}
-    
+
     
     
     
@@ -74,5 +73,5 @@ public class NSZone
     @Deprecated
     @GlobalFunction("NSRealMemoryAvailable")
     public static native @MachineSizedUInt long getRealMemoryAvailable();
-    
+
 }

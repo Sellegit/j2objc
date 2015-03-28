@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h") @Mapping("NSMutableCharacterSet")
 public class NSMutableCharacterSet 
     extends NSCharacterSet 
@@ -33,10 +30,10 @@ public class NSMutableCharacterSet
     public NSMutableCharacterSet(NSCoder aDecoder) { }
     @Mapping("init")
     public NSMutableCharacterSet() { }
+
     
-    
-    
-    
+
+
     
     
     @Mapping("addCharactersInRange:")
@@ -94,5 +91,5 @@ public class NSMutableCharacterSet
     public static native NSMutableCharacterSet create(NSData data);
     @Mapping("characterSetWithContentsOfFile:")
     public static native NSMutableCharacterSet createWithFile(String fName);
-    
+
 }

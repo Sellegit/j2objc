@@ -19,9 +19,6 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h")
 @Mapping("UITableViewCellAccessoryType")
 public final class UITableViewCellAccessoryType extends ObjCEnum {
@@ -39,6 +36,6 @@ public final class UITableViewCellAccessoryType extends ObjCEnum {
      */
     @GlobalConstant("UITableViewCellAccessoryDetailButton")
     public static final long DetailButton = 4L;
-    
+
 
 }

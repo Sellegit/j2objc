@@ -19,11 +19,9 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 3.0 and later.
  */
-
 @Library("Foundation/Foundation.h") @Mapping("NSValueTransformer")
 public class NSValueTransformer 
     extends NSObject 
@@ -33,10 +31,10 @@ public class NSValueTransformer
     
     @Mapping("init")
     public NSValueTransformer() { }
+
     
-    
-    
-    
+
+
     
     
     @Mapping("transformedValue:")
@@ -51,5 +49,5 @@ public class NSValueTransformer
     public static native NSArray<NSValueTransformer> getValueTransformers();
     @Mapping("allowsReverseTransformation")
     public static native boolean allowsReverseTransformation();
-    
+
 }

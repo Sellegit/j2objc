@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UITraitCollection")
 public class UITraitCollection 
     extends NSObject 
@@ -33,7 +31,7 @@ public class UITraitCollection
     
     @Mapping("init")
     public UITraitCollection() { }
-    
+
     
     @Mapping("userInterfaceIdiom")
     public native @Representing("UIUserInterfaceIdiom") long getUserInterfaceIdiom();
@@ -43,7 +41,7 @@ public class UITraitCollection
     public native @Representing("UIUserInterfaceSizeClass") long getHorizontalSizeClass();
     @Mapping("verticalSizeClass")
     public native @Representing("UIUserInterfaceSizeClass") long getVerticalSizeClass();
-    
+
     
     
     @Mapping("containsTraitsInCollection:")
@@ -60,5 +58,5 @@ public class UITraitCollection
     public static native UITraitCollection createWithVerticalSizeClass(@Representing("UIUserInterfaceSizeClass") long verticalSizeClass);
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
-    
+
 }

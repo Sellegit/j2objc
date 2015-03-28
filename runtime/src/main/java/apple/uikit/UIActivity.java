@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 6.0 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UIActivity")
 public class UIActivity 
     extends NSObject 
@@ -33,10 +31,10 @@ public class UIActivity
     
     @Mapping("init")
     public UIActivity() { }
+
     
-    
-    
-    
+
+
     
     
     @Mapping("activityType")
@@ -60,5 +58,5 @@ public class UIActivity
      */
     @Mapping("activityCategory")
     public static native @Representing("UIActivityCategory") long getActivityCategory();
-    
+
 }

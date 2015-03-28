@@ -19,11 +19,9 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 5.0 and later.
  */
-
 @Library("Foundation/Foundation.h") @Mapping("NSMetadataQueryResultGroup")
 public class NSMetadataQueryResultGroup 
     extends NSObject 
@@ -33,7 +31,7 @@ public class NSMetadataQueryResultGroup
     
     @Mapping("init")
     public NSMetadataQueryResultGroup() { }
-    
+
     
     @Mapping("attribute")
     public native NSMetadataItemAttribute getAttribute();
@@ -45,10 +43,10 @@ public class NSMetadataQueryResultGroup
     public native @MachineSizedUInt long getResultCount();
     @Mapping("results")
     public native NSArray<NSMetadataItem> getResults();
-    
+
     
     
     @Mapping("resultAtIndex:")
     public native NSMetadataItem getResult(@MachineSizedUInt long idx);
-    
+
 }

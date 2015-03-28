@@ -19,17 +19,14 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h") @Mapping("UIWebViewDelegate")
 public interface UIWebViewDelegate 
     extends NSObjectProtocol {
 
     
     
-    
-    
+
+
     
     @Mapping("webView:shouldStartLoadWithRequest:navigationType:")
     boolean shouldStartLoad(UIWebView webView, NSURLRequest request, @Representing("UIWebViewNavigationType") long navigationType);
@@ -39,7 +36,7 @@ public interface UIWebViewDelegate
     void didFinishLoad(UIWebView webView);
     @Mapping("webView:didFailLoadWithError:")
     void didFailLoad(UIWebView webView, NSError error);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

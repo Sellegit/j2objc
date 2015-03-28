@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 3.0 and later.
  */
-
 @Library("CoreData/CoreData.h") @Mapping("NSPropertyDescription")
 public class NSPropertyDescription 
     extends NSObject 
@@ -28,7 +26,7 @@ public class NSPropertyDescription
     
     @Mapping("init")
     public NSPropertyDescription() { }
-    
+
     
     @Mapping("entity")
     public native NSEntityDescription getEntity();
@@ -107,7 +105,7 @@ public class NSPropertyDescription
      */
     @Mapping("setRenamingIdentifier:")
     public native void setRenamingIdentifier(String v);
-    
+
     
     
     @Mapping("setValidationPredicates:withValidationWarnings:")
@@ -116,5 +114,5 @@ public class NSPropertyDescription
     public native void encode(NSCoder aCoder);
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
-    
+
 }

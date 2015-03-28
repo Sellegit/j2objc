@@ -15,21 +15,18 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
-
-
 @Library("MediaPlayer/MediaPlayer.h") @Mapping("MPPlayableContentDelegate")
 public interface MPPlayableContentDelegate 
     extends NSObjectProtocol {
 
     
     
-    
-    
+
+
     
     @Mapping("playableContentManager:initiatePlaybackOfContentItemAtIndexPath:completionHandler:")
     void initiatePlayback(MPPlayableContentManager contentManager, NSIndexPath indexPath, @Block VoidBlock1<NSError> completionHandler);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

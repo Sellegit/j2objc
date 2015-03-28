@@ -19,11 +19,9 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("Foundation/Foundation.h") @Mapping("NSLengthFormatter")
 public class NSLengthFormatter 
     extends NSFormatter 
@@ -35,7 +33,7 @@ public class NSLengthFormatter
     public NSLengthFormatter(NSCoder aDecoder) { }
     @Mapping("init")
     public NSLengthFormatter() { }
-    
+
     
     @Mapping("numberFormatter")
     public native NSNumberFormatter getNumberFormatter();
@@ -49,7 +47,7 @@ public class NSLengthFormatter
     public native boolean isForPersonHeightUse();
     @Mapping("setForPersonHeightUse:")
     public native void setForPersonHeightUse(boolean v);
-    
+
     
     
     @Mapping("stringFromValue:unit:")
@@ -60,5 +58,5 @@ public class NSLengthFormatter
     public native String formatUnit(double value, @Representing("NSLengthFormatterUnit") long unit);
     @Mapping("unitStringFromMeters:usedUnit:")
     public native String formatUnitMeters(double numberInMeters, Todo unitp);
-    
+
 }

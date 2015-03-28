@@ -20,9 +20,6 @@ import apple.spritekit.*;
 import apple.opengles.*;
 
 
-
-
-
 @Library("SceneKit/SceneKit.h") @Mapping("SCNPhysicsSliderJoint")
 public class SCNPhysicsSliderJoint 
     extends SCNPhysicsBehavior 
@@ -32,7 +29,7 @@ public class SCNPhysicsSliderJoint
     
     @Mapping("init")
     public SCNPhysicsSliderJoint() { }
-    
+
     
     @Mapping("bodyA")
     public native SCNPhysicsBody getBodyA();
@@ -86,12 +83,12 @@ public class SCNPhysicsSliderJoint
     public native @MachineSizedFloat double getMotorMaximumTorque();
     @Mapping("setMotorMaximumTorque:")
     public native void setMotorMaximumTorque(@MachineSizedFloat double v);
-    
+
     
     
     @Mapping("jointWithBodyA:axisA:anchorA:bodyB:axisB:anchorB:")
     public static native SCNPhysicsSliderJoint create(SCNPhysicsBody bodyA, SCNVector3 axisA, SCNVector3 anchorA, SCNPhysicsBody bodyB, SCNVector3 axisB, SCNVector3 anchorB);
     @Mapping("jointWithBody:axis:anchor:")
     public static native SCNPhysicsSliderJoint create(SCNPhysicsBody body, SCNVector3 axis, SCNVector3 anchor);
-    
+
 }

@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Mapping("NSFastEnumerationState") @Library("Foundation/Foundation.h")
 public class NSFastEnumerationState 
     extends Struct 
@@ -37,6 +34,6 @@ public class NSFastEnumerationState
     public native Todo getItemsPtr();
     @DotMapping("mutationsPtr")
     public native Todo getMutationsPtr();
-    
+
     
 }

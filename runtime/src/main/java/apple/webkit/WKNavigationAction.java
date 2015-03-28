@@ -15,11 +15,9 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("WebKit/WebKit.h") @Mapping("WKNavigationAction")
 public class WKNavigationAction 
     extends NSObject 
@@ -29,7 +27,7 @@ public class WKNavigationAction
     
     @Mapping("init")
     public WKNavigationAction() { }
-    
+
     
     @Mapping("sourceFrame")
     public native WKFrameInfo getSourceFrame();
@@ -39,9 +37,9 @@ public class WKNavigationAction
     public native @Representing("WKNavigationType") long getNavigationType();
     @Mapping("request")
     public native NSURLRequest getRequest();
+
     
     
-    
-    
-    
+
+
 }

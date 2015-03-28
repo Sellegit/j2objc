@@ -19,9 +19,6 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h")
 @Mapping("UIImagePickerControllerSourceType")
 public final class UIImagePickerControllerSourceType extends ObjCEnum {
@@ -32,6 +29,6 @@ public final class UIImagePickerControllerSourceType extends ObjCEnum {
     public static final long Camera = 1L;
     @GlobalConstant("UIImagePickerControllerSourceTypeSavedPhotosAlbum")
     public static final long SavedPhotosAlbum = 2L;
-    
+
 
 }

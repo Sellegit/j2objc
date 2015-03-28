@@ -17,9 +17,6 @@ import apple.corevideo.*;
 import apple.imageio.*;
 
 
-
-
-
 @Library("CoreImage/CoreImage.h") @Mapping("CIQRCodeFeature")
 public class CIQRCodeFeature 
     extends CIFeature 
@@ -29,7 +26,7 @@ public class CIQRCodeFeature
     
     @Mapping("init")
     public CIQRCodeFeature() { }
-    
+
     
     @Mapping("bounds")
     public native CGRect getBounds();
@@ -43,9 +40,9 @@ public class CIQRCodeFeature
     public native CGPoint getBottomRight();
     @Mapping("messageString")
     public native String getMessageString();
+
     
     
-    
-    
-    
+
+
 }

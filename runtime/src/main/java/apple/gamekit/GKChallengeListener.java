@@ -15,17 +15,14 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
-
-
 @Library("GameKit/GameKit.h") @Mapping("GKChallengeListener")
 public interface GKChallengeListener 
     extends NSObjectProtocol {
 
     
     
-    
-    
+
+
     
     /**
      * @since Available in iOS 7.0 and later.
@@ -47,7 +44,7 @@ public interface GKChallengeListener
      */
     @Mapping("player:issuedChallengeWasCompleted:byFriend:")
     void issuedChallengeWasCompleted(GKPlayer player, GKChallenge challenge, GKPlayer friendPlayer);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

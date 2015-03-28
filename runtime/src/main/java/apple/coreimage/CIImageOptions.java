@@ -16,7 +16,6 @@ import apple.opengles.*;
 import apple.corevideo.*;
 import apple.imageio.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("CoreImage/CoreImage.h")
@@ -36,5 +35,5 @@ public class CIImageOptions
      */
     @GlobalConstant("kCIImageProperties")
     public static native CFString PropertiesKey();
-    
+
 }

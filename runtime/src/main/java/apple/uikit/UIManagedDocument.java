@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 5.0 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UIManagedDocument")
 public class UIManagedDocument 
     extends UIDocument 
@@ -35,7 +33,7 @@ public class UIManagedDocument
     public UIManagedDocument(NSURL url) { }
     @Mapping("init")
     public UIManagedDocument() { }
-    
+
     
     @Mapping("managedObjectContext")
     public native NSManagedObjectContext getManagedObjectContext();
@@ -49,7 +47,7 @@ public class UIManagedDocument
     public native String getModelConfiguration();
     @Mapping("setModelConfiguration:")
     public native void setModelConfiguration(String v);
-    
+
     
     
     @Mapping("configurePersistentStoreCoordinatorForURL:ofType:modelConfiguration:storeOptions:error:")
@@ -64,5 +62,5 @@ public class UIManagedDocument
     public native boolean writeAdditionalContent(Object content, NSURL absoluteURL, NSURL absoluteOriginalContentsURL, Todo error);
     @Mapping("persistentStoreName")
     public static native String getPersistentStoreName();
-    
+
 }

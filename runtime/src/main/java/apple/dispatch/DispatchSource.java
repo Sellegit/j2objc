@@ -12,7 +12,6 @@ import apple.corefoundation.*;
 import apple.coregraphics.*;
 import apple.coreservices.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("dispatch/dispatch.h")
@@ -37,10 +36,10 @@ public class DispatchSource
     public static final int VNODE_RENAME = 0x20;
     public static final int VNODE_REVOKE = 0x40;
     public static final int TIMER_STRICT = 0x1;
-    
+
     
     protected DispatchSource() {}
-    
+
     
     
     
@@ -99,5 +98,5 @@ public class DispatchSource
      */
     @GlobalFunction("dispatch_source_set_registration_handler")
     public static native void setRegistrationHandler(DispatchSource source, @Block Runnable handler);
-    
+
 }

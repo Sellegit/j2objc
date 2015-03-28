@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h")
 @Mapping("NSCalendarOptions")
 public final class NSCalendarOptions extends ObjCEnum {
@@ -63,6 +60,6 @@ public final class NSCalendarOptions extends ObjCEnum {
      */
     @GlobalConstant("NSCalendarMatchLast")
     public static final long MatchLast = 8192L;
-    
+
 
 }

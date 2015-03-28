@@ -20,9 +20,6 @@ import apple.spritekit.*;
 import apple.opengles.*;
 
 
-
-
-
 @Library("SceneKit/SceneKit.h") @Mapping("SCNSceneSource")
 public class SCNSceneSource 
     extends NSObject 
@@ -36,13 +33,13 @@ public class SCNSceneSource
     public SCNSceneSource(NSData data, NSDictionary<?, ?> options) { }
     @Mapping("init")
     public SCNSceneSource() { }
-    
+
     
     @Mapping("url")
     public native NSURL getUrl();
     @Mapping("data")
     public native NSData getData();
-    
+
     
     
     @Mapping("sceneWithOptions:error:")
@@ -55,5 +52,5 @@ public class SCNSceneSource
     public static native SCNSceneSource create(NSURL url, NSDictionary<?, ?> options);
     @Mapping("sceneSourceWithData:options:")
     public static native SCNSceneSource create(NSData data, NSDictionary<?, ?> options);
-    
+
 }

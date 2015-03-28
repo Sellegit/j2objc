@@ -20,9 +20,6 @@ import apple.spritekit.*;
 import apple.opengles.*;
 
 
-
-
-
 @Library("SceneKit/SceneKit.h") @Mapping("SCNTube")
 public class SCNTube 
     extends SCNGeometry 
@@ -32,7 +29,7 @@ public class SCNTube
     
     @Mapping("init")
     public SCNTube() { }
-    
+
     
     @Mapping("innerRadius")
     public native @MachineSizedFloat double getInnerRadius();
@@ -54,10 +51,10 @@ public class SCNTube
     public native @MachineSizedSInt long getHeightSegmentCount();
     @Mapping("setHeightSegmentCount:")
     public native void setHeightSegmentCount(@MachineSizedSInt long v);
-    
+
     
     
     @Mapping("tubeWithInnerRadius:outerRadius:height:")
     public static native SCNTube create(@MachineSizedFloat double innerRadius, @MachineSizedFloat double outerRadius, @MachineSizedFloat double height);
-    
+
 }

@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h")
 @Mapping("NSStringEnumerationOptions")
 public final class NSStringEnumerationOptions extends ObjCEnum {
@@ -42,6 +39,6 @@ public final class NSStringEnumerationOptions extends ObjCEnum {
     public static final long SubstringNotRequired = 512L;
     @GlobalConstant("NSStringEnumerationLocalized")
     public static final long Localized = 1024L;
-    
+
 
 }

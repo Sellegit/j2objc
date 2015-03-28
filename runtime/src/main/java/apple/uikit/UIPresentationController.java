@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UIPresentationController")
 public class UIPresentationController 
     extends NSObject 
@@ -35,7 +33,7 @@ public class UIPresentationController
     public UIPresentationController(UIViewController presentedViewController, UIViewController presentingViewController) { }
     @Mapping("init")
     public UIPresentationController() { }
-    
+
     
     @Mapping("presentingViewController")
     public native UIViewController getPresentingViewController();
@@ -55,7 +53,7 @@ public class UIPresentationController
     public native void setOverrideTraitCollection(UITraitCollection v);
     @Mapping("traitCollection")
     public native UITraitCollection getTraitCollection();
-    
+
     
     
     @Mapping("adaptivePresentationStyle")
@@ -82,5 +80,5 @@ public class UIPresentationController
     public native void dismissalTransitionDidEnd(boolean completed);
     @Mapping("traitCollectionDidChange:")
     public native void traitCollectionDidChange(UITraitCollection previousTraitCollection);
-    
+
 }

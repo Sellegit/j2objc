@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h") @Mapping("NSPropertyListSerialization")
 public class NSPropertyListSerialization 
     extends NSObject 
@@ -31,10 +28,10 @@ public class NSPropertyListSerialization
     
     @Mapping("init")
     public NSPropertyListSerialization() { }
+
     
-    
-    
-    
+
+
     
     
     @Mapping("propertyList:isValidForFormat:")
@@ -59,5 +56,5 @@ public class NSPropertyListSerialization
      */
     @Mapping("propertyListWithStream:options:format:error:")
     public static native NSPropertyList getPropertyListFromStream(NSInputStream stream, @MachineSizedUInt long opt, Todo format, Todo error);
-    
+
 }

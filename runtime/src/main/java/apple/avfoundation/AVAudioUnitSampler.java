@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h") @Mapping("AVAudioUnitSampler")
 public class AVAudioUnitSampler 
     extends AVAudioUnitMIDIInstrument 
@@ -36,7 +34,7 @@ public class AVAudioUnitSampler
     public AVAudioUnitSampler(AudioComponentDescription description) { }
     @Mapping("init")
     public AVAudioUnitSampler() { }
-    
+
     
     @Mapping("stereoPan")
     public native float getStereoPan();
@@ -50,7 +48,7 @@ public class AVAudioUnitSampler
     public native float getGlobalTuning();
     @Mapping("setGlobalTuning:")
     public native void setGlobalTuning(float v);
-    
+
     
     
     @Mapping("loadSoundBankInstrumentAtURL:program:bankMSB:bankLSB:error:")
@@ -59,5 +57,5 @@ public class AVAudioUnitSampler
     public native boolean loadInstrument(NSURL instrumentURL, Todo outError);
     @Mapping("loadAudioFilesAtURLs:error:")
     public native boolean loadAudioFiles(NSArray<?> audioFiles, Todo outError);
-    
+
 }

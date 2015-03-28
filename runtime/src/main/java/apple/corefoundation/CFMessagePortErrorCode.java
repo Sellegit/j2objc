@@ -15,9 +15,6 @@ import apple.dispatch.*;
 import apple.foundation.*;
 
 
-
-
-
 @Library("CoreFoundation/CoreFoundation.h")
 @Mapping("CFMessagePortErrorCode")
 public final class CFMessagePortErrorCode extends ObjCEnum {
@@ -34,6 +31,6 @@ public final class CFMessagePortErrorCode extends ObjCEnum {
     public static final long TransportError = -4L;
     @GlobalConstant("kCFMessagePortBecameInvalidError")
     public static final long BecameInvalidError = -5L;
-    
+
 
 }

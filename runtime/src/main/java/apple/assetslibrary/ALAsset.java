@@ -15,11 +15,9 @@ import apple.foundation.*;
 import apple.imageio.*;
 
 
-
 /**
  * @since Available in iOS 4.0 and later.
  */
-
 @Library("AssetsLibrary/AssetsLibrary.h") @Mapping("ALAsset")
 public class ALAsset 
     extends NSObject 
@@ -29,7 +27,7 @@ public class ALAsset
     
     @Mapping("init")
     public ALAsset() { }
-    
+
     
     /**
      * @since Available in iOS 5.0 and later.
@@ -41,7 +39,7 @@ public class ALAsset
      */
     @Mapping("isEditable")
     public native boolean isEditable();
-    
+
     
     
     /**
@@ -49,7 +47,7 @@ public class ALAsset
      */
     @GlobalConstant("ALErrorInvalidProperty")
     public static native NSString getInvalidProperty();
-    
+
     @Mapping("valueForProperty:")
     public native Object getValue(String property);
     @Mapping("defaultRepresentation")
@@ -63,5 +61,5 @@ public class ALAsset
      */
     @Mapping("aspectRatioThumbnail")
     public native CGImage getAspectRatioThumbnail();
-    
+
 }

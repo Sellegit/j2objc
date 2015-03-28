@@ -13,7 +13,6 @@ import apple.coregraphics.*;
 import apple.coreservices.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Mapping("CFNetServiceBrowserRef") @Library("CFNetwork/CFNetwork.h")
@@ -24,7 +23,7 @@ public class CFNetServiceBrowser
     
     
     protected CFNetServiceBrowser() {}
-    
+
     
     
     
@@ -68,5 +67,5 @@ public class CFNetServiceBrowser
      */
     @GlobalFunction("CFNetServiceBrowserUnscheduleFromRunLoop")
     public static native void unschedule(CFNetServiceBrowser browser, CFRunLoop runLoop, CFString runLoopMode);
-    
+
 }

@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("HomeKit/HomeKit.h")
 @Mapping("HMCharacteristicValueTemperatureUnit")
 public final class HMCharacteristicValueTemperatureUnit extends ObjCEnum {
@@ -27,6 +25,6 @@ public final class HMCharacteristicValueTemperatureUnit extends ObjCEnum {
     public static final long Celsius = 0L;
     @GlobalConstant("HMCharacteristicValueTemperatureUnitFahrenheit")
     public static final long Fahrenheit = 1L;
-    
+
 
 }

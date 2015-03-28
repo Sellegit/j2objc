@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 import apple.imageio.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("AssetsLibrary/AssetsLibrary.h")
@@ -32,5 +31,5 @@ public class ALAssetsLibraryError
      */
     @GlobalConstant("ALAssetsLibraryErrorDomain")
     public static native String getClassDomain();
-    
+
 }

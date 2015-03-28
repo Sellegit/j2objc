@@ -17,7 +17,6 @@ import apple.coreaudio.*;
 import apple.coreanimation.*;
 import apple.corevideo.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Mapping("CMSimpleQueueRef") @Library("CoreMedia/CoreMedia.h")
@@ -28,7 +27,7 @@ public class CMSimpleQueue
     
     
     protected CMSimpleQueue() {}
-    
+
     
     
     
@@ -72,5 +71,5 @@ public class CMSimpleQueue
      */
     @GlobalFunction("CMSimpleQueueGetCount")
     public static native CMSimpleQueueError getCount(CMSimpleQueue queue);
-    
+
 }

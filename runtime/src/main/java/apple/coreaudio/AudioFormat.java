@@ -14,9 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
-
-
 @Library("CoreAudio/CoreAudioTypes.h")
 @Mapping("AudioFormat")
 public final class AudioFormat extends ObjCEnum {
@@ -93,6 +90,6 @@ public final class AudioFormat extends ObjCEnum {
     public static final long MicrosoftGSM = 1836253233L;
     @GlobalConstant("kAudioFormatAES3")
     public static final long AES3 = 1634038579L;
-    
+
 
 }

@@ -19,9 +19,6 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h") @Mapping("UITextInputTraits")
 public interface UITextInputTraits 
     extends NSObjectProtocol {
@@ -66,10 +63,10 @@ public interface UITextInputTraits
     boolean isSecureTextEntry();
     @Mapping("setSecureTextEntry:")
     void setSecureTextEntry(boolean v);
+
     
-    
-    
-    
+
+
     /*<adapter>*/
     /*</adapter>*/
 }

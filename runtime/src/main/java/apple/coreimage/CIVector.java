@@ -17,9 +17,6 @@ import apple.corevideo.*;
 import apple.imageio.*;
 
 
-
-
-
 @Library("CoreImage/CoreImage.h") @Mapping("CIVector")
 public class CIVector 
     extends NSObject 
@@ -54,10 +51,10 @@ public class CIVector
     public CIVector(String representation) { }
     @Mapping("init")
     public CIVector() { }
+
     
-    
-    
-    
+
+
     
     
     @Mapping("valueAtIndex:")
@@ -93,5 +90,5 @@ public class CIVector
     public native Object copyWithZone$(NSZone zone);
     @Mapping("encodeWithCoder:")
     public native void encode(NSCoder aCoder);
-    
+
 }

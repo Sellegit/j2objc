@@ -16,11 +16,9 @@ import apple.uikit.*;
 import apple.accounts.*;
 
 
-
 /**
  * @since Available in iOS 3.0 and later.
  */
-
 @Library("StoreKit/StoreKit.h") @Mapping("SKProductsRequest")
 public class SKProductsRequest 
     extends SKRequest 
@@ -35,7 +33,7 @@ public class SKProductsRequest
     public SKProductsRequest(NSSet<?> productIdentifiers) { }
     @Mapping("init")
     public SKProductsRequest() { }
-    
+
     
     /**
      * @since Available in iOS 3.0 and later.
@@ -47,9 +45,9 @@ public class SKProductsRequest
      */
     @Mapping("setDelegate:")
     public native void setDelegate(SKProductsRequestDelegate v);
+
     
     
-    
-    
-    
+
+
 }

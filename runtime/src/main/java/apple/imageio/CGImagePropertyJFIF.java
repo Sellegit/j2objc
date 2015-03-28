@@ -13,7 +13,6 @@ import apple.coregraphics.*;
 import apple.coreservices.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("ImageIO/ImageIO.h")
@@ -51,5 +50,5 @@ public class CGImagePropertyJFIF
      */
     @GlobalConstant("kCGImagePropertyJFIFIsProgressive")
     public static native CFString IsProgressiveKey();
-    
+
 }

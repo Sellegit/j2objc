@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 import apple.uikit.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -25,8 +24,8 @@ public abstract class GKGameCenterControllerDelegateAdapter
     
     
     
-    
-    
+
+
     
     
     /**
@@ -34,5 +33,5 @@ public abstract class GKGameCenterControllerDelegateAdapter
      */
     @NotImplemented("gameCenterViewControllerDidFinish:")
     public void didFinish(GKGameCenterViewController gameCenterViewController) { throw new UnsupportedOperationException(); }
-    
+
 }

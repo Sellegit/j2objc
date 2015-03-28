@@ -16,11 +16,9 @@ import apple.addressbook.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 4.0 and later.
  */
-
 @Library("EventKit/EventKit.h") @Mapping("EKParticipant")
 public class EKParticipant 
     extends EKObject 
@@ -30,7 +28,7 @@ public class EKParticipant
     
     @Mapping("init")
     public EKParticipant() { }
-    
+
     
     @Mapping("URL")
     public native NSURL getURL();
@@ -47,15 +45,15 @@ public class EKParticipant
      */
     @Mapping("isCurrentUser")
     public native boolean isCurrentUser();
-    
+
     
     
     /**
      * @since Available in iOS 4.0 and later.
      */
     @Mapping("ABRecordWithAddressBook:")
-    public native ABRecord getAddessBookRecord(ABAddressBook addressBook);
+    public native ABRecordRef getAddessBookRecord(ABAddressBookRef addressBook);
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
-    
+
 }

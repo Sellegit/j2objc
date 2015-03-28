@@ -19,11 +19,9 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 3.2 and later.
  */
-
 @Library("Foundation/Foundation.h") @Mapping("NSAttributedString")
 public class NSAttributedString 
     extends NSObject 
@@ -39,13 +37,13 @@ public class NSAttributedString
     public NSAttributedString(String str, NSDictionary<?, ?> attrs) { }
     @Mapping("initWithAttributedString:")
     public NSAttributedString(NSAttributedString attrStr) { }
-    
+
     
     @Mapping("string")
     public native String getString();
     @Mapping("length")
     public native @MachineSizedUInt long length();
-    
+
     
     
     @Mapping("attributesAtIndex:effectiveRange:")
@@ -62,5 +60,5 @@ public class NSAttributedString
     public native boolean equalsTo(NSAttributedString other);
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
-    
+
 }

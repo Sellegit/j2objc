@@ -20,9 +20,6 @@ import apple.spritekit.*;
 import apple.opengles.*;
 
 
-
-
-
 @Library("SceneKit/SceneKit.h") @Mapping("SCNTechnique")
 public class SCNTechnique 
     extends NSObject 
@@ -32,11 +29,11 @@ public class SCNTechnique
     
     @Mapping("init")
     public SCNTechnique() { }
-    
+
     
     @Mapping("dictionaryRepresentation")
     public native NSDictionary<?, ?> getDictionaryRepresentation();
-    
+
     
     
     @Mapping("techniqueWithDictionary:")
@@ -63,5 +60,5 @@ public class SCNTechnique
     public native void removeAnimation(String key, @MachineSizedFloat double duration);
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
-    
+
 }

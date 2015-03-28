@@ -19,11 +19,9 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 4.0 and later.
  */
-
 @Library("Foundation/Foundation.h")
 @Mapping("NSDataSearchOptions")
 public final class NSDataSearchOptions extends ObjCEnum {
@@ -32,6 +30,6 @@ public final class NSDataSearchOptions extends ObjCEnum {
     public static final long Backwards = 1L;
     @GlobalConstant("NSDataSearchAnchored")
     public static final long Anchored = 2L;
-    
+
 
 }

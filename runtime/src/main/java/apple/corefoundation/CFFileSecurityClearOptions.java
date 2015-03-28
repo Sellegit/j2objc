@@ -15,11 +15,9 @@ import apple.dispatch.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 6.0 and later.
  */
-
 @Library("CoreFoundation/CoreFoundation.h")
 @Mapping("CFFileSecurityClearOptions")
 public final class CFFileSecurityClearOptions extends ObjCEnum {
@@ -36,6 +34,6 @@ public final class CFFileSecurityClearOptions extends ObjCEnum {
     public static final long GroupUUID = 16L;
     @GlobalConstant("kCFFileSecurityClearAccessControlList")
     public static final long AccessControlList = 32L;
-    
+
 
 }

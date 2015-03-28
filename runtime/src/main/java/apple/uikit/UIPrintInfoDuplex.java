@@ -19,9 +19,6 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h")
 @Mapping("UIPrintInfoDuplex")
 public final class UIPrintInfoDuplex extends ObjCEnum {
@@ -32,6 +29,6 @@ public final class UIPrintInfoDuplex extends ObjCEnum {
     public static final long LongEdge = 1L;
     @GlobalConstant("UIPrintInfoDuplexShortEdge")
     public static final long ShortEdge = 2L;
-    
+
 
 }

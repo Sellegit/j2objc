@@ -15,11 +15,9 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
 /**
  * @since Available in iOS 3.0 and later.
  */
-
 @Library("MediaPlayer/MediaPlayer.h") @Mapping("MPMediaPredicate")
 public class MPMediaPredicate 
     extends NSObject 
@@ -29,12 +27,12 @@ public class MPMediaPredicate
     
     @Mapping("init")
     public MPMediaPredicate() { }
+
+    
+
+
     
     
-    
-    
-    
-    
-    
-    
+
+
 }

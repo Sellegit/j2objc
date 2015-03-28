@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 4.2 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UIPrintInteractionController")
 public class UIPrintInteractionController 
     extends NSObject 
@@ -33,7 +31,7 @@ public class UIPrintInteractionController
     
     @Mapping("init")
     public UIPrintInteractionController() { }
-    
+
     
     @Mapping("printInfo")
     public native UIPrintInfo getPrintInfo();
@@ -85,7 +83,7 @@ public class UIPrintInteractionController
     public native NSArray<?> getPrintingItems();
     @Mapping("setPrintingItems:")
     public native void setPrintingItems(NSArray<?> v);
-    
+
     
     
     @Mapping("dismissAnimated:")
@@ -100,5 +98,5 @@ public class UIPrintInteractionController
     public static native boolean canPrint(NSData data);
     @Mapping("sharedPrintController")
     public static native UIPrintInteractionController getSharedPrintController();
-    
+
 }

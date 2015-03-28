@@ -19,17 +19,14 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h") @Mapping("NSURLSessionDelegate")
 public interface NSURLSessionDelegate 
     extends NSObjectProtocol {
 
     
     
-    
-    
+
+
     
     @Mapping("URLSession:didBecomeInvalidWithError:")
     void didBecomeInvalid(NSURLSession session, NSError error);
@@ -40,7 +37,7 @@ public interface NSURLSessionDelegate
      */
     @Mapping("URLSessionDidFinishEventsForBackgroundURLSession:")
     void didFinishEvents(NSURLSession session);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

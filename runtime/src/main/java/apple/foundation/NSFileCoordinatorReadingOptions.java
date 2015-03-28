@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h")
 @Mapping("NSFileCoordinatorReadingOptions")
 public final class NSFileCoordinatorReadingOptions extends ObjCEnum {
@@ -40,6 +37,6 @@ public final class NSFileCoordinatorReadingOptions extends ObjCEnum {
      */
     @GlobalConstant("NSFileCoordinatorReadingForUploading")
     public static final long ForUploading = 8L;
-    
+
 
 }

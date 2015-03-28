@@ -15,25 +15,23 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
 /**
  * @since Available in iOS 4.1 and later.
  * @deprecated Deprecated in iOS 7.0.
  */
 @Deprecated
-
 @Library("GameKit/GameKit.h") @Mapping("GKAchievementViewControllerDelegate")
 public interface GKAchievementViewControllerDelegate 
     extends NSObjectProtocol {
 
     
     
-    
-    
+
+
     
     @Mapping("achievementViewControllerDidFinish:")
     void didFinish(GKAchievementViewController viewController);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

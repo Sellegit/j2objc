@@ -17,11 +17,9 @@ import apple.uikit.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 5.0 and later.
  */
-
 @Library("GLKit/GLKit.h")
 @Mapping("GLKFogMode")
 public final class GLKFogMode extends ObjCEnum {
@@ -32,6 +30,6 @@ public final class GLKFogMode extends ObjCEnum {
     public static final long Exp2 = 1L;
     @GlobalConstant("GLKFogModeLinear")
     public static final long Linear = 2L;
-    
+
 
 }

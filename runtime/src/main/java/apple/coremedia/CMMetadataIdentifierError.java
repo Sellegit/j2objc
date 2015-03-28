@@ -18,9 +18,6 @@ import apple.coreanimation.*;
 import apple.corevideo.*;
 
 
-
-
-
 @Library("CoreMedia/CoreMedia.h")
 @Mapping("CMMetadataIdentifierError")
 public final class CMMetadataIdentifierError extends ObjCEnum {
@@ -43,6 +40,6 @@ public final class CMMetadataIdentifierError extends ObjCEnum {
     public static final long BadIdentifier = -16307L;
     @GlobalConstant("kCMMetadataIdentifierError_NoKeyValueAvailable")
     public static final long NoKeyValueAvailable = -16308L;
-    
+
 
 }

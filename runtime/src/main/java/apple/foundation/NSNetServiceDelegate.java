@@ -19,17 +19,14 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h") @Mapping("NSNetServiceDelegate")
 public interface NSNetServiceDelegate 
     extends NSObjectProtocol {
 
     
     
-    
-    
+
+
     
     @Mapping("netServiceWillPublish:")
     void willPublish(NSNetService sender);
@@ -52,7 +49,7 @@ public interface NSNetServiceDelegate
      */
     @Mapping("netService:didAcceptConnectionWithInputStream:outputStream:")
     void didAcceptConnection(NSNetService sender, NSInputStream inputStream, NSOutputStream outputStream);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

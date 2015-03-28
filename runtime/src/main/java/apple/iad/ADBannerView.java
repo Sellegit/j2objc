@@ -18,11 +18,9 @@ import apple.mediaplayer.*;
 import apple.avkit.*;
 
 
-
 /**
  * @since Available in iOS 4.0 and later.
  */
-
 @Library("iAd/iAd.h") @Mapping("ADBannerView")
 public class ADBannerView 
     extends UIView 
@@ -39,7 +37,7 @@ public class ADBannerView
     public ADBannerView(CGRect frame) { }
     @Mapping("init")
     public ADBannerView() { }
-    
+
     
     /**
      * @since Available in iOS 6.0 and later.
@@ -86,7 +84,7 @@ public class ADBannerView
     @Deprecated
     @Mapping("setCurrentContentSizeIdentifier:")
     public native void setCurrentContentSizeIdentifier(ADBannerContentSizeIdentifier v);
-    
+
     
     
     @Mapping("cancelBannerViewAction")
@@ -98,5 +96,5 @@ public class ADBannerView
     @Deprecated
     @Mapping("sizeFromBannerContentSizeIdentifier:")
     public static native CGSize getSizeForIdentifier(String contentSizeIdentifier);
-    
+
 }

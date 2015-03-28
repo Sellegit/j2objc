@@ -17,9 +17,6 @@ import apple.coreaudio.*;
 import apple.coremedia.*;
 
 
-
-
-
 @Library("AudioToolbox/AudioToolbox.h")
 @Mapping("AudioFileRegionFlag")
 public final class AudioFileRegionFlag extends ObjCEnum {
@@ -30,6 +27,6 @@ public final class AudioFileRegionFlag extends ObjCEnum {
     public static final long PlayForward = 2L;
     @GlobalConstant("kAudioFileRegionFlag_PlayBackward")
     public static final long PlayBackward = 4L;
-    
+
 
 }

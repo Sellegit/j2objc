@@ -19,9 +19,6 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h")
 @Mapping("NSLayoutAttribute")
 public final class NSLayoutAttribute extends ObjCEnum {
@@ -97,6 +94,6 @@ public final class NSLayoutAttribute extends ObjCEnum {
     public static final long CenterYWithinMargins = 20L;
     @GlobalConstant("NSLayoutAttributeNotAnAttribute")
     public static final long NotAnAttribute = 0L;
-    
+
 
 }

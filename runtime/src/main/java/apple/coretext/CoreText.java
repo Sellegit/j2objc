@@ -13,7 +13,6 @@ import apple.coregraphics.*;
 import apple.coreservices.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("CoreText/CoreText.h")
@@ -236,11 +235,11 @@ public class CoreText
      */
     @GlobalConstant("kCTRubyAnnotationAttributeName")
     public static native CFString Value__kCTRubyAnnotationAttributeName();
-    
+
     /**
      * @since Available in iOS 3.2 and later.
      */
     @GlobalFunction("CTGetCoreTextVersion")
     public static native int function__CTGetCoreTextVersion();
-    
+
 }

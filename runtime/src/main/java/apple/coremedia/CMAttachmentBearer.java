@@ -17,7 +17,6 @@ import apple.coreaudio.*;
 import apple.coreanimation.*;
 import apple.corevideo.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Mapping("CMAttachmentBearerRef") @Library("CoreMedia/CoreMedia.h")
@@ -28,7 +27,7 @@ public class CMAttachmentBearer
     
     
     protected CMAttachmentBearer() {}
-    
+
     
     
     
@@ -67,5 +66,5 @@ public class CMAttachmentBearer
      */
     @GlobalFunction("CMPropagateAttachments")
     public static native void propagateAttachments(CMAttachmentBearer source, CMAttachmentBearer destination);
-    
+
 }

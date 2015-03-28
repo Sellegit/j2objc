@@ -19,7 +19,6 @@ import apple.glkit.*;
 import apple.spritekit.*;
 import apple.opengles.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -38,9 +37,9 @@ public abstract class SCNShadableAdapter
     public SCNProgram getProgram() { throw new UnsupportedOperationException(); }
     @Mapping("setProgram:")
     public void setProgram(SCNProgram v) { throw new UnsupportedOperationException(); }
+
     
     
-    
-    
-    
+
+
 }

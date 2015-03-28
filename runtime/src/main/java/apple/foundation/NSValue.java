@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h") @Mapping("NSValue")
 public class NSValue 
     extends NSObject 
@@ -33,7 +30,7 @@ public class NSValue
     public NSValue(NSCoder aDecoder) { }
     @Mapping("init")
     public NSValue() { }
-    
+
     
     @Mapping("objCType")
     public native Todo objCType();
@@ -41,7 +38,7 @@ public class NSValue
     public native Object objectValue();
     @Mapping("rangeValue")
     public native NSRange rangeValue();
-    
+
     
     
     @Mapping("getValue:")
@@ -58,5 +55,5 @@ public class NSValue
     public static native NSValue valueOf(NSRange range);
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
-    
+
 }

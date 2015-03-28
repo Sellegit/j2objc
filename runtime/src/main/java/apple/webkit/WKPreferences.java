@@ -15,11 +15,9 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("WebKit/WebKit.h") @Mapping("WKPreferences")
 public class WKPreferences 
     extends NSObject 
@@ -29,7 +27,7 @@ public class WKPreferences
     
     @Mapping("init")
     public WKPreferences() { }
-    
+
     
     @Mapping("minimumFontSize")
     public native @MachineSizedFloat double getMinimumFontSize();
@@ -43,9 +41,9 @@ public class WKPreferences
     public native boolean javaScriptCanOpenWindowsAutomatically();
     @Mapping("setJavaScriptCanOpenWindowsAutomatically:")
     public native void setJavaScriptCanOpenWindowsAutomatically(boolean v);
+
     
     
-    
-    
-    
+
+
 }

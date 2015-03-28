@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 4.2 and later.
  */
-
 @Library("CoreMIDI/CoreMIDI.h") @Mapping("MIDINetworkHost")
 public class MIDINetworkHost 
     extends NSObject 
@@ -28,7 +26,7 @@ public class MIDINetworkHost
     
     @Mapping("init")
     public MIDINetworkHost() { }
-    
+
     
     @Mapping("name")
     public native String getName();
@@ -40,7 +38,7 @@ public class MIDINetworkHost
     public native String getNetServiceName();
     @Mapping("netServiceDomain")
     public native String getNetServiceDomain();
-    
+
     
     
     @Mapping("hasSameAddressAs:")
@@ -51,5 +49,5 @@ public class MIDINetworkHost
     public static native MIDINetworkHost create(String name, NSNetService netService);
     @Mapping("hostWithName:netServiceName:netServiceDomain:")
     public static native MIDINetworkHost create(String name, String netServiceName, String netServiceDomain);
-    
+
 }

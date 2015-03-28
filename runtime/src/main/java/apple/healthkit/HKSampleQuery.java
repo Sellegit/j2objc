@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("HealthKit/HealthKit.h") @Mapping("HKSampleQuery")
 public class HKSampleQuery 
     extends HKQuery 
@@ -26,21 +24,21 @@ public class HKSampleQuery
 
     
     public static final int NoLimit = 0;
-    
+
     
     @Mapping("initWithSampleType:predicate:limit:sortDescriptors:resultsHandler:")
     public HKSampleQuery(HKSampleType sampleType, NSPredicate predicate, @MachineSizedUInt long limit, NSArray<?> sortDescriptors, Todo resultsHandler) { }
     @Mapping("init")
     public HKSampleQuery() { }
-    
+
     
     @Mapping("limit")
     public native @MachineSizedUInt long getLimit();
     @Mapping("sortDescriptors")
     public native NSArray<NSSortDescriptor> getSortDescriptors();
+
     
     
-    
-    
-    
+
+
 }

@@ -19,9 +19,6 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h")
 @Mapping("UIControlContentVerticalAlignment")
 public final class UIControlContentVerticalAlignment extends ObjCEnum {
@@ -34,6 +31,6 @@ public final class UIControlContentVerticalAlignment extends ObjCEnum {
     public static final long Bottom = 2L;
     @GlobalConstant("UIControlContentVerticalAlignmentFill")
     public static final long Fill = 3L;
-    
+
 
 }

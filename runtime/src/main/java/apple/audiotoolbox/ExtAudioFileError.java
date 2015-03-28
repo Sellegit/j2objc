@@ -17,9 +17,6 @@ import apple.coreaudio.*;
 import apple.coremedia.*;
 
 
-
-
-
 @Library("AudioToolbox/AudioToolbox.h")
 @Mapping("ExtAudioFileError")
 public final class ExtAudioFileError extends ObjCEnum {
@@ -48,6 +45,6 @@ public final class ExtAudioFileError extends ObjCEnum {
     public static final long AsyncWriteTooLarge = -66569L;
     @GlobalConstant("kExtAudioFileError_AsyncWriteBufferOverflow")
     public static final long AsyncWriteBufferOverflow = -66570L;
-    
+
 
 }

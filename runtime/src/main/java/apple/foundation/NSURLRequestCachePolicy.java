@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h")
 @Mapping("NSURLRequestCachePolicy")
 public final class NSURLRequestCachePolicy extends ObjCEnum {
@@ -40,6 +37,6 @@ public final class NSURLRequestCachePolicy extends ObjCEnum {
     public static final long ReturnCacheDataDontLoad = 3L;
     @GlobalConstant("NSURLRequestReloadRevalidatingCacheData")
     public static final long ReloadRevalidatingCacheData = 5L;
-    
+
 
 }

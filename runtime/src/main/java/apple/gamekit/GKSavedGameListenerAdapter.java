@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 import apple.uikit.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -25,13 +24,13 @@ public abstract class GKSavedGameListenerAdapter
     
     
     
-    
-    
+
+
     
     
     @NotImplemented("player:didModifySavedGame:")
     public void didModifySavedGame(GKPlayer player, GKSavedGame savedGame) { throw new UnsupportedOperationException(); }
     @NotImplemented("player:hasConflictingSavedGames:")
     public void hasConflictingSavedGames(GKPlayer player, NSArray<?> savedGames) { throw new UnsupportedOperationException(); }
-    
+
 }

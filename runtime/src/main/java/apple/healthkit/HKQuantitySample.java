@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("HealthKit/HealthKit.h") @Mapping("HKQuantitySample")
 public class HKQuantitySample 
     extends HKSample 
@@ -28,18 +26,18 @@ public class HKQuantitySample
     
     @Mapping("init")
     public HKQuantitySample() { }
-    
+
     
     @Mapping("quantityType")
     public native HKQuantityType getQuantityType();
     @Mapping("quantity")
     public native HKQuantity getQuantity();
-    
+
     
     
     @Mapping("quantitySampleWithType:quantity:startDate:endDate:")
     public static native HKQuantitySample create(HKQuantityType quantityType, HKQuantity quantity, NSDate startDate, NSDate endDate);
     @Mapping("quantitySampleWithType:quantity:startDate:endDate:metadata:")
     public static native HKQuantitySample create(HKQuantityType quantityType, HKQuantity quantity, NSDate startDate, NSDate endDate, NSDictionary<?, ?> metadata);
-    
+
 }

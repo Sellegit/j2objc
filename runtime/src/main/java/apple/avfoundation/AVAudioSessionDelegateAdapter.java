@@ -19,7 +19,6 @@ import apple.coremedia.*;
 import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -30,8 +29,8 @@ public abstract class AVAudioSessionDelegateAdapter
     
     
     
-    
-    
+
+
     
     
     @NotImplemented("beginInterruption")
@@ -45,5 +44,5 @@ public abstract class AVAudioSessionDelegateAdapter
     public void endInterruption() { throw new UnsupportedOperationException(); }
     @NotImplemented("inputIsAvailableChanged:")
     public void inputAvailabilityChanged(boolean isInputAvailable) { throw new UnsupportedOperationException(); }
-    
+
 }

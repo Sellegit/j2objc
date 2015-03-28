@@ -15,11 +15,9 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
 /**
  * @since Available in iOS 3.0 and later.
  */
-
 @Library("MediaPlayer/MediaPlayer.h")
 @Mapping("MPMediaGrouping")
 public final class MPMediaGrouping extends ObjCEnum {
@@ -40,6 +38,6 @@ public final class MPMediaGrouping extends ObjCEnum {
     public static final long Playlist = 6L;
     @GlobalConstant("MPMediaGroupingPodcastTitle")
     public static final long PodcastTitle = 7L;
-    
+
 
 }

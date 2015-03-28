@@ -17,9 +17,6 @@ import apple.coreaudio.*;
 import apple.coremedia.*;
 
 
-
-
-
 @Library("AudioToolbox/AudioToolbox.h")
 @Mapping("AudioSessionRouteChangeReason")
 public final class AudioSessionRouteChangeReason extends ObjCEnum {
@@ -40,6 +37,6 @@ public final class AudioSessionRouteChangeReason extends ObjCEnum {
     public static final long NoSuitableRouteForCategory = 7L;
     @GlobalConstant("kAudioSessionRouteChangeReason_RouteConfigurationChange")
     public static final long RouteConfigurationChange = 8L;
-    
+
 
 }

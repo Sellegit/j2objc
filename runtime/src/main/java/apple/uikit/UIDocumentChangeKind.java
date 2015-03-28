@@ -19,9 +19,6 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h")
 @Mapping("UIDocumentChangeKind")
 public final class UIDocumentChangeKind extends ObjCEnum {
@@ -34,6 +31,6 @@ public final class UIDocumentChangeKind extends ObjCEnum {
     public static final long Redone = 2L;
     @GlobalConstant("UIDocumentChangeCleared")
     public static final long Cleared = 3L;
-    
+
 
 }

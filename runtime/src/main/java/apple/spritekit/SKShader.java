@@ -21,11 +21,9 @@ import apple.glkit.*;
 import apple.scenekit.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("SpriteKit/SpriteKit.h") @Mapping("SKShader")
 public class SKShader 
     extends NSObject 
@@ -39,7 +37,7 @@ public class SKShader
     public SKShader(String source, NSArray<?> uniforms) { }
     @Mapping("init")
     public SKShader() { }
-    
+
     
     @Mapping("source")
     public native String getSource();
@@ -49,7 +47,7 @@ public class SKShader
     public native NSArray<SKUniform> getUniforms();
     @Mapping("setUniforms:")
     public native void setUniforms(NSArray<SKUniform> v);
-    
+
     
     
     @Mapping("addUniform:")
@@ -70,5 +68,5 @@ public class SKShader
     public native Object copyWithZone$(NSZone zone);
     @Mapping("encodeWithCoder:")
     public native void encode(NSCoder aCoder);
-    
+
 }

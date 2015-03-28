@@ -17,11 +17,9 @@ import apple.uikit.*;
 import apple.avfoundation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("Photos/Photos.h")
 @Mapping("PHCollectionListType")
 public final class PHCollectionListType extends ObjCEnum {
@@ -32,6 +30,6 @@ public final class PHCollectionListType extends ObjCEnum {
     public static final long Folder = 2L;
     @GlobalConstant("PHCollectionListTypeSmartFolder")
     public static final long SmartFolder = 3L;
-    
+
 
 }

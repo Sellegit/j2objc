@@ -17,11 +17,9 @@ import apple.uikit.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 7.0 and later.
  */
-
 @Library("MapKit/MapKit.h") @Mapping("MKCircleRenderer")
 public class MKCircleRenderer 
     extends MKOverlayPathRenderer 
@@ -35,13 +33,13 @@ public class MKCircleRenderer
     public MKCircleRenderer(MKOverlay overlay) { }
     @Mapping("init")
     public MKCircleRenderer() { }
-    
+
     
     @Mapping("circle")
     public native MKCircle getCircle();
+
     
     
-    
-    
-    
+
+
 }

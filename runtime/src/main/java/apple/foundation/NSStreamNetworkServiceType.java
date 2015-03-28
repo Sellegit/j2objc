@@ -18,7 +18,6 @@ import apple.coremedia.*;
 import apple.security.*;
 import apple.dispatch.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("Foundation/Foundation.h")
@@ -51,5 +50,5 @@ public class NSStreamNetworkServiceType
      */
     @GlobalConstant("NSStreamNetworkServiceTypeVoice")
     public static native NSString VoiceValue();
-    
+
 }

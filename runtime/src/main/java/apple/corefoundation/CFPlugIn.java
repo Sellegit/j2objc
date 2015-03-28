@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.dispatch.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Mapping("CFPlugInRef") @Library("CoreFoundation/CoreFoundation.h")
@@ -25,7 +24,7 @@ public class CFPlugIn
     
     
     protected CFPlugIn() {}
-    
+
     
     
     
@@ -57,5 +56,5 @@ public class CFPlugIn
     public static native void addInstanceForFactory(CFUUID factoryID);
     @GlobalFunction("CFPlugInRemoveInstanceForFactory")
     public static native void removeInstanceForFactory(CFUUID factoryID);
-    
+
 }

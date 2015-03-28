@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h") @Mapping("NSDateComponents")
 public class NSDateComponents 
     extends NSObject 
@@ -29,11 +26,11 @@ public class NSDateComponents
 
     
     public static final int UndefinedComponent = 2147483647;
-    
+
     
     @Mapping("init")
     public NSDateComponents() { }
-    
+
     
     /**
      * @since Available in iOS 4.0 and later.
@@ -161,7 +158,7 @@ public class NSDateComponents
      */
     @Mapping("isValidDate")
     public native boolean isValidDate();
-    
+
     
     
     /**
@@ -195,5 +192,5 @@ public class NSDateComponents
     public native boolean isValidDateInCalendar(NSCalendar calendar);
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
-    
+
 }

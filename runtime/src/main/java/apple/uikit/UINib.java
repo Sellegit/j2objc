@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 4.0 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UINib")
 public class UINib 
     extends NSObject 
@@ -33,10 +31,10 @@ public class UINib
     
     @Mapping("init")
     public UINib() { }
+
     
-    
-    
-    
+
+
     
     
     @Mapping("instantiateWithOwner:options:")
@@ -45,5 +43,5 @@ public class UINib
     public static native UINib create(String name, NSBundle bundleOrNil);
     @Mapping("nibWithData:bundle:")
     public static native UINib create(NSData data, NSBundle bundleOrNil);
-    
+
 }

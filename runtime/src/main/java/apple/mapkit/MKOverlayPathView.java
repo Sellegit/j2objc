@@ -17,11 +17,9 @@ import apple.uikit.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 4.0 and later.
  */
-
 @Library("MapKit/MapKit.h") @Mapping("MKOverlayPathView")
 public class MKOverlayPathView 
     extends MKOverlayView 
@@ -40,7 +38,7 @@ public class MKOverlayPathView
     public MKOverlayPathView(CGRect frame) { }
     @Mapping("init")
     public MKOverlayPathView() { }
-    
+
     
     /**
      * @since Available in iOS 4.0 and later.
@@ -168,7 +166,7 @@ public class MKOverlayPathView
     @Deprecated
     @Mapping("setPath:")
     public native void setPath(CGPath v);
-    
+
     
     
     /**
@@ -213,5 +211,5 @@ public class MKOverlayPathView
     @Deprecated
     @Mapping("fillPath:inContext:")
     public native void fillPath(CGPath path, CGContext context);
-    
+
 }

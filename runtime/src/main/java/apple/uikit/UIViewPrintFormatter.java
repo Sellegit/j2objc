@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 4.2 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UIViewPrintFormatter")
 public class UIViewPrintFormatter 
     extends UIPrintFormatter 
@@ -33,13 +31,13 @@ public class UIViewPrintFormatter
     
     @Mapping("init")
     public UIViewPrintFormatter() { }
-    
+
     
     @Mapping("view")
     public native UIView getView();
+
     
     
-    
-    
-    
+
+
 }

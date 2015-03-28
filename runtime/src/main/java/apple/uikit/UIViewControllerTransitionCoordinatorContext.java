@@ -19,17 +19,14 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h") @Mapping("UIViewControllerTransitionCoordinatorContext")
 public interface UIViewControllerTransitionCoordinatorContext 
     extends NSObjectProtocol {
 
     
     
-    
-    
+
+
     
     @Mapping("isAnimated")
     boolean isAnimated();
@@ -63,7 +60,7 @@ public interface UIViewControllerTransitionCoordinatorContext
      */
     @Mapping("targetTransform")
     CGAffineTransform getTargetTransform();
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

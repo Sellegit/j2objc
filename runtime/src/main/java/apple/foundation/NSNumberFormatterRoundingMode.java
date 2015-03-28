@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h")
 @Mapping("NSNumberFormatterRoundingMode")
 public final class NSNumberFormatterRoundingMode extends ObjCEnum {
@@ -40,6 +37,6 @@ public final class NSNumberFormatterRoundingMode extends ObjCEnum {
     public static final long HalfDown = 5L;
     @GlobalConstant("NSNumberFormatterRoundHalfUp")
     public static final long HalfUp = 6L;
-    
+
 
 }

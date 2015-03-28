@@ -19,7 +19,6 @@ import apple.coremedia.*;
 import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("AVFoundation/AVFoundation.h")
@@ -107,5 +106,5 @@ public class AVMetadataKey3GPUserData
      */
     @GlobalConstant("AVMetadata3GPUserDataKeyMediaRating")
     public static native NSString MediaRatingValue();
-    
+
 }

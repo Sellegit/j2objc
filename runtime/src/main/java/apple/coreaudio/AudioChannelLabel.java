@@ -14,9 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
-
-
 @Library("CoreAudio/CoreAudioTypes.h")
 @Mapping("AudioChannelLabel")
 public final class AudioChannelLabel extends ObjCEnum {
@@ -149,6 +146,6 @@ public final class AudioChannelLabel extends ObjCEnum {
     public static final long Discrete_15 = 65551L;
     @GlobalConstant("kAudioChannelLabel_Discrete_65535")
     public static final long Discrete_65535 = 131071L;
-    
+
 
 }

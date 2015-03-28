@@ -21,11 +21,9 @@ import apple.glkit.*;
 import apple.scenekit.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("SpriteKit/SpriteKit.h") @Mapping("SKRegion")
 public class SKRegion 
     extends NSObject 
@@ -41,11 +39,11 @@ public class SKRegion
     public SKRegion(CGPath path) { }
     @Mapping("init")
     public SKRegion() { }
-    
+
     
     @Mapping("path")
     public native CGPath getPath();
-    
+
     
     
     @Mapping("inverseRegion")
@@ -64,5 +62,5 @@ public class SKRegion
     public native Object copyWithZone$(NSZone zone);
     @Mapping("encodeWithCoder:")
     public native void encode(NSCoder aCoder);
-    
+
 }

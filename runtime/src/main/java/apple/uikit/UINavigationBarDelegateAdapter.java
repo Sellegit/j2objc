@@ -18,7 +18,6 @@ import apple.coreimage.*;
 import apple.coretext.*;
 import apple.corelocation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -29,8 +28,8 @@ public abstract class UINavigationBarDelegateAdapter
     
     
     
-    
-    
+
+
     
     
     @NotImplemented("navigationBar:shouldPushItem:")
@@ -41,5 +40,5 @@ public abstract class UINavigationBarDelegateAdapter
     public boolean shouldPopItem(UINavigationBar navigationBar, UINavigationItem item) { throw new UnsupportedOperationException(); }
     @NotImplemented("navigationBar:didPopItem:")
     public void didPopItem(UINavigationBar navigationBar, UINavigationItem item) { throw new UnsupportedOperationException(); }
-    
+
 }

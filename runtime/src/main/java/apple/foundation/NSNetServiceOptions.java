@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h")
 @Mapping("NSNetServiceOptions")
 public final class NSNetServiceOptions extends ObjCEnum {
@@ -33,6 +30,6 @@ public final class NSNetServiceOptions extends ObjCEnum {
      */
     @GlobalConstant("NSNetServiceListenForConnections")
     public static final long ListenForConnections = 2L;
-    
+
 
 }

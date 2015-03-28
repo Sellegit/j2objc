@@ -17,7 +17,6 @@ import apple.coreaudio.*;
 import apple.coreanimation.*;
 import apple.corevideo.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Mapping("CMMetadataFormatDescriptionRef") @Library("CoreMedia/CoreMedia.h")
@@ -28,7 +27,7 @@ public class CMMetadataFormatDescription
     
     
     protected CMMetadataFormatDescription() {}
-    
+
     
     
     
@@ -77,5 +76,5 @@ public class CMMetadataFormatDescription
      */
     @GlobalFunction("CMMetadataFormatDescriptionCopyAsBigEndianMetadataDescriptionBlockBuffer")
     public static native int copyAsBigEndianMetadataDescriptionBlockBuffer(CFAllocator allocator, CMMetadataFormatDescription metadataFormatDescription, CFString metadataDescriptionFlavor, Todo metadataDescriptionBlockBufferOut);
-    
+
 }

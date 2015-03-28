@@ -16,9 +16,6 @@ import apple.uikit.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("ExternalAccessory/ExternalAccessory.h")
 @Mapping("EABluetoothAccessoryPickerErrorCode")
 public final class EABluetoothAccessoryPickerErrorCode extends ObjCEnum {
@@ -31,6 +28,6 @@ public final class EABluetoothAccessoryPickerErrorCode extends ObjCEnum {
     public static final long ResultCancelled = 2L;
     @GlobalConstant("EABluetoothAccessoryPickerResultFailed")
     public static final long ResultFailed = 3L;
-    
+
 
 }

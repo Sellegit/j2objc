@@ -14,9 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
-
-
 @Library("CFNetwork/CFNetwork.h")
 @Mapping("CFHostInfoType")
 public final class CFHostInfoType extends ObjCEnum {
@@ -27,6 +24,6 @@ public final class CFHostInfoType extends ObjCEnum {
     public static final long Names = 1L;
     @GlobalConstant("kCFHostReachability")
     public static final long Reachability = 2L;
-    
+
 
 }

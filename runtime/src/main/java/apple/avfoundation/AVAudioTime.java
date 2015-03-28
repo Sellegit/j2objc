@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h") @Mapping("AVAudioTime")
 public class AVAudioTime 
     extends NSObject 
@@ -42,7 +40,7 @@ public class AVAudioTime
     public AVAudioTime(long hostTime, long sampleTime, double sampleRate) { }
     @Mapping("init")
     public AVAudioTime() { }
-    
+
     
     @Mapping("isHostTimeValid")
     public native boolean isHostTimeValid();
@@ -56,7 +54,7 @@ public class AVAudioTime
     public native double getSampleRate();
     @Mapping("audioTimeStamp")
     public native Todo getAudioTimeStamp();
-    
+
     
     
     @Mapping("extrapolateTimeFromAnchor:")
@@ -73,5 +71,5 @@ public class AVAudioTime
     public static native long convertSecondsToHostTime(double seconds);
     @Mapping("secondsForHostTime:")
     public static native double convertHostTimeToSeconds(long hostTime);
-    
+
 }

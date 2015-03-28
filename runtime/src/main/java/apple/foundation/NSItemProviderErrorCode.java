@@ -19,11 +19,9 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("Foundation/Foundation.h")
 @Mapping("NSItemProviderErrorCode")
 public final class NSItemProviderErrorCode extends ObjCEnum {
@@ -34,6 +32,6 @@ public final class NSItemProviderErrorCode extends ObjCEnum {
     public static final long ItemUnavailable = -1000L;
     @GlobalConstant("NSItemProviderUnexpectedValueClassError")
     public static final long UnexpectedValueClass = -1100L;
-    
+
 
 }

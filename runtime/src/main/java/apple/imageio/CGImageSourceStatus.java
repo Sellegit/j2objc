@@ -14,9 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
-
-
 @Library("ImageIO/ImageIO.h")
 @Mapping("CGImageSourceStatus")
 public final class CGImageSourceStatus extends ObjCEnum {
@@ -33,6 +30,6 @@ public final class CGImageSourceStatus extends ObjCEnum {
     public static final long Incomplete = -1L;
     @GlobalConstant("kCGImageStatusComplete")
     public static final long Complete = 0L;
-    
+
 
 }

@@ -18,7 +18,6 @@ import apple.coreimage.*;
 import apple.coretext.*;
 import apple.corelocation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -29,8 +28,8 @@ public abstract class UICollectionViewDelegateFlowLayoutAdapter
     
     
     
-    
-    
+
+
     
     
     @NotImplemented("collectionView:layout:sizeForItemAtIndexPath:")
@@ -45,5 +44,5 @@ public abstract class UICollectionViewDelegateFlowLayoutAdapter
     public CGSize getSectionHeaderReferenceSize(UICollectionView collectionView, UICollectionViewLayout collectionViewLayout, @MachineSizedSInt long section) { throw new UnsupportedOperationException(); }
     @NotImplemented("collectionView:layout:referenceSizeForFooterInSection:")
     public CGSize getSectionFooterReferenceSize(UICollectionView collectionView, UICollectionViewLayout collectionViewLayout, @MachineSizedSInt long section) { throw new UnsupportedOperationException(); }
-    
+
 }

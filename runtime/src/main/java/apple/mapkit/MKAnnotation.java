@@ -17,9 +17,6 @@ import apple.uikit.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("MapKit/MapKit.h") @Mapping("MKAnnotation")
 public interface MKAnnotation 
     extends NSObjectProtocol {
@@ -34,10 +31,10 @@ public interface MKAnnotation
     String getTitle();
     @Mapping("subtitle")
     String getSubtitle();
+
     
-    
-    
-    
+
+
     /*<adapter>*/
     /*</adapter>*/
 }

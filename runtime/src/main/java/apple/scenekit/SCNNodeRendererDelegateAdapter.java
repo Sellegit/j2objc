@@ -19,7 +19,6 @@ import apple.glkit.*;
 import apple.spritekit.*;
 import apple.opengles.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -30,11 +29,11 @@ public abstract class SCNNodeRendererDelegateAdapter
     
     
     
-    
-    
+
+
     
     
     @NotImplemented("renderNode:renderer:arguments:")
     public void renderNode(SCNNode node, SCNRenderer renderer, NSDictionary<?, ?> arguments) { throw new UnsupportedOperationException(); }
-    
+
 }

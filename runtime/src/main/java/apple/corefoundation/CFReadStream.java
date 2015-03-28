@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.dispatch.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Mapping("CFReadStreamRef") @Library("CoreFoundation/CoreFoundation.h")
@@ -25,7 +24,7 @@ public class CFReadStream
     
     
     protected CFReadStream() {}
-    
+
     
     
     
@@ -74,5 +73,5 @@ public class CFReadStream
     public static native DispatchQueue getDispatchQueue(CFReadStream stream);
     @GlobalFunction("CFReadStreamGetError")
     public static native CFStreamError getStreamError(CFReadStream stream);
-    
+
 }

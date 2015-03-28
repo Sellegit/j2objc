@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("HomeKit/HomeKit.h") @Mapping("HMService")
 public class HMService 
     extends NSObject 
@@ -28,7 +26,7 @@ public class HMService
     
     @Mapping("init")
     public HMService() { }
-    
+
     
     @Mapping("accessory")
     public native HMAccessory getAccessory();
@@ -40,12 +38,12 @@ public class HMService
     public native HMServiceType getAssociatedServiceType();
     @Mapping("characteristics")
     public native NSArray<HMCharacteristic> getCharacteristics();
-    
+
     
     
     @Mapping("updateName:completionHandler:")
     public native void updateName(String name, @Block VoidBlock1<NSError> completion);
     @Mapping("updateAssociatedServiceType:completionHandler:")
     public native void updateAssociatedServiceType(String serviceType, @Block VoidBlock1<NSError> completion);
-    
+
 }

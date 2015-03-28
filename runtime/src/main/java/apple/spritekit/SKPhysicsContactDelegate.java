@@ -21,23 +21,20 @@ import apple.glkit.*;
 import apple.scenekit.*;
 
 
-
-
-
 @Library("SpriteKit/SpriteKit.h") @Mapping("SKPhysicsContactDelegate")
 public interface SKPhysicsContactDelegate 
     extends NSObjectProtocol {
 
     
     
-    
-    
+
+
     
     @Mapping("didBeginContact:")
     void didBeginContact(SKPhysicsContact contact);
     @Mapping("didEndContact:")
     void didEndContact(SKPhysicsContact contact);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

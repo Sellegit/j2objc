@@ -15,9 +15,6 @@ import apple.dispatch.*;
 import apple.foundation.*;
 
 
-
-
-
 @Mapping("CFStreamClientContext") @Library("CoreFoundation/CoreFoundation.h")
 public class CFStreamClientContext 
     extends Struct 
@@ -29,6 +26,6 @@ public class CFStreamClientContext
     
     @DotMapping("version")
     public native @MachineSizedSInt long getVersion();
-    
+
     
 }

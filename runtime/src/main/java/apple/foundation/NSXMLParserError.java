@@ -18,7 +18,6 @@ import apple.coremedia.*;
 import apple.security.*;
 import apple.dispatch.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("Foundation/Foundation.h")
@@ -29,7 +28,7 @@ public class NSXMLParserError
     
     
     protected NSXMLParserError() {}
-    
+
     
     
     
@@ -38,5 +37,5 @@ public class NSXMLParserError
      */
     @GlobalConstant("NSXMLParserErrorDomain")
     public static native String getClassDomain();
-    
+
 }

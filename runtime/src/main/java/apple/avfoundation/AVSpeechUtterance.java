@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 7.0 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h") @Mapping("AVSpeechUtterance")
 public class AVSpeechUtterance 
     extends NSObject 
@@ -36,7 +34,7 @@ public class AVSpeechUtterance
     public AVSpeechUtterance(String string) { }
     @Mapping("init")
     public AVSpeechUtterance() { }
-    
+
     
     @Mapping("voice")
     public native AVSpeechSynthesisVoice getVoice();
@@ -64,7 +62,7 @@ public class AVSpeechUtterance
     public native double getPostUtteranceDelay();
     @Mapping("setPostUtteranceDelay:")
     public native void setPostUtteranceDelay(double v);
-    
+
     
     
     @GlobalConstant("AVSpeechUtteranceMinimumSpeechRate")
@@ -73,10 +71,10 @@ public class AVSpeechUtterance
     public static native float getMaximumSpeechRate();
     @GlobalConstant("AVSpeechUtteranceDefaultSpeechRate")
     public static native float getDefaultSpeechRate();
-    
+
     @Mapping("speechUtteranceWithString:")
     public static native AVSpeechUtterance create(String string);
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
-    
+
 }

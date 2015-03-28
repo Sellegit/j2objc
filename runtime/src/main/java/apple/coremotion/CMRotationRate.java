@@ -14,9 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
-
-
 @Mapping("CMRotationRate") @Library("CoreMotion/CoreMotion.h")
 public class CMRotationRate 
     extends Struct 
@@ -32,7 +29,7 @@ public class CMRotationRate
     public native double getY();
     @DotMapping("z")
     public native double getZ();
-    
+
     public static native CMRotationRate create(double x, double y, double z) /*-[
         CMRotationRate __new = { .x = x, .y = y, .z = z };
         return __new;
@@ -42,17 +39,36 @@ public class CMRotationRate
         return __new;
     ]-*/;
 
-    
+
     public static native CMRotationRate copyWithy(CMRotationRate original, double y) /*-[
         CMRotationRate __new = { .x = original.x, .y = y, .z = original.z };
         return __new;
     ]-*/;
 
-    
+
     public static native CMRotationRate copyWithz(CMRotationRate original, double z) /*-[
         CMRotationRate __new = { .x = original.x, .y = original.y, .z = z };
         return __new;
     ]-*/;
 
-    
+
+    public static final class Adapter {
+
+        public double x;
+        public double y;
+        public double z;
+        public Adapter(double x, double y, double z) {
+            this.x = x;
+            this.y = y;
+            this.z = z;
+        }
+        public Adapter(CMRotationRate original) {
+            this.x = original.getX();
+            this.y = original.getY();
+            this.z = original.getZ();
+        }
+        public CMRotationRate convert() {
+            return create(x, y, z);
+        }
+    }
 }

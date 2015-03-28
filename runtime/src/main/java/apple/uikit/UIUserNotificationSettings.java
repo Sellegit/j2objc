@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UIUserNotificationSettings")
 public class UIUserNotificationSettings 
     extends NSObject 
@@ -33,16 +31,16 @@ public class UIUserNotificationSettings
     
     @Mapping("init")
     public UIUserNotificationSettings() { }
-    
+
     
     @Mapping("types")
     public native @Representing("UIUserNotificationType") long getTypes();
     @Mapping("categories")
     public native NSSet<UIUserNotificationCategory> getCategories();
-    
+
     
     
     @Mapping("settingsForTypes:categories:")
     public static native UIUserNotificationSettings create(@Representing("UIUserNotificationType") long types, NSSet<?> categories);
-    
+
 }

@@ -12,7 +12,6 @@ import apple.corefoundation.*;
 import apple.coregraphics.*;
 import apple.coreservices.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("dispatch/dispatch.h")
@@ -23,7 +22,7 @@ public class DispatchSourceType
     
     
     protected DispatchSourceType() {}
-    
+
     
     
     
@@ -82,5 +81,5 @@ public class DispatchSourceType
      */
     @GlobalConstant("_dispatch_source_type_write")
     public static native DispatchSourceType Write();
-    
+
 }

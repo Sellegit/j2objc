@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h")
 @Mapping("NSNumberFormatterStyle")
 public final class NSNumberFormatterStyle extends ObjCEnum {
@@ -38,6 +35,6 @@ public final class NSNumberFormatterStyle extends ObjCEnum {
     public static final long Scientific = 4L;
     @GlobalConstant("NSNumberFormatterSpellOutStyle")
     public static final long SpellOut = 5L;
-    
+
 
 }

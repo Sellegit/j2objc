@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 6.0 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h") @Mapping("AVMetadataFaceObject")
 public class AVMetadataFaceObject 
     extends AVMetadataObject 
@@ -34,7 +32,7 @@ public class AVMetadataFaceObject
     
     @Mapping("init")
     public AVMetadataFaceObject() { }
-    
+
     
     @Mapping("faceID")
     public native @MachineSizedSInt long getFaceID();
@@ -46,10 +44,10 @@ public class AVMetadataFaceObject
     public native boolean hasYawAngle();
     @Mapping("yawAngle")
     public native @MachineSizedFloat double getYawAngle();
-    
+
     
     
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
-    
+
 }

@@ -16,9 +16,6 @@ import apple.addressbook.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("EventKit/EventKit.h") @Mapping("EKObject")
 public class EKObject 
     extends NSObject 
@@ -28,10 +25,10 @@ public class EKObject
     
     @Mapping("init")
     public EKObject() { }
+
     
-    
-    
-    
+
+
     
     
     @Mapping("hasChanges")
@@ -44,5 +41,5 @@ public class EKObject
     public native void rollback();
     @Mapping("refresh")
     public native boolean refresh();
-    
+
 }

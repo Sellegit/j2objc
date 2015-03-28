@@ -19,7 +19,6 @@ import apple.coremedia.*;
 import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("AVFoundation/AVFoundation.h")
@@ -52,5 +51,5 @@ public class AVOutputSettingsPreset
      */
     @GlobalConstant("AVOutputSettingsPreset1920x1080")
     public static native NSString _1920x1080Value();
-    
+
 }

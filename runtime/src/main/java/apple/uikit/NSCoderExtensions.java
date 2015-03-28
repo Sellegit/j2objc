@@ -18,7 +18,6 @@ import apple.coreimage.*;
 import apple.coretext.*;
 import apple.corelocation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("UIKit/UIKit.h")
@@ -29,10 +28,10 @@ public final class NSCoderExtensions
     
     
     private NSCoderExtensions() {}
+
     
-    
-    
-    
+
+
     
     
     @ExtensionMapping("encodeCGPoint:forKey:")
@@ -69,5 +68,5 @@ public final class NSCoderExtensions
      */
     @ExtensionMapping("decodeUIOffsetForKey:")
     public static native UIOffset decodeUIOffset(NSCoder thiz, String key);
-    
+
 }

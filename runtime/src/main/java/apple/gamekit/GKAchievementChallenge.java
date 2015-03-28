@@ -15,11 +15,9 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
 /**
  * @since Available in iOS 6.0 and later.
  */
-
 @Library("GameKit/GameKit.h") @Mapping("GKAchievementChallenge")
 public class GKAchievementChallenge 
     extends GKChallenge 
@@ -31,13 +29,13 @@ public class GKAchievementChallenge
     public GKAchievementChallenge(NSCoder aDecoder) { }
     @Mapping("init")
     public GKAchievementChallenge() { }
-    
+
     
     @Mapping("achievement")
     public native GKAchievement getAchievement();
+
     
     
-    
-    
-    
+
+
 }

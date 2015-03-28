@@ -13,7 +13,6 @@ import apple.coregraphics.*;
 import apple.coreservices.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("CoreData/CoreData.h")
@@ -41,5 +40,5 @@ public class NSPersistentStoreType
      */
     @GlobalConstant("NSInMemoryStoreType")
     public static native String InMemoryValue();
-    
+
 }

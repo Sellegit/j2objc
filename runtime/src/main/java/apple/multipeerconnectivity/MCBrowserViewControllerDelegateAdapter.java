@@ -15,7 +15,6 @@ import apple.foundation.*;
 import apple.uikit.*;
 import apple.security.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -26,8 +25,8 @@ public abstract class MCBrowserViewControllerDelegateAdapter
     
     
     
-    
-    
+
+
     
     
     @NotImplemented("browserViewControllerDidFinish:")
@@ -36,5 +35,5 @@ public abstract class MCBrowserViewControllerDelegateAdapter
     public void wasCancelled(MCBrowserViewController browserViewController) { throw new UnsupportedOperationException(); }
     @NotImplemented("browserViewController:shouldPresentNearbyPeer:withDiscoveryInfo:")
     public boolean shouldPresentNearbyPeer(MCBrowserViewController browserViewController, MCPeerID peerID, NSDictionary<?, ?> info) { throw new UnsupportedOperationException(); }
-    
+
 }

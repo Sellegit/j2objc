@@ -15,11 +15,9 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
 /**
  * @since Available in iOS 7.1 and later.
  */
-
 @Library("MediaPlayer/MediaPlayer.h") @Mapping("MPRemoteCommandEvent")
 public class MPRemoteCommandEvent 
     extends NSObject 
@@ -29,15 +27,15 @@ public class MPRemoteCommandEvent
     
     @Mapping("init")
     public MPRemoteCommandEvent() { }
-    
+
     
     @Mapping("command")
     public native MPRemoteCommand getCommand();
     @Mapping("timestamp")
     public native double getTimestamp();
+
     
     
-    
-    
-    
+
+
 }

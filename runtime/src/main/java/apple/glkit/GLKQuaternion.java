@@ -17,9 +17,6 @@ import apple.uikit.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Mapping("GLKQuaternion") @Library("GLKit/GLKit.h")
 public class GLKQuaternion 
     extends Struct 
@@ -29,12 +26,12 @@ public class GLKQuaternion
     private GLKQuaternion() {}
     
     
-    
-    
+
+
     
     @GlobalConstant("GLKQuaternionIdentity")
     public static native GLKQuaternion Identity();
-    
+
     @GlobalFunction("GLKQuaternionMake")
     public static native GLKQuaternion createPrime(float x, float y, float z, float w);
     @GlobalFunction("GLKQuaternionMakeWithVector3")
@@ -77,5 +74,5 @@ public class GLKQuaternion
     public static native GLKVector4 rotateVector4(GLKQuaternion quaternion, GLKVector4 vector);
     @GlobalFunction("GLKQuaternionRotateVector4Array")
     public static native void rotateVector4Array(GLKQuaternion quaternion, GLKVector4 vectors, @MachineSizedUInt long vectorCount);
-    
+
 }

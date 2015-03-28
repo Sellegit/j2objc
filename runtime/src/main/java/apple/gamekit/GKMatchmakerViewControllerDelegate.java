@@ -15,17 +15,14 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
-
-
 @Library("GameKit/GameKit.h") @Mapping("GKMatchmakerViewControllerDelegate")
 public interface GKMatchmakerViewControllerDelegate 
     extends NSObjectProtocol {
 
     
     
-    
-    
+
+
     
     /**
      * @since Available in iOS 4.1 and later.
@@ -66,7 +63,7 @@ public interface GKMatchmakerViewControllerDelegate
     @Deprecated
     @Mapping("matchmakerViewController:didReceiveAcceptFromHostedPlayer:")
     void didReceiveAccept(GKMatchmakerViewController viewController, String playerID);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

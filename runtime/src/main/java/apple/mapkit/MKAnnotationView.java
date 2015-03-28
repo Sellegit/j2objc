@@ -17,11 +17,9 @@ import apple.uikit.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 3.0 and later.
  */
-
 @Library("MapKit/MapKit.h") @Mapping("MKAnnotationView")
 public class MKAnnotationView 
     extends UIView 
@@ -35,7 +33,7 @@ public class MKAnnotationView
     public MKAnnotationView(CGRect frame) { }
     @Mapping("init")
     public MKAnnotationView() { }
-    
+
     
     @Mapping("reuseIdentifier")
     public native String getReuseIdentifier();
@@ -99,7 +97,7 @@ public class MKAnnotationView
      */
     @Mapping("setDragState:")
     public native void setDragState(@Representing("MKAnnotationViewDragState") long v);
-    
+
     
     
     @Mapping("prepareForReuse")
@@ -111,5 +109,5 @@ public class MKAnnotationView
      */
     @Mapping("setDragState:animated:")
     public native void setDragState(@Representing("MKAnnotationViewDragState") long newDragState, boolean animated);
-    
+
 }

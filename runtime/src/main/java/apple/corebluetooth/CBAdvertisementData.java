@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 import apple.dispatch.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("CoreBluetooth/CoreBluetooth.h")
@@ -52,5 +51,5 @@ public class CBAdvertisementData
      */
     @GlobalConstant("CBAdvertisementDataSolicitedServiceUUIDsKey")
     public static native NSString SolicitedServiceUUIDsKey();
-    
+
 }

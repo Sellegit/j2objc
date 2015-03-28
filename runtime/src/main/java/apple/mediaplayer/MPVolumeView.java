@@ -15,11 +15,9 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
 /**
  * @since Available in iOS 2.0 and later.
  */
-
 @Library("MediaPlayer/MediaPlayer.h") @Mapping("MPVolumeView")
 public class MPVolumeView 
     extends UIView 
@@ -31,7 +29,7 @@ public class MPVolumeView
     public MPVolumeView(CGRect frame) { }
     @Mapping("init")
     public MPVolumeView() { }
-    
+
     
     /**
      * @since Available in iOS 4.2 and later.
@@ -73,7 +71,7 @@ public class MPVolumeView
      */
     @Mapping("setVolumeWarningSliderImage:")
     public native void setVolumeWarningSliderImage(UIImage v);
-    
+
     
     
     /**
@@ -86,7 +84,7 @@ public class MPVolumeView
      */
     @GlobalConstant("MPVolumeViewWirelessRouteActiveDidChangeNotification")
     public static native NSString WirelessRouteActiveDidChangeNotification();
-    
+
     /**
      * @since Available in iOS 6.0 and later.
      */
@@ -142,5 +140,5 @@ public class MPVolumeView
      */
     @Mapping("routeButtonRectForBounds:")
     public native CGRect getRouteButtonRect(CGRect bounds);
-    
+
 }

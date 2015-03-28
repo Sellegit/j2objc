@@ -20,9 +20,6 @@ import apple.spritekit.*;
 import apple.opengles.*;
 
 
-
-
-
 @Library("SceneKit/SceneKit.h") @Mapping("SCNPhysicsContact")
 public class SCNPhysicsContact 
     extends NSObject 
@@ -32,7 +29,7 @@ public class SCNPhysicsContact
     
     @Mapping("init")
     public SCNPhysicsContact() { }
-    
+
     
     @Mapping("nodeA")
     public native SCNNode getNodeA();
@@ -46,9 +43,9 @@ public class SCNPhysicsContact
     public native @MachineSizedFloat double getCollisionImpulse();
     @Mapping("penetrationDistance")
     public native @MachineSizedFloat double getPenetrationDistance();
+
     
     
-    
-    
-    
+
+
 }

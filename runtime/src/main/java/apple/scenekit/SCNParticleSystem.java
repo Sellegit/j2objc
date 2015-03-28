@@ -20,9 +20,6 @@ import apple.spritekit.*;
 import apple.opengles.*;
 
 
-
-
-
 @Library("SceneKit/SceneKit.h") @Mapping("SCNParticleSystem")
 public class SCNParticleSystem 
     extends NSObject 
@@ -32,7 +29,7 @@ public class SCNParticleSystem
     
     @Mapping("init")
     public SCNParticleSystem() { }
-    
+
     
     @Mapping("emissionDuration")
     public native @MachineSizedFloat double getEmissionDuration();
@@ -274,7 +271,7 @@ public class SCNParticleSystem
     public native Map<SCNParticleProperty, SCNParticlePropertyController> getPropertyControllers();
     @Mapping("setPropertyControllers:")
     public native void setPropertyControllers(Map<SCNParticleProperty, SCNParticlePropertyController> v);
-    
+
     
     
     @Mapping("reset")
@@ -307,5 +304,5 @@ public class SCNParticleSystem
     public native boolean isAnimationPaused(String key);
     @Mapping("removeAnimationForKey:fadeOutDuration:")
     public native void removeAnimation(String key, @MachineSizedFloat double duration);
-    
+
 }

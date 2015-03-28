@@ -19,7 +19,6 @@ import apple.coremedia.*;
 import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("AVFoundation/AVFoundation.h")
@@ -87,5 +86,5 @@ public class AVMediaCharacteristic
      */
     @GlobalConstant("AVMediaCharacteristicDescribesVideoForAccessibility")
     public static native NSString DescribesVideoForAccessibilityValue();
-    
+
 }

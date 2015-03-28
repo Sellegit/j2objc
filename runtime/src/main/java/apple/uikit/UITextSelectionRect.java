@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 6.0 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UITextSelectionRect")
 public class UITextSelectionRect 
     extends NSObject 
@@ -33,7 +31,7 @@ public class UITextSelectionRect
     
     @Mapping("init")
     public UITextSelectionRect() { }
-    
+
     
     @Mapping("rect")
     public native CGRect getRect();
@@ -45,9 +43,9 @@ public class UITextSelectionRect
     public native boolean containsEnd();
     @Mapping("isVertical")
     public native boolean isVertical();
+
     
     
-    
-    
-    
+
+
 }

@@ -16,7 +16,6 @@ import apple.opengles.*;
 import apple.corevideo.*;
 import apple.imageio.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("CoreImage/CoreImage.h")
@@ -35,5 +34,5 @@ public class CIFilterAttributes
     public static native NSString DisplayNameKey();
     @GlobalConstant("kCIAttributeFilterCategories")
     public static native NSString CategoriesKey();
-    
+
 }

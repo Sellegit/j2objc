@@ -15,9 +15,6 @@ import apple.dispatch.*;
 import apple.foundation.*;
 
 
-
-
-
 @Library("CoreFoundation/CoreFoundation.h")
 @Mapping("CFGregorianUnitFlags")
 public final class CFGregorianUnitFlags extends ObjCEnum {
@@ -71,6 +68,6 @@ public final class CFGregorianUnitFlags extends ObjCEnum {
     @Deprecated
     @GlobalConstant("kCFGregorianAllUnits")
     public static final long AllUnits = 16777215L;
-    
+
 
 }

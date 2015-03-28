@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 2.0 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UIApplication")
 public class UIApplication 
     extends UIResponder 
@@ -33,7 +31,7 @@ public class UIApplication
     
     @Mapping("init")
     public UIApplication() { }
-    
+
     
     @Mapping("delegate")
     public native UIApplicationDelegate getDelegate();
@@ -121,7 +119,7 @@ public class UIApplication
      */
     @Mapping("setScheduledLocalNotifications:")
     public native void setScheduledLocalNotifications(NSArray<UILocalNotification> v);
-    
+
     
     
     /**
@@ -213,10 +211,10 @@ public class UIApplication
      */
     @GlobalConstant("UIApplicationUserDidTakeScreenshotNotification")
     public static native NSString UserDidTakeScreenshotNotification();
-    
+
     @GlobalFunction("UIApplicationMain")
     public static native int main(int argc, Todo argv, String principalClassName, String delegateClassName);
-    
+
     @Mapping("beginIgnoringInteractionEvents")
     public native void beginIgnoringInteractionEvents();
     @Mapping("endIgnoringInteractionEvents")
@@ -383,5 +381,5 @@ public class UIApplication
     public native void willDismiss(UIActionSheet actionSheet, @MachineSizedSInt long buttonIndex);
     @Mapping("actionSheet:didDismissWithButtonIndex:")
     public native void didDismiss(UIActionSheet actionSheet, @MachineSizedSInt long buttonIndex);
-    
+
 }

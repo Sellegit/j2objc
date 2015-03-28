@@ -14,9 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
-
-
 @Library("CoreText/CoreText.h")
 @Mapping("CTTextAlignment")
 public final class CTTextAlignment extends ObjCEnum {
@@ -41,6 +38,6 @@ public final class CTTextAlignment extends ObjCEnum {
     public static final long JustifiedTextAlignment = 3L;
     @GlobalConstant("kCTNaturalTextAlignment")
     public static final long NaturalTextAlignment = 4L;
-    
+
 
 }

@@ -19,11 +19,9 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 6.0 and later.
  */
-
 @Library("Foundation/Foundation.h") @Mapping("NSHashTable")
 public class NSHashTable <T>
     extends NSObject 
@@ -33,7 +31,7 @@ public class NSHashTable <T>
     
     @Mapping("init")
     public NSHashTable() { }
-    
+
     
     @Mapping("count")
     public native @MachineSizedUInt long getCount();
@@ -43,7 +41,7 @@ public class NSHashTable <T>
     public native T any();
     @Mapping("setRepresentation")
     public native NSSet<T> asSet();
-    
+
     
     
     @Mapping("member:")
@@ -74,5 +72,5 @@ public class NSHashTable <T>
     public native Object copyWithZone$(NSZone zone);
     @Mapping("encodeWithCoder:")
     public native void encode(NSCoder aCoder);
-    
+
 }

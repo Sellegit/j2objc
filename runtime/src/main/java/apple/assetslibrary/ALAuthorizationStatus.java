@@ -15,11 +15,9 @@ import apple.foundation.*;
 import apple.imageio.*;
 
 
-
 /**
  * @since Available in iOS 6.0 and later.
  */
-
 @Library("AssetsLibrary/AssetsLibrary.h")
 @Mapping("ALAuthorizationStatus")
 public final class ALAuthorizationStatus extends ObjCEnum {
@@ -32,6 +30,6 @@ public final class ALAuthorizationStatus extends ObjCEnum {
     public static final long Denied = 2L;
     @GlobalConstant("ALAuthorizationStatusAuthorized")
     public static final long Authorized = 3L;
-    
+
 
 }

@@ -19,11 +19,9 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 3.0 and later.
  */
-
 @Library("Foundation/Foundation.h") @Mapping("NSCompoundPredicate")
 public class NSCompoundPredicate 
     extends NSPredicate 
@@ -35,13 +33,13 @@ public class NSCompoundPredicate
     public NSCompoundPredicate(@Representing("NSCompoundPredicateType") long type, NSArray<?> subpredicates) { }
     @Mapping("init")
     public NSCompoundPredicate() { }
-    
+
     
     @Mapping("compoundPredicateType")
     public native @Representing("NSCompoundPredicateType") long getCompoundPredicateType();
     @Mapping("subpredicates")
     public native NSArray<NSPredicate> getSubpredicates();
-    
+
     
     
     @Mapping("andPredicateWithSubpredicates:")
@@ -50,5 +48,5 @@ public class NSCompoundPredicate
     public static native NSCompoundPredicate createOrPredicate(NSArray<?> subpredicates);
     @Mapping("notPredicateWithSubpredicate:")
     public static native NSCompoundPredicate createNotPredicate(NSPredicate predicate);
-    
+
 }

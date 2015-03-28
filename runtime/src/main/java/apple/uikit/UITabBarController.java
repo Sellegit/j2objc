@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 2.0 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UITabBarController")
 public class UITabBarController 
     extends UIViewController 
@@ -37,7 +35,7 @@ public class UITabBarController
     public UITabBarController(NSCoder aDecoder) { }
     @Mapping("init")
     public UITabBarController() { }
-    
+
     
     @Mapping("viewControllers")
     public native NSArray<UIViewController> getViewControllers();
@@ -66,7 +64,7 @@ public class UITabBarController
     public native UITabBarControllerDelegate getDelegate();
     @Mapping("setDelegate:")
     public native void setDelegate(UITabBarControllerDelegate v);
-    
+
     
     
     @Mapping("setViewControllers:animated:")
@@ -81,5 +79,5 @@ public class UITabBarController
     public native void willEndCustomizingItems(UITabBar tabBar, NSArray<?> items, boolean changed);
     @Mapping("tabBar:didEndCustomizingItems:changed:")
     public native void didEndCustomizingItems(UITabBar tabBar, NSArray<?> items, boolean changed);
-    
+
 }

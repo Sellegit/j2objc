@@ -19,9 +19,6 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h")
 @Mapping("UIWebViewNavigationType")
 public final class UIWebViewNavigationType extends ObjCEnum {
@@ -38,6 +35,6 @@ public final class UIWebViewNavigationType extends ObjCEnum {
     public static final long FormResubmitted = 4L;
     @GlobalConstant("UIWebViewNavigationTypeOther")
     public static final long Other = 5L;
-    
+
 
 }

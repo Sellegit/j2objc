@@ -19,17 +19,14 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h") @Mapping("UIActivityItemSource")
 public interface UIActivityItemSource 
     extends NSObjectProtocol {
 
     
     
-    
-    
+
+
     
     @Mapping("activityViewControllerPlaceholderItem:")
     Object getPlaceholderItem(UIActivityViewController activityViewController);
@@ -41,7 +38,7 @@ public interface UIActivityItemSource
     String getDataTypeIdentifier(UIActivityViewController activityViewController, String activityType);
     @Mapping("activityViewController:thumbnailImageForActivityType:suggestedSize:")
     UIImage getThumbnailImage(UIActivityViewController activityViewController, String activityType, CGSize size);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

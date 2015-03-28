@@ -13,7 +13,6 @@ import apple.coregraphics.*;
 import apple.coreservices.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("ImageIO/ImageIO.h")
@@ -51,5 +50,5 @@ public class CGImagePropertyGIF
      */
     @GlobalConstant("kCGImagePropertyGIFUnclampedDelayTime")
     public static native CFString UnclampedDelayTimeKey();
-    
+
 }

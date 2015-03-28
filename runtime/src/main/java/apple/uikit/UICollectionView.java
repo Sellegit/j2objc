@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 6.0 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UICollectionView")
 public class UICollectionView 
     extends UIScrollView 
@@ -39,7 +37,7 @@ public class UICollectionView
     public UICollectionView(NSCoder aDecoder) { }
     @Mapping("init")
     public UICollectionView() { }
-    
+
     
     @Mapping("collectionViewLayout")
     public native UICollectionViewLayout getCollectionViewLayout();
@@ -65,7 +63,7 @@ public class UICollectionView
     public native boolean allowsMultipleSelection();
     @Mapping("setAllowsMultipleSelection:")
     public native void setAllowsMultipleSelection(boolean v);
-    
+
     
     
     @Mapping("registerNib:forCellWithReuseIdentifier:")
@@ -139,5 +137,5 @@ public class UICollectionView
     public native void moveItem(NSIndexPath indexPath, NSIndexPath newIndexPath);
     @Mapping("performBatchUpdates:completion:")
     public native void performBatchUpdates(@Block Runnable updates, @Block VoidBooleanBlock completion);
-    
+
 }

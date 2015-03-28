@@ -15,11 +15,9 @@ import apple.foundation.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("PushKit/PushKit.h") @Mapping("PKPushCredentials")
 public class PKPushCredentials 
     extends NSObject 
@@ -29,15 +27,15 @@ public class PKPushCredentials
     
     @Mapping("init")
     public PKPushCredentials() { }
-    
+
     
     @Mapping("type")
     public native String getType();
     @Mapping("token")
     public native NSData getToken();
+
     
     
-    
-    
-    
+
+
 }

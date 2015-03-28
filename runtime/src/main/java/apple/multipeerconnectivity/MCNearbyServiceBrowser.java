@@ -16,11 +16,9 @@ import apple.uikit.*;
 import apple.security.*;
 
 
-
 /**
  * @since Available in iOS 7.0 and later.
  */
-
 @Library("MultipeerConnectivity/MultipeerConnectivity.h") @Mapping("MCNearbyServiceBrowser")
 public class MCNearbyServiceBrowser 
     extends NSObject 
@@ -32,7 +30,7 @@ public class MCNearbyServiceBrowser
     public MCNearbyServiceBrowser(MCPeerID myPeerID, String serviceType) { }
     @Mapping("init")
     public MCNearbyServiceBrowser() { }
-    
+
     
     @Mapping("delegate")
     public native MCNearbyServiceBrowserDelegate getDelegate();
@@ -42,7 +40,7 @@ public class MCNearbyServiceBrowser
     public native MCPeerID getMyPeerID();
     @Mapping("serviceType")
     public native String getServiceType();
-    
+
     
     
     @Mapping("startBrowsingForPeers")
@@ -51,5 +49,5 @@ public class MCNearbyServiceBrowser
     public native void stopBrowsing();
     @Mapping("invitePeer:toSession:withContext:timeout:")
     public native void invitePeer(MCPeerID peerID, MCSession session, NSData context, double timeout);
-    
+
 }

@@ -17,11 +17,9 @@ import apple.uikit.*;
 import apple.avfoundation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("Photos/Photos.h") @Mapping("PHFetchOptions")
 public class PHFetchOptions 
     extends NSObject 
@@ -31,7 +29,7 @@ public class PHFetchOptions
     
     @Mapping("init")
     public PHFetchOptions() { }
-    
+
     
     @Mapping("predicate")
     public native NSPredicate getPredicate();
@@ -53,10 +51,10 @@ public class PHFetchOptions
     public native boolean wantsIncrementalChangeDetails();
     @Mapping("setWantsIncrementalChangeDetails:")
     public native void setWantsIncrementalChangeDetails(boolean v);
-    
+
     
     
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
-    
+
 }

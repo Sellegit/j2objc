@@ -17,11 +17,9 @@ import apple.uikit.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 4.0 and later.
  */
-
 @Library("MapKit/MapKit.h") @Mapping("MKMultiPoint")
 public class MKMultiPoint 
     extends MKShape 
@@ -31,16 +29,16 @@ public class MKMultiPoint
     
     @Mapping("init")
     public MKMultiPoint() { }
-    
+
     
     @Mapping("pointCount")
     public native @MachineSizedUInt long getPointCount();
-    
+
     
     
     @Mapping("points")
     public native MKMapPoint getPoints0();
     @Mapping("getCoordinates:range:")
     public native void getCoordinates0(CLLocationCoordinate2D coords, NSRange range);
-    
+
 }

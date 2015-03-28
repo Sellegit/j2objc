@@ -17,7 +17,6 @@ import apple.coreaudio.*;
 import apple.coreanimation.*;
 import apple.corevideo.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Mapping("CMTimebaseRef") @Library("CoreMedia/CoreMedia.h")
@@ -28,7 +27,7 @@ public class CMTimebase
     
     
     protected CMTimebase() {}
-    
+
     
     
     
@@ -47,7 +46,7 @@ public class CMTimebase
      */
     @GlobalConstant("kCMTimebaseNotificationKey_EventTime")
     public static native NSString EventTimeNotificationKey();
-    
+
     /**
      * @since Available in iOS 6.0 and later.
      */
@@ -168,5 +167,5 @@ public class CMTimebase
      */
     @GlobalFunction("CMTimebaseNotificationBarrier")
     public static native CMTimebaseError notificationBarrier(CMTimebase timebase);
-    
+
 }

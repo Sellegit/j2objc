@@ -19,9 +19,6 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h")
 @Mapping("UITableViewStyle")
 public final class UITableViewStyle extends ObjCEnum {
@@ -30,6 +27,6 @@ public final class UITableViewStyle extends ObjCEnum {
     public static final long Plain = 0L;
     @GlobalConstant("UITableViewStyleGrouped")
     public static final long Grouped = 1L;
-    
+
 
 }

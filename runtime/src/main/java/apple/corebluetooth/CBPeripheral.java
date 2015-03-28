@@ -15,11 +15,9 @@ import apple.foundation.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 5.0 and later.
  */
-
 @Library("CoreBluetooth/CoreBluetooth.h") @Mapping("CBPeripheral")
 public class CBPeripheral 
     extends CBPeer 
@@ -29,7 +27,7 @@ public class CBPeripheral
     
     @Mapping("init")
     public CBPeripheral() { }
-    
+
     
     @Mapping("delegate")
     public native CBPeripheralDelegate getDelegate();
@@ -55,7 +53,7 @@ public class CBPeripheral
     public native @Representing("CBPeripheralState") long getState();
     @Mapping("services")
     public native NSArray<CBService> getServices();
-    
+
     
     
     @Mapping("readRSSI")
@@ -78,5 +76,5 @@ public class CBPeripheral
     public native void readValue(CBDescriptor descriptor);
     @Mapping("writeValue:forDescriptor:")
     public native void writeValue(NSData data, CBDescriptor descriptor);
-    
+
 }

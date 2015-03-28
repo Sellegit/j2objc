@@ -15,7 +15,6 @@ import apple.foundation.*;
 import apple.uikit.*;
 import apple.security.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("MultipeerConnectivity/MultipeerConnectivity.h")
@@ -30,5 +29,5 @@ public class MCError
     
     @GlobalConstant("MCErrorDomain")
     public static native String getClassDomain();
-    
+
 }

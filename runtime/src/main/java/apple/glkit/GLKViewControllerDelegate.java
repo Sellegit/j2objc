@@ -17,23 +17,20 @@ import apple.uikit.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("GLKit/GLKit.h") @Mapping("GLKViewControllerDelegate")
 public interface GLKViewControllerDelegate 
     extends NSObjectProtocol {
 
     
     
-    
-    
+
+
     
     @Mapping("glkViewControllerUpdate:")
     void update(GLKViewController controller);
     @Mapping("glkViewController:willPause:")
     void willPause(GLKViewController controller, boolean pause);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

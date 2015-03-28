@@ -16,9 +16,6 @@ import apple.opengles.*;
 import apple.coremedia.*;
 
 
-
-
-
 @Library("CoreVideo/CoreVideo.h")
 @Mapping("CVReturn")
 public final class CVReturn extends ObjCEnum {
@@ -59,6 +56,6 @@ public final class CVReturn extends ObjCEnum {
     public static final long InvalidPoolAttributes = -6691L;
     @GlobalConstant("kCVReturnLast")
     public static final long Last = -6699L;
-    
+
 
 }

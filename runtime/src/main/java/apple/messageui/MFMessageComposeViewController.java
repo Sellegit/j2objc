@@ -15,11 +15,9 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
 /**
  * @since Available in iOS 4.0 and later.
  */
-
 @Library("MessageUI/MessageUI.h") @Mapping("MFMessageComposeViewController")
 public class MFMessageComposeViewController 
     extends UINavigationController 
@@ -33,7 +31,7 @@ public class MFMessageComposeViewController
     public MFMessageComposeViewController(String nibNameOrNil, NSBundle nibBundleOrNil) { }
     @Mapping("init")
     public MFMessageComposeViewController() { }
-    
+
     
     @Mapping("messageComposeDelegate")
     public native MFMessageComposeViewControllerDelegate getMessageComposeDelegate();
@@ -53,7 +51,7 @@ public class MFMessageComposeViewController
     public native void setSubject(String v);
     @Mapping("attachments")
     public native List<MFMessageComposeViewControllerAttachment> getAttachments();
-    
+
     
     
     /**
@@ -66,7 +64,7 @@ public class MFMessageComposeViewController
      */
     @GlobalConstant("MFMessageComposeViewControllerTextMessageAvailabilityKey")
     public static native NSString TextMessageAvailabilityKey();
-    
+
     /**
      * @since Available in iOS 7.0 and later.
      */
@@ -102,5 +100,5 @@ public class MFMessageComposeViewController
      */
     @Mapping("isSupportedAttachmentUTI:")
     public static native boolean isSupportedAttachmentUTI(String uti);
-    
+
 }

@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 import apple.uikit.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -25,8 +24,8 @@ public abstract class GKPeerPickerControllerDelegateAdapter
     
     
     
-    
-    
+
+
     
     
     @NotImplemented("peerPickerController:didSelectConnectionType:")
@@ -37,5 +36,5 @@ public abstract class GKPeerPickerControllerDelegateAdapter
     public void didConnectPeer(GKPeerPickerController picker, String peerID, GKSession session) { throw new UnsupportedOperationException(); }
     @NotImplemented("peerPickerControllerDidCancel:")
     public void didCancel(GKPeerPickerController picker) { throw new UnsupportedOperationException(); }
-    
+
 }

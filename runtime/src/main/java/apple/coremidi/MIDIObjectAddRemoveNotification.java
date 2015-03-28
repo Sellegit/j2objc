@@ -14,9 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
-
-
 @Mapping("MIDIObjectAddRemoveNotification") @Library("CoreMIDI/CoreMIDI.h")
 public class MIDIObjectAddRemoveNotification 
     extends Struct 
@@ -38,6 +35,6 @@ public class MIDIObjectAddRemoveNotification
     public native MIDIObject getChild();
     @DotMapping("childType")
     public native MIDIObjectType getChildType();
-    
+
     
 }

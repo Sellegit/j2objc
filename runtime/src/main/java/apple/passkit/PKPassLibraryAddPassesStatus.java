@@ -16,11 +16,9 @@ import apple.uikit.*;
 import apple.addressbook.*;
 
 
-
 /**
  * @since Available in iOS 7.0 and later.
  */
-
 @Library("PassKit/PassKit.h")
 @Mapping("PKPassLibraryAddPassesStatus")
 public final class PKPassLibraryAddPassesStatus extends ObjCEnum {
@@ -31,6 +29,6 @@ public final class PKPassLibraryAddPassesStatus extends ObjCEnum {
     public static final long ShouldReviewPasses = 1L;
     @GlobalConstant("PKPassLibraryDidCancelAddPasses")
     public static final long DidCancelAddPasses = 2L;
-    
+
 
 }

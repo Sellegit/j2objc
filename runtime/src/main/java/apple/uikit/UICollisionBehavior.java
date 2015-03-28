@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 7.0 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UICollisionBehavior")
 public class UICollisionBehavior 
     extends UIDynamicBehavior 
@@ -35,7 +33,7 @@ public class UICollisionBehavior
     public UICollisionBehavior(NSArray<?> items) { }
     @Mapping("init")
     public UICollisionBehavior() { }
-    
+
     
     @Mapping("items")
     public native List<UIDynamicItem> getItems();
@@ -53,7 +51,7 @@ public class UICollisionBehavior
     public native UICollisionBehaviorDelegate getCollisionDelegate();
     @Mapping("setCollisionDelegate:")
     public native void setCollisionDelegate(UICollisionBehaviorDelegate v);
-    
+
     
     
     @Mapping("addItem:")
@@ -72,5 +70,5 @@ public class UICollisionBehavior
     public native void removeBoundary(Cloneable identifier);
     @Mapping("removeAllBoundaries")
     public native void removeAllBoundaries();
-    
+
 }

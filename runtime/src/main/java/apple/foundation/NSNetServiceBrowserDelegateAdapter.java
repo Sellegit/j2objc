@@ -18,7 +18,6 @@ import apple.coremedia.*;
 import apple.security.*;
 import apple.dispatch.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -29,8 +28,8 @@ public abstract class NSNetServiceBrowserDelegateAdapter
     
     
     
-    
-    
+
+
     
     
     @NotImplemented("netServiceBrowserWillSearch:")
@@ -47,5 +46,5 @@ public abstract class NSNetServiceBrowserDelegateAdapter
     public void didRemoveDomain(NSNetServiceBrowser aNetServiceBrowser, String domainString, boolean moreComing) { throw new UnsupportedOperationException(); }
     @NotImplemented("netServiceBrowser:didRemoveService:moreComing:")
     public void didRemoveService(NSNetServiceBrowser aNetServiceBrowser, NSNetService aNetService, boolean moreComing) { throw new UnsupportedOperationException(); }
-    
+
 }

@@ -13,7 +13,6 @@ import apple.coregraphics.*;
 import apple.coreservices.*;
 import apple.dispatch.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Mapping("SecPolicyRef") @Library("Security/Security.h")
@@ -24,7 +23,7 @@ public class SecPolicy
     
     
     protected SecPolicy() {}
-    
+
     
     
     
@@ -93,7 +92,7 @@ public class SecPolicy
      */
     @GlobalConstant("kSecPolicyRevocationFlags")
     public static native CFType RevocationFlags();
-    
+
     /**
      * @since Available in iOS 2.0 and later.
      */
@@ -124,5 +123,5 @@ public class SecPolicy
      */
     @GlobalFunction("SecPolicyCreateWithProperties")
     public static native SecPolicy createWithProperties(CFType policyIdentifier, CFDictionary properties);
-    
+
 }

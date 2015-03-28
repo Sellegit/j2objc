@@ -18,9 +18,6 @@ import apple.coreanimation.*;
 import apple.corevideo.*;
 
 
-
-
-
 @Library("CoreMedia/CoreMedia.h")
 @Mapping("CMMetadataDataTypeRegistryError")
 public final class CMMetadataDataTypeRegistryError extends ObjCEnum {
@@ -37,6 +34,6 @@ public final class CMMetadataDataTypeRegistryError extends ObjCEnum {
     public static final long RequiresConformingBaseType = -16314L;
     @GlobalConstant("kCMMetadataDataTypeRegistryError_MultipleConformingBaseTypes")
     public static final long MultipleConformingBaseTypes = -16315L;
-    
+
 
 }

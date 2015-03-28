@@ -13,7 +13,6 @@ import apple.coregraphics.*;
 import apple.coreservices.*;
 import apple.dispatch.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Mapping("SecTrustRef") @Library("Security/Security.h")
@@ -24,7 +23,7 @@ public class SecTrust
     
     
     protected SecTrust() {}
-    
+
     
     
     
@@ -58,7 +57,7 @@ public class SecTrust
      */
     @GlobalConstant("kSecTrustRevocationValidUntilDate")
     public static native CFType RevocationValidUntilDate();
-    
+
     /**
      * @since Available in iOS 2.0 and later.
      */
@@ -169,5 +168,5 @@ public class SecTrust
      */
     @GlobalFunction("SecTrustSetOCSPResponse")
     public static native int setOCSPResponse(SecTrust trust, CFType responseData);
-    
+
 }

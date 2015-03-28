@@ -16,11 +16,9 @@ import apple.uikit.*;
 import apple.addressbook.*;
 
 
-
 /**
  * @since Available in iOS 6.0 and later.
  */
-
 @Library("PassKit/PassKit.h")
 @Mapping("PKPassKitErrorCode")
 public final class PKPassKitErrorCode extends ObjCEnum {
@@ -35,6 +33,6 @@ public final class PKPassKitErrorCode extends ObjCEnum {
     public static final long InvalidSignature = 3L;
     @GlobalConstant("PKNotEntitledError")
     public static final long NotEntitledError = 4L;
-    
+
 
 }

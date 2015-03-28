@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UIVisualEffectView")
 public class UIVisualEffectView 
     extends UIView 
@@ -39,15 +37,15 @@ public class UIVisualEffectView
     public UIVisualEffectView(NSCoder aDecoder) { }
     @Mapping("init")
     public UIVisualEffectView() { }
-    
+
     
     @Mapping("contentView")
     public native UIView getContentView();
     @Mapping("effect")
     public native UIVisualEffect getEffect();
+
     
     
-    
-    
-    
+
+
 }

@@ -15,9 +15,6 @@ import apple.foundation.*;
 import apple.imageio.*;
 
 
-
-
-
 @Library("AssetsLibrary/AssetsLibrary.h")
 @Mapping("ALAssetOrientation")
 public final class ALAssetOrientation extends ObjCEnum {
@@ -38,6 +35,6 @@ public final class ALAssetOrientation extends ObjCEnum {
     public static final long LeftMirrored = 6L;
     @GlobalConstant("ALAssetOrientationRightMirrored")
     public static final long RightMirrored = 7L;
-    
+
 
 }

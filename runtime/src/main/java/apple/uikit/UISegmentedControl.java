@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 2.0 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UISegmentedControl")
 public class UISegmentedControl 
     extends UIControl 
@@ -31,7 +29,7 @@ public class UISegmentedControl
 
     
     public static final int NoSegment = -1;
-    
+
     
     @Mapping("initWithItems:")
     public UISegmentedControl(NSArray<?> items) { }
@@ -41,7 +39,7 @@ public class UISegmentedControl
     public UISegmentedControl(NSCoder aDecoder) { }
     @Mapping("init")
     public UISegmentedControl() { }
-    
+
     
     /**
      * @since Available in iOS 2.0 and later.
@@ -81,7 +79,7 @@ public class UISegmentedControl
     public native UIColor getTintColor();
     @Mapping("setTintColor:")
     public native void setTintColor(UIColor v);
-    
+
     
     
     @Mapping("insertSegmentWithTitle:atIndex:animated:")
@@ -152,5 +150,5 @@ public class UISegmentedControl
      */
     @Mapping("contentPositionAdjustmentForSegmentType:barMetrics:")
     public native UIOffset getContentPositionAdjustment(@Representing("UISegmentedControlSegment") long leftCenterRightOrAlone, @Representing("UIBarMetrics") long barMetrics);
-    
+
 }

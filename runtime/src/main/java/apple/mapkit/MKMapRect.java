@@ -17,9 +17,6 @@ import apple.uikit.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Mapping("MKMapRect") @Library("MapKit/MapKit.h")
 public class MKMapRect 
     extends Struct 
@@ -33,7 +30,7 @@ public class MKMapRect
     public native MKMapPoint getOrigin();
     @DotMapping("size")
     public native MKMapSize getSize();
-    
+
     public static native MKMapRect create(MKMapPoint origin, MKMapSize size) /*-[
         MKMapRect __new = { .origin = origin, .size = size };
         return __new;
@@ -43,13 +40,29 @@ public class MKMapRect
         return __new;
     ]-*/;
 
-    
+
     public static native MKMapRect copyWithsize(MKMapRect original, MKMapSize size) /*-[
         MKMapRect __new = { .origin = original.origin, .size = size };
         return __new;
     ]-*/;
 
-    
+
+    public static final class Adapter {
+
+        public MKMapPoint origin;
+        public MKMapSize size;
+        public Adapter(MKMapPoint origin, MKMapSize size) {
+            this.origin = origin;
+            this.size = size;
+        }
+        public Adapter(MKMapRect original) {
+            this.origin = original.getOrigin();
+            this.size = original.getSize();
+        }
+        public MKMapRect convert() {
+            return create(origin, size);
+        }
+    }
     /**
      * @since Available in iOS 4.0 and later.
      */
@@ -60,7 +73,7 @@ public class MKMapRect
      */
     @GlobalConstant("MKMapRectNull")
     public static native MKMapRect getNullRect();
-    
+
     /**
      * @since Available in iOS 4.0 and later.
      */
@@ -111,5 +124,5 @@ public class MKMapRect
      */
     @GlobalFunction("MKMapRectRemainder")
     public static native MKMapRect remainder(MKMapRect rect);
-    
+
 }

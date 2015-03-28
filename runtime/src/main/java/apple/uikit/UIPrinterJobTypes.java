@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("UIKit/UIKit.h")
 @Mapping("UIPrinterJobTypes")
 public final class UIPrinterJobTypes extends ObjCEnum {
@@ -46,6 +44,6 @@ public final class UIPrinterJobTypes extends ObjCEnum {
     public static final long LargeFormat = 64L;
     @GlobalConstant("UIPrinterJobTypePostcard")
     public static final long Postcard = 128L;
-    
+
 
 }

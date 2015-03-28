@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 7.0 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UIAttachmentBehavior")
 public class UIAttachmentBehavior 
     extends UIDynamicBehavior 
@@ -41,7 +39,7 @@ public class UIAttachmentBehavior
     public UIAttachmentBehavior(UIDynamicItem item1, UIOffset offset1, UIDynamicItem item2, UIOffset offset2) { }
     @Mapping("init")
     public UIAttachmentBehavior() { }
-    
+
     
     @Mapping("items")
     public native List<UIDynamicItem> getItems();
@@ -63,9 +61,9 @@ public class UIAttachmentBehavior
     public native @MachineSizedFloat double getFrequency();
     @Mapping("setFrequency:")
     public native void setFrequency(@MachineSizedFloat double v);
+
     
     
-    
-    
-    
+
+
 }

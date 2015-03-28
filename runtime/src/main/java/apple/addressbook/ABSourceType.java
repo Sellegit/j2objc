@@ -14,9 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
-
-
 @Library("AddressBook/AddressBook.h")
 @Mapping("ABSourceType")
 public final class ABSourceType extends ObjCEnum {
@@ -35,6 +32,6 @@ public final class ABSourceType extends ObjCEnum {
     public static final long CardDAV = 4L;
     @GlobalConstant("kABSourceTypeCardDAVSearch")
     public static final long CardDAVSearch = 16777220L;
-    
+
 
 }

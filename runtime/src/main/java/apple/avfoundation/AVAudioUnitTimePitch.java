@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h") @Mapping("AVAudioUnitTimePitch")
 public class AVAudioUnitTimePitch 
     extends AVAudioUnitTimeEffect 
@@ -36,7 +34,7 @@ public class AVAudioUnitTimePitch
     public AVAudioUnitTimePitch(AudioComponentDescription audioComponentDescription) { }
     @Mapping("init")
     public AVAudioUnitTimePitch() { }
-    
+
     
     @Mapping("rate")
     public native float getRate();
@@ -50,9 +48,9 @@ public class AVAudioUnitTimePitch
     public native float getOverlap();
     @Mapping("setOverlap:")
     public native void setOverlap(float v);
+
     
     
-    
-    
-    
+
+
 }

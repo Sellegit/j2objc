@@ -16,7 +16,6 @@ import apple.coreimage.*;
 import apple.coretext.*;
 import apple.opengles.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("QuartzCore/QuartzCore.h")
@@ -54,5 +53,5 @@ public class CAMediaTimingFunctionName
      */
     @GlobalConstant("kCAMediaTimingFunctionDefault")
     public static native NSString DefaultValue();
-    
+
 }

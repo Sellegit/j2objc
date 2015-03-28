@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 7.0 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UIInputView")
 public class UIInputView 
     extends UIView 
@@ -39,13 +37,13 @@ public class UIInputView
     public UIInputView(NSCoder aDecoder) { }
     @Mapping("init")
     public UIInputView() { }
-    
+
     
     @Mapping("inputViewStyle")
     public native @Representing("UIInputViewStyle") long getInputViewStyle();
+
     
     
-    
-    
-    
+
+
 }

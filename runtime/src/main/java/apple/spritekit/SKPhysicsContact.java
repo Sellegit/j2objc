@@ -21,9 +21,6 @@ import apple.glkit.*;
 import apple.scenekit.*;
 
 
-
-
-
 @Library("SpriteKit/SpriteKit.h") @Mapping("SKPhysicsContact")
 public class SKPhysicsContact 
     extends NSObject 
@@ -33,7 +30,7 @@ public class SKPhysicsContact
     
     @Mapping("init")
     public SKPhysicsContact() { }
-    
+
     
     @Mapping("bodyA")
     public native SKPhysicsBody getBodyA();
@@ -45,9 +42,9 @@ public class SKPhysicsContact
     public native CGVector getContactNormal();
     @Mapping("collisionImpulse")
     public native @MachineSizedFloat double getCollisionImpulse();
+
     
     
-    
-    
-    
+
+
 }

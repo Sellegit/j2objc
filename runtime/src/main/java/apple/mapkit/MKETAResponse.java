@@ -17,11 +17,9 @@ import apple.uikit.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 7.0 and later.
  */
-
 @Library("MapKit/MapKit.h") @Mapping("MKETAResponse")
 public class MKETAResponse 
     extends NSObject 
@@ -31,7 +29,7 @@ public class MKETAResponse
     
     @Mapping("init")
     public MKETAResponse() { }
-    
+
     
     @Mapping("source")
     public native MKMapItem getSource();
@@ -39,9 +37,9 @@ public class MKETAResponse
     public native MKMapItem getDestination();
     @Mapping("expectedTravelTime")
     public native double getExpectedTravelTime();
+
     
     
-    
-    
-    
+
+
 }

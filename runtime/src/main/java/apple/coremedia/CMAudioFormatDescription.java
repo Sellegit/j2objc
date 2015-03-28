@@ -17,7 +17,6 @@ import apple.coreaudio.*;
 import apple.coreanimation.*;
 import apple.corevideo.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Mapping("CMAudioFormatDescriptionRef") @Library("CoreMedia/CoreMedia.h")
@@ -28,7 +27,7 @@ public class CMAudioFormatDescription
     
     
     protected CMAudioFormatDescription() {}
-    
+
     
     
     
@@ -92,5 +91,5 @@ public class CMAudioFormatDescription
      */
     @GlobalFunction("CMAudioFormatDescriptionCopyAsBigEndianSoundDescriptionBlockBuffer")
     public static native int copyAsBigEndianSoundDescriptionBlockBuffer(CFAllocator allocator, CMAudioFormatDescription audioFormatDescription, CFString soundDescriptionFlavor, Todo soundDescriptionBlockBufferOut);
-    
+
 }

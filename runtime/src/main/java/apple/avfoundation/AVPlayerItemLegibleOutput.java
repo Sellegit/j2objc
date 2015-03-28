@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 7.0 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h") @Mapping("AVPlayerItemLegibleOutput")
 public class AVPlayerItemLegibleOutput 
     extends AVPlayerItemOutput 
@@ -36,7 +34,7 @@ public class AVPlayerItemLegibleOutput
     public AVPlayerItemLegibleOutput() { }
     @Mapping("initWithMediaSubtypesForNativeRepresentation:")
     public AVPlayerItemLegibleOutput(NSArray<?> subtypes) { }
-    
+
     
     @Mapping("delegate")
     public native AVPlayerItemLegibleOutputPushDelegate getDelegate();
@@ -50,10 +48,10 @@ public class AVPlayerItemLegibleOutput
     public native AVPlayerItemLegibleOutputTextStylingResolution getTextStylingResolution();
     @Mapping("setTextStylingResolution:")
     public native void setTextStylingResolution(AVPlayerItemLegibleOutputTextStylingResolution v);
-    
+
     
     
     @Mapping("setDelegate:queue:")
     public native void setDelegate(AVPlayerItemLegibleOutputPushDelegate delegate, DispatchQueue delegateQueue);
-    
+
 }

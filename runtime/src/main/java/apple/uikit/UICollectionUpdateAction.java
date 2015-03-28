@@ -19,9 +19,6 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h")
 @Mapping("UICollectionUpdateAction")
 public final class UICollectionUpdateAction extends ObjCEnum {
@@ -36,6 +33,6 @@ public final class UICollectionUpdateAction extends ObjCEnum {
     public static final long Move = 3L;
     @GlobalConstant("UICollectionUpdateActionNone")
     public static final long None = 4L;
-    
+
 
 }

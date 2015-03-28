@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 5.0 and later.
  */
-
 @Library("Accounts/Accounts.h") @Mapping("ACAccountCredential")
 public class ACAccountCredential 
     extends NSObject 
@@ -32,15 +30,15 @@ public class ACAccountCredential
     public ACAccountCredential(String token, String refreshToken, NSDate expiryDate) { }
     @Mapping("init")
     public ACAccountCredential() { }
-    
+
     
     @Mapping("oauthToken")
     public native String getOauthToken();
     @Mapping("setOauthToken:")
     public native void setOauthToken(String v);
+
     
     
-    
-    
-    
+
+
 }

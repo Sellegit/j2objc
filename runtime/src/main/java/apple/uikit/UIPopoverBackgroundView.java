@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 5.0 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UIPopoverBackgroundView")
 public class UIPopoverBackgroundView 
     extends UIView 
@@ -37,7 +35,7 @@ public class UIPopoverBackgroundView
     public UIPopoverBackgroundView(NSCoder aDecoder) { }
     @Mapping("init")
     public UIPopoverBackgroundView() { }
-    
+
     
     @Mapping("arrowOffset")
     public native @MachineSizedFloat double getArrowOffset();
@@ -47,7 +45,7 @@ public class UIPopoverBackgroundView
     public native @Representing("UIPopoverArrowDirection") long getArrowDirection();
     @Mapping("setArrowDirection:")
     public native void setArrowDirection(@Representing("UIPopoverArrowDirection") long v);
-    
+
     
     
     /**
@@ -55,5 +53,5 @@ public class UIPopoverBackgroundView
      */
     @Mapping("wantsDefaultContentAppearance")
     public static native boolean wantsDefaultContentAppearance();
-    
+
 }

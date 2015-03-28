@@ -14,9 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
-
-
 @Library("CoreTelephony/CTCall.h")
 @Mapping("CTErrorDomain")
 public final class CTErrorDomain extends ObjCEnum {
@@ -27,6 +24,6 @@ public final class CTErrorDomain extends ObjCEnum {
     public static final long POSIX = 1L;
     @GlobalConstant("kCTErrorDomainMach")
     public static final long Mach = 2L;
-    
+
 
 }

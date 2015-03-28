@@ -21,9 +21,6 @@ import apple.glkit.*;
 import apple.scenekit.*;
 
 
-
-
-
 @Library("SpriteKit/SpriteKit.h") @Mapping("SKScene")
 public class SKScene 
     extends SKEffectNode 
@@ -37,7 +34,7 @@ public class SKScene
     public SKScene() { }
     @Mapping("initWithCoder:")
     public SKScene(NSCoder aDecoder) { }
-    
+
     
     @Mapping("size")
     public native CGSize getSize();
@@ -69,7 +66,7 @@ public class SKScene
     public native SKPhysicsWorld getPhysicsWorld();
     @Mapping("view")
     public native SKView getView();
-    
+
     
     
     @Mapping("convertPointFromView:")
@@ -100,5 +97,5 @@ public class SKScene
     public native void didChangeSize(CGSize oldSize);
     @Mapping("sceneWithSize:")
     public static native SKScene create(CGSize size);
-    
+
 }

@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 5.0 and later.
  */
-
 @Library("CoreData/CoreData.h") @Mapping("NSIncrementalStoreNode")
 public class NSIncrementalStoreNode 
     extends NSObject 
@@ -30,18 +28,18 @@ public class NSIncrementalStoreNode
     public NSIncrementalStoreNode(NSManagedObjectID objectID, NSDictionary<?, ?> values, long version) { }
     @Mapping("init")
     public NSIncrementalStoreNode() { }
-    
+
     
     @Mapping("objectID")
     public native NSManagedObjectID getObjectID();
     @Mapping("version")
     public native long getVersion();
-    
+
     
     
     @Mapping("updateWithValues:version:")
     public native void update(NSDictionary<?, ?> values, long version);
     @Mapping("valueForPropertyDescription:")
     public native Object getValue(NSPropertyDescription prop);
-    
+
 }

@@ -16,9 +16,6 @@ import apple.uikit.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("ExternalAccessory/ExternalAccessory.h")
 @Mapping("EAWiFiUnconfiguredAccessoryBrowserState")
 public final class EAWiFiUnconfiguredAccessoryBrowserState extends ObjCEnum {
@@ -31,6 +28,6 @@ public final class EAWiFiUnconfiguredAccessoryBrowserState extends ObjCEnum {
     public static final long Searching = 2L;
     @GlobalConstant("EAWiFiUnconfiguredAccessoryBrowserStateConfiguring")
     public static final long Configuring = 3L;
-    
+
 
 }

@@ -14,9 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
-
-
 @Library("CoreData/CoreData.h")
 @Mapping("NSEntityMappingType")
 public final class NSEntityMappingType extends ObjCEnum {
@@ -33,6 +30,6 @@ public final class NSEntityMappingType extends ObjCEnum {
     public static final long Copy = 4L;
     @GlobalConstant("NSTransformEntityMappingType")
     public static final long Transform = 5L;
-    
+
 
 }

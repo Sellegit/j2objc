@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 7.0 and later.
  */
-
 @Library("UIKit/UIKit.h")
 @Mapping("UIImageRenderingMode")
 public final class UIImageRenderingMode extends ObjCEnum {
@@ -34,6 +32,6 @@ public final class UIImageRenderingMode extends ObjCEnum {
     public static final long AlwaysOriginal = 1L;
     @GlobalConstant("UIImageRenderingModeAlwaysTemplate")
     public static final long AlwaysTemplate = 2L;
-    
+
 
 }

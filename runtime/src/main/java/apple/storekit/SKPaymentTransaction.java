@@ -16,11 +16,9 @@ import apple.uikit.*;
 import apple.accounts.*;
 
 
-
 /**
  * @since Available in iOS 3.0 and later.
  */
-
 @Library("StoreKit/StoreKit.h") @Mapping("SKPaymentTransaction")
 public class SKPaymentTransaction 
     extends NSObject 
@@ -30,7 +28,7 @@ public class SKPaymentTransaction
     
     @Mapping("init")
     public SKPaymentTransaction() { }
-    
+
     
     /**
      * @since Available in iOS 3.0 and later.
@@ -74,9 +72,9 @@ public class SKPaymentTransaction
      */
     @Mapping("transactionState")
     public native @Representing("SKPaymentTransactionState") long getTransactionState();
+
     
     
-    
-    
-    
+
+
 }

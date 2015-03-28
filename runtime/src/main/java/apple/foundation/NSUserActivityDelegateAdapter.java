@@ -18,7 +18,6 @@ import apple.coremedia.*;
 import apple.security.*;
 import apple.dispatch.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -29,8 +28,8 @@ public abstract class NSUserActivityDelegateAdapter
     
     
     
-    
-    
+
+
     
     
     @NotImplemented("userActivityWillSave:")
@@ -39,5 +38,5 @@ public abstract class NSUserActivityDelegateAdapter
     public void wasContinued(NSUserActivity userActivity) { throw new UnsupportedOperationException(); }
     @NotImplemented("userActivity:didReceiveInputStream:outputStream:")
     public void didReceiveStreams(NSUserActivity userActivity, NSInputStream inputStream, NSOutputStream outputStream) { throw new UnsupportedOperationException(); }
-    
+
 }

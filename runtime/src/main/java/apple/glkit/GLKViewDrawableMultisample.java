@@ -17,11 +17,9 @@ import apple.uikit.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 5.0 and later.
  */
-
 @Library("GLKit/GLKit.h")
 @Mapping("GLKViewDrawableMultisample")
 public final class GLKViewDrawableMultisample extends ObjCEnum {
@@ -30,6 +28,6 @@ public final class GLKViewDrawableMultisample extends ObjCEnum {
     public static final long None = 0L;
     @GlobalConstant("GLKViewDrawableMultisample4X")
     public static final long _4X = 1L;
-    
+
 
 }

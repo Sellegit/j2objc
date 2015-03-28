@@ -17,11 +17,9 @@ import apple.uikit.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 7.0 and later.
  */
-
 @Library("MapKit/MapKit.h")
 @Mapping("MKDistanceFormatterUnitStyle")
 public final class MKDistanceFormatterUnitStyle extends ObjCEnum {
@@ -32,6 +30,6 @@ public final class MKDistanceFormatterUnitStyle extends ObjCEnum {
     public static final long Abbreviated = 1L;
     @GlobalConstant("MKDistanceFormatterUnitStyleFull")
     public static final long Full = 2L;
-    
+
 
 }

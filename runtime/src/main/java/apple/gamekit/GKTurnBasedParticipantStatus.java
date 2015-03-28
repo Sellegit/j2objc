@@ -15,9 +15,6 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
-
-
 @Library("GameKit/GameKit.h")
 @Mapping("GKTurnBasedParticipantStatus")
 public final class GKTurnBasedParticipantStatus extends ObjCEnum {
@@ -34,6 +31,6 @@ public final class GKTurnBasedParticipantStatus extends ObjCEnum {
     public static final long Active = 4L;
     @GlobalConstant("GKTurnBasedParticipantStatusDone")
     public static final long Done = 5L;
-    
+
 
 }

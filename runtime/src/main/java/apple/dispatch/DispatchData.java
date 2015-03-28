@@ -12,7 +12,6 @@ import apple.corefoundation.*;
 import apple.coregraphics.*;
 import apple.coreservices.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("dispatch/dispatch.h")
@@ -23,7 +22,7 @@ public class DispatchData
     
     
     protected DispatchData() {}
-    
+
     
     
     
@@ -47,7 +46,7 @@ public class DispatchData
      */
     @GlobalConstant("_dispatch_data_destructor_munmap")
     public static native DispatchData DestructorMunmap();
-    
+
     /**
      * @since Available in iOS 5.0 and later.
      */
@@ -83,5 +82,5 @@ public class DispatchData
      */
     @GlobalFunction("dispatch_data_copy_region")
     public static native DispatchData copyRegion(DispatchData data, @MachineSizedUInt long location, Todo offset_ptr);
-    
+
 }

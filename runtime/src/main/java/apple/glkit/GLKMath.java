@@ -16,7 +16,6 @@ import apple.opengles.*;
 import apple.uikit.*;
 import apple.dispatch.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("GLKit/GLKit.h")
@@ -33,5 +32,5 @@ public class GLKMath
     public static native GLKVector3 project(GLKVector3 object, GLKMatrix4 model, GLKMatrix4 projection, Todo viewport);
     @GlobalFunction("GLKMathUnproject")
     public static native GLKVector3 unproject(GLKVector3 window, GLKMatrix4 model, GLKMatrix4 projection, Todo viewport, Todo success);
-    
+
 }

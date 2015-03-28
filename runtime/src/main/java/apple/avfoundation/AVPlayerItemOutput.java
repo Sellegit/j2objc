@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 6.0 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h") @Mapping("AVPlayerItemOutput")
 public class AVPlayerItemOutput 
     extends NSObject 
@@ -34,7 +32,7 @@ public class AVPlayerItemOutput
     
     @Mapping("init")
     public AVPlayerItemOutput() { }
-    
+
     
     /**
      * @since Available in iOS 6.0 and later.
@@ -46,12 +44,12 @@ public class AVPlayerItemOutput
      */
     @Mapping("setSuppressesPlayerRendering:")
     public native void setSuppressesPlayerRendering(boolean v);
-    
+
     
     
     @Mapping("itemTimeForHostTime:")
     public native CMTime getItem(double hostTimeInSeconds);
     @Mapping("itemTimeForMachAbsoluteTime:")
     public native CMTime getItem(long machAbsoluteTime);
-    
+
 }

@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.dispatch.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Mapping("CFPropertyListRef")
@@ -25,7 +24,7 @@ public class CFPropertyListRef
     
     
     protected CFPropertyListRef() {}
-    
+
     
     
     

@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 2.0 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UITouch")
 public class UITouch 
     extends NSObject 
@@ -33,7 +31,7 @@ public class UITouch
     
     @Mapping("init")
     public UITouch() { }
-    
+
     
     @Mapping("timestamp")
     public native double getTimestamp();
@@ -60,12 +58,12 @@ public class UITouch
      */
     @Mapping("gestureRecognizers")
     public native NSArray<UIGestureRecognizer> getGestureRecognizers();
-    
+
     
     
     @Mapping("locationInView:")
     public native CGPoint getLocationInView(UIView view);
     @Mapping("previousLocationInView:")
     public native CGPoint getPreviousLocationInView(UIView view);
-    
+
 }

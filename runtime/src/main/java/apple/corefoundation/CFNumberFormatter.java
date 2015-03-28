@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.dispatch.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Mapping("CFNumberFormatterRef") @Library("CoreFoundation/CoreFoundation.h")
@@ -25,7 +24,7 @@ public class CFNumberFormatter
     
     
     protected CFNumberFormatter() {}
-    
+
     
     
     
@@ -55,5 +54,5 @@ public class CFNumberFormatter
     public static native CFType getProperty(CFNumberFormatter formatter, CFString key);
     @GlobalFunction("CFNumberFormatterGetDecimalInfoForCurrencyCode")
     public static native boolean getDecimalInfoForCurrencyCode(CFString currencyCode, Todo defaultFractionDigits, Todo roundingIncrement);
-    
+
 }

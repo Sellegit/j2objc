@@ -20,9 +20,6 @@ import apple.spritekit.*;
 import apple.opengles.*;
 
 
-
-
-
 @Library("SceneKit/SceneKit.h") @Mapping("SCNGeometryElement")
 public class SCNGeometryElement 
     extends NSObject 
@@ -32,7 +29,7 @@ public class SCNGeometryElement
     
     @Mapping("init")
     public SCNGeometryElement() { }
-    
+
     
     @Mapping("data")
     public native NSData getData();
@@ -42,10 +39,10 @@ public class SCNGeometryElement
     public native @MachineSizedSInt long getPrimitiveCount();
     @Mapping("bytesPerIndex")
     public native @MachineSizedSInt long getBytesPerIndex();
-    
+
     
     
     @Mapping("geometryElementWithData:primitiveType:primitiveCount:bytesPerIndex:")
     public static native SCNGeometryElement create(NSData data, @Representing("SCNGeometryPrimitiveType") long primitiveType, @MachineSizedSInt long primitiveCount, @MachineSizedSInt long bytesPerIndex);
-    
+
 }

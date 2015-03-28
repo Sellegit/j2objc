@@ -17,11 +17,9 @@ import apple.uikit.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 5.0 and later.
  */
-
 @Library("GLKit/GLKit.h") @Mapping("GLKEffectPropertyTexture")
 public class GLKEffectPropertyTexture 
     extends GLKEffectProperty 
@@ -31,7 +29,7 @@ public class GLKEffectPropertyTexture
     
     @Mapping("init")
     public GLKEffectPropertyTexture() { }
-    
+
     
     @Mapping("enabled")
     public native boolean isEnabled();
@@ -49,9 +47,9 @@ public class GLKEffectPropertyTexture
     public native @Representing("GLKTextureEnvMode") long getEnvMode();
     @Mapping("setEnvMode:")
     public native void setEnvMode(@Representing("GLKTextureEnvMode") long v);
+
     
     
-    
-    
-    
+
+
 }

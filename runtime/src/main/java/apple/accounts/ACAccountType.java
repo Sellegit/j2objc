@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 5.0 and later.
  */
-
 @Library("Accounts/Accounts.h") @Mapping("ACAccountType")
 public class ACAccountType 
     extends NSObject 
@@ -28,7 +26,7 @@ public class ACAccountType
     
     @Mapping("init")
     public ACAccountType() { }
-    
+
     
     @Mapping("accountTypeDescription")
     public native String getAccountTypeDescription();
@@ -36,9 +34,9 @@ public class ACAccountType
     public native ACAccountTypeIdentifier getIdentifier();
     @Mapping("accessGranted")
     public native boolean isAccessGranted();
+
     
     
-    
-    
-    
+
+
 }

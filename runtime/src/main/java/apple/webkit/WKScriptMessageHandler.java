@@ -15,21 +15,18 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
-
-
 @Library("WebKit/WebKit.h") @Mapping("WKScriptMessageHandler")
 public interface WKScriptMessageHandler 
     extends NSObjectProtocol {
 
     
     
-    
-    
+
+
     
     @Mapping("userContentController:didReceiveScriptMessage:")
     void didReceiveScriptMessage(WKUserContentController userContentController, WKScriptMessage message);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

@@ -13,7 +13,6 @@ import apple.coregraphics.*;
 import apple.coreservices.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("CoreData/CoreData.h")
@@ -51,12 +50,12 @@ public class CoreDataVersionNumber
     public static final double Version_iPhoneOS_6_1 = 419.1;
     public static final double Version_iPhoneOS_7_0 = 479.1;
     public static final double Version_iPhoneOS_7_1 = 479.3;
-    
+
     
     
     
     
     @GlobalConstant("NSCoreDataVersionNumber")
     public static native double getVersion();
-    
+
 }

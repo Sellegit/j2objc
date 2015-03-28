@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 7.0 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("NSTextStorage")
 public class NSTextStorage 
     extends NSMutableAttributedString 
@@ -33,7 +31,7 @@ public class NSTextStorage
     
     @Mapping("init")
     public NSTextStorage() { }
-    
+
     
     @Mapping("layoutManagers")
     public native NSArray<NSLayoutManager> getLayoutManagers();
@@ -55,7 +53,7 @@ public class NSTextStorage
     public native void setDelegate(NSTextStorageDelegate v);
     @Mapping("fixesAttributesLazily")
     public native boolean fixesAttributesLazily();
-    
+
     
     
     /**
@@ -68,7 +66,7 @@ public class NSTextStorage
      */
     @GlobalConstant("NSTextStorageDidProcessEditingNotification")
     public static native NSString DidProcessEditingNotification();
-    
+
     @Mapping("addLayoutManager:")
     public native void addLayoutManager(NSLayoutManager aLayoutManager);
     @Mapping("removeLayoutManager:")
@@ -81,5 +79,5 @@ public class NSTextStorage
     public native void invalidateAttributes(NSRange range);
     @Mapping("ensureAttributesAreFixedInRange:")
     public native void ensureAttributesAreFixed(NSRange range);
-    
+
 }

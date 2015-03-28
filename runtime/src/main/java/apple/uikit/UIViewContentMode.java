@@ -19,9 +19,6 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h")
 @Mapping("UIViewContentMode")
 public final class UIViewContentMode extends ObjCEnum {
@@ -52,6 +49,6 @@ public final class UIViewContentMode extends ObjCEnum {
     public static final long BottomLeft = 11L;
     @GlobalConstant("UIViewContentModeBottomRight")
     public static final long BottomRight = 12L;
-    
+
 
 }

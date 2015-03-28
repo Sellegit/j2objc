@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h")
 @Mapping("AVCaptureAutoFocusSystem")
 public final class AVCaptureAutoFocusSystem extends ObjCEnum {
@@ -35,6 +33,6 @@ public final class AVCaptureAutoFocusSystem extends ObjCEnum {
     public static final long ContrastDetection = 1L;
     @GlobalConstant("AVCaptureAutoFocusSystemPhaseDetection")
     public static final long PhaseDetection = 2L;
-    
+
 
 }

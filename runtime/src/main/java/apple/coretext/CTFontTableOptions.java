@@ -14,9 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
-
-
 @Library("CoreText/CoreText.h")
 @Mapping("CTFontTableOptions")
 public final class CTFontTableOptions extends ObjCEnum {
@@ -30,6 +27,6 @@ public final class CTFontTableOptions extends ObjCEnum {
     @Deprecated
     @GlobalConstant("kCTFontTableOptionExcludeSynthetic")
     public static final long ExcludeSynthetic = 1L;
-    
+
 
 }

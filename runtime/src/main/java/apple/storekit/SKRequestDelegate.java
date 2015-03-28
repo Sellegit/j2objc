@@ -16,17 +16,14 @@ import apple.uikit.*;
 import apple.accounts.*;
 
 
-
-
-
 @Library("StoreKit/StoreKit.h") @Mapping("SKRequestDelegate")
 public interface SKRequestDelegate 
     extends NSObjectProtocol {
 
     
     
-    
-    
+
+
     
     /**
      * @since Available in iOS 3.0 and later.
@@ -38,7 +35,7 @@ public interface SKRequestDelegate
      */
     @Mapping("request:didFailWithError:")
     void didFail(SKRequest request, NSError error);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

@@ -18,7 +18,6 @@ import apple.coreimage.*;
 import apple.coretext.*;
 import apple.corelocation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -29,8 +28,8 @@ public abstract class UIResponderStandardEditActionsAdapter
     
     
     
-    
-    
+
+
     
     
     /**
@@ -98,5 +97,5 @@ public abstract class UIResponderStandardEditActionsAdapter
      */
     @NotImplemented("decreaseSize:")
     public void decreaseSize(Object sender) { throw new UnsupportedOperationException(); }
-    
+
 }

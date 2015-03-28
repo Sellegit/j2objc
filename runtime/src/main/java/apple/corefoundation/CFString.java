@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.dispatch.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Mapping("CFStringRef") @Library("CoreFoundation/CoreFoundation.h")
@@ -25,7 +24,7 @@ public class CFString
     
     
     protected CFString() {}
-    
+
     
     
     
@@ -162,5 +161,5 @@ public class CFString
     public static native int getMostCompatibleMacStringEncoding(int encoding);
     @GlobalFunction("CFShowStr")
     public static native void show(CFString str);
-    
+
 }

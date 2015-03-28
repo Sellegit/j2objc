@@ -19,21 +19,18 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h") @Mapping("NSCoding")
 public interface NSCoding 
      {
 
     
     
-    
-    
+
+
     
     @Mapping("encodeWithCoder:")
     void encode(NSCoder aCoder);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

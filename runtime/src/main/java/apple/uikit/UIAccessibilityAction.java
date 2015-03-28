@@ -19,9 +19,6 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h") @Mapping("UIAccessibilityAction")
 public interface UIAccessibilityAction 
      {
@@ -38,7 +35,7 @@ public interface UIAccessibilityAction
      */
     @Mapping("setAccessibilityCustomActions:")
     void setAccessibilityCustomActions(NSArray<UIAccessibilityCustomAction> v);
-    
+
     
     /**
      * @since Available in iOS 7.0 and later.
@@ -70,7 +67,7 @@ public interface UIAccessibilityAction
      */
     @Mapping("accessibilityPerformMagicTap")
     boolean performMagicTap();
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

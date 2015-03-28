@@ -20,9 +20,6 @@ import apple.spritekit.*;
 import apple.opengles.*;
 
 
-
-
-
 @Library("SceneKit/SceneKit.h") @Mapping("SCNPyramid")
 public class SCNPyramid 
     extends SCNGeometry 
@@ -32,7 +29,7 @@ public class SCNPyramid
     
     @Mapping("init")
     public SCNPyramid() { }
-    
+
     
     @Mapping("width")
     public native @MachineSizedFloat double getWidth();
@@ -58,10 +55,10 @@ public class SCNPyramid
     public native @MachineSizedSInt long getLengthSegmentCount();
     @Mapping("setLengthSegmentCount:")
     public native void setLengthSegmentCount(@MachineSizedSInt long v);
-    
+
     
     
     @Mapping("pyramidWithWidth:height:length:")
     public static native SCNPyramid create(@MachineSizedFloat double width, @MachineSizedFloat double height, @MachineSizedFloat double length);
-    
+
 }

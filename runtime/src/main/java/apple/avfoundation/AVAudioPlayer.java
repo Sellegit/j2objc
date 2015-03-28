@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 2.2 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h") @Mapping("AVAudioPlayer")
 public class AVAudioPlayer 
     extends NSObject 
@@ -33,7 +31,7 @@ public class AVAudioPlayer
     
     
     public AVAudioPlayer() {}
-    
+
     
     @Mapping("isPlaying")
     public native boolean isPlaying();
@@ -115,7 +113,7 @@ public class AVAudioPlayer
      */
     @Mapping("setChannelAssignments:")
     public native void setChannelAssignments(NSArray<AVAudioSessionChannelDescription> v);
-    
+
     
     
     @Mapping("prepareToPlay")
@@ -137,5 +135,5 @@ public class AVAudioPlayer
     public native float getPeakPowerForChannel(@MachineSizedUInt long channelNumber);
     @Mapping("averagePowerForChannel:")
     public native float getAveragePowerForChannel(@MachineSizedUInt long channelNumber);
-    
+
 }

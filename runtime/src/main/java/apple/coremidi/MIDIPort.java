@@ -13,7 +13,6 @@ import apple.coregraphics.*;
 import apple.coreservices.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("CoreMIDI/CoreMIDI.h")
@@ -24,7 +23,7 @@ public class MIDIPort
     
     
     protected MIDIPort() {}
-    
+
     
     
     
@@ -32,12 +31,12 @@ public class MIDIPort
      * @since Available in iOS 4.2 and later.
      */
     @GlobalFunction("MIDIInputPortCreate")
-    public static native MIDIError createInputPort(MIDIClient client, String portName, FunctionPtr readProc, Todo refCon, Todo outPort);
+    public static native MIDIError createInputPort(MIDIClient client, CFString portName, FunctionPtr readProc, Todo refCon, Todo outPort);
     /**
      * @since Available in iOS 4.2 and later.
      */
     @GlobalFunction("MIDIOutputPortCreate")
-    public static native MIDIError createOutputPort(MIDIClient client, String portName, Todo outPort);
+    public static native MIDIError createOutputPort(MIDIClient client, CFString portName, Todo outPort);
     /**
      * @since Available in iOS 4.2 and later.
      */
@@ -53,5 +52,5 @@ public class MIDIPort
      */
     @GlobalFunction("MIDIPortDisconnectSource")
     public static native MIDIError disconnectSource(MIDIPort port, MIDIEndpoint source);
-    
+
 }

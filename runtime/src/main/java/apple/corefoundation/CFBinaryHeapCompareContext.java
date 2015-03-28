@@ -15,9 +15,6 @@ import apple.dispatch.*;
 import apple.foundation.*;
 
 
-
-
-
 @Mapping("CFBinaryHeapCompareContext") @Library("CoreFoundation/CoreFoundation.h")
 public class CFBinaryHeapCompareContext 
     extends Struct 
@@ -31,6 +28,6 @@ public class CFBinaryHeapCompareContext
     public native @MachineSizedSInt long getVersion();
     @DotMapping("info")
     public native Todo getInfo();
-    
+
     
 }

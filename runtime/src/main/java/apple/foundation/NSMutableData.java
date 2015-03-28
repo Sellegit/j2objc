@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h") @Mapping("NSMutableData")
 public class NSMutableData 
     extends NSData 
@@ -32,10 +29,10 @@ public class NSMutableData
     public NSMutableData() {}
     @Mapping("initWithCapacity:")
     public NSMutableData(@MachineSizedUInt long capacity) { }
+
     
-    
-    
-    
+
+
     
     
     @Mapping("appendBytes:length:")
@@ -52,5 +49,5 @@ public class NSMutableData
     public native void setData(NSData data);
     @Mapping("replaceBytesInRange:withBytes:length:")
     public native void replaceBytes(NSRange range, Todo replacementBytes, @MachineSizedUInt long replacementLength);
-    
+
 }

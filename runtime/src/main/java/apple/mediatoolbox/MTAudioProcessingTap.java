@@ -15,7 +15,6 @@ import apple.foundation.*;
 import apple.coremedia.*;
 import apple.coreaudio.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Mapping("MTAudioProcessingTapRef") @Library("MediaToolbox/MediaToolbox.h")
@@ -25,10 +24,10 @@ public class MTAudioProcessingTap
 
     
     public static final int CallbacksVersion = 0;
-    
+
     
     protected MTAudioProcessingTap() {}
-    
+
     
     
     
@@ -52,5 +51,5 @@ public class MTAudioProcessingTap
      */
     @GlobalFunction("MTAudioProcessingTapGetSourceAudio")
     public static native int getSourceAudio(MTAudioProcessingTap tap, @MachineSizedSInt long numberFrames, Todo bufferListInOut, Todo flagsOut, CMTimeRange timeRangeOut, Todo numberFramesOut);
-    
+
 }

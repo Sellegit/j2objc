@@ -15,7 +15,6 @@ import apple.foundation.*;
 import apple.uikit.*;
 import apple.accounts.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("Social/Social.h")
@@ -48,5 +47,5 @@ public class SLServiceType
      */
     @GlobalConstant("SLServiceTypeTencentWeibo")
     public static native NSString TencentWeiboValue();
-    
+
 }

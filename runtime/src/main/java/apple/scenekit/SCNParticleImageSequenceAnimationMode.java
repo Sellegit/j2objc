@@ -20,9 +20,6 @@ import apple.spritekit.*;
 import apple.opengles.*;
 
 
-
-
-
 @Library("SceneKit/SceneKit.h")
 @Mapping("SCNParticleImageSequenceAnimationMode")
 public final class SCNParticleImageSequenceAnimationMode extends ObjCEnum {
@@ -33,6 +30,6 @@ public final class SCNParticleImageSequenceAnimationMode extends ObjCEnum {
     public static final long Clamp = 1L;
     @GlobalConstant("SCNParticleImageSequenceAnimationModeAutoReverse")
     public static final long AutoReverse = 2L;
-    
+
 
 }

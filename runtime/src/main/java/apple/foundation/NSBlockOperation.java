@@ -19,11 +19,9 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 4.0 and later.
  */
-
 @Library("Foundation/Foundation.h") @Mapping("NSBlockOperation")
 public class NSBlockOperation 
     extends NSOperation 
@@ -33,15 +31,15 @@ public class NSBlockOperation
     
     @Mapping("init")
     public NSBlockOperation() { }
+
     
-    
-    
-    
+
+
     
     
     @Mapping("addExecutionBlock:")
     public native void addExecutionBlock(@Block Runnable block);
     @Mapping("blockOperationWithBlock:")
     public static native NSBlockOperation create(@Block Runnable block);
-    
+
 }

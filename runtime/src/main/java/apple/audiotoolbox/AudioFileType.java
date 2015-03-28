@@ -17,9 +17,6 @@ import apple.coreaudio.*;
 import apple.coremedia.*;
 
 
-
-
-
 @Library("AudioToolbox/AudioToolbox.h")
 @Mapping("AudioFileType")
 public final class AudioFileType extends ObjCEnum {
@@ -58,6 +55,6 @@ public final class AudioFileType extends ObjCEnum {
     public static final long _3GP2 = 862416946L;
     @GlobalConstant("kAudioFileAMRType")
     public static final long AMR = 1634562662L;
-    
+
 
 }

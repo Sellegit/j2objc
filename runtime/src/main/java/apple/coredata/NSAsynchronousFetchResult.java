@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("CoreData/CoreData.h") @Mapping("NSAsynchronousFetchResult")
 public class NSAsynchronousFetchResult 
     extends NSPersistentStoreAsynchronousResult 
@@ -28,15 +26,15 @@ public class NSAsynchronousFetchResult
     
     @Mapping("init")
     public NSAsynchronousFetchResult() { }
-    
+
     
     @Mapping("fetchRequest")
     public native NSAsynchronousFetchRequest getFetchRequest();
     @Mapping("finalResult")
     public native NSArray<NSManagedObject> getFinalResult();
+
     
     
-    
-    
-    
+
+
 }

@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.dispatch.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Mapping("CFDateRef") @Library("CoreFoundation/CoreFoundation.h")
@@ -25,7 +24,7 @@ public class CFDate
     
     
     protected CFDate() {}
-    
+
     
     
     
@@ -33,7 +32,7 @@ public class CFDate
     public static native double getAbsoluteTimeIntervalSince1970();
     @GlobalConstant("kCFAbsoluteTimeIntervalSince1904")
     public static native double getAbsoluteTimeIntervalSince1904();
-    
+
     @GlobalFunction("CFAbsoluteTimeGetCurrent")
     public static native double getCurrentAbsoluteTime();
     @GlobalFunction("CFDateGetTypeID")
@@ -81,5 +80,5 @@ public class CFDate
     @Deprecated
     @GlobalFunction("CFAbsoluteTimeGetWeekOfYear")
     public static native int getWeekOfYearFromAbsoluteTime(double at, CFTimeZone tz);
-    
+
 }

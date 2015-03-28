@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h") @Mapping("NSURLCredentialStorage")
 public class NSURLCredentialStorage 
     extends NSObject 
@@ -31,16 +28,16 @@ public class NSURLCredentialStorage
     
     @Mapping("init")
     public NSURLCredentialStorage() { }
-    
+
     
     @Mapping("allCredentials")
     public native Map<String, NSURLCredential> getAllCredentials();
-    
+
     
     
     @GlobalConstant("NSURLCredentialStorageChangedNotification")
     public static native NSString ChangedNotification();
-    
+
     @Mapping("credentialsForProtectionSpace:")
     public native Map<String, NSURLCredential> getCredentials(NSURLProtectionSpace space);
     @Mapping("setCredential:forProtectionSpace:")
@@ -83,5 +80,5 @@ public class NSURLCredentialStorage
      */
     @Mapping("setDefaultCredential:forProtectionSpace:task:")
     public native void setDefaultCredential(NSURLCredential credential, NSURLProtectionSpace protectionSpace, NSURLSessionTask task);
-    
+
 }

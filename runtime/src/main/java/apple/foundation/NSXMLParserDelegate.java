@@ -19,17 +19,14 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h") @Mapping("NSXMLParserDelegate")
 public interface NSXMLParserDelegate 
     extends NSObjectProtocol {
 
     
     
-    
-    
+
+
     
     @Mapping("parserDidStartDocument:")
     void didStartDocument(NSXMLParser parser);
@@ -71,7 +68,7 @@ public interface NSXMLParserDelegate
     void parseErrorOccurred(NSXMLParser parser, NSError parseError);
     @Mapping("parser:validationErrorOccurred:")
     void validationErrorOccurred(NSXMLParser parser, NSError validationError);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

@@ -18,7 +18,6 @@ import apple.coreimage.*;
 import apple.coretext.*;
 import apple.corelocation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -29,8 +28,8 @@ public abstract class UITabBarControllerDelegateAdapter
     
     
     
-    
-    
+
+
     
     
     /**
@@ -72,5 +71,5 @@ public abstract class UITabBarControllerDelegateAdapter
      */
     @NotImplemented("tabBarController:animationControllerForTransitionFromViewController:toViewController:")
     public UIViewControllerAnimatedTransitioning getAnimationController(UITabBarController tabBarController, UIViewController fromVC, UIViewController toVC) { throw new UnsupportedOperationException(); }
-    
+
 }

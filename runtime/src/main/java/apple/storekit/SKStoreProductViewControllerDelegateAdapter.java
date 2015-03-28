@@ -15,7 +15,6 @@ import apple.foundation.*;
 import apple.uikit.*;
 import apple.accounts.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -26,8 +25,8 @@ public abstract class SKStoreProductViewControllerDelegateAdapter
     
     
     
-    
-    
+
+
     
     
     /**
@@ -35,5 +34,5 @@ public abstract class SKStoreProductViewControllerDelegateAdapter
      */
     @NotImplemented("productViewControllerDidFinish:")
     public void didFinish(SKStoreProductViewController viewController) { throw new UnsupportedOperationException(); }
-    
+
 }

@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h") @Mapping("NSStream")
 public class NSStream 
     extends NSObject 
@@ -31,7 +28,7 @@ public class NSStream
     
     @Mapping("init")
     public NSStream() { }
-    
+
     
     @Mapping("delegate")
     public native NSStreamDelegate getDelegate();
@@ -41,7 +38,7 @@ public class NSStream
     public native @Representing("NSStreamStatus") long getStreamStatus();
     @Mapping("streamError")
     public native NSError getStreamError();
-    
+
     
     
     @Mapping("open")
@@ -61,5 +58,5 @@ public class NSStream
      */
     @Mapping("getStreamsToHostWithName:port:inputStream:outputStream:")
     public static native void getStreamsToHost(String hostname, @MachineSizedSInt long port, Todo inputStream, Todo outputStream);
-    
+
 }

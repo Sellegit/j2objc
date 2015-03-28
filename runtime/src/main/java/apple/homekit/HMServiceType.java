@@ -13,7 +13,6 @@ import apple.coregraphics.*;
 import apple.coreservices.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("HomeKit/HomeKit.h")
@@ -71,5 +70,5 @@ public class HMServiceType
      */
     @GlobalConstant("HMServiceTypeLockManagement")
     public static native NSString LockManagementValue();
-    
+
 }

@@ -15,11 +15,9 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
 /**
  * @since Available in iOS 7.1 and later.
  */
-
 @Library("MediaPlayer/MediaPlayer.h") @Mapping("MPContentItem")
 public class MPContentItem 
     extends NSObject 
@@ -31,7 +29,7 @@ public class MPContentItem
     public MPContentItem(String identifier) { }
     @Mapping("init")
     public MPContentItem() { }
-    
+
     
     @Mapping("identifier")
     public native String getIdentifier();
@@ -59,9 +57,9 @@ public class MPContentItem
     public native float getPlaybackProgress();
     @Mapping("setPlaybackProgress:")
     public native void setPlaybackProgress(float v);
+
     
     
-    
-    
-    
+
+
 }

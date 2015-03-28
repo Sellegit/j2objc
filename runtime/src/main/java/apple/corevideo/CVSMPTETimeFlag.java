@@ -16,9 +16,6 @@ import apple.opengles.*;
 import apple.coremedia.*;
 
 
-
-
-
 @Library("CoreVideo/CoreVideo.h")
 @Mapping("CVSMPTETimeFlag")
 public final class CVSMPTETimeFlag extends ObjCEnum {
@@ -27,6 +24,6 @@ public final class CVSMPTETimeFlag extends ObjCEnum {
     public static final long Valid = 1L;
     @GlobalConstant("kCVSMPTETimeRunning")
     public static final long Running = 2L;
-    
+
 
 }

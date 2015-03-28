@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UITableViewRowAction")
 public class UITableViewRowAction 
     extends NSObject 
@@ -33,7 +31,7 @@ public class UITableViewRowAction
     
     @Mapping("init")
     public UITableViewRowAction() { }
-    
+
     
     @Mapping("style")
     public native @Representing("UITableViewRowActionStyle") long getStyle();
@@ -49,12 +47,12 @@ public class UITableViewRowAction
     public native UIVisualEffect getBackgroundEffect();
     @Mapping("setBackgroundEffect:")
     public native void setBackgroundEffect(UIVisualEffect v);
-    
+
     
     
     @Mapping("rowActionWithStyle:title:handler:")
     public static native UITableViewRowAction create(@Representing("UITableViewRowActionStyle") long style, String title, @Block VoidBlock2<UITableViewRowAction, NSIndexPath> handler);
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
-    
+
 }

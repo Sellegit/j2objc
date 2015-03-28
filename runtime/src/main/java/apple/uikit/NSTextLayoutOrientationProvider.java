@@ -19,9 +19,6 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h") @Mapping("NSTextLayoutOrientationProvider")
 public interface NSTextLayoutOrientationProvider 
      {
@@ -38,10 +35,10 @@ public interface NSTextLayoutOrientationProvider
      */
     @Mapping("setLayoutOrientation:")
     void setLayoutOrientation(@Representing("NSTextLayoutOrientation") long v);
+
     
-    
-    
-    
+
+
     /*<adapter>*/
     /*</adapter>*/
 }

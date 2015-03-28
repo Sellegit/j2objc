@@ -15,9 +15,6 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
-
-
 @Library("GameKit/GameKit.h")
 @Mapping("GKVoiceChatServiceErrorCode")
 public final class GKVoiceChatServiceErrorCode extends ObjCEnum {
@@ -56,6 +53,6 @@ public final class GKVoiceChatServiceErrorCode extends ObjCEnum {
     public static final long OutOfMemory = 32015L;
     @GlobalConstant("GKVoiceChatServiceInvalidParameterError")
     public static final long InvalidParameter = 32016L;
-    
+
 
 }

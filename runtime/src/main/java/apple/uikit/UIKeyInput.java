@@ -19,17 +19,14 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h") @Mapping("UIKeyInput")
 public interface UIKeyInput 
     extends UITextInputTraits {
 
     
     
-    
-    
+
+
     
     @Mapping("hasText")
     boolean hasText();
@@ -37,7 +34,7 @@ public interface UIKeyInput
     void insertText(String text);
     @Mapping("deleteBackward")
     void deleteBackward();
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

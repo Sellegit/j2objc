@@ -19,9 +19,6 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h")
 @Mapping("UIEventType")
 public final class UIEventType extends ObjCEnum {
@@ -32,6 +29,6 @@ public final class UIEventType extends ObjCEnum {
     public static final long Motion = 1L;
     @GlobalConstant("UIEventTypeRemoteControl")
     public static final long RemoteControl = 2L;
-    
+
 
 }

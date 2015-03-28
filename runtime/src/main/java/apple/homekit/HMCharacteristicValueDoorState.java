@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("HomeKit/HomeKit.h")
 @Mapping("HMCharacteristicValueDoorState")
 public final class HMCharacteristicValueDoorState extends ObjCEnum {
@@ -33,6 +31,6 @@ public final class HMCharacteristicValueDoorState extends ObjCEnum {
     public static final long Closing = 3L;
     @GlobalConstant("HMCharacteristicValueDoorStateStopped")
     public static final long Stopped = 4L;
-    
+
 
 }

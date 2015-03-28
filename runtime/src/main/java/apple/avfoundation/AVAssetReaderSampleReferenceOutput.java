@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h") @Mapping("AVAssetReaderSampleReferenceOutput")
 public class AVAssetReaderSampleReferenceOutput 
     extends AVAssetReaderOutput 
@@ -36,14 +34,14 @@ public class AVAssetReaderSampleReferenceOutput
     public AVAssetReaderSampleReferenceOutput(AVAssetTrack track) { }
     @Mapping("init")
     public AVAssetReaderSampleReferenceOutput() { }
-    
+
     
     @Mapping("track")
     public native AVAssetTrack getTrack();
-    
+
     
     
     @Mapping("assetReaderSampleReferenceOutputWithTrack:")
     public static native AVAssetReaderSampleReferenceOutput create(AVAssetTrack track);
-    
+
 }

@@ -19,17 +19,14 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h") @Mapping("UISearchControllerDelegate")
 public interface UISearchControllerDelegate 
     extends NSObjectProtocol {
 
     
     
-    
-    
+
+
     
     @Mapping("willPresentSearchController:")
     void willPresent(UISearchController searchController);
@@ -41,7 +38,7 @@ public interface UISearchControllerDelegate
     void didDismiss(UISearchController searchController);
     @Mapping("presentSearchController:")
     void present(UISearchController searchController);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

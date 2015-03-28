@@ -16,9 +16,6 @@ import apple.opengles.*;
 import apple.coremedia.*;
 
 
-
-
-
 @Mapping("CVSMPTETime") @Library("CoreVideo/CoreVideo.h")
 public class CVSMPTETime 
     extends Struct 
@@ -46,7 +43,7 @@ public class CVSMPTETime
     public native short getSeconds();
     @DotMapping("frames")
     public native short getFrames();
-    
+
     public static native CVSMPTETime create(short subframes, short subframeDivisor, int counter, int type, int flags, short hours, short minutes, short seconds, short frames) /*-[
         CVSMPTETime __new = { .subframes = subframes, .subframeDivisor = subframeDivisor, .counter = counter, .type = type, .flags = flags, .hours = hours, .minutes = minutes, .seconds = seconds, .frames = frames };
         return __new;
@@ -56,53 +53,90 @@ public class CVSMPTETime
         return __new;
     ]-*/;
 
-    
+
     public static native CVSMPTETime copyWithsubframeDivisor(CVSMPTETime original, short subframeDivisor) /*-[
         CVSMPTETime __new = { .subframes = original.subframes, .subframeDivisor = subframeDivisor, .counter = original.counter, .type = original.type, .flags = original.flags, .hours = original.hours, .minutes = original.minutes, .seconds = original.seconds, .frames = original.frames };
         return __new;
     ]-*/;
 
-    
+
     public static native CVSMPTETime copyWithcounter(CVSMPTETime original, int counter) /*-[
         CVSMPTETime __new = { .subframes = original.subframes, .subframeDivisor = original.subframeDivisor, .counter = counter, .type = original.type, .flags = original.flags, .hours = original.hours, .minutes = original.minutes, .seconds = original.seconds, .frames = original.frames };
         return __new;
     ]-*/;
 
-    
+
     public static native CVSMPTETime copyWithtype(CVSMPTETime original, int type) /*-[
         CVSMPTETime __new = { .subframes = original.subframes, .subframeDivisor = original.subframeDivisor, .counter = original.counter, .type = type, .flags = original.flags, .hours = original.hours, .minutes = original.minutes, .seconds = original.seconds, .frames = original.frames };
         return __new;
     ]-*/;
 
-    
+
     public static native CVSMPTETime copyWithflags(CVSMPTETime original, int flags) /*-[
         CVSMPTETime __new = { .subframes = original.subframes, .subframeDivisor = original.subframeDivisor, .counter = original.counter, .type = original.type, .flags = flags, .hours = original.hours, .minutes = original.minutes, .seconds = original.seconds, .frames = original.frames };
         return __new;
     ]-*/;
 
-    
+
     public static native CVSMPTETime copyWithhours(CVSMPTETime original, short hours) /*-[
         CVSMPTETime __new = { .subframes = original.subframes, .subframeDivisor = original.subframeDivisor, .counter = original.counter, .type = original.type, .flags = original.flags, .hours = hours, .minutes = original.minutes, .seconds = original.seconds, .frames = original.frames };
         return __new;
     ]-*/;
 
-    
+
     public static native CVSMPTETime copyWithminutes(CVSMPTETime original, short minutes) /*-[
         CVSMPTETime __new = { .subframes = original.subframes, .subframeDivisor = original.subframeDivisor, .counter = original.counter, .type = original.type, .flags = original.flags, .hours = original.hours, .minutes = minutes, .seconds = original.seconds, .frames = original.frames };
         return __new;
     ]-*/;
 
-    
+
     public static native CVSMPTETime copyWithseconds(CVSMPTETime original, short seconds) /*-[
         CVSMPTETime __new = { .subframes = original.subframes, .subframeDivisor = original.subframeDivisor, .counter = original.counter, .type = original.type, .flags = original.flags, .hours = original.hours, .minutes = original.minutes, .seconds = seconds, .frames = original.frames };
         return __new;
     ]-*/;
 
-    
+
     public static native CVSMPTETime copyWithframes(CVSMPTETime original, short frames) /*-[
         CVSMPTETime __new = { .subframes = original.subframes, .subframeDivisor = original.subframeDivisor, .counter = original.counter, .type = original.type, .flags = original.flags, .hours = original.hours, .minutes = original.minutes, .seconds = original.seconds, .frames = frames };
         return __new;
     ]-*/;
 
-    
+
+    public static final class Adapter {
+
+        public short subframes;
+        public short subframeDivisor;
+        public int counter;
+        public int type;
+        public int flags;
+        public short hours;
+        public short minutes;
+        public short seconds;
+        public short frames;
+        public Adapter(short subframes, short subframeDivisor, int counter, int type, int flags, short hours, short minutes, short seconds, short frames) {
+            this.subframes = subframes;
+            this.subframeDivisor = subframeDivisor;
+            this.counter = counter;
+            this.type = type;
+            this.flags = flags;
+            this.hours = hours;
+            this.minutes = minutes;
+            this.seconds = seconds;
+            this.frames = frames;
+        }
+        public Adapter(CVSMPTETime original) {
+            this.subframes = original.getSubframes();
+            this.subframeDivisor = original.getSubframeDivisor();
+            this.counter = original.getCounter();
+            this.type = original.getType();
+            this.flags = original.getFlags();
+            this.hours = original.getHours();
+            this.minutes = original.getMinutes();
+            this.seconds = original.getSeconds();
+            this.frames = original.getFrames();
+        }
+        public CVSMPTETime convert() {
+            return create(subframes, subframeDivisor, counter, type, flags, hours, minutes, seconds, frames);
+        }
+    }
 }

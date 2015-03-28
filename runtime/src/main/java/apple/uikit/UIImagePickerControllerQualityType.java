@@ -19,9 +19,6 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h")
 @Mapping("UIImagePickerControllerQualityType")
 public final class UIImagePickerControllerQualityType extends ObjCEnum {
@@ -38,6 +35,6 @@ public final class UIImagePickerControllerQualityType extends ObjCEnum {
     public static final long IFrame1280x720 = 4L;
     @GlobalConstant("UIImagePickerControllerQualityTypeIFrame960x540")
     public static final long IFrame960x540 = 5L;
-    
+
 
 }

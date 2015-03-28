@@ -15,9 +15,6 @@ import apple.dispatch.*;
 import apple.foundation.*;
 
 
-
-
-
 @Library("CoreFoundation/CoreFoundation.h")
 @Mapping("CFNumberFormatterRoundingMode")
 public final class CFNumberFormatterRoundingMode extends ObjCEnum {
@@ -36,6 +33,6 @@ public final class CFNumberFormatterRoundingMode extends ObjCEnum {
     public static final long HalfDown = 5L;
     @GlobalConstant("kCFNumberFormatterRoundHalfUp")
     public static final long HalfUp = 6L;
-    
+
 
 }

@@ -16,11 +16,9 @@ import apple.addressbook.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 5.0 and later.
  */
-
 @Library("EventKit/EventKit.h") @Mapping("EKSource")
 public class EKSource 
     extends EKObject 
@@ -30,7 +28,7 @@ public class EKSource
     
     @Mapping("init")
     public EKSource() { }
-    
+
     
     @Mapping("sourceIdentifier")
     public native String getSourceIdentifier();
@@ -45,7 +43,7 @@ public class EKSource
     @Deprecated
     @Mapping("calendars")
     public native NSSet<EKCalendar> getCalendars();
-    
+
     
     
     /**
@@ -53,5 +51,5 @@ public class EKSource
      */
     @Mapping("calendarsForEntityType:")
     public native NSSet<EKCalendar> getCalendars(@Representing("EKEntityType") long entityType);
-    
+
 }

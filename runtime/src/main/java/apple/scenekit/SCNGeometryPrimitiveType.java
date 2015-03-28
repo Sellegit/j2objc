@@ -20,9 +20,6 @@ import apple.spritekit.*;
 import apple.opengles.*;
 
 
-
-
-
 @Library("SceneKit/SceneKit.h")
 @Mapping("SCNGeometryPrimitiveType")
 public final class SCNGeometryPrimitiveType extends ObjCEnum {
@@ -35,6 +32,6 @@ public final class SCNGeometryPrimitiveType extends ObjCEnum {
     public static final long Line = 2L;
     @GlobalConstant("SCNGeometryPrimitiveTypePoint")
     public static final long Point = 3L;
-    
+
 
 }

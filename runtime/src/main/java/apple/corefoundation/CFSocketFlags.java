@@ -15,9 +15,6 @@ import apple.dispatch.*;
 import apple.foundation.*;
 
 
-
-
-
 @Library("CoreFoundation/CoreFoundation.h")
 @Mapping("CFSocketFlags")
 public final class CFSocketFlags extends ObjCEnum {
@@ -37,6 +34,6 @@ public final class CFSocketFlags extends ObjCEnum {
     public static final long LeaveErrors = 64L;
     @GlobalConstant("kCFSocketCloseOnInvalidate")
     public static final long CloseOnInvalidate = 128L;
-    
+
 
 }

@@ -19,9 +19,6 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h") @Mapping("UIAccessibilityIdentification")
 public interface UIAccessibilityIdentification 
     extends NSObjectProtocol {
@@ -38,10 +35,10 @@ public interface UIAccessibilityIdentification
      */
     @Mapping("setAccessibilityIdentifier:")
     void setAccessibilityIdentifier(String v);
+
     
-    
-    
-    
+
+
     /*<adapter>*/
     /*</adapter>*/
 }

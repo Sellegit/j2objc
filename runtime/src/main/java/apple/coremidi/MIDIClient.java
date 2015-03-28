@@ -13,7 +13,6 @@ import apple.coregraphics.*;
 import apple.coreservices.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("CoreMIDI/CoreMIDI.h")
@@ -24,7 +23,7 @@ public class MIDIClient
     
     
     protected MIDIClient() {}
-    
+
     
     
     
@@ -32,11 +31,11 @@ public class MIDIClient
      * @since Available in iOS 4.2 and later.
      */
     @GlobalFunction("MIDIClientCreate")
-    public static native MIDIError create(String name, FunctionPtr notifyProc, Todo notifyRefCon, Todo outClient);
+    public static native MIDIError create(CFString name, FunctionPtr notifyProc, Todo notifyRefCon, Todo outClient);
     /**
      * @since Available in iOS 4.2 and later.
      */
     @GlobalFunction("MIDIClientDispose")
     public static native MIDIError dispose(MIDIClient client);
-    
+
 }

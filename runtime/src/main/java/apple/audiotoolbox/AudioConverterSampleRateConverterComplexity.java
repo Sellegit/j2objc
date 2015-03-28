@@ -17,9 +17,6 @@ import apple.coreaudio.*;
 import apple.coremedia.*;
 
 
-
-
-
 @Library("AudioToolbox/AudioToolbox.h")
 @Mapping("AudioConverterSampleRateConverterComplexity")
 public final class AudioConverterSampleRateConverterComplexity extends ObjCEnum {
@@ -30,6 +27,6 @@ public final class AudioConverterSampleRateConverterComplexity extends ObjCEnum 
     public static final long Normal = 1852797549L;
     @GlobalConstant("kAudioConverterSampleRateConverterComplexity_Mastering")
     public static final long Mastering = 1650553971L;
-    
+
 
 }

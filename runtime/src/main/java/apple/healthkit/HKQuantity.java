@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("HealthKit/HealthKit.h") @Mapping("HKQuantity")
 public class HKQuantity 
     extends NSObject 
@@ -28,10 +26,10 @@ public class HKQuantity
     
     @Mapping("init")
     public HKQuantity() { }
+
     
-    
-    
-    
+
+
     
     
     @Mapping("isCompatibleWithUnit:")
@@ -44,5 +42,5 @@ public class HKQuantity
     public static native HKQuantity create(HKUnit unit, double value);
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
-    
+
 }

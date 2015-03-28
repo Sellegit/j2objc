@@ -17,7 +17,6 @@ import apple.coreaudio.*;
 import apple.coreanimation.*;
 import apple.corevideo.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Mapping("CMMuxedFormatDescriptionRef") @Library("CoreMedia/CoreMedia.h")
@@ -28,7 +27,7 @@ public class CMMuxedFormatDescription
     
     
     protected CMMuxedFormatDescription() {}
-    
+
     
     
     
@@ -37,5 +36,5 @@ public class CMMuxedFormatDescription
      */
     @GlobalFunction("CMMuxedFormatDescriptionCreate")
     public static native int create(CFAllocator allocator, @Representing("CMMuxedStreamType") long muxType, CFDictionary extensions, Todo outDesc);
-    
+
 }

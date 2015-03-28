@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h") @Mapping("NSNetServiceBrowser")
 public class NSNetServiceBrowser 
     extends NSObject 
@@ -30,7 +27,7 @@ public class NSNetServiceBrowser
     
     
     public NSNetServiceBrowser() {}
-    
+
     
     @Mapping("delegate")
     public native NSNetServiceBrowserDelegate getDelegate();
@@ -46,7 +43,7 @@ public class NSNetServiceBrowser
      */
     @Mapping("setIncludesPeerToPeer:")
     public native void setIncludesPeerToPeer(boolean v);
-    
+
     
     
     @Mapping("scheduleInRunLoop:forMode:")
@@ -61,5 +58,5 @@ public class NSNetServiceBrowser
     public native void searchForServices(String type, String domainString);
     @Mapping("stop")
     public native void stop();
-    
+
 }

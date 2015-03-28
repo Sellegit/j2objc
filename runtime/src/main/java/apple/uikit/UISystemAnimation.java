@@ -19,17 +19,15 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 7.0 and later.
  */
-
 @Library("UIKit/UIKit.h")
 @Mapping("UISystemAnimation")
 public final class UISystemAnimation extends ObjCEnum {
     
     @GlobalConstant("UISystemAnimationDelete")
     public static final long Delete = 0L;
-    
+
 
 }

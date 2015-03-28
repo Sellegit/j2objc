@@ -19,9 +19,6 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h")
 @Mapping("UIRectCorner")
 public final class UIRectCorner extends ObjCEnum {
@@ -36,6 +33,6 @@ public final class UIRectCorner extends ObjCEnum {
     public static final long BottomRight = 8L;
     @GlobalConstant("UIRectCornerAllCorners")
     public static final long AllCorners = -1L;
-    
+
 
 }

@@ -16,11 +16,9 @@ import apple.uikit.*;
 import apple.security.*;
 
 
-
 /**
  * @since Available in iOS 7.0 and later.
  */
-
 @Library("MultipeerConnectivity/MultipeerConnectivity.h") @Mapping("MCSession")
 public class MCSession 
     extends NSObject 
@@ -34,7 +32,7 @@ public class MCSession
     public MCSession(MCPeerID myPeerID, NSArray<?> identity, @Representing("MCEncryptionPreference") long encryptionPreference) { }
     @Mapping("init")
     public MCSession() { }
-    
+
     
     @Mapping("delegate")
     public native MCSessionDelegate getDelegate();
@@ -48,7 +46,7 @@ public class MCSession
     public native @Representing("MCEncryptionPreference") long getEncryptionPreference();
     @Mapping("connectedPeers")
     public native NSArray<MCPeerID> getConnectedPeers();
-    
+
     
     
     /**
@@ -61,7 +59,7 @@ public class MCSession
      */
     @GlobalConstant("kMCSessionMaximumNumberOfPeers")
     public static native @MachineSizedUInt long getMaximumNumberOfPeers();
-    
+
     @Mapping("sendData:toPeers:withMode:error:")
     public native boolean sendData(NSData data, NSArray<?> peerIDs, @Representing("MCSessionSendDataMode") long mode, Todo error);
     @Mapping("disconnect")
@@ -76,5 +74,5 @@ public class MCSession
     public native void connectPeer(MCPeerID peerID, NSData data);
     @Mapping("cancelConnectPeer:")
     public native void cancelConnectPeer(MCPeerID peerID);
-    
+
 }

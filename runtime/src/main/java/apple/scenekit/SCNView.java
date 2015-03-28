@@ -20,9 +20,6 @@ import apple.spritekit.*;
 import apple.opengles.*;
 
 
-
-
-
 @Library("SceneKit/SceneKit.h") @Mapping("SCNView")
 public class SCNView 
     extends UIView 
@@ -36,7 +33,7 @@ public class SCNView
     public SCNView(CGRect frame) { }
     @Mapping("init")
     public SCNView() { }
-    
+
     
     @Mapping("scene")
     public native SCNScene getScene();
@@ -100,7 +97,7 @@ public class SCNView
     public native SCNTechnique getTechnique();
     @Mapping("setTechnique:")
     public native void setTechnique(SCNTechnique v);
-    
+
     
     
     @Mapping("snapshot")
@@ -123,5 +120,5 @@ public class SCNView
     public native boolean prepareObject(Object object, @Block Block0<Boolean> block);
     @Mapping("prepareObjects:withCompletionHandler:")
     public native void prepareObjects(NSArray<?> objects, @Block VoidBooleanBlock completionHandler);
-    
+
 }

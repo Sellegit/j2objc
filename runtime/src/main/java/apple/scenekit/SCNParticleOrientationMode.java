@@ -20,9 +20,6 @@ import apple.spritekit.*;
 import apple.opengles.*;
 
 
-
-
-
 @Library("SceneKit/SceneKit.h")
 @Mapping("SCNParticleOrientationMode")
 public final class SCNParticleOrientationMode extends ObjCEnum {
@@ -35,6 +32,6 @@ public final class SCNParticleOrientationMode extends ObjCEnum {
     public static final long Free = 2L;
     @GlobalConstant("SCNParticleOrientationModeBillboardYAligned")
     public static final long BillboardYAligned = 3L;
-    
+
 
 }

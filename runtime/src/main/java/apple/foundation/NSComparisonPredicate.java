@@ -19,11 +19,9 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 3.0 and later.
  */
-
 @Library("Foundation/Foundation.h") @Mapping("NSComparisonPredicate")
 public class NSComparisonPredicate 
     extends NSPredicate 
@@ -37,7 +35,7 @@ public class NSComparisonPredicate
     public NSComparisonPredicate(NSExpression lhs, NSExpression rhs, Selector selector) { }
     @Mapping("init")
     public NSComparisonPredicate() { }
-    
+
     
     @Mapping("predicateOperatorType")
     public native @Representing("NSPredicateOperatorType") long getPredicateOperatorType();
@@ -51,9 +49,9 @@ public class NSComparisonPredicate
     public native Selector getCustomSelector();
     @Mapping("options")
     public native @Representing("NSComparisonPredicateOptions") long getOptions();
+
     
     
-    
-    
-    
+
+
 }

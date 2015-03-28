@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 4.0 and later.
  */
-
 @Library("CoreMotion/CoreMotion.h") @Mapping("CMGyroData")
 public class CMGyroData 
     extends CMLogItem 
@@ -28,13 +26,13 @@ public class CMGyroData
     
     @Mapping("init")
     public CMGyroData() { }
-    
+
     
     @Mapping("rotationRate")
     public native CMRotationRate getRotationRate();
+
     
     
-    
-    
-    
+
+
 }

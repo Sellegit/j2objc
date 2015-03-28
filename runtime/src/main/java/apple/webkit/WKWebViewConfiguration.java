@@ -15,11 +15,9 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("WebKit/WebKit.h") @Mapping("WKWebViewConfiguration")
 public class WKWebViewConfiguration 
     extends NSObject 
@@ -29,7 +27,7 @@ public class WKWebViewConfiguration
     
     @Mapping("init")
     public WKWebViewConfiguration() { }
-    
+
     
     @Mapping("processPool")
     public native WKProcessPool getProcessPool();
@@ -63,10 +61,10 @@ public class WKWebViewConfiguration
     public native @Representing("WKSelectionGranularity") long getSelectionGranularity();
     @Mapping("setSelectionGranularity:")
     public native void setSelectionGranularity(@Representing("WKSelectionGranularity") long v);
-    
+
     
     
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
-    
+
 }

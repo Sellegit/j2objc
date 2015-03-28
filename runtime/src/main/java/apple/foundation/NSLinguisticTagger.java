@@ -19,11 +19,9 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 5.0 and later.
  */
-
 @Library("Foundation/Foundation.h") @Mapping("NSLinguisticTagger")
 public class NSLinguisticTagger 
     extends NSObject 
@@ -38,7 +36,7 @@ public class NSLinguisticTagger
     public NSLinguisticTagger(NSArray<?> tagSchemes, @MachineSizedUInt long opts) { }
     @Mapping("init")
     public NSLinguisticTagger() { }
-    
+
     
     /**
      * @since Available in iOS 5.0 and later.
@@ -55,7 +53,7 @@ public class NSLinguisticTagger
      */
     @Mapping("setString:")
     public native void setString(String v);
-    
+
     
     
     /**
@@ -93,5 +91,5 @@ public class NSLinguisticTagger
      */
     @Mapping("availableTagSchemesForLanguage:")
     public static native List<NSLinguisticTagScheme> getAvailableTagSchemes(String language);
-    
+
 }

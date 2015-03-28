@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("CoreData/CoreData.h") @Mapping("NSBatchUpdateResult")
 public class NSBatchUpdateResult 
     extends NSPersistentStoreResult 
@@ -28,15 +26,15 @@ public class NSBatchUpdateResult
     
     @Mapping("init")
     public NSBatchUpdateResult() { }
-    
+
     
     @Mapping("result")
     public native Object getResult();
     @Mapping("resultType")
     public native @Representing("NSBatchUpdateRequestResultType") long getResultType();
+
     
     
-    
-    
-    
+
+
 }

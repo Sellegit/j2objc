@@ -18,7 +18,6 @@ import apple.coreimage.*;
 import apple.coretext.*;
 import apple.corelocation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -29,8 +28,8 @@ public abstract class UITextInputTokenizerAdapter
     
     
     
-    
-    
+
+
     
     
     @NotImplemented("rangeEnclosingPosition:withGranularity:inDirection:")
@@ -41,5 +40,5 @@ public abstract class UITextInputTokenizerAdapter
     public UITextPosition getPosition(UITextPosition position, @Representing("UITextGranularity") long granularity, @MachineSizedSInt long direction) { throw new UnsupportedOperationException(); }
     @NotImplemented("isPosition:withinTextUnit:inDirection:")
     public boolean isPositionWithinTextUnit(UITextPosition position, @Representing("UITextGranularity") long granularity, @MachineSizedSInt long direction) { throw new UnsupportedOperationException(); }
-    
+
 }

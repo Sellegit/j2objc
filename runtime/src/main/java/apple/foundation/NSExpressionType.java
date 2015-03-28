@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h")
 @Mapping("NSExpressionType")
 public final class NSExpressionType extends ObjCEnum {
@@ -68,6 +65,6 @@ public final class NSExpressionType extends ObjCEnum {
     public static final long AnyKey = 15L;
     @GlobalConstant("NSBlockExpressionType")
     public static final long Block = 19L;
-    
+
 
 }

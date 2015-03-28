@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 import apple.uikit.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -25,8 +24,8 @@ public abstract class GKTurnBasedEventListenerAdapter
     
     
     
-    
-    
+
+
     
     
     /**
@@ -63,5 +62,5 @@ public abstract class GKTurnBasedEventListenerAdapter
     @Deprecated
     @NotImplemented("player:didRequestMatchWithPlayers:")
     public void didRequestMatchWithPlayers(GKPlayer player, NSArray<?> playerIDsToInvite) { throw new UnsupportedOperationException(); }
-    
+
 }

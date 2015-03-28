@@ -19,9 +19,6 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h")
 @Mapping("UIControlContentHorizontalAlignment")
 public final class UIControlContentHorizontalAlignment extends ObjCEnum {
@@ -34,6 +31,6 @@ public final class UIControlContentHorizontalAlignment extends ObjCEnum {
     public static final long Right = 2L;
     @GlobalConstant("UIControlContentHorizontalAlignmentFill")
     public static final long Fill = 3L;
-    
+
 
 }

@@ -16,9 +16,6 @@ import apple.uikit.*;
 import apple.accounts.*;
 
 
-
-
-
 @Library("Social/Social.h")
 @Mapping("SLComposeViewControllerResult")
 public final class SLComposeViewControllerResult extends ObjCEnum {
@@ -27,6 +24,6 @@ public final class SLComposeViewControllerResult extends ObjCEnum {
     public static final long Cancelled = 0L;
     @GlobalConstant("SLComposeViewControllerResultDone")
     public static final long Done = 1L;
-    
+
 
 }

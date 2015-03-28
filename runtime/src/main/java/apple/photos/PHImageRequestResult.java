@@ -16,7 +16,6 @@ import apple.corelocation.*;
 import apple.uikit.*;
 import apple.avfoundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("Photos/Photos.h")
@@ -54,5 +53,5 @@ public class PHImageRequestResult
      */
     @GlobalConstant("PHImageErrorKey")
     public static native NSString ErrorKey();
-    
+
 }

@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h")
 @Mapping("NSURLRequestNetworkServiceType")
 public final class NSURLRequestNetworkServiceType extends ObjCEnum {
@@ -36,6 +33,6 @@ public final class NSURLRequestNetworkServiceType extends ObjCEnum {
     public static final long Background = 3L;
     @GlobalConstant("NSURLNetworkServiceTypeVoice")
     public static final long Voice = 4L;
-    
+
 
 }

@@ -18,7 +18,6 @@ import apple.coremedia.*;
 import apple.security.*;
 import apple.dispatch.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -29,8 +28,8 @@ public abstract class NSURLSessionDownloadDelegateAdapter
     
     
     
-    
-    
+
+
     
     
     @NotImplemented("URLSession:downloadTask:didFinishDownloadingToURL:")
@@ -39,5 +38,5 @@ public abstract class NSURLSessionDownloadDelegateAdapter
     public void didWriteData(NSURLSession session, NSURLSessionDownloadTask downloadTask, long bytesWritten, long totalBytesWritten, long totalBytesExpectedToWrite) { throw new UnsupportedOperationException(); }
     @NotImplemented("URLSession:downloadTask:didResumeAtOffset:expectedTotalBytes:")
     public void didResume(NSURLSession session, NSURLSessionDownloadTask downloadTask, long fileOffset, long expectedTotalBytes) { throw new UnsupportedOperationException(); }
-    
+
 }

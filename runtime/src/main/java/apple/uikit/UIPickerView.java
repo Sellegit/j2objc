@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 2.0 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UIPickerView")
 public class UIPickerView 
     extends UIView 
@@ -37,7 +35,7 @@ public class UIPickerView
     public UIPickerView(NSCoder aDecoder) { }
     @Mapping("init")
     public UIPickerView() { }
-    
+
     
     @Mapping("dataSource")
     public native UIPickerViewDataSource getDataSource();
@@ -53,7 +51,7 @@ public class UIPickerView
     public native void setShowsSelectionIndicator(boolean v);
     @Mapping("numberOfComponents")
     public native @MachineSizedSInt long getNumberOfComponents();
-    
+
     
     
     @Mapping("numberOfRowsInComponent:")
@@ -92,5 +90,5 @@ public class UIPickerView
     public native void commitEditingStyleForRow(UITableView tableView, @Representing("UITableViewCellEditingStyle") long editingStyle, NSIndexPath indexPath);
     @Mapping("tableView:moveRowAtIndexPath:toIndexPath:")
     public native void moveRow(UITableView tableView, NSIndexPath sourceIndexPath, NSIndexPath destinationIndexPath);
-    
+
 }

@@ -17,9 +17,6 @@ import apple.coreaudio.*;
 import apple.coremedia.*;
 
 
-
-
-
 @Library("AudioToolbox/AudioToolbox.h")
 @Mapping("AudioFileLoopDirection")
 public final class AudioFileLoopDirection extends ObjCEnum {
@@ -32,6 +29,6 @@ public final class AudioFileLoopDirection extends ObjCEnum {
     public static final long ForwardAndBackward = 2L;
     @GlobalConstant("kAudioFileLoopDirection_Backward")
     public static final long Backward = 3L;
-    
+
 
 }

@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h") @Mapping("AVAudioUnitTimeEffect")
 public class AVAudioUnitTimeEffect 
     extends AVAudioUnit 
@@ -36,15 +34,15 @@ public class AVAudioUnitTimeEffect
     public AVAudioUnitTimeEffect(AudioComponentDescription audioComponentDescription) { }
     @Mapping("init")
     public AVAudioUnitTimeEffect() { }
-    
+
     
     @Mapping("bypass")
     public native boolean isBypass();
     @Mapping("setBypass:")
     public native void setBypass(boolean v);
+
     
     
-    
-    
-    
+
+
 }

@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 4.0 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h") @Mapping("AVPlayerItemTrack")
 public class AVPlayerItemTrack 
     extends NSObject 
@@ -34,7 +32,7 @@ public class AVPlayerItemTrack
     
     @Mapping("init")
     public AVPlayerItemTrack() { }
-    
+
     
     @Mapping("assetTrack")
     public native AVAssetTrack getAssetTrack();
@@ -47,9 +45,9 @@ public class AVPlayerItemTrack
      */
     @Mapping("currentVideoFrameRate")
     public native float getCurrentVideoFrameRate();
+
     
     
-    
-    
-    
+
+
 }

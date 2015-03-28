@@ -15,11 +15,9 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
 /**
  * @since Available in iOS 4.1 and later.
  */
-
 @Library("GameKit/GameKit.h") @Mapping("GKMatchRequest")
 public class GKMatchRequest 
     extends NSObject 
@@ -29,7 +27,7 @@ public class GKMatchRequest
     
     @Mapping("init")
     public GKMatchRequest() { }
-    
+
     
     @Mapping("minPlayers")
     public native @MachineSizedUInt long getMinPlayers();
@@ -115,7 +113,7 @@ public class GKMatchRequest
     @Deprecated
     @Mapping("setInviteeResponseHandler:")
     public native void setInviteeResponseHandler(@Block VoidBlock2<String, GKInviteeResponse> v);
-    
+
     
     
     /**
@@ -123,5 +121,5 @@ public class GKMatchRequest
      */
     @Mapping("maxPlayersAllowedForMatchOfType:")
     public static native @MachineSizedUInt long getMaxPlayersAllowedForMatchType(@Representing("GKMatchType") long matchType);
-    
+
 }

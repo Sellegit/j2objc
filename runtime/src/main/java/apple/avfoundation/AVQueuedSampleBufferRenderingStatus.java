@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h")
 @Mapping("AVQueuedSampleBufferRenderingStatus")
 public final class AVQueuedSampleBufferRenderingStatus extends ObjCEnum {
@@ -35,6 +33,6 @@ public final class AVQueuedSampleBufferRenderingStatus extends ObjCEnum {
     public static final long Rendering = 1L;
     @GlobalConstant("AVQueuedSampleBufferRenderingStatusFailed")
     public static final long Failed = 2L;
-    
+
 
 }

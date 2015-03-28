@@ -13,7 +13,6 @@ import apple.coregraphics.*;
 import apple.coreservices.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("AddressBook/AddressBook.h")
@@ -31,14 +30,14 @@ public class ABMutableMultiValue
     @GlobalFunction("ABMultiValueCreateMutableCopy")
     public static native CFType create(ABMultiValueRef multiValue);
     @GlobalFunction("ABMultiValueAddValueAndLabel")
-    public static native boolean addValueAndLabel(CFType multiValue, CFType value, String label, Todo outIdentifier);
+    public static native boolean addValueAndLabel(CFType multiValue, CFType value, CFString label, Todo outIdentifier);
     @GlobalFunction("ABMultiValueInsertValueAndLabelAtIndex")
-    public static native boolean insertValueAndLabel(CFType multiValue, CFType value, String label, @MachineSizedSInt long index, Todo outIdentifier);
+    public static native boolean insertValueAndLabel(CFType multiValue, CFType value, CFString label, @MachineSizedSInt long index, Todo outIdentifier);
     @GlobalFunction("ABMultiValueRemoveValueAndLabelAtIndex")
     public static native boolean removeValueAndLabel(CFType multiValue, @MachineSizedSInt long index);
     @GlobalFunction("ABMultiValueReplaceValueAtIndex")
     public static native boolean replaceValue(CFType multiValue, CFType value, @MachineSizedSInt long index);
     @GlobalFunction("ABMultiValueReplaceLabelAtIndex")
-    public static native boolean replaceLabel(CFType multiValue, String label, @MachineSizedSInt long index);
-    
+    public static native boolean replaceLabel(CFType multiValue, CFString label, @MachineSizedSInt long index);
+
 }

@@ -19,9 +19,6 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h") @Mapping("UILayoutSupport")
 public interface UILayoutSupport 
     extends NSObjectProtocol {
@@ -30,10 +27,10 @@ public interface UILayoutSupport
     
     @Mapping("length")
     @MachineSizedFloat double getLength();
+
     
-    
-    
-    
+
+
     /*<adapter>*/
     /*</adapter>*/
 }

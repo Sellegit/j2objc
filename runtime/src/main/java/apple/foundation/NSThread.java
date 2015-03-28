@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h") @Mapping("NSThread")
 public class NSThread 
     extends NSObject 
@@ -35,7 +32,7 @@ public class NSThread
      */
     @Mapping("initWithTarget:selector:object:")
     public NSThread(Object target, Selector selector, Object argument) { }
-    
+
     
     @Mapping("threadDictionary")
     public native NSMutableDictionary<?, ?> getThreadDictionary();
@@ -89,7 +86,7 @@ public class NSThread
      */
     @Mapping("isCancelled")
     public native boolean isCancelled();
-    
+
     
     
     @GlobalConstant("NSWillBecomeMultiThreadedNotification")
@@ -98,7 +95,7 @@ public class NSThread
     public static native NSString DidBecomeSingleThreadedNotification();
     @GlobalConstant("NSThreadWillExitNotification")
     public static native NSString WillExitNotification();
-    
+
     /**
      * @since Available in iOS 2.0 and later.
      */
@@ -140,5 +137,5 @@ public class NSThread
      */
     @Mapping("mainThread")
     public static native NSThread getMainThread();
-    
+
 }

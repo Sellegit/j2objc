@@ -19,7 +19,6 @@ import apple.coremedia.*;
 import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("AVFoundation/AVFoundation.h")
@@ -492,5 +491,5 @@ public class AVMetadataKeyID3Metadata
      */
     @GlobalConstant("AVMetadataID3MetadataKeyUserURL")
     public static native NSString UserURLValue();
-    
+
 }

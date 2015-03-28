@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.dispatch.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Mapping("CFNumberRef") @Library("CoreFoundation/CoreFoundation.h")
@@ -25,7 +24,7 @@ public class CFNumber
     
     
     protected CFNumber() {}
-    
+
     
     
     
@@ -35,7 +34,7 @@ public class CFNumber
     public static native CFNumber getNegativeInfinity();
     @GlobalConstant("kCFNumberNaN")
     public static native CFNumber getNaN();
-    
+
     @GlobalFunction("CFNumberGetTypeID")
     public static native @MachineSizedUInt long getClassTypeID();
     @GlobalFunction("CFNumberCreate")
@@ -50,5 +49,5 @@ public class CFNumber
     public static native boolean getValue(CFNumber number, @Representing("CFNumberType") long theType, Todo valuePtr);
     @GlobalFunction("CFNumberCompare")
     public static native CFComparisonResult compareTo(CFNumber number, CFNumber otherNumber, Todo context);
-    
+
 }

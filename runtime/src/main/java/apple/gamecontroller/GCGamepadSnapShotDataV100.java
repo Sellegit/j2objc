@@ -14,9 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
-
-
 @Mapping("GCGamepadSnapShotDataV100") @Library("GameController/GameController.h")
 public class GCGamepadSnapShotDataV100 
     extends Struct 
@@ -46,11 +43,11 @@ public class GCGamepadSnapShotDataV100
     public native float getLeftShoulder();
     @DotMapping("rightShoulder")
     public native float getRightShoulder();
-    
+
     
     @GlobalFunction("GCGamepadSnapShotDataV100FromNSData")
     public static native boolean setData(GCGamepadSnapShotDataV100 snapshotData, NSData data);
     @GlobalFunction("NSDataFromGCGamepadSnapShotDataV100")
     public static native NSData getData(GCGamepadSnapShotDataV100 snapshotData);
-    
+
 }

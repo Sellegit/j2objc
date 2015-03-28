@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 3.0 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UIMenuController")
 public class UIMenuController 
     extends NSObject 
@@ -33,7 +31,7 @@ public class UIMenuController
     
     @Mapping("init")
     public UIMenuController() { }
-    
+
     
     @Mapping("isMenuVisible")
     public native boolean isMenuVisible();
@@ -61,7 +59,7 @@ public class UIMenuController
     public native void setMenuItems(NSArray<UIMenuItem> v);
     @Mapping("menuFrame")
     public native CGRect getMenuFrame();
-    
+
     
     
     @GlobalConstant("UIMenuControllerWillShowMenuNotification")
@@ -74,7 +72,7 @@ public class UIMenuController
     public static native NSString DidHideMenuNotification();
     @GlobalConstant("UIMenuControllerMenuFrameDidChangeNotification")
     public static native NSString MenuFrameDidChangeNotification();
-    
+
     @Mapping("setMenuVisible:animated:")
     public native void setMenuVisible(boolean menuVisible, boolean animated);
     @Mapping("setTargetRect:inView:")
@@ -83,5 +81,5 @@ public class UIMenuController
     public native void update();
     @Mapping("sharedMenuController")
     public static native UIMenuController getSharedMenuController();
-    
+
 }

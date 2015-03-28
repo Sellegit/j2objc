@@ -14,9 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
-
-
 @Library("CoreData/CoreData.h")
 @Mapping("NSMergePolicyType")
 public final class NSMergePolicyType extends ObjCEnum {
@@ -31,6 +28,6 @@ public final class NSMergePolicyType extends ObjCEnum {
     public static final long Overwrite = 3L;
     @GlobalConstant("NSRollbackMergePolicyType")
     public static final long Rollback = 4L;
-    
+
 
 }

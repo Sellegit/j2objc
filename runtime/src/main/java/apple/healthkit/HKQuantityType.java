@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("HealthKit/HealthKit.h") @Mapping("HKQuantityType")
 public class HKQuantityType 
     extends HKSampleType 
@@ -28,14 +26,14 @@ public class HKQuantityType
     
     @Mapping("init")
     public HKQuantityType() { }
-    
+
     
     @Mapping("aggregationStyle")
     public native @Representing("HKQuantityAggregationStyle") long getAggregationStyle();
-    
+
     
     
     @Mapping("isCompatibleWithUnit:")
     public native boolean isCompatibleWithUnit(HKUnit unit);
-    
+
 }

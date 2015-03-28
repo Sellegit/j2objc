@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 4.2 and later.
  */
-
 @Library("CoreMIDI/CoreMIDI.h") @Mapping("MIDINetworkSession")
 public class MIDINetworkSession 
     extends NSObject 
@@ -28,7 +26,7 @@ public class MIDINetworkSession
     
     @Mapping("init")
     public MIDINetworkSession() { }
-    
+
     
     @Mapping("isEnabled")
     public native boolean isEnabled();
@@ -44,7 +42,7 @@ public class MIDINetworkSession
     public native @Representing("MIDINetworkConnectionPolicy") long getConnectionPolicy();
     @Mapping("setConnectionPolicy:")
     public native void setConnectionPolicy(@Representing("MIDINetworkConnectionPolicy") long v);
-    
+
     
     
     @Mapping("contacts")
@@ -65,5 +63,5 @@ public class MIDINetworkSession
     public native MIDIEndpoint getDestinationEndpoint();
     @Mapping("defaultSession")
     public static native MIDINetworkSession defaultSession();
-    
+
 }

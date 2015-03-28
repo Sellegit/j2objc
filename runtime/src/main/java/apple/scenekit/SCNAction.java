@@ -20,9 +20,6 @@ import apple.spritekit.*;
 import apple.opengles.*;
 
 
-
-
-
 @Library("SceneKit/SceneKit.h") @Mapping("SCNAction")
 public class SCNAction 
     extends NSObject 
@@ -32,7 +29,7 @@ public class SCNAction
     
     @Mapping("init")
     public SCNAction() { }
-    
+
     
     @Mapping("duration")
     public native double getDuration();
@@ -50,7 +47,7 @@ public class SCNAction
     public native @MachineSizedFloat double getSpeed();
     @Mapping("setSpeed:")
     public native void setSpeed(@MachineSizedFloat double v);
-    
+
     
     
     @Mapping("reversedAction")
@@ -107,5 +104,5 @@ public class SCNAction
     public static native SCNAction custom(double seconds, @Block("(,@MachineSizedFloat)") VoidBlock2<SCNNode, Double> block);
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
-    
+
 }

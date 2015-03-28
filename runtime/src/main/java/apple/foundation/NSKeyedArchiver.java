@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h") @Mapping("NSKeyedArchiver")
 public class NSKeyedArchiver 
     extends NSCoder 
@@ -33,7 +30,7 @@ public class NSKeyedArchiver
     public NSKeyedArchiver(NSMutableData data) { }
     @Mapping("init")
     public NSKeyedArchiver() { }
-    
+
     
     @Mapping("delegate")
     public native NSKeyedArchiverDelegate getDelegate();
@@ -43,7 +40,7 @@ public class NSKeyedArchiver
     public native @Representing("NSPropertyListFormat") long getOutputFormat();
     @Mapping("setOutputFormat:")
     public native void setOutputFormat(@Representing("NSPropertyListFormat") long v);
-    
+
     
     
     /**
@@ -51,7 +48,7 @@ public class NSKeyedArchiver
      */
     @GlobalConstant("NSKeyedArchiveRootObjectKey")
     public static native String ArchiveRootObjectKey();
-    
+
     @Mapping("finishEncoding")
     public native void finishEncoding();
     /**
@@ -63,5 +60,5 @@ public class NSKeyedArchiver
     public static native NSData archive(Object rootObject);
     @Mapping("archiveRootObject:toFile:")
     public static native boolean archiveRootObject(Object rootObject, String path);
-    
+
 }

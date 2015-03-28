@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 import apple.uikit.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -25,13 +24,13 @@ public abstract class MPMediaPickerControllerDelegateAdapter
     
     
     
-    
-    
+
+
     
     
     @NotImplemented("mediaPicker:didPickMediaItems:")
     public void didPickMediaItems(MPMediaPickerController mediaPicker, MPMediaItemCollection mediaItemCollection) { throw new UnsupportedOperationException(); }
     @NotImplemented("mediaPickerDidCancel:")
     public void didCancel(MPMediaPickerController mediaPicker) { throw new UnsupportedOperationException(); }
-    
+
 }

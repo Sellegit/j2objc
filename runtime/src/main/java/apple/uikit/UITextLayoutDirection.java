@@ -19,9 +19,6 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h")
 @Mapping("UITextLayoutDirection")
 public final class UITextLayoutDirection extends ObjCEnum {
@@ -34,6 +31,6 @@ public final class UITextLayoutDirection extends ObjCEnum {
     public static final long Up = 4L;
     @GlobalConstant("UITextLayoutDirectionDown")
     public static final long Down = 5L;
-    
+
 
 }

@@ -19,11 +19,9 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 3.0 and later.
  */
-
 @Library("Foundation/Foundation.h") @Mapping("NSUndoManager")
 public class NSUndoManager 
     extends NSObject 
@@ -31,11 +29,11 @@ public class NSUndoManager
 
     
     public static final int CloseGroupingRunLoopOrdering = 350000;
-    
+
     
     @Mapping("init")
     public NSUndoManager() { }
-    
+
     
     @Mapping("groupingLevel")
     public native @MachineSizedSInt long getGroupingLevel();
@@ -79,7 +77,7 @@ public class NSUndoManager
     public native String getUndoMenuItemTitle();
     @Mapping("redoMenuItemTitle")
     public native String getRedoMenuItemTitle();
-    
+
     
     
     /**
@@ -127,7 +125,7 @@ public class NSUndoManager
      */
     @GlobalConstant("NSUndoManagerDidCloseUndoGroupNotification")
     public static native NSString DidCloseUndoGroupNotification();
-    
+
     @Mapping("beginUndoGrouping")
     public native void beginUndoGrouping();
     @Mapping("endUndoGrouping")
@@ -161,5 +159,5 @@ public class NSUndoManager
     public native String getUndoMenuTitle(String actionName);
     @Mapping("redoMenuTitleForUndoActionName:")
     public native String getRedoMenuTitle(String actionName);
-    
+
 }

@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h")
 @Mapping("NSPropertyListFormat")
 public final class NSPropertyListFormat extends ObjCEnum {
@@ -32,6 +29,6 @@ public final class NSPropertyListFormat extends ObjCEnum {
     public static final long XMLFormat_v1_0 = 100L;
     @GlobalConstant("NSPropertyListBinaryFormat_v1_0")
     public static final long BinaryFormat_v1_0 = 200L;
-    
+
 
 }

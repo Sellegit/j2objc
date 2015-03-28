@@ -18,11 +18,9 @@ import apple.mediaplayer.*;
 import apple.avkit.*;
 
 
-
 /**
  * @since Available in iOS 7.0 and later.
  */
-
 @Library("iAd/iAd.h")
 @Mapping("ADInterstitialPresentationPolicy")
 public final class ADInterstitialPresentationPolicy extends ObjCEnum {
@@ -33,6 +31,6 @@ public final class ADInterstitialPresentationPolicy extends ObjCEnum {
     public static final long Automatic = 1L;
     @GlobalConstant("ADInterstitialPresentationPolicyManual")
     public static final long Manual = 2L;
-    
+
 
 }

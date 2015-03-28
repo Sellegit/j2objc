@@ -15,9 +15,6 @@ import apple.foundation.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("SystemConfiguration/SystemConfiguration.h")
 @Mapping("SCStatusCode")
 public final class SCStatusCode extends ObjCEnum {
@@ -62,6 +59,6 @@ public final class SCStatusCode extends ObjCEnum {
     public static final long ConnectionNoService = 5001L;
     @GlobalConstant("kSCStatusConnectionIgnore")
     public static final long ConnectionIgnore = 5002L;
-    
+
 
 }

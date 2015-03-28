@@ -19,11 +19,9 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 4.0 and later.
  */
-
 @Library("Foundation/Foundation.h")
 @Mapping("NSVolumeEnumerationOptions")
 public final class NSVolumeEnumerationOptions extends ObjCEnum {
@@ -32,6 +30,6 @@ public final class NSVolumeEnumerationOptions extends ObjCEnum {
     public static final long SkipHiddenVolumes = 2L;
     @GlobalConstant("NSVolumeEnumerationProduceFileReferenceURLs")
     public static final long ProduceFileReferenceURLs = 4L;
-    
+
 
 }

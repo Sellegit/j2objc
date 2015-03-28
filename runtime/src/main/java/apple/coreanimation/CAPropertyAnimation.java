@@ -17,9 +17,6 @@ import apple.coretext.*;
 import apple.opengles.*;
 
 
-
-
-
 @Library("QuartzCore/QuartzCore.h") @Mapping("CAPropertyAnimation")
 public class CAPropertyAnimation 
     extends CAAnimation 
@@ -31,7 +28,7 @@ public class CAPropertyAnimation
     public CAPropertyAnimation(NSCoder aDecoder) { }
     @Mapping("init")
     public CAPropertyAnimation() { }
-    
+
     
     @Mapping("keyPath")
     public native String getKeyPath();
@@ -49,10 +46,10 @@ public class CAPropertyAnimation
     public native CAValueFunction getValueFunction();
     @Mapping("setValueFunction:")
     public native void setValueFunction(CAValueFunction v);
-    
+
     
     
     @Mapping("animationWithKeyPath:")
     public static native CAPropertyAnimation create(String path);
-    
+
 }

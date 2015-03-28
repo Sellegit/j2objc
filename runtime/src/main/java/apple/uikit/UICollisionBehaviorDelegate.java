@@ -19,17 +19,14 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h") @Mapping("UICollisionBehaviorDelegate")
 public interface UICollisionBehaviorDelegate 
     extends NSObjectProtocol {
 
     
     
-    
-    
+
+
     
     @Mapping("collisionBehavior:beganContactForItem:withItem:atPoint:")
     void beganContact(UICollisionBehavior behavior, UIDynamicItem item1, UIDynamicItem item2, CGPoint p);
@@ -39,7 +36,7 @@ public interface UICollisionBehaviorDelegate
     void beganBoundaryContact(UICollisionBehavior behavior, UIDynamicItem item, Cloneable identifier, CGPoint p);
     @Mapping("collisionBehavior:endedContactForItem:withBoundaryIdentifier:")
     void endedBoundaryContact(UICollisionBehavior behavior, UIDynamicItem item, Cloneable identifier);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

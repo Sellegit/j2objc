@@ -19,11 +19,9 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("Foundation/Foundation.h")
 @Mapping("NSEnergyFormatterUnit")
 public final class NSEnergyFormatterUnit extends ObjCEnum {
@@ -36,6 +34,6 @@ public final class NSEnergyFormatterUnit extends ObjCEnum {
     public static final long Calorie = 1793L;
     @GlobalConstant("NSEnergyFormatterUnitKilocalorie")
     public static final long Kilocalorie = 1794L;
-    
+
 
 }

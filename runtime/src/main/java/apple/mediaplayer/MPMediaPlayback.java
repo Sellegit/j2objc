@@ -15,9 +15,6 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
-
-
 @Library("MediaPlayer/MediaPlayer.h") @Mapping("MPMediaPlayback")
 public interface MPMediaPlayback 
      {
@@ -34,7 +31,7 @@ public interface MPMediaPlayback
     float getCurrentPlaybackRate();
     @Mapping("setCurrentPlaybackRate:")
     void setCurrentPlaybackRate(float v);
-    
+
     
     @Mapping("prepareToPlay")
     void prepareToPlay();
@@ -50,7 +47,7 @@ public interface MPMediaPlayback
     void beginSeekingBackward();
     @Mapping("endSeeking")
     void endSeeking();
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

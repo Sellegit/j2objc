@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 4.1 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h") @Mapping("AVAssetReader")
 public class AVAssetReader 
     extends NSObject 
@@ -34,7 +32,7 @@ public class AVAssetReader
     
     @Mapping("init")
     public AVAssetReader() { }
-    
+
     
     @Mapping("asset")
     public native AVAsset getAsset();
@@ -48,7 +46,7 @@ public class AVAssetReader
     public native void setTimeRange(CMTimeRange v);
     @Mapping("outputs")
     public native NSArray<AVAssetReaderOutput> getOutputs();
-    
+
     
     
     @Mapping("canAddOutput:")
@@ -61,5 +59,5 @@ public class AVAssetReader
     public native void cancelReading();
     @Mapping("assetReaderWithAsset:error:")
     public static native AVAssetReader create(AVAsset asset, Todo outError);
-    
+
 }

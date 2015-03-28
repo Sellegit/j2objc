@@ -13,7 +13,6 @@ import apple.coregraphics.*;
 import apple.coreservices.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("ImageIO/ImageIO.h")
@@ -46,5 +45,5 @@ public class CGImageDestinationProperties
      */
     @GlobalConstant("kCGImageDestinationEmbedThumbnail")
     public static native CFString EmbedThumbnailKey();
-    
+
 }

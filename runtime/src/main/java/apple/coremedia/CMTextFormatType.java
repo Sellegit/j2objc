@@ -18,9 +18,6 @@ import apple.coreanimation.*;
 import apple.corevideo.*;
 
 
-
-
-
 @Library("CoreMedia/CoreMedia.h")
 @Mapping("CMTextFormatType")
 public final class CMTextFormatType extends ObjCEnum {
@@ -29,6 +26,6 @@ public final class CMTextFormatType extends ObjCEnum {
     public static final long QTText = 1952807028L;
     @GlobalConstant("kCMTextFormatType_3GText")
     public static final long _3GText = 1954034535L;
-    
+
 
 }

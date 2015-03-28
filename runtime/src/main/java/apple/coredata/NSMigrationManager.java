@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 3.0 and later.
  */
-
 @Library("CoreData/CoreData.h") @Mapping("NSMigrationManager")
 public class NSMigrationManager 
     extends NSObject 
@@ -30,7 +28,7 @@ public class NSMigrationManager
     public NSMigrationManager(NSManagedObjectModel sourceModel, NSManagedObjectModel destinationModel) { }
     @Mapping("init")
     public NSMigrationManager() { }
-    
+
     
     /**
      * @since Available in iOS 5.0 and later.
@@ -60,7 +58,7 @@ public class NSMigrationManager
     public native NSDictionary<?, ?> getUserInfo();
     @Mapping("setUserInfo:")
     public native void setUserInfo(NSDictionary<?, ?> v);
-    
+
     
     
     @Mapping("migrateStoreFromURL:type:options:withMappingModel:toDestinationURL:destinationType:destinationOptions:error:")
@@ -79,5 +77,5 @@ public class NSMigrationManager
     public native NSArray<NSEntityMapping> getSourceInstances(String mappingName, NSArray<?> destinationInstances);
     @Mapping("cancelMigrationWithError:")
     public native void cancelMigration(NSError error);
-    
+
 }

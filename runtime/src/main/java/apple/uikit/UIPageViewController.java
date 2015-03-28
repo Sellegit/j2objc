@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 5.0 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UIPageViewController")
 public class UIPageViewController 
     extends UIViewController 
@@ -39,7 +37,7 @@ public class UIPageViewController
     public UIPageViewController(NSCoder aDecoder) { }
     @Mapping("init")
     public UIPageViewController() { }
-    
+
     
     @Mapping("delegate")
     public native UIPageViewControllerDelegate getDelegate();
@@ -63,10 +61,10 @@ public class UIPageViewController
     public native NSArray<UIGestureRecognizer> getGestureRecognizers();
     @Mapping("viewControllers")
     public native NSArray<UIViewController> getViewControllers();
-    
+
     
     
     @Mapping("setViewControllers:direction:animated:completion:")
     public native void setViewControllers(NSArray<?> viewControllers, @Representing("UIPageViewControllerNavigationDirection") long direction, boolean animated, @Block VoidBooleanBlock completion);
-    
+
 }

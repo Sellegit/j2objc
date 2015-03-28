@@ -19,9 +19,6 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h")
 @Mapping("UITouchPhase")
 public final class UITouchPhase extends ObjCEnum {
@@ -36,6 +33,6 @@ public final class UITouchPhase extends ObjCEnum {
     public static final long Ended = 3L;
     @GlobalConstant("UITouchPhaseCancelled")
     public static final long Cancelled = 4L;
-    
+
 
 }

@@ -19,9 +19,6 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h")
 @Mapping("UIWebPaginationMode")
 public final class UIWebPaginationMode extends ObjCEnum {
@@ -36,6 +33,6 @@ public final class UIWebPaginationMode extends ObjCEnum {
     public static final long BottomToTop = 3L;
     @GlobalConstant("UIWebPaginationModeRightToLeft")
     public static final long RightToLeft = 4L;
-    
+
 
 }

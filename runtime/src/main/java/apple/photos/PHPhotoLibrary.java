@@ -17,11 +17,9 @@ import apple.uikit.*;
 import apple.avfoundation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("Photos/Photos.h") @Mapping("PHPhotoLibrary")
 public class PHPhotoLibrary 
     extends NSObject 
@@ -31,10 +29,10 @@ public class PHPhotoLibrary
     
     @Mapping("init")
     public PHPhotoLibrary() { }
+
     
-    
-    
-    
+
+
     
     
     @Mapping("performChanges:completionHandler:")
@@ -51,5 +49,5 @@ public class PHPhotoLibrary
     public static native @Representing("PHAuthorizationStatus") long getAuthorizationStatus();
     @Mapping("requestAuthorization:")
     public static native void requestAuthorization(@Block VoidBlock1<PHAuthorizationStatus> handler);
-    
+
 }

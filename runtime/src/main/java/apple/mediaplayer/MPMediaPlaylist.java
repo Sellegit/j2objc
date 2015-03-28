@@ -15,11 +15,9 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
 /**
  * @since Available in iOS 3.0 and later.
  */
-
 @Library("MediaPlayer/MediaPlayer.h") @Mapping("MPMediaPlaylist")
 public class MPMediaPlaylist 
     extends MPMediaItemCollection 
@@ -31,7 +29,7 @@ public class MPMediaPlaylist
     public MPMediaPlaylist(NSArray<?> items) { }
     @Mapping("init")
     public MPMediaPlaylist() { }
-    
+
     
     /**
      * @since Available in iOS 7.0 and later.
@@ -53,9 +51,9 @@ public class MPMediaPlaylist
      */
     @Mapping("seedItems")
     public native NSArray<MPMediaItem> getSeedItems();
+
     
     
-    
-    
-    
+
+
 }

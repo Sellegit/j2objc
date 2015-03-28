@@ -18,7 +18,6 @@ import apple.coremedia.*;
 import apple.security.*;
 import apple.dispatch.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -35,7 +34,7 @@ public abstract class NSFilePresenterAdapter
     public NSOperationQueue getPresentedItemOperationQueue() { throw new UnsupportedOperationException(); }
     @NotImplemented("primaryPresentedItemURL")
     public NSURL getPrimaryPresentedItemURL() { throw new UnsupportedOperationException(); }
-    
+
     
     
     @NotImplemented("relinquishPresentedItemToReader:")
@@ -70,5 +69,5 @@ public abstract class NSFilePresenterAdapter
     public void presentedSubitemAtURLDidLoseVersion(NSURL url, NSFileVersion version) { throw new UnsupportedOperationException(); }
     @NotImplemented("presentedSubitemAtURL:didResolveConflictVersion:")
     public void presentedSubitemAtURLDidResolveConflictVersion(NSURL url, NSFileVersion version) { throw new UnsupportedOperationException(); }
-    
+
 }

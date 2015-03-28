@@ -18,9 +18,6 @@ import apple.coreanimation.*;
 import apple.corevideo.*;
 
 
-
-
-
 @Library("CoreMedia/CoreMedia.h")
 @Mapping("CMAudioCodecType")
 public final class CMAudioCodecType extends ObjCEnum {
@@ -29,6 +26,6 @@ public final class CMAudioCodecType extends ObjCEnum {
     public static final long AAC_LCProtected = 1885430115L;
     @GlobalConstant("kCMAudioCodecType_AAC_AudibleProtected")
     public static final long AAC_AudibleProtected = 1633771875L;
-    
+
 
 }

@@ -17,9 +17,6 @@ import apple.corevideo.*;
 import apple.imageio.*;
 
 
-
-
-
 @Library("CoreImage/CoreImage.h") @Mapping("CIImage")
 public class CIImage 
     extends NSObject 
@@ -50,10 +47,10 @@ public class CIImage
     public CIImage(CIColor color) { }
     @Mapping("init")
     public CIImage() { }
+
     
-    
-    
-    
+
+
     
     
     @Mapping("imageByApplyingTransform:")
@@ -113,5 +110,5 @@ public class CIImage
     public native void encode(NSCoder aCoder);
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
-    
+
 }

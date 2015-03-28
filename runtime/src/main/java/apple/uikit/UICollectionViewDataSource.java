@@ -19,17 +19,14 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h") @Mapping("UICollectionViewDataSource")
 public interface UICollectionViewDataSource 
     extends NSObjectProtocol {
 
     
     
-    
-    
+
+
     
     @Mapping("collectionView:numberOfItemsInSection:")
     @MachineSizedSInt long getNumberOfItemsInSection(UICollectionView collectionView, @MachineSizedSInt long section);
@@ -39,7 +36,7 @@ public interface UICollectionViewDataSource
     @MachineSizedSInt long getNumberOfSections(UICollectionView collectionView);
     @Mapping("collectionView:viewForSupplementaryElementOfKind:atIndexPath:")
     UICollectionReusableView getViewForSupplementaryElement(UICollectionView collectionView, String kind, NSIndexPath indexPath);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

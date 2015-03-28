@@ -15,9 +15,6 @@ import apple.dispatch.*;
 import apple.foundation.*;
 
 
-
-
-
 @Library("CoreFoundation/CoreFoundation.h")
 @Mapping("CFByteOrder")
 public final class CFByteOrder extends ObjCEnum {
@@ -28,6 +25,6 @@ public final class CFByteOrder extends ObjCEnum {
     public static final long LittleEndian = 1L;
     @GlobalConstant("CFByteOrderBigEndian")
     public static final long BigEndian = 2L;
-    
+
 
 }

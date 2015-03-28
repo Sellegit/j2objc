@@ -19,9 +19,6 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h")
 @Mapping("UIImageResizingMode")
 public final class UIImageResizingMode extends ObjCEnum {
@@ -30,6 +27,6 @@ public final class UIImageResizingMode extends ObjCEnum {
     public static final long Tile = 0L;
     @GlobalConstant("UIImageResizingModeStretch")
     public static final long Stretch = 1L;
-    
+
 
 }

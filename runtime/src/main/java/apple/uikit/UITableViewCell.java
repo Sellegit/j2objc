@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 2.0 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UITableViewCell")
 public class UITableViewCell 
     extends UIView 
@@ -42,7 +40,7 @@ public class UITableViewCell
     public UITableViewCell(NSCoder aDecoder) { }
     @Mapping("init")
     public UITableViewCell() { }
-    
+
     
     /**
      * @since Available in iOS 3.0 and later.
@@ -143,7 +141,7 @@ public class UITableViewCell
     public native void setEditing(boolean v);
     @Mapping("showingDeleteConfirmation")
     public native boolean isShowingDeleteConfirmation();
-    
+
     
     
     @Mapping("prepareForReuse")
@@ -180,5 +178,5 @@ public class UITableViewCell
     public native boolean shouldBeRequiredToFail(UIGestureRecognizer gestureRecognizer, UIGestureRecognizer otherGestureRecognizer);
     @Mapping("gestureRecognizer:shouldReceiveTouch:")
     public native boolean shouldReceiveTouch(UIGestureRecognizer gestureRecognizer, UITouch touch);
-    
+
 }

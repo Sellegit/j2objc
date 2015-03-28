@@ -16,9 +16,6 @@ import apple.opengles.*;
 import apple.coremedia.*;
 
 
-
-
-
 @Mapping("CVTimeStamp") @Library("CoreVideo/CoreVideo.h")
 public class CVTimeStamp 
     extends Struct 
@@ -46,6 +43,6 @@ public class CVTimeStamp
     public native long getFlags();
     @DotMapping("reserved")
     public native long getReserved();
-    
+
     
 }

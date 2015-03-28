@@ -14,9 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
-
-
 @Library("ImageIO/ImageIO.h")
 @Mapping("CGImageMetadataErrors")
 public final class CGImageMetadataErrors extends ObjCEnum {
@@ -31,6 +28,6 @@ public final class CGImageMetadataErrors extends ObjCEnum {
     public static final long ConflictingArguments = 3L;
     @GlobalConstant("kCGImageMetadataErrorPrefixConflict")
     public static final long PrefixConflict = 4L;
-    
+
 
 }

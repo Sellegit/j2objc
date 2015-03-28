@@ -17,11 +17,9 @@ import apple.uikit.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 7.0 and later.
  */
-
 @Library("MapKit/MapKit.h") @Mapping("MKOverlayPathRenderer")
 public class MKOverlayPathRenderer 
     extends MKOverlayRenderer 
@@ -33,7 +31,7 @@ public class MKOverlayPathRenderer
     public MKOverlayPathRenderer(MKOverlay overlay) { }
     @Mapping("init")
     public MKOverlayPathRenderer() { }
-    
+
     
     @Mapping("fillColor")
     public native UIColor getFillColor();
@@ -71,7 +69,7 @@ public class MKOverlayPathRenderer
     public native CGPath getPath();
     @Mapping("setPath:")
     public native void setPath(CGPath v);
-    
+
     
     
     @Mapping("createPath")
@@ -86,5 +84,5 @@ public class MKOverlayPathRenderer
     public native void strokePath(CGPath path, CGContext context);
     @Mapping("fillPath:inContext:")
     public native void fillPath(CGPath path, CGContext context);
-    
+
 }

@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.dispatch.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Mapping("CFTypeRef") @Library("CoreFoundation/CoreFoundation.h")
@@ -25,7 +24,7 @@ public class CFType
     
     
     protected CFType() {}
-    
+
     
     
     
@@ -56,5 +55,5 @@ public class CFType
     public static native CFType makeCollectable(CFType cf);
     @GlobalFunction("CFShow")
     public static native void show(CFType obj);
-    
+
 }

@@ -19,9 +19,6 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h")
 @Mapping("UIDeviceOrientation")
 public final class UIDeviceOrientation extends ObjCEnum {
@@ -40,6 +37,6 @@ public final class UIDeviceOrientation extends ObjCEnum {
     public static final long FaceUp = 5L;
     @GlobalConstant("UIDeviceOrientationFaceDown")
     public static final long FaceDown = 6L;
-    
+
 
 }

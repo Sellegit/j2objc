@@ -14,9 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
-
-
 @Library("CoreData/CoreData.h")
 @Mapping("NSCoreDataErrorCode")
 public final class NSCoreDataErrorCode extends ObjCEnum {
@@ -103,6 +100,6 @@ public final class NSCoreDataErrorCode extends ObjCEnum {
     public static final long InferredMappingModel = 134190L;
     @GlobalConstant("NSExternalRecordImportError")
     public static final long ExternalRecordImport = 134200L;
-    
+
 
 }

@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 import apple.uikit.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -25,8 +24,8 @@ public abstract class GKMatchDelegateAdapter
     
     
     
-    
-    
+
+
     
     
     /**
@@ -70,5 +69,5 @@ public abstract class GKMatchDelegateAdapter
     @Deprecated
     @NotImplemented("match:shouldReinvitePlayer:")
     public boolean shouldReinvitePlayer(GKMatch match, String playerID) { throw new UnsupportedOperationException(); }
-    
+
 }

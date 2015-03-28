@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h") @Mapping("NSMutableDictionary")
 public class NSMutableDictionary <K, V>
     extends NSDictionary 
@@ -33,10 +30,10 @@ public class NSMutableDictionary <K, V>
     public NSMutableDictionary() { }
     @Mapping("initWithCapacity:")
     public NSMutableDictionary(@MachineSizedUInt long numItems) { }
+
     
-    
-    
-    
+
+
     
     
     @Mapping("removeObjectForKey:")
@@ -45,5 +42,5 @@ public class NSMutableDictionary <K, V>
     public native void setObject(Object anObject, Object aKey);
     @Mapping("removeAllObjects")
     public native void removeAllObjects();
-    
+
 }

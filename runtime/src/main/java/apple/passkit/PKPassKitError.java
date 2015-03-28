@@ -15,7 +15,6 @@ import apple.foundation.*;
 import apple.uikit.*;
 import apple.addressbook.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("PassKit/PassKit.h")
@@ -33,5 +32,5 @@ public class PKPassKitError
      */
     @GlobalConstant("PKPassKitErrorDomain")
     public static native String PKPassKitErrorDomain();
-    
+
 }

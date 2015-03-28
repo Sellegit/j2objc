@@ -12,7 +12,6 @@ import apple.corefoundation.*;
 import apple.coregraphics.*;
 import apple.coreservices.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("dispatch/dispatch.h")
@@ -23,7 +22,7 @@ public class DispatchObject
     
     
     protected DispatchObject() {}
-    
+
     
     
     
@@ -52,5 +51,5 @@ public class DispatchObject
      */
     @GlobalFunction("dispatch_set_target_queue")
     public static native void setTargetQueue(DispatchObject object, DispatchQueue queue);
-    
+
 }

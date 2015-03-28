@@ -14,9 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
-
-
 @Library("CoreAudio/CoreAudioTypes.h")
 @Mapping("AudioChannelBit")
 public final class AudioChannelBit extends ObjCEnum {
@@ -57,6 +54,6 @@ public final class AudioChannelBit extends ObjCEnum {
     public static final long TopBackCenter = 65536L;
     @GlobalConstant("kAudioChannelBit_TopBackRight")
     public static final long TopBackRight = 131072L;
-    
+
 
 }

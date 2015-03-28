@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 import apple.uikit.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("MediaPlayer/MediaPlayer.h")
@@ -37,5 +36,5 @@ public class MPMoviePlayerFullscreenAnimation
      */
     @GlobalConstant("MPMoviePlayerFullscreenAnimationCurveUserInfoKey")
     public static native NSString CurveUserInfoKey();
-    
+
 }

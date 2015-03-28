@@ -15,11 +15,9 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("WebKit/WebKit.h") @Mapping("WKBackForwardList")
 public class WKBackForwardList 
     extends NSObject 
@@ -29,7 +27,7 @@ public class WKBackForwardList
     
     @Mapping("init")
     public WKBackForwardList() { }
-    
+
     
     @Mapping("currentItem")
     public native WKBackForwardListItem getCurrentItem();
@@ -41,10 +39,10 @@ public class WKBackForwardList
     public native NSArray<WKBackForwardListItem> getBackList();
     @Mapping("forwardList")
     public native NSArray<WKBackForwardListItem> getForwardList();
-    
+
     
     
     @Mapping("itemAtIndex:")
     public native WKBackForwardListItem getItem(@MachineSizedSInt long index);
-    
+
 }

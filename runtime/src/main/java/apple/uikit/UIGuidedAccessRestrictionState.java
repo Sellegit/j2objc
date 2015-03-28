@@ -19,9 +19,6 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h")
 @Mapping("UIGuidedAccessRestrictionState")
 public final class UIGuidedAccessRestrictionState extends ObjCEnum {
@@ -30,6 +27,6 @@ public final class UIGuidedAccessRestrictionState extends ObjCEnum {
     public static final long Allow = 0L;
     @GlobalConstant("UIGuidedAccessRestrictionStateDeny")
     public static final long Deny = 1L;
-    
+
 
 }

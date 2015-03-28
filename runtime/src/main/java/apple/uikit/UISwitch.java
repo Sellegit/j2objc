@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 2.0 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UISwitch")
 public class UISwitch 
     extends UIControl 
@@ -37,7 +35,7 @@ public class UISwitch
     public UISwitch(NSCoder aDecoder) { }
     @Mapping("init")
     public UISwitch() { }
-    
+
     
     /**
      * @since Available in iOS 5.0 and later.
@@ -93,10 +91,10 @@ public class UISwitch
     public native boolean isOn();
     @Mapping("setOn:")
     public native void setOn(boolean v);
-    
+
     
     
     @Mapping("setOn:animated:")
     public native void setOn(boolean on, boolean animated);
-    
+
 }

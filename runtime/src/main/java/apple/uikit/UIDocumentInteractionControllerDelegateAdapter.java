@@ -18,7 +18,6 @@ import apple.coreimage.*;
 import apple.coretext.*;
 import apple.corelocation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -29,8 +28,8 @@ public abstract class UIDocumentInteractionControllerDelegateAdapter
     
     
     
-    
-    
+
+
     
     
     @NotImplemented("documentInteractionControllerViewControllerForPreview:")
@@ -69,5 +68,5 @@ public abstract class UIDocumentInteractionControllerDelegateAdapter
     @Deprecated
     @NotImplemented("documentInteractionController:performAction:")
     public boolean performAction(UIDocumentInteractionController controller, Selector action) { throw new UnsupportedOperationException(); }
-    
+
 }

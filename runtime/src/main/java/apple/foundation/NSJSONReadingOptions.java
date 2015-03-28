@@ -19,11 +19,9 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 5.0 and later.
  */
-
 @Library("Foundation/Foundation.h")
 @Mapping("NSJSONReadingOptions")
 public final class NSJSONReadingOptions extends ObjCEnum {
@@ -34,6 +32,6 @@ public final class NSJSONReadingOptions extends ObjCEnum {
     public static final long MutableLeaves = 2L;
     @GlobalConstant("NSJSONReadingAllowFragments")
     public static final long AllowFragments = 4L;
-    
+
 
 }

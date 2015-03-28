@@ -20,9 +20,6 @@ import apple.spritekit.*;
 import apple.opengles.*;
 
 
-
-
-
 @Library("SceneKit/SceneKit.h") @Mapping("SCNGeometrySource")
 public class SCNGeometrySource 
     extends NSObject 
@@ -32,7 +29,7 @@ public class SCNGeometrySource
     
     @Mapping("init")
     public SCNGeometrySource() { }
-    
+
     
     @Mapping("data")
     public native NSData getData();
@@ -50,7 +47,7 @@ public class SCNGeometrySource
     public native @MachineSizedSInt long getDataOffset();
     @Mapping("dataStride")
     public native @MachineSizedSInt long getDataStride();
-    
+
     
     
     @Mapping("geometrySourceWithData:semantic:vectorCount:floatComponents:componentsPerVector:bytesPerComponent:dataOffset:dataStride:")
@@ -61,5 +58,5 @@ public class SCNGeometrySource
     public static native SCNGeometrySource createWithNormals(SCNVector3 normals, @MachineSizedSInt long count);
     @Mapping("geometrySourceWithTextureCoordinates:count:")
     public static native SCNGeometrySource createWithTextureCoordinates(CGPoint texcoord, @MachineSizedSInt long count);
-    
+
 }

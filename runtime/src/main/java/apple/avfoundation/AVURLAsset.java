@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 4.0 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h") @Mapping("AVURLAsset")
 public class AVURLAsset 
     extends AVAsset 
@@ -36,7 +34,7 @@ public class AVURLAsset
     public AVURLAsset(NSURL URL, NSDictionary<?, ?> options) { }
     @Mapping("init")
     public AVURLAsset() { }
-    
+
     
     @Mapping("URL")
     public native NSURL getURL();
@@ -45,7 +43,7 @@ public class AVURLAsset
      */
     @Mapping("resourceLoader")
     public native AVAssetResourceLoader getResourceLoader();
-    
+
     
     
     /**
@@ -67,5 +65,5 @@ public class AVURLAsset
     public static native AVURLAsset create(NSURL URL, NSDictionary<?, ?> options);
     @Mapping("compatibleTrackForCompositionTrack:")
     public native AVAssetTrack getCompatibleTrack(AVCompositionTrack compositionTrack);
-    
+
 }

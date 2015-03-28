@@ -21,11 +21,9 @@ import apple.glkit.*;
 import apple.scenekit.*;
 
 
-
 /**
  * @since Available in iOS 7.0 and later.
  */
-
 @Library("SpriteKit/SpriteKit.h")
 @Mapping("SKTextureFilteringMode")
 public final class SKTextureFilteringMode extends ObjCEnum {
@@ -34,6 +32,6 @@ public final class SKTextureFilteringMode extends ObjCEnum {
     public static final long Nearest = 0L;
     @GlobalConstant("SKTextureFilteringLinear")
     public static final long Linear = 1L;
-    
+
 
 }

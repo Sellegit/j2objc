@@ -15,9 +15,6 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
-
-
 @Library("GameKit/GameKit.h")
 @Mapping("GKSessionErrorCode")
 public final class GKSessionErrorCode extends ObjCEnum {
@@ -54,6 +51,6 @@ public final class GKSessionErrorCode extends ObjCEnum {
     public static final long Unknown = 30204L;
     @GlobalConstant("GKSessionSystemError")
     public static final long System = 30205L;
-    
+
 
 }

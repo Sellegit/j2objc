@@ -19,9 +19,6 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h")
 @Mapping("NSLayoutRelation")
 public final class NSLayoutRelation extends ObjCEnum {
@@ -32,6 +29,6 @@ public final class NSLayoutRelation extends ObjCEnum {
     public static final long Equal = 0L;
     @GlobalConstant("NSLayoutRelationGreaterThanOrEqual")
     public static final long GreaterThanOrEqual = 1L;
-    
+
 
 }

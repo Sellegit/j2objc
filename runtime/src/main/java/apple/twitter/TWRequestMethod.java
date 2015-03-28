@@ -17,9 +17,6 @@ import apple.social.*;
 import apple.accounts.*;
 
 
-
-
-
 @Library("Twitter/Twitter.h")
 @Mapping("TWRequestMethod")
 public final class TWRequestMethod extends ObjCEnum {
@@ -30,6 +27,6 @@ public final class TWRequestMethod extends ObjCEnum {
     public static final long POST = 1L;
     @GlobalConstant("TWRequestMethodDELETE")
     public static final long DELETE = 2L;
-    
+
 
 }

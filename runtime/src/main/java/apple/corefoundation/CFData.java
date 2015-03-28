@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.dispatch.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Mapping("CFDataRef") @Library("CoreFoundation/CoreFoundation.h")
@@ -25,7 +24,7 @@ public class CFData
     
     
     protected CFData() {}
-    
+
     
     
     
@@ -50,5 +49,5 @@ public class CFData
      */
     @GlobalFunction("CFDataFind")
     public static native CFRange find(CFData theData, CFData dataToFind, CFRange searchRange, @Representing("CFDataSearchFlags") long compareOptions);
-    
+
 }

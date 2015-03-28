@@ -13,7 +13,6 @@ import apple.coregraphics.*;
 import apple.coreservices.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -24,13 +23,13 @@ public abstract class HMAccessoryBrowserDelegateAdapter
     
     
     
-    
-    
+
+
     
     
     @NotImplemented("accessoryBrowser:didFindNewAccessory:")
     public void didFindNewAccessory(HMAccessoryBrowser browser, HMAccessory accessory) { throw new UnsupportedOperationException(); }
     @NotImplemented("accessoryBrowser:didRemoveNewAccessory:")
     public void didRemoveNewAccessory(HMAccessoryBrowser browser, HMAccessory accessory) { throw new UnsupportedOperationException(); }
-    
+
 }

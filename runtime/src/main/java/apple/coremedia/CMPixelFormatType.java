@@ -18,9 +18,6 @@ import apple.coreanimation.*;
 import apple.corevideo.*;
 
 
-
-
-
 @Library("CoreMedia/CoreMedia.h")
 @Mapping("CMPixelFormatType")
 public final class CMPixelFormatType extends ObjCEnum {
@@ -57,6 +54,6 @@ public final class CMPixelFormatType extends ObjCEnum {
     public static final long _444YpCbCr10 = 1983131952L;
     @GlobalConstant("kCMPixelFormat_8IndexedGray_WhiteIsZero")
     public static final long _8IndexedGray_WhiteIsZero = 40L;
-    
+
 
 }

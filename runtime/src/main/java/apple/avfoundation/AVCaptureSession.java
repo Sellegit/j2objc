@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 4.0 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h") @Mapping("AVCaptureSession")
 public class AVCaptureSession 
     extends NSObject 
@@ -34,7 +32,7 @@ public class AVCaptureSession
     
     @Mapping("init")
     public AVCaptureSession() { }
-    
+
     
     @Mapping("sessionPreset")
     public native AVCaptureSessionPreset getSessionPreset();
@@ -76,7 +74,7 @@ public class AVCaptureSession
      */
     @Mapping("masterClock")
     public native CMClock getMasterClock();
-    
+
     
     
     /**
@@ -109,7 +107,7 @@ public class AVCaptureSession
      */
     @GlobalConstant("AVCaptureSessionInterruptionEndedNotification")
     public static native NSString InterruptionEndedNotification();
-    
+
     @Mapping("canSetSessionPreset:")
     public native boolean canSetSessionPreset(String preset);
     @Mapping("canAddInput:")
@@ -157,5 +155,5 @@ public class AVCaptureSession
     public native void startRunning();
     @Mapping("stopRunning")
     public native void stopRunning();
-    
+
 }

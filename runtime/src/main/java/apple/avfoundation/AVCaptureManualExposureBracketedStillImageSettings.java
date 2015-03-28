@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h") @Mapping("AVCaptureManualExposureBracketedStillImageSettings")
 public class AVCaptureManualExposureBracketedStillImageSettings 
     extends AVCaptureBracketedStillImageSettings 
@@ -34,16 +32,16 @@ public class AVCaptureManualExposureBracketedStillImageSettings
     
     @Mapping("init")
     public AVCaptureManualExposureBracketedStillImageSettings() { }
-    
+
     
     @Mapping("exposureDuration")
     public native CMTime getExposureDuration();
     @Mapping("ISO")
     public native float getISO();
-    
+
     
     
     @Mapping("manualExposureSettingsWithExposureDuration:ISO:")
     public static native AVCaptureManualExposureBracketedStillImageSettings create(CMTime duration, float ISO);
-    
+
 }

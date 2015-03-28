@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("NetworkExtension/NetworkExtension.h") @Mapping("NEVPNIKEv2SecurityAssociationParameters")
 public class NEVPNIKEv2SecurityAssociationParameters 
     extends NSObject 
@@ -28,7 +26,7 @@ public class NEVPNIKEv2SecurityAssociationParameters
     
     @Mapping("init")
     public NEVPNIKEv2SecurityAssociationParameters() { }
-    
+
     
     /**
      * @since Available in iOS 8.0 and later.
@@ -70,10 +68,10 @@ public class NEVPNIKEv2SecurityAssociationParameters
      */
     @Mapping("setLifetimeMinutes:")
     public native void setLifetimeMinutes(int v);
-    
+
     
     
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
-    
+
 }

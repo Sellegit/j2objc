@@ -16,9 +16,6 @@ import apple.addressbook.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("EventKit/EventKit.h")
 @Mapping("EKAlarmProximity")
 public final class EKAlarmProximity extends ObjCEnum {
@@ -29,6 +26,6 @@ public final class EKAlarmProximity extends ObjCEnum {
     public static final long Enter = 1L;
     @GlobalConstant("EKAlarmProximityLeave")
     public static final long Leave = 2L;
-    
+
 
 }

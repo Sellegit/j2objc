@@ -17,9 +17,6 @@ import apple.coreaudio.*;
 import apple.coremedia.*;
 
 
-
-
-
 @Library("AudioToolbox/AudioToolbox.h")
 @Mapping("AudioConverterProperty")
 public final class AudioConverterProperty extends ObjCEnum {
@@ -90,6 +87,6 @@ public final class AudioConverterProperty extends ObjCEnum {
     public static final long PropertyBitDepthHint = 1633903204L;
     @GlobalConstant("kAudioConverterPropertyFormatList")
     public static final long PropertyFormatList = 1718383476L;
-    
+
 
 }

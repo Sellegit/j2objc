@@ -13,7 +13,6 @@ import apple.coregraphics.*;
 import apple.coreservices.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("AddressBook/AddressBook.h")
@@ -23,7 +22,7 @@ public class ABMultiValue
 
     
     public static final int InvalidIdentifier = -1;
-    
+
     
     
     
@@ -44,5 +43,5 @@ public class ABMultiValue
     public static native int getIdentifier(ABMultiValueRef multiValue, @MachineSizedSInt long index);
     @GlobalFunction("ABMultiValueGetFirstIndexOfValue")
     public static native @MachineSizedSInt long indexOf(ABMultiValueRef multiValue, CFType value);
-    
+
 }

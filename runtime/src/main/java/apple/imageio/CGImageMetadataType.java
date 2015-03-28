@@ -14,9 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
-
-
 @Library("ImageIO/ImageIO.h")
 @Mapping("CGImageMetadataType")
 public final class CGImageMetadataType extends ObjCEnum {
@@ -37,6 +34,6 @@ public final class CGImageMetadataType extends ObjCEnum {
     public static final long AlternateText = 5L;
     @GlobalConstant("kCGImageMetadataTypeStructure")
     public static final long Structure = 6L;
-    
+
 
 }

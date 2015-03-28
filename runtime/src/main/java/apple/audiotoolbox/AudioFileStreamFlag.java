@@ -17,9 +17,6 @@ import apple.coreaudio.*;
 import apple.coremedia.*;
 
 
-
-
-
 @Library("AudioToolbox/AudioToolbox.h")
 @Mapping("AudioFileStreamFlag")
 public final class AudioFileStreamFlag extends ObjCEnum {
@@ -32,6 +29,6 @@ public final class AudioFileStreamFlag extends ObjCEnum {
     public static final long ParseFlag_Discontinuity = 1L;
     @GlobalConstant("kAudioFileStreamSeekFlag_OffsetIsEstimated")
     public static final long SeekFlag_OffsetIsEstimated = 1L;
-    
+
 
 }

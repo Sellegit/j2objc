@@ -15,9 +15,6 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
-
-
 @Library("GameKit/GameKit.h")
 @Mapping("GKMatchSendDataMode")
 public final class GKMatchSendDataMode extends ObjCEnum {
@@ -26,6 +23,6 @@ public final class GKMatchSendDataMode extends ObjCEnum {
     public static final long Reliable = 0L;
     @GlobalConstant("GKMatchSendDataUnreliable")
     public static final long Unreliable = 1L;
-    
+
 
 }

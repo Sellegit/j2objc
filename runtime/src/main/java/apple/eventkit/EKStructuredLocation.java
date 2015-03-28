@@ -16,11 +16,9 @@ import apple.addressbook.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 6.0 and later.
  */
-
 @Library("EventKit/EventKit.h") @Mapping("EKStructuredLocation")
 public class EKStructuredLocation 
     extends EKObject 
@@ -30,7 +28,7 @@ public class EKStructuredLocation
     
     @Mapping("init")
     public EKStructuredLocation() { }
-    
+
     
     @Mapping("title")
     public native String getTitle();
@@ -44,12 +42,12 @@ public class EKStructuredLocation
     public native double getRadius();
     @Mapping("setRadius:")
     public native void setRadius(double v);
-    
+
     
     
     @Mapping("locationWithTitle:")
     public static native EKStructuredLocation create(String title);
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
-    
+
 }

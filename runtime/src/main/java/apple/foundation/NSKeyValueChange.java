@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h")
 @Mapping("NSKeyValueChange")
 public final class NSKeyValueChange extends ObjCEnum {
@@ -34,6 +31,6 @@ public final class NSKeyValueChange extends ObjCEnum {
     public static final long Removal = 3L;
     @GlobalConstant("NSKeyValueChangeReplacement")
     public static final long Replacement = 4L;
-    
+
 
 }

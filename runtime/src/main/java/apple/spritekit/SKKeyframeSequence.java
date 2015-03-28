@@ -21,9 +21,6 @@ import apple.glkit.*;
 import apple.scenekit.*;
 
 
-
-
-
 @Library("SpriteKit/SpriteKit.h") @Mapping("SKKeyframeSequence")
 public class SKKeyframeSequence 
     extends NSObject 
@@ -39,7 +36,7 @@ public class SKKeyframeSequence
     public SKKeyframeSequence(NSCoder aDecoder) { }
     @Mapping("init")
     public SKKeyframeSequence() { }
-    
+
     
     @Mapping("interpolationMode")
     public native @Representing("SKInterpolationMode") long getInterpolationMode();
@@ -49,7 +46,7 @@ public class SKKeyframeSequence
     public native @Representing("SKRepeatMode") long getRepeatMode();
     @Mapping("setRepeatMode:")
     public native void setRepeatMode(@Representing("SKRepeatMode") long v);
-    
+
     
     
     @Mapping("count")
@@ -76,5 +73,5 @@ public class SKKeyframeSequence
     public native void encode(NSCoder aCoder);
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
-    
+
 }

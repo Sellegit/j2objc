@@ -17,11 +17,9 @@ import apple.uikit.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 6.1 and later.
  */
-
 @Library("MapKit/MapKit.h") @Mapping("MKLocalSearchRequest")
 public class MKLocalSearchRequest 
     extends NSObject 
@@ -31,7 +29,7 @@ public class MKLocalSearchRequest
     
     @Mapping("init")
     public MKLocalSearchRequest() { }
-    
+
     
     @Mapping("naturalLanguageQuery")
     public native String getNaturalLanguageQuery();
@@ -41,10 +39,10 @@ public class MKLocalSearchRequest
     public native MKCoordinateRegion getRegion();
     @Mapping("setRegion:")
     public native void setRegion(MKCoordinateRegion v);
-    
+
     
     
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
-    
+
 }

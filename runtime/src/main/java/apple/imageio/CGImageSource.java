@@ -13,7 +13,6 @@ import apple.coregraphics.*;
 import apple.coreservices.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Mapping("CGImageSourceRef") @Library("ImageIO/ImageIO.h")
@@ -24,7 +23,7 @@ public class CGImageSource
     
     
     protected CGImageSource() {}
-    
+
     
     
     
@@ -118,5 +117,5 @@ public class CGImageSource
      */
     @GlobalFunction("CGImageSourceGetStatusAtIndex")
     public static native CGImageSourceStatus getStatus(CGImageSource isrc, @MachineSizedUInt long index);
-    
+
 }

@@ -20,21 +20,18 @@ import apple.spritekit.*;
 import apple.opengles.*;
 
 
-
-
-
 @Library("SceneKit/SceneKit.h") @Mapping("SCNProgramDelegate")
 public interface SCNProgramDelegate 
     extends NSObjectProtocol {
 
     
     
-    
-    
+
+
     
     @Mapping("program:handleError:")
     void handleError(SCNProgram program, NSError error);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

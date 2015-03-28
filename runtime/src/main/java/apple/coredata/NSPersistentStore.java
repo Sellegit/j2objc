@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 3.0 and later.
  */
-
 @Library("CoreData/CoreData.h") @Mapping("NSPersistentStore")
 public class NSPersistentStore 
     extends NSObject 
@@ -30,7 +28,7 @@ public class NSPersistentStore
     public NSPersistentStore(NSPersistentStoreCoordinator root, String name, NSURL url, NSDictionary<?, ?> options) { }
     @Mapping("init")
     public NSPersistentStore() { }
-    
+
     
     @Mapping("persistentStoreCoordinator")
     public native NSPersistentStoreCoordinator getPersistentStoreCoordinator();
@@ -56,7 +54,7 @@ public class NSPersistentStore
     public native NSPersistentStoreMetadata getMetadata();
     @Mapping("setMetadata:")
     public native void setMetadata(NSPersistentStoreMetadata v);
-    
+
     
     
     @Mapping("loadMetadata:")
@@ -74,5 +72,5 @@ public class NSPersistentStore
      */
     @Mapping("migrationManagerClass")
     public static native Class<? extends NSMigrationManager> getMigrationManagerClass();
-    
+
 }

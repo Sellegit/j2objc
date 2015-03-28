@@ -17,9 +17,6 @@ import apple.uikit.*;
 import apple.avfoundation.*;
 
 
-
-
-
 @Library("Photos/Photos.h") @Mapping("PHAssetCollectionChangeRequest")
 public class PHAssetCollectionChangeRequest 
     extends NSObject 
@@ -29,7 +26,7 @@ public class PHAssetCollectionChangeRequest
     
     @Mapping("init")
     public PHAssetCollectionChangeRequest() { }
-    
+
     
     @Mapping("placeholderForCreatedAssetCollection")
     public native PHObjectPlaceholder getPlaceholderForCreatedAssetCollection();
@@ -37,7 +34,7 @@ public class PHAssetCollectionChangeRequest
     public native String getTitle();
     @Mapping("setTitle:")
     public native void setTitle(String v);
-    
+
     
     
     @Mapping("addAssets:")
@@ -60,5 +57,5 @@ public class PHAssetCollectionChangeRequest
     public static native PHAssetCollectionChangeRequest create(PHAssetCollection assetCollection);
     @Mapping("changeRequestForAssetCollection:assets:")
     public static native PHAssetCollectionChangeRequest create(PHAssetCollection assetCollection, PHFetchResult assets);
-    
+
 }

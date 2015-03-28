@@ -19,17 +19,14 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h") @Mapping("UIActionSheetDelegate")
 public interface UIActionSheetDelegate 
     extends NSObjectProtocol {
 
     
     
-    
-    
+
+
     
     @Mapping("actionSheet:clickedButtonAtIndex:")
     void clicked(UIActionSheet actionSheet, @MachineSizedSInt long buttonIndex);
@@ -43,7 +40,7 @@ public interface UIActionSheetDelegate
     void willDismiss(UIActionSheet actionSheet, @MachineSizedSInt long buttonIndex);
     @Mapping("actionSheet:didDismissWithButtonIndex:")
     void didDismiss(UIActionSheet actionSheet, @MachineSizedSInt long buttonIndex);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

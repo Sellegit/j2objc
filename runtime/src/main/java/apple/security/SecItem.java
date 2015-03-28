@@ -13,7 +13,6 @@ import apple.coregraphics.*;
 import apple.coreservices.*;
 import apple.dispatch.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("Security/Security.h")
@@ -631,7 +630,7 @@ public class SecItem
      */
     @GlobalConstant("kSecUseItemList")
     public static native CFType UseItemList();
-    
+
     /**
      * @since Available in iOS 2.0 and later.
      */
@@ -652,5 +651,5 @@ public class SecItem
      */
     @GlobalFunction("SecItemDelete")
     public static native int delete(CFDictionary query);
-    
+
 }

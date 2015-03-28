@@ -19,17 +19,14 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h") @Mapping("UIPrintInteractionControllerDelegate")
 public interface UIPrintInteractionControllerDelegate 
     extends NSObjectProtocol {
 
     
     
-    
-    
+
+
     
     @Mapping("printInteractionControllerParentViewController:")
     UIViewController getParentViewController(UIPrintInteractionController printInteractionController);
@@ -52,7 +49,7 @@ public interface UIPrintInteractionControllerDelegate
      */
     @Mapping("printInteractionController:cutLengthForPaper:")
     @MachineSizedFloat double getCutLength(UIPrintInteractionController printInteractionController, UIPrintPaper paper);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

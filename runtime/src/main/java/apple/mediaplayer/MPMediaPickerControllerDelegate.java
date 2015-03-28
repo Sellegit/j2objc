@@ -15,23 +15,20 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
-
-
 @Library("MediaPlayer/MediaPlayer.h") @Mapping("MPMediaPickerControllerDelegate")
 public interface MPMediaPickerControllerDelegate 
     extends NSObjectProtocol {
 
     
     
-    
-    
+
+
     
     @Mapping("mediaPicker:didPickMediaItems:")
     void didPickMediaItems(MPMediaPickerController mediaPicker, MPMediaItemCollection mediaItemCollection);
     @Mapping("mediaPickerDidCancel:")
     void didCancel(MPMediaPickerController mediaPicker);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

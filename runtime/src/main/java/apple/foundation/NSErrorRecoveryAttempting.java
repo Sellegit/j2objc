@@ -19,23 +19,20 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h") @Mapping("NSErrorRecoveryAttempting")
 public interface NSErrorRecoveryAttempting 
      {
 
     
     
-    
-    
+
+
     
     @Mapping("attemptRecoveryFromError:optionIndex:delegate:didRecoverSelector:contextInfo:")
     void attemptRecoveryFromError(NSError error, @MachineSizedUInt long recoveryOptionIndex, Object delegate, Selector didRecoverSelector, Todo contextInfo);
     @Mapping("attemptRecoveryFromError:optionIndex:")
     boolean attemptRecoveryFromError(NSError error, @MachineSizedUInt long recoveryOptionIndex);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

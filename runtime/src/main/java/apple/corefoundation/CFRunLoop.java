@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.dispatch.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Mapping("CFRunLoopRef") @Library("CoreFoundation/CoreFoundation.h")
@@ -25,7 +24,7 @@ public class CFRunLoop
     
     
     protected CFRunLoop() {}
-    
+
     
     
     
@@ -76,5 +75,5 @@ public class CFRunLoop
     public static native void addTimer(CFRunLoop rl, CFRunLoopTimer timer, CFString mode);
     @GlobalFunction("CFRunLoopRemoveTimer")
     public static native void removeTimer(CFRunLoop rl, CFRunLoopTimer timer, CFString mode);
-    
+
 }

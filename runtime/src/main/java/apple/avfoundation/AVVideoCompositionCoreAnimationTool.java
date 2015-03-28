@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 4.0 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h") @Mapping("AVVideoCompositionCoreAnimationTool")
 public class AVVideoCompositionCoreAnimationTool 
     extends NSObject 
@@ -34,10 +32,10 @@ public class AVVideoCompositionCoreAnimationTool
     
     @Mapping("init")
     public AVVideoCompositionCoreAnimationTool() { }
+
     
-    
-    
-    
+
+
     
     
     @Mapping("videoCompositionCoreAnimationToolWithAdditionalLayer:asTrackID:")
@@ -49,5 +47,5 @@ public class AVVideoCompositionCoreAnimationTool
      */
     @Mapping("videoCompositionCoreAnimationToolWithPostProcessingAsVideoLayers:inLayer:")
     public static native AVVideoCompositionCoreAnimationTool create(NSArray<?> videoLayers, CALayer animationLayer);
-    
+
 }

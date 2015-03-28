@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h")
 @Mapping("NSComparisonResult")
 public final class NSComparisonResult extends ObjCEnum {
@@ -32,6 +29,6 @@ public final class NSComparisonResult extends ObjCEnum {
     public static final long Same = 0L;
     @GlobalConstant("NSOrderedDescending")
     public static final long Descending = 1L;
-    
+
 
 }

@@ -19,11 +19,9 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 7.0 and later.
  */
-
 @Library("Foundation/Foundation.h") @Mapping("NSURLSession")
 public class NSURLSession 
     extends NSObject 
@@ -33,7 +31,7 @@ public class NSURLSession
     
     @Mapping("init")
     public NSURLSession() { }
-    
+
     
     @Mapping("delegateQueue")
     public native NSOperationQueue getDelegateQueue();
@@ -45,7 +43,7 @@ public class NSURLSession
     public native String getSessionDescription();
     @Mapping("setSessionDescription:")
     public native void setSessionDescription(String v);
-    
+
     
     
     /**
@@ -53,7 +51,7 @@ public class NSURLSession
      */
     @GlobalConstant("NSURLSessionTransferSizeUnknown")
     public static native long getTransferSizeUnknown();
-    
+
     @Mapping("finishTasksAndInvalidate")
     public native void finishTasksAndInvalidate();
     @Mapping("invalidateAndCancel")
@@ -135,5 +133,5 @@ public class NSURLSession
     @Deprecated
     @Mapping("dataTaskWithHTTPGetRequest:completionHandler:")
     public native NSURLSessionDataTask newHTTPGetDataTask(NSURL url, @Block VoidBlock3<NSData, NSURLResponse, NSError> completionHandler);
-    
+
 }

@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h") @Mapping("AVAudioUnitDistortion")
 public class AVAudioUnitDistortion 
     extends AVAudioUnitEffect 
@@ -36,7 +34,7 @@ public class AVAudioUnitDistortion
     public AVAudioUnitDistortion(AudioComponentDescription audioComponentDescription) { }
     @Mapping("init")
     public AVAudioUnitDistortion() { }
-    
+
     
     @Mapping("preGain")
     public native float getPreGain();
@@ -46,10 +44,10 @@ public class AVAudioUnitDistortion
     public native float getWetDryMix();
     @Mapping("setWetDryMix:")
     public native void setWetDryMix(float v);
-    
+
     
     
     @Mapping("loadFactoryPreset:")
     public native void loadFactoryPreset(@Representing("AVAudioUnitDistortionPreset") long preset);
-    
+
 }

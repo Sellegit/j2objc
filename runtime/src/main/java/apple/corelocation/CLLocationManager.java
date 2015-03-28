@@ -16,11 +16,9 @@ import apple.addressbook.*;
 import apple.corebluetooth.*;
 
 
-
 /**
  * @since Available in iOS 2.0 and later.
  */
-
 @Library("CoreLocation/CoreLocation.h") @Mapping("CLLocationManager")
 public class CLLocationManager 
     extends NSObject 
@@ -30,7 +28,7 @@ public class CLLocationManager
     
     @Mapping("init")
     public CLLocationManager() { }
-    
+
     
     @Mapping("delegate")
     public native CLLocationManagerDelegate getDelegate();
@@ -120,7 +118,7 @@ public class CLLocationManager
      */
     @Mapping("rangedRegions")
     public native NSSet<CLBeaconRegion> getRangedRegions();
-    
+
     
     
     @GlobalConstant("kCLDistanceFilterNone")
@@ -132,7 +130,7 @@ public class CLLocationManager
     public static native double getTimeIntervalMax();
     @GlobalConstant("kCLHeadingFilterNone")
     public static native double getHeadingFilterNone();
-    
+
     /**
      * @since Available in iOS 8.0 and later.
      */
@@ -261,5 +259,5 @@ public class CLLocationManager
      */
     @Mapping("stopMonitoringVisits")
     public native void stopMonitoringVisits();
-    
+
 }

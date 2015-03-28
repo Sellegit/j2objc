@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h") @Mapping("NSURLProtocol")
 public class NSURLProtocol 
     extends NSObject 
@@ -38,7 +35,7 @@ public class NSURLProtocol
      */
     @Mapping("initWithTask:cachedResponse:client:")
     public NSURLProtocol(NSURLSessionTask task, NSCachedURLResponse cachedResponse, NSURLProtocolClient client) { }
-    
+
     
     @Mapping("client")
     public native NSURLProtocolClient getClient();
@@ -51,7 +48,7 @@ public class NSURLProtocol
      */
     @Mapping("task")
     public native NSURLSessionTask getTask();
-    
+
     
     
     @Mapping("startLoading")
@@ -75,5 +72,5 @@ public class NSURLProtocol
      */
     @Mapping("canInitWithTask:")
     public static native boolean canInitWithTask(NSURLSessionTask task);
-    
+
 }

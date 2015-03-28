@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("HealthKit/HealthKit.h")
 @Mapping("HKQuantityAggregationStyle")
 public final class HKQuantityAggregationStyle extends ObjCEnum {
@@ -27,6 +25,6 @@ public final class HKQuantityAggregationStyle extends ObjCEnum {
     public static final long Cumulative = 0L;
     @GlobalConstant("HKQuantityAggregationStyleDiscrete")
     public static final long Discrete = 1L;
-    
+
 
 }

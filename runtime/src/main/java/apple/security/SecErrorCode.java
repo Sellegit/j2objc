@@ -13,7 +13,6 @@ import apple.coregraphics.*;
 import apple.coreservices.*;
 import apple.dispatch.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 
@@ -37,7 +36,7 @@ public class SecErrorCode
     public static final int InteractionNotAllowed = -25308;
     public static final int Decode = -26275;
     public static final int AuthFailed = -25293;
-    
+
     
     
     

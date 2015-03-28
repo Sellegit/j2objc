@@ -17,11 +17,9 @@ import apple.uikit.*;
 import apple.avfoundation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("Photos/Photos.h") @Mapping("PHContentEditingOutput")
 public class PHContentEditingOutput 
     extends NSObject 
@@ -35,7 +33,7 @@ public class PHContentEditingOutput
     public PHContentEditingOutput() { }
     @Mapping("initWithPlaceholderForCreatedAsset:")
     public PHContentEditingOutput(PHObjectPlaceholder placeholderForCreatedAsset) { }
-    
+
     
     @Mapping("adjustmentData")
     public native PHAdjustmentData getAdjustmentData();
@@ -43,9 +41,9 @@ public class PHContentEditingOutput
     public native void setAdjustmentData(PHAdjustmentData v);
     @Mapping("renderedContentURL")
     public native NSURL getRenderedContentURL();
+
     
     
-    
-    
-    
+
+
 }

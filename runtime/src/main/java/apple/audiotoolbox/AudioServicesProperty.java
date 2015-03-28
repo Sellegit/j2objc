@@ -17,9 +17,6 @@ import apple.coreaudio.*;
 import apple.coremedia.*;
 
 
-
-
-
 @Library("AudioToolbox/AudioToolbox.h")
 @Mapping("AudioServicesProperty")
 public final class AudioServicesProperty extends ObjCEnum {
@@ -28,6 +25,6 @@ public final class AudioServicesProperty extends ObjCEnum {
     public static final long IsUISound = 1769174377L;
     @GlobalConstant("kAudioServicesPropertyCompletePlaybackIfAppDies")
     public static final long CompletePlaybackIfAppDies = 1768318057L;
-    
+
 
 }

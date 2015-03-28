@@ -13,7 +13,6 @@ import apple.coregraphics.*;
 import apple.coreservices.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -24,8 +23,8 @@ public abstract class HMHomeDelegateAdapter
     
     
     
-    
-    
+
+
     
     
     @NotImplemented("homeDidUpdateName:")
@@ -86,5 +85,5 @@ public abstract class HMHomeDelegateAdapter
     public void didUnblockAccessory(HMHome home, HMAccessory accessory) { throw new UnsupportedOperationException(); }
     @NotImplemented("home:didEncounterError:forAccessory:")
     public void didEncounterError(HMHome home, NSError error, HMAccessory accessory) { throw new UnsupportedOperationException(); }
-    
+
 }

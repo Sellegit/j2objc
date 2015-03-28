@@ -13,7 +13,6 @@ import apple.coregraphics.*;
 import apple.coreservices.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("HomeKit/HomeKit.h")
@@ -41,5 +40,5 @@ public class HMCharacteristicProperty
      */
     @GlobalConstant("HMCharacteristicPropertyWritable")
     public static native NSString WritableValue();
-    
+
 }

@@ -20,21 +20,18 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
-
-
 @Library("AVFoundation/AVFoundation.h") @Mapping("AVPlayerItemOutputPushDelegate")
 public interface AVPlayerItemOutputPushDelegate 
     extends NSObjectProtocol {
 
     
     
-    
-    
+
+
     
     @Mapping("outputSequenceWasFlushed:")
     void wasFlushed(AVPlayerItemOutput output);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

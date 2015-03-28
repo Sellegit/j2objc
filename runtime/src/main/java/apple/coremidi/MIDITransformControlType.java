@@ -14,9 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
-
-
 @Library("CoreMIDI/CoreMIDI.h")
 @Mapping("MIDITransformControlType")
 public final class MIDITransformControlType extends ObjCEnum {
@@ -33,6 +30,6 @@ public final class MIDITransformControlType extends ObjCEnum {
     public static final long _7BitNRPN = 4L;
     @GlobalConstant("kMIDIControlType_14BitNRPN")
     public static final long _14BitNRPN = 5L;
-    
+
 
 }

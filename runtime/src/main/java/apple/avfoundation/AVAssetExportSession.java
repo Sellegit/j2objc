@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 4.0 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h") @Mapping("AVAssetExportSession")
 public class AVAssetExportSession 
     extends NSObject 
@@ -36,7 +34,7 @@ public class AVAssetExportSession
     public AVAssetExportSession(AVAsset asset, String presetName) { }
     @Mapping("init")
     public AVAssetExportSession() { }
-    
+
     
     @Mapping("presetName")
     public native AVAssetExportPreset getPresetName();
@@ -137,7 +135,7 @@ public class AVAssetExportSession
      */
     @Mapping("setDirectoryForTemporaryFiles:")
     public native void setDirectoryForTemporaryFiles(NSURL v);
-    
+
     
     
     /**
@@ -163,5 +161,5 @@ public class AVAssetExportSession
      */
     @Mapping("exportSessionWithAsset:presetName:")
     public static native AVAssetExportSession create(AVAsset asset, String presetName);
-    
+
 }

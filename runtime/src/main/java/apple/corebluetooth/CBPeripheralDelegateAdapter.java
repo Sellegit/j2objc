@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 import apple.dispatch.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -25,8 +24,8 @@ public abstract class CBPeripheralDelegateAdapter
     
     
     
-    
-    
+
+
     
     
     /**
@@ -76,5 +75,5 @@ public abstract class CBPeripheralDelegateAdapter
     public void didUpdateValue(CBPeripheral peripheral, CBDescriptor descriptor, NSError error) { throw new UnsupportedOperationException(); }
     @NotImplemented("peripheral:didWriteValueForDescriptor:error:")
     public void didWriteValue(CBPeripheral peripheral, CBDescriptor descriptor, NSError error) { throw new UnsupportedOperationException(); }
-    
+
 }

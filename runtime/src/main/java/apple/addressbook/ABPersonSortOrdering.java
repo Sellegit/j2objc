@@ -14,9 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
-
-
 @Library("AddressBook/AddressBook.h")
 @Mapping("ABPersonSortOrdering")
 public final class ABPersonSortOrdering extends ObjCEnum {
@@ -25,6 +22,6 @@ public final class ABPersonSortOrdering extends ObjCEnum {
     public static final long FirstName = 0L;
     @GlobalConstant("kABPersonSortByLastName")
     public static final long LastName = 1L;
-    
+
 
 }

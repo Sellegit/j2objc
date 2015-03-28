@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.dispatch.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Mapping("CFAttributedStringRef") @Library("CoreFoundation/CoreFoundation.h")
@@ -25,7 +24,7 @@ public class CFAttributedString
     
     
     protected CFAttributedString() {}
-    
+
     
     
     
@@ -51,5 +50,5 @@ public class CFAttributedString
     public static native CFType getAttributeAndLongestEffectiveRange(CFAttributedString aStr, @MachineSizedSInt long loc, CFString attrName, CFRange inRange, CFRange longestEffectiveRange);
     @GlobalFunction("CFAttributedStringGetMutableString")
     public static native CFMutableString getMutableString(CFMutableAttributedString aStr);
-    
+
 }

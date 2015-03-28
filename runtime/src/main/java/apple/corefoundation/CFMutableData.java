@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.dispatch.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Mapping("CFMutableDataRef") @Library("CoreFoundation/CoreFoundation.h")
@@ -25,7 +24,7 @@ public class CFMutableData
     
     
     protected CFMutableData() {}
-    
+
     
     
     
@@ -43,5 +42,5 @@ public class CFMutableData
     public static native void replace(CFMutableData theData, CFRange range, Todo newBytes, @MachineSizedSInt long newLength);
     @GlobalFunction("CFDataDeleteBytes")
     public static native void deleteBytes(CFMutableData theData, CFRange range);
-    
+
 }

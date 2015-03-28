@@ -13,7 +13,6 @@ import apple.coregraphics.*;
 import apple.coreservices.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Mapping("CTTypesetterRef") @Library("CoreText/CoreText.h")
@@ -24,7 +23,7 @@ public class CTTypesetter
     
     
     protected CTTypesetter() {}
-    
+
     
     
     
@@ -73,5 +72,5 @@ public class CTTypesetter
      */
     @GlobalFunction("CTTypesetterSuggestClusterBreak")
     public static native @MachineSizedSInt long suggestClusterBreak(CTTypesetter typesetter, @MachineSizedSInt long startIndex, double width);
-    
+
 }

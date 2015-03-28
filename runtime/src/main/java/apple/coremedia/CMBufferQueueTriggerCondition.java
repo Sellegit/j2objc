@@ -18,9 +18,6 @@ import apple.coreanimation.*;
 import apple.corevideo.*;
 
 
-
-
-
 @Library("CoreMedia/CoreMedia.h")
 @Mapping("CMBufferQueueTriggerCondition")
 public final class CMBufferQueueTriggerCondition extends ObjCEnum {
@@ -47,6 +44,6 @@ public final class CMBufferQueueTriggerCondition extends ObjCEnum {
     public static final long WhenBufferCountBecomesLessThan = 10L;
     @GlobalConstant("kCMBufferQueueTrigger_WhenBufferCountBecomesGreaterThan")
     public static final long WhenBufferCountBecomesGreaterThan = 11L;
-    
+
 
 }

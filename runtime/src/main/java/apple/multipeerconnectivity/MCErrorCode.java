@@ -16,11 +16,9 @@ import apple.uikit.*;
 import apple.security.*;
 
 
-
 /**
  * @since Available in iOS 7.0 and later.
  */
-
 @Library("MultipeerConnectivity/MultipeerConnectivity.h")
 @Mapping("MCErrorCode")
 public final class MCErrorCode extends ObjCEnum {
@@ -39,6 +37,6 @@ public final class MCErrorCode extends ObjCEnum {
     public static final long Cancelled = 5L;
     @GlobalConstant("MCErrorUnavailable")
     public static final long Unavailable = 6L;
-    
+
 
 }

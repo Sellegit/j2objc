@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 6.0 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h")
 @Mapping("AVAudioSessionCategoryOptions")
 public final class AVAudioSessionCategoryOptions extends ObjCEnum {
@@ -37,6 +35,6 @@ public final class AVAudioSessionCategoryOptions extends ObjCEnum {
     public static final long AllowBluetooth = 4L;
     @GlobalConstant("AVAudioSessionCategoryOptionDefaultToSpeaker")
     public static final long DefaultToSpeaker = 8L;
-    
+
 
 }

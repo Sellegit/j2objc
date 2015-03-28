@@ -18,7 +18,6 @@ import apple.coreimage.*;
 import apple.coretext.*;
 import apple.corelocation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -29,8 +28,8 @@ public abstract class UISearchDisplayDelegateAdapter
     
     
     
-    
-    
+
+
     
     
     /**
@@ -117,5 +116,5 @@ public abstract class UISearchDisplayDelegateAdapter
     @Deprecated
     @NotImplemented("searchDisplayController:shouldReloadTableForSearchScope:")
     public boolean shouldReloadForSearchScope(UISearchDisplayController controller, @MachineSizedSInt long searchOption) { throw new UnsupportedOperationException(); }
-    
+
 }

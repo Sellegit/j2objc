@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h") @Mapping("AVAudioIONode")
 public class AVAudioIONode 
     extends AVAudioNode 
@@ -34,15 +32,15 @@ public class AVAudioIONode
     
     @Mapping("init")
     public AVAudioIONode() { }
-    
+
     
     @Mapping("presentationLatency")
     public native double getPresentationLatency();
     @Mapping("audioUnit")
     public native AudioComponentInstance getAudioUnit();
+
     
     
-    
-    
-    
+
+
 }

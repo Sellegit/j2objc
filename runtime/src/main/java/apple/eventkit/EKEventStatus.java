@@ -16,9 +16,6 @@ import apple.addressbook.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("EventKit/EventKit.h")
 @Mapping("EKEventStatus")
 public final class EKEventStatus extends ObjCEnum {
@@ -31,6 +28,6 @@ public final class EKEventStatus extends ObjCEnum {
     public static final long Tentative = 2L;
     @GlobalConstant("EKEventStatusCanceled")
     public static final long Canceled = 3L;
-    
+
 
 }

@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("HomeKit/HomeKit.h") @Mapping("HMAction")
 public class HMAction 
     extends NSObject 
@@ -28,12 +26,12 @@ public class HMAction
     
     @Mapping("init")
     public HMAction() { }
+
+    
+
+
     
     
-    
-    
-    
-    
-    
-    
+
+
 }

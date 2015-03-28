@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 3.2 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UILongPressGestureRecognizer")
 public class UILongPressGestureRecognizer 
     extends UIGestureRecognizer 
@@ -35,7 +33,7 @@ public class UILongPressGestureRecognizer
     public UILongPressGestureRecognizer(Object target, Selector action) { }
     @Mapping("init")
     public UILongPressGestureRecognizer() { }
-    
+
     
     @Mapping("numberOfTapsRequired")
     public native @MachineSizedUInt long getNumberOfTapsRequired();
@@ -53,9 +51,9 @@ public class UILongPressGestureRecognizer
     public native @MachineSizedFloat double getAllowableMovement();
     @Mapping("setAllowableMovement:")
     public native void setAllowableMovement(@MachineSizedFloat double v);
+
     
     
-    
-    
-    
+
+
 }

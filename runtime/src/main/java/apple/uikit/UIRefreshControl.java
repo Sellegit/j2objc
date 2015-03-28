@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 6.0 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UIRefreshControl")
 public class UIRefreshControl 
     extends UIControl 
@@ -36,7 +34,7 @@ public class UIRefreshControl
     public UIRefreshControl(CGRect frame) { }
     @Mapping("initWithCoder:")
     public UIRefreshControl(NSCoder aDecoder) { }
-    
+
     
     @Mapping("isRefreshing")
     public native boolean isRefreshing();
@@ -48,7 +46,7 @@ public class UIRefreshControl
     public native NSAttributedString getAttributedTitle();
     @Mapping("setAttributedTitle:")
     public native void setAttributedTitle(NSAttributedString v);
-    
+
     
     
     /**
@@ -61,5 +59,5 @@ public class UIRefreshControl
      */
     @Mapping("endRefreshing")
     public native void endRefreshing();
-    
+
 }

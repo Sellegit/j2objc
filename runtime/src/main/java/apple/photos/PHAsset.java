@@ -17,11 +17,9 @@ import apple.uikit.*;
 import apple.avfoundation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("Photos/Photos.h") @Mapping("PHAsset")
 public class PHAsset 
     extends PHObject 
@@ -31,7 +29,7 @@ public class PHAsset
     
     @Mapping("init")
     public PHAsset() { }
-    
+
     
     @Mapping("mediaType")
     public native @Representing("PHAssetMediaType") long getMediaType();
@@ -59,7 +57,7 @@ public class PHAsset
     public native @Representing("PHAssetBurstSelectionType") long getBurstSelectionTypes();
     @Mapping("representsBurst")
     public native boolean representsBurst();
-    
+
     
     
     @Mapping("canPerformEditOperation:")
@@ -88,5 +86,5 @@ public class PHAsset
      */
     @Mapping("cancelContentEditingInputRequest:")
     public native void cancelContentEditingInputRequest(@MachineSizedUInt long requestID);
-    
+
 }

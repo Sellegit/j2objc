@@ -18,7 +18,6 @@ import apple.coremedia.*;
 import apple.security.*;
 import apple.dispatch.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -29,8 +28,8 @@ public abstract class NSXMLParserDelegateAdapter
     
     
     
-    
-    
+
+
     
     
     @NotImplemented("parserDidStartDocument:")
@@ -73,5 +72,5 @@ public abstract class NSXMLParserDelegateAdapter
     public void parseErrorOccurred(NSXMLParser parser, NSError parseError) { throw new UnsupportedOperationException(); }
     @NotImplemented("parser:validationErrorOccurred:")
     public void validationErrorOccurred(NSXMLParser parser, NSError validationError) { throw new UnsupportedOperationException(); }
-    
+
 }

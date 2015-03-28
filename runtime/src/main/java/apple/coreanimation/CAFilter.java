@@ -16,7 +16,6 @@ import apple.coreimage.*;
 import apple.coretext.*;
 import apple.opengles.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("QuartzCore/QuartzCore.h")
@@ -44,5 +43,5 @@ public class CAFilter
      */
     @GlobalConstant("kCAFilterTrilinear")
     public static native NSString TrilinearValue();
-    
+
 }

@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 4.1 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h") @Mapping("AVQueuePlayer")
 public class AVQueuePlayer 
     extends AVPlayer 
@@ -40,10 +38,10 @@ public class AVQueuePlayer
     public AVQueuePlayer(AVPlayerItem item) { }
     @Mapping("init")
     public AVQueuePlayer() { }
+
     
-    
-    
-    
+
+
     
     
     @Mapping("items")
@@ -60,5 +58,5 @@ public class AVQueuePlayer
     public native void removeAllItems();
     @Mapping("queuePlayerWithItems:")
     public static native AVQueuePlayer create(NSArray<?> items);
-    
+
 }

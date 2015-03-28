@@ -14,9 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
-
-
 @Library("CoreMIDI/CoreMIDI.h")
 @Mapping("MIDINotificationMessageID")
 public final class MIDINotificationMessageID extends ObjCEnum {
@@ -35,6 +32,6 @@ public final class MIDINotificationMessageID extends ObjCEnum {
     public static final long SerialPortOwnerChanged = 6L;
     @GlobalConstant("kMIDIMsgIOError")
     public static final long IOError = 7L;
-    
+
 
 }

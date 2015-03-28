@@ -19,9 +19,6 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h")
 @Mapping("UIButtonType")
 public final class UIButtonType extends ObjCEnum {
@@ -43,6 +40,6 @@ public final class UIButtonType extends ObjCEnum {
     public static final long ContactAdd = 5L;
     @GlobalConstant("UIButtonTypeRoundedRect")
     public static final long RoundedRect = 1L;
-    
+
 
 }

@@ -16,11 +16,9 @@ import apple.uikit.*;
 import apple.addressbook.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("PassKit/PassKit.h") @Mapping("PKShippingMethod")
 public class PKShippingMethod 
     extends PKPaymentSummaryItem 
@@ -30,7 +28,7 @@ public class PKShippingMethod
     
     @Mapping("init")
     public PKShippingMethod() { }
-    
+
     
     @Mapping("identifier")
     public native String getIdentifier();
@@ -40,9 +38,9 @@ public class PKShippingMethod
     public native String getDetail();
     @Mapping("setDetail:")
     public native void setDetail(String v);
+
     
     
-    
-    
-    
+
+
 }

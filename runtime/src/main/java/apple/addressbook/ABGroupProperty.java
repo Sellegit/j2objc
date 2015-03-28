@@ -13,7 +13,6 @@ import apple.coregraphics.*;
 import apple.coreservices.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("AddressBook/AddressBook.h")
@@ -28,5 +27,5 @@ public class ABGroupProperty
     
     @GlobalConstant("kABGroupNameProperty")
     public static native int NameValue();
-    
+
 }

@@ -17,9 +17,6 @@ import apple.coretext.*;
 import apple.opengles.*;
 
 
-
-
-
 @Library("QuartzCore/QuartzCore.h") @Mapping("CAEmitterCell")
 public class CAEmitterCell 
     extends NSObject 
@@ -29,7 +26,7 @@ public class CAEmitterCell
     
     @Mapping("init")
     public CAEmitterCell() { }
-    
+
     
     @Mapping("name")
     public native String getName();
@@ -199,7 +196,7 @@ public class CAEmitterCell
     public native CAFillMode getFillMode();
     @Mapping("setFillMode:")
     public native void setFillMode(CAFillMode v);
-    
+
     
     
     @Mapping("shouldArchiveValueForKey:")
@@ -210,5 +207,5 @@ public class CAEmitterCell
     public static native Object getDefaultValue(String key);
     @Mapping("encodeWithCoder:")
     public native void encode(NSCoder aCoder);
-    
+
 }

@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 5.0 and later.
  */
-
 @Library("CoreData/CoreData.h")
 @Mapping("NSManagedObjectContextConcurrencyType")
 public final class NSManagedObjectContextConcurrencyType extends ObjCEnum {
@@ -29,6 +27,6 @@ public final class NSManagedObjectContextConcurrencyType extends ObjCEnum {
     public static final long PrivateQueue = 1L;
     @GlobalConstant("NSMainQueueConcurrencyType")
     public static final long MainQueue = 2L;
-    
+
 
 }

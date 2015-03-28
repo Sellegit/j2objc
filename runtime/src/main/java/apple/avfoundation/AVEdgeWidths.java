@@ -20,9 +20,6 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
-
-
 @Mapping("AVEdgeWidths") @Library("AVFoundation/AVFoundation.h")
 public class AVEdgeWidths 
     extends Struct 
@@ -40,7 +37,7 @@ public class AVEdgeWidths
     public native @MachineSizedFloat double getRight();
     @DotMapping("bottom")
     public native @MachineSizedFloat double getBottom();
-    
+
     public static native AVEdgeWidths create(@MachineSizedFloat double left, @MachineSizedFloat double top, @MachineSizedFloat double right, @MachineSizedFloat double bottom) /*-[
         AVEdgeWidths __new = { .left = left, .top = top, .right = right, .bottom = bottom };
         return __new;
@@ -50,23 +47,45 @@ public class AVEdgeWidths
         return __new;
     ]-*/;
 
-    
+
     public static native AVEdgeWidths copyWithtop(AVEdgeWidths original, @MachineSizedFloat double top) /*-[
         AVEdgeWidths __new = { .left = original.left, .top = top, .right = original.right, .bottom = original.bottom };
         return __new;
     ]-*/;
 
-    
+
     public static native AVEdgeWidths copyWithright(AVEdgeWidths original, @MachineSizedFloat double right) /*-[
         AVEdgeWidths __new = { .left = original.left, .top = original.top, .right = right, .bottom = original.bottom };
         return __new;
     ]-*/;
 
-    
+
     public static native AVEdgeWidths copyWithbottom(AVEdgeWidths original, @MachineSizedFloat double bottom) /*-[
         AVEdgeWidths __new = { .left = original.left, .top = original.top, .right = original.right, .bottom = bottom };
         return __new;
     ]-*/;
 
-    
+
+    public static final class Adapter {
+
+        public @MachineSizedFloat double left;
+        public @MachineSizedFloat double top;
+        public @MachineSizedFloat double right;
+        public @MachineSizedFloat double bottom;
+        public Adapter(@MachineSizedFloat double left, @MachineSizedFloat double top, @MachineSizedFloat double right, @MachineSizedFloat double bottom) {
+            this.left = left;
+            this.top = top;
+            this.right = right;
+            this.bottom = bottom;
+        }
+        public Adapter(AVEdgeWidths original) {
+            this.left = original.getLeft();
+            this.top = original.getTop();
+            this.right = original.getRight();
+            this.bottom = original.getBottom();
+        }
+        public AVEdgeWidths convert() {
+            return create(left, top, right, bottom);
+        }
+    }
 }

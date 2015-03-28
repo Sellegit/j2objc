@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 5.0 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UIStepper")
 public class UIStepper 
     extends UIControl 
@@ -37,7 +35,7 @@ public class UIStepper
     public UIStepper(NSCoder aDecoder) { }
     @Mapping("init")
     public UIStepper() { }
-    
+
     
     @Mapping("isContinuous")
     public native boolean isContinuous();
@@ -77,7 +75,7 @@ public class UIStepper
      */
     @Mapping("setTintColor:")
     public native void setTintColor(UIColor v);
-    
+
     
     
     /**
@@ -120,5 +118,5 @@ public class UIStepper
      */
     @Mapping("decrementImageForState:")
     public native UIImage getDecrementImage(@Representing("UIControlState") long state);
-    
+
 }

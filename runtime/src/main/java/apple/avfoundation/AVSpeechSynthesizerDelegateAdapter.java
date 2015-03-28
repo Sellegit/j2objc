@@ -19,7 +19,6 @@ import apple.coremedia.*;
 import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -30,8 +29,8 @@ public abstract class AVSpeechSynthesizerDelegateAdapter
     
     
     
-    
-    
+
+
     
     
     @NotImplemented("speechSynthesizer:didStartSpeechUtterance:")
@@ -46,5 +45,5 @@ public abstract class AVSpeechSynthesizerDelegateAdapter
     public void didCancelSpeechUtterance(AVSpeechSynthesizer synthesizer, AVSpeechUtterance utterance) { throw new UnsupportedOperationException(); }
     @NotImplemented("speechSynthesizer:willSpeakRangeOfSpeechString:utterance:")
     public void willSpeak(AVSpeechSynthesizer synthesizer, NSRange characterRange, AVSpeechUtterance utterance) { throw new UnsupportedOperationException(); }
-    
+
 }

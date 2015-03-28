@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h") @Mapping("AVAudioEnvironmentNode")
 public class AVAudioEnvironmentNode 
     extends AVAudioNode 
@@ -34,7 +32,7 @@ public class AVAudioEnvironmentNode
     
     @Mapping("init")
     public AVAudioEnvironmentNode() { }
-    
+
     
     @Mapping("outputVolume")
     public native float getOutputVolume();
@@ -90,10 +88,10 @@ public class AVAudioEnvironmentNode
     public native AVAudio3DPoint getPosition();
     @Mapping("setPosition:")
     public native void setPosition(AVAudio3DPoint v);
-    
+
     
     
     @Mapping("applicableRenderingAlgorithms")
     public native List<AVAudio3DMixingRenderingAlgorithm> getApplicableRenderingAlgorithms();
-    
+
 }

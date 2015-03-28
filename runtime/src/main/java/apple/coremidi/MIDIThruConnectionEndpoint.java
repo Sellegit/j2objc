@@ -14,9 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
-
-
 @Mapping("MIDIThruConnectionEndpoint") @Library("CoreMIDI/CoreMIDI.h")
 public class MIDIThruConnectionEndpoint 
     extends Struct 
@@ -30,6 +27,6 @@ public class MIDIThruConnectionEndpoint
     public native MIDIEndpoint getEndpointRef();
     @DotMapping("uniqueID")
     public native int getUniqueID();
-    
+
     
 }

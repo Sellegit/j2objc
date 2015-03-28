@@ -20,9 +20,6 @@ import apple.spritekit.*;
 import apple.opengles.*;
 
 
-
-
-
 @Library("SceneKit/SceneKit.h") @Mapping("SCNPhysicsVehicle")
 public class SCNPhysicsVehicle 
     extends SCNPhysicsBehavior 
@@ -32,7 +29,7 @@ public class SCNPhysicsVehicle
     
     @Mapping("init")
     public SCNPhysicsVehicle() { }
-    
+
     
     @Mapping("speedInKilometersPerHour")
     public native @MachineSizedFloat double getSpeedInKilometersPerHour();
@@ -40,7 +37,7 @@ public class SCNPhysicsVehicle
     public native NSArray<SCNPhysicsVehicleWheel> getWheels();
     @Mapping("chassisBody")
     public native SCNPhysicsBody getChassisBody();
-    
+
     
     
     @Mapping("applyEngineForce:forWheelAtIndex:")
@@ -51,5 +48,5 @@ public class SCNPhysicsVehicle
     public native void applyBrakingForceForWheel(@MachineSizedFloat double value, @MachineSizedSInt long index);
     @Mapping("vehicleWithChassisBody:wheels:")
     public static native SCNPhysicsVehicle create(SCNPhysicsBody chassisBody, NSArray<?> wheels);
-    
+
 }

@@ -15,13 +15,11 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
 /**
  * @since Available in iOS 3.0 and later.
  * @deprecated Deprecated in iOS 7.0.
  */
 @Deprecated
-
 @Library("GameKit/GameKit.h") @Mapping("GKVoiceChatService")
 public class GKVoiceChatService 
     extends NSObject 
@@ -31,7 +29,7 @@ public class GKVoiceChatService
     
     @Mapping("init")
     public GKVoiceChatService() { }
-    
+
     
     @Mapping("client")
     public native GKVoiceChatClient getClient();
@@ -57,7 +55,7 @@ public class GKVoiceChatService
     public native float getOutputMeterLevel();
     @Mapping("inputMeterLevel")
     public native float getInputMeterLevel();
-    
+
     
     
     @Mapping("startVoiceChatWithParticipantID:error:")
@@ -76,5 +74,5 @@ public class GKVoiceChatService
     public static native GKVoiceChatService getDefaultVoiceChatService();
     @Mapping("isVoIPAllowed")
     public static native boolean isVoIPAllowed();
-    
+
 }

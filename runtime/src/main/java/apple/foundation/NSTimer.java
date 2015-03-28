@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h") @Mapping("NSTimer")
 public class NSTimer 
     extends NSObject 
@@ -33,7 +30,7 @@ public class NSTimer
     public NSTimer(NSDate date, double ti, Object t, Selector s, Object ui, boolean rep) { }
     @Mapping("init")
     public NSTimer() { }
-    
+
     
     @Mapping("fireDate")
     public native NSDate getFireDate();
@@ -55,7 +52,7 @@ public class NSTimer
     public native boolean isValid();
     @Mapping("userInfo")
     public native Object getUserInfo();
-    
+
     
     
     @Mapping("fire")
@@ -70,5 +67,5 @@ public class NSTimer
     public static native NSTimer create(double ti, Object aTarget, Selector aSelector, Object userInfo, boolean yesOrNo);
     @Mapping("scheduledTimerWithTimeInterval:target:selector:userInfo:repeats:")
     public static native NSTimer createScheduled(double ti, Object aTarget, Selector aSelector, Object userInfo, boolean yesOrNo);
-    
+
 }

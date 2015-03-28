@@ -17,11 +17,9 @@ import apple.uikit.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 7.0 and later.
  */
-
 @Library("MapKit/MapKit.h") @Mapping("MKDirectionsResponse")
 public class MKDirectionsResponse 
     extends NSObject 
@@ -31,7 +29,7 @@ public class MKDirectionsResponse
     
     @Mapping("init")
     public MKDirectionsResponse() { }
-    
+
     
     @Mapping("source")
     public native MKMapItem getSource();
@@ -39,9 +37,9 @@ public class MKDirectionsResponse
     public native MKMapItem getDestination();
     @Mapping("routes")
     public native NSArray<MKRoute> getRoutes();
+
     
     
-    
-    
-    
+
+
 }

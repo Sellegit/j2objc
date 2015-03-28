@@ -15,11 +15,9 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
 /**
  * @since Available in iOS 4.1 and later.
  */
-
 @Library("GameKit/GameKit.h") @Mapping("GKMatch")
 public class GKMatch 
     extends NSObject 
@@ -29,7 +27,7 @@ public class GKMatch
     
     @Mapping("init")
     public GKMatch() { }
-    
+
     
     /**
      * @since Available in iOS 8.0 and later.
@@ -49,7 +47,7 @@ public class GKMatch
     @Deprecated
     @Mapping("playerIDs")
     public native List<String> getPlayerIDs();
-    
+
     
     
     /**
@@ -87,5 +85,5 @@ public class GKMatch
     @Deprecated
     @Mapping("sendData:toPlayers:withDataMode:error:")
     public native boolean sendDataToPlayersWithDataMod(NSData data, NSArray<?> playerIDs, @Representing("GKMatchSendDataMode") long mode, Todo error);
-    
+
 }

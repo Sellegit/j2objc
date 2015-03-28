@@ -13,7 +13,6 @@ import apple.coregraphics.*;
 import apple.coreservices.*;
 import apple.dispatch.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Mapping("SecKeyRef") @Library("Security/Security.h")
@@ -24,7 +23,7 @@ public class SecKey
     
     
     protected SecKey() {}
-    
+
     
     
     
@@ -38,7 +37,7 @@ public class SecKey
      */
     @GlobalConstant("kSecPublicKeyAttrs")
     public static native CFType PublicKeyAttrs();
-    
+
     /**
      * @since Available in iOS 2.0 and later.
      */
@@ -74,5 +73,5 @@ public class SecKey
      */
     @GlobalFunction("SecKeyGetBlockSize")
     public static native @MachineSizedUInt long getBlockSize(SecKey key);
-    
+
 }

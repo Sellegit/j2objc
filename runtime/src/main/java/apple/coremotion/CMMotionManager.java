@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 4.0 and later.
  */
-
 @Library("CoreMotion/CoreMotion.h") @Mapping("CMMotionManager")
 public class CMMotionManager 
     extends NSObject 
@@ -28,7 +26,7 @@ public class CMMotionManager
     
     @Mapping("init")
     public CMMotionManager() { }
-    
+
     
     @Mapping("accelerometerUpdateInterval")
     public native double getAccelerometerUpdateInterval();
@@ -100,7 +98,7 @@ public class CMMotionManager
      */
     @Mapping("setShowsDeviceMovementDisplay:")
     public native void setShowsDeviceMovementDisplay(boolean v);
-    
+
     
     
     @Mapping("startAccelerometerUpdates")
@@ -135,5 +133,5 @@ public class CMMotionManager
      */
     @Mapping("availableAttitudeReferenceFrames")
     public static native @MachineSizedUInt long getAvailableAttitudeReferenceFrames();
-    
+
 }

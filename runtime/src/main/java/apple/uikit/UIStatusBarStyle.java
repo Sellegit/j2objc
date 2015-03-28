@@ -19,9 +19,6 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h")
 @Mapping("UIStatusBarStyle")
 public final class UIStatusBarStyle extends ObjCEnum {
@@ -47,6 +44,6 @@ public final class UIStatusBarStyle extends ObjCEnum {
     @Deprecated
     @GlobalConstant("UIStatusBarStyleBlackOpaque")
     public static final long BlackOpaque = 2L;
-    
+
 
 }

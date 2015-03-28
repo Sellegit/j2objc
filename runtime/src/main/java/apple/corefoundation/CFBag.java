@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.dispatch.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Mapping("CFBagRef") @Library("CoreFoundation/CoreFoundation.h")
@@ -25,7 +24,7 @@ public class CFBag
     
     
     protected CFBag() {}
-    
+
     
     
     
@@ -33,7 +32,7 @@ public class CFBag
     public static native CFBagCallBacks getTypeCallBacks();
     @GlobalConstant("kCFCopyStringBagCallBacks")
     public static native CFBagCallBacks getCopyStringCallBacks();
-    
+
     @GlobalFunction("CFBagGetTypeID")
     public static native @MachineSizedUInt long getClassTypeID();
     @GlobalFunction("CFBagCreate")
@@ -54,5 +53,5 @@ public class CFBag
     public static native void getValues(CFBag theBag, Todo values);
     @GlobalFunction("CFBagApplyFunction")
     public static native void applyFunction(CFBag theBag, FunctionPtr applier, Todo context);
-    
+
 }

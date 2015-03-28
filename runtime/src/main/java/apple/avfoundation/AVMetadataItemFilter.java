@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 7.0 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h") @Mapping("AVMetadataItemFilter")
 public class AVMetadataItemFilter 
     extends NSObject 
@@ -34,13 +32,13 @@ public class AVMetadataItemFilter
     
     @Mapping("init")
     public AVMetadataItemFilter() { }
+
     
-    
-    
-    
+
+
     
     
     @Mapping("metadataItemFilterForSharing")
     public static native AVMetadataItemFilter createForSharing();
-    
+
 }

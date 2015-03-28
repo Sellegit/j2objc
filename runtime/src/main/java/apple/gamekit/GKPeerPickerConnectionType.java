@@ -15,13 +15,11 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
 /**
  * @since Available in iOS 3.0 and later.
  * @deprecated Deprecated in iOS 7.0.
  */
 @Deprecated
-
 @Library("GameKit/GameKit.h")
 @Mapping("GKPeerPickerConnectionType")
 public final class GKPeerPickerConnectionType extends ObjCEnum {
@@ -30,6 +28,6 @@ public final class GKPeerPickerConnectionType extends ObjCEnum {
     public static final long Online = 1L;
     @GlobalConstant("GKPeerPickerConnectionTypeNearby")
     public static final long Nearby = 2L;
-    
+
 
 }

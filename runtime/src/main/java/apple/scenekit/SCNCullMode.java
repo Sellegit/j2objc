@@ -20,9 +20,6 @@ import apple.spritekit.*;
 import apple.opengles.*;
 
 
-
-
-
 @Library("SceneKit/SceneKit.h")
 @Mapping("SCNCullMode")
 public final class SCNCullMode extends ObjCEnum {
@@ -31,6 +28,6 @@ public final class SCNCullMode extends ObjCEnum {
     public static final long Back = 0L;
     @GlobalConstant("SCNCullFront")
     public static final long Front = 1L;
-    
+
 
 }

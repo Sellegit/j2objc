@@ -14,9 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
-
-
 @Library("AddressBook/AddressBook.h")
 @Mapping("ABAddressBookErrorCode")
 public final class ABAddressBookErrorCode extends ObjCEnum {
@@ -25,6 +22,6 @@ public final class ABAddressBookErrorCode extends ObjCEnum {
     public static final long Store = 0L;
     @GlobalConstant("kABOperationNotPermittedByUserError")
     public static final long User = 1L;
-    
+
 
 }

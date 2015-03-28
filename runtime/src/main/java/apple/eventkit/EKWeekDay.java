@@ -16,9 +16,6 @@ import apple.addressbook.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("EventKit/EventKit.h")
 @Mapping("EKWeekDay")
 public final class EKWeekDay extends ObjCEnum {
@@ -37,6 +34,6 @@ public final class EKWeekDay extends ObjCEnum {
     public static final long Friday = 6L;
     @GlobalConstant("EKSaturday")
     public static final long Saturday = 7L;
-    
+
 
 }

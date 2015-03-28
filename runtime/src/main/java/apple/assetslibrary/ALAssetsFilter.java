@@ -15,11 +15,9 @@ import apple.foundation.*;
 import apple.imageio.*;
 
 
-
 /**
  * @since Available in iOS 4.0 and later.
  */
-
 @Library("AssetsLibrary/AssetsLibrary.h") @Mapping("ALAssetsFilter")
 public class ALAssetsFilter 
     extends NSObject 
@@ -29,10 +27,10 @@ public class ALAssetsFilter
     
     @Mapping("init")
     public ALAssetsFilter() { }
+
     
-    
-    
-    
+
+
     
     
     @Mapping("allPhotos")
@@ -41,5 +39,5 @@ public class ALAssetsFilter
     public static native ALAssetsFilter allVideos();
     @Mapping("allAssets")
     public static native ALAssetsFilter allAssets();
-    
+
 }

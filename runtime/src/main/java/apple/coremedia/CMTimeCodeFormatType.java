@@ -18,9 +18,6 @@ import apple.coreanimation.*;
 import apple.corevideo.*;
 
 
-
-
-
 @Library("CoreMedia/CoreMedia.h")
 @Mapping("CMTimeCodeFormatType")
 public final class CMTimeCodeFormatType extends ObjCEnum {
@@ -33,6 +30,6 @@ public final class CMTimeCodeFormatType extends ObjCEnum {
     public static final long Counter32 = 1668166450L;
     @GlobalConstant("kCMTimeCodeFormatType_Counter64")
     public static final long Counter64 = 1668167220L;
-    
+
 
 }

@@ -20,9 +20,6 @@ import apple.spritekit.*;
 import apple.opengles.*;
 
 
-
-
-
 @Library("SceneKit/SceneKit.h") @Mapping("SCNPhysicsBallSocketJoint")
 public class SCNPhysicsBallSocketJoint 
     extends SCNPhysicsBehavior 
@@ -32,7 +29,7 @@ public class SCNPhysicsBallSocketJoint
     
     @Mapping("init")
     public SCNPhysicsBallSocketJoint() { }
-    
+
     
     @Mapping("bodyA")
     public native SCNPhysicsBody getBodyA();
@@ -46,12 +43,12 @@ public class SCNPhysicsBallSocketJoint
     public native SCNVector3 getAnchorB();
     @Mapping("setAnchorB:")
     public native void setAnchorB(SCNVector3 v);
-    
+
     
     
     @Mapping("jointWithBodyA:anchorA:bodyB:anchorB:")
     public static native SCNPhysicsBallSocketJoint create(SCNPhysicsBody bodyA, SCNVector3 anchorA, SCNPhysicsBody bodyB, SCNVector3 anchorB);
     @Mapping("jointWithBody:anchor:")
     public static native SCNPhysicsBallSocketJoint create(SCNPhysicsBody body, SCNVector3 anchor);
-    
+
 }

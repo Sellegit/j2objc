@@ -18,7 +18,6 @@ import apple.coreimage.*;
 import apple.coretext.*;
 import apple.corelocation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -29,13 +28,13 @@ public abstract class UIAdaptivePresentationControllerDelegateAdapter
     
     
     
-    
-    
+
+
     
     
     @NotImplemented("adaptivePresentationStyleForPresentationController:")
     public @Representing("UIModalPresentationStyle") long getAdaptivePresentationStyle(UIPresentationController controller) { throw new UnsupportedOperationException(); }
     @NotImplemented("presentationController:viewControllerForAdaptivePresentationStyle:")
     public UIViewController getViewController(UIPresentationController controller, @Representing("UIModalPresentationStyle") long style) { throw new UnsupportedOperationException(); }
-    
+
 }

@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 2.0 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UISlider")
 public class UISlider 
     extends UIControl 
@@ -37,7 +35,7 @@ public class UISlider
     public UISlider(NSCoder aDecoder) { }
     @Mapping("init")
     public UISlider() { }
-    
+
     
     @Mapping("value")
     public native float getValue();
@@ -99,7 +97,7 @@ public class UISlider
     public native UIImage getCurrentMinimumTrackImage();
     @Mapping("currentMaximumTrackImage")
     public native UIImage getCurrentMaximumTrackImage();
-    
+
     
     
     @Mapping("setValue:animated:")
@@ -124,5 +122,5 @@ public class UISlider
     public native CGRect getTrackRect(CGRect bounds);
     @Mapping("thumbRectForBounds:trackRect:value:")
     public native CGRect getThumbRect(CGRect bounds, CGRect rect, float value);
-    
+
 }

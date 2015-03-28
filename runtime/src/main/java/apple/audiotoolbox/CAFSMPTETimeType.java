@@ -17,9 +17,6 @@ import apple.coreaudio.*;
 import apple.coremedia.*;
 
 
-
-
-
 @Library("AudioToolbox/AudioToolbox.h")
 @Mapping("CAFSMPTETimeType")
 public final class CAFSMPTETimeType extends ObjCEnum {
@@ -50,6 +47,6 @@ public final class CAFSMPTETimeType extends ObjCEnum {
     public static final long _50 = 11L;
     @GlobalConstant("kCAF_SMPTE_TimeType2398")
     public static final long _2398 = 12L;
-    
+
 
 }

@@ -17,9 +17,6 @@ import apple.coretext.*;
 import apple.opengles.*;
 
 
-
-
-
 @Library("QuartzCore/QuartzCore.h") @Mapping("CAMediaTimingFunction")
 public class CAMediaTimingFunction 
     extends NSObject 
@@ -31,10 +28,10 @@ public class CAMediaTimingFunction
     public CAMediaTimingFunction(float c1x, float c1y, float c2x, float c2y) { }
     @Mapping("init")
     public CAMediaTimingFunction() { }
+
     
-    
-    
-    
+
+
     
     
     @Mapping("getControlPointAtIndex:values:")
@@ -45,5 +42,5 @@ public class CAMediaTimingFunction
     public static native CAMediaTimingFunction create(float c1x, float c1y, float c2x, float c2y);
     @Mapping("encodeWithCoder:")
     public native void encode(NSCoder aCoder);
-    
+
 }

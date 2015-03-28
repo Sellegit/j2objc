@@ -17,11 +17,9 @@ import apple.uikit.*;
 import apple.avfoundation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("Photos/Photos.h")
 @Mapping("PHAuthorizationStatus")
 public final class PHAuthorizationStatus extends ObjCEnum {
@@ -34,6 +32,6 @@ public final class PHAuthorizationStatus extends ObjCEnum {
     public static final long Denied = 2L;
     @GlobalConstant("PHAuthorizationStatusAuthorized")
     public static final long Authorized = 3L;
-    
+
 
 }

@@ -15,9 +15,6 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
-
-
 @Library("GameKit/GameKit.h")
 @Mapping("GKSessionMode")
 public final class GKSessionMode extends ObjCEnum {
@@ -28,6 +25,6 @@ public final class GKSessionMode extends ObjCEnum {
     public static final long Client = 1L;
     @GlobalConstant("GKSessionModePeer")
     public static final long Peer = 2L;
-    
+
 
 }

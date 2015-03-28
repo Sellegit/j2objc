@@ -19,23 +19,20 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h") @Mapping("UIDynamicAnimatorDelegate")
 public interface UIDynamicAnimatorDelegate 
     extends NSObjectProtocol {
 
     
     
-    
-    
+
+
     
     @Mapping("dynamicAnimatorWillResume:")
     void willResume(UIDynamicAnimator animator);
     @Mapping("dynamicAnimatorDidPause:")
     void didPause(UIDynamicAnimator animator);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

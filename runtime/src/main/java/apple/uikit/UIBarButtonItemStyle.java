@@ -19,9 +19,6 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h")
 @Mapping("UIBarButtonItemStyle")
 public final class UIBarButtonItemStyle extends ObjCEnum {
@@ -37,6 +34,6 @@ public final class UIBarButtonItemStyle extends ObjCEnum {
     public static final long Bordered = 1L;
     @GlobalConstant("UIBarButtonItemStyleDone")
     public static final long Done = 2L;
-    
+
 
 }

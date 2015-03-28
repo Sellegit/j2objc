@@ -19,9 +19,6 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Mapping("UIEdgeInsets") @Library("UIKit/UIKit.h")
 public class UIEdgeInsets 
     extends Struct 
@@ -39,7 +36,7 @@ public class UIEdgeInsets
     public native @MachineSizedFloat double getBottom();
     @DotMapping("right")
     public native @MachineSizedFloat double getRight();
-    
+
     public static native UIEdgeInsets create(@MachineSizedFloat double top, @MachineSizedFloat double left, @MachineSizedFloat double bottom, @MachineSizedFloat double right) /*-[
         UIEdgeInsets __new = { .top = top, .left = left, .bottom = bottom, .right = right };
         return __new;
@@ -49,31 +46,53 @@ public class UIEdgeInsets
         return __new;
     ]-*/;
 
-    
+
     public static native UIEdgeInsets copyWithleft(UIEdgeInsets original, @MachineSizedFloat double left) /*-[
         UIEdgeInsets __new = { .top = original.top, .left = left, .bottom = original.bottom, .right = original.right };
         return __new;
     ]-*/;
 
-    
+
     public static native UIEdgeInsets copyWithbottom(UIEdgeInsets original, @MachineSizedFloat double bottom) /*-[
         UIEdgeInsets __new = { .top = original.top, .left = original.left, .bottom = bottom, .right = original.right };
         return __new;
     ]-*/;
 
-    
+
     public static native UIEdgeInsets copyWithright(UIEdgeInsets original, @MachineSizedFloat double right) /*-[
         UIEdgeInsets __new = { .top = original.top, .left = original.left, .bottom = original.bottom, .right = right };
         return __new;
     ]-*/;
 
-    
+
+    public static final class Adapter {
+
+        public @MachineSizedFloat double top;
+        public @MachineSizedFloat double left;
+        public @MachineSizedFloat double bottom;
+        public @MachineSizedFloat double right;
+        public Adapter(@MachineSizedFloat double top, @MachineSizedFloat double left, @MachineSizedFloat double bottom, @MachineSizedFloat double right) {
+            this.top = top;
+            this.left = left;
+            this.bottom = bottom;
+            this.right = right;
+        }
+        public Adapter(UIEdgeInsets original) {
+            this.top = original.getTop();
+            this.left = original.getLeft();
+            this.bottom = original.getBottom();
+            this.right = original.getRight();
+        }
+        public UIEdgeInsets convert() {
+            return create(top, left, bottom, right);
+        }
+    }
     @GlobalConstant("UIEdgeInsetsZero")
     public static native UIEdgeInsets Zero();
-    
+
     @GlobalFunction("NSStringFromUIEdgeInsets")
     public static native String toString(UIEdgeInsets insets);
     @GlobalFunction("UIEdgeInsetsFromString")
     public static native UIEdgeInsets fromString(String string);
-    
+
 }

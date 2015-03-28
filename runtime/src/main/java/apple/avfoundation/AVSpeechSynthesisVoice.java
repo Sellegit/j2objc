@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 7.0 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h") @Mapping("AVSpeechSynthesisVoice")
 public class AVSpeechSynthesisVoice 
     extends NSObject 
@@ -34,11 +32,11 @@ public class AVSpeechSynthesisVoice
     
     @Mapping("init")
     public AVSpeechSynthesisVoice() { }
-    
+
     
     @Mapping("language")
     public native String getLanguage();
-    
+
     
     
     @Mapping("speechVoices")
@@ -47,5 +45,5 @@ public class AVSpeechSynthesisVoice
     public static native String getCurrentLanguageCode();
     @Mapping("voiceWithLanguage:")
     public static native AVSpeechSynthesisVoice create(String language);
-    
+
 }

@@ -15,9 +15,6 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
-
-
 @Library("MediaPlayer/MediaPlayer.h")
 @Mapping("MPMusicShuffleMode")
 public final class MPMusicShuffleMode extends ObjCEnum {
@@ -30,6 +27,6 @@ public final class MPMusicShuffleMode extends ObjCEnum {
     public static final long Songs = 2L;
     @GlobalConstant("MPMusicShuffleModeAlbums")
     public static final long Albums = 3L;
-    
+
 
 }

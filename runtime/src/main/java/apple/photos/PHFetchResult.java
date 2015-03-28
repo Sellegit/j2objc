@@ -17,11 +17,9 @@ import apple.uikit.*;
 import apple.avfoundation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("Photos/Photos.h") @Mapping("PHFetchResult")
 public class PHFetchResult 
     extends NSObject 
@@ -31,7 +29,7 @@ public class PHFetchResult
     
     @Mapping("init")
     public PHFetchResult() { }
-    
+
     
     @Mapping("count")
     public native @MachineSizedUInt long size();
@@ -39,7 +37,7 @@ public class PHFetchResult
     public native PHObject first();
     @Mapping("lastObject")
     public native PHObject last();
-    
+
     
     
     @Mapping("objectAtIndex:")
@@ -62,5 +60,5 @@ public class PHFetchResult
     public native @MachineSizedUInt long getCountOfAssetsWithMediaType(@Representing("PHAssetMediaType") long mediaType);
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
-    
+
 }

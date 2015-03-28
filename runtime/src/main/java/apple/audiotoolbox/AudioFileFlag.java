@@ -17,9 +17,6 @@ import apple.coreaudio.*;
 import apple.coremedia.*;
 
 
-
-
-
 @Library("AudioToolbox/AudioToolbox.h")
 @Mapping("AudioFileFlag")
 public final class AudioFileFlag extends ObjCEnum {
@@ -28,6 +25,6 @@ public final class AudioFileFlag extends ObjCEnum {
     public static final long EraseFile = 1L;
     @GlobalConstant("kAudioFileFlags_DontPageAlignAudioData")
     public static final long DontPageAlignAudioData = 2L;
-    
+
 
 }

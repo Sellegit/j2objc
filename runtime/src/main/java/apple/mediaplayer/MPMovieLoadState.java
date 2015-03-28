@@ -15,9 +15,6 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
-
-
 @Library("MediaPlayer/MediaPlayer.h")
 @Mapping("MPMovieLoadState")
 public final class MPMovieLoadState extends ObjCEnum {
@@ -30,6 +27,6 @@ public final class MPMovieLoadState extends ObjCEnum {
     public static final long PlaythroughOK = 2L;
     @GlobalConstant("MPMovieLoadStateStalled")
     public static final long Stalled = 4L;
-    
+
 
 }

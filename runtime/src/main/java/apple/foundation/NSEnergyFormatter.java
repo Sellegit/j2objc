@@ -19,11 +19,9 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("Foundation/Foundation.h") @Mapping("NSEnergyFormatter")
 public class NSEnergyFormatter 
     extends NSFormatter 
@@ -35,7 +33,7 @@ public class NSEnergyFormatter
     public NSEnergyFormatter(NSCoder aDecoder) { }
     @Mapping("init")
     public NSEnergyFormatter() { }
-    
+
     
     @Mapping("numberFormatter")
     public native NSNumberFormatter getNumberFormatter();
@@ -49,7 +47,7 @@ public class NSEnergyFormatter
     public native boolean isForFoodEnergyUse();
     @Mapping("setForFoodEnergyUse:")
     public native void setForFoodEnergyUse(boolean v);
-    
+
     
     
     @Mapping("stringFromValue:unit:")
@@ -60,5 +58,5 @@ public class NSEnergyFormatter
     public native String formatUnit(double value, @Representing("NSEnergyFormatterUnit") long unit);
     @Mapping("unitStringFromJoules:usedUnit:")
     public native String formatUnitJoules(double numberInJoules, Todo unitp);
-    
+
 }

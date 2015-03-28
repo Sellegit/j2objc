@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h") @Mapping("NSConditionLock")
 public class NSConditionLock 
     extends NSObject 
@@ -33,7 +30,7 @@ public class NSConditionLock
     public NSConditionLock(@MachineSizedSInt long condition) { }
     @Mapping("init")
     public NSConditionLock() { }
-    
+
     
     @Mapping("condition")
     public native @MachineSizedSInt long getCondition();
@@ -47,7 +44,7 @@ public class NSConditionLock
      */
     @Mapping("setName:")
     public native void setName(String v);
-    
+
     
     
     @Mapping("lockWhenCondition:")
@@ -66,5 +63,5 @@ public class NSConditionLock
     public native void lock();
     @Mapping("unlock")
     public native void unlock();
-    
+
 }

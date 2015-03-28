@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 6.0 and later.
  */
-
 @Library("UIKit/UIKit.h")
 @Mapping("NSTextAlignment")
 public final class NSTextAlignment extends ObjCEnum {
@@ -38,6 +36,6 @@ public final class NSTextAlignment extends ObjCEnum {
     public static final long Justified = 3L;
     @GlobalConstant("NSTextAlignmentNatural")
     public static final long Natural = 4L;
-    
+
 
 }

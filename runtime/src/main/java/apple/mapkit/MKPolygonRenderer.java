@@ -17,11 +17,9 @@ import apple.uikit.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 7.0 and later.
  */
-
 @Library("MapKit/MapKit.h") @Mapping("MKPolygonRenderer")
 public class MKPolygonRenderer 
     extends MKOverlayPathRenderer 
@@ -35,13 +33,13 @@ public class MKPolygonRenderer
     public MKPolygonRenderer(MKOverlay overlay) { }
     @Mapping("init")
     public MKPolygonRenderer() { }
-    
+
     
     @Mapping("polygon")
     public native MKPolygon getPolygon();
+
     
     
-    
-    
-    
+
+
 }

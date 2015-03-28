@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UISearchController")
 public class UISearchController 
     extends UIViewController 
@@ -39,7 +37,7 @@ public class UISearchController
     public UISearchController(NSCoder aDecoder) { }
     @Mapping("init")
     public UISearchController() { }
-    
+
     
     @Mapping("searchResultsUpdater")
     public native UISearchResultsUpdating getSearchResultsUpdater();
@@ -65,7 +63,7 @@ public class UISearchController
     public native UIViewController getSearchResultsController();
     @Mapping("searchBar")
     public native UISearchBar getSearchBar();
-    
+
     
     
     @Mapping("animationControllerForPresentedController:presentingController:sourceController:")
@@ -87,5 +85,5 @@ public class UISearchController
     public native void animateTransition(UIViewControllerContextTransitioning transitionContext);
     @Mapping("animationEnded:")
     public native void animationEnded(boolean transitionCompleted);
-    
+
 }

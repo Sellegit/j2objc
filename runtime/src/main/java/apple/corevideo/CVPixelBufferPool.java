@@ -15,7 +15,6 @@ import apple.foundation.*;
 import apple.opengles.*;
 import apple.coremedia.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Mapping("CVPixelBufferPoolRef") @Library("CoreVideo/CoreVideo.h")
@@ -26,7 +25,7 @@ public class CVPixelBufferPool
     
     
     protected CVPixelBufferPool() {}
-    
+
     
     
     
@@ -60,5 +59,5 @@ public class CVPixelBufferPool
      */
     @GlobalFunction("CVPixelBufferPoolCreatePixelBufferWithAuxAttributes")
     public static native CVReturn createPixelBuffer(CFAllocator allocator, CVPixelBufferPool pixelBufferPool, CFDictionary auxAttributes, Todo pixelBufferOut);
-    
+
 }

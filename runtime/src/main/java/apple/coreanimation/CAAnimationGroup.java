@@ -17,9 +17,6 @@ import apple.coretext.*;
 import apple.opengles.*;
 
 
-
-
-
 @Library("QuartzCore/QuartzCore.h") @Mapping("CAAnimationGroup")
 public class CAAnimationGroup 
     extends CAAnimation 
@@ -31,15 +28,15 @@ public class CAAnimationGroup
     public CAAnimationGroup(NSCoder aDecoder) { }
     @Mapping("init")
     public CAAnimationGroup() { }
-    
+
     
     @Mapping("animations")
     public native NSArray<CAAnimation> getAnimations();
     @Mapping("setAnimations:")
     public native void setAnimations(NSArray<CAAnimation> v);
+
     
     
-    
-    
-    
+
+
 }

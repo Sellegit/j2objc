@@ -14,9 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
-
-
 @Library("CoreText/CoreText.h")
 @Mapping("CTFontTableTag")
 public final class CTFontTableTag extends ObjCEnum {
@@ -139,6 +136,6 @@ public final class CTFontTableTag extends ObjCEnum {
     public static final long Vhea = 1986553185L;
     @GlobalConstant("kCTFontTableVmtx")
     public static final long Vmtx = 1986884728L;
-    
+
 
 }

@@ -18,7 +18,6 @@ import apple.coremedia.*;
 import apple.security.*;
 import apple.dispatch.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -29,13 +28,13 @@ public abstract class NSMetadataQueryDelegateAdapter
     
     
     
-    
-    
+
+
     
     
     @NotImplemented("metadataQuery:replacementObjectForResultObject:")
     public Object getReplacementObject(NSMetadataQuery query, NSMetadataItem result) { throw new UnsupportedOperationException(); }
     @NotImplemented("metadataQuery:replacementValueForAttribute:value:")
     public Object getReplacementValue(NSMetadataQuery query, String attrName, Object attrValue) { throw new UnsupportedOperationException(); }
-    
+
 }

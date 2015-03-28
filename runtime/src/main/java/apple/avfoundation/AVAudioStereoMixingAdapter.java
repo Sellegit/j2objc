@@ -19,7 +19,6 @@ import apple.coremedia.*;
 import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -34,9 +33,9 @@ public abstract class AVAudioStereoMixingAdapter
     public float getPan() { throw new UnsupportedOperationException(); }
     @Mapping("setPan:")
     public void setPan(float v) { throw new UnsupportedOperationException(); }
+
     
     
-    
-    
-    
+
+
 }

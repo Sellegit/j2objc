@@ -19,7 +19,6 @@ import apple.coremedia.*;
 import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("AVFoundation/AVFoundation.h")
@@ -152,11 +151,11 @@ public class AVFoundation
      */
     @GlobalConstant("AVMetadataCommonKeySoftware")
     public static native NSString SoftwareValue();
-    
+
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("AVMakeRectWithAspectRatioInsideRect")
     public static native CGRect createRectWithAspectRatioInsideRect(CGSize aspectRatio, CGRect boundingRect);
-    
+
 }

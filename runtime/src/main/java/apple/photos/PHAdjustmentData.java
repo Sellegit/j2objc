@@ -17,11 +17,9 @@ import apple.uikit.*;
 import apple.avfoundation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("Photos/Photos.h") @Mapping("PHAdjustmentData")
 public class PHAdjustmentData 
     extends NSObject 
@@ -33,7 +31,7 @@ public class PHAdjustmentData
     public PHAdjustmentData(String formatIdentifier, String formatVersion, NSData data) { }
     @Mapping("init")
     public PHAdjustmentData() { }
-    
+
     
     @Mapping("formatIdentifier")
     public native String getFormatIdentifier();
@@ -41,9 +39,9 @@ public class PHAdjustmentData
     public native String getFormatVersion();
     @Mapping("data")
     public native NSData getData();
+
     
     
-    
-    
-    
+
+
 }

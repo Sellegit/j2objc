@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 4.0 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h") @Mapping("AVMutableCompositionTrack")
 public class AVMutableCompositionTrack 
     extends AVCompositionTrack 
@@ -34,7 +32,7 @@ public class AVMutableCompositionTrack
     
     @Mapping("init")
     public AVMutableCompositionTrack() { }
-    
+
     
     @Mapping("naturalTimeScale")
     public native int getNaturalTimeScale();
@@ -60,7 +58,7 @@ public class AVMutableCompositionTrack
     public native NSArray<AVAssetTrackSegment> getSegments();
     @Mapping("setSegments:")
     public native void setSegments(NSArray<AVAssetTrackSegment> v);
-    
+
     
     
     @Mapping("insertTimeRange:ofTrack:atTime:error:")
@@ -78,5 +76,5 @@ public class AVMutableCompositionTrack
     public native void scaleTimeRange(CMTimeRange timeRange, CMTime duration);
     @Mapping("validateTrackSegments:error:")
     public native boolean validateTrackSegments(NSArray<?> trackSegments, Todo error);
-    
+
 }

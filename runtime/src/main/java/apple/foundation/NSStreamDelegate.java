@@ -19,21 +19,18 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h") @Mapping("NSStreamDelegate")
 public interface NSStreamDelegate 
     extends NSObjectProtocol {
 
     
     
-    
-    
+
+
     
     @Mapping("stream:handleEvent:")
     void handleEvent(NSStream aStream, @Representing("NSStreamEvent") long eventCode);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

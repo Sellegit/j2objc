@@ -14,9 +14,6 @@ import apple.coreservices.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Security/Security.h")
 @Mapping("SSLAuthenticate")
 public final class SSLAuthenticate extends ObjCEnum {
@@ -27,6 +24,6 @@ public final class SSLAuthenticate extends ObjCEnum {
     public static final long AlwaysAuthenticate = 1L;
     @GlobalConstant("kTryAuthenticate")
     public static final long TryAuthenticate = 2L;
-    
+
 
 }

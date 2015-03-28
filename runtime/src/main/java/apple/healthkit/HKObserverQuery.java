@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("HealthKit/HealthKit.h") @Mapping("HKObserverQuery")
 public class HKObserverQuery 
     extends HKQuery 
@@ -30,12 +28,12 @@ public class HKObserverQuery
     public HKObserverQuery(HKSampleType sampleType, NSPredicate predicate, Todo updateHandler) { }
     @Mapping("init")
     public HKObserverQuery() { }
+
+    
+
+
     
     
-    
-    
-    
-    
-    
-    
+
+
 }

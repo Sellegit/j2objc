@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h")
 @Mapping("NSKeyValueObservingOptions")
 public final class NSKeyValueObservingOptions extends ObjCEnum {
@@ -40,6 +37,6 @@ public final class NSKeyValueObservingOptions extends ObjCEnum {
      */
     @GlobalConstant("NSKeyValueObservingOptionPrior")
     public static final long Prior = 8L;
-    
+
 
 }

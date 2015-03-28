@@ -17,11 +17,9 @@ import apple.uikit.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 4.0 and later.
  */
-
 @Library("MapKit/MapKit.h") @Mapping("MKCircleView")
 public class MKCircleView 
     extends MKOverlayPathView 
@@ -47,7 +45,7 @@ public class MKCircleView
     public MKCircleView(CGRect frame) { }
     @Mapping("init")
     public MKCircleView() { }
-    
+
     
     /**
      * @since Available in iOS 4.0 and later.
@@ -56,9 +54,9 @@ public class MKCircleView
     @Deprecated
     @Mapping("circle")
     public native MKCircle getCircle();
+
     
     
-    
-    
-    
+
+
 }

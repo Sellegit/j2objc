@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("HealthKit/HealthKit.h")
 @Mapping("HKCategoryValueSleepAnalysis")
 public final class HKCategoryValueSleepAnalysis extends ObjCEnum {
@@ -27,6 +25,6 @@ public final class HKCategoryValueSleepAnalysis extends ObjCEnum {
     public static final long InBed = 0L;
     @GlobalConstant("HKCategoryValueSleepAnalysisAsleep")
     public static final long Asleep = 1L;
-    
+
 
 }

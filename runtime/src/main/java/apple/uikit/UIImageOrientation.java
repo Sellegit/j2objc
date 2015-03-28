@@ -19,9 +19,6 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h")
 @Mapping("UIImageOrientation")
 public final class UIImageOrientation extends ObjCEnum {
@@ -42,6 +39,6 @@ public final class UIImageOrientation extends ObjCEnum {
     public static final long LeftMirrored = 6L;
     @GlobalConstant("UIImageOrientationRightMirrored")
     public static final long RightMirrored = 7L;
-    
+
 
 }

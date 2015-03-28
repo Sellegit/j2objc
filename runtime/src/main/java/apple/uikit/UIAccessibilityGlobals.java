@@ -18,7 +18,6 @@ import apple.coreimage.*;
 import apple.coretext.*;
 import apple.corelocation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("UIKit/UIKit.h")
@@ -116,7 +115,7 @@ public class UIAccessibilityGlobals
      */
     @GlobalConstant("UIAccessibilitySpeakScreenStatusDidChangeNotification")
     public static native NSString SpeakScreenStatusDidChangeNotification();
-    
+
     /**
      * @since Available in iOS 5.0 and later.
      */
@@ -209,5 +208,5 @@ public class UIAccessibilityGlobals
      */
     @GlobalFunction("UIAccessibilityRequestGuidedAccessSession")
     public static native void requestGuidedAccessSession(boolean enable, @Block VoidBooleanBlock completionHandler);
-    
+
 }

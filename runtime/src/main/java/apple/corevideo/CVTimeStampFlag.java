@@ -16,9 +16,6 @@ import apple.opengles.*;
 import apple.coremedia.*;
 
 
-
-
-
 @Library("CoreVideo/CoreVideo.h")
 @Mapping("CVTimeStampFlag")
 public final class CVTimeStampFlag extends ObjCEnum {
@@ -37,6 +34,6 @@ public final class CVTimeStampFlag extends ObjCEnum {
     public static final long TopField = 65536L;
     @GlobalConstant("kCVTimeStampBottomField")
     public static final long BottomField = 131072L;
-    
+
 
 }

@@ -15,23 +15,20 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
-
-
 @Library("NotificationCenter/NotificationCenter.h") @Mapping("NCWidgetProviding")
 public interface NCWidgetProviding 
     extends NSObjectProtocol {
 
     
     
-    
-    
+
+
     
     @Mapping("widgetPerformUpdateWithCompletionHandler:")
     void performUpdate(@Block VoidBlock1<NCUpdateResult> completionHandler);
     @Mapping("widgetMarginInsetsForProposedMarginInsets:")
     UIEdgeInsets getMarginInsetsForProposedInsets(UIEdgeInsets defaultMarginInsets);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

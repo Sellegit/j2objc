@@ -14,9 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
-
-
 @Mapping("MIDIThruConnectionParams") @Library("CoreMIDI/CoreMIDI.h")
 public class MIDIThruConnectionParams 
     extends Struct 
@@ -70,12 +67,12 @@ public class MIDIThruConnectionParams
     public native short getNumControlTransforms();
     @DotMapping("numMaps")
     public native short getNumMaps();
-    
+
     
     /**
      * @since Available in iOS 4.2 and later.
      */
     @GlobalFunction("MIDIThruConnectionParamsInitialize")
     public static native void initialize(MIDIThruConnectionParams inConnectionParams);
-    
+
 }

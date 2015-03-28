@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 6.0 and later.
  */
-
 @Library("UIKit/UIKit.h")
 @Mapping("NSWritingDirection")
 public final class NSWritingDirection extends ObjCEnum {
@@ -34,6 +32,6 @@ public final class NSWritingDirection extends ObjCEnum {
     public static final long LeftToRight = 0L;
     @GlobalConstant("NSWritingDirectionRightToLeft")
     public static final long RightToLeft = 1L;
-    
+
 
 }

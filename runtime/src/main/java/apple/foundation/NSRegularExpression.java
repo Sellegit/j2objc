@@ -19,11 +19,9 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 4.0 and later.
  */
-
 @Library("Foundation/Foundation.h") @Mapping("NSRegularExpression")
 public class NSRegularExpression 
     extends NSObject 
@@ -35,7 +33,7 @@ public class NSRegularExpression
     public NSRegularExpression(String pattern, @Representing("NSRegularExpressionOptions") long options, Todo error) { }
     @Mapping("init")
     public NSRegularExpression() { }
-    
+
     
     @Mapping("pattern")
     public native String getPattern();
@@ -43,7 +41,7 @@ public class NSRegularExpression
     public native @Representing("NSRegularExpressionOptions") long getOptions();
     @Mapping("numberOfCaptureGroups")
     public native @MachineSizedUInt long getNumberOfCaptureGroups();
-    
+
     
     
     @Mapping("escapedPatternForString:")
@@ -70,5 +68,5 @@ public class NSRegularExpression
     public native Object copyWithZone$(NSZone zone);
     @Mapping("encodeWithCoder:")
     public native void encode(NSCoder aCoder);
-    
+
 }

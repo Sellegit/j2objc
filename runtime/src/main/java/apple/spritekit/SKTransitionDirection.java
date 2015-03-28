@@ -21,11 +21,9 @@ import apple.glkit.*;
 import apple.scenekit.*;
 
 
-
 /**
  * @since Available in iOS 7.0 and later.
  */
-
 @Library("SpriteKit/SpriteKit.h")
 @Mapping("SKTransitionDirection")
 public final class SKTransitionDirection extends ObjCEnum {
@@ -38,6 +36,6 @@ public final class SKTransitionDirection extends ObjCEnum {
     public static final long Right = 2L;
     @GlobalConstant("SKTransitionDirectionLeft")
     public static final long Left = 3L;
-    
+
 
 }

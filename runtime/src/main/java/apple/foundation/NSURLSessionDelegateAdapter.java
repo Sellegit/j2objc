@@ -18,7 +18,6 @@ import apple.coremedia.*;
 import apple.security.*;
 import apple.dispatch.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -29,8 +28,8 @@ public abstract class NSURLSessionDelegateAdapter
     
     
     
-    
-    
+
+
     
     
     @NotImplemented("URLSession:didBecomeInvalidWithError:")
@@ -42,5 +41,5 @@ public abstract class NSURLSessionDelegateAdapter
      */
     @NotImplemented("URLSessionDidFinishEventsForBackgroundURLSession:")
     public void didFinishEvents(NSURLSession session) { throw new UnsupportedOperationException(); }
-    
+
 }

@@ -18,7 +18,6 @@ import apple.coreimage.*;
 import apple.coretext.*;
 import apple.corelocation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -29,8 +28,8 @@ public abstract class UITableViewDataSourceAdapter
     
     
     
-    
-    
+
+
     
     
     @NotImplemented("tableView:numberOfRowsInSection:")
@@ -55,5 +54,5 @@ public abstract class UITableViewDataSourceAdapter
     public void commitEditingStyleForRow(UITableView tableView, @Representing("UITableViewCellEditingStyle") long editingStyle, NSIndexPath indexPath) { throw new UnsupportedOperationException(); }
     @NotImplemented("tableView:moveRowAtIndexPath:toIndexPath:")
     public void moveRow(UITableView tableView, NSIndexPath sourceIndexPath, NSIndexPath destinationIndexPath) { throw new UnsupportedOperationException(); }
-    
+
 }

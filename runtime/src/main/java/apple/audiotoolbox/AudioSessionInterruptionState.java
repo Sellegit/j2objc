@@ -17,9 +17,6 @@ import apple.coreaudio.*;
 import apple.coremedia.*;
 
 
-
-
-
 @Library("AudioToolbox/AudioToolbox.h")
 @Mapping("AudioSessionInterruptionState")
 public final class AudioSessionInterruptionState extends ObjCEnum {
@@ -28,6 +25,6 @@ public final class AudioSessionInterruptionState extends ObjCEnum {
     public static final long BeginInterruption = 1L;
     @GlobalConstant("kAudioSessionEndInterruption")
     public static final long EndInterruption = 0L;
-    
+
 
 }

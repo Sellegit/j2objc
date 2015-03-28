@@ -15,9 +15,6 @@ import apple.foundation.*;
 import apple.imageio.*;
 
 
-
-
-
 @Library("AssetsLibrary/AssetsLibrary.h")
 @Mapping("ALAssetsGroupType")
 public final class ALAssetsGroupType extends ObjCEnum {
@@ -36,6 +33,6 @@ public final class ALAssetsGroupType extends ObjCEnum {
     public static final long PhotoStream = 32L;
     @GlobalConstant("ALAssetsGroupAll")
     public static final long All = -1L;
-    
+
 
 }

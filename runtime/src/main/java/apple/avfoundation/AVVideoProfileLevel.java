@@ -19,7 +19,6 @@ import apple.coremedia.*;
 import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("AVFoundation/AVFoundation.h")
@@ -92,5 +91,5 @@ public class AVVideoProfileLevel
      */
     @GlobalConstant("AVVideoProfileLevelH264HighAutoLevel")
     public static native NSString H264HighAutoLevelValue();
-    
+
 }

@@ -18,7 +18,6 @@ import apple.coremedia.*;
 import apple.security.*;
 import apple.dispatch.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("Foundation/Foundation.h")
@@ -82,5 +81,5 @@ public class NSLocaleComponent
      */
     @GlobalConstant("NSLocaleAlternateQuotationEndDelimiterKey")
     public static native NSString AlternateQuotationEndDelimiterKeyValue();
-    
+
 }

@@ -19,7 +19,6 @@ import apple.coremedia.*;
 import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -54,9 +53,9 @@ public abstract class AVAudio3DMixingAdapter
     public AVAudio3DPoint getPosition() { throw new UnsupportedOperationException(); }
     @Mapping("setPosition:")
     public void setPosition(AVAudio3DPoint v) { throw new UnsupportedOperationException(); }
+
     
     
-    
-    
-    
+
+
 }

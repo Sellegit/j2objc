@@ -18,7 +18,6 @@ import apple.coremedia.*;
 import apple.security.*;
 import apple.dispatch.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("Foundation/Foundation.h")
@@ -46,5 +45,5 @@ public class NSURLSessionTaskPriority
      */
     @GlobalConstant("NSURLSessionTaskPriorityHigh")
     public static native float High();
-    
+
 }

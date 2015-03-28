@@ -15,17 +15,14 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
-
-
 @Library("GameKit/GameKit.h") @Mapping("GKInviteEventListener")
 public interface GKInviteEventListener 
      {
 
     
     
-    
-    
+
+
     
     /**
      * @since Available in iOS 7.0 and later.
@@ -44,7 +41,7 @@ public interface GKInviteEventListener
     @Deprecated
     @Mapping("player:didRequestMatchWithPlayers:")
     void didRequestMatchWithPlayers(GKPlayer player, NSArray<?> playerIDsToInvite);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

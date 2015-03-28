@@ -17,9 +17,6 @@ import apple.coreaudio.*;
 import apple.coremedia.*;
 
 
-
-
-
 @Library("AudioToolbox/AudioToolbox.h")
 @Mapping("AudioSessionMode")
 public final class AudioSessionMode extends ObjCEnum {
@@ -34,6 +31,6 @@ public final class AudioSessionMode extends ObjCEnum {
     public static final long Measurement = 1836281204L;
     @GlobalConstant("kAudioSessionMode_GameChat")
     public static final long GameChat = 1735222132L;
-    
+
 
 }

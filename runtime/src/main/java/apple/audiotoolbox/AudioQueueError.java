@@ -17,9 +17,6 @@ import apple.coreaudio.*;
 import apple.coremedia.*;
 
 
-
-
-
 @Library("AudioToolbox/AudioToolbox.h")
 @Mapping("AudioQueueError")
 public final class AudioQueueError extends ObjCEnum {
@@ -72,6 +69,6 @@ public final class AudioQueueError extends ObjCEnum {
     public static final long EnqueueDuringReset = -66632L;
     @GlobalConstant("kAudioQueueErr_InvalidOfflineMode")
     public static final long InvalidOfflineMode = -66626L;
-    
+
 
 }

@@ -16,11 +16,9 @@ import apple.addressbook.*;
 import apple.corebluetooth.*;
 
 
-
 /**
  * @since Available in iOS 5.0 and later.
  */
-
 @Library("CoreLocation/CoreLocation.h") @Mapping("CLGeocoder")
 public class CLGeocoder 
     extends NSObject 
@@ -30,11 +28,11 @@ public class CLGeocoder
     
     @Mapping("init")
     public CLGeocoder() { }
-    
+
     
     @Mapping("isGeocoding")
     public native boolean isGeocoding();
-    
+
     
     
     @Mapping("reverseGeocodeLocation:completionHandler:")
@@ -47,5 +45,5 @@ public class CLGeocoder
     public native void geocodeAddress(String addressString, CLRegion region, @Block VoidBlock2<NSArray<CLPlacemark>, NSError> completionHandler);
     @Mapping("cancelGeocode")
     public native void cancelGeocode();
-    
+
 }

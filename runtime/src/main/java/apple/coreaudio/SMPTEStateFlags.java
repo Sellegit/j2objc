@@ -14,9 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
-
-
 @Library("CoreAudio/CoreAudioTypes.h")
 @Mapping("SMPTEStateFlags")
 public final class SMPTEStateFlags extends ObjCEnum {
@@ -25,6 +22,6 @@ public final class SMPTEStateFlags extends ObjCEnum {
     public static final long Valid = 1L;
     @GlobalConstant("kSMPTETimeRunning")
     public static final long Running = 2L;
-    
+
 
 }

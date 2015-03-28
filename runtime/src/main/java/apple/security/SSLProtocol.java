@@ -14,9 +14,6 @@ import apple.coreservices.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Security/Security.h")
 @Mapping("SSLProtocol")
 public final class SSLProtocol extends ObjCEnum {
@@ -41,6 +38,6 @@ public final class SSLProtocol extends ObjCEnum {
     public static final long TLSProtocol1Only = 5L;
     @GlobalConstant("kSSLProtocolAll")
     public static final long SSLProtocolAll = 6L;
-    
+
 
 }

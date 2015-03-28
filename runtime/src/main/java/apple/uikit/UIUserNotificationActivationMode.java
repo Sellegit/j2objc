@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("UIKit/UIKit.h")
 @Mapping("UIUserNotificationActivationMode")
 public final class UIUserNotificationActivationMode extends ObjCEnum {
@@ -32,6 +30,6 @@ public final class UIUserNotificationActivationMode extends ObjCEnum {
     public static final long Foreground = 0L;
     @GlobalConstant("UIUserNotificationActivationModeBackground")
     public static final long Background = 1L;
-    
+
 
 }

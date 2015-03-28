@@ -14,9 +14,6 @@ import apple.coreservices.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Security/Security.h")
 @Mapping("SSLProtocolSide")
 public final class SSLProtocolSide extends ObjCEnum {
@@ -25,6 +22,6 @@ public final class SSLProtocolSide extends ObjCEnum {
     public static final long ServerSide = 0L;
     @GlobalConstant("kSSLClientSide")
     public static final long ClientSide = 1L;
-    
+
 
 }

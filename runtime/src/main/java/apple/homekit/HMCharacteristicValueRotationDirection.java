@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("HomeKit/HomeKit.h")
 @Mapping("HMCharacteristicValueRotationDirection")
 public final class HMCharacteristicValueRotationDirection extends ObjCEnum {
@@ -27,6 +25,6 @@ public final class HMCharacteristicValueRotationDirection extends ObjCEnum {
     public static final long Clockwise = 0L;
     @GlobalConstant("HMCharacteristicValueRotationDirectionCounterClockwise")
     public static final long CounterClockwise = 1L;
-    
+
 
 }

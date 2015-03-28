@@ -20,9 +20,6 @@ import apple.spritekit.*;
 import apple.opengles.*;
 
 
-
-
-
 @Library("SceneKit/SceneKit.h")
 @Mapping("SCNParticleModifierStage")
 public final class SCNParticleModifierStage extends ObjCEnum {
@@ -35,6 +32,6 @@ public final class SCNParticleModifierStage extends ObjCEnum {
     public static final long PreCollision = 2L;
     @GlobalConstant("SCNParticleModifierStagePostCollision")
     public static final long PostCollision = 3L;
-    
+
 
 }

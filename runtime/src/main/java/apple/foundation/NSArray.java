@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h") @Mapping("NSArray")
 public class NSArray <T>
     extends NSObject 
@@ -34,7 +31,7 @@ public class NSArray <T>
     public NSArray(Todo objects, @MachineSizedUInt long cnt) { }
     @Mapping("initWithArray:")
     public NSArray(NSArray<?> array) { }
-    
+
     
     @Mapping("count")
     public native @MachineSizedUInt long getCount();
@@ -47,7 +44,7 @@ public class NSArray <T>
     public native T last();
     @Mapping("sortedArrayHint")
     public native NSData getSortedArrayHint();
-    
+
     
     
     @Mapping("objectAtIndex:")
@@ -73,5 +70,5 @@ public class NSArray <T>
      */
     @Mapping("removeObserver:fromObjectsAtIndexes:forKeyPath:context:")
     public native void removeObserver(NSObject observer, NSIndexSet indexes, String keyPath, Todo context);
-    
+
 }

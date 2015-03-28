@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 4.0 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h") @Mapping("AVCaptureStillImageOutput")
 public class AVCaptureStillImageOutput 
     extends AVCaptureOutput 
@@ -34,7 +32,7 @@ public class AVCaptureStillImageOutput
     
     @Mapping("init")
     public AVCaptureStillImageOutput() { }
-    
+
     
     @Mapping("outputSettings")
     public native NSDictionary<NSString, NSObject> getOutputSettings0();
@@ -84,7 +82,7 @@ public class AVCaptureStillImageOutput
      */
     @Mapping("maxBracketedCaptureStillImageCount")
     public native @MachineSizedUInt long getMaxBracketedCaptureStillImageCount();
-    
+
     
     
     /**
@@ -92,5 +90,5 @@ public class AVCaptureStillImageOutput
      */
     @Mapping("prepareToCaptureStillImageBracketFromConnection:withSettingsArray:completionHandler:")
     public native void prepareToCaptureStillImageBracket(AVCaptureConnection connection, NSArray<?> settings, @Block VoidBlock2<Boolean, NSError> handler);
-    
+
 }

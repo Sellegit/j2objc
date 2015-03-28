@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h")
 @Mapping("NSNumberFormatterBehavior")
 public final class NSNumberFormatterBehavior extends ObjCEnum {
@@ -30,6 +27,6 @@ public final class NSNumberFormatterBehavior extends ObjCEnum {
     public static final long Default = 0L;
     @GlobalConstant("NSNumberFormatterBehavior10_4")
     public static final long _10_4 = 1040L;
-    
+
 
 }

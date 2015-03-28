@@ -17,11 +17,9 @@ import apple.uikit.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 5.0 and later.
  */
-
 @Library("GLKit/GLKit.h") @Mapping("GLKBaseEffect")
 public class GLKBaseEffect 
     extends NSObject 
@@ -31,7 +29,7 @@ public class GLKBaseEffect
     
     @Mapping("init")
     public GLKBaseEffect() { }
-    
+
     
     @Mapping("colorMaterialEnabled")
     public native boolean isColorMaterialEnabled();
@@ -81,10 +79,10 @@ public class GLKBaseEffect
     public native String getLabel();
     @Mapping("setLabel:")
     public native void setLabel(String v);
-    
+
     
     
     @Mapping("prepareToDraw")
     public native void prepareToDraw();
-    
+
 }

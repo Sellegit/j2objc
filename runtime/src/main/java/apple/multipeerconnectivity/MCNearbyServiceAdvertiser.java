@@ -16,11 +16,9 @@ import apple.uikit.*;
 import apple.security.*;
 
 
-
 /**
  * @since Available in iOS 7.0 and later.
  */
-
 @Library("MultipeerConnectivity/MultipeerConnectivity.h") @Mapping("MCNearbyServiceAdvertiser")
 public class MCNearbyServiceAdvertiser 
     extends NSObject 
@@ -32,7 +30,7 @@ public class MCNearbyServiceAdvertiser
     public MCNearbyServiceAdvertiser(MCPeerID myPeerID, NSDictionary<?, ?> info, String serviceType) { }
     @Mapping("init")
     public MCNearbyServiceAdvertiser() { }
-    
+
     
     @Mapping("delegate")
     public native MCNearbyServiceAdvertiserDelegate getDelegate();
@@ -44,12 +42,12 @@ public class MCNearbyServiceAdvertiser
     public native Map<String, String> getDiscoveryInfo();
     @Mapping("serviceType")
     public native String getServiceType();
-    
+
     
     
     @Mapping("startAdvertisingPeer")
     public native void startAdvertisingPeer();
     @Mapping("stopAdvertisingPeer")
     public native void stopAdvertisingPeer();
-    
+
 }

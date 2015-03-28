@@ -16,7 +16,6 @@ import apple.corelocation.*;
 import apple.uikit.*;
 import apple.avfoundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("Photos/Photos.h")
@@ -44,5 +43,5 @@ public class PHContentEditingInputRequestResult
      */
     @GlobalConstant("PHContentEditingInputErrorKey")
     public static native NSString ErrorKey();
-    
+
 }

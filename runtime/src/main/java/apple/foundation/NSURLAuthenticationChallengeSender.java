@@ -19,17 +19,14 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h") @Mapping("NSURLAuthenticationChallengeSender")
 public interface NSURLAuthenticationChallengeSender 
     extends NSObjectProtocol {
 
     
     
-    
-    
+
+
     
     @Mapping("useCredential:forAuthenticationChallenge:")
     void useCredential(NSURLCredential credential, NSURLAuthenticationChallenge challenge);
@@ -41,7 +38,7 @@ public interface NSURLAuthenticationChallengeSender
     void performDefaultHandling(NSURLAuthenticationChallenge challenge);
     @Mapping("rejectProtectionSpaceAndContinueWithChallenge:")
     void rejectProtectionSpaceAndContinue(NSURLAuthenticationChallenge challenge);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

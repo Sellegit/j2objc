@@ -14,9 +14,6 @@ import apple.coreservices.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Security/Security.h")
 @Mapping("SSLCipherSuite")
 public final class SSLCipherSuite extends ObjCEnum {
@@ -339,6 +336,6 @@ public final class SSLCipherSuite extends ObjCEnum {
     public static final long SSL_RSA_WITH_3DES_EDE_CBC_MD5 = 65411L;
     @GlobalConstant("SSL_NO_SUCH_CIPHERSUITE")
     public static final long SSL_NO_SUCH_CIPHERSUITE = 65535L;
-    
+
 
 }

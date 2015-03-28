@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UILexiconEntry")
 public class UILexiconEntry 
     extends NSObject 
@@ -33,16 +31,16 @@ public class UILexiconEntry
     
     @Mapping("init")
     public UILexiconEntry() { }
-    
+
     
     @Mapping("documentText")
     public native String getDocumentText();
     @Mapping("userInput")
     public native String getUserInput();
-    
+
     
     
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
-    
+
 }

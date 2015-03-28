@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 7.0 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UICollectionViewFlowLayoutInvalidationContext")
 public class UICollectionViewFlowLayoutInvalidationContext 
     extends UICollectionViewLayoutInvalidationContext 
@@ -33,7 +31,7 @@ public class UICollectionViewFlowLayoutInvalidationContext
     
     @Mapping("init")
     public UICollectionViewFlowLayoutInvalidationContext() { }
-    
+
     
     @Mapping("invalidateFlowLayoutDelegateMetrics")
     public native boolean invalidatesFlowLayoutDelegateMetrics();
@@ -43,9 +41,9 @@ public class UICollectionViewFlowLayoutInvalidationContext
     public native boolean invalidatesFlowLayoutAttributes();
     @Mapping("setInvalidateFlowLayoutAttributes:")
     public native void setInvalidatesFlowLayoutAttributes(boolean v);
+
     
     
-    
-    
-    
+
+
 }

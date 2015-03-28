@@ -19,17 +19,14 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h") @Mapping("UICollectionViewDelegateFlowLayout")
 public interface UICollectionViewDelegateFlowLayout 
     extends UICollectionViewDelegate {
 
     
     
-    
-    
+
+
     
     @Mapping("collectionView:layout:sizeForItemAtIndexPath:")
     CGSize getItemSize(UICollectionView collectionView, UICollectionViewLayout collectionViewLayout, NSIndexPath indexPath);
@@ -43,7 +40,7 @@ public interface UICollectionViewDelegateFlowLayout
     CGSize getSectionHeaderReferenceSize(UICollectionView collectionView, UICollectionViewLayout collectionViewLayout, @MachineSizedSInt long section);
     @Mapping("collectionView:layout:referenceSizeForFooterInSection:")
     CGSize getSectionFooterReferenceSize(UICollectionView collectionView, UICollectionViewLayout collectionViewLayout, @MachineSizedSInt long section);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

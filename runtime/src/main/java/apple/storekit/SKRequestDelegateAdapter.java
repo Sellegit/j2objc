@@ -15,7 +15,6 @@ import apple.foundation.*;
 import apple.uikit.*;
 import apple.accounts.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -26,8 +25,8 @@ public abstract class SKRequestDelegateAdapter
     
     
     
-    
-    
+
+
     
     
     /**
@@ -40,5 +39,5 @@ public abstract class SKRequestDelegateAdapter
      */
     @NotImplemented("request:didFailWithError:")
     public void didFail(SKRequest request, NSError error) { throw new UnsupportedOperationException(); }
-    
+
 }

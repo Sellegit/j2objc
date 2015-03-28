@@ -20,9 +20,6 @@ import apple.spritekit.*;
 import apple.opengles.*;
 
 
-
-
-
 @Library("SceneKit/SceneKit.h") @Mapping("SCNCylinder")
 public class SCNCylinder 
     extends SCNGeometry 
@@ -32,7 +29,7 @@ public class SCNCylinder
     
     @Mapping("init")
     public SCNCylinder() { }
-    
+
     
     @Mapping("radius")
     public native @MachineSizedFloat double getRadius();
@@ -50,10 +47,10 @@ public class SCNCylinder
     public native @MachineSizedSInt long getHeightSegmentCount();
     @Mapping("setHeightSegmentCount:")
     public native void setHeightSegmentCount(@MachineSizedSInt long v);
-    
+
     
     
     @Mapping("cylinderWithRadius:height:")
     public static native SCNCylinder create(@MachineSizedFloat double radius, @MachineSizedFloat double height);
-    
+
 }

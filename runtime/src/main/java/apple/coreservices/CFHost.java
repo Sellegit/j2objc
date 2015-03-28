@@ -13,7 +13,6 @@ import apple.coregraphics.*;
 import apple.coreservices.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Mapping("CFHostRef") @Library("CFNetwork/CFNetwork.h")
@@ -24,7 +23,7 @@ public class CFHost
     
     
     protected CFHost() {}
-    
+
     
     
     
@@ -93,5 +92,5 @@ public class CFHost
      */
     @GlobalFunction("CFStreamCreatePairWithSocketToCFHost")
     public static native void createSocketStreamPair(CFAllocator alloc, CFHost host, int port, Todo readStream, Todo writeStream);
-    
+
 }

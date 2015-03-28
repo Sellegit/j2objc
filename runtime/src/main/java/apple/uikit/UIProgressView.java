@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 2.0 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UIProgressView")
 public class UIProgressView 
     extends UIView 
@@ -39,7 +37,7 @@ public class UIProgressView
     public UIProgressView(NSCoder aDecoder) { }
     @Mapping("init")
     public UIProgressView() { }
-    
+
     
     @Mapping("progressViewStyle")
     public native @Representing("UIProgressViewStyle") long getProgressViewStyle();
@@ -89,7 +87,7 @@ public class UIProgressView
      */
     @Mapping("setTrackImage:")
     public native void setTrackImage(UIImage v);
-    
+
     
     
     /**
@@ -97,5 +95,5 @@ public class UIProgressView
      */
     @Mapping("setProgress:animated:")
     public native void setProgress(float progress, boolean animated);
-    
+
 }

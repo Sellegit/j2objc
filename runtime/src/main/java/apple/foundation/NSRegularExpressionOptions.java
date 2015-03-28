@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h")
 @Mapping("NSRegularExpressionOptions")
 public final class NSRegularExpressionOptions extends ObjCEnum {
@@ -40,6 +37,6 @@ public final class NSRegularExpressionOptions extends ObjCEnum {
     public static final long UseUnixLineSeparators = 32L;
     @GlobalConstant("NSRegularExpressionUseUnicodeWordBoundaries")
     public static final long UseUnicodeWordBoundaries = 64L;
-    
+
 
 }

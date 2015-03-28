@@ -17,9 +17,6 @@ import apple.coreaudio.*;
 import apple.coremedia.*;
 
 
-
-
-
 @Library("AudioToolbox/AudioToolbox.h")
 @Mapping("ExtAudioFileProperty")
 public final class ExtAudioFileProperty extends ObjCEnum {
@@ -52,6 +49,6 @@ public final class ExtAudioFileProperty extends ObjCEnum {
     public static final long IOBuffer = 1768907366L;
     @GlobalConstant("kExtAudioFileProperty_PacketTable")
     public static final long PacketTable = 2020635753L;
-    
+
 
 }

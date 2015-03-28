@@ -20,19 +20,17 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 4.0 and later.
  * @deprecated Deprecated in iOS 6.0.
  */
 @Deprecated
-
 @Library("AVFoundation/AVFoundation.h")
 @Mapping("AVAudioSessionInterruptionFlag")
 public final class AVAudioSessionInterruptionFlag extends ObjCEnum {
     
     @GlobalConstant("AVAudioSessionInterruptionFlags_ShouldResume")
     public static final long ShouldResume = 1L;
-    
+
 
 }

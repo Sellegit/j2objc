@@ -19,9 +19,6 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h")
 @Mapping("UIProgressViewStyle")
 public final class UIProgressViewStyle extends ObjCEnum {
@@ -30,6 +27,6 @@ public final class UIProgressViewStyle extends ObjCEnum {
     public static final long Default = 0L;
     @GlobalConstant("UIProgressViewStyleBar")
     public static final long Bar = 1L;
-    
+
 
 }

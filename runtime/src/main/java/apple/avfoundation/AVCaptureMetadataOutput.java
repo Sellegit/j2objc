@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 6.0 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h") @Mapping("AVCaptureMetadataOutput")
 public class AVCaptureMetadataOutput 
     extends AVCaptureOutput 
@@ -34,7 +32,7 @@ public class AVCaptureMetadataOutput
     
     @Mapping("init")
     public AVCaptureMetadataOutput() { }
-    
+
     
     @Mapping("metadataObjectsDelegate")
     public native AVCaptureMetadataOutputObjectsDelegate getMetadataObjectsDelegate();
@@ -56,10 +54,10 @@ public class AVCaptureMetadataOutput
      */
     @Mapping("setRectOfInterest:")
     public native void setRectOfInterest(CGRect v);
-    
+
     
     
     @Mapping("setMetadataObjectsDelegate:queue:")
     public native void setMetadataObjectsDelegate(AVCaptureMetadataOutputObjectsDelegate objectsDelegate, DispatchQueue objectsCallbackQueue);
-    
+
 }

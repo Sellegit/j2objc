@@ -15,11 +15,9 @@ import apple.foundation.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 6.0 and later.
  */
-
 @Library("CoreBluetooth/CoreBluetooth.h") @Mapping("CBCentral")
 public class CBCentral 
     extends CBPeer 
@@ -29,13 +27,13 @@ public class CBCentral
     
     @Mapping("init")
     public CBCentral() { }
-    
+
     
     @Mapping("maximumUpdateValueLength")
     public native @MachineSizedUInt long getMaximumUpdateValueLength();
+
     
     
-    
-    
-    
+
+
 }

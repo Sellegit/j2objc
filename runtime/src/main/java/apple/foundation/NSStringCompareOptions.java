@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h")
 @Mapping("NSStringCompareOptions")
 public final class NSStringCompareOptions extends ObjCEnum {
@@ -56,6 +53,6 @@ public final class NSStringCompareOptions extends ObjCEnum {
      */
     @GlobalConstant("NSRegularExpressionSearch")
     public static final long RegularExpression = 1024L;
-    
+
 
 }

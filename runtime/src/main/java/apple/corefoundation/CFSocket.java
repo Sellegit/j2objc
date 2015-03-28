@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.dispatch.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Mapping("CFSocketRef") @Library("CoreFoundation/CoreFoundation.h")
@@ -25,7 +24,7 @@ public class CFSocket
     
     
     protected CFSocket() {}
-    
+
     
     
     
@@ -81,5 +80,5 @@ public class CFSocket
     public static native void setDefaultNameRegistryPortNumber(short port);
     @GlobalFunction("CFSocketGetDefaultNameRegistryPortNumber")
     public static native short getDefaultNameRegistryPortNumber();
-    
+
 }

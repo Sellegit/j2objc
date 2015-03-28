@@ -20,9 +20,6 @@ import apple.spritekit.*;
 import apple.opengles.*;
 
 
-
-
-
 @Library("SceneKit/SceneKit.h") @Mapping("SCNSkinner")
 public class SCNSkinner 
     extends NSObject 
@@ -32,7 +29,7 @@ public class SCNSkinner
     
     @Mapping("init")
     public SCNSkinner() { }
-    
+
     
     @Mapping("skeleton")
     public native SCNNode getSkeleton();
@@ -54,10 +51,10 @@ public class SCNSkinner
     public native SCNGeometrySource getBoneWeights();
     @Mapping("boneIndices")
     public native SCNGeometrySource getBoneIndices();
-    
+
     
     
     @Mapping("skinnerWithBaseGeometry:bones:boneInverseBindTransforms:boneWeights:boneIndices:")
     public static native SCNSkinner create(SCNGeometry baseGeometry, NSArray<?> bones, NSArray<?> boneInverseBindTransforms, SCNGeometrySource boneWeights, SCNGeometrySource boneIndices);
-    
+
 }

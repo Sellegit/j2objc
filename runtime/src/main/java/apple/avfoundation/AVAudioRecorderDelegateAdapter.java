@@ -19,7 +19,6 @@ import apple.coremedia.*;
 import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -30,8 +29,8 @@ public abstract class AVAudioRecorderDelegateAdapter
     
     
     
-    
-    
+
+
     
     
     @NotImplemented("audioRecorderDidFinishRecording:successfully:")
@@ -66,5 +65,5 @@ public abstract class AVAudioRecorderDelegateAdapter
     @Deprecated
     @NotImplemented("audioRecorderEndInterruption:")
     public void endInterruption(AVAudioRecorder recorder) { throw new UnsupportedOperationException(); }
-    
+
 }

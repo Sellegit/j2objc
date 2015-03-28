@@ -14,9 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
-
-
 @Mapping("GCExtendedGamepadSnapShotDataV100") @Library("GameController/GameController.h")
 public class GCExtendedGamepadSnapShotDataV100 
     extends Struct 
@@ -58,11 +55,11 @@ public class GCExtendedGamepadSnapShotDataV100
     public native float getLeftTrigger();
     @DotMapping("rightTrigger")
     public native float getRightTrigger();
-    
+
     
     @GlobalFunction("GCExtendedGamepadSnapShotDataV100FromNSData")
     public static native boolean setData(GCExtendedGamepadSnapShotDataV100 snapshotData, NSData data);
     @GlobalFunction("NSDataFromGCExtendedGamepadSnapShotDataV100")
     public static native NSData getData(GCExtendedGamepadSnapShotDataV100 snapshotData);
-    
+
 }

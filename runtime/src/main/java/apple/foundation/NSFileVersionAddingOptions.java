@@ -19,15 +19,12 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h")
 @Mapping("NSFileVersionAddingOptions")
 public final class NSFileVersionAddingOptions extends ObjCEnum {
     
     @GlobalConstant("NSFileVersionAddingByMoving")
     public static final long ByMoving = 1L;
-    
+
 
 }

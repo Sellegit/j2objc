@@ -59,6 +59,7 @@ FAT_LIB_NAME = runtime
 FAT_LIB_SOURCES_RELATIVE = $(TRANSLATE_SOURCES:$(GEN_OBJC_DIR)/%=%)
 FAT_LIB_SOURCE_DIRS = $(GEN_OBJC_DIR)
 FAT_LIB_COMPILE = $(J2OBJCC)
+FAT_LIB_ONLY_IOS = 1
 include ../make/fat_lib.mk
 
 fat_lib_dependencies: annotations_dist

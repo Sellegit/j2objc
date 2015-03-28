@@ -20,17 +20,15 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 6.0 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h")
 @Mapping("AVAudioSessionInterruptionOptions")
 public final class AVAudioSessionInterruptionOptions extends ObjCEnum {
     
     @GlobalConstant("AVAudioSessionInterruptionOptionShouldResume")
     public static final long ShouldResume = 1L;
-    
+
 
 }

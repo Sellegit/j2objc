@@ -19,9 +19,6 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h")
 @Mapping("UIKeyboardAppearance")
 public final class UIKeyboardAppearance extends ObjCEnum {
@@ -40,6 +37,6 @@ public final class UIKeyboardAppearance extends ObjCEnum {
     public static final long Light = 2L;
     @GlobalConstant("UIKeyboardAppearanceAlert")
     public static final long Alert = 1L;
-    
+
 
 }

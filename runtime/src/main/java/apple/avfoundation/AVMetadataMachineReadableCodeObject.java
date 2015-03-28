@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 7.0 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h") @Mapping("AVMetadataMachineReadableCodeObject")
 public class AVMetadataMachineReadableCodeObject 
     extends AVMetadataObject 
@@ -34,15 +32,15 @@ public class AVMetadataMachineReadableCodeObject
     
     @Mapping("init")
     public AVMetadataMachineReadableCodeObject() { }
-    
+
     
     @Mapping("corners")
     public native NSArray<NSDictionary<?, ?>> getCorners();
     @Mapping("stringValue")
     public native String getStringValue();
+
     
     
-    
-    
-    
+
+
 }

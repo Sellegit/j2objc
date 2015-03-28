@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h") @Mapping("NSAutoreleasePool")
 public class NSAutoreleasePool 
     extends NSObject 
@@ -30,13 +27,13 @@ public class NSAutoreleasePool
     
     
     public NSAutoreleasePool() {}
+
     
-    
-    
-    
+
+
     
     
     @Mapping("drain")
     public native void drain();
-    
+
 }

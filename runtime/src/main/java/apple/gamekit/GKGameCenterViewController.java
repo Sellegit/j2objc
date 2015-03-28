@@ -15,11 +15,9 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
 /**
  * @since Available in iOS 6.0 and later.
  */
-
 @Library("GameKit/GameKit.h") @Mapping("GKGameCenterViewController")
 public class GKGameCenterViewController 
     extends UINavigationController 
@@ -33,7 +31,7 @@ public class GKGameCenterViewController
     public GKGameCenterViewController(String nibNameOrNil, NSBundle nibBundleOrNil) { }
     @Mapping("init")
     public GKGameCenterViewController() { }
-    
+
     
     @Mapping("gameCenterDelegate")
     public native GKGameCenterControllerDelegate getGameCenterDelegate();
@@ -81,9 +79,9 @@ public class GKGameCenterViewController
     @Deprecated
     @Mapping("setLeaderboardCategory:")
     public native void setLeaderboardCategory(String v);
+
     
     
-    
-    
-    
+
+
 }

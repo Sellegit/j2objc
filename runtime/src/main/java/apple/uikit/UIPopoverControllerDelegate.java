@@ -19,17 +19,14 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h") @Mapping("UIPopoverControllerDelegate")
 public interface UIPopoverControllerDelegate 
     extends NSObjectProtocol {
 
     
     
-    
-    
+
+
     
     @Mapping("popoverControllerShouldDismissPopover:")
     boolean shouldDismiss(UIPopoverController popoverController);
@@ -40,7 +37,7 @@ public interface UIPopoverControllerDelegate
      */
     @Mapping("popoverController:willRepositionPopoverToRect:inView:")
     void willReposition(UIPopoverController popoverController, CGRect rect, Todo view);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

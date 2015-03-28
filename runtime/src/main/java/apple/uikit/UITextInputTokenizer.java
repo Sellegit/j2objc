@@ -19,17 +19,14 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h") @Mapping("UITextInputTokenizer")
 public interface UITextInputTokenizer 
     extends NSObjectProtocol {
 
     
     
-    
-    
+
+
     
     @Mapping("rangeEnclosingPosition:withGranularity:inDirection:")
     UITextRange getRangeEnclosingPosition(UITextPosition position, @Representing("UITextGranularity") long granularity, @MachineSizedSInt long direction);
@@ -39,7 +36,7 @@ public interface UITextInputTokenizer
     UITextPosition getPosition(UITextPosition position, @Representing("UITextGranularity") long granularity, @MachineSizedSInt long direction);
     @Mapping("isPosition:withinTextUnit:inDirection:")
     boolean isPositionWithinTextUnit(UITextPosition position, @Representing("UITextGranularity") long granularity, @MachineSizedSInt long direction);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

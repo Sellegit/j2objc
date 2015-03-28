@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 3.0 and later.
  */
-
 @Library("CoreData/CoreData.h") @Mapping("NSPropertyMapping")
 public class NSPropertyMapping 
     extends NSObject 
@@ -28,7 +26,7 @@ public class NSPropertyMapping
     
     @Mapping("init")
     public NSPropertyMapping() { }
-    
+
     
     @Mapping("name")
     public native String getName();
@@ -42,9 +40,9 @@ public class NSPropertyMapping
     public native NSDictionary<?, ?> getUserInfo();
     @Mapping("setUserInfo:")
     public native void setUserInfo(NSDictionary<?, ?> v);
+
     
     
-    
-    
-    
+
+
 }

@@ -19,17 +19,14 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h") @Mapping("UITextInputDelegate")
 public interface UITextInputDelegate 
     extends NSObjectProtocol {
 
     
     
-    
-    
+
+
     
     @Mapping("selectionWillChange:")
     void selectionWillChange(UITextInput textInput);
@@ -39,7 +36,7 @@ public interface UITextInputDelegate
     void textWillChange(UITextInput textInput);
     @Mapping("textDidChange:")
     void textDidChange(UITextInput textInput);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

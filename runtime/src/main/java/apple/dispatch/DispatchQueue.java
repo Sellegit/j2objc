@@ -12,7 +12,6 @@ import apple.corefoundation.*;
 import apple.coregraphics.*;
 import apple.coreservices.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("dispatch/dispatch.h")
@@ -25,10 +24,10 @@ public class DispatchQueue
     public static final int PRIORITY_DEFAULT = 0;
     public static final int PRIORITY_LOW = -2;
     public static final int PRIORITY_BACKGROUND = -32768;
-    
+
     
     protected DispatchQueue() {}
-    
+
     
     
     
@@ -96,5 +95,5 @@ public class DispatchQueue
      */
     @GlobalFunction("dispatch_barrier_sync")
     public static native void barrierSync(DispatchQueue queue, @Block Runnable block);
-    
+
 }

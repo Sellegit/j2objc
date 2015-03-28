@@ -18,7 +18,6 @@ import apple.coreimage.*;
 import apple.coretext.*;
 import apple.corelocation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("UIKit/UIKit.h")
@@ -41,5 +40,5 @@ public class UIVideo
      */
     @GlobalFunction("UISaveVideoAtPathToSavedPhotosAlbum")
     public static native void saveToPhotosAlbum(String videoPath, Object completionTarget, Selector completionSelector, Todo contextInfo);
-    
+
 }

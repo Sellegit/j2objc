@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("CoreData/CoreData.h") @Mapping("NSPersistentStoreAsynchronousResult")
 public class NSPersistentStoreAsynchronousResult 
     extends NSPersistentStoreResult 
@@ -28,7 +26,7 @@ public class NSPersistentStoreAsynchronousResult
     
     @Mapping("init")
     public NSPersistentStoreAsynchronousResult() { }
-    
+
     
     @Mapping("managedObjectContext")
     public native NSManagedObjectContext getManagedObjectContext();
@@ -36,10 +34,10 @@ public class NSPersistentStoreAsynchronousResult
     public native NSError getOperationError();
     @Mapping("progress")
     public native NSProgress getProgress();
-    
+
     
     
     @Mapping("cancel")
     public native void cancel();
-    
+
 }

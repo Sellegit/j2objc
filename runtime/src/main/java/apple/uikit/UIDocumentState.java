@@ -19,9 +19,6 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h")
 @Mapping("UIDocumentState")
 public final class UIDocumentState extends ObjCEnum {
@@ -36,6 +33,6 @@ public final class UIDocumentState extends ObjCEnum {
     public static final long SavingError = 4L;
     @GlobalConstant("UIDocumentStateEditingDisabled")
     public static final long EditingDisabled = 8L;
-    
+
 
 }

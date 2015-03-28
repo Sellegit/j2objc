@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 6.0 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UICollectionViewController")
 public class UICollectionViewController 
     extends UIViewController 
@@ -39,7 +37,7 @@ public class UICollectionViewController
     public UICollectionViewController(NSCoder aDecoder) { }
     @Mapping("init")
     public UICollectionViewController() { }
-    
+
     
     @Mapping("collectionView")
     public native UICollectionView getCollectionView();
@@ -64,7 +62,7 @@ public class UICollectionViewController
      */
     @Mapping("collectionViewLayout")
     public native UICollectionViewLayout getCollectionViewLayout();
-    
+
     
     
     @Mapping("collectionView:shouldHighlightItemAtIndexPath:")
@@ -146,5 +144,5 @@ public class UICollectionViewController
     public native @MachineSizedSInt long getNumberOfSections(UICollectionView collectionView);
     @Mapping("collectionView:viewForSupplementaryElementOfKind:atIndexPath:")
     public native UICollectionReusableView getViewForSupplementaryElement(UICollectionView collectionView, String kind, NSIndexPath indexPath);
-    
+
 }

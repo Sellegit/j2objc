@@ -18,9 +18,6 @@ import apple.coreanimation.*;
 import apple.corevideo.*;
 
 
-
-
-
 @Library("CoreMedia/CoreMedia.h")
 @Mapping("CMBlockBufferError")
 public final class CMBlockBufferError extends ObjCEnum {
@@ -45,6 +42,6 @@ public final class CMBlockBufferError extends ObjCEnum {
     public static final long UnallocatedBlock = -12707L;
     @GlobalConstant("kCMBlockBufferInsufficientSpaceErr")
     public static final long InsufficientSpace = -12708L;
-    
+
 
 }

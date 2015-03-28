@@ -18,7 +18,6 @@ import apple.coreimage.*;
 import apple.coretext.*;
 import apple.corelocation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -29,8 +28,8 @@ public abstract class UIGestureRecognizerDelegateAdapter
     
     
     
-    
-    
+
+
     
     
     @NotImplemented("gestureRecognizerShouldBegin:")
@@ -49,5 +48,5 @@ public abstract class UIGestureRecognizerDelegateAdapter
     public boolean shouldBeRequiredToFail(UIGestureRecognizer gestureRecognizer, UIGestureRecognizer otherGestureRecognizer) { throw new UnsupportedOperationException(); }
     @NotImplemented("gestureRecognizer:shouldReceiveTouch:")
     public boolean shouldReceiveTouch(UIGestureRecognizer gestureRecognizer, UITouch touch) { throw new UnsupportedOperationException(); }
-    
+
 }

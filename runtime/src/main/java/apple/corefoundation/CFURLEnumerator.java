@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.dispatch.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Mapping("CFURLEnumeratorRef") @Library("CoreFoundation/CoreFoundation.h")
@@ -25,7 +24,7 @@ public class CFURLEnumerator
     
     
     protected CFURLEnumerator() {}
-    
+
     
     
     
@@ -59,5 +58,5 @@ public class CFURLEnumerator
      */
     @GlobalFunction("CFURLEnumeratorGetDescendentLevel")
     public static native @MachineSizedSInt long getDescendentLevel(CFURLEnumerator enumerator);
-    
+
 }

@@ -17,7 +17,6 @@ import apple.addressbook.*;
 import apple.mediaplayer.*;
 import apple.avkit.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("iAd/iAd.h")
@@ -44,5 +43,5 @@ public class ADBannerContentSizeIdentifier
     @Deprecated
     @GlobalConstant("ADBannerContentSizeIdentifierLandscape")
     public static native NSString SizeLandscapeValue();
-    
+
 }

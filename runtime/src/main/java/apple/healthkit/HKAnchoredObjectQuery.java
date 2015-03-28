@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("HealthKit/HealthKit.h") @Mapping("HKAnchoredObjectQuery")
 public class HKAnchoredObjectQuery 
     extends HKQuery 
@@ -26,18 +24,18 @@ public class HKAnchoredObjectQuery
 
     
     public static final int NoAnchor = 0;
-    
+
     
     @Mapping("initWithType:predicate:anchor:limit:completionHandler:")
     public HKAnchoredObjectQuery(HKSampleType type, NSPredicate predicate, @MachineSizedUInt long anchor, @MachineSizedUInt long limit, Todo handler) { }
     @Mapping("init")
     public HKAnchoredObjectQuery() { }
+
+    
+
+
     
     
-    
-    
-    
-    
-    
-    
+
+
 }

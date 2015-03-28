@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h") @Mapping("NSMessagePort")
 public class NSMessagePort 
     extends NSPort 
@@ -33,12 +30,12 @@ public class NSMessagePort
     public NSMessagePort(NSCoder aDecoder) { }
     @Mapping("init")
     public NSMessagePort() { }
+
+    
+
+
     
     
-    
-    
-    
-    
-    
-    
+
+
 }

@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 7.0 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UIDynamicItemBehavior")
 public class UIDynamicItemBehavior 
     extends UIDynamicBehavior 
@@ -35,7 +33,7 @@ public class UIDynamicItemBehavior
     public UIDynamicItemBehavior(NSArray<?> items) { }
     @Mapping("init")
     public UIDynamicItemBehavior() { }
-    
+
     
     @Mapping("items")
     public native List<UIDynamicItem> getItems();
@@ -63,7 +61,7 @@ public class UIDynamicItemBehavior
     public native boolean allowsRotation();
     @Mapping("setAllowsRotation:")
     public native void setAllowsRotation(boolean v);
-    
+
     
     
     @Mapping("addItem:")
@@ -78,5 +76,5 @@ public class UIDynamicItemBehavior
     public native void addAngularVelocityForItem(@MachineSizedFloat double velocity, UIDynamicItem item);
     @Mapping("angularVelocityForItem:")
     public native @MachineSizedFloat double getAngularVelocityForItem(UIDynamicItem item);
-    
+
 }

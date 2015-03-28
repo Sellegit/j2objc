@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 4.1 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h") @Mapping("AVAssetReaderVideoCompositionOutput")
 public class AVAssetReaderVideoCompositionOutput 
     extends AVAssetReaderOutput 
@@ -34,7 +32,7 @@ public class AVAssetReaderVideoCompositionOutput
     
     @Mapping("init")
     public AVAssetReaderVideoCompositionOutput() { }
-    
+
     
     @Mapping("videoTracks")
     public native NSArray<AVAssetTrack> getVideoTracks();
@@ -49,10 +47,10 @@ public class AVAssetReaderVideoCompositionOutput
      */
     @Mapping("customVideoCompositor")
     public native AVVideoCompositing getCustomVideoCompositor();
-    
+
     
     
     @Mapping("assetReaderVideoCompositionOutputWithVideoTracks:videoSettings:")
     public static native AVAssetReaderVideoCompositionOutput create(NSArray<?> videoTracks, NSDictionary<?, ?> videoSettings);
-    
+
 }

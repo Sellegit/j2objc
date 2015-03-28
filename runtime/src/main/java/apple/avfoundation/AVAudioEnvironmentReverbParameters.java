@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h") @Mapping("AVAudioEnvironmentReverbParameters")
 public class AVAudioEnvironmentReverbParameters 
     extends NSObject 
@@ -34,7 +32,7 @@ public class AVAudioEnvironmentReverbParameters
     
     @Mapping("init")
     public AVAudioEnvironmentReverbParameters() { }
-    
+
     
     @Mapping("enable")
     public native boolean isEnable();
@@ -46,10 +44,10 @@ public class AVAudioEnvironmentReverbParameters
     public native void setLevel(float v);
     @Mapping("filterParameters")
     public native AVAudioUnitEQFilterParameters getFilterParameters();
-    
+
     
     
     @Mapping("loadFactoryReverbPreset:")
     public native void loadFactoryReverbPreset(@Representing("AVAudioUnitReverbPreset") long preset);
-    
+
 }

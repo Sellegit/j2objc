@@ -19,9 +19,6 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h")
 @Mapping("UIImagePickerControllerCameraFlashMode")
 public final class UIImagePickerControllerCameraFlashMode extends ObjCEnum {
@@ -32,6 +29,6 @@ public final class UIImagePickerControllerCameraFlashMode extends ObjCEnum {
     public static final long Auto = 0L;
     @GlobalConstant("UIImagePickerControllerCameraFlashModeOn")
     public static final long On = 1L;
-    
+
 
 }

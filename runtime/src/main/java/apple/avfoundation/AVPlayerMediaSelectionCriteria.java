@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 7.0 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h") @Mapping("AVPlayerMediaSelectionCriteria")
 public class AVPlayerMediaSelectionCriteria 
     extends NSObject 
@@ -36,15 +34,15 @@ public class AVPlayerMediaSelectionCriteria
     public AVPlayerMediaSelectionCriteria(NSArray<?> preferredLanguages, NSArray<?> preferredMediaCharacteristics) { }
     @Mapping("init")
     public AVPlayerMediaSelectionCriteria() { }
-    
+
     
     @Mapping("preferredLanguages")
     public native List<String> getPreferredLanguages();
     @Mapping("preferredMediaCharacteristics")
     public native List<AVMediaCharacteristic> getPreferredMediaCharacteristics();
+
     
     
-    
-    
-    
+
+
 }

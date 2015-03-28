@@ -16,11 +16,9 @@ import apple.eventkit.*;
 import apple.uikit.*;
 
 
-
 /**
  * @since Available in iOS 5.0 and later.
  */
-
 @Library("EventKitUI/EventKitUI.h") @Mapping("EKCalendarChooser")
 public class EKCalendarChooser 
     extends UIViewController 
@@ -36,7 +34,7 @@ public class EKCalendarChooser
     public EKCalendarChooser(String nibNameOrNil, NSBundle nibBundleOrNil) { }
     @Mapping("init")
     public EKCalendarChooser() { }
-    
+
     
     @Mapping("selectionStyle")
     public native EKCalendarChooserSelectionStyle getSelectionStyle();
@@ -56,9 +54,9 @@ public class EKCalendarChooser
     public native NSSet<EKCalendar> getSelectedCalendars();
     @Mapping("setSelectedCalendars:")
     public native void setSelectedCalendars(NSSet<EKCalendar> v);
+
     
     
-    
-    
-    
+
+
 }

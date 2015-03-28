@@ -19,11 +19,9 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 4.0 and later.
  */
-
 @Library("Foundation/Foundation.h")
 @Mapping("NSFileWrapperWritingOptions")
 public final class NSFileWrapperWritingOptions extends ObjCEnum {
@@ -32,6 +30,6 @@ public final class NSFileWrapperWritingOptions extends ObjCEnum {
     public static final long Atomic = 1L;
     @GlobalConstant("NSFileWrapperWritingWithNameUpdating")
     public static final long WithNameUpdating = 2L;
-    
+
 
 }

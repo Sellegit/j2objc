@@ -15,11 +15,9 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("WebKit/WebKit.h") @Mapping("WKFrameInfo")
 public class WKFrameInfo 
     extends NSObject 
@@ -29,16 +27,16 @@ public class WKFrameInfo
     
     @Mapping("init")
     public WKFrameInfo() { }
-    
+
     
     @Mapping("isMainFrame")
     public native boolean isMainFrame();
     @Mapping("request")
     public native NSURLRequest getRequest();
-    
+
     
     
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
-    
+
 }

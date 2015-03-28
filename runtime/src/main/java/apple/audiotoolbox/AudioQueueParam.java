@@ -17,9 +17,6 @@ import apple.coreaudio.*;
 import apple.coremedia.*;
 
 
-
-
-
 @Library("AudioToolbox/AudioToolbox.h")
 @Mapping("AudioQueueParam")
 public final class AudioQueueParam extends ObjCEnum {
@@ -34,6 +31,6 @@ public final class AudioQueueParam extends ObjCEnum {
     public static final long VolumeRampTime = 4L;
     @GlobalConstant("kAudioQueueParam_Pan")
     public static final long Pan = 13L;
-    
+
 
 }

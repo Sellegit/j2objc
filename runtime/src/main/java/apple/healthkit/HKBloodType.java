@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("HealthKit/HealthKit.h")
 @Mapping("HKBloodType")
 public final class HKBloodType extends ObjCEnum {
@@ -41,6 +39,6 @@ public final class HKBloodType extends ObjCEnum {
     public static final long OPositive = 7L;
     @GlobalConstant("HKBloodTypeONegative")
     public static final long ONegative = 8L;
-    
+
 
 }

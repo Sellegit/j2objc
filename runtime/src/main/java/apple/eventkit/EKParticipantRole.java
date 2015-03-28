@@ -16,9 +16,6 @@ import apple.addressbook.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("EventKit/EventKit.h")
 @Mapping("EKParticipantRole")
 public final class EKParticipantRole extends ObjCEnum {
@@ -33,6 +30,6 @@ public final class EKParticipantRole extends ObjCEnum {
     public static final long Chair = 3L;
     @GlobalConstant("EKParticipantRoleNonParticipant")
     public static final long NonParticipant = 4L;
-    
+
 
 }

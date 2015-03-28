@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h")
 @Mapping("NSMatchingOptions")
 public final class NSMatchingOptions extends ObjCEnum {
@@ -36,6 +33,6 @@ public final class NSMatchingOptions extends ObjCEnum {
     public static final long WithTransparentBounds = 8L;
     @GlobalConstant("NSMatchingWithoutAnchoringBounds")
     public static final long WithoutAnchoringBounds = 16L;
-    
+
 
 }

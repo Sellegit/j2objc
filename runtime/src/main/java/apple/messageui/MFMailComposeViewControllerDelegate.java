@@ -15,24 +15,21 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
-
-
 @Library("MessageUI/MessageUI.h") @Mapping("MFMailComposeViewControllerDelegate")
 public interface MFMailComposeViewControllerDelegate 
     extends NSObjectProtocol {
 
     
     
-    
-    
+
+
     
     /**
      * @since Available in iOS 3.0 and later.
      */
     @Mapping("mailComposeController:didFinishWithResult:error:")
     void didFinish(MFMailComposeViewController controller, @Representing("MFMailComposeResult") long result, NSError error);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

@@ -13,7 +13,6 @@ import apple.coregraphics.*;
 import apple.coreservices.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("ImageIO/ImageIO.h")
@@ -116,5 +115,5 @@ public class CGImagePropertyNikon
      */
     @GlobalConstant("kCGImagePropertyMakerNikonShutterCount")
     public static native CFString ShutterCountKey();
-    
+
 }

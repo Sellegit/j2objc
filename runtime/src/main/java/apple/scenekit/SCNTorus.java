@@ -20,9 +20,6 @@ import apple.spritekit.*;
 import apple.opengles.*;
 
 
-
-
-
 @Library("SceneKit/SceneKit.h") @Mapping("SCNTorus")
 public class SCNTorus 
     extends SCNGeometry 
@@ -32,7 +29,7 @@ public class SCNTorus
     
     @Mapping("init")
     public SCNTorus() { }
-    
+
     
     @Mapping("ringRadius")
     public native @MachineSizedFloat double getRingRadius();
@@ -50,10 +47,10 @@ public class SCNTorus
     public native @MachineSizedSInt long getPipeSegmentCount();
     @Mapping("setPipeSegmentCount:")
     public native void setPipeSegmentCount(@MachineSizedSInt long v);
-    
+
     
     
     @Mapping("torusWithRingRadius:pipeRadius:")
     public static native SCNTorus create(@MachineSizedFloat double ringRadius, @MachineSizedFloat double pipeRadius);
-    
+
 }

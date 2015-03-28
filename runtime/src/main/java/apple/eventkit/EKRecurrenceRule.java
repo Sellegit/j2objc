@@ -16,11 +16,9 @@ import apple.addressbook.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 4.0 and later.
  */
-
 @Library("EventKit/EventKit.h") @Mapping("EKRecurrenceRule")
 public class EKRecurrenceRule 
     extends EKObject 
@@ -34,7 +32,7 @@ public class EKRecurrenceRule
     public EKRecurrenceRule(EKRecurrenceFrequency type, @MachineSizedSInt long interval, NSArray<?> days, NSArray<?> monthDays, NSArray<?> months, NSArray<?> weeksOfTheYear, NSArray<?> daysOfTheYear, NSArray<?> setPositions, EKRecurrenceEnd end) { }
     @Mapping("init")
     public EKRecurrenceRule() { }
-    
+
     
     @Mapping("calendarIdentifier")
     public native String getCalendarIdentifier();
@@ -60,10 +58,10 @@ public class EKRecurrenceRule
     public native NSArray<NSNumber> getMonthsOfTheYear();
     @Mapping("setPositions")
     public native NSArray<NSNumber> getSetPositions();
-    
+
     
     
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
-    
+
 }

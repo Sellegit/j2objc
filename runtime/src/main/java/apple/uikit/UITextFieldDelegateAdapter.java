@@ -18,7 +18,6 @@ import apple.coreimage.*;
 import apple.coretext.*;
 import apple.corelocation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -29,8 +28,8 @@ public abstract class UITextFieldDelegateAdapter
     
     
     
-    
-    
+
+
     
     
     @NotImplemented("textFieldShouldBeginEditing:")
@@ -47,5 +46,5 @@ public abstract class UITextFieldDelegateAdapter
     public boolean shouldClear(UITextField textField) { throw new UnsupportedOperationException(); }
     @NotImplemented("textFieldShouldReturn:")
     public boolean shouldReturn(UITextField textField) { throw new UnsupportedOperationException(); }
-    
+
 }

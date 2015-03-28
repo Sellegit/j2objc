@@ -18,7 +18,6 @@ import apple.coremedia.*;
 import apple.security.*;
 import apple.dispatch.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -29,8 +28,8 @@ public abstract class NSURLConnectionDownloadDelegateAdapter
     
     
     
-    
-    
+
+
     
     
     @NotImplemented("connection:didWriteData:totalBytesWritten:expectedTotalBytes:")
@@ -39,5 +38,5 @@ public abstract class NSURLConnectionDownloadDelegateAdapter
     public void didResumeDownloading(NSURLConnection connection, long totalBytesWritten, long expectedTotalBytes) { throw new UnsupportedOperationException(); }
     @NotImplemented("connectionDidFinishDownloading:destinationURL:")
     public void didFinishDownloading(NSURLConnection connection, NSURL destinationURL) { throw new UnsupportedOperationException(); }
-    
+
 }

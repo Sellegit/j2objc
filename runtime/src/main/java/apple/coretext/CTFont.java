@@ -13,7 +13,6 @@ import apple.coregraphics.*;
 import apple.coreservices.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Mapping("CTFontRef") @Library("CoreText/CoreText.h")
@@ -24,7 +23,7 @@ public class CTFont
     
     
     protected CTFont() {}
-    
+
     
     
     
@@ -298,5 +297,5 @@ public class CTFont
      */
     @GlobalFunction("CTFontCopyDefaultCascadeListForLanguages")
     public static native CFArray getDefaultCascadeList(CTFont font, CFArray languagePrefList);
-    
+
 }

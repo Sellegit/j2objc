@@ -20,21 +20,18 @@ import apple.spritekit.*;
 import apple.opengles.*;
 
 
-
-
-
 @Library("SceneKit/SceneKit.h") @Mapping("SCNNodeRendererDelegate")
 public interface SCNNodeRendererDelegate 
     extends NSObjectProtocol {
 
     
     
-    
-    
+
+
     
     @Mapping("renderNode:renderer:arguments:")
     void renderNode(SCNNode node, SCNRenderer renderer, NSDictionary<?, ?> arguments);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

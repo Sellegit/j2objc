@@ -15,11 +15,9 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
 /**
  * @since Available in iOS 6.0 and later.
  */
-
 @Library("GameKit/GameKit.h") @Mapping("GKChallenge")
 public class GKChallenge 
     extends NSObject 
@@ -29,7 +27,7 @@ public class GKChallenge
     
     @Mapping("init")
     public GKChallenge() { }
-    
+
     
     /**
      * @since Available in iOS 6.0 and later.
@@ -63,7 +61,7 @@ public class GKChallenge
     public native NSDate getCompletionDate();
     @Mapping("message")
     public native String getMessage();
-    
+
     
     
     @Mapping("decline")
@@ -72,5 +70,5 @@ public class GKChallenge
     public static native void loadReceivedChallenges(Todo completionHandler);
     @Mapping("encodeWithCoder:")
     public native void encode(NSCoder aCoder);
-    
+
 }

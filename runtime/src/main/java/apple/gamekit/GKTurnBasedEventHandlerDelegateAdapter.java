@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 import apple.uikit.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -25,8 +24,8 @@ public abstract class GKTurnBasedEventHandlerDelegateAdapter
     
     
     
-    
-    
+
+
     
     
     /**
@@ -57,5 +56,5 @@ public abstract class GKTurnBasedEventHandlerDelegateAdapter
     @Deprecated
     @NotImplemented("handleMatchEnded:")
     public void handleMatchEnded(GKTurnBasedMatch match) { throw new UnsupportedOperationException(); }
-    
+
 }

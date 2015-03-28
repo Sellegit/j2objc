@@ -15,11 +15,9 @@ import apple.dispatch.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 2.0 and later.
  */
-
 @Library("CoreFoundation/CoreFoundation.h")
 @Mapping("CFTimeZoneNameStyle")
 public final class CFTimeZoneNameStyle extends ObjCEnum {
@@ -36,6 +34,6 @@ public final class CFTimeZoneNameStyle extends ObjCEnum {
     public static final long Generic = 4L;
     @GlobalConstant("kCFTimeZoneNameStyleShortGeneric")
     public static final long ShortGeneric = 5L;
-    
+
 
 }

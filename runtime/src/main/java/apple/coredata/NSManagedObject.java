@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 3.0 and later.
  */
-
 @Library("CoreData/CoreData.h") @Mapping("NSManagedObject")
 public class NSManagedObject 
     extends NSObject 
@@ -30,7 +28,7 @@ public class NSManagedObject
     public NSManagedObject(NSEntityDescription entity, NSManagedObjectContext context) { }
     @Mapping("init")
     public NSManagedObject() { }
-    
+
     
     @Mapping("managedObjectContext")
     public native NSManagedObjectContext getManagedObjectContext();
@@ -56,7 +54,7 @@ public class NSManagedObject
      */
     @Mapping("faultingState")
     public native @MachineSizedUInt long getFaultingState();
-    
+
     
     
     /**
@@ -131,5 +129,5 @@ public class NSManagedObject
      */
     @Mapping("contextShouldIgnoreUnmodeledPropertyChanges")
     public static native boolean shouldContextIgnoreUnmodeledPropertyChanges();
-    
+
 }

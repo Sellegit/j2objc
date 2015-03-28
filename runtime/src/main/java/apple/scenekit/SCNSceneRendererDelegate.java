@@ -20,17 +20,14 @@ import apple.spritekit.*;
 import apple.opengles.*;
 
 
-
-
-
 @Library("SceneKit/SceneKit.h") @Mapping("SCNSceneRendererDelegate")
 public interface SCNSceneRendererDelegate 
     extends NSObjectProtocol {
 
     
     
-    
-    
+
+
     
     @Mapping("renderer:updateAtTime:")
     void update(SCNSceneRenderer aRenderer, double time);
@@ -42,7 +39,7 @@ public interface SCNSceneRendererDelegate
     void willRenderScene(SCNSceneRenderer aRenderer, SCNScene scene, double time);
     @Mapping("renderer:didRenderScene:atTime:")
     void didRenderScene(SCNSceneRenderer aRenderer, SCNScene scene, double time);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

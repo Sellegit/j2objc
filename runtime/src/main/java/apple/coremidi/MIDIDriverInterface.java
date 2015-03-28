@@ -14,9 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
-
-
 @Mapping("MIDIDriverInterface") @Library("CoreMIDI/CoreMIDI.h")
 public class MIDIDriverInterface 
     extends Struct 
@@ -28,6 +25,6 @@ public class MIDIDriverInterface
     
     @DotMapping("_reserved")
     public native Todo get_reserved();
-    
+
     
 }

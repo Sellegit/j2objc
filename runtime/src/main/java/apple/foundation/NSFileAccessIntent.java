@@ -19,11 +19,9 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("Foundation/Foundation.h") @Mapping("NSFileAccessIntent")
 public class NSFileAccessIntent 
     extends NSObject 
@@ -33,16 +31,16 @@ public class NSFileAccessIntent
     
     @Mapping("init")
     public NSFileAccessIntent() { }
-    
+
     
     @Mapping("URL")
     public native NSURL getURL();
-    
+
     
     
     @Mapping("readingIntentWithURL:options:")
     public static native NSFileAccessIntent createReadingIntent(NSURL url, @Representing("NSFileCoordinatorReadingOptions") long options);
     @Mapping("writingIntentWithURL:options:")
     public static native NSFileAccessIntent createWritingIntent(NSURL url, @Representing("NSFileCoordinatorWritingOptions") long options);
-    
+
 }

@@ -17,11 +17,9 @@ import apple.uikit.*;
 import apple.avfoundation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("Photos/Photos.h") @Mapping("PHCachingImageManager")
 public class PHCachingImageManager 
     extends PHImageManager 
@@ -31,13 +29,13 @@ public class PHCachingImageManager
     
     @Mapping("init")
     public PHCachingImageManager() { }
-    
+
     
     @Mapping("allowsCachingHighQualityImages")
     public native boolean allowsCachingHighQualityImages();
     @Mapping("setAllowsCachingHighQualityImages:")
     public native void setAllowsCachingHighQualityImages(boolean v);
-    
+
     
     
     @Mapping("startCachingImagesForAssets:targetSize:contentMode:options:")
@@ -46,5 +44,5 @@ public class PHCachingImageManager
     public native void stopCachingImagesForAssets(NSArray<?> assets, CGSize targetSize, @Representing("PHImageContentMode") long contentMode, PHImageRequestOptions options);
     @Mapping("stopCachingImagesForAllAssets")
     public native void stopCachingImagesForAllAssets();
-    
+
 }

@@ -19,7 +19,6 @@ import apple.coremedia.*;
 import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("AVFoundation/AVFoundation.h")
@@ -30,10 +29,10 @@ public final class NSCoderExtensions
     
     
     private NSCoderExtensions() {}
+
     
-    
-    
-    
+
+
     
     
     /**
@@ -66,5 +65,5 @@ public final class NSCoderExtensions
      */
     @ExtensionMapping("decodeCMTimeMappingForKey:")
     public static native CMTimeMapping decodeCMTimeMapping(NSCoder thiz, String key);
-    
+
 }

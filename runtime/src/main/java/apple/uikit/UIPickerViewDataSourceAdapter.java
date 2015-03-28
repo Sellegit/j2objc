@@ -18,7 +18,6 @@ import apple.coreimage.*;
 import apple.coretext.*;
 import apple.corelocation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -29,13 +28,13 @@ public abstract class UIPickerViewDataSourceAdapter
     
     
     
-    
-    
+
+
     
     
     @NotImplemented("numberOfComponentsInPickerView:")
     public @MachineSizedSInt long getNumberOfComponents(UIPickerView pickerView) { throw new UnsupportedOperationException(); }
     @NotImplemented("pickerView:numberOfRowsInComponent:")
     public @MachineSizedSInt long getNumberOfRows(UIPickerView pickerView, @MachineSizedSInt long component) { throw new UnsupportedOperationException(); }
-    
+
 }

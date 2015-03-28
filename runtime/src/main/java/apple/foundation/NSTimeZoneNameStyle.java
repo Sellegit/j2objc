@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h")
 @Mapping("NSTimeZoneNameStyle")
 public final class NSTimeZoneNameStyle extends ObjCEnum {
@@ -38,6 +35,6 @@ public final class NSTimeZoneNameStyle extends ObjCEnum {
     public static final long Generic = 4L;
     @GlobalConstant("NSTimeZoneNameStyleShortGeneric")
     public static final long ShortGeneric = 5L;
-    
+
 
 }

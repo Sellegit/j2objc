@@ -19,17 +19,14 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h") @Mapping("UIViewControllerAnimatedTransitioning")
 public interface UIViewControllerAnimatedTransitioning 
     extends NSObjectProtocol {
 
     
     
-    
-    
+
+
     
     @Mapping("transitionDuration:")
     double getTransitionDuration(UIViewControllerContextTransitioning transitionContext);
@@ -37,7 +34,7 @@ public interface UIViewControllerAnimatedTransitioning
     void animateTransition(UIViewControllerContextTransitioning transitionContext);
     @Mapping("animationEnded:")
     void animationEnded(boolean transitionCompleted);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

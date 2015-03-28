@@ -17,9 +17,6 @@ import apple.coreaudio.*;
 import apple.coremedia.*;
 
 
-
-
-
 @Library("AudioToolbox/AudioToolbox.h")
 @Mapping("AudioSessionCategory")
 public final class AudioSessionCategory extends ObjCEnum {
@@ -36,6 +33,6 @@ public final class AudioSessionCategory extends ObjCEnum {
     public static final long PlayAndRecord = 1886151026L;
     @GlobalConstant("kAudioSessionCategory_AudioProcessing")
     public static final long AudioProcessing = 1886547811L;
-    
+
 
 }

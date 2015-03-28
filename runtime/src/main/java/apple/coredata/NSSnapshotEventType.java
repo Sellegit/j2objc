@@ -14,9 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
-
-
 @Library("CoreData/CoreData.h")
 @Mapping("NSSnapshotEventType")
 public final class NSSnapshotEventType extends ObjCEnum {
@@ -33,6 +30,6 @@ public final class NSSnapshotEventType extends ObjCEnum {
     public static final long Refresh = 32L;
     @GlobalConstant("NSSnapshotEventMergePolicy")
     public static final long MergePolicy = 64L;
-    
+
 
 }

@@ -16,7 +16,6 @@ import apple.corelocation.*;
 import apple.uikit.*;
 import apple.dispatch.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("MapKit/MapKit.h")
@@ -59,5 +58,5 @@ public class MKLaunchOptions
      */
     @GlobalConstant("MKLaunchOptionsCameraKey")
     public static native NSString CameraKey();
-    
+
 }

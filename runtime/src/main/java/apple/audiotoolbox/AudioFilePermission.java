@@ -17,9 +17,6 @@ import apple.coreaudio.*;
 import apple.coremedia.*;
 
 
-
-
-
 @Library("AudioToolbox/AudioToolbox.h")
 @Mapping("AudioFilePermission")
 public final class AudioFilePermission extends ObjCEnum {
@@ -30,6 +27,6 @@ public final class AudioFilePermission extends ObjCEnum {
     public static final long WritePermission = 2L;
     @GlobalConstant("kAudioFileReadWritePermission")
     public static final long ReadWritePermission = 3L;
-    
+
 
 }

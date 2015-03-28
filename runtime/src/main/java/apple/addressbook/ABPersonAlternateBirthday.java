@@ -13,7 +13,6 @@ import apple.coregraphics.*;
 import apple.coreservices.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("AddressBook/AddressBook.h")
@@ -56,5 +55,5 @@ public class ABPersonAlternateBirthday
      */
     @GlobalConstant("kABPersonAlternateBirthdayDayKey")
     public static native CFString DayKey();
-    
+
 }

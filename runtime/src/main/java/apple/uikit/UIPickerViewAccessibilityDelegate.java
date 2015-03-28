@@ -19,23 +19,20 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h") @Mapping("UIPickerViewAccessibilityDelegate")
 public interface UIPickerViewAccessibilityDelegate 
     extends UIPickerViewDelegate {
 
     
     
-    
-    
+
+
     
     @Mapping("pickerView:accessibilityLabelForComponent:")
     String getAccessibilityLabel(UIPickerView pickerView, @MachineSizedSInt long component);
     @Mapping("pickerView:accessibilityHintForComponent:")
     String getAccessibilityHint(UIPickerView pickerView, @MachineSizedSInt long component);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

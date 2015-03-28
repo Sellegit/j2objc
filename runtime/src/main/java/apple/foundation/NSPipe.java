@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h") @Mapping("NSPipe")
 public class NSPipe 
     extends NSObject 
@@ -30,16 +27,16 @@ public class NSPipe
     
     
     public NSPipe() {}
-    
+
     
     @Mapping("fileHandleForReading")
     public native NSFileHandle getFileHandleForReading();
     @Mapping("fileHandleForWriting")
     public native NSFileHandle getFileHandleForWriting();
-    
+
     
     
     @Mapping("pipe")
     public static native NSPipe create();
-    
+
 }

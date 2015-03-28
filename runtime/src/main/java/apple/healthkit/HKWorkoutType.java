@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("HealthKit/HealthKit.h") @Mapping("HKWorkoutType")
 public class HKWorkoutType 
     extends HKSampleType 
@@ -28,12 +26,12 @@ public class HKWorkoutType
     
     @Mapping("init")
     public HKWorkoutType() { }
+
+    
+
+
     
     
-    
-    
-    
-    
-    
-    
+
+
 }

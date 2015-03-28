@@ -19,17 +19,14 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h") @Mapping("UINavigationControllerDelegate")
 public interface UINavigationControllerDelegate 
     extends NSObjectProtocol {
 
     
     
-    
-    
+
+
     
     @Mapping("navigationController:willShowViewController:animated:")
     void willShowViewController(UINavigationController navigationController, UIViewController viewController, boolean animated);
@@ -55,7 +52,7 @@ public interface UINavigationControllerDelegate
      */
     @Mapping("navigationController:animationControllerForOperation:fromViewController:toViewController:")
     UIViewControllerAnimatedTransitioning getAnimationController(UINavigationController navigationController, @Representing("UINavigationControllerOperation") long operation, UIViewController fromVC, UIViewController toVC);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

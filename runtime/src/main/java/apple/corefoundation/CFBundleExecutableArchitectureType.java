@@ -15,11 +15,9 @@ import apple.dispatch.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 2.0 and later.
  */
-
 @Library("CoreFoundation/CoreFoundation.h")
 @Mapping("CFBundleExecutableArchitectureType")
 public final class CFBundleExecutableArchitectureType extends ObjCEnum {
@@ -32,6 +30,6 @@ public final class CFBundleExecutableArchitectureType extends ObjCEnum {
     public static final long X86_64 = 16777223L;
     @GlobalConstant("kCFBundleExecutableArchitecturePPC64")
     public static final long PPC64 = 16777234L;
-    
+
 
 }

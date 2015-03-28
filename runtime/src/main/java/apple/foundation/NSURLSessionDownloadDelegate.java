@@ -19,17 +19,14 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h") @Mapping("NSURLSessionDownloadDelegate")
 public interface NSURLSessionDownloadDelegate 
     extends NSURLSessionTaskDelegate {
 
     
     
-    
-    
+
+
     
     @Mapping("URLSession:downloadTask:didFinishDownloadingToURL:")
     void didFinishDownloading(NSURLSession session, NSURLSessionDownloadTask downloadTask, NSURL location);
@@ -37,7 +34,7 @@ public interface NSURLSessionDownloadDelegate
     void didWriteData(NSURLSession session, NSURLSessionDownloadTask downloadTask, long bytesWritten, long totalBytesWritten, long totalBytesExpectedToWrite);
     @Mapping("URLSession:downloadTask:didResumeAtOffset:expectedTotalBytes:")
     void didResume(NSURLSession session, NSURLSessionDownloadTask downloadTask, long fileOffset, long expectedTotalBytes);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

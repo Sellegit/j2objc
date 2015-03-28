@@ -17,9 +17,6 @@ import apple.coreaudio.*;
 import apple.coremedia.*;
 
 
-
-
-
 @Library("AudioToolbox/AudioToolbox.h")
 @Mapping("MusicEventType")
 public final class MusicEventType extends ObjCEnum {
@@ -44,6 +41,6 @@ public final class MusicEventType extends ObjCEnum {
     public static final long Parameter = 9L;
     @GlobalConstant("kMusicEventType_AUPreset")
     public static final long AUPreset = 10L;
-    
+
 
 }

@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("NetworkExtension/NetworkExtension.h") @Mapping("NEOnDemandRule")
 public class NEOnDemandRule 
     extends NSObject 
@@ -28,7 +26,7 @@ public class NEOnDemandRule
     
     @Mapping("init")
     public NEOnDemandRule() { }
-    
+
     
     /**
      * @since Available in iOS 8.0 and later.
@@ -85,10 +83,10 @@ public class NEOnDemandRule
      */
     @Mapping("setProbeURL:")
     public native void setProbeURL(NSURL v);
-    
+
     
     
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
-    
+
 }

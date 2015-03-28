@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h")
 @Mapping("AVAudioCommonFormat")
 public final class AVAudioCommonFormat extends ObjCEnum {
@@ -39,6 +37,6 @@ public final class AVAudioCommonFormat extends ObjCEnum {
     public static final long PCMFormatInt16 = 3L;
     @GlobalConstant("AVAudioPCMFormatInt32")
     public static final long PCMFormatInt32 = 4L;
-    
+
 
 }

@@ -15,9 +15,6 @@ import apple.dispatch.*;
 import apple.foundation.*;
 
 
-
-
-
 @Mapping("CFTreeContext") @Library("CoreFoundation/CoreFoundation.h")
  class CFTreeContext 
     extends Struct 
@@ -31,6 +28,6 @@ import apple.foundation.*;
     public native @MachineSizedSInt long getVersion();
     @DotMapping("info")
     public native Todo getInfo();
-    
+
     
 }

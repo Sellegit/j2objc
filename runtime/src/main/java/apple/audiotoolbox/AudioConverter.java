@@ -16,10 +16,9 @@ import apple.opengles.*;
 import apple.coreaudio.*;
 import apple.coremedia.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("AudioToolbox/AudioToolbox.h")
+@Mapping("AudioConverterRef") @Library("AudioToolbox/AudioToolbox.h")
 public class AudioConverter 
     extends Object 
      {
@@ -27,7 +26,7 @@ public class AudioConverter
     
     
     protected AudioConverter() {}
-    
+
     
     
     
@@ -76,5 +75,5 @@ public class AudioConverter
      */
     @GlobalFunction("AudioConverterConvertComplexBuffer")
     public static native AudioConverterError convertComplexBuffer(AudioConverter inAudioConverter, int inNumberPCMFrames, Todo inInputData, Todo outOutputData);
-    
+
 }

@@ -15,17 +15,14 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
-
-
 @Library("GameKit/GameKit.h") @Mapping("GKTurnBasedEventListener")
 public interface GKTurnBasedEventListener 
      {
 
     
     
-    
-    
+
+
     
     /**
      * @since Available in iOS 8.0 and later.
@@ -61,7 +58,7 @@ public interface GKTurnBasedEventListener
     @Deprecated
     @Mapping("player:didRequestMatchWithPlayers:")
     void didRequestMatchWithPlayers(GKPlayer player, NSArray<?> playerIDsToInvite);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

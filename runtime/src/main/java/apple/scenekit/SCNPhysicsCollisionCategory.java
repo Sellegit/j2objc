@@ -20,9 +20,6 @@ import apple.spritekit.*;
 import apple.opengles.*;
 
 
-
-
-
 @Library("SceneKit/SceneKit.h")
 @Mapping("SCNPhysicsCollisionCategory")
 public final class SCNPhysicsCollisionCategory extends ObjCEnum {
@@ -33,6 +30,6 @@ public final class SCNPhysicsCollisionCategory extends ObjCEnum {
     public static final long Static = 2L;
     @GlobalConstant("SCNPhysicsCollisionCategoryAll")
     public static final long All = -1L;
-    
+
 
 }

@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 5.1 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UIDictationPhrase")
 public class UIDictationPhrase 
     extends NSObject 
@@ -33,15 +31,15 @@ public class UIDictationPhrase
     
     @Mapping("init")
     public UIDictationPhrase() { }
-    
+
     
     @Mapping("text")
     public native String getText();
     @Mapping("alternativeInterpretations")
     public native List<String> getAlternativeInterpretations();
+
     
     
-    
-    
-    
+
+
 }

@@ -20,17 +20,14 @@ import apple.spritekit.*;
 import apple.opengles.*;
 
 
-
-
-
 @Library("SceneKit/SceneKit.h") @Mapping("SCNBoundingVolume")
 public interface SCNBoundingVolume 
     extends NSObjectProtocol {
 
     
     
-    
-    
+
+
     
     @Mapping("getBoundingBoxMin:max:")
     boolean getBoundingBox(SCNVector3 min, SCNVector3 max);
@@ -38,7 +35,7 @@ public interface SCNBoundingVolume
     boolean getBoundingSphere(SCNVector3 center, Todo radius);
     @Mapping("setBoundingBoxMin:max:")
     void setBoundingBox(SCNVector3 min, SCNVector3 max);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

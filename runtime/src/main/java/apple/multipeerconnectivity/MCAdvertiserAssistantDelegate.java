@@ -16,23 +16,20 @@ import apple.uikit.*;
 import apple.security.*;
 
 
-
-
-
 @Library("MultipeerConnectivity/MultipeerConnectivity.h") @Mapping("MCAdvertiserAssistantDelegate")
 public interface MCAdvertiserAssistantDelegate 
     extends NSObjectProtocol {
 
     
     
-    
-    
+
+
     
     @Mapping("advertiserAssistantWillPresentInvitation:")
     void willPresentInvitation(MCAdvertiserAssistant advertiserAssistant);
     @Mapping("advertiserAssistantDidDismissInvitation:")
     void didDismissInvitation(MCAdvertiserAssistant advertiserAssistant);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

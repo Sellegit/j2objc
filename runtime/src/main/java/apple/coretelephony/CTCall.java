@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 4.0 and later.
  */
-
 @Library("CoreTelephony/CTCall.h") @Mapping("CTCall")
 public class CTCall 
     extends NSObject 
@@ -28,7 +26,7 @@ public class CTCall
     
     @Mapping("init")
     public CTCall() { }
-    
+
     
     /**
      * @since Available in iOS 4.0 and later.
@@ -40,9 +38,9 @@ public class CTCall
      */
     @Mapping("callID")
     public native String getCallID();
+
     
     
-    
-    
-    
+
+
 }

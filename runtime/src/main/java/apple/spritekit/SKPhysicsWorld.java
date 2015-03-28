@@ -21,9 +21,6 @@ import apple.glkit.*;
 import apple.scenekit.*;
 
 
-
-
-
 @Library("SpriteKit/SpriteKit.h") @Mapping("SKPhysicsWorld")
 public class SKPhysicsWorld 
     extends NSObject 
@@ -33,7 +30,7 @@ public class SKPhysicsWorld
     
     @Mapping("init")
     public SKPhysicsWorld() { }
-    
+
     
     @Mapping("gravity")
     public native CGVector getGravity();
@@ -47,7 +44,7 @@ public class SKPhysicsWorld
     public native SKPhysicsContactDelegate getContactDelegate();
     @Mapping("setContactDelegate:")
     public native void setContactDelegate(SKPhysicsContactDelegate v);
-    
+
     
     
     @Mapping("addJoint:")
@@ -75,5 +72,5 @@ public class SKPhysicsWorld
     public native void enumerateBodiesAlongRay(CGPoint start, CGPoint end, @Block VoidBlock4<SKPhysicsBody, CGPoint, CGVector, Todo> block);
     @Mapping("encodeWithCoder:")
     public native void encode(NSCoder aCoder);
-    
+
 }

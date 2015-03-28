@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h")
 @Mapping("AVAudioSessionSilenceSecondaryAudioHintType")
 public final class AVAudioSessionSilenceSecondaryAudioHintType extends ObjCEnum {
@@ -33,6 +31,6 @@ public final class AVAudioSessionSilenceSecondaryAudioHintType extends ObjCEnum 
     public static final long Begin = 1L;
     @GlobalConstant("AVAudioSessionSilenceSecondaryAudioHintTypeEnd")
     public static final long End = 0L;
-    
+
 
 }

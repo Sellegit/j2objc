@@ -16,7 +16,6 @@ import apple.opengles.*;
 import apple.coreaudio.*;
 import apple.coremedia.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("AudioToolbox/AudioToolbox.h")
@@ -134,5 +133,5 @@ public class MusicTrack
      */
     @GlobalFunction("MusicTrackNewAUPresetEvent")
     public static native int newAUPresetEvent(OpaqueMusicTrack inTrack, double inTimeStamp, Todo inPresetEvent);
-    
+
 }

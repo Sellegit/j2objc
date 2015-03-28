@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("UIKit/UIKit.h")
 @Mapping("UIDocumentMenuOrder")
 public final class UIDocumentMenuOrder extends ObjCEnum {
@@ -32,6 +30,6 @@ public final class UIDocumentMenuOrder extends ObjCEnum {
     public static final long First = 0L;
     @GlobalConstant("UIDocumentMenuOrderLast")
     public static final long Last = 1L;
-    
+
 
 }

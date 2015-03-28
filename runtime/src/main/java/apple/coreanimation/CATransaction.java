@@ -17,9 +17,6 @@ import apple.coretext.*;
 import apple.opengles.*;
 
 
-
-
-
 @Library("QuartzCore/QuartzCore.h") @Mapping("CATransaction")
 public class CATransaction 
     extends NSObject 
@@ -29,10 +26,10 @@ public class CATransaction
     
     @Mapping("init")
     public CATransaction() { }
+
     
-    
-    
-    
+
+
     
     
     @Mapping("begin")
@@ -65,5 +62,5 @@ public class CATransaction
     public static native Object get(String key);
     @Mapping("setValue:forKey:")
     public static native void set(Object anObject, String key);
-    
+
 }

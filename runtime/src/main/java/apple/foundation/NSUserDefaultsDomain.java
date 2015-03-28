@@ -18,7 +18,6 @@ import apple.coremedia.*;
 import apple.security.*;
 import apple.dispatch.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("Foundation/Foundation.h")
@@ -37,5 +36,5 @@ public class NSUserDefaultsDomain
     public static native String ArgumentValue();
     @GlobalConstant("NSRegistrationDomain")
     public static native String RegistrationValue();
-    
+
 }

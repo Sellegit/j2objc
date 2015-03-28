@@ -15,11 +15,9 @@ import apple.foundation.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 5.0 and later.
  */
-
 @Library("CoreBluetooth/CoreBluetooth.h") @Mapping("CBDescriptor")
 public class CBDescriptor 
     extends CBAttribute 
@@ -29,15 +27,15 @@ public class CBDescriptor
     
     @Mapping("init")
     public CBDescriptor() { }
-    
+
     
     @Mapping("characteristic")
     public native CBCharacteristic getCharacteristic();
     @Mapping("value")
     public native Object getValue();
+
     
     
-    
-    
-    
+
+
 }

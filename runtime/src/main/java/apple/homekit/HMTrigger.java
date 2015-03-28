@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("HomeKit/HomeKit.h") @Mapping("HMTrigger")
 public class HMTrigger 
     extends NSObject 
@@ -27,7 +25,7 @@ public class HMTrigger
     
     
     public HMTrigger() {}
-    
+
     
     @Mapping("name")
     public native String getName();
@@ -37,7 +35,7 @@ public class HMTrigger
     public native NSArray<HMActionSet> getActionSets();
     @Mapping("lastFireDate")
     public native NSDate getLastFireDate();
-    
+
     
     
     @Mapping("updateName:completionHandler:")
@@ -48,5 +46,5 @@ public class HMTrigger
     public native void removeActionSet(HMActionSet actionSet, @Block VoidBlock1<NSError> completion);
     @Mapping("enable:completionHandler:")
     public native void enable(boolean enable, @Block VoidBlock1<NSError> completion);
-    
+
 }

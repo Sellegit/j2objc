@@ -14,15 +14,12 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
-
-
 @Library("CFNetwork/CFNetwork.h")
 @Mapping("CFNetServiceMonitorType")
 public final class CFNetServiceMonitorType extends ObjCEnum {
     
     @GlobalConstant("kCFNetServiceMonitorTXT")
     public static final long TXT = 1L;
-    
+
 
 }

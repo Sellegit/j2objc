@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.dispatch.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Mapping("CFMutableAttributedStringRef") @Library("CoreFoundation/CoreFoundation.h")
@@ -25,7 +24,7 @@ public class CFMutableAttributedString
     
     
     protected CFMutableAttributedString() {}
-    
+
     
     
     
@@ -47,5 +46,5 @@ public class CFMutableAttributedString
     public static native void beginEditing(CFMutableAttributedString aStr);
     @GlobalFunction("CFAttributedStringEndEditing")
     public static native void endEditing(CFMutableAttributedString aStr);
-    
+
 }

@@ -16,7 +16,6 @@ import apple.opengles.*;
 import apple.coreaudio.*;
 import apple.coremedia.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("AudioToolbox/AudioToolbox.h")
@@ -174,5 +173,5 @@ public class AUGraph
      */
     @GlobalFunction("MusicSequenceGetAUGraph")
     public static native int musicSequenceGet(OpaqueMusicSequence inSequence, Todo outGraph);
-    
+
 }

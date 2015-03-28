@@ -17,11 +17,9 @@ import apple.uikit.*;
 import apple.avfoundation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("Photos/Photos.h")
 @Mapping("PHAssetMediaSubtype")
 public final class PHAssetMediaSubtype extends ObjCEnum {
@@ -38,6 +36,6 @@ public final class PHAssetMediaSubtype extends ObjCEnum {
     public static final long VideoHighFrameRate = 131072L;
     @GlobalConstant("PHAssetMediaSubtypeVideoTimelapse")
     public static final long VideoTimelapse = 262144L;
-    
+
 
 }

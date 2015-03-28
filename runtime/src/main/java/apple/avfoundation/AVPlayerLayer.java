@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 4.0 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h") @Mapping("AVPlayerLayer")
 public class AVPlayerLayer 
     extends CALayer 
@@ -36,7 +34,7 @@ public class AVPlayerLayer
     public AVPlayerLayer() { }
     @Mapping("initWithLayer:")
     public AVPlayerLayer(Object layer) { }
-    
+
     
     @Mapping("player")
     public native AVPlayer getPlayer();
@@ -53,10 +51,10 @@ public class AVPlayerLayer
      */
     @Mapping("videoRect")
     public native CGRect getVideoRect();
-    
+
     
     
     @Mapping("playerLayerWithPlayer:")
     public static native AVPlayerLayer create(AVPlayer player);
-    
+
 }

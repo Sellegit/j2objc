@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 4.2 and later.
  */
-
 @Library("CoreMIDI/CoreMIDI.h") @Mapping("MIDINetworkConnection")
 public class MIDINetworkConnection 
     extends NSObject 
@@ -28,14 +26,14 @@ public class MIDINetworkConnection
     
     @Mapping("init")
     public MIDINetworkConnection() { }
-    
+
     
     @Mapping("host")
     public native MIDINetworkHost getHost();
-    
+
     
     
     @Mapping("connectionWithHost:")
     public static native MIDINetworkConnection create(MIDINetworkHost host);
-    
+
 }

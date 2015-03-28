@@ -16,7 +16,6 @@ import apple.corelocation.*;
 import apple.uikit.*;
 import apple.dispatch.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("MapKit/MapKit.h")
@@ -27,18 +26,18 @@ public final class NSValueExtensions
     
     
     private NSValueExtensions() {}
-    
+
     
     @ExtensionMapping("MKCoordinateValue")
     public static native CLLocationCoordinate2D getMKCoordinateValue(NSValue thiz);
     @ExtensionMapping("MKCoordinateSpanValue")
     public static native MKCoordinateSpan getMKCoordinateSpanValue(NSValue thiz);
-    
+
     
     
     @Mapping("valueWithMKCoordinate:")
     public static native NSValue createPrime(CLLocationCoordinate2D coordinate);
     @Mapping("valueWithMKCoordinateSpan:")
     public static native NSValue createPrime(MKCoordinateSpan span);
-    
+
 }

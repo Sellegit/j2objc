@@ -14,9 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
-
-
 @Mapping("MIDISysexSendRequest") @Library("CoreMIDI/CoreMIDI.h")
 public class MIDISysexSendRequest 
     extends Struct 
@@ -36,6 +33,6 @@ public class MIDISysexSendRequest
     public native boolean getComplete();
     @DotMapping("completionRefCon")
     public native Todo getCompletionRefCon();
-    
+
     
 }

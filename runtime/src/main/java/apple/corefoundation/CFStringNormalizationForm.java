@@ -15,9 +15,6 @@ import apple.dispatch.*;
 import apple.foundation.*;
 
 
-
-
-
 @Library("CoreFoundation/CoreFoundation.h")
 @Mapping("CFStringNormalizationForm")
 public final class CFStringNormalizationForm extends ObjCEnum {
@@ -30,6 +27,6 @@ public final class CFStringNormalizationForm extends ObjCEnum {
     public static final long C = 2L;
     @GlobalConstant("kCFStringNormalizationFormKC")
     public static final long KC = 3L;
-    
+
 
 }

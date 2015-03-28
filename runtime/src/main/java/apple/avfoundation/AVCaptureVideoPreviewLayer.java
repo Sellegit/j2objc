@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 4.0 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h") @Mapping("AVCaptureVideoPreviewLayer")
 public class AVCaptureVideoPreviewLayer 
     extends CALayer 
@@ -38,7 +36,7 @@ public class AVCaptureVideoPreviewLayer
     public AVCaptureVideoPreviewLayer() { }
     @Mapping("initWithLayer:")
     public AVCaptureVideoPreviewLayer(Object layer) { }
-    
+
     
     @Mapping("session")
     public native AVCaptureSession getSession();
@@ -109,7 +107,7 @@ public class AVCaptureVideoPreviewLayer
     @Deprecated
     @Mapping("setMirrored:")
     public native void setMirrored(boolean v);
-    
+
     
     
     /**
@@ -149,5 +147,5 @@ public class AVCaptureVideoPreviewLayer
      */
     @Mapping("layerWithSessionWithNoConnection:")
     public static native AVCaptureVideoPreviewLayer createWithNoConnection(AVCaptureSession session);
-    
+
 }

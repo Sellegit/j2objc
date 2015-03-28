@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 7.0 and later.
  */
-
 @Library("UIKit/UIKit.h")
 @Mapping("UIScrollViewKeyboardDismissMode")
 public final class UIScrollViewKeyboardDismissMode extends ObjCEnum {
@@ -34,6 +32,6 @@ public final class UIScrollViewKeyboardDismissMode extends ObjCEnum {
     public static final long OnDrag = 1L;
     @GlobalConstant("UIScrollViewKeyboardDismissModeInteractive")
     public static final long Interactive = 2L;
-    
+
 
 }

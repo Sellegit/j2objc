@@ -19,17 +19,14 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h") @Mapping("NSKeyedUnarchiverDelegate")
 public interface NSKeyedUnarchiverDelegate 
     extends NSObjectProtocol {
 
     
     
-    
-    
+
+
     
     @Mapping("unarchiver:didDecodeObject:")
     Object didDecodeObject(NSKeyedUnarchiver unarchiver, Object object);
@@ -39,7 +36,7 @@ public interface NSKeyedUnarchiverDelegate
     void willFinish(NSKeyedUnarchiver unarchiver);
     @Mapping("unarchiverDidFinish:")
     void didFinish(NSKeyedUnarchiver unarchiver);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

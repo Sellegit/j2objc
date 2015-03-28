@@ -17,7 +17,6 @@ import apple.coreaudio.*;
 import apple.coreanimation.*;
 import apple.corevideo.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Mapping("CMBufferQueueRef") @Library("CoreMedia/CoreMedia.h")
@@ -28,7 +27,7 @@ public class CMBufferQueue
     
     
     protected CMBufferQueue() {}
-    
+
     
     
     
@@ -167,5 +166,5 @@ public class CMBufferQueue
      */
     @GlobalFunction("CMBufferQueueSetValidationCallback")
     public static native CMBufferQueueError setValidationCallback(CMBufferQueue queue, FunctionPtr validationCallback, Todo validationRefCon);
-    
+
 }

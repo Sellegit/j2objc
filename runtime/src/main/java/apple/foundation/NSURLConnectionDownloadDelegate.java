@@ -19,17 +19,14 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h") @Mapping("NSURLConnectionDownloadDelegate")
 public interface NSURLConnectionDownloadDelegate 
     extends NSURLConnectionDelegate {
 
     
     
-    
-    
+
+
     
     @Mapping("connection:didWriteData:totalBytesWritten:expectedTotalBytes:")
     void didWriteData(NSURLConnection connection, long bytesWritten, long totalBytesWritten, long expectedTotalBytes);
@@ -37,7 +34,7 @@ public interface NSURLConnectionDownloadDelegate
     void didResumeDownloading(NSURLConnection connection, long totalBytesWritten, long expectedTotalBytes);
     @Mapping("connectionDidFinishDownloading:destinationURL:")
     void didFinishDownloading(NSURLConnection connection, NSURL destinationURL);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

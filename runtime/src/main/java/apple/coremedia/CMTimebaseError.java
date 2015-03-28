@@ -18,9 +18,6 @@ import apple.coreanimation.*;
 import apple.corevideo.*;
 
 
-
-
-
 @Library("CoreMedia/CoreMedia.h")
 @Mapping("CMTimebaseError")
 public final class CMTimebaseError extends ObjCEnum {
@@ -35,6 +32,6 @@ public final class CMTimebaseError extends ObjCEnum {
     public static final long TimerIntervalTooShort = -12751L;
     @GlobalConstant("kCMTimebaseError_ReadOnly")
     public static final long ReadOnly = -12757L;
-    
+
 
 }

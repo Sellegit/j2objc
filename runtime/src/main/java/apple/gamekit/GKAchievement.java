@@ -15,11 +15,9 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
 /**
  * @since Available in iOS 4.1 and later.
  */
-
 @Library("GameKit/GameKit.h") @Mapping("GKAchievement")
 public class GKAchievement 
     extends NSObject 
@@ -43,7 +41,7 @@ public class GKAchievement
     @Deprecated
     @Mapping("initWithIdentifier:forPlayer:")
     public GKAchievement(String identifier, String playerID) { }
-    
+
     
     @Mapping("identifier")
     public native String getIdentifier();
@@ -86,7 +84,7 @@ public class GKAchievement
     @Deprecated
     @Mapping("playerID")
     public native String getPlayerID();
-    
+
     
     
     @Mapping("loadAchievementsWithCompletionHandler:")
@@ -131,5 +129,5 @@ public class GKAchievement
     public native void selectChallengeablePlayerIDs(NSArray<?> playerIDs, Todo completionHandler);
     @Mapping("encodeWithCoder:")
     public native void encode(NSCoder aCoder);
-    
+
 }

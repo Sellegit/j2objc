@@ -19,11 +19,9 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 7.0 and later.
  */
-
 @Library("Foundation/Foundation.h")
 @Mapping("NSURLSessionTaskState")
 public final class NSURLSessionTaskState extends ObjCEnum {
@@ -36,6 +34,6 @@ public final class NSURLSessionTaskState extends ObjCEnum {
     public static final long Canceling = 2L;
     @GlobalConstant("NSURLSessionTaskStateCompleted")
     public static final long Completed = 3L;
-    
+
 
 }

@@ -17,9 +17,6 @@ import apple.coreaudio.*;
 import apple.coremedia.*;
 
 
-
-
-
 @Library("AudioToolbox/AudioToolbox.h")
 @Mapping("CAFMarkerType")
 public final class CAFMarkerType extends ObjCEnum {
@@ -70,6 +67,6 @@ public final class CAFMarkerType extends ObjCEnum {
     public static final long TimeSignature = 1953720679L;
     @GlobalConstant("kCAFMarkerType_KeySignature")
     public static final long KeySignature = 1802725735L;
-    
+
 
 }

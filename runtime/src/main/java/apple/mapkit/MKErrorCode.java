@@ -17,11 +17,9 @@ import apple.uikit.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 3.0 and later.
  */
-
 @Library("MapKit/MapKit.h")
 @Mapping("MKErrorCode")
 public final class MKErrorCode extends ObjCEnum {
@@ -39,6 +37,6 @@ public final class MKErrorCode extends ObjCEnum {
      */
     @GlobalConstant("MKErrorDirectionsNotFound")
     public static final long DirectionsNotFound = 5L;
-    
+
 
 }

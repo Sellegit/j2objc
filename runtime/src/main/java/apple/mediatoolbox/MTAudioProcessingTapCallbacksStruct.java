@@ -16,9 +16,6 @@ import apple.coremedia.*;
 import apple.coreaudio.*;
 
 
-
-
-
 @Mapping("MTAudioProcessingTapCallbacksStruct") @Library("MediaToolbox/MediaToolbox.h")
  class MTAudioProcessingTapCallbacksStruct 
     extends Struct 
@@ -32,6 +29,6 @@ import apple.coreaudio.*;
     public native int getVersion();
     @DotMapping("clientInfo")
     public native Todo getClientInfo();
-    
+
     
 }

@@ -19,13 +19,11 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 2.0 and later.
  * @deprecated Deprecated in iOS 8.0.
  */
 @Deprecated
-
 @Library("Foundation/Foundation.h")
 @Mapping("NSOperatingSystem")
 public final class NSOperatingSystem extends ObjCEnum {
@@ -44,6 +42,6 @@ public final class NSOperatingSystem extends ObjCEnum {
     public static final long SunOS = 6L;
     @GlobalConstant("NSOSF1OperatingSystem")
     public static final long OSF1 = 7L;
-    
+
 
 }

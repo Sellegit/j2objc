@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.dispatch.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Mapping("CFMachPortRef") @Library("CoreFoundation/CoreFoundation.h")
@@ -25,7 +24,7 @@ public class CFMachPort
     
     
     protected CFMachPort() {}
-    
+
     
     
     
@@ -47,5 +46,5 @@ public class CFMachPort
     public static native void setInvalidationCallBack0(CFMachPort port, FunctionPtr callout);
     @GlobalFunction("CFMachPortCreateRunLoopSource")
     public static native CFRunLoopSource createRunLoopSource(CFAllocator allocator, CFMachPort port, @MachineSizedSInt long order);
-    
+
 }

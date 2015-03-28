@@ -15,9 +15,6 @@ import apple.foundation.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("CoreBluetooth/CoreBluetooth.h")
 @Mapping("CBATTErrorCode")
 public final class CBATTErrorCode extends ObjCEnum {
@@ -61,6 +58,6 @@ public final class CBATTErrorCode extends ObjCEnum {
     public static final long UnsupportedGroupType = 16L;
     @GlobalConstant("CBATTErrorInsufficientResources")
     public static final long InsufficientResources = 17L;
-    
+
 
 }

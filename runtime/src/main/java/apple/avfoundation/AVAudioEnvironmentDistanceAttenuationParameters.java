@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h") @Mapping("AVAudioEnvironmentDistanceAttenuationParameters")
 public class AVAudioEnvironmentDistanceAttenuationParameters 
     extends NSObject 
@@ -34,7 +32,7 @@ public class AVAudioEnvironmentDistanceAttenuationParameters
     
     @Mapping("init")
     public AVAudioEnvironmentDistanceAttenuationParameters() { }
-    
+
     
     @Mapping("distanceAttenuationModel")
     public native @Representing("AVAudioEnvironmentDistanceAttenuationModel") long getDistanceAttenuationModel();
@@ -52,9 +50,9 @@ public class AVAudioEnvironmentDistanceAttenuationParameters
     public native float getRolloffFactor();
     @Mapping("setRolloffFactor:")
     public native void setRolloffFactor(float v);
+
     
     
-    
-    
-    
+
+
 }

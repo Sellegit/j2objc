@@ -20,9 +20,6 @@ import apple.spritekit.*;
 import apple.opengles.*;
 
 
-
-
-
 @Library("SceneKit/SceneKit.h") @Mapping("SCNHitTestResult")
 public class SCNHitTestResult 
     extends NSObject 
@@ -32,7 +29,7 @@ public class SCNHitTestResult
     
     @Mapping("init")
     public SCNHitTestResult() { }
-    
+
     
     @Mapping("node")
     public native SCNNode getNode();
@@ -50,10 +47,10 @@ public class SCNHitTestResult
     public native SCNVector3 getWorldNormal();
     @Mapping("modelTransform")
     public native SCNMatrix4 getModelTransform();
-    
+
     
     
     @Mapping("textureCoordinatesWithMappingChannel:")
     public native CGPoint getTextureCoordinatesWithMappingChannel(@MachineSizedSInt long channel);
-    
+
 }

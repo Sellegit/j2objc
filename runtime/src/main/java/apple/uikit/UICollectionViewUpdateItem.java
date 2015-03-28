@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 6.0 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UICollectionViewUpdateItem")
 public class UICollectionViewUpdateItem 
     extends NSObject 
@@ -33,7 +31,7 @@ public class UICollectionViewUpdateItem
     
     @Mapping("init")
     public UICollectionViewUpdateItem() { }
-    
+
     
     @Mapping("indexPathBeforeUpdate")
     public native NSIndexPath getIndexPathBeforeUpdate();
@@ -41,9 +39,9 @@ public class UICollectionViewUpdateItem
     public native NSIndexPath getIndexPathAfterUpdate();
     @Mapping("updateAction")
     public native @Representing("UICollectionUpdateAction") long getUpdateAction();
+
     
     
-    
-    
-    
+
+
 }

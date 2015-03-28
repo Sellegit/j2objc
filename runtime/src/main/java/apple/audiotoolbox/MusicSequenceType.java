@@ -17,9 +17,6 @@ import apple.coreaudio.*;
 import apple.coremedia.*;
 
 
-
-
-
 @Library("AudioToolbox/AudioToolbox.h")
 @Mapping("MusicSequenceType")
 public final class MusicSequenceType extends ObjCEnum {
@@ -30,6 +27,6 @@ public final class MusicSequenceType extends ObjCEnum {
     public static final long Seconds = 1936024435L;
     @GlobalConstant("kMusicSequenceType_Samples")
     public static final long Samples = 1935764848L;
-    
+
 
 }

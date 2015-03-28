@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 4.0 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h") @Mapping("AVAsset")
 public class AVAsset 
     extends NSObject 
@@ -34,7 +32,7 @@ public class AVAsset
     
     @Mapping("init")
     public AVAsset() { }
-    
+
     
     @Mapping("duration")
     public native CMTime getDuration();
@@ -114,7 +112,7 @@ public class AVAsset
      */
     @Mapping("isCompatibleWithSavedPhotosAlbum")
     public native boolean isCompatibleWithSavedPhotosAlbum();
-    
+
     
     
     @Mapping("assetWithURL:")
@@ -152,5 +150,5 @@ public class AVAsset
     public native @Representing("AVKeyValueStatus") long getStatusOfValue(String key, Todo outError);
     @Mapping("loadValuesAsynchronouslyForKeys:completionHandler:")
     public native void loadValuesAsynchronously(NSArray<?> keys, @Block Runnable handler);
-    
+
 }

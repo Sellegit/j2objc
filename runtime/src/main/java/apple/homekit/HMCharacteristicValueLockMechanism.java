@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("HomeKit/HomeKit.h")
 @Mapping("HMCharacteristicValueLockMechanism")
 public final class HMCharacteristicValueLockMechanism extends ObjCEnum {
@@ -41,6 +39,6 @@ public final class HMCharacteristicValueLockMechanism extends ObjCEnum {
     public static final long UnsecuredRemotely = 7L;
     @GlobalConstant("HMCharacteristicValueLockMechanismLastKnownActionSecuredWithAutomaticSecureTimeout")
     public static final long SecuredWithAutomaticSecureTimeout = 8L;
-    
+
 
 }

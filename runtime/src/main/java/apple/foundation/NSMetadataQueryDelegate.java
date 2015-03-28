@@ -19,23 +19,20 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h") @Mapping("NSMetadataQueryDelegate")
 public interface NSMetadataQueryDelegate 
     extends NSObjectProtocol {
 
     
     
-    
-    
+
+
     
     @Mapping("metadataQuery:replacementObjectForResultObject:")
     Object getReplacementObject(NSMetadataQuery query, NSMetadataItem result);
     @Mapping("metadataQuery:replacementValueForAttribute:value:")
     Object getReplacementValue(NSMetadataQuery query, String attrName, Object attrValue);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

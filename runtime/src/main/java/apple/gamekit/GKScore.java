@@ -15,11 +15,9 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
 /**
  * @since Available in iOS 4.1 and later.
  */
-
 @Library("GameKit/GameKit.h") @Mapping("GKScore")
 public class GKScore 
     extends NSObject 
@@ -43,7 +41,7 @@ public class GKScore
     @Deprecated
     @Mapping("initWithLeaderboardIdentifier:forPlayer:")
     public GKScore(String identifier, String playerID) { }
-    
+
     
     @Mapping("value")
     public native long getValue();
@@ -111,7 +109,7 @@ public class GKScore
     @Deprecated
     @Mapping("setCategory:")
     public native void setCategory(String v);
-    
+
     
     
     /**
@@ -140,5 +138,5 @@ public class GKScore
     public static native void reportScores(NSArray<?> scores, NSArray<?> challenges, @Block VoidBlock1<NSError> completionHandler);
     @Mapping("encodeWithCoder:")
     public native void encode(NSCoder aCoder);
-    
+
 }

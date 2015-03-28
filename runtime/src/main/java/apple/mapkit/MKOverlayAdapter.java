@@ -16,7 +16,6 @@ import apple.corelocation.*;
 import apple.uikit.*;
 import apple.dispatch.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -31,7 +30,7 @@ public abstract class MKOverlayAdapter
     public CLLocationCoordinate2D getCoordinate() { throw new UnsupportedOperationException(); }
     @NotImplemented("boundingMapRect")
     public MKMapRect getBoundingMapRect() { throw new UnsupportedOperationException(); }
-    
+
     
     
     @NotImplemented("intersectsMapRect:")
@@ -41,5 +40,5 @@ public abstract class MKOverlayAdapter
      */
     @NotImplemented("canReplaceMapContent")
     public boolean canReplaceMapContent() { throw new UnsupportedOperationException(); }
-    
+
 }

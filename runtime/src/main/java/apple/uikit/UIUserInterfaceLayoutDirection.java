@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 5.0 and later.
  */
-
 @Library("UIKit/UIKit.h")
 @Mapping("UIUserInterfaceLayoutDirection")
 public final class UIUserInterfaceLayoutDirection extends ObjCEnum {
@@ -32,6 +30,6 @@ public final class UIUserInterfaceLayoutDirection extends ObjCEnum {
     public static final long LeftToRight = 0L;
     @GlobalConstant("UIUserInterfaceLayoutDirectionRightToLeft")
     public static final long RightToLeft = 1L;
-    
+
 
 }

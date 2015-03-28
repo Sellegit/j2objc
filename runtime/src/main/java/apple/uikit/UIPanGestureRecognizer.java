@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 3.2 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UIPanGestureRecognizer")
 public class UIPanGestureRecognizer 
     extends UIGestureRecognizer 
@@ -35,7 +33,7 @@ public class UIPanGestureRecognizer
     public UIPanGestureRecognizer(Object target, Selector action) { }
     @Mapping("init")
     public UIPanGestureRecognizer() { }
-    
+
     
     @Mapping("minimumNumberOfTouches")
     public native @MachineSizedUInt long getMinimumNumberOfTouches();
@@ -45,7 +43,7 @@ public class UIPanGestureRecognizer
     public native @MachineSizedUInt long getMaximumNumberOfTouches();
     @Mapping("setMaximumNumberOfTouches:")
     public native void setMaximumNumberOfTouches(@MachineSizedUInt long v);
-    
+
     
     
     @Mapping("translationInView:")
@@ -54,5 +52,5 @@ public class UIPanGestureRecognizer
     public native void setTranslation(CGPoint translation, UIView view);
     @Mapping("velocityInView:")
     public native CGPoint getVelocity(UIView view);
-    
+
 }

@@ -15,9 +15,6 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
-
-
 @Library("GameKit/GameKit.h")
 @Mapping("GKInviteRecipientResponse")
 public final class GKInviteRecipientResponse extends ObjCEnum {
@@ -46,6 +43,6 @@ public final class GKInviteRecipientResponse extends ObjCEnum {
     public static final long eResponseUnableToConnect = 4L;
     @GlobalConstant("GKInviteeResponseNoAnswer")
     public static final long eResponseNoAnswer = 5L;
-    
+
 
 }

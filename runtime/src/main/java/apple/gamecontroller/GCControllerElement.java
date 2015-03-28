@@ -14,9 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
-
-
 @Library("GameController/GameController.h") @Mapping("GCControllerElement")
 public class GCControllerElement 
     extends NSObject 
@@ -26,15 +23,15 @@ public class GCControllerElement
     
     @Mapping("init")
     public GCControllerElement() { }
-    
+
     
     @Mapping("collection")
     public native GCControllerElement getCollection();
     @Mapping("isAnalog")
     public native boolean isAnalog();
+
     
     
-    
-    
-    
+
+
 }

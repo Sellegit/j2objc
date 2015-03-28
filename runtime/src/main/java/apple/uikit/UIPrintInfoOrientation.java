@@ -19,9 +19,6 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h")
 @Mapping("UIPrintInfoOrientation")
 public final class UIPrintInfoOrientation extends ObjCEnum {
@@ -30,6 +27,6 @@ public final class UIPrintInfoOrientation extends ObjCEnum {
     public static final long Portrait = 0L;
     @GlobalConstant("UIPrintInfoOrientationLandscape")
     public static final long Landscape = 1L;
-    
+
 
 }

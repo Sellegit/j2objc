@@ -17,9 +17,6 @@ import apple.coreaudio.*;
 import apple.coremedia.*;
 
 
-
-
-
 @Library("AudioToolbox/AudioToolbox.h")
 @Mapping("AudioFileStreamProperty")
 public final class AudioFileStreamProperty extends ObjCEnum {
@@ -62,6 +59,6 @@ public final class AudioFileStreamProperty extends ObjCEnum {
     public static final long BitRate = 1651663220L;
     @GlobalConstant("kAudioFileStreamProperty_InfoDictionary")
     public static final long InfoDictionary = 1768842863L;
-    
+
 
 }

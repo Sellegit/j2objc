@@ -16,7 +16,6 @@ import apple.opengles.*;
 import apple.uikit.*;
 import apple.dispatch.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -27,11 +26,11 @@ public abstract class GLKNamedEffectAdapter
     
     
     
-    
-    
+
+
     
     
     @NotImplemented("prepareToDraw")
     public void prepareToDraw() { throw new UnsupportedOperationException(); }
-    
+
 }

@@ -15,11 +15,9 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
 /**
  * @since Available in iOS 7.1 and later.
  */
-
 @Library("MediaPlayer/MediaPlayer.h")
 @Mapping("MPRemoteCommandHandlerStatus")
 public final class MPRemoteCommandHandlerStatus extends ObjCEnum {
@@ -30,6 +28,6 @@ public final class MPRemoteCommandHandlerStatus extends ObjCEnum {
     public static final long NoSuchContent = 100L;
     @GlobalConstant("MPRemoteCommandHandlerStatusCommandFailed")
     public static final long CommandFailed = 200L;
-    
+
 
 }

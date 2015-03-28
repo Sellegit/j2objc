@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("HomeKit/HomeKit.h") @Mapping("HMAccessory")
 public class HMAccessory 
     extends NSObject 
@@ -28,7 +26,7 @@ public class HMAccessory
     
     @Mapping("init")
     public HMAccessory() { }
-    
+
     
     @Mapping("name")
     public native String getName();
@@ -50,12 +48,12 @@ public class HMAccessory
     public native NSArray<HMService> getServices();
     @Mapping("isBlocked")
     public native boolean isBlocked();
-    
+
     
     
     @Mapping("updateName:completionHandler:")
     public native void updateName(String name, @Block VoidBlock1<NSError> completion);
     @Mapping("identifyWithCompletionHandler:")
     public native void identify(@Block VoidBlock1<NSError> completion);
-    
+
 }

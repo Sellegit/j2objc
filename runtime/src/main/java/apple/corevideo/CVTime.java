@@ -16,9 +16,6 @@ import apple.opengles.*;
 import apple.coremedia.*;
 
 
-
-
-
 @Mapping("CVTime") @Library("CoreVideo/CoreVideo.h")
 public class CVTime 
     extends Struct 
@@ -34,7 +31,7 @@ public class CVTime
     public native int getTimeScale();
     @DotMapping("flags")
     public native int getFlags();
-    
+
     public static native CVTime create(long timeValue, int timeScale, int flags) /*-[
         CVTime __new = { .timeValue = timeValue, .timeScale = timeScale, .flags = flags };
         return __new;
@@ -44,17 +41,36 @@ public class CVTime
         return __new;
     ]-*/;
 
-    
+
     public static native CVTime copyWithtimeScale(CVTime original, int timeScale) /*-[
         CVTime __new = { .timeValue = original.timeValue, .timeScale = timeScale, .flags = original.flags };
         return __new;
     ]-*/;
 
-    
+
     public static native CVTime copyWithflags(CVTime original, int flags) /*-[
         CVTime __new = { .timeValue = original.timeValue, .timeScale = original.timeScale, .flags = flags };
         return __new;
     ]-*/;
 
-    
+
+    public static final class Adapter {
+
+        public long timeValue;
+        public int timeScale;
+        public int flags;
+        public Adapter(long timeValue, int timeScale, int flags) {
+            this.timeValue = timeValue;
+            this.timeScale = timeScale;
+            this.flags = flags;
+        }
+        public Adapter(CVTime original) {
+            this.timeValue = original.getTimeValue();
+            this.timeScale = original.getTimeScale();
+            this.flags = original.getFlags();
+        }
+        public CVTime convert() {
+            return create(timeValue, timeScale, flags);
+        }
+    }
 }

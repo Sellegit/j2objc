@@ -19,11 +19,9 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 4.0 and later.
  */
-
 @Library("Foundation/Foundation.h")
 @Mapping("NSFileWrapperReadingOptions")
 public final class NSFileWrapperReadingOptions extends ObjCEnum {
@@ -32,6 +30,6 @@ public final class NSFileWrapperReadingOptions extends ObjCEnum {
     public static final long Immediate = 1L;
     @GlobalConstant("NSFileWrapperReadingWithoutMapping")
     public static final long WithoutMapping = 2L;
-    
+
 
 }

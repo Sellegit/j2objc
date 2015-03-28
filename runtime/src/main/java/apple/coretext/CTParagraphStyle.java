@@ -13,7 +13,6 @@ import apple.coregraphics.*;
 import apple.coreservices.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Mapping("CTParagraphStyleRef") @Library("CoreText/CoreText.h")
@@ -24,7 +23,7 @@ public class CTParagraphStyle
     
     
     protected CTParagraphStyle() {}
-    
+
     
     
     
@@ -48,5 +47,5 @@ public class CTParagraphStyle
      */
     @GlobalFunction("CTParagraphStyleGetValueForSpecifier")
     public static native boolean getValueForSpecifier(CTParagraphStyle paragraphStyle, @Representing("CTParagraphStyleSpecifier") long spec, @MachineSizedUInt long valueBufferSize, Todo valueBuffer);
-    
+
 }

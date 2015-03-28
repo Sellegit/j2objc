@@ -21,9 +21,6 @@ import apple.glkit.*;
 import apple.scenekit.*;
 
 
-
-
-
 @Library("SpriteKit/SpriteKit.h") @Mapping("SKPhysicsJointPin")
 public class SKPhysicsJointPin 
     extends SKPhysicsJoint 
@@ -35,7 +32,7 @@ public class SKPhysicsJointPin
     public SKPhysicsJointPin(NSCoder aDecoder) { }
     @Mapping("init")
     public SKPhysicsJointPin() { }
-    
+
     
     @Mapping("shouldEnableLimits")
     public native boolean shouldEnableLimits();
@@ -57,10 +54,10 @@ public class SKPhysicsJointPin
     public native @MachineSizedFloat double getRotationSpeed();
     @Mapping("setRotationSpeed:")
     public native void setRotationSpeed(@MachineSizedFloat double v);
-    
+
     
     
     @Mapping("jointWithBodyA:bodyB:anchor:")
     public static native SKPhysicsJointPin create(SKPhysicsBody bodyA, SKPhysicsBody bodyB, CGPoint anchor);
-    
+
 }

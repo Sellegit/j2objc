@@ -13,7 +13,6 @@ import apple.coregraphics.*;
 import apple.coreservices.*;
 import apple.dispatch.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("Security/Security.h")
@@ -23,7 +22,7 @@ public class Security
 
     
     public static final long kSecAccessControlUserPresence = 1L;
-    
+
     
     
     
@@ -58,7 +57,7 @@ public class Security
      */
     @GlobalConstant("kSecSharedPassword")
     public static native void kSecSharedPassword(CFType v);
-    
+
     /**
      * @since Available in iOS 8.0 and later.
      */
@@ -74,5 +73,5 @@ public class Security
      */
     @GlobalFunction("SecCreateSharedWebCredentialPassword")
     public static native CFString secCreateSharedWebCredentialPassword();
-    
+
 }

@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 import apple.uikit.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("GameKit/GameKit.h")
@@ -29,5 +28,5 @@ public class GKError
     
     @GlobalConstant("GKErrorDomain")
     public static native String getClassDomain();
-    
+
 }

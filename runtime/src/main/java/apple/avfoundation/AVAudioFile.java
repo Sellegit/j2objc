@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h") @Mapping("AVAudioFile")
 public class AVAudioFile 
     extends NSObject 
@@ -33,7 +31,7 @@ public class AVAudioFile
     
     
     public AVAudioFile() {}
-    
+
     
     @Mapping("url")
     public native NSURL getUrl();
@@ -47,9 +45,9 @@ public class AVAudioFile
     public native long getFramePosition();
     @Mapping("setFramePosition:")
     public native void setFramePosition(long v);
+
     
     
-    
-    
-    
+
+
 }

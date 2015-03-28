@@ -14,17 +14,15 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 7.0 and later.
  */
-
 @Library("SafariServices/SafariServices.h")
 @Mapping("SSReadingListErrorCode")
 public final class SSReadingListErrorCode extends ObjCEnum {
     
     @GlobalConstant("SSReadingListErrorURLSchemeNotAllowed")
     public static final long URLSchemeNotAllowed = 1L;
-    
+
 
 }

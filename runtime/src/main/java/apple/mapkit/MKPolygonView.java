@@ -17,11 +17,9 @@ import apple.uikit.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 4.0 and later.
  */
-
 @Library("MapKit/MapKit.h") @Mapping("MKPolygonView")
 public class MKPolygonView 
     extends MKOverlayPathView 
@@ -47,7 +45,7 @@ public class MKPolygonView
     public MKPolygonView(CGRect frame) { }
     @Mapping("init")
     public MKPolygonView() { }
-    
+
     
     /**
      * @since Available in iOS 4.0 and later.
@@ -56,9 +54,9 @@ public class MKPolygonView
     @Deprecated
     @Mapping("polygon")
     public native MKPolygon getPolygon();
+
     
     
-    
-    
-    
+
+
 }

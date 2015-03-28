@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 6.0 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("NSShadow")
 public class NSShadow 
     extends NSObject 
@@ -33,7 +31,7 @@ public class NSShadow
     
     @Mapping("init")
     public NSShadow() { }
-    
+
     
     @Mapping("shadowOffset")
     public native CGSize getShadowOffset();
@@ -47,12 +45,12 @@ public class NSShadow
     public native UIColor getShadowColor();
     @Mapping("setShadowColor:")
     public native void setShadowColor(UIColor v);
-    
+
     
     
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
     @Mapping("encodeWithCoder:")
     public native void encode(NSCoder aCoder);
-    
+
 }

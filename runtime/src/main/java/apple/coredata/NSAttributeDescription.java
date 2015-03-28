@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 3.0 and later.
  */
-
 @Library("CoreData/CoreData.h") @Mapping("NSAttributeDescription")
 public class NSAttributeDescription 
     extends NSPropertyDescription 
@@ -30,7 +28,7 @@ public class NSAttributeDescription
     public NSAttributeDescription(NSCoder aDecoder) { }
     @Mapping("init")
     public NSAttributeDescription() { }
-    
+
     
     @Mapping("attributeType")
     public native @Representing("NSAttributeType") long getAttributeType();
@@ -69,9 +67,9 @@ public class NSAttributeDescription
      */
     @Mapping("setAllowsExternalBinaryDataStorage:")
     public native void setAllowsExternalBinaryDataStorage(boolean v);
+
     
     
-    
-    
-    
+
+
 }

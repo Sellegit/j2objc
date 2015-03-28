@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("HealthKit/HealthKit.h")
 @Mapping("HKErrorCode")
 public final class HKErrorCode extends ObjCEnum {
@@ -39,6 +37,6 @@ public final class HKErrorCode extends ObjCEnum {
     public static final long ErrorDatabaseInaccessible = 6L;
     @GlobalConstant("HKErrorUserCanceled")
     public static final long ErrorUserCanceled = 7L;
-    
+
 
 }

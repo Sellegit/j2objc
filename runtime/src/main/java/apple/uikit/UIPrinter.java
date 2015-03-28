@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UIPrinter")
 public class UIPrinter 
     extends NSObject 
@@ -33,7 +31,7 @@ public class UIPrinter
     
     @Mapping("init")
     public UIPrinter() { }
-    
+
     
     @Mapping("URL")
     public native NSURL getURL();
@@ -49,12 +47,12 @@ public class UIPrinter
     public native boolean supportsColor();
     @Mapping("supportsDuplex")
     public native boolean supportsDuplex();
-    
+
     
     
     @Mapping("contactPrinter:")
     public native void contactPrinter(@Block VoidBooleanBlock completionHandler);
     @Mapping("printerWithURL:")
     public static native UIPrinter create(NSURL url);
-    
+
 }

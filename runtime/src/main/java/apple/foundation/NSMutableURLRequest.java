@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h") @Mapping("NSMutableURLRequest")
 public class NSMutableURLRequest 
     extends NSURLRequest 
@@ -35,7 +32,7 @@ public class NSMutableURLRequest
     public NSMutableURLRequest(NSURL URL, @Representing("NSURLRequestCachePolicy") long cachePolicy, double timeoutInterval) { }
     @Mapping("init")
     public NSMutableURLRequest() { }
-    
+
     
     @Mapping("URL")
     public native NSURL getURL();
@@ -103,12 +100,12 @@ public class NSMutableURLRequest
      */
     @Mapping("setHTTPShouldUsePipelining:")
     public native void setShouldUseHTTPPipelining(boolean v);
-    
+
     
     
     @Mapping("setValue:forHTTPHeaderField:")
     public native void setHTTPHeaderField0(String value, String field);
     @Mapping("addValue:forHTTPHeaderField:")
     public native void addHTTPHeaderField0(String value, String field);
-    
+
 }

@@ -18,9 +18,6 @@ import apple.coreanimation.*;
 import apple.corevideo.*;
 
 
-
-
-
 @Mapping("CMTimeRange") @Library("CoreMedia/CoreMedia.h")
 public class CMTimeRange 
     extends Struct 
@@ -34,7 +31,7 @@ public class CMTimeRange
     public native CMTime getStart();
     @DotMapping("duration")
     public native CMTime getDuration();
-    
+
     public static native CMTimeRange create(CMTime start, CMTime duration) /*-[
         CMTimeRange __new = { .start = start, .duration = duration };
         return __new;
@@ -44,13 +41,29 @@ public class CMTimeRange
         return __new;
     ]-*/;
 
-    
+
     public static native CMTimeRange copyWithduration(CMTimeRange original, CMTime duration) /*-[
         CMTimeRange __new = { .start = original.start, .duration = duration };
         return __new;
     ]-*/;
 
-    
+
+    public static final class Adapter {
+
+        public CMTime start;
+        public CMTime duration;
+        public Adapter(CMTime start, CMTime duration) {
+            this.start = start;
+            this.duration = duration;
+        }
+        public Adapter(CMTimeRange original) {
+            this.start = original.getStart();
+            this.duration = original.getDuration();
+        }
+        public CMTimeRange convert() {
+            return create(start, duration);
+        }
+    }
     /**
      * @since Available in iOS 4.0 and later.
      */
@@ -61,7 +74,7 @@ public class CMTimeRange
      */
     @GlobalConstant("kCMTimeRangeInvalid")
     public static native CMTimeRange Invalid();
-    
+
     /**
      * @since Available in iOS 4.0 and later.
      */
@@ -117,5 +130,5 @@ public class CMTimeRange
      */
     @GlobalFunction("CMTimeRangeShow")
     public static native void show(CMTimeRange range);
-    
+
 }

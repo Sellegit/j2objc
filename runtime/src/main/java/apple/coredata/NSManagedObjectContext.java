@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 3.0 and later.
  */
-
 @Library("CoreData/CoreData.h") @Mapping("NSManagedObjectContext")
 public class NSManagedObjectContext 
     extends NSObject 
@@ -33,7 +31,7 @@ public class NSManagedObjectContext
     public NSManagedObjectContext(@Representing("NSManagedObjectContextConcurrencyType") long ct) { }
     @Mapping("init")
     public NSManagedObjectContext() { }
-    
+
     
     @Mapping("persistentStoreCoordinator")
     public native NSPersistentStoreCoordinator getPersistentStoreCoordinator();
@@ -99,7 +97,7 @@ public class NSManagedObjectContext
     public native Object getMergePolicy();
     @Mapping("setMergePolicy:")
     public native void setMergePolicy(Object v);
-    
+
     
     
     /**
@@ -117,7 +115,7 @@ public class NSManagedObjectContext
      */
     @GlobalConstant("NSManagedObjectContextObjectsDidChangeNotification")
     public static native NSString ObjectsDidChangeNotification();
-    
+
     /**
      * @since Available in iOS 5.0 and later.
      */
@@ -204,5 +202,5 @@ public class NSManagedObjectContext
     public native void mergeChangesFromContextDidSaveNotification(NSNotification notification);
     @Mapping("encodeWithCoder:")
     public native void encode(NSCoder aCoder);
-    
+
 }

@@ -19,7 +19,6 @@ import apple.glkit.*;
 import apple.spritekit.*;
 import apple.opengles.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -72,7 +71,7 @@ public abstract class SCNSceneRendererAdapter
     public void setOverlaySKScene(SKScene v) { throw new UnsupportedOperationException(); }
     @NotImplemented("context")
     public EAGLContext getContext() { throw new UnsupportedOperationException(); }
-    
+
     
     
     @NotImplemented("hitTest:options:")
@@ -87,5 +86,5 @@ public abstract class SCNSceneRendererAdapter
     public boolean prepareObject(Object object, @Block Block0<Boolean> block) { throw new UnsupportedOperationException(); }
     @NotImplemented("prepareObjects:withCompletionHandler:")
     public void prepareObjects(NSArray<?> objects, @Block VoidBooleanBlock completionHandler) { throw new UnsupportedOperationException(); }
-    
+
 }

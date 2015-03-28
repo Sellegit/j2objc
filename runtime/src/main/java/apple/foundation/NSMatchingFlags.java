@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h")
 @Mapping("NSMatchingFlags")
 public final class NSMatchingFlags extends ObjCEnum {
@@ -36,6 +33,6 @@ public final class NSMatchingFlags extends ObjCEnum {
     public static final long RequiredEnd = 8L;
     @GlobalConstant("NSMatchingInternalError")
     public static final long InternalError = 16L;
-    
+
 
 }

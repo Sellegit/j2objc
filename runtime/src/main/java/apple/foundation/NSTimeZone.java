@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h") @Mapping("NSTimeZone")
 public class NSTimeZone 
     extends NSObject 
@@ -35,7 +32,7 @@ public class NSTimeZone
     public NSTimeZone(String tzName) { }
     @Mapping("initWithName:data:")
     public NSTimeZone(String tzName, NSData aData) { }
-    
+
     
     @Mapping("name")
     public native String getName();
@@ -57,7 +54,7 @@ public class NSTimeZone
      */
     @Mapping("nextDaylightSavingTimeTransition")
     public native NSDate getNextDaylightSavingTimeTransition();
-    
+
     
     
     /**
@@ -65,7 +62,7 @@ public class NSTimeZone
      */
     @GlobalConstant("NSSystemTimeZoneDidChangeNotification")
     public static native NSString DidChangeNotification();
-    
+
     @Mapping("secondsFromGMTForDate:")
     public native @MachineSizedSInt long getSecondsFromGMTForDate(NSDate aDate);
     @Mapping("abbreviationForDate:")
@@ -123,5 +120,5 @@ public class NSTimeZone
     public static native NSTimeZone fromAbbreviation(String abbreviation);
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
-    
+
 }

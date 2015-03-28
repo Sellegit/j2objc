@@ -21,9 +21,6 @@ import apple.glkit.*;
 import apple.scenekit.*;
 
 
-
-
-
 @Library("SpriteKit/SpriteKit.h") @Mapping("SKSpriteNode")
 public class SKSpriteNode 
     extends SKNode 
@@ -43,7 +40,7 @@ public class SKSpriteNode
     public SKSpriteNode(NSCoder aDecoder) { }
     @Mapping("init")
     public SKSpriteNode() { }
-    
+
     
     @Mapping("texture")
     public native SKTexture getTexture();
@@ -123,7 +120,7 @@ public class SKSpriteNode
      */
     @Mapping("setShader:")
     public native void setShader(SKShader v);
-    
+
     
     
     @Mapping("spriteNodeWithTexture:size:")
@@ -138,5 +135,5 @@ public class SKSpriteNode
     public static native SKSpriteNode create(String name, boolean generateNormalMap);
     @Mapping("spriteNodeWithColor:size:")
     public static native SKSpriteNode create(UIColor color, CGSize size);
-    
+
 }

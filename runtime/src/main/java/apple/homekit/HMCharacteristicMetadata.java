@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("HomeKit/HomeKit.h") @Mapping("HMCharacteristicMetadata")
 public class HMCharacteristicMetadata 
     extends NSObject 
@@ -28,7 +26,7 @@ public class HMCharacteristicMetadata
     
     @Mapping("init")
     public HMCharacteristicMetadata() { }
-    
+
     
     @Mapping("minimumValue")
     public native NSNumber getMinimumValue();
@@ -44,9 +42,9 @@ public class HMCharacteristicMetadata
     public native HMCharacteristicMetadataUnits getUnits();
     @Mapping("manufacturerDescription")
     public native String getManufacturerDescription();
+
     
     
-    
-    
-    
+
+
 }

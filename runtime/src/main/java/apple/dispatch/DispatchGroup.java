@@ -12,7 +12,6 @@ import apple.corefoundation.*;
 import apple.coregraphics.*;
 import apple.coreservices.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("dispatch/dispatch.h")
@@ -23,7 +22,7 @@ public class DispatchGroup
     
     
     protected DispatchGroup() {}
-    
+
     
     
     
@@ -57,5 +56,5 @@ public class DispatchGroup
      */
     @GlobalFunction("dispatch_group_leave")
     public static native void leave(DispatchGroup group);
-    
+
 }

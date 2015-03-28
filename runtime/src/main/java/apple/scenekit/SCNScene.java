@@ -20,9 +20,6 @@ import apple.spritekit.*;
 import apple.opengles.*;
 
 
-
-
-
 @Library("SceneKit/SceneKit.h") @Mapping("SCNScene")
 public class SCNScene 
     extends NSObject 
@@ -32,7 +29,7 @@ public class SCNScene
     
     @Mapping("init")
     public SCNScene() { }
-    
+
     
     @Mapping("rootNode")
     public native SCNNode getRootNode();
@@ -62,7 +59,7 @@ public class SCNScene
     public native void setPaused(boolean v);
     @Mapping("particleSystems")
     public native NSArray<SCNParticleSystem> getParticleSystems();
-    
+
     
     
     @Mapping("attributeForKey:")
@@ -83,5 +80,5 @@ public class SCNScene
     public native void removeAllParticleSystems();
     @Mapping("removeParticleSystem:")
     public native void removeParticleSystem(SCNParticleSystem system);
-    
+
 }

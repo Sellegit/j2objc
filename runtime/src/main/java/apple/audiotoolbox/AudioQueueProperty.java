@@ -17,9 +17,6 @@ import apple.coreaudio.*;
 import apple.coremedia.*;
 
 
-
-
-
 @Library("AudioToolbox/AudioToolbox.h")
 @Mapping("AudioQueueProperty")
 public final class AudioQueueProperty extends ObjCEnum {
@@ -56,6 +53,6 @@ public final class AudioQueueProperty extends ObjCEnum {
     public static final long Property_TimePitchAlgorithm = 1903456353L;
     @GlobalConstant("kAudioQueueProperty_TimePitchBypass")
     public static final long Property_TimePitchBypass = 1903456354L;
-    
+
 
 }

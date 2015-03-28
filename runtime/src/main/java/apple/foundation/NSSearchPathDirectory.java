@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h")
 @Mapping("NSSearchPathDirectory")
 public final class NSSearchPathDirectory extends ObjCEnum {
@@ -110,6 +107,6 @@ public final class NSSearchPathDirectory extends ObjCEnum {
     public static final long AllLibrariesDirectory = 101L;
     @GlobalConstant("NSTrashDirectory")
     public static final long TrashDirectory = 102L;
-    
+
 
 }

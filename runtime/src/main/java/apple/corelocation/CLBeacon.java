@@ -16,11 +16,9 @@ import apple.addressbook.*;
 import apple.corebluetooth.*;
 
 
-
 /**
  * @since Available in iOS 7.0 and later.
  */
-
 @Library("CoreLocation/CoreLocation.h") @Mapping("CLBeacon")
 public class CLBeacon 
     extends NSObject 
@@ -30,7 +28,7 @@ public class CLBeacon
     
     @Mapping("init")
     public CLBeacon() { }
-    
+
     
     @Mapping("proximityUUID")
     public native NSUUID getProximityUUID();
@@ -44,10 +42,10 @@ public class CLBeacon
     public native double getAccuracy();
     @Mapping("rssi")
     public native @MachineSizedSInt long getRssi();
-    
+
     
     
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
-    
+
 }

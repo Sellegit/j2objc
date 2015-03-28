@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 7.0 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UIInterpolatingMotionEffect")
 public class UIInterpolatingMotionEffect 
     extends UIMotionEffect 
@@ -37,7 +35,7 @@ public class UIInterpolatingMotionEffect
     public UIInterpolatingMotionEffect(NSCoder aDecoder) { }
     @Mapping("init")
     public UIInterpolatingMotionEffect() { }
-    
+
     
     @Mapping("keyPath")
     public native String getKeyPath();
@@ -51,9 +49,9 @@ public class UIInterpolatingMotionEffect
     public native NSValue getMaximumRelativeValue();
     @Mapping("setMaximumRelativeValue:")
     public native void setMaximumRelativeValue(NSValue v);
+
     
     
-    
-    
-    
+
+
 }

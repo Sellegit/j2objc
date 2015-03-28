@@ -15,17 +15,14 @@ import apple.foundation.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("PushKit/PushKit.h") @Mapping("PKPushRegistryDelegate")
 public interface PKPushRegistryDelegate 
     extends NSObjectProtocol {
 
     
     
-    
-    
+
+
     
     @Mapping("pushRegistry:didUpdatePushCredentials:forType:")
     void didUpdatePushCredentials(PKPushRegistry registry, PKPushCredentials credentials, String type);
@@ -33,7 +30,7 @@ public interface PKPushRegistryDelegate
     void didReceiveIncomingPush(PKPushRegistry registry, PKPushPayload payload, String type);
     @Mapping("pushRegistry:didInvalidatePushTokenForType:")
     void didInvalidatePushToken(PKPushRegistry registry, String type);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h")
 @Mapping("NSMapTableOptions")
 public final class NSMapTableOptions extends ObjCEnum {
@@ -46,6 +43,6 @@ public final class NSMapTableOptions extends ObjCEnum {
      */
     @GlobalConstant("NSMapTableWeakMemory")
     public static final long WeakMemory = 5L;
-    
+
 
 }

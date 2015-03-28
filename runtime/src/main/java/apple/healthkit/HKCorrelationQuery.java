@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("HealthKit/HealthKit.h") @Mapping("HKCorrelationQuery")
 public class HKCorrelationQuery 
     extends HKQuery 
@@ -30,15 +28,15 @@ public class HKCorrelationQuery
     public HKCorrelationQuery(HKCorrelationType correlationType, NSPredicate predicate, NSDictionary<?, ?> samplePredicates, Todo completion) { }
     @Mapping("init")
     public HKCorrelationQuery() { }
-    
+
     
     @Mapping("correlationType")
     public native HKCorrelationType getCorrelationType();
     @Mapping("samplePredicates")
     public native NSDictionary<HKSampleType, NSPredicate> getSamplePredicates();
+
     
     
-    
-    
-    
+
+
 }

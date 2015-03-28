@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h") @Mapping("AVAssetResourceRenewalRequest")
 public class AVAssetResourceRenewalRequest 
     extends AVAssetResourceLoadingRequest 
@@ -34,12 +32,12 @@ public class AVAssetResourceRenewalRequest
     
     @Mapping("init")
     public AVAssetResourceRenewalRequest() { }
+
+    
+
+
     
     
-    
-    
-    
-    
-    
-    
+
+
 }

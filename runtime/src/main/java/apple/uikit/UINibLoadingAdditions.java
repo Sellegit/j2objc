@@ -19,17 +19,14 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h") @Mapping("UINibLoadingAdditions")
 public interface UINibLoadingAdditions 
      {
 
     
     
-    
-    
+
+
     
     @Mapping("awakeFromNib")
     void awakeFromNib();
@@ -38,7 +35,7 @@ public interface UINibLoadingAdditions
      */
     @Mapping("prepareForInterfaceBuilder")
     void prepareForInterfaceBuilder();
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

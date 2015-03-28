@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.dispatch.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("CoreFoundation/CoreFoundation.h")
@@ -37,5 +36,5 @@ public class CFPlugInProperty
     public static native CFString FactoriesValue();
     @GlobalConstant("kCFPlugInTypesKey")
     public static native CFString TypesValue();
-    
+
 }

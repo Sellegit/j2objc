@@ -17,11 +17,9 @@ import apple.uikit.*;
 import apple.avfoundation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("Photos/Photos.h")
 @Mapping("PHAssetEditOperation")
 public final class PHAssetEditOperation extends ObjCEnum {
@@ -32,6 +30,6 @@ public final class PHAssetEditOperation extends ObjCEnum {
     public static final long Content = 2L;
     @GlobalConstant("PHAssetEditOperationProperties")
     public static final long Properties = 3L;
-    
+
 
 }

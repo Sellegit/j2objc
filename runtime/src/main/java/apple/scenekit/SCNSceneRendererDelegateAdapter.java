@@ -19,7 +19,6 @@ import apple.glkit.*;
 import apple.spritekit.*;
 import apple.opengles.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -30,8 +29,8 @@ public abstract class SCNSceneRendererDelegateAdapter
     
     
     
-    
-    
+
+
     
     
     @NotImplemented("renderer:updateAtTime:")
@@ -44,5 +43,5 @@ public abstract class SCNSceneRendererDelegateAdapter
     public void willRenderScene(SCNSceneRenderer aRenderer, SCNScene scene, double time) { throw new UnsupportedOperationException(); }
     @NotImplemented("renderer:didRenderScene:atTime:")
     public void didRenderScene(SCNSceneRenderer aRenderer, SCNScene scene, double time) { throw new UnsupportedOperationException(); }
-    
+
 }

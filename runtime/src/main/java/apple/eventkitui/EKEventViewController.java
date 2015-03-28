@@ -16,11 +16,9 @@ import apple.eventkit.*;
 import apple.uikit.*;
 
 
-
 /**
  * @since Available in iOS 4.0 and later.
  */
-
 @Library("EventKitUI/EventKitUI.h") @Mapping("EKEventViewController")
 public class EKEventViewController 
     extends UIViewController 
@@ -32,7 +30,7 @@ public class EKEventViewController
     public EKEventViewController(String nibNameOrNil, NSBundle nibBundleOrNil) { }
     @Mapping("init")
     public EKEventViewController() { }
-    
+
     
     /**
      * @since Available in iOS 4.2 and later.
@@ -56,9 +54,9 @@ public class EKEventViewController
     public native boolean allowsCalendarPreview();
     @Mapping("setAllowsCalendarPreview:")
     public native void setAllowsCalendarPreview(boolean v);
+
     
     
-    
-    
-    
+
+
 }

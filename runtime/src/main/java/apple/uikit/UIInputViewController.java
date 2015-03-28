@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UIInputViewController")
 public class UIInputViewController 
     extends UIViewController 
@@ -37,7 +35,7 @@ public class UIInputViewController
     public UIInputViewController(NSCoder aDecoder) { }
     @Mapping("init")
     public UIInputViewController() { }
-    
+
     
     @Mapping("inputView")
     public native UIInputView getInputView();
@@ -49,7 +47,7 @@ public class UIInputViewController
     public native String getPrimaryLanguage();
     @Mapping("setPrimaryLanguage:")
     public native void setPrimaryLanguage(String v);
-    
+
     
     
     @Mapping("dismissKeyboard")
@@ -66,5 +64,5 @@ public class UIInputViewController
     public native void textWillChange(UITextInput textInput);
     @Mapping("textDidChange:")
     public native void textDidChange(UITextInput textInput);
-    
+
 }

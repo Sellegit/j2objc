@@ -14,9 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
-
-
 @Library("CoreData/CoreData.h")
 @Mapping("NSDeleteRule")
 public final class NSDeleteRule extends ObjCEnum {
@@ -29,6 +26,6 @@ public final class NSDeleteRule extends ObjCEnum {
     public static final long Cascade = 2L;
     @GlobalConstant("NSDenyDeleteRule")
     public static final long Deny = 3L;
-    
+
 
 }

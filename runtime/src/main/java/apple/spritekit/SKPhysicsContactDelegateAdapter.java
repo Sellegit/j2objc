@@ -20,7 +20,6 @@ import apple.avfoundation.*;
 import apple.glkit.*;
 import apple.scenekit.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -31,13 +30,13 @@ public abstract class SKPhysicsContactDelegateAdapter
     
     
     
-    
-    
+
+
     
     
     @NotImplemented("didBeginContact:")
     public void didBeginContact(SKPhysicsContact contact) { throw new UnsupportedOperationException(); }
     @NotImplemented("didEndContact:")
     public void didEndContact(SKPhysicsContact contact) { throw new UnsupportedOperationException(); }
-    
+
 }

@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h") @Mapping("NSDecimalNumber")
 public class NSDecimalNumber 
     extends NSNumber 
@@ -33,10 +30,10 @@ public class NSDecimalNumber
     public NSDecimalNumber(String numberValue, Object locale) { }
     @Mapping("init")
     public NSDecimalNumber() { }
+
     
-    
-    
-    
+
+
     
     
     @Mapping("decimalNumberByAdding:")
@@ -79,5 +76,5 @@ public class NSDecimalNumber
     public static native void setDefaultBehavior(NSDecimalNumberBehaviors behavior);
     @Mapping("defaultBehavior")
     public static native NSDecimalNumberBehaviors getDefaultBehavior();
-    
+
 }

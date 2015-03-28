@@ -19,17 +19,14 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h") @Mapping("UISearchDisplayDelegate")
 public interface UISearchDisplayDelegate 
     extends NSObjectProtocol {
 
     
     
-    
-    
+
+
     
     /**
      * @since Available in iOS 3.0 and later.
@@ -115,7 +112,7 @@ public interface UISearchDisplayDelegate
     @Deprecated
     @Mapping("searchDisplayController:shouldReloadTableForSearchScope:")
     boolean shouldReloadForSearchScope(UISearchDisplayController controller, @MachineSizedSInt long searchOption);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

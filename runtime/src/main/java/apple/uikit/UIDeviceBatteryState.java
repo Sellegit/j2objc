@@ -19,9 +19,6 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h")
 @Mapping("UIDeviceBatteryState")
 public final class UIDeviceBatteryState extends ObjCEnum {
@@ -34,6 +31,6 @@ public final class UIDeviceBatteryState extends ObjCEnum {
     public static final long Charging = 2L;
     @GlobalConstant("UIDeviceBatteryStateFull")
     public static final long Full = 3L;
-    
+
 
 }

@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 7.0 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h") @Mapping("AVVideoCompositionRenderContext")
 public class AVVideoCompositionRenderContext 
     extends NSObject 
@@ -34,7 +32,7 @@ public class AVVideoCompositionRenderContext
     
     @Mapping("init")
     public AVVideoCompositionRenderContext() { }
-    
+
     
     @Mapping("size")
     public native CGSize getSize();
@@ -50,9 +48,9 @@ public class AVVideoCompositionRenderContext
     public native boolean isHighQualityRendering();
     @Mapping("videoComposition")
     public native AVVideoComposition getVideoComposition();
+
     
     
-    
-    
-    
+
+
 }

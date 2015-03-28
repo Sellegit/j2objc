@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.dispatch.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Mapping("CFFileDescriptorRef") @Library("CoreFoundation/CoreFoundation.h")
@@ -25,7 +24,7 @@ public class CFFileDescriptor
     
     
     protected CFFileDescriptor() {}
-    
+
     
     
     
@@ -74,5 +73,5 @@ public class CFFileDescriptor
      */
     @GlobalFunction("CFFileDescriptorCreateRunLoopSource")
     public static native CFRunLoopSource createRunLoopSource(CFAllocator allocator, CFFileDescriptor f, @MachineSizedSInt long order);
-    
+
 }

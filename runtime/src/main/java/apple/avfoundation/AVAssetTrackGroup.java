@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 7.0 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h") @Mapping("AVAssetTrackGroup")
 public class AVAssetTrackGroup 
     extends NSObject 
@@ -34,14 +32,14 @@ public class AVAssetTrackGroup
     
     @Mapping("init")
     public AVAssetTrackGroup() { }
-    
+
     
     @Mapping("trackIDs")
     public native NSArray<NSNumber> getTrackIDs();
-    
+
     
     
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
-    
+
 }

@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h") @Mapping("NSNetService")
 public class NSNetService 
     extends NSObject 
@@ -35,7 +32,7 @@ public class NSNetService
     public NSNetService(String domain, String type, String name) { }
     @Mapping("init")
     public NSNetService() { }
-    
+
     
     @Mapping("delegate")
     public native NSNetServiceDelegate getDelegate();
@@ -66,7 +63,7 @@ public class NSNetService
      */
     @Mapping("port")
     public native @MachineSizedSInt long getPort();
-    
+
     
     
     @Mapping("scheduleInRunLoop:forMode:")
@@ -98,5 +95,5 @@ public class NSNetService
     public static native NSDictionary<?, ?> getDictionaryFromTXTRecordData(NSData txtData);
     @Mapping("dataFromTXTRecordDictionary:")
     public static native NSData getDataFromTXTRecordDictionary(NSDictionary<?, ?> txtDictionary);
-    
+
 }

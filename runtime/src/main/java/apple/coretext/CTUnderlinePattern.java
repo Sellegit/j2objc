@@ -14,9 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
-
-
 @Library("CoreText/CoreText.h")
 @Mapping("CTUnderlinePattern")
 public final class CTUnderlinePattern extends ObjCEnum {
@@ -31,6 +28,6 @@ public final class CTUnderlinePattern extends ObjCEnum {
     public static final long DashDot = 768L;
     @GlobalConstant("kCTUnderlinePatternDashDotDot")
     public static final long DashDotDot = 1024L;
-    
+
 
 }

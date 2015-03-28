@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 5.0 and later.
  */
-
 @Library("CoreData/CoreData.h") @Mapping("NSIncrementalStore")
 public class NSIncrementalStore 
     extends NSPersistentStore 
@@ -30,10 +28,10 @@ public class NSIncrementalStore
     public NSIncrementalStore(NSPersistentStoreCoordinator root, String name, NSURL url, NSDictionary<?, ?> options) { }
     @Mapping("init")
     public NSIncrementalStore() { }
+
     
-    
-    
-    
+
+
     
     
     @Mapping("loadMetadata:")
@@ -56,5 +54,5 @@ public class NSIncrementalStore
     public native Object getReferenceObjectForID(NSManagedObjectID objectID);
     @Mapping("identifierForNewStoreAtURL:")
     public static native Object getIdentifierForNewStore(NSURL storeURL);
-    
+
 }

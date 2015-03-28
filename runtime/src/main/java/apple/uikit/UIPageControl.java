@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 2.0 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UIPageControl")
 public class UIPageControl 
     extends UIControl 
@@ -37,7 +35,7 @@ public class UIPageControl
     public UIPageControl(NSCoder aDecoder) { }
     @Mapping("init")
     public UIPageControl() { }
-    
+
     
     @Mapping("numberOfPages")
     public native @MachineSizedSInt long getNumberOfPages();
@@ -75,12 +73,12 @@ public class UIPageControl
      */
     @Mapping("setCurrentPageIndicatorTintColor:")
     public native void setCurrentPageIndicatorTintColor(UIColor v);
-    
+
     
     
     @Mapping("updateCurrentPageDisplay")
     public native void updateCurrentPageDisplay();
     @Mapping("sizeForNumberOfPages:")
     public native CGSize getSizeForNumberOfPages(@MachineSizedSInt long pageCount);
-    
+
 }

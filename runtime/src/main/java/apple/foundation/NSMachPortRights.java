@@ -19,11 +19,9 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 2.0 and later.
  */
-
 @Library("Foundation/Foundation.h")
 @Mapping("NSMachPortRights")
 public final class NSMachPortRights extends ObjCEnum {
@@ -34,6 +32,6 @@ public final class NSMachPortRights extends ObjCEnum {
     public static final long SendRight = 1L;
     @GlobalConstant("NSMachPortDeallocateReceiveRight")
     public static final long ReceiveRight = 2L;
-    
+
 
 }

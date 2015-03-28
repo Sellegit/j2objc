@@ -18,7 +18,6 @@ import apple.coremedia.*;
 import apple.security.*;
 import apple.dispatch.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -29,8 +28,8 @@ public abstract class NSNetServiceDelegateAdapter
     
     
     
-    
-    
+
+
     
     
     @NotImplemented("netServiceWillPublish:")
@@ -54,5 +53,5 @@ public abstract class NSNetServiceDelegateAdapter
      */
     @NotImplemented("netService:didAcceptConnectionWithInputStream:outputStream:")
     public void didAcceptConnection(NSNetService sender, NSInputStream inputStream, NSOutputStream outputStream) { throw new UnsupportedOperationException(); }
-    
+
 }

@@ -16,9 +16,6 @@ import apple.uikit.*;
 import apple.accounts.*;
 
 
-
-
-
 @Library("Social/Social.h")
 @Mapping("SLRequestMethod")
 public final class SLRequestMethod extends ObjCEnum {
@@ -31,6 +28,6 @@ public final class SLRequestMethod extends ObjCEnum {
     public static final long DELETE = 2L;
     @GlobalConstant("SLRequestMethodPUT")
     public static final long PUT = 3L;
-    
+
 
 }

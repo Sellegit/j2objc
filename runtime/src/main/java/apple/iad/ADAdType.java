@@ -18,11 +18,9 @@ import apple.mediaplayer.*;
 import apple.avkit.*;
 
 
-
 /**
  * @since Available in iOS 6.0 and later.
  */
-
 @Library("iAd/iAd.h")
 @Mapping("ADAdType")
 public final class ADAdType extends ObjCEnum {
@@ -31,6 +29,6 @@ public final class ADAdType extends ObjCEnum {
     public static final long Banner = 0L;
     @GlobalConstant("ADAdTypeMediumRectangle")
     public static final long MediumRectangle = 1L;
-    
+
 
 }

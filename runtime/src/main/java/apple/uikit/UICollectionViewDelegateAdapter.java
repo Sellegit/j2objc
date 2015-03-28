@@ -18,7 +18,6 @@ import apple.coreimage.*;
 import apple.coretext.*;
 import apple.corelocation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -29,8 +28,8 @@ public abstract class UICollectionViewDelegateAdapter
     
     
     
-    
-    
+
+
     
     
     @NotImplemented("collectionView:shouldHighlightItemAtIndexPath:")
@@ -69,5 +68,5 @@ public abstract class UICollectionViewDelegateAdapter
     public void performAction(UICollectionView collectionView, Selector action, NSIndexPath indexPath, Object sender) { throw new UnsupportedOperationException(); }
     @NotImplemented("collectionView:transitionLayoutForOldLayout:newLayout:")
     public UICollectionViewTransitionLayout getTransitionLayout(UICollectionView collectionView, UICollectionViewLayout fromLayout, UICollectionViewLayout toLayout) { throw new UnsupportedOperationException(); }
-    
+
 }

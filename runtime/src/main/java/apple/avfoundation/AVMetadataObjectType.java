@@ -19,7 +19,6 @@ import apple.coremedia.*;
 import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("AVFoundation/AVFoundation.h")
@@ -102,5 +101,5 @@ public class AVMetadataObjectType
      */
     @GlobalConstant("AVMetadataObjectTypeDataMatrixCode")
     public static native NSString DataMatrixCodeValue();
-    
+
 }

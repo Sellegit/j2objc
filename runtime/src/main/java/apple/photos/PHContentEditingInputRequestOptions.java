@@ -17,11 +17,9 @@ import apple.uikit.*;
 import apple.avfoundation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("Photos/Photos.h") @Mapping("PHContentEditingInputRequestOptions")
 public class PHContentEditingInputRequestOptions 
     extends NSObject 
@@ -31,7 +29,7 @@ public class PHContentEditingInputRequestOptions
     
     @Mapping("init")
     public PHContentEditingInputRequestOptions() { }
-    
+
     
     @Mapping("canHandleAdjustmentData")
     public native @Block Block1<PHAdjustmentData, Boolean> getCanHandleAdjustmentData();
@@ -45,9 +43,9 @@ public class PHContentEditingInputRequestOptions
     public native @Block VoidBlock2<Double, Todo> getProgressHandler();
     @Mapping("setProgressHandler:")
     public native void setProgressHandler(@Block VoidBlock2<Double, Todo> v);
+
     
     
-    
-    
-    
+
+
 }

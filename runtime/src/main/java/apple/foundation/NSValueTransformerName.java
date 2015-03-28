@@ -18,7 +18,6 @@ import apple.coremedia.*;
 import apple.security.*;
 import apple.dispatch.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("Foundation/Foundation.h")
@@ -56,5 +55,5 @@ public class NSValueTransformerName
      */
     @GlobalConstant("NSKeyedUnarchiveFromDataTransformerName")
     public static native String KeyedUnarchiveFromDataValue();
-    
+
 }

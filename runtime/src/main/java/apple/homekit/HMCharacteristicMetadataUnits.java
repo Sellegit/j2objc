@@ -13,7 +13,6 @@ import apple.coregraphics.*;
 import apple.coreservices.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("HomeKit/HomeKit.h")
@@ -46,5 +45,5 @@ public class HMCharacteristicMetadataUnits
      */
     @GlobalConstant("HMCharacteristicMetadataUnitsArcDegree")
     public static native NSString ArcDegreeValue();
-    
+
 }

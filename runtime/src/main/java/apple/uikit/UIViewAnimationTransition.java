@@ -19,9 +19,6 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h")
 @Mapping("UIViewAnimationTransition")
 public final class UIViewAnimationTransition extends ObjCEnum {
@@ -36,6 +33,6 @@ public final class UIViewAnimationTransition extends ObjCEnum {
     public static final long CurlUp = 3L;
     @GlobalConstant("UIViewAnimationTransitionCurlDown")
     public static final long CurlDown = 4L;
-    
+
 
 }

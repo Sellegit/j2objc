@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 2.0 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UIAlertView")
 public class UIAlertView 
     extends UIView 
@@ -37,7 +35,7 @@ public class UIAlertView
     public UIAlertView(NSCoder aDecoder) { }
     @Mapping("init")
     public UIAlertView() { }
-    
+
     
     @Mapping("delegate")
     public native UIAlertViewDelegate getDelegate();
@@ -71,7 +69,7 @@ public class UIAlertView
      */
     @Mapping("setAlertViewStyle:")
     public native void setAlertViewStyle(@Representing("UIAlertViewStyle") long v);
-    
+
     
     
     @Mapping("addButtonWithTitle:")
@@ -87,5 +85,5 @@ public class UIAlertView
      */
     @Mapping("textFieldAtIndex:")
     public native UITextField getTextField(@MachineSizedSInt long textFieldIndex);
-    
+
 }

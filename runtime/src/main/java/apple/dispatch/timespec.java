@@ -13,9 +13,6 @@ import apple.coregraphics.*;
 import apple.coreservices.*;
 
 
-
-
-
 @Mapping("timespec") @Library("dispatch/dispatch.h")
 public class timespec 
     extends Struct 
@@ -29,6 +26,6 @@ public class timespec
     public native @MachineSizedSInt long getTv_sec();
     @DotMapping("tv_nsec")
     public native @MachineSizedSInt long getTv_nsec();
-    
+
     
 }

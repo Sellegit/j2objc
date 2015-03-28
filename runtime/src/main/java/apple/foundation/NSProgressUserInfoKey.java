@@ -18,7 +18,6 @@ import apple.coremedia.*;
 import apple.security.*;
 import apple.dispatch.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("Foundation/Foundation.h")
@@ -61,5 +60,5 @@ public class NSProgressUserInfoKey
      */
     @GlobalConstant("NSProgressFileCompletedCountKey")
     public static native NSString FileCompletedCountValue();
-    
+
 }

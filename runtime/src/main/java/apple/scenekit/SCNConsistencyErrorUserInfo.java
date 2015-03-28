@@ -19,7 +19,6 @@ import apple.glkit.*;
 import apple.spritekit.*;
 import apple.opengles.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("SceneKit/SceneKit.h")
@@ -38,5 +37,5 @@ public class SCNConsistencyErrorUserInfo
     public static native NSString ConsistencyElementTypeErrorKey();
     @GlobalConstant("SCNConsistencyLineNumberErrorKey")
     public static native NSString ConsistencyLineNumberErrorKey();
-    
+
 }

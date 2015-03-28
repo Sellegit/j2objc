@@ -13,7 +13,6 @@ import apple.coregraphics.*;
 import apple.coreservices.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("CoreText/CoreText.h")
@@ -38,5 +37,5 @@ public class CTTypesetterOptions
      */
     @GlobalConstant("kCTTypesetterOptionForcedEmbeddingLevel")
     public static native CFString ForcedEmbeddingLevel();
-    
+
 }

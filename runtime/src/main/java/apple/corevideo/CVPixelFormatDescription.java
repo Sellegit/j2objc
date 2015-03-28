@@ -15,7 +15,6 @@ import apple.foundation.*;
 import apple.opengles.*;
 import apple.coremedia.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("CoreVideo/CoreVideo.h")
@@ -43,5 +42,5 @@ public class CVPixelFormatDescription
      */
     @GlobalFunction("CVPixelFormatDescriptionRegisterDescriptionWithPixelFormatType")
     public static native void registerDescription(CFDictionary description, int pixelFormat);
-    
+
 }

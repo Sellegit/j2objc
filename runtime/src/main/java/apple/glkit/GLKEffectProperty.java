@@ -17,11 +17,9 @@ import apple.uikit.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 5.0 and later.
  */
-
 @Library("GLKit/GLKit.h") @Mapping("GLKEffectProperty")
 public class GLKEffectProperty 
     extends NSObject 
@@ -31,12 +29,12 @@ public class GLKEffectProperty
     
     @Mapping("init")
     public GLKEffectProperty() { }
+
+    
+
+
     
     
-    
-    
-    
-    
-    
-    
+
+
 }

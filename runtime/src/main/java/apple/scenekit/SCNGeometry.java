@@ -20,9 +20,6 @@ import apple.spritekit.*;
 import apple.opengles.*;
 
 
-
-
-
 @Library("SceneKit/SceneKit.h") @Mapping("SCNGeometry")
 public class SCNGeometry 
     extends NSObject 
@@ -32,7 +29,7 @@ public class SCNGeometry
     
     @Mapping("init")
     public SCNGeometry() { }
-    
+
     
     @Mapping("name")
     public native String getName();
@@ -72,7 +69,7 @@ public class SCNGeometry
     public native SCNProgram getProgram();
     @Mapping("setProgram:")
     public native void setProgram(SCNProgram v);
-    
+
     
     
     @Mapping("insertMaterial:atIndex:")
@@ -117,5 +114,5 @@ public class SCNGeometry
     public native void setBoundingBox(SCNVector3 min, SCNVector3 max);
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
-    
+
 }

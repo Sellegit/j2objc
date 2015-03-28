@@ -21,9 +21,6 @@ import apple.glkit.*;
 import apple.scenekit.*;
 
 
-
-
-
 @Library("SpriteKit/SpriteKit.h") @Mapping("SKPhysicsBody")
 public class SKPhysicsBody 
     extends NSObject 
@@ -33,7 +30,7 @@ public class SKPhysicsBody
     
     @Mapping("init")
     public SKPhysicsBody() { }
-    
+
     
     @Mapping("isDynamic")
     public native boolean isDynamic();
@@ -135,7 +132,7 @@ public class SKPhysicsBody
     public native @MachineSizedFloat double getAngularVelocity();
     @Mapping("setAngularVelocity:")
     public native void setAngularVelocity(@MachineSizedFloat double v);
-    
+
     
     
     @Mapping("applyForce:")
@@ -186,5 +183,5 @@ public class SKPhysicsBody
     public native Object copyWithZone$(NSZone zone);
     @Mapping("encodeWithCoder:")
     public native void encode(NSCoder aCoder);
-    
+
 }

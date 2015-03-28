@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 4.0 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h") @Mapping("AVCaptureDevice")
 public class AVCaptureDevice 
     extends NSObject 
@@ -34,7 +32,7 @@ public class AVCaptureDevice
     
     @Mapping("init")
     public AVCaptureDevice() { }
-    
+
     
     @Mapping("uniqueID")
     public native String getUniqueID();
@@ -298,7 +296,7 @@ public class AVCaptureDevice
      */
     @Mapping("setVideoHDREnabled:")
     public native void setVideoHDREnabled(boolean v);
-    
+
     
     
     /**
@@ -343,7 +341,7 @@ public class AVCaptureDevice
      */
     @GlobalConstant("AVCaptureWhiteBalanceGainsCurrent")
     public static native AVCaptureWhiteBalanceGains getWhiteBalanceGainsCurrent();
-    
+
     @Mapping("hasMediaType:")
     public native boolean hasMediaType(String mediaType);
     @Mapping("lockForConfiguration:")
@@ -435,5 +433,5 @@ public class AVCaptureDevice
      */
     @Mapping("requestAccessForMediaType:completionHandler:")
     public static native void requestAccessForMediaType(String mediaType, @Block VoidBooleanBlock handler);
-    
+
 }

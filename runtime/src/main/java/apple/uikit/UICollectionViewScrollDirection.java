@@ -19,9 +19,6 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h")
 @Mapping("UICollectionViewScrollDirection")
 public final class UICollectionViewScrollDirection extends ObjCEnum {
@@ -30,6 +27,6 @@ public final class UICollectionViewScrollDirection extends ObjCEnum {
     public static final long Vertical = 0L;
     @GlobalConstant("UICollectionViewScrollDirectionHorizontal")
     public static final long Horizontal = 1L;
-    
+
 
 }

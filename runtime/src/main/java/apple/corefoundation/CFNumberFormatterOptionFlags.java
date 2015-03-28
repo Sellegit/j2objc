@@ -15,15 +15,12 @@ import apple.dispatch.*;
 import apple.foundation.*;
 
 
-
-
-
 @Library("CoreFoundation/CoreFoundation.h")
 @Mapping("CFNumberFormatterOptionFlags")
 public final class CFNumberFormatterOptionFlags extends ObjCEnum {
     
     @GlobalConstant("kCFNumberFormatterParseIntegersOnly")
     public static final long ParseIntegersOnly = 1L;
-    
+
 
 }

@@ -15,9 +15,6 @@ import apple.dispatch.*;
 import apple.foundation.*;
 
 
-
-
-
 @Library("CoreFoundation/CoreFoundation.h")
 @Mapping("CFDateFormatterStyle")
 public final class CFDateFormatterStyle extends ObjCEnum {
@@ -32,6 +29,6 @@ public final class CFDateFormatterStyle extends ObjCEnum {
     public static final long LongStyle = 3L;
     @GlobalConstant("kCFDateFormatterFullStyle")
     public static final long FullStyle = 4L;
-    
+
 
 }

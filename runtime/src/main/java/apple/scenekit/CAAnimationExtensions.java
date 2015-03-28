@@ -19,7 +19,6 @@ import apple.glkit.*;
 import apple.spritekit.*;
 import apple.opengles.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("SceneKit/SceneKit.h")
@@ -30,7 +29,7 @@ public final class CAAnimationExtensions
     
     
     private CAAnimationExtensions() {}
-    
+
     
     @ExtensionMapping("usesSceneTimeBase")
     public static native boolean usesSceneTimeBase(CAAnimation thiz);
@@ -48,9 +47,9 @@ public final class CAAnimationExtensions
     public static native NSArray<SCNAnimationEvent> getAnimationEvents(CAAnimation thiz);
     @ExtensionMapping("setAnimationEvents:")
     public static native void setAnimationEvents(CAAnimation thiz, NSArray<SCNAnimationEvent> v);
+
     
     
-    
-    
-    
+
+
 }

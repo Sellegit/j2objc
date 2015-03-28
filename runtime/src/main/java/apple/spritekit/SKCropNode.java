@@ -21,9 +21,6 @@ import apple.glkit.*;
 import apple.scenekit.*;
 
 
-
-
-
 @Library("SpriteKit/SpriteKit.h") @Mapping("SKCropNode")
 public class SKCropNode 
     extends SKNode 
@@ -35,15 +32,15 @@ public class SKCropNode
     public SKCropNode() { }
     @Mapping("initWithCoder:")
     public SKCropNode(NSCoder aDecoder) { }
-    
+
     
     @Mapping("maskNode")
     public native SKNode getMaskNode();
     @Mapping("setMaskNode:")
     public native void setMaskNode(SKNode v);
+
     
     
-    
-    
-    
+
+
 }

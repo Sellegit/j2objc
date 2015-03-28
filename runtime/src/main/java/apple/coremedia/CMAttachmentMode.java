@@ -18,9 +18,6 @@ import apple.coreanimation.*;
 import apple.corevideo.*;
 
 
-
-
-
 @Library("CoreMedia/CoreMedia.h")
 @Mapping("CMAttachmentMode")
 public final class CMAttachmentMode extends ObjCEnum {
@@ -29,6 +26,6 @@ public final class CMAttachmentMode extends ObjCEnum {
     public static final long ShouldNotPropagate = 0L;
     @GlobalConstant("kCMAttachmentMode_ShouldPropagate")
     public static final long ShouldPropagate = 1L;
-    
+
 
 }

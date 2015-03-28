@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h")
 @Mapping("NSCalendarUnit")
 public final class NSCalendarUnit extends ObjCEnum {
@@ -79,6 +76,6 @@ public final class NSCalendarUnit extends ObjCEnum {
      */
     @GlobalConstant("NSCalendarUnitTimeZone")
     public static final long TimeZone = 2097152L;
-    
+
 
 }

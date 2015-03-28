@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 3.0 and later.
  */
-
 @Library("CoreData/CoreData.h") @Mapping("NSAtomicStore")
 public class NSAtomicStore 
     extends NSPersistentStore 
@@ -30,10 +28,10 @@ public class NSAtomicStore
     public NSAtomicStore(NSPersistentStoreCoordinator coordinator, String configurationName, NSURL url, NSDictionary<?, ?> options) { }
     @Mapping("init")
     public NSAtomicStore() { }
+
     
-    
-    
-    
+
+
     
     
     @Mapping("load:")
@@ -58,5 +56,5 @@ public class NSAtomicStore
     public native Object newReferenceObject(NSManagedObject managedObject);
     @Mapping("referenceObjectForObjectID:")
     public native Object getReferenceObject(NSManagedObjectID objectID);
-    
+
 }

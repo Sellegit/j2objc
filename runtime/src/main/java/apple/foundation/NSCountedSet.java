@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h") @Mapping("NSCountedSet")
 public class NSCountedSet 
     extends NSMutableSet 
@@ -30,13 +27,13 @@ public class NSCountedSet
     
     
     public NSCountedSet() {}
+
     
-    
-    
-    
+
+
     
     
     @Mapping("countForObject:")
     public native @MachineSizedUInt long countForObject(Object object);
-    
+
 }

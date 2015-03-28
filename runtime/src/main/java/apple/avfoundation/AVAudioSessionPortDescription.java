@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 6.0 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h") @Mapping("AVAudioSessionPortDescription")
 public class AVAudioSessionPortDescription 
     extends NSObject 
@@ -34,7 +32,7 @@ public class AVAudioSessionPortDescription
     
     @Mapping("init")
     public AVAudioSessionPortDescription() { }
-    
+
     
     @Mapping("portType")
     public native AVAudioSessionPort getPortType();
@@ -59,7 +57,7 @@ public class AVAudioSessionPortDescription
      */
     @Mapping("preferredDataSource")
     public native AVAudioSessionDataSourceDescription getPreferredDataSource();
-    
+
     
     
     /**
@@ -67,5 +65,5 @@ public class AVAudioSessionPortDescription
      */
     @Mapping("setPreferredDataSource:error:")
     public native boolean setPreferredDataSource(AVAudioSessionDataSourceDescription dataSource, Todo outError);
-    
+
 }

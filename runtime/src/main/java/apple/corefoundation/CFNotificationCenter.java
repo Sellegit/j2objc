@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.dispatch.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Mapping("CFNotificationCenterRef") @Library("CoreFoundation/CoreFoundation.h")
@@ -25,7 +24,7 @@ public class CFNotificationCenter
     
     
     protected CFNotificationCenter() {}
-    
+
     
     
     
@@ -45,5 +44,5 @@ public class CFNotificationCenter
     public static native void postNotification(CFNotificationCenter center, CFString name, Todo object, CFDictionary userInfo, boolean deliverImmediately);
     @GlobalFunction("CFNotificationCenterPostNotificationWithOptions")
     public static native void postNotification(CFNotificationCenter center, CFString name, Todo object, CFDictionary userInfo, @MachineSizedUInt long options);
-    
+
 }

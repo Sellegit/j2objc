@@ -19,11 +19,9 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 6.0 and later.
  */
-
 @Library("Foundation/Foundation.h") @Mapping("NSByteCountFormatter")
 public class NSByteCountFormatter 
     extends NSFormatter 
@@ -35,7 +33,7 @@ public class NSByteCountFormatter
     public NSByteCountFormatter(NSCoder aDecoder) { }
     @Mapping("init")
     public NSByteCountFormatter() { }
-    
+
     
     @Mapping("allowedUnits")
     public native @Representing("NSByteCountFormatterUnits") long getAllowedUnits();
@@ -79,12 +77,12 @@ public class NSByteCountFormatter
      */
     @Mapping("setFormattingContext:")
     public native void setFormattingContext(@Representing("NSFormattingContext") long v);
-    
+
     
     
     @Mapping("stringFromByteCount:")
     public native String format(long byteCount);
     @Mapping("stringFromByteCount:countStyle:")
     public static native String format(long byteCount, @Representing("NSByteCountFormatterCountStyle") long countStyle);
-    
+
 }

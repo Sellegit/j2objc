@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h") @Mapping("AVAssetWriterInputMetadataAdaptor")
 public class AVAssetWriterInputMetadataAdaptor 
     extends NSObject 
@@ -36,16 +34,16 @@ public class AVAssetWriterInputMetadataAdaptor
     public AVAssetWriterInputMetadataAdaptor(AVAssetWriterInput input) { }
     @Mapping("init")
     public AVAssetWriterInputMetadataAdaptor() { }
-    
+
     
     @Mapping("assetWriterInput")
     public native AVAssetWriterInput getAssetWriterInput();
-    
+
     
     
     @Mapping("appendTimedMetadataGroup:")
     public native boolean appendTimedMetadataGroup(AVTimedMetadataGroup timedMetadataGroup);
     @Mapping("assetWriterInputMetadataAdaptorWithAssetWriterInput:")
     public static native AVAssetWriterInputMetadataAdaptor create(AVAssetWriterInput input);
-    
+
 }

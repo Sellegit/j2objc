@@ -17,9 +17,6 @@ import apple.coreaudio.*;
 import apple.coremedia.*;
 
 
-
-
-
 @Library("AudioToolbox/AudioToolbox.h")
 @Mapping("MusicTrackProperty")
 public final class MusicTrackProperty extends ObjCEnum {
@@ -38,6 +35,6 @@ public final class MusicTrackProperty extends ObjCEnum {
     public static final long TrackLength = 5L;
     @GlobalConstant("kSequenceTrackProperty_TimeResolution")
     public static final long TimeResolution = 6L;
-    
+
 
 }

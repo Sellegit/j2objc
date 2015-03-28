@@ -19,7 +19,6 @@ import apple.coremedia.*;
 import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("AVFoundation/AVFoundation.h")
@@ -42,5 +41,5 @@ public class AVMetadataKeyISOUserData
      */
     @GlobalConstant("AVMetadataISOUserDataKeyTaggedCharacteristic")
     public static native NSString TaggedCharacteristicValue();
-    
+
 }

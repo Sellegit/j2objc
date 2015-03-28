@@ -19,11 +19,9 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 3.2 and later.
  */
-
 @Library("Foundation/Foundation.h") @Mapping("NSMutableAttributedString")
 public class NSMutableAttributedString 
     extends NSAttributedString 
@@ -39,11 +37,11 @@ public class NSMutableAttributedString
     public NSMutableAttributedString(NSAttributedString attrStr) { }
     @Mapping("init")
     public NSMutableAttributedString() { }
-    
+
     
     @Mapping("mutableString")
     public native NSMutableString getMutableString();
-    
+
     
     
     @Mapping("replaceCharactersInRange:withString:")
@@ -70,5 +68,5 @@ public class NSMutableAttributedString
     public native void beginEditing();
     @Mapping("endEditing")
     public native void endEditing();
-    
+
 }

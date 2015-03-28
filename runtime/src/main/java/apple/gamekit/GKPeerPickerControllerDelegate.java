@@ -15,17 +15,14 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
-
-
 @Library("GameKit/GameKit.h") @Mapping("GKPeerPickerControllerDelegate")
 public interface GKPeerPickerControllerDelegate 
     extends NSObjectProtocol {
 
     
     
-    
-    
+
+
     
     @Mapping("peerPickerController:didSelectConnectionType:")
     void didSelectConnectionType(GKPeerPickerController picker, @Representing("GKPeerPickerConnectionType") long type);
@@ -35,7 +32,7 @@ public interface GKPeerPickerControllerDelegate
     void didConnectPeer(GKPeerPickerController picker, String peerID, GKSession session);
     @Mapping("peerPickerControllerDidCancel:")
     void didCancel(GKPeerPickerController picker);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

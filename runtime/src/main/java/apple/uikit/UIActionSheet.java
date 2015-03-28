@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 2.0 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UIActionSheet")
 public class UIActionSheet 
     extends UIView 
@@ -37,7 +35,7 @@ public class UIActionSheet
     public UIActionSheet(NSCoder aDecoder) { }
     @Mapping("init")
     public UIActionSheet() { }
-    
+
     
     @Mapping("delegate")
     public native UIActionSheetDelegate getDelegate();
@@ -65,7 +63,7 @@ public class UIActionSheet
     public native @MachineSizedSInt long getFirstOtherButtonIndex();
     @Mapping("isVisible")
     public native boolean isVisible();
-    
+
     
     
     @Mapping("addButtonWithTitle:")
@@ -90,5 +88,5 @@ public class UIActionSheet
     public native void showIn(UIView view);
     @Mapping("dismissWithClickedButtonIndex:animated:")
     public native void dismiss(@MachineSizedSInt long buttonIndex, boolean animated);
-    
+
 }

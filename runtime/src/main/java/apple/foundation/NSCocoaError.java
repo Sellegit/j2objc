@@ -18,7 +18,6 @@ import apple.coremedia.*;
 import apple.security.*;
 import apple.dispatch.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("Foundation/Foundation.h")
@@ -33,5 +32,5 @@ public class NSCocoaError
     
     @GlobalConstant("NSCocoaErrorDomain")
     public static native String getClassDomain();
-    
+
 }

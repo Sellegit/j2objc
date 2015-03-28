@@ -17,9 +17,6 @@ import apple.coretext.*;
 import apple.opengles.*;
 
 
-
-
-
 @Library("QuartzCore/QuartzCore.h") @Mapping("CAShapeLayer")
 public class CAShapeLayer 
     extends CALayer 
@@ -33,7 +30,7 @@ public class CAShapeLayer
     public CAShapeLayer(Object layer) { }
     @Mapping("initWithCoder:")
     public CAShapeLayer(NSCoder aDecoder) { }
-    
+
     
     @Mapping("path")
     public native CGPath getPath();
@@ -83,9 +80,9 @@ public class CAShapeLayer
     public native NSArray<NSNumber> getLineDashPattern();
     @Mapping("setLineDashPattern:")
     public native void setLineDashPattern(NSArray<NSNumber> v);
+
     
     
-    
-    
-    
+
+
 }

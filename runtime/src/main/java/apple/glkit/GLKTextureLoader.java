@@ -17,11 +17,9 @@ import apple.uikit.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 5.0 and later.
  */
-
 @Library("GLKit/GLKit.h") @Mapping("GLKTextureLoader")
 public class GLKTextureLoader 
     extends NSObject 
@@ -33,10 +31,10 @@ public class GLKTextureLoader
     public GLKTextureLoader(EAGLSharegroup sharegroup) { }
     @Mapping("init")
     public GLKTextureLoader() { }
+
     
-    
-    
-    
+
+
     
     
     @Mapping("textureWithContentsOfFile:options:queue:completionHandler:")
@@ -67,5 +65,5 @@ public class GLKTextureLoader
     public static native GLKTextureInfo loadCubeMap(String path, NSDictionary<?, ?> options, Todo outError);
     @Mapping("cubeMapWithContentsOfURL:options:error:")
     public static native GLKTextureInfo loadCubeMap(NSURL url, NSDictionary<?, ?> options, Todo outError);
-    
+
 }

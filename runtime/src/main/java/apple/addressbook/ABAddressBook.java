@@ -13,7 +13,6 @@ import apple.coregraphics.*;
 import apple.coreservices.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("AddressBook/AddressBook.h")
@@ -35,7 +34,7 @@ public class ABAddressBook
      * @since Available in iOS 6.0 and later.
      */
     @GlobalFunction("ABAddressBookCreateWithOptions")
-    public static native ABAddressBookRef create(NSDictionary<?, ?> options, Todo error);
+    public static native ABAddressBookRef create(CFDictionary options, Todo error);
     /**
      * @since Available in iOS 2.0 and later.
      * @deprecated Deprecated in iOS 6.0.
@@ -57,7 +56,7 @@ public class ABAddressBook
     @GlobalFunction("ABAddressBookRemoveRecord")
     public static native boolean removeRecord(ABAddressBookRef addressBook, ABRecordRef record, Todo error);
     @GlobalFunction("ABAddressBookCopyLocalizedLabel")
-    public static native String getLocalizedLabel(String label);
+    public static native CFString getLocalizedLabel(CFString label);
     @GlobalFunction("ABAddressBookRegisterExternalChangeCallback")
     public static native void registerExternalChangeCallback(ABAddressBookRef addressBook, FunctionPtr callback, Todo context);
     @GlobalFunction("ABAddressBookUnregisterExternalChangeCallback")
@@ -78,7 +77,7 @@ public class ABAddressBook
      * @since Available in iOS 4.0 and later.
      */
     @GlobalFunction("ABAddressBookCopyArrayOfAllSources")
-    public static native NSArray<?> getAllSources(ABAddressBookRef addressBook);
+    public static native CFArray getAllSources(ABAddressBookRef addressBook);
     @GlobalFunction("ABAddressBookGetPersonCount")
     public static native @MachineSizedSInt long getPersonCount(ABAddressBookRef addressBook);
     @GlobalFunction("ABAddressBookGetPersonWithRecordID")
@@ -96,7 +95,7 @@ public class ABAddressBook
     @GlobalFunction("ABAddressBookCopyArrayOfAllPeopleInSourceWithSortOrdering")
     public static native List<ABPerson> getAllPeopleInSource(ABAddressBookRef addressBook, ABRecordRef source, @Representing("ABPersonSortOrdering") long sortOrdering);
     @GlobalFunction("ABAddressBookCopyPeopleWithName")
-    public static native List<ABPerson> getPeople(ABAddressBookRef addressBook, String name);
+    public static native List<ABPerson> getPeople(ABAddressBookRef addressBook, CFString name);
     @GlobalFunction("ABAddressBookGetGroupWithRecordID")
     public static native ABGroup getGroup(ABAddressBookRef addressBook, int recordID);
     @GlobalFunction("ABAddressBookGetGroupCount")
@@ -108,5 +107,5 @@ public class ABAddressBook
      */
     @GlobalFunction("ABAddressBookCopyArrayOfAllGroupsInSource")
     public static native List<ABGroup> getAllGroupsInSource(ABAddressBookRef addressBook, ABRecordRef source);
-    
+
 }

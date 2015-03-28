@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.dispatch.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Mapping("CFDictionaryRef") @Library("CoreFoundation/CoreFoundation.h")
@@ -25,7 +24,7 @@ public class CFDictionary
     
     
     protected CFDictionary() {}
-    
+
     
     
     
@@ -35,7 +34,7 @@ public class CFDictionary
     public static native CFDictionaryKeyCallBacks getCopyStringKeyCallBacks();
     @GlobalConstant("kCFTypeDictionaryValueCallBacks")
     public static native CFDictionaryValueCallBacks getTypeValueCallBacks();
-    
+
     @GlobalFunction("CFDictionaryGetTypeID")
     public static native @MachineSizedUInt long getClassTypeID();
     @GlobalFunction("CFDictionaryCreate")
@@ -60,5 +59,5 @@ public class CFDictionary
     public static native void getKeysAndValues(CFDictionary theDict, Todo keys, Todo values);
     @GlobalFunction("CFDictionaryApplyFunction")
     public static native void applyFunction(CFDictionary theDict, FunctionPtr applier, Todo context);
-    
+
 }

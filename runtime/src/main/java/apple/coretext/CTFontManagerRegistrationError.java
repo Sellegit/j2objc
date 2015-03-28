@@ -14,9 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
-
-
 @Library("CoreText/CoreText.h")
 @Mapping("CTFontManagerRegistrationError")
 public final class CTFontManagerRegistrationError extends ObjCEnum {
@@ -37,6 +34,6 @@ public final class CTFontManagerRegistrationError extends ObjCEnum {
     public static final long InUse = 202L;
     @GlobalConstant("kCTFontManagerErrorSystemRequired")
     public static final long SystemRequired = 203L;
-    
+
 
 }

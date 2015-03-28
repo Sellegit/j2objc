@@ -14,9 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
-
-
 @Library("CoreMotion/CoreMotion.h")
 @Mapping("CMMagneticFieldCalibrationAccuracy")
 public final class CMMagneticFieldCalibrationAccuracy extends ObjCEnum {
@@ -29,6 +26,6 @@ public final class CMMagneticFieldCalibrationAccuracy extends ObjCEnum {
     public static final long Medium = 1L;
     @GlobalConstant("CMMagneticFieldCalibrationAccuracyHigh")
     public static final long High = 2L;
-    
+
 
 }

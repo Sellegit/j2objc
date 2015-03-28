@@ -17,11 +17,9 @@ import apple.uikit.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 6.1 and later.
  */
-
 @Library("MapKit/MapKit.h") @Mapping("MKLocalSearch")
 public class MKLocalSearch 
     extends NSObject 
@@ -33,14 +31,14 @@ public class MKLocalSearch
     public MKLocalSearch(MKLocalSearchRequest request) { }
     @Mapping("init")
     public MKLocalSearch() { }
-    
+
     
     @Mapping("isSearching")
     public native boolean isSearching();
-    
+
     
     
     @Mapping("cancel")
     public native void cancel();
-    
+
 }

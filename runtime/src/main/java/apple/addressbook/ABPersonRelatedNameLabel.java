@@ -13,7 +13,6 @@ import apple.coregraphics.*;
 import apple.coreservices.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("AddressBook/AddressBook.h")
@@ -48,5 +47,5 @@ public class ABPersonRelatedNameLabel
     public static native CFString AssistantLabel();
     @GlobalConstant("kABPersonManagerLabel")
     public static native CFString ManagerLabel();
-    
+
 }

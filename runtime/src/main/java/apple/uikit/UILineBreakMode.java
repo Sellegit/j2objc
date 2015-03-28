@@ -19,13 +19,11 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 2.0 and later.
  * @deprecated Deprecated in iOS 6.0.
  */
 @Deprecated
-
 @Library("UIKit/UIKit.h")
 @Mapping("UILineBreakMode")
 public final class UILineBreakMode extends ObjCEnum {
@@ -42,6 +40,6 @@ public final class UILineBreakMode extends ObjCEnum {
     public static final long TailTruncation = 4L;
     @GlobalConstant("UILineBreakModeMiddleTruncation")
     public static final long MiddleTruncation = 5L;
-    
+
 
 }

@@ -19,9 +19,6 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h") @Mapping("UIAccessibility")
 public interface UIAccessibility 
      {
@@ -116,10 +113,10 @@ public interface UIAccessibility
      */
     @Mapping("setAccessibilityNavigationStyle:")
     void setAccessibilityNavigationStyle(@Representing("UIAccessibilityNavigationStyle") long v);
+
     
-    
-    
-    
+
+
     /*<adapter>*/
     /*</adapter>*/
 }

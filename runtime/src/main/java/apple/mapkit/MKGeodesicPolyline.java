@@ -17,11 +17,9 @@ import apple.uikit.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 7.0 and later.
  */
-
 @Library("MapKit/MapKit.h") @Mapping("MKGeodesicPolyline")
 public class MKGeodesicPolyline 
     extends MKPolyline 
@@ -31,15 +29,15 @@ public class MKGeodesicPolyline
     
     @Mapping("init")
     public MKGeodesicPolyline() { }
+
     
-    
-    
-    
+
+
     
     
     @Mapping("polylineWithPoints:count:")
     public static native MKGeodesicPolyline createPrime(MKMapPoint points, @MachineSizedUInt long count);
     @Mapping("polylineWithCoordinates:count:")
     public static native MKGeodesicPolyline createPrime(CLLocationCoordinate2D coords, @MachineSizedUInt long count);
-    
+
 }

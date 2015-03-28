@@ -19,11 +19,9 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 5.0 and later.
  */
-
 @Library("Foundation/Foundation.h") @Mapping("NSFileVersion")
 public class NSFileVersion 
     extends NSObject 
@@ -33,7 +31,7 @@ public class NSFileVersion
     
     @Mapping("init")
     public NSFileVersion() { }
-    
+
     
     @Mapping("URL")
     public native NSURL getURL();
@@ -61,7 +59,7 @@ public class NSFileVersion
      */
     @Mapping("hasThumbnail")
     public native boolean hasThumbnail();
-    
+
     
     
     @Mapping("replaceItemAtURL:options:error:")
@@ -83,5 +81,5 @@ public class NSFileVersion
     public static native NSFileVersion getItemVersionAtURL(NSURL url, Object persistentIdentifier);
     @Mapping("removeOtherVersionsOfItemAtURL:error:")
     public static native boolean removeOtherItemVersionsAtURL(NSURL url, Todo outError);
-    
+
 }

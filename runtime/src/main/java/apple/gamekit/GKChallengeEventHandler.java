@@ -15,13 +15,11 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
 /**
  * @since Available in iOS 6.0 and later.
  * @deprecated Deprecated in iOS 7.0.
  */
 @Deprecated
-
 @Library("GameKit/GameKit.h") @Mapping("GKChallengeEventHandler")
 public class GKChallengeEventHandler 
     extends NSObject 
@@ -31,7 +29,7 @@ public class GKChallengeEventHandler
     
     @Mapping("init")
     public GKChallengeEventHandler() { }
-    
+
     
     /**
      * @since Available in iOS 6.0 and later.
@@ -47,7 +45,7 @@ public class GKChallengeEventHandler
     @Deprecated
     @Mapping("setDelegate:")
     public native void setDelegate(GKChallengeEventHandlerDelegate v);
-    
+
     
     
     /**
@@ -57,5 +55,5 @@ public class GKChallengeEventHandler
     @Deprecated
     @Mapping("challengeEventHandler")
     public static native GKChallengeEventHandler getChallengeEventHandler();
-    
+
 }

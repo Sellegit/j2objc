@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("CoreMotion/CoreMotion.h") @Mapping("CMPedometerData")
 public class CMPedometerData 
     extends NSObject 
@@ -28,7 +26,7 @@ public class CMPedometerData
     
     @Mapping("init")
     public CMPedometerData() { }
-    
+
     
     @Mapping("startDate")
     public native NSDate getStartDate();
@@ -42,10 +40,10 @@ public class CMPedometerData
     public native NSNumber getFloorsAscended();
     @Mapping("floorsDescended")
     public native NSNumber getFloorsDescended();
-    
+
     
     
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
-    
+
 }

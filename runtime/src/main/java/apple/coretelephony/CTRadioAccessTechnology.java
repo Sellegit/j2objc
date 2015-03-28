@@ -13,7 +13,6 @@ import apple.coregraphics.*;
 import apple.coreservices.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("CoreTelephony/CTCall.h")
@@ -81,5 +80,5 @@ public class CTRadioAccessTechnology
      */
     @GlobalConstant("CTRadioAccessTechnologyLTE")
     public static native NSString LTEValue();
-    
+
 }

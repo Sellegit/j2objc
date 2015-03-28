@@ -16,11 +16,9 @@ import apple.uikit.*;
 import apple.accounts.*;
 
 
-
 /**
  * @since Available in iOS 3.0 and later.
  */
-
 @Library("StoreKit/StoreKit.h") @Mapping("SKPaymentQueue")
 public class SKPaymentQueue 
     extends NSObject 
@@ -30,14 +28,14 @@ public class SKPaymentQueue
     
     @Mapping("init")
     public SKPaymentQueue() { }
-    
+
     
     /**
      * @since Available in iOS 3.0 and later.
      */
     @Mapping("transactions")
     public native NSArray<SKPaymentTransaction> getTransactions();
-    
+
     
     
     /**
@@ -100,5 +98,5 @@ public class SKPaymentQueue
      */
     @Mapping("canMakePayments")
     public static native boolean canMakePayments();
-    
+
 }

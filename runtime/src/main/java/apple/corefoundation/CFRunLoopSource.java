@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.dispatch.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Mapping("CFRunLoopSourceRef") @Library("CoreFoundation/CoreFoundation.h")
@@ -25,7 +24,7 @@ public class CFRunLoopSource
     
     
     protected CFRunLoopSource() {}
-    
+
     
     
     
@@ -43,5 +42,5 @@ public class CFRunLoopSource
     public static native void getContext(CFRunLoopSource source, CFRunLoopSourceContext context);
     @GlobalFunction("CFRunLoopSourceSignal")
     public static native void signal(CFRunLoopSource source);
-    
+
 }

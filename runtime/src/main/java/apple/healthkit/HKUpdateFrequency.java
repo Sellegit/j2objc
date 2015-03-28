@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("HealthKit/HealthKit.h")
 @Mapping("HKUpdateFrequency")
 public final class HKUpdateFrequency extends ObjCEnum {
@@ -31,6 +29,6 @@ public final class HKUpdateFrequency extends ObjCEnum {
     public static final long Daily = 3L;
     @GlobalConstant("HKUpdateFrequencyWeekly")
     public static final long Weekly = 4L;
-    
+
 
 }

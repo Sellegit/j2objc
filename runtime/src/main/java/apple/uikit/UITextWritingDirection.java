@@ -19,9 +19,6 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h")
 @Mapping("UITextWritingDirection")
 public final class UITextWritingDirection extends ObjCEnum {
@@ -32,6 +29,6 @@ public final class UITextWritingDirection extends ObjCEnum {
     public static final long LeftToRight = 0L;
     @GlobalConstant("UITextWritingDirectionRightToLeft")
     public static final long RightToLeft = 1L;
-    
+
 
 }

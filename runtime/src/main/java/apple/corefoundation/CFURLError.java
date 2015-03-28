@@ -15,13 +15,11 @@ import apple.dispatch.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 2.0 and later.
  * @deprecated Deprecated in iOS 7.0.
  */
 @Deprecated
-
 @Library("CoreFoundation/CoreFoundation.h")
 @Mapping("CFURLError")
 public final class CFURLError extends ObjCEnum {
@@ -44,6 +42,6 @@ public final class CFURLError extends ObjCEnum {
     public static final long PropertyKeyUnavailableError = -17L;
     @GlobalConstant("kCFURLTimeoutError")
     public static final long TimeoutError = -18L;
-    
+
 
 }

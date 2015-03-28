@@ -19,7 +19,6 @@ import apple.glkit.*;
 import apple.spritekit.*;
 import apple.opengles.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("SceneKit/SceneKit.h")
@@ -52,5 +51,5 @@ public class SCNSceneSourceOptions
     public static native NSString ConvertToYUpKey();
     @GlobalConstant("SCNSceneSourceAnimationImportPolicyKey")
     public static native NSString AnimationImportPolicyKey();
-    
+
 }

@@ -17,11 +17,9 @@ import apple.uikit.*;
 import apple.avfoundation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("Photos/Photos.h") @Mapping("PHAssetChangeRequest")
 public class PHAssetChangeRequest 
     extends NSObject 
@@ -31,7 +29,7 @@ public class PHAssetChangeRequest
     
     @Mapping("init")
     public PHAssetChangeRequest() { }
-    
+
     
     @Mapping("placeholderForCreatedAsset")
     public native PHObjectPlaceholder getPlaceholderForCreatedAsset();
@@ -55,7 +53,7 @@ public class PHAssetChangeRequest
     public native PHContentEditingOutput getContentEditingOutput();
     @Mapping("setContentEditingOutput:")
     public native void setContentEditingOutput(PHContentEditingOutput v);
-    
+
     
     
     @Mapping("revertAssetContentToOriginal")
@@ -70,5 +68,5 @@ public class PHAssetChangeRequest
     public static native void deleteAssets(NSFastEnumeration assets);
     @Mapping("changeRequestForAsset:")
     public static native PHAssetChangeRequest create(PHAsset asset);
-    
+
 }

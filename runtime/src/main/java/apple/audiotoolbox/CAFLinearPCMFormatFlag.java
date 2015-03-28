@@ -17,9 +17,6 @@ import apple.coreaudio.*;
 import apple.coremedia.*;
 
 
-
-
-
 @Library("AudioToolbox/AudioToolbox.h")
 @Mapping("CAFLinearPCMFormatFlag")
 public final class CAFLinearPCMFormatFlag extends ObjCEnum {
@@ -28,6 +25,6 @@ public final class CAFLinearPCMFormatFlag extends ObjCEnum {
     public static final long Float = 1L;
     @GlobalConstant("kCAFLinearPCMFormatFlagIsLittleEndian")
     public static final long LittleEndian = 2L;
-    
+
 
 }

@@ -15,9 +15,6 @@ import apple.foundation.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("CoreBluetooth/CoreBluetooth.h")
 @Mapping("CBCharacteristicProperties")
 public final class CBCharacteristicProperties extends ObjCEnum {
@@ -48,6 +45,6 @@ public final class CBCharacteristicProperties extends ObjCEnum {
      */
     @GlobalConstant("CBCharacteristicPropertyIndicateEncryptionRequired")
     public static final long IndicateEncryptionRequired = 512L;
-    
+
 
 }

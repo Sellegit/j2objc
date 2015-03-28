@@ -14,9 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
-
-
 @Library("CoreText/CoreText.h")
 @Mapping("CTUnderlineStyle")
 public final class CTUnderlineStyle extends ObjCEnum {
@@ -29,6 +26,6 @@ public final class CTUnderlineStyle extends ObjCEnum {
     public static final long Thick = 2L;
     @GlobalConstant("kCTUnderlineStyleDouble")
     public static final long Double = 9L;
-    
+
 
 }

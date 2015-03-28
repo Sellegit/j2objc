@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.dispatch.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Mapping("CFRunLoopObserverRef") @Library("CoreFoundation/CoreFoundation.h")
@@ -25,7 +24,7 @@ public class CFRunLoopObserver
     
     
     protected CFRunLoopObserver() {}
-    
+
     
     
     
@@ -46,5 +45,5 @@ public class CFRunLoopObserver
     public static native void invalidate(CFRunLoopObserver observer);
     @GlobalFunction("CFRunLoopObserverIsValid")
     public static native boolean isValid(CFRunLoopObserver observer);
-    
+
 }

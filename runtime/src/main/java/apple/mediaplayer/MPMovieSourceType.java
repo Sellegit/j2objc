@@ -15,9 +15,6 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
-
-
 @Library("MediaPlayer/MediaPlayer.h")
 @Mapping("MPMovieSourceType")
 public final class MPMovieSourceType extends ObjCEnum {
@@ -28,6 +25,6 @@ public final class MPMovieSourceType extends ObjCEnum {
     public static final long File = 1L;
     @GlobalConstant("MPMovieSourceTypeStreaming")
     public static final long Streaming = 2L;
-    
+
 
 }

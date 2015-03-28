@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 3.2 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UIScreenMode")
 public class UIScreenMode 
     extends NSObject 
@@ -33,15 +31,15 @@ public class UIScreenMode
     
     @Mapping("init")
     public UIScreenMode() { }
-    
+
     
     @Mapping("size")
     public native CGSize getSize();
     @Mapping("pixelAspectRatio")
     public native @MachineSizedFloat double getPixelAspectRatio();
+
     
     
-    
-    
-    
+
+
 }

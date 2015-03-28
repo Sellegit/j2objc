@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.dispatch.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Mapping("CFTimeZoneRef") @Library("CoreFoundation/CoreFoundation.h")
@@ -25,7 +24,7 @@ public class CFTimeZone
     
     
     protected CFTimeZone() {}
-    
+
     
     
     
@@ -34,7 +33,7 @@ public class CFTimeZone
      */
     @GlobalConstant("kCFTimeZoneSystemTimeZoneDidChangeNotification")
     public static native NSString SystemTimeZoneDidChangeNotification();
-    
+
     @GlobalFunction("CFTimeZoneGetTypeID")
     public static native @MachineSizedUInt long getClassTypeID();
     @GlobalFunction("CFTimeZoneCopySystem")
@@ -82,5 +81,5 @@ public class CFTimeZone
      */
     @GlobalFunction("CFTimeZoneCopyLocalizedName")
     public static native CFString getLocalizedName(CFTimeZone tz, @Representing("CFTimeZoneNameStyle") long style, CFLocale locale);
-    
+
 }

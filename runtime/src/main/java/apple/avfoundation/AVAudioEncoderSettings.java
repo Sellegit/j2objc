@@ -19,7 +19,6 @@ import apple.coremedia.*;
 import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("AVFoundation/AVFoundation.h")
@@ -53,5 +52,5 @@ public class AVAudioEncoderSettings
     public static native NSString BitRateStrategyKey();
     @GlobalConstant("AVEncoderBitDepthHintKey")
     public static native NSString BitDepthHintKey();
-    
+
 }

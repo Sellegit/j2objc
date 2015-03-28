@@ -16,11 +16,9 @@ import apple.addressbook.*;
 import apple.corebluetooth.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("CoreLocation/CoreLocation.h") @Mapping("CLVisit")
 public class CLVisit 
     extends NSObject 
@@ -30,7 +28,7 @@ public class CLVisit
     
     @Mapping("init")
     public CLVisit() { }
-    
+
     
     @Mapping("arrivalDate")
     public native NSDate getArrivalDate();
@@ -40,10 +38,10 @@ public class CLVisit
     public native CLLocationCoordinate2D getCoordinate();
     @Mapping("horizontalAccuracy")
     public native double getHorizontalAccuracy();
-    
+
     
     
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
-    
+
 }

@@ -17,11 +17,9 @@ import apple.uikit.*;
 import apple.avfoundation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("Photos/Photos.h")
 @Mapping("PHImageRequestOptionsDeliveryMode")
 public final class PHImageRequestOptionsDeliveryMode extends ObjCEnum {
@@ -32,6 +30,6 @@ public final class PHImageRequestOptionsDeliveryMode extends ObjCEnum {
     public static final long HighQualityFormat = 1L;
     @GlobalConstant("PHImageRequestOptionsDeliveryModeFastFormat")
     public static final long FastFormat = 2L;
-    
+
 
 }

@@ -20,9 +20,6 @@ import apple.spritekit.*;
 import apple.opengles.*;
 
 
-
-
-
 @Library("SceneKit/SceneKit.h")
 @Mapping("SCNConsistencyErrorCode")
 public final class SCNConsistencyErrorCode extends ObjCEnum {
@@ -39,6 +36,6 @@ public final class SCNConsistencyErrorCode extends ObjCEnum {
     public static final long MissingAttributeError = 1004L;
     @GlobalConstant("SCNConsistencyXMLSchemaValidationError")
     public static final long XMLSchemaValidationError = 1005L;
-    
+
 
 }

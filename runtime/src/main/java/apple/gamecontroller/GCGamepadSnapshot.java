@@ -14,9 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
-
-
 @Library("GameController/GameController.h") @Mapping("GCGamepadSnapshot")
 public class GCGamepadSnapshot 
     extends GCGamepad 
@@ -30,15 +27,15 @@ public class GCGamepadSnapshot
     public GCGamepadSnapshot(GCController controller, NSData data) { }
     @Mapping("init")
     public GCGamepadSnapshot() { }
-    
+
     
     @Mapping("snapshotData")
     public native NSData getSnapshotData();
     @Mapping("setSnapshotData:")
     public native void setSnapshotData(NSData v);
+
     
     
-    
-    
-    
+
+
 }

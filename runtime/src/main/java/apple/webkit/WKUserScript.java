@@ -15,11 +15,9 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("WebKit/WebKit.h") @Mapping("WKUserScript")
 public class WKUserScript 
     extends NSObject 
@@ -31,7 +29,7 @@ public class WKUserScript
     public WKUserScript(String source, @Representing("WKUserScriptInjectionTime") long injectionTime, boolean forMainFrameOnly) { }
     @Mapping("init")
     public WKUserScript() { }
-    
+
     
     @Mapping("source")
     public native String getSource();
@@ -39,10 +37,10 @@ public class WKUserScript
     public native @Representing("WKUserScriptInjectionTime") long getInjectionTime();
     @Mapping("isForMainFrameOnly")
     public native boolean isForMainFrameOnly();
-    
+
     
     
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
-    
+
 }

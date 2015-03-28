@@ -20,9 +20,6 @@ import apple.spritekit.*;
 import apple.opengles.*;
 
 
-
-
-
 @Library("SceneKit/SceneKit.h") @Mapping("SCNText")
 public class SCNText 
     extends SCNGeometry 
@@ -32,7 +29,7 @@ public class SCNText
     
     @Mapping("init")
     public SCNText() { }
-    
+
     
     @Mapping("extrusionDepth")
     public native @MachineSizedFloat double getExtrusionDepth();
@@ -74,10 +71,10 @@ public class SCNText
     public native @MachineSizedFloat double getFlatness();
     @Mapping("setFlatness:")
     public native void setFlatness(@MachineSizedFloat double v);
-    
+
     
     
     @Mapping("textWithString:extrusionDepth:")
     public static native SCNText create(Object string, @MachineSizedFloat double extrusionDepth);
-    
+
 }

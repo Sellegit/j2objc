@@ -20,17 +20,14 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
-
-
 @Library("AVFoundation/AVFoundation.h") @Mapping("AVAudioPlayerDelegate")
 public interface AVAudioPlayerDelegate 
     extends NSObjectProtocol {
 
     
     
-    
-    
+
+
     
     @Mapping("audioPlayerDidFinishPlaying:successfully:")
     void didFinishPlaying(AVAudioPlayer player, boolean flag);
@@ -64,7 +61,7 @@ public interface AVAudioPlayerDelegate
     @Deprecated
     @Mapping("audioPlayerEndInterruption:")
     void endInterruption(AVAudioPlayer player);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

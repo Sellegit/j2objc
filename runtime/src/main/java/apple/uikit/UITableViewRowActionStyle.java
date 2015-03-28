@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("UIKit/UIKit.h")
 @Mapping("UITableViewRowActionStyle")
 public final class UITableViewRowActionStyle extends ObjCEnum {
@@ -34,6 +32,6 @@ public final class UITableViewRowActionStyle extends ObjCEnum {
     public static final long Destructive = 0L;
     @GlobalConstant("UITableViewRowActionStyleNormal")
     public static final long Normal = 1L;
-    
+
 
 }

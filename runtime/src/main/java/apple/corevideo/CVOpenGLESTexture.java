@@ -15,7 +15,6 @@ import apple.foundation.*;
 import apple.opengles.*;
 import apple.coremedia.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Mapping("CVOpenGLESTextureRef") @Library("CoreVideo/CoreVideo.h")
@@ -26,7 +25,7 @@ public class CVOpenGLESTexture
     
     
     protected CVOpenGLESTexture() {}
-    
+
     
     
     
@@ -55,5 +54,5 @@ public class CVOpenGLESTexture
      */
     @GlobalFunction("CVOpenGLESTextureGetCleanTexCoords")
     public static native void getCleanTexCoords(CVOpenGLESTexture image, Todo lowerLeft, Todo lowerRight, Todo upperRight, Todo upperLeft);
-    
+
 }

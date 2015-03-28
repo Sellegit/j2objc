@@ -13,7 +13,6 @@ import apple.coregraphics.*;
 import apple.coreservices.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("CoreMIDI/CoreMIDI.h")
@@ -41,5 +40,5 @@ public class CoreMIDI
      */
     @GlobalConstant("MIDINetworkNotificationSessionDidChange")
     public static native NSString NetworkNotificationSessionDidChange();
-    
+
 }

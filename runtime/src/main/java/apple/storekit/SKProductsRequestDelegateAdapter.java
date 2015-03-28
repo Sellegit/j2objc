@@ -15,7 +15,6 @@ import apple.foundation.*;
 import apple.uikit.*;
 import apple.accounts.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -26,8 +25,8 @@ public abstract class SKProductsRequestDelegateAdapter
     
     
     
-    
-    
+
+
     
     
     /**
@@ -35,5 +34,5 @@ public abstract class SKProductsRequestDelegateAdapter
      */
     @NotImplemented("productsRequest:didReceiveResponse:")
     public void didReceiveResponse(SKProductsRequest request, SKProductsResponse response) { throw new UnsupportedOperationException(); }
-    
+
 }

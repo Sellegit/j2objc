@@ -20,9 +20,6 @@ import apple.spritekit.*;
 import apple.opengles.*;
 
 
-
-
-
 @Library("SceneKit/SceneKit.h") @Mapping("SCNSceneRenderer")
 public interface SCNSceneRenderer 
     extends NSObjectProtocol {
@@ -71,7 +68,7 @@ public interface SCNSceneRenderer
     void setOverlaySKScene(SKScene v);
     @Mapping("context")
     EAGLContext getContext();
-    
+
     
     @Mapping("hitTest:options:")
     NSArray<SCNHitTestResult> hitTest(CGPoint thePoint, NSDictionary<?, ?> options);
@@ -85,7 +82,7 @@ public interface SCNSceneRenderer
     boolean prepareObject(Object object, @Block Block0<Boolean> block);
     @Mapping("prepareObjects:withCompletionHandler:")
     void prepareObjects(NSArray<?> objects, @Block VoidBooleanBlock completionHandler);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

@@ -15,11 +15,9 @@ import apple.foundation.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 6.0 and later.
  */
-
 @Library("CoreBluetooth/CoreBluetooth.h") @Mapping("CBPeripheralManager")
 public class CBPeripheralManager 
     extends NSObject 
@@ -36,7 +34,7 @@ public class CBPeripheralManager
     public CBPeripheralManager(CBPeripheralManagerDelegate delegate, DispatchQueue queue, NSDictionary<?, ?> options) { }
     @Mapping("init")
     public CBPeripheralManager() { }
-    
+
     
     @Mapping("delegate")
     public native CBPeripheralManagerDelegate getDelegate();
@@ -46,7 +44,7 @@ public class CBPeripheralManager
     public native @Representing("CBPeripheralManagerState") long getState();
     @Mapping("isAdvertising")
     public native boolean isAdvertising();
-    
+
     
     
     @Mapping("startAdvertising:")
@@ -70,5 +68,5 @@ public class CBPeripheralManager
      */
     @Mapping("authorizationStatus")
     public static native @Representing("CBPeripheralManagerAuthorizationStatus") long authorizationStatus();
-    
+
 }

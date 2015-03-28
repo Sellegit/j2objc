@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 2.0 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UITableView")
 public class UITableView 
     extends UIScrollView 
@@ -39,7 +37,7 @@ public class UITableView
     public UITableView(NSCoder aDecoder) { }
     @Mapping("init")
     public UITableView() { }
-    
+
     
     @Mapping("style")
     public native @Representing("UITableViewStyle") long getStyle();
@@ -211,7 +209,7 @@ public class UITableView
     public native UIView getTableFooterView();
     @Mapping("setTableFooterView:")
     public native void setTableFooterView(UIView v);
-    
+
     
     
     /**
@@ -226,7 +224,7 @@ public class UITableView
     public static native @MachineSizedFloat double getAutomaticDimension();
     @GlobalConstant("UITableViewSelectionDidChangeNotification")
     public static native NSString SelectionDidChangeNotification();
-    
+
     @Mapping("reloadData")
     public native void reloadData();
     /**
@@ -339,5 +337,5 @@ public class UITableView
      */
     @Mapping("registerNib:forHeaderFooterViewReuseIdentifier:")
     public native void registerReusableHeaderFooterViewNib(UINib nib, String identifier);
-    
+
 }

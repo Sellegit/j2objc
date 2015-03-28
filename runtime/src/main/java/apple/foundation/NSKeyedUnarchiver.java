@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h") @Mapping("NSKeyedUnarchiver")
 public class NSKeyedUnarchiver 
     extends NSCoder 
@@ -33,13 +30,13 @@ public class NSKeyedUnarchiver
     public NSKeyedUnarchiver(NSData data) { }
     @Mapping("init")
     public NSKeyedUnarchiver() { }
-    
+
     
     @Mapping("delegate")
     public native NSKeyedUnarchiverDelegate getDelegate();
     @Mapping("setDelegate:")
     public native void setDelegate(NSKeyedUnarchiverDelegate v);
-    
+
     
     
     @Mapping("finishDecoding")
@@ -53,5 +50,5 @@ public class NSKeyedUnarchiver
     public static native Object unarchive(NSData data);
     @Mapping("unarchiveObjectWithFile:")
     public static native Object unarchiveObject(String path);
-    
+
 }

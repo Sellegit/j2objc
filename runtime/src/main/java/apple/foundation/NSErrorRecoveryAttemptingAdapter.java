@@ -18,7 +18,6 @@ import apple.coremedia.*;
 import apple.security.*;
 import apple.dispatch.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -29,13 +28,13 @@ public abstract class NSErrorRecoveryAttemptingAdapter
     
     
     
-    
-    
+
+
     
     
     @NotImplemented("attemptRecoveryFromError:optionIndex:delegate:didRecoverSelector:contextInfo:")
     public void attemptRecoveryFromError(NSError error, @MachineSizedUInt long recoveryOptionIndex, Object delegate, Selector didRecoverSelector, Todo contextInfo) { throw new UnsupportedOperationException(); }
     @NotImplemented("attemptRecoveryFromError:optionIndex:")
     public boolean attemptRecoveryFromError(NSError error, @MachineSizedUInt long recoveryOptionIndex) { throw new UnsupportedOperationException(); }
-    
+
 }

@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h")
 @Mapping("AVCaptureVideoStabilizationMode")
 public final class AVCaptureVideoStabilizationMode extends ObjCEnum {
@@ -37,6 +35,6 @@ public final class AVCaptureVideoStabilizationMode extends ObjCEnum {
     public static final long Cinematic = 2L;
     @GlobalConstant("AVCaptureVideoStabilizationModeAuto")
     public static final long Auto = -1L;
-    
+
 
 }

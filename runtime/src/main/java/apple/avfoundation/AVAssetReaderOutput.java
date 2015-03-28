@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 4.1 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h") @Mapping("AVAssetReaderOutput")
 public class AVAssetReaderOutput 
     extends NSObject 
@@ -34,7 +32,7 @@ public class AVAssetReaderOutput
     
     @Mapping("init")
     public AVAssetReaderOutput() { }
-    
+
     
     @Mapping("mediaType")
     public native AVMediaType getMediaType();
@@ -58,7 +56,7 @@ public class AVAssetReaderOutput
      */
     @Mapping("setSupportsRandomAccess:")
     public native void setSupportsRandomAccess(boolean v);
-    
+
     
     
     /**
@@ -71,5 +69,5 @@ public class AVAssetReaderOutput
      */
     @Mapping("markConfigurationAsFinal")
     public native void markConfigurationAsFinal();
-    
+
 }

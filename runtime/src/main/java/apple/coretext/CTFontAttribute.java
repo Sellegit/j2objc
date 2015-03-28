@@ -13,7 +13,6 @@ import apple.coregraphics.*;
 import apple.coreservices.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("CoreText/CoreText.h")
@@ -146,5 +145,5 @@ public class CTFontAttribute
      */
     @GlobalConstant("kCTFontDownloadedAttribute")
     public static native CFString DownloadedValue();
-    
+
 }

@@ -15,9 +15,6 @@ import apple.dispatch.*;
 import apple.foundation.*;
 
 
-
-
-
 @Library("CoreFoundation/CoreFoundation.h")
 @Mapping("CFSocketCallBackType")
 public final class CFSocketCallBackType extends ObjCEnum {
@@ -34,6 +31,6 @@ public final class CFSocketCallBackType extends ObjCEnum {
     public static final long ConnectCallBack = 4L;
     @GlobalConstant("kCFSocketWriteCallBack")
     public static final long WriteCallBack = 8L;
-    
+
 
 }

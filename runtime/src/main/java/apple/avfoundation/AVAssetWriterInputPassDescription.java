@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h") @Mapping("AVAssetWriterInputPassDescription")
 public class AVAssetWriterInputPassDescription 
     extends NSObject 
@@ -34,13 +32,13 @@ public class AVAssetWriterInputPassDescription
     
     @Mapping("init")
     public AVAssetWriterInputPassDescription() { }
-    
+
     
     @Mapping("sourceTimeRanges")
     public native List<CMTimeRange> getSourceTimeRanges();
+
     
     
-    
-    
-    
+
+
 }

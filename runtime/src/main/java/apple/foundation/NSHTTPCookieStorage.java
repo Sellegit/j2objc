@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h") @Mapping("NSHTTPCookieStorage")
 public class NSHTTPCookieStorage 
     extends NSObject 
@@ -31,7 +28,7 @@ public class NSHTTPCookieStorage
     
     @Mapping("init")
     public NSHTTPCookieStorage() { }
-    
+
     
     @Mapping("cookies")
     public native NSArray<NSHTTPCookie> getCookies();
@@ -39,14 +36,14 @@ public class NSHTTPCookieStorage
     public native @Representing("NSHTTPCookieAcceptPolicy") long getCookieAcceptPolicy();
     @Mapping("setCookieAcceptPolicy:")
     public native void setCookieAcceptPolicy(@Representing("NSHTTPCookieAcceptPolicy") long v);
-    
+
     
     
     @GlobalConstant("NSHTTPCookieManagerAcceptPolicyChangedNotification")
     public static native NSString AcceptPolicyChangedNotification();
     @GlobalConstant("NSHTTPCookieManagerCookiesChangedNotification")
     public static native NSString CookiesChangedNotification();
-    
+
     @Mapping("setCookie:")
     public native void setCookie(NSHTTPCookie cookie);
     @Mapping("deleteCookie:")
@@ -77,5 +74,5 @@ public class NSHTTPCookieStorage
      */
     @Mapping("getCookiesForTask:completionHandler:")
     public native void getCookiesForTask(NSURLSessionTask task, Todo completionHandler);
-    
+
 }

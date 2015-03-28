@@ -15,9 +15,6 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
-
-
 @Library("MessageUI/MessageUI.h") @Mapping("MFMailComposeViewController")
 public class MFMailComposeViewController 
     extends UINavigationController 
@@ -31,13 +28,13 @@ public class MFMailComposeViewController
     public MFMailComposeViewController(String nibNameOrNil, NSBundle nibBundleOrNil) { }
     @Mapping("init")
     public MFMailComposeViewController() { }
-    
+
     
     @Mapping("mailComposeDelegate")
     public native MFMailComposeViewControllerDelegate getMailComposeDelegate();
     @Mapping("setMailComposeDelegate:")
     public native void setMailComposeDelegate(MFMailComposeViewControllerDelegate v);
-    
+
     
     
     /**
@@ -75,5 +72,5 @@ public class MFMailComposeViewController
      */
     @Mapping("canSendMail")
     public static native boolean canSendMail();
-    
+
 }

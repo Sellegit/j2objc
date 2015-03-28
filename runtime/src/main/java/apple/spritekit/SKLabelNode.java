@@ -21,9 +21,6 @@ import apple.glkit.*;
 import apple.scenekit.*;
 
 
-
-
-
 @Library("SpriteKit/SpriteKit.h") @Mapping("SKLabelNode")
 public class SKLabelNode 
     extends SKNode 
@@ -37,7 +34,7 @@ public class SKLabelNode
     public SKLabelNode() { }
     @Mapping("initWithCoder:")
     public SKLabelNode(NSCoder aDecoder) { }
-    
+
     
     @Mapping("verticalAlignmentMode")
     public native @Representing("SKLabelVerticalAlignmentMode") long getVerticalAlignmentMode();
@@ -75,12 +72,12 @@ public class SKLabelNode
     public native @Representing("SKBlendMode") long getBlendMode();
     @Mapping("setBlendMode:")
     public native void setBlendMode(@Representing("SKBlendMode") long v);
-    
+
     
     
     @Mapping("labelNodeWithText:")
     public static native SKLabelNode createWithText(String text);
     @Mapping("labelNodeWithFontNamed:")
     public static native SKLabelNode createWithFont(String fontName);
-    
+
 }

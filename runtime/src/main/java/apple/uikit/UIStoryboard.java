@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 5.0 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UIStoryboard")
 public class UIStoryboard 
     extends NSObject 
@@ -33,10 +31,10 @@ public class UIStoryboard
     
     @Mapping("init")
     public UIStoryboard() { }
+
     
-    
-    
-    
+
+
     
     
     @Mapping("instantiateInitialViewController")
@@ -45,5 +43,5 @@ public class UIStoryboard
     public native UIViewController instantiateViewController(String identifier);
     @Mapping("storyboardWithName:bundle:")
     public static native UIStoryboard create(String name, NSBundle storyboardBundleOrNil);
-    
+
 }

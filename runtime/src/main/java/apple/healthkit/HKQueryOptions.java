@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("HealthKit/HealthKit.h")
 @Mapping("HKQueryOptions")
 public final class HKQueryOptions extends ObjCEnum {
@@ -29,6 +27,6 @@ public final class HKQueryOptions extends ObjCEnum {
     public static final long StrictStartDate = 1L;
     @GlobalConstant("HKQueryOptionStrictEndDate")
     public static final long StrictEndDate = 2L;
-    
+
 
 }

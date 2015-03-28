@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h")
 @Mapping("NSNumberFormatterPadPosition")
 public final class NSNumberFormatterPadPosition extends ObjCEnum {
@@ -34,6 +31,6 @@ public final class NSNumberFormatterPadPosition extends ObjCEnum {
     public static final long BeforeSuffix = 2L;
     @GlobalConstant("NSNumberFormatterPadAfterSuffix")
     public static final long AfterSuffix = 3L;
-    
+
 
 }

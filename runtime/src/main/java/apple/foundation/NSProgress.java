@@ -19,11 +19,9 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 7.0 and later.
  */
-
 @Library("Foundation/Foundation.h") @Mapping("NSProgress")
 public class NSProgress 
     extends NSObject 
@@ -35,7 +33,7 @@ public class NSProgress
     public NSProgress(NSProgress parentProgressOrNil, NSDictionary<?, ?> userInfoOrNil) { }
     @Mapping("init")
     public NSProgress() { }
-    
+
     
     @Mapping("totalUnitCount")
     public native long getTotalUnitCount();
@@ -83,7 +81,7 @@ public class NSProgress
     public native NSProgressKind getKind();
     @Mapping("setKind:")
     public native void setKind(NSProgressKind v);
-    
+
     
     
     @Mapping("becomeCurrentWithPendingUnitCount:")
@@ -100,5 +98,5 @@ public class NSProgress
     public static native NSProgress getCurrentProgress();
     @Mapping("progressWithTotalUnitCount:")
     public static native NSProgress create(long unitCount);
-    
+
 }

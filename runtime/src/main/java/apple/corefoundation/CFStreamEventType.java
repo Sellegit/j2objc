@@ -15,9 +15,6 @@ import apple.dispatch.*;
 import apple.foundation.*;
 
 
-
-
-
 @Library("CoreFoundation/CoreFoundation.h")
 @Mapping("CFStreamEventType")
 public final class CFStreamEventType extends ObjCEnum {
@@ -34,6 +31,6 @@ public final class CFStreamEventType extends ObjCEnum {
     public static final long ErrorOccurred = 8L;
     @GlobalConstant("kCFStreamEventEndEncountered")
     public static final long EndEncountered = 16L;
-    
+
 
 }

@@ -16,9 +16,6 @@ import apple.uikit.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("ExternalAccessory/ExternalAccessory.h")
 @Mapping("EAWiFiUnconfiguredAccessoryProperties")
 public final class EAWiFiUnconfiguredAccessoryProperties extends ObjCEnum {
@@ -29,6 +26,6 @@ public final class EAWiFiUnconfiguredAccessoryProperties extends ObjCEnum {
     public static final long AirPrint = 2L;
     @GlobalConstant("EAWiFiUnconfiguredAccessoryPropertySupportsHomeKit")
     public static final long HomeKit = 4L;
-    
+
 
 }

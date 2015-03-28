@@ -17,11 +17,9 @@ import apple.uikit.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 7.0 and later.
  */
-
 @Library("MapKit/MapKit.h") @Mapping("MKMapCamera")
 public class MKMapCamera 
     extends NSObject 
@@ -31,7 +29,7 @@ public class MKMapCamera
     
     @Mapping("init")
     public MKMapCamera() { }
-    
+
     
     @Mapping("centerCoordinate")
     public native CLLocationCoordinate2D getCenterCoordinate();
@@ -49,7 +47,7 @@ public class MKMapCamera
     public native double getAltitude();
     @Mapping("setAltitude:")
     public native void setAltitude(double v);
-    
+
     
     
     @Mapping("camera")
@@ -58,5 +56,5 @@ public class MKMapCamera
     public static native MKMapCamera createPrime(CLLocationCoordinate2D centerCoordinate, CLLocationCoordinate2D eyeCoordinate, double eyeAltitude);
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
-    
+
 }

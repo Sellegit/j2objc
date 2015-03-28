@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.dispatch.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Mapping("CFWriteStreamRef") @Library("CoreFoundation/CoreFoundation.h")
@@ -25,7 +24,7 @@ public class CFWriteStream
     
     
     protected CFWriteStream() {}
-    
+
     
     
     
@@ -72,5 +71,5 @@ public class CFWriteStream
     public static native DispatchQueue getDispatchQueue(CFWriteStream stream);
     @GlobalFunction("CFWriteStreamGetError")
     public static native CFStreamError getStreamError(CFWriteStream stream);
-    
+
 }

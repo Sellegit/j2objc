@@ -19,23 +19,20 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h") @Mapping("UIPickerViewDataSource")
 public interface UIPickerViewDataSource 
     extends NSObjectProtocol {
 
     
     
-    
-    
+
+
     
     @Mapping("numberOfComponentsInPickerView:")
     @MachineSizedSInt long getNumberOfComponents(UIPickerView pickerView);
     @Mapping("pickerView:numberOfRowsInComponent:")
     @MachineSizedSInt long getNumberOfRows(UIPickerView pickerView, @MachineSizedSInt long component);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

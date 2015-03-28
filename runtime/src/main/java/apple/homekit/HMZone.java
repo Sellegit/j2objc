@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("HomeKit/HomeKit.h") @Mapping("HMZone")
 public class HMZone 
     extends NSObject 
@@ -27,13 +25,13 @@ public class HMZone
     
     
     public HMZone() {}
-    
+
     
     @Mapping("name")
     public native String getName();
     @Mapping("rooms")
     public native NSArray<HMRoom> getRooms();
-    
+
     
     
     @Mapping("updateName:completionHandler:")
@@ -42,5 +40,5 @@ public class HMZone
     public native void addRoom(HMRoom room, @Block VoidBlock1<NSError> completion);
     @Mapping("removeRoom:completionHandler:")
     public native void removeRoom(HMRoom room, @Block VoidBlock1<NSError> completion);
-    
+
 }

@@ -15,11 +15,9 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
 /**
  * @since Available in iOS 4.3 and later.
  */
-
 @Library("MediaPlayer/MediaPlayer.h") @Mapping("MPMovieErrorLogEvent")
 public class MPMovieErrorLogEvent 
     extends NSObject 
@@ -29,7 +27,7 @@ public class MPMovieErrorLogEvent
     
     @Mapping("init")
     public MPMovieErrorLogEvent() { }
-    
+
     
     @Mapping("date")
     public native NSDate getDate();
@@ -45,10 +43,10 @@ public class MPMovieErrorLogEvent
     public native String getErrorDomain();
     @Mapping("errorComment")
     public native String getErrorComment();
-    
+
     
     
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
-    
+
 }

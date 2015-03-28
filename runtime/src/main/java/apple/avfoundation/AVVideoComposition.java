@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 4.0 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h") @Mapping("AVVideoComposition")
 public class AVVideoComposition 
     extends NSObject 
@@ -34,7 +32,7 @@ public class AVVideoComposition
     
     @Mapping("init")
     public AVVideoComposition() { }
-    
+
     
     /**
      * @since Available in iOS 7.0 and later.
@@ -51,7 +49,7 @@ public class AVVideoComposition
     public native NSArray<AVVideoCompositionInstruction> getInstructions();
     @Mapping("animationTool")
     public native AVVideoCompositionCoreAnimationTool getAnimationTool();
-    
+
     
     
     /**
@@ -66,5 +64,5 @@ public class AVVideoComposition
     public native boolean isValid(AVAsset asset, CMTimeRange timeRange, AVVideoCompositionValidationHandling validationDelegate);
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
-    
+
 }

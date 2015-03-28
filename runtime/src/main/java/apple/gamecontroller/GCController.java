@@ -14,9 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
-
-
 @Library("GameController/GameController.h") @Mapping("GCController")
 public class GCController 
     extends NSObject 
@@ -26,7 +23,7 @@ public class GCController
     
     @Mapping("init")
     public GCController() { }
-    
+
     
     @Mapping("controllerPausedHandler")
     public native @Block VoidBlock1<GCController> getControllerPausedHandler();
@@ -49,19 +46,19 @@ public class GCController
      */
     @Mapping("motion")
     public native GCMotion getMotion();
-    
+
     
     
     @GlobalConstant("GCControllerDidConnectNotification")
     public static native NSString DidConnectNotification();
     @GlobalConstant("GCControllerDidDisconnectNotification")
     public static native NSString DidDisconnectNotification();
-    
+
     @Mapping("controllers")
     public static native NSArray<GCController> getControllers();
     @Mapping("startWirelessControllerDiscoveryWithCompletionHandler:")
     public static native void startWirelessControllerDiscovery(@Block Runnable completionHandler);
     @Mapping("stopWirelessControllerDiscovery")
     public static native void stopWirelessControllerDiscovery();
-    
+
 }

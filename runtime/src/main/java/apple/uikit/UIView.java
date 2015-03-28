@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 2.0 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UIView")
 public class UIView 
     extends UIResponder 
@@ -35,7 +33,7 @@ public class UIView
     public UIView(CGRect frame) { }
     @Mapping("init")
     public UIView() { }
-    
+
     
     @Mapping("isUserInteractionEnabled")
     public native boolean isUserInteractionEnabled();
@@ -229,7 +227,7 @@ public class UIView
      */
     @Mapping("setAccessibilityIdentifier:")
     public native void setAccessibilityIdentifier(String v);
-    
+
     
     
     /**
@@ -237,7 +235,7 @@ public class UIView
      */
     @GlobalConstant("UIViewNoIntrinsicMetric")
     public static native @MachineSizedFloat double NoIntrinsicMetric();
-    
+
     @Mapping("hitTest:withEvent:")
     public native UIView hitTest(CGPoint point, UIEvent event);
     @Mapping("pointInside:withEvent:")
@@ -603,5 +601,5 @@ public class UIView
      */
     @Mapping("convertRect:fromCoordinateSpace:")
     public native CGRect convertRectFromCoordinateSpace(CGRect rect, UICoordinateSpace coordinateSpace);
-    
+
 }

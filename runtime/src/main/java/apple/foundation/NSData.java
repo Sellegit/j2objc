@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h") @Mapping("NSData")
 public class NSData 
     extends NSObject 
@@ -46,11 +43,11 @@ public class NSData
      */
     @Mapping("initWithBase64EncodedData:options:")
     public NSData(NSData base64Data, @Representing("NSDataBase64DecodingOptions") long options) { }
-    
+
     
     @Mapping("length")
     public native @MachineSizedUInt long getLength();
-    
+
     
     
     @Mapping("getBytes:length:")
@@ -87,5 +84,5 @@ public class NSData
     @Deprecated
     @Mapping("dataWithContentsOfMappedFile:")
     public static native Object readMappedFile(String path);
-    
+
 }

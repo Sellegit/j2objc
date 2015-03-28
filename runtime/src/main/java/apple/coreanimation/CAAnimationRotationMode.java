@@ -16,7 +16,6 @@ import apple.coreimage.*;
 import apple.coretext.*;
 import apple.opengles.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("QuartzCore/QuartzCore.h")
@@ -39,5 +38,5 @@ public class CAAnimationRotationMode
      */
     @GlobalConstant("kCAAnimationRotateAutoReverse")
     public static native NSString AutoReverseValue();
-    
+
 }

@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 4.0 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h") @Mapping("AVMutableMetadataItem")
 public class AVMutableMetadataItem 
     extends AVMetadataItem 
@@ -34,7 +32,7 @@ public class AVMutableMetadataItem
     
     @Mapping("init")
     public AVMutableMetadataItem() { }
-    
+
     
     /**
      * @since Available in iOS 8.0 and later.
@@ -100,10 +98,10 @@ public class AVMutableMetadataItem
     public native Todo getKey();
     @Mapping("setKey:")
     public native void setKey(Todo v);
-    
+
     
     
     @Mapping("metadataItem")
     public static native AVMutableMetadataItem create();
-    
+
 }

@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("NetworkExtension/NetworkExtension.h")
 @Mapping("NEVPNIKEv2DeadPeerDetectionRate")
 public final class NEVPNIKEv2DeadPeerDetectionRate extends ObjCEnum {
@@ -31,6 +29,6 @@ public final class NEVPNIKEv2DeadPeerDetectionRate extends ObjCEnum {
     public static final long Medium = 2L;
     @GlobalConstant("NEVPNIKEv2DeadPeerDetectionRateHigh")
     public static final long High = 3L;
-    
+
 
 }

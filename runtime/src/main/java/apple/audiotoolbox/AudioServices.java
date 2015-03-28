@@ -16,7 +16,6 @@ import apple.opengles.*;
 import apple.coreaudio.*;
 import apple.coremedia.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("AudioToolbox/AudioToolbox.h")
@@ -74,5 +73,5 @@ public class AudioServices
      */
     @GlobalFunction("AudioServicesSetProperty")
     public static native int setProperty(int inPropertyID, int inSpecifierSize, Todo inSpecifier, int inPropertyDataSize, Todo inPropertyData);
-    
+
 }

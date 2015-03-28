@@ -17,11 +17,9 @@ import apple.uikit.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 4.0 and later.
  */
-
 @Library("MapKit/MapKit.h") @Mapping("MKPolyline")
 public class MKPolyline 
     extends MKMultiPoint 
@@ -31,13 +29,13 @@ public class MKPolyline
     
     @Mapping("init")
     public MKPolyline() { }
-    
+
     
     @Mapping("coordinate")
     public native CLLocationCoordinate2D getCoordinate();
     @Mapping("boundingMapRect")
     public native MKMapRect getBoundingMapRect();
-    
+
     
     
     @Mapping("polylineWithPoints:count:")
@@ -51,5 +49,5 @@ public class MKPolyline
      */
     @Mapping("canReplaceMapContent")
     public native boolean canReplaceMapContent();
-    
+
 }

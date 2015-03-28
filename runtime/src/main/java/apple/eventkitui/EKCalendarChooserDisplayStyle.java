@@ -16,9 +16,6 @@ import apple.eventkit.*;
 import apple.uikit.*;
 
 
-
-
-
 @Library("EventKitUI/EventKitUI.h")
 @Mapping("EKCalendarChooserDisplayStyle")
 public final class EKCalendarChooserDisplayStyle extends ObjCEnum {
@@ -27,6 +24,6 @@ public final class EKCalendarChooserDisplayStyle extends ObjCEnum {
     public static final long AllCalendars = 0L;
     @GlobalConstant("EKCalendarChooserDisplayWritableCalendarsOnly")
     public static final long WritableCalendarsOnly = 1L;
-    
+
 
 }

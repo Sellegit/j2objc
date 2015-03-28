@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.dispatch.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Mapping("CFTreeRef") @Library("CoreFoundation/CoreFoundation.h")
@@ -25,7 +24,7 @@ public class CFTree
     
     
     protected CFTree() {}
-    
+
     
     
     
@@ -65,5 +64,5 @@ public class CFTree
     public static native void removeAllChildren(CFTree tree);
     @GlobalFunction("CFTreeSortChildren")
     public static native void sortChildren(CFTree tree, FunctionPtr comparator, Todo context);
-    
+
 }

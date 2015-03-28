@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 4.3 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h") @Mapping("AVPlayerItemAccessLogEvent")
 public class AVPlayerItemAccessLogEvent 
     extends NSObject 
@@ -34,7 +32,7 @@ public class AVPlayerItemAccessLogEvent
     
     @Mapping("init")
     public AVPlayerItemAccessLogEvent() { }
-    
+
     
     /**
      * @since Available in iOS 4.3 and later.
@@ -119,10 +117,10 @@ public class AVPlayerItemAccessLogEvent
      */
     @Mapping("switchBitrate")
     public native double getSwitchBitrate();
-    
+
     
     
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
-    
+
 }

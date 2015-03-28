@@ -16,9 +16,6 @@ import apple.opengles.*;
 import apple.coremedia.*;
 
 
-
-
-
 @Library("CoreVideo/CoreVideo.h")
 @Mapping("CVAttachmentMode")
 public final class CVAttachmentMode extends ObjCEnum {
@@ -27,6 +24,6 @@ public final class CVAttachmentMode extends ObjCEnum {
     public static final long NotPropagate = 0L;
     @GlobalConstant("kCVAttachmentMode_ShouldPropagate")
     public static final long Propagate = 1L;
-    
+
 
 }

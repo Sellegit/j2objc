@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h") @Mapping("AVAudioBuffer")
 public class AVAudioBuffer 
     extends NSObject 
@@ -33,7 +31,7 @@ public class AVAudioBuffer
     
     
     public AVAudioBuffer() {}
-    
+
     
     @Mapping("format")
     public native AVAudioFormat getFormat();
@@ -41,10 +39,10 @@ public class AVAudioBuffer
     public native Todo getAudioBufferList();
     @Mapping("mutableAudioBufferList")
     public native Todo getMutableAudioBufferList();
-    
+
     
     
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
-    
+
 }

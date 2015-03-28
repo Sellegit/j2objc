@@ -18,7 +18,6 @@ import apple.coremedia.*;
 import apple.security.*;
 import apple.dispatch.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("Foundation/Foundation.h")
@@ -45,5 +44,5 @@ public class NSPathUtilities
     public static native String getOpenStepRootDirectory();
     @GlobalFunction("NSSearchPathForDirectoriesInDomains")
     public static native List<String> getSearchPathForDirectoriesInDomains(@Representing("NSSearchPathDirectory") long directory, @Representing("NSSearchPathDomainMask") long domainMask, boolean expandTilde);
-    
+
 }

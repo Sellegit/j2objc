@@ -17,11 +17,9 @@ import apple.uikit.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 4.0 and later.
  */
-
 @Library("MapKit/MapKit.h") @Mapping("MKPolygon")
 public class MKPolygon 
     extends MKMultiPoint 
@@ -31,7 +29,7 @@ public class MKPolygon
     
     @Mapping("init")
     public MKPolygon() { }
-    
+
     
     @Mapping("interiorPolygons")
     public native NSArray<MKPolygon> getInteriorPolygons();
@@ -39,7 +37,7 @@ public class MKPolygon
     public native CLLocationCoordinate2D getCoordinate();
     @Mapping("boundingMapRect")
     public native MKMapRect getBoundingMapRect();
-    
+
     
     
     @Mapping("polygonWithPoints:count:")
@@ -57,5 +55,5 @@ public class MKPolygon
      */
     @Mapping("canReplaceMapContent")
     public native boolean canReplaceMapContent();
-    
+
 }

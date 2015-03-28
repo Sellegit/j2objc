@@ -19,9 +19,6 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h")
 @Mapping("UIBarStyle")
 public final class UIBarStyle extends ObjCEnum {
@@ -34,6 +31,6 @@ public final class UIBarStyle extends ObjCEnum {
     public static final long BlackOpaque = 1L;
     @GlobalConstant("UIBarStyleBlackTranslucent")
     public static final long BlackTranslucent = 2L;
-    
+
 
 }

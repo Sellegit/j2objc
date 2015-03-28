@@ -21,9 +21,6 @@ import apple.glkit.*;
 import apple.scenekit.*;
 
 
-
-
-
 @Library("SpriteKit/SpriteKit.h") @Mapping("SKTransition")
 public class SKTransition 
     extends NSObject 
@@ -33,7 +30,7 @@ public class SKTransition
     
     @Mapping("init")
     public SKTransition() { }
-    
+
     
     @Mapping("pausesIncomingScene")
     public native boolean pausesIncomingScene();
@@ -43,7 +40,7 @@ public class SKTransition
     public native boolean pausesOutgoingScene();
     @Mapping("setPausesOutgoingScene:")
     public native void setPausesOutgoingScene(boolean v);
-    
+
     
     
     @Mapping("crossFadeWithDuration:")
@@ -74,5 +71,5 @@ public class SKTransition
     public static native SKTransition doorway(double sec);
     @Mapping("transitionWithCIFilter:duration:")
     public static native SKTransition create(CIFilter filter, double sec);
-    
+
 }

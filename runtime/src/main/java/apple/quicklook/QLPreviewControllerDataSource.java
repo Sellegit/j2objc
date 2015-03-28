@@ -15,23 +15,20 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
-
-
 @Library("QuickLook/QuickLook.h") @Mapping("QLPreviewControllerDataSource")
 public interface QLPreviewControllerDataSource 
      {
 
     
     
-    
-    
+
+
     
     @Mapping("numberOfPreviewItemsInPreviewController:")
     @MachineSizedSInt long getNumberOfPreviewItems(QLPreviewController controller);
     @Mapping("previewController:previewItemAtIndex:")
     QLPreviewItem getPreviewItem(QLPreviewController controller, @MachineSizedSInt long index);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

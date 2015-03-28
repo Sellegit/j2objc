@@ -15,9 +15,6 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
-
-
 @Library("GameKit/GameKit.h") @Mapping("GKSavedGame")
 public class GKSavedGame 
     extends NSObject 
@@ -27,7 +24,7 @@ public class GKSavedGame
     
     @Mapping("init")
     public GKSavedGame() { }
-    
+
     
     @Mapping("name")
     public native String getName();
@@ -35,12 +32,12 @@ public class GKSavedGame
     public native String getDeviceName();
     @Mapping("modificationDate")
     public native NSDate getModificationDate();
-    
+
     
     
     @Mapping("loadDataWithCompletionHandler:")
     public native void loadData(@Block VoidBlock2<NSData, NSError> handler);
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
-    
+
 }

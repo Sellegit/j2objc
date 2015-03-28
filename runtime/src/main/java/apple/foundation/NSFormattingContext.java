@@ -19,11 +19,9 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("Foundation/Foundation.h")
 @Mapping("NSFormattingContext")
 public final class NSFormattingContext extends ObjCEnum {
@@ -40,6 +38,6 @@ public final class NSFormattingContext extends ObjCEnum {
     public static final long BeginningOfSentence = 4L;
     @GlobalConstant("NSFormattingContextMiddleOfSentence")
     public static final long MiddleOfSentence = 5L;
-    
+
 
 }

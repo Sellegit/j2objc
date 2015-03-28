@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 import apple.uikit.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -25,8 +24,8 @@ public abstract class GKInviteEventListenerAdapter
     
     
     
-    
-    
+
+
     
     
     /**
@@ -46,5 +45,5 @@ public abstract class GKInviteEventListenerAdapter
     @Deprecated
     @NotImplemented("player:didRequestMatchWithPlayers:")
     public void didRequestMatchWithPlayers(GKPlayer player, NSArray<?> playerIDsToInvite) { throw new UnsupportedOperationException(); }
-    
+
 }

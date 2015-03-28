@@ -14,9 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
-
-
 @Mapping("GCRotationRate") @Library("GameController/GameController.h")
 public class GCRotationRate 
     extends Struct 
@@ -32,7 +29,7 @@ public class GCRotationRate
     public native double getY();
     @DotMapping("z")
     public native double getZ();
-    
+
     public static native GCRotationRate create(double x, double y, double z) /*-[
         GCRotationRate __new = { .x = x, .y = y, .z = z };
         return __new;
@@ -42,17 +39,36 @@ public class GCRotationRate
         return __new;
     ]-*/;
 
-    
+
     public static native GCRotationRate copyWithy(GCRotationRate original, double y) /*-[
         GCRotationRate __new = { .x = original.x, .y = y, .z = original.z };
         return __new;
     ]-*/;
 
-    
+
     public static native GCRotationRate copyWithz(GCRotationRate original, double z) /*-[
         GCRotationRate __new = { .x = original.x, .y = original.y, .z = z };
         return __new;
     ]-*/;
 
-    
+
+    public static final class Adapter {
+
+        public double x;
+        public double y;
+        public double z;
+        public Adapter(double x, double y, double z) {
+            this.x = x;
+            this.y = y;
+            this.z = z;
+        }
+        public Adapter(GCRotationRate original) {
+            this.x = original.getX();
+            this.y = original.getY();
+            this.z = original.getZ();
+        }
+        public GCRotationRate convert() {
+            return create(x, y, z);
+        }
+    }
 }

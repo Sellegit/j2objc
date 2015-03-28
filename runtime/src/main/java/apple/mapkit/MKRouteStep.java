@@ -17,11 +17,9 @@ import apple.uikit.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 7.0 and later.
  */
-
 @Library("MapKit/MapKit.h") @Mapping("MKRouteStep")
 public class MKRouteStep 
     extends NSObject 
@@ -31,7 +29,7 @@ public class MKRouteStep
     
     @Mapping("init")
     public MKRouteStep() { }
-    
+
     
     @Mapping("instructions")
     public native String getInstructions();
@@ -43,9 +41,9 @@ public class MKRouteStep
     public native double getDistance();
     @Mapping("transportType")
     public native @Representing("MKDirectionsTransportType") long getTransportType();
+
     
     
-    
-    
-    
+
+
 }

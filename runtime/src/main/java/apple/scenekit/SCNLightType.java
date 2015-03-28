@@ -19,7 +19,6 @@ import apple.glkit.*;
 import apple.spritekit.*;
 import apple.opengles.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("SceneKit/SceneKit.h")
@@ -40,5 +39,5 @@ public class SCNLightType
     public static native NSString DirectionalValue();
     @GlobalConstant("SCNLightTypeSpot")
     public static native NSString SpotValue();
-    
+
 }

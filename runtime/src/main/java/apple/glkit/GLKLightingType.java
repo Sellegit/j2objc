@@ -17,11 +17,9 @@ import apple.uikit.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 5.0 and later.
  */
-
 @Library("GLKit/GLKit.h")
 @Mapping("GLKLightingType")
 public final class GLKLightingType extends ObjCEnum {
@@ -30,6 +28,6 @@ public final class GLKLightingType extends ObjCEnum {
     public static final long Vertex = 0L;
     @GlobalConstant("GLKLightingTypePerPixel")
     public static final long Pixel = 1L;
-    
+
 
 }

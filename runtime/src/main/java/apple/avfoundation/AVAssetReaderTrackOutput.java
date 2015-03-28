@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 4.1 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h") @Mapping("AVAssetReaderTrackOutput")
 public class AVAssetReaderTrackOutput 
     extends AVAssetReaderOutput 
@@ -34,7 +32,7 @@ public class AVAssetReaderTrackOutput
     
     @Mapping("init")
     public AVAssetReaderTrackOutput() { }
-    
+
     
     @Mapping("track")
     public native AVAssetTrack getTrack();
@@ -50,10 +48,10 @@ public class AVAssetReaderTrackOutput
      */
     @Mapping("setAudioTimePitchAlgorithm:")
     public native void setAudioTimePitchAlgorithm(AVAudioTimePitchAlgorithm v);
-    
+
     
     
     @Mapping("assetReaderTrackOutputWithTrack:outputSettings:")
     public static native AVAssetReaderTrackOutput create(AVAssetTrack track, NSDictionary<?, ?> outputSettings);
-    
+
 }

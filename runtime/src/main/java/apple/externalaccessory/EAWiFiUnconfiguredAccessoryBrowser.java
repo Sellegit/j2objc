@@ -16,11 +16,9 @@ import apple.uikit.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("ExternalAccessory/ExternalAccessory.h") @Mapping("EAWiFiUnconfiguredAccessoryBrowser")
 public class EAWiFiUnconfiguredAccessoryBrowser 
     extends NSObject 
@@ -35,7 +33,7 @@ public class EAWiFiUnconfiguredAccessoryBrowser
     public EAWiFiUnconfiguredAccessoryBrowser(EAWiFiUnconfiguredAccessoryBrowserDelegate delegate, DispatchQueue queue) { }
     @Mapping("init")
     public EAWiFiUnconfiguredAccessoryBrowser() { }
-    
+
     
     @Mapping("delegate")
     public native EAWiFiUnconfiguredAccessoryBrowserDelegate getDelegate();
@@ -43,7 +41,7 @@ public class EAWiFiUnconfiguredAccessoryBrowser
     public native void setDelegate(EAWiFiUnconfiguredAccessoryBrowserDelegate v);
     @Mapping("unconfiguredAccessories")
     public native NSSet<EAWiFiUnconfiguredAccessory> getUnconfiguredAccessories();
-    
+
     
     
     /**
@@ -61,5 +59,5 @@ public class EAWiFiUnconfiguredAccessoryBrowser
      */
     @Mapping("configureAccessory:withConfigurationUIOnViewController:")
     public native void configureAccessory(EAWiFiUnconfiguredAccessory accessory, UIViewController viewController);
-    
+
 }

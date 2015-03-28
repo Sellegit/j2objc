@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 import apple.uikit.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -25,13 +24,13 @@ public abstract class QLPreviewControllerDataSourceAdapter
     
     
     
-    
-    
+
+
     
     
     @NotImplemented("numberOfPreviewItemsInPreviewController:")
     public @MachineSizedSInt long getNumberOfPreviewItems(QLPreviewController controller) { throw new UnsupportedOperationException(); }
     @NotImplemented("previewController:previewItemAtIndex:")
     public QLPreviewItem getPreviewItem(QLPreviewController controller, @MachineSizedSInt long index) { throw new UnsupportedOperationException(); }
-    
+
 }

@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("NetworkExtension/NetworkExtension.h") @Mapping("NEOnDemandRuleIgnore")
 public class NEOnDemandRuleIgnore 
     extends NEOnDemandRule 
@@ -28,12 +26,12 @@ public class NEOnDemandRuleIgnore
     
     @Mapping("init")
     public NEOnDemandRuleIgnore() { }
+
+    
+
+
     
     
-    
-    
-    
-    
-    
-    
+
+
 }

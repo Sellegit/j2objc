@@ -15,13 +15,11 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
 /**
  * @since Available in iOS 3.0 and later.
  * @deprecated Deprecated in iOS 7.0.
  */
 @Deprecated
-
 @Library("GameKit/GameKit.h") @Mapping("GKSession")
 public class GKSession 
     extends NSObject 
@@ -38,7 +36,7 @@ public class GKSession
     public GKSession(String sessionID, String name, GKSessionMode mode) { }
     @Mapping("init")
     public GKSession() { }
-    
+
     
     @Mapping("delegate")
     public native GKSessionDelegate getDelegate();
@@ -65,7 +63,7 @@ public class GKSession
     public native double getDisconnectTimeout();
     @Mapping("setDisconnectTimeout:")
     public native void setDisconnectTimeout(double v);
-    
+
     
     
     @Mapping("displayNameForPeer:")
@@ -105,5 +103,5 @@ public class GKSession
     @Deprecated
     @Mapping("peersWithConnectionState:")
     public native List<String> getPeers(GKPeerConnectionState state);
-    
+
 }

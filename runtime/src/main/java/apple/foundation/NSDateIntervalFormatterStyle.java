@@ -19,11 +19,9 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("Foundation/Foundation.h")
 @Mapping("NSDateIntervalFormatterStyle")
 public final class NSDateIntervalFormatterStyle extends ObjCEnum {
@@ -38,6 +36,6 @@ public final class NSDateIntervalFormatterStyle extends ObjCEnum {
     public static final long Long = 3L;
     @GlobalConstant("NSDateIntervalFormatterFullStyle")
     public static final long Full = 4L;
-    
+
 
 }

@@ -14,9 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
-
-
 @Library("CoreText/CoreText.h")
 @Mapping("CTRunStatus")
 public final class CTRunStatus extends ObjCEnum {
@@ -29,6 +26,6 @@ public final class CTRunStatus extends ObjCEnum {
     public static final long NonMonotonic = 2L;
     @GlobalConstant("kCTRunStatusHasNonIdentityMatrix")
     public static final long HasNonIdentityMatrix = 4L;
-    
+
 
 }

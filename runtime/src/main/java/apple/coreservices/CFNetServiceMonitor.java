@@ -13,7 +13,6 @@ import apple.coregraphics.*;
 import apple.coreservices.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Mapping("CFNetServiceMonitorRef") @Library("CFNetwork/CFNetwork.h")
@@ -24,7 +23,7 @@ public class CFNetServiceMonitor
     
     
     protected CFNetServiceMonitor() {}
-    
+
     
     
     
@@ -63,5 +62,5 @@ public class CFNetServiceMonitor
      */
     @GlobalFunction("CFNetServiceMonitorUnscheduleFromRunLoop")
     public static native void unschedule(CFNetServiceMonitor monitor, CFRunLoop runLoop, CFString runLoopMode);
-    
+
 }

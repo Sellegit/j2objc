@@ -17,11 +17,9 @@ import apple.uikit.*;
 import apple.avfoundation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("Photos/Photos.h") @Mapping("PHAssetCollection")
 public class PHAssetCollection 
     extends PHCollection 
@@ -31,7 +29,7 @@ public class PHAssetCollection
     
     @Mapping("init")
     public PHAssetCollection() { }
-    
+
     
     @Mapping("assetCollectionType")
     public native @Representing("PHAssetCollectionType") long getAssetCollectionType();
@@ -47,7 +45,7 @@ public class PHAssetCollection
     public native CLLocation getApproximateLocation();
     @Mapping("localizedLocationNames")
     public native List<String> getLocalizedLocationNames();
-    
+
     
     
     @Mapping("fetchAssetCollectionsWithLocalIdentifiers:options:")
@@ -66,5 +64,5 @@ public class PHAssetCollection
     public static native PHAssetCollection createTransientAssetCollection(NSArray<?> assets, String title);
     @Mapping("transientAssetCollectionWithAssetFetchResult:title:")
     public static native PHAssetCollection createTransientAssetCollection(PHFetchResult fetchResult, String title);
-    
+
 }

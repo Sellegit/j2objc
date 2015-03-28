@@ -18,7 +18,6 @@ import apple.coreimage.*;
 import apple.coretext.*;
 import apple.corelocation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -29,8 +28,8 @@ public abstract class UIGuidedAccessRestrictionDelegateAdapter
     
     
     
-    
-    
+
+
     
     
     @NotImplemented("guidedAccessRestrictionIdentifiers")
@@ -41,5 +40,5 @@ public abstract class UIGuidedAccessRestrictionDelegateAdapter
     public String getText(String restrictionIdentifier) { throw new UnsupportedOperationException(); }
     @NotImplemented("detailTextForGuidedAccessRestrictionWithIdentifier:")
     public String getDetailText(String restrictionIdentifier) { throw new UnsupportedOperationException(); }
-    
+
 }

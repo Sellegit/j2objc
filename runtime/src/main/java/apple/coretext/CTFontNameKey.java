@@ -13,7 +13,6 @@ import apple.coregraphics.*;
 import apple.coreservices.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("CoreText/CoreText.h")
@@ -116,5 +115,5 @@ public class CTFontNameKey
      */
     @GlobalConstant("kCTFontPostScriptCIDNameKey")
     public static native CFString PostScriptCIDValue();
-    
+
 }

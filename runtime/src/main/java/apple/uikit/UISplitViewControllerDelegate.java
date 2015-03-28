@@ -19,17 +19,14 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h") @Mapping("UISplitViewControllerDelegate")
 public interface UISplitViewControllerDelegate 
      {
 
     
     
-    
-    
+
+
     
     /**
      * @since Available in iOS 8.0 and later.
@@ -109,7 +106,7 @@ public interface UISplitViewControllerDelegate
     @Deprecated
     @Mapping("splitViewController:shouldHideViewController:inOrientation:")
     boolean shouldHideViewController(UISplitViewController svc, UIViewController vc, @Representing("UIInterfaceOrientation") long orientation);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

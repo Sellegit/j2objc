@@ -19,9 +19,6 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h")
 @Mapping("UIViewAutoresizing")
 public final class UIViewAutoresizing extends ObjCEnum {
@@ -40,6 +37,6 @@ public final class UIViewAutoresizing extends ObjCEnum {
     public static final long FlexibleHeight = 16L;
     @GlobalConstant("UIViewAutoresizingFlexibleBottomMargin")
     public static final long FlexibleBottomMargin = 32L;
-    
+
 
 }

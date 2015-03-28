@@ -19,9 +19,6 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h")
 @Mapping("UIPageViewControllerSpineLocation")
 public final class UIPageViewControllerSpineLocation extends ObjCEnum {
@@ -34,6 +31,6 @@ public final class UIPageViewControllerSpineLocation extends ObjCEnum {
     public static final long Mid = 2L;
     @GlobalConstant("UIPageViewControllerSpineLocationMax")
     public static final long Max = 3L;
-    
+
 
 }

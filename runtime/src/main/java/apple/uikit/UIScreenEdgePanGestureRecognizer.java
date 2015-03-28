@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 7.0 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UIScreenEdgePanGestureRecognizer")
 public class UIScreenEdgePanGestureRecognizer 
     extends UIPanGestureRecognizer 
@@ -35,15 +33,15 @@ public class UIScreenEdgePanGestureRecognizer
     public UIScreenEdgePanGestureRecognizer(Object target, Selector action) { }
     @Mapping("init")
     public UIScreenEdgePanGestureRecognizer() { }
-    
+
     
     @Mapping("edges")
     public native @Representing("UIRectEdge") long getEdges();
     @Mapping("setEdges:")
     public native void setEdges(@Representing("UIRectEdge") long v);
+
     
     
-    
-    
-    
+
+
 }

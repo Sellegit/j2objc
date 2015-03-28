@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h")
 @Mapping("NSNotificationCoalescing")
 public final class NSNotificationCoalescing extends ObjCEnum {
@@ -32,6 +29,6 @@ public final class NSNotificationCoalescing extends ObjCEnum {
     public static final long CoalescingOnName = 1L;
     @GlobalConstant("NSNotificationCoalescingOnSender")
     public static final long CoalescingOnSender = 2L;
-    
+
 
 }

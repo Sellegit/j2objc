@@ -19,11 +19,9 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 4.0 and later.
  */
-
 @Library("Foundation/Foundation.h") @Mapping("NSFileWrapper")
 public class NSFileWrapper 
     extends NSObject 
@@ -49,7 +47,7 @@ public class NSFileWrapper
     public NSFileWrapper(NSCoder inCoder) { }
     @Mapping("init")
     public NSFileWrapper() { }
-    
+
     
     @Mapping("isDirectory")
     public native boolean isDirectory();
@@ -80,7 +78,7 @@ public class NSFileWrapper
      */
     @Mapping("symbolicLinkDestinationURL")
     public native NSURL getSymbolicLinkDestinationURL();
-    
+
     
     
     /**
@@ -108,5 +106,5 @@ public class NSFileWrapper
     public native String getKeyForFileWrapper(NSFileWrapper child);
     @Mapping("encodeWithCoder:")
     public native void encode(NSCoder aCoder);
-    
+
 }

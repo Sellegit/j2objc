@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 7.0 and later.
  */
-
 @Library("UIKit/UIKit.h")
 @Mapping("UIRectEdge")
 public final class UIRectEdge extends ObjCEnum {
@@ -40,6 +38,6 @@ public final class UIRectEdge extends ObjCEnum {
     public static final long Right = 8L;
     @GlobalConstant("UIRectEdgeAll")
     public static final long All = 15L;
-    
+
 
 }

@@ -13,7 +13,6 @@ import apple.coregraphics.*;
 import apple.coreservices.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("CFNetwork/CFNetwork.h")
@@ -41,5 +40,5 @@ public class CFFTPStream
      */
     @GlobalFunction("CFWriteStreamCreateWithFTPURL")
     public static native CFWriteStream createWriteStream(CFAllocator alloc, CFURL ftpURL);
-    
+
 }

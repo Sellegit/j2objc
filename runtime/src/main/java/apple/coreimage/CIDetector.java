@@ -17,9 +17,6 @@ import apple.corevideo.*;
 import apple.imageio.*;
 
 
-
-
-
 @Library("CoreImage/CoreImage.h") @Mapping("CIDetector")
 public class CIDetector 
     extends NSObject 
@@ -29,10 +26,10 @@ public class CIDetector
     
     @Mapping("init")
     public CIDetector() { }
+
     
-    
-    
-    
+
+
     
     
     /**
@@ -45,5 +42,5 @@ public class CIDetector
      */
     @Mapping("featuresInImage:options:")
     public native NSArray<CIFeature> findFeatures(CIImage image, NSDictionary<?, ?> options);
-    
+
 }

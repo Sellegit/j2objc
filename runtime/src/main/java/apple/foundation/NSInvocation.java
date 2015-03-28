@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h") @Mapping("NSInvocation")
 public class NSInvocation 
     extends NSObject 
@@ -31,7 +28,7 @@ public class NSInvocation
     
     @Mapping("init")
     public NSInvocation() { }
-    
+
     
     @Mapping("methodSignature")
     public native NSMethodSignature getMethodSignature();
@@ -45,7 +42,7 @@ public class NSInvocation
     public native Selector getSelector();
     @Mapping("setSelector:")
     public native void setSelector(Selector v);
-    
+
     
     
     @Mapping("retainArguments")
@@ -64,5 +61,5 @@ public class NSInvocation
     public native void invoke(Object target);
     @Mapping("invocationWithMethodSignature:")
     public static native NSInvocation create(NSMethodSignature sig);
-    
+
 }

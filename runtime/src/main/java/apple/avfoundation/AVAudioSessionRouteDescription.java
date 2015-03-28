@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 6.0 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h") @Mapping("AVAudioSessionRouteDescription")
 public class AVAudioSessionRouteDescription 
     extends NSObject 
@@ -34,15 +32,15 @@ public class AVAudioSessionRouteDescription
     
     @Mapping("init")
     public AVAudioSessionRouteDescription() { }
-    
+
     
     @Mapping("inputs")
     public native NSArray<AVAudioSessionPortDescription> getInputs();
     @Mapping("outputs")
     public native NSArray<AVAudioSessionPortDescription> getOutputs();
+
     
     
-    
-    
-    
+
+
 }

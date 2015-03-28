@@ -19,11 +19,9 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 5.0 and later.
  */
-
 @Library("Foundation/Foundation.h") @Mapping("NSMetadataItem")
 public class NSMetadataItem 
     extends NSObject 
@@ -33,16 +31,16 @@ public class NSMetadataItem
     
     @Mapping("init")
     public NSMetadataItem() { }
-    
+
     
     @Mapping("attributes")
     public native List<NSMetadataItemAttribute> getAttributes();
-    
+
     
     
     @Mapping("valueForAttribute:")
     public native Object getValue(String key);
     @Mapping("valuesForAttributes:")
     public native NSDictionary<?, ?> getValues(NSArray<?> keys);
-    
+
 }

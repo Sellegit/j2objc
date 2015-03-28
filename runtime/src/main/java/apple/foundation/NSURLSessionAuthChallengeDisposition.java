@@ -19,11 +19,9 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 7.0 and later.
  */
-
 @Library("Foundation/Foundation.h")
 @Mapping("NSURLSessionAuthChallengeDisposition")
 public final class NSURLSessionAuthChallengeDisposition extends ObjCEnum {
@@ -36,6 +34,6 @@ public final class NSURLSessionAuthChallengeDisposition extends ObjCEnum {
     public static final long CancelAuthenticationChallenge = 2L;
     @GlobalConstant("NSURLSessionAuthChallengeRejectProtectionSpace")
     public static final long RejectProtectionSpace = 3L;
-    
+
 
 }

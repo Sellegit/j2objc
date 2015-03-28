@@ -19,17 +19,14 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h") @Mapping("UICollectionViewDelegate")
 public interface UICollectionViewDelegate 
     extends UIScrollViewDelegate {
 
     
     
-    
-    
+
+
     
     @Mapping("collectionView:shouldHighlightItemAtIndexPath:")
     boolean shouldHighlightItem(UICollectionView collectionView, NSIndexPath indexPath);
@@ -67,7 +64,7 @@ public interface UICollectionViewDelegate
     void performAction(UICollectionView collectionView, Selector action, NSIndexPath indexPath, Object sender);
     @Mapping("collectionView:transitionLayoutForOldLayout:newLayout:")
     UICollectionViewTransitionLayout getTransitionLayout(UICollectionView collectionView, UICollectionViewLayout fromLayout, UICollectionViewLayout toLayout);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

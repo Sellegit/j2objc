@@ -16,9 +16,6 @@ import apple.addressbook.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("EventKit/EventKit.h")
 @Mapping("EKRecurrenceFrequency")
 public final class EKRecurrenceFrequency extends ObjCEnum {
@@ -31,6 +28,6 @@ public final class EKRecurrenceFrequency extends ObjCEnum {
     public static final long Monthly = 2L;
     @GlobalConstant("EKRecurrenceFrequencyYearly")
     public static final long Yearly = 3L;
-    
+
 
 }

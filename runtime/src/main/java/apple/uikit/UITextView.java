@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 2.0 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UITextView")
 public class UITextView 
     extends UIScrollView 
@@ -42,7 +40,7 @@ public class UITextView
     public UITextView(NSCoder aDecoder) { }
     @Mapping("init")
     public UITextView() { }
-    
+
     
     @Mapping("delegate")
     public native UITextViewDelegate getDelegate();
@@ -239,7 +237,7 @@ public class UITextView
     public native boolean isSecureTextEntry();
     @Mapping("setSecureTextEntry:")
     public native void setSecureTextEntry(boolean v);
-    
+
     
     
     @GlobalConstant("UITextViewTextDidBeginEditingNotification")
@@ -248,7 +246,7 @@ public class UITextView
     public static native NSString DidChangeNotification();
     @GlobalConstant("UITextViewTextDidEndEditingNotification")
     public static native NSString DidEndEditingNotification();
-    
+
     @Mapping("scrollRangeToVisible:")
     public native void scrollRangeToVisible(NSRange range);
     @Mapping("textInRange:")
@@ -321,5 +319,5 @@ public class UITextView
     public native void insertText(String text);
     @Mapping("deleteBackward")
     public native void deleteBackward();
-    
+
 }

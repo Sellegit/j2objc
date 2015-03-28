@@ -14,9 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
-
-
 @Mapping("MIDIPacket") @Library("CoreMIDI/CoreMIDI.h")
 public class MIDIPacket 
     extends Struct 
@@ -30,6 +27,6 @@ public class MIDIPacket
     public native long getTimeStamp();
     @DotMapping("length")
     public native short getLength();
-    
+
     
 }

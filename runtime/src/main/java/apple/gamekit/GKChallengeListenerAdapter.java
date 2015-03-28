@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 import apple.uikit.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -25,8 +24,8 @@ public abstract class GKChallengeListenerAdapter
     
     
     
-    
-    
+
+
     
     
     /**
@@ -49,5 +48,5 @@ public abstract class GKChallengeListenerAdapter
      */
     @NotImplemented("player:issuedChallengeWasCompleted:byFriend:")
     public void issuedChallengeWasCompleted(GKPlayer player, GKChallenge challenge, GKPlayer friendPlayer) { throw new UnsupportedOperationException(); }
-    
+
 }

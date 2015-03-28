@@ -16,9 +16,6 @@ import apple.eventkit.*;
 import apple.uikit.*;
 
 
-
-
-
 @Library("EventKitUI/EventKitUI.h")
 @Mapping("EKEventEditViewAction")
 public final class EKEventEditViewAction extends ObjCEnum {
@@ -31,6 +28,6 @@ public final class EKEventEditViewAction extends ObjCEnum {
     public static final long Deleted = 2L;
     @GlobalConstant("EKEventEditViewActionCancelled")
     public static final long Cancelled = 0L;
-    
+
 
 }

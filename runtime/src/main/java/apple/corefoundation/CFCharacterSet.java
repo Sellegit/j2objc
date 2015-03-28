@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.dispatch.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Mapping("CFCharacterSetRef") @Library("CoreFoundation/CoreFoundation.h")
@@ -25,7 +24,7 @@ public class CFCharacterSet
     
     
     protected CFCharacterSet() {}
-    
+
     
     
     
@@ -51,5 +50,5 @@ public class CFCharacterSet
     public static native boolean isLongCharacterMember(CFCharacterSet theSet, int theChar);
     @GlobalFunction("CFCharacterSetCreateBitmapRepresentation")
     public static native CFData createBitmapRepresentation(CFAllocator alloc, CFCharacterSet theSet);
-    
+
 }

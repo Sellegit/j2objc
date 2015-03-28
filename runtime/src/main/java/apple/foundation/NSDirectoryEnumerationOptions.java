@@ -19,11 +19,9 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 4.0 and later.
  */
-
 @Library("Foundation/Foundation.h")
 @Mapping("NSDirectoryEnumerationOptions")
 public final class NSDirectoryEnumerationOptions extends ObjCEnum {
@@ -34,6 +32,6 @@ public final class NSDirectoryEnumerationOptions extends ObjCEnum {
     public static final long PackageDescendants = 2L;
     @GlobalConstant("NSDirectoryEnumerationSkipsHiddenFiles")
     public static final long HiddenFiles = 4L;
-    
+
 
 }

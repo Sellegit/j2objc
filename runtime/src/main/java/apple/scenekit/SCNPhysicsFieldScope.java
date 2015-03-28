@@ -20,11 +20,9 @@ import apple.spritekit.*;
 import apple.opengles.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("SceneKit/SceneKit.h")
 @Mapping("SCNPhysicsFieldScope")
 public final class SCNPhysicsFieldScope extends ObjCEnum {
@@ -33,6 +31,6 @@ public final class SCNPhysicsFieldScope extends ObjCEnum {
     public static final long InsideExtent = 0L;
     @GlobalConstant("SCNPhysicsFieldScopeOutsideExtent")
     public static final long OutsideExtent = 1L;
-    
+
 
 }

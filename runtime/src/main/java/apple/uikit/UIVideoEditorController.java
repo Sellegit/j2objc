@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 3.1 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UIVideoEditorController")
 public class UIVideoEditorController 
     extends UINavigationController 
@@ -39,7 +37,7 @@ public class UIVideoEditorController
     public UIVideoEditorController(NSCoder aDecoder) { }
     @Mapping("init")
     public UIVideoEditorController() { }
-    
+
     
     @Mapping("delegate")
     public native UIVideoEditorControllerDelegate getDelegate();
@@ -57,7 +55,7 @@ public class UIVideoEditorController
     public native @Representing("UIImagePickerControllerQualityType") long getVideoQuality();
     @Mapping("setVideoQuality:")
     public native void setVideoQuality(@Representing("UIImagePickerControllerQualityType") long v);
-    
+
     
     
     /**
@@ -65,5 +63,5 @@ public class UIVideoEditorController
      */
     @Mapping("canEditVideoAtPath:")
     public static native boolean canEditVideo(String videoPath);
-    
+
 }

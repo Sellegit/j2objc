@@ -20,23 +20,20 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
-
-
 @Library("AVFoundation/AVFoundation.h") @Mapping("AVAsynchronousKeyValueLoading")
 public interface AVAsynchronousKeyValueLoading 
      {
 
     
     
-    
-    
+
+
     
     @Mapping("statusOfValueForKey:error:")
     @Representing("AVKeyValueStatus") long getStatusOfValue(String key, Todo outError);
     @Mapping("loadValuesAsynchronouslyForKeys:completionHandler:")
     void loadValuesAsynchronously(NSArray<?> keys, @Block Runnable handler);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

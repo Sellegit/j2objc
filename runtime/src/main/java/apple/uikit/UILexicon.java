@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UILexicon")
 public class UILexicon 
     extends NSObject 
@@ -33,14 +31,14 @@ public class UILexicon
     
     @Mapping("init")
     public UILexicon() { }
-    
+
     
     @Mapping("entries")
     public native NSArray<UILexiconEntry> getEntries();
-    
+
     
     
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
-    
+
 }

@@ -17,11 +17,9 @@ import apple.uikit.*;
 import apple.avfoundation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("Photos/Photos.h")
 @Mapping("PHAssetCollectionType")
 public final class PHAssetCollectionType extends ObjCEnum {
@@ -32,6 +30,6 @@ public final class PHAssetCollectionType extends ObjCEnum {
     public static final long SmartAlbum = 2L;
     @GlobalConstant("PHAssetCollectionTypeMoment")
     public static final long Moment = 3L;
-    
+
 
 }

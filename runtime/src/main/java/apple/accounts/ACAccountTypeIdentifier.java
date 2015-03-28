@@ -13,7 +13,6 @@ import apple.coregraphics.*;
 import apple.coreservices.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("Accounts/Accounts.h")
@@ -46,5 +45,5 @@ public class ACAccountTypeIdentifier
      */
     @GlobalConstant("ACAccountTypeIdentifierTencentWeibo")
     public static native NSString TencentWeiboValue();
-    
+
 }

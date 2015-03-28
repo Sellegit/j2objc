@@ -15,11 +15,9 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
 /**
  * @since Available in iOS 7.1 and later.
  */
-
 @Library("MediaPlayer/MediaPlayer.h") @Mapping("MPRemoteCommand")
 public class MPRemoteCommand 
     extends NSObject 
@@ -29,13 +27,13 @@ public class MPRemoteCommand
     
     @Mapping("init")
     public MPRemoteCommand() { }
-    
+
     
     @Mapping("isEnabled")
     public native boolean isEnabled();
     @Mapping("setEnabled:")
     public native void setEnabled(boolean v);
-    
+
     
     
     @Mapping("addTarget:action:")
@@ -46,5 +44,5 @@ public class MPRemoteCommand
     public native void removeTarget(Object target);
     @Mapping("addTargetWithHandler:")
     public native Object addTarget(@Block Block1<MPRemoteCommandEvent, MPRemoteCommandHandlerStatus> handler);
-    
+
 }

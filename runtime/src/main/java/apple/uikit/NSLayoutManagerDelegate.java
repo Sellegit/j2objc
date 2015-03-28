@@ -19,17 +19,14 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h") @Mapping("NSLayoutManagerDelegate")
 public interface NSLayoutManagerDelegate 
     extends NSObjectProtocol {
 
     
     
-    
-    
+
+
     
     /**
      * @since Available in iOS 7.0 and later.
@@ -86,7 +83,7 @@ public interface NSLayoutManagerDelegate
      */
     @Mapping("layoutManager:textContainer:didChangeGeometryFromSize:")
     void didChangeGeometry(NSLayoutManager layoutManager, NSTextContainer textContainer, CGSize oldSize);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

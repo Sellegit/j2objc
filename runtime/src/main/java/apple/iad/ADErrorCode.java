@@ -18,11 +18,9 @@ import apple.mediaplayer.*;
 import apple.avkit.*;
 
 
-
 /**
  * @since Available in iOS 4.0 and later.
  */
-
 @Library("iAd/iAd.h")
 @Mapping("ADErrorCode")
 public final class ADErrorCode extends ObjCEnum {
@@ -43,6 +41,6 @@ public final class ADErrorCode extends ObjCEnum {
     public static final long ApplicationInactive = 6L;
     @GlobalConstant("ADErrorAdUnloaded")
     public static final long AdUnloaded = 7L;
-    
+
 
 }

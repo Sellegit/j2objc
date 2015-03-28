@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.dispatch.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Mapping("CFBitVectorRef") @Library("CoreFoundation/CoreFoundation.h")
@@ -25,7 +24,7 @@ public class CFBitVector
     
     
     protected CFBitVector() {}
-    
+
     
     
     
@@ -49,5 +48,5 @@ public class CFBitVector
     public static native @MachineSizedSInt long getFirstIndexOfBit(CFBitVector bv, CFRange range, int value);
     @GlobalFunction("CFBitVectorGetLastIndexOfBit")
     public static native @MachineSizedSInt long getLastIndexOfBit(CFBitVector bv, CFRange range, int value);
-    
+
 }

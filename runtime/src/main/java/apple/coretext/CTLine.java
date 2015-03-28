@@ -13,7 +13,6 @@ import apple.coregraphics.*;
 import apple.coreservices.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Mapping("CTLineRef") @Library("CoreText/CoreText.h")
@@ -24,7 +23,7 @@ public class CTLine
     
     
     protected CTLine() {}
-    
+
     
     
     
@@ -103,5 +102,5 @@ public class CTLine
      */
     @GlobalFunction("CTLineGetOffsetForStringIndex")
     public static native @MachineSizedFloat double getOffset(CTLine line, @MachineSizedSInt long charIndex, Todo secondaryOffset);
-    
+
 }

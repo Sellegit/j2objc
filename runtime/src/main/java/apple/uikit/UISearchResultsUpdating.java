@@ -19,21 +19,18 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h") @Mapping("UISearchResultsUpdating")
 public interface UISearchResultsUpdating 
     extends NSObjectProtocol {
 
     
     
-    
-    
+
+
     
     @Mapping("updateSearchResultsForSearchController:")
     void updateSearchResults(UISearchController searchController);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

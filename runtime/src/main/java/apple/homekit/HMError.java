@@ -13,7 +13,6 @@ import apple.coregraphics.*;
 import apple.coreservices.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("HomeKit/HomeKit.h")
@@ -31,5 +30,5 @@ public class HMError
      */
     @GlobalConstant("HMErrorDomain")
     public static native String getClassDomain();
-    
+
 }

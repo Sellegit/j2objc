@@ -19,9 +19,6 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h")
 @Mapping("UIPageViewControllerNavigationDirection")
 public final class UIPageViewControllerNavigationDirection extends ObjCEnum {
@@ -30,6 +27,6 @@ public final class UIPageViewControllerNavigationDirection extends ObjCEnum {
     public static final long Forward = 0L;
     @GlobalConstant("UIPageViewControllerNavigationDirectionReverse")
     public static final long Reverse = 1L;
-    
+
 
 }

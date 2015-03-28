@@ -18,7 +18,6 @@ import apple.coreimage.*;
 import apple.coretext.*;
 import apple.corelocation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("UIKit/UIKit.h")
@@ -36,5 +35,5 @@ public class NSTextEffect
      */
     @GlobalConstant("NSTextEffectLetterpressStyle")
     public static native NSString LetterpressStyleValue();
-    
+
 }

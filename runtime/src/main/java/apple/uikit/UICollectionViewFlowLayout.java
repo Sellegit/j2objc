@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 6.0 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UICollectionViewFlowLayout")
 public class UICollectionViewFlowLayout 
     extends UICollectionViewLayout 
@@ -35,7 +33,7 @@ public class UICollectionViewFlowLayout
     public UICollectionViewFlowLayout(NSCoder aDecoder) { }
     @Mapping("init")
     public UICollectionViewFlowLayout() { }
-    
+
     
     @Mapping("minimumLineSpacing")
     public native @MachineSizedFloat double getMinimumLineSpacing();
@@ -75,7 +73,7 @@ public class UICollectionViewFlowLayout
     public native UIEdgeInsets getSectionInset();
     @Mapping("setSectionInset:")
     public native void setSectionInset(UIEdgeInsets v);
-    
+
     
     
     @Mapping("initialLayoutAttributesForAppearingItemAtIndexPath:")
@@ -84,5 +82,5 @@ public class UICollectionViewFlowLayout
     public native UICollectionViewLayoutAttributes initialLayoutAttributesForAppearingSupplementaryElementOfKind$atIndexPath$(String elementKind, NSIndexPath elementIndexPath);
     @Mapping("initialLayoutAttributesForAppearingDecorationElementOfKind:atIndexPath:")
     public native UICollectionViewLayoutAttributes initialLayoutAttributesForAppearingDecorationElementOfKind$atIndexPath$(String elementKind, NSIndexPath decorationIndexPath);
-    
+
 }

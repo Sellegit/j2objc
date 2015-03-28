@@ -16,11 +16,9 @@ import apple.addressbook.*;
 import apple.corebluetooth.*;
 
 
-
 /**
  * @since Available in iOS 4.0 and later.
  */
-
 @Library("CoreLocation/CoreLocation.h") @Mapping("CLRegion")
 public class CLRegion 
     extends NSObject 
@@ -37,7 +35,7 @@ public class CLRegion
     public CLRegion(CLLocationCoordinate2D center, double radius, String identifier) { }
     @Mapping("init")
     public CLRegion() { }
-    
+
     
     /**
      * @since Available in iOS 4.0 and later.
@@ -78,7 +76,7 @@ public class CLRegion
      */
     @Mapping("setNotifyOnExit:")
     public native void setNotifiesOnExit(boolean v);
-    
+
     
     
     /**
@@ -90,5 +88,5 @@ public class CLRegion
     public native boolean containsCoordinate(CLLocationCoordinate2D coordinate);
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
-    
+
 }

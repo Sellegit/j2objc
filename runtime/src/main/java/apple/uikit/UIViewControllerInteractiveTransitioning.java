@@ -19,17 +19,14 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h") @Mapping("UIViewControllerInteractiveTransitioning")
 public interface UIViewControllerInteractiveTransitioning 
     extends NSObjectProtocol {
 
     
     
-    
-    
+
+
     
     @Mapping("startInteractiveTransition:")
     void startInteractiveTransition(UIViewControllerContextTransitioning transitionContext);
@@ -37,7 +34,7 @@ public interface UIViewControllerInteractiveTransitioning
     @MachineSizedFloat double getCompletionSpeed();
     @Mapping("completionCurve")
     @Representing("UIViewAnimationCurve") long getCompletionCurve();
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

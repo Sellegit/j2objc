@@ -13,7 +13,6 @@ import apple.coregraphics.*;
 import apple.coreservices.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -24,8 +23,8 @@ public abstract class HMHomeManagerDelegateAdapter
     
     
     
-    
-    
+
+
     
     
     @NotImplemented("homeManagerDidUpdateHomes:")
@@ -36,5 +35,5 @@ public abstract class HMHomeManagerDelegateAdapter
     public void didAddHome(HMHomeManager manager, HMHome home) { throw new UnsupportedOperationException(); }
     @NotImplemented("homeManager:didRemoveHome:")
     public void didRemoveHome(HMHomeManager manager, HMHome home) { throw new UnsupportedOperationException(); }
-    
+
 }

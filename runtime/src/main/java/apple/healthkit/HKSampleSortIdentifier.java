@@ -13,7 +13,6 @@ import apple.coregraphics.*;
 import apple.coreservices.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("HealthKit/HealthKit.h")
@@ -36,5 +35,5 @@ public class HKSampleSortIdentifier
      */
     @GlobalConstant("HKSampleSortIdentifierEndDate")
     public static native String EndDateValue();
-    
+
 }

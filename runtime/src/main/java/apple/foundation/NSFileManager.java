@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h") @Mapping("NSFileManager")
 public class NSFileManager 
     extends NSObject 
@@ -31,7 +28,7 @@ public class NSFileManager
     
     @Mapping("init")
     public NSFileManager() { }
-    
+
     
     /**
      * @since Available in iOS 2.0 and later.
@@ -50,7 +47,7 @@ public class NSFileManager
      */
     @Mapping("ubiquityIdentityToken")
     public native NSObject getUbiquityIdentityToken();
-    
+
     
     
     /**
@@ -58,7 +55,7 @@ public class NSFileManager
      */
     @GlobalConstant("NSUbiquityIdentityDidChangeNotification")
     public static native NSString UbiquityIdentityDidChangeNotification();
-    
+
     /**
      * @since Available in iOS 4.0 and later.
      */
@@ -256,5 +253,5 @@ public class NSFileManager
     public native NSURL getContainerURLForSecurityApplication(String groupIdentifier);
     @Mapping("defaultManager")
     public static native NSFileManager getDefaultManager();
-    
+
 }

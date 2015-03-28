@@ -18,7 +18,6 @@ import apple.coreimage.*;
 import apple.coretext.*;
 import apple.corelocation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -29,8 +28,8 @@ public abstract class UIViewControllerContextTransitioningAdapter
     
     
     
-    
-    
+
+
     
     
     @NotImplemented("containerView")
@@ -67,5 +66,5 @@ public abstract class UIViewControllerContextTransitioningAdapter
     public CGRect getInitialFrame(UIViewController vc) { throw new UnsupportedOperationException(); }
     @NotImplemented("finalFrameForViewController:")
     public CGRect getFinalFrame(UIViewController vc) { throw new UnsupportedOperationException(); }
-    
+
 }

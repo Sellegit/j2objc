@@ -19,11 +19,9 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 7.0 and later.
  */
-
 @Library("Foundation/Foundation.h")
 @Mapping("NSURLSessionResponseDisposition")
 public final class NSURLSessionResponseDisposition extends ObjCEnum {
@@ -34,6 +32,6 @@ public final class NSURLSessionResponseDisposition extends ObjCEnum {
     public static final long Allow = 1L;
     @GlobalConstant("NSURLSessionResponseBecomeDownload")
     public static final long BecomeDownload = 2L;
-    
+
 
 }

@@ -13,7 +13,6 @@ import apple.coregraphics.*;
 import apple.coreservices.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("HealthKit/HealthKit.h")
@@ -41,5 +40,5 @@ public class HKCharacteristicTypeIdentifier
      */
     @GlobalConstant("HKCharacteristicTypeIdentifierDateOfBirth")
     public static native NSString DateOfBirthValue();
-    
+
 }

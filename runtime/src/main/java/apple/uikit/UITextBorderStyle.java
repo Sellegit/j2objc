@@ -19,9 +19,6 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h")
 @Mapping("UITextBorderStyle")
 public final class UITextBorderStyle extends ObjCEnum {
@@ -34,6 +31,6 @@ public final class UITextBorderStyle extends ObjCEnum {
     public static final long Bezel = 2L;
     @GlobalConstant("UITextBorderStyleRoundedRect")
     public static final long RoundedRect = 3L;
-    
+
 
 }

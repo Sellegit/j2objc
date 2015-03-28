@@ -19,17 +19,14 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h") @Mapping("UIGestureRecognizerDelegate")
 public interface UIGestureRecognizerDelegate 
     extends NSObjectProtocol {
 
     
     
-    
-    
+
+
     
     @Mapping("gestureRecognizerShouldBegin:")
     boolean shouldBegin(UIGestureRecognizer gestureRecognizer);
@@ -47,7 +44,7 @@ public interface UIGestureRecognizerDelegate
     boolean shouldBeRequiredToFail(UIGestureRecognizer gestureRecognizer, UIGestureRecognizer otherGestureRecognizer);
     @Mapping("gestureRecognizer:shouldReceiveTouch:")
     boolean shouldReceiveTouch(UIGestureRecognizer gestureRecognizer, UITouch touch);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

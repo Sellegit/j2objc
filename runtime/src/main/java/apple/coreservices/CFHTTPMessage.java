@@ -13,7 +13,6 @@ import apple.coregraphics.*;
 import apple.coreservices.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Mapping("CFHTTPMessageRef") @Library("CFNetwork/CFNetwork.h")
@@ -24,7 +23,7 @@ public class CFHTTPMessage
     
     
     protected CFHTTPMessage() {}
-    
+
     
     
     
@@ -43,7 +42,7 @@ public class CFHTTPMessage
      */
     @GlobalConstant("kCFHTTPAuthenticationAccountDomain")
     public static native CFString HTTPAuthenticationAccountDomain();
-    
+
     /**
      * @since Available in iOS 2.0 and later.
      */
@@ -154,5 +153,5 @@ public class CFHTTPMessage
      */
     @GlobalFunction("CFHTTPMessageApplyCredentialDictionary")
     public static native boolean applyCredentialDictionary(CFHTTPMessage request, CFHTTPAuthentication auth, CFDictionary dict, Todo error);
-    
+
 }

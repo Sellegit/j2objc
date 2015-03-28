@@ -19,9 +19,6 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h") @Mapping("UITraitEnvironment")
 public interface UITraitEnvironment 
     extends NSObjectProtocol {
@@ -30,11 +27,11 @@ public interface UITraitEnvironment
     
     @Mapping("traitCollection")
     UITraitCollection getTraitCollection();
-    
+
     
     @Mapping("traitCollectionDidChange:")
     void traitCollectionDidChange(UITraitCollection previousTraitCollection);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 4.0 and later.
  */
-
 @Library("CoreTelephony/CTCall.h") @Mapping("CTTelephonyNetworkInfo")
 public class CTTelephonyNetworkInfo 
     extends NSObject 
@@ -28,7 +26,7 @@ public class CTTelephonyNetworkInfo
     
     @Mapping("init")
     public CTTelephonyNetworkInfo() { }
-    
+
     
     /**
      * @since Available in iOS 4.0 and later.
@@ -50,7 +48,7 @@ public class CTTelephonyNetworkInfo
      */
     @Mapping("currentRadioAccessTechnology")
     public native CTRadioAccessTechnology getCurrentRadioAccessTechnology();
-    
+
     
     
     /**
@@ -58,7 +56,7 @@ public class CTTelephonyNetworkInfo
      */
     @GlobalConstant("CTRadioAccessTechnologyDidChangeNotification")
     public static native NSString RadioAccessTechnologyDidChangeNotification();
-    
-    
-    
+
+
+
 }

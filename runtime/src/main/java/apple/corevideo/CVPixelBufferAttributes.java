@@ -15,7 +15,6 @@ import apple.foundation.*;
 import apple.opengles.*;
 import apple.coremedia.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("CoreVideo/CoreVideo.h")
@@ -108,5 +107,5 @@ public class CVPixelBufferAttributes
      */
     @GlobalConstant("kCVPixelBufferMetalCompatibilityKey")
     public static native CFString MetalCompatibilityKey();
-    
+
 }

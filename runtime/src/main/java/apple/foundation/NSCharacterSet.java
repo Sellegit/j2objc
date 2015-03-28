@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h") @Mapping("NSCharacterSet")
 public class NSCharacterSet 
     extends NSObject 
@@ -29,19 +26,19 @@ public class NSCharacterSet
 
     
     public static final int OpenStepUnicodeReservedBase = 62464;
-    
+
     
     @Mapping("initWithCoder:")
     public NSCharacterSet(NSCoder aDecoder) { }
     @Mapping("init")
     public NSCharacterSet() { }
-    
+
     
     @Mapping("bitmapRepresentation")
     public native NSData getBitmapRepresentation();
     @Mapping("invertedSet")
     public native NSCharacterSet getInvertedSet();
-    
+
     
     
     @Mapping("characterIsMember:")
@@ -127,5 +124,5 @@ public class NSCharacterSet
     public native Object copyWithZone$(NSZone zone);
     @Mapping("encodeWithCoder:")
     public native void encode(NSCoder aCoder);
-    
+
 }

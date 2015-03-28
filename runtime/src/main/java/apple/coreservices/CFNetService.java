@@ -13,7 +13,6 @@ import apple.coregraphics.*;
 import apple.coreservices.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Mapping("CFNetServiceRef") @Library("CFNetwork/CFNetwork.h")
@@ -24,7 +23,7 @@ public class CFNetService
     
     
     protected CFNetService() {}
-    
+
     
     
     
@@ -128,5 +127,5 @@ public class CFNetService
      */
     @GlobalFunction("CFStreamCreatePairWithSocketToNetService")
     public static native void createSocketStreamPair(CFAllocator alloc, CFNetService service, Todo readStream, Todo writeStream);
-    
+
 }

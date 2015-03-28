@@ -16,11 +16,9 @@ import apple.addressbook.*;
 import apple.corebluetooth.*;
 
 
-
 /**
  * @since Available in iOS 3.0 and later.
  */
-
 @Library("CoreLocation/CoreLocation.h") @Mapping("CLHeading")
 public class CLHeading 
     extends NSObject 
@@ -30,7 +28,7 @@ public class CLHeading
     
     @Mapping("init")
     public CLHeading() { }
-    
+
     
     @Mapping("magneticHeading")
     public native double getMagneticHeading();
@@ -46,10 +44,10 @@ public class CLHeading
     public native double getZ();
     @Mapping("timestamp")
     public native NSDate getTimestamp();
-    
+
     
     
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
-    
+
 }

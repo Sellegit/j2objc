@@ -19,23 +19,20 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h") @Mapping("UIDocumentPickerDelegate")
 public interface UIDocumentPickerDelegate 
     extends NSObjectProtocol {
 
     
     
-    
-    
+
+
     
     @Mapping("documentPicker:didPickDocumentAtURL:")
     void didPickDocument(UIDocumentPickerViewController controller, NSURL url);
     @Mapping("documentPickerWasCancelled:")
     void wasCancelled(UIDocumentPickerViewController controller);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

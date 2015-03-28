@@ -20,9 +20,6 @@ import apple.spritekit.*;
 import apple.opengles.*;
 
 
-
-
-
 @Library("SceneKit/SceneKit.h") @Mapping("SCNPhysicsBehavior")
 public class SCNPhysicsBehavior 
     extends NSObject 
@@ -32,12 +29,12 @@ public class SCNPhysicsBehavior
     
     @Mapping("init")
     public SCNPhysicsBehavior() { }
+
+    
+
+
     
     
-    
-    
-    
-    
-    
-    
+
+
 }

@@ -15,17 +15,14 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
-
-
 @Library("GameKit/GameKit.h") @Mapping("GKMatchDelegate")
 public interface GKMatchDelegate 
     extends NSObjectProtocol {
 
     
     
-    
-    
+
+
     
     /**
      * @since Available in iOS 8.0 and later.
@@ -68,7 +65,7 @@ public interface GKMatchDelegate
     @Deprecated
     @Mapping("match:shouldReinvitePlayer:")
     boolean shouldReinvitePlayer(GKMatch match, String playerID);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

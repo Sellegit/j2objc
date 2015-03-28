@@ -17,23 +17,20 @@ import apple.coretext.*;
 import apple.opengles.*;
 
 
-
-
-
 @Library("QuartzCore/QuartzCore.h") @Mapping("CAAnimationDelegate")
 public interface CAAnimationDelegate 
      {
 
     
     
-    
-    
+
+
     
     @Mapping("animationDidStart:")
     void didStart(CAAnimation anim);
     @Mapping("animationDidStop:finished:")
     void didStop(CAAnimation anim, boolean flag);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("HealthKit/HealthKit.h") @Mapping("HKSource")
 public class HKSource 
     extends NSObject 
@@ -28,18 +26,18 @@ public class HKSource
     
     @Mapping("init")
     public HKSource() { }
-    
+
     
     @Mapping("name")
     public native String getName();
     @Mapping("bundleIdentifier")
     public native String getBundleIdentifier();
-    
+
     
     
     @Mapping("defaultSource")
     public static native HKSource getDefaultSource();
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
-    
+
 }

@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("NetworkExtension/NetworkExtension.h")
 @Mapping("NEOnDemandRuleAction")
 public final class NEOnDemandRuleAction extends ObjCEnum {
@@ -31,6 +29,6 @@ public final class NEOnDemandRuleAction extends ObjCEnum {
     public static final long EvaluateConnection = 3L;
     @GlobalConstant("NEOnDemandRuleActionIgnore")
     public static final long Ignore = 4L;
-    
+
 
 }

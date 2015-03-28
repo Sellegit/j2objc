@@ -19,9 +19,6 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h") @Mapping("UITextInput")
 public interface UITextInput 
     extends UIKeyInput {
@@ -54,7 +51,7 @@ public interface UITextInput
     @Representing("UITextStorageDirection") long getSelectionAffinity();
     @Mapping("setSelectionAffinity:")
     void setSelectionAffinity(@Representing("UITextStorageDirection") long v);
-    
+
     
     @Mapping("textInRange:")
     String getText(UITextRange range);
@@ -120,7 +117,7 @@ public interface UITextInput
     CGRect getDictationResultPlaceholderFrame(Object placeholder);
     @Mapping("removeDictationResultPlaceholder:willInsertResult:")
     void removeDictationResultPlaceholder(Object placeholder, boolean willInsertResult);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

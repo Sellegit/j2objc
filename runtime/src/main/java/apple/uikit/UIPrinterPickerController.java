@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UIPrinterPickerController")
 public class UIPrinterPickerController 
     extends NSObject 
@@ -33,7 +31,7 @@ public class UIPrinterPickerController
     
     @Mapping("init")
     public UIPrinterPickerController() { }
-    
+
     
     @Mapping("selectedPrinter")
     public native UIPrinter getSelectedPrinter();
@@ -41,12 +39,12 @@ public class UIPrinterPickerController
     public native UIPrinterPickerControllerDelegate getDelegate();
     @Mapping("setDelegate:")
     public native void setDelegate(UIPrinterPickerControllerDelegate v);
-    
+
     
     
     @Mapping("dismissAnimated:")
     public native void dismissAnimated(boolean animated);
     @Mapping("printerPickerControllerWithInitiallySelectedPrinter:")
     public static native UIPrinterPickerController create(UIPrinter printer);
-    
+
 }

@@ -15,21 +15,19 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
 /**
  * @since Available in iOS 6.0 and later.
  * @deprecated Deprecated in iOS 7.0.
  */
 @Deprecated
-
 @Library("GameKit/GameKit.h") @Mapping("GKChallengeEventHandlerDelegate")
 public interface GKChallengeEventHandlerDelegate 
     extends NSObjectProtocol {
 
     
     
-    
-    
+
+
     
     @Mapping("localPlayerDidSelectChallenge:")
     void localPlayerDidSelectChallenge(GKChallenge challenge);
@@ -45,7 +43,7 @@ public interface GKChallengeEventHandlerDelegate
     boolean shouldShowBannerForRemotelyCompletedChallenge(GKChallenge challenge);
     @Mapping("remotePlayerDidCompleteChallenge:")
     void remotePlayerDidCompleteChallenge(GKChallenge challenge);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

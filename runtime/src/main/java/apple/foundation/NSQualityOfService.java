@@ -19,11 +19,9 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("Foundation/Foundation.h")
 @Mapping("NSQualityOfService")
 public final class NSQualityOfService extends ObjCEnum {
@@ -38,6 +36,6 @@ public final class NSQualityOfService extends ObjCEnum {
     public static final long Background = 9L;
     @GlobalConstant("NSQualityOfServiceDefault")
     public static final long Default = -1L;
-    
+
 
 }

@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UIPopoverPresentationController")
 public class UIPopoverPresentationController 
     extends UIPresentationController 
@@ -35,7 +33,7 @@ public class UIPopoverPresentationController
     public UIPopoverPresentationController(UIViewController presentedViewController, UIViewController presentingViewController) { }
     @Mapping("init")
     public UIPopoverPresentationController() { }
-    
+
     
     @Mapping("delegate")
     public native UIPopoverPresentationControllerDelegate getPopoverPresentationDelegate();
@@ -71,9 +69,9 @@ public class UIPopoverPresentationController
     public native UIEdgeInsets getPopoverLayoutMargins();
     @Mapping("setPopoverLayoutMargins:")
     public native void setPopoverLayoutMargins(UIEdgeInsets v);
+
     
     
-    
-    
-    
+
+
 }

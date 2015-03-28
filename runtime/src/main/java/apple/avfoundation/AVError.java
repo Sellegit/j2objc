@@ -19,7 +19,6 @@ import apple.coremedia.*;
 import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("AVFoundation/AVFoundation.h")
@@ -30,7 +29,7 @@ public class AVError
     
     
     protected AVError() {}
-    
+
     
     
     
@@ -39,5 +38,5 @@ public class AVError
      */
     @GlobalConstant("AVFoundationErrorDomain")
     public static native String getClassDomain();
-    
+
 }

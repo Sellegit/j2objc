@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 7.0 and later.
  */
-
 @Library("UIKit/UIKit.h")
 @Mapping("UIPushBehaviorMode")
 public final class UIPushBehaviorMode extends ObjCEnum {
@@ -32,6 +30,6 @@ public final class UIPushBehaviorMode extends ObjCEnum {
     public static final long Continuous = 0L;
     @GlobalConstant("UIPushBehaviorModeInstantaneous")
     public static final long Instantaneous = 1L;
-    
+
 
 }

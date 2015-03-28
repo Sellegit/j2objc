@@ -19,9 +19,6 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h")
 @Mapping("UISearchBarIcon")
 public final class UISearchBarIcon extends ObjCEnum {
@@ -34,6 +31,6 @@ public final class UISearchBarIcon extends ObjCEnum {
     public static final long Bookmark = 2L;
     @GlobalConstant("UISearchBarIconResultsList")
     public static final long ResultsList = 3L;
-    
+
 
 }

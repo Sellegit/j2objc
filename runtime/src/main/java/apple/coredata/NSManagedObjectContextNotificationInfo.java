@@ -13,7 +13,6 @@ import apple.coregraphics.*;
 import apple.coreservices.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("CoreData/CoreData.h")
@@ -56,5 +55,5 @@ public class NSManagedObjectContextNotificationInfo
      */
     @GlobalConstant("NSInvalidatedAllObjectsKey")
     public static native NSString InvalidatedAllObjectsKey();
-    
+
 }

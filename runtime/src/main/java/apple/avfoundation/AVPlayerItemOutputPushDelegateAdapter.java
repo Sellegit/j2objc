@@ -19,7 +19,6 @@ import apple.coremedia.*;
 import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -30,11 +29,11 @@ public abstract class AVPlayerItemOutputPushDelegateAdapter
     
     
     
-    
-    
+
+
     
     
     @NotImplemented("outputSequenceWasFlushed:")
     public void wasFlushed(AVPlayerItemOutput output) { throw new UnsupportedOperationException(); }
-    
+
 }

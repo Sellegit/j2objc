@@ -13,7 +13,6 @@ import apple.coregraphics.*;
 import apple.coreservices.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Mapping("CTRunRef") @Library("CoreText/CoreText.h")
@@ -24,7 +23,7 @@ public class CTRun
     
     
     protected CTRun() {}
-    
+
     
     
     
@@ -93,5 +92,5 @@ public class CTRun
      */
     @GlobalFunction("CTRunDraw")
     public static native void draw(CTRun run, CGContext context, CFRange range);
-    
+
 }

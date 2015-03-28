@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 7.0 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UIPushBehavior")
 public class UIPushBehavior 
     extends UIDynamicBehavior 
@@ -35,7 +33,7 @@ public class UIPushBehavior
     public UIPushBehavior(NSArray<?> items, @Representing("UIPushBehaviorMode") long mode) { }
     @Mapping("init")
     public UIPushBehavior() { }
-    
+
     
     @Mapping("items")
     public native List<UIDynamicItem> getItems();
@@ -57,7 +55,7 @@ public class UIPushBehavior
     public native CGVector getPushDirection();
     @Mapping("setPushDirection:")
     public native void setPushDirection(CGVector v);
-    
+
     
     
     @Mapping("addItem:")
@@ -70,5 +68,5 @@ public class UIPushBehavior
     public native void setTargetOffset(UIOffset o, UIDynamicItem item);
     @Mapping("setAngle:magnitude:")
     public native void setAngleAndMagnitude(@MachineSizedFloat double angle, @MachineSizedFloat double magnitude);
-    
+
 }

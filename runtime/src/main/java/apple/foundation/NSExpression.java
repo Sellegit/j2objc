@@ -19,11 +19,9 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 3.0 and later.
  */
-
 @Library("Foundation/Foundation.h") @Mapping("NSExpression")
 public class NSExpression 
     extends NSObject 
@@ -35,7 +33,7 @@ public class NSExpression
     public NSExpression(@Representing("NSExpressionType") long type) { }
     @Mapping("init")
     public NSExpression() { }
-    
+
     
     @Mapping("expressionType")
     public native @Representing("NSExpressionType") long getExpressionType();
@@ -76,7 +74,7 @@ public class NSExpression
      */
     @Mapping("expressionBlock")
     public native @Block Block3<NSObject, NSArray<NSExpression>, NSMutableDictionary<?, ?>, NSObject> getExpressionBlock();
-    
+
     
     
     @Mapping("expressionValueWithObject:context:")
@@ -143,5 +141,5 @@ public class NSExpression
     public static native NSExpression createForBlock(Todo block, NSArray<?> arguments);
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
-    
+
 }

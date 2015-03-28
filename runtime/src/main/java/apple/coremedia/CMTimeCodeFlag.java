@@ -18,9 +18,6 @@ import apple.coreanimation.*;
 import apple.corevideo.*;
 
 
-
-
-
 @Library("CoreMedia/CoreMedia.h")
 @Mapping("CMTimeCodeFlag")
 public final class CMTimeCodeFlag extends ObjCEnum {
@@ -31,6 +28,6 @@ public final class CMTimeCodeFlag extends ObjCEnum {
     public static final long _24HourMax = 2L;
     @GlobalConstant("kCMTimeCodeFlag_NegTimesOK")
     public static final long NegTimesOK = 4L;
-    
+
 
 }

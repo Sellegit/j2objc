@@ -18,9 +18,6 @@ import apple.coreanimation.*;
 import apple.corevideo.*;
 
 
-
-
-
 @Library("CoreMedia/CoreMedia.h")
 @Mapping("CMSampleBufferError")
 public final class CMSampleBufferError extends ObjCEnum {
@@ -59,6 +56,6 @@ public final class CMSampleBufferError extends ObjCEnum {
     public static final long DataFailed = -12745L;
     @GlobalConstant("kCMSampleBufferError_DataCanceled")
     public static final long DataCanceled = -12746L;
-    
+
 
 }

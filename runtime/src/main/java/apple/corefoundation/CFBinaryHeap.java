@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.dispatch.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Mapping("CFBinaryHeapRef") @Library("CoreFoundation/CoreFoundation.h")
@@ -25,13 +24,13 @@ public class CFBinaryHeap
     
     
     protected CFBinaryHeap() {}
-    
+
     
     
     
     @GlobalConstant("kCFStringBinaryHeapCallBacks")
     public static native CFBinaryHeapCallBacks getCopyStringCallBacks();
-    
+
     @GlobalFunction("CFBinaryHeapGetTypeID")
     public static native @MachineSizedUInt long getClassTypeID();
     @GlobalFunction("CFBinaryHeapCreate")
@@ -58,5 +57,5 @@ public class CFBinaryHeap
     public static native void removeMinimumValue(CFBinaryHeap heap);
     @GlobalFunction("CFBinaryHeapRemoveAllValues")
     public static native void removeAllValues(CFBinaryHeap heap);
-    
+
 }

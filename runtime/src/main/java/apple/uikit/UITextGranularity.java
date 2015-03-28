@@ -19,9 +19,6 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h")
 @Mapping("UITextGranularity")
 public final class UITextGranularity extends ObjCEnum {
@@ -38,6 +35,6 @@ public final class UITextGranularity extends ObjCEnum {
     public static final long Line = 4L;
     @GlobalConstant("UITextGranularityDocument")
     public static final long Document = 5L;
-    
+
 
 }

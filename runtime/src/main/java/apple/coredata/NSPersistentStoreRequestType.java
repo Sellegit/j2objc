@@ -14,9 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
-
-
 @Library("CoreData/CoreData.h")
 @Mapping("NSPersistentStoreRequestType")
 public final class NSPersistentStoreRequestType extends ObjCEnum {
@@ -27,6 +24,6 @@ public final class NSPersistentStoreRequestType extends ObjCEnum {
     public static final long Save = 2L;
     @GlobalConstant("NSBatchUpdateRequestType")
     public static final long BatchUpdate = 6L;
-    
+
 
 }

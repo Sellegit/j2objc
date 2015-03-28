@@ -15,11 +15,9 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
 /**
  * @since Available in iOS 3.0 and later.
  */
-
 @Library("MediaPlayer/MediaPlayer.h") @Mapping("MPMediaItemArtwork")
 public class MPMediaItemArtwork 
     extends NSObject 
@@ -34,16 +32,16 @@ public class MPMediaItemArtwork
     public MPMediaItemArtwork(UIImage image) { }
     @Mapping("init")
     public MPMediaItemArtwork() { }
-    
+
     
     @Mapping("bounds")
     public native CGRect getBounds();
     @Mapping("imageCropRect")
     public native CGRect getImageCropRect();
-    
+
     
     
     @Mapping("imageWithSize:")
     public native UIImage getImage(CGSize size);
-    
+
 }

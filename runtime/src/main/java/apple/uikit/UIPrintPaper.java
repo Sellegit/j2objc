@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 4.2 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UIPrintPaper")
 public class UIPrintPaper 
     extends NSObject 
@@ -33,18 +31,18 @@ public class UIPrintPaper
     
     @Mapping("init")
     public UIPrintPaper() { }
-    
+
     
     @Mapping("paperSize")
     public native CGSize getPaperSize();
     @Mapping("printableRect")
     public native CGRect getPrintableRect();
-    
+
     
     
     @Mapping("bestPaperForPageSize:withPapersFromArray:")
     public static native UIPrintPaper createBestForPageSize(CGSize contentSize, NSArray<?> paperList);
     @Mapping("printRect")
     public native CGRect getPrintRect();
-    
+
 }

@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 4.0 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h") @Mapping("AVMutableVideoCompositionLayerInstruction")
 public class AVMutableVideoCompositionLayerInstruction 
     extends AVVideoCompositionLayerInstruction 
@@ -34,13 +32,13 @@ public class AVMutableVideoCompositionLayerInstruction
     
     @Mapping("init")
     public AVMutableVideoCompositionLayerInstruction() { }
-    
+
     
     @Mapping("trackID")
     public native int getTrackID();
     @Mapping("setTrackID:")
     public native void setTrackID(int v);
-    
+
     
     
     @Mapping("setTransformRampFromStartTransform:toEndTransform:timeRange:")
@@ -65,5 +63,5 @@ public class AVMutableVideoCompositionLayerInstruction
     public static native AVMutableVideoCompositionLayerInstruction create(AVAssetTrack track);
     @Mapping("videoCompositionLayerInstruction")
     public static native AVMutableVideoCompositionLayerInstruction create();
-    
+
 }

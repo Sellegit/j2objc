@@ -17,11 +17,9 @@ import apple.uikit.*;
 import apple.avfoundation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("Photos/Photos.h")
 @Mapping("PHCollectionEditOperation")
 public final class PHCollectionEditOperation extends ObjCEnum {
@@ -40,6 +38,6 @@ public final class PHCollectionEditOperation extends ObjCEnum {
     public static final long Delete = 6L;
     @GlobalConstant("PHCollectionEditOperationRename")
     public static final long Rename = 7L;
-    
+
 
 }

@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 2.0 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UINavigationBar")
 public class UINavigationBar 
     extends UIView 
@@ -37,7 +35,7 @@ public class UINavigationBar
     public UINavigationBar(NSCoder aDecoder) { }
     @Mapping("init")
     public UINavigationBar() { }
-    
+
     
     @Mapping("barStyle")
     public native @Representing("UIBarStyle") long getBarStyle();
@@ -121,7 +119,7 @@ public class UINavigationBar
     public native void setBackIndicatorTransitionMaskImage(UIImage v);
     @Mapping("barPosition")
     public native @Representing("UIBarPosition") long getBarPosition();
-    
+
     
     
     @Mapping("pushNavigationItem:animated:")
@@ -160,5 +158,5 @@ public class UINavigationBar
      */
     @Mapping("titleVerticalPositionAdjustmentForBarMetrics:")
     public native @MachineSizedFloat double getTitleVerticalPositionAdjustment(@Representing("UIBarMetrics") long barMetrics);
-    
+
 }

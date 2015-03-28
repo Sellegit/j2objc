@@ -17,21 +17,18 @@ import apple.coretext.*;
 import apple.opengles.*;
 
 
-
-
-
 @Library("QuartzCore/QuartzCore.h") @Mapping("CAAction")
 public interface CAAction 
      {
 
     
     
-    
-    
+
+
     
     @Mapping("runActionForKey:object:arguments:")
     void runAction(String event, Object anObject, NSDictionary<?, ?> dict);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

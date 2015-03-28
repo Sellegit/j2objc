@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h")
 @Mapping("NSURLCredentialPersistence")
 public final class NSURLCredentialPersistence extends ObjCEnum {
@@ -37,6 +34,6 @@ public final class NSURLCredentialPersistence extends ObjCEnum {
      */
     @GlobalConstant("NSURLCredentialPersistenceSynchronizable")
     public static final long Synchronizable = 3L;
-    
+
 
 }

@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.dispatch.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Mapping("CFMutableSetRef") @Library("CoreFoundation/CoreFoundation.h")
@@ -25,7 +24,7 @@ public class CFMutableSet
     
     
     protected CFMutableSet() {}
-    
+
     
     
     
@@ -43,5 +42,5 @@ public class CFMutableSet
     public static native void removeValue(CFMutableSet theSet, Todo value);
     @GlobalFunction("CFSetRemoveAllValues")
     public static native void removeAllValues(CFMutableSet theSet);
-    
+
 }

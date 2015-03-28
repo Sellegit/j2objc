@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 4.0 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h") @Mapping("AVCaptureInputPort")
 public class AVCaptureInputPort 
     extends NSObject 
@@ -34,7 +32,7 @@ public class AVCaptureInputPort
     
     @Mapping("init")
     public AVCaptureInputPort() { }
-    
+
     
     @Mapping("input")
     public native AVCaptureInput getInput();
@@ -51,7 +49,7 @@ public class AVCaptureInputPort
      */
     @Mapping("clock")
     public native CMClock getClock();
-    
+
     
     
     /**
@@ -59,7 +57,7 @@ public class AVCaptureInputPort
      */
     @GlobalConstant("AVCaptureInputPortFormatDescriptionDidChangeNotification")
     public static native NSString FormatDescriptionDidChangeNotification();
-    
-    
-    
+
+
+
 }

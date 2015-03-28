@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h") @Mapping("NSBundle")
 public class NSBundle 
     extends NSObject 
@@ -37,7 +34,7 @@ public class NSBundle
      */
     @Mapping("initWithURL:")
     public NSBundle(NSURL url) { }
-    
+
     
     @Mapping("isLoaded")
     public native boolean isLoaded();
@@ -112,14 +109,14 @@ public class NSBundle
      */
     @Mapping("executableArchitectures")
     public native List<NSBundleExecutableArchitectureType> getExecutableArchitectures();
-    
+
     
     
     @GlobalConstant("NSBundleDidLoadNotification")
     public static native NSString DidLoadNotification();
     @GlobalConstant("NSLoadedClasses")
     public static native NSString LoadedClassesKey();
-    
+
     /**
      * @since Available in iOS 2.0 and later.
      */
@@ -202,5 +199,5 @@ public class NSBundle
     public static native List<String> getPreferredLocalizations(NSArray<?> localizationsArray);
     @Mapping("preferredLocalizationsFromArray:forPreferences:")
     public static native List<String> getPreferredLocalizations(NSArray<?> localizationsArray, NSArray<?> preferencesArray);
-    
+
 }

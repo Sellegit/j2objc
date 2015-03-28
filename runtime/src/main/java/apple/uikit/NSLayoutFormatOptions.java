@@ -19,9 +19,6 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h")
 @Mapping("NSLayoutFormatOptions")
 public final class NSLayoutFormatOptions extends ObjCEnum {
@@ -61,6 +58,6 @@ public final class NSLayoutFormatOptions extends ObjCEnum {
     public static final long DirectionRightToLeft = 131072L;
     @GlobalConstant("NSLayoutFormatDirectionMask")
     public static final long DirectionMask = 196608L;
-    
+
 
 }

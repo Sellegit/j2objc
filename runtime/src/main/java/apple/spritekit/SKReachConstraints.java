@@ -21,11 +21,9 @@ import apple.glkit.*;
 import apple.scenekit.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("SpriteKit/SpriteKit.h") @Mapping("SKReachConstraints")
 public class SKReachConstraints 
     extends NSObject 
@@ -37,7 +35,7 @@ public class SKReachConstraints
     public SKReachConstraints(@MachineSizedFloat double lowerAngleLimit, @MachineSizedFloat double upperAngleLimit) { }
     @Mapping("init")
     public SKReachConstraints() { }
-    
+
     
     @Mapping("lowerAngleLimit")
     public native @MachineSizedFloat double getLowerAngleLimit();
@@ -47,10 +45,10 @@ public class SKReachConstraints
     public native @MachineSizedFloat double getUpperAngleLimit();
     @Mapping("setUpperAngleLimit:")
     public native void setUpperAngleLimit(@MachineSizedFloat double v);
-    
+
     
     
     @Mapping("encodeWithCoder:")
     public native void encode(NSCoder aCoder);
-    
+
 }

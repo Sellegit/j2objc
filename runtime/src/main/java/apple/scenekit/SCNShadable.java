@@ -20,9 +20,6 @@ import apple.spritekit.*;
 import apple.opengles.*;
 
 
-
-
-
 @Library("SceneKit/SceneKit.h") @Mapping("SCNShadable")
 public interface SCNShadable 
     extends NSObjectProtocol {
@@ -37,10 +34,10 @@ public interface SCNShadable
     SCNProgram getProgram();
     @Mapping("setProgram:")
     void setProgram(SCNProgram v);
+
     
-    
-    
-    
+
+
     /*<adapter>*/
     /*</adapter>*/
 }

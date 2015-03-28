@@ -19,9 +19,6 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h")
 @Mapping("UINavigationControllerOperation")
 public final class UINavigationControllerOperation extends ObjCEnum {
@@ -32,6 +29,6 @@ public final class UINavigationControllerOperation extends ObjCEnum {
     public static final long Push = 1L;
     @GlobalConstant("UINavigationControllerOperationPop")
     public static final long Pop = 2L;
-    
+
 
 }

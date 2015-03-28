@@ -14,9 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
-
-
 @Library("CoreMotion/CoreMotion.h")
 @Mapping("CMMotionActivityConfidence")
 public final class CMMotionActivityConfidence extends ObjCEnum {
@@ -27,6 +24,6 @@ public final class CMMotionActivityConfidence extends ObjCEnum {
     public static final long Medium = 1L;
     @GlobalConstant("CMMotionActivityConfidenceHigh")
     public static final long High = 2L;
-    
+
 
 }

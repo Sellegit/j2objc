@@ -14,9 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
-
-
 @Library("CoreMIDI/CoreMIDI.h")
 @Mapping("MIDIObjectType")
 public final class MIDIObjectType extends ObjCEnum {
@@ -41,6 +38,6 @@ public final class MIDIObjectType extends ObjCEnum {
     public static final long ExternalSource = 18L;
     @GlobalConstant("kMIDIObjectType_ExternalDestination")
     public static final long ExternalDestination = 19L;
-    
+
 
 }

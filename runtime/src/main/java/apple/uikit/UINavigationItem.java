@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 2.0 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UINavigationItem")
 public class UINavigationItem 
     extends NSObject 
@@ -35,7 +33,7 @@ public class UINavigationItem
     public UINavigationItem(String title) { }
     @Mapping("init")
     public UINavigationItem() { }
-    
+
     
     @Mapping("title")
     public native String getTitle();
@@ -95,7 +93,7 @@ public class UINavigationItem
     public native UIBarButtonItem getRightBarButtonItem();
     @Mapping("setRightBarButtonItem:")
     public native void setRightBarButtonItem(UIBarButtonItem v);
-    
+
     
     
     @Mapping("setHidesBackButton:animated:")
@@ -116,5 +114,5 @@ public class UINavigationItem
     public native void setRightBarButtonItem(UIBarButtonItem item, boolean animated);
     @Mapping("encodeWithCoder:")
     public native void encode(NSCoder aCoder);
-    
+
 }

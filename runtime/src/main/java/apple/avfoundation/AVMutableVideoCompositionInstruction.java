@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 4.0 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h") @Mapping("AVMutableVideoCompositionInstruction")
 public class AVMutableVideoCompositionInstruction 
     extends AVVideoCompositionInstruction 
@@ -34,7 +32,7 @@ public class AVMutableVideoCompositionInstruction
     
     @Mapping("init")
     public AVMutableVideoCompositionInstruction() { }
-    
+
     
     @Mapping("timeRange")
     public native CMTimeRange getTimeRange();
@@ -52,10 +50,10 @@ public class AVMutableVideoCompositionInstruction
     public native boolean isPostProcessingEnabled();
     @Mapping("setEnablePostProcessing:")
     public native void setPostProcessingEnabled(boolean v);
-    
+
     
     
     @Mapping("videoCompositionInstruction")
     public static native AVMutableVideoCompositionInstruction create();
-    
+
 }

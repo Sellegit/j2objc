@@ -15,9 +15,6 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
-
-
 @Library("MessageUI/MessageUI.h")
 @Mapping("MessageComposeResult")
 public final class MessageComposeResult extends ObjCEnum {
@@ -28,6 +25,6 @@ public final class MessageComposeResult extends ObjCEnum {
     public static final long Sent = 1L;
     @GlobalConstant("MessageComposeResultFailed")
     public static final long Failed = 2L;
-    
+
 
 }

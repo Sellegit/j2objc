@@ -19,7 +19,6 @@ import apple.glkit.*;
 import apple.spritekit.*;
 import apple.opengles.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -30,8 +29,8 @@ public abstract class SCNActionableAdapter
     
     
     
-    
-    
+
+
     
     
     @NotImplemented("runAction:")
@@ -50,5 +49,5 @@ public abstract class SCNActionableAdapter
     public void removeAction(String key) { throw new UnsupportedOperationException(); }
     @NotImplemented("removeAllActions")
     public void removeAllActions() { throw new UnsupportedOperationException(); }
-    
+
 }

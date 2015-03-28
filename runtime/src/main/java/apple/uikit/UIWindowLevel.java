@@ -18,7 +18,6 @@ import apple.coreimage.*;
 import apple.coretext.*;
 import apple.corelocation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("UIKit/UIKit.h")
@@ -37,5 +36,5 @@ public class UIWindowLevel
     public static native @MachineSizedFloat double LevelAlert();
     @GlobalConstant("UIWindowLevelStatusBar")
     public static native @MachineSizedFloat double LevelStatusBar();
-    
+
 }

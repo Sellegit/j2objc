@@ -19,17 +19,14 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h") @Mapping("UIViewControllerTransitionCoordinator")
 public interface UIViewControllerTransitionCoordinator 
     extends UIViewControllerTransitionCoordinatorContext {
 
     
     
-    
-    
+
+
     
     @Mapping("animateAlongsideTransition:completion:")
     boolean animateAlongsideTransition(@Block VoidBlock1<UIViewControllerTransitionCoordinatorContext> animation, @Block VoidBlock1<UIViewControllerTransitionCoordinatorContext> completion);
@@ -37,7 +34,7 @@ public interface UIViewControllerTransitionCoordinator
     boolean animateAlongsideTransition(UIView view, @Block VoidBlock1<UIViewControllerTransitionCoordinatorContext> animation, @Block VoidBlock1<UIViewControllerTransitionCoordinatorContext> completion);
     @Mapping("notifyWhenInteractionEndsUsingBlock:")
     void notifyWhenInteractionEnds(@Block VoidBlock1<UIViewControllerTransitionCoordinatorContext> handler);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

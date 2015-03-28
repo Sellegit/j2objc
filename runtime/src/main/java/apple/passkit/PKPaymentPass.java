@@ -16,11 +16,9 @@ import apple.uikit.*;
 import apple.addressbook.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("PassKit/PassKit.h") @Mapping("PKPaymentPass")
 public class PKPaymentPass 
     extends PKPass 
@@ -32,7 +30,7 @@ public class PKPaymentPass
     public PKPaymentPass(NSData data, Todo error) { }
     @Mapping("init")
     public PKPaymentPass() { }
-    
+
     
     @Mapping("primaryAccountIdentifier")
     public native String getPrimaryAccountIdentifier();
@@ -44,9 +42,9 @@ public class PKPaymentPass
     public native String getDeviceAccountNumberSuffix();
     @Mapping("activationState")
     public native @Representing("PKPaymentPassActivationState") long getActivationState();
+
     
     
-    
-    
-    
+
+
 }

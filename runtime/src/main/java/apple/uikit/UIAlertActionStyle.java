@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("UIKit/UIKit.h")
 @Mapping("UIAlertActionStyle")
 public final class UIAlertActionStyle extends ObjCEnum {
@@ -34,6 +32,6 @@ public final class UIAlertActionStyle extends ObjCEnum {
     public static final long Cancel = 1L;
     @GlobalConstant("UIAlertActionStyleDestructive")
     public static final long Destructive = 2L;
-    
+
 
 }

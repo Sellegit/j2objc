@@ -17,9 +17,6 @@ import apple.coretext.*;
 import apple.opengles.*;
 
 
-
-
-
 @Library("QuartzCore/QuartzCore.h") @Mapping("CADisplayLink")
 public class CADisplayLink 
     extends NSObject 
@@ -29,7 +26,7 @@ public class CADisplayLink
     
     @Mapping("init")
     public CADisplayLink() { }
-    
+
     
     @Mapping("timestamp")
     public native double getTimestamp();
@@ -43,7 +40,7 @@ public class CADisplayLink
     public native @MachineSizedSInt long getFrameInterval();
     @Mapping("setFrameInterval:")
     public native void setFrameInterval(@MachineSizedSInt long v);
-    
+
     
     
     @Mapping("addToRunLoop:forMode:")
@@ -54,5 +51,5 @@ public class CADisplayLink
     public native void invalidate();
     @Mapping("displayLinkWithTarget:selector:")
     public static native CADisplayLink create(Object target, Selector sel);
-    
+
 }

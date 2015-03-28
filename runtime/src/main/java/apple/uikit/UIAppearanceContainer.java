@@ -19,20 +19,17 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h") @Mapping("UIAppearanceContainer")
 public interface UIAppearanceContainer 
     extends NSObjectProtocol {
 
     
     
+
+
     
-    
-    
-    
-    
+
+
     /*<adapter>*/
     /*</adapter>*/
 }

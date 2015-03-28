@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 4.0 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h") @Mapping("AVCompositionTrackSegment")
 public class AVCompositionTrackSegment 
     extends AVAssetTrackSegment 
@@ -38,7 +36,7 @@ public class AVCompositionTrackSegment
     public AVCompositionTrackSegment(CMTimeRange timeRange) { }
     @Mapping("init")
     public AVCompositionTrackSegment() { }
-    
+
     
     @Mapping("isEmpty")
     public native boolean isEmpty();
@@ -46,12 +44,12 @@ public class AVCompositionTrackSegment
     public native NSURL getSourceURL();
     @Mapping("sourceTrackID")
     public native int getSourceTrackID();
-    
+
     
     
     @Mapping("compositionTrackSegmentWithURL:trackID:sourceTimeRange:targetTimeRange:")
     public static native AVCompositionTrackSegment create(NSURL URL, int trackID, CMTimeRange sourceTimeRange, CMTimeRange targetTimeRange);
     @Mapping("compositionTrackSegmentWithTimeRange:")
     public static native AVCompositionTrackSegment create(CMTimeRange timeRange);
-    
+
 }

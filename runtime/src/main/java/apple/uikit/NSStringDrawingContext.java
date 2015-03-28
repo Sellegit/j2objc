@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 6.0 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("NSStringDrawingContext")
 public class NSStringDrawingContext 
     extends NSObject 
@@ -33,7 +31,7 @@ public class NSStringDrawingContext
     
     @Mapping("init")
     public NSStringDrawingContext() { }
-    
+
     
     @Mapping("minimumScaleFactor")
     public native @MachineSizedFloat double getMinimumScaleFactor();
@@ -64,9 +62,9 @@ public class NSStringDrawingContext
     public native @MachineSizedFloat double getActualTrackingAdjustment();
     @Mapping("totalBounds")
     public native CGRect getTotalBounds();
+
     
     
-    
-    
-    
+
+
 }

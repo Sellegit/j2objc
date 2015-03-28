@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h")
 @Mapping("AVAudioUnitEQFilterType")
 public final class AVAudioUnitEQFilterType extends ObjCEnum {
@@ -51,6 +49,6 @@ public final class AVAudioUnitEQFilterType extends ObjCEnum {
     public static final long ResonantLowShelf = 9L;
     @GlobalConstant("AVAudioUnitEQFilterTypeResonantHighShelf")
     public static final long ResonantHighShelf = 10L;
-    
+
 
 }

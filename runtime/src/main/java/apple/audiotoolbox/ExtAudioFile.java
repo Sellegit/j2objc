@@ -16,7 +16,6 @@ import apple.opengles.*;
 import apple.coreaudio.*;
 import apple.coremedia.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("AudioToolbox/AudioToolbox.h")
@@ -84,5 +83,5 @@ public class ExtAudioFile
      */
     @GlobalFunction("ExtAudioFileSetProperty")
     public static native int setProperty(OpaqueExtAudioFile inExtAudioFile, int inPropertyID, int inPropertyDataSize, Todo inPropertyData);
-    
+
 }

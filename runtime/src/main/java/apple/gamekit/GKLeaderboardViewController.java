@@ -15,13 +15,11 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
 /**
  * @since Available in iOS 4.1 and later.
  * @deprecated Deprecated in iOS 7.0.
  */
 @Deprecated
-
 @Library("GameKit/GameKit.h") @Mapping("GKLeaderboardViewController")
 public class GKLeaderboardViewController 
     extends GKGameCenterViewController 
@@ -35,7 +33,7 @@ public class GKLeaderboardViewController
     public GKLeaderboardViewController(String nibNameOrNil, NSBundle nibBundleOrNil) { }
     @Mapping("init")
     public GKLeaderboardViewController() { }
-    
+
     
     @Mapping("timeScope")
     public native @Representing("GKLeaderboardTimeScope") long getTimeScope();
@@ -49,9 +47,9 @@ public class GKLeaderboardViewController
     public native GKLeaderboardViewControllerDelegate getLeaderboardDelegate();
     @Mapping("setLeaderboardDelegate:")
     public native void setLeaderboardDelegate(GKLeaderboardViewControllerDelegate v);
+
     
     
-    
-    
-    
+
+
 }

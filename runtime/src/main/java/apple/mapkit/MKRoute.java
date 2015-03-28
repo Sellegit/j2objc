@@ -17,11 +17,9 @@ import apple.uikit.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 7.0 and later.
  */
-
 @Library("MapKit/MapKit.h") @Mapping("MKRoute")
 public class MKRoute 
     extends NSObject 
@@ -31,7 +29,7 @@ public class MKRoute
     
     @Mapping("init")
     public MKRoute() { }
-    
+
     
     @Mapping("name")
     public native String getName();
@@ -47,9 +45,9 @@ public class MKRoute
     public native MKPolyline getPolyline();
     @Mapping("steps")
     public native NSArray<MKRouteStep> getSteps();
+
     
     
-    
-    
-    
+
+
 }

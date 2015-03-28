@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 6.0 and later.
  */
-
 @Library("UIKit/UIKit.h")
 @Mapping("NSStringDrawingOptions")
 public final class NSStringDrawingOptions extends ObjCEnum {
@@ -36,6 +34,6 @@ public final class NSStringDrawingOptions extends ObjCEnum {
     public static final long UsesFontLeading = 2L;
     @GlobalConstant("NSStringDrawingUsesDeviceMetrics")
     public static final long UsesDeviceMetrics = 8L;
-    
+
 
 }

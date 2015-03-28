@@ -17,11 +17,9 @@ import apple.uikit.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 4.0 and later.
  */
-
 @Library("MapKit/MapKit.h") @Mapping("MKCircle")
 public class MKCircle 
     extends MKShape 
@@ -31,7 +29,7 @@ public class MKCircle
     
     @Mapping("init")
     public MKCircle() { }
-    
+
     
     @Mapping("coordinate")
     public native CLLocationCoordinate2D getCoordinate();
@@ -39,7 +37,7 @@ public class MKCircle
     public native double getRadius();
     @Mapping("boundingMapRect")
     public native MKMapRect getBoundingMapRect();
-    
+
     
     
     @Mapping("circleWithCenterCoordinate:radius:")
@@ -53,5 +51,5 @@ public class MKCircle
      */
     @Mapping("canReplaceMapContent")
     public native boolean canReplaceMapContent();
-    
+
 }

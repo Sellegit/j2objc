@@ -14,9 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
-
-
 @Library("CoreText/CoreText.h")
 @Mapping("CTFontManagerScope")
 public final class CTFontManagerScope extends ObjCEnum {
@@ -29,6 +26,6 @@ public final class CTFontManagerScope extends ObjCEnum {
     public static final long User = 2L;
     @GlobalConstant("kCTFontManagerScopeSession")
     public static final long Session = 3L;
-    
+
 
 }

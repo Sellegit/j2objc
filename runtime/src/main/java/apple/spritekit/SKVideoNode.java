@@ -21,9 +21,6 @@ import apple.glkit.*;
 import apple.scenekit.*;
 
 
-
-
-
 @Library("SpriteKit/SpriteKit.h") @Mapping("SKVideoNode")
 public class SKVideoNode 
     extends SKNode 
@@ -41,7 +38,7 @@ public class SKVideoNode
     public SKVideoNode(NSCoder aDecoder) { }
     @Mapping("init")
     public SKVideoNode() { }
-    
+
     
     @Mapping("size")
     public native CGSize getSize();
@@ -51,7 +48,7 @@ public class SKVideoNode
     public native CGPoint getAnchorPoint();
     @Mapping("setAnchorPoint:")
     public native void setAnchorPoint(CGPoint v);
-    
+
     
     
     @Mapping("play")
@@ -64,5 +61,5 @@ public class SKVideoNode
     public static native SKVideoNode create(String videoFile);
     @Mapping("videoNodeWithVideoURL:")
     public static native SKVideoNode create(NSURL videoURL);
-    
+
 }

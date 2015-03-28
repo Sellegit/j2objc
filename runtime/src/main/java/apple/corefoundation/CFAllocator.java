@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.dispatch.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Mapping("CFAllocatorRef") @Library("CoreFoundation/CoreFoundation.h")
@@ -25,7 +24,7 @@ public class CFAllocator
     
     
     protected CFAllocator() {}
-    
+
     
     
     
@@ -41,7 +40,7 @@ public class CFAllocator
     public static native CFAllocator getNullAllocator();
     @GlobalConstant("kCFAllocatorUseContext")
     public static native CFAllocator getUseContextAllocator();
-    
+
     @GlobalFunction("CFAllocatorGetTypeID")
     public static native @MachineSizedUInt long getClassTypeID();
     @GlobalFunction("CFAllocatorSetDefault")
@@ -60,5 +59,5 @@ public class CFAllocator
     public static native @MachineSizedSInt long getPreferredSizeForSize(CFAllocator allocator, @MachineSizedSInt long size, @MachineSizedUInt long hint);
     @GlobalFunction("CFAllocatorGetContext")
     public static native void getContext(CFAllocator allocator, CFAllocatorContext context);
-    
+
 }

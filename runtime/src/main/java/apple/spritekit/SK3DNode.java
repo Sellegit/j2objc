@@ -21,11 +21,9 @@ import apple.glkit.*;
 import apple.scenekit.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("SpriteKit/SpriteKit.h") @Mapping("SK3DNode")
 public class SK3DNode 
     extends SKNode 
@@ -39,7 +37,7 @@ public class SK3DNode
     public SK3DNode(NSCoder aDecoder) { }
     @Mapping("init")
     public SK3DNode() { }
-    
+
     
     @Mapping("viewportSize")
     public native CGSize getViewportSize();
@@ -69,7 +67,7 @@ public class SK3DNode
     public native boolean autoenablesDefaultLighting();
     @Mapping("setAutoenablesDefaultLighting:")
     public native void setAutoenablesDefaultLighting(boolean v);
-    
+
     
     
     @Mapping("hitTest:options:")
@@ -80,5 +78,5 @@ public class SK3DNode
     public native SKVector3 unprojectPoint(SKVector3 point);
     @Mapping("nodeWithViewportSize:")
     public static native SK3DNode create(CGSize viewportSize);
-    
+
 }

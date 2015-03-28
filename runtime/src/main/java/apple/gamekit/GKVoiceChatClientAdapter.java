@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 import apple.uikit.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -25,8 +24,8 @@ public abstract class GKVoiceChatClientAdapter
     
     
     
-    
-    
+
+
     
     
     @NotImplemented("voiceChatService:sendData:toParticipantID:")
@@ -43,5 +42,5 @@ public abstract class GKVoiceChatClientAdapter
     public void didStop(GKVoiceChatService voiceChatService, String participantID, NSError error) { throw new UnsupportedOperationException(); }
     @NotImplemented("voiceChatService:didReceiveInvitationFromParticipantID:callID:")
     public void didReceiveInvitation(GKVoiceChatService voiceChatService, String participantID, @MachineSizedSInt long callID) { throw new UnsupportedOperationException(); }
-    
+
 }

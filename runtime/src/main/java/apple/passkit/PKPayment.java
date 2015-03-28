@@ -16,11 +16,9 @@ import apple.uikit.*;
 import apple.addressbook.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("PassKit/PassKit.h") @Mapping("PKPayment")
 public class PKPayment 
     extends NSObject 
@@ -30,7 +28,7 @@ public class PKPayment
     
     @Mapping("init")
     public PKPayment() { }
-    
+
     
     @Mapping("token")
     public native PKPaymentToken getToken();
@@ -40,9 +38,9 @@ public class PKPayment
     public native ABPerson getShippingAddress();
     @Mapping("shippingMethod")
     public native PKShippingMethod getShippingMethod();
+
     
     
-    
-    
-    
+
+
 }

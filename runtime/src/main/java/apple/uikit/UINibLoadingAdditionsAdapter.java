@@ -18,7 +18,6 @@ import apple.coreimage.*;
 import apple.coretext.*;
 import apple.corelocation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -29,8 +28,8 @@ public abstract class UINibLoadingAdditionsAdapter
     
     
     
-    
-    
+
+
     
     
     @NotImplemented("awakeFromNib")
@@ -40,5 +39,5 @@ public abstract class UINibLoadingAdditionsAdapter
      */
     @NotImplemented("prepareForInterfaceBuilder")
     public void prepareForInterfaceBuilder() { throw new UnsupportedOperationException(); }
-    
+
 }

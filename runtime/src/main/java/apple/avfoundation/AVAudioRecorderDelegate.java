@@ -20,17 +20,14 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
-
-
 @Library("AVFoundation/AVFoundation.h") @Mapping("AVAudioRecorderDelegate")
 public interface AVAudioRecorderDelegate 
     extends NSObjectProtocol {
 
     
     
-    
-    
+
+
     
     @Mapping("audioRecorderDidFinishRecording:successfully:")
     void didFinishRecording(AVAudioRecorder recorder, boolean flag);
@@ -64,7 +61,7 @@ public interface AVAudioRecorderDelegate
     @Deprecated
     @Mapping("audioRecorderEndInterruption:")
     void endInterruption(AVAudioRecorder recorder);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

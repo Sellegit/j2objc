@@ -19,17 +19,14 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h") @Mapping("NSURLSessionDataDelegate")
 public interface NSURLSessionDataDelegate 
     extends NSURLSessionTaskDelegate {
 
     
     
-    
-    
+
+
     
     @Mapping("URLSession:dataTask:didReceiveResponse:completionHandler:")
     void didReceiveResponse(NSURLSession session, NSURLSessionDataTask dataTask, NSURLResponse response, @Block VoidBlock1<NSURLSessionResponseDisposition> completionHandler);
@@ -39,7 +36,7 @@ public interface NSURLSessionDataDelegate
     void didReceiveData(NSURLSession session, NSURLSessionDataTask dataTask, NSData data);
     @Mapping("URLSession:dataTask:willCacheResponse:completionHandler:")
     void willCacheResponse(NSURLSession session, NSURLSessionDataTask dataTask, NSCachedURLResponse proposedResponse, @Block VoidBlock1<NSCachedURLResponse> completionHandler);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

@@ -19,11 +19,9 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 4.0 and later.
  */
-
 @Library("Foundation/Foundation.h") @Mapping("NSCache")
 public class NSCache 
     extends NSObject 
@@ -33,7 +31,7 @@ public class NSCache
     
     @Mapping("init")
     public NSCache() { }
-    
+
     
     @Mapping("name")
     public native String getName();
@@ -55,7 +53,7 @@ public class NSCache
     public native boolean evictsObjectsWithDiscardedContent();
     @Mapping("setEvictsObjectsWithDiscardedContent:")
     public native void setEvictsObjectsWithDiscardedContent(boolean v);
-    
+
     
     
     @Mapping("objectForKey:")
@@ -68,5 +66,5 @@ public class NSCache
     public native void remove(Object key);
     @Mapping("removeAllObjects")
     public native void clear();
-    
+
 }

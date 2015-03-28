@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h")
 @Mapping("AVAudioUnitDistortionPreset")
 public final class AVAudioUnitDistortionPreset extends ObjCEnum {
@@ -73,6 +71,6 @@ public final class AVAudioUnitDistortionPreset extends ObjCEnum {
     public static final long SpeechRadioTower = 20L;
     @GlobalConstant("AVAudioUnitDistortionPresetSpeechWaves")
     public static final long SpeechWaves = 21L;
-    
+
 
 }

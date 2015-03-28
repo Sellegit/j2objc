@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 3.0 and later.
  */
-
 @Library("CoreData/CoreData.h") @Mapping("NSEntityMigrationPolicy")
 public class NSEntityMigrationPolicy 
     extends NSObject 
@@ -28,10 +26,10 @@ public class NSEntityMigrationPolicy
     
     @Mapping("init")
     public NSEntityMigrationPolicy() { }
+
     
-    
-    
-    
+
+
     
     
     @Mapping("beginEntityMapping:manager:error:")
@@ -48,5 +46,5 @@ public class NSEntityMigrationPolicy
     public native boolean performCustomValidation(NSEntityMapping mapping, NSMigrationManager manager, Todo error);
     @Mapping("endEntityMapping:manager:error:")
     public native boolean endEntityMapping(NSEntityMapping mapping, NSMigrationManager manager, Todo error);
-    
+
 }

@@ -19,17 +19,14 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h") @Mapping("UIPageViewControllerDelegate")
 public interface UIPageViewControllerDelegate 
     extends NSObjectProtocol {
 
     
     
-    
-    
+
+
     
     /**
      * @since Available in iOS 6.0 and later.
@@ -50,7 +47,7 @@ public interface UIPageViewControllerDelegate
      */
     @Mapping("pageViewControllerPreferredInterfaceOrientationForPresentation:")
     @Representing("UIInterfaceOrientation") long getPreferredInterfaceOrientation(UIPageViewController pageViewController);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

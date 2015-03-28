@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.dispatch.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("CoreFoundation/CoreFoundation.h")
@@ -112,12 +111,12 @@ public class CoreFoundationVersionNumber
     public static final double VersionNumber_iOS_6_1 = 793.00;
     public static final double VersionNumber_iOS_7_0 = 847.20;
     public static final double VersionNumber_iOS_7_1 = 847.24;
-    
+
     
     
     
     
     @GlobalConstant("kCFCoreFoundationVersionNumber")
     public static native double getVersion();
-    
+
 }

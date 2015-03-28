@@ -16,11 +16,9 @@ import apple.addressbook.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 4.0 and later.
  */
-
 @Library("EventKit/EventKit.h") @Mapping("EKEventStore")
 public class EKEventStore 
     extends NSObject 
@@ -30,7 +28,7 @@ public class EKEventStore
     
     @Mapping("init")
     public EKEventStore() { }
-    
+
     
     @Mapping("eventStoreIdentifier")
     public native String getEventStoreIdentifier();
@@ -43,7 +41,7 @@ public class EKEventStore
     public native NSArray<EKCalendar> getCalendars();
     @Mapping("defaultCalendarForNewEvents")
     public native EKCalendar getDefaultCalendarForNewEvents();
-    
+
     
     
     /**
@@ -51,7 +49,7 @@ public class EKEventStore
      */
     @GlobalConstant("EKEventStoreChangedNotification")
     public static native NSString ChangedNotification();
-    
+
     /**
      * @since Available in iOS 5.0 and later.
      */
@@ -178,5 +176,5 @@ public class EKEventStore
      */
     @Mapping("authorizationStatusForEntityType:")
     public static native @Representing("EKAuthorizationStatus") long getAuthorizationStatusForEntityType(@Representing("EKEntityType") long entityType);
-    
+
 }

@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 7.0 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h")
 @Mapping("AVAudioSessionErrorCode")
 public final class AVAudioSessionErrorCode extends ObjCEnum {
@@ -53,6 +51,6 @@ public final class AVAudioSessionErrorCode extends ObjCEnum {
     public static final long InsufficientPriority = 561017449L;
     @GlobalConstant("AVAudioSessionErrorCodeUnspecified")
     public static final long CodeUnspecified = 2003329396L;
-    
+
 
 }

@@ -13,7 +13,6 @@ import apple.coregraphics.*;
 import apple.coreservices.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("CoreMIDI/CoreMIDI.h")
@@ -24,7 +23,7 @@ public class MIDIEntity
     
     
     protected MIDIEntity() {}
-    
+
     
     
     
@@ -58,5 +57,5 @@ public class MIDIEntity
      */
     @GlobalFunction("MIDIEntityAddOrRemoveEndpoints")
     public static native MIDIError addOrRemoveEndpoints(MIDIEntity entity, @MachineSizedUInt long numSourceEndpoints, @MachineSizedUInt long numDestinationEndpoints);
-    
+
 }

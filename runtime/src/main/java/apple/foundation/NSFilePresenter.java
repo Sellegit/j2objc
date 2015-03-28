@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h") @Mapping("NSFilePresenter")
 public interface NSFilePresenter 
     extends NSObjectProtocol {
@@ -32,7 +29,7 @@ public interface NSFilePresenter
     NSURL getPresentedItemURL();
     @Mapping("presentedItemOperationQueue")
     NSOperationQueue getPresentedItemOperationQueue();
-    
+
     
     @Mapping("relinquishPresentedItemToReader:")
     void relinquishPresentedItemToReader(@Block("(@Block)") VoidBlock1<Runnable> reader);
@@ -66,7 +63,7 @@ public interface NSFilePresenter
     void presentedSubitemAtURLDidLoseVersion(NSURL url, NSFileVersion version);
     @Mapping("presentedSubitemAtURL:didResolveConflictVersion:")
     void presentedSubitemAtURLDidResolveConflictVersion(NSURL url, NSFileVersion version);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

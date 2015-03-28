@@ -21,9 +21,6 @@ import apple.glkit.*;
 import apple.scenekit.*;
 
 
-
-
-
 @Library("SpriteKit/SpriteKit.h") @Mapping("SKPhysicsJointLimit")
 public class SKPhysicsJointLimit 
     extends SKPhysicsJoint 
@@ -35,16 +32,16 @@ public class SKPhysicsJointLimit
     public SKPhysicsJointLimit(NSCoder aDecoder) { }
     @Mapping("init")
     public SKPhysicsJointLimit() { }
-    
+
     
     @Mapping("maxLength")
     public native @MachineSizedFloat double getMaxLength();
     @Mapping("setMaxLength:")
     public native void setMaxLength(@MachineSizedFloat double v);
-    
+
     
     
     @Mapping("jointWithBodyA:bodyB:anchorA:anchorB:")
     public static native SKPhysicsJointLimit create(SKPhysicsBody bodyA, SKPhysicsBody bodyB, CGPoint anchorA, CGPoint anchorB);
-    
+
 }

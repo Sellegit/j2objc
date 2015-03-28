@@ -18,7 +18,6 @@ import apple.coremedia.*;
 import apple.security.*;
 import apple.dispatch.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("Foundation/Foundation.h")
@@ -186,5 +185,5 @@ public class NSURLVolumeProperty
      */
     @GlobalConstant("NSURLVolumeLocalizedNameKey")
     public static native NSString LocalizedNameValue();
-    
+
 }

@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h") @Mapping("NSDate")
 public class NSDate 
     extends NSObject 
@@ -29,12 +26,12 @@ public class NSDate
 
     
     public static final double TimeIntervalSince1970 = 978307200.0;
-    
+
     
     public NSDate() {}
     @Mapping("initWithTimeIntervalSince1970:")
     public NSDate(double secs) { }
-    
+
     
     @Mapping("timeIntervalSinceReferenceDate")
     public native double getTimeIntervalSinceReferenceDate();
@@ -42,7 +39,7 @@ public class NSDate
     public native double getTimeIntervalSinceNow();
     @Mapping("timeIntervalSince1970")
     public native double getTimeIntervalSince1970();
-    
+
     
     
     /**
@@ -50,7 +47,7 @@ public class NSDate
      */
     @GlobalConstant("NSSystemClockDidChangeNotification")
     public static native NSString SystemClockDidChangeNotification();
-    
+
     @Mapping("timeIntervalSinceDate:")
     public native double getTimeIntervalSince(NSDate anotherDate);
     /**
@@ -82,5 +79,5 @@ public class NSDate
     public static native NSDate getDistantFuture();
     @Mapping("distantPast")
     public static native NSDate getDistantPast();
-    
+
 }

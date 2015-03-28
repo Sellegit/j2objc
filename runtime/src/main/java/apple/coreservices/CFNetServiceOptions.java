@@ -14,15 +14,12 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
-
-
 @Library("CFNetwork/CFNetwork.h")
 @Mapping("CFNetServiceOptions")
 public final class CFNetServiceOptions extends ObjCEnum {
     
     @GlobalConstant("kCFNetServiceFlagNoAutoRename")
     public static final long NoAutoRename = 1L;
-    
+
 
 }

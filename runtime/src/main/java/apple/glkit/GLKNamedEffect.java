@@ -17,21 +17,18 @@ import apple.uikit.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("GLKit/GLKit.h") @Mapping("GLKNamedEffect")
 public interface GLKNamedEffect 
      {
 
     
     
-    
-    
+
+
     
     @Mapping("prepareToDraw")
     void prepareToDraw();
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.dispatch.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("CoreFoundation/CoreFoundation.h")
@@ -31,5 +30,5 @@ public class CFRunLoopMode
     public static native CFString DefaultValue();
     @GlobalConstant("kCFRunLoopCommonModes")
     public static native CFString CommonValue();
-    
+
 }

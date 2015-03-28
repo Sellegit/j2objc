@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 3.2 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UIMenuItem")
 public class UIMenuItem 
     extends NSObject 
@@ -35,7 +33,7 @@ public class UIMenuItem
     public UIMenuItem(String title, Selector action) { }
     @Mapping("init")
     public UIMenuItem() { }
-    
+
     
     @Mapping("title")
     public native String getTitle();
@@ -45,9 +43,9 @@ public class UIMenuItem
     public native Selector getAction();
     @Mapping("setAction:")
     public native void setAction(Selector v);
+
     
     
-    
-    
-    
+
+
 }

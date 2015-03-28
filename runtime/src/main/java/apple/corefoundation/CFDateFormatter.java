@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.dispatch.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Mapping("CFDateFormatterRef") @Library("CoreFoundation/CoreFoundation.h")
@@ -25,7 +24,7 @@ public class CFDateFormatter
     
     
     protected CFDateFormatter() {}
-    
+
     
     
     
@@ -60,5 +59,5 @@ public class CFDateFormatter
     public static native void setProperty(CFDateFormatter formatter, CFString key, CFType value);
     @GlobalFunction("CFDateFormatterCopyProperty")
     public static native CFType getProperty(CFDateFormatter formatter, CFString key);
-    
+
 }

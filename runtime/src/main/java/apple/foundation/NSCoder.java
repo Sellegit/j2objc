@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h") @Mapping("NSCoder")
 public class NSCoder 
     extends NSObject 
@@ -31,7 +28,7 @@ public class NSCoder
     
     @Mapping("init")
     public NSCoder() { }
-    
+
     
     @Mapping("systemVersion")
     public native int getSystemVersion();
@@ -47,7 +44,7 @@ public class NSCoder
      */
     @Mapping("allowedClasses")
     public native List<ObjCClass> getAllowedClasses();
-    
+
     
     
     @Mapping("encodeDataObject:")
@@ -132,5 +129,5 @@ public class NSCoder
      */
     @Mapping("decodePropertyListForKey:")
     public native Object decodePropertyList(String key);
-    
+
 }

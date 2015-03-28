@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("CoreData/CoreData.h") @Mapping("NSBatchUpdateRequest")
 public class NSBatchUpdateRequest 
     extends NSPersistentStoreRequest 
@@ -32,7 +30,7 @@ public class NSBatchUpdateRequest
     public NSBatchUpdateRequest(NSEntityDescription entity) { }
     @Mapping("init")
     public NSBatchUpdateRequest() { }
-    
+
     
     @Mapping("entityName")
     public native String getEntityName();
@@ -54,10 +52,10 @@ public class NSBatchUpdateRequest
     public native Map<String, NSExpression> getPropertiesToUpdate();
     @Mapping("setPropertiesToUpdate:")
     public native void setPropertiesToUpdate(Map<String, NSExpression> v);
-    
+
     
     
     @Mapping("batchUpdateRequestWithEntityName:")
     public static native NSBatchUpdateRequest create(String entityName);
-    
+
 }

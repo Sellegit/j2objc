@@ -19,17 +19,14 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h") @Mapping("UITabBarControllerDelegate")
 public interface UITabBarControllerDelegate 
     extends NSObjectProtocol {
 
     
     
-    
-    
+
+
     
     /**
      * @since Available in iOS 3.0 and later.
@@ -70,7 +67,7 @@ public interface UITabBarControllerDelegate
      */
     @Mapping("tabBarController:animationControllerForTransitionFromViewController:toViewController:")
     UIViewControllerAnimatedTransitioning getAnimationController(UITabBarController tabBarController, UIViewController fromVC, UIViewController toVC);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

@@ -15,11 +15,9 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
 /**
  * @since Available in iOS 7.0 and later.
  */
-
 @Library("GameKit/GameKit.h") @Mapping("GKTurnBasedExchangeReply")
 public class GKTurnBasedExchangeReply 
     extends NSObject 
@@ -29,7 +27,7 @@ public class GKTurnBasedExchangeReply
     
     @Mapping("init")
     public GKTurnBasedExchangeReply() { }
-    
+
     
     @Mapping("recipient")
     public native GKTurnBasedParticipant getRecipient();
@@ -42,9 +40,9 @@ public class GKTurnBasedExchangeReply
      */
     @Mapping("replyDate")
     public native NSDate getReplyDate();
+
     
     
-    
-    
-    
+
+
 }

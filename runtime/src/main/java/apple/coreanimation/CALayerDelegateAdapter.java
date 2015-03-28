@@ -16,7 +16,6 @@ import apple.coreimage.*;
 import apple.coretext.*;
 import apple.opengles.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -27,8 +26,8 @@ public abstract class CALayerDelegateAdapter
     
     
     
-    
-    
+
+
     
     
     @NotImplemented("displayLayer:")
@@ -39,5 +38,5 @@ public abstract class CALayerDelegateAdapter
     public void layoutSublayers(CALayer layer) { throw new UnsupportedOperationException(); }
     @NotImplemented("actionForLayer:forKey:")
     public CAAction getAction(CALayer layer, String event) { throw new UnsupportedOperationException(); }
-    
+
 }

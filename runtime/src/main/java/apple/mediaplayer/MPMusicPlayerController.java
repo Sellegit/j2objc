@@ -15,11 +15,9 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
 /**
  * @since Available in iOS 3.0 and later.
  */
-
 @Library("MediaPlayer/MediaPlayer.h") @Mapping("MPMusicPlayerController")
 public class MPMusicPlayerController 
     extends NSObject 
@@ -29,7 +27,7 @@ public class MPMusicPlayerController
     
     @Mapping("init")
     public MPMusicPlayerController() { }
-    
+
     
     @Mapping("playbackState")
     public native @Representing("MPMusicPlaybackState") long getPlaybackState();
@@ -74,7 +72,7 @@ public class MPMusicPlayerController
     public native float getCurrentPlaybackRate();
     @Mapping("setCurrentPlaybackRate:")
     public native void setCurrentPlaybackRate(float v);
-    
+
     
     
     /**
@@ -88,7 +86,7 @@ public class MPMusicPlayerController
     public static native NSString NowPlayingItemDidChangeNotification();
     @GlobalConstant("MPMusicPlayerControllerVolumeDidChangeNotification")
     public static native NSString VolumeDidChangeNotification();
-    
+
     @Mapping("applicationMusicPlayer")
     public static native MPMusicPlayerController getApplicationMusicPlayer();
     @Mapping("systemMusicPlayer")
@@ -128,5 +126,5 @@ public class MPMusicPlayerController
     public native void beginSeekingBackward();
     @Mapping("endSeeking")
     public native void endSeeking();
-    
+
 }

@@ -19,9 +19,6 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h")
 @Mapping("UIImagePickerControllerCameraCaptureMode")
 public final class UIImagePickerControllerCameraCaptureMode extends ObjCEnum {
@@ -30,6 +27,6 @@ public final class UIImagePickerControllerCameraCaptureMode extends ObjCEnum {
     public static final long Photo = 0L;
     @GlobalConstant("UIImagePickerControllerCameraCaptureModeVideo")
     public static final long Video = 1L;
-    
+
 
 }

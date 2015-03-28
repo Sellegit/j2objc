@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("HealthKit/HealthKit.h") @Mapping("HKStatisticsQuery")
 public class HKStatisticsQuery 
     extends HKQuery 
@@ -30,12 +28,12 @@ public class HKStatisticsQuery
     public HKStatisticsQuery(HKQuantityType quantityType, NSPredicate quantitySamplePredicate, @Representing("HKStatisticsOptions") long options, @Block VoidBlock3<HKStatisticsQuery, HKStatistics, NSError> handler) { }
     @Mapping("init")
     public HKStatisticsQuery() { }
+
+    
+
+
     
     
-    
-    
-    
-    
-    
-    
+
+
 }

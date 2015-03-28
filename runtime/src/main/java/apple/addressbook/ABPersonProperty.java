@@ -13,7 +13,6 @@ import apple.coregraphics.*;
 import apple.coreservices.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("AddressBook/AddressBook.h")
@@ -84,10 +83,10 @@ public class ABPersonProperty
      */
     @GlobalConstant("kABPersonAlternateBirthdayProperty")
     public static native int AlternateBirthdayValue();
-    
+
     @GlobalFunction("ABPersonGetTypeOfProperty")
     public static native ABPropertyType getType(int property);
     @GlobalFunction("ABPersonCopyLocalizedPropertyName")
-    public static native String getLocalizedPropertyName(int property);
-    
+    public static native CFString getLocalizedPropertyName(int property);
+
 }

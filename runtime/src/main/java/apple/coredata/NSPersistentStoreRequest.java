@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 5.0 and later.
  */
-
 @Library("CoreData/CoreData.h") @Mapping("NSPersistentStoreRequest")
 public class NSPersistentStoreRequest 
     extends NSObject 
@@ -28,7 +26,7 @@ public class NSPersistentStoreRequest
     
     @Mapping("init")
     public NSPersistentStoreRequest() { }
-    
+
     
     @Mapping("affectedStores")
     public native List<String> getAffectedStores();
@@ -36,10 +34,10 @@ public class NSPersistentStoreRequest
     public native void setAffectedStores(List<String> v);
     @Mapping("requestType")
     public native @Representing("NSPersistentStoreRequestType") long getRequestType();
-    
+
     
     
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
-    
+
 }

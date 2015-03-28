@@ -15,7 +15,6 @@ import apple.foundation.*;
 import apple.uikit.*;
 import apple.security.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -26,13 +25,13 @@ public abstract class MCNearbyServiceAdvertiserDelegateAdapter
     
     
     
-    
-    
+
+
     
     
     @NotImplemented("advertiser:didReceiveInvitationFromPeer:withContext:invitationHandler:")
     public void didReceiveInvitation(MCNearbyServiceAdvertiser advertiser, MCPeerID peerID, NSData context, @Block VoidBlock2<Boolean, MCSession> invitationHandler) { throw new UnsupportedOperationException(); }
     @NotImplemented("advertiser:didNotStartAdvertisingPeer:")
     public void didNotStart(MCNearbyServiceAdvertiser advertiser, NSError error) { throw new UnsupportedOperationException(); }
-    
+
 }

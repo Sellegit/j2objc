@@ -20,9 +20,6 @@ import apple.spritekit.*;
 import apple.opengles.*;
 
 
-
-
-
 @Library("SceneKit/SceneKit.h") @Mapping("SCNPhysicsWorld")
 public class SCNPhysicsWorld 
     extends NSObject 
@@ -32,7 +29,7 @@ public class SCNPhysicsWorld
     
     @Mapping("init")
     public SCNPhysicsWorld() { }
-    
+
     
     @Mapping("gravity")
     public native SCNVector3 getGravity();
@@ -50,7 +47,7 @@ public class SCNPhysicsWorld
     public native SCNPhysicsContactDelegate getContactDelegate();
     @Mapping("setContactDelegate:")
     public native void setContactDelegate(SCNPhysicsContactDelegate v);
-    
+
     
     
     @Mapping("addBehavior:")
@@ -71,5 +68,5 @@ public class SCNPhysicsWorld
     public native NSArray<SCNHitTestResult> convexSweepTestWithShape(SCNPhysicsShape shape, SCNMatrix4 from, SCNMatrix4 to, NSDictionary<?, ?> options);
     @Mapping("updateCollisionPairs")
     public native void updateCollisionPairs();
-    
+
 }

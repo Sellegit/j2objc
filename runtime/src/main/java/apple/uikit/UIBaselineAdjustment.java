@@ -19,9 +19,6 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h")
 @Mapping("UIBaselineAdjustment")
 public final class UIBaselineAdjustment extends ObjCEnum {
@@ -32,6 +29,6 @@ public final class UIBaselineAdjustment extends ObjCEnum {
     public static final long AlignCenters = 1L;
     @GlobalConstant("UIBaselineAdjustmentNone")
     public static final long None = 2L;
-    
+
 
 }

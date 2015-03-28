@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("NetworkExtension/NetworkExtension.h")
 @Mapping("NEVPNIKEv2DiffieHellmanGroup")
 public final class NEVPNIKEv2DiffieHellmanGroup extends ObjCEnum {
@@ -41,6 +39,6 @@ public final class NEVPNIKEv2DiffieHellmanGroup extends ObjCEnum {
     public static final long _17 = 17L;
     @GlobalConstant("NEVPNIKEv2DiffieHellmanGroup18")
     public static final long _18 = 18L;
-    
+
 
 }

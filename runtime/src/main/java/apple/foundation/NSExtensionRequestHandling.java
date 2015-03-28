@@ -19,21 +19,18 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h") @Mapping("NSExtensionRequestHandling")
 public interface NSExtensionRequestHandling 
     extends NSObjectProtocol {
 
     
     
-    
-    
+
+
     
     @Mapping("beginRequestWithExtensionContext:")
     void beginRequest(NSExtensionContext context);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

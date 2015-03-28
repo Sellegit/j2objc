@@ -18,7 +18,6 @@ import apple.coremedia.*;
 import apple.security.*;
 import apple.dispatch.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -29,8 +28,8 @@ public abstract class NSURLSessionDataDelegateAdapter
     
     
     
-    
-    
+
+
     
     
     @NotImplemented("URLSession:dataTask:didReceiveResponse:completionHandler:")
@@ -41,5 +40,5 @@ public abstract class NSURLSessionDataDelegateAdapter
     public void didReceiveData(NSURLSession session, NSURLSessionDataTask dataTask, NSData data) { throw new UnsupportedOperationException(); }
     @NotImplemented("URLSession:dataTask:willCacheResponse:completionHandler:")
     public void willCacheResponse(NSURLSession session, NSURLSessionDataTask dataTask, NSCachedURLResponse proposedResponse, @Block VoidBlock1<NSCachedURLResponse> completionHandler) { throw new UnsupportedOperationException(); }
-    
+
 }

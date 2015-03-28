@@ -15,11 +15,9 @@ import apple.foundation.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 6.0 and later.
  */
-
 @Library("CoreBluetooth/CoreBluetooth.h") @Mapping("CBMutableService")
 public class CBMutableService 
     extends CBService 
@@ -31,7 +29,7 @@ public class CBMutableService
     public CBMutableService(CBUUID UUID, boolean isPrimary) { }
     @Mapping("init")
     public CBMutableService() { }
-    
+
     
     @Mapping("UUID")
     public native CBUUID getUUID();
@@ -49,9 +47,9 @@ public class CBMutableService
     public native NSArray<CBCharacteristic> getCharacteristics();
     @Mapping("setCharacteristics:")
     public native void setCharacteristics(NSArray<CBCharacteristic> v);
+
     
     
-    
-    
-    
+
+
 }

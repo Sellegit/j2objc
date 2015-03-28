@@ -14,9 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
-
-
 @Mapping("AudioTimeStamp") @Library("CoreAudio/CoreAudioTypes.h")
 public class AudioTimeStamp 
     extends Struct 
@@ -40,7 +37,7 @@ public class AudioTimeStamp
     public native int getMFlags();
     @DotMapping("mReserved")
     public native int getMReserved();
-    
+
     public static native AudioTimeStamp create(double mSampleTime, long mHostTime, double mRateScalar, long mWordClockTime, SMPTETime mSMPTETime, int mFlags, int mReserved) /*-[
         AudioTimeStamp __new = { .mSampleTime = mSampleTime, .mHostTime = mHostTime, .mRateScalar = mRateScalar, .mWordClockTime = mWordClockTime, .mSMPTETime = mSMPTETime, .mFlags = mFlags, .mReserved = mReserved };
         return __new;
@@ -50,41 +47,72 @@ public class AudioTimeStamp
         return __new;
     ]-*/;
 
-    
+
     public static native AudioTimeStamp copyWithmHostTime(AudioTimeStamp original, long mHostTime) /*-[
         AudioTimeStamp __new = { .mSampleTime = original.mSampleTime, .mHostTime = mHostTime, .mRateScalar = original.mRateScalar, .mWordClockTime = original.mWordClockTime, .mSMPTETime = original.mSMPTETime, .mFlags = original.mFlags, .mReserved = original.mReserved };
         return __new;
     ]-*/;
 
-    
+
     public static native AudioTimeStamp copyWithmRateScalar(AudioTimeStamp original, double mRateScalar) /*-[
         AudioTimeStamp __new = { .mSampleTime = original.mSampleTime, .mHostTime = original.mHostTime, .mRateScalar = mRateScalar, .mWordClockTime = original.mWordClockTime, .mSMPTETime = original.mSMPTETime, .mFlags = original.mFlags, .mReserved = original.mReserved };
         return __new;
     ]-*/;
 
-    
+
     public static native AudioTimeStamp copyWithmWordClockTime(AudioTimeStamp original, long mWordClockTime) /*-[
         AudioTimeStamp __new = { .mSampleTime = original.mSampleTime, .mHostTime = original.mHostTime, .mRateScalar = original.mRateScalar, .mWordClockTime = mWordClockTime, .mSMPTETime = original.mSMPTETime, .mFlags = original.mFlags, .mReserved = original.mReserved };
         return __new;
     ]-*/;
 
-    
+
     public static native AudioTimeStamp copyWithmSMPTETime(AudioTimeStamp original, SMPTETime mSMPTETime) /*-[
         AudioTimeStamp __new = { .mSampleTime = original.mSampleTime, .mHostTime = original.mHostTime, .mRateScalar = original.mRateScalar, .mWordClockTime = original.mWordClockTime, .mSMPTETime = mSMPTETime, .mFlags = original.mFlags, .mReserved = original.mReserved };
         return __new;
     ]-*/;
 
-    
+
     public static native AudioTimeStamp copyWithmFlags(AudioTimeStamp original, int mFlags) /*-[
         AudioTimeStamp __new = { .mSampleTime = original.mSampleTime, .mHostTime = original.mHostTime, .mRateScalar = original.mRateScalar, .mWordClockTime = original.mWordClockTime, .mSMPTETime = original.mSMPTETime, .mFlags = mFlags, .mReserved = original.mReserved };
         return __new;
     ]-*/;
 
-    
+
     public static native AudioTimeStamp copyWithmReserved(AudioTimeStamp original, int mReserved) /*-[
         AudioTimeStamp __new = { .mSampleTime = original.mSampleTime, .mHostTime = original.mHostTime, .mRateScalar = original.mRateScalar, .mWordClockTime = original.mWordClockTime, .mSMPTETime = original.mSMPTETime, .mFlags = original.mFlags, .mReserved = mReserved };
         return __new;
     ]-*/;
 
-    
+
+    public static final class Adapter {
+
+        public double mSampleTime;
+        public long mHostTime;
+        public double mRateScalar;
+        public long mWordClockTime;
+        public SMPTETime mSMPTETime;
+        public int mFlags;
+        public int mReserved;
+        public Adapter(double mSampleTime, long mHostTime, double mRateScalar, long mWordClockTime, SMPTETime mSMPTETime, int mFlags, int mReserved) {
+            this.mSampleTime = mSampleTime;
+            this.mHostTime = mHostTime;
+            this.mRateScalar = mRateScalar;
+            this.mWordClockTime = mWordClockTime;
+            this.mSMPTETime = mSMPTETime;
+            this.mFlags = mFlags;
+            this.mReserved = mReserved;
+        }
+        public Adapter(AudioTimeStamp original) {
+            this.mSampleTime = original.getMSampleTime();
+            this.mHostTime = original.getMHostTime();
+            this.mRateScalar = original.getMRateScalar();
+            this.mWordClockTime = original.getMWordClockTime();
+            this.mSMPTETime = original.getMSMPTETime();
+            this.mFlags = original.getMFlags();
+            this.mReserved = original.getMReserved();
+        }
+        public AudioTimeStamp convert() {
+            return create(mSampleTime, mHostTime, mRateScalar, mWordClockTime, mSMPTETime, mFlags, mReserved);
+        }
+    }
 }

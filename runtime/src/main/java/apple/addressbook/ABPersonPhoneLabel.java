@@ -13,7 +13,6 @@ import apple.coregraphics.*;
 import apple.coreservices.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("AddressBook/AddressBook.h")
@@ -46,5 +45,5 @@ public class ABPersonPhoneLabel
     public static native CFString OtherFAXLabel();
     @GlobalConstant("kABPersonPhonePagerLabel")
     public static native CFString PagerLabel();
-    
+
 }

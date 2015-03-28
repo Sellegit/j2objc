@@ -17,9 +17,6 @@ import apple.coreaudio.*;
 import apple.coremedia.*;
 
 
-
-
-
 @Library("AudioToolbox/AudioToolbox.h")
 @Mapping("AudioFileStreamError")
 public final class AudioFileStreamError extends ObjCEnum {
@@ -48,6 +45,6 @@ public final class AudioFileStreamError extends ObjCEnum {
     public static final long UnspecifiedError = 2003334207L;
     @GlobalConstant("kAudioFileStreamError_DiscontinuityCantRecover")
     public static final long DiscontinuityCantRecover = 1685283617L;
-    
+
 
 }

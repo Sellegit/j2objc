@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 6.0 and later.
  */
-
 @Library("UIKit/UIKit.h")
 @Mapping("NSLineBreakMode")
 public final class NSLineBreakMode extends ObjCEnum {
@@ -40,6 +38,6 @@ public final class NSLineBreakMode extends ObjCEnum {
     public static final long TruncatingTail = 4L;
     @GlobalConstant("NSLineBreakByTruncatingMiddle")
     public static final long TruncatingMiddle = 5L;
-    
+
 
 }

@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 7.0 and later.
  */
-
 @Library("UIKit/UIKit.h")
 @Mapping("UICollisionBehaviorMode")
 public final class UICollisionBehaviorMode extends ObjCEnum {
@@ -34,6 +32,6 @@ public final class UICollisionBehaviorMode extends ObjCEnum {
     public static final long Boundaries = 2L;
     @GlobalConstant("UICollisionBehaviorModeEverything")
     public static final long Everything = -1L;
-    
+
 
 }

@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 2.0 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UIBarItem")
 public class UIBarItem 
     extends NSObject 
@@ -33,7 +31,7 @@ public class UIBarItem
     
     @Mapping("init")
     public UIBarItem() { }
-    
+
     
     @Mapping("isEnabled")
     public native boolean isEnabled();
@@ -75,7 +73,7 @@ public class UIBarItem
     public native @MachineSizedSInt long getTag();
     @Mapping("setTag:")
     public native void setTag(@MachineSizedSInt long v);
-    
+
     
     
     /**
@@ -88,5 +86,5 @@ public class UIBarItem
      */
     @Mapping("titleTextAttributesForState:")
     public native NSDictionary<?, ?> getTitleTextAttributes(@Representing("UIControlState") long state);
-    
+
 }

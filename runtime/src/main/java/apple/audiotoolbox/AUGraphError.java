@@ -17,9 +17,6 @@ import apple.coreaudio.*;
 import apple.coremedia.*;
 
 
-
-
-
 @Library("AudioToolbox/AudioToolbox.h")
 @Mapping("AUGraphError")
 public final class AUGraphError extends ObjCEnum {
@@ -34,6 +31,6 @@ public final class AUGraphError extends ObjCEnum {
     public static final long CannotDoInCurrentContext = -10863L;
     @GlobalConstant("kAUGraphErr_InvalidAudioUnit")
     public static final long InvalidAudioUnit = -10864L;
-    
+
 
 }

@@ -16,9 +16,6 @@ import apple.photos.*;
 import apple.uikit.*;
 
 
-
-
-
 @Library("PhotosUI/PhotosUI.h") @Mapping("PHContentEditingController")
 public interface PHContentEditingController 
     extends NSObjectProtocol {
@@ -27,7 +24,7 @@ public interface PHContentEditingController
     
     @Mapping("shouldShowCancelConfirmation")
     boolean shouldShowCancelConfirmation();
-    
+
     
     @Mapping("canHandleAdjustmentData:")
     boolean canHandleAdjustmentData(PHAdjustmentData adjustmentData);
@@ -37,7 +34,7 @@ public interface PHContentEditingController
     void finishContentEditing(@Block VoidBlock1<PHContentEditingOutput> completionHandler);
     @Mapping("cancelContentEditing")
     void cancelContentEditing();
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.dispatch.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Mapping("CFRunLoopTimerRef") @Library("CoreFoundation/CoreFoundation.h")
@@ -25,7 +24,7 @@ public class CFRunLoopTimer
     
     
     protected CFRunLoopTimer() {}
-    
+
     
     
     
@@ -60,5 +59,5 @@ public class CFRunLoopTimer
      */
     @GlobalFunction("CFRunLoopTimerSetTolerance")
     public static native void setTolerance(CFRunLoopTimer timer, double tolerance);
-    
+
 }

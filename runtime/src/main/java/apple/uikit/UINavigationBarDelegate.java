@@ -19,17 +19,14 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h") @Mapping("UINavigationBarDelegate")
 public interface UINavigationBarDelegate 
     extends UIBarPositioningDelegate {
 
     
     
-    
-    
+
+
     
     @Mapping("navigationBar:shouldPushItem:")
     boolean shouldPushItem(UINavigationBar navigationBar, UINavigationItem item);
@@ -39,7 +36,7 @@ public interface UINavigationBarDelegate
     boolean shouldPopItem(UINavigationBar navigationBar, UINavigationItem item);
     @Mapping("navigationBar:didPopItem:")
     void didPopItem(UINavigationBar navigationBar, UINavigationItem item);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

@@ -18,7 +18,6 @@ import apple.coreimage.*;
 import apple.coretext.*;
 import apple.corelocation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("UIKit/UIKit.h")
@@ -33,5 +32,5 @@ public class UIPrintError
     
     @GlobalConstant("UIPrintErrorDomain")
     public static native String getClassDomain();
-    
+
 }

@@ -16,11 +16,9 @@ import apple.addressbook.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 6.0 and later.
  */
-
 @Library("EventKit/EventKit.h") @Mapping("EKReminder")
 public class EKReminder 
     extends EKCalendarItem 
@@ -30,7 +28,7 @@ public class EKReminder
     
     @Mapping("init")
     public EKReminder() { }
-    
+
     
     @Mapping("startDateComponents")
     public native NSDateComponents getStartDateComponents();
@@ -52,10 +50,10 @@ public class EKReminder
     public native @MachineSizedSInt long getPriority();
     @Mapping("setPriority:")
     public native void setPriority(@MachineSizedSInt long v);
-    
+
     
     
     @Mapping("reminderWithEventStore:")
     public static native EKReminder create(EKEventStore eventStore);
-    
+
 }

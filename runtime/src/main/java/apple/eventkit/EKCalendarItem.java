@@ -16,11 +16,9 @@ import apple.addressbook.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 5.0 and later.
  */
-
 @Library("EventKit/EventKit.h") @Mapping("EKCalendarItem")
 public class EKCalendarItem 
     extends EKObject 
@@ -30,7 +28,7 @@ public class EKCalendarItem
     
     @Mapping("init")
     public EKCalendarItem() { }
-    
+
     
     /**
      * @since Available in iOS 5.0 and later.
@@ -128,7 +126,7 @@ public class EKCalendarItem
      */
     @Mapping("setRecurrenceRules:")
     public native void setRecurrenceRules(NSArray<EKRecurrenceRule> v);
-    
+
     
     
     @Mapping("addAlarm:")
@@ -139,5 +137,5 @@ public class EKCalendarItem
     public native void addRecurrenceRule(EKRecurrenceRule rule);
     @Mapping("removeRecurrenceRule:")
     public native void removeRecurrenceRule(EKRecurrenceRule rule);
-    
+
 }

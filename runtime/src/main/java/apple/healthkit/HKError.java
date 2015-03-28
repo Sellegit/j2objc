@@ -13,7 +13,6 @@ import apple.coregraphics.*;
 import apple.coreservices.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("HealthKit/HealthKit.h")
@@ -31,5 +30,5 @@ public class HKError
      */
     @GlobalConstant("HKErrorDomain")
     public static native String getClassDomain();
-    
+
 }

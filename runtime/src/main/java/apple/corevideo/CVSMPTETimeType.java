@@ -16,9 +16,6 @@ import apple.opengles.*;
 import apple.coremedia.*;
 
 
-
-
-
 @Library("CoreVideo/CoreVideo.h")
 @Mapping("CVSMPTETimeType")
 public final class CVSMPTETimeType extends ObjCEnum {
@@ -39,6 +36,6 @@ public final class CVSMPTETimeType extends ObjCEnum {
     public static final long _60 = 6L;
     @GlobalConstant("kCVSMPTETimeType5994")
     public static final long _5994 = 7L;
-    
+
 
 }

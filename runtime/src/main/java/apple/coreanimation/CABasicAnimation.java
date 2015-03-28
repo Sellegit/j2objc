@@ -17,9 +17,6 @@ import apple.coretext.*;
 import apple.opengles.*;
 
 
-
-
-
 @Library("QuartzCore/QuartzCore.h") @Mapping("CABasicAnimation")
 public class CABasicAnimation 
     extends CAPropertyAnimation 
@@ -31,7 +28,7 @@ public class CABasicAnimation
     public CABasicAnimation(NSCoder aDecoder) { }
     @Mapping("init")
     public CABasicAnimation() { }
-    
+
     
     @Mapping("fromValue")
     public native Object getFromValue();
@@ -45,9 +42,9 @@ public class CABasicAnimation
     public native Object getByValue();
     @Mapping("setByValue:")
     public native void setByValue(Object v);
+
     
     
-    
-    
-    
+
+
 }

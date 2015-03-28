@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("HealthKit/HealthKit.h")
 @Mapping("HKHeartRateSensorLocation")
 public final class HKHeartRateSensorLocation extends ObjCEnum {
@@ -37,6 +35,6 @@ public final class HKHeartRateSensorLocation extends ObjCEnum {
     public static final long EarLobe = 5L;
     @GlobalConstant("HKHeartRateSensorLocationFoot")
     public static final long Foot = 6L;
-    
+
 
 }

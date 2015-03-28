@@ -17,9 +17,6 @@ import apple.coreaudio.*;
 import apple.coremedia.*;
 
 
-
-
-
 @Library("AudioToolbox/AudioToolbox.h")
 @Mapping("AUNodeInteraction")
 public final class AUNodeInteraction extends ObjCEnum {
@@ -28,6 +25,6 @@ public final class AUNodeInteraction extends ObjCEnum {
     public static final long Connection = 1L;
     @GlobalConstant("kAUNodeInteraction_InputCallback")
     public static final long InputCallback = 2L;
-    
+
 
 }

@@ -15,11 +15,9 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
 /**
  * @since Available in iOS 4.1 and later.
  */
-
 @Library("GameKit/GameKit.h") @Mapping("GKInvite")
 public class GKInvite 
     extends NSObject 
@@ -29,7 +27,7 @@ public class GKInvite
     
     @Mapping("init")
     public GKInvite() { }
-    
+
     
     /**
      * @since Available in iOS 8.0 and later.
@@ -55,9 +53,9 @@ public class GKInvite
      */
     @Mapping("playerAttributes")
     public native int getPlayerAttributes();
+
     
     
-    
-    
-    
+
+
 }

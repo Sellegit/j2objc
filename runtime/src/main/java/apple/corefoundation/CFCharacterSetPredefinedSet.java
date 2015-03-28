@@ -15,9 +15,6 @@ import apple.dispatch.*;
 import apple.foundation.*;
 
 
-
-
-
 @Library("CoreFoundation/CoreFoundation.h")
 @Mapping("CFCharacterSetPredefinedSet")
 public final class CFCharacterSetPredefinedSet extends ObjCEnum {
@@ -55,6 +52,6 @@ public final class CFCharacterSetPredefinedSet extends ObjCEnum {
     public static final long Newline = 15L;
     @GlobalConstant("kCFCharacterSetIllegal")
     public static final long Illegal = 12L;
-    
+
 
 }

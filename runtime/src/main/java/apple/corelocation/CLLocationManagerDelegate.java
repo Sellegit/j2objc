@@ -16,17 +16,14 @@ import apple.addressbook.*;
 import apple.corebluetooth.*;
 
 
-
-
-
 @Library("CoreLocation/CoreLocation.h") @Mapping("CLLocationManagerDelegate")
 public interface CLLocationManagerDelegate 
     extends NSObjectProtocol {
 
     
     
-    
-    
+
+
     
     /**
      * @since Available in iOS 2.0 and later.
@@ -109,7 +106,7 @@ public interface CLLocationManagerDelegate
     void didFinishDeferredUpdates(CLLocationManager manager, NSError error);
     @Mapping("locationManager:didVisit:")
     void didVisit(CLLocationManager manager, CLVisit visit);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

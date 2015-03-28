@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h") @Mapping("AVAudioUnitEQ")
 public class AVAudioUnitEQ 
     extends AVAudioUnitEffect 
@@ -38,7 +36,7 @@ public class AVAudioUnitEQ
     public AVAudioUnitEQ(AudioComponentDescription audioComponentDescription) { }
     @Mapping("init")
     public AVAudioUnitEQ() { }
-    
+
     
     @Mapping("bands")
     public native AVAudioUnitEQFilterParameters getBands();
@@ -46,9 +44,9 @@ public class AVAudioUnitEQ
     public native float getGlobalGain();
     @Mapping("setGlobalGain:")
     public native void setGlobalGain(float v);
+
     
     
-    
-    
-    
+
+
 }

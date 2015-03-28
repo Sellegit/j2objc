@@ -20,9 +20,6 @@ import apple.spritekit.*;
 import apple.opengles.*;
 
 
-
-
-
 @Library("SceneKit/SceneKit.h")
 @Mapping("SCNShadowMode")
 public final class SCNShadowMode extends ObjCEnum {
@@ -33,6 +30,6 @@ public final class SCNShadowMode extends ObjCEnum {
     public static final long Deferred = 1L;
     @GlobalConstant("SCNShadowModeModulated")
     public static final long Modulated = 2L;
-    
+
 
 }

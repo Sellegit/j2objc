@@ -18,7 +18,6 @@ import apple.coremedia.*;
 import apple.security.*;
 import apple.dispatch.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("Foundation/Foundation.h")
@@ -57,5 +56,5 @@ public class NSHTTPCookieAttribute
     public static native NSString MaximumAgeAttribute();
     @GlobalConstant("NSHTTPCookiePort")
     public static native NSString PortAttribute();
-    
+
 }

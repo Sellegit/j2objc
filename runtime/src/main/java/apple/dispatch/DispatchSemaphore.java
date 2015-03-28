@@ -12,7 +12,6 @@ import apple.corefoundation.*;
 import apple.coregraphics.*;
 import apple.coreservices.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("dispatch/dispatch.h")
@@ -23,7 +22,7 @@ public class DispatchSemaphore
     
     
     protected DispatchSemaphore() {}
-    
+
     
     
     
@@ -42,5 +41,5 @@ public class DispatchSemaphore
      */
     @GlobalFunction("dispatch_semaphore_signal")
     public static native @MachineSizedSInt long signal(DispatchSemaphore dsema);
-    
+
 }

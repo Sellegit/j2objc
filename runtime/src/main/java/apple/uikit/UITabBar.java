@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 2.0 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UITabBar")
 public class UITabBar 
     extends UIView 
@@ -37,7 +35,7 @@ public class UITabBar
     public UITabBar(NSCoder aDecoder) { }
     @Mapping("init")
     public UITabBar() { }
-    
+
     
     @Mapping("delegate")
     public native UITabBarDelegate getDelegate();
@@ -165,7 +163,7 @@ public class UITabBar
      */
     @Mapping("setTranslucent:")
     public native void setTranslucent(boolean v);
-    
+
     
     
     @Mapping("setItems:animated:")
@@ -176,5 +174,5 @@ public class UITabBar
     public native boolean endCustomizing(boolean animated);
     @Mapping("isCustomizing")
     public native boolean isCustomizing();
-    
+
 }

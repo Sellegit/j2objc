@@ -16,7 +16,6 @@ import apple.opengles.*;
 import apple.coreaudio.*;
 import apple.coremedia.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("AudioToolbox/AudioToolbox.h")
@@ -189,5 +188,5 @@ public class AudioQueue
      */
     @GlobalFunction("AudioQueueProcessingTapGetQueueTime")
     public static native AudioQueueError processingTapGetQueueTime(OpaqueAudioQueueProcessingTap inAQTap, Todo outQueueSampleTime, Todo outQueueFrameCount);
-    
+
 }

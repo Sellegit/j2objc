@@ -15,7 +15,6 @@ import apple.foundation.*;
 import apple.uikit.*;
 import apple.dispatch.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -26,8 +25,8 @@ public abstract class EAAccessoryDelegateAdapter
     
     
     
-    
-    
+
+
     
     
     /**
@@ -35,5 +34,5 @@ public abstract class EAAccessoryDelegateAdapter
      */
     @NotImplemented("accessoryDidDisconnect:")
     public void didDisconnect(EAAccessory accessory) { throw new UnsupportedOperationException(); }
-    
+
 }

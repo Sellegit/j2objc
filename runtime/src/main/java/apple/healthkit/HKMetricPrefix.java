@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("HealthKit/HealthKit.h")
 @Mapping("HKMetricPrefix")
 public final class HKMetricPrefix extends ObjCEnum {
@@ -49,6 +47,6 @@ public final class HKMetricPrefix extends ObjCEnum {
     public static final long Giga = 11L;
     @GlobalConstant("HKMetricPrefixTera")
     public static final long Tera = 12L;
-    
+
 
 }

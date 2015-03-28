@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 import apple.imageio.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("AssetsLibrary/AssetsLibrary.h")
@@ -47,5 +46,5 @@ public class ALAssetsGroupProperty
      */
     @GlobalConstant("ALAssetsGroupPropertyURL")
     public static native NSString URLValue();
-    
+
 }

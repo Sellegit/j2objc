@@ -20,9 +20,6 @@ import apple.spritekit.*;
 import apple.opengles.*;
 
 
-
-
-
 @Library("SceneKit/SceneKit.h") @Mapping("SCNRenderer")
 public class SCNRenderer 
     extends NSObject 
@@ -32,7 +29,7 @@ public class SCNRenderer
     
     @Mapping("init")
     public SCNRenderer() { }
-    
+
     
     @Mapping("scene")
     public native SCNScene getScene();
@@ -82,7 +79,7 @@ public class SCNRenderer
     public native SCNTechnique getTechnique();
     @Mapping("setTechnique:")
     public native void setTechnique(SCNTechnique v);
-    
+
     
     
     @Mapping("render")
@@ -103,5 +100,5 @@ public class SCNRenderer
     public native boolean prepareObject(Object object, @Block Block0<Boolean> block);
     @Mapping("prepareObjects:withCompletionHandler:")
     public native void prepareObjects(NSArray<?> objects, @Block VoidBooleanBlock completionHandler);
-    
+
 }

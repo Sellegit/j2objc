@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h") @Mapping("AVAudioPlayerNode")
 public class AVAudioPlayerNode 
     extends AVAudioNode 
@@ -34,7 +32,7 @@ public class AVAudioPlayerNode
     
     @Mapping("init")
     public AVAudioPlayerNode() { }
-    
+
     
     @Mapping("isPlaying")
     public native boolean isPlaying();
@@ -70,7 +68,7 @@ public class AVAudioPlayerNode
     public native AVAudio3DPoint getPosition();
     @Mapping("setPosition:")
     public native void setPosition(AVAudio3DPoint v);
-    
+
     
     
     @Mapping("scheduleFile:atTime:completionHandler:")
@@ -91,5 +89,5 @@ public class AVAudioPlayerNode
     public native AVAudioTime convertPlayerTimeToNodeTime(AVAudioTime playerTime);
     @Mapping("playerTimeForNodeTime:")
     public native AVAudioTime convertNodeTimeToPlayerTime(AVAudioTime nodeTime);
-    
+
 }

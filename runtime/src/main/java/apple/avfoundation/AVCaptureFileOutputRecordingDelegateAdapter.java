@@ -19,7 +19,6 @@ import apple.coremedia.*;
 import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -30,13 +29,13 @@ public abstract class AVCaptureFileOutputRecordingDelegateAdapter
     
     
     
-    
-    
+
+
     
     
     @NotImplemented("captureOutput:didStartRecordingToOutputFileAtURL:fromConnections:")
     public void didStartRecording(AVCaptureFileOutput captureOutput, NSURL fileURL, NSArray<?> connections) { throw new UnsupportedOperationException(); }
     @NotImplemented("captureOutput:didFinishRecordingToOutputFileAtURL:fromConnections:error:")
     public void didFinishRecording(AVCaptureFileOutput captureOutput, NSURL outputFileURL, NSArray<?> connections, NSError error) { throw new UnsupportedOperationException(); }
-    
+
 }

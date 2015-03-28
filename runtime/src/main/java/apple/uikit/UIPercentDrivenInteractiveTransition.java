@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 7.0 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UIPercentDrivenInteractiveTransition")
 public class UIPercentDrivenInteractiveTransition 
     extends NSObject 
@@ -33,7 +31,7 @@ public class UIPercentDrivenInteractiveTransition
     
     @Mapping("init")
     public UIPercentDrivenInteractiveTransition() { }
-    
+
     
     @Mapping("duration")
     public native @MachineSizedFloat double getDuration();
@@ -47,7 +45,7 @@ public class UIPercentDrivenInteractiveTransition
     public native @Representing("UIViewAnimationCurve") long getCompletionCurve();
     @Mapping("setCompletionCurve:")
     public native void setCompletionCurve(@Representing("UIViewAnimationCurve") long v);
-    
+
     
     
     @Mapping("updateInteractiveTransition:")
@@ -58,5 +56,5 @@ public class UIPercentDrivenInteractiveTransition
     public native void finishInteractiveTransition();
     @Mapping("startInteractiveTransition:")
     public native void startInteractiveTransition(UIViewControllerContextTransitioning transitionContext);
-    
+
 }

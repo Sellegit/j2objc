@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h")
 @Mapping("NSXMLParserErrorCode")
 public final class NSXMLParserErrorCode extends ObjCEnum {
@@ -212,6 +209,6 @@ public final class NSXMLParserErrorCode extends ObjCEnum {
     public static final long NoDTD = 94L;
     @GlobalConstant("NSXMLParserDelegateAbortedParseError")
     public static final long DelegateAbortedParse = 512L;
-    
+
 
 }

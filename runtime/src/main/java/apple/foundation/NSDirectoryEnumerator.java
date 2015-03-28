@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h") @Mapping("NSDirectoryEnumerator")
 public class NSDirectoryEnumerator 
     extends NSEnumerator 
@@ -31,7 +28,7 @@ public class NSDirectoryEnumerator
     
     @Mapping("init")
     public NSDirectoryEnumerator() { }
-    
+
     
     @Mapping("fileAttributes")
     public native NSDictionary<?, ?> getFileAttributes();
@@ -42,7 +39,7 @@ public class NSDirectoryEnumerator
      */
     @Mapping("level")
     public native @MachineSizedUInt long getLevel();
-    
+
     
     
     @Mapping("skipDescendents")
@@ -52,5 +49,5 @@ public class NSDirectoryEnumerator
      */
     @Mapping("skipDescendants")
     public native void skipDescendants();
-    
+
 }

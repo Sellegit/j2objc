@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("NetworkExtension/NetworkExtension.h") @Mapping("NEVPNProtocolIPSec")
 public class NEVPNProtocolIPSec 
     extends NEVPNProtocol 
@@ -28,7 +26,7 @@ public class NEVPNProtocolIPSec
     
     @Mapping("init")
     public NEVPNProtocolIPSec() { }
-    
+
     
     /**
      * @since Available in iOS 8.0 and later.
@@ -80,9 +78,9 @@ public class NEVPNProtocolIPSec
      */
     @Mapping("setRemoteIdentifier:")
     public native void setRemoteIdentifier(String v);
+
     
     
-    
-    
-    
+
+
 }

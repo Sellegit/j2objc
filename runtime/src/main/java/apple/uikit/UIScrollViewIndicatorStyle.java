@@ -19,9 +19,6 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h")
 @Mapping("UIScrollViewIndicatorStyle")
 public final class UIScrollViewIndicatorStyle extends ObjCEnum {
@@ -32,6 +29,6 @@ public final class UIScrollViewIndicatorStyle extends ObjCEnum {
     public static final long Black = 1L;
     @GlobalConstant("UIScrollViewIndicatorStyleWhite")
     public static final long White = 2L;
-    
+
 
 }

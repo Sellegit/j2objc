@@ -17,11 +17,9 @@ import apple.uikit.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 5.0 and later.
  */
-
 @Library("GLKit/GLKit.h") @Mapping("GLKReflectionMapEffect")
 public class GLKReflectionMapEffect 
     extends GLKBaseEffect 
@@ -31,7 +29,7 @@ public class GLKReflectionMapEffect
     
     @Mapping("init")
     public GLKReflectionMapEffect() { }
-    
+
     
     @Mapping("textureCubeMap")
     public native GLKEffectPropertyTexture getTextureCubeMap();
@@ -39,10 +37,10 @@ public class GLKReflectionMapEffect
     public native GLKMatrix3 getMatrix();
     @Mapping("setMatrix:")
     public native void setMatrix(GLKMatrix3 v);
-    
+
     
     
     @Mapping("prepareToDraw")
     public native void prepareToDraw();
-    
+
 }

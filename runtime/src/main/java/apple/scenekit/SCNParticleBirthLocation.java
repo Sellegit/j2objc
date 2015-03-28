@@ -20,9 +20,6 @@ import apple.spritekit.*;
 import apple.opengles.*;
 
 
-
-
-
 @Library("SceneKit/SceneKit.h")
 @Mapping("SCNParticleBirthLocation")
 public final class SCNParticleBirthLocation extends ObjCEnum {
@@ -33,6 +30,6 @@ public final class SCNParticleBirthLocation extends ObjCEnum {
     public static final long Volume = 1L;
     @GlobalConstant("SCNParticleBirthLocationVertex")
     public static final long Vertex = 2L;
-    
+
 
 }

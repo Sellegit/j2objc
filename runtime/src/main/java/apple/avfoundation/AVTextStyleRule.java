@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 6.0 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h") @Mapping("AVTextStyleRule")
 public class AVTextStyleRule 
     extends NSObject 
@@ -38,13 +36,13 @@ public class AVTextStyleRule
     public AVTextStyleRule(NSDictionary<?, ?> textMarkupAttributes, String textSelector) { }
     @Mapping("init")
     public AVTextStyleRule() { }
-    
+
     
     @Mapping("textMarkupAttributes")
     public native NSDictionary<NSString, ?> getTextMarkupAttributes();
     @Mapping("textSelector")
     public native String getTextSelector();
-    
+
     
     
     @Mapping("propertyListForTextStyleRules:")
@@ -57,5 +55,5 @@ public class AVTextStyleRule
     public static native AVTextStyleRule create(NSDictionary<?, ?> textMarkupAttributes, String textSelector);
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
-    
+
 }

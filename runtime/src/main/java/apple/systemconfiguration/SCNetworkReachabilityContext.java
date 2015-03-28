@@ -15,9 +15,6 @@ import apple.foundation.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Mapping("SCNetworkReachabilityContext") @Library("SystemConfiguration/SystemConfiguration.h")
  class SCNetworkReachabilityContext 
     extends Struct 
@@ -29,6 +26,6 @@ import apple.dispatch.*;
     
     @DotMapping("version")
     public native @MachineSizedSInt long getVersion();
-    
+
     
 }

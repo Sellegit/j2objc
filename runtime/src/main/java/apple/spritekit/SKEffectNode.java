@@ -21,9 +21,6 @@ import apple.glkit.*;
 import apple.scenekit.*;
 
 
-
-
-
 @Library("SpriteKit/SpriteKit.h") @Mapping("SKEffectNode")
 public class SKEffectNode 
     extends SKNode 
@@ -35,7 +32,7 @@ public class SKEffectNode
     public SKEffectNode() { }
     @Mapping("initWithCoder:")
     public SKEffectNode(NSCoder aDecoder) { }
-    
+
     
     @Mapping("filter")
     public native CIFilter getFilter();
@@ -61,9 +58,9 @@ public class SKEffectNode
     public native SKShader getShader();
     @Mapping("setShader:")
     public native void setShader(SKShader v);
+
     
     
-    
-    
-    
+
+
 }

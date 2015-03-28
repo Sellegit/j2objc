@@ -17,11 +17,9 @@ import apple.uikit.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 5.0 and later.
  */
-
 @Library("GLKit/GLKit.h") @Mapping("GLKViewController")
 public class GLKViewController 
     extends UIViewController 
@@ -33,7 +31,7 @@ public class GLKViewController
     public GLKViewController(String nibNameOrNil, NSBundle nibBundleOrNil) { }
     @Mapping("init")
     public GLKViewController() { }
-    
+
     
     @Mapping("delegate")
     public native GLKViewControllerDelegate getDelegate();
@@ -67,10 +65,10 @@ public class GLKViewController
     public native boolean resumesOnDidBecomeActive();
     @Mapping("setResumeOnDidBecomeActive:")
     public native void setResumesOnDidBecomeActive(boolean v);
-    
+
     
     
     @Mapping("glkView:drawInRect:")
     public native void draw(GLKView view, CGRect rect);
-    
+
 }

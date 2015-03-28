@@ -19,9 +19,6 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h")
 @Mapping("UITableViewCellSelectionStyle")
 public final class UITableViewCellSelectionStyle extends ObjCEnum {
@@ -37,6 +34,6 @@ public final class UITableViewCellSelectionStyle extends ObjCEnum {
      */
     @GlobalConstant("UITableViewCellSelectionStyleDefault")
     public static final long Default = 3L;
-    
+
 
 }

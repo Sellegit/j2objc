@@ -19,17 +19,14 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h") @Mapping("UIScrollViewDelegate")
 public interface UIScrollViewDelegate 
     extends NSObjectProtocol {
 
     
     
-    
-    
+
+
     
     @Mapping("scrollViewDidScroll:")
     void didScroll(UIScrollView scrollView);
@@ -66,7 +63,7 @@ public interface UIScrollViewDelegate
     boolean shouldScrollToTop(UIScrollView scrollView);
     @Mapping("scrollViewDidScrollToTop:")
     void didScrollToTop(UIScrollView scrollView);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

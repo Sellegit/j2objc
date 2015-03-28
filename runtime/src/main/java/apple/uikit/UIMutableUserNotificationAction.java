@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UIMutableUserNotificationAction")
 public class UIMutableUserNotificationAction 
     extends UIUserNotificationAction 
@@ -33,7 +31,7 @@ public class UIMutableUserNotificationAction
     
     @Mapping("init")
     public UIMutableUserNotificationAction() { }
-    
+
     
     @Mapping("identifier")
     public native String getIdentifier();
@@ -55,9 +53,9 @@ public class UIMutableUserNotificationAction
     public native boolean isDestructive();
     @Mapping("setDestructive:")
     public native void setDestructive(boolean v);
+
     
     
-    
-    
-    
+
+
 }

@@ -13,7 +13,6 @@ import apple.coregraphics.*;
 import apple.coreservices.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("ImageIO/ImageIO.h")
@@ -56,5 +55,5 @@ public class CGImagePropertyDNG
      */
     @GlobalConstant("kCGImagePropertyDNGLensInfo")
     public static native CFString LensInfoKey();
-    
+
 }

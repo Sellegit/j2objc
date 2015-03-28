@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h")
 @Mapping("NSBundleExecutableArchitectureType")
 public final class NSBundleExecutableArchitectureType extends ObjCEnum {
@@ -34,6 +31,6 @@ public final class NSBundleExecutableArchitectureType extends ObjCEnum {
     public static final long X86_64 = 16777223L;
     @GlobalConstant("NSBundleExecutableArchitecturePPC64")
     public static final long PPC64 = 16777234L;
-    
+
 
 }

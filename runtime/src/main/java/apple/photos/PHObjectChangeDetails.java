@@ -17,11 +17,9 @@ import apple.uikit.*;
 import apple.avfoundation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("Photos/Photos.h") @Mapping("PHObjectChangeDetails")
 public class PHObjectChangeDetails 
     extends NSObject 
@@ -31,7 +29,7 @@ public class PHObjectChangeDetails
     
     @Mapping("init")
     public PHObjectChangeDetails() { }
-    
+
     
     @Mapping("objectBeforeChanges")
     public native PHObject getObjectBeforeChanges();
@@ -41,9 +39,9 @@ public class PHObjectChangeDetails
     public native boolean assetContentChanged();
     @Mapping("objectWasDeleted")
     public native boolean objectWasDeleted();
+
     
     
-    
-    
-    
+
+
 }

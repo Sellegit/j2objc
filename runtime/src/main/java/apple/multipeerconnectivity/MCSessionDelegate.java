@@ -16,17 +16,14 @@ import apple.uikit.*;
 import apple.security.*;
 
 
-
-
-
 @Library("MultipeerConnectivity/MultipeerConnectivity.h") @Mapping("MCSessionDelegate")
 public interface MCSessionDelegate 
     extends NSObjectProtocol {
 
     
     
-    
-    
+
+
     
     @Mapping("session:peer:didChangeState:")
     void didChangeState(MCSession session, MCPeerID peerID, @Representing("MCSessionState") long state);
@@ -40,7 +37,7 @@ public interface MCSessionDelegate
     void didFinishReceivingResource(MCSession session, String resourceName, MCPeerID peerID, NSURL localURL, NSError error);
     @Mapping("session:didReceiveCertificate:fromPeer:certificateHandler:")
     void didReceiveCertificate(MCSession session, NSArray<?> certificate, MCPeerID peerID, @Block VoidBooleanBlock certificateHandler);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

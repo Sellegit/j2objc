@@ -19,7 +19,6 @@ import apple.coremedia.*;
 import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -30,11 +29,11 @@ public abstract class AVCaptureMetadataOutputObjectsDelegateAdapter
     
     
     
-    
-    
+
+
     
     
     @NotImplemented("captureOutput:didOutputMetadataObjects:fromConnection:")
     public void didOutputMetadataObjects(AVCaptureOutput captureOutput, NSArray<?> metadataObjects, AVCaptureConnection connection) { throw new UnsupportedOperationException(); }
-    
+
 }

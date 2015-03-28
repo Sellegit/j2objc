@@ -16,7 +16,6 @@ import apple.corelocation.*;
 import apple.uikit.*;
 import apple.dispatch.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -27,8 +26,8 @@ public abstract class MKMapViewDelegateAdapter
     
     
     
-    
-    
+
+
     
     
     @NotImplemented("mapView:regionWillChangeAnimated:")
@@ -121,5 +120,5 @@ public abstract class MKMapViewDelegateAdapter
     @Deprecated
     @NotImplemented("mapView:didAddOverlayViews:")
     public void didAddOverlayViews(MKMapView mapView, NSArray<?> overlayViews) { throw new UnsupportedOperationException(); }
-    
+
 }

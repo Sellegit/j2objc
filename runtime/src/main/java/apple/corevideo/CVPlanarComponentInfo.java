@@ -16,9 +16,6 @@ import apple.opengles.*;
 import apple.coremedia.*;
 
 
-
-
-
 @Mapping("CVPlanarComponentInfo") @Library("CoreVideo/CoreVideo.h")
 public class CVPlanarComponentInfo 
     extends Struct 
@@ -32,7 +29,7 @@ public class CVPlanarComponentInfo
     public native int getOffset();
     @DotMapping("rowBytes")
     public native int getRowBytes();
-    
+
     public static native CVPlanarComponentInfo create(int offset, int rowBytes) /*-[
         CVPlanarComponentInfo __new = { .offset = offset, .rowBytes = rowBytes };
         return __new;
@@ -42,11 +39,27 @@ public class CVPlanarComponentInfo
         return __new;
     ]-*/;
 
-    
+
     public static native CVPlanarComponentInfo copyWithrowBytes(CVPlanarComponentInfo original, int rowBytes) /*-[
         CVPlanarComponentInfo __new = { .offset = original.offset, .rowBytes = rowBytes };
         return __new;
     ]-*/;
 
-    
+
+    public static final class Adapter {
+
+        public int offset;
+        public int rowBytes;
+        public Adapter(int offset, int rowBytes) {
+            this.offset = offset;
+            this.rowBytes = rowBytes;
+        }
+        public Adapter(CVPlanarComponentInfo original) {
+            this.offset = original.getOffset();
+            this.rowBytes = original.getRowBytes();
+        }
+        public CVPlanarComponentInfo convert() {
+            return create(offset, rowBytes);
+        }
+    }
 }

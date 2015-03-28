@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 5.0 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UIReferenceLibraryViewController")
 public class UIReferenceLibraryViewController 
     extends UIViewController 
@@ -39,13 +37,13 @@ public class UIReferenceLibraryViewController
     public UIReferenceLibraryViewController(NSCoder aDecoder) { }
     @Mapping("init")
     public UIReferenceLibraryViewController() { }
+
     
-    
-    
-    
+
+
     
     
     @Mapping("dictionaryHasDefinitionForTerm:")
     public static native boolean dictionaryHasDefinitionForTerm(String term);
-    
+
 }

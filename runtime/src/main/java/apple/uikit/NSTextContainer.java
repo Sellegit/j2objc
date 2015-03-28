@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 7.0 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("NSTextContainer")
 public class NSTextContainer 
     extends NSObject 
@@ -35,7 +33,7 @@ public class NSTextContainer
     public NSTextContainer(CGSize size) { }
     @Mapping("init")
     public NSTextContainer() { }
-    
+
     
     @Mapping("layoutManager")
     public native NSLayoutManager getLayoutManager();
@@ -79,12 +77,12 @@ public class NSTextContainer
      */
     @Mapping("setLayoutOrientation:")
     public native void setLayoutOrientation(@Representing("NSTextLayoutOrientation") long v);
-    
+
     
     
     @Mapping("lineFragmentRectForProposedRect:atIndex:writingDirection:remainingRect:")
     public native CGRect getLineFragmentRect(CGRect proposedRect, @MachineSizedUInt long characterIndex, @Representing("NSWritingDirection") long baseWritingDirection, CGRect remainingRect);
     @Mapping("encodeWithCoder:")
     public native void encode(NSCoder aCoder);
-    
+
 }

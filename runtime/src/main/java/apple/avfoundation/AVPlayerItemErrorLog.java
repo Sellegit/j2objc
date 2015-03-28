@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 4.3 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h") @Mapping("AVPlayerItemErrorLog")
 public class AVPlayerItemErrorLog 
     extends NSObject 
@@ -34,18 +32,18 @@ public class AVPlayerItemErrorLog
     
     @Mapping("init")
     public AVPlayerItemErrorLog() { }
-    
+
     
     @Mapping("extendedLogDataStringEncoding")
     public native @Representing("NSStringEncoding") long getExtendedLogDataStringEncoding();
     @Mapping("events")
     public native NSArray<AVPlayerItemErrorLogEvent> getEvents();
-    
+
     
     
     @Mapping("extendedLogData")
     public native NSData getExtendedLogData();
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
-    
+
 }

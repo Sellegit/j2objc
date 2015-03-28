@@ -13,7 +13,6 @@ import apple.coregraphics.*;
 import apple.coreservices.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("CoreMIDI/CoreMIDI.h")
@@ -24,7 +23,7 @@ public class MIDIDeviceList
     
     
     protected MIDIDeviceList() {}
-    
+
     
     
     
@@ -48,5 +47,5 @@ public class MIDIDeviceList
      */
     @GlobalFunction("MIDIDeviceListDispose")
     public static native MIDIError dispose(MIDIDeviceList devList);
-    
+
 }

@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 2.0 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UINavigationController")
 public class UINavigationController 
     extends UIViewController 
@@ -39,7 +37,7 @@ public class UINavigationController
     public UINavigationController(NSCoder aDecoder) { }
     @Mapping("init")
     public UINavigationController() { }
-    
+
     
     @Mapping("topViewController")
     public native UIViewController getTopViewController();
@@ -129,12 +127,12 @@ public class UINavigationController
      */
     @Mapping("barHideOnTapGestureRecognizer")
     public native UITapGestureRecognizer getBarHideOnTapGestureRecognizer();
-    
+
     
     
     @GlobalConstant("UINavigationControllerHideShowBarDuration")
     public static native @MachineSizedFloat double getHideShowBarDuration();
-    
+
     @Mapping("pushViewController:animated:")
     public native void pushViewController(UIViewController viewController, boolean animated);
     @Mapping("popViewControllerAnimated:")
@@ -160,5 +158,5 @@ public class UINavigationController
      */
     @Mapping("showViewController:sender:")
     public native void showViewController(UIViewController vc, Object sender);
-    
+
 }

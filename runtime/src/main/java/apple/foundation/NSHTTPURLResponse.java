@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h") @Mapping("NSHTTPURLResponse")
 public class NSHTTPURLResponse 
     extends NSURLResponse 
@@ -38,16 +35,16 @@ public class NSHTTPURLResponse
     public NSHTTPURLResponse(NSURL URL, String MIMEType, @MachineSizedSInt long length, String name) { }
     @Mapping("init")
     public NSHTTPURLResponse() { }
-    
+
     
     @Mapping("statusCode")
     public native @MachineSizedSInt long getStatusCode();
     @Mapping("allHeaderFields")
     public native Map<String, String> getAllHeaderFields();
-    
+
     
     
     @Mapping("localizedStringForStatusCode:")
     public static native String getLocalizedStatusCode(@MachineSizedSInt long statusCode);
-    
+
 }

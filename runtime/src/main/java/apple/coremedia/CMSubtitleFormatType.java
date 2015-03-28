@@ -18,9 +18,6 @@ import apple.coreanimation.*;
 import apple.corevideo.*;
 
 
-
-
-
 @Library("CoreMedia/CoreMedia.h")
 @Mapping("CMSubtitleFormatType")
 public final class CMSubtitleFormatType extends ObjCEnum {
@@ -29,6 +26,6 @@ public final class CMSubtitleFormatType extends ObjCEnum {
     public static final long _3GText = 1954034535L;
     @GlobalConstant("kCMSubtitleFormatType_WebVTT")
     public static final long WebVTT = 2004251764L;
-    
+
 
 }

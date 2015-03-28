@@ -18,7 +18,6 @@ import apple.coremedia.*;
 import apple.security.*;
 import apple.dispatch.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("Foundation/Foundation.h")
@@ -36,5 +35,5 @@ public class NSStreamSOCKSError
      */
     @GlobalConstant("NSStreamSOCKSErrorDomain")
     public static native String getClassDomain();
-    
+
 }

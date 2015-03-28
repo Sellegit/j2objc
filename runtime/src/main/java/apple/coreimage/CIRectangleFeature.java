@@ -17,9 +17,6 @@ import apple.corevideo.*;
 import apple.imageio.*;
 
 
-
-
-
 @Library("CoreImage/CoreImage.h") @Mapping("CIRectangleFeature")
 public class CIRectangleFeature 
     extends CIFeature 
@@ -29,7 +26,7 @@ public class CIRectangleFeature
     
     @Mapping("init")
     public CIRectangleFeature() { }
-    
+
     
     @Mapping("bounds")
     public native CGRect getBounds();
@@ -41,9 +38,9 @@ public class CIRectangleFeature
     public native CGPoint getBottomLeft();
     @Mapping("bottomRight")
     public native CGPoint getBottomRight();
+
     
     
-    
-    
-    
+
+
 }

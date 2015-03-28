@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h")
 @Mapping("NSComparisonPredicateOptions")
 public final class NSComparisonPredicateOptions extends ObjCEnum {
@@ -35,6 +32,6 @@ public final class NSComparisonPredicateOptions extends ObjCEnum {
      */
     @GlobalConstant("NSNormalizedPredicateOption")
     public static final long Normalized = 4L;
-    
+
 
 }

@@ -15,9 +15,6 @@ import apple.foundation.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("CoreBluetooth/CoreBluetooth.h")
 @Mapping("CBErrorCode")
 public final class CBErrorCode extends ObjCEnum {
@@ -74,6 +71,6 @@ public final class CBErrorCode extends ObjCEnum {
      */
     @GlobalConstant("CBErrorConnectionFailed")
     public static final long ConnectionFailed = 10L;
-    
+
 
 }

@@ -16,11 +16,9 @@ import apple.addressbook.*;
 import apple.corebluetooth.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("CoreLocation/CoreLocation.h") @Mapping("CLFloor")
 public class CLFloor 
     extends NSObject 
@@ -30,14 +28,14 @@ public class CLFloor
     
     @Mapping("init")
     public CLFloor() { }
-    
+
     
     @Mapping("level")
     public native @MachineSizedSInt long getLevel();
-    
+
     
     
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
-    
+
 }

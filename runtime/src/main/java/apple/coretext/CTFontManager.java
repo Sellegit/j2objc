@@ -13,7 +13,6 @@ import apple.coregraphics.*;
 import apple.coreservices.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("CoreText/CoreText.h")
@@ -66,5 +65,5 @@ public class CTFontManager
      */
     @GlobalFunction("CTFontManagerUnregisterFontsForURLs")
     public static native boolean unregisterFonts(CFArray fontURLs, @Representing("CTFontManagerScope") long scope, Todo errors);
-    
+
 }

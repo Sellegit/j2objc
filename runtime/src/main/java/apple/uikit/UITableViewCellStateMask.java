@@ -19,9 +19,6 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h")
 @Mapping("UITableViewCellStateMask")
 public final class UITableViewCellStateMask extends ObjCEnum {
@@ -32,6 +29,6 @@ public final class UITableViewCellStateMask extends ObjCEnum {
     public static final long ShowingEditControlMask = 1L;
     @GlobalConstant("UITableViewCellStateShowingDeleteConfirmationMask")
     public static final long ShowingDeleteConfirmationMask = 2L;
-    
+
 
 }

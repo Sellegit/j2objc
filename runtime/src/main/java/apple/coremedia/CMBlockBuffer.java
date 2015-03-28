@@ -17,7 +17,6 @@ import apple.coreaudio.*;
 import apple.coreanimation.*;
 import apple.corevideo.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Mapping("CMBlockBufferRef") @Library("CoreMedia/CoreMedia.h")
@@ -28,7 +27,7 @@ public class CMBlockBuffer
     
     
     protected CMBlockBuffer() {}
-    
+
     
     
     
@@ -112,5 +111,5 @@ public class CMBlockBuffer
      */
     @GlobalFunction("CMBlockBufferIsEmpty")
     public static native boolean isEmpty(CMBlockBuffer theBuffer);
-    
+
 }

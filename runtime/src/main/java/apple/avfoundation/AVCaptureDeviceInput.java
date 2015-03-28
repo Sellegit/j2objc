@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 4.0 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h") @Mapping("AVCaptureDeviceInput")
 public class AVCaptureDeviceInput 
     extends AVCaptureInput 
@@ -34,14 +32,14 @@ public class AVCaptureDeviceInput
     
     @Mapping("init")
     public AVCaptureDeviceInput() { }
-    
+
     
     @Mapping("device")
     public native AVCaptureDevice getDevice();
-    
+
     
     
     @Mapping("deviceInputWithDevice:error:")
     public static native AVCaptureDeviceInput create(AVCaptureDevice device, Todo outError);
-    
+
 }

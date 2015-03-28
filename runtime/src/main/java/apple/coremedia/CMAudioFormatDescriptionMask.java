@@ -18,9 +18,6 @@ import apple.coreanimation.*;
 import apple.corevideo.*;
 
 
-
-
-
 @Library("CoreMedia/CoreMedia.h")
 @Mapping("CMAudioFormatDescriptionMask")
 public final class CMAudioFormatDescriptionMask extends ObjCEnum {
@@ -35,6 +32,6 @@ public final class CMAudioFormatDescriptionMask extends ObjCEnum {
     public static final long Extensions = 8L;
     @GlobalConstant("kCMAudioFormatDescriptionMask_All")
     public static final long All = 15L;
-    
+
 
 }

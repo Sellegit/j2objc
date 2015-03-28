@@ -19,23 +19,20 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h") @Mapping("UIImagePickerControllerDelegate")
 public interface UIImagePickerControllerDelegate 
     extends UINavigationControllerDelegate {
 
     
     
-    
-    
+
+
     
     @Mapping("imagePickerController:didFinishPickingMediaWithInfo:")
     void didFinishPickingMedia(UIImagePickerController picker, NSDictionary<?, ?> info);
     @Mapping("imagePickerControllerDidCancel:")
     void didCancel(UIImagePickerController picker);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 4.1 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h") @Mapping("AVAssetWriter")
 public class AVAssetWriter 
     extends NSObject 
@@ -34,7 +32,7 @@ public class AVAssetWriter
     
     @Mapping("init")
     public AVAssetWriter() { }
-    
+
     
     @Mapping("outputURL")
     public native NSURL getOutputURL();
@@ -85,7 +83,7 @@ public class AVAssetWriter
      */
     @Mapping("inputGroups")
     public native NSArray<AVAssetWriterInputGroup> getInputGroups();
-    
+
     
     
     @Mapping("canApplyOutputSettings:forMediaType:")
@@ -126,5 +124,5 @@ public class AVAssetWriter
      */
     @Mapping("addInputGroup:")
     public native void addInputGroup(AVAssetWriterInputGroup inputGroup);
-    
+
 }

@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 4.0 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h") @Mapping("AVVideoCompositionInstruction")
 public class AVVideoCompositionInstruction 
     extends NSObject 
@@ -34,7 +32,7 @@ public class AVVideoCompositionInstruction
     
     @Mapping("init")
     public AVVideoCompositionInstruction() { }
-    
+
     
     @Mapping("timeRange")
     public native CMTimeRange getTimeRange();
@@ -56,10 +54,10 @@ public class AVVideoCompositionInstruction
      */
     @Mapping("passthroughTrackID")
     public native int getPassthroughTrackID();
-    
+
     
     
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
-    
+
 }

@@ -20,9 +20,6 @@ import apple.spritekit.*;
 import apple.opengles.*;
 
 
-
-
-
 @Library("SceneKit/SceneKit.h") @Mapping("SCNPhysicsHingeJoint")
 public class SCNPhysicsHingeJoint 
     extends SCNPhysicsBehavior 
@@ -32,7 +29,7 @@ public class SCNPhysicsHingeJoint
     
     @Mapping("init")
     public SCNPhysicsHingeJoint() { }
-    
+
     
     @Mapping("bodyA")
     public native SCNPhysicsBody getBodyA();
@@ -54,12 +51,12 @@ public class SCNPhysicsHingeJoint
     public native SCNVector3 getAnchorB();
     @Mapping("setAnchorB:")
     public native void setAnchorB(SCNVector3 v);
-    
+
     
     
     @Mapping("jointWithBodyA:axisA:anchorA:bodyB:axisB:anchorB:")
     public static native SCNPhysicsHingeJoint create(SCNPhysicsBody bodyA, SCNVector3 axisA, SCNVector3 anchorA, SCNPhysicsBody bodyB, SCNVector3 axisB, SCNVector3 anchorB);
     @Mapping("jointWithBody:axis:anchor:")
     public static native SCNPhysicsHingeJoint create(SCNPhysicsBody body, SCNVector3 axis, SCNVector3 anchor);
-    
+
 }

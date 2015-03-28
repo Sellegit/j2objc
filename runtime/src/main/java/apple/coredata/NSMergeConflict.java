@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 5.0 and later.
  */
-
 @Library("CoreData/CoreData.h") @Mapping("NSMergeConflict")
 public class NSMergeConflict 
     extends NSObject 
@@ -30,7 +28,7 @@ public class NSMergeConflict
     public NSMergeConflict(NSManagedObject srcObject, @MachineSizedUInt long newvers, @MachineSizedUInt long oldvers, NSDictionary<?, ?> cachesnap, NSDictionary<?, ?> persnap) { }
     @Mapping("init")
     public NSMergeConflict() { }
-    
+
     
     @Mapping("sourceObject")
     public native NSManagedObject getSourceObject();
@@ -44,9 +42,9 @@ public class NSMergeConflict
     public native @MachineSizedUInt long getNewVersionNumber();
     @Mapping("oldVersionNumber")
     public native @MachineSizedUInt long getOldVersionNumber();
+
     
     
-    
-    
-    
+
+
 }

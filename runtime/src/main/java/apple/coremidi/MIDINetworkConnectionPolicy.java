@@ -14,9 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
-
-
 @Library("CoreMIDI/CoreMIDI.h")
 @Mapping("MIDINetworkConnectionPolicy")
 public final class MIDINetworkConnectionPolicy extends ObjCEnum {
@@ -27,6 +24,6 @@ public final class MIDINetworkConnectionPolicy extends ObjCEnum {
     public static final long HostsInContactList = 1L;
     @GlobalConstant("MIDINetworkConnectionPolicy_Anyone")
     public static final long Anyone = 2L;
-    
+
 
 }

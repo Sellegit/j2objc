@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 import apple.uikit.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("WebKit/WebKit.h")
@@ -32,5 +31,5 @@ public class WKError
      */
     @GlobalConstant("WKErrorDomain")
     public static native String getClassDomain();
-    
+
 }

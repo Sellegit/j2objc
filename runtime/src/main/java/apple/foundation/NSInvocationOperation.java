@@ -19,11 +19,9 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 2.0 and later.
  */
-
 @Library("Foundation/Foundation.h") @Mapping("NSInvocationOperation")
 public class NSInvocationOperation 
     extends NSOperation 
@@ -37,15 +35,15 @@ public class NSInvocationOperation
     public NSInvocationOperation(NSInvocation inv) { }
     @Mapping("init")
     public NSInvocationOperation() { }
-    
+
     
     @Mapping("invocation")
     public native NSInvocation getInvocation();
     @Mapping("result")
     public native Object getResult();
+
     
     
-    
-    
-    
+
+
 }

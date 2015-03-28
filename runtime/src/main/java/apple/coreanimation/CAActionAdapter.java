@@ -16,7 +16,6 @@ import apple.coreimage.*;
 import apple.coretext.*;
 import apple.opengles.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -27,11 +26,11 @@ public abstract class CAActionAdapter
     
     
     
-    
-    
+
+
     
     
     @NotImplemented("runActionForKey:object:arguments:")
     public void runAction(String event, Object anObject, NSDictionary<?, ?> dict) { throw new UnsupportedOperationException(); }
-    
+
 }

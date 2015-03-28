@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 7.0 and later.
  */
-
 @Library("UIKit/UIKit.h")
 @Mapping("NSTextStorageEditActions")
 public final class NSTextStorageEditActions extends ObjCEnum {
@@ -32,6 +30,6 @@ public final class NSTextStorageEditActions extends ObjCEnum {
     public static final long Attributes = 1L;
     @GlobalConstant("NSTextStorageEditedCharacters")
     public static final long Characters = 2L;
-    
+
 
 }

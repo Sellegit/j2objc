@@ -19,9 +19,6 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h")
 @Mapping("UIReturnKeyType")
 public final class UIReturnKeyType extends ObjCEnum {
@@ -48,6 +45,6 @@ public final class UIReturnKeyType extends ObjCEnum {
     public static final long Done = 9L;
     @GlobalConstant("UIReturnKeyEmergencyCall")
     public static final long EmergencyCall = 10L;
-    
+
 
 }

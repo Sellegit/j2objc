@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.dispatch.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Mapping("CFUUIDRef") @Library("CoreFoundation/CoreFoundation.h")
@@ -25,7 +24,7 @@ public class CFUUID
     
     
     protected CFUUID() {}
-    
+
     
     
     
@@ -45,5 +44,5 @@ public class CFUUID
     public static native CFUUIDBytes getUUIDBytes(CFUUID uuid);
     @GlobalFunction("CFUUIDCreateFromUUIDBytes")
     public static native CFUUID create(CFAllocator alloc, CFUUIDBytes bytes);
-    
+
 }

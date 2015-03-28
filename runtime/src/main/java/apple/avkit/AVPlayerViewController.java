@@ -17,11 +17,9 @@ import apple.avfoundation.*;
 import apple.iad.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("AVKit/AVKit.h") @Mapping("AVPlayerViewController")
 public class AVPlayerViewController 
     extends UIViewController 
@@ -33,7 +31,7 @@ public class AVPlayerViewController
     public AVPlayerViewController(String nibNameOrNil, NSBundle nibBundleOrNil) { }
     @Mapping("init")
     public AVPlayerViewController() { }
-    
+
     
     @Mapping("player")
     public native AVPlayer getPlayer();
@@ -53,9 +51,9 @@ public class AVPlayerViewController
     public native CGRect getVideoBounds();
     @Mapping("contentOverlayView")
     public native UIView getContentOverlayView();
+
     
     
-    
-    
-    
+
+
 }

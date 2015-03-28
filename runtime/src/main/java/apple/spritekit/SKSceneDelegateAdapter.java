@@ -20,7 +20,6 @@ import apple.avfoundation.*;
 import apple.glkit.*;
 import apple.scenekit.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -31,8 +30,8 @@ public abstract class SKSceneDelegateAdapter
     
     
     
-    
-    
+
+
     
     
     @NotImplemented("update:forScene:")
@@ -45,5 +44,5 @@ public abstract class SKSceneDelegateAdapter
     public void didApplyConstraints(SKScene scene) { throw new UnsupportedOperationException(); }
     @NotImplemented("didFinishUpdateForScene:")
     public void didFinishUpdate(SKScene scene) { throw new UnsupportedOperationException(); }
-    
+
 }

@@ -14,9 +14,6 @@ import apple.coreservices.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Security/Security.h")
 @Mapping("SSLConnectionType")
 public final class SSLConnectionType extends ObjCEnum {
@@ -25,6 +22,6 @@ public final class SSLConnectionType extends ObjCEnum {
     public static final long StreamType = 0L;
     @GlobalConstant("kSSLDatagramType")
     public static final long DatagramType = 1L;
-    
+
 
 }

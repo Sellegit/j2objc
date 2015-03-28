@@ -19,17 +19,14 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h") @Mapping("UITableViewDataSource")
 public interface UITableViewDataSource 
     extends NSObjectProtocol {
 
     
     
-    
-    
+
+
     
     @Mapping("tableView:numberOfRowsInSection:")
     @MachineSizedSInt long getNumberOfRowsInSection(UITableView tableView, @MachineSizedSInt long section);
@@ -53,7 +50,7 @@ public interface UITableViewDataSource
     void commitEditingStyleForRow(UITableView tableView, @Representing("UITableViewCellEditingStyle") long editingStyle, NSIndexPath indexPath);
     @Mapping("tableView:moveRowAtIndexPath:toIndexPath:")
     void moveRow(UITableView tableView, NSIndexPath sourceIndexPath, NSIndexPath destinationIndexPath);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

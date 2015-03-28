@@ -19,7 +19,6 @@ import apple.coremedia.*;
 import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("AVFoundation/AVFoundation.h")
@@ -30,7 +29,7 @@ public final class NSValueExtensions
     
     
     private NSValueExtensions() {}
-    
+
     
     /**
      * @since Available in iOS 4.0 and later.
@@ -47,7 +46,7 @@ public final class NSValueExtensions
      */
     @ExtensionMapping("CMTimeMappingValue")
     public static native CMTimeMapping getCMTimeMappingValue(NSValue thiz);
-    
+
     
     
     /**
@@ -65,5 +64,5 @@ public final class NSValueExtensions
      */
     @Mapping("valueWithCMTimeMapping:")
     public static native NSValue create(CMTimeMapping timeMapping);
-    
+
 }

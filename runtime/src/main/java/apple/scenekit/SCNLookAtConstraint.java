@@ -20,9 +20,6 @@ import apple.spritekit.*;
 import apple.opengles.*;
 
 
-
-
-
 @Library("SceneKit/SceneKit.h") @Mapping("SCNLookAtConstraint")
 public class SCNLookAtConstraint 
     extends SCNConstraint 
@@ -32,7 +29,7 @@ public class SCNLookAtConstraint
     
     @Mapping("init")
     public SCNLookAtConstraint() { }
-    
+
     
     @Mapping("target")
     public native SCNNode getTarget();
@@ -40,10 +37,10 @@ public class SCNLookAtConstraint
     public native boolean isGimbalLockEnabled();
     @Mapping("setGimbalLockEnabled:")
     public native void setGimbalLockEnabled(boolean v);
-    
+
     
     
     @Mapping("lookAtConstraintWithTarget:")
     public static native SCNLookAtConstraint create(SCNNode target);
-    
+
 }

@@ -15,9 +15,6 @@ import apple.dispatch.*;
 import apple.foundation.*;
 
 
-
-
-
 @Library("CoreFoundation/CoreFoundation.h")
 @Mapping("CFStringTokenizerUnitOptions")
 public final class CFStringTokenizerUnitOptions extends ObjCEnum {
@@ -36,6 +33,6 @@ public final class CFStringTokenizerUnitOptions extends ObjCEnum {
     public static final long AttributeLatinTranscription = 65536L;
     @GlobalConstant("kCFStringTokenizerAttributeLanguage")
     public static final long AttributeLanguage = 131072L;
-    
+
 
 }

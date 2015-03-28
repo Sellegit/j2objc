@@ -15,11 +15,9 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
 /**
  * @since Available in iOS 7.1 and later.
  */
-
 @Library("MediaPlayer/MediaPlayer.h") @Mapping("MPFeedbackCommand")
 public class MPFeedbackCommand 
     extends MPRemoteCommand 
@@ -29,7 +27,7 @@ public class MPFeedbackCommand
     
     @Mapping("init")
     public MPFeedbackCommand() { }
-    
+
     
     @Mapping("isActive")
     public native boolean isActive();
@@ -49,9 +47,9 @@ public class MPFeedbackCommand
      */
     @Mapping("setLocalizedShortTitle:")
     public native void setLocalizedShortTitle(String v);
+
     
     
-    
-    
-    
+
+
 }

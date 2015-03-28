@@ -15,17 +15,14 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
-
-
 @Library("GameKit/GameKit.h") @Mapping("GKVoiceChatClient")
 public interface GKVoiceChatClient 
     extends NSObjectProtocol {
 
     
     
-    
-    
+
+
     
     @Mapping("voiceChatService:sendData:toParticipantID:")
     void sendData(GKVoiceChatService voiceChatService, NSData data, String participantID);
@@ -41,7 +38,7 @@ public interface GKVoiceChatClient
     void didStop(GKVoiceChatService voiceChatService, String participantID, NSError error);
     @Mapping("voiceChatService:didReceiveInvitationFromParticipantID:callID:")
     void didReceiveInvitation(GKVoiceChatService voiceChatService, String participantID, @MachineSizedSInt long callID);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

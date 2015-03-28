@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("NetworkExtension/NetworkExtension.h")
 @Mapping("NEOnDemandRuleInterfaceType")
 public final class NEOnDemandRuleInterfaceType extends ObjCEnum {
@@ -35,6 +33,6 @@ public final class NEOnDemandRuleInterfaceType extends ObjCEnum {
      */
     @GlobalConstant("NEOnDemandRuleInterfaceTypeCellular")
     public static final long Cellular = 3L;
-    
+
 
 }

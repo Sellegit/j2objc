@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.dispatch.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Mapping("CFFileSecurityRef") @Library("CoreFoundation/CoreFoundation.h")
@@ -25,7 +24,7 @@ public class CFFileSecurity
     
     
     protected CFFileSecurity() {}
-    
+
     
     
     
@@ -99,5 +98,5 @@ public class CFFileSecurity
      */
     @GlobalFunction("CFFileSecurityClearProperties")
     public static native boolean clearProperties(CFFileSecurity fileSec, @Representing("CFFileSecurityClearOptions") long clearPropertyMask);
-    
+
 }

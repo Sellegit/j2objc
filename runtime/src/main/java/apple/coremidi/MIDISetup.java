@@ -13,7 +13,6 @@ import apple.coregraphics.*;
 import apple.coreservices.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 
@@ -24,7 +23,7 @@ import apple.foundation.*;
     
     
     protected MIDISetup() {}
-    
+
     
     
     

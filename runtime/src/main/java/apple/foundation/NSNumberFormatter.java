@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h") @Mapping("NSNumberFormatter")
 public class NSNumberFormatter 
     extends NSFormatter 
@@ -33,7 +30,7 @@ public class NSNumberFormatter
     public NSNumberFormatter(NSCoder aDecoder) { }
     @Mapping("init")
     public NSNumberFormatter() { }
-    
+
     
     /**
      * @since Available in iOS 8.0 and later.
@@ -305,7 +302,7 @@ public class NSNumberFormatter
      */
     @Mapping("setPartialStringValidationEnabled:")
     public native void setPartialStringValidationEnabled(boolean v);
-    
+
     
     
     @Mapping("stringFromNumber:")
@@ -321,5 +318,5 @@ public class NSNumberFormatter
     public static native @Representing("NSNumberFormatterBehavior") long getDefaultFormatterBehavior();
     @Mapping("setDefaultFormatterBehavior:")
     public static native void setDefaultFormatterBehavior(@Representing("NSNumberFormatterBehavior") long behavior);
-    
+
 }

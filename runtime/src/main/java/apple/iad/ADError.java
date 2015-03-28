@@ -17,7 +17,6 @@ import apple.addressbook.*;
 import apple.mediaplayer.*;
 import apple.avkit.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("iAd/iAd.h")
@@ -28,11 +27,11 @@ public class ADError
     
     
     protected ADError() {}
-    
+
     
     
     
     @GlobalConstant("ADErrorDomain")
     public static native String getClassDomain();
-    
+
 }

@@ -13,7 +13,6 @@ import apple.coregraphics.*;
 import apple.coreservices.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Mapping("CTGlyphInfoRef") @Library("CoreText/CoreText.h")
@@ -24,7 +23,7 @@ public class CTGlyphInfo
     
     
     protected CTGlyphInfo() {}
-    
+
     
     
     
@@ -63,5 +62,5 @@ public class CTGlyphInfo
      */
     @GlobalFunction("CTGlyphInfoGetCharacterCollection")
     public static native CTCharacterCollection getCharacterCollection(CTGlyphInfo glyphInfo);
-    
+
 }

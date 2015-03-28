@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 4.0 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h") @Mapping("AVMutableAudioMix")
 public class AVMutableAudioMix 
     extends AVAudioMix 
@@ -34,16 +32,16 @@ public class AVMutableAudioMix
     
     @Mapping("init")
     public AVMutableAudioMix() { }
-    
+
     
     @Mapping("inputParameters")
     public native NSArray<AVAudioMixInputParameters> getInputParameters();
     @Mapping("setInputParameters:")
     public native void setInputParameters(NSArray<AVAudioMixInputParameters> v);
-    
+
     
     
     @Mapping("audioMix")
     public static native AVMutableAudioMix create();
-    
+
 }

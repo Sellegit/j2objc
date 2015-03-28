@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.dispatch.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("CoreFoundation/CoreFoundation.h")
@@ -130,5 +129,5 @@ public class CFDateFormatterProperty
      */
     @GlobalConstant("kCFDateFormatterDoesRelativeDateFormattingKey")
     public static native CFString DoesRelativeDateFormattingKeyValue();
-    
+
 }

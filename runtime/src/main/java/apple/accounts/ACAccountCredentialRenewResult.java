@@ -14,9 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
-
-
 @Library("Accounts/Accounts.h")
 @Mapping("ACAccountCredentialRenewResult")
 public final class ACAccountCredentialRenewResult extends ObjCEnum {
@@ -27,6 +24,6 @@ public final class ACAccountCredentialRenewResult extends ObjCEnum {
     public static final long Rejected = 1L;
     @GlobalConstant("ACAccountCredentialRenewResultFailed")
     public static final long Failed = 2L;
-    
+
 
 }

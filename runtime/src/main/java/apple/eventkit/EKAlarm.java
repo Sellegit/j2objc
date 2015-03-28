@@ -16,11 +16,9 @@ import apple.addressbook.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 4.0 and later.
  */
-
 @Library("EventKit/EventKit.h") @Mapping("EKAlarm")
 public class EKAlarm 
     extends EKObject 
@@ -30,7 +28,7 @@ public class EKAlarm
     
     @Mapping("init")
     public EKAlarm() { }
-    
+
     
     @Mapping("relativeOffset")
     public native double getRelativeOffset();
@@ -48,7 +46,7 @@ public class EKAlarm
     public native @Representing("EKAlarmProximity") long getProximity();
     @Mapping("setProximity:")
     public native void setProximity(@Representing("EKAlarmProximity") long v);
-    
+
     
     
     @Mapping("alarmWithAbsoluteDate:")
@@ -57,5 +55,5 @@ public class EKAlarm
     public static native EKAlarm create(double offset);
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
-    
+
 }

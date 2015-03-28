@@ -15,9 +15,6 @@ import apple.dispatch.*;
 import apple.foundation.*;
 
 
-
-
-
 @Library("CoreFoundation/CoreFoundation.h")
 @Mapping("CFURLComponentType")
 public final class CFURLComponentType extends ObjCEnum {
@@ -46,6 +43,6 @@ public final class CFURLComponentType extends ObjCEnum {
     public static final long Query = 11L;
     @GlobalConstant("kCFURLComponentFragment")
     public static final long Fragment = 12L;
-    
+
 
 }

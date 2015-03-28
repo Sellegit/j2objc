@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 5.0 and later.
  */
-
 @Library("NewsstandKit/NewsstandKit.h") @Mapping("NKLibrary")
 public class NKLibrary 
     extends NSObject 
@@ -28,7 +26,7 @@ public class NKLibrary
     
     @Mapping("init")
     public NKLibrary() { }
-    
+
     
     @Mapping("issues")
     public native NSArray<NKIssue> getIssues();
@@ -40,7 +38,7 @@ public class NKLibrary
     public native NKIssue getCurrentlyReadingIssue();
     @Mapping("setCurrentlyReadingIssue:")
     public native void setCurrentlyReadingIssue(NKIssue v);
-    
+
     
     
     @Mapping("issueWithName:")
@@ -51,5 +49,5 @@ public class NKLibrary
     public native void removeIssue(NKIssue issue);
     @Mapping("sharedLibrary")
     public static native NKLibrary getSharedLibrary();
-    
+
 }

@@ -14,9 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
-
-
 @Library("CoreMotion/CoreMotion.h")
 @Mapping("CMAttitudeReferenceFrame")
 public final class CMAttitudeReferenceFrame extends ObjCEnum {
@@ -29,6 +26,6 @@ public final class CMAttitudeReferenceFrame extends ObjCEnum {
     public static final long MagneticNorthZVertical = 4L;
     @GlobalConstant("CMAttitudeReferenceFrameXTrueNorthZVertical")
     public static final long TrueNorthZVertical = 8L;
-    
+
 
 }

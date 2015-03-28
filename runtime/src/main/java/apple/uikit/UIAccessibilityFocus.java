@@ -19,17 +19,14 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h") @Mapping("UIAccessibilityFocus")
 public interface UIAccessibilityFocus 
      {
 
     
     
-    
-    
+
+
     
     /**
      * @since Available in iOS 4.0 and later.
@@ -46,7 +43,7 @@ public interface UIAccessibilityFocus
      */
     @Mapping("accessibilityElementIsFocused")
     boolean isFocused();
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

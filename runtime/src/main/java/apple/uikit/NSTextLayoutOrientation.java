@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 7.0 and later.
  */
-
 @Library("UIKit/UIKit.h")
 @Mapping("NSTextLayoutOrientation")
 public final class NSTextLayoutOrientation extends ObjCEnum {
@@ -32,6 +30,6 @@ public final class NSTextLayoutOrientation extends ObjCEnum {
     public static final long Horizontal = 0L;
     @GlobalConstant("NSTextLayoutOrientationVertical")
     public static final long Vertical = 1L;
-    
+
 
 }

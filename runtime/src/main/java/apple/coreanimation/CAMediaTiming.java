@@ -17,9 +17,6 @@ import apple.coretext.*;
 import apple.opengles.*;
 
 
-
-
-
 @Library("QuartzCore/QuartzCore.h") @Mapping("CAMediaTiming")
 public interface CAMediaTiming 
      {
@@ -58,10 +55,10 @@ public interface CAMediaTiming
     CAFillMode getFillMode();
     @Mapping("setFillMode:")
     void setFillMode(CAFillMode v);
+
     
-    
-    
-    
+
+
     /*<adapter>*/
     /*</adapter>*/
 }

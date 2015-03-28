@@ -18,7 +18,6 @@ import apple.coreimage.*;
 import apple.coretext.*;
 import apple.corelocation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -29,8 +28,8 @@ public abstract class UICollectionViewDataSourceAdapter
     
     
     
-    
-    
+
+
     
     
     @NotImplemented("collectionView:numberOfItemsInSection:")
@@ -41,5 +40,5 @@ public abstract class UICollectionViewDataSourceAdapter
     public @MachineSizedSInt long getNumberOfSections(UICollectionView collectionView) { throw new UnsupportedOperationException(); }
     @NotImplemented("collectionView:viewForSupplementaryElementOfKind:atIndexPath:")
     public UICollectionReusableView getViewForSupplementaryElement(UICollectionView collectionView, String kind, NSIndexPath indexPath) { throw new UnsupportedOperationException(); }
-    
+
 }

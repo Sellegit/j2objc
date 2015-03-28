@@ -14,9 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
-
-
 @Library("AddressBook/AddressBook.h")
 @Mapping("ABRecordType")
 public final class ABRecordType extends ObjCEnum {
@@ -27,6 +24,6 @@ public final class ABRecordType extends ObjCEnum {
     public static final long Group = 1L;
     @GlobalConstant("kABSourceType")
     public static final long Source = 2L;
-    
+
 
 }

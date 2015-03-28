@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 3.2 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UISwipeGestureRecognizer")
 public class UISwipeGestureRecognizer 
     extends UIGestureRecognizer 
@@ -35,7 +33,7 @@ public class UISwipeGestureRecognizer
     public UISwipeGestureRecognizer(Object target, Selector action) { }
     @Mapping("init")
     public UISwipeGestureRecognizer() { }
-    
+
     
     @Mapping("numberOfTouchesRequired")
     public native @MachineSizedUInt long getNumberOfTouchesRequired();
@@ -45,9 +43,9 @@ public class UISwipeGestureRecognizer
     public native @Representing("UISwipeGestureRecognizerDirection") long getDirection();
     @Mapping("setDirection:")
     public native void setDirection(@Representing("UISwipeGestureRecognizerDirection") long v);
+
     
     
-    
-    
-    
+
+
 }

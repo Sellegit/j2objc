@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UIUserNotificationAction")
 public class UIUserNotificationAction 
     extends NSObject 
@@ -33,7 +31,7 @@ public class UIUserNotificationAction
     
     @Mapping("init")
     public UIUserNotificationAction() { }
-    
+
     
     @Mapping("identifier")
     public native String getIdentifier();
@@ -45,10 +43,10 @@ public class UIUserNotificationAction
     public native boolean isAuthenticationRequired();
     @Mapping("isDestructive")
     public native boolean isDestructive();
-    
+
     
     
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
-    
+
 }

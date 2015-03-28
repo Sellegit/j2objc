@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 5.0 and later.
  */
-
 @Library("CoreData/CoreData.h") @Mapping("NSMergePolicy")
 public class NSMergePolicy 
     extends NSObject 
@@ -30,11 +28,11 @@ public class NSMergePolicy
     public NSMergePolicy(@Representing("NSMergePolicyType") long ty) { }
     @Mapping("init")
     public NSMergePolicy() { }
-    
+
     
     @Mapping("mergeType")
     public native @Representing("NSMergePolicyType") long getMergeType();
-    
+
     
     
     /**
@@ -62,8 +60,8 @@ public class NSMergePolicy
      */
     @GlobalConstant("NSRollbackMergePolicy")
     public static native NSMergePolicy getRollbackMergePolicy();
-    
+
     @Mapping("resolveConflicts:error:")
     public native boolean resolveConflicts(NSArray<?> list, Todo error);
-    
+
 }

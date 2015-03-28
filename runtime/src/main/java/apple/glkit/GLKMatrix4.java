@@ -17,9 +17,6 @@ import apple.uikit.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Mapping("GLKMatrix4") @Library("GLKit/GLKit.h")
 public class GLKMatrix4 
     extends Struct 
@@ -29,12 +26,12 @@ public class GLKMatrix4
     private GLKMatrix4() {}
     
     
-    
-    
+
+
     
     @GlobalConstant("GLKMatrix4Identity")
     public static native GLKMatrix4 Identity();
-    
+
     @GlobalFunction("GLKMatrix4Make")
     public static native GLKMatrix4 createPrime(float m00, float m01, float m02, float m03, float m10, float m11, float m12, float m13, float m20, float m21, float m22, float m23, float m30, float m31, float m32, float m33);
     @GlobalFunction("GLKMatrix4MakeAndTranspose")
@@ -133,5 +130,5 @@ public class GLKMatrix4
     public static native GLKVector4 multiplyVector4(GLKMatrix4 matrixLeft, GLKVector4 vectorRight);
     @GlobalFunction("GLKMatrix4MultiplyVector4Array")
     public static native void multiplyVector4Array(GLKMatrix4 matrix, GLKVector4 vectors, @MachineSizedUInt long vectorCount);
-    
+
 }

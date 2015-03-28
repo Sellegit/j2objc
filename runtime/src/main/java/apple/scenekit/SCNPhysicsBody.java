@@ -20,9 +20,6 @@ import apple.spritekit.*;
 import apple.opengles.*;
 
 
-
-
-
 @Library("SceneKit/SceneKit.h") @Mapping("SCNPhysicsBody")
 public class SCNPhysicsBody 
     extends NSObject 
@@ -32,7 +29,7 @@ public class SCNPhysicsBody
     
     @Mapping("init")
     public SCNPhysicsBody() { }
-    
+
     
     @Mapping("type")
     public native @Representing("SCNPhysicsBodyType") long getType();
@@ -100,7 +97,7 @@ public class SCNPhysicsBody
     public native SCNPhysicsCollisionCategory getCollisionBitMask();
     @Mapping("setCollisionBitMask:")
     public native void setCollisionBitMask(SCNPhysicsCollisionCategory v);
-    
+
     
     
     @Mapping("applyForce:impulse:")
@@ -123,5 +120,5 @@ public class SCNPhysicsBody
     public static native SCNPhysicsBody create(@Representing("SCNPhysicsBodyType") long type, SCNPhysicsShape shape);
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
-    
+
 }

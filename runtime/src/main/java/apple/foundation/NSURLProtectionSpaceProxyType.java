@@ -18,7 +18,6 @@ import apple.coremedia.*;
 import apple.security.*;
 import apple.dispatch.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("Foundation/Foundation.h")
@@ -39,5 +38,5 @@ public class NSURLProtectionSpaceProxyType
     public static native NSString FTPValue();
     @GlobalConstant("NSURLProtectionSpaceSOCKSProxy")
     public static native NSString SOCKSValue();
-    
+
 }

@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h") @Mapping("AVAudioPCMBuffer")
 public class AVAudioPCMBuffer 
     extends AVAudioBuffer 
@@ -33,7 +31,7 @@ public class AVAudioPCMBuffer
     
     
     public AVAudioPCMBuffer() {}
-    
+
     
     @Mapping("frameCapacity")
     public native int getFrameCapacity();
@@ -49,9 +47,9 @@ public class AVAudioPCMBuffer
     public native Todo getInt16ChannelData();
     @Mapping("int32ChannelData")
     public native Todo getInt32ChannelData();
+
     
     
-    
-    
-    
+
+
 }

@@ -16,11 +16,9 @@ import apple.uikit.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 3.0 and later.
  */
-
 @Library("ExternalAccessory/ExternalAccessory.h") @Mapping("EAAccessoryManager")
 public class EAAccessoryManager 
     extends NSObject 
@@ -30,14 +28,14 @@ public class EAAccessoryManager
     
     @Mapping("init")
     public EAAccessoryManager() { }
-    
+
     
     /**
      * @since Available in iOS 3.0 and later.
      */
     @Mapping("connectedAccessories")
     public native NSArray<EAAccessory> getConnectedAccessories();
-    
+
     
     
     /**
@@ -60,7 +58,7 @@ public class EAAccessoryManager
      */
     @GlobalConstant("EAAccessorySelectedKey")
     public static native NSString AccessorySelectedKey();
-    
+
     /**
      * @since Available in iOS 3.0 and later.
      */
@@ -76,5 +74,5 @@ public class EAAccessoryManager
      */
     @Mapping("sharedAccessoryManager")
     public static native EAAccessoryManager getSharedAccessoryManager();
-    
+
 }

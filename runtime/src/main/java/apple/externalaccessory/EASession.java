@@ -16,11 +16,9 @@ import apple.uikit.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 3.0 and later.
  */
-
 @Library("ExternalAccessory/ExternalAccessory.h") @Mapping("EASession")
 public class EASession 
     extends NSObject 
@@ -35,7 +33,7 @@ public class EASession
     public EASession(EAAccessory accessory, String protocolString) { }
     @Mapping("init")
     public EASession() { }
-    
+
     
     /**
      * @since Available in iOS 3.0 and later.
@@ -57,9 +55,9 @@ public class EASession
      */
     @Mapping("outputStream")
     public native NSOutputStream getOutputStream();
+
     
     
-    
-    
-    
+
+
 }

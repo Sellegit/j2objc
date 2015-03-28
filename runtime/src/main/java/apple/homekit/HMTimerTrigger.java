@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("HomeKit/HomeKit.h") @Mapping("HMTimerTrigger")
 public class HMTimerTrigger 
     extends HMTrigger 
@@ -29,7 +27,7 @@ public class HMTimerTrigger
     public HMTimerTrigger() {}
     @Mapping("initWithName:fireDate:timeZone:recurrence:recurrenceCalendar:")
     public HMTimerTrigger(String name, NSDate fireDate, NSTimeZone timeZone, NSDateComponents recurrence, NSCalendar recurrenceCalendar) { }
-    
+
     
     @Mapping("fireDate")
     public native NSDate getFireDate();
@@ -39,7 +37,7 @@ public class HMTimerTrigger
     public native NSDateComponents getRecurrence();
     @Mapping("recurrenceCalendar")
     public native NSCalendar getRecurrenceCalendar();
-    
+
     
     
     @Mapping("updateFireDate:completionHandler:")
@@ -48,5 +46,5 @@ public class HMTimerTrigger
     public native void updateTimeZone(NSTimeZone timeZone, @Block VoidBlock1<NSError> completion);
     @Mapping("updateRecurrence:completionHandler:")
     public native void updateRecurrence(NSDateComponents recurrence, @Block VoidBlock1<NSError> completion);
-    
+
 }

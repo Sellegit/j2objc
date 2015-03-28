@@ -19,13 +19,11 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 3.0 and later.
  * @deprecated Deprecated in iOS 8.0.
  */
 @Deprecated
-
 @Library("UIKit/UIKit.h") @Mapping("UISearchDisplayController")
 public class UISearchDisplayController 
     extends NSObject 
@@ -37,7 +35,7 @@ public class UISearchDisplayController
     public UISearchDisplayController(UISearchBar searchBar, UIViewController viewController) { }
     @Mapping("init")
     public UISearchDisplayController() { }
-    
+
     
     @Mapping("delegate")
     public native UISearchDisplayDelegate getDelegate();
@@ -86,10 +84,10 @@ public class UISearchDisplayController
      */
     @Mapping("navigationItem")
     public native UINavigationItem getNavigationItem();
-    
+
     
     
     @Mapping("setActive:animated:")
     public native void setActive(boolean visible, boolean animated);
-    
+
 }

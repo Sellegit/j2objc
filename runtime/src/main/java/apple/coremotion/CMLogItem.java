@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 4.0 and later.
  */
-
 @Library("CoreMotion/CoreMotion.h") @Mapping("CMLogItem")
 public class CMLogItem 
     extends NSObject 
@@ -28,14 +26,14 @@ public class CMLogItem
     
     @Mapping("init")
     public CMLogItem() { }
-    
+
     
     @Mapping("timestamp")
     public native double getTimestamp();
-    
+
     
     
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
-    
+
 }

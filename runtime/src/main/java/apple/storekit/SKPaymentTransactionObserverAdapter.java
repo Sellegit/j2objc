@@ -15,7 +15,6 @@ import apple.foundation.*;
 import apple.uikit.*;
 import apple.accounts.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -26,8 +25,8 @@ public abstract class SKPaymentTransactionObserverAdapter
     
     
     
-    
-    
+
+
     
     
     /**
@@ -55,5 +54,5 @@ public abstract class SKPaymentTransactionObserverAdapter
      */
     @NotImplemented("paymentQueue:updatedDownloads:")
     public void updatedDownloads(SKPaymentQueue queue, NSArray<?> downloads) { throw new UnsupportedOperationException(); }
-    
+
 }

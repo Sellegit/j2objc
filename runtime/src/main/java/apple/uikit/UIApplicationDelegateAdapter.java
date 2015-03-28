@@ -18,7 +18,6 @@ import apple.coreimage.*;
 import apple.coretext.*;
 import apple.corelocation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -39,7 +38,7 @@ public abstract class UIApplicationDelegateAdapter
      */
     @Mapping("setWindow:")
     public void setWindow(UIWindow v) { throw new UnsupportedOperationException(); }
-    
+
     
     
     @NotImplemented("applicationDidFinishLaunching:")
@@ -209,5 +208,5 @@ public abstract class UIApplicationDelegateAdapter
      */
     @NotImplemented("application:didUpdateUserActivity:")
     public void didUpdateUserActivity(UIApplication application, NSUserActivity userActivity) { throw new UnsupportedOperationException(); }
-    
+
 }

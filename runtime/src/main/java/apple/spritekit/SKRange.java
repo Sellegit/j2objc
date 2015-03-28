@@ -21,11 +21,9 @@ import apple.glkit.*;
 import apple.scenekit.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("SpriteKit/SpriteKit.h") @Mapping("SKRange")
 public class SKRange 
     extends NSObject 
@@ -37,7 +35,7 @@ public class SKRange
     public SKRange(@MachineSizedFloat double lower, @MachineSizedFloat double upper) { }
     @Mapping("init")
     public SKRange() { }
-    
+
     
     @Mapping("lowerLimit")
     public native @MachineSizedFloat double getLowerLimit();
@@ -47,7 +45,7 @@ public class SKRange
     public native @MachineSizedFloat double getUpperLimit();
     @Mapping("setUpperLimit:")
     public native void setUpperLimit(@MachineSizedFloat double v);
-    
+
     
     
     @Mapping("rangeWithLowerLimit:upperLimit:")
@@ -66,5 +64,5 @@ public class SKRange
     public native void encode(NSCoder aCoder);
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
-    
+
 }

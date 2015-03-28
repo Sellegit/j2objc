@@ -19,17 +19,14 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h") @Mapping("UIDocumentInteractionControllerDelegate")
 public interface UIDocumentInteractionControllerDelegate 
     extends NSObjectProtocol {
 
     
     
-    
-    
+
+
     
     @Mapping("documentInteractionControllerViewControllerForPreview:")
     UIViewController getViewControllerForPreview(UIDocumentInteractionController controller);
@@ -67,7 +64,7 @@ public interface UIDocumentInteractionControllerDelegate
     @Deprecated
     @Mapping("documentInteractionController:performAction:")
     boolean performAction(UIDocumentInteractionController controller, Selector action);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

@@ -13,7 +13,6 @@ import apple.coregraphics.*;
 import apple.coreservices.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("ImageIO/ImageIO.h")
@@ -66,5 +65,5 @@ public class CGImagePropertyIPTCContactInfo
      */
     @GlobalConstant("kCGImagePropertyIPTCContactInfoWebURLs")
     public static native CFString WebURLsKey();
-    
+
 }

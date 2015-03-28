@@ -15,9 +15,6 @@ import apple.dispatch.*;
 import apple.foundation.*;
 
 
-
-
-
 @Library("CoreFoundation/CoreFoundation.h")
 @Mapping("CFComparisonResult")
 public final class CFComparisonResult extends ObjCEnum {
@@ -28,6 +25,6 @@ public final class CFComparisonResult extends ObjCEnum {
     public static final long EqualTo = 0L;
     @GlobalConstant("kCFCompareGreaterThan")
     public static final long GreaterThan = 1L;
-    
+
 
 }

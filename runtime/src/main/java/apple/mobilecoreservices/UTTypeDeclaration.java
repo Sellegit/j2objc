@@ -13,7 +13,6 @@ import apple.coregraphics.*;
 import apple.coreservices.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("MobileCoreServices/MobileCoreServices.h")
@@ -71,5 +70,5 @@ public class UTTypeDeclaration
      */
     @GlobalConstant("kUTTypeVersionKey")
     public static native NSString TypeVersionKey();
-    
+
 }

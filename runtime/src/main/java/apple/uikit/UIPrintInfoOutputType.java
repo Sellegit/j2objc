@@ -19,9 +19,6 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h")
 @Mapping("UIPrintInfoOutputType")
 public final class UIPrintInfoOutputType extends ObjCEnum {
@@ -34,6 +31,6 @@ public final class UIPrintInfoOutputType extends ObjCEnum {
     public static final long Grayscale = 2L;
     @GlobalConstant("UIPrintInfoOutputPhotoGrayscale")
     public static final long PhotoGrayscale = 3L;
-    
+
 
 }

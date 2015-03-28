@@ -15,7 +15,6 @@ import apple.foundation.*;
 import apple.eventkit.*;
 import apple.uikit.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -26,8 +25,8 @@ public abstract class EKEventViewDelegateAdapter
     
     
     
-    
-    
+
+
     
     
     /**
@@ -35,5 +34,5 @@ public abstract class EKEventViewDelegateAdapter
      */
     @NotImplemented("eventViewController:didCompleteWithAction:")
     public void didComplete(EKEventViewController controller, EKEventViewAction action) { throw new UnsupportedOperationException(); }
-    
+
 }

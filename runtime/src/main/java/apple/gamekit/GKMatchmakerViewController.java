@@ -15,11 +15,9 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
 /**
  * @since Available in iOS 4.1 and later.
  */
-
 @Library("GameKit/GameKit.h") @Mapping("GKMatchmakerViewController")
 public class GKMatchmakerViewController 
     extends UINavigationController 
@@ -37,7 +35,7 @@ public class GKMatchmakerViewController
     public GKMatchmakerViewController(String nibNameOrNil, NSBundle nibBundleOrNil) { }
     @Mapping("init")
     public GKMatchmakerViewController() { }
-    
+
     
     @Mapping("matchmakerDelegate")
     public native GKMatchmakerViewControllerDelegate getMatchmakerDelegate();
@@ -63,7 +61,7 @@ public class GKMatchmakerViewController
     @Deprecated
     @Mapping("setDefaultInvitationMessage:")
     public native void setDefaultInvitationMessage(String v);
-    
+
     
     
     /**
@@ -83,5 +81,5 @@ public class GKMatchmakerViewController
      */
     @Mapping("setHostedPlayer:didConnect:")
     public native void setHostedPlayer(GKPlayer player, boolean connected);
-    
+
 }

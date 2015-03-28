@@ -15,11 +15,9 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
 /**
  * @since Available in iOS 4.1 and later.
  */
-
 @Library("GameKit/GameKit.h") @Mapping("GKPlayer")
 public class GKPlayer 
     extends NSObject 
@@ -29,7 +27,7 @@ public class GKPlayer
     
     @Mapping("init")
     public GKPlayer() { }
-    
+
     
     @Mapping("playerID")
     public native String getPlayerID();
@@ -47,12 +45,12 @@ public class GKPlayer
     @Deprecated
     @Mapping("isFriend")
     public native boolean isFriend();
-    
+
     
     
     @GlobalConstant("GKPlayerDidChangeNotificationName")
     public static native NSString DidChangeNotification();
-    
+
     @Mapping("loadPlayersForIdentifiers:withCompletionHandler:")
     public static native void loadPlayers(NSArray<?> identifiers, Todo completionHandler);
     /**
@@ -60,5 +58,5 @@ public class GKPlayer
      */
     @Mapping("loadPhotoForSize:withCompletionHandler:")
     public native void loadPhoto(@Representing("GKPhotoSize") long size, @Block VoidBlock2<UIImage, NSError> completionHandler);
-    
+
 }

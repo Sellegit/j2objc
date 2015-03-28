@@ -15,9 +15,6 @@ import apple.dispatch.*;
 import apple.foundation.*;
 
 
-
-
-
 @Library("CoreFoundation/CoreFoundation.h")
 @Mapping("CFURLPathStyle")
 public final class CFURLPathStyle extends ObjCEnum {
@@ -33,6 +30,6 @@ public final class CFURLPathStyle extends ObjCEnum {
     public static final long HFSPathStyle = 1L;
     @GlobalConstant("kCFURLWindowsPathStyle")
     public static final long WindowsPathStyle = 2L;
-    
+
 
 }

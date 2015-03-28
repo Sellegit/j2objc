@@ -15,7 +15,6 @@ import apple.foundation.*;
 import apple.uikit.*;
 import apple.dispatch.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("ExternalAccessory/ExternalAccessory.h")
@@ -30,5 +29,5 @@ public class EABluetoothAccessoryPickerError
     
     @GlobalConstant("EABluetoothAccessoryPickerErrorDomain")
     public static native String getClassDomain();
-    
+
 }

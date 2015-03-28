@@ -15,7 +15,6 @@ import apple.foundation.*;
 import apple.opengles.*;
 import apple.coremedia.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Mapping("CVOpenGLESTextureCacheRef") @Library("CoreVideo/CoreVideo.h")
@@ -26,7 +25,7 @@ public class CVOpenGLESTextureCache
     
     
     protected CVOpenGLESTextureCache() {}
-    
+
     
     
     
@@ -50,5 +49,5 @@ public class CVOpenGLESTextureCache
      */
     @GlobalFunction("CVOpenGLESTextureCacheFlush")
     public static native void flush(CVOpenGLESTextureCache textureCache, long options);
-    
+
 }

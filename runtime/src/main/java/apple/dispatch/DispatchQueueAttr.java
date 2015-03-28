@@ -12,7 +12,6 @@ import apple.corefoundation.*;
 import apple.coregraphics.*;
 import apple.coreservices.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("dispatch/dispatch.h")
@@ -23,7 +22,7 @@ public class DispatchQueueAttr
     
     
     protected DispatchQueueAttr() {}
-    
+
     
     
     
@@ -32,5 +31,5 @@ public class DispatchQueueAttr
      */
     @GlobalConstant("_dispatch_queue_attr_concurrent")
     public static native DispatchQueueAttr Concurrent();
-    
+
 }

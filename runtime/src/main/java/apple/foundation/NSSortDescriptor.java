@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h") @Mapping("NSSortDescriptor")
 public class NSSortDescriptor 
     extends NSObject 
@@ -35,7 +32,7 @@ public class NSSortDescriptor
     public NSSortDescriptor(String key, boolean ascending, Selector selector) { }
     @Mapping("init")
     public NSSortDescriptor() { }
-    
+
     
     @Mapping("key")
     public native String getKey();
@@ -50,7 +47,7 @@ public class NSSortDescriptor
     public native @Block Block2<NSObject, NSObject, NSComparisonResult> getComparator();
     @Mapping("reversedSortDescriptor")
     public native NSSortDescriptor getReversedSortDescriptor();
-    
+
     
     
     /**
@@ -62,5 +59,5 @@ public class NSSortDescriptor
     public native @Representing("NSComparisonResult") long compare(Object object1, Object object2);
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
-    
+
 }

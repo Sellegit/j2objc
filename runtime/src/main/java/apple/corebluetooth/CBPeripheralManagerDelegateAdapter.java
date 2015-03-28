@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 import apple.dispatch.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -25,8 +24,8 @@ public abstract class CBPeripheralManagerDelegateAdapter
     
     
     
-    
-    
+
+
     
     
     @NotImplemented("peripheralManagerDidUpdateState:")
@@ -47,5 +46,5 @@ public abstract class CBPeripheralManagerDelegateAdapter
     public void didReceiveWriteRequests(CBPeripheralManager peripheral, NSArray<?> requests) { throw new UnsupportedOperationException(); }
     @NotImplemented("peripheralManagerIsReadyToUpdateSubscribers:")
     public void readyToUpdateSubscribers(CBPeripheralManager peripheral) { throw new UnsupportedOperationException(); }
-    
+
 }

@@ -16,17 +16,14 @@ import apple.uikit.*;
 import apple.security.*;
 
 
-
-
-
 @Library("MultipeerConnectivity/MultipeerConnectivity.h") @Mapping("MCBrowserViewControllerDelegate")
 public interface MCBrowserViewControllerDelegate 
     extends NSObjectProtocol {
 
     
     
-    
-    
+
+
     
     @Mapping("browserViewControllerDidFinish:")
     void didFinish(MCBrowserViewController browserViewController);
@@ -34,7 +31,7 @@ public interface MCBrowserViewControllerDelegate
     void wasCancelled(MCBrowserViewController browserViewController);
     @Mapping("browserViewController:shouldPresentNearbyPeer:withDiscoveryInfo:")
     boolean shouldPresentNearbyPeer(MCBrowserViewController browserViewController, MCPeerID peerID, NSDictionary<?, ?> info);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

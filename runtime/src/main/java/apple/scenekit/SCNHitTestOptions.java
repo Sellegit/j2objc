@@ -19,7 +19,6 @@ import apple.glkit.*;
 import apple.spritekit.*;
 import apple.opengles.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("SceneKit/SceneKit.h")
@@ -48,5 +47,5 @@ public class SCNHitTestOptions
     public static native NSString RootNodeKey();
     @GlobalConstant("SCNHitTestIgnoreHiddenNodesKey")
     public static native NSString IgnoreHiddenNodesKey();
-    
+
 }

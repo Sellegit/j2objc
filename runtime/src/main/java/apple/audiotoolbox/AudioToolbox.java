@@ -16,7 +16,6 @@ import apple.opengles.*;
 import apple.coreaudio.*;
 import apple.coremedia.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("AudioToolbox/AudioToolbox.h")
@@ -38,7 +37,7 @@ public class AudioToolbox
     public static final int Constant__kAudioConverterPropertyCanResumeFromInterruption = 1668441705;
     public static final int Constant__kAudioConverterErr_HardwareInUse = 1752656245;
     public static final int Constant__kAudioConverterErr_NoHardwarePermission = 1885696621;
-    
+
     
     
     
@@ -211,7 +210,7 @@ public class AudioToolbox
     @Deprecated
     @GlobalConstant("kAudioSession_OutputDestinationKey_Description")
     public static native CFString Value__kAudioSession_OutputDestinationKey_Description();
-    
+
     /**
      * @since Available in iOS 2.0 and later.
      */
@@ -222,5 +221,5 @@ public class AudioToolbox
      */
     @GlobalFunction("AudioFormatGetProperty")
     public static native int function__AudioFormatGetProperty(int inPropertyID, int inSpecifierSize, Todo inSpecifier, Todo ioPropertyDataSize, Todo outPropertyData);
-    
+
 }

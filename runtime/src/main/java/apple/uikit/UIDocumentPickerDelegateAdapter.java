@@ -18,7 +18,6 @@ import apple.coreimage.*;
 import apple.coretext.*;
 import apple.corelocation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -29,13 +28,13 @@ public abstract class UIDocumentPickerDelegateAdapter
     
     
     
-    
-    
+
+
     
     
     @NotImplemented("documentPicker:didPickDocumentAtURL:")
     public void didPickDocument(UIDocumentPickerViewController controller, NSURL url) { throw new UnsupportedOperationException(); }
     @NotImplemented("documentPickerWasCancelled:")
     public void wasCancelled(UIDocumentPickerViewController controller) { throw new UnsupportedOperationException(); }
-    
+
 }

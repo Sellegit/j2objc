@@ -19,11 +19,9 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("Foundation/Foundation.h")
 @Mapping("NSLengthFormatterUnit")
 public final class NSLengthFormatterUnit extends ObjCEnum {
@@ -44,6 +42,6 @@ public final class NSLengthFormatterUnit extends ObjCEnum {
     public static final long Yard = 1283L;
     @GlobalConstant("NSLengthFormatterUnitMile")
     public static final long Mile = 1284L;
-    
+
 
 }

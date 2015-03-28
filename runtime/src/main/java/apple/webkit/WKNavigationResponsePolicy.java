@@ -15,11 +15,9 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("WebKit/WebKit.h")
 @Mapping("WKNavigationResponsePolicy")
 public final class WKNavigationResponsePolicy extends ObjCEnum {
@@ -28,6 +26,6 @@ public final class WKNavigationResponsePolicy extends ObjCEnum {
     public static final long Cancel = 0L;
     @GlobalConstant("WKNavigationResponsePolicyAllow")
     public static final long Allow = 1L;
-    
+
 
 }

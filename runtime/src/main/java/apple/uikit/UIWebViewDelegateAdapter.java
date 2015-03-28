@@ -18,7 +18,6 @@ import apple.coreimage.*;
 import apple.coretext.*;
 import apple.corelocation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -29,8 +28,8 @@ public abstract class UIWebViewDelegateAdapter
     
     
     
-    
-    
+
+
     
     
     @NotImplemented("webView:shouldStartLoadWithRequest:navigationType:")
@@ -41,5 +40,5 @@ public abstract class UIWebViewDelegateAdapter
     public void didFinishLoad(UIWebView webView) { throw new UnsupportedOperationException(); }
     @NotImplemented("webView:didFailLoadWithError:")
     public void didFailLoad(UIWebView webView, NSError error) { throw new UnsupportedOperationException(); }
-    
+
 }

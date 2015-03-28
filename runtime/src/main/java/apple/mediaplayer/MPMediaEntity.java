@@ -15,11 +15,9 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
 /**
  * @since Available in iOS 4.2 and later.
  */
-
 @Library("MediaPlayer/MediaPlayer.h") @Mapping("MPMediaEntity")
 public class MPMediaEntity 
     extends NSObject 
@@ -29,14 +27,14 @@ public class MPMediaEntity
     
     @Mapping("init")
     public MPMediaEntity() { }
-    
+
     
     /**
      * @since Available in iOS 7.0 and later.
      */
     @Mapping("persistentID")
     public native long getPersistentID();
-    
+
     
     
     /**
@@ -48,5 +46,5 @@ public class MPMediaEntity
     public native Object getValue(String property);
     @Mapping("canFilterByProperty:")
     public static native boolean canFilterByProperty(String property);
-    
+
 }

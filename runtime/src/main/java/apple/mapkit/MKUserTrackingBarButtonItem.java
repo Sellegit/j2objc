@@ -17,11 +17,9 @@ import apple.uikit.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 5.0 and later.
  */
-
 @Library("MapKit/MapKit.h") @Mapping("MKUserTrackingBarButtonItem")
 public class MKUserTrackingBarButtonItem 
     extends UIBarButtonItem 
@@ -46,15 +44,15 @@ public class MKUserTrackingBarButtonItem
     public MKUserTrackingBarButtonItem(UIView customView) { }
     @Mapping("init")
     public MKUserTrackingBarButtonItem() { }
-    
+
     
     @Mapping("mapView")
     public native MKMapView getMapView();
     @Mapping("setMapView:")
     public native void setMapView(MKMapView v);
+
     
     
-    
-    
-    
+
+
 }

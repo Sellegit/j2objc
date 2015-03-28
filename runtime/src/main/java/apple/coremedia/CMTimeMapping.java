@@ -18,9 +18,6 @@ import apple.coreanimation.*;
 import apple.corevideo.*;
 
 
-
-
-
 @Mapping("CMTimeMapping") @Library("CoreMedia/CoreMedia.h")
 public class CMTimeMapping 
     extends Struct 
@@ -34,7 +31,7 @@ public class CMTimeMapping
     public native CMTimeRange getSource();
     @DotMapping("target")
     public native CMTimeRange getTarget();
-    
+
     public static native CMTimeMapping create(CMTimeRange source, CMTimeRange target) /*-[
         CMTimeMapping __new = { .source = source, .target = target };
         return __new;
@@ -44,11 +41,27 @@ public class CMTimeMapping
         return __new;
     ]-*/;
 
-    
+
     public static native CMTimeMapping copyWithtarget(CMTimeMapping original, CMTimeRange target) /*-[
         CMTimeMapping __new = { .source = original.source, .target = target };
         return __new;
     ]-*/;
 
-    
+
+    public static final class Adapter {
+
+        public CMTimeRange source;
+        public CMTimeRange target;
+        public Adapter(CMTimeRange source, CMTimeRange target) {
+            this.source = source;
+            this.target = target;
+        }
+        public Adapter(CMTimeMapping original) {
+            this.source = original.getSource();
+            this.target = original.getTarget();
+        }
+        public CMTimeMapping convert() {
+            return create(source, target);
+        }
+    }
 }

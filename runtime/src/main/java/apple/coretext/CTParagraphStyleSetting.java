@@ -14,9 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
-
-
 @Mapping("CTParagraphStyleSetting") @Library("CoreText/CoreText.h")
 public class CTParagraphStyleSetting 
     extends Struct 
@@ -32,6 +29,6 @@ public class CTParagraphStyleSetting
     public native @MachineSizedUInt long getValueSize();
     @DotMapping("value")
     public native Todo getValue();
-    
+
     
 }

@@ -17,7 +17,6 @@ import apple.coreaudio.*;
 import apple.coreanimation.*;
 import apple.corevideo.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("CoreMedia/CoreMedia.h")
@@ -70,5 +69,5 @@ public class CMMetadataDataType
      */
     @GlobalFunction("CMMetadataDataTypeRegistryGetBaseDataTypeForConformingDataType")
     public static native CMMetadataBaseDataType getBaseDataTypeForConformingDataType(CFString dataType);
-    
+
 }

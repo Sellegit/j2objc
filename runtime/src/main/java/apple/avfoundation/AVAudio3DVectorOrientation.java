@@ -20,9 +20,6 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
-
-
 @Mapping("AVAudio3DVectorOrientation") @Library("AVFoundation/AVFoundation.h")
 public class AVAudio3DVectorOrientation 
     extends Struct 
@@ -36,7 +33,7 @@ public class AVAudio3DVectorOrientation
     public native AVAudio3DVector getForward();
     @DotMapping("up")
     public native AVAudio3DVector getUp();
-    
+
     public static native AVAudio3DVectorOrientation create(AVAudio3DVector forward, AVAudio3DVector up) /*-[
         AVAudio3DVectorOrientation __new = { .forward = forward, .up = up };
         return __new;
@@ -46,11 +43,27 @@ public class AVAudio3DVectorOrientation
         return __new;
     ]-*/;
 
-    
+
     public static native AVAudio3DVectorOrientation copyWithup(AVAudio3DVectorOrientation original, AVAudio3DVector up) /*-[
         AVAudio3DVectorOrientation __new = { .forward = original.forward, .up = up };
         return __new;
     ]-*/;
 
-    
+
+    public static final class Adapter {
+
+        public AVAudio3DVector forward;
+        public AVAudio3DVector up;
+        public Adapter(AVAudio3DVector forward, AVAudio3DVector up) {
+            this.forward = forward;
+            this.up = up;
+        }
+        public Adapter(AVAudio3DVectorOrientation original) {
+            this.forward = original.getForward();
+            this.up = original.getUp();
+        }
+        public AVAudio3DVectorOrientation convert() {
+            return create(forward, up);
+        }
+    }
 }

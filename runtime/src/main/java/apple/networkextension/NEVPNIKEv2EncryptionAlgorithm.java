@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("NetworkExtension/NetworkExtension.h")
 @Mapping("NEVPNIKEv2EncryptionAlgorithm")
 public final class NEVPNIKEv2EncryptionAlgorithm extends ObjCEnum {
@@ -31,6 +29,6 @@ public final class NEVPNIKEv2EncryptionAlgorithm extends ObjCEnum {
     public static final long AES128 = 3L;
     @GlobalConstant("NEVPNIKEv2EncryptionAlgorithmAES256")
     public static final long AES256 = 4L;
-    
+
 
 }

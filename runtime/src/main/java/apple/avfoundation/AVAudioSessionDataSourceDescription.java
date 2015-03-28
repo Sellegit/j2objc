@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 6.0 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h") @Mapping("AVAudioSessionDataSourceDescription")
 public class AVAudioSessionDataSourceDescription 
     extends NSObject 
@@ -34,7 +32,7 @@ public class AVAudioSessionDataSourceDescription
     
     @Mapping("init")
     public AVAudioSessionDataSourceDescription() { }
-    
+
     
     @Mapping("dataSourceID")
     public native NSNumber getDataSourceID();
@@ -65,7 +63,7 @@ public class AVAudioSessionDataSourceDescription
      */
     @Mapping("preferredPolarPattern")
     public native AVAudioSessionPolarPattern getPreferredPolarPattern();
-    
+
     
     
     /**
@@ -73,5 +71,5 @@ public class AVAudioSessionDataSourceDescription
      */
     @Mapping("setPreferredPolarPattern:error:")
     public native boolean setPreferredPolarPattern(String pattern, Todo outError);
-    
+
 }

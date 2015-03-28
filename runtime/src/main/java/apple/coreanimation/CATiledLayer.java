@@ -17,9 +17,6 @@ import apple.coretext.*;
 import apple.opengles.*;
 
 
-
-
-
 @Library("QuartzCore/QuartzCore.h") @Mapping("CATiledLayer")
 public class CATiledLayer 
     extends CALayer 
@@ -33,7 +30,7 @@ public class CATiledLayer
     public CATiledLayer(Object layer) { }
     @Mapping("initWithCoder:")
     public CATiledLayer(NSCoder aDecoder) { }
-    
+
     
     @Mapping("levelsOfDetail")
     public native @MachineSizedUInt long getLevelsOfDetail();
@@ -47,10 +44,10 @@ public class CATiledLayer
     public native CGSize getTileSize();
     @Mapping("setTileSize:")
     public native void setTileSize(CGSize v);
-    
+
     
     
     @Mapping("fadeDuration")
     public static native double getFadeDuration();
-    
+
 }

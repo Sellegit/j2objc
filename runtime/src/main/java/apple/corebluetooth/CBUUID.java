@@ -15,11 +15,9 @@ import apple.foundation.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 5.0 and later.
  */
-
 @Library("CoreBluetooth/CoreBluetooth.h") @Mapping("CBUUID")
 public class CBUUID 
     extends NSObject 
@@ -29,7 +27,7 @@ public class CBUUID
     
     @Mapping("init")
     public CBUUID() { }
-    
+
     
     @Mapping("data")
     public native NSData getData();
@@ -38,7 +36,7 @@ public class CBUUID
      */
     @Mapping("UUIDString")
     public native String getUUIDString();
-    
+
     
     
     @Mapping("UUIDWithString:")
@@ -54,5 +52,5 @@ public class CBUUID
     public static native CBUUID create(NSUUID theUUID);
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
-    
+
 }

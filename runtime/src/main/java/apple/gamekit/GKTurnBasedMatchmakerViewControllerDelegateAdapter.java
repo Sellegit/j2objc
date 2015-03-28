@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 import apple.uikit.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -25,8 +24,8 @@ public abstract class GKTurnBasedMatchmakerViewControllerDelegateAdapter
     
     
     
-    
-    
+
+
     
     
     /**
@@ -49,5 +48,5 @@ public abstract class GKTurnBasedMatchmakerViewControllerDelegateAdapter
      */
     @NotImplemented("turnBasedMatchmakerViewController:playerQuitForMatch:")
     public void playerQuit(GKTurnBasedMatchmakerViewController viewController, GKTurnBasedMatch match) { throw new UnsupportedOperationException(); }
-    
+
 }

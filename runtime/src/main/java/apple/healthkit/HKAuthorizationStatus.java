@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("HealthKit/HealthKit.h")
 @Mapping("HKAuthorizationStatus")
 public final class HKAuthorizationStatus extends ObjCEnum {
@@ -29,6 +27,6 @@ public final class HKAuthorizationStatus extends ObjCEnum {
     public static final long SharingDenied = 1L;
     @GlobalConstant("HKAuthorizationStatusSharingAuthorized")
     public static final long SharingAuthorized = 2L;
-    
+
 
 }

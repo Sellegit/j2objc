@@ -13,7 +13,6 @@ import apple.coregraphics.*;
 import apple.coreservices.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("CoreText/CoreText.h")
@@ -46,5 +45,5 @@ public class CTFrameAttributes
      */
     @GlobalConstant("kCTFrameClippingPathsAttributeName")
     public static native CFString ClippingPaths();
-    
+
 }

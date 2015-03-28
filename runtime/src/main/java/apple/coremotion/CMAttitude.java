@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 4.0 and later.
  */
-
 @Library("CoreMotion/CoreMotion.h") @Mapping("CMAttitude")
 public class CMAttitude 
     extends NSObject 
@@ -28,7 +26,7 @@ public class CMAttitude
     
     @Mapping("init")
     public CMAttitude() { }
-    
+
     
     @Mapping("roll")
     public native double getRoll();
@@ -40,12 +38,12 @@ public class CMAttitude
     public native CMRotationMatrix getRotationMatrix();
     @Mapping("quaternion")
     public native CMQuaternion getQuaternion();
-    
+
     
     
     @Mapping("multiplyByInverseOfAttitude:")
     public native void multiplyByInverseOfAttitude(CMAttitude attitude);
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
-    
+
 }

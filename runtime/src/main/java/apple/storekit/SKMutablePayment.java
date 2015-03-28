@@ -16,11 +16,9 @@ import apple.uikit.*;
 import apple.accounts.*;
 
 
-
 /**
  * @since Available in iOS 3.0 and later.
  */
-
 @Library("StoreKit/StoreKit.h") @Mapping("SKMutablePayment")
 public class SKMutablePayment 
     extends SKPayment 
@@ -30,7 +28,7 @@ public class SKMutablePayment
     
     @Mapping("init")
     public SKMutablePayment() { }
-    
+
     
     /**
      * @since Available in iOS 7.0 and later.
@@ -72,9 +70,9 @@ public class SKMutablePayment
      */
     @Mapping("setRequestData:")
     public native void setRequestData(NSData v);
+
     
     
-    
-    
-    
+
+
 }

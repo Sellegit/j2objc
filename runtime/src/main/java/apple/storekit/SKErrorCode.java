@@ -16,9 +16,6 @@ import apple.uikit.*;
 import apple.accounts.*;
 
 
-
-
-
 @Library("StoreKit/StoreKit.h")
 @Mapping("SKErrorCode")
 public final class SKErrorCode extends ObjCEnum {
@@ -35,6 +32,6 @@ public final class SKErrorCode extends ObjCEnum {
     public static final long PaymentNotAllowed = 4L;
     @GlobalConstant("SKErrorStoreProductNotAvailable")
     public static final long StoreProductNotAvailable = 5L;
-    
+
 
 }

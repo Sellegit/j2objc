@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 2.0 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UIResponder")
 public class UIResponder 
     extends NSObject 
@@ -33,7 +31,7 @@ public class UIResponder
     
     @Mapping("init")
     public UIResponder() { }
-    
+
     
     /**
      * @since Available in iOS 3.0 and later.
@@ -85,7 +83,7 @@ public class UIResponder
      */
     @Mapping("setUserActivity:")
     public native void setUserActivity(NSUserActivity v);
-    
+
     
     
     @Mapping("nextResponder")
@@ -158,5 +156,5 @@ public class UIResponder
      */
     @Mapping("restoreUserActivityState:")
     public native void restoreUserActivityState(NSUserActivity activity);
-    
+
 }

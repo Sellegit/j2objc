@@ -19,11 +19,9 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 3.0 and later.
  */
-
 @Library("Foundation/Foundation.h") @Mapping("NSPredicate")
 public class NSPredicate 
     extends NSObject 
@@ -33,11 +31,11 @@ public class NSPredicate
     
     @Mapping("init")
     public NSPredicate() { }
-    
+
     
     @Mapping("predicateFormat")
     public native String getPredicateFormat();
-    
+
     
     
     @Mapping("predicateWithSubstitutionVariables:")
@@ -65,5 +63,5 @@ public class NSPredicate
     public static native NSPredicate create(Todo block);
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
-    
+
 }

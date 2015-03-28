@@ -14,9 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
-
-
 @Library("HomeKit/HomeKit.h")
 @Mapping("HMErrorCode")
 public final class HMErrorCode extends ObjCEnum {
@@ -181,6 +178,6 @@ public final class HMErrorCode extends ObjCEnum {
     public static final long AddAccessoryFailed = 79L;
     @GlobalConstant("HMErrorCodeMissingEntitlement")
     public static final long MissingEntitlement = 80L;
-    
+
 
 }

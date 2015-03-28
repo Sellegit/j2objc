@@ -18,9 +18,6 @@ import apple.coreanimation.*;
 import apple.corevideo.*;
 
 
-
-
-
 @Library("CoreMedia/CoreMedia.h")
 @Mapping("CMBlockBufferFlag")
 public final class CMBlockBufferFlag extends ObjCEnum {
@@ -33,6 +30,6 @@ public final class CMBlockBufferFlag extends ObjCEnum {
     public static final long DontOptimizeDepth = 4L;
     @GlobalConstant("kCMBlockBufferPermitEmptyReferenceFlag")
     public static final long PermitEmptyReference = 8L;
-    
+
 
 }

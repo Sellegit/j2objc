@@ -13,7 +13,6 @@ import apple.coregraphics.*;
 import apple.coreservices.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("ImageIO/ImageIO.h")
@@ -181,5 +180,5 @@ public class CGImageProperties
      */
     @GlobalConstant("kCGImagePropertyProfileName")
     public static native CFString ProfileNameKey();
-    
+
 }

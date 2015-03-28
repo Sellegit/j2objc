@@ -20,11 +20,9 @@ import apple.spritekit.*;
 import apple.opengles.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("SceneKit/SceneKit.h")
 @Mapping("SCNChamferMode")
 public final class SCNChamferMode extends ObjCEnum {
@@ -35,6 +33,6 @@ public final class SCNChamferMode extends ObjCEnum {
     public static final long Front = 1L;
     @GlobalConstant("SCNChamferModeBack")
     public static final long Back = 2L;
-    
+
 
 }

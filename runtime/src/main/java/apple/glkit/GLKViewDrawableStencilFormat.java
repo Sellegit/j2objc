@@ -17,11 +17,9 @@ import apple.uikit.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 5.0 and later.
  */
-
 @Library("GLKit/GLKit.h")
 @Mapping("GLKViewDrawableStencilFormat")
 public final class GLKViewDrawableStencilFormat extends ObjCEnum {
@@ -30,6 +28,6 @@ public final class GLKViewDrawableStencilFormat extends ObjCEnum {
     public static final long None = 0L;
     @GlobalConstant("GLKViewDrawableStencilFormat8")
     public static final long _8 = 1L;
-    
+
 
 }

@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h") @Mapping("AVAudioEngine")
 public class AVAudioEngine 
     extends NSObject 
@@ -33,7 +31,7 @@ public class AVAudioEngine
     
     
     public AVAudioEngine() {}
-    
+
     
     @Mapping("musicSequence")
     public native OpaqueMusicSequence getMusicSequence();
@@ -47,7 +45,7 @@ public class AVAudioEngine
     public native AVAudioMixerNode getMainMixerNode();
     @Mapping("isRunning")
     public native boolean isRunning();
-    
+
     
     
     /**
@@ -55,7 +53,7 @@ public class AVAudioEngine
      */
     @GlobalConstant("AVAudioEngineConfigurationChangeNotification")
     public static native NSString ConfigurationChangeNotification();
-    
+
     @Mapping("attachNode:")
     public native void attachNode(AVAudioNode node);
     @Mapping("detachNode:")
@@ -82,5 +80,5 @@ public class AVAudioEngine
     public native void reset();
     @Mapping("stop")
     public native void stop();
-    
+
 }

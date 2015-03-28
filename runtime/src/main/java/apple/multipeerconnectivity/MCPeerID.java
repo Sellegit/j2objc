@@ -16,11 +16,9 @@ import apple.uikit.*;
 import apple.security.*;
 
 
-
 /**
  * @since Available in iOS 7.0 and later.
  */
-
 @Library("MultipeerConnectivity/MultipeerConnectivity.h") @Mapping("MCPeerID")
 public class MCPeerID 
     extends NSObject 
@@ -32,14 +30,14 @@ public class MCPeerID
     public MCPeerID(String myDisplayName) { }
     @Mapping("init")
     public MCPeerID() { }
-    
+
     
     @Mapping("displayName")
     public native String getDisplayName();
-    
+
     
     
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
-    
+
 }

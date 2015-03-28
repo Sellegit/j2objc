@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h")
 @Mapping("AVAudioEnvironmentDistanceAttenuationModel")
 public final class AVAudioEnvironmentDistanceAttenuationModel extends ObjCEnum {
@@ -35,6 +33,6 @@ public final class AVAudioEnvironmentDistanceAttenuationModel extends ObjCEnum {
     public static final long Inverse = 2L;
     @GlobalConstant("AVAudioEnvironmentDistanceAttenuationModelLinear")
     public static final long Linear = 3L;
-    
+
 
 }

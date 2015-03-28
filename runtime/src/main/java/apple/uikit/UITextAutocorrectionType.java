@@ -19,9 +19,6 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h")
 @Mapping("UITextAutocorrectionType")
 public final class UITextAutocorrectionType extends ObjCEnum {
@@ -32,6 +29,6 @@ public final class UITextAutocorrectionType extends ObjCEnum {
     public static final long No = 1L;
     @GlobalConstant("UITextAutocorrectionTypeYes")
     public static final long Yes = 2L;
-    
+
 
 }

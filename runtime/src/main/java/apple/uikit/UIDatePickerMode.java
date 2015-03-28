@@ -19,9 +19,6 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h")
 @Mapping("UIDatePickerMode")
 public final class UIDatePickerMode extends ObjCEnum {
@@ -34,6 +31,6 @@ public final class UIDatePickerMode extends ObjCEnum {
     public static final long DateAndTime = 2L;
     @GlobalConstant("UIDatePickerModeCountDownTimer")
     public static final long CountDownTimer = 3L;
-    
+
 
 }

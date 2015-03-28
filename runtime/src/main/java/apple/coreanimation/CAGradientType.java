@@ -16,7 +16,6 @@ import apple.coreimage.*;
 import apple.coretext.*;
 import apple.opengles.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("QuartzCore/QuartzCore.h")
@@ -34,5 +33,5 @@ public class CAGradientType
      */
     @GlobalConstant("kCAGradientLayerAxial")
     public static native NSString AxialValue();
-    
+
 }

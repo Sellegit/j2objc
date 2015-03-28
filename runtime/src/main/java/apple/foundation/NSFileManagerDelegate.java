@@ -19,17 +19,14 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h") @Mapping("NSFileManagerDelegate")
 public interface NSFileManagerDelegate 
     extends NSObjectProtocol {
 
     
     
-    
-    
+
+
     
     @Mapping("fileManager:shouldCopyItemAtPath:toPath:")
     boolean shouldCopyItemAtPath(NSFileManager fileManager, String srcPath, String dstPath);
@@ -87,7 +84,7 @@ public interface NSFileManagerDelegate
      */
     @Mapping("fileManager:shouldProceedAfterError:removingItemAtURL:")
     boolean shouldProceedRemovingItemAtURL(NSFileManager fileManager, NSError error, NSURL URL);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

@@ -20,9 +20,6 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
-
-
 @Library("AVFoundation/AVFoundation.h")
 @Mapping("AVAudioQuality")
 public final class AVAudioQuality extends ObjCEnum {
@@ -37,6 +34,6 @@ public final class AVAudioQuality extends ObjCEnum {
     public static final long High = 96L;
     @GlobalConstant("AVAudioQualityMax")
     public static final long Max = 127L;
-    
+
 
 }

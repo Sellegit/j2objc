@@ -16,11 +16,9 @@ import apple.uikit.*;
 import apple.addressbook.*;
 
 
-
 /**
  * @since Available in iOS 6.0 and later.
  */
-
 @Library("PassKit/PassKit.h") @Mapping("PKAddPassesViewController")
 public class PKAddPassesViewController 
     extends UIViewController 
@@ -39,13 +37,13 @@ public class PKAddPassesViewController
     public PKAddPassesViewController(String nibNameOrNil, NSBundle nibBundleOrNil) { }
     @Mapping("init")
     public PKAddPassesViewController() { }
-    
+
     
     @Mapping("delegate")
     public native PKAddPassesViewControllerDelegate getDelegate();
     @Mapping("setDelegate:")
     public native void setDelegate(PKAddPassesViewControllerDelegate v);
-    
+
     
     
     /**
@@ -53,5 +51,5 @@ public class PKAddPassesViewController
      */
     @Mapping("canAddPasses")
     public static native boolean canAddPasses();
-    
+
 }

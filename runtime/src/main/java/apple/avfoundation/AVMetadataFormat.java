@@ -19,7 +19,6 @@ import apple.coremedia.*;
 import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("AVFoundation/AVFoundation.h")
@@ -62,5 +61,5 @@ public class AVMetadataFormat
      */
     @GlobalConstant("AVMetadataFormatHLSMetadata")
     public static native NSString HLSMetadataValue();
-    
+
 }

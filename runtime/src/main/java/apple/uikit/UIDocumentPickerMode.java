@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("UIKit/UIKit.h")
 @Mapping("UIDocumentPickerMode")
 public final class UIDocumentPickerMode extends ObjCEnum {
@@ -36,6 +34,6 @@ public final class UIDocumentPickerMode extends ObjCEnum {
     public static final long ExportToService = 2L;
     @GlobalConstant("UIDocumentPickerModeMoveToService")
     public static final long MoveToService = 3L;
-    
+
 
 }

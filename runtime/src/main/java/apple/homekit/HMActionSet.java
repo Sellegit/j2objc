@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("HomeKit/HomeKit.h") @Mapping("HMActionSet")
 public class HMActionSet 
     extends NSObject 
@@ -27,7 +25,7 @@ public class HMActionSet
     
     
     public HMActionSet() {}
-    
+
     
     @Mapping("name")
     public native String getName();
@@ -35,7 +33,7 @@ public class HMActionSet
     public native NSArray<HMAction> getActions();
     @Mapping("isExecuting")
     public native boolean isExecuting();
-    
+
     
     
     @Mapping("updateName:completionHandler:")
@@ -44,5 +42,5 @@ public class HMActionSet
     public native void addAction(HMAction action, @Block VoidBlock1<NSError> completion);
     @Mapping("removeAction:completionHandler:")
     public native void removeAction(HMAction action, @Block VoidBlock1<NSError> completion);
-    
+
 }

@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 import apple.uikit.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -25,13 +24,13 @@ public abstract class NCWidgetProvidingAdapter
     
     
     
-    
-    
+
+
     
     
     @NotImplemented("widgetPerformUpdateWithCompletionHandler:")
     public void performUpdate(@Block VoidBlock1<NCUpdateResult> completionHandler) { throw new UnsupportedOperationException(); }
     @NotImplemented("widgetMarginInsetsForProposedMarginInsets:")
     public UIEdgeInsets getMarginInsetsForProposedInsets(UIEdgeInsets defaultMarginInsets) { throw new UnsupportedOperationException(); }
-    
+
 }

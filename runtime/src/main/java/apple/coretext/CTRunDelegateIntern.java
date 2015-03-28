@@ -13,7 +13,6 @@ import apple.coregraphics.*;
 import apple.coreservices.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Mapping("CTRunDelegateRef") @Library("CoreText/CoreText.h")
@@ -24,7 +23,7 @@ import apple.foundation.*;
     
     
     protected CTRunDelegateIntern() {}
-    
+
     
     
     
@@ -43,5 +42,5 @@ import apple.foundation.*;
      */
     @GlobalFunction("CTRunDelegateGetRefCon")
     public static native @Pointer long getRefCon(CTRunDelegateIntern runDelegate);
-    
+
 }

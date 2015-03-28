@@ -19,9 +19,6 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h")
 @Mapping("UITextAutocapitalizationType")
 public final class UITextAutocapitalizationType extends ObjCEnum {
@@ -34,6 +31,6 @@ public final class UITextAutocapitalizationType extends ObjCEnum {
     public static final long Sentences = 2L;
     @GlobalConstant("UITextAutocapitalizationTypeAllCharacters")
     public static final long AllCharacters = 3L;
-    
+
 
 }

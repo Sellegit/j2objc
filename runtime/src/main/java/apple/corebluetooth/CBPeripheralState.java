@@ -15,11 +15,9 @@ import apple.foundation.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 7.0 and later.
  */
-
 @Library("CoreBluetooth/CoreBluetooth.h")
 @Mapping("CBPeripheralState")
 public final class CBPeripheralState extends ObjCEnum {
@@ -30,6 +28,6 @@ public final class CBPeripheralState extends ObjCEnum {
     public static final long Connecting = 1L;
     @GlobalConstant("CBPeripheralStateConnected")
     public static final long Connected = 2L;
-    
+
 
 }

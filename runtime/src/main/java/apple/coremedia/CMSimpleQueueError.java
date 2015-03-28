@@ -18,9 +18,6 @@ import apple.coreanimation.*;
 import apple.corevideo.*;
 
 
-
-
-
 @Library("CoreMedia/CoreMedia.h")
 @Mapping("CMSimpleQueueError")
 public final class CMSimpleQueueError extends ObjCEnum {
@@ -33,6 +30,6 @@ public final class CMSimpleQueueError extends ObjCEnum {
     public static final long ParameterOutOfRange = -12772L;
     @GlobalConstant("kCMSimpleQueueError_QueueIsFull")
     public static final long QueueIsFull = -12773L;
-    
+
 
 }

@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h") @Mapping("NSMachPort")
 public class NSMachPort 
     extends NSPort 
@@ -40,11 +37,11 @@ public class NSMachPort
     public NSMachPort(NSCoder aDecoder) { }
     @Mapping("init")
     public NSMachPort() { }
-    
+
     
     @Mapping("machPort")
     public native int getMachPort();
-    
+
     
     
     @Mapping("setDelegate:")
@@ -62,5 +59,5 @@ public class NSMachPort
      */
     @Mapping("portWithMachPort:options:")
     public static native NSPort create(int machPort, @MachineSizedUInt long f);
-    
+
 }

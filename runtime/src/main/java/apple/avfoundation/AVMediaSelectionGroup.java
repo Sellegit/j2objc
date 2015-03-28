@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 5.0 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h") @Mapping("AVMediaSelectionGroup")
 public class AVMediaSelectionGroup 
     extends NSObject 
@@ -34,7 +32,7 @@ public class AVMediaSelectionGroup
     
     @Mapping("init")
     public AVMediaSelectionGroup() { }
-    
+
     
     @Mapping("options")
     public native NSArray<AVMediaSelectionOption> getOptions();
@@ -45,7 +43,7 @@ public class AVMediaSelectionGroup
     public native AVMediaSelectionOption getDefaultOption();
     @Mapping("allowsEmptySelection")
     public native boolean allowsEmptySelection();
-    
+
     
     
     @Mapping("mediaSelectionOptionWithPropertyList:")
@@ -65,5 +63,5 @@ public class AVMediaSelectionGroup
     public static native NSArray<AVMediaSelectionOption> filterMediaSelectionOptionsWithoutMediaCharacteristics(NSArray<?> mediaSelectionOptions, NSArray<?> mediaCharacteristics);
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
-    
+
 }

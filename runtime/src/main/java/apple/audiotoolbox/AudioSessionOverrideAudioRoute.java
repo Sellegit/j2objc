@@ -17,9 +17,6 @@ import apple.coreaudio.*;
 import apple.coremedia.*;
 
 
-
-
-
 @Library("AudioToolbox/AudioToolbox.h")
 @Mapping("AudioSessionOverrideAudioRoute")
 public final class AudioSessionOverrideAudioRoute extends ObjCEnum {
@@ -28,6 +25,6 @@ public final class AudioSessionOverrideAudioRoute extends ObjCEnum {
     public static final long None = 0L;
     @GlobalConstant("kAudioSessionOverrideAudioRoute_Speaker")
     public static final long Speaker = 1936747378L;
-    
+
 
 }

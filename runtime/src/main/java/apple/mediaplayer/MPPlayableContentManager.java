@@ -15,11 +15,9 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
 /**
  * @since Available in iOS 7.1 and later.
  */
-
 @Library("MediaPlayer/MediaPlayer.h") @Mapping("MPPlayableContentManager")
 public class MPPlayableContentManager 
     extends NSObject 
@@ -29,7 +27,7 @@ public class MPPlayableContentManager
     
     @Mapping("init")
     public MPPlayableContentManager() { }
-    
+
     
     @Mapping("dataSource")
     public native MPPlayableContentDataSource getDataSource();
@@ -39,7 +37,7 @@ public class MPPlayableContentManager
     public native MPPlayableContentDelegate getDelegate();
     @Mapping("setDelegate:")
     public native void setDelegate(MPPlayableContentDelegate v);
-    
+
     
     
     @Mapping("reloadData")
@@ -50,5 +48,5 @@ public class MPPlayableContentManager
     public native void endUpdates();
     @Mapping("sharedContentManager")
     public static native MPPlayableContentManager getSharedContentManager();
-    
+
 }

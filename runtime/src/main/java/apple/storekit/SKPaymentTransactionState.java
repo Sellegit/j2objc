@@ -16,11 +16,9 @@ import apple.uikit.*;
 import apple.accounts.*;
 
 
-
 /**
  * @since Available in iOS 3.0 and later.
  */
-
 @Library("StoreKit/StoreKit.h")
 @Mapping("SKPaymentTransactionState")
 public final class SKPaymentTransactionState extends ObjCEnum {
@@ -38,6 +36,6 @@ public final class SKPaymentTransactionState extends ObjCEnum {
      */
     @GlobalConstant("SKPaymentTransactionStateDeferred")
     public static final long Deferred = 4L;
-    
+
 
 }

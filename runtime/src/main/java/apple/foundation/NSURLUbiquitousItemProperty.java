@@ -18,7 +18,6 @@ import apple.coremedia.*;
 import apple.security.*;
 import apple.dispatch.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("Foundation/Foundation.h")
@@ -102,5 +101,5 @@ public class NSURLUbiquitousItemProperty
      */
     @GlobalConstant("NSURLUbiquitousItemContainerDisplayNameKey")
     public static native NSString ContainerDisplayNameValue();
-    
+
 }

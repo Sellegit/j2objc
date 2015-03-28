@@ -19,17 +19,15 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 5.0 and later.
  */
-
 @Library("Foundation/Foundation.h")
 @Mapping("NSJSONWritingOptions")
 public final class NSJSONWritingOptions extends ObjCEnum {
     
     @GlobalConstant("NSJSONWritingPrettyPrinted")
     public static final long PrettyPrinted = 1L;
-    
+
 
 }

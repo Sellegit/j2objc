@@ -15,7 +15,6 @@ import apple.foundation.*;
 import apple.uikit.*;
 import apple.accounts.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("StoreKit/StoreKit.h")
@@ -33,5 +32,5 @@ public class SKError
      */
     @GlobalConstant("SKErrorDomain")
     public static native String getClassDomain();
-    
+
 }

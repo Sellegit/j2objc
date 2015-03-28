@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h") @Mapping("NSScanner")
 public class NSScanner 
     extends NSObject 
@@ -33,7 +30,7 @@ public class NSScanner
     public NSScanner(String string) { }
     @Mapping("init")
     public NSScanner() { }
-    
+
     
     @Mapping("string")
     public native String getString();
@@ -55,7 +52,7 @@ public class NSScanner
     public native void setLocale(NSLocale v);
     @Mapping("isAtEnd")
     public native boolean isAtEnd();
-    
+
     
     
     @Mapping("scanInt:")
@@ -101,5 +98,5 @@ public class NSScanner
     public native boolean scanDecimal(NSDecimal dcm);
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
-    
+
 }

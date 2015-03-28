@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 4.0 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h") @Mapping("AVCaptureAudioChannel")
 public class AVCaptureAudioChannel 
     extends NSObject 
@@ -34,15 +32,15 @@ public class AVCaptureAudioChannel
     
     @Mapping("init")
     public AVCaptureAudioChannel() { }
-    
+
     
     @Mapping("averagePowerLevel")
     public native float getAveragePowerLevel();
     @Mapping("peakHoldLevel")
     public native float getPeakHoldLevel();
+
     
     
-    
-    
-    
+
+
 }

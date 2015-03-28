@@ -15,9 +15,6 @@ import apple.dispatch.*;
 import apple.foundation.*;
 
 
-
-
-
 @Library("CoreFoundation/CoreFoundation.h")
 @Mapping("CFStringTokenizerTokenType")
 public final class CFStringTokenizerTokenType extends ObjCEnum {
@@ -36,6 +33,6 @@ public final class CFStringTokenizerTokenType extends ObjCEnum {
     public static final long HasNonLettersMask = 16L;
     @GlobalConstant("kCFStringTokenizerTokenIsCJWordMask")
     public static final long IsCJWordMask = 32L;
-    
+
 
 }

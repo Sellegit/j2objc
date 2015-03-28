@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 6.0 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UICollectionViewLayout")
 public class UICollectionViewLayout 
     extends NSObject 
@@ -33,11 +31,11 @@ public class UICollectionViewLayout
     
     @Mapping("init")
     public UICollectionViewLayout() { }
-    
+
     
     @Mapping("collectionView")
     public native UICollectionView getCollectionView();
-    
+
     
     
     @Mapping("invalidateLayout")
@@ -142,5 +140,5 @@ public class UICollectionViewLayout
     public native NSArray<NSIndexPath> getIndexPathsToInsertForDecorationView(String elementKind);
     @Mapping("encodeWithCoder:")
     public native void encode(NSCoder aCoder);
-    
+
 }

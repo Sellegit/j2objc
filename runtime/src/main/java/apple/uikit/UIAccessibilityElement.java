@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 3.0 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UIAccessibilityElement")
 public class UIAccessibilityElement 
     extends NSObject 
@@ -35,7 +33,7 @@ public class UIAccessibilityElement
     public UIAccessibilityElement(Object container) { }
     @Mapping("init")
     public UIAccessibilityElement() { }
-    
+
     
     @Mapping("accessibilityContainer")
     public native UIAccessibilityContainer getAccessibilityContainer();
@@ -75,9 +73,9 @@ public class UIAccessibilityElement
      */
     @Mapping("setAccessibilityIdentifier:")
     public native void setAccessibilityIdentifier(String v);
+
     
     
-    
-    
-    
+
+
 }

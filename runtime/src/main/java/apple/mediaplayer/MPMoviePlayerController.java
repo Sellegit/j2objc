@@ -15,11 +15,9 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
 /**
  * @since Available in iOS 2.0 and later.
  */
-
 @Library("MediaPlayer/MediaPlayer.h") @Mapping("MPMoviePlayerController")
 public class MPMoviePlayerController 
     extends NSObject 
@@ -31,7 +29,7 @@ public class MPMoviePlayerController
     public MPMoviePlayerController(NSURL url) { }
     @Mapping("init")
     public MPMoviePlayerController() { }
-    
+
     
     @Mapping("contentURL")
     public native NSURL getContentURL();
@@ -144,7 +142,7 @@ public class MPMoviePlayerController
     public native float getCurrentPlaybackRate();
     @Mapping("setCurrentPlaybackRate:")
     public native void setCurrentPlaybackRate(float v);
-    
+
     
     
     @GlobalConstant("MPMoviePlayerScalingModeDidChangeNotification")
@@ -236,7 +234,7 @@ public class MPMoviePlayerController
      */
     @GlobalConstant("MPMoviePlayerTimedMetadataUserInfoKey")
     public static native NSString TimedMetadataUserInfoKey();
-    
+
     @Mapping("setFullscreen:animated:")
     public native void setFullscreen(boolean fullscreen, boolean animated);
     /**
@@ -270,5 +268,5 @@ public class MPMoviePlayerController
     public native void beginSeekingBackward();
     @Mapping("endSeeking")
     public native void endSeeking();
-    
+
 }

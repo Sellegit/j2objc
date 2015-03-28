@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 import apple.imageio.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("AssetsLibrary/AssetsLibrary.h")
@@ -42,5 +41,5 @@ public class ALAssetType
      */
     @GlobalConstant("ALAssetTypeUnknown")
     public static native NSString UnknownValue();
-    
+
 }

@@ -17,9 +17,6 @@ import apple.coreaudio.*;
 import apple.coremedia.*;
 
 
-
-
-
 @Library("AudioToolbox/AudioToolbox.h")
 @Mapping("AudioBalanceFadeType")
 public final class AudioBalanceFadeType extends ObjCEnum {
@@ -28,6 +25,6 @@ public final class AudioBalanceFadeType extends ObjCEnum {
     public static final long MaxUnityGain = 0L;
     @GlobalConstant("kAudioBalanceFadeType_EqualPower")
     public static final long EqualPower = 1L;
-    
+
 
 }

@@ -13,7 +13,6 @@ import apple.coregraphics.*;
 import apple.coreservices.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -32,9 +31,9 @@ public abstract class NSFetchedResultsSectionInfoAdapter
     public @MachineSizedUInt long getNumberOfObjects() { throw new UnsupportedOperationException(); }
     @NotImplemented("objects")
     public NSArray<NSManagedObject> getObjects() { throw new UnsupportedOperationException(); }
+
     
     
-    
-    
-    
+
+
 }

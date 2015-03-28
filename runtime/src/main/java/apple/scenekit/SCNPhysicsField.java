@@ -20,9 +20,6 @@ import apple.spritekit.*;
 import apple.opengles.*;
 
 
-
-
-
 @Library("SceneKit/SceneKit.h") @Mapping("SCNPhysicsField")
 public class SCNPhysicsField 
     extends NSObject 
@@ -32,7 +29,7 @@ public class SCNPhysicsField
     
     @Mapping("init")
     public SCNPhysicsField() { }
-    
+
     
     @Mapping("strength")
     public native @MachineSizedFloat double getStrength();
@@ -78,7 +75,7 @@ public class SCNPhysicsField
     public native @MachineSizedUInt long getCategoryBitMask();
     @Mapping("setCategoryBitMask:")
     public native void setCategoryBitMask(@MachineSizedUInt long v);
-    
+
     
     
     @Mapping("dragField")
@@ -101,5 +98,5 @@ public class SCNPhysicsField
     public static native SCNPhysicsField createMagneticField();
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
-    
+
 }

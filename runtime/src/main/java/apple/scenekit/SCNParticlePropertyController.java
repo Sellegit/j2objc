@@ -20,9 +20,6 @@ import apple.spritekit.*;
 import apple.opengles.*;
 
 
-
-
-
 @Library("SceneKit/SceneKit.h") @Mapping("SCNParticlePropertyController")
 public class SCNParticlePropertyController 
     extends NSObject 
@@ -32,7 +29,7 @@ public class SCNParticlePropertyController
     
     @Mapping("init")
     public SCNParticlePropertyController() { }
-    
+
     
     @Mapping("animation")
     public native CAAnimation getAnimation();
@@ -58,12 +55,12 @@ public class SCNParticlePropertyController
     public native SCNParticleProperty getInputProperty();
     @Mapping("setInputProperty:")
     public native void setInputProperty(SCNParticleProperty v);
-    
+
     
     
     @Mapping("controllerWithAnimation:")
     public static native SCNParticlePropertyController create(CAAnimation animation);
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
-    
+
 }

@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 3.2 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UITapGestureRecognizer")
 public class UITapGestureRecognizer 
     extends UIGestureRecognizer 
@@ -35,7 +33,7 @@ public class UITapGestureRecognizer
     public UITapGestureRecognizer(Object target, Selector action) { }
     @Mapping("init")
     public UITapGestureRecognizer() { }
-    
+
     
     @Mapping("numberOfTapsRequired")
     public native @MachineSizedUInt long getNumberOfTapsRequired();
@@ -45,9 +43,9 @@ public class UITapGestureRecognizer
     public native @MachineSizedUInt long getNumberOfTouchesRequired();
     @Mapping("setNumberOfTouchesRequired:")
     public native void setNumberOfTouchesRequired(@MachineSizedUInt long v);
+
     
     
-    
-    
-    
+
+
 }

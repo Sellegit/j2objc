@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h") @Mapping("NSOutputStream")
 public class NSOutputStream 
     extends NSStream 
@@ -38,14 +35,14 @@ public class NSOutputStream
     public NSOutputStream(NSURL url, boolean shouldAppend) { }
     @Mapping("initToFileAtPath:append:")
     public NSOutputStream(String path, boolean shouldAppend) { }
-    
+
     
     @Mapping("hasSpaceAvailable")
     public native boolean hasSpaceAvailable();
-    
+
     
     
     @Mapping("write:maxLength:")
     public native @MachineSizedSInt long write(Todo buffer, @MachineSizedUInt long len);
-    
+
 }

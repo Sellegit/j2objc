@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 6.0 and later.
  */
-
 @Library("UIKit/UIKit.h")
 @Mapping("NSUnderlineStyle")
 public final class NSUnderlineStyle extends ObjCEnum {
@@ -72,6 +70,6 @@ public final class NSUnderlineStyle extends ObjCEnum {
      */
     @GlobalConstant("NSUnderlineByWord")
     public static final long ByWord = 32768L;
-    
+
 
 }

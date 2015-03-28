@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.dispatch.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Mapping("CFArrayRef") @Library("CoreFoundation/CoreFoundation.h")
@@ -25,13 +24,13 @@ public class CFArray
     
     
     protected CFArray() {}
-    
+
     
     
     
     @GlobalConstant("kCFTypeArrayCallBacks")
     public static native CFArrayCallBacks getTypeCallBacks();
-    
+
     @GlobalFunction("CFArrayGetTypeID")
     public static native @MachineSizedUInt long getClassTypeID();
     @GlobalFunction("CFArrayCreate")
@@ -56,5 +55,5 @@ public class CFArray
     public static native @MachineSizedSInt long getLastIndexOfValue(CFArray theArray, CFRange range, Todo value);
     @GlobalFunction("CFArrayBSearchValues")
     public static native @MachineSizedSInt long bSearchValues(CFArray theArray, CFRange range, Todo value, FunctionPtr comparator, Todo context);
-    
+
 }

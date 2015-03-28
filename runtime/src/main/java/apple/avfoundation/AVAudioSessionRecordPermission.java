@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h")
 @Mapping("AVAudioSessionRecordPermission")
 public final class AVAudioSessionRecordPermission extends ObjCEnum {
@@ -35,6 +33,6 @@ public final class AVAudioSessionRecordPermission extends ObjCEnum {
     public static final long Denied = 1684369017L;
     @GlobalConstant("AVAudioSessionRecordPermissionGranted")
     public static final long Granted = 1735552628L;
-    
+
 
 }

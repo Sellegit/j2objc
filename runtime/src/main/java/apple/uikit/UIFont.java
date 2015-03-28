@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 2.0 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UIFont")
 public class UIFont 
     extends NSObject 
@@ -33,7 +31,7 @@ public class UIFont
     
     @Mapping("init")
     public UIFont() { }
-    
+
     
     @Mapping("familyName")
     public native String getFamilyName();
@@ -56,7 +54,7 @@ public class UIFont
     public native @MachineSizedFloat double getLineHeight();
     @Mapping("leading")
     public native @MachineSizedFloat double getLeading();
-    
+
     
     
     @Mapping("fontWithSize:")
@@ -103,5 +101,5 @@ public class UIFont
     public static native @MachineSizedFloat double getSystemFontSize();
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
-    
+
 }

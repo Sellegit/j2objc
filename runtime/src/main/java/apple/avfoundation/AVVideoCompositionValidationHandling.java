@@ -20,17 +20,14 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
-
-
 @Library("AVFoundation/AVFoundation.h") @Mapping("AVVideoCompositionValidationHandling")
 public interface AVVideoCompositionValidationHandling 
     extends NSObjectProtocol {
 
     
     
-    
-    
+
+
     
     /**
      * @since Available in iOS 5.0 and later.
@@ -52,7 +49,7 @@ public interface AVVideoCompositionValidationHandling
      */
     @Mapping("videoComposition:shouldContinueValidatingAfterFindingInvalidTrackIDInInstruction:layerInstruction:asset:")
     boolean shouldContinueValidatingAfterFindingInvalidTrackID(AVVideoComposition videoComposition, AVVideoCompositionInstruction videoCompositionInstruction, AVVideoCompositionLayerInstruction layerInstruction, AVAsset asset);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

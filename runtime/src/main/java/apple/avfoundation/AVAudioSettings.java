@@ -19,7 +19,6 @@ import apple.coremedia.*;
 import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("AVFoundation/AVFoundation.h")
@@ -54,5 +53,5 @@ public class AVAudioSettings
      */
     @GlobalConstant("AVChannelLayoutKey")
     public static native NSString ChannelLayoutKey();
-    
+
 }

@@ -16,24 +16,21 @@ import apple.uikit.*;
 import apple.accounts.*;
 
 
-
-
-
 @Library("StoreKit/StoreKit.h") @Mapping("SKStoreProductViewControllerDelegate")
 public interface SKStoreProductViewControllerDelegate 
     extends NSObjectProtocol {
 
     
     
-    
-    
+
+
     
     /**
      * @since Available in iOS 6.0 and later.
      */
     @Mapping("productViewControllerDidFinish:")
     void didFinish(SKStoreProductViewController viewController);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

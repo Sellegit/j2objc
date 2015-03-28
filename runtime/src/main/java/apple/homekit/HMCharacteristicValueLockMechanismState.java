@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("HomeKit/HomeKit.h")
 @Mapping("HMCharacteristicValueLockMechanismState")
 public final class HMCharacteristicValueLockMechanismState extends ObjCEnum {
@@ -31,6 +29,6 @@ public final class HMCharacteristicValueLockMechanismState extends ObjCEnum {
     public static final long Jammed = 2L;
     @GlobalConstant("HMCharacteristicValueLockMechanismStateUnknown")
     public static final long Unknown = 3L;
-    
+
 
 }

@@ -16,11 +16,9 @@ import apple.uikit.*;
 import apple.security.*;
 
 
-
 /**
  * @since Available in iOS 7.0 and later.
  */
-
 @Library("MultipeerConnectivity/MultipeerConnectivity.h") @Mapping("MCBrowserViewController")
 public class MCBrowserViewController 
     extends UIViewController 
@@ -36,7 +34,7 @@ public class MCBrowserViewController
     public MCBrowserViewController(String nibNameOrNil, NSBundle nibBundleOrNil) { }
     @Mapping("init")
     public MCBrowserViewController() { }
-    
+
     
     @Mapping("delegate")
     public native MCBrowserViewControllerDelegate getDelegate();
@@ -54,7 +52,7 @@ public class MCBrowserViewController
     public native @MachineSizedUInt long getMaximumNumberOfPeers();
     @Mapping("setMaximumNumberOfPeers:")
     public native void setMaximumNumberOfPeers(@MachineSizedUInt long v);
-    
+
     
     
     @Mapping("browser:foundPeer:withDiscoveryInfo:")
@@ -63,5 +61,5 @@ public class MCBrowserViewController
     public native void lostPeer(MCNearbyServiceBrowser browser, MCPeerID peerID);
     @Mapping("browser:didNotStartBrowsingForPeers:")
     public native void didNotStartBrowsing(MCNearbyServiceBrowser browser, NSError error);
-    
+
 }

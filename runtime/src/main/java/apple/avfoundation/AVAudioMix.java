@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 4.0 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h") @Mapping("AVAudioMix")
 public class AVAudioMix 
     extends NSObject 
@@ -34,14 +32,14 @@ public class AVAudioMix
     
     @Mapping("init")
     public AVAudioMix() { }
-    
+
     
     @Mapping("inputParameters")
     public native NSArray<AVAudioMixInputParameters> getInputParameters();
-    
+
     
     
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
-    
+
 }

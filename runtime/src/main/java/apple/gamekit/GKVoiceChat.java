@@ -15,11 +15,9 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
 /**
  * @since Available in iOS 4.1 and later.
  */
-
 @Library("GameKit/GameKit.h") @Mapping("GKVoiceChat")
 public class GKVoiceChat 
     extends NSObject 
@@ -29,7 +27,7 @@ public class GKVoiceChat
     
     @Mapping("init")
     public GKVoiceChat() { }
-    
+
     
     /**
      * @since Available in iOS 8.0 and later.
@@ -77,7 +75,7 @@ public class GKVoiceChat
     @Deprecated
     @Mapping("setPlayerStateUpdateHandler:")
     public native void setPlayerStateUpdateHandler(@Block VoidBlock2<String, GKVoiceChatPlayerState> v);
-    
+
     
     
     @Mapping("start")
@@ -98,5 +96,5 @@ public class GKVoiceChat
     @Deprecated
     @Mapping("setMute:forPlayer:")
     public native void setMuteForPlayer(boolean isMuted, String playerID);
-    
+
 }

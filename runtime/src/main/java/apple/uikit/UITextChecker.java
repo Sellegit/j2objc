@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 3.2 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UITextChecker")
 public class UITextChecker 
     extends NSObject 
@@ -33,10 +31,10 @@ public class UITextChecker
     
     @Mapping("init")
     public UITextChecker() { }
+
     
-    
-    
-    
+
+
     
     
     @Mapping("rangeOfMisspelledWordInString:range:startingAt:wrap:language:")
@@ -59,5 +57,5 @@ public class UITextChecker
     public static native void unlearnWord(String word);
     @Mapping("availableLanguages")
     public static native List<String> getAvailableLanguages();
-    
+
 }

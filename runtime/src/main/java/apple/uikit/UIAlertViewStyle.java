@@ -19,9 +19,6 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h")
 @Mapping("UIAlertViewStyle")
 public final class UIAlertViewStyle extends ObjCEnum {
@@ -34,6 +31,6 @@ public final class UIAlertViewStyle extends ObjCEnum {
     public static final long PlainTextInput = 2L;
     @GlobalConstant("UIAlertViewStyleLoginAndPasswordInput")
     public static final long LoginAndPasswordInput = 3L;
-    
+
 
 }

@@ -17,11 +17,9 @@ import apple.uikit.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 6.1 and later.
  */
-
 @Library("MapKit/MapKit.h") @Mapping("MKLocalSearchResponse")
 public class MKLocalSearchResponse 
     extends NSObject 
@@ -31,15 +29,15 @@ public class MKLocalSearchResponse
     
     @Mapping("init")
     public MKLocalSearchResponse() { }
-    
+
     
     @Mapping("mapItems")
     public native NSArray<MKMapItem> getMapItems();
     @Mapping("boundingRegion")
     public native MKCoordinateRegion getBoundingRegion();
+
     
     
-    
-    
-    
+
+
 }

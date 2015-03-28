@@ -17,11 +17,9 @@ import apple.uikit.*;
 import apple.avfoundation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("Photos/Photos.h")
 @Mapping("PHVideoRequestOptionsVersion")
 public final class PHVideoRequestOptionsVersion extends ObjCEnum {
@@ -30,6 +28,6 @@ public final class PHVideoRequestOptionsVersion extends ObjCEnum {
     public static final long Current = 0L;
     @GlobalConstant("PHVideoRequestOptionsVersionOriginal")
     public static final long Original = 1L;
-    
+
 
 }

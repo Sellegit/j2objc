@@ -13,7 +13,6 @@ import apple.coregraphics.*;
 import apple.coreservices.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Mapping("CFNetDiagnosticRef") @Library("CFNetwork/CFNetwork.h")
@@ -24,7 +23,7 @@ public class CFNetDiagnostic
     
     
     protected CFNetDiagnostic() {}
-    
+
     
     
     
@@ -53,5 +52,5 @@ public class CFNetDiagnostic
      */
     @GlobalFunction("CFNetDiagnosticCopyNetworkStatusPassively")
     public static native CFNetDiagnosticStatus getNetworkStatusPassively(CFNetDiagnostic details, Todo description);
-    
+
 }

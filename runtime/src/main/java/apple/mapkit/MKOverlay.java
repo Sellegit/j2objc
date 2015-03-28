@@ -17,9 +17,6 @@ import apple.uikit.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("MapKit/MapKit.h") @Mapping("MKOverlay")
 public interface MKOverlay 
     extends MKAnnotation {
@@ -30,7 +27,7 @@ public interface MKOverlay
     CLLocationCoordinate2D getCoordinate();
     @Mapping("boundingMapRect")
     MKMapRect getBoundingMapRect();
-    
+
     
     @Mapping("intersectsMapRect:")
     boolean intersects(MKMapRect mapRect);
@@ -39,7 +36,7 @@ public interface MKOverlay
      */
     @Mapping("canReplaceMapContent")
     boolean canReplaceMapContent();
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

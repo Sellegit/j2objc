@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 import apple.dispatch.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("CoreBluetooth/CoreBluetooth.h")
@@ -25,11 +24,11 @@ public class CBError
     
     
     protected CBError() {}
-    
+
     
     
     
     @GlobalConstant("CBErrorDomain")
     public static native String getClassDomain();
-    
+
 }

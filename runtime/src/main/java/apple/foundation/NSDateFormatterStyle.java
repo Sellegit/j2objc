@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h")
 @Mapping("NSDateFormatterStyle")
 public final class NSDateFormatterStyle extends ObjCEnum {
@@ -36,6 +33,6 @@ public final class NSDateFormatterStyle extends ObjCEnum {
     public static final long Long = 3L;
     @GlobalConstant("NSDateFormatterFullStyle")
     public static final long Full = 4L;
-    
+
 
 }

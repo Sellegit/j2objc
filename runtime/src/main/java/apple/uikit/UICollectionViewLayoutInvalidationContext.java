@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 7.0 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UICollectionViewLayoutInvalidationContext")
 public class UICollectionViewLayoutInvalidationContext 
     extends NSObject 
@@ -33,7 +31,7 @@ public class UICollectionViewLayoutInvalidationContext
     
     @Mapping("init")
     public UICollectionViewLayoutInvalidationContext() { }
-    
+
     
     @Mapping("invalidateEverything")
     public native boolean invalidatesEverything();
@@ -74,7 +72,7 @@ public class UICollectionViewLayoutInvalidationContext
      */
     @Mapping("setContentSizeAdjustment:")
     public native void setContentSizeAdjustment(CGSize v);
-    
+
     
     
     /**
@@ -92,5 +90,5 @@ public class UICollectionViewLayoutInvalidationContext
      */
     @Mapping("invalidateDecorationElementsOfKind:atIndexPaths:")
     public native void invalidateDecorationElementsOfKind(String elementKind, NSArray<?> indexPaths);
-    
+
 }

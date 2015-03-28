@@ -14,9 +14,6 @@ import apple.coreservices.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Security/Security.h")
 @Mapping("SSLSessionState")
 public final class SSLSessionState extends ObjCEnum {
@@ -31,6 +28,6 @@ public final class SSLSessionState extends ObjCEnum {
     public static final long Closed = 3L;
     @GlobalConstant("kSSLAborted")
     public static final long Aborted = 4L;
-    
+
 
 }

@@ -17,9 +17,6 @@ import apple.coretext.*;
 import apple.opengles.*;
 
 
-
-
-
 @Library("QuartzCore/QuartzCore.h") @Mapping("CAEAGLLayer")
 public class CAEAGLLayer 
     extends CALayer 
@@ -33,15 +30,15 @@ public class CAEAGLLayer
     public CAEAGLLayer(Object layer) { }
     @Mapping("initWithCoder:")
     public CAEAGLLayer(NSCoder aDecoder) { }
-    
+
     
     @Mapping("drawableProperties")
     public native EAGLDrawableProperties getDrawableProperties();
     @Mapping("setDrawableProperties:")
     public native void setDrawableProperties(EAGLDrawableProperties v);
+
     
     
-    
-    
-    
+
+
 }

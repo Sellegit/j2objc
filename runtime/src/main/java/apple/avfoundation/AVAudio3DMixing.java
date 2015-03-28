@@ -20,9 +20,6 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
-
-
 @Library("AVFoundation/AVFoundation.h") @Mapping("AVAudio3DMixing")
 public interface AVAudio3DMixing 
     extends NSObjectProtocol {
@@ -53,10 +50,10 @@ public interface AVAudio3DMixing
     AVAudio3DPoint getPosition();
     @Mapping("setPosition:")
     void setPosition(AVAudio3DPoint v);
+
     
-    
-    
-    
+
+
     /*<adapter>*/
     /*</adapter>*/
 }

@@ -17,11 +17,9 @@ import apple.uikit.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 5.0 and later.
  */
-
 @Library("GLKit/GLKit.h") @Mapping("GLKEffectPropertyFog")
 public class GLKEffectPropertyFog 
     extends GLKEffectProperty 
@@ -31,7 +29,7 @@ public class GLKEffectPropertyFog
     
     @Mapping("init")
     public GLKEffectPropertyFog() { }
-    
+
     
     @Mapping("enabled")
     public native boolean isEnabled();
@@ -57,9 +55,9 @@ public class GLKEffectPropertyFog
     public native float getEnd();
     @Mapping("setEnd:")
     public native void setEnd(float v);
+
     
     
-    
-    
-    
+
+
 }

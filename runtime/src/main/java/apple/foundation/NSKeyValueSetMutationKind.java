@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h")
 @Mapping("NSKeyValueSetMutationKind")
 public final class NSKeyValueSetMutationKind extends ObjCEnum {
@@ -34,6 +31,6 @@ public final class NSKeyValueSetMutationKind extends ObjCEnum {
     public static final long Intersect = 3L;
     @GlobalConstant("NSKeyValueSetSetMutation")
     public static final long Set = 4L;
-    
+
 
 }

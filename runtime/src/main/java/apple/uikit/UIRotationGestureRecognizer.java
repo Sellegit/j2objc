@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 3.2 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UIRotationGestureRecognizer")
 public class UIRotationGestureRecognizer 
     extends UIGestureRecognizer 
@@ -35,7 +33,7 @@ public class UIRotationGestureRecognizer
     public UIRotationGestureRecognizer(Object target, Selector action) { }
     @Mapping("init")
     public UIRotationGestureRecognizer() { }
-    
+
     
     @Mapping("rotation")
     public native @MachineSizedFloat double getRotation();
@@ -43,9 +41,9 @@ public class UIRotationGestureRecognizer
     public native void setRotation(@MachineSizedFloat double v);
     @Mapping("velocity")
     public native @MachineSizedFloat double getVelocity();
+
     
     
-    
-    
-    
+
+
 }

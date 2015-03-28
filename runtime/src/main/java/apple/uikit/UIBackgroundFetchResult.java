@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 7.0 and later.
  */
-
 @Library("UIKit/UIKit.h")
 @Mapping("UIBackgroundFetchResult")
 public final class UIBackgroundFetchResult extends ObjCEnum {
@@ -34,6 +32,6 @@ public final class UIBackgroundFetchResult extends ObjCEnum {
     public static final long NoData = 1L;
     @GlobalConstant("UIBackgroundFetchResultFailed")
     public static final long Failed = 2L;
-    
+
 
 }

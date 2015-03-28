@@ -19,21 +19,18 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h") @Mapping("NSCopying")
 public interface NSCopying 
      {
 
     
     
-    
-    
+
+
     
     @Mapping("copyWithZone:")
     Object copyWithZone$(NSZone zone);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

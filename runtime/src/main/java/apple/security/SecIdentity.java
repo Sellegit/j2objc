@@ -13,7 +13,6 @@ import apple.coregraphics.*;
 import apple.coreservices.*;
 import apple.dispatch.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Mapping("SecIdentityRef") @Library("Security/Security.h")
@@ -24,7 +23,7 @@ public class SecIdentity
     
     
     protected SecIdentity() {}
-    
+
     
     
     
@@ -43,5 +42,5 @@ public class SecIdentity
      */
     @GlobalFunction("SecIdentityCopyPrivateKey")
     public static native int copyPrivateKey(SecIdentity identityRef, Todo privateKeyRef);
-    
+
 }

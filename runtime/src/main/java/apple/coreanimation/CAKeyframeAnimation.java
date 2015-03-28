@@ -17,9 +17,6 @@ import apple.coretext.*;
 import apple.opengles.*;
 
 
-
-
-
 @Library("QuartzCore/QuartzCore.h") @Mapping("CAKeyframeAnimation")
 public class CAKeyframeAnimation 
     extends CAPropertyAnimation 
@@ -31,7 +28,7 @@ public class CAKeyframeAnimation
     public CAKeyframeAnimation(NSCoder aDecoder) { }
     @Mapping("init")
     public CAKeyframeAnimation() { }
-    
+
     
     @Mapping("values")
     public native NSArray<NSObject> getValues();
@@ -69,9 +66,9 @@ public class CAKeyframeAnimation
     public native CAAnimationRotationMode getRotationMode();
     @Mapping("setRotationMode:")
     public native void setRotationMode(CAAnimationRotationMode v);
+
     
     
-    
-    
-    
+
+
 }

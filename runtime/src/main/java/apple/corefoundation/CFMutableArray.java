@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.dispatch.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Mapping("CFMutableArrayRef") @Library("CoreFoundation/CoreFoundation.h")
@@ -25,7 +24,7 @@ public class CFMutableArray
     
     
     protected CFMutableArray() {}
-    
+
     
     
     
@@ -51,5 +50,5 @@ public class CFMutableArray
     public static native void sortValues(CFMutableArray theArray, CFRange range, FunctionPtr comparator, Todo context);
     @GlobalFunction("CFArrayAppendArray")
     public static native void appendArray(CFMutableArray theArray, CFArray otherArray, CFRange otherRange);
-    
+
 }

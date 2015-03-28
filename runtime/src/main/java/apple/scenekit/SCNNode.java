@@ -20,9 +20,6 @@ import apple.spritekit.*;
 import apple.opengles.*;
 
 
-
-
-
 @Library("SceneKit/SceneKit.h") @Mapping("SCNNode")
 public class SCNNode 
     extends NSObject 
@@ -32,7 +29,7 @@ public class SCNNode
     
     @Mapping("init")
     public SCNNode() { }
-    
+
     
     @Mapping("name")
     public native String getName();
@@ -138,7 +135,7 @@ public class SCNNode
     public native void setCategoryBitMask(@MachineSizedUInt long v);
     @Mapping("particleSystems")
     public native NSArray<SCNParticleSystem> getParticleSystems();
-    
+
     
     
     @Mapping("addChildNode:")
@@ -219,5 +216,5 @@ public class SCNNode
     public native boolean getBoundingSphere(SCNVector3 center, Todo radius);
     @Mapping("setBoundingBoxMin:max:")
     public native void setBoundingBox(SCNVector3 min, SCNVector3 max);
-    
+
 }

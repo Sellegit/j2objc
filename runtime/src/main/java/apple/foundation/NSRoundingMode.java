@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h")
 @Mapping("NSRoundingMode")
 public final class NSRoundingMode extends ObjCEnum {
@@ -34,6 +31,6 @@ public final class NSRoundingMode extends ObjCEnum {
     public static final long Up = 2L;
     @GlobalConstant("NSRoundBankers")
     public static final long Bankers = 3L;
-    
+
 
 }

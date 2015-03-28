@@ -17,11 +17,9 @@ import apple.uikit.*;
 import apple.avfoundation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("Photos/Photos.h")
 @Mapping("PHAssetBurstSelectionType")
 public final class PHAssetBurstSelectionType extends ObjCEnum {
@@ -32,6 +30,6 @@ public final class PHAssetBurstSelectionType extends ObjCEnum {
     public static final long AutoPick = 1L;
     @GlobalConstant("PHAssetBurstSelectionTypeUserPick")
     public static final long UserPick = 2L;
-    
+
 
 }

@@ -16,17 +16,14 @@ import apple.uikit.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("ExternalAccessory/ExternalAccessory.h") @Mapping("EAWiFiUnconfiguredAccessoryBrowserDelegate")
 public interface EAWiFiUnconfiguredAccessoryBrowserDelegate 
     extends NSObjectProtocol {
 
     
     
-    
-    
+
+
     
     /**
      * @since Available in iOS 8.0 and later.
@@ -48,7 +45,7 @@ public interface EAWiFiUnconfiguredAccessoryBrowserDelegate
      */
     @Mapping("accessoryBrowser:didFinishConfiguringAccessory:withStatus:")
     void didFinishConfiguringAccessory(EAWiFiUnconfiguredAccessoryBrowser browser, EAWiFiUnconfiguredAccessory accessory, @Representing("EAWiFiUnconfiguredAccessoryConfigurationStatus") long status);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

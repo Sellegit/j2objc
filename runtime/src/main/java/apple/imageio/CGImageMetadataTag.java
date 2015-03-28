@@ -13,7 +13,6 @@ import apple.coregraphics.*;
 import apple.coreservices.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Mapping("CGImageMetadataTagRef") @Library("ImageIO/ImageIO.h")
@@ -24,7 +23,7 @@ public class CGImageMetadataTag
     
     
     protected CGImageMetadataTag() {}
-    
+
     
     
     
@@ -68,5 +67,5 @@ public class CGImageMetadataTag
      */
     @GlobalFunction("CGImageMetadataTagCopyQualifiers")
     public static native List<String> getQualifiers(CGImageMetadataTag tag);
-    
+
 }

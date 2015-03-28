@@ -16,11 +16,9 @@ import apple.uikit.*;
 import apple.accounts.*;
 
 
-
 /**
  * @since Available in iOS 6.0 and later.
  */
-
 @Library("Social/Social.h") @Mapping("SLRequest")
 public class SLRequest 
     extends NSObject 
@@ -30,7 +28,7 @@ public class SLRequest
     
     @Mapping("init")
     public SLRequest() { }
-    
+
     
     @Mapping("account")
     public native ACAccount getAccount();
@@ -42,7 +40,7 @@ public class SLRequest
     public native NSURL getURL();
     @Mapping("parameters")
     public native Map<String, NSObject> getParameters();
-    
+
     
     
     @Mapping("addMultipartData:withName:type:filename:")
@@ -51,5 +49,5 @@ public class SLRequest
     public native NSURLRequest getPreparedURLRequest();
     @Mapping("requestForServiceType:requestMethod:URL:parameters:")
     public static native SLRequest create(String serviceType, @Representing("SLRequestMethod") long requestMethod, NSURL url, NSDictionary<?, ?> parameters);
-    
+
 }

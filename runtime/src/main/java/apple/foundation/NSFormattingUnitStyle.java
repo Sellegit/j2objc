@@ -19,11 +19,9 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("Foundation/Foundation.h")
 @Mapping("NSFormattingUnitStyle")
 public final class NSFormattingUnitStyle extends ObjCEnum {
@@ -34,6 +32,6 @@ public final class NSFormattingUnitStyle extends ObjCEnum {
     public static final long Medium = 2L;
     @GlobalConstant("NSFormattingUnitStyleLong")
     public static final long Long = 3L;
-    
+
 
 }

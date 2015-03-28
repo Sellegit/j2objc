@@ -15,7 +15,6 @@ import apple.foundation.*;
 import apple.uikit.*;
 import apple.addressbook.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -26,8 +25,8 @@ public abstract class PKPaymentAuthorizationViewControllerDelegateAdapter
     
     
     
-    
-    
+
+
     
     
     @NotImplemented("paymentAuthorizationViewController:didAuthorizePayment:completion:")
@@ -37,6 +36,6 @@ public abstract class PKPaymentAuthorizationViewControllerDelegateAdapter
     @NotImplemented("paymentAuthorizationViewController:didSelectShippingMethod:completion:")
     public void didSelectShippingMethod(PKPaymentAuthorizationViewController controller, PKShippingMethod shippingMethod, Todo completion) { throw new UnsupportedOperationException(); }
     @NotImplemented("paymentAuthorizationViewController:didSelectShippingAddress:completion:")
-    public void didSelectShippingAddress(PKPaymentAuthorizationViewController controller, ABRecord address, Todo completion) { throw new UnsupportedOperationException(); }
-    
+    public void didSelectShippingAddress(PKPaymentAuthorizationViewController controller, ABRecordRef address, Todo completion) { throw new UnsupportedOperationException(); }
+
 }

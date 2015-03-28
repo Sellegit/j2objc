@@ -18,9 +18,6 @@ import apple.coreanimation.*;
 import apple.corevideo.*;
 
 
-
-
-
 @Mapping("CMTime") @Library("CoreMedia/CoreMedia.h")
 public class CMTime 
     extends Struct 
@@ -28,7 +25,7 @@ public class CMTime
 
     
     public static final long MaxTimescale = 0x7fffffffL;
-    
+
     private CMTime() {}
     
     
@@ -40,7 +37,7 @@ public class CMTime
     public native CMTimeFlags getFlags();
     @DotMapping("epoch")
     public native long getEpoch();
-    
+
     public static native CMTime create(long value, int timescale, CMTimeFlags flags, long epoch) /*-[
         CMTime __new = { .value = value, .timescale = timescale, .flags = flags, .epoch = epoch };
         return __new;
@@ -50,25 +47,47 @@ public class CMTime
         return __new;
     ]-*/;
 
-    
+
     public static native CMTime copyWithtimescale(CMTime original, int timescale) /*-[
         CMTime __new = { .value = original.value, .timescale = timescale, .flags = original.flags, .epoch = original.epoch };
         return __new;
     ]-*/;
 
-    
+
     public static native CMTime copyWithflags(CMTime original, CMTimeFlags flags) /*-[
         CMTime __new = { .value = original.value, .timescale = original.timescale, .flags = flags, .epoch = original.epoch };
         return __new;
     ]-*/;
 
-    
+
     public static native CMTime copyWithepoch(CMTime original, long epoch) /*-[
         CMTime __new = { .value = original.value, .timescale = original.timescale, .flags = original.flags, .epoch = epoch };
         return __new;
     ]-*/;
 
-    
+
+    public static final class Adapter {
+
+        public long value;
+        public int timescale;
+        public CMTimeFlags flags;
+        public long epoch;
+        public Adapter(long value, int timescale, CMTimeFlags flags, long epoch) {
+            this.value = value;
+            this.timescale = timescale;
+            this.flags = flags;
+            this.epoch = epoch;
+        }
+        public Adapter(CMTime original) {
+            this.value = original.getValue();
+            this.timescale = original.getTimescale();
+            this.flags = original.getFlags();
+            this.epoch = original.getEpoch();
+        }
+        public CMTime convert() {
+            return create(value, timescale, flags, epoch);
+        }
+    }
     /**
      * @since Available in iOS 4.0 and later.
      */
@@ -94,7 +113,7 @@ public class CMTime
      */
     @GlobalConstant("kCMTimeZero")
     public static native CMTime Zero();
-    
+
     /**
      * @since Available in iOS 4.0 and later.
      */
@@ -200,5 +219,5 @@ public class CMTime
      */
     @GlobalFunction("CMTimeMapDurationFromRangeToRange")
     public static native CMTime mapDurationFromRangeToRange(CMTime dur, CMTimeRange fromRange, CMTimeRange toRange);
-    
+
 }

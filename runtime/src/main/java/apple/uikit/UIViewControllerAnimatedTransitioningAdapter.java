@@ -18,7 +18,6 @@ import apple.coreimage.*;
 import apple.coretext.*;
 import apple.corelocation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -29,8 +28,8 @@ public abstract class UIViewControllerAnimatedTransitioningAdapter
     
     
     
-    
-    
+
+
     
     
     @NotImplemented("transitionDuration:")
@@ -39,5 +38,5 @@ public abstract class UIViewControllerAnimatedTransitioningAdapter
     public void animateTransition(UIViewControllerContextTransitioning transitionContext) { throw new UnsupportedOperationException(); }
     @NotImplemented("animationEnded:")
     public void animationEnded(boolean transitionCompleted) { throw new UnsupportedOperationException(); }
-    
+
 }

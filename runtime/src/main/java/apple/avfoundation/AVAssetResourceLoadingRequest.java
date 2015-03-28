@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 6.0 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h") @Mapping("AVAssetResourceLoadingRequest")
 public class AVAssetResourceLoadingRequest 
     extends NSObject 
@@ -34,7 +32,7 @@ public class AVAssetResourceLoadingRequest
     
     @Mapping("init")
     public AVAssetResourceLoadingRequest() { }
-    
+
     
     @Mapping("request")
     public native NSURLRequest getRequest();
@@ -75,7 +73,7 @@ public class AVAssetResourceLoadingRequest
      */
     @Mapping("setRedirect:")
     public native void setRedirect(NSURLRequest v);
-    
+
     
     
     /**
@@ -94,5 +92,5 @@ public class AVAssetResourceLoadingRequest
     @Deprecated
     @Mapping("finishLoadingWithResponse:data:redirect:")
     public native void finishLoading(NSURLResponse response, NSData data, NSURLRequest redirect);
-    
+
 }

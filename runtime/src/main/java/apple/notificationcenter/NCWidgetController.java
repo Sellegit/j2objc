@@ -15,11 +15,9 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("NotificationCenter/NotificationCenter.h") @Mapping("NCWidgetController")
 public class NCWidgetController 
     extends NSObject 
@@ -29,15 +27,15 @@ public class NCWidgetController
     
     @Mapping("init")
     public NCWidgetController() { }
+
     
-    
-    
-    
+
+
     
     
     @Mapping("setHasContent:forWidgetWithBundleIdentifier:")
     public native void setHasContentForWidgetWithBundleID(boolean flag, String bundleID);
     @Mapping("widgetController")
     public static native NCWidgetController create();
-    
+
 }

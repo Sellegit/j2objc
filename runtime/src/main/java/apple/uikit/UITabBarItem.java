@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 2.0 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UITabBarItem")
 public class UITabBarItem 
     extends UIBarItem 
@@ -42,7 +40,7 @@ public class UITabBarItem
     public UITabBarItem(@Representing("UITabBarSystemItem") long systemItem, @MachineSizedSInt long tag) { }
     @Mapping("init")
     public UITabBarItem() { }
-    
+
     
     /**
      * @since Available in iOS 7.0 and later.
@@ -58,7 +56,7 @@ public class UITabBarItem
     public native String getBadgeValue();
     @Mapping("setBadgeValue:")
     public native void setBadgeValue(String v);
-    
+
     
     
     /**
@@ -92,5 +90,5 @@ public class UITabBarItem
      */
     @Mapping("titlePositionAdjustment")
     public native UIOffset getTitlePositionAdjustment();
-    
+
 }

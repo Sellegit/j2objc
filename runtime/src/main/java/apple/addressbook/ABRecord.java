@@ -13,7 +13,6 @@ import apple.coregraphics.*;
 import apple.coreservices.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("AddressBook/AddressBook.h")
@@ -23,7 +22,7 @@ public class ABRecord
 
     
     public static final int InvalidID = -1;
-    
+
     
     
     
@@ -39,6 +38,6 @@ public class ABRecord
     @GlobalFunction("ABRecordRemoveValue")
     public static native boolean removeValue(ABRecordRef record, int property, Todo error);
     @GlobalFunction("ABRecordCopyCompositeName")
-    public static native String getCompositeName(ABRecordRef record);
-    
+    public static native CFString getCompositeName(ABRecordRef record);
+
 }

@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 7.0 and later.
  */
-
 @Library("CoreData/CoreData.h")
 @Mapping("NSPersistentStoreUbiquitousTransitionType")
 public final class NSPersistentStoreUbiquitousTransitionType extends ObjCEnum {
@@ -31,6 +29,6 @@ public final class NSPersistentStoreUbiquitousTransitionType extends ObjCEnum {
     public static final long ContentRemoved = 3L;
     @GlobalConstant("NSPersistentStoreUbiquitousTransitionTypeInitialImportCompleted")
     public static final long InitialImportCompleted = 4L;
-    
+
 
 }

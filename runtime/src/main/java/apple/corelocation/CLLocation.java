@@ -16,11 +16,9 @@ import apple.addressbook.*;
 import apple.corebluetooth.*;
 
 
-
 /**
  * @since Available in iOS 2.0 and later.
  */
-
 @Library("CoreLocation/CoreLocation.h") @Mapping("CLLocation")
 public class CLLocation 
     extends NSObject 
@@ -39,7 +37,7 @@ public class CLLocation
     public CLLocation(CLLocationCoordinate2D coordinate, double altitude, double hAccuracy, double vAccuracy, double course, double speed, NSDate timestamp) { }
     @Mapping("init")
     public CLLocation() { }
-    
+
     
     @Mapping("coordinate")
     public native CLLocationCoordinate2D getCoordinate();
@@ -66,7 +64,7 @@ public class CLLocation
      */
     @Mapping("floor")
     public native CLFloor getFloor();
-    
+
     
     
     /**
@@ -74,7 +72,7 @@ public class CLLocation
      */
     @GlobalConstant("CLLocationDistanceMax")
     public static native double getLocationDistanceMax();
-    
+
     /**
      * @since Available in iOS 3.2 and later.
      */
@@ -82,5 +80,5 @@ public class CLLocation
     public native double getDistanceTo(CLLocation location);
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
-    
+
 }

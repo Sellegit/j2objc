@@ -15,9 +15,6 @@ import apple.dispatch.*;
 import apple.foundation.*;
 
 
-
-
-
 @Library("CoreFoundation/CoreFoundation.h")
 @Mapping("CFSocketError")
 public final class CFSocketError extends ObjCEnum {
@@ -28,6 +25,6 @@ public final class CFSocketError extends ObjCEnum {
     public static final long Error = -1L;
     @GlobalConstant("kCFSocketTimeout")
     public static final long Timeout = -2L;
-    
+
 
 }

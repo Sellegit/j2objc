@@ -17,9 +17,6 @@ import apple.coretext.*;
 import apple.opengles.*;
 
 
-
-
-
 @Library("QuartzCore/QuartzCore.h") @Mapping("CATextLayer")
 public class CATextLayer 
     extends CALayer 
@@ -33,7 +30,7 @@ public class CATextLayer
     public CATextLayer(Object layer) { }
     @Mapping("initWithCoder:")
     public CATextLayer(NSCoder aDecoder) { }
-    
+
     
     @Mapping("fontSize")
     public native @MachineSizedFloat double getFontSize();
@@ -55,9 +52,9 @@ public class CATextLayer
     public native CATextAlignmentMode getAlignmentMode();
     @Mapping("setAlignmentMode:")
     public native void setAlignmentMode(CATextAlignmentMode v);
+
     
     
-    
-    
-    
+
+
 }

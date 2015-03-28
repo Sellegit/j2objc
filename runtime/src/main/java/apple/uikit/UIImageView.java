@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 2.0 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UIImageView")
 public class UIImageView 
     extends UIView 
@@ -44,7 +42,7 @@ public class UIImageView
     public UIImageView(NSCoder aDecoder) { }
     @Mapping("init")
     public UIImageView() { }
-    
+
     
     @Mapping("image")
     public native UIImage getImage();
@@ -106,7 +104,7 @@ public class UIImageView
      */
     @Mapping("setTintColor:")
     public native void setTintColor(UIColor v);
-    
+
     
     
     @Mapping("startAnimating")
@@ -115,5 +113,5 @@ public class UIImageView
     public native void stopAnimating();
     @Mapping("isAnimating")
     public native boolean isAnimating();
-    
+
 }

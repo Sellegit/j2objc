@@ -18,7 +18,6 @@ import apple.coreimage.*;
 import apple.coretext.*;
 import apple.corelocation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -31,10 +30,10 @@ public abstract class UITraitEnvironmentAdapter
     
     @NotImplemented("traitCollection")
     public UITraitCollection getTraitCollection() { throw new UnsupportedOperationException(); }
-    
+
     
     
     @NotImplemented("traitCollectionDidChange:")
     public void traitCollectionDidChange(UITraitCollection previousTraitCollection) { throw new UnsupportedOperationException(); }
-    
+
 }

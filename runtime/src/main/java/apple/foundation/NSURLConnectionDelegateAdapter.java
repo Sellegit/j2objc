@@ -18,7 +18,6 @@ import apple.coremedia.*;
 import apple.security.*;
 import apple.dispatch.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -29,8 +28,8 @@ public abstract class NSURLConnectionDelegateAdapter
     
     
     
-    
-    
+
+
     
     
     @NotImplemented("connection:didFailWithError:")
@@ -60,5 +59,5 @@ public abstract class NSURLConnectionDelegateAdapter
     @Deprecated
     @NotImplemented("connection:didCancelAuthenticationChallenge:")
     public void didCancelAuthenticationChallenge(NSURLConnection connection, NSURLAuthenticationChallenge challenge) { throw new UnsupportedOperationException(); }
-    
+
 }

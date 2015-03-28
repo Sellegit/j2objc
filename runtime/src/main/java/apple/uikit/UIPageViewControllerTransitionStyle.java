@@ -19,9 +19,6 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h")
 @Mapping("UIPageViewControllerTransitionStyle")
 public final class UIPageViewControllerTransitionStyle extends ObjCEnum {
@@ -30,6 +27,6 @@ public final class UIPageViewControllerTransitionStyle extends ObjCEnum {
     public static final long PageCurl = 0L;
     @GlobalConstant("UIPageViewControllerTransitionStyleScroll")
     public static final long Scroll = 1L;
-    
+
 
 }

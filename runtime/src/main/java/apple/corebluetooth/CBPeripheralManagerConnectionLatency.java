@@ -15,11 +15,9 @@ import apple.foundation.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 6.0 and later.
  */
-
 @Library("CoreBluetooth/CoreBluetooth.h")
 @Mapping("CBPeripheralManagerConnectionLatency")
 public final class CBPeripheralManagerConnectionLatency extends ObjCEnum {
@@ -30,6 +28,6 @@ public final class CBPeripheralManagerConnectionLatency extends ObjCEnum {
     public static final long Medium = 1L;
     @GlobalConstant("CBPeripheralManagerConnectionLatencyHigh")
     public static final long High = 2L;
-    
+
 
 }

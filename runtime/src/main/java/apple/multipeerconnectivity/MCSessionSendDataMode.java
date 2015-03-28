@@ -16,11 +16,9 @@ import apple.uikit.*;
 import apple.security.*;
 
 
-
 /**
  * @since Available in iOS 7.0 and later.
  */
-
 @Library("MultipeerConnectivity/MultipeerConnectivity.h")
 @Mapping("MCSessionSendDataMode")
 public final class MCSessionSendDataMode extends ObjCEnum {
@@ -29,6 +27,6 @@ public final class MCSessionSendDataMode extends ObjCEnum {
     public static final long Reliable = 0L;
     @GlobalConstant("MCSessionSendDataUnreliable")
     public static final long Unreliable = 1L;
-    
+
 
 }

@@ -21,11 +21,9 @@ import apple.glkit.*;
 import apple.scenekit.*;
 
 
-
 /**
  * @since Available in iOS 7.0 and later.
  */
-
 @Library("SpriteKit/SpriteKit.h")
 @Mapping("SKActionTimingMode")
 public final class SKActionTimingMode extends ObjCEnum {
@@ -38,6 +36,6 @@ public final class SKActionTimingMode extends ObjCEnum {
     public static final long EaseOut = 2L;
     @GlobalConstant("SKActionTimingEaseInEaseOut")
     public static final long EaseInEaseOut = 3L;
-    
+
 
 }

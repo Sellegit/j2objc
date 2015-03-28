@@ -14,9 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
-
-
 @Library("CoreText/CoreText.h")
 @Mapping("CTFontPriority")
 public final class CTFontPriority extends ObjCEnum {
@@ -33,6 +30,6 @@ public final class CTFontPriority extends ObjCEnum {
     public static final long Dynamic = 50000L;
     @GlobalConstant("kCTFontPriorityProcess")
     public static final long Process = 60000L;
-    
+
 
 }

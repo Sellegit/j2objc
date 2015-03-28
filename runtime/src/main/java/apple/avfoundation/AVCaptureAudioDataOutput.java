@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 4.0 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h") @Mapping("AVCaptureAudioDataOutput")
 public class AVCaptureAudioDataOutput 
     extends AVCaptureOutput 
@@ -34,11 +32,11 @@ public class AVCaptureAudioDataOutput
     
     @Mapping("init")
     public AVCaptureAudioDataOutput() { }
-    
+
     
     @Mapping("sampleBufferCallbackQueue")
     public native DispatchQueue getSampleBufferCallbackQueue();
-    
+
     
     
     /**
@@ -46,5 +44,5 @@ public class AVCaptureAudioDataOutput
      */
     @Mapping("recommendedAudioSettingsForAssetWriterWithOutputFileType:")
     public native AVAudioSettings getRecommendedAudioSettings(String outputFileType);
-    
+
 }

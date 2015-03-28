@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h") @Mapping("NSPort")
 public class NSPort 
     extends NSObject 
@@ -31,18 +28,18 @@ public class NSPort
     
     @Mapping("init")
     public NSPort() { }
-    
+
     
     @Mapping("isValid")
     public native boolean isValid();
     @Mapping("reservedSpaceLength")
     public native @MachineSizedUInt long getReservedSpaceLength();
-    
+
     
     
     @GlobalConstant("NSPortDidBecomeInvalidNotification")
     public static native NSString DidBecomeInvalidNotification();
-    
+
     @Mapping("invalidate")
     public native void invalidate();
     @Mapping("setDelegate:")
@@ -63,5 +60,5 @@ public class NSPort
     public native Object copyWithZone$(NSZone zone);
     @Mapping("encodeWithCoder:")
     public native void encode(NSCoder aCoder);
-    
+
 }

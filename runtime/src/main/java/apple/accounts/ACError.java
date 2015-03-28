@@ -13,7 +13,6 @@ import apple.coregraphics.*;
 import apple.coreservices.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("Accounts/Accounts.h")
@@ -31,5 +30,5 @@ public class ACError
      */
     @GlobalConstant("ACErrorDomain")
     public static native String getClassDomain();
-    
+
 }

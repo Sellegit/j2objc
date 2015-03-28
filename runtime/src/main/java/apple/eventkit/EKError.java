@@ -15,7 +15,6 @@ import apple.foundation.*;
 import apple.addressbook.*;
 import apple.corelocation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("EventKit/EventKit.h")
@@ -33,5 +32,5 @@ public class EKError
      */
     @GlobalConstant("EKErrorDomain")
     public static native String getClassDomain();
-    
+
 }

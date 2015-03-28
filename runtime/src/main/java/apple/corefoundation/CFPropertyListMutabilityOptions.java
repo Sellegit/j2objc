@@ -15,9 +15,6 @@ import apple.dispatch.*;
 import apple.foundation.*;
 
 
-
-
-
 @Library("CoreFoundation/CoreFoundation.h")
 @Mapping("CFPropertyListMutabilityOptions")
 public final class CFPropertyListMutabilityOptions extends ObjCEnum {
@@ -28,6 +25,6 @@ public final class CFPropertyListMutabilityOptions extends ObjCEnum {
     public static final long MutableContainers = 1L;
     @GlobalConstant("kCFPropertyListMutableContainersAndLeaves")
     public static final long MutableContainersAndLeaves = 2L;
-    
+
 
 }

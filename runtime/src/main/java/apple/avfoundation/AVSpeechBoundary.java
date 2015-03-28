@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 7.0 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h")
 @Mapping("AVSpeechBoundary")
 public final class AVSpeechBoundary extends ObjCEnum {
@@ -33,6 +31,6 @@ public final class AVSpeechBoundary extends ObjCEnum {
     public static final long Immediate = 0L;
     @GlobalConstant("AVSpeechBoundaryWord")
     public static final long Word = 1L;
-    
+
 
 }

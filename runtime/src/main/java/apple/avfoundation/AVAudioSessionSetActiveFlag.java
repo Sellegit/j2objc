@@ -20,19 +20,17 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 4.0 and later.
  * @deprecated Deprecated in iOS 6.0.
  */
 @Deprecated
-
 @Library("AVFoundation/AVFoundation.h")
 @Mapping("AVAudioSessionSetActiveFlag")
 public final class AVAudioSessionSetActiveFlag extends ObjCEnum {
     
     @GlobalConstant("AVAudioSessionSetActiveFlags_NotifyOthersOnDeactivation")
     public static final long NotifyOthersOnDeactivation = 1L;
-    
+
 
 }

@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 4.0 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h") @Mapping("AVCaptureInput")
 public class AVCaptureInput 
     extends NSObject 
@@ -34,13 +32,13 @@ public class AVCaptureInput
     
     @Mapping("init")
     public AVCaptureInput() { }
-    
+
     
     @Mapping("ports")
     public native NSArray<AVCaptureInputPort> getPorts();
+
     
     
-    
-    
-    
+
+
 }

@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 2.0 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UIControl")
 public class UIControl 
     extends UIView 
@@ -37,7 +35,7 @@ public class UIControl
     public UIControl(NSCoder aDecoder) { }
     @Mapping("init")
     public UIControl() { }
-    
+
     
     @Mapping("isEnabled")
     public native boolean isEnabled();
@@ -65,7 +63,7 @@ public class UIControl
     public native boolean isTracking();
     @Mapping("isTouchInside")
     public native boolean isTouchInside();
-    
+
     
     
     @Mapping("beginTrackingWithTouch:withEvent:")
@@ -90,5 +88,5 @@ public class UIControl
     public native void sendAction(Selector action, Object target, UIEvent event);
     @Mapping("sendActionsForControlEvents:")
     public native void sendControlEventsActions(@Representing("UIControlEvents") long controlEvents);
-    
+
 }

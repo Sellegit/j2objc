@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 3.0 and later.
  */
-
 @Library("CoreData/CoreData.h") @Mapping("NSManagedObjectModel")
 public class NSManagedObjectModel 
     extends NSObject 
@@ -30,7 +28,7 @@ public class NSManagedObjectModel
     public NSManagedObjectModel(NSURL url) { }
     @Mapping("init")
     public NSManagedObjectModel() { }
-    
+
     
     @Mapping("entitiesByName")
     public native Map<String, NSEntityDescription> getEntitiesByName();
@@ -64,7 +62,7 @@ public class NSManagedObjectModel
      */
     @Mapping("entityVersionHashesByName")
     public native NSDictionary<?, ?> getEntityVersionHashesByName();
-    
+
     
     
     @Mapping("entitiesForConfiguration:")
@@ -100,5 +98,5 @@ public class NSManagedObjectModel
     public native void encode(NSCoder aCoder);
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
-    
+
 }

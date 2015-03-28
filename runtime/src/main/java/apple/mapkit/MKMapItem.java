@@ -17,11 +17,9 @@ import apple.uikit.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 6.0 and later.
  */
-
 @Library("MapKit/MapKit.h") @Mapping("MKMapItem")
 public class MKMapItem 
     extends NSObject 
@@ -33,7 +31,7 @@ public class MKMapItem
     public MKMapItem(MKPlacemark placemark) { }
     @Mapping("init")
     public MKMapItem() { }
-    
+
     
     @Mapping("placemark")
     public native MKPlacemark getPlacemark();
@@ -51,7 +49,7 @@ public class MKMapItem
     public native NSURL getUrl();
     @Mapping("setUrl:")
     public native void setUrl(NSURL v);
-    
+
     
     
     @Mapping("openInMapsWithLaunchOptions:")
@@ -60,5 +58,5 @@ public class MKMapItem
     public static native MKMapItem getMapItemForCurrentLocation();
     @Mapping("openMapsWithItems:launchOptions:")
     public static native boolean openMaps(NSArray<?> mapItems, NSDictionary<?, ?> launchOptions);
-    
+
 }

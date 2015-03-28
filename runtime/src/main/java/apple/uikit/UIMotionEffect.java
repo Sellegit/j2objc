@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 7.0 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UIMotionEffect")
 public class UIMotionEffect 
     extends NSObject 
@@ -33,10 +31,10 @@ public class UIMotionEffect
     
     @Mapping("init")
     public UIMotionEffect() { }
+
     
-    
-    
-    
+
+
     
     
     @Mapping("keyPathsAndRelativeValuesForViewerOffset:")
@@ -45,5 +43,5 @@ public class UIMotionEffect
     public native Object copyWithZone$(NSZone zone);
     @Mapping("encodeWithCoder:")
     public native void encode(NSCoder aCoder);
-    
+
 }

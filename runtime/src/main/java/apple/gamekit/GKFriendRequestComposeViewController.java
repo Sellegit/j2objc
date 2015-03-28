@@ -15,11 +15,9 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
 /**
  * @since Available in iOS 4.2 and later.
  */
-
 @Library("GameKit/GameKit.h") @Mapping("GKFriendRequestComposeViewController")
 public class GKFriendRequestComposeViewController 
     extends UINavigationController 
@@ -33,13 +31,13 @@ public class GKFriendRequestComposeViewController
     public GKFriendRequestComposeViewController(String nibNameOrNil, NSBundle nibBundleOrNil) { }
     @Mapping("init")
     public GKFriendRequestComposeViewController() { }
-    
+
     
     @Mapping("composeViewDelegate")
     public native GKFriendRequestComposeViewControllerDelegate getComposeViewDelegate();
     @Mapping("setComposeViewDelegate:")
     public native void setComposeViewDelegate(GKFriendRequestComposeViewControllerDelegate v);
-    
+
     
     
     @Mapping("setMessage:")
@@ -60,5 +58,5 @@ public class GKFriendRequestComposeViewController
     public native void addRecipientsWithEmailAddresses(NSArray<?> emailAddresses);
     @Mapping("maxNumberOfRecipients")
     public static native @MachineSizedUInt long getMaxNumberOfRecipients();
-    
+
 }

@@ -20,9 +20,6 @@ import apple.spritekit.*;
 import apple.opengles.*;
 
 
-
-
-
 @Library("SceneKit/SceneKit.h")
 @Mapping("SCNPhysicsBodyType")
 public final class SCNPhysicsBodyType extends ObjCEnum {
@@ -33,6 +30,6 @@ public final class SCNPhysicsBodyType extends ObjCEnum {
     public static final long Dynamic = 1L;
     @GlobalConstant("SCNPhysicsBodyTypeKinematic")
     public static final long Kinematic = 2L;
-    
+
 
 }

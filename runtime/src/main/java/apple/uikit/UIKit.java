@@ -18,7 +18,6 @@ import apple.coreimage.*;
 import apple.coretext.*;
 import apple.corelocation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("UIKit/UIKit.h")
@@ -32,7 +31,7 @@ public class UIKit
     public static final long Constant__UIRemoteNotificationTypeSound = 2L;
     public static final long Constant__UIRemoteNotificationTypeAlert = 4L;
     public static final long Constant__UIRemoteNotificationTypeNewsstandContentAvailability = 8L;
-    
+
     
     
     
@@ -82,5 +81,5 @@ public class UIKit
      */
     @GlobalConstant("UIFontWeightBlack")
     public static native @MachineSizedFloat double Value__UIFontWeightBlack();
-    
+
 }

@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 import apple.uikit.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -25,8 +24,8 @@ public abstract class GKFriendRequestComposeViewControllerDelegateAdapter
     
     
     
-    
-    
+
+
     
     
     /**
@@ -34,5 +33,5 @@ public abstract class GKFriendRequestComposeViewControllerDelegateAdapter
      */
     @NotImplemented("friendRequestComposeViewControllerDidFinish:")
     public void didFinish(GKFriendRequestComposeViewController viewController) { throw new UnsupportedOperationException(); }
-    
+
 }

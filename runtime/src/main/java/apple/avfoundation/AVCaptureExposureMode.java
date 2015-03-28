@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 4.0 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h")
 @Mapping("AVCaptureExposureMode")
 public final class AVCaptureExposureMode extends ObjCEnum {
@@ -40,6 +38,6 @@ public final class AVCaptureExposureMode extends ObjCEnum {
      */
     @GlobalConstant("AVCaptureExposureModeCustom")
     public static final long Custom = 3L;
-    
+
 
 }

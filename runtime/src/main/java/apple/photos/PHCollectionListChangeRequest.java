@@ -17,11 +17,9 @@ import apple.uikit.*;
 import apple.avfoundation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("Photos/Photos.h") @Mapping("PHCollectionListChangeRequest")
 public class PHCollectionListChangeRequest 
     extends NSObject 
@@ -31,7 +29,7 @@ public class PHCollectionListChangeRequest
     
     @Mapping("init")
     public PHCollectionListChangeRequest() { }
-    
+
     
     @Mapping("placeholderForCreatedCollectionList")
     public native PHObjectPlaceholder getPlaceholderForCreatedCollectionList();
@@ -39,7 +37,7 @@ public class PHCollectionListChangeRequest
     public native String getTitle();
     @Mapping("setTitle:")
     public native void setTitle(String v);
-    
+
     
     
     @Mapping("addChildCollections:")
@@ -62,5 +60,5 @@ public class PHCollectionListChangeRequest
     public static native PHCollectionListChangeRequest create(PHCollectionList collectionList);
     @Mapping("changeRequestForCollectionList:childCollections:")
     public static native PHCollectionListChangeRequest create(PHCollectionList collectionList, PHFetchResult childCollections);
-    
+
 }

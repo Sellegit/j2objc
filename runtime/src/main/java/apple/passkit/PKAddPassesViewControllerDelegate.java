@@ -16,21 +16,18 @@ import apple.uikit.*;
 import apple.addressbook.*;
 
 
-
-
-
 @Library("PassKit/PassKit.h") @Mapping("PKAddPassesViewControllerDelegate")
 public interface PKAddPassesViewControllerDelegate 
     extends NSObjectProtocol {
 
     
     
-    
-    
+
+
     
     @Mapping("addPassesViewControllerDidFinish:")
     void didFinish(PKAddPassesViewController controller);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

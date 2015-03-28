@@ -20,9 +20,6 @@ import apple.spritekit.*;
 import apple.opengles.*;
 
 
-
-
-
 @Library("SceneKit/SceneKit.h") @Mapping("SCNMorpher")
 public class SCNMorpher 
     extends NSObject 
@@ -32,7 +29,7 @@ public class SCNMorpher
     
     @Mapping("init")
     public SCNMorpher() { }
-    
+
     
     @Mapping("targets")
     public native NSArray<SCNGeometry> getTargets();
@@ -42,7 +39,7 @@ public class SCNMorpher
     public native @Representing("SCNMorpherCalculationMode") long getCalculationMode();
     @Mapping("setCalculationMode:")
     public native void setCalculationMode(@Representing("SCNMorpherCalculationMode") long v);
-    
+
     
     
     @Mapping("setWeight:forTargetAtIndex:")
@@ -67,5 +64,5 @@ public class SCNMorpher
     public native boolean isAnimationPaused(String key);
     @Mapping("removeAnimationForKey:fadeOutDuration:")
     public native void removeAnimation(String key, @MachineSizedFloat double duration);
-    
+
 }

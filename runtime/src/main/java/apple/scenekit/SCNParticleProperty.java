@@ -19,7 +19,6 @@ import apple.glkit.*;
 import apple.spritekit.*;
 import apple.opengles.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("SceneKit/SceneKit.h")
@@ -64,5 +63,5 @@ public class SCNParticleProperty
     public static native NSString ContactPointValue();
     @GlobalConstant("SCNParticlePropertyContactNormal")
     public static native NSString ContactNormalValue();
-    
+
 }

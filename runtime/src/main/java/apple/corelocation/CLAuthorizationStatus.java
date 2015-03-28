@@ -16,9 +16,6 @@ import apple.addressbook.*;
 import apple.corebluetooth.*;
 
 
-
-
-
 @Library("CoreLocation/CoreLocation.h")
 @Mapping("CLAuthorizationStatus")
 public final class CLAuthorizationStatus extends ObjCEnum {
@@ -46,6 +43,6 @@ public final class CLAuthorizationStatus extends ObjCEnum {
     @Deprecated
     @GlobalConstant("kCLAuthorizationStatusAuthorized")
     public static final long Authorized = 3L;
-    
+
 
 }

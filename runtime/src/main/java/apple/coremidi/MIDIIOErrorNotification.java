@@ -14,9 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
-
-
 @Mapping("MIDIIOErrorNotification") @Library("CoreMIDI/CoreMIDI.h")
 public class MIDIIOErrorNotification 
     extends Struct 
@@ -34,6 +31,6 @@ public class MIDIIOErrorNotification
     public native MIDIDevice getDriverDevice();
     @DotMapping("errorCode")
     public native int getErrorCode();
-    
+
     
 }

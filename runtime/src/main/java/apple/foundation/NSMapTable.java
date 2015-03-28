@@ -19,11 +19,9 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 6.0 and later.
  */
-
 @Library("Foundation/Foundation.h") @Mapping("NSMapTable")
 public class NSMapTable <K, V>
     extends NSObject 
@@ -33,11 +31,11 @@ public class NSMapTable <K, V>
     
     @Mapping("init")
     public NSMapTable() { }
-    
+
     
     @Mapping("count")
     public native @MachineSizedUInt long getCount();
-    
+
     
     
     @Mapping("objectForKey:")
@@ -58,5 +56,5 @@ public class NSMapTable <K, V>
     public native Object copyWithZone$(NSZone zone);
     @Mapping("encodeWithCoder:")
     public native void encode(NSCoder aCoder);
-    
+
 }

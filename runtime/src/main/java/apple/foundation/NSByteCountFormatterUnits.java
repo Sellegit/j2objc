@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h")
 @Mapping("NSByteCountFormatterUnits")
 public final class NSByteCountFormatterUnits extends ObjCEnum {
@@ -48,6 +45,6 @@ public final class NSByteCountFormatterUnits extends ObjCEnum {
     public static final long YBOrHigher = 65280L;
     @GlobalConstant("NSByteCountFormatterUseAll")
     public static final long All = 65535L;
-    
+
 
 }

@@ -17,7 +17,6 @@ import apple.coreaudio.*;
 import apple.coreanimation.*;
 import apple.corevideo.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Mapping("CMSampleBufferRef") @Library("CoreMedia/CoreMedia.h")
@@ -28,7 +27,7 @@ public class CMSampleBuffer
     
     
     protected CMSampleBuffer() {}
-    
+
     
     
     
@@ -87,7 +86,7 @@ public class CMSampleBuffer
      */
     @GlobalConstant("kCMSampleBufferConsumerNotification_BufferConsumed")
     public static native NSString BufferConsumedConsumerNotification();
-    
+
     /**
      * @since Available in iOS 4.0 and later.
      */
@@ -313,5 +312,5 @@ public class CMSampleBuffer
      */
     @GlobalFunction("CMSampleBufferCallBlockForEachSample")
     public static native CMSampleBufferError callForEachSample(CMSampleBuffer sbuf, Todo handler);
-    
+
 }

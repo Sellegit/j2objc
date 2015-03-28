@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 6.0 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h") @Mapping("AVAssetResourceLoader")
 public class AVAssetResourceLoader 
     extends NSObject 
@@ -34,16 +32,16 @@ public class AVAssetResourceLoader
     
     @Mapping("init")
     public AVAssetResourceLoader() { }
-    
+
     
     @Mapping("delegate")
     public native AVAssetResourceLoaderDelegate getDelegate();
     @Mapping("delegateQueue")
     public native DispatchQueue getDelegateQueue();
-    
+
     
     
     @Mapping("setDelegate:queue:")
     public native void setDelegate(AVAssetResourceLoaderDelegate delegate, DispatchQueue delegateQueue);
-    
+
 }

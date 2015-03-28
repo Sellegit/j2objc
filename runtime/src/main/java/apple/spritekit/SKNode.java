@@ -21,9 +21,6 @@ import apple.glkit.*;
 import apple.scenekit.*;
 
 
-
-
-
 @Library("SpriteKit/SpriteKit.h") @Mapping("SKNode")
 public class SKNode 
     extends UIResponder 
@@ -35,7 +32,7 @@ public class SKNode
     public SKNode(NSCoder aDecoder) { }
     @Mapping("init")
     public SKNode() { }
-    
+
     
     @Mapping("frame")
     public native CGRect getFrame();
@@ -105,7 +102,7 @@ public class SKNode
     public native NSArray<SKConstraint> getConstraints();
     @Mapping("setConstraints:")
     public native void setConstraints(NSArray<SKConstraint> v);
-    
+
     
     
     @Mapping("calculateAccumulatedFrame")
@@ -167,5 +164,5 @@ public class SKNode
     public native Object copyWithZone$(NSZone zone);
     @Mapping("encodeWithCoder:")
     public native void encode(NSCoder aCoder);
-    
+
 }

@@ -17,9 +17,6 @@ import apple.coreaudio.*;
 import apple.coremedia.*;
 
 
-
-
-
 @Library("AudioToolbox/AudioToolbox.h")
 @Mapping("AudioToolboxError")
 public final class AudioToolboxError extends ObjCEnum {
@@ -44,6 +41,6 @@ public final class AudioToolboxError extends ObjCEnum {
     public static final long InvalidPlayerState = -10852L;
     @GlobalConstant("kAudioToolboxErr_CannotDoInCurrentContext")
     public static final long CannotDoInCurrentContext = -10863L;
-    
+
 
 }

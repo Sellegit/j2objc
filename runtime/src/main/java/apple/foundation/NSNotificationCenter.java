@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h") @Mapping("NSNotificationCenter")
 public class NSNotificationCenter 
     extends NSObject 
@@ -30,10 +27,10 @@ public class NSNotificationCenter
     
     
     public NSNotificationCenter() {}
+
     
-    
-    
-    
+
+
     
     
     @Mapping("addObserver:selector:name:object:")
@@ -55,5 +52,5 @@ public class NSNotificationCenter
     public native NSObject addObserver(String name, Object obj, NSOperationQueue queue, @Block VoidBlock1<NSNotification> block);
     @Mapping("defaultCenter")
     public static native NSNotificationCenter getDefaultCenter();
-    
+
 }

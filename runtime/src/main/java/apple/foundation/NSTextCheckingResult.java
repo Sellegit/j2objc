@@ -19,11 +19,9 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 4.0 and later.
  */
-
 @Library("Foundation/Foundation.h") @Mapping("NSTextCheckingResult")
 public class NSTextCheckingResult 
     extends NSObject 
@@ -33,7 +31,7 @@ public class NSTextCheckingResult
     
     @Mapping("init")
     public NSTextCheckingResult() { }
-    
+
     
     @Mapping("resultType")
     public native @Representing("NSTextCheckingType") long getResultType();
@@ -80,7 +78,7 @@ public class NSTextCheckingResult
      */
     @Mapping("numberOfRanges")
     public native @MachineSizedUInt long getNumberOfRanges();
-    
+
     
     
     /**
@@ -139,5 +137,5 @@ public class NSTextCheckingResult
     public native Object copyWithZone$(NSZone zone);
     @Mapping("encodeWithCoder:")
     public native void encode(NSCoder aCoder);
-    
+
 }

@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h") @Mapping("AVAssetReaderOutputMetadataAdaptor")
 public class AVAssetReaderOutputMetadataAdaptor 
     extends NSObject 
@@ -36,16 +34,16 @@ public class AVAssetReaderOutputMetadataAdaptor
     public AVAssetReaderOutputMetadataAdaptor(AVAssetReaderTrackOutput trackOutput) { }
     @Mapping("init")
     public AVAssetReaderOutputMetadataAdaptor() { }
-    
+
     
     @Mapping("assetReaderTrackOutput")
     public native AVAssetReaderTrackOutput getAssetReaderTrackOutput();
-    
+
     
     
     @Mapping("nextTimedMetadataGroup")
     public native AVTimedMetadataGroup nextTimedMetadataGroup();
     @Mapping("assetReaderOutputMetadataAdaptorWithAssetReaderTrackOutput:")
     public static native AVAssetReaderOutputMetadataAdaptor create(AVAssetReaderTrackOutput trackOutput);
-    
+
 }

@@ -17,9 +17,6 @@ import apple.coretext.*;
 import apple.opengles.*;
 
 
-
-
-
 @Library("QuartzCore/QuartzCore.h") @Mapping("CAEmitterLayer")
 public class CAEmitterLayer 
     extends CALayer 
@@ -33,7 +30,7 @@ public class CAEmitterLayer
     public CAEmitterLayer(Object layer) { }
     @Mapping("initWithCoder:")
     public CAEmitterLayer(NSCoder aDecoder) { }
-    
+
     
     @Mapping("emitterCells")
     public native NSArray<CAEmitterCell> getEmitterCells();
@@ -95,9 +92,9 @@ public class CAEmitterLayer
     public native int getSeed();
     @Mapping("setSeed:")
     public native void setSeed(int v);
+
     
     
-    
-    
-    
+
+
 }

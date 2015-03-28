@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h") @Mapping("AVAudioUnitEQFilterParameters")
 public class AVAudioUnitEQFilterParameters 
     extends NSObject 
@@ -34,7 +32,7 @@ public class AVAudioUnitEQFilterParameters
     
     @Mapping("init")
     public AVAudioUnitEQFilterParameters() { }
-    
+
     
     @Mapping("filterType")
     public native @Representing("AVAudioUnitEQFilterType") long getFilterType();
@@ -56,9 +54,9 @@ public class AVAudioUnitEQFilterParameters
     public native boolean isBypass();
     @Mapping("setBypass:")
     public native void setBypass(boolean v);
+
     
     
-    
-    
-    
+
+
 }

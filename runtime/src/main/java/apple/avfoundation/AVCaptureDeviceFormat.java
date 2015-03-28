@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 7.0 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h") @Mapping("AVCaptureDeviceFormat")
 public class AVCaptureDeviceFormat 
     extends NSObject 
@@ -34,7 +32,7 @@ public class AVCaptureDeviceFormat
     
     @Mapping("init")
     public AVCaptureDeviceFormat() { }
-    
+
     
     @Mapping("mediaType")
     public native AVMediaType getMediaType();
@@ -104,7 +102,7 @@ public class AVCaptureDeviceFormat
      */
     @Mapping("autoFocusSystem")
     public native @Representing("AVCaptureAutoFocusSystem") long getAutoFocusSystem();
-    
+
     
     
     /**
@@ -112,5 +110,5 @@ public class AVCaptureDeviceFormat
      */
     @Mapping("isVideoStabilizationModeSupported:")
     public native boolean isVideoStabilizationModeSupported(@Representing("AVCaptureVideoStabilizationMode") long videoStabilizationMode);
-    
+
 }

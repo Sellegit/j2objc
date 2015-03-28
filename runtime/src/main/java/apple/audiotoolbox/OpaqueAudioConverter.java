@@ -16,7 +16,6 @@ import apple.opengles.*;
 import apple.coreaudio.*;
 import apple.coremedia.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 
@@ -27,7 +26,7 @@ public class OpaqueAudioConverter
     
     
     protected OpaqueAudioConverter() {}
-    
+
     
     
     

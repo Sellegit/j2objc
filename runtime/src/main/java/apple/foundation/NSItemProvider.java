@@ -19,11 +19,9 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("Foundation/Foundation.h") @Mapping("NSItemProvider")
 public class NSItemProvider 
     extends NSObject 
@@ -37,7 +35,7 @@ public class NSItemProvider
     public NSItemProvider(NSURL fileURL) { }
     @Mapping("init")
     public NSItemProvider() { }
-    
+
     
     @Mapping("registeredTypeIdentifiers")
     public native List<String> getRegisteredTypeIdentifiers();
@@ -51,7 +49,7 @@ public class NSItemProvider
      */
     @Mapping("setPreviewImageHandler:")
     public native void setPreviewImageHandler(@Block("(@Block,,)") VoidBlock3<VoidBlock2<NSObject, NSError>, ObjCClass, NSDictionary<NSString, NSObject>> v);
-    
+
     
     
     /**
@@ -64,10 +62,10 @@ public class NSItemProvider
      */
     @GlobalConstant("NSExtensionJavaScriptFinalizeArgumentKey")
     public static native String JavaScriptFinalizeArgumentKey();
-    
+
     @Mapping("hasItemConformingToTypeIdentifier:")
     public native boolean hasItemConformingToTypeIdentifier(String typeIdentifier);
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
-    
+
 }

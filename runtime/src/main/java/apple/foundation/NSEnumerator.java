@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h") @Mapping("NSEnumerator")
 public class NSEnumerator <T>
     extends NSObject 
@@ -31,14 +28,14 @@ public class NSEnumerator <T>
     
     @Mapping("init")
     public NSEnumerator() { }
-    
+
     
     @Mapping("allObjects")
     public native NSArray<T> getAllObjects();
-    
+
     
     
     @Mapping("nextObject")
     public native T nextObject();
-    
+
 }

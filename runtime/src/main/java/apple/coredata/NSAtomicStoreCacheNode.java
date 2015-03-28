@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 3.0 and later.
  */
-
 @Library("CoreData/CoreData.h") @Mapping("NSAtomicStoreCacheNode")
 public class NSAtomicStoreCacheNode 
     extends NSObject 
@@ -30,7 +28,7 @@ public class NSAtomicStoreCacheNode
     public NSAtomicStoreCacheNode(NSManagedObjectID moid) { }
     @Mapping("init")
     public NSAtomicStoreCacheNode() { }
-    
+
     
     @Mapping("objectID")
     public native NSManagedObjectID getObjectID();
@@ -38,12 +36,12 @@ public class NSAtomicStoreCacheNode
     public native Map<String, NSObject> getPropertyCache();
     @Mapping("setPropertyCache:")
     public native void setPropertyCache(Map<String, NSObject> v);
-    
+
     
     
     @Mapping("valueForKey:")
     public native Object getValue(String key);
     @Mapping("setValue:forKey:")
     public native void setValue(Object value, String key);
-    
+
 }

@@ -15,7 +15,6 @@ import apple.foundation.*;
 import apple.uikit.*;
 import apple.accounts.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("StoreKit/StoreKit.h")
@@ -43,5 +42,5 @@ public class SKStoreProductParameters
      */
     @GlobalConstant("SKStoreProductParameterCampaignToken")
     public static native NSString CampaignTokenKey();
-    
+
 }

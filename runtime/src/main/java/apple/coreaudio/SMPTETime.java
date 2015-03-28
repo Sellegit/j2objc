@@ -14,9 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
-
-
 @Mapping("SMPTETime") @Library("CoreAudio/CoreAudioTypes.h")
 public class SMPTETime 
     extends Struct 
@@ -44,6 +41,6 @@ public class SMPTETime
     public native short getMSeconds();
     @DotMapping("mFrames")
     public native short getMFrames();
-    
+
     
 }

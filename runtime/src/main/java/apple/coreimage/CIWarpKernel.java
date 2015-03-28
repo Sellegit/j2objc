@@ -17,9 +17,6 @@ import apple.corevideo.*;
 import apple.imageio.*;
 
 
-
-
-
 @Library("CoreImage/CoreImage.h") @Mapping("CIWarpKernel")
 public class CIWarpKernel 
     extends CIKernel 
@@ -29,12 +26,12 @@ public class CIWarpKernel
     
     @Mapping("init")
     public CIWarpKernel() { }
+
+    
+
+
     
     
-    
-    
-    
-    
-    
-    
+
+
 }

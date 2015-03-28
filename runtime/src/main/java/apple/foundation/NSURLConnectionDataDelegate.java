@@ -19,17 +19,14 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h") @Mapping("NSURLConnectionDataDelegate")
 public interface NSURLConnectionDataDelegate 
     extends NSURLConnectionDelegate {
 
     
     
-    
-    
+
+
     
     @Mapping("connection:willSendRequest:redirectResponse:")
     NSURLRequest willSendRequest(NSURLConnection connection, NSURLRequest request, NSURLResponse response);
@@ -45,7 +42,7 @@ public interface NSURLConnectionDataDelegate
     NSCachedURLResponse willCacheResponse(NSURLConnection connection, NSCachedURLResponse cachedResponse);
     @Mapping("connectionDidFinishLoading:")
     void didFinishLoading(NSURLConnection connection);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

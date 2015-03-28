@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h") @Mapping("NSCachedURLResponse")
 public class NSCachedURLResponse 
     extends NSObject 
@@ -35,7 +32,7 @@ public class NSCachedURLResponse
     public NSCachedURLResponse(NSURLResponse response, NSData data, NSDictionary<?, ?> userInfo, @Representing("NSURLCacheStoragePolicy") long storagePolicy) { }
     @Mapping("init")
     public NSCachedURLResponse() { }
-    
+
     
     @Mapping("response")
     public native NSURLResponse getResponse();
@@ -45,10 +42,10 @@ public class NSCachedURLResponse
     public native NSDictionary<?, ?> getUserInfo();
     @Mapping("storagePolicy")
     public native @Representing("NSURLCacheStoragePolicy") long getStoragePolicy();
-    
+
     
     
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
-    
+
 }

@@ -16,11 +16,9 @@ import apple.uikit.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 3.0 and later.
  */
-
 @Library("ExternalAccessory/ExternalAccessory.h") @Mapping("EAAccessory")
 public class EAAccessory 
     extends NSObject 
@@ -28,11 +26,11 @@ public class EAAccessory
 
     
     public static final int ConnectionIDNone = 0;
-    
+
     
     @Mapping("init")
     public EAAccessory() { }
-    
+
     
     /**
      * @since Available in iOS 3.0 and later.
@@ -89,9 +87,9 @@ public class EAAccessory
      */
     @Mapping("setDelegate:")
     public native void setDelegate(EAAccessoryDelegate v);
+
     
     
-    
-    
-    
+
+
 }

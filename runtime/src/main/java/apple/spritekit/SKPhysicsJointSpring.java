@@ -21,9 +21,6 @@ import apple.glkit.*;
 import apple.scenekit.*;
 
 
-
-
-
 @Library("SpriteKit/SpriteKit.h") @Mapping("SKPhysicsJointSpring")
 public class SKPhysicsJointSpring 
     extends SKPhysicsJoint 
@@ -35,7 +32,7 @@ public class SKPhysicsJointSpring
     public SKPhysicsJointSpring(NSCoder aDecoder) { }
     @Mapping("init")
     public SKPhysicsJointSpring() { }
-    
+
     
     @Mapping("damping")
     public native @MachineSizedFloat double getDamping();
@@ -45,10 +42,10 @@ public class SKPhysicsJointSpring
     public native @MachineSizedFloat double getFrequency();
     @Mapping("setFrequency:")
     public native void setFrequency(@MachineSizedFloat double v);
-    
+
     
     
     @Mapping("jointWithBodyA:bodyB:anchorA:anchorB:")
     public static native SKPhysicsJointSpring create(SKPhysicsBody bodyA, SKPhysicsBody bodyB, CGPoint anchorA, CGPoint anchorB);
-    
+
 }

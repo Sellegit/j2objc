@@ -19,9 +19,6 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h")
 @Mapping("UIBarMetrics")
 public final class UIBarMetrics extends ObjCEnum {
@@ -48,6 +45,6 @@ public final class UIBarMetrics extends ObjCEnum {
     @Deprecated
     @GlobalConstant("UIBarMetricsLandscapePhonePrompt")
     public static final long LandscapePhonePrompt = 102L;
-    
+
 
 }

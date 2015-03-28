@@ -16,11 +16,9 @@ import apple.uikit.*;
 import apple.security.*;
 
 
-
 /**
  * @since Available in iOS 7.0 and later.
  */
-
 @Library("MultipeerConnectivity/MultipeerConnectivity.h")
 @Mapping("MCEncryptionPreference")
 public final class MCEncryptionPreference extends ObjCEnum {
@@ -31,6 +29,6 @@ public final class MCEncryptionPreference extends ObjCEnum {
     public static final long Required = 1L;
     @GlobalConstant("MCEncryptionNone")
     public static final long None = 2L;
-    
+
 
 }

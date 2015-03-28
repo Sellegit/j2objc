@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 2.0 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UIDatePicker")
 public class UIDatePicker 
     extends UIControl 
@@ -37,7 +35,7 @@ public class UIDatePicker
     public UIDatePicker(NSCoder aDecoder) { }
     @Mapping("init")
     public UIDatePicker() { }
-    
+
     
     @Mapping("datePickerMode")
     public native @Representing("UIDatePickerMode") long getDatePickerMode();
@@ -75,10 +73,10 @@ public class UIDatePicker
     public native @MachineSizedSInt long getMinuteInterval();
     @Mapping("setMinuteInterval:")
     public native void setMinuteInterval(@MachineSizedSInt long v);
-    
+
     
     
     @Mapping("setDate:animated:")
     public native void setDate(NSDate date, boolean animated);
-    
+
 }

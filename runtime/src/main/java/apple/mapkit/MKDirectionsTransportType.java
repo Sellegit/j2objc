@@ -17,11 +17,9 @@ import apple.uikit.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 7.0 and later.
  */
-
 @Library("MapKit/MapKit.h")
 @Mapping("MKDirectionsTransportType")
 public final class MKDirectionsTransportType extends ObjCEnum {
@@ -32,6 +30,6 @@ public final class MKDirectionsTransportType extends ObjCEnum {
     public static final long Walking = 2L;
     @GlobalConstant("MKDirectionsTransportTypeAny")
     public static final long Any = 268435455L;
-    
+
 
 }

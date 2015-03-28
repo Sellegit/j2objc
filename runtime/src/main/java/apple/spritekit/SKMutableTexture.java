@@ -21,11 +21,9 @@ import apple.glkit.*;
 import apple.scenekit.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("SpriteKit/SpriteKit.h") @Mapping("SKMutableTexture")
 public class SKMutableTexture 
     extends SKTexture 
@@ -41,15 +39,15 @@ public class SKMutableTexture
     public SKMutableTexture(NSCoder aDecoder) { }
     @Mapping("init")
     public SKMutableTexture() { }
+
     
-    
-    
-    
+
+
     
     
     @Mapping("modifyPixelDataWithBlock:")
     public native void modifyPixelData(Todo block);
     @Mapping("mutableTextureWithSize:")
     public static native SKMutableTexture create(CGSize size);
-    
+
 }

@@ -19,11 +19,9 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 4.0 and later.
  */
-
 @Library("Foundation/Foundation.h")
 @Mapping("NSURLBookmarkCreationOptions")
 public final class NSURLBookmarkCreationOptions extends ObjCEnum {
@@ -43,6 +41,6 @@ public final class NSURLBookmarkCreationOptions extends ObjCEnum {
     public static final long WithSecurityScope = 2048L;
     @GlobalConstant("NSURLBookmarkCreationSecurityScopeAllowOnlyReadAccess")
     public static final long SecurityScopeAllowOnlyReadAccess = 4096L;
-    
+
 
 }

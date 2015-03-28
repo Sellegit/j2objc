@@ -19,7 +19,6 @@ import apple.coremedia.*;
 import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("AVFoundation/AVFoundation.h")
@@ -87,5 +86,5 @@ public class AVCaptureSessionPreset
      */
     @GlobalConstant("AVCaptureSessionPresetInputPriority")
     public static native NSString InputPriorityValue();
-    
+
 }

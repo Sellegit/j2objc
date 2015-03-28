@@ -17,9 +17,6 @@ import apple.coreaudio.*;
 import apple.coremedia.*;
 
 
-
-
-
 @Library("AudioToolbox/AudioToolbox.h")
 @Mapping("AudioFormatError")
 public final class AudioFormatError extends ObjCEnum {
@@ -36,6 +33,6 @@ public final class AudioFormatError extends ObjCEnum {
     public static final long UnsupportedDataFormat = 1718449215L;
     @GlobalConstant("kAudioFormatUnknownFormatError")
     public static final long UnknownFormat = 560360820L;
-    
+
 
 }

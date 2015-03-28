@@ -19,9 +19,6 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Mapping("UIOffset") @Library("UIKit/UIKit.h")
 public class UIOffset 
     extends Struct 
@@ -35,7 +32,7 @@ public class UIOffset
     public native @MachineSizedFloat double getHorizontal();
     @DotMapping("vertical")
     public native @MachineSizedFloat double getVertical();
-    
+
     public static native UIOffset create(@MachineSizedFloat double horizontal, @MachineSizedFloat double vertical) /*-[
         UIOffset __new = { .horizontal = horizontal, .vertical = vertical };
         return __new;
@@ -45,19 +42,35 @@ public class UIOffset
         return __new;
     ]-*/;
 
-    
+
     public static native UIOffset copyWithvertical(UIOffset original, @MachineSizedFloat double vertical) /*-[
         UIOffset __new = { .horizontal = original.horizontal, .vertical = vertical };
         return __new;
     ]-*/;
 
-    
+
+    public static final class Adapter {
+
+        public @MachineSizedFloat double horizontal;
+        public @MachineSizedFloat double vertical;
+        public Adapter(@MachineSizedFloat double horizontal, @MachineSizedFloat double vertical) {
+            this.horizontal = horizontal;
+            this.vertical = vertical;
+        }
+        public Adapter(UIOffset original) {
+            this.horizontal = original.getHorizontal();
+            this.vertical = original.getVertical();
+        }
+        public UIOffset convert() {
+            return create(horizontal, vertical);
+        }
+    }
     @GlobalConstant("UIOffsetZero")
     public static native UIOffset Zero();
-    
+
     @GlobalFunction("NSStringFromUIOffset")
     public static native String toString(UIOffset offset);
     @GlobalFunction("UIOffsetFromString")
     public static native UIOffset fromString(String string);
-    
+
 }

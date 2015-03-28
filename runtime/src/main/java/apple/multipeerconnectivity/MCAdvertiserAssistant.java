@@ -16,11 +16,9 @@ import apple.uikit.*;
 import apple.security.*;
 
 
-
 /**
  * @since Available in iOS 7.0 and later.
  */
-
 @Library("MultipeerConnectivity/MultipeerConnectivity.h") @Mapping("MCAdvertiserAssistant")
 public class MCAdvertiserAssistant 
     extends NSObject 
@@ -32,7 +30,7 @@ public class MCAdvertiserAssistant
     public MCAdvertiserAssistant(String serviceType, NSDictionary<?, ?> info, MCSession session) { }
     @Mapping("init")
     public MCAdvertiserAssistant() { }
-    
+
     
     @Mapping("delegate")
     public native MCAdvertiserAssistantDelegate getDelegate();
@@ -44,12 +42,12 @@ public class MCAdvertiserAssistant
     public native Map<String, String> getDiscoveryInfo();
     @Mapping("serviceType")
     public native String getServiceType();
-    
+
     
     
     @Mapping("start")
     public native void start();
     @Mapping("stop")
     public native void stop();
-    
+
 }

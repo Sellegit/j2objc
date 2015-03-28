@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 4.0 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h") @Mapping("AVAssetTrack")
 public class AVAssetTrack 
     extends NSObject 
@@ -34,7 +32,7 @@ public class AVAssetTrack
     
     @Mapping("init")
     public AVAssetTrack() { }
-    
+
     
     @Mapping("asset")
     public native AVAsset getAsset();
@@ -99,7 +97,7 @@ public class AVAssetTrack
      */
     @Mapping("availableTrackAssociationTypes")
     public native List<AVTrackAssociationType> getAvailableTrackAssociationTypes();
-    
+
     
     
     @Mapping("hasMediaCharacteristic:")
@@ -121,5 +119,5 @@ public class AVAssetTrack
     public native @Representing("AVKeyValueStatus") long getStatusOfValue(String key, Todo outError);
     @Mapping("loadValuesAsynchronouslyForKeys:completionHandler:")
     public native void loadValuesAsynchronously(NSArray<?> keys, @Block Runnable handler);
-    
+
 }

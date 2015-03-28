@@ -15,11 +15,9 @@ import apple.foundation.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 6.0 and later.
  */
-
 @Library("CoreBluetooth/CoreBluetooth.h") @Mapping("CBMutableCharacteristic")
 public class CBMutableCharacteristic 
     extends CBCharacteristic 
@@ -31,7 +29,7 @@ public class CBMutableCharacteristic
     public CBMutableCharacteristic(CBUUID UUID, @Representing("CBCharacteristicProperties") long properties, NSData value, @Representing("CBAttributePermissions") long permissions) { }
     @Mapping("init")
     public CBMutableCharacteristic() { }
-    
+
     
     @Mapping("permissions")
     public native @Representing("CBAttributePermissions") long getPermissions();
@@ -58,9 +56,9 @@ public class CBMutableCharacteristic
     public native NSArray<CBDescriptor> getDescriptors();
     @Mapping("setDescriptors:")
     public native void setDescriptors(NSArray<CBDescriptor> v);
+
     
     
-    
-    
-    
+
+
 }

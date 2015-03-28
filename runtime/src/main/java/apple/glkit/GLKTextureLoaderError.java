@@ -16,7 +16,6 @@ import apple.opengles.*;
 import apple.uikit.*;
 import apple.dispatch.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("GLKit/GLKit.h")
@@ -27,7 +26,7 @@ public class GLKTextureLoaderError
     
     
     protected GLKTextureLoaderError() {}
-    
+
     
     
     
@@ -36,5 +35,5 @@ public class GLKTextureLoaderError
      */
     @GlobalConstant("GLKTextureLoaderErrorDomain")
     public static native String getClassDomain();
-    
+
 }

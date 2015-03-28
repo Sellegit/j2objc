@@ -17,7 +17,6 @@ import apple.coreaudio.*;
 import apple.coreanimation.*;
 import apple.corevideo.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Mapping("CMClockOrTimebaseRef") @Library("CoreMedia/CoreMedia.h")
@@ -28,7 +27,7 @@ public class CMClockOrTimebase
     
     
     protected CMClockOrTimebase() {}
-    
+
     
     
     
@@ -57,5 +56,5 @@ public class CMClockOrTimebase
      */
     @GlobalFunction("CMSyncGetTime")
     public static native CMTime getTime(CMClockOrTimebase clockOrTimebase);
-    
+
 }

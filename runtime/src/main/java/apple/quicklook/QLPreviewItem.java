@@ -15,9 +15,6 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
-
-
 @Library("QuickLook/QuickLook.h") @Mapping("QLPreviewItem")
 public interface QLPreviewItem 
     extends NSObjectProtocol {
@@ -28,10 +25,10 @@ public interface QLPreviewItem
     NSURL getURL();
     @Mapping("previewItemTitle")
     String getTitle();
+
     
-    
-    
-    
+
+
     /*<adapter>*/
     /*</adapter>*/
 }

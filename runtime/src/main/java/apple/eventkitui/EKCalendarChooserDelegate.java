@@ -16,17 +16,14 @@ import apple.eventkit.*;
 import apple.uikit.*;
 
 
-
-
-
 @Library("EventKitUI/EventKitUI.h") @Mapping("EKCalendarChooserDelegate")
 public interface EKCalendarChooserDelegate 
     extends NSObjectProtocol {
 
     
     
-    
-    
+
+
     
     @Mapping("calendarChooserSelectionDidChange:")
     void didChangeSelection(EKCalendarChooser calendarChooser);
@@ -34,7 +31,7 @@ public interface EKCalendarChooserDelegate
     void didFinish(EKCalendarChooser calendarChooser);
     @Mapping("calendarChooserDidCancel:")
     void didCancel(EKCalendarChooser calendarChooser);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

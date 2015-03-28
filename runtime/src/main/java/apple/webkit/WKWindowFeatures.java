@@ -15,11 +15,9 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("WebKit/WebKit.h") @Mapping("WKWindowFeatures")
 public class WKWindowFeatures 
     extends NSObject 
@@ -29,7 +27,7 @@ public class WKWindowFeatures
     
     @Mapping("init")
     public WKWindowFeatures() { }
-    
+
     
     @Mapping("menuBarVisibility")
     public native NSNumber menuBarVisibility();
@@ -47,9 +45,9 @@ public class WKWindowFeatures
     public native NSNumber width();
     @Mapping("height")
     public native NSNumber height();
+
     
     
-    
-    
-    
+
+
 }

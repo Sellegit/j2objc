@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 4.2 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UIPrintPageRenderer")
 public class UIPrintPageRenderer 
     extends NSObject 
@@ -33,7 +31,7 @@ public class UIPrintPageRenderer
     
     @Mapping("init")
     public UIPrintPageRenderer() { }
-    
+
     
     @Mapping("headerHeight")
     public native @MachineSizedFloat double getHeaderHeight();
@@ -51,7 +49,7 @@ public class UIPrintPageRenderer
     public native NSArray<UIPrintFormatter> getPrintFormatters();
     @Mapping("setPrintFormatters:")
     public native void setPrintFormatters(NSArray<UIPrintFormatter> v);
-    
+
     
     
     @Mapping("printFormattersForPageAtIndex:")
@@ -72,5 +70,5 @@ public class UIPrintPageRenderer
     public native void drawContent(@MachineSizedSInt long pageIndex, CGRect contentRect);
     @Mapping("drawFooterForPageAtIndex:inRect:")
     public native void drawFooter(@MachineSizedSInt long pageIndex, CGRect footerRect);
-    
+
 }

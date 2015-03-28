@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 3.0 and later.
  */
-
 @Library("CoreData/CoreData.h") @Mapping("NSFetchedResultsController")
 public class NSFetchedResultsController 
     extends NSObject 
@@ -30,7 +28,7 @@ public class NSFetchedResultsController
     public NSFetchedResultsController(NSFetchRequest fetchRequest, NSManagedObjectContext context, String sectionNameKeyPath, String name) { }
     @Mapping("init")
     public NSFetchedResultsController() { }
-    
+
     
     @Mapping("fetchRequest")
     public native NSFetchRequest getFetchRequest();
@@ -50,7 +48,7 @@ public class NSFetchedResultsController
     public native List<String> getSectionIndexTitles();
     @Mapping("sections")
     public native List<NSFetchedResultsSectionInfo> getSections();
-    
+
     
     
     @Mapping("performFetch:")
@@ -65,5 +63,5 @@ public class NSFetchedResultsController
     public native @MachineSizedSInt long getSectionForIndexTitle(String title, @MachineSizedSInt long sectionIndex);
     @Mapping("deleteCacheWithName:")
     public static native void deleteCache(String name);
-    
+
 }

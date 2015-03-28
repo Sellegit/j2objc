@@ -16,7 +16,6 @@ import apple.corelocation.*;
 import apple.uikit.*;
 import apple.dispatch.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("MapKit/MapKit.h")
@@ -39,5 +38,5 @@ public class MKDirectionsMode
      */
     @GlobalConstant("MKLaunchOptionsDirectionsModeWalking")
     public static native NSString WalkingValue();
-    
+
 }

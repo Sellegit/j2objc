@@ -16,9 +16,6 @@ import apple.uikit.*;
 import apple.addressbook.*;
 
 
-
-
-
 @Library("PassKit/PassKit.h") @Mapping("PKObject")
 public class PKObject 
     extends NSObject 
@@ -28,12 +25,12 @@ public class PKObject
     
     @Mapping("init")
     public PKObject() { }
+
+    
+
+
     
     
-    
-    
-    
-    
-    
-    
+
+
 }

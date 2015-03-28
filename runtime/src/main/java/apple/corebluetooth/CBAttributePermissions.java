@@ -15,11 +15,9 @@ import apple.foundation.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 6.0 and later.
  */
-
 @Library("CoreBluetooth/CoreBluetooth.h")
 @Mapping("CBAttributePermissions")
 public final class CBAttributePermissions extends ObjCEnum {
@@ -32,6 +30,6 @@ public final class CBAttributePermissions extends ObjCEnum {
     public static final long ReadEncryptionRequired = 4L;
     @GlobalConstant("CBAttributePermissionsWriteEncryptionRequired")
     public static final long WriteEncryptionRequired = 8L;
-    
+
 
 }

@@ -16,7 +16,6 @@ import apple.opengles.*;
 import apple.corevideo.*;
 import apple.imageio.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("CoreImage/CoreImage.h")
@@ -72,5 +71,5 @@ public class CIFilterCategory
     public static native NSString HighDynamicRangeValue();
     @GlobalConstant("kCICategoryBuiltIn")
     public static native NSString BuiltInValue();
-    
+
 }

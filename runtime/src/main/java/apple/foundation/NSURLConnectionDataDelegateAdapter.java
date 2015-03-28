@@ -18,7 +18,6 @@ import apple.coremedia.*;
 import apple.security.*;
 import apple.dispatch.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -29,8 +28,8 @@ public abstract class NSURLConnectionDataDelegateAdapter
     
     
     
-    
-    
+
+
     
     
     @NotImplemented("connection:willSendRequest:redirectResponse:")
@@ -47,5 +46,5 @@ public abstract class NSURLConnectionDataDelegateAdapter
     public NSCachedURLResponse willCacheResponse(NSURLConnection connection, NSCachedURLResponse cachedResponse) { throw new UnsupportedOperationException(); }
     @NotImplemented("connectionDidFinishLoading:")
     public void didFinishLoading(NSURLConnection connection) { throw new UnsupportedOperationException(); }
-    
+
 }

@@ -19,9 +19,6 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h")
 @Mapping("UIBarButtonSystemItem")
 public final class UIBarButtonSystemItem extends ObjCEnum {
@@ -74,6 +71,6 @@ public final class UIBarButtonSystemItem extends ObjCEnum {
     public static final long Redo = 22L;
     @GlobalConstant("UIBarButtonSystemItemPageCurl")
     public static final long PageCurl = 23L;
-    
+
 
 }

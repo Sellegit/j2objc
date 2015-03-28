@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 import apple.uikit.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("MessageUI/MessageUI.h")
@@ -32,5 +31,5 @@ public class MFMailComposeError
      */
     @GlobalConstant("MFMailComposeErrorDomain")
     public static native String getClassDomain();
-    
+
 }

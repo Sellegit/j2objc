@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 4.0 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h") @Mapping("AVCaptureVideoDataOutput")
 public class AVCaptureVideoDataOutput 
     extends AVCaptureOutput 
@@ -34,7 +32,7 @@ public class AVCaptureVideoDataOutput
     
     @Mapping("init")
     public AVCaptureVideoDataOutput() { }
-    
+
     
     @Mapping("sampleBufferCallbackQueue")
     public native DispatchQueue getSampleBufferCallbackQueue();
@@ -56,7 +54,7 @@ public class AVCaptureVideoDataOutput
     public native boolean alwaysDiscardsLateVideoFrames();
     @Mapping("setAlwaysDiscardsLateVideoFrames:")
     public native void setAlwaysDiscardsLateVideoFrames(boolean v);
-    
+
     
     
     /**
@@ -64,5 +62,5 @@ public class AVCaptureVideoDataOutput
      */
     @Mapping("recommendedVideoSettingsForAssetWriterWithOutputFileType:")
     public native NSDictionary<NSString, NSObject> getRecommendedVideoSettings0(String outputFileType);
-    
+
 }

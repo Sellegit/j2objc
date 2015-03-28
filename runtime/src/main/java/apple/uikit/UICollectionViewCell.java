@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 6.0 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UICollectionViewCell")
 public class UICollectionViewCell 
     extends UICollectionReusableView 
@@ -37,7 +35,7 @@ public class UICollectionViewCell
     public UICollectionViewCell(NSCoder aDecoder) { }
     @Mapping("init")
     public UICollectionViewCell() { }
-    
+
     
     @Mapping("contentView")
     public native UIView getContentView();
@@ -57,9 +55,9 @@ public class UICollectionViewCell
     public native UIView getSelectedBackgroundView();
     @Mapping("setSelectedBackgroundView:")
     public native void setSelectedBackgroundView(UIView v);
+
     
     
-    
-    
-    
+
+
 }

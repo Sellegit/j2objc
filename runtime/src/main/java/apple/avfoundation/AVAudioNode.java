@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h") @Mapping("AVAudioNode")
 public class AVAudioNode 
     extends NSObject 
@@ -34,7 +32,7 @@ public class AVAudioNode
     
     @Mapping("init")
     public AVAudioNode() { }
-    
+
     
     @Mapping("engine")
     public native AVAudioEngine getEngine();
@@ -44,7 +42,7 @@ public class AVAudioNode
     public native @MachineSizedUInt long getNumberOfOutputs();
     @Mapping("lastRenderTime")
     public native AVAudioTime getLastRenderTime();
-    
+
     
     
     @Mapping("reset")
@@ -59,5 +57,5 @@ public class AVAudioNode
     public native String getNameForOutputBus(@MachineSizedUInt long bus);
     @Mapping("removeTapOnBus:")
     public native void removeTapOnBus(@MachineSizedUInt long bus);
-    
+
 }

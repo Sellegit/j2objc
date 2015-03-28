@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 7.0 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h") @Mapping("AVAssetResourceLoadingContentInformationRequest")
 public class AVAssetResourceLoadingContentInformationRequest 
     extends NSObject 
@@ -34,7 +32,7 @@ public class AVAssetResourceLoadingContentInformationRequest
     
     @Mapping("init")
     public AVAssetResourceLoadingContentInformationRequest() { }
-    
+
     
     @Mapping("contentType")
     public native String getContentType();
@@ -58,9 +56,9 @@ public class AVAssetResourceLoadingContentInformationRequest
      */
     @Mapping("setRenewalDate:")
     public native void setRenewalDate(NSDate v);
+
     
     
-    
-    
-    
+
+
 }

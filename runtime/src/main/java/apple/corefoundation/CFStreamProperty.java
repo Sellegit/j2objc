@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.dispatch.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("CoreFoundation/CoreFoundation.h")
@@ -39,5 +38,5 @@ public class CFStreamProperty
     public static native CFString SocketRemoteHostNameValue();
     @GlobalConstant("kCFStreamPropertySocketRemotePortNumber")
     public static native CFString SocketRemotePortNumberValue();
-    
+
 }

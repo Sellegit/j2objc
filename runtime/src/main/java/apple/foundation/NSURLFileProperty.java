@@ -18,7 +18,6 @@ import apple.coremedia.*;
 import apple.security.*;
 import apple.dispatch.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("Foundation/Foundation.h")
@@ -56,5 +55,5 @@ public class NSURLFileProperty
      */
     @GlobalConstant("NSURLIsAliasFileKey")
     public static native NSString IsAliasFileValue();
-    
+
 }

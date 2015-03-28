@@ -17,9 +17,6 @@ import apple.corevideo.*;
 import apple.imageio.*;
 
 
-
-
-
 @Library("CoreImage/CoreImage.h") @Mapping("CIFaceFeature")
 public class CIFaceFeature 
     extends CIFeature 
@@ -29,7 +26,7 @@ public class CIFaceFeature
     
     @Mapping("init")
     public CIFaceFeature() { }
-    
+
     
     @Mapping("bounds")
     public native CGRect getBounds();
@@ -63,9 +60,9 @@ public class CIFaceFeature
     public native boolean isLeftEyeClosed();
     @Mapping("rightEyeClosed")
     public native boolean isRightEyeClosed();
+
     
     
-    
-    
-    
+
+
 }

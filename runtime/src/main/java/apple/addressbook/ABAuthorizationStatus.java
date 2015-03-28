@@ -14,9 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
-
-
 @Library("AddressBook/AddressBook.h")
 @Mapping("ABAuthorizationStatus")
 public final class ABAuthorizationStatus extends ObjCEnum {
@@ -29,6 +26,6 @@ public final class ABAuthorizationStatus extends ObjCEnum {
     public static final long Denied = 2L;
     @GlobalConstant("kABAuthorizationStatusAuthorized")
     public static final long Authorized = 3L;
-    
+
 
 }

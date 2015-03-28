@@ -17,11 +17,9 @@ import apple.uikit.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 5.0 and later.
  */
-
 @Library("GLKit/GLKit.h") @Mapping("GLKView")
 public class GLKView 
     extends UIView 
@@ -35,7 +33,7 @@ public class GLKView
     public GLKView(CGRect frame) { }
     @Mapping("init")
     public GLKView() { }
-    
+
     
     @Mapping("delegate")
     public native GLKViewDelegate getDelegate();
@@ -71,7 +69,7 @@ public class GLKView
     public native boolean enablesSetNeedsDisplay();
     @Mapping("setEnableSetNeedsDisplay:")
     public native void setEnablesSetNeedsDisplay(boolean v);
-    
+
     
     
     @Mapping("bindDrawable")
@@ -80,5 +78,5 @@ public class GLKView
     public native void deleteDrawable();
     @Mapping("display")
     public native void display();
-    
+
 }

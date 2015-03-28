@@ -15,9 +15,6 @@ import apple.dispatch.*;
 import apple.foundation.*;
 
 
-
-
-
 @Library("CoreFoundation/CoreFoundation.h")
 @Mapping("CFNumberFormatterPadPosition")
 public final class CFNumberFormatterPadPosition extends ObjCEnum {
@@ -30,6 +27,6 @@ public final class CFNumberFormatterPadPosition extends ObjCEnum {
     public static final long BeforeSuffix = 2L;
     @GlobalConstant("kCFNumberFormatterPadAfterSuffix")
     public static final long AfterSuffix = 3L;
-    
+
 
 }

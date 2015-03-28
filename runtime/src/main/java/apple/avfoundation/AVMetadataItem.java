@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 4.0 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h") @Mapping("AVMetadataItem")
 public class AVMetadataItem 
     extends NSObject 
@@ -34,7 +32,7 @@ public class AVMetadataItem
     
     @Mapping("init")
     public AVMetadataItem() { }
-    
+
     
     /**
      * @since Available in iOS 8.0 and later.
@@ -78,7 +76,7 @@ public class AVMetadataItem
     public native Todo getCommonKey();
     @Mapping("keySpace")
     public native AVMetadataKeySpace getKeySpace();
-    
+
     
     
     /**
@@ -127,5 +125,5 @@ public class AVMetadataItem
     public static native NSArray<AVMetadataItem> filterMetadataItemsByKey(NSArray<?> metadataItems, Object key, String keySpace);
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
-    
+
 }

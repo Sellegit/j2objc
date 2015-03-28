@@ -14,9 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
-
-
 @Mapping("MIDITransform") @Library("CoreMIDI/CoreMIDI.h")
 public class MIDITransform 
     extends Struct 
@@ -30,7 +27,7 @@ public class MIDITransform
     public native MIDITransformType getTransform();
     @DotMapping("param")
     public native short getParam();
-    
+
     public static native MIDITransform create(MIDITransformType transform, short param) /*-[
         MIDITransform __new = { .transform = transform, .param = param };
         return __new;
@@ -40,11 +37,27 @@ public class MIDITransform
         return __new;
     ]-*/;
 
-    
+
     public static native MIDITransform copyWithparam(MIDITransform original, short param) /*-[
         MIDITransform __new = { .transform = original.transform, .param = param };
         return __new;
     ]-*/;
 
-    
+
+    public static final class Adapter {
+
+        public MIDITransformType transform;
+        public short param;
+        public Adapter(MIDITransformType transform, short param) {
+            this.transform = transform;
+            this.param = param;
+        }
+        public Adapter(MIDITransform original) {
+            this.transform = original.getTransform();
+            this.param = original.getParam();
+        }
+        public MIDITransform convert() {
+            return create(transform, param);
+        }
+    }
 }

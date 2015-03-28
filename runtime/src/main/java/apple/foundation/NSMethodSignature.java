@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h") @Mapping("NSMethodSignature")
 public class NSMethodSignature 
     extends NSObject 
@@ -31,7 +28,7 @@ public class NSMethodSignature
     
     @Mapping("init")
     public NSMethodSignature() { }
-    
+
     
     @Mapping("numberOfArguments")
     public native @MachineSizedUInt long getNumberOfArguments();
@@ -41,7 +38,7 @@ public class NSMethodSignature
     public native String getMethodReturnType();
     @Mapping("methodReturnLength")
     public native @MachineSizedUInt long getMethodReturnLength();
-    
+
     
     
     @Mapping("getArgumentTypeAtIndex:")
@@ -50,5 +47,5 @@ public class NSMethodSignature
     public native boolean isOneway();
     @Mapping("signatureWithObjCTypes:")
     public static native NSMethodSignature create(Todo types);
-    
+
 }

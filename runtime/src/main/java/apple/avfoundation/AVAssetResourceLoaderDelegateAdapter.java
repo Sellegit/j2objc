@@ -19,7 +19,6 @@ import apple.coremedia.*;
 import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -30,8 +29,8 @@ public abstract class AVAssetResourceLoaderDelegateAdapter
     
     
     
-    
-    
+
+
     
     
     /**
@@ -59,5 +58,5 @@ public abstract class AVAssetResourceLoaderDelegateAdapter
      */
     @NotImplemented("resourceLoader:didCancelAuthenticationChallenge:")
     public void didCancelAuthenticationChallenge(AVAssetResourceLoader resourceLoader, NSURLAuthenticationChallenge authenticationChallenge) { throw new UnsupportedOperationException(); }
-    
+
 }

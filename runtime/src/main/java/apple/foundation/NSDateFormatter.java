@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h") @Mapping("NSDateFormatter")
 public class NSDateFormatter 
     extends NSFormatter 
@@ -33,7 +30,7 @@ public class NSDateFormatter
     public NSDateFormatter(NSCoder aDecoder) { }
     @Mapping("init")
     public NSDateFormatter() { }
-    
+
     
     /**
      * @since Available in iOS 8.0 and later.
@@ -267,7 +264,7 @@ public class NSDateFormatter
      */
     @Mapping("setDoesRelativeDateFormatting:")
     public native void setDoesRelativeDateFormatting(boolean v);
-    
+
     
     
     @Mapping("stringFromDate:")
@@ -293,5 +290,5 @@ public class NSDateFormatter
     public static native @Representing("NSDateFormatterBehavior") long getDefaultFormatterBehavior();
     @Mapping("setDefaultFormatterBehavior:")
     public static native void setDefaultFormatterBehavior(@Representing("NSDateFormatterBehavior") long behavior);
-    
+
 }

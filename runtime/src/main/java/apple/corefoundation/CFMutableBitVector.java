@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.dispatch.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Mapping("CFMutableBitVectorRef") @Library("CoreFoundation/CoreFoundation.h")
@@ -25,7 +24,7 @@ public class CFMutableBitVector
     
     
     protected CFMutableBitVector() {}
-    
+
     
     
     
@@ -45,5 +44,5 @@ public class CFMutableBitVector
     public static native void setBits(CFMutableBitVector bv, CFRange range, int value);
     @GlobalFunction("CFBitVectorSetAllBits")
     public static native void setAllBits(CFMutableBitVector bv, int value);
-    
+
 }

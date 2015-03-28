@@ -13,7 +13,6 @@ import apple.coregraphics.*;
 import apple.coreservices.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("MobileCoreServices/MobileCoreServices.h")
@@ -36,5 +35,5 @@ public class UTTagClass
      */
     @GlobalConstant("kUTTagClassMIMEType")
     public static native CFString MIMETypeValue();
-    
+
 }

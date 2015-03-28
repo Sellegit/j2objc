@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 7.0 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("NSTextTab")
 public class NSTextTab 
     extends NSObject 
@@ -35,7 +33,7 @@ public class NSTextTab
     public NSTextTab(@Representing("NSTextAlignment") long alignment, @MachineSizedFloat double loc, NSDictionary<?, ?> options) { }
     @Mapping("init")
     public NSTextTab() { }
-    
+
     
     @Mapping("alignment")
     public native @Representing("NSTextAlignment") long getAlignment();
@@ -43,7 +41,7 @@ public class NSTextTab
     public native @MachineSizedFloat double getLocation();
     @Mapping("options")
     public native NSDictionary<?, ?> getOptions();
-    
+
     
     
     @Mapping("columnTerminatorsForLocale:")
@@ -52,5 +50,5 @@ public class NSTextTab
     public native Object copyWithZone$(NSZone zone);
     @Mapping("encodeWithCoder:")
     public native void encode(NSCoder aCoder);
-    
+
 }

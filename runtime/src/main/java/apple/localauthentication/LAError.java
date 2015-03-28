@@ -13,7 +13,6 @@ import apple.coregraphics.*;
 import apple.coreservices.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("LocalAuthentication/LocalAuthentication.h")
@@ -24,7 +23,7 @@ public class LAError
     
     
     protected LAError() {}
-    
+
     
     
     
@@ -33,5 +32,5 @@ public class LAError
      */
     @GlobalConstant("LAErrorDomain")
     public static native String getClassDomain();
-    
+
 }

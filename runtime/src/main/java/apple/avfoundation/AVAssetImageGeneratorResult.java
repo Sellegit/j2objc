@@ -20,9 +20,6 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
-
-
 @Library("AVFoundation/AVFoundation.h")
 @Mapping("AVAssetImageGeneratorResult")
 public final class AVAssetImageGeneratorResult extends ObjCEnum {
@@ -33,6 +30,6 @@ public final class AVAssetImageGeneratorResult extends ObjCEnum {
     public static final long Failed = 1L;
     @GlobalConstant("AVAssetImageGeneratorCancelled")
     public static final long Cancelled = 2L;
-    
+
 
 }

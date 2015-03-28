@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h")
 @Mapping("NSStringEncodingConversionOptions")
 public final class NSStringEncodingConversionOptions extends ObjCEnum {
@@ -30,6 +27,6 @@ public final class NSStringEncodingConversionOptions extends ObjCEnum {
     public static final long AllowLossy = 1L;
     @GlobalConstant("NSStringEncodingConversionExternalRepresentation")
     public static final long ExternalRepresentation = 2L;
-    
+
 
 }

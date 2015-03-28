@@ -19,17 +19,14 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h") @Mapping("UITableViewDelegate")
 public interface UITableViewDelegate 
     extends NSObjectProtocol, UIScrollViewDelegate {
 
     
     
-    
-    
+
+
     
     @Mapping("tableView:willDisplayCell:forRowAtIndexPath:")
     void willDisplayCell(UITableView tableView, UITableViewCell cell, NSIndexPath indexPath);
@@ -151,7 +148,7 @@ public interface UITableViewDelegate
      */
     @Mapping("tableView:performAction:forRowAtIndexPath:withSender:")
     void performActionForRow(UITableView tableView, Selector action, NSIndexPath indexPath, Object sender);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

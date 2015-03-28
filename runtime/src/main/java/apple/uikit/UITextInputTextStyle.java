@@ -18,7 +18,6 @@ import apple.coreimage.*;
 import apple.coretext.*;
 import apple.corelocation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("UIKit/UIKit.h")
@@ -52,5 +51,5 @@ public class UITextInputTextStyle
     @Deprecated
     @GlobalConstant("UITextInputTextFontKey")
     public static native NSString FontKey();
-    
+
 }

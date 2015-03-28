@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h")
 @Mapping("NSStreamEvent")
 public final class NSStreamEvent extends ObjCEnum {
@@ -38,6 +35,6 @@ public final class NSStreamEvent extends ObjCEnum {
     public static final long ErrorOccurred = 8L;
     @GlobalConstant("NSStreamEventEndEncountered")
     public static final long EndEncountered = 16L;
-    
+
 
 }

@@ -19,17 +19,14 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h") @Mapping("UITabBarDelegate")
 public interface UITabBarDelegate 
     extends NSObjectProtocol {
 
     
     
-    
-    
+
+
     
     @Mapping("tabBar:didSelectItem:")
     void didSelectItem(UITabBar tabBar, UITabBarItem item);
@@ -41,7 +38,7 @@ public interface UITabBarDelegate
     void willEndCustomizingItems(UITabBar tabBar, NSArray<?> items, boolean changed);
     @Mapping("tabBar:didEndCustomizingItems:changed:")
     void didEndCustomizingItems(UITabBar tabBar, NSArray<?> items, boolean changed);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

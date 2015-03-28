@@ -17,11 +17,9 @@ import apple.uikit.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 3.0 and later.
  */
-
 @Library("MapKit/MapKit.h") @Mapping("MKPinAnnotationView")
 public class MKPinAnnotationView 
     extends MKAnnotationView 
@@ -35,7 +33,7 @@ public class MKPinAnnotationView
     public MKPinAnnotationView(CGRect frame) { }
     @Mapping("init")
     public MKPinAnnotationView() { }
-    
+
     
     @Mapping("pinColor")
     public native @Representing("MKPinAnnotationColor") long getPinColor();
@@ -45,9 +43,9 @@ public class MKPinAnnotationView
     public native boolean animatesDrop();
     @Mapping("setAnimatesDrop:")
     public native void setAnimatesDrop(boolean v);
+
     
     
-    
-    
-    
+
+
 }

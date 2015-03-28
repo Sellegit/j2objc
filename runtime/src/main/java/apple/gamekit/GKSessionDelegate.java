@@ -15,17 +15,14 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
-
-
 @Library("GameKit/GameKit.h") @Mapping("GKSessionDelegate")
 public interface GKSessionDelegate 
     extends NSObjectProtocol {
 
     
     
-    
-    
+
+
     
     @Mapping("session:peer:didChangeState:")
     void didChangeState(GKSession session, String peerID, GKPeerConnectionState state);
@@ -35,7 +32,7 @@ public interface GKSessionDelegate
     void connectionWithPeerFailed(GKSession session, String peerID, NSError error);
     @Mapping("session:didFailWithError:")
     void didFail(GKSession session, NSError error);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

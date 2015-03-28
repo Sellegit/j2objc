@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h") @Mapping("AVPlayerItemMetadataOutput")
 public class AVPlayerItemMetadataOutput 
     extends AVPlayerItemOutput 
@@ -36,7 +34,7 @@ public class AVPlayerItemMetadataOutput
     public AVPlayerItemMetadataOutput(NSArray<?> identifiers) { }
     @Mapping("init")
     public AVPlayerItemMetadataOutput() { }
-    
+
     
     @Mapping("delegate")
     public native AVPlayerItemMetadataOutputPushDelegate getDelegate();
@@ -46,10 +44,10 @@ public class AVPlayerItemMetadataOutput
     public native double getAdvanceIntervalForDelegateInvocation();
     @Mapping("setAdvanceIntervalForDelegateInvocation:")
     public native void setAdvanceIntervalForDelegateInvocation(double v);
-    
+
     
     
     @Mapping("setDelegate:queue:")
     public native void setDelegate(AVPlayerItemMetadataOutputPushDelegate delegate, DispatchQueue delegateQueue);
-    
+
 }

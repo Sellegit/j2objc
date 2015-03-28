@@ -14,19 +14,17 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("HomeKit/HomeKit.h") @Mapping("HMHomeDelegate")
 public interface HMHomeDelegate 
     extends NSObjectProtocol {
 
     
     
-    
-    
+
+
     
     @Mapping("homeDidUpdateName:")
     void didUpdateName(HMHome home);
@@ -86,7 +84,7 @@ public interface HMHomeDelegate
     void didUnblockAccessory(HMHome home, HMAccessory accessory);
     @Mapping("home:didEncounterError:forAccessory:")
     void didEncounterError(HMHome home, NSError error, HMAccessory accessory);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

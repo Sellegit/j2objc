@@ -19,19 +19,17 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("Foundation/Foundation.h") @Mapping("NSUserActivityDelegate")
 public interface NSUserActivityDelegate 
     extends NSObjectProtocol {
 
     
     
-    
-    
+
+
     
     @Mapping("userActivityWillSave:")
     void willSave(NSUserActivity userActivity);
@@ -39,7 +37,7 @@ public interface NSUserActivityDelegate
     void wasContinued(NSUserActivity userActivity);
     @Mapping("userActivity:didReceiveInputStream:outputStream:")
     void didReceiveStreams(NSUserActivity userActivity, NSInputStream inputStream, NSOutputStream outputStream);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

@@ -19,7 +19,6 @@ import apple.glkit.*;
 import apple.spritekit.*;
 import apple.opengles.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -30,8 +29,8 @@ public abstract class SCNAnimatableAdapter
     
     
     
-    
-    
+
+
     
     
     @NotImplemented("addAnimation:forKey:")
@@ -52,5 +51,5 @@ public abstract class SCNAnimatableAdapter
     public boolean isAnimationPaused(String key) { throw new UnsupportedOperationException(); }
     @NotImplemented("removeAnimationForKey:fadeOutDuration:")
     public void removeAnimation(String key, @MachineSizedFloat double duration) { throw new UnsupportedOperationException(); }
-    
+
 }

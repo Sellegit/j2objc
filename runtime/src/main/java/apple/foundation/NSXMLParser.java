@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h") @Mapping("NSXMLParser")
 public class NSXMLParser 
     extends NSObject 
@@ -40,7 +37,7 @@ public class NSXMLParser
     public NSXMLParser(NSInputStream stream) { }
     @Mapping("init")
     public NSXMLParser() { }
-    
+
     
     @Mapping("delegate")
     public native NSXMLParserDelegate getDelegate();
@@ -88,12 +85,12 @@ public class NSXMLParser
     public native @MachineSizedSInt long getLineNumber();
     @Mapping("columnNumber")
     public native @MachineSizedSInt long getColumnNumber();
-    
+
     
     
     @Mapping("parse")
     public native boolean parse();
     @Mapping("abortParsing")
     public native void abortParsing();
-    
+
 }

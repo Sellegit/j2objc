@@ -19,9 +19,6 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h")
 @Mapping("UIInterpolatingMotionEffectType")
 public final class UIInterpolatingMotionEffectType extends ObjCEnum {
@@ -30,6 +27,6 @@ public final class UIInterpolatingMotionEffectType extends ObjCEnum {
     public static final long TiltAlongHorizontalAxis = 0L;
     @GlobalConstant("UIInterpolatingMotionEffectTypeTiltAlongVerticalAxis")
     public static final long TiltAlongVerticalAxis = 1L;
-    
+
 
 }

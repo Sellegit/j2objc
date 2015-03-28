@@ -20,9 +20,6 @@ import apple.spritekit.*;
 import apple.opengles.*;
 
 
-
-
-
 @Library("SceneKit/SceneKit.h")
 @Mapping("SCNWrapMode")
 public final class SCNWrapMode extends ObjCEnum {
@@ -35,6 +32,6 @@ public final class SCNWrapMode extends ObjCEnum {
     public static final long ClampToBorder = 3L;
     @GlobalConstant("SCNWrapModeMirror")
     public static final long Mirror = 4L;
-    
+
 
 }

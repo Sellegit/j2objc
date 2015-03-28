@@ -20,9 +20,6 @@ import apple.spritekit.*;
 import apple.opengles.*;
 
 
-
-
-
 @Library("SceneKit/SceneKit.h")
 @Mapping("SCNFilterMode")
 public final class SCNFilterMode extends ObjCEnum {
@@ -33,6 +30,6 @@ public final class SCNFilterMode extends ObjCEnum {
     public static final long Nearest = 1L;
     @GlobalConstant("SCNFilterModeLinear")
     public static final long Linear = 2L;
-    
+
 
 }

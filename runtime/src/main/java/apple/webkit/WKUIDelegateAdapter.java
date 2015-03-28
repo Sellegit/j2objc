@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 import apple.uikit.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -25,8 +24,8 @@ public abstract class WKUIDelegateAdapter
     
     
     
-    
-    
+
+
     
     
     @NotImplemented("webView:createWebViewWithConfiguration:forNavigationAction:windowFeatures:")
@@ -37,5 +36,5 @@ public abstract class WKUIDelegateAdapter
     public void runJavaScriptConfirmPanel(WKWebView webView, String message, WKFrameInfo frame, @Block VoidBooleanBlock completionHandler) { throw new UnsupportedOperationException(); }
     @NotImplemented("webView:runJavaScriptTextInputPanelWithPrompt:defaultText:initiatedByFrame:completionHandler:")
     public void runJavaScriptTextInputPanel(WKWebView webView, String prompt, String defaultText, WKFrameInfo frame, @Block VoidBlock1<String> completionHandler) { throw new UnsupportedOperationException(); }
-    
+
 }

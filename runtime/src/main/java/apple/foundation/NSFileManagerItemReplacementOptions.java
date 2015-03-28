@@ -19,11 +19,9 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 4.0 and later.
  */
-
 @Library("Foundation/Foundation.h")
 @Mapping("NSFileManagerItemReplacementOptions")
 public final class NSFileManagerItemReplacementOptions extends ObjCEnum {
@@ -32,6 +30,6 @@ public final class NSFileManagerItemReplacementOptions extends ObjCEnum {
     public static final long UsingNewMetadataOnly = 1L;
     @GlobalConstant("NSFileManagerItemReplacementWithoutDeletingBackupItem")
     public static final long WithoutDeletingBackupItem = 2L;
-    
+
 
 }

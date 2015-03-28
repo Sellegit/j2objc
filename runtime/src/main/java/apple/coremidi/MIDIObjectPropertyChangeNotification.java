@@ -14,9 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
-
-
 @Mapping("MIDIObjectPropertyChangeNotification") @Library("CoreMIDI/CoreMIDI.h")
 public class MIDIObjectPropertyChangeNotification 
     extends Struct 
@@ -35,7 +32,7 @@ public class MIDIObjectPropertyChangeNotification
     @DotMapping("objectType")
     public native MIDIObjectType getObjectType();
     @DotMapping("propertyName")
-    public native String getPropertyName();
-    
+    public native CFString getPropertyName();
+
     
 }

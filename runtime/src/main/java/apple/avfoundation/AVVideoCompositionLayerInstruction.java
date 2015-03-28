@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 4.0 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h") @Mapping("AVVideoCompositionLayerInstruction")
 public class AVVideoCompositionLayerInstruction 
     extends NSObject 
@@ -34,11 +32,11 @@ public class AVVideoCompositionLayerInstruction
     
     @Mapping("init")
     public AVVideoCompositionLayerInstruction() { }
-    
+
     
     @Mapping("trackID")
     public native int getTrackID();
-    
+
     
     
     @Mapping("getTransformRampForTime:startTransform:endTransform:timeRange:")
@@ -52,5 +50,5 @@ public class AVVideoCompositionLayerInstruction
     public native boolean getCropRectangleRamp(CMTime time, CGRect startCropRectangle, CGRect endCropRectangle, CMTimeRange timeRange);
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
-    
+
 }

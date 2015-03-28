@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h") @Mapping("AVAudioUnitDelay")
 public class AVAudioUnitDelay 
     extends AVAudioUnitEffect 
@@ -36,7 +34,7 @@ public class AVAudioUnitDelay
     public AVAudioUnitDelay(AudioComponentDescription audioComponentDescription) { }
     @Mapping("init")
     public AVAudioUnitDelay() { }
-    
+
     
     @Mapping("delayTime")
     public native double getDelayTime();
@@ -54,9 +52,9 @@ public class AVAudioUnitDelay
     public native float getWetDryMix();
     @Mapping("setWetDryMix:")
     public native void setWetDryMix(float v);
+
     
     
-    
-    
-    
+
+
 }

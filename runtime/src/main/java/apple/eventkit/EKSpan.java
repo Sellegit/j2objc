@@ -16,9 +16,6 @@ import apple.addressbook.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("EventKit/EventKit.h")
 @Mapping("EKSpan")
 public final class EKSpan extends ObjCEnum {
@@ -27,6 +24,6 @@ public final class EKSpan extends ObjCEnum {
     public static final long ThisEvent = 0L;
     @GlobalConstant("EKSpanFutureEvents")
     public static final long FutureEvents = 1L;
-    
+
 
 }

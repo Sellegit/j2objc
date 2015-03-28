@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h")
 @Mapping("NSFileCoordinatorWritingOptions")
 public final class NSFileCoordinatorWritingOptions extends ObjCEnum {
@@ -39,6 +36,6 @@ public final class NSFileCoordinatorWritingOptions extends ObjCEnum {
      */
     @GlobalConstant("NSFileCoordinatorWritingContentIndependentMetadataOnly")
     public static final long ContentIndependentMetadataOnly = 16L;
-    
+
 
 }

@@ -15,11 +15,9 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
 /**
  * @since Available in iOS 4.1 and later.
  */
-
 @Library("GameKit/GameKit.h") @Mapping("GKMatchmaker")
 public class GKMatchmaker 
     extends NSObject 
@@ -29,7 +27,7 @@ public class GKMatchmaker
     
     @Mapping("init")
     public GKMatchmaker() { }
-    
+
     
     /**
      * @since Available in iOS 4.1 and later.
@@ -45,7 +43,7 @@ public class GKMatchmaker
     @Deprecated
     @Mapping("setInviteHandler:")
     public native void setInviteHandler(@Block VoidBlock2<GKInvite, NSArray<NSString>> v);
-    
+
     
     
     /**
@@ -111,5 +109,5 @@ public class GKMatchmaker
     @Deprecated
     @Mapping("findPlayersForHostedMatchRequest:withCompletionHandler:")
     public native void findPlayers(GKMatchRequest request, Todo completionHandler);
-    
+
 }

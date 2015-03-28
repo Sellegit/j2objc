@@ -18,7 +18,6 @@ import apple.coreimage.*;
 import apple.coretext.*;
 import apple.corelocation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("UIKit/UIKit.h")
@@ -29,10 +28,10 @@ public final class NSValueExtensions
     
     
     private NSValueExtensions() {}
+
     
-    
-    
-    
+
+
     
     
     @ExtensionMapping("CGPointValue")
@@ -69,5 +68,5 @@ public final class NSValueExtensions
      */
     @Mapping("valueWithUIOffset:")
     public static native NSValue create(UIOffset insets);
-    
+
 }

@@ -19,23 +19,20 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h") @Mapping("UIAdaptivePresentationControllerDelegate")
 public interface UIAdaptivePresentationControllerDelegate 
     extends NSObjectProtocol {
 
     
     
-    
-    
+
+
     
     @Mapping("adaptivePresentationStyleForPresentationController:")
     @Representing("UIModalPresentationStyle") long getAdaptivePresentationStyle(UIPresentationController controller);
     @Mapping("presentationController:viewControllerForAdaptivePresentationStyle:")
     UIViewController getViewController(UIPresentationController controller, @Representing("UIModalPresentationStyle") long style);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

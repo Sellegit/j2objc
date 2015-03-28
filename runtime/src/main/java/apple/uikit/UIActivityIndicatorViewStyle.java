@@ -19,9 +19,6 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h")
 @Mapping("UIActivityIndicatorViewStyle")
 public final class UIActivityIndicatorViewStyle extends ObjCEnum {
@@ -32,6 +29,6 @@ public final class UIActivityIndicatorViewStyle extends ObjCEnum {
     public static final long White = 1L;
     @GlobalConstant("UIActivityIndicatorViewStyleGray")
     public static final long Gray = 2L;
-    
+
 
 }

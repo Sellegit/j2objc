@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 4.2 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UIPrintFormatter")
 public class UIPrintFormatter 
     extends NSObject 
@@ -33,7 +31,7 @@ public class UIPrintFormatter
     
     @Mapping("init")
     public UIPrintFormatter() { }
-    
+
     
     @Mapping("printPageRenderer")
     public native UIPrintPageRenderer getPrintPageRenderer();
@@ -59,7 +57,7 @@ public class UIPrintFormatter
     public native void setStartPage(@MachineSizedSInt long v);
     @Mapping("pageCount")
     public native @MachineSizedSInt long getPageCount();
-    
+
     
     
     @Mapping("removeFromPrintPageRenderer")
@@ -70,5 +68,5 @@ public class UIPrintFormatter
     public native void draw(CGRect rect, @MachineSizedSInt long pageIndex);
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
-    
+
 }

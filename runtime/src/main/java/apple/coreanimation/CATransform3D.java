@@ -17,9 +17,6 @@ import apple.coretext.*;
 import apple.opengles.*;
 
 
-
-
-
 @Mapping("CATransform3D") @Library("QuartzCore/QuartzCore.h")
 public class CATransform3D 
     extends Struct 
@@ -61,7 +58,7 @@ public class CATransform3D
     public native @MachineSizedFloat double getM43();
     @DotMapping("m44")
     public native @MachineSizedFloat double getM44();
-    
+
     public static native CATransform3D create(@MachineSizedFloat double m11, @MachineSizedFloat double m12, @MachineSizedFloat double m13, @MachineSizedFloat double m14, @MachineSizedFloat double m21, @MachineSizedFloat double m22, @MachineSizedFloat double m23, @MachineSizedFloat double m24, @MachineSizedFloat double m31, @MachineSizedFloat double m32, @MachineSizedFloat double m33, @MachineSizedFloat double m34, @MachineSizedFloat double m41, @MachineSizedFloat double m42, @MachineSizedFloat double m43, @MachineSizedFloat double m44) /*-[
         CATransform3D __new = { .m11 = m11, .m12 = m12, .m13 = m13, .m14 = m14, .m21 = m21, .m22 = m22, .m23 = m23, .m24 = m24, .m31 = m31, .m32 = m32, .m33 = m33, .m34 = m34, .m41 = m41, .m42 = m42, .m43 = m43, .m44 = m44 };
         return __new;
@@ -71,103 +68,161 @@ public class CATransform3D
         return __new;
     ]-*/;
 
-    
+
     public static native CATransform3D copyWithm12(CATransform3D original, @MachineSizedFloat double m12) /*-[
         CATransform3D __new = { .m11 = original.m11, .m12 = m12, .m13 = original.m13, .m14 = original.m14, .m21 = original.m21, .m22 = original.m22, .m23 = original.m23, .m24 = original.m24, .m31 = original.m31, .m32 = original.m32, .m33 = original.m33, .m34 = original.m34, .m41 = original.m41, .m42 = original.m42, .m43 = original.m43, .m44 = original.m44 };
         return __new;
     ]-*/;
 
-    
+
     public static native CATransform3D copyWithm13(CATransform3D original, @MachineSizedFloat double m13) /*-[
         CATransform3D __new = { .m11 = original.m11, .m12 = original.m12, .m13 = m13, .m14 = original.m14, .m21 = original.m21, .m22 = original.m22, .m23 = original.m23, .m24 = original.m24, .m31 = original.m31, .m32 = original.m32, .m33 = original.m33, .m34 = original.m34, .m41 = original.m41, .m42 = original.m42, .m43 = original.m43, .m44 = original.m44 };
         return __new;
     ]-*/;
 
-    
+
     public static native CATransform3D copyWithm14(CATransform3D original, @MachineSizedFloat double m14) /*-[
         CATransform3D __new = { .m11 = original.m11, .m12 = original.m12, .m13 = original.m13, .m14 = m14, .m21 = original.m21, .m22 = original.m22, .m23 = original.m23, .m24 = original.m24, .m31 = original.m31, .m32 = original.m32, .m33 = original.m33, .m34 = original.m34, .m41 = original.m41, .m42 = original.m42, .m43 = original.m43, .m44 = original.m44 };
         return __new;
     ]-*/;
 
-    
+
     public static native CATransform3D copyWithm21(CATransform3D original, @MachineSizedFloat double m21) /*-[
         CATransform3D __new = { .m11 = original.m11, .m12 = original.m12, .m13 = original.m13, .m14 = original.m14, .m21 = m21, .m22 = original.m22, .m23 = original.m23, .m24 = original.m24, .m31 = original.m31, .m32 = original.m32, .m33 = original.m33, .m34 = original.m34, .m41 = original.m41, .m42 = original.m42, .m43 = original.m43, .m44 = original.m44 };
         return __new;
     ]-*/;
 
-    
+
     public static native CATransform3D copyWithm22(CATransform3D original, @MachineSizedFloat double m22) /*-[
         CATransform3D __new = { .m11 = original.m11, .m12 = original.m12, .m13 = original.m13, .m14 = original.m14, .m21 = original.m21, .m22 = m22, .m23 = original.m23, .m24 = original.m24, .m31 = original.m31, .m32 = original.m32, .m33 = original.m33, .m34 = original.m34, .m41 = original.m41, .m42 = original.m42, .m43 = original.m43, .m44 = original.m44 };
         return __new;
     ]-*/;
 
-    
+
     public static native CATransform3D copyWithm23(CATransform3D original, @MachineSizedFloat double m23) /*-[
         CATransform3D __new = { .m11 = original.m11, .m12 = original.m12, .m13 = original.m13, .m14 = original.m14, .m21 = original.m21, .m22 = original.m22, .m23 = m23, .m24 = original.m24, .m31 = original.m31, .m32 = original.m32, .m33 = original.m33, .m34 = original.m34, .m41 = original.m41, .m42 = original.m42, .m43 = original.m43, .m44 = original.m44 };
         return __new;
     ]-*/;
 
-    
+
     public static native CATransform3D copyWithm24(CATransform3D original, @MachineSizedFloat double m24) /*-[
         CATransform3D __new = { .m11 = original.m11, .m12 = original.m12, .m13 = original.m13, .m14 = original.m14, .m21 = original.m21, .m22 = original.m22, .m23 = original.m23, .m24 = m24, .m31 = original.m31, .m32 = original.m32, .m33 = original.m33, .m34 = original.m34, .m41 = original.m41, .m42 = original.m42, .m43 = original.m43, .m44 = original.m44 };
         return __new;
     ]-*/;
 
-    
+
     public static native CATransform3D copyWithm31(CATransform3D original, @MachineSizedFloat double m31) /*-[
         CATransform3D __new = { .m11 = original.m11, .m12 = original.m12, .m13 = original.m13, .m14 = original.m14, .m21 = original.m21, .m22 = original.m22, .m23 = original.m23, .m24 = original.m24, .m31 = m31, .m32 = original.m32, .m33 = original.m33, .m34 = original.m34, .m41 = original.m41, .m42 = original.m42, .m43 = original.m43, .m44 = original.m44 };
         return __new;
     ]-*/;
 
-    
+
     public static native CATransform3D copyWithm32(CATransform3D original, @MachineSizedFloat double m32) /*-[
         CATransform3D __new = { .m11 = original.m11, .m12 = original.m12, .m13 = original.m13, .m14 = original.m14, .m21 = original.m21, .m22 = original.m22, .m23 = original.m23, .m24 = original.m24, .m31 = original.m31, .m32 = m32, .m33 = original.m33, .m34 = original.m34, .m41 = original.m41, .m42 = original.m42, .m43 = original.m43, .m44 = original.m44 };
         return __new;
     ]-*/;
 
-    
+
     public static native CATransform3D copyWithm33(CATransform3D original, @MachineSizedFloat double m33) /*-[
         CATransform3D __new = { .m11 = original.m11, .m12 = original.m12, .m13 = original.m13, .m14 = original.m14, .m21 = original.m21, .m22 = original.m22, .m23 = original.m23, .m24 = original.m24, .m31 = original.m31, .m32 = original.m32, .m33 = m33, .m34 = original.m34, .m41 = original.m41, .m42 = original.m42, .m43 = original.m43, .m44 = original.m44 };
         return __new;
     ]-*/;
 
-    
+
     public static native CATransform3D copyWithm34(CATransform3D original, @MachineSizedFloat double m34) /*-[
         CATransform3D __new = { .m11 = original.m11, .m12 = original.m12, .m13 = original.m13, .m14 = original.m14, .m21 = original.m21, .m22 = original.m22, .m23 = original.m23, .m24 = original.m24, .m31 = original.m31, .m32 = original.m32, .m33 = original.m33, .m34 = m34, .m41 = original.m41, .m42 = original.m42, .m43 = original.m43, .m44 = original.m44 };
         return __new;
     ]-*/;
 
-    
+
     public static native CATransform3D copyWithm41(CATransform3D original, @MachineSizedFloat double m41) /*-[
         CATransform3D __new = { .m11 = original.m11, .m12 = original.m12, .m13 = original.m13, .m14 = original.m14, .m21 = original.m21, .m22 = original.m22, .m23 = original.m23, .m24 = original.m24, .m31 = original.m31, .m32 = original.m32, .m33 = original.m33, .m34 = original.m34, .m41 = m41, .m42 = original.m42, .m43 = original.m43, .m44 = original.m44 };
         return __new;
     ]-*/;
 
-    
+
     public static native CATransform3D copyWithm42(CATransform3D original, @MachineSizedFloat double m42) /*-[
         CATransform3D __new = { .m11 = original.m11, .m12 = original.m12, .m13 = original.m13, .m14 = original.m14, .m21 = original.m21, .m22 = original.m22, .m23 = original.m23, .m24 = original.m24, .m31 = original.m31, .m32 = original.m32, .m33 = original.m33, .m34 = original.m34, .m41 = original.m41, .m42 = m42, .m43 = original.m43, .m44 = original.m44 };
         return __new;
     ]-*/;
 
-    
+
     public static native CATransform3D copyWithm43(CATransform3D original, @MachineSizedFloat double m43) /*-[
         CATransform3D __new = { .m11 = original.m11, .m12 = original.m12, .m13 = original.m13, .m14 = original.m14, .m21 = original.m21, .m22 = original.m22, .m23 = original.m23, .m24 = original.m24, .m31 = original.m31, .m32 = original.m32, .m33 = original.m33, .m34 = original.m34, .m41 = original.m41, .m42 = original.m42, .m43 = m43, .m44 = original.m44 };
         return __new;
     ]-*/;
 
-    
+
     public static native CATransform3D copyWithm44(CATransform3D original, @MachineSizedFloat double m44) /*-[
         CATransform3D __new = { .m11 = original.m11, .m12 = original.m12, .m13 = original.m13, .m14 = original.m14, .m21 = original.m21, .m22 = original.m22, .m23 = original.m23, .m24 = original.m24, .m31 = original.m31, .m32 = original.m32, .m33 = original.m33, .m34 = original.m34, .m41 = original.m41, .m42 = original.m42, .m43 = original.m43, .m44 = m44 };
         return __new;
     ]-*/;
 
-    
+
+    public static final class Adapter {
+
+        public @MachineSizedFloat double m11;
+        public @MachineSizedFloat double m12;
+        public @MachineSizedFloat double m13;
+        public @MachineSizedFloat double m14;
+        public @MachineSizedFloat double m21;
+        public @MachineSizedFloat double m22;
+        public @MachineSizedFloat double m23;
+        public @MachineSizedFloat double m24;
+        public @MachineSizedFloat double m31;
+        public @MachineSizedFloat double m32;
+        public @MachineSizedFloat double m33;
+        public @MachineSizedFloat double m34;
+        public @MachineSizedFloat double m41;
+        public @MachineSizedFloat double m42;
+        public @MachineSizedFloat double m43;
+        public @MachineSizedFloat double m44;
+        public Adapter(@MachineSizedFloat double m11, @MachineSizedFloat double m12, @MachineSizedFloat double m13, @MachineSizedFloat double m14, @MachineSizedFloat double m21, @MachineSizedFloat double m22, @MachineSizedFloat double m23, @MachineSizedFloat double m24, @MachineSizedFloat double m31, @MachineSizedFloat double m32, @MachineSizedFloat double m33, @MachineSizedFloat double m34, @MachineSizedFloat double m41, @MachineSizedFloat double m42, @MachineSizedFloat double m43, @MachineSizedFloat double m44) {
+            this.m11 = m11;
+            this.m12 = m12;
+            this.m13 = m13;
+            this.m14 = m14;
+            this.m21 = m21;
+            this.m22 = m22;
+            this.m23 = m23;
+            this.m24 = m24;
+            this.m31 = m31;
+            this.m32 = m32;
+            this.m33 = m33;
+            this.m34 = m34;
+            this.m41 = m41;
+            this.m42 = m42;
+            this.m43 = m43;
+            this.m44 = m44;
+        }
+        public Adapter(CATransform3D original) {
+            this.m11 = original.getM11();
+            this.m12 = original.getM12();
+            this.m13 = original.getM13();
+            this.m14 = original.getM14();
+            this.m21 = original.getM21();
+            this.m22 = original.getM22();
+            this.m23 = original.getM23();
+            this.m24 = original.getM24();
+            this.m31 = original.getM31();
+            this.m32 = original.getM32();
+            this.m33 = original.getM33();
+            this.m34 = original.getM34();
+            this.m41 = original.getM41();
+            this.m42 = original.getM42();
+            this.m43 = original.getM43();
+            this.m44 = original.getM44();
+        }
+        public CATransform3D convert() {
+            return create(m11, m12, m13, m14, m21, m22, m23, m24, m31, m32, m33, m34, m41, m42, m43, m44);
+        }
+    }
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalConstant("CATransform3DIdentity")
     public static native CATransform3D Identity();
-    
+
     /**
      * @since Available in iOS 2.0 and later.
      */
@@ -233,5 +288,5 @@ public class CATransform3D
      */
     @GlobalFunction("CATransform3DGetAffineTransform")
     public static native CGAffineTransform getAffineTransform(CATransform3D t);
-    
+
 }

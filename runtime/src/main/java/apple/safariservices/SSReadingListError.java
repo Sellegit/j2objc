@@ -13,7 +13,6 @@ import apple.coregraphics.*;
 import apple.coreservices.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("SafariServices/SafariServices.h")
@@ -31,5 +30,5 @@ public class SSReadingListError
      */
     @GlobalConstant("SSReadingListErrorDomain")
     public static native String getClassDomain();
-    
+
 }

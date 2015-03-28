@@ -19,9 +19,6 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h")
 @Mapping("UITabBarSystemItem")
 public final class UITabBarSystemItem extends ObjCEnum {
@@ -50,6 +47,6 @@ public final class UITabBarSystemItem extends ObjCEnum {
     public static final long MostRecent = 10L;
     @GlobalConstant("UITabBarSystemItemMostViewed")
     public static final long MostViewed = 11L;
-    
+
 
 }

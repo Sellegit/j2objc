@@ -14,9 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
-
-
 @Library("AddressBook/AddressBook.h")
 @Mapping("ABPropertyType")
 public final class ABPropertyType extends ObjCEnum {
@@ -43,6 +40,6 @@ public final class ABPropertyType extends ObjCEnum {
     public static final long MultiDateTime = 260L;
     @GlobalConstant("kABMultiDictionaryPropertyType")
     public static final long MultiDictionary = 261L;
-    
+
 
 }

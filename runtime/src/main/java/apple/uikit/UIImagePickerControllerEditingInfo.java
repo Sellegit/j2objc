@@ -18,7 +18,6 @@ import apple.coreimage.*;
 import apple.coretext.*;
 import apple.corelocation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("UIKit/UIKit.h")
@@ -51,5 +50,5 @@ public class UIImagePickerControllerEditingInfo
      */
     @GlobalConstant("UIImagePickerControllerMediaMetadata")
     public static native NSString MediaMetadataKey();
-    
+
 }

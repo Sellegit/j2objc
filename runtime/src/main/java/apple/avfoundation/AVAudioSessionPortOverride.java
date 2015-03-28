@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 6.0 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h")
 @Mapping("AVAudioSessionPortOverride")
 public final class AVAudioSessionPortOverride extends ObjCEnum {
@@ -33,6 +31,6 @@ public final class AVAudioSessionPortOverride extends ObjCEnum {
     public static final long None = 0L;
     @GlobalConstant("AVAudioSessionPortOverrideSpeaker")
     public static final long Speaker = 1936747378L;
-    
+
 
 }

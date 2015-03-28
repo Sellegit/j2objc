@@ -13,7 +13,6 @@ import apple.coregraphics.*;
 import apple.coreservices.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("AddressBook/AddressBook.h")
@@ -27,6 +26,6 @@ public class ABAddressBookError
     
     
     @GlobalConstant("ABAddressBookErrorDomain")
-    public static native String getClassDomain();
-    
+    public static native CFString getClassDomain();
+
 }

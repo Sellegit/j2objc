@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UIDocumentPickerExtensionViewController")
 public class UIDocumentPickerExtensionViewController 
     extends UIViewController 
@@ -37,7 +35,7 @@ public class UIDocumentPickerExtensionViewController
     public UIDocumentPickerExtensionViewController(NSCoder aDecoder) { }
     @Mapping("init")
     public UIDocumentPickerExtensionViewController() { }
-    
+
     
     @Mapping("documentPickerMode")
     public native @Representing("UIDocumentPickerMode") long getDocumentPickerMode();
@@ -49,12 +47,12 @@ public class UIDocumentPickerExtensionViewController
     public native String getProviderIdentifier();
     @Mapping("documentStorageURL")
     public native NSURL getDocumentStorageURL();
-    
+
     
     
     @Mapping("dismissGrantingAccessToURL:")
     public native void dismissGrantingAccessToURL(NSURL url);
     @Mapping("prepareForPresentationInMode:")
     public native void prepareForPresentation(@Representing("UIDocumentPickerMode") long mode);
-    
+
 }

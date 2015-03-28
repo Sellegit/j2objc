@@ -15,11 +15,9 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("WebKit/WebKit.h") @Mapping("WKBackForwardListItem")
 public class WKBackForwardListItem 
     extends NSObject 
@@ -29,7 +27,7 @@ public class WKBackForwardListItem
     
     @Mapping("init")
     public WKBackForwardListItem() { }
-    
+
     
     @Mapping("URL")
     public native NSURL getURL();
@@ -37,9 +35,9 @@ public class WKBackForwardListItem
     public native String getTitle();
     @Mapping("initialURL")
     public native NSURL getInitialURL();
+
     
     
-    
-    
-    
+
+
 }

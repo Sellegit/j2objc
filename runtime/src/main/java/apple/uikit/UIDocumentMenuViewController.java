@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UIDocumentMenuViewController")
 public class UIDocumentMenuViewController 
     extends UIViewController 
@@ -41,16 +39,16 @@ public class UIDocumentMenuViewController
     public UIDocumentMenuViewController(NSCoder aDecoder) { }
     @Mapping("init")
     public UIDocumentMenuViewController() { }
-    
+
     
     @Mapping("delegate")
     public native UIDocumentMenuDelegate getDelegate();
     @Mapping("setDelegate:")
     public native void setDelegate(UIDocumentMenuDelegate v);
-    
+
     
     
     @Mapping("addOptionWithTitle:image:order:handler:")
     public native void addOption(String title, UIImage image, @Representing("UIDocumentMenuOrder") long order, @Block Runnable handler);
-    
+
 }

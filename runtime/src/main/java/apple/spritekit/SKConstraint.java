@@ -21,11 +21,9 @@ import apple.glkit.*;
 import apple.scenekit.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("SpriteKit/SpriteKit.h") @Mapping("SKConstraint")
 public class SKConstraint 
     extends NSObject 
@@ -35,7 +33,7 @@ public class SKConstraint
     
     @Mapping("init")
     public SKConstraint() { }
-    
+
     
     @Mapping("enabled")
     public native boolean isEnabled();
@@ -45,7 +43,7 @@ public class SKConstraint
     public native SKNode getReferenceNode();
     @Mapping("setReferenceNode:")
     public native void setReferenceNode(SKNode v);
-    
+
     
     
     @Mapping("positionX:")
@@ -72,5 +70,5 @@ public class SKConstraint
     public native void encode(NSCoder aCoder);
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
-    
+
 }

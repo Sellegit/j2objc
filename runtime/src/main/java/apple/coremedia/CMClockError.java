@@ -18,9 +18,6 @@ import apple.coreanimation.*;
 import apple.corevideo.*;
 
 
-
-
-
 @Library("CoreMedia/CoreMedia.h")
 @Mapping("CMClockError")
 public final class CMClockError extends ObjCEnum {
@@ -33,6 +30,6 @@ public final class CMClockError extends ObjCEnum {
     public static final long AllocationFailed = -12747L;
     @GlobalConstant("kCMClockError_UnsupportedOperation")
     public static final long UnsupportedOperation = -12756L;
-    
+
 
 }

@@ -19,11 +19,9 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 5.0 and later.
  */
-
 @Library("Foundation/Foundation.h") @Mapping("NSMetadataQueryAttributeValueTuple")
 public class NSMetadataQueryAttributeValueTuple 
     extends NSObject 
@@ -33,7 +31,7 @@ public class NSMetadataQueryAttributeValueTuple
     
     @Mapping("init")
     public NSMetadataQueryAttributeValueTuple() { }
-    
+
     
     @Mapping("attribute")
     public native NSMetadataItemAttribute getAttribute();
@@ -41,9 +39,9 @@ public class NSMetadataQueryAttributeValueTuple
     public native Object getValue();
     @Mapping("count")
     public native @MachineSizedUInt long getCount();
+
     
     
-    
-    
-    
+
+
 }

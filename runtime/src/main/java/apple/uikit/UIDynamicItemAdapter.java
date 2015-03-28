@@ -18,7 +18,6 @@ import apple.coreimage.*;
 import apple.coretext.*;
 import apple.corelocation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -39,9 +38,9 @@ public abstract class UIDynamicItemAdapter
     public CGAffineTransform getTransform() { throw new UnsupportedOperationException(); }
     @Mapping("setTransform:")
     public void setTransform(CGAffineTransform v) { throw new UnsupportedOperationException(); }
+
     
     
-    
-    
-    
+
+
 }

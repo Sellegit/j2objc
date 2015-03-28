@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h")
 @Mapping("NSCocoaErrorCode")
 public final class NSCocoaErrorCode extends ObjCEnum {
@@ -249,6 +246,6 @@ public final class NSCocoaErrorCode extends ObjCEnum {
      */
     @GlobalConstant("NSUserActivityErrorMaximum")
     public static final long UserActivityErrorMaximum = 4863L;
-    
+
 
 }

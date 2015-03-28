@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 7.0 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UIGravityBehavior")
 public class UIGravityBehavior 
     extends UIDynamicBehavior 
@@ -35,7 +33,7 @@ public class UIGravityBehavior
     public UIGravityBehavior(NSArray<?> items) { }
     @Mapping("init")
     public UIGravityBehavior() { }
-    
+
     
     @Mapping("items")
     public native List<UIDynamicItem> getItems();
@@ -51,7 +49,7 @@ public class UIGravityBehavior
     public native @MachineSizedFloat double getMagnitude();
     @Mapping("setMagnitude:")
     public native void setMagnitude(@MachineSizedFloat double v);
-    
+
     
     
     @Mapping("addItem:")
@@ -60,5 +58,5 @@ public class UIGravityBehavior
     public native void removeItem(UIDynamicItem item);
     @Mapping("setAngle:magnitude:")
     public native void setAngle(@MachineSizedFloat double angle, @MachineSizedFloat double magnitude);
-    
+
 }

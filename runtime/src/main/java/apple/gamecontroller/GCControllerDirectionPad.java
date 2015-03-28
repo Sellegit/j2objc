@@ -14,9 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
-
-
 @Library("GameController/GameController.h") @Mapping("GCControllerDirectionPad")
 public class GCControllerDirectionPad 
     extends GCControllerElement 
@@ -26,7 +23,7 @@ public class GCControllerDirectionPad
     
     @Mapping("init")
     public GCControllerDirectionPad() { }
-    
+
     
     @Mapping("valueChangedHandler")
     public native @Block VoidBlock3<GCControllerDirectionPad, Float, Float> getValueChangedHandler();
@@ -44,9 +41,9 @@ public class GCControllerDirectionPad
     public native GCControllerButtonInput getLeft();
     @Mapping("right")
     public native GCControllerButtonInput getRight();
+
     
     
-    
-    
-    
+
+
 }

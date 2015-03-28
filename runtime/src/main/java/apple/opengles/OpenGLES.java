@@ -13,7 +13,6 @@ import apple.coregraphics.*;
 import apple.coreservices.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("OpenGLES/EAGL.h")
@@ -28,5 +27,5 @@ public class OpenGLES
     
     @GlobalFunction("EAGLGetVersion")
     public static native void getVersion(Todo major, Todo minor);
-    
+
 }

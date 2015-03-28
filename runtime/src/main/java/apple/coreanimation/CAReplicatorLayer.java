@@ -17,9 +17,6 @@ import apple.coretext.*;
 import apple.opengles.*;
 
 
-
-
-
 @Library("QuartzCore/QuartzCore.h") @Mapping("CAReplicatorLayer")
 public class CAReplicatorLayer 
     extends CALayer 
@@ -33,7 +30,7 @@ public class CAReplicatorLayer
     public CAReplicatorLayer(Object layer) { }
     @Mapping("initWithCoder:")
     public CAReplicatorLayer(NSCoder aDecoder) { }
-    
+
     
     @Mapping("instanceCount")
     public native @MachineSizedSInt long getInstanceCount();
@@ -71,9 +68,9 @@ public class CAReplicatorLayer
     public native float getInstanceAlphaOffset();
     @Mapping("setInstanceAlphaOffset:")
     public native void setInstanceAlphaOffset(float v);
+
     
     
-    
-    
-    
+
+
 }

@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.dispatch.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Mapping("CFMutableStringRef") @Library("CoreFoundation/CoreFoundation.h")
@@ -25,7 +24,7 @@ public class CFMutableString
     
     
     protected CFMutableString() {}
-    
+
     
     
     
@@ -76,5 +75,5 @@ public class CFMutableString
     public static native void fold(CFMutableString theString, @Representing("CFStringCompareFlags") long theFlags, CFLocale theLocale);
     @GlobalFunction("CFStringTransform")
     public static native boolean transform(CFMutableString string, CFRange range, CFString transform, boolean reverse);
-    
+
 }

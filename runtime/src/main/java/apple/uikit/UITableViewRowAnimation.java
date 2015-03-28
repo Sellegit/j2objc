@@ -19,9 +19,6 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h")
 @Mapping("UITableViewRowAnimation")
 public final class UITableViewRowAnimation extends ObjCEnum {
@@ -42,6 +39,6 @@ public final class UITableViewRowAnimation extends ObjCEnum {
     public static final long Middle = 6L;
     @GlobalConstant("UITableViewRowAnimationAutomatic")
     public static final long Automatic = 100L;
-    
+
 
 }

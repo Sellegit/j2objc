@@ -15,9 +15,6 @@ import apple.dispatch.*;
 import apple.foundation.*;
 
 
-
-
-
 @Library("CoreFoundation/CoreFoundation.h")
 @Mapping("CFFileDescriptorCallBackType")
 public final class CFFileDescriptorCallBackType extends ObjCEnum {
@@ -26,6 +23,6 @@ public final class CFFileDescriptorCallBackType extends ObjCEnum {
     public static final long ReadCallBack = 1L;
     @GlobalConstant("kCFFileDescriptorWriteCallBack")
     public static final long WriteCallBack = 2L;
-    
+
 
 }

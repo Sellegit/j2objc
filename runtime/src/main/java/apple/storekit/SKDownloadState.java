@@ -16,11 +16,9 @@ import apple.uikit.*;
 import apple.accounts.*;
 
 
-
 /**
  * @since Available in iOS 6.0 and later.
  */
-
 @Library("StoreKit/StoreKit.h")
 @Mapping("SKDownloadState")
 public final class SKDownloadState extends ObjCEnum {
@@ -37,6 +35,6 @@ public final class SKDownloadState extends ObjCEnum {
     public static final long Failed = 4L;
     @GlobalConstant("SKDownloadStateCancelled")
     public static final long Cancelled = 5L;
-    
+
 
 }

@@ -15,9 +15,6 @@ import apple.dispatch.*;
 import apple.foundation.*;
 
 
-
-
-
 @Library("CoreFoundation/CoreFoundation.h")
 @Mapping("CFNumberType")
 public final class CFNumberType extends ObjCEnum {
@@ -62,6 +59,6 @@ public final class CFNumberType extends ObjCEnum {
     public static final long CGFloatType = 16L;
     @GlobalConstant("kCFNumberMaxType")
     public static final long MaxType = 16L;
-    
+
 
 }

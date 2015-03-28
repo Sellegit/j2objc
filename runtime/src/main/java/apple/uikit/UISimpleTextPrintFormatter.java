@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 4.2 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UISimpleTextPrintFormatter")
 public class UISimpleTextPrintFormatter 
     extends UIPrintFormatter 
@@ -40,7 +38,7 @@ public class UISimpleTextPrintFormatter
     public UISimpleTextPrintFormatter(NSAttributedString attributedText) { }
     @Mapping("init")
     public UISimpleTextPrintFormatter() { }
-    
+
     
     @Mapping("text")
     public native String getText();
@@ -68,9 +66,9 @@ public class UISimpleTextPrintFormatter
     public native @Representing("NSTextAlignment") long getTextAlignment();
     @Mapping("setTextAlignment:")
     public native void setTextAlignment(@Representing("NSTextAlignment") long v);
+
     
     
-    
-    
-    
+
+
 }

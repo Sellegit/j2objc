@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h") @Mapping("AVCaptureAutoExposureBracketedStillImageSettings")
 public class AVCaptureAutoExposureBracketedStillImageSettings 
     extends AVCaptureBracketedStillImageSettings 
@@ -34,14 +32,14 @@ public class AVCaptureAutoExposureBracketedStillImageSettings
     
     @Mapping("init")
     public AVCaptureAutoExposureBracketedStillImageSettings() { }
-    
+
     
     @Mapping("exposureTargetBias")
     public native float getExposureTargetBias();
-    
+
     
     
     @Mapping("autoExposureSettingsWithExposureTargetBias:")
     public static native AVCaptureAutoExposureBracketedStillImageSettings create(float exposureTargetBias);
-    
+
 }

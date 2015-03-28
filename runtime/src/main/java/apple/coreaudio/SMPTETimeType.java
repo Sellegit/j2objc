@@ -14,9 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
-
-
 @Library("CoreAudio/CoreAudioTypes.h")
 @Mapping("SMPTETimeType")
 public final class SMPTETimeType extends ObjCEnum {
@@ -45,6 +42,6 @@ public final class SMPTETimeType extends ObjCEnum {
     public static final long _50 = 10L;
     @GlobalConstant("kSMPTETimeType2398")
     public static final long _2398 = 11L;
-    
+
 
 }

@@ -17,11 +17,9 @@ import apple.uikit.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 4.0 and later.
  */
-
 @Library("MapKit/MapKit.h") @Mapping("MKShape")
 public class MKShape 
     extends NSObject 
@@ -31,7 +29,7 @@ public class MKShape
     
     @Mapping("init")
     public MKShape() { }
-    
+
     
     @Mapping("title")
     public native String getTitle();
@@ -45,9 +43,9 @@ public class MKShape
     public native CLLocationCoordinate2D getCoordinate();
     @Mapping("setCoordinate:")
     public native void setCoordinate(CLLocationCoordinate2D v);
+
     
     
-    
-    
-    
+
+
 }

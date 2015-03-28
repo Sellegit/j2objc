@@ -15,11 +15,9 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
 /**
  * @since Available in iOS 5.0 and later.
  */
-
 @Library("GameKit/GameKit.h") @Mapping("GKTurnBasedParticipant")
 public class GKTurnBasedParticipant 
     extends NSObject 
@@ -29,7 +27,7 @@ public class GKTurnBasedParticipant
     
     @Mapping("init")
     public GKTurnBasedParticipant() { }
-    
+
     
     /**
      * @since Available in iOS 8.0 and later.
@@ -56,9 +54,9 @@ public class GKTurnBasedParticipant
     @Deprecated
     @Mapping("playerID")
     public native String getPlayerID();
+
     
     
-    
-    
-    
+
+
 }

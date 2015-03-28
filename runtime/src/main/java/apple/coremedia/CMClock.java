@@ -17,7 +17,6 @@ import apple.coreaudio.*;
 import apple.coreanimation.*;
 import apple.corevideo.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Mapping("CMClockRef") @Library("CoreMedia/CoreMedia.h")
@@ -28,7 +27,7 @@ public class CMClock
     
     
     protected CMClock() {}
-    
+
     
     
     
@@ -77,5 +76,5 @@ public class CMClock
      */
     @GlobalFunction("CMAudioClockCreate")
     public static native int createAudioClock(CFAllocator allocator, Todo clockOut);
-    
+
 }

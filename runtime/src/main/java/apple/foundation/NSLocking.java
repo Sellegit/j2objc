@@ -19,23 +19,20 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h") @Mapping("NSLocking")
 public interface NSLocking 
      {
 
     
     
-    
-    
+
+
     
     @Mapping("lock")
     void lock();
     @Mapping("unlock")
     void unlock();
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

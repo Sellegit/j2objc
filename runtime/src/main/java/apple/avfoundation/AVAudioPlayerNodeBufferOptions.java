@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h")
 @Mapping("AVAudioPlayerNodeBufferOptions")
 public final class AVAudioPlayerNodeBufferOptions extends ObjCEnum {
@@ -35,6 +33,6 @@ public final class AVAudioPlayerNodeBufferOptions extends ObjCEnum {
     public static final long Interrupts = 2L;
     @GlobalConstant("AVAudioPlayerNodeBufferInterruptsAtLoop")
     public static final long InterruptsAtLoop = 4L;
-    
+
 
 }

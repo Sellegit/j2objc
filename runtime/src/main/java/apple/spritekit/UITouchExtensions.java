@@ -20,7 +20,6 @@ import apple.avfoundation.*;
 import apple.glkit.*;
 import apple.scenekit.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("SpriteKit/SpriteKit.h")
@@ -31,15 +30,15 @@ public final class UITouchExtensions
     
     
     private UITouchExtensions() {}
+
     
-    
-    
-    
+
+
     
     
     @ExtensionMapping("locationInNode:")
     public static native CGPoint getLocationInNode(UITouch thiz, SKNode node);
     @ExtensionMapping("previousLocationInNode:")
     public static native CGPoint getPreviousLocationInNode(UITouch thiz, SKNode node);
-    
+
 }

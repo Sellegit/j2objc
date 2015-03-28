@@ -18,7 +18,6 @@ import apple.coremedia.*;
 import apple.security.*;
 import apple.dispatch.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -29,8 +28,8 @@ public abstract class NSURLSessionTaskDelegateAdapter
     
     
     
-    
-    
+
+
     
     
     @NotImplemented("URLSession:task:willPerformHTTPRedirection:newRequest:completionHandler:")
@@ -43,5 +42,5 @@ public abstract class NSURLSessionTaskDelegateAdapter
     public void didSendBodyData(NSURLSession session, NSURLSessionTask task, long bytesSent, long totalBytesSent, long totalBytesExpectedToSend) { throw new UnsupportedOperationException(); }
     @NotImplemented("URLSession:task:didCompleteWithError:")
     public void didComplete(NSURLSession session, NSURLSessionTask task, NSError error) { throw new UnsupportedOperationException(); }
-    
+
 }

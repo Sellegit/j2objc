@@ -20,9 +20,6 @@ import apple.spritekit.*;
 import apple.opengles.*;
 
 
-
-
-
 @Library("SceneKit/SceneKit.h")
 @Mapping("SCNParticleSortingMode")
 public final class SCNParticleSortingMode extends ObjCEnum {
@@ -37,6 +34,6 @@ public final class SCNParticleSortingMode extends ObjCEnum {
     public static final long OldestFirst = 3L;
     @GlobalConstant("SCNParticleSortingModeYoungestFirst")
     public static final long YoungestFirst = 4L;
-    
+
 
 }

@@ -15,11 +15,9 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("WebKit/WebKit.h")
 @Mapping("WKNavigationActionPolicy")
 public final class WKNavigationActionPolicy extends ObjCEnum {
@@ -28,6 +26,6 @@ public final class WKNavigationActionPolicy extends ObjCEnum {
     public static final long Cancel = 0L;
     @GlobalConstant("WKNavigationActionPolicyAllow")
     public static final long Allow = 1L;
-    
+
 
 }

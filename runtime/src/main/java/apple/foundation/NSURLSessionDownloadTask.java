@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h") @Mapping("NSURLSessionDownloadTask")
 public class NSURLSessionDownloadTask 
     extends NSURLSessionTask 
@@ -31,13 +28,13 @@ public class NSURLSessionDownloadTask
     
     @Mapping("init")
     public NSURLSessionDownloadTask() { }
+
     
-    
-    
-    
+
+
     
     
     @Mapping("cancelByProducingResumeData:")
     public native void cancelByProducingResumeData(@Block VoidBlock1<NSData> completionHandler);
-    
+
 }

@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h") @Mapping("AVAudioStereoMixing")
 public interface AVAudioStereoMixing 
     extends NSObjectProtocol {
@@ -35,10 +33,10 @@ public interface AVAudioStereoMixing
     float getPan();
     @Mapping("setPan:")
     void setPan(float v);
+
     
-    
-    
-    
+
+
     /*<adapter>*/
     /*</adapter>*/
 }

@@ -17,11 +17,9 @@ import apple.uikit.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 7.0 and later.
  */
-
 @Library("MapKit/MapKit.h")
 @Mapping("MKOverlayLevel")
 public final class MKOverlayLevel extends ObjCEnum {
@@ -30,6 +28,6 @@ public final class MKOverlayLevel extends ObjCEnum {
     public static final long Roads = 0L;
     @GlobalConstant("MKOverlayLevelAboveLabels")
     public static final long Labels = 1L;
-    
+
 
 }

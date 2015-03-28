@@ -19,11 +19,9 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 4.0 and later.
  */
-
 @Library("Foundation/Foundation.h") @Mapping("NSOrthography")
 public class NSOrthography 
     extends NSObject 
@@ -40,7 +38,7 @@ public class NSOrthography
     public NSOrthography(NSCoder aDecoder) { }
     @Mapping("init")
     public NSOrthography() { }
-    
+
     
     @Mapping("dominantScript")
     public native String getDominantScript();
@@ -61,7 +59,7 @@ public class NSOrthography
      */
     @Mapping("allLanguages")
     public native List<String> getAllLanguages();
-    
+
     
     
     /**
@@ -78,5 +76,5 @@ public class NSOrthography
     public native Object copyWithZone$(NSZone zone);
     @Mapping("encodeWithCoder:")
     public native void encode(NSCoder aCoder);
-    
+
 }

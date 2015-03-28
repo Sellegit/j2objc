@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 import apple.uikit.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -25,8 +24,8 @@ public abstract class GKChallengeEventHandlerDelegateAdapter
     
     
     
-    
-    
+
+
     
     
     @NotImplemented("localPlayerDidSelectChallenge:")
@@ -43,5 +42,5 @@ public abstract class GKChallengeEventHandlerDelegateAdapter
     public boolean shouldShowBannerForRemotelyCompletedChallenge(GKChallenge challenge) { throw new UnsupportedOperationException(); }
     @NotImplemented("remotePlayerDidCompleteChallenge:")
     public void remotePlayerDidCompleteChallenge(GKChallenge challenge) { throw new UnsupportedOperationException(); }
-    
+
 }

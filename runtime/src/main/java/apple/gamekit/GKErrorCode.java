@@ -15,9 +15,6 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
-
-
 @Library("GameKit/GameKit.h")
 @Mapping("GKErrorCode")
 public final class GKErrorCode extends ObjCEnum {
@@ -76,6 +73,6 @@ public final class GKErrorCode extends ObjCEnum {
     public static final long PlayerPhotoFailure = 26L;
     @GlobalConstant("GKErrorUbiquityContainerUnavailable")
     public static final long UbiquityContainerUnavailable = 27L;
-    
+
 
 }

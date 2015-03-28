@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Mapping("NSDecimal") @Library("Foundation/Foundation.h")
 public class NSDecimal 
     extends Struct 
@@ -41,7 +38,7 @@ public class NSDecimal
     public native int get_isCompact();
     @DotMapping("_reserved")
     public native int get_reserved();
-    
+
     
     @GlobalFunction("NSDecimalCompact")
     public static native void compact(NSDecimal number);
@@ -65,5 +62,5 @@ public class NSDecimal
     public static native NSCalculationError multiplyByPowerOf10(NSDecimal result, NSDecimal number, short power, @Representing("NSRoundingMode") long roundingMode);
     @GlobalFunction("NSDecimalString")
     public static native String toString(NSDecimal dcm, Object locale);
-    
+
 }

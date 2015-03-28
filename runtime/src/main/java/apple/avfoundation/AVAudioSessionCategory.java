@@ -19,7 +19,6 @@ import apple.coremedia.*;
 import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("AVFoundation/AVFoundation.h")
@@ -49,5 +48,5 @@ public class AVAudioSessionCategory
      */
     @GlobalConstant("AVAudioSessionCategoryMultiRoute")
     public static native NSString MultiRouteValue();
-    
+
 }

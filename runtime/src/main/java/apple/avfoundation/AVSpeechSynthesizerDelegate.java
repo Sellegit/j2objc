@@ -20,17 +20,14 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
-
-
 @Library("AVFoundation/AVFoundation.h") @Mapping("AVSpeechSynthesizerDelegate")
 public interface AVSpeechSynthesizerDelegate 
     extends NSObjectProtocol {
 
     
     
-    
-    
+
+
     
     @Mapping("speechSynthesizer:didStartSpeechUtterance:")
     void didStartSpeechUtterance(AVSpeechSynthesizer synthesizer, AVSpeechUtterance utterance);
@@ -44,7 +41,7 @@ public interface AVSpeechSynthesizerDelegate
     void didCancelSpeechUtterance(AVSpeechSynthesizer synthesizer, AVSpeechUtterance utterance);
     @Mapping("speechSynthesizer:willSpeakRangeOfSpeechString:utterance:")
     void willSpeak(AVSpeechSynthesizer synthesizer, NSRange characterRange, AVSpeechUtterance utterance);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

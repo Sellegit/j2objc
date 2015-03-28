@@ -19,11 +19,9 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 7.0 and later.
  */
-
 @Library("Foundation/Foundation.h")
 @Mapping("NSDataBase64EncodingOptions")
 public final class NSDataBase64EncodingOptions extends ObjCEnum {
@@ -36,6 +34,6 @@ public final class NSDataBase64EncodingOptions extends ObjCEnum {
     public static final long EndLineWithCarriageReturn = 16L;
     @GlobalConstant("NSDataBase64EncodingEndLineWithLineFeed")
     public static final long EndLineWithLineFeed = 32L;
-    
+
 
 }

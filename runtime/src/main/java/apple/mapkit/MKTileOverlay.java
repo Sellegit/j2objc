@@ -17,11 +17,9 @@ import apple.uikit.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 7.0 and later.
  */
-
 @Library("MapKit/MapKit.h") @Mapping("MKTileOverlay")
 public class MKTileOverlay 
     extends NSObject 
@@ -33,7 +31,7 @@ public class MKTileOverlay
     public MKTileOverlay(String URLTemplate) { }
     @Mapping("init")
     public MKTileOverlay() { }
-    
+
     
     @Mapping("tileSize")
     public native CGSize getTileSize();
@@ -67,7 +65,7 @@ public class MKTileOverlay
     public native String getTitle();
     @Mapping("subtitle")
     public native String getSubtitle();
-    
+
     
     
     @Mapping("URLForTilePath:")
@@ -76,5 +74,5 @@ public class MKTileOverlay
     public native void loadTile(MKTileOverlayPath path, @Block VoidBlock2<NSData, NSError> result);
     @Mapping("intersectsMapRect:")
     public native boolean intersects(MKMapRect mapRect);
-    
+
 }

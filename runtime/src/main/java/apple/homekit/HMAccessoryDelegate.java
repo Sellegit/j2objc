@@ -14,19 +14,17 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("HomeKit/HomeKit.h") @Mapping("HMAccessoryDelegate")
 public interface HMAccessoryDelegate 
     extends NSObjectProtocol {
 
     
     
-    
-    
+
+
     
     @Mapping("accessoryDidUpdateName:")
     void didUpdateName(HMAccessory accessory);
@@ -40,7 +38,7 @@ public interface HMAccessoryDelegate
     void didUpdateReachability(HMAccessory accessory);
     @Mapping("accessory:service:didUpdateValueForCharacteristic:")
     void didUpdateCharacteristicValue(HMAccessory accessory, HMService service, HMCharacteristic characteristic);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

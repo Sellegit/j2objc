@@ -18,7 +18,6 @@ import apple.coreimage.*;
 import apple.coretext.*;
 import apple.corelocation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("UIKit/UIKit.h")
@@ -29,10 +28,10 @@ public final class NSAttributedStringExtensions
     
     
     private NSAttributedStringExtensions() {}
+
     
-    
-    
-    
+
+
     
     
     /**
@@ -75,5 +74,5 @@ public final class NSAttributedStringExtensions
      */
     @Mapping("attributedStringWithAttachment:")
     public static native NSAttributedString create(NSTextAttachment attachment);
-    
+
 }

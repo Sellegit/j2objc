@@ -14,9 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
-
-
 @Library("CoreData/CoreData.h")
 @Mapping("NSBatchUpdateRequestResultType")
 public final class NSBatchUpdateRequestResultType extends ObjCEnum {
@@ -27,6 +24,6 @@ public final class NSBatchUpdateRequestResultType extends ObjCEnum {
     public static final long UpdatedObjectIDsResultType = 1L;
     @GlobalConstant("NSUpdatedObjectsCountResultType")
     public static final long UpdatedObjectsCountResultType = 2L;
-    
+
 
 }

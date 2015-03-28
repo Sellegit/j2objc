@@ -14,9 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
-
-
 @Mapping("MIDINotification") @Library("CoreMIDI/CoreMIDI.h")
 public class MIDINotification 
     extends Struct 
@@ -30,7 +27,7 @@ public class MIDINotification
     public native MIDINotificationMessageID getMessageID();
     @DotMapping("messageSize")
     public native int getMessageSize();
-    
+
     public static native MIDINotification create(MIDINotificationMessageID messageID, int messageSize) /*-[
         MIDINotification __new = { .messageID = messageID, .messageSize = messageSize };
         return __new;
@@ -40,11 +37,27 @@ public class MIDINotification
         return __new;
     ]-*/;
 
-    
+
     public static native MIDINotification copyWithmessageSize(MIDINotification original, int messageSize) /*-[
         MIDINotification __new = { .messageID = original.messageID, .messageSize = messageSize };
         return __new;
     ]-*/;
 
-    
+
+    public static final class Adapter {
+
+        public MIDINotificationMessageID messageID;
+        public int messageSize;
+        public Adapter(MIDINotificationMessageID messageID, int messageSize) {
+            this.messageID = messageID;
+            this.messageSize = messageSize;
+        }
+        public Adapter(MIDINotification original) {
+            this.messageID = original.getMessageID();
+            this.messageSize = original.getMessageSize();
+        }
+        public MIDINotification convert() {
+            return create(messageID, messageSize);
+        }
+    }
 }

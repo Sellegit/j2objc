@@ -14,9 +14,6 @@ import apple.coreservices.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Security/Security.h")
 @Mapping("SecTrustResultType")
 public final class SecTrustResultType extends ObjCEnum {
@@ -37,6 +34,6 @@ public final class SecTrustResultType extends ObjCEnum {
     public static final long FatalTrustFailure = 6L;
     @GlobalConstant("kSecTrustResultOtherError")
     public static final long OtherError = 7L;
-    
+
 
 }

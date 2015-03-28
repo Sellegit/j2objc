@@ -17,11 +17,9 @@ import apple.uikit.*;
 import apple.avfoundation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("Photos/Photos.h") @Mapping("PHCollection")
 public class PHCollection 
     extends PHObject 
@@ -31,7 +29,7 @@ public class PHCollection
     
     @Mapping("init")
     public PHCollection() { }
-    
+
     
     @Mapping("canContainAssets")
     public native boolean canContainAssets();
@@ -39,7 +37,7 @@ public class PHCollection
     public native boolean canContainCollections();
     @Mapping("localizedTitle")
     public native String getLocalizedTitle();
-    
+
     
     
     @Mapping("canPerformEditOperation:")
@@ -48,5 +46,5 @@ public class PHCollection
     public static native PHFetchResult fetchCollectionsInCollectionList(PHCollectionList collectionList, PHFetchOptions options);
     @Mapping("fetchTopLevelUserCollectionsWithOptions:")
     public static native PHFetchResult fetchTopLevelUserCollections(PHFetchOptions options);
-    
+
 }

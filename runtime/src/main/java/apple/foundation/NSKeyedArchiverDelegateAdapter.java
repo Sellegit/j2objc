@@ -18,7 +18,6 @@ import apple.coremedia.*;
 import apple.security.*;
 import apple.dispatch.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -29,8 +28,8 @@ public abstract class NSKeyedArchiverDelegateAdapter
     
     
     
-    
-    
+
+
     
     
     @NotImplemented("archiver:willEncodeObject:")
@@ -43,5 +42,5 @@ public abstract class NSKeyedArchiverDelegateAdapter
     public void willFinish(NSKeyedArchiver archiver) { throw new UnsupportedOperationException(); }
     @NotImplemented("archiverDidFinish:")
     public void didFinish(NSKeyedArchiver archiver) { throw new UnsupportedOperationException(); }
-    
+
 }

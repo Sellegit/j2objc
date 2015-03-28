@@ -19,11 +19,9 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 2.0 and later.
  */
-
 @Library("Foundation/Foundation.h") @Mapping("NSCondition")
 public class NSCondition 
     extends NSObject 
@@ -33,7 +31,7 @@ public class NSCondition
     
     @Mapping("init")
     public NSCondition() { }
-    
+
     
     /**
      * @since Available in iOS 2.0 and later.
@@ -45,7 +43,7 @@ public class NSCondition
      */
     @Mapping("setName:")
     public native void setName(String v);
-    
+
     
     
     @Mapping("wait")
@@ -60,5 +58,5 @@ public class NSCondition
     public native void lock();
     @Mapping("unlock")
     public native void unlock();
-    
+
 }

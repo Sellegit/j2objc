@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h") @Mapping("AVAudioMixing")
 public interface AVAudioMixing 
     extends AVAudioStereoMixing, AVAudio3DMixing {
@@ -35,10 +33,10 @@ public interface AVAudioMixing
     float getVolume();
     @Mapping("setVolume:")
     void setVolume(float v);
+
     
-    
-    
-    
+
+
     /*<adapter>*/
     /*</adapter>*/
 }

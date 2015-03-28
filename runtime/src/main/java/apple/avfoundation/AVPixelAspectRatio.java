@@ -20,9 +20,6 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
-
-
 @Mapping("AVPixelAspectRatio") @Library("AVFoundation/AVFoundation.h")
 public class AVPixelAspectRatio 
     extends Struct 
@@ -36,7 +33,7 @@ public class AVPixelAspectRatio
     public native @MachineSizedSInt long getHorizontalSpacing();
     @DotMapping("verticalSpacing")
     public native @MachineSizedSInt long getVerticalSpacing();
-    
+
     public static native AVPixelAspectRatio create(@MachineSizedSInt long horizontalSpacing, @MachineSizedSInt long verticalSpacing) /*-[
         AVPixelAspectRatio __new = { .horizontalSpacing = horizontalSpacing, .verticalSpacing = verticalSpacing };
         return __new;
@@ -46,11 +43,27 @@ public class AVPixelAspectRatio
         return __new;
     ]-*/;
 
-    
+
     public static native AVPixelAspectRatio copyWithverticalSpacing(AVPixelAspectRatio original, @MachineSizedSInt long verticalSpacing) /*-[
         AVPixelAspectRatio __new = { .horizontalSpacing = original.horizontalSpacing, .verticalSpacing = verticalSpacing };
         return __new;
     ]-*/;
 
-    
+
+    public static final class Adapter {
+
+        public @MachineSizedSInt long horizontalSpacing;
+        public @MachineSizedSInt long verticalSpacing;
+        public Adapter(@MachineSizedSInt long horizontalSpacing, @MachineSizedSInt long verticalSpacing) {
+            this.horizontalSpacing = horizontalSpacing;
+            this.verticalSpacing = verticalSpacing;
+        }
+        public Adapter(AVPixelAspectRatio original) {
+            this.horizontalSpacing = original.getHorizontalSpacing();
+            this.verticalSpacing = original.getVerticalSpacing();
+        }
+        public AVPixelAspectRatio convert() {
+            return create(horizontalSpacing, verticalSpacing);
+        }
+    }
 }

@@ -15,17 +15,14 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
-
-
 @Library("WebKit/WebKit.h") @Mapping("WKNavigationDelegate")
 public interface WKNavigationDelegate 
     extends NSObjectProtocol {
 
     
     
-    
-    
+
+
     
     @Mapping("webView:decidePolicyForNavigationAction:decisionHandler:")
     void decidePolicyForNavigationAction(WKWebView webView, WKNavigationAction navigationAction, @Block VoidBlock1<WKNavigationActionPolicy> decisionHandler);
@@ -45,7 +42,7 @@ public interface WKNavigationDelegate
     void didFailNavigation(WKWebView webView, WKNavigation navigation, NSError error);
     @Mapping("webView:didReceiveAuthenticationChallenge:completionHandler:")
     void didReceiveAuthenticationChallenge(WKWebView webView, NSURLAuthenticationChallenge challenge, @Block VoidBlock2<NSURLSessionAuthChallengeDisposition, NSURLCredential> completionHandler);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

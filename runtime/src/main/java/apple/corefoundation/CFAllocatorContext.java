@@ -15,9 +15,6 @@ import apple.dispatch.*;
 import apple.foundation.*;
 
 
-
-
-
 @Mapping("CFAllocatorContext") @Library("CoreFoundation/CoreFoundation.h")
 public class CFAllocatorContext 
     extends Struct 
@@ -31,6 +28,6 @@ public class CFAllocatorContext
     public native @MachineSizedSInt long getVersion();
     @DotMapping("info")
     public native Todo getInfo();
-    
+
     
 }

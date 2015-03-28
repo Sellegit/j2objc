@@ -19,9 +19,6 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h")
 @Mapping("UILayoutConstraintAxis")
 public final class UILayoutConstraintAxis extends ObjCEnum {
@@ -30,6 +27,6 @@ public final class UILayoutConstraintAxis extends ObjCEnum {
     public static final long Horizontal = 0L;
     @GlobalConstant("UILayoutConstraintAxisVertical")
     public static final long Vertical = 1L;
-    
+
 
 }

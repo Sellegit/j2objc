@@ -16,11 +16,9 @@ import apple.uikit.*;
 import apple.accounts.*;
 
 
-
 /**
  * @since Available in iOS 7.0 and later.
  */
-
 @Library("StoreKit/StoreKit.h") @Mapping("SKReceiptRefreshRequest")
 public class SKReceiptRefreshRequest 
     extends SKRequest 
@@ -35,14 +33,14 @@ public class SKReceiptRefreshRequest
     public SKReceiptRefreshRequest(NSDictionary<?, ?> properties) { }
     @Mapping("init")
     public SKReceiptRefreshRequest() { }
-    
+
     
     /**
      * @since Available in iOS 7.0 and later.
      */
     @Mapping("receiptProperties")
     public native SKReceiptRefreshRequestOptions getReceiptProperties();
-    
+
     
     
     /**
@@ -50,7 +48,7 @@ public class SKReceiptRefreshRequest
      */
     @GlobalFunction("SKTerminateForInvalidReceipt")
     public static native void terminateForInvalidReceipt();
-    
-    
-    
+
+
+
 }

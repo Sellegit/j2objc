@@ -13,7 +13,6 @@ import apple.coregraphics.*;
 import apple.coreservices.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("HealthKit/HealthKit.h")
@@ -51,5 +50,5 @@ public class HKBodyQuantityTypeIdentifier
      */
     @GlobalConstant("HKQuantityTypeIdentifierLeanBodyMass")
     public static native NSString LeanBodyMassValue();
-    
+
 }

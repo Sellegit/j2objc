@@ -15,7 +15,6 @@ import apple.foundation.*;
 import apple.uikit.*;
 import apple.security.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -26,8 +25,8 @@ public abstract class MCSessionDelegateAdapter
     
     
     
-    
-    
+
+
     
     
     @NotImplemented("session:peer:didChangeState:")
@@ -42,5 +41,5 @@ public abstract class MCSessionDelegateAdapter
     public void didFinishReceivingResource(MCSession session, String resourceName, MCPeerID peerID, NSURL localURL, NSError error) { throw new UnsupportedOperationException(); }
     @NotImplemented("session:didReceiveCertificate:fromPeer:certificateHandler:")
     public void didReceiveCertificate(MCSession session, NSArray<?> certificate, MCPeerID peerID, @Block VoidBooleanBlock certificateHandler) { throw new UnsupportedOperationException(); }
-    
+
 }

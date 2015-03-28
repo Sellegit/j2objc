@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.dispatch.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Mapping("CFBooleanRef") @Library("CoreFoundation/CoreFoundation.h")
@@ -25,7 +24,7 @@ public class CFBoolean
     
     
     protected CFBoolean() {}
-    
+
     
     
     
@@ -33,10 +32,10 @@ public class CFBoolean
     public static native CFBoolean True();
     @GlobalConstant("kCFBooleanFalse")
     public static native CFBoolean False();
-    
+
     @GlobalFunction("CFBooleanGetTypeID")
     public static native @MachineSizedUInt long getClassTypeID();
     @GlobalFunction("CFBooleanGetValue")
     public static native boolean booleanValue(CFBoolean boolVal);
-    
+
 }

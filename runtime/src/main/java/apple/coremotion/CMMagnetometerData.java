@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 5.0 and later.
  */
-
 @Library("CoreMotion/CoreMotion.h") @Mapping("CMMagnetometerData")
 public class CMMagnetometerData 
     extends CMLogItem 
@@ -28,13 +26,13 @@ public class CMMagnetometerData
     
     @Mapping("init")
     public CMMagnetometerData() { }
-    
+
     
     @Mapping("magneticField")
     public native CMMagneticField getMagneticField();
+
     
     
-    
-    
-    
+
+
 }

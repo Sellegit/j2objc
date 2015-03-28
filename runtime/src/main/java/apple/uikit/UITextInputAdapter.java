@@ -18,7 +18,6 @@ import apple.coreimage.*;
 import apple.coretext.*;
 import apple.corelocation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -55,7 +54,7 @@ public abstract class UITextInputAdapter
     public @Representing("UITextStorageDirection") long getSelectionAffinity() { throw new UnsupportedOperationException(); }
     @Mapping("setSelectionAffinity:")
     public void setSelectionAffinity(@Representing("UITextStorageDirection") long v) { throw new UnsupportedOperationException(); }
-    
+
     
     
     @NotImplemented("textInRange:")
@@ -122,5 +121,5 @@ public abstract class UITextInputAdapter
     public CGRect getDictationResultPlaceholderFrame(Object placeholder) { throw new UnsupportedOperationException(); }
     @NotImplemented("removeDictationResultPlaceholder:willInsertResult:")
     public void removeDictationResultPlaceholder(Object placeholder, boolean willInsertResult) { throw new UnsupportedOperationException(); }
-    
+
 }

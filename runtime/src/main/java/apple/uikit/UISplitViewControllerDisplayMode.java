@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("UIKit/UIKit.h")
 @Mapping("UISplitViewControllerDisplayMode")
 public final class UISplitViewControllerDisplayMode extends ObjCEnum {
@@ -36,6 +34,6 @@ public final class UISplitViewControllerDisplayMode extends ObjCEnum {
     public static final long AllVisible = 2L;
     @GlobalConstant("UISplitViewControllerDisplayModePrimaryOverlay")
     public static final long PrimaryOverlay = 3L;
-    
+
 
 }

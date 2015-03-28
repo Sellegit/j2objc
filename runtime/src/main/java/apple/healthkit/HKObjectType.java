@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("HealthKit/HealthKit.h") @Mapping("HKObjectType")
 public class HKObjectType 
     extends NSObject 
@@ -28,11 +26,11 @@ public class HKObjectType
     
     @Mapping("init")
     public HKObjectType() { }
-    
+
     
     @Mapping("identifier")
     public native String getIdentifier();
-    
+
     
     
     @Mapping("quantityTypeForIdentifier:")
@@ -47,5 +45,5 @@ public class HKObjectType
     public static native HKWorkoutType getWorkoutType();
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
-    
+
 }

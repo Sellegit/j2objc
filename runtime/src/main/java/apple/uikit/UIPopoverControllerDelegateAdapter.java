@@ -18,7 +18,6 @@ import apple.coreimage.*;
 import apple.coretext.*;
 import apple.corelocation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -29,8 +28,8 @@ public abstract class UIPopoverControllerDelegateAdapter
     
     
     
-    
-    
+
+
     
     
     @NotImplemented("popoverControllerShouldDismissPopover:")
@@ -42,5 +41,5 @@ public abstract class UIPopoverControllerDelegateAdapter
      */
     @NotImplemented("popoverController:willRepositionPopoverToRect:inView:")
     public void willReposition(UIPopoverController popoverController, CGRect rect, Todo view) { throw new UnsupportedOperationException(); }
-    
+
 }

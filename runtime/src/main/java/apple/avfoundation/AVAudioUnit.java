@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h") @Mapping("AVAudioUnit")
 public class AVAudioUnit 
     extends AVAudioNode 
@@ -34,7 +32,7 @@ public class AVAudioUnit
     
     @Mapping("init")
     public AVAudioUnit() { }
-    
+
     
     @Mapping("audioComponentDescription")
     public native AudioComponentDescription getAudioComponentDescription();
@@ -46,10 +44,10 @@ public class AVAudioUnit
     public native String getManufacturerName();
     @Mapping("version")
     public native @MachineSizedUInt long getVersion();
-    
+
     
     
     @Mapping("loadAudioUnitPresetAtURL:error:")
     public native boolean loadAudioUnitPreset(NSURL url, Todo error);
-    
+
 }

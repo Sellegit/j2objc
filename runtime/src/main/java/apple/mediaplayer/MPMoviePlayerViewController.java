@@ -15,11 +15,9 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
 /**
  * @since Available in iOS 3.2 and later.
  */
-
 @Library("MediaPlayer/MediaPlayer.h") @Mapping("MPMoviePlayerViewController")
 public class MPMoviePlayerViewController 
     extends UIViewController 
@@ -33,13 +31,13 @@ public class MPMoviePlayerViewController
     public MPMoviePlayerViewController(String nibNameOrNil, NSBundle nibBundleOrNil) { }
     @Mapping("init")
     public MPMoviePlayerViewController() { }
-    
+
     
     @Mapping("moviePlayer")
     public native MPMoviePlayerController getMoviePlayer();
+
     
     
-    
-    
-    
+
+
 }

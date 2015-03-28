@@ -17,11 +17,9 @@ import apple.uikit.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 5.0 and later.
  */
-
 @Library("GLKit/GLKit.h")
 @Mapping("GLKViewDrawableDepthFormat")
 public final class GLKViewDrawableDepthFormat extends ObjCEnum {
@@ -32,6 +30,6 @@ public final class GLKViewDrawableDepthFormat extends ObjCEnum {
     public static final long _16 = 1L;
     @GlobalConstant("GLKViewDrawableDepthFormat24")
     public static final long _24 = 2L;
-    
+
 
 }

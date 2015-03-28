@@ -21,11 +21,9 @@ import apple.glkit.*;
 import apple.scenekit.*;
 
 
-
 /**
  * @since Available in iOS 7.0 and later.
  */
-
 @Library("SpriteKit/SpriteKit.h")
 @Mapping("SKLabelHorizontalAlignmentMode")
 public final class SKLabelHorizontalAlignmentMode extends ObjCEnum {
@@ -36,6 +34,6 @@ public final class SKLabelHorizontalAlignmentMode extends ObjCEnum {
     public static final long Left = 1L;
     @GlobalConstant("SKLabelHorizontalAlignmentModeRight")
     public static final long Right = 2L;
-    
+
 
 }

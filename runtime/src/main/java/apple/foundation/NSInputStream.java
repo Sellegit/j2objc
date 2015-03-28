@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h") @Mapping("NSInputStream")
 public class NSInputStream 
     extends NSStream 
@@ -40,14 +37,14 @@ public class NSInputStream
     public NSInputStream() { }
     @Mapping("initWithFileAtPath:")
     public NSInputStream(String path) { }
-    
+
     
     @Mapping("hasBytesAvailable")
     public native boolean hasBytesAvailable();
-    
+
     
     
     @Mapping("read:maxLength:")
     public native @MachineSizedSInt long read(Todo buffer, @MachineSizedUInt long len);
-    
+
 }

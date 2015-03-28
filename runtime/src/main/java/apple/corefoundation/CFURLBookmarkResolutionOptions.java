@@ -15,11 +15,9 @@ import apple.dispatch.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 4.0 and later.
  */
-
 @Library("CoreFoundation/CoreFoundation.h")
 @Mapping("CFURLBookmarkResolutionOptions")
 public final class CFURLBookmarkResolutionOptions extends ObjCEnum {
@@ -34,6 +32,6 @@ public final class CFURLBookmarkResolutionOptions extends ObjCEnum {
     public static final long WithoutUIMask = 256L;
     @GlobalConstant("kCFBookmarkResolutionWithoutMountingMask")
     public static final long WithoutMountingMask = 512L;
-    
+
 
 }

@@ -13,7 +13,6 @@ import apple.coregraphics.*;
 import apple.coreservices.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("CoreData/CoreData.h")
@@ -51,5 +50,5 @@ public class NSPersistentStoreMetadata
      */
     @GlobalConstant("NSPersistentStoreOSCompatibility")
     public static native NSString OSCompatibilityValue();
-    
+
 }

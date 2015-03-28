@@ -15,11 +15,9 @@ import apple.foundation.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("CoreBluetooth/CoreBluetooth.h") @Mapping("CBPeer")
 public class CBPeer 
     extends NSObject 
@@ -29,7 +27,7 @@ public class CBPeer
     
     @Mapping("init")
     public CBPeer() { }
-    
+
     
     /**
      * @since Available in iOS 5.0 and later.
@@ -43,10 +41,10 @@ public class CBPeer
      */
     @Mapping("identifier")
     public native NSUUID getIdentifier();
-    
+
     
     
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
-    
+
 }

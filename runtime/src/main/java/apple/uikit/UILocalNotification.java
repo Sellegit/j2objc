@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 4.0 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UILocalNotification")
 public class UILocalNotification 
     extends NSObject 
@@ -33,7 +31,7 @@ public class UILocalNotification
     
     @Mapping("init")
     public UILocalNotification() { }
-    
+
     
     @Mapping("fireDate")
     public native NSDate getFireDate();
@@ -119,7 +117,7 @@ public class UILocalNotification
      */
     @Mapping("setCategory:")
     public native void setCategory(String v);
-    
+
     
     
     /**
@@ -127,10 +125,10 @@ public class UILocalNotification
      */
     @GlobalConstant("UILocalNotificationDefaultSoundName")
     public static native String getDefaultSoundName();
-    
+
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
     @Mapping("encodeWithCoder:")
     public native void encode(NSCoder aCoder);
-    
+
 }

@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 4.0 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h")
 @Mapping("AVCaptureDevicePosition")
 public final class AVCaptureDevicePosition extends ObjCEnum {
@@ -35,6 +33,6 @@ public final class AVCaptureDevicePosition extends ObjCEnum {
     public static final long Back = 1L;
     @GlobalConstant("AVCaptureDevicePositionFront")
     public static final long Front = 2L;
-    
+
 
 }

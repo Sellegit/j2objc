@@ -16,9 +16,6 @@ import apple.uikit.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("ExternalAccessory/ExternalAccessory.h")
 @Mapping("EAWiFiUnconfiguredAccessoryConfigurationStatus")
 public final class EAWiFiUnconfiguredAccessoryConfigurationStatus extends ObjCEnum {
@@ -29,6 +26,6 @@ public final class EAWiFiUnconfiguredAccessoryConfigurationStatus extends ObjCEn
     public static final long UserCancelledConfiguration = 1L;
     @GlobalConstant("EAWiFiUnconfiguredAccessoryConfigurationStatusFailed")
     public static final long Failed = 2L;
-    
+
 
 }

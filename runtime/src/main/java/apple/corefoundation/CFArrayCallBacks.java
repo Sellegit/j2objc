@@ -15,9 +15,6 @@ import apple.dispatch.*;
 import apple.foundation.*;
 
 
-
-
-
 @Mapping("CFArrayCallBacks") @Library("CoreFoundation/CoreFoundation.h")
  class CFArrayCallBacks 
     extends Struct 
@@ -29,6 +26,6 @@ import apple.foundation.*;
     
     @DotMapping("version")
     public native @MachineSizedSInt long getVersion();
-    
+
     
 }

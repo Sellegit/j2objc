@@ -14,9 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
-
-
 @Library("CoreText/CoreText.h")
 @Mapping("CTLineBoundsOptions")
 public final class CTLineBoundsOptions extends ObjCEnum {
@@ -36,6 +33,6 @@ public final class CTLineBoundsOptions extends ObjCEnum {
      */
     @GlobalConstant("kCTLineBoundsIncludeLanguageExtents")
     public static final long IncludeLanguageExtents = 32L;
-    
+
 
 }

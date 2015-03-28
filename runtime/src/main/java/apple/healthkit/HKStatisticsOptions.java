@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("HealthKit/HealthKit.h")
 @Mapping("HKStatisticsOptions")
 public final class HKStatisticsOptions extends ObjCEnum {
@@ -35,6 +33,6 @@ public final class HKStatisticsOptions extends ObjCEnum {
     public static final long DiscreteMax = 8L;
     @GlobalConstant("HKStatisticsOptionCumulativeSum")
     public static final long CumulativeSum = 16L;
-    
+
 
 }

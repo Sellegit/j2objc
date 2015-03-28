@@ -19,7 +19,6 @@ import apple.glkit.*;
 import apple.spritekit.*;
 import apple.opengles.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("SceneKit/SceneKit.h")
@@ -30,7 +29,7 @@ public final class NSValueExtensions
     
     
     private NSValueExtensions() {}
-    
+
     
     @ExtensionMapping("SCNVector3Value")
     public static native SCNVector3 getSCNVector3Value(NSValue thiz);
@@ -38,7 +37,7 @@ public final class NSValueExtensions
     public static native SCNVector4 getSCNVector4Value(NSValue thiz);
     @ExtensionMapping("SCNMatrix4Value")
     public static native SCNMatrix4 getSCNMatrix4Value(NSValue thiz);
-    
+
     
     
     @Mapping("valueWithSCNVector3:")
@@ -47,5 +46,5 @@ public final class NSValueExtensions
     public static native NSValue create(SCNVector4 v);
     @Mapping("valueWithSCNMatrix4:")
     public static native NSValue create(SCNMatrix4 v);
-    
+
 }

@@ -17,9 +17,6 @@ import apple.corevideo.*;
 import apple.imageio.*;
 
 
-
-
-
 @Library("CoreImage/CoreImage.h") @Mapping("CIColor")
 public class CIColor 
     extends NSObject 
@@ -29,10 +26,10 @@ public class CIColor
     
     @Mapping("init")
     public CIColor() { }
+
     
-    
-    
-    
+
+
     
     
     @Mapping("numberOfComponents")
@@ -55,5 +52,5 @@ public class CIColor
     public native void encode(NSCoder aCoder);
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
-    
+
 }

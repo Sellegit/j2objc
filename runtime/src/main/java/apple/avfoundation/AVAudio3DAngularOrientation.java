@@ -20,9 +20,6 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
-
-
 @Mapping("AVAudio3DAngularOrientation") @Library("AVFoundation/AVFoundation.h")
 public class AVAudio3DAngularOrientation 
     extends Struct 
@@ -38,7 +35,7 @@ public class AVAudio3DAngularOrientation
     public native float getPitch();
     @DotMapping("roll")
     public native float getRoll();
-    
+
     public static native AVAudio3DAngularOrientation create(float yaw, float pitch, float roll) /*-[
         AVAudio3DAngularOrientation __new = { .yaw = yaw, .pitch = pitch, .roll = roll };
         return __new;
@@ -48,17 +45,36 @@ public class AVAudio3DAngularOrientation
         return __new;
     ]-*/;
 
-    
+
     public static native AVAudio3DAngularOrientation copyWithpitch(AVAudio3DAngularOrientation original, float pitch) /*-[
         AVAudio3DAngularOrientation __new = { .yaw = original.yaw, .pitch = pitch, .roll = original.roll };
         return __new;
     ]-*/;
 
-    
+
     public static native AVAudio3DAngularOrientation copyWithroll(AVAudio3DAngularOrientation original, float roll) /*-[
         AVAudio3DAngularOrientation __new = { .yaw = original.yaw, .pitch = original.pitch, .roll = roll };
         return __new;
     ]-*/;
 
-    
+
+    public static final class Adapter {
+
+        public float yaw;
+        public float pitch;
+        public float roll;
+        public Adapter(float yaw, float pitch, float roll) {
+            this.yaw = yaw;
+            this.pitch = pitch;
+            this.roll = roll;
+        }
+        public Adapter(AVAudio3DAngularOrientation original) {
+            this.yaw = original.getYaw();
+            this.pitch = original.getPitch();
+            this.roll = original.getRoll();
+        }
+        public AVAudio3DAngularOrientation convert() {
+            return create(yaw, pitch, roll);
+        }
+    }
 }

@@ -17,11 +17,9 @@ import apple.uikit.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 5.0 and later.
  */
-
 @Library("GLKit/GLKit.h")
 @Mapping("GLKTextureInfoOrigin")
 public final class GLKTextureInfoOrigin extends ObjCEnum {
@@ -32,6 +30,6 @@ public final class GLKTextureInfoOrigin extends ObjCEnum {
     public static final long TopLeft = 1L;
     @GlobalConstant("GLKTextureInfoOriginBottomLeft")
     public static final long BottomLeft = 2L;
-    
+
 
 }

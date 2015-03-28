@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h")
 @Mapping("NSDataWritingOptions")
 public final class NSDataWritingOptions extends ObjCEnum {
@@ -60,6 +57,6 @@ public final class NSDataWritingOptions extends ObjCEnum {
     public static final long DataWritingFileProtectionMask = -268435456L;
     @GlobalConstant("NSAtomicWrite")
     public static final long AtomicWrite = 1L;
-    
+
 
 }

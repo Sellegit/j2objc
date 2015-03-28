@@ -14,9 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
-
-
 @Library("CoreText/CoreText.h")
 @Mapping("CTFontOrientation")
 public final class CTFontOrientation extends ObjCEnum {
@@ -33,6 +30,6 @@ public final class CTFontOrientation extends ObjCEnum {
     public static final long HorizontalOrientation = 1L;
     @GlobalConstant("kCTFontVerticalOrientation")
     public static final long VerticalOrientation = 2L;
-    
+
 
 }

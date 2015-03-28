@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h") @Mapping("NSNotification")
 public class NSNotification 
     extends NSObject 
@@ -38,7 +35,7 @@ public class NSNotification
     public NSNotification(NSCoder aDecoder) { }
     @Mapping("init")
     public NSNotification() { }
-    
+
     
     @Mapping("name")
     public native NSString getName();
@@ -46,12 +43,12 @@ public class NSNotification
     public native Object getObject();
     @Mapping("userInfo")
     public native NSDictionary<NSString, NSObject> getUserInfo();
-    
+
     
     
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
     @Mapping("encodeWithCoder:")
     public native void encode(NSCoder aCoder);
-    
+
 }

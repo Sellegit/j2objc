@@ -19,9 +19,6 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h")
 @Mapping("UIKeyboardType")
 public final class UIKeyboardType extends ObjCEnum {
@@ -59,6 +56,6 @@ public final class UIKeyboardType extends ObjCEnum {
     public static final long WebSearch = 10L;
     @GlobalConstant("UIKeyboardTypeAlphabet")
     public static final long Alphabet = 1L;
-    
+
 
 }

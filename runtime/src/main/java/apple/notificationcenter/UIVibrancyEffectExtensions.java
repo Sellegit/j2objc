@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 import apple.uikit.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("NotificationCenter/NotificationCenter.h")
@@ -25,13 +24,13 @@ public final class UIVibrancyEffectExtensions
     
     
     private UIVibrancyEffectExtensions() {}
+
     
-    
-    
-    
+
+
     
     
     @Mapping("notificationCenterVibrancyEffect")
     public static native UIVibrancyEffect createNotificationCenterEffect();
-    
+
 }

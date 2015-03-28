@@ -19,20 +19,17 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h") @Mapping("NSFastEnumeration")
 public interface NSFastEnumeration 
      {
 
     
     
+
+
     
-    
-    
-    
-    
+
+
     /*<adapter>*/
     /*</adapter>*/
 }

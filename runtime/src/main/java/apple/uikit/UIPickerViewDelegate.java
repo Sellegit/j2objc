@@ -19,17 +19,14 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h") @Mapping("UIPickerViewDelegate")
 public interface UIPickerViewDelegate 
     extends NSObjectProtocol {
 
     
     
-    
-    
+
+
     
     @Mapping("pickerView:widthForComponent:")
     @MachineSizedFloat double getComponentWidth(UIPickerView pickerView, @MachineSizedSInt long component);
@@ -46,7 +43,7 @@ public interface UIPickerViewDelegate
     UIView getRowView(UIPickerView pickerView, @MachineSizedSInt long row, @MachineSizedSInt long component, UIView view);
     @Mapping("pickerView:didSelectRow:inComponent:")
     void didSelectRow(UIPickerView pickerView, @MachineSizedSInt long row, @MachineSizedSInt long component);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

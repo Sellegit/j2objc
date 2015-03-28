@@ -14,17 +14,14 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
-
-
 @Library("CoreData/CoreData.h") @Mapping("NSFetchedResultsControllerDelegate")
 public interface NSFetchedResultsControllerDelegate 
      {
 
     
     
-    
-    
+
+
     
     @Mapping("controller:didChangeObject:atIndexPath:forChangeType:newIndexPath:")
     void didChangeObject(NSFetchedResultsController controller, Object anObject, NSIndexPath indexPath, @Representing("NSFetchedResultsChangeType") long type, NSIndexPath newIndexPath);
@@ -39,7 +36,7 @@ public interface NSFetchedResultsControllerDelegate
      */
     @Mapping("controller:sectionIndexTitleForSectionName:")
     String getSectionIndexTitle(NSFetchedResultsController controller, String sectionName);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

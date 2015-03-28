@@ -18,7 +18,6 @@ import apple.coreimage.*;
 import apple.coretext.*;
 import apple.corelocation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -29,13 +28,13 @@ public abstract class UIImagePickerControllerDelegateAdapter
     
     
     
-    
-    
+
+
     
     
     @NotImplemented("imagePickerController:didFinishPickingMediaWithInfo:")
     public void didFinishPickingMedia(UIImagePickerController picker, NSDictionary<?, ?> info) { throw new UnsupportedOperationException(); }
     @NotImplemented("imagePickerControllerDidCancel:")
     public void didCancel(UIImagePickerController picker) { throw new UnsupportedOperationException(); }
-    
+
 }

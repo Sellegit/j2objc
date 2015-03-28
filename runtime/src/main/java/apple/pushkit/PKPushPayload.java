@@ -15,11 +15,9 @@ import apple.foundation.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("PushKit/PushKit.h") @Mapping("PKPushPayload")
 public class PKPushPayload 
     extends NSObject 
@@ -29,15 +27,15 @@ public class PKPushPayload
     
     @Mapping("init")
     public PKPushPayload() { }
-    
+
     
     @Mapping("type")
     public native String getType();
     @Mapping("dictionaryPayload")
     public native NSDictionary<?, ?> getDictionaryPayload();
+
     
     
-    
-    
-    
+
+
 }

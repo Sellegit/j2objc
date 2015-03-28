@@ -15,11 +15,9 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
 /**
  * @since Available in iOS 4.0 and later.
  */
-
 @Library("MediaPlayer/MediaPlayer.h") @Mapping("MPTimedMetadata")
 public class MPTimedMetadata 
     extends NSObject 
@@ -29,7 +27,7 @@ public class MPTimedMetadata
     
     @Mapping("init")
     public MPTimedMetadata() { }
-    
+
     
     @Mapping("key")
     public native String getKey();
@@ -41,7 +39,7 @@ public class MPTimedMetadata
     public native double getTimestamp();
     @Mapping("allMetadata")
     public native NSDictionary<NSString, NSObject> getAllMetadata();
-    
+
     
     
     /**
@@ -69,7 +67,7 @@ public class MPTimedMetadata
      */
     @GlobalConstant("MPMoviePlayerTimedMetadataKeyLanguageCode")
     public static native NSString LanguageCode();
-    
-    
-    
+
+
+
 }

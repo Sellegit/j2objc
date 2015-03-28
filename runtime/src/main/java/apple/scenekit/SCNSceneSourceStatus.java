@@ -20,9 +20,6 @@ import apple.spritekit.*;
 import apple.opengles.*;
 
 
-
-
-
 @Library("SceneKit/SceneKit.h")
 @Mapping("SCNSceneSourceStatus")
 public final class SCNSceneSourceStatus extends ObjCEnum {
@@ -37,6 +34,6 @@ public final class SCNSceneSourceStatus extends ObjCEnum {
     public static final long Processing = 12L;
     @GlobalConstant("SCNSceneSourceStatusComplete")
     public static final long Complete = 16L;
-    
+
 
 }

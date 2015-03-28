@@ -15,11 +15,9 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("WebKit/WebKit.h") @Mapping("WKUserContentController")
 public class WKUserContentController 
     extends NSObject 
@@ -29,11 +27,11 @@ public class WKUserContentController
     
     @Mapping("init")
     public WKUserContentController() { }
-    
+
     
     @Mapping("userScripts")
     public native NSArray<WKUserScript> getUserScripts();
-    
+
     
     
     @Mapping("addUserScript:")
@@ -44,5 +42,5 @@ public class WKUserContentController
     public native void addScriptMessageHandler(WKScriptMessageHandler scriptMessageHandler, String name);
     @Mapping("removeScriptMessageHandlerForName:")
     public native void removeScriptMessageHandler(String name);
-    
+
 }

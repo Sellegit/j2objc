@@ -13,7 +13,6 @@ import apple.coregraphics.*;
 import apple.coreservices.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("CoreData/CoreData.h")
@@ -101,5 +100,5 @@ public class NSPersistentStoreOptions
      */
     @GlobalConstant("NSPersistentStoreFileProtectionKey")
     public static native NSString FileProtectionOption();
-    
+
 }

@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 7.0 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h") @Mapping("AVOutputSettingsAssistant")
 public class AVOutputSettingsAssistant 
     extends NSObject 
@@ -34,7 +32,7 @@ public class AVOutputSettingsAssistant
     
     @Mapping("init")
     public AVOutputSettingsAssistant() { }
-    
+
     
     @Mapping("audioSettings")
     public native AVAudioSettings getAudioSettings();
@@ -64,7 +62,7 @@ public class AVOutputSettingsAssistant
      */
     @Mapping("setSourceVideoMinFrameDuration:")
     public native void setSourceVideoMinFrameDuration(CMTime v);
-    
+
     
     
     /**
@@ -74,5 +72,5 @@ public class AVOutputSettingsAssistant
     public static native List<AVOutputSettingsPreset> getAvailableOutputSettingsPresets();
     @Mapping("outputSettingsAssistantWithPreset:")
     public static native AVOutputSettingsAssistant create(String presetIdentifier);
-    
+
 }

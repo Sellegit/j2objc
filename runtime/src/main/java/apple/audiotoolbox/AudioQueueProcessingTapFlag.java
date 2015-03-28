@@ -17,9 +17,6 @@ import apple.coreaudio.*;
 import apple.coremedia.*;
 
 
-
-
-
 @Library("AudioToolbox/AudioToolbox.h")
 @Mapping("AudioQueueProcessingTapFlag")
 public final class AudioQueueProcessingTapFlag extends ObjCEnum {
@@ -34,6 +31,6 @@ public final class AudioQueueProcessingTapFlag extends ObjCEnum {
     public static final long StartOfStream = 256L;
     @GlobalConstant("kAudioQueueProcessingTap_EndOfStream")
     public static final long EndOfStream = 512L;
-    
+
 
 }

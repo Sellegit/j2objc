@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h")
 @Mapping("NSDataReadingOptions")
 public final class NSDataReadingOptions extends ObjCEnum {
@@ -41,6 +38,6 @@ public final class NSDataReadingOptions extends ObjCEnum {
     public static final long MappedRead = 1L;
     @GlobalConstant("NSUncachedRead")
     public static final long UncachedRead = 2L;
-    
+
 
 }

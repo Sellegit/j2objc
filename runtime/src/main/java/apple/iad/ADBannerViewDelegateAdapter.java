@@ -17,7 +17,6 @@ import apple.addressbook.*;
 import apple.mediaplayer.*;
 import apple.avkit.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -28,8 +27,8 @@ public abstract class ADBannerViewDelegateAdapter
     
     
     
-    
-    
+
+
     
     
     /**
@@ -45,5 +44,5 @@ public abstract class ADBannerViewDelegateAdapter
     public boolean actionShouldBegin(ADBannerView banner, boolean willLeave) { throw new UnsupportedOperationException(); }
     @NotImplemented("bannerViewActionDidFinish:")
     public void actionDidFinish(ADBannerView banner) { throw new UnsupportedOperationException(); }
-    
+
 }

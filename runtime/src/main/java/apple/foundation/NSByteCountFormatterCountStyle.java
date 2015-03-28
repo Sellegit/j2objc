@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h")
 @Mapping("NSByteCountFormatterCountStyle")
 public final class NSByteCountFormatterCountStyle extends ObjCEnum {
@@ -34,6 +31,6 @@ public final class NSByteCountFormatterCountStyle extends ObjCEnum {
     public static final long Decimal = 2L;
     @GlobalConstant("NSByteCountFormatterCountStyleBinary")
     public static final long Binary = 3L;
-    
+
 
 }

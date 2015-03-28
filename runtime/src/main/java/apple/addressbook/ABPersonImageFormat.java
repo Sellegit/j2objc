@@ -14,9 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
-
-
 @Library("AddressBook/AddressBook.h")
 @Mapping("ABPersonImageFormat")
 public final class ABPersonImageFormat extends ObjCEnum {
@@ -25,6 +22,6 @@ public final class ABPersonImageFormat extends ObjCEnum {
     public static final long Thumbnail = 0L;
     @GlobalConstant("kABPersonImageFormatOriginalSize")
     public static final long OriginalSize = 2L;
-    
+
 
 }

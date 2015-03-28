@@ -19,7 +19,6 @@ import apple.glkit.*;
 import apple.spritekit.*;
 import apple.opengles.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -30,8 +29,8 @@ public abstract class SCNPhysicsContactDelegateAdapter
     
     
     
-    
-    
+
+
     
     
     @NotImplemented("physicsWorld:didBeginContact:")
@@ -40,5 +39,5 @@ public abstract class SCNPhysicsContactDelegateAdapter
     public void didUpdateContact(SCNPhysicsWorld world, SCNPhysicsContact contact) { throw new UnsupportedOperationException(); }
     @NotImplemented("physicsWorld:didEndContact:")
     public void didEndContact(SCNPhysicsWorld world, SCNPhysicsContact contact) { throw new UnsupportedOperationException(); }
-    
+
 }

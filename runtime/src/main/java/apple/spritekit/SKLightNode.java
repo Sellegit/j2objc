@@ -21,11 +21,9 @@ import apple.glkit.*;
 import apple.scenekit.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("SpriteKit/SpriteKit.h") @Mapping("SKLightNode")
 public class SKLightNode 
     extends SKNode 
@@ -37,7 +35,7 @@ public class SKLightNode
     public SKLightNode() { }
     @Mapping("initWithCoder:")
     public SKLightNode(NSCoder aDecoder) { }
-    
+
     
     @Mapping("isEnabled")
     public native boolean isEnabled();
@@ -63,9 +61,9 @@ public class SKLightNode
     public native int getCategoryBitMask();
     @Mapping("setCategoryBitMask:")
     public native void setCategoryBitMask(int v);
+
     
     
-    
-    
-    
+
+
 }

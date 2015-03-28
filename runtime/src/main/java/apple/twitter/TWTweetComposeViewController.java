@@ -17,13 +17,11 @@ import apple.social.*;
 import apple.accounts.*;
 
 
-
 /**
  * @since Available in iOS 5.0 and later.
  * @deprecated Deprecated in iOS 6.0.
  */
 @Deprecated
-
 @Library("Twitter/Twitter.h") @Mapping("TWTweetComposeViewController")
 public class TWTweetComposeViewController 
     extends UIViewController 
@@ -35,13 +33,13 @@ public class TWTweetComposeViewController
     public TWTweetComposeViewController(String nibNameOrNil, NSBundle nibBundleOrNil) { }
     @Mapping("init")
     public TWTweetComposeViewController() { }
-    
+
     
     @Mapping("completionHandler")
     public native @Block VoidBlock1<TWTweetComposeViewControllerResult> getCompletionHandler();
     @Mapping("setCompletionHandler:")
     public native void setCompletionHandler(@Block VoidBlock1<TWTweetComposeViewControllerResult> v);
-    
+
     
     
     @Mapping("setInitialText:")
@@ -56,5 +54,5 @@ public class TWTweetComposeViewController
     public native boolean removeAllURLs();
     @Mapping("canSendTweet")
     public static native boolean canSendTweet();
-    
+
 }

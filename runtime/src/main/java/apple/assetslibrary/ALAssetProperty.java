@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 import apple.imageio.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("AssetsLibrary/AssetsLibrary.h")
@@ -67,5 +66,5 @@ public class ALAssetProperty
      */
     @GlobalConstant("ALAssetPropertyAssetURL")
     public static native NSString AssetURLValue();
-    
+
 }

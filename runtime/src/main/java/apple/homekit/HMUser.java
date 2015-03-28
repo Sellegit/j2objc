@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("HomeKit/HomeKit.h") @Mapping("HMUser")
 public class HMUser 
     extends NSObject 
@@ -27,13 +25,13 @@ public class HMUser
     
     
     public HMUser() {}
-    
+
     
     @Mapping("name")
     public native String getName();
+
     
     
-    
-    
-    
+
+
 }

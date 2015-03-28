@@ -18,7 +18,6 @@ import apple.coreimage.*;
 import apple.coretext.*;
 import apple.corelocation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -29,8 +28,8 @@ public abstract class UIScrollViewDelegateAdapter
     
     
     
-    
-    
+
+
     
     
     @NotImplemented("scrollViewDidScroll:")
@@ -68,5 +67,5 @@ public abstract class UIScrollViewDelegateAdapter
     public boolean shouldScrollToTop(UIScrollView scrollView) { throw new UnsupportedOperationException(); }
     @NotImplemented("scrollViewDidScrollToTop:")
     public void didScrollToTop(UIScrollView scrollView) { throw new UnsupportedOperationException(); }
-    
+
 }

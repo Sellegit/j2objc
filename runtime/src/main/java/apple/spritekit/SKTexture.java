@@ -21,9 +21,6 @@ import apple.glkit.*;
 import apple.scenekit.*;
 
 
-
-
-
 @Library("SpriteKit/SpriteKit.h") @Mapping("SKTexture")
 public class SKTexture 
     extends NSObject 
@@ -33,7 +30,7 @@ public class SKTexture
     
     @Mapping("init")
     public SKTexture() { }
-    
+
     
     @Mapping("filteringMode")
     public native @Representing("SKTextureFilteringMode") long getFilteringMode();
@@ -43,7 +40,7 @@ public class SKTexture
     public native boolean usesMipmaps();
     @Mapping("setUsesMipmaps:")
     public native void setUsesMipmaps(boolean v);
-    
+
     
     
     @Mapping("textureByApplyingCIFilter:")
@@ -94,5 +91,5 @@ public class SKTexture
     public native Object copyWithZone$(NSZone zone);
     @Mapping("encodeWithCoder:")
     public native void encode(NSCoder aCoder);
-    
+
 }

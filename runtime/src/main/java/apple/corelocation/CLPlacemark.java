@@ -16,11 +16,9 @@ import apple.addressbook.*;
 import apple.corebluetooth.*;
 
 
-
 /**
  * @since Available in iOS 5.0 and later.
  */
-
 @Library("CoreLocation/CoreLocation.h") @Mapping("CLPlacemark")
 public class CLPlacemark 
     extends NSObject 
@@ -32,7 +30,7 @@ public class CLPlacemark
     public CLPlacemark(CLPlacemark placemark) { }
     @Mapping("init")
     public CLPlacemark() { }
-    
+
     
     @Mapping("location")
     public native CLLocation getLocation();
@@ -66,10 +64,10 @@ public class CLPlacemark
     public native String getOcean();
     @Mapping("areasOfInterest")
     public native List<String> getAreasOfInterest();
-    
+
     
     
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
-    
+
 }

@@ -19,7 +19,6 @@ import apple.coremedia.*;
 import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -30,8 +29,8 @@ public abstract class AVVideoCompositingAdapter
     
     
     
-    
-    
+
+
     
     
     @NotImplemented("renderContextChanged:")
@@ -40,5 +39,5 @@ public abstract class AVVideoCompositingAdapter
     public void startVideoCompositionRequest(AVAsynchronousVideoCompositionRequest asyncVideoCompositionRequest) { throw new UnsupportedOperationException(); }
     @NotImplemented("cancelAllPendingVideoCompositionRequests")
     public void cancelAllPendingVideoCompositionRequests() { throw new UnsupportedOperationException(); }
-    
+
 }

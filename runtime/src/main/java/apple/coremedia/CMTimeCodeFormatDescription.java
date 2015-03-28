@@ -17,7 +17,6 @@ import apple.coreaudio.*;
 import apple.coreanimation.*;
 import apple.corevideo.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Mapping("CMTimeCodeFormatDescriptionRef") @Library("CoreMedia/CoreMedia.h")
@@ -28,7 +27,7 @@ public class CMTimeCodeFormatDescription
     
     
     protected CMTimeCodeFormatDescription() {}
-    
+
     
     
     
@@ -67,5 +66,5 @@ public class CMTimeCodeFormatDescription
      */
     @GlobalFunction("CMTimeCodeFormatDescriptionCopyAsBigEndianTimeCodeDescriptionBlockBuffer")
     public static native int copyAsBigEndianTimeCodeDescriptionBlockBuffer(CFAllocator allocator, CMTimeCodeFormatDescription timeCodeFormatDescription, CFString timeCodeDescriptionFlavor, Todo timeCodeDescriptionBlockBufferOut);
-    
+
 }

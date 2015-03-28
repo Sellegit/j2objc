@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 2.0 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UIImage")
 public class UIImage 
     extends NSObject 
@@ -59,7 +57,7 @@ public class UIImage
     public UIImage(CIImage ciImage, @MachineSizedFloat double scale, @Representing("UIImageOrientation") long orientation) { }
     @Mapping("init")
     public UIImage() { }
-    
+
     
     @Mapping("size")
     public native CGSize getSize();
@@ -131,7 +129,7 @@ public class UIImage
      */
     @Mapping("setAccessibilityIdentifier:")
     public native void setAccessibilityIdentifier(String v);
-    
+
     
     
     @GlobalFunction("UIImagePNGRepresentation")
@@ -140,7 +138,7 @@ public class UIImage
     public static native NSData toJPEGData(UIImage image, @MachineSizedFloat double compressionQuality);
     @GlobalFunction("UIImageWriteToSavedPhotosAlbum")
     public static native void saveToPhotosAlbum(UIImage image, Object completionTarget, Selector completionSelector, Todo contextInfo);
-    
+
     @Mapping("drawAtPoint:")
     public native void draw(CGPoint point);
     @Mapping("drawAtPoint:blendMode:alpha:")
@@ -223,5 +221,5 @@ public class UIImage
     public static native UIImage createAnimated(NSArray<?> images, double duration);
     @Mapping("stretchableImageWithLeftCapWidth:topCapHeight:")
     public native UIImage createStretchable(@MachineSizedSInt long leftCapWidth, @MachineSizedSInt long topCapHeight);
-    
+
 }

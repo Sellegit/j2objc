@@ -21,9 +21,6 @@ import apple.glkit.*;
 import apple.scenekit.*;
 
 
-
-
-
 @Library("SpriteKit/SpriteKit.h") @Mapping("SKEmitterNode")
 public class SKEmitterNode 
     extends SKNode 
@@ -35,7 +32,7 @@ public class SKEmitterNode
     public SKEmitterNode() { }
     @Mapping("initWithCoder:")
     public SKEmitterNode(NSCoder aDecoder) { }
-    
+
     
     @Mapping("particleTexture")
     public native SKTexture getParticleTexture();
@@ -225,12 +222,12 @@ public class SKEmitterNode
     public native SKShader getShader();
     @Mapping("setShader:")
     public native void setShader(SKShader v);
-    
+
     
     
     @Mapping("advanceSimulationTime:")
     public native void advanceSimulationTime(double sec);
     @Mapping("resetSimulation")
     public native void resetSimulation();
-    
+
 }

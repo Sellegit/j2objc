@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UIUserNotificationCategory")
 public class UIUserNotificationCategory 
     extends NSObject 
@@ -33,16 +31,16 @@ public class UIUserNotificationCategory
     
     @Mapping("init")
     public UIUserNotificationCategory() { }
-    
+
     
     @Mapping("identifier")
     public native String getIdentifier();
-    
+
     
     
     @Mapping("actionsForContext:")
     public native NSArray<UIUserNotificationAction> getActions(@Representing("UIUserNotificationActionContext") long context);
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
-    
+
 }

@@ -16,7 +16,6 @@ import apple.opengles.*;
 import apple.coreaudio.*;
 import apple.coremedia.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("AudioToolbox/AudioToolbox.h")
@@ -85,5 +84,5 @@ public class AudioSession
     @Deprecated
     @GlobalFunction("AudioSessionRemovePropertyListenerWithUserData")
     public static native int removePropertyListenerWithUserData(int inID, FunctionPtr inProc, Todo inClientData);
-    
+
 }

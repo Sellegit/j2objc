@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("LocalAuthentication/LocalAuthentication.h")
 @Mapping("LAErrorCode")
 public final class LAErrorCode extends ObjCEnum {
@@ -37,6 +35,6 @@ public final class LAErrorCode extends ObjCEnum {
     public static final long TouchIDNotAvailable = -6L;
     @GlobalConstant("LAErrorTouchIDNotEnrolled")
     public static final long TouchIDNotEnrolled = -7L;
-    
+
 
 }

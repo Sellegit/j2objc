@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 import apple.dispatch.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("CoreBluetooth/CoreBluetooth.h")
@@ -42,5 +41,5 @@ public class CBCentralManagerRestoredState
      */
     @GlobalConstant("CBCentralManagerRestoredStateScanOptionsKey")
     public static native NSString ScanOptionsKey();
-    
+
 }

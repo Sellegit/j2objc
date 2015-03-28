@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 4.0 and later.
  */
-
 @Library("CoreMotion/CoreMotion.h") @Mapping("CMDeviceMotion")
 public class CMDeviceMotion 
     extends CMLogItem 
@@ -28,7 +26,7 @@ public class CMDeviceMotion
     
     @Mapping("init")
     public CMDeviceMotion() { }
-    
+
     
     @Mapping("attitude")
     public native CMAttitude getAttitude();
@@ -43,9 +41,9 @@ public class CMDeviceMotion
      */
     @Mapping("magneticField")
     public native CMCalibratedMagneticField getMagneticField();
+
     
     
-    
-    
-    
+
+
 }

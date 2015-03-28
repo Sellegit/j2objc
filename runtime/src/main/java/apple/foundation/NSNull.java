@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h") @Mapping("NSNull")
 public class NSNull 
     extends NSObject 
@@ -31,15 +28,15 @@ public class NSNull
     
     @Mapping("init")
     public NSNull() { }
+
     
-    
-    
-    
+
+
     
     
     @Mapping("null")
     public static native NSNull getNull();
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
-    
+
 }

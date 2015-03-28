@@ -17,9 +17,6 @@ import apple.social.*;
 import apple.accounts.*;
 
 
-
-
-
 @Library("Twitter/Twitter.h")
 @Mapping("TWTweetComposeViewControllerResult")
 public final class TWTweetComposeViewControllerResult extends ObjCEnum {
@@ -28,6 +25,6 @@ public final class TWTweetComposeViewControllerResult extends ObjCEnum {
     public static final long Cancelled = 0L;
     @GlobalConstant("TWTweetComposeViewControllerResultDone")
     public static final long Done = 1L;
-    
+
 
 }

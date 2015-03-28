@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 7.0 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UIDynamicBehavior")
 public class UIDynamicBehavior 
     extends NSObject 
@@ -33,7 +31,7 @@ public class UIDynamicBehavior
     
     @Mapping("init")
     public UIDynamicBehavior() { }
-    
+
     
     @Mapping("childBehaviors")
     public native NSArray<UIDynamicBehavior> getChildBehaviors();
@@ -43,7 +41,7 @@ public class UIDynamicBehavior
     public native void setAction(@Block Runnable v);
     @Mapping("dynamicAnimator")
     public native UIDynamicAnimator getDynamicAnimator();
-    
+
     
     
     @Mapping("addChildBehavior:")
@@ -52,5 +50,5 @@ public class UIDynamicBehavior
     public native void removeChildBehavior(UIDynamicBehavior behavior);
     @Mapping("willMoveToAnimator:")
     public native void willMoveToAnimator(UIDynamicAnimator dynamicAnimator);
-    
+
 }

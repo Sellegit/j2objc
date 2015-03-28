@@ -15,9 +15,6 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
-
-
 @Library("GameKit/GameKit.h")
 @Mapping("GKGameCenterViewControllerState")
 public final class GKGameCenterViewControllerState extends ObjCEnum {
@@ -30,6 +27,6 @@ public final class GKGameCenterViewControllerState extends ObjCEnum {
     public static final long Achievements = 1L;
     @GlobalConstant("GKGameCenterViewControllerStateChallenges")
     public static final long Challenges = 2L;
-    
+
 
 }

@@ -15,9 +15,6 @@ import apple.dispatch.*;
 import apple.foundation.*;
 
 
-
-
-
 @Library("CoreFoundation/CoreFoundation.h")
 @Mapping("CFRunLoopActivity")
 public final class CFRunLoopActivity extends ObjCEnum {
@@ -36,6 +33,6 @@ public final class CFRunLoopActivity extends ObjCEnum {
     public static final long Exit = 128L;
     @GlobalConstant("kCFRunLoopAllActivities")
     public static final long AllActivities = 268435455L;
-    
+
 
 }

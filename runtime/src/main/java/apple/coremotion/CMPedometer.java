@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("CoreMotion/CoreMotion.h") @Mapping("CMPedometer")
 public class CMPedometer 
     extends NSObject 
@@ -28,10 +26,10 @@ public class CMPedometer
     
     @Mapping("init")
     public CMPedometer() { }
+
     
-    
-    
-    
+
+
     
     
     @Mapping("stopPedometerUpdates")
@@ -42,5 +40,5 @@ public class CMPedometer
     public static native boolean isDistanceAvailable();
     @Mapping("isFloorCountingAvailable")
     public static native boolean isFloorCountingAvailable();
-    
+
 }

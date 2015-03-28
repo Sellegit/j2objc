@@ -14,9 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
-
-
 @Library("CoreData/CoreData.h") @Mapping("NSFetchedResultsSectionInfo")
 public interface NSFetchedResultsSectionInfo 
      {
@@ -31,10 +28,10 @@ public interface NSFetchedResultsSectionInfo
     @MachineSizedUInt long getNumberOfObjects();
     @Mapping("objects")
     NSArray<NSManagedObject> getObjects();
+
     
-    
-    
-    
+
+
     /*<adapter>*/
     /*</adapter>*/
 }

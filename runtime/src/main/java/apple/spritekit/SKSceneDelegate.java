@@ -21,19 +21,17 @@ import apple.glkit.*;
 import apple.scenekit.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("SpriteKit/SpriteKit.h") @Mapping("SKSceneDelegate")
 public interface SKSceneDelegate 
     extends NSObjectProtocol {
 
     
     
-    
-    
+
+
     
     @Mapping("update:forScene:")
     void update(double currentTime, SKScene scene);
@@ -45,7 +43,7 @@ public interface SKSceneDelegate
     void didApplyConstraints(SKScene scene);
     @Mapping("didFinishUpdateForScene:")
     void didFinishUpdate(SKScene scene);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

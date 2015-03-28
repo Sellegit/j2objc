@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 7.0 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h") @Mapping("AVAssetResourceLoadingDataRequest")
 public class AVAssetResourceLoadingDataRequest 
     extends NSObject 
@@ -34,7 +32,7 @@ public class AVAssetResourceLoadingDataRequest
     
     @Mapping("init")
     public AVAssetResourceLoadingDataRequest() { }
-    
+
     
     @Mapping("requestedOffset")
     public native long getRequestedOffset();
@@ -42,10 +40,10 @@ public class AVAssetResourceLoadingDataRequest
     public native @MachineSizedSInt long getRequestedLength();
     @Mapping("currentOffset")
     public native long getCurrentOffset();
-    
+
     
     
     @Mapping("respondWithData:")
     public native void respondWithData(NSData data);
-    
+
 }

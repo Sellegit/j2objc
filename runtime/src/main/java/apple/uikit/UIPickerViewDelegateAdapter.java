@@ -18,7 +18,6 @@ import apple.coreimage.*;
 import apple.coretext.*;
 import apple.corelocation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -29,8 +28,8 @@ public abstract class UIPickerViewDelegateAdapter
     
     
     
-    
-    
+
+
     
     
     @NotImplemented("pickerView:widthForComponent:")
@@ -48,5 +47,5 @@ public abstract class UIPickerViewDelegateAdapter
     public UIView getRowView(UIPickerView pickerView, @MachineSizedSInt long row, @MachineSizedSInt long component, UIView view) { throw new UnsupportedOperationException(); }
     @NotImplemented("pickerView:didSelectRow:inComponent:")
     public void didSelectRow(UIPickerView pickerView, @MachineSizedSInt long row, @MachineSizedSInt long component) { throw new UnsupportedOperationException(); }
-    
+
 }

@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h") @Mapping("NSMutableIndexSet")
 public class NSMutableIndexSet 
     extends NSIndexSet 
@@ -37,10 +34,10 @@ public class NSMutableIndexSet
     public NSMutableIndexSet(@MachineSizedUInt long value) { }
     @Mapping("init")
     public NSMutableIndexSet() { }
+
     
-    
-    
-    
+
+
     
     
     @Mapping("addIndexes:")
@@ -59,5 +56,5 @@ public class NSMutableIndexSet
     public native void removeIndexes(NSRange range);
     @Mapping("shiftIndexesStartingAtIndex:by:")
     public native void shiftIndexes(@MachineSizedUInt long index, @MachineSizedSInt long delta);
-    
+
 }

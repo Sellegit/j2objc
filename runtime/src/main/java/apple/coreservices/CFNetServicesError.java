@@ -14,9 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
-
-
 @Library("CFNetwork/CFNetwork.h")
 @Mapping("CFNetServicesError")
 public final class CFNetServicesError extends ObjCEnum {
@@ -37,6 +34,6 @@ public final class CFNetServicesError extends ObjCEnum {
     public static final long Invalid = -72006L;
     @GlobalConstant("kCFNetServicesErrorTimeout")
     public static final long Timeout = -72007L;
-    
+
 
 }

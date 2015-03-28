@@ -16,9 +16,6 @@ import apple.addressbook.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("EventKit/EventKit.h")
 @Mapping("EKErrorCode")
 public final class EKErrorCode extends ObjCEnum {
@@ -79,6 +76,6 @@ public final class EKErrorCode extends ObjCEnum {
     public static final long InvalidEntityType = 26L;
     @GlobalConstant("EKErrorLast")
     public static final long Last = 27L;
-    
+
 
 }

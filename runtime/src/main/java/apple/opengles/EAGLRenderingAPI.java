@@ -14,9 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
-
-
 @Library("OpenGLES/EAGL.h")
 @Mapping("EAGLRenderingAPI")
 public final class EAGLRenderingAPI extends ObjCEnum {
@@ -27,6 +24,6 @@ public final class EAGLRenderingAPI extends ObjCEnum {
     public static final long OpenGLES2 = 2L;
     @GlobalConstant("kEAGLRenderingAPIOpenGLES3")
     public static final long OpenGLES3 = 3L;
-    
+
 
 }

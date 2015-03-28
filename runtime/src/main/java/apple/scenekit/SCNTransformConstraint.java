@@ -20,9 +20,6 @@ import apple.spritekit.*;
 import apple.opengles.*;
 
 
-
-
-
 @Library("SceneKit/SceneKit.h") @Mapping("SCNTransformConstraint")
 public class SCNTransformConstraint 
     extends SCNConstraint 
@@ -32,13 +29,13 @@ public class SCNTransformConstraint
     
     @Mapping("init")
     public SCNTransformConstraint() { }
+
     
-    
-    
-    
+
+
     
     
     @Mapping("transformConstraintInWorldSpace:withBlock:")
     public static native SCNTransformConstraint create(boolean world, @Block Block2<SCNNode, SCNMatrix4, SCNMatrix4> block);
-    
+
 }

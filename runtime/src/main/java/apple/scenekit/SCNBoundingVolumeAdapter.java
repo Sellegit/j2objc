@@ -19,7 +19,6 @@ import apple.glkit.*;
 import apple.spritekit.*;
 import apple.opengles.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -30,8 +29,8 @@ public abstract class SCNBoundingVolumeAdapter
     
     
     
-    
-    
+
+
     
     
     @NotImplemented("getBoundingBoxMin:max:")
@@ -40,5 +39,5 @@ public abstract class SCNBoundingVolumeAdapter
     public boolean getBoundingSphere(SCNVector3 center, Todo radius) { throw new UnsupportedOperationException(); }
     @NotImplemented("setBoundingBoxMin:max:")
     public void setBoundingBox(SCNVector3 min, SCNVector3 max) { throw new UnsupportedOperationException(); }
-    
+
 }

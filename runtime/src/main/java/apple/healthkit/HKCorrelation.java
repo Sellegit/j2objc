@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("HealthKit/HealthKit.h") @Mapping("HKCorrelation")
 public class HKCorrelation 
     extends HKSample 
@@ -28,13 +26,13 @@ public class HKCorrelation
     
     @Mapping("init")
     public HKCorrelation() { }
-    
+
     
     @Mapping("correlationType")
     public native HKCorrelationType getCorrelationType();
     @Mapping("objects")
     public native NSSet<HKSample> getObjects();
-    
+
     
     
     @Mapping("objectsForType:")
@@ -43,5 +41,5 @@ public class HKCorrelation
     public static native HKCorrelation create(HKCorrelationType correlationType, NSDate startDate, NSDate endDate, NSSet<?> objects);
     @Mapping("correlationWithType:startDate:endDate:objects:metadata:")
     public static native HKCorrelation create(HKCorrelationType correlationType, NSDate startDate, NSDate endDate, NSSet<?> objects, NSDictionary<?, ?> metadata);
-    
+
 }

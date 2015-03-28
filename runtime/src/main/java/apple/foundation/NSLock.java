@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h") @Mapping("NSLock")
 public class NSLock 
     extends NSObject 
@@ -31,7 +28,7 @@ public class NSLock
     
     @Mapping("init")
     public NSLock() { }
-    
+
     
     /**
      * @since Available in iOS 2.0 and later.
@@ -43,7 +40,7 @@ public class NSLock
      */
     @Mapping("setName:")
     public native void setName(String v);
-    
+
     
     
     @Mapping("tryLock")
@@ -54,5 +51,5 @@ public class NSLock
     public native void lock();
     @Mapping("unlock")
     public native void unlock();
-    
+
 }

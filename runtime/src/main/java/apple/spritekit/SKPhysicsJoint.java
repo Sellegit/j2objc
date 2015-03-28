@@ -21,9 +21,6 @@ import apple.glkit.*;
 import apple.scenekit.*;
 
 
-
-
-
 @Library("SpriteKit/SpriteKit.h") @Mapping("SKPhysicsJoint")
 public class SKPhysicsJoint 
     extends NSObject 
@@ -33,7 +30,7 @@ public class SKPhysicsJoint
     
     @Mapping("init")
     public SKPhysicsJoint() { }
-    
+
     
     @Mapping("bodyA")
     public native SKPhysicsBody getBodyA();
@@ -47,10 +44,10 @@ public class SKPhysicsJoint
     public native CGVector getReactionForce();
     @Mapping("reactionTorque")
     public native @MachineSizedFloat double getReactionTorque();
-    
+
     
     
     @Mapping("encodeWithCoder:")
     public native void encode(NSCoder aCoder);
-    
+
 }

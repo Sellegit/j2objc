@@ -19,9 +19,6 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h")
 @Mapping("UIInterfaceOrientationMask")
 public final class UIInterfaceOrientationMask extends ObjCEnum {
@@ -40,6 +37,6 @@ public final class UIInterfaceOrientationMask extends ObjCEnum {
     public static final long All = 30L;
     @GlobalConstant("UIInterfaceOrientationMaskAllButUpsideDown")
     public static final long AllButUpsideDown = 26L;
-    
+
 
 }

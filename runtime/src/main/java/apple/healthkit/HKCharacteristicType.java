@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("HealthKit/HealthKit.h") @Mapping("HKCharacteristicType")
 public class HKCharacteristicType 
     extends HKObjectType 
@@ -28,12 +26,12 @@ public class HKCharacteristicType
     
     @Mapping("init")
     public HKCharacteristicType() { }
+
+    
+
+
     
     
-    
-    
-    
-    
-    
-    
+
+
 }

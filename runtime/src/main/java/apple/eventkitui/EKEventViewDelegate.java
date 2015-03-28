@@ -16,24 +16,21 @@ import apple.eventkit.*;
 import apple.uikit.*;
 
 
-
-
-
 @Library("EventKitUI/EventKitUI.h") @Mapping("EKEventViewDelegate")
 public interface EKEventViewDelegate 
     extends NSObjectProtocol {
 
     
     
-    
-    
+
+
     
     /**
      * @since Available in iOS 4.2 and later.
      */
     @Mapping("eventViewController:didCompleteWithAction:")
     void didComplete(EKEventViewController controller, EKEventViewAction action);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

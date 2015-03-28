@@ -13,7 +13,6 @@ import apple.coregraphics.*;
 import apple.coreservices.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("CoreMotion/CoreMotion.h")
@@ -24,7 +23,7 @@ public class CMError
     
     
     protected CMError() {}
-    
+
     
     
     
@@ -33,5 +32,5 @@ public class CMError
      */
     @GlobalConstant("CMErrorDomain")
     public static native String getClassDomain();
-    
+
 }

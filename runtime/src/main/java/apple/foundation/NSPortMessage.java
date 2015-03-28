@@ -18,7 +18,6 @@ import apple.coremedia.*;
 import apple.security.*;
 import apple.dispatch.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 
@@ -29,12 +28,12 @@ public class NSPortMessage
     
     
     public NSPortMessage() {}
+
+    
+
+
     
     
-    
-    
-    
-    
-    
-    
+
+
 }

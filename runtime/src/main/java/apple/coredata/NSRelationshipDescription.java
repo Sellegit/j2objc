@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 3.0 and later.
  */
-
 @Library("CoreData/CoreData.h") @Mapping("NSRelationshipDescription")
 public class NSRelationshipDescription 
     extends NSPropertyDescription 
@@ -30,7 +28,7 @@ public class NSRelationshipDescription
     public NSRelationshipDescription(NSCoder aDecoder) { }
     @Mapping("init")
     public NSRelationshipDescription() { }
-    
+
     
     @Mapping("destinationEntity")
     public native NSEntityDescription getDestinationEntity();
@@ -69,9 +67,9 @@ public class NSRelationshipDescription
      */
     @Mapping("setOrdered:")
     public native void setOrdered(boolean v);
+
     
     
-    
-    
-    
+
+
 }

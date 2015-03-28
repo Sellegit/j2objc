@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 2.0 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UIScrollView")
 public class UIScrollView 
     extends UIView 
@@ -37,7 +35,7 @@ public class UIScrollView
     public UIScrollView(NSCoder aDecoder) { }
     @Mapping("init")
     public UIScrollView() { }
-    
+
     
     @Mapping("contentOffset")
     public native CGPoint getContentOffset();
@@ -169,7 +167,7 @@ public class UIScrollView
      */
     @Mapping("setKeyboardDismissMode:")
     public native void setKeyboardDismissMode(@Representing("UIScrollViewKeyboardDismissMode") long v);
-    
+
     
     
     /**
@@ -182,7 +180,7 @@ public class UIScrollView
      */
     @GlobalConstant("UIScrollViewDecelerationRateFast")
     public static native @MachineSizedFloat double getFastDecelerationRate();
-    
+
     @Mapping("setContentOffset:animated:")
     public native void setContentOffset(CGPoint contentOffset, boolean animated);
     @Mapping("scrollRectToVisible:animated:")
@@ -203,5 +201,5 @@ public class UIScrollView
      */
     @Mapping("zoomToRect:animated:")
     public native void zoomToRect(CGRect rect, boolean animated);
-    
+
 }

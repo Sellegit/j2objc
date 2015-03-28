@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 7.0 and later.
  */
-
 @Library("CoreMotion/CoreMotion.h") @Mapping("CMMotionActivity")
 public class CMMotionActivity 
     extends CMLogItem 
@@ -28,7 +26,7 @@ public class CMMotionActivity
     
     @Mapping("init")
     public CMMotionActivity() { }
-    
+
     
     @Mapping("confidence")
     public native @Representing("CMMotionActivityConfidence") long getConfidence();
@@ -49,9 +47,9 @@ public class CMMotionActivity
      */
     @Mapping("cycling")
     public native boolean isCycling();
+
     
     
-    
-    
-    
+
+
 }

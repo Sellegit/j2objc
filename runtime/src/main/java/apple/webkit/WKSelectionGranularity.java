@@ -15,11 +15,9 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("WebKit/WebKit.h")
 @Mapping("WKSelectionGranularity")
 public final class WKSelectionGranularity extends ObjCEnum {
@@ -28,6 +26,6 @@ public final class WKSelectionGranularity extends ObjCEnum {
     public static final long Dynamic = 0L;
     @GlobalConstant("WKSelectionGranularityCharacter")
     public static final long Character = 1L;
-    
+
 
 }

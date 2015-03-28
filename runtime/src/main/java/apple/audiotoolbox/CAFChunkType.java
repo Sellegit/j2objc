@@ -17,9 +17,6 @@ import apple.coreaudio.*;
 import apple.coremedia.*;
 
 
-
-
-
 @Library("AudioToolbox/AudioToolbox.h")
 @Mapping("CAFChunkType")
 public final class CAFChunkType extends ObjCEnum {
@@ -62,6 +59,6 @@ public final class CAFChunkType extends ObjCEnum {
     public static final long FormatListID = 1818522467L;
     @GlobalConstant("kCAF_iXMLChunkID")
     public static final long iXMLChunkID = 1767394636L;
-    
+
 
 }

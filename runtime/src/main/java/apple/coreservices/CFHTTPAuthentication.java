@@ -13,7 +13,6 @@ import apple.coregraphics.*;
 import apple.coreservices.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Mapping("CFHTTPAuthenticationRef") @Library("CFNetwork/CFNetwork.h")
@@ -24,7 +23,7 @@ public class CFHTTPAuthentication
     
     
     protected CFHTTPAuthentication() {}
-    
+
     
     
     
@@ -78,5 +77,5 @@ public class CFHTTPAuthentication
      */
     @GlobalFunction("CFHTTPAuthenticationRequiresAccountDomain")
     public static native boolean requiresAccountDomain(CFHTTPAuthentication auth);
-    
+
 }

@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h") @Mapping("NSError")
 public class NSError 
     extends NSObject 
@@ -33,7 +30,7 @@ public class NSError
     public NSError(String domain, @MachineSizedSInt long code, NSDictionary<?, ?> dict) { }
     @Mapping("init")
     public NSError() { }
-    
+
     
     @Mapping("domain")
     public native String getDomain();
@@ -53,10 +50,10 @@ public class NSError
     public native NSErrorRecoveryAttempting getRecoveryAttempter();
     @Mapping("helpAnchor")
     public native String getHelpAnchor();
-    
+
     
     
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
-    
+
 }

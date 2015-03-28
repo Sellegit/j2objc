@@ -19,19 +19,17 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 7.0 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UIGuidedAccessRestrictionDelegate")
 public interface UIGuidedAccessRestrictionDelegate 
     extends NSObjectProtocol {
 
     
     
-    
-    
+
+
     
     @Mapping("guidedAccessRestrictionIdentifiers")
     List<String> getIdentifiers();
@@ -41,7 +39,7 @@ public interface UIGuidedAccessRestrictionDelegate
     String getText(String restrictionIdentifier);
     @Mapping("detailTextForGuidedAccessRestrictionWithIdentifier:")
     String getDetailText(String restrictionIdentifier);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h")
 @Mapping("AVAudioUnitReverbPreset")
 public final class AVAudioUnitReverbPreset extends ObjCEnum {
@@ -55,6 +53,6 @@ public final class AVAudioUnitReverbPreset extends ObjCEnum {
     public static final long MediumHall3 = 11L;
     @GlobalConstant("AVAudioUnitReverbPresetLargeHall2")
     public static final long LargeHall2 = 12L;
-    
+
 
 }

@@ -15,11 +15,9 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
 /**
  * @since Available in iOS 5.0 and later.
  */
-
 @Library("GameKit/GameKit.h") @Mapping("GKTurnBasedMatch")
 public class GKTurnBasedMatch 
     extends NSObject 
@@ -29,7 +27,7 @@ public class GKTurnBasedMatch
     
     @Mapping("init")
     public GKTurnBasedMatch() { }
-    
+
     
     @Mapping("matchID")
     public native String getMatchID();
@@ -77,7 +75,7 @@ public class GKTurnBasedMatch
      */
     @Mapping("exchangeMaxInitiatedExchangesPerPlayer")
     public native @MachineSizedUInt long getExchangeMaxInitiatedExchangesPerPlayer();
-    
+
     
     
     /**
@@ -90,7 +88,7 @@ public class GKTurnBasedMatch
      */
     @GlobalConstant("GKTurnTimeoutNone")
     public static native double getNoneTimeout();
-    
+
     /**
      * @since Available in iOS 7.0 and later.
      */
@@ -177,5 +175,5 @@ public class GKTurnBasedMatch
      */
     @Mapping("loadMatchWithID:withCompletionHandler:")
     public static native void loadMatches(String matchID, @Block VoidBlock2<GKTurnBasedMatch, NSError> completionHandler);
-    
+
 }

@@ -17,9 +17,6 @@ import apple.corevideo.*;
 import apple.imageio.*;
 
 
-
-
-
 @Library("CoreImage/CoreImage.h") @Mapping("CIColorKernel")
 public class CIColorKernel 
     extends CIKernel 
@@ -29,10 +26,10 @@ public class CIColorKernel
     
     @Mapping("init")
     public CIColorKernel() { }
+
     
-    
-    
-    
+
+
     
     
     /**
@@ -40,5 +37,5 @@ public class CIColorKernel
      */
     @Mapping("applyWithExtent:arguments:")
     public native CIImage apply(CGRect extent, NSArray<?> args);
-    
+
 }

@@ -20,9 +20,6 @@ import apple.spritekit.*;
 import apple.opengles.*;
 
 
-
-
-
 @Library("SceneKit/SceneKit.h") @Mapping("SCNProgram")
 public class SCNProgram 
     extends NSObject 
@@ -32,7 +29,7 @@ public class SCNProgram
     
     @Mapping("init")
     public SCNProgram() { }
-    
+
     
     @Mapping("vertexShader")
     public native String getVertexShader();
@@ -50,7 +47,7 @@ public class SCNProgram
     public native SCNProgramDelegate getDelegate();
     @Mapping("setDelegate:")
     public native void setDelegate(SCNProgramDelegate v);
-    
+
     
     
     @Mapping("setSemantic:forSymbol:options:")
@@ -61,5 +58,5 @@ public class SCNProgram
     public static native SCNProgram create();
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
-    
+
 }

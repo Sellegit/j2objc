@@ -15,9 +15,6 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
-
-
 @Library("GameKit/GameKit.h")
 @Mapping("GKTurnBasedMatchOutcome")
 public final class GKTurnBasedMatchOutcome extends ObjCEnum {
@@ -44,6 +41,6 @@ public final class GKTurnBasedMatchOutcome extends ObjCEnum {
     public static final long Fourth = 9L;
     @GlobalConstant("GKTurnBasedMatchOutcomeCustomRange")
     public static final long CustomRange = 16711680L;
-    
+
 
 }

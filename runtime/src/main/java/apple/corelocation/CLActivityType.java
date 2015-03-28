@@ -16,9 +16,6 @@ import apple.addressbook.*;
 import apple.corebluetooth.*;
 
 
-
-
-
 @Library("CoreLocation/CoreLocation.h")
 @Mapping("CLActivityType")
 public final class CLActivityType extends ObjCEnum {
@@ -31,6 +28,6 @@ public final class CLActivityType extends ObjCEnum {
     public static final long Fitness = 3L;
     @GlobalConstant("CLActivityTypeOtherNavigation")
     public static final long OtherNavigation = 4L;
-    
+
 
 }

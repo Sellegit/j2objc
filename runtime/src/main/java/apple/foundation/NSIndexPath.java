@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h") @Mapping("NSIndexPath")
 public class NSIndexPath 
     extends NSObject 
@@ -35,11 +32,11 @@ public class NSIndexPath
     public NSIndexPath(@MachineSizedUInt long index) { }
     @Mapping("init")
     public NSIndexPath() { }
-    
+
     
     @Mapping("length")
     public native @MachineSizedUInt long getLength();
-    
+
     
     
     @Mapping("indexPathByAddingIndex:")
@@ -54,5 +51,5 @@ public class NSIndexPath
     public native @Representing("NSComparisonResult") long compare(NSIndexPath otherObject);
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
-    
+
 }

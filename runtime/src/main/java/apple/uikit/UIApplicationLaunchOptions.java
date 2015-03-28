@@ -18,7 +18,6 @@ import apple.coreimage.*;
 import apple.coretext.*;
 import apple.corelocation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("UIKit/UIKit.h")
@@ -81,5 +80,5 @@ public class UIApplicationLaunchOptions
      */
     @GlobalConstant("UIApplicationLaunchOptionsUserActivityDictionaryKey")
     public static native NSString UserActivityDictionaryKey();
-    
+
 }

@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 6.0 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UICollectionReusableView")
 public class UICollectionReusableView 
     extends UIView 
@@ -37,11 +35,11 @@ public class UICollectionReusableView
     public UICollectionReusableView(NSCoder aDecoder) { }
     @Mapping("init")
     public UICollectionReusableView() { }
-    
+
     
     @Mapping("reuseIdentifier")
     public native String getReuseIdentifier();
-    
+
     
     
     @Mapping("prepareForReuse")
@@ -57,5 +55,5 @@ public class UICollectionReusableView
      */
     @Mapping("preferredLayoutAttributesFittingAttributes:")
     public native UICollectionViewLayoutAttributes getPreferredLayoutAttributesFittingAttributes(UICollectionViewLayoutAttributes layoutAttributes);
-    
+
 }

@@ -15,11 +15,9 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
 /**
  * @since Available in iOS 7.1 and later.
  */
-
 @Library("MediaPlayer/MediaPlayer.h")
 @Mapping("MPSeekCommandEventType")
 public final class MPSeekCommandEventType extends ObjCEnum {
@@ -28,6 +26,6 @@ public final class MPSeekCommandEventType extends ObjCEnum {
     public static final long BeginSeeking = 0L;
     @GlobalConstant("MPSeekCommandEventTypeEndSeeking")
     public static final long EndSeeking = 1L;
-    
+
 
 }

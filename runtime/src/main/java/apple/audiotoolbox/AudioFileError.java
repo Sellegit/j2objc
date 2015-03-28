@@ -17,9 +17,6 @@ import apple.coreaudio.*;
 import apple.coremedia.*;
 
 
-
-
-
 @Library("AudioToolbox/AudioToolbox.h")
 @Mapping("AudioFileError")
 public final class AudioFileError extends ObjCEnum {
@@ -56,6 +53,6 @@ public final class AudioFileError extends ObjCEnum {
     public static final long Position = -40L;
     @GlobalConstant("kAudioFileFileNotFoundError")
     public static final long FileNotFound = -43L;
-    
+
 
 }

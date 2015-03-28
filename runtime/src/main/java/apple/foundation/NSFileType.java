@@ -18,7 +18,6 @@ import apple.coremedia.*;
 import apple.security.*;
 import apple.dispatch.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("Foundation/Foundation.h")
@@ -45,5 +44,5 @@ public class NSFileType
     public static native NSString BlockSpecialValue();
     @GlobalConstant("NSFileTypeUnknown")
     public static native NSString UnknownValue();
-    
+
 }

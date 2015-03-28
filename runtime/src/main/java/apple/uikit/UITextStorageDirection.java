@@ -19,9 +19,6 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h")
 @Mapping("UITextStorageDirection")
 public final class UITextStorageDirection extends ObjCEnum {
@@ -30,6 +27,6 @@ public final class UITextStorageDirection extends ObjCEnum {
     public static final long Forward = 0L;
     @GlobalConstant("UITextStorageDirectionBackward")
     public static final long Backward = 1L;
-    
+
 
 }

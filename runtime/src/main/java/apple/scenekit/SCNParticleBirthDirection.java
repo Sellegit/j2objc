@@ -20,9 +20,6 @@ import apple.spritekit.*;
 import apple.opengles.*;
 
 
-
-
-
 @Library("SceneKit/SceneKit.h")
 @Mapping("SCNParticleBirthDirection")
 public final class SCNParticleBirthDirection extends ObjCEnum {
@@ -33,6 +30,6 @@ public final class SCNParticleBirthDirection extends ObjCEnum {
     public static final long SurfaceNormal = 1L;
     @GlobalConstant("SCNParticleBirthDirectionRandom")
     public static final long Random = 2L;
-    
+
 
 }

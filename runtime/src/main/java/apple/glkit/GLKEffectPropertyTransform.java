@@ -17,11 +17,9 @@ import apple.uikit.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 5.0 and later.
  */
-
 @Library("GLKit/GLKit.h") @Mapping("GLKEffectPropertyTransform")
 public class GLKEffectPropertyTransform 
     extends GLKEffectProperty 
@@ -31,7 +29,7 @@ public class GLKEffectPropertyTransform
     
     @Mapping("init")
     public GLKEffectPropertyTransform() { }
-    
+
     
     @Mapping("modelviewMatrix")
     public native GLKMatrix4 getModelviewMatrix();
@@ -43,9 +41,9 @@ public class GLKEffectPropertyTransform
     public native void setProjectionMatrix(GLKMatrix4 v);
     @Mapping("normalMatrix")
     public native GLKMatrix3 getNormalMatrix();
+
     
     
-    
-    
-    
+
+
 }

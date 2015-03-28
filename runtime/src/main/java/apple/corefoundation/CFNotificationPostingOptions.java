@@ -15,9 +15,6 @@ import apple.dispatch.*;
 import apple.foundation.*;
 
 
-
-
-
 @Library("CoreFoundation/CoreFoundation.h")
 @Mapping("CFNotificationPostingOptions")
 public final class CFNotificationPostingOptions extends ObjCEnum {
@@ -26,6 +23,6 @@ public final class CFNotificationPostingOptions extends ObjCEnum {
     public static final long DeliverImmediately = 1L;
     @GlobalConstant("kCFNotificationPostToAllSessions")
     public static final long PostToAllSessions = 2L;
-    
+
 
 }

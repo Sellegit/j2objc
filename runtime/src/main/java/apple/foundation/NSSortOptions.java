@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h")
 @Mapping("NSSortOptions")
 public final class NSSortOptions extends ObjCEnum {
@@ -30,6 +27,6 @@ public final class NSSortOptions extends ObjCEnum {
     public static final long Concurrent = 1L;
     @GlobalConstant("NSSortStable")
     public static final long Stable = 16L;
-    
+
 
 }

@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 3.2 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UIPopoverController")
 public class UIPopoverController 
     extends NSObject 
@@ -35,7 +33,7 @@ public class UIPopoverController
     public UIPopoverController(UIViewController viewController) { }
     @Mapping("init")
     public UIPopoverController() { }
-    
+
     
     @Mapping("delegate")
     public native UIPopoverControllerDelegate getDelegate();
@@ -77,7 +75,7 @@ public class UIPopoverController
      */
     @Mapping("setPopoverLayoutMargins:")
     public native void setPopoverLayoutMargins(UIEdgeInsets v);
-    
+
     
     
     @Mapping("setContentViewController:animated:")
@@ -90,5 +88,5 @@ public class UIPopoverController
     public native void presentFromBarButtonItem(UIBarButtonItem item, @Representing("UIPopoverArrowDirection") long arrowDirections, boolean animated);
     @Mapping("dismissPopoverAnimated:")
     public native void dismiss(boolean animated);
-    
+
 }

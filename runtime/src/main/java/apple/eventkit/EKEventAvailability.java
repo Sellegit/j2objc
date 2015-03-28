@@ -16,9 +16,6 @@ import apple.addressbook.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("EventKit/EventKit.h")
 @Mapping("EKEventAvailability")
 public final class EKEventAvailability extends ObjCEnum {
@@ -33,6 +30,6 @@ public final class EKEventAvailability extends ObjCEnum {
     public static final long Tentative = 2L;
     @GlobalConstant("EKEventAvailabilityUnavailable")
     public static final long Unavailable = 3L;
-    
+
 
 }

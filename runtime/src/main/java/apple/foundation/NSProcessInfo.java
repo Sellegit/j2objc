@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h") @Mapping("NSProcessInfo")
 public class NSProcessInfo 
     extends NSObject 
@@ -31,7 +28,7 @@ public class NSProcessInfo
     
     @Mapping("init")
     public NSProcessInfo() { }
-    
+
     
     @Mapping("environment")
     public native Map<String, NSObject> getEnvironment();
@@ -74,7 +71,7 @@ public class NSProcessInfo
      */
     @Mapping("systemUptime")
     public native double getSystemUptime();
-    
+
     
     
     /**
@@ -118,5 +115,5 @@ public class NSProcessInfo
      */
     @Mapping("performExpiringActivityWithReason:usingBlock:")
     public native void performExpiringActivityWithReason$usingBlock$(String reason, @Block VoidBooleanBlock block);
-    
+
 }

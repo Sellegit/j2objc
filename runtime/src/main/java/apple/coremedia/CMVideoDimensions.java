@@ -18,9 +18,6 @@ import apple.coreanimation.*;
 import apple.corevideo.*;
 
 
-
-
-
 @Mapping("CMVideoDimensions") @Library("CoreMedia/CoreMedia.h")
 public class CMVideoDimensions 
     extends Struct 
@@ -34,7 +31,7 @@ public class CMVideoDimensions
     public native int getWidth();
     @DotMapping("height")
     public native int getHeight();
-    
+
     public static native CMVideoDimensions create(int width, int height) /*-[
         CMVideoDimensions __new = { .width = width, .height = height };
         return __new;
@@ -44,11 +41,27 @@ public class CMVideoDimensions
         return __new;
     ]-*/;
 
-    
+
     public static native CMVideoDimensions copyWithheight(CMVideoDimensions original, int height) /*-[
         CMVideoDimensions __new = { .width = original.width, .height = height };
         return __new;
     ]-*/;
 
-    
+
+    public static final class Adapter {
+
+        public int width;
+        public int height;
+        public Adapter(int width, int height) {
+            this.width = width;
+            this.height = height;
+        }
+        public Adapter(CMVideoDimensions original) {
+            this.width = original.getWidth();
+            this.height = original.getHeight();
+        }
+        public CMVideoDimensions convert() {
+            return create(width, height);
+        }
+    }
 }

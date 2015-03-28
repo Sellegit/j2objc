@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 4.0 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h")
 @Mapping("AVCaptureFlashMode")
 public final class AVCaptureFlashMode extends ObjCEnum {
@@ -35,6 +33,6 @@ public final class AVCaptureFlashMode extends ObjCEnum {
     public static final long On = 1L;
     @GlobalConstant("AVCaptureFlashModeAuto")
     public static final long Auto = 2L;
-    
+
 
 }

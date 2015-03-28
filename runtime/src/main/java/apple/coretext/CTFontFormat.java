@@ -14,9 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
-
-
 @Library("CoreText/CoreText.h")
 @Mapping("CTFontFormat")
 public final class CTFontFormat extends ObjCEnum {
@@ -33,6 +30,6 @@ public final class CTFontFormat extends ObjCEnum {
     public static final long PostScript = 4L;
     @GlobalConstant("kCTFontFormatBitmap")
     public static final long Bitmap = 5L;
-    
+
 
 }

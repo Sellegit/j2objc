@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h")
 @Mapping("NSSearchPathDomainMask")
 public final class NSSearchPathDomainMask extends ObjCEnum {
@@ -36,6 +33,6 @@ public final class NSSearchPathDomainMask extends ObjCEnum {
     public static final long SystemDomainMask = 8L;
     @GlobalConstant("NSAllDomainsMask")
     public static final long AllDomainsMask = 65535L;
-    
+
 
 }

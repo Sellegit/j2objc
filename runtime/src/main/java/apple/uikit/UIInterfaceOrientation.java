@@ -19,9 +19,6 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h")
 @Mapping("UIInterfaceOrientation")
 public final class UIInterfaceOrientation extends ObjCEnum {
@@ -36,6 +33,6 @@ public final class UIInterfaceOrientation extends ObjCEnum {
     public static final long LandscapeLeft = 4L;
     @GlobalConstant("UIInterfaceOrientationLandscapeRight")
     public static final long LandscapeRight = 3L;
-    
+
 
 }

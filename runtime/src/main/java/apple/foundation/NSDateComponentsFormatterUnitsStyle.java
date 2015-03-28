@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h")
 @Mapping("NSDateComponentsFormatterUnitsStyle")
 public final class NSDateComponentsFormatterUnitsStyle extends ObjCEnum {
@@ -36,6 +33,6 @@ public final class NSDateComponentsFormatterUnitsStyle extends ObjCEnum {
     public static final long Full = 3L;
     @GlobalConstant("NSDateComponentsFormatterUnitsStyleSpellOut")
     public static final long SpellOut = 4L;
-    
+
 
 }

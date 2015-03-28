@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("HealthKit/HealthKit.h") @Mapping("HKCorrelationType")
 public class HKCorrelationType 
     extends HKSampleType 
@@ -28,12 +26,12 @@ public class HKCorrelationType
     
     @Mapping("init")
     public HKCorrelationType() { }
+
+    
+
+
     
     
-    
-    
-    
-    
-    
-    
+
+
 }

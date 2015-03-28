@@ -20,9 +20,6 @@ import apple.spritekit.*;
 import apple.opengles.*;
 
 
-
-
-
 @Library("SceneKit/SceneKit.h") @Mapping("SCNConstraint")
 public class SCNConstraint 
     extends NSObject 
@@ -32,13 +29,13 @@ public class SCNConstraint
     
     @Mapping("init")
     public SCNConstraint() { }
-    
+
     
     @Mapping("influenceFactor")
     public native @MachineSizedFloat double getInfluenceFactor();
     @Mapping("setInfluenceFactor:")
     public native void setInfluenceFactor(@MachineSizedFloat double v);
-    
+
     
     
     @Mapping("copyWithZone:")
@@ -61,5 +58,5 @@ public class SCNConstraint
     public native boolean isAnimationPaused(String key);
     @Mapping("removeAnimationForKey:fadeOutDuration:")
     public native void removeAnimation(String key, @MachineSizedFloat double duration);
-    
+
 }

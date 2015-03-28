@@ -15,11 +15,9 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("WebKit/WebKit.h") @Mapping("WKNavigationResponse")
 public class WKNavigationResponse 
     extends NSObject 
@@ -29,7 +27,7 @@ public class WKNavigationResponse
     
     @Mapping("init")
     public WKNavigationResponse() { }
-    
+
     
     @Mapping("isForMainFrame")
     public native boolean isForMainFrame();
@@ -37,9 +35,9 @@ public class WKNavigationResponse
     public native NSURLResponse getResponse();
     @Mapping("canShowMIMEType")
     public native boolean canShowMIMEType();
+
     
     
-    
-    
-    
+
+
 }

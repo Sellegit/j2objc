@@ -15,11 +15,9 @@ import apple.foundation.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 5.0 and later.
  */
-
 @Library("CoreBluetooth/CoreBluetooth.h") @Mapping("CBService")
 public class CBService 
     extends CBAttribute 
@@ -29,7 +27,7 @@ public class CBService
     
     @Mapping("init")
     public CBService() { }
-    
+
     
     @Mapping("peripheral")
     public native CBPeripheral getPeripheral();
@@ -39,9 +37,9 @@ public class CBService
     public native NSArray<CBService> getIncludedServices();
     @Mapping("characteristics")
     public native NSArray<CBCharacteristic> getCharacteristics();
+
     
     
-    
-    
-    
+
+
 }

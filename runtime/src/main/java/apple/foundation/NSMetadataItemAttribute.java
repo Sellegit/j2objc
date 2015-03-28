@@ -18,7 +18,6 @@ import apple.coremedia.*;
 import apple.security.*;
 import apple.dispatch.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("Foundation/Foundation.h")
@@ -158,5 +157,5 @@ public class NSMetadataItemAttribute
      */
     @GlobalConstant("NSMetadataQueryResultContentRelevanceAttribute")
     public static native NSString ContentRelevanceValue();
-    
+
 }

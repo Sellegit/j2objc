@@ -17,9 +17,6 @@ import apple.corevideo.*;
 import apple.imageio.*;
 
 
-
-
-
 @Library("CoreImage/CoreImage.h") @Mapping("CIFeature")
 public class CIFeature 
     extends NSObject 
@@ -29,15 +26,15 @@ public class CIFeature
     
     @Mapping("init")
     public CIFeature() { }
-    
+
     
     @Mapping("type")
     public native String getType();
     @Mapping("bounds")
     public native CGRect getBounds();
+
     
     
-    
-    
-    
+
+
 }

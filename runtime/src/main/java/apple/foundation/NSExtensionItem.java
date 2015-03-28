@@ -19,11 +19,9 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("Foundation/Foundation.h") @Mapping("NSExtensionItem")
 public class NSExtensionItem 
     extends NSObject 
@@ -33,7 +31,7 @@ public class NSExtensionItem
     
     @Mapping("init")
     public NSExtensionItem() { }
-    
+
     
     @Mapping("attributedTitle")
     public native NSAttributedString getAttributedTitle();
@@ -51,7 +49,7 @@ public class NSExtensionItem
     public native NSDictionary<?, ?> getUserInfo();
     @Mapping("setUserInfo:")
     public native void setUserInfo(NSDictionary<?, ?> v);
-    
+
     
     
     /**
@@ -69,8 +67,8 @@ public class NSExtensionItem
      */
     @GlobalConstant("NSExtensionItemAttachmentsKey")
     public static native String AttachmentsKey();
-    
+
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
-    
+
 }

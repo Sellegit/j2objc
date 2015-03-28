@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 3.0 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h") @Mapping("AVAudioRecorder")
 public class AVAudioRecorder 
     extends NSObject 
@@ -34,7 +32,7 @@ public class AVAudioRecorder
     
     @Mapping("init")
     public AVAudioRecorder() { }
-    
+
     
     @Mapping("isRecording")
     public native boolean isRecording();
@@ -67,7 +65,7 @@ public class AVAudioRecorder
      */
     @Mapping("setChannelAssignments:")
     public native void setChannelAssignments(NSArray<AVAudioSessionChannelDescription> v);
-    
+
     
     
     @Mapping("prepareToRecord")
@@ -98,5 +96,5 @@ public class AVAudioRecorder
     public native float getPeakPowerForChannel(@MachineSizedUInt long channelNumber);
     @Mapping("averagePowerForChannel:")
     public native float getAveragePowerForChannel(@MachineSizedUInt long channelNumber);
-    
+
 }

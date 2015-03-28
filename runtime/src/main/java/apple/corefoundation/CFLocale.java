@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.dispatch.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Mapping("CFLocaleRef") @Library("CoreFoundation/CoreFoundation.h")
@@ -25,7 +24,7 @@ public class CFLocale
     
     
     protected CFLocale() {}
-    
+
     
     
     
@@ -34,7 +33,7 @@ public class CFLocale
      */
     @GlobalConstant("kCFLocaleCurrentLocaleDidChangeNotification")
     public static native NSString CurrentLocaleDidChangeNotification();
-    
+
     @GlobalFunction("CFLocaleGetTypeID")
     public static native @MachineSizedUInt long getClassTypeID();
     @GlobalFunction("CFLocaleGetSystem")
@@ -99,5 +98,5 @@ public class CFLocale
     public static native CFType getComponent(CFLocale locale, CFString key);
     @GlobalFunction("CFLocaleCopyDisplayNameForPropertyValue")
     public static native CFString getComponentDisplayName(CFLocale displayLocale, CFString key, CFString value);
-    
+
 }

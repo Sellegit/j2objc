@@ -19,20 +19,17 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h") @Mapping("NSObject")
 public interface NSObjectProtocol 
      {
 
     
     
+
+
     
-    
-    
-    
-    
+
+
     /*<adapter>*/
     /*</adapter>*/
 }

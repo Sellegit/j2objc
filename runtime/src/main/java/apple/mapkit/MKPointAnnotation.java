@@ -17,11 +17,9 @@ import apple.uikit.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 4.0 and later.
  */
-
 @Library("MapKit/MapKit.h") @Mapping("MKPointAnnotation")
 public class MKPointAnnotation 
     extends MKShape 
@@ -31,15 +29,15 @@ public class MKPointAnnotation
     
     @Mapping("init")
     public MKPointAnnotation() { }
-    
+
     
     @Mapping("coordinate")
     public native CLLocationCoordinate2D getCoordinate();
     @Mapping("setCoordinate:")
     public native void setCoordinate(CLLocationCoordinate2D v);
+
     
     
-    
-    
-    
+
+
 }

@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 4.0 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h") @Mapping("AVCaptureFileOutput")
 public class AVCaptureFileOutput 
     extends AVCaptureOutput 
@@ -34,7 +32,7 @@ public class AVCaptureFileOutput
     
     @Mapping("init")
     public AVCaptureFileOutput() { }
-    
+
     
     @Mapping("outputFileURL")
     public native NSURL getOutputFileURL();
@@ -56,12 +54,12 @@ public class AVCaptureFileOutput
     public native long getMinFreeDiskSpaceLimit();
     @Mapping("setMinFreeDiskSpaceLimit:")
     public native void setMinFreeDiskSpaceLimit(long v);
-    
+
     
     
     @Mapping("startRecordingToOutputFileURL:recordingDelegate:")
     public native void startRecording(NSURL outputFileURL, AVCaptureFileOutputRecordingDelegate delegate);
     @Mapping("stopRecording")
     public native void stopRecording();
-    
+
 }

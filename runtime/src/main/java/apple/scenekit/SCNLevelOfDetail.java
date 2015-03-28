@@ -20,9 +20,6 @@ import apple.spritekit.*;
 import apple.opengles.*;
 
 
-
-
-
 @Library("SceneKit/SceneKit.h") @Mapping("SCNLevelOfDetail")
 public class SCNLevelOfDetail 
     extends NSObject 
@@ -32,7 +29,7 @@ public class SCNLevelOfDetail
     
     @Mapping("init")
     public SCNLevelOfDetail() { }
-    
+
     
     @Mapping("geometry")
     public native SCNGeometry getGeometry();
@@ -40,7 +37,7 @@ public class SCNLevelOfDetail
     public native @MachineSizedFloat double getScreenSpaceRadius();
     @Mapping("worldSpaceDistance")
     public native @MachineSizedFloat double getWorldSpaceDistance();
-    
+
     
     
     @Mapping("levelOfDetailWithGeometry:screenSpaceRadius:")
@@ -49,5 +46,5 @@ public class SCNLevelOfDetail
     public static native SCNLevelOfDetail createWithGeometryAndDistance(SCNGeometry geometry, @MachineSizedFloat double distance);
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
-    
+
 }

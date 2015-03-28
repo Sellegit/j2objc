@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 2.0 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UIViewController")
 public class UIViewController 
     extends UIResponder 
@@ -35,7 +33,7 @@ public class UIViewController
     public UIViewController(String nibNameOrNil, NSBundle nibBundleOrNil) { }
     @Mapping("init")
     public UIViewController() { }
-    
+
     
     @Mapping("view")
     public native UIView getView();
@@ -309,7 +307,7 @@ public class UIViewController
     public native UITraitCollection getTraitCollection();
     @Mapping("restorationParent")
     public native UIStateRestoring getRestorationParent();
-    
+
     
     
     /**
@@ -317,7 +315,7 @@ public class UIViewController
      */
     @GlobalConstant("UIViewControllerShowDetailTargetDidChangeNotification")
     public static native NSString ShowDetailTargetDidChangeNotification();
-    
+
     @Mapping("loadView")
     public native void loadView();
     /**
@@ -661,5 +659,5 @@ public class UIViewController
     public native void traitCollectionDidChange(UITraitCollection previousTraitCollection);
     @Mapping("beginRequestWithExtensionContext:")
     public native void beginRequest(NSExtensionContext context);
-    
+
 }

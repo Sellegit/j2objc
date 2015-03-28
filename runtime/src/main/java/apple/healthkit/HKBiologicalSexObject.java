@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("HealthKit/HealthKit.h") @Mapping("HKBiologicalSexObject")
 public class HKBiologicalSexObject 
     extends NSObject 
@@ -28,13 +26,13 @@ public class HKBiologicalSexObject
     
     @Mapping("init")
     public HKBiologicalSexObject() { }
-    
+
     
     @Mapping("biologicalSex")
     public native @Representing("HKBiologicalSex") long getBiologicalSex();
+
     
     
-    
-    
-    
+
+
 }

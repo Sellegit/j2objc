@@ -18,7 +18,6 @@ import apple.coreimage.*;
 import apple.coretext.*;
 import apple.corelocation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -33,10 +32,10 @@ public abstract class UITextDocumentProxyAdapter
     public String getDocumentContextBeforeInput() { throw new UnsupportedOperationException(); }
     @NotImplemented("documentContextAfterInput")
     public String getDocumentContextAfterInput() { throw new UnsupportedOperationException(); }
-    
+
     
     
     @NotImplemented("adjustTextPositionByCharacterOffset:")
     public void adjustTextPosition(@MachineSizedSInt long offset) { throw new UnsupportedOperationException(); }
-    
+
 }

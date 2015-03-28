@@ -13,7 +13,6 @@ import apple.coregraphics.*;
 import apple.coreservices.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Mapping("ABRecordRef")
@@ -24,7 +23,7 @@ public class ABRecordRef
     
     
     protected ABRecordRef() {}
-    
+
     
     
     

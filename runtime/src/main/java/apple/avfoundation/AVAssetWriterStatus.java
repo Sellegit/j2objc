@@ -20,9 +20,6 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
-
-
 @Library("AVFoundation/AVFoundation.h")
 @Mapping("AVAssetWriterStatus")
 public final class AVAssetWriterStatus extends ObjCEnum {
@@ -37,6 +34,6 @@ public final class AVAssetWriterStatus extends ObjCEnum {
     public static final long Failed = 3L;
     @GlobalConstant("AVAssetWriterStatusCancelled")
     public static final long Cancelled = 4L;
-    
+
 
 }

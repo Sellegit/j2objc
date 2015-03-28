@@ -16,11 +16,9 @@ import apple.uikit.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("ExternalAccessory/ExternalAccessory.h") @Mapping("EAWiFiUnconfiguredAccessory")
 public class EAWiFiUnconfiguredAccessory 
     extends NSObject 
@@ -30,7 +28,7 @@ public class EAWiFiUnconfiguredAccessory
     
     @Mapping("init")
     public EAWiFiUnconfiguredAccessory() { }
-    
+
     
     @Mapping("name")
     public native String getName();
@@ -44,9 +42,9 @@ public class EAWiFiUnconfiguredAccessory
     public native String getMacAddress();
     @Mapping("properties")
     public native @Representing("EAWiFiUnconfiguredAccessoryProperties") long getProperties();
+
     
     
-    
-    
-    
+
+
 }

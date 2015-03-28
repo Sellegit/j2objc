@@ -17,7 +17,6 @@ import apple.coreaudio.*;
 import apple.coreanimation.*;
 import apple.corevideo.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Mapping("CMMemoryPoolRef") @Library("CoreMedia/CoreMedia.h")
@@ -28,7 +27,7 @@ public class CMMemoryPool
     
     
     protected CMMemoryPool() {}
-    
+
     
     
     
@@ -57,5 +56,5 @@ public class CMMemoryPool
      */
     @GlobalFunction("CMMemoryPoolInvalidate")
     public static native void invalidate(CMMemoryPool pool);
-    
+
 }

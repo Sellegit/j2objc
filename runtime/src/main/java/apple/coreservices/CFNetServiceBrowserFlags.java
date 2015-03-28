@@ -14,9 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
-
-
 @Library("CFNetwork/CFNetwork.h")
 @Mapping("CFNetServiceBrowserFlags")
 public final class CFNetServiceBrowserFlags extends ObjCEnum {
@@ -29,6 +26,6 @@ public final class CFNetServiceBrowserFlags extends ObjCEnum {
     public static final long IsDefault = 4L;
     @GlobalConstant("kCFNetServiceFlagRemove")
     public static final long Remove = 8L;
-    
+
 
 }

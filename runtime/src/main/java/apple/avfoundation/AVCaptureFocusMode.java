@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 4.0 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h")
 @Mapping("AVCaptureFocusMode")
 public final class AVCaptureFocusMode extends ObjCEnum {
@@ -35,6 +33,6 @@ public final class AVCaptureFocusMode extends ObjCEnum {
     public static final long AutoFocus = 1L;
     @GlobalConstant("AVCaptureFocusModeContinuousAutoFocus")
     public static final long ContinuousAutoFocus = 2L;
-    
+
 
 }

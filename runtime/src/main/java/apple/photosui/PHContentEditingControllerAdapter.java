@@ -15,7 +15,6 @@ import apple.foundation.*;
 import apple.photos.*;
 import apple.uikit.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -28,7 +27,7 @@ public abstract class PHContentEditingControllerAdapter
     
     @NotImplemented("shouldShowCancelConfirmation")
     public boolean shouldShowCancelConfirmation() { throw new UnsupportedOperationException(); }
-    
+
     
     
     @NotImplemented("canHandleAdjustmentData:")
@@ -39,5 +38,5 @@ public abstract class PHContentEditingControllerAdapter
     public void finishContentEditing(@Block VoidBlock1<PHContentEditingOutput> completionHandler) { throw new UnsupportedOperationException(); }
     @NotImplemented("cancelContentEditing")
     public void cancelContentEditing() { throw new UnsupportedOperationException(); }
-    
+
 }

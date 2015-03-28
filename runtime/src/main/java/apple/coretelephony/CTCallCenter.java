@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 4.0 and later.
  */
-
 @Library("CoreTelephony/CTCall.h") @Mapping("CTCallCenter")
 public class CTCallCenter 
     extends NSObject 
@@ -28,7 +26,7 @@ public class CTCallCenter
     
     @Mapping("init")
     public CTCallCenter() { }
-    
+
     
     /**
      * @since Available in iOS 4.0 and later.
@@ -45,9 +43,9 @@ public class CTCallCenter
      */
     @Mapping("setCallEventHandler:")
     public native void setCallEventHandler(@Block VoidBlock1<CTCall> v);
+
     
     
-    
-    
-    
+
+
 }

@@ -19,17 +19,14 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h") @Mapping("UIPopoverPresentationControllerDelegate")
 public interface UIPopoverPresentationControllerDelegate 
     extends UIAdaptivePresentationControllerDelegate {
 
     
     
-    
-    
+
+
     
     @Mapping("prepareForPopoverPresentation:")
     void prepareForPopoverPresentation(UIPopoverPresentationController popoverPresentationController);
@@ -39,7 +36,7 @@ public interface UIPopoverPresentationControllerDelegate
     void didDismissPopover(UIPopoverPresentationController popoverPresentationController);
     @Mapping("popoverPresentationController:willRepositionPopoverToRect:inView:")
     void willRepositionPopover(UIPopoverPresentationController popoverPresentationController, CGRect rect, Todo view);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

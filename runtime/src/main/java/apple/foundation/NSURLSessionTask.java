@@ -19,11 +19,9 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 7.0 and later.
  */
-
 @Library("Foundation/Foundation.h") @Mapping("NSURLSessionTask")
 public class NSURLSessionTask 
     extends NSObject 
@@ -33,7 +31,7 @@ public class NSURLSessionTask
     
     @Mapping("init")
     public NSURLSessionTask() { }
-    
+
     
     @Mapping("taskIdentifier")
     public native @MachineSizedUInt long getTaskIdentifier();
@@ -69,7 +67,7 @@ public class NSURLSessionTask
      */
     @Mapping("setPriority:")
     public native void setPriority(float v);
-    
+
     
     
     @Mapping("cancel")
@@ -80,5 +78,5 @@ public class NSURLSessionTask
     public native void resume();
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
-    
+
 }

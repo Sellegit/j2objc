@@ -17,9 +17,6 @@ import apple.coreaudio.*;
 import apple.coremedia.*;
 
 
-
-
-
 @Library("AudioToolbox/AudioToolbox.h")
 @Mapping("AudioQueuePitchAlgorithm")
 public final class AudioQueuePitchAlgorithm extends ObjCEnum {
@@ -32,6 +29,6 @@ public final class AudioQueuePitchAlgorithm extends ObjCEnum {
     public static final long LowQualityZeroLatency = 1819376236L;
     @GlobalConstant("kAudioQueueTimePitchAlgorithm_Varispeed")
     public static final long Varispeed = 1987276900L;
-    
+
 
 }

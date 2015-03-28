@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 import apple.uikit.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("MediaPlayer/MediaPlayer.h")
@@ -33,5 +32,5 @@ public class MPVolumeSettings
     public static native void hideAlert();
     @GlobalFunction("MPVolumeSettingsAlertIsVisible")
     public static native boolean isAlertVisible();
-    
+
 }

@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("HealthKit/HealthKit.h") @Mapping("HKWorkout")
 public class HKWorkout 
     extends HKSample 
@@ -28,7 +26,7 @@ public class HKWorkout
     
     @Mapping("init")
     public HKWorkout() { }
-    
+
     
     @Mapping("workoutActivityType")
     public native @Representing("HKWorkoutActivityType") long getWorkoutActivityType();
@@ -40,7 +38,7 @@ public class HKWorkout
     public native HKQuantity getTotalEnergyBurned();
     @Mapping("totalDistance")
     public native HKQuantity getTotalDistance();
-    
+
     
     
     @Mapping("workoutWithActivityType:startDate:endDate:")
@@ -49,5 +47,5 @@ public class HKWorkout
     public static native HKWorkout create(@Representing("HKWorkoutActivityType") long workoutActivityType, NSDate startDate, NSDate endDate, NSArray<?> workoutEvents, HKQuantity totalEnergyBurned, HKQuantity totalDistance, NSDictionary<?, ?> metadata);
     @Mapping("workoutWithActivityType:startDate:endDate:duration:totalEnergyBurned:totalDistance:metadata:")
     public static native HKWorkout create(@Representing("HKWorkoutActivityType") long workoutActivityType, NSDate startDate, NSDate endDate, double duration, HKQuantity totalEnergyBurned, HKQuantity totalDistance, NSDictionary<?, ?> metadata);
-    
+
 }

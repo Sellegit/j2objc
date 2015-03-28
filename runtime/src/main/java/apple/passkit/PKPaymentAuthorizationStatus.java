@@ -16,11 +16,9 @@ import apple.uikit.*;
 import apple.addressbook.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("PassKit/PassKit.h")
 @Mapping("PKPaymentAuthorizationStatus")
 public final class PKPaymentAuthorizationStatus extends ObjCEnum {
@@ -35,6 +33,6 @@ public final class PKPaymentAuthorizationStatus extends ObjCEnum {
     public static final long InvalidShippingPostalAddress = 3L;
     @GlobalConstant("PKPaymentAuthorizationStatusInvalidShippingContact")
     public static final long InvalidShippingContact = 4L;
-    
+
 
 }

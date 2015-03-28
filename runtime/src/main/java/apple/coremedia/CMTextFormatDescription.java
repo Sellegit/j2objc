@@ -17,7 +17,6 @@ import apple.coreaudio.*;
 import apple.coreanimation.*;
 import apple.corevideo.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("CoreMedia/CoreMedia.h")
@@ -70,5 +69,5 @@ public class CMTextFormatDescription
      */
     @GlobalFunction("CMTextFormatDescriptionCopyAsBigEndianTextDescriptionBlockBuffer")
     public static native int copyAsBigEndianTextDescriptionBlockBuffer(CFAllocator allocator, CMTextFormatDescription textFormatDescription, CFString textDescriptionFlavor, Todo textDescriptionBlockBufferOut);
-    
+
 }

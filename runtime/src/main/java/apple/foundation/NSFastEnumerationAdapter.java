@@ -18,7 +18,6 @@ import apple.coremedia.*;
 import apple.security.*;
 import apple.dispatch.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -29,10 +28,10 @@ public abstract class NSFastEnumerationAdapter
     
     
     
+
+
     
     
-    
-    
-    
-    
+
+
 }

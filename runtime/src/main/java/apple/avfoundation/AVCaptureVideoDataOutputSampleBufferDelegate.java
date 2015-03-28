@@ -20,20 +20,17 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
-
-
 @Library("AVFoundation/AVFoundation.h") @Mapping("AVCaptureVideoDataOutputSampleBufferDelegate")
 public interface AVCaptureVideoDataOutputSampleBufferDelegate 
     extends NSObjectProtocol {
 
     
     
+
+
     
-    
-    
-    
-    
+
+
     /*<adapter>*/
     /*</adapter>*/
 }

@@ -17,11 +17,9 @@ import apple.uikit.*;
 import apple.avfoundation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("Photos/Photos.h")
 @Mapping("PHImageRequestOptionsResizeMode")
 public final class PHImageRequestOptionsResizeMode extends ObjCEnum {
@@ -32,6 +30,6 @@ public final class PHImageRequestOptionsResizeMode extends ObjCEnum {
     public static final long Fast = 1L;
     @GlobalConstant("PHImageRequestOptionsResizeModeExact")
     public static final long Exact = 2L;
-    
+
 
 }

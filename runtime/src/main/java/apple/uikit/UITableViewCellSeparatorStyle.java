@@ -19,9 +19,6 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h")
 @Mapping("UITableViewCellSeparatorStyle")
 public final class UITableViewCellSeparatorStyle extends ObjCEnum {
@@ -32,6 +29,6 @@ public final class UITableViewCellSeparatorStyle extends ObjCEnum {
     public static final long SingleLine = 1L;
     @GlobalConstant("UITableViewCellSeparatorStyleSingleLineEtched")
     public static final long SingleLineEtched = 2L;
-    
+
 
 }

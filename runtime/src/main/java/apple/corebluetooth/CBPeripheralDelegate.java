@@ -15,17 +15,14 @@ import apple.foundation.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("CoreBluetooth/CoreBluetooth.h") @Mapping("CBPeripheralDelegate")
 public interface CBPeripheralDelegate 
     extends NSObjectProtocol {
 
     
     
-    
-    
+
+
     
     /**
      * @since Available in iOS 6.0 and later.
@@ -74,7 +71,7 @@ public interface CBPeripheralDelegate
     void didUpdateValue(CBPeripheral peripheral, CBDescriptor descriptor, NSError error);
     @Mapping("peripheral:didWriteValueForDescriptor:error:")
     void didWriteValue(CBPeripheral peripheral, CBDescriptor descriptor, NSError error);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

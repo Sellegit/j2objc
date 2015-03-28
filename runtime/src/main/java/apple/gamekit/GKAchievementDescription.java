@@ -15,11 +15,9 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
 /**
  * @since Available in iOS 4.1 and later.
  */
-
 @Library("GameKit/GameKit.h") @Mapping("GKAchievementDescription")
 public class GKAchievementDescription 
     extends NSObject 
@@ -29,7 +27,7 @@ public class GKAchievementDescription
     
     @Mapping("init")
     public GKAchievementDescription() { }
-    
+
     
     @Mapping("identifier")
     public native String getIdentifier();
@@ -60,7 +58,7 @@ public class GKAchievementDescription
     @Deprecated
     @Mapping("image")
     public native UIImage getImage();
-    
+
     
     
     @Mapping("loadAchievementDescriptionsWithCompletionHandler:")
@@ -73,5 +71,5 @@ public class GKAchievementDescription
     public static native UIImage getPlaceholderCompletedAchievementImage();
     @Mapping("encodeWithCoder:")
     public native void encode(NSCoder aCoder);
-    
+
 }

@@ -19,11 +19,9 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("Foundation/Foundation.h") @Mapping("NSMassFormatter")
 public class NSMassFormatter 
     extends NSFormatter 
@@ -35,7 +33,7 @@ public class NSMassFormatter
     public NSMassFormatter(NSCoder aDecoder) { }
     @Mapping("init")
     public NSMassFormatter() { }
-    
+
     
     @Mapping("numberFormatter")
     public native NSNumberFormatter getNumberFormatter();
@@ -49,7 +47,7 @@ public class NSMassFormatter
     public native boolean isForPersonMassUse();
     @Mapping("setForPersonMassUse:")
     public native void setForPersonMassUse(boolean v);
-    
+
     
     
     @Mapping("stringFromValue:unit:")
@@ -60,5 +58,5 @@ public class NSMassFormatter
     public native String formatUnit(double value, @Representing("NSMassFormatterUnit") long unit);
     @Mapping("unitStringFromKilograms:usedUnit:")
     public native String formatUnitKilograms(double numberInKilograms, Todo unitp);
-    
+
 }

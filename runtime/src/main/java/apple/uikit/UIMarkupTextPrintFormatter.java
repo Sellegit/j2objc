@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 4.2 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UIMarkupTextPrintFormatter")
 public class UIMarkupTextPrintFormatter 
     extends UIPrintFormatter 
@@ -35,15 +33,15 @@ public class UIMarkupTextPrintFormatter
     public UIMarkupTextPrintFormatter(String markupText) { }
     @Mapping("init")
     public UIMarkupTextPrintFormatter() { }
-    
+
     
     @Mapping("markupText")
     public native String getMarkupText();
     @Mapping("setMarkupText:")
     public native void setMarkupText(String v);
+
     
     
-    
-    
-    
+
+
 }

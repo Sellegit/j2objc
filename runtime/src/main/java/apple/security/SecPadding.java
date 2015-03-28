@@ -14,9 +14,6 @@ import apple.coreservices.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Security/Security.h")
 @Mapping("SecPadding")
 public final class SecPadding extends ObjCEnum {
@@ -41,6 +38,6 @@ public final class SecPadding extends ObjCEnum {
     public static final long PKCS1SHA384 = 32773L;
     @GlobalConstant("kSecPaddingPKCS1SHA512")
     public static final long PKCS1SHA512 = 32774L;
-    
+
 
 }

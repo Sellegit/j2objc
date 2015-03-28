@@ -18,7 +18,6 @@ import apple.coremedia.*;
 import apple.security.*;
 import apple.dispatch.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("Foundation/Foundation.h")
@@ -113,12 +112,12 @@ public class FoundationVersionNumber
     public static final double Version_iOS_7_0 = 1047.20;
     public static final double Version_iOS_7_1 = 1047.25;
     public static final int VersionWithFileManagerResourceForkSupport = 412;
-    
+
     
     
     
     
     @GlobalConstant("NSFoundationVersionNumber")
     public static native double getVersion();
-    
+
 }

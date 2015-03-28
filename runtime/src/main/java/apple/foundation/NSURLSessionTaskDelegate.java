@@ -19,17 +19,14 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h") @Mapping("NSURLSessionTaskDelegate")
 public interface NSURLSessionTaskDelegate 
     extends NSURLSessionDelegate {
 
     
     
-    
-    
+
+
     
     @Mapping("URLSession:task:willPerformHTTPRedirection:newRequest:completionHandler:")
     void willPerformHTTPRedirection(NSURLSession session, NSURLSessionTask task, NSHTTPURLResponse response, NSURLRequest request, @Block VoidBlock1<NSURLRequest> completionHandler);
@@ -41,7 +38,7 @@ public interface NSURLSessionTaskDelegate
     void didSendBodyData(NSURLSession session, NSURLSessionTask task, long bytesSent, long totalBytesSent, long totalBytesExpectedToSend);
     @Mapping("URLSession:task:didCompleteWithError:")
     void didComplete(NSURLSession session, NSURLSessionTask task, NSError error);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

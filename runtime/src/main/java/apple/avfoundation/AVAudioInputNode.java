@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h") @Mapping("AVAudioInputNode")
 public class AVAudioInputNode 
     extends AVAudioIONode 
@@ -34,7 +32,7 @@ public class AVAudioInputNode
     
     @Mapping("init")
     public AVAudioInputNode() { }
-    
+
     
     @Mapping("volume")
     public native float getVolume();
@@ -68,9 +66,9 @@ public class AVAudioInputNode
     public native AVAudio3DPoint getPosition();
     @Mapping("setPosition:")
     public native void setPosition(AVAudio3DPoint v);
+
     
     
-    
-    
-    
+
+
 }

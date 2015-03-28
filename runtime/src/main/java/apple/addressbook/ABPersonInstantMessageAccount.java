@@ -13,7 +13,6 @@ import apple.coregraphics.*;
 import apple.coreservices.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("AddressBook/AddressBook.h")
@@ -30,5 +29,5 @@ public class ABPersonInstantMessageAccount
     public static native CFString ServiceKey();
     @GlobalConstant("kABPersonInstantMessageUsernameKey")
     public static native CFString UsernameKey();
-    
+
 }

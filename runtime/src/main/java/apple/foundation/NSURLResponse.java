@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h") @Mapping("NSURLResponse")
 public class NSURLResponse 
     extends NSObject 
@@ -29,13 +26,13 @@ public class NSURLResponse
 
     
     public static final int UnknownLength = -1;
-    
+
     
     @Mapping("initWithURL:MIMEType:expectedContentLength:textEncodingName:")
     public NSURLResponse(NSURL URL, String MIMEType, @MachineSizedSInt long length, String name) { }
     @Mapping("init")
     public NSURLResponse() { }
-    
+
     
     @Mapping("URL")
     public native NSURL getURL();
@@ -47,10 +44,10 @@ public class NSURLResponse
     public native String getTextEncodingName();
     @Mapping("suggestedFilename")
     public native String getSuggestedFilename();
-    
+
     
     
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
-    
+
 }

@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.dispatch.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Mapping("CFMessagePortRef") @Library("CoreFoundation/CoreFoundation.h")
@@ -25,7 +24,7 @@ public class CFMessagePort
     
     
     protected CFMessagePort() {}
-    
+
     
     
     
@@ -58,5 +57,5 @@ public class CFMessagePort
      */
     @GlobalFunction("CFMessagePortSetDispatchQueue")
     public static native void setDispatchQueue(CFMessagePort ms, DispatchQueue queue);
-    
+
 }

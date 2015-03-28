@@ -14,9 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
-
-
 @Library("CoreAudio/CoreAudioTypes.h")
 @Mapping("AudioChannelFlag")
 public final class AudioChannelFlag extends ObjCEnum {
@@ -29,6 +26,6 @@ public final class AudioChannelFlag extends ObjCEnum {
     public static final long SphericalCoordinates = 2L;
     @GlobalConstant("kAudioChannelFlags_Meters")
     public static final long Meters = 4L;
-    
+
 
 }

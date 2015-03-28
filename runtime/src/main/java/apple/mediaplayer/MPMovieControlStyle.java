@@ -15,9 +15,6 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
-
-
 @Library("MediaPlayer/MediaPlayer.h")
 @Mapping("MPMovieControlStyle")
 public final class MPMovieControlStyle extends ObjCEnum {
@@ -30,6 +27,6 @@ public final class MPMovieControlStyle extends ObjCEnum {
     public static final long Fullscreen = 2L;
     @GlobalConstant("MPMovieControlStyleDefault")
     public static final long Default = 1L;
-    
+
 
 }

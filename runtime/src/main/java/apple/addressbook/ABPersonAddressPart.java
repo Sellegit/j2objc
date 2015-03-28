@@ -13,7 +13,6 @@ import apple.coregraphics.*;
 import apple.coreservices.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("AddressBook/AddressBook.h")
@@ -38,5 +37,5 @@ public class ABPersonAddressPart
     public static native CFString CountryValue();
     @GlobalConstant("kABPersonAddressCountryCodeKey")
     public static native CFString CountryCodeValue();
-    
+
 }

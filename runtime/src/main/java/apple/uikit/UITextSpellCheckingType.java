@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 5.0 and later.
  */
-
 @Library("UIKit/UIKit.h")
 @Mapping("UITextSpellCheckingType")
 public final class UITextSpellCheckingType extends ObjCEnum {
@@ -34,6 +32,6 @@ public final class UITextSpellCheckingType extends ObjCEnum {
     public static final long No = 1L;
     @GlobalConstant("UITextSpellCheckingTypeYes")
     public static final long Yes = 2L;
-    
+
 
 }

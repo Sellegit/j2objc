@@ -19,7 +19,6 @@ import apple.glkit.*;
 import apple.spritekit.*;
 import apple.opengles.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -30,11 +29,11 @@ public abstract class SCNProgramDelegateAdapter
     
     
     
-    
-    
+
+
     
     
     @NotImplemented("program:handleError:")
     public void handleError(SCNProgram program, NSError error) { throw new UnsupportedOperationException(); }
-    
+
 }

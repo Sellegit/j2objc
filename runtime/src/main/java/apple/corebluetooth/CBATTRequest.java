@@ -15,11 +15,9 @@ import apple.foundation.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 6.0 and later.
  */
-
 @Library("CoreBluetooth/CoreBluetooth.h") @Mapping("CBATTRequest")
 public class CBATTRequest 
     extends NSObject 
@@ -29,7 +27,7 @@ public class CBATTRequest
     
     @Mapping("init")
     public CBATTRequest() { }
-    
+
     
     @Mapping("central")
     public native CBCentral getCentral();
@@ -41,9 +39,9 @@ public class CBATTRequest
     public native NSData getValue();
     @Mapping("setValue:")
     public native void setValue(NSData v);
+
     
     
-    
-    
-    
+
+
 }

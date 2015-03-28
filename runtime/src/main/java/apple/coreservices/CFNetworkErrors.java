@@ -14,9 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
-
-
 @Library("CFNetwork/CFNetwork.h")
 @Mapping("CFNetworkErrors")
 public final class CFNetworkErrors extends ObjCEnum {
@@ -185,6 +182,6 @@ public final class CFNetworkErrors extends ObjCEnum {
     public static final long NetServiceErrorTimeout = -72007L;
     @GlobalConstant("kCFNetServiceErrorDNSServiceFailure")
     public static final long NetServiceErrorDNSServiceFailure = -73000L;
-    
+
 
 }

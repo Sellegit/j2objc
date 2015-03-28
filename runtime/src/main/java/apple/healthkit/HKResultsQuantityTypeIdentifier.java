@@ -13,7 +13,6 @@ import apple.coregraphics.*;
 import apple.coreservices.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("HealthKit/HealthKit.h")
@@ -76,5 +75,5 @@ public class HKResultsQuantityTypeIdentifier
      */
     @GlobalConstant("HKQuantityTypeIdentifierPeakExpiratoryFlowRate")
     public static native NSString PeakExpiratoryFlowRateValue();
-    
+
 }

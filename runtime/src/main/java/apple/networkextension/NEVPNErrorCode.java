@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("NetworkExtension/NetworkExtension.h")
 @Mapping("NEVPNErrorCode")
 public final class NEVPNErrorCode extends ObjCEnum {
@@ -31,6 +29,6 @@ public final class NEVPNErrorCode extends ObjCEnum {
     public static final long nectionFailed = 3L;
     @GlobalConstant("NEVPNErrorConfigurationStale")
     public static final long figurationStale = 4L;
-    
+
 
 }

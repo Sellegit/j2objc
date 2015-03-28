@@ -16,7 +16,6 @@ import apple.corelocation.*;
 import apple.uikit.*;
 import apple.dispatch.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("MapKit/MapKit.h")
@@ -31,5 +30,5 @@ public class MKError
     
     @GlobalConstant("MKErrorDomain")
     public static native String getClassDomain();
-    
+
 }

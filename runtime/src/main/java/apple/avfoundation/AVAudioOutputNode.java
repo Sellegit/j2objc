@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h") @Mapping("AVAudioOutputNode")
 public class AVAudioOutputNode 
     extends AVAudioIONode 
@@ -34,12 +32,12 @@ public class AVAudioOutputNode
     
     @Mapping("init")
     public AVAudioOutputNode() { }
+
+    
+
+
     
     
-    
-    
-    
-    
-    
-    
+
+
 }

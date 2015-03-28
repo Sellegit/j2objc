@@ -18,9 +18,6 @@ import apple.coreanimation.*;
 import apple.corevideo.*;
 
 
-
-
-
 @Library("CoreMedia/CoreMedia.h")
 @Mapping("CMMuxedStreamType")
 public final class CMMuxedStreamType extends ObjCEnum {
@@ -33,6 +30,6 @@ public final class CMMuxedStreamType extends ObjCEnum {
     public static final long MPEG2Program = 1836069488L;
     @GlobalConstant("kCMMuxedStreamType_DV")
     public static final long DV = 1685463072L;
-    
+
 
 }

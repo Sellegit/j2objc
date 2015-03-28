@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("HealthKit/HealthKit.h") @Mapping("HKUnit")
 public class HKUnit 
     extends NSObject 
@@ -26,15 +24,15 @@ public class HKUnit
 
     
     public static final double MolarMassBloodGlucose = 180.15588000005408;
-    
+
     
     @Mapping("init")
     public HKUnit() { }
-    
+
     
     @Mapping("unitString")
     public native String getUnitString();
-    
+
     
     
     @Mapping("isNull")
@@ -141,5 +139,5 @@ public class HKUnit
     public native HKUnit reciprocalUnit();
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
-    
+
 }

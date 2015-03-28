@@ -15,9 +15,6 @@ import apple.foundation.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("CoreBluetooth/CoreBluetooth.h")
 @Mapping("CBCentralManagerState")
 public final class CBCentralManagerState extends ObjCEnum {
@@ -34,6 +31,6 @@ public final class CBCentralManagerState extends ObjCEnum {
     public static final long PoweredOff = 4L;
     @GlobalConstant("CBCentralManagerStatePoweredOn")
     public static final long PoweredOn = 5L;
-    
+
 
 }

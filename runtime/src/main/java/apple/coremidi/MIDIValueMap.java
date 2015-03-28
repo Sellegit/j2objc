@@ -14,9 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
-
-
 @Mapping("MIDIValueMap") @Library("CoreMIDI/CoreMIDI.h")
 public class MIDIValueMap 
     extends Struct 
@@ -26,7 +23,7 @@ public class MIDIValueMap
     private MIDIValueMap() {}
     
     
-    
-    
+
+
     
 }

@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 3.2 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UIGestureRecognizer")
 public class UIGestureRecognizer 
     extends NSObject 
@@ -35,7 +33,7 @@ public class UIGestureRecognizer
     public UIGestureRecognizer(Object target, Selector action) { }
     @Mapping("init")
     public UIGestureRecognizer() { }
-    
+
     
     @Mapping("state")
     public native @Representing("UIGestureRecognizerState") long getState();
@@ -61,7 +59,7 @@ public class UIGestureRecognizer
     public native boolean delaysTouchesEnded();
     @Mapping("setDelaysTouchesEnded:")
     public native void setDelaysTouchesEnded(boolean v);
-    
+
     
     
     @Mapping("addTarget:action:")
@@ -76,5 +74,5 @@ public class UIGestureRecognizer
     public native @MachineSizedUInt long getNumberOfTouches();
     @Mapping("locationOfTouch:inView:")
     public native CGPoint getLocationOfTouch(@MachineSizedUInt long touchIndex, UIView view);
-    
+
 }

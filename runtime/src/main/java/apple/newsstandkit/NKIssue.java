@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 5.0 and later.
  */
-
 @Library("NewsstandKit/NewsstandKit.h") @Mapping("NKIssue")
 public class NKIssue 
     extends NSObject 
@@ -28,7 +26,7 @@ public class NKIssue
     
     @Mapping("init")
     public NKIssue() { }
-    
+
     
     @Mapping("downloadingAssets")
     public native NSArray<NKAssetDownload> getDownloadingAssets();
@@ -40,7 +38,7 @@ public class NKIssue
     public native String getName();
     @Mapping("date")
     public native NSDate getDate();
-    
+
     
     
     /**
@@ -48,8 +46,8 @@ public class NKIssue
      */
     @GlobalConstant("NKIssueDownloadCompletedNotification")
     public static native NSString DownloadCompletedNotification();
-    
+
     @Mapping("addAssetWithRequest:")
     public native NKAssetDownload addAsset(NSURLRequest request);
-    
+
 }

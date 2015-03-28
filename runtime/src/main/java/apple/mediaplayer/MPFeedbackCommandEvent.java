@@ -15,11 +15,9 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
 /**
  * @since Available in iOS 7.1 and later.
  */
-
 @Library("MediaPlayer/MediaPlayer.h") @Mapping("MPFeedbackCommandEvent")
 public class MPFeedbackCommandEvent 
     extends MPRemoteCommandEvent 
@@ -29,13 +27,13 @@ public class MPFeedbackCommandEvent
     
     @Mapping("init")
     public MPFeedbackCommandEvent() { }
-    
+
     
     @Mapping("isNegative")
     public native boolean isNegative();
+
     
     
-    
-    
-    
+
+
 }

@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h")
 @Mapping("NSCalculationError")
 public final class NSCalculationError extends ObjCEnum {
@@ -36,6 +33,6 @@ public final class NSCalculationError extends ObjCEnum {
     public static final long Overflow = 3L;
     @GlobalConstant("NSCalculationDivideByZero")
     public static final long DivideByZero = 4L;
-    
+
 
 }

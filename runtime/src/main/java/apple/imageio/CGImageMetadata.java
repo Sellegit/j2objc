@@ -13,7 +13,6 @@ import apple.coregraphics.*;
 import apple.coreservices.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Mapping("CGImageMetadataRef") @Library("ImageIO/ImageIO.h")
@@ -24,7 +23,7 @@ public class CGImageMetadata
     
     
     protected CGImageMetadata() {}
-    
+
     
     
     
@@ -90,5 +89,5 @@ public class CGImageMetadata
      */
     @GlobalFunction("CGImageMetadataCreateFromXMPData")
     public static native CGImageMetadata createFromXMPData(CFData data);
-    
+
 }

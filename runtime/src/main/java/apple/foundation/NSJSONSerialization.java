@@ -19,11 +19,9 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 5.0 and later.
  */
-
 @Library("Foundation/Foundation.h") @Mapping("NSJSONSerialization")
 public class NSJSONSerialization 
     extends NSObject 
@@ -33,10 +31,10 @@ public class NSJSONSerialization
     
     @Mapping("init")
     public NSJSONSerialization() { }
+
     
-    
-    
-    
+
+
     
     
     @Mapping("isValidJSONObject:")
@@ -49,5 +47,5 @@ public class NSJSONSerialization
     public static native @MachineSizedSInt long writeJSONObject(Object obj, NSOutputStream stream, @Representing("NSJSONWritingOptions") long opt, Todo error);
     @Mapping("JSONObjectWithStream:options:error:")
     public static native Object readJSONObject(NSInputStream stream, @Representing("NSJSONReadingOptions") long opt, Todo error);
-    
+
 }

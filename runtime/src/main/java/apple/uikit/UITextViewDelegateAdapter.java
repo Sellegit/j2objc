@@ -18,7 +18,6 @@ import apple.coreimage.*;
 import apple.coretext.*;
 import apple.corelocation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -29,8 +28,8 @@ public abstract class UITextViewDelegateAdapter
     
     
     
-    
-    
+
+
     
     
     @NotImplemented("textViewShouldBeginEditing:")
@@ -57,5 +56,5 @@ public abstract class UITextViewDelegateAdapter
      */
     @NotImplemented("textView:shouldInteractWithTextAttachment:inRange:")
     public boolean shouldInteractWithTextAttachment(UITextView textView, NSTextAttachment textAttachment, NSRange characterRange) { throw new UnsupportedOperationException(); }
-    
+
 }

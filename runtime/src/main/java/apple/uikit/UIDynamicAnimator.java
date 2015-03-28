@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 7.0 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UIDynamicAnimator")
 public class UIDynamicAnimator 
     extends NSObject 
@@ -37,7 +35,7 @@ public class UIDynamicAnimator
     public UIDynamicAnimator() { }
     @Mapping("initWithCollectionViewLayout:")
     public UIDynamicAnimator(UICollectionViewLayout layout) { }
-    
+
     
     @Mapping("referenceView")
     public native UIView getReferenceView();
@@ -49,7 +47,7 @@ public class UIDynamicAnimator
     public native UIDynamicAnimatorDelegate getDelegate();
     @Mapping("setDelegate:")
     public native void setDelegate(UIDynamicAnimatorDelegate v);
-    
+
     
     
     @Mapping("addBehavior:")
@@ -70,5 +68,5 @@ public class UIDynamicAnimator
     public native UICollectionViewLayoutAttributes getLayoutAttributesForSupplementaryView(String kind, NSIndexPath indexPath);
     @Mapping("layoutAttributesForDecorationViewOfKind:atIndexPath:")
     public native UICollectionViewLayoutAttributes getLayoutAttributesForDecorationView(String decorationViewKind, NSIndexPath indexPath);
-    
+
 }

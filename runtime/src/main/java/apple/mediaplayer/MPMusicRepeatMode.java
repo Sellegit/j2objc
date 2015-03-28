@@ -15,9 +15,6 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
-
-
 @Library("MediaPlayer/MediaPlayer.h")
 @Mapping("MPMusicRepeatMode")
 public final class MPMusicRepeatMode extends ObjCEnum {
@@ -30,6 +27,6 @@ public final class MPMusicRepeatMode extends ObjCEnum {
     public static final long One = 2L;
     @GlobalConstant("MPMusicRepeatModeAll")
     public static final long All = 3L;
-    
+
 
 }

@@ -15,7 +15,6 @@ import apple.foundation.*;
 import apple.uikit.*;
 import apple.addressbook.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -26,11 +25,11 @@ public abstract class PKAddPassesViewControllerDelegateAdapter
     
     
     
-    
-    
+
+
     
     
     @NotImplemented("addPassesViewControllerDidFinish:")
     public void didFinish(PKAddPassesViewController controller) { throw new UnsupportedOperationException(); }
-    
+
 }

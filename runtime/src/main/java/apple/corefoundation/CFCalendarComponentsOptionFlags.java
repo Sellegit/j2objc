@@ -15,15 +15,12 @@ import apple.dispatch.*;
 import apple.foundation.*;
 
 
-
-
-
 @Library("CoreFoundation/CoreFoundation.h")
 @Mapping("CFCalendarComponentsOptionFlags")
 public final class CFCalendarComponentsOptionFlags extends ObjCEnum {
     
     @GlobalConstant("kCFCalendarComponentsWrap")
     public static final long Wrap = 1L;
-    
+
 
 }

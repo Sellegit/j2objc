@@ -14,9 +14,6 @@ import apple.coreservices.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Security/Security.h")
 @Mapping("SSLClientCertificateState")
 public final class SSLClientCertificateState extends ObjCEnum {
@@ -29,6 +26,6 @@ public final class SSLClientCertificateState extends ObjCEnum {
     public static final long Sent = 2L;
     @GlobalConstant("kSSLClientCertRejected")
     public static final long Rejected = 3L;
-    
+
 
 }

@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("HealthKit/HealthKit.h")
 @Mapping("HKWorkoutEventType")
 public final class HKWorkoutEventType extends ObjCEnum {
@@ -27,6 +25,6 @@ public final class HKWorkoutEventType extends ObjCEnum {
     public static final long Pause = 1L;
     @GlobalConstant("HKWorkoutEventTypeResume")
     public static final long Resume = 2L;
-    
+
 
 }

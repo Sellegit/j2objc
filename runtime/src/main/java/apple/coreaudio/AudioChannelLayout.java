@@ -14,9 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
-
-
 @Mapping("AudioChannelLayout") @Library("CoreAudio/CoreAudioTypes.h")
 public class AudioChannelLayout 
     extends Struct 
@@ -34,6 +31,6 @@ public class AudioChannelLayout
     public native int getMNumberChannelDescriptions();
     @DotMapping("mChannelDescriptions")
     public native AudioChannelDescription getMChannelDescriptions();
-    
+
     
 }

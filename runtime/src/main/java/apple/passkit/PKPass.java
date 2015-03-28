@@ -16,9 +16,6 @@ import apple.uikit.*;
 import apple.addressbook.*;
 
 
-
-
-
 @Library("PassKit/PassKit.h") @Mapping("PKPass")
 public class PKPass 
     extends PKObject 
@@ -28,7 +25,7 @@ public class PKPass
     
     @Mapping("init")
     public PKPass() { }
-    
+
     
     /**
      * @since Available in iOS 8.0 and later.
@@ -65,10 +62,10 @@ public class PKPass
     public native NSDictionary<?, ?> getUserInfo();
     @Mapping("passURL")
     public native NSURL getPassURL();
-    
+
     
     
     @Mapping("localizedValueForFieldKey:")
     public native Object getLocalizedValue(String key);
-    
+
 }

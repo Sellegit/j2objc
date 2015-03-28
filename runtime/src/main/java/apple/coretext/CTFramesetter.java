@@ -13,7 +13,6 @@ import apple.coregraphics.*;
 import apple.coreservices.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Mapping("CTFramesetterRef") @Library("CoreText/CoreText.h")
@@ -24,7 +23,7 @@ public class CTFramesetter
     
     
     protected CTFramesetter() {}
-    
+
     
     
     
@@ -53,5 +52,5 @@ public class CTFramesetter
      */
     @GlobalFunction("CTFramesetterSuggestFrameSizeWithConstraints")
     public static native CGSize suggestFrameSize(CTFramesetter framesetter, CFRange stringRange, CFDictionary frameAttributes, CGSize constraints, CFRange fitRange);
-    
+
 }

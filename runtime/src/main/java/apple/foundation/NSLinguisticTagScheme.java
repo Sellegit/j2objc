@@ -18,7 +18,6 @@ import apple.coremedia.*;
 import apple.security.*;
 import apple.dispatch.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("Foundation/Foundation.h")
@@ -66,5 +65,5 @@ public class NSLinguisticTagScheme
      */
     @GlobalConstant("NSLinguisticTagSchemeScript")
     public static native NSString ScriptValue();
-    
+
 }

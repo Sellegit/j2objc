@@ -13,7 +13,6 @@ import apple.coregraphics.*;
 import apple.coreservices.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("AddressBook/AddressBook.h")
@@ -30,5 +29,5 @@ public class ABPersonKind
     public static native CFNumber PersonValue();
     @GlobalConstant("kABPersonKindOrganization")
     public static native CFNumber OrganizationValue();
-    
+
 }

@@ -20,9 +20,6 @@ import apple.spritekit.*;
 import apple.opengles.*;
 
 
-
-
-
 @Mapping("matrix_float4x4") @Library("SceneKit/SceneKit.h")
 public class matrix_float4x4 
     extends Struct 
@@ -32,7 +29,7 @@ public class matrix_float4x4
     private matrix_float4x4() {}
     
     
-    
-    
+
+
     
 }

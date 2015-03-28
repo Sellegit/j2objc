@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h") @Mapping("NSURLCache")
 public class NSURLCache 
     extends NSObject 
@@ -33,7 +30,7 @@ public class NSURLCache
     public NSURLCache(@MachineSizedUInt long memoryCapacity, @MachineSizedUInt long diskCapacity, String path) { }
     @Mapping("init")
     public NSURLCache() { }
-    
+
     
     @Mapping("memoryCapacity")
     public native @MachineSizedUInt long getMemoryCapacity();
@@ -47,7 +44,7 @@ public class NSURLCache
     public native @MachineSizedUInt long getCurrentMemoryUsage();
     @Mapping("currentDiskUsage")
     public native @MachineSizedUInt long getCurrentDiskUsage();
-    
+
     
     
     @Mapping("cachedResponseForRequest:")
@@ -82,5 +79,5 @@ public class NSURLCache
      */
     @Mapping("removeCachedResponseForDataTask:")
     public native void removeCachedResponse(NSURLSessionDataTask dataTask);
-    
+
 }

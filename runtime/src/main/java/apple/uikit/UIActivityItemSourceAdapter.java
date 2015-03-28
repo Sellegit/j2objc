@@ -18,7 +18,6 @@ import apple.coreimage.*;
 import apple.coretext.*;
 import apple.corelocation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -29,8 +28,8 @@ public abstract class UIActivityItemSourceAdapter
     
     
     
-    
-    
+
+
     
     
     @NotImplemented("activityViewControllerPlaceholderItem:")
@@ -43,5 +42,5 @@ public abstract class UIActivityItemSourceAdapter
     public String getDataTypeIdentifier(UIActivityViewController activityViewController, String activityType) { throw new UnsupportedOperationException(); }
     @NotImplemented("activityViewController:thumbnailImageForActivityType:suggestedSize:")
     public UIImage getThumbnailImage(UIActivityViewController activityViewController, String activityType, CGSize size) { throw new UnsupportedOperationException(); }
-    
+
 }

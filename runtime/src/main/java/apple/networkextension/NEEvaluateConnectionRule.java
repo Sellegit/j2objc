@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("NetworkExtension/NetworkExtension.h") @Mapping("NEEvaluateConnectionRule")
 public class NEEvaluateConnectionRule 
     extends NSObject 
@@ -33,7 +31,7 @@ public class NEEvaluateConnectionRule
     public NEEvaluateConnectionRule(NSArray<?> domains, @Representing("NEEvaluateConnectionRuleAction") long action) { }
     @Mapping("init")
     public NEEvaluateConnectionRule() { }
-    
+
     
     /**
      * @since Available in iOS 8.0 and later.
@@ -65,10 +63,10 @@ public class NEEvaluateConnectionRule
      */
     @Mapping("setProbeURL:")
     public native void setProbeURL(NSURL v);
-    
+
     
     
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
-    
+
 }

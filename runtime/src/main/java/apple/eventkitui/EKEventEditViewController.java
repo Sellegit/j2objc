@@ -16,11 +16,9 @@ import apple.eventkit.*;
 import apple.uikit.*;
 
 
-
 /**
  * @since Available in iOS 4.0 and later.
  */
-
 @Library("EventKitUI/EventKitUI.h") @Mapping("EKEventEditViewController")
 public class EKEventEditViewController 
     extends UINavigationController 
@@ -34,7 +32,7 @@ public class EKEventEditViewController
     public EKEventEditViewController(String nibNameOrNil, NSBundle nibBundleOrNil) { }
     @Mapping("init")
     public EKEventEditViewController() { }
-    
+
     
     @Mapping("editViewDelegate")
     public native EKEventEditViewDelegate getEditViewDelegate();
@@ -48,10 +46,10 @@ public class EKEventEditViewController
     public native EKEvent getEvent();
     @Mapping("setEvent:")
     public native void setEvent(EKEvent v);
-    
+
     
     
     @Mapping("cancelEditing")
     public native void cancelEditing();
-    
+
 }

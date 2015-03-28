@@ -18,7 +18,6 @@ import apple.coremedia.*;
 import apple.security.*;
 import apple.dispatch.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("Foundation/Foundation.h")
@@ -53,5 +52,5 @@ public final class NSKeyValueOperator
     public static native NSString UnionOfObjectsValue();
     @GlobalConstant("NSUnionOfSetsKeyValueOperator")
     public static native NSString UnionOfSetsValue();
-    
+
 }

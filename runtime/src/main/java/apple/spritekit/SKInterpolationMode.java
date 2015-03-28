@@ -21,9 +21,6 @@ import apple.glkit.*;
 import apple.scenekit.*;
 
 
-
-
-
 @Library("SpriteKit/SpriteKit.h")
 @Mapping("SKInterpolationMode")
 public final class SKInterpolationMode extends ObjCEnum {
@@ -34,6 +31,6 @@ public final class SKInterpolationMode extends ObjCEnum {
     public static final long Spline = 2L;
     @GlobalConstant("SKInterpolationModeStep")
     public static final long Step = 3L;
-    
+
 
 }

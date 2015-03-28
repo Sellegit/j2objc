@@ -17,7 +17,6 @@ import apple.addressbook.*;
 import apple.mediaplayer.*;
 import apple.avkit.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -28,8 +27,8 @@ public abstract class ADInterstitialAdDelegateAdapter
     
     
     
-    
-    
+
+
     
     
     @NotImplemented("interstitialAdDidUnload:")
@@ -47,5 +46,5 @@ public abstract class ADInterstitialAdDelegateAdapter
     public boolean actionShouldBegin(ADInterstitialAd interstitialAd, boolean willLeave) { throw new UnsupportedOperationException(); }
     @NotImplemented("interstitialAdActionDidFinish:")
     public void actionDidFinish(ADInterstitialAd interstitialAd) { throw new UnsupportedOperationException(); }
-    
+
 }

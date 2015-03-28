@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h") @Mapping("NSURLSessionUploadTask")
 public class NSURLSessionUploadTask 
     extends NSURLSessionDataTask 
@@ -31,12 +28,12 @@ public class NSURLSessionUploadTask
     
     @Mapping("init")
     public NSURLSessionUploadTask() { }
+
+    
+
+
     
     
-    
-    
-    
-    
-    
-    
+
+
 }

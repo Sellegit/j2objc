@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 7.0 and later.
  */
-
 @Library("UIKit/UIKit.h")
 @Mapping("UIViewTintAdjustmentMode")
 public final class UIViewTintAdjustmentMode extends ObjCEnum {
@@ -34,6 +32,6 @@ public final class UIViewTintAdjustmentMode extends ObjCEnum {
     public static final long Normal = 1L;
     @GlobalConstant("UIViewTintAdjustmentModeDimmed")
     public static final long Dimmed = 2L;
-    
+
 
 }

@@ -15,9 +15,6 @@ import apple.dispatch.*;
 import apple.foundation.*;
 
 
-
-
-
 @Library("CoreFoundation/CoreFoundation.h")
 @Mapping("CFStreamErrorDomain")
 public final class CFStreamErrorDomain extends ObjCEnum {
@@ -28,6 +25,6 @@ public final class CFStreamErrorDomain extends ObjCEnum {
     public static final long POSIX = 1L;
     @GlobalConstant("kCFStreamErrorDomainMacOSStatus")
     public static final long MacOSStatus = 2L;
-    
+
 
 }

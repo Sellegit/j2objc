@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 7.0 and later.
  */
-
 @Library("UIKit/UIKit.h")
 @Mapping("UIActivityCategory")
 public final class UIActivityCategory extends ObjCEnum {
@@ -32,6 +30,6 @@ public final class UIActivityCategory extends ObjCEnum {
     public static final long Action = 0L;
     @GlobalConstant("UIActivityCategoryShare")
     public static final long Share = 1L;
-    
+
 
 }

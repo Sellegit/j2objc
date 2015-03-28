@@ -18,7 +18,6 @@ import apple.coreimage.*;
 import apple.coretext.*;
 import apple.corelocation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -29,8 +28,8 @@ public abstract class UIVideoEditorControllerDelegateAdapter
     
     
     
-    
-    
+
+
     
     
     @NotImplemented("videoEditorController:didSaveEditedVideoToPath:")
@@ -39,5 +38,5 @@ public abstract class UIVideoEditorControllerDelegateAdapter
     public void didFail(UIVideoEditorController editor, NSError error) { throw new UnsupportedOperationException(); }
     @NotImplemented("videoEditorControllerDidCancel:")
     public void didCancel(UIVideoEditorController editor) { throw new UnsupportedOperationException(); }
-    
+
 }

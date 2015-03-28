@@ -19,9 +19,6 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h") @Mapping("UIApplicationDelegate")
 public interface UIApplicationDelegate 
     extends NSObjectProtocol {
@@ -38,7 +35,7 @@ public interface UIApplicationDelegate
      */
     @Mapping("setWindow:")
     void setWindow(UIWindow v);
-    
+
     
     @Mapping("applicationDidFinishLaunching:")
     void didFinishLaunching(UIApplication application);
@@ -207,7 +204,7 @@ public interface UIApplicationDelegate
      */
     @Mapping("application:didUpdateUserActivity:")
     void didUpdateUserActivity(UIApplication application, NSUserActivity userActivity);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

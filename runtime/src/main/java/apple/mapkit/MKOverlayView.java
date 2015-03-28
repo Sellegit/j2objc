@@ -17,11 +17,9 @@ import apple.uikit.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 4.0 and later.
  */
-
 @Library("MapKit/MapKit.h") @Mapping("MKOverlayView")
 public class MKOverlayView 
     extends UIView 
@@ -40,7 +38,7 @@ public class MKOverlayView
     public MKOverlayView(CGRect frame) { }
     @Mapping("init")
     public MKOverlayView() { }
-    
+
     
     /**
      * @since Available in iOS 4.0 and later.
@@ -49,7 +47,7 @@ public class MKOverlayView
     @Deprecated
     @Mapping("overlay")
     public native MKOverlay getOverlay();
-    
+
     
     
     /**
@@ -108,5 +106,5 @@ public class MKOverlayView
     @Deprecated
     @Mapping("setNeedsDisplayInMapRect:zoomScale:")
     public native void setNeedsDisplay(MKMapRect mapRect, @MachineSizedFloat double zoomScale);
-    
+
 }

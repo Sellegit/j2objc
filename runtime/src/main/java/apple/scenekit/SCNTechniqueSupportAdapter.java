@@ -19,7 +19,6 @@ import apple.glkit.*;
 import apple.spritekit.*;
 import apple.opengles.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -34,9 +33,9 @@ public abstract class SCNTechniqueSupportAdapter
     public SCNTechnique getTechnique() { throw new UnsupportedOperationException(); }
     @Mapping("setTechnique:")
     public void setTechnique(SCNTechnique v) { throw new UnsupportedOperationException(); }
+
     
     
-    
-    
-    
+
+
 }

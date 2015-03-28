@@ -17,9 +17,6 @@ import apple.uikit.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Mapping("GLKVector4") @Library("GLKit/GLKit.h")
 public class GLKVector4 
     extends Struct 
@@ -29,8 +26,8 @@ public class GLKVector4
     private GLKVector4() {}
     
     
-    
-    
+
+
     
     @GlobalFunction("GLKVector4Make")
     public static native GLKVector4 createPrime(float x, float y, float z, float w);
@@ -86,5 +83,5 @@ public class GLKVector4
     public static native GLKVector4 crossProduct(GLKVector4 vectorLeft, GLKVector4 vectorRight);
     @GlobalFunction("GLKVector4Project")
     public static native GLKVector4 project(GLKVector4 vectorToProject, GLKVector4 projectionVector);
-    
+
 }

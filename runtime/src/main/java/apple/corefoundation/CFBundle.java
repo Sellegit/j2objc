@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.dispatch.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Mapping("CFBundleRef") @Library("CoreFoundation/CoreFoundation.h")
@@ -25,7 +24,7 @@ public class CFBundle
     
     
     protected CFBundle() {}
-    
+
     
     
     
@@ -143,5 +142,5 @@ public class CFBundle
     public static native int openBundleResourceFiles(CFBundle bundle, Todo refNum, Todo localizedRefNum);
     @GlobalFunction("CFBundleCloseBundleResourceMap")
     public static native void closeBundleResourceMap(CFBundle bundle, short refNum);
-    
+
 }

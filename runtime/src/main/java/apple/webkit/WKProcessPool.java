@@ -15,11 +15,9 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("WebKit/WebKit.h") @Mapping("WKProcessPool")
 public class WKProcessPool 
     extends NSObject 
@@ -29,12 +27,12 @@ public class WKProcessPool
     
     @Mapping("init")
     public WKProcessPool() { }
+
+    
+
+
     
     
-    
-    
-    
-    
-    
-    
+
+
 }

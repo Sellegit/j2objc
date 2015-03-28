@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 import apple.uikit.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -25,8 +24,8 @@ public abstract class GKSessionDelegateAdapter
     
     
     
-    
-    
+
+
     
     
     @NotImplemented("session:peer:didChangeState:")
@@ -37,5 +36,5 @@ public abstract class GKSessionDelegateAdapter
     public void connectionWithPeerFailed(GKSession session, String peerID, NSError error) { throw new UnsupportedOperationException(); }
     @NotImplemented("session:didFailWithError:")
     public void didFail(GKSession session, NSError error) { throw new UnsupportedOperationException(); }
-    
+
 }

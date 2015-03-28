@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 7.0 and later.
  */
-
 @Library("UIKit/UIKit.h")
 @Mapping("UIBackgroundRefreshStatus")
 public final class UIBackgroundRefreshStatus extends ObjCEnum {
@@ -34,6 +32,6 @@ public final class UIBackgroundRefreshStatus extends ObjCEnum {
     public static final long Denied = 1L;
     @GlobalConstant("UIBackgroundRefreshStatusAvailable")
     public static final long Available = 2L;
-    
+
 
 }

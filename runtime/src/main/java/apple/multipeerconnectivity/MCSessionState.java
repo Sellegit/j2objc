@@ -16,11 +16,9 @@ import apple.uikit.*;
 import apple.security.*;
 
 
-
 /**
  * @since Available in iOS 7.0 and later.
  */
-
 @Library("MultipeerConnectivity/MultipeerConnectivity.h")
 @Mapping("MCSessionState")
 public final class MCSessionState extends ObjCEnum {
@@ -31,6 +29,6 @@ public final class MCSessionState extends ObjCEnum {
     public static final long Connecting = 1L;
     @GlobalConstant("MCSessionStateConnected")
     public static final long Connected = 2L;
-    
+
 
 }

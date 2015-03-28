@@ -17,11 +17,9 @@ import apple.uikit.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 5.0 and later.
  */
-
 @Library("GLKit/GLKit.h")
 @Mapping("GLKTextureTarget")
 public final class GLKTextureTarget extends ObjCEnum {
@@ -32,6 +30,6 @@ public final class GLKTextureTarget extends ObjCEnum {
     public static final long CubeMap = 34067L;
     @GlobalConstant("GLKTextureTargetCt")
     public static final long Ct = 2L;
-    
+
 
 }

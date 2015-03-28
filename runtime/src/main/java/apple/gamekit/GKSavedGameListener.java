@@ -15,23 +15,20 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
-
-
 @Library("GameKit/GameKit.h") @Mapping("GKSavedGameListener")
 public interface GKSavedGameListener 
     extends NSObjectProtocol {
 
     
     
-    
-    
+
+
     
     @Mapping("player:didModifySavedGame:")
     void didModifySavedGame(GKPlayer player, GKSavedGame savedGame);
     @Mapping("player:hasConflictingSavedGames:")
     void hasConflictingSavedGames(GKPlayer player, NSArray<?> savedGames);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

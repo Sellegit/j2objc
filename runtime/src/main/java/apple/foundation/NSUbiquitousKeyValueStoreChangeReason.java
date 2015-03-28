@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h")
 @Mapping("NSUbiquitousKeyValueStoreChangeReason")
 public final class NSUbiquitousKeyValueStoreChangeReason extends ObjCEnum {
@@ -46,6 +43,6 @@ public final class NSUbiquitousKeyValueStoreChangeReason extends ObjCEnum {
      */
     @GlobalConstant("NSUbiquitousKeyValueStoreAccountChange")
     public static final long AccountChange = 3L;
-    
+
 
 }

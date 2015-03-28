@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 3.2 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UITextInputStringTokenizer")
 public class UITextInputStringTokenizer 
     extends NSObject 
@@ -35,10 +33,10 @@ public class UITextInputStringTokenizer
     public UITextInputStringTokenizer(Todo textInput) { }
     @Mapping("init")
     public UITextInputStringTokenizer() { }
+
     
-    
-    
-    
+
+
     
     
     @Mapping("rangeEnclosingPosition:withGranularity:inDirection:")
@@ -49,5 +47,5 @@ public class UITextInputStringTokenizer
     public native UITextPosition getPosition(UITextPosition position, @Representing("UITextGranularity") long granularity, @MachineSizedSInt long direction);
     @Mapping("isPosition:withinTextUnit:inDirection:")
     public native boolean isPositionWithinTextUnit(UITextPosition position, @Representing("UITextGranularity") long granularity, @MachineSizedSInt long direction);
-    
+
 }

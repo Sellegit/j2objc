@@ -17,11 +17,9 @@ import apple.uikit.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 5.0 and later.
  */
-
 @Library("GLKit/GLKit.h")
 @Mapping("GLKViewDrawableColorFormat")
 public final class GLKViewDrawableColorFormat extends ObjCEnum {
@@ -32,6 +30,6 @@ public final class GLKViewDrawableColorFormat extends ObjCEnum {
     public static final long RGB565 = 1L;
     @GlobalConstant("GLKViewDrawableColorFormatSRGBA8888")
     public static final long SRGBA8888 = 2L;
-    
+
 
 }

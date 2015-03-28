@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Mapping("NSOperatingSystemVersion") @Library("Foundation/Foundation.h")
 public class NSOperatingSystemVersion 
     extends Struct 
@@ -37,7 +34,7 @@ public class NSOperatingSystemVersion
     public native @MachineSizedSInt long getMinorVersion();
     @DotMapping("patchVersion")
     public native @MachineSizedSInt long getPatchVersion();
-    
+
     public static native NSOperatingSystemVersion create(@MachineSizedSInt long majorVersion, @MachineSizedSInt long minorVersion, @MachineSizedSInt long patchVersion) /*-[
         NSOperatingSystemVersion __new = { .majorVersion = majorVersion, .minorVersion = minorVersion, .patchVersion = patchVersion };
         return __new;
@@ -47,17 +44,36 @@ public class NSOperatingSystemVersion
         return __new;
     ]-*/;
 
-    
+
     public static native NSOperatingSystemVersion copyWithminorVersion(NSOperatingSystemVersion original, @MachineSizedSInt long minorVersion) /*-[
         NSOperatingSystemVersion __new = { .majorVersion = original.majorVersion, .minorVersion = minorVersion, .patchVersion = original.patchVersion };
         return __new;
     ]-*/;
 
-    
+
     public static native NSOperatingSystemVersion copyWithpatchVersion(NSOperatingSystemVersion original, @MachineSizedSInt long patchVersion) /*-[
         NSOperatingSystemVersion __new = { .majorVersion = original.majorVersion, .minorVersion = original.minorVersion, .patchVersion = patchVersion };
         return __new;
     ]-*/;
 
-    
+
+    public static final class Adapter {
+
+        public @MachineSizedSInt long majorVersion;
+        public @MachineSizedSInt long minorVersion;
+        public @MachineSizedSInt long patchVersion;
+        public Adapter(@MachineSizedSInt long majorVersion, @MachineSizedSInt long minorVersion, @MachineSizedSInt long patchVersion) {
+            this.majorVersion = majorVersion;
+            this.minorVersion = minorVersion;
+            this.patchVersion = patchVersion;
+        }
+        public Adapter(NSOperatingSystemVersion original) {
+            this.majorVersion = original.getMajorVersion();
+            this.minorVersion = original.getMinorVersion();
+            this.patchVersion = original.getPatchVersion();
+        }
+        public NSOperatingSystemVersion convert() {
+            return create(majorVersion, minorVersion, patchVersion);
+        }
+    }
 }

@@ -17,11 +17,9 @@ import apple.uikit.*;
 import apple.avfoundation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("Photos/Photos.h") @Mapping("PHObjectPlaceholder")
 public class PHObjectPlaceholder 
     extends PHObject 
@@ -31,12 +29,12 @@ public class PHObjectPlaceholder
     
     @Mapping("init")
     public PHObjectPlaceholder() { }
+
+    
+
+
     
     
-    
-    
-    
-    
-    
-    
+
+
 }

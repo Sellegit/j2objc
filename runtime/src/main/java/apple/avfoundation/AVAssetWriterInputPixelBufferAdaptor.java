@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 4.1 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h") @Mapping("AVAssetWriterInputPixelBufferAdaptor")
 public class AVAssetWriterInputPixelBufferAdaptor 
     extends NSObject 
@@ -33,13 +31,13 @@ public class AVAssetWriterInputPixelBufferAdaptor
     
     
     public AVAssetWriterInputPixelBufferAdaptor() {}
-    
+
     
     @Mapping("assetWriterInput")
     public native AVAssetWriterInput getAssetWriterInput();
+
     
     
-    
-    
-    
+
+
 }

@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h")
 @Mapping("NSStreamStatus")
 public final class NSStreamStatus extends ObjCEnum {
@@ -42,6 +39,6 @@ public final class NSStreamStatus extends ObjCEnum {
     public static final long Closed = 6L;
     @GlobalConstant("NSStreamStatusError")
     public static final long Error = 7L;
-    
+
 
 }

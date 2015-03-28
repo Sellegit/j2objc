@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h") @Mapping("AVAudioUnitVarispeed")
 public class AVAudioUnitVarispeed 
     extends AVAudioUnitTimeEffect 
@@ -36,15 +34,15 @@ public class AVAudioUnitVarispeed
     public AVAudioUnitVarispeed(AudioComponentDescription audioComponentDescription) { }
     @Mapping("init")
     public AVAudioUnitVarispeed() { }
-    
+
     
     @Mapping("rate")
     public native float getRate();
     @Mapping("setRate:")
     public native void setRate(float v);
+
     
     
-    
-    
-    
+
+
 }

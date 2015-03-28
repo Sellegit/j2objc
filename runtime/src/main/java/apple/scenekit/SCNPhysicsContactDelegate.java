@@ -20,17 +20,14 @@ import apple.spritekit.*;
 import apple.opengles.*;
 
 
-
-
-
 @Library("SceneKit/SceneKit.h") @Mapping("SCNPhysicsContactDelegate")
 public interface SCNPhysicsContactDelegate 
     extends NSObjectProtocol {
 
     
     
-    
-    
+
+
     
     @Mapping("physicsWorld:didBeginContact:")
     void didBeginContact(SCNPhysicsWorld world, SCNPhysicsContact contact);
@@ -38,7 +35,7 @@ public interface SCNPhysicsContactDelegate
     void didUpdateContact(SCNPhysicsWorld world, SCNPhysicsContact contact);
     @Mapping("physicsWorld:didEndContact:")
     void didEndContact(SCNPhysicsWorld world, SCNPhysicsContact contact);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

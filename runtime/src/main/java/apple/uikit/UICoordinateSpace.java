@@ -19,9 +19,6 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h") @Mapping("UICoordinateSpace")
 public interface UICoordinateSpace 
     extends NSObjectProtocol {
@@ -33,7 +30,7 @@ public interface UICoordinateSpace
      */
     @Mapping("bounds")
     CGRect getBounds();
-    
+
     
     /**
      * @since Available in iOS 8.0 and later.
@@ -55,7 +52,7 @@ public interface UICoordinateSpace
      */
     @Mapping("convertRect:fromCoordinateSpace:")
     CGRect convertRectFromCoordinateSpace(CGRect rect, UICoordinateSpace coordinateSpace);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

@@ -20,9 +20,6 @@ import apple.spritekit.*;
 import apple.opengles.*;
 
 
-
-
-
 @Library("SceneKit/SceneKit.h") @Mapping("SCNCapsule")
 public class SCNCapsule 
     extends SCNGeometry 
@@ -32,7 +29,7 @@ public class SCNCapsule
     
     @Mapping("init")
     public SCNCapsule() { }
-    
+
     
     @Mapping("capRadius")
     public native @MachineSizedFloat double getCapRadius();
@@ -54,10 +51,10 @@ public class SCNCapsule
     public native @MachineSizedSInt long getCapSegmentCount();
     @Mapping("setCapSegmentCount:")
     public native void setCapSegmentCount(@MachineSizedSInt long v);
-    
+
     
     
     @Mapping("capsuleWithCapRadius:height:")
     public static native SCNCapsule create(@MachineSizedFloat double capRadius, @MachineSizedFloat double height);
-    
+
 }

@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 6.0 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("NSLayoutConstraint")
 public class NSLayoutConstraint 
     extends NSObject 
@@ -33,7 +31,7 @@ public class NSLayoutConstraint
     
     @Mapping("init")
     public NSLayoutConstraint() { }
-    
+
     
     @Mapping("priority")
     public native float getPriority();
@@ -79,7 +77,7 @@ public class NSLayoutConstraint
      */
     @Mapping("setIdentifier:")
     public native void setIdentifier(String v);
-    
+
     
     
     @Mapping("constraintsWithVisualFormat:options:metrics:views:")
@@ -96,5 +94,5 @@ public class NSLayoutConstraint
      */
     @Mapping("deactivateConstraints:")
     public static native void deactivateConstraints(NSArray<?> constraints);
-    
+
 }

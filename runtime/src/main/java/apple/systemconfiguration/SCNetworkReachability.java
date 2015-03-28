@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 import apple.dispatch.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Mapping("SCNetworkReachabilityRef") @Library("SystemConfiguration/SystemConfiguration.h")
@@ -25,7 +24,7 @@ public class SCNetworkReachability
     
     
     protected SCNetworkReachability() {}
-    
+
     
     
     
@@ -74,5 +73,5 @@ public class SCNetworkReachability
      */
     @GlobalFunction("SCNetworkReachabilitySetDispatchQueue")
     public static native boolean setDispatchQueue(SCNetworkReachability target, DispatchQueue queue);
-    
+
 }

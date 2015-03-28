@@ -16,15 +16,12 @@ import apple.opengles.*;
 import apple.coremedia.*;
 
 
-
-
-
 @Library("CoreVideo/CoreVideo.h")
 @Mapping("CVPixelBufferLockFlags")
 public final class CVPixelBufferLockFlags extends ObjCEnum {
     
     @GlobalConstant("kCVPixelBufferLock_ReadOnly")
     public static final long ReadOnly = 1L;
-    
+
 
 }

@@ -14,9 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
-
-
 @Library("OpenGLES/EAGL.h") @Mapping("EAGLDrawable")
 public interface EAGLDrawable 
      {
@@ -27,10 +24,10 @@ public interface EAGLDrawable
     EAGLDrawableProperties getDrawableProperties();
     @Mapping("setDrawableProperties:")
     void setDrawableProperties(EAGLDrawableProperties v);
+
     
-    
-    
-    
+
+
     /*<adapter>*/
     /*</adapter>*/
 }

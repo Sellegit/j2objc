@@ -15,7 +15,6 @@ import apple.foundation.*;
 import apple.opengles.*;
 import apple.coremedia.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Mapping("CVPixelBufferRef") @Library("CoreVideo/CoreVideo.h")
@@ -26,7 +25,7 @@ public class CVPixelBuffer
     
     
     protected CVPixelBuffer() {}
-    
+
     
     
     
@@ -135,5 +134,5 @@ public class CVPixelBuffer
      */
     @GlobalFunction("CVPixelBufferFillExtendedPixels")
     public static native CVReturn fillExtendedPixels(CVPixelBuffer pixelBuffer);
-    
+
 }

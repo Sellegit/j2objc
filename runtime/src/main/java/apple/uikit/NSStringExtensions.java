@@ -18,7 +18,6 @@ import apple.coreimage.*;
 import apple.coretext.*;
 import apple.corelocation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("UIKit/UIKit.h")
@@ -29,10 +28,10 @@ public final class NSStringExtensions
     
     
     private NSStringExtensions() {}
+
     
-    
-    
-    
+
+
     
     
     /**
@@ -144,5 +143,5 @@ public final class NSStringExtensions
      */
     @ExtensionMapping("boundingRectWithSize:options:attributes:context:")
     public static native CGRect getBoundingRect(NSString thiz, CGSize size, @Representing("NSStringDrawingOptions") long options, NSDictionary<?, ?> attributes, NSStringDrawingContext context);
-    
+
 }

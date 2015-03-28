@@ -19,9 +19,6 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h")
 @Mapping("UIModalTransitionStyle")
 public final class UIModalTransitionStyle extends ObjCEnum {
@@ -37,6 +34,6 @@ public final class UIModalTransitionStyle extends ObjCEnum {
      */
     @GlobalConstant("UIModalTransitionStylePartialCurl")
     public static final long PartialCurl = 3L;
-    
+
 
 }

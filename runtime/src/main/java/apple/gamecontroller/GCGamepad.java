@@ -14,9 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
-
-
 @Library("GameController/GameController.h") @Mapping("GCGamepad")
 public class GCGamepad 
     extends NSObject 
@@ -26,7 +23,7 @@ public class GCGamepad
     
     @Mapping("init")
     public GCGamepad() { }
-    
+
     
     @Mapping("controller")
     public native GCController getController();
@@ -48,10 +45,10 @@ public class GCGamepad
     public native GCControllerButtonInput getLeftShoulder();
     @Mapping("rightShoulder")
     public native GCControllerButtonInput getRightShoulder();
-    
+
     
     
     @Mapping("saveSnapshot")
     public native GCGamepadSnapshot saveSnapshot();
-    
+
 }

@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 3.2 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UIBezierPath")
 public class UIBezierPath 
     extends NSObject 
@@ -33,7 +31,7 @@ public class UIBezierPath
     
     @Mapping("init")
     public UIBezierPath() { }
-    
+
     
     @Mapping("CGPath")
     public native CGPath getCGPath();
@@ -69,7 +67,7 @@ public class UIBezierPath
     public native boolean usesEvenOddFillRule();
     @Mapping("setUsesEvenOddFillRule:")
     public native void setUsesEvenOddFillRule(boolean v);
-    
+
     
     
     @Mapping("moveToPoint:")
@@ -130,5 +128,5 @@ public class UIBezierPath
     public native Object copyWithZone$(NSZone zone);
     @Mapping("encodeWithCoder:")
     public native void encode(NSCoder aCoder);
-    
+
 }

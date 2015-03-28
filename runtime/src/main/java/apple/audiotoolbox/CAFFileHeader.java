@@ -17,9 +17,6 @@ import apple.coreaudio.*;
 import apple.coremedia.*;
 
 
-
-
-
 @Library("AudioToolbox/AudioToolbox.h")
 @Mapping("CAFFileHeader")
 public final class CAFFileHeader extends ObjCEnum {
@@ -28,6 +25,6 @@ public final class CAFFileHeader extends ObjCEnum {
     public static final long Type = 1667327590L;
     @GlobalConstant("kCAF_FileVersion_Initial")
     public static final long Version_Initial = 1L;
-    
+
 
 }

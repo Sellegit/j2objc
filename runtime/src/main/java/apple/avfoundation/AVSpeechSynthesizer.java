@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 7.0 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h") @Mapping("AVSpeechSynthesizer")
 public class AVSpeechSynthesizer 
     extends NSObject 
@@ -34,7 +32,7 @@ public class AVSpeechSynthesizer
     
     @Mapping("init")
     public AVSpeechSynthesizer() { }
-    
+
     
     @Mapping("delegate")
     public native AVSpeechSynthesizerDelegate getDelegate();
@@ -44,7 +42,7 @@ public class AVSpeechSynthesizer
     public native boolean isSpeaking();
     @Mapping("isPaused")
     public native boolean isPaused();
-    
+
     
     
     @Mapping("speakUtterance:")
@@ -55,5 +53,5 @@ public class AVSpeechSynthesizer
     public native boolean pauseSpeaking(@Representing("AVSpeechBoundary") long boundary);
     @Mapping("continueSpeaking")
     public native boolean continueSpeaking();
-    
+
 }

@@ -14,9 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
-
-
 @Library("CoreText/CoreText.h")
 @Mapping("CTLineTruncationType")
 public final class CTLineTruncationType extends ObjCEnum {
@@ -27,6 +24,6 @@ public final class CTLineTruncationType extends ObjCEnum {
     public static final long End = 1L;
     @GlobalConstant("kCTLineTruncationMiddle")
     public static final long Middle = 2L;
-    
+
 
 }

@@ -20,9 +20,6 @@ import apple.spritekit.*;
 import apple.opengles.*;
 
 
-
-
-
 @Library("SceneKit/SceneKit.h") @Mapping("SCNTechniqueSupport")
 public interface SCNTechniqueSupport 
     extends NSObjectProtocol {
@@ -33,10 +30,10 @@ public interface SCNTechniqueSupport
     SCNTechnique getTechnique();
     @Mapping("setTechnique:")
     void setTechnique(SCNTechnique v);
+
     
-    
-    
-    
+
+
     /*<adapter>*/
     /*</adapter>*/
 }

@@ -19,9 +19,6 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h") @Mapping("UIBarPositioning")
 public interface UIBarPositioning 
     extends NSObjectProtocol {
@@ -30,10 +27,10 @@ public interface UIBarPositioning
     
     @Mapping("barPosition")
     @Representing("UIBarPosition") long getBarPosition();
+
     
-    
-    
-    
+
+
     /*<adapter>*/
     /*</adapter>*/
 }

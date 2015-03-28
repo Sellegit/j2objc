@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 7.0 and later.
  */
-
 @Library("UIKit/UIKit.h")
 @Mapping("UIAttachmentBehaviorType")
 public final class UIAttachmentBehaviorType extends ObjCEnum {
@@ -32,6 +30,6 @@ public final class UIAttachmentBehaviorType extends ObjCEnum {
     public static final long Items = 0L;
     @GlobalConstant("UIAttachmentBehaviorTypeAnchor")
     public static final long Anchor = 1L;
-    
+
 
 }

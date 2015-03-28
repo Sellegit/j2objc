@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 3.2 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UIDocumentInteractionController")
 public class UIDocumentInteractionController 
     extends NSObject 
@@ -33,7 +31,7 @@ public class UIDocumentInteractionController
     
     @Mapping("init")
     public UIDocumentInteractionController() { }
-    
+
     
     @Mapping("delegate")
     public native UIDocumentInteractionControllerDelegate getDelegate();
@@ -59,7 +57,7 @@ public class UIDocumentInteractionController
     public native void setAnnotation(Object v);
     @Mapping("gestureRecognizers")
     public native NSArray<UIGestureRecognizer> getGestureRecognizers();
-    
+
     
     
     @Mapping("presentOptionsMenuFromRect:inView:animated:")
@@ -90,5 +88,5 @@ public class UIDocumentInteractionController
     public native void willDismiss(UIActionSheet actionSheet, @MachineSizedSInt long buttonIndex);
     @Mapping("actionSheet:didDismissWithButtonIndex:")
     public native void didDismiss(UIActionSheet actionSheet, @MachineSizedSInt long buttonIndex);
-    
+
 }

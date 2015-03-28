@@ -17,21 +17,18 @@ import apple.uikit.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("GLKit/GLKit.h") @Mapping("GLKViewDelegate")
 public interface GLKViewDelegate 
     extends NSObjectProtocol {
 
     
     
-    
-    
+
+
     
     @Mapping("glkView:drawInRect:")
     void draw(GLKView view, CGRect rect);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

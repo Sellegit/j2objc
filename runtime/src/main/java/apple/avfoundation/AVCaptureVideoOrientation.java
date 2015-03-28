@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 4.0 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h")
 @Mapping("AVCaptureVideoOrientation")
 public final class AVCaptureVideoOrientation extends ObjCEnum {
@@ -37,6 +35,6 @@ public final class AVCaptureVideoOrientation extends ObjCEnum {
     public static final long LandscapeRight = 3L;
     @GlobalConstant("AVCaptureVideoOrientationLandscapeLeft")
     public static final long LandscapeLeft = 4L;
-    
+
 
 }

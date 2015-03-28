@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 4.0 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h") @Mapping("AVMutableComposition")
 public class AVMutableComposition 
     extends AVComposition 
@@ -34,7 +32,7 @@ public class AVMutableComposition
     
     @Mapping("init")
     public AVMutableComposition() { }
-    
+
     
     @Mapping("tracks")
     public native NSArray<AVAssetTrack> getTracks();
@@ -42,7 +40,7 @@ public class AVMutableComposition
     public native CGSize getNaturalSize();
     @Mapping("setNaturalSize:")
     public native void setNaturalSize(CGSize v);
-    
+
     
     
     @Mapping("composition")
@@ -61,5 +59,5 @@ public class AVMutableComposition
     public native void removeTrack(AVCompositionTrack track);
     @Mapping("mutableTrackCompatibleWithTrack:")
     public native AVMutableCompositionTrack getCompatibleMutableTrack(AVAssetTrack track);
-    
+
 }

@@ -14,9 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
-
-
 @Library("Accounts/Accounts.h")
 @Mapping("ACErrorCode")
 public final class ACErrorCode extends ObjCEnum {
@@ -63,6 +60,6 @@ public final class ACErrorCode extends ObjCEnum {
     public static final long InvalidCommand = 20L;
     @GlobalConstant("ACErrorMissingTransportMessageID")
     public static final long MissingTransportMessageID = 21L;
-    
+
 
 }

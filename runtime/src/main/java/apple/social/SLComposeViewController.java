@@ -16,11 +16,9 @@ import apple.uikit.*;
 import apple.accounts.*;
 
 
-
 /**
  * @since Available in iOS 6.0 and later.
  */
-
 @Library("Social/Social.h") @Mapping("SLComposeViewController")
 public class SLComposeViewController 
     extends UIViewController 
@@ -32,7 +30,7 @@ public class SLComposeViewController
     public SLComposeViewController(String nibNameOrNil, NSBundle nibBundleOrNil) { }
     @Mapping("init")
     public SLComposeViewController() { }
-    
+
     
     @Mapping("serviceType")
     public native SLServiceType getServiceType();
@@ -40,7 +38,7 @@ public class SLComposeViewController
     public native @Block VoidBlock3<String, SLRequestMethod, NSURL> getCompletionHandler();
     @Mapping("setCompletionHandler:")
     public native void setCompletionHandler(@Block VoidBlock3<String, SLRequestMethod, NSURL> v);
-    
+
     
     
     @Mapping("setInitialText:")
@@ -57,5 +55,5 @@ public class SLComposeViewController
     public static native boolean isAvailable(String serviceType);
     @Mapping("composeViewControllerForServiceType:")
     public static native SLComposeViewController create(String serviceType);
-    
+
 }

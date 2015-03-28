@@ -19,9 +19,6 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h")
 @Mapping("UIMenuControllerArrowDirection")
 public final class UIMenuControllerArrowDirection extends ObjCEnum {
@@ -36,6 +33,6 @@ public final class UIMenuControllerArrowDirection extends ObjCEnum {
     public static final long Left = 3L;
     @GlobalConstant("UIMenuControllerArrowRight")
     public static final long Right = 4L;
-    
+
 
 }

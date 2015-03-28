@@ -18,7 +18,6 @@ import apple.coremedia.*;
 import apple.security.*;
 import apple.dispatch.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("Foundation/Foundation.h")
@@ -30,7 +29,7 @@ public class Foundation
     public static final long PropertyListImmutable = 0L;
     public static final long PropertyListMutableContainers = 1L;
     public static final long PropertyListMutableContainersAndLeaves = 2L;
-    
+
     
     
     
@@ -70,5 +69,5 @@ public class Foundation
      */
     @GlobalConstant("NSExtensionHostDidBecomeActiveNotification")
     public static native String ExtensionHostDidBecomeActiveNotification();
-    
+
 }

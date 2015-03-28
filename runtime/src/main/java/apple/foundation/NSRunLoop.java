@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h") @Mapping("NSRunLoop")
 public class NSRunLoop 
     extends NSObject 
@@ -31,11 +28,11 @@ public class NSRunLoop
     
     @Mapping("init")
     public NSRunLoop() { }
-    
+
     
     @Mapping("currentMode")
     public native String getCurrentMode();
-    
+
     
     
     @Mapping("getCFRunLoop")
@@ -69,5 +66,5 @@ public class NSRunLoop
     public native void cancel(Selector aSelector, Object target, Object arg);
     @Mapping("cancelPerformSelectorsWithTarget:")
     public native void cancel(Object target);
-    
+
 }

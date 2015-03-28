@@ -15,9 +15,6 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
-
-
 @Library("GameKit/GameKit.h")
 @Mapping("GKPlayerConnectionState")
 public final class GKPlayerConnectionState extends ObjCEnum {
@@ -28,6 +25,6 @@ public final class GKPlayerConnectionState extends ObjCEnum {
     public static final long Connected = 1L;
     @GlobalConstant("GKPlayerStateDisconnected")
     public static final long Disconnected = 2L;
-    
+
 
 }

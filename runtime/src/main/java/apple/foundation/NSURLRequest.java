@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h") @Mapping("NSURLRequest")
 public class NSURLRequest 
     extends NSObject 
@@ -35,7 +32,7 @@ public class NSURLRequest
     public NSURLRequest(NSURL URL, @Representing("NSURLRequestCachePolicy") long cachePolicy, double timeoutInterval) { }
     @Mapping("init")
     public NSURLRequest() { }
-    
+
     
     @Mapping("URL")
     public native NSURL getURL();
@@ -70,7 +67,7 @@ public class NSURLRequest
      */
     @Mapping("HTTPShouldUsePipelining")
     public native boolean shouldUseHTTPPipelining();
-    
+
     
     
     @Mapping("supportsSecureCoding")
@@ -79,5 +76,5 @@ public class NSURLRequest
     public native String getHTTPHeaderFieldValue(String field);
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
-    
+
 }

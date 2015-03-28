@@ -18,7 +18,6 @@ import apple.coremedia.*;
 import apple.security.*;
 import apple.dispatch.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("Foundation/Foundation.h")
@@ -35,5 +34,5 @@ public class NSNetServiceErrorInfo
     public static native NSString ErrorCodeKey();
     @GlobalConstant("NSNetServicesErrorDomain")
     public static native NSString ErrorDomainKey();
-    
+
 }

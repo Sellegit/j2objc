@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 7.0 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h") @Mapping("AVAsynchronousVideoCompositionRequest")
 public class AVAsynchronousVideoCompositionRequest 
     extends NSObject 
@@ -34,7 +32,7 @@ public class AVAsynchronousVideoCompositionRequest
     
     @Mapping("init")
     public AVAsynchronousVideoCompositionRequest() { }
-    
+
     
     @Mapping("renderContext")
     public native AVVideoCompositionRenderContext getRenderContext();
@@ -44,7 +42,7 @@ public class AVAsynchronousVideoCompositionRequest
     public native List<String> getSourceTrackIDs();
     @Mapping("videoCompositionInstruction")
     public native AVVideoCompositionInstruction getVideoCompositionInstruction();
-    
+
     
     
     @Mapping("finishWithError:")
@@ -53,5 +51,5 @@ public class AVAsynchronousVideoCompositionRequest
     public native void finishCancelledRequest();
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
-    
+
 }

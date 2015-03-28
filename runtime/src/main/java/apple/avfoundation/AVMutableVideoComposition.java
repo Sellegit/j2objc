@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 4.0 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h") @Mapping("AVMutableVideoComposition")
 public class AVMutableVideoComposition 
     extends AVVideoComposition 
@@ -34,7 +32,7 @@ public class AVMutableVideoComposition
     
     @Mapping("init")
     public AVMutableVideoComposition() { }
-    
+
     
     /**
      * @since Available in iOS 7.0 and later.
@@ -66,7 +64,7 @@ public class AVMutableVideoComposition
     public native AVVideoCompositionCoreAnimationTool getAnimationTool();
     @Mapping("setAnimationTool:")
     public native void setAnimationTool(AVVideoCompositionCoreAnimationTool v);
-    
+
     
     
     @Mapping("videoComposition")
@@ -76,5 +74,5 @@ public class AVMutableVideoComposition
      */
     @Mapping("videoCompositionWithPropertiesOfAsset:")
     public static native AVMutableVideoComposition create(AVAsset asset);
-    
+
 }

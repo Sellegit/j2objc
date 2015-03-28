@@ -13,7 +13,6 @@ import apple.coregraphics.*;
 import apple.coreservices.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("CFNetwork/CFNetwork.h")
@@ -61,5 +60,5 @@ public class CFProxyType
      */
     @GlobalConstant("kCFProxyTypeAutoConfigurationJavaScript")
     public static native CFString AutoConfigurationJavaScriptValue();
-    
+
 }

@@ -18,9 +18,6 @@ import apple.coreanimation.*;
 import apple.corevideo.*;
 
 
-
-
-
 @Mapping("CMBlockBufferCustomBlockSource") @Library("CoreMedia/CoreMedia.h")
 public class CMBlockBufferCustomBlockSource 
     extends Struct 
@@ -28,7 +25,7 @@ public class CMBlockBufferCustomBlockSource
 
     
     public static final int Version = 0;
-    
+
     private CMBlockBufferCustomBlockSource() {}
     
     
@@ -36,6 +33,6 @@ public class CMBlockBufferCustomBlockSource
     public native int getVersion();
     @DotMapping("refCon")
     public native Todo getRefCon();
-    
+
     
 }

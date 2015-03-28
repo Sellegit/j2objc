@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 4.0 and later.
  */
-
 @Library("CoreMotion/CoreMotion.h") @Mapping("CMAccelerometerData")
 public class CMAccelerometerData 
     extends CMLogItem 
@@ -28,13 +26,13 @@ public class CMAccelerometerData
     
     @Mapping("init")
     public CMAccelerometerData() { }
-    
+
     
     @Mapping("acceleration")
     public native CMAcceleration getAcceleration();
+
     
     
-    
-    
-    
+
+
 }

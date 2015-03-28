@@ -15,9 +15,6 @@ import apple.dispatch.*;
 import apple.foundation.*;
 
 
-
-
-
 @Library("CoreFoundation/CoreFoundation.h")
 @Mapping("CFNotificationSuspensionBehavior")
 public final class CFNotificationSuspensionBehavior extends ObjCEnum {
@@ -30,6 +27,6 @@ public final class CFNotificationSuspensionBehavior extends ObjCEnum {
     public static final long Hold = 3L;
     @GlobalConstant("CFNotificationSuspensionBehaviorDeliverImmediately")
     public static final long DeliverImmediately = 4L;
-    
+
 
 }

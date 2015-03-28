@@ -19,11 +19,9 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 2.0 and later.
  */
-
 @Library("Foundation/Foundation.h") @Mapping("NSOperation")
 public class NSOperation 
     extends NSObject 
@@ -32,7 +30,7 @@ public class NSOperation
     
     
     public NSOperation() {}
-    
+
     
     @Mapping("isCancelled")
     public native boolean isCancelled();
@@ -99,7 +97,7 @@ public class NSOperation
      */
     @Mapping("setName:")
     public native void setName(String v);
-    
+
     
     
     @Mapping("start")
@@ -117,5 +115,5 @@ public class NSOperation
      */
     @Mapping("waitUntilFinished")
     public native void waitUntilFinished();
-    
+
 }

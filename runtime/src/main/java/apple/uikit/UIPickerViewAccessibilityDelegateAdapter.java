@@ -18,7 +18,6 @@ import apple.coreimage.*;
 import apple.coretext.*;
 import apple.corelocation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -29,13 +28,13 @@ public abstract class UIPickerViewAccessibilityDelegateAdapter
     
     
     
-    
-    
+
+
     
     
     @NotImplemented("pickerView:accessibilityLabelForComponent:")
     public String getAccessibilityLabel(UIPickerView pickerView, @MachineSizedSInt long component) { throw new UnsupportedOperationException(); }
     @NotImplemented("pickerView:accessibilityHintForComponent:")
     public String getAccessibilityHint(UIPickerView pickerView, @MachineSizedSInt long component) { throw new UnsupportedOperationException(); }
-    
+
 }

@@ -19,11 +19,9 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 5.0 and later.
  */
-
 @Library("Foundation/Foundation.h") @Mapping("NSMutableOrderedSet")
 public class NSMutableOrderedSet 
     extends NSOrderedSet 
@@ -34,10 +32,10 @@ public class NSMutableOrderedSet
     public NSMutableOrderedSet() {}
     @Mapping("initWithCapacity:")
     public NSMutableOrderedSet(@MachineSizedUInt long numItems) { }
+
     
-    
-    
-    
+
+
     
     
     @Mapping("insertObject:atIndex:")
@@ -50,5 +48,5 @@ public class NSMutableOrderedSet
     public native void removeAllObjects();
     @Mapping("removeObject:")
     public native void removeObject(Object object);
-    
+
 }

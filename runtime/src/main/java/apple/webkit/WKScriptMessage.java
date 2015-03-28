@@ -15,11 +15,9 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("WebKit/WebKit.h") @Mapping("WKScriptMessage")
 public class WKScriptMessage 
     extends NSObject 
@@ -29,7 +27,7 @@ public class WKScriptMessage
     
     @Mapping("init")
     public WKScriptMessage() { }
-    
+
     
     @Mapping("body")
     public native Object getBody();
@@ -39,9 +37,9 @@ public class WKScriptMessage
     public native WKFrameInfo getFrameInfo();
     @Mapping("name")
     public native String getName();
+
     
     
-    
-    
-    
+
+
 }

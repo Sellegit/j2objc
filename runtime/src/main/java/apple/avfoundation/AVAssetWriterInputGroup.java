@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 7.0 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h") @Mapping("AVAssetWriterInputGroup")
 public class AVAssetWriterInputGroup 
     extends AVMediaSelectionGroup 
@@ -36,16 +34,16 @@ public class AVAssetWriterInputGroup
     public AVAssetWriterInputGroup(NSArray<?> inputs, AVAssetWriterInput defaultInput) { }
     @Mapping("init")
     public AVAssetWriterInputGroup() { }
-    
+
     
     @Mapping("inputs")
     public native NSArray<AVAssetWriterInput> getInputs();
     @Mapping("defaultInput")
     public native AVAssetWriterInput getDefaultInput();
-    
+
     
     
     @Mapping("assetWriterInputGroupWithInputs:defaultInput:")
     public static native AVAssetWriterInputGroup create(NSArray<?> inputs, AVAssetWriterInput defaultInput);
-    
+
 }

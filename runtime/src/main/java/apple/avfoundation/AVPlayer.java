@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 4.0 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h") @Mapping("AVPlayer")
 public class AVPlayer 
     extends NSObject 
@@ -38,7 +36,7 @@ public class AVPlayer
     public AVPlayer(AVPlayerItem item) { }
     @Mapping("init")
     public AVPlayer() { }
-    
+
     
     @Mapping("status")
     public native @Representing("AVPlayerStatus") long getStatus();
@@ -173,7 +171,7 @@ public class AVPlayer
      */
     @Mapping("outputObscuredDueToInsufficientExternalProtection")
     public native boolean outputObscuredDueToInsufficientExternalProtection();
-    
+
     
     
     @Mapping("playerWithURL:")
@@ -240,5 +238,5 @@ public class AVPlayer
      */
     @Mapping("mediaSelectionCriteriaForMediaCharacteristic:")
     public native AVPlayerMediaSelectionCriteria getMediaSelectionCriteria(String mediaCharacteristic);
-    
+
 }

@@ -19,7 +19,6 @@ import apple.glkit.*;
 import apple.spritekit.*;
 import apple.opengles.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("SceneKit/SceneKit.h")
@@ -40,5 +39,5 @@ public class SCNShaderModifierEntryPoint
     public static native NSString LightingModelValue();
     @GlobalConstant("SCNShaderModifierEntryPointFragment")
     public static native NSString FragmentValue();
-    
+
 }

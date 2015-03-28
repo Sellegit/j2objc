@@ -21,11 +21,9 @@ import apple.glkit.*;
 import apple.scenekit.*;
 
 
-
 /**
  * @since Available in iOS 7.0 and later.
  */
-
 @Library("SpriteKit/SpriteKit.h")
 @Mapping("SKBlendMode")
 public final class SKBlendMode extends ObjCEnum {
@@ -44,6 +42,6 @@ public final class SKBlendMode extends ObjCEnum {
     public static final long Screen = 5L;
     @GlobalConstant("SKBlendModeReplace")
     public static final long Replace = 6L;
-    
+
 
 }

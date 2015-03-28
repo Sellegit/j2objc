@@ -16,24 +16,21 @@ import apple.uikit.*;
 import apple.accounts.*;
 
 
-
-
-
 @Library("StoreKit/StoreKit.h") @Mapping("SKProductsRequestDelegate")
 public interface SKProductsRequestDelegate 
     extends SKRequestDelegate {
 
     
     
-    
-    
+
+
     
     /**
      * @since Available in iOS 3.0 and later.
      */
     @Mapping("productsRequest:didReceiveResponse:")
     void didReceiveResponse(SKProductsRequest request, SKProductsResponse response);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

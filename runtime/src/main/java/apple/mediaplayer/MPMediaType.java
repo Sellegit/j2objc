@@ -15,11 +15,9 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
 /**
  * @since Available in iOS 3.0 and later.
  */
-
 @Library("MediaPlayer/MediaPlayer.h")
 @Mapping("MPMediaType")
 public final class MPMediaType extends ObjCEnum {
@@ -74,6 +72,6 @@ public final class MPMediaType extends ObjCEnum {
     public static final long AnyVideo = 65280L;
     @GlobalConstant("MPMediaTypeAny")
     public static final long Any = -1L;
-    
+
 
 }

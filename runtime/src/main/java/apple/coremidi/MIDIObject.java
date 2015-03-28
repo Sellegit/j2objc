@@ -13,7 +13,6 @@ import apple.coregraphics.*;
 import apple.coreservices.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("CoreMIDI/CoreMIDI.h")
@@ -30,42 +29,42 @@ public class MIDIObject
      * @since Available in iOS 4.2 and later.
      */
     @GlobalFunction("MIDIObjectGetIntegerProperty")
-    public static native MIDIError getIntegerProperty(MIDIObject obj, String propertyID, Todo outValue);
+    public static native MIDIError getIntegerProperty(MIDIObject obj, CFString propertyID, Todo outValue);
     /**
      * @since Available in iOS 4.2 and later.
      */
     @GlobalFunction("MIDIObjectSetIntegerProperty")
-    public static native MIDIError setIntegerProperty(MIDIObject obj, String propertyID, int value);
+    public static native MIDIError setIntegerProperty(MIDIObject obj, CFString propertyID, int value);
     /**
      * @since Available in iOS 4.2 and later.
      */
     @GlobalFunction("MIDIObjectGetStringProperty")
-    public static native MIDIError getStringProperty(MIDIObject obj, String propertyID, Todo str);
+    public static native MIDIError getStringProperty(MIDIObject obj, CFString propertyID, Todo str);
     /**
      * @since Available in iOS 4.2 and later.
      */
     @GlobalFunction("MIDIObjectSetStringProperty")
-    public static native MIDIError setStringProperty(MIDIObject obj, String propertyID, String str);
+    public static native MIDIError setStringProperty(MIDIObject obj, CFString propertyID, CFString str);
     /**
      * @since Available in iOS 4.2 and later.
      */
     @GlobalFunction("MIDIObjectGetDataProperty")
-    public static native MIDIError getDataProperty(MIDIObject obj, String propertyID, NSData outData);
+    public static native MIDIError getDataProperty(MIDIObject obj, CFString propertyID, Todo outData);
     /**
      * @since Available in iOS 4.2 and later.
      */
     @GlobalFunction("MIDIObjectSetDataProperty")
-    public static native MIDIError setDataProperty(MIDIObject obj, String propertyID, NSData data);
+    public static native MIDIError setDataProperty(MIDIObject obj, CFString propertyID, CFData data);
     /**
      * @since Available in iOS 4.2 and later.
      */
     @GlobalFunction("MIDIObjectGetDictionaryProperty")
-    public static native MIDIError getDictionaryProperty(MIDIObject obj, String propertyID, Todo outDict);
+    public static native MIDIError getDictionaryProperty(MIDIObject obj, CFString propertyID, Todo outDict);
     /**
      * @since Available in iOS 4.2 and later.
      */
     @GlobalFunction("MIDIObjectSetDictionaryProperty")
-    public static native MIDIError setDictionaryProperty(MIDIObject obj, String propertyID, NSDictionary<?, ?> data);
+    public static native MIDIError setDictionaryProperty(MIDIObject obj, CFString propertyID, CFDictionary data);
     /**
      * @since Available in iOS 4.2 and later.
      */
@@ -75,11 +74,11 @@ public class MIDIObject
      * @since Available in iOS 4.2 and later.
      */
     @GlobalFunction("MIDIObjectRemoveProperty")
-    public static native MIDIError removeProperty(MIDIObject obj, String propertyID);
+    public static native MIDIError removeProperty(MIDIObject obj, CFString propertyID);
     /**
      * @since Available in iOS 4.2 and later.
      */
     @GlobalFunction("MIDIObjectFindByUniqueID")
     public static native MIDIError findByUniqueID(int inUniqueID, Todo outObject, Todo outObjectType);
-    
+
 }

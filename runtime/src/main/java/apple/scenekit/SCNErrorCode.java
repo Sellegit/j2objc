@@ -20,15 +20,12 @@ import apple.spritekit.*;
 import apple.opengles.*;
 
 
-
-
-
 @Library("SceneKit/SceneKit.h")
 @Mapping("SCNErrorCode")
 public final class SCNErrorCode extends ObjCEnum {
     
     @GlobalConstant("SCNProgramCompilationError")
     public static final long ProgramCompilation = 1L;
-    
+
 
 }

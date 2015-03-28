@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 7.0 and later.
  */
-
 @Library("UIKit/UIKit.h")
 @Mapping("UIKeyModifierFlags")
 public final class UIKeyModifierFlags extends ObjCEnum {
@@ -40,6 +38,6 @@ public final class UIKeyModifierFlags extends ObjCEnum {
     public static final long Command = 1048576L;
     @GlobalConstant("UIKeyModifierNumericPad")
     public static final long NumericPad = 2097152L;
-    
+
 
 }

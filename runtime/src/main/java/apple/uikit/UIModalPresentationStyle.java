@@ -19,9 +19,6 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h")
 @Mapping("UIModalPresentationStyle")
 public final class UIModalPresentationStyle extends ObjCEnum {
@@ -68,6 +65,6 @@ public final class UIModalPresentationStyle extends ObjCEnum {
      */
     @GlobalConstant("UIModalPresentationNone")
     public static final long None = -1L;
-    
+
 
 }

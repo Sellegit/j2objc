@@ -13,7 +13,6 @@ import apple.coregraphics.*;
 import apple.coreservices.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Mapping("CTFontCollectionRef") @Library("CoreText/CoreText.h")
@@ -24,7 +23,7 @@ public class CTFontCollection
     
     
     protected CTFontCollection() {}
-    
+
     
     
     
@@ -58,5 +57,5 @@ public class CTFontCollection
      */
     @GlobalFunction("CTFontCollectionCreateMatchingFontDescriptorsSortedWithCallback")
     public static native List<CTFontDescriptor> getMatchingFontDescriptorsSorted(CTFontCollection collection, FunctionPtr sortCallback, Todo refCon);
-    
+
 }

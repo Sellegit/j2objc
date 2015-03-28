@@ -19,9 +19,6 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h") @Mapping("UIDynamicItem")
 public interface UIDynamicItem 
     extends NSObjectProtocol {
@@ -38,10 +35,10 @@ public interface UIDynamicItem
     CGAffineTransform getTransform();
     @Mapping("setTransform:")
     void setTransform(CGAffineTransform v);
+
     
-    
-    
-    
+
+
     /*<adapter>*/
     /*</adapter>*/
 }

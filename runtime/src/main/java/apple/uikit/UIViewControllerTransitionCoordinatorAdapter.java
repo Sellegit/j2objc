@@ -18,7 +18,6 @@ import apple.coreimage.*;
 import apple.coretext.*;
 import apple.corelocation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -29,8 +28,8 @@ public abstract class UIViewControllerTransitionCoordinatorAdapter
     
     
     
-    
-    
+
+
     
     
     @NotImplemented("animateAlongsideTransition:completion:")
@@ -39,5 +38,5 @@ public abstract class UIViewControllerTransitionCoordinatorAdapter
     public boolean animateAlongsideTransition(UIView view, @Block VoidBlock1<UIViewControllerTransitionCoordinatorContext> animation, @Block VoidBlock1<UIViewControllerTransitionCoordinatorContext> completion) { throw new UnsupportedOperationException(); }
     @NotImplemented("notifyWhenInteractionEndsUsingBlock:")
     public void notifyWhenInteractionEnds(@Block VoidBlock1<UIViewControllerTransitionCoordinatorContext> handler) { throw new UnsupportedOperationException(); }
-    
+
 }

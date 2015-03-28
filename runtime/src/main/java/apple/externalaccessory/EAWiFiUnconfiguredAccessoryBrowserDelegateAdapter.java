@@ -15,7 +15,6 @@ import apple.foundation.*;
 import apple.uikit.*;
 import apple.dispatch.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -26,8 +25,8 @@ public abstract class EAWiFiUnconfiguredAccessoryBrowserDelegateAdapter
     
     
     
-    
-    
+
+
     
     
     /**
@@ -50,5 +49,5 @@ public abstract class EAWiFiUnconfiguredAccessoryBrowserDelegateAdapter
      */
     @NotImplemented("accessoryBrowser:didFinishConfiguringAccessory:withStatus:")
     public void didFinishConfiguringAccessory(EAWiFiUnconfiguredAccessoryBrowser browser, EAWiFiUnconfiguredAccessory accessory, @Representing("EAWiFiUnconfiguredAccessoryConfigurationStatus") long status) { throw new UnsupportedOperationException(); }
-    
+
 }

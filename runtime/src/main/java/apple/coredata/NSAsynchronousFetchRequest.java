@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("CoreData/CoreData.h") @Mapping("NSAsynchronousFetchRequest")
 public class NSAsynchronousFetchRequest 
     extends NSPersistentStoreRequest 
@@ -28,7 +26,7 @@ public class NSAsynchronousFetchRequest
     
     @Mapping("init")
     public NSAsynchronousFetchRequest() { }
-    
+
     
     @Mapping("fetchRequest")
     public native NSFetchRequest getFetchRequest();
@@ -38,9 +36,9 @@ public class NSAsynchronousFetchRequest
     public native @MachineSizedSInt long getEstimatedResultCount();
     @Mapping("setEstimatedResultCount:")
     public native void setEstimatedResultCount(@MachineSizedSInt long v);
+
     
     
-    
-    
-    
+
+
 }

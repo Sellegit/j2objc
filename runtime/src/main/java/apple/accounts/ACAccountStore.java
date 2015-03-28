@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 5.0 and later.
  */
-
 @Library("Accounts/Accounts.h") @Mapping("ACAccountStore")
 public class ACAccountStore 
     extends NSObject 
@@ -28,11 +26,11 @@ public class ACAccountStore
     
     @Mapping("init")
     public ACAccountStore() { }
-    
+
     
     @Mapping("accounts")
     public native NSArray<ACAccount> getAccounts();
-    
+
     
     
     /**
@@ -40,12 +38,12 @@ public class ACAccountStore
      */
     @GlobalConstant("ACAccountStoreDidChangeNotification")
     public static native NSString DidChangeNotification();
-    
+
     @Mapping("accountWithIdentifier:")
     public native ACAccount getAccount(String identifier);
     @Mapping("accountTypeWithAccountTypeIdentifier:")
     public native ACAccountType getAccountType(String typeIdentifier);
     @Mapping("accountsWithAccountType:")
     public native NSArray<ACAccount> getAccounts(ACAccountType accountType);
-    
+
 }

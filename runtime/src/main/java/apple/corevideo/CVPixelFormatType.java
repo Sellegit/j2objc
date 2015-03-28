@@ -16,9 +16,6 @@ import apple.opengles.*;
 import apple.coremedia.*;
 
 
-
-
-
 @Library("CoreVideo/CoreVideo.h")
 @Mapping("CVPixelFormatType")
 public final class CVPixelFormatType extends ObjCEnum {
@@ -119,6 +116,6 @@ public final class CVPixelFormatType extends ObjCEnum {
     public static final long _64RGBAHalf = 1380411457L;
     @GlobalConstant("kCVPixelFormatType_128RGBAFloat")
     public static final long _128RGBAFloat = 1380410945L;
-    
+
 
 }

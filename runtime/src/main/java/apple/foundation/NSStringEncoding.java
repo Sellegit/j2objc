@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h")
 @Mapping("NSStringEncoding")
 public final class NSStringEncoding extends ObjCEnum {
@@ -74,6 +71,6 @@ public final class NSStringEncoding extends ObjCEnum {
     public static final long UTF32LittleEndian = -1677721344L;
     @GlobalConstant("NSProprietaryStringEncoding")
     public static final long Proprietary = 65536L;
-    
+
 
 }

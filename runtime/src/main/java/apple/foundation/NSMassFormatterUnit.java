@@ -19,11 +19,9 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("Foundation/Foundation.h")
 @Mapping("NSMassFormatterUnit")
 public final class NSMassFormatterUnit extends ObjCEnum {
@@ -38,6 +36,6 @@ public final class NSMassFormatterUnit extends ObjCEnum {
     public static final long Pound = 1538L;
     @GlobalConstant("NSMassFormatterUnitStone")
     public static final long Stone = 1539L;
-    
+
 
 }

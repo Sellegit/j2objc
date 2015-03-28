@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("HealthKit/HealthKit.h") @Mapping("HKObject")
 public class HKObject 
     extends NSObject 
@@ -27,7 +25,7 @@ public class HKObject
     
     
     public HKObject() {}
-    
+
     
     @Mapping("UUID")
     public native NSUUID getUUID();
@@ -35,9 +33,9 @@ public class HKObject
     public native HKSource getSource();
     @Mapping("metadata")
     public native NSDictionary<?, ?> getMetadata();
+
     
     
-    
-    
-    
+
+
 }

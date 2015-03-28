@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 7.0 and later.
  */
-
 @Library("UIKit/UIKit.h")
 @Mapping("UISearchBarStyle")
 public final class UISearchBarStyle extends ObjCEnum {
@@ -34,6 +32,6 @@ public final class UISearchBarStyle extends ObjCEnum {
     public static final long Prominent = 1L;
     @GlobalConstant("UISearchBarStyleMinimal")
     public static final long Minimal = 2L;
-    
+
 
 }

@@ -19,9 +19,6 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h")
 @Mapping("UIImagePickerControllerCameraDevice")
 public final class UIImagePickerControllerCameraDevice extends ObjCEnum {
@@ -30,6 +27,6 @@ public final class UIImagePickerControllerCameraDevice extends ObjCEnum {
     public static final long Rear = 0L;
     @GlobalConstant("UIImagePickerControllerCameraDeviceFront")
     public static final long Front = 1L;
-    
+
 
 }

@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("HealthKit/HealthKit.h") @Mapping("HKStatisticsCollectionQuery")
 public class HKStatisticsCollectionQuery 
     extends HKQuery 
@@ -30,7 +28,7 @@ public class HKStatisticsCollectionQuery
     public HKStatisticsCollectionQuery(HKQuantityType quantityType, NSPredicate quantitySamplePredicate, @Representing("HKStatisticsOptions") long options, NSDate anchorDate, NSDateComponents intervalComponents) { }
     @Mapping("init")
     public HKStatisticsCollectionQuery() { }
-    
+
     
     @Mapping("anchorDate")
     public native NSDate getAnchorDate();
@@ -46,9 +44,9 @@ public class HKStatisticsCollectionQuery
     public native @Block VoidBlock4<HKStatisticsCollectionQuery, HKStatistics, HKStatisticsCollection, NSError> getStatisticsUpdateHandler();
     @Mapping("setStatisticsUpdateHandler:")
     public native void setStatisticsUpdateHandler(@Block VoidBlock4<HKStatisticsCollectionQuery, HKStatistics, HKStatisticsCollection, NSError> v);
+
     
     
-    
-    
-    
+
+
 }

@@ -18,9 +18,6 @@ import apple.coreanimation.*;
 import apple.corevideo.*;
 
 
-
-
-
 @Library("CoreMedia/CoreMedia.h")
 @Mapping("CMTextJustification")
 public final class CMTextJustification extends ObjCEnum {
@@ -31,6 +28,6 @@ public final class CMTextJustification extends ObjCEnum {
     public static final long Centered = 1L;
     @GlobalConstant("kCMTextJustification_bottom_right")
     public static final long BottomRight = -1L;
-    
+
 
 }

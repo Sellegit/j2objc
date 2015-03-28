@@ -19,11 +19,9 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("Foundation/Foundation.h") @Mapping("NSDateComponentsFormatter")
 public class NSDateComponentsFormatter 
     extends NSFormatter 
@@ -32,7 +30,7 @@ public class NSDateComponentsFormatter
     
     
     public NSDateComponentsFormatter() {}
-    
+
     
     @Mapping("unitsStyle")
     public native @Representing("NSDateComponentsFormatterUnitsStyle") long getUnitsStyle();
@@ -74,7 +72,7 @@ public class NSDateComponentsFormatter
     public native @Representing("NSFormattingContext") long getFormattingContext();
     @Mapping("setFormattingContext:")
     public native void setFormattingContext(@Representing("NSFormattingContext") long v);
-    
+
     
     
     @Mapping("stringForObjectValue:")
@@ -85,5 +83,5 @@ public class NSDateComponentsFormatter
     public native String format(NSDate startDate, NSDate endDate);
     @Mapping("stringFromTimeInterval:")
     public native String format(double ti);
-    
+
 }

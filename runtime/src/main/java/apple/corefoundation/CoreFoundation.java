@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.dispatch.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("CoreFoundation/CoreFoundation.h")
@@ -24,7 +23,7 @@ public class CoreFoundation
 
     
     public static final float StringEncodingInvalidId = 0xffffffff;
-    
+
     
     
     
@@ -644,5 +643,5 @@ public class CoreFoundation
     public static native CFString Values_kCFBundleNameKey();
     @GlobalConstant("kCFBundleLocalizationsKey")
     public static native CFString Values_kCFBundleLocalizationsKey();
-    
+
 }

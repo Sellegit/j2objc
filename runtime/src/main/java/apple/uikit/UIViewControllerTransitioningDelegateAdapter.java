@@ -18,7 +18,6 @@ import apple.coreimage.*;
 import apple.coretext.*;
 import apple.corelocation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -29,8 +28,8 @@ public abstract class UIViewControllerTransitioningDelegateAdapter
     
     
     
-    
-    
+
+
     
     
     @NotImplemented("animationControllerForPresentedController:presentingController:sourceController:")
@@ -46,5 +45,5 @@ public abstract class UIViewControllerTransitioningDelegateAdapter
      */
     @NotImplemented("presentationControllerForPresentedViewController:presentingViewController:sourceViewController:")
     public UIPresentationController getPresentationControllerForPresentedViewController(UIViewController presented, UIViewController presenting, UIViewController source) { throw new UnsupportedOperationException(); }
-    
+
 }

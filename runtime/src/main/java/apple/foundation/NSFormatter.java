@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h") @Mapping("NSFormatter")
 public class NSFormatter 
     extends NSObject 
@@ -31,15 +28,15 @@ public class NSFormatter
     
     @Mapping("init")
     public NSFormatter() { }
+
     
-    
-    
-    
+
+
     
     
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
     @Mapping("encodeWithCoder:")
     public native void encode(NSCoder aCoder);
-    
+
 }

@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 2.0 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UIEvent")
 public class UIEvent 
     extends NSObject 
@@ -33,7 +31,7 @@ public class UIEvent
     
     @Mapping("init")
     public UIEvent() { }
-    
+
     
     /**
      * @since Available in iOS 3.0 and later.
@@ -47,7 +45,7 @@ public class UIEvent
     public native @Representing("UIEventSubtype") long getSubtype();
     @Mapping("timestamp")
     public native double getTimestamp();
-    
+
     
     
     @Mapping("allTouches")
@@ -61,5 +59,5 @@ public class UIEvent
      */
     @Mapping("touchesForGestureRecognizer:")
     public native NSSet<UITouch> getTouches(UIGestureRecognizer gesture);
-    
+
 }

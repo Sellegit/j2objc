@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h") @Mapping("NSLocale")
 public class NSLocale 
     extends NSObject 
@@ -33,11 +30,11 @@ public class NSLocale
     public NSLocale(String string) { }
     @Mapping("init")
     public NSLocale() { }
-    
+
     
     @Mapping("localeIdentifier")
     public native String getLocaleIdentifier();
-    
+
     
     
     /**
@@ -45,7 +42,7 @@ public class NSLocale
      */
     @GlobalConstant("NSCurrentLocaleDidChangeNotification")
     public static native NSString CurrentLocaleDidChangeNotification();
-    
+
     @Mapping("objectForKey:")
     public native Object getComponent(Object key);
     @Mapping("displayNameForKey:value:")
@@ -107,5 +104,5 @@ public class NSLocale
     public static native @Representing("NSLocaleLanguageDirection") long getLineDirection(String isoLangCode);
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
-    
+
 }

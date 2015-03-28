@@ -14,9 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
-
-
 @Library("CoreText/CoreText.h")
 @Mapping("CTCharacterCollection")
 public final class CTCharacterCollection extends ObjCEnum {
@@ -45,6 +42,6 @@ public final class CTCharacterCollection extends ObjCEnum {
     public static final long AdobeJapan2CharacterCollection = 4L;
     @GlobalConstant("kCTAdobeKorea1CharacterCollection")
     public static final long AdobeKorea1CharacterCollection = 5L;
-    
+
 
 }

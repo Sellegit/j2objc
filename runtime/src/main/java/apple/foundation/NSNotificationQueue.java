@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h") @Mapping("NSNotificationQueue")
 public class NSNotificationQueue 
     extends NSObject 
@@ -33,10 +30,10 @@ public class NSNotificationQueue
     public NSNotificationQueue(NSNotificationCenter notificationCenter) { }
     @Mapping("init")
     public NSNotificationQueue() { }
+
     
-    
-    
-    
+
+
     
     
     @Mapping("enqueueNotification:postingStyle:")
@@ -47,5 +44,5 @@ public class NSNotificationQueue
     public native void dequeueNotificationsMatching(NSNotification notification, @MachineSizedUInt long coalesceMask);
     @Mapping("defaultQueue")
     public static native NSNotificationQueue getDefaultQueue();
-    
+
 }

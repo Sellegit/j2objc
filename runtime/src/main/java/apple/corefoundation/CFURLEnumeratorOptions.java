@@ -15,9 +15,6 @@ import apple.dispatch.*;
 import apple.foundation.*;
 
 
-
-
-
 @Library("CoreFoundation/CoreFoundation.h")
 @Mapping("CFURLEnumeratorOptions")
 public final class CFURLEnumeratorOptions extends ObjCEnum {
@@ -36,6 +33,6 @@ public final class CFURLEnumeratorOptions extends ObjCEnum {
     public static final long IncludeDirectoriesPreOrder = 16L;
     @GlobalConstant("kCFURLEnumeratorIncludeDirectoriesPostOrder")
     public static final long IncludeDirectoriesPostOrder = 32L;
-    
+
 
 }

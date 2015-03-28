@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("HealthKit/HealthKit.h")
 @Mapping("HKBodyTemperatureSensorLocation")
 public final class HKBodyTemperatureSensorLocation extends ObjCEnum {
@@ -47,6 +45,6 @@ public final class HKBodyTemperatureSensorLocation extends ObjCEnum {
     public static final long TemporalArtery = 10L;
     @GlobalConstant("HKBodyTemperatureSensorLocationForehead")
     public static final long Forehead = 11L;
-    
+
 
 }

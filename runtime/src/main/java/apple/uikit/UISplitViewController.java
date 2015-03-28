@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 3.2 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UISplitViewController")
 public class UISplitViewController 
     extends UIViewController 
@@ -37,7 +35,7 @@ public class UISplitViewController
     public UISplitViewController(NSCoder aDecoder) { }
     @Mapping("init")
     public UISplitViewController() { }
-    
+
     
     @Mapping("viewControllers")
     public native NSArray<UIViewController> getViewControllers();
@@ -112,7 +110,7 @@ public class UISplitViewController
      */
     @Mapping("primaryColumnWidth")
     public native @MachineSizedFloat double getPrimaryColumnWidth();
-    
+
     
     
     /**
@@ -120,7 +118,7 @@ public class UISplitViewController
      */
     @GlobalConstant("UISplitViewControllerAutomaticDimension")
     public static native @MachineSizedFloat double getAutomaticDimension();
-    
+
     /**
      * @since Available in iOS 8.0 and later.
      */
@@ -136,5 +134,5 @@ public class UISplitViewController
      */
     @Mapping("showDetailViewController:sender:")
     public native void showDetailViewController(UIViewController vc, Object sender);
-    
+
 }

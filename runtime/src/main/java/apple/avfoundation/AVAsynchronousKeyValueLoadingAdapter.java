@@ -19,7 +19,6 @@ import apple.coremedia.*;
 import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -30,13 +29,13 @@ public abstract class AVAsynchronousKeyValueLoadingAdapter
     
     
     
-    
-    
+
+
     
     
     @NotImplemented("statusOfValueForKey:error:")
     public @Representing("AVKeyValueStatus") long getStatusOfValue(String key, Todo outError) { throw new UnsupportedOperationException(); }
     @NotImplemented("loadValuesAsynchronouslyForKeys:completionHandler:")
     public void loadValuesAsynchronously(NSArray<?> keys, @Block Runnable handler) { throw new UnsupportedOperationException(); }
-    
+
 }

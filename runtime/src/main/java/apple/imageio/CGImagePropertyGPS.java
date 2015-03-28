@@ -13,7 +13,6 @@ import apple.coregraphics.*;
 import apple.coreservices.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("ImageIO/ImageIO.h")
@@ -186,5 +185,5 @@ public class CGImagePropertyGPS
      */
     @GlobalConstant("kCGImagePropertyGPSHPositioningError")
     public static native CFString HPositioningErrorKey();
-    
+
 }

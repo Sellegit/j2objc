@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 6.0 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("NSParagraphStyle")
 public class NSParagraphStyle 
     extends NSObject 
@@ -33,7 +31,7 @@ public class NSParagraphStyle
     
     @Mapping("init")
     public NSParagraphStyle() { }
-    
+
     
     @Mapping("lineSpacing")
     public native @MachineSizedFloat double getLineSpacing();
@@ -71,7 +69,7 @@ public class NSParagraphStyle
      */
     @Mapping("defaultTabInterval")
     public native @MachineSizedFloat double getDefaultTabInterval();
-    
+
     
     
     @Mapping("defaultParagraphStyle")
@@ -82,5 +80,5 @@ public class NSParagraphStyle
     public native Object copyWithZone$(NSZone zone);
     @Mapping("encodeWithCoder:")
     public native void encode(NSCoder aCoder);
-    
+
 }

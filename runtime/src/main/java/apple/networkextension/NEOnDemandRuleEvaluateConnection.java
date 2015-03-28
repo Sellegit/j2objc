@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("NetworkExtension/NetworkExtension.h") @Mapping("NEOnDemandRuleEvaluateConnection")
 public class NEOnDemandRuleEvaluateConnection 
     extends NEOnDemandRule 
@@ -28,7 +26,7 @@ public class NEOnDemandRuleEvaluateConnection
     
     @Mapping("init")
     public NEOnDemandRuleEvaluateConnection() { }
-    
+
     
     /**
      * @since Available in iOS 8.0 and later.
@@ -40,9 +38,9 @@ public class NEOnDemandRuleEvaluateConnection
      */
     @Mapping("setConnectionRules:")
     public native void setConnectionRules(NSArray<NEEvaluateConnectionRule> v);
+
     
     
-    
-    
-    
+
+
 }

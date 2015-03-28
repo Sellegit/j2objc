@@ -17,9 +17,6 @@ import apple.coreaudio.*;
 import apple.coremedia.*;
 
 
-
-
-
 @Library("AudioToolbox/AudioToolbox.h")
 @Mapping("AudioSessionError")
 public final class AudioSessionError extends ObjCEnum {
@@ -46,6 +43,6 @@ public final class AudioSessionError extends ObjCEnum {
     public static final long ssionIncompatibleCategory = 560161140L;
     @GlobalConstant("kAudioSessionUnspecifiedError")
     public static final long ssionUnspecified = 2003329396L;
-    
+
 
 }

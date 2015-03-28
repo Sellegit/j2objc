@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h") @Mapping("NSUserDefaults")
 public class NSUserDefaults 
     extends NSObject 
@@ -30,16 +27,16 @@ public class NSUserDefaults
     
     
     public NSUserDefaults() {}
-    
+
     
     @Mapping("volatileDomainNames")
     public native List<String> getVolatileDomainNames();
-    
+
     
     
     @GlobalConstant("NSUserDefaultsDidChangeNotification")
     public static native NSString DidChangeNotification();
-    
+
     @Mapping("objectForKey:")
     public native Object get(String defaultName);
     @Mapping("setObject:forKey:")
@@ -119,5 +116,5 @@ public class NSUserDefaults
     public static native NSUserDefaults getStandardUserDefaults();
     @Mapping("resetStandardUserDefaults")
     public static native void resetStandardUserDefaults();
-    
+
 }

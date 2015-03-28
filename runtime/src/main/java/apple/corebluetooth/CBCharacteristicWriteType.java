@@ -15,9 +15,6 @@ import apple.foundation.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("CoreBluetooth/CoreBluetooth.h")
 @Mapping("CBCharacteristicWriteType")
 public final class CBCharacteristicWriteType extends ObjCEnum {
@@ -26,6 +23,6 @@ public final class CBCharacteristicWriteType extends ObjCEnum {
     public static final long Response = 0L;
     @GlobalConstant("CBCharacteristicWriteWithoutResponse")
     public static final long outResponse = 1L;
-    
+
 
 }

@@ -16,7 +16,6 @@ import apple.corelocation.*;
 import apple.uikit.*;
 import apple.avfoundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -27,11 +26,11 @@ public abstract class PHPhotoLibraryChangeObserverAdapter
     
     
     
-    
-    
+
+
     
     
     @NotImplemented("photoLibraryDidChange:")
     public void didChange(PHChange changeInstance) { throw new UnsupportedOperationException(); }
-    
+
 }

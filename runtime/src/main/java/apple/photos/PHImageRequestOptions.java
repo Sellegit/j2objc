@@ -17,11 +17,9 @@ import apple.uikit.*;
 import apple.avfoundation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("Photos/Photos.h") @Mapping("PHImageRequestOptions")
 public class PHImageRequestOptions 
     extends NSObject 
@@ -31,7 +29,7 @@ public class PHImageRequestOptions
     
     @Mapping("init")
     public PHImageRequestOptions() { }
-    
+
     
     @Mapping("version")
     public native @Representing("PHImageRequestOptionsVersion") long getVersion();
@@ -61,10 +59,10 @@ public class PHImageRequestOptions
     public native @Block VoidBlock4<Double, NSError, Todo, NSDictionary<NSString, NSObject>> getProgressHandler();
     @Mapping("setProgressHandler:")
     public native void setProgressHandler(@Block VoidBlock4<Double, NSError, Todo, NSDictionary<NSString, NSObject>> v);
-    
+
     
     
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
-    
+
 }

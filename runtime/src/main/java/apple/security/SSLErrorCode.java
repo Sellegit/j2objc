@@ -13,7 +13,6 @@ import apple.coregraphics.*;
 import apple.coreservices.*;
 import apple.dispatch.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 
@@ -72,7 +71,7 @@ public class SSLErrorCode
     public static final int RecordOverflow = -9847;
     public static final int BadConfiguration = -9848;
     public static final int UnexpectedRecord = -9849;
-    
+
     
     
     

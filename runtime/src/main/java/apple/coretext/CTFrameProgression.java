@@ -14,9 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
-
-
 @Library("CoreText/CoreText.h")
 @Mapping("CTFrameProgression")
 public final class CTFrameProgression extends ObjCEnum {
@@ -27,6 +24,6 @@ public final class CTFrameProgression extends ObjCEnum {
     public static final long RightToLeft = 1L;
     @GlobalConstant("kCTFrameProgressionLeftToRight")
     public static final long LeftToRight = 2L;
-    
+
 
 }

@@ -20,17 +20,14 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
-
-
 @Library("AVFoundation/AVFoundation.h") @Mapping("AVAssetResourceLoaderDelegate")
 public interface AVAssetResourceLoaderDelegate 
     extends NSObjectProtocol {
 
     
     
-    
-    
+
+
     
     /**
      * @since Available in iOS 6.0 and later.
@@ -57,7 +54,7 @@ public interface AVAssetResourceLoaderDelegate
      */
     @Mapping("resourceLoader:didCancelAuthenticationChallenge:")
     void didCancelAuthenticationChallenge(AVAssetResourceLoader resourceLoader, NSURLAuthenticationChallenge authenticationChallenge);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

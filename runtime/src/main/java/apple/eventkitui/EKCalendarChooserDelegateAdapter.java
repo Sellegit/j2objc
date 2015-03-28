@@ -15,7 +15,6 @@ import apple.foundation.*;
 import apple.eventkit.*;
 import apple.uikit.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -26,8 +25,8 @@ public abstract class EKCalendarChooserDelegateAdapter
     
     
     
-    
-    
+
+
     
     
     @NotImplemented("calendarChooserSelectionDidChange:")
@@ -36,5 +35,5 @@ public abstract class EKCalendarChooserDelegateAdapter
     public void didFinish(EKCalendarChooser calendarChooser) { throw new UnsupportedOperationException(); }
     @NotImplemented("calendarChooserDidCancel:")
     public void didCancel(EKCalendarChooser calendarChooser) { throw new UnsupportedOperationException(); }
-    
+
 }

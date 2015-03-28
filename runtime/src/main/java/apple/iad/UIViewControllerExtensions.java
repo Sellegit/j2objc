@@ -17,7 +17,6 @@ import apple.addressbook.*;
 import apple.mediaplayer.*;
 import apple.avkit.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("iAd/iAd.h")
@@ -28,7 +27,7 @@ public final class UIViewControllerExtensions
     
     
     private UIViewControllerExtensions() {}
-    
+
     
     /**
      * @since Available in iOS 7.0 and later.
@@ -70,7 +69,7 @@ public final class UIViewControllerExtensions
      */
     @ExtensionMapping("shouldPresentInterstitialAd")
     public static native boolean shouldPresentInterstitialAd(UIViewController thiz);
-    
+
     
     
     /**
@@ -83,5 +82,5 @@ public final class UIViewControllerExtensions
      */
     @Mapping("prepareInterstitialAds")
     public static native void prepareInterstitialAds();
-    
+
 }

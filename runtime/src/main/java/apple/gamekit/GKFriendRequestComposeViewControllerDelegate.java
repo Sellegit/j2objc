@@ -15,24 +15,21 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
-
-
 @Library("GameKit/GameKit.h") @Mapping("GKFriendRequestComposeViewControllerDelegate")
 public interface GKFriendRequestComposeViewControllerDelegate 
      {
 
     
     
-    
-    
+
+
     
     /**
      * @since Available in iOS 4.2 and later.
      */
     @Mapping("friendRequestComposeViewControllerDidFinish:")
     void didFinish(GKFriendRequestComposeViewController viewController);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

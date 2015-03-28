@@ -15,11 +15,9 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
 /**
  * @since Available in iOS 3.0 and later.
  */
-
 @Library("MediaPlayer/MediaPlayer.h") @Mapping("MPMediaItem")
 public class MPMediaItem 
     extends MPMediaEntity 
@@ -29,7 +27,7 @@ public class MPMediaItem
     
     @Mapping("init")
     public MPMediaItem() { }
-    
+
     
     /**
      * @since Available in iOS 5.0 and later.
@@ -201,7 +199,7 @@ public class MPMediaItem
      */
     @Mapping("bookmarkTime")
     public native double getBookmarkTime();
-    
+
     
     
     /**
@@ -214,5 +212,5 @@ public class MPMediaItem
      */
     @Mapping("titlePropertyForGroupingType:")
     public static native MPMediaEntityProperty getTitleProperty(@Representing("MPMediaGrouping") long groupingType);
-    
+
 }

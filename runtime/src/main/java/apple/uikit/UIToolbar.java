@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 2.0 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UIToolbar")
 public class UIToolbar 
     extends UIView 
@@ -37,7 +35,7 @@ public class UIToolbar
     public UIToolbar(NSCoder aDecoder) { }
     @Mapping("init")
     public UIToolbar() { }
-    
+
     
     @Mapping("barStyle")
     public native @Representing("UIBarStyle") long getBarStyle();
@@ -83,7 +81,7 @@ public class UIToolbar
     public native void setDelegate(UIToolbarDelegate v);
     @Mapping("barPosition")
     public native @Representing("UIBarPosition") long getBarPosition();
-    
+
     
     
     @Mapping("setItems:animated:")
@@ -108,5 +106,5 @@ public class UIToolbar
      */
     @Mapping("shadowImageForToolbarPosition:")
     public native UIImage getShadowImage(@Representing("UIBarPosition") long topOrBottom);
-    
+
 }

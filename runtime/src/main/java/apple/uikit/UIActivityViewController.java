@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 6.0 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UIActivityViewController")
 public class UIActivityViewController 
     extends UIViewController 
@@ -39,7 +37,7 @@ public class UIActivityViewController
     public UIActivityViewController(NSCoder aDecoder) { }
     @Mapping("init")
     public UIActivityViewController() { }
-    
+
     
     /**
      * @since Available in iOS 6.0 and later.
@@ -69,9 +67,9 @@ public class UIActivityViewController
     public native List<String> getExcludedActivityTypes();
     @Mapping("setExcludedActivityTypes:")
     public native void setExcludedActivityTypes(List<String> v);
+
     
     
-    
-    
-    
+
+
 }

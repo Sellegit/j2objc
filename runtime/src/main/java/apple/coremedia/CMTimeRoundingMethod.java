@@ -18,9 +18,6 @@ import apple.coreanimation.*;
 import apple.corevideo.*;
 
 
-
-
-
 @Library("CoreMedia/CoreMedia.h")
 @Mapping("CMTimeRoundingMethod")
 public final class CMTimeRoundingMethod extends ObjCEnum {
@@ -39,6 +36,6 @@ public final class CMTimeRoundingMethod extends ObjCEnum {
     public static final long RoundTowardNegativeInfinity = 6L;
     @GlobalConstant("kCMTimeRoundingMethod_Default")
     public static final long Default = 1L;
-    
+
 
 }

@@ -20,9 +20,6 @@ import apple.spritekit.*;
 import apple.opengles.*;
 
 
-
-
-
 @Library("SceneKit/SceneKit.h") @Mapping("SCNCone")
 public class SCNCone 
     extends SCNGeometry 
@@ -32,7 +29,7 @@ public class SCNCone
     
     @Mapping("init")
     public SCNCone() { }
-    
+
     
     @Mapping("topRadius")
     public native @MachineSizedFloat double getTopRadius();
@@ -54,10 +51,10 @@ public class SCNCone
     public native @MachineSizedSInt long getHeightSegmentCount();
     @Mapping("setHeightSegmentCount:")
     public native void setHeightSegmentCount(@MachineSizedSInt long v);
-    
+
     
     
     @Mapping("coneWithTopRadius:bottomRadius:height:")
     public static native SCNCone create(@MachineSizedFloat double topRadius, @MachineSizedFloat double bottomRadius, @MachineSizedFloat double height);
-    
+
 }

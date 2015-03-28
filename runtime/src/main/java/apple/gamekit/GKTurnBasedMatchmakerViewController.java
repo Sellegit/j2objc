@@ -15,11 +15,9 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
 /**
  * @since Available in iOS 5.0 and later.
  */
-
 @Library("GameKit/GameKit.h") @Mapping("GKTurnBasedMatchmakerViewController")
 public class GKTurnBasedMatchmakerViewController 
     extends UINavigationController 
@@ -35,7 +33,7 @@ public class GKTurnBasedMatchmakerViewController
     public GKTurnBasedMatchmakerViewController() { }
     @Mapping("initWithMatchRequest:")
     public GKTurnBasedMatchmakerViewController(GKMatchRequest request) { }
-    
+
     
     @Mapping("turnBasedMatchmakerDelegate")
     public native GKTurnBasedMatchmakerViewControllerDelegate getTurnBasedMatchmakerDelegate();
@@ -45,9 +43,9 @@ public class GKTurnBasedMatchmakerViewController
     public native boolean showsExistingMatches();
     @Mapping("setShowExistingMatches:")
     public native void setShowsExistingMatches(boolean v);
+
     
     
-    
-    
-    
+
+
 }

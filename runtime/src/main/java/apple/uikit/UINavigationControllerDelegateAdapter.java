@@ -18,7 +18,6 @@ import apple.coreimage.*;
 import apple.coretext.*;
 import apple.corelocation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -29,8 +28,8 @@ public abstract class UINavigationControllerDelegateAdapter
     
     
     
-    
-    
+
+
     
     
     @NotImplemented("navigationController:willShowViewController:animated:")
@@ -57,5 +56,5 @@ public abstract class UINavigationControllerDelegateAdapter
      */
     @NotImplemented("navigationController:animationControllerForOperation:fromViewController:toViewController:")
     public UIViewControllerAnimatedTransitioning getAnimationController(UINavigationController navigationController, @Representing("UINavigationControllerOperation") long operation, UIViewController fromVC, UIViewController toVC) { throw new UnsupportedOperationException(); }
-    
+
 }

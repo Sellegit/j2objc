@@ -16,11 +16,9 @@ import apple.uikit.*;
 import apple.accounts.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("Social/Social.h") @Mapping("SLComposeServiceViewController")
 public class SLComposeServiceViewController 
     extends UIViewController 
@@ -32,7 +30,7 @@ public class SLComposeServiceViewController
     public SLComposeServiceViewController(String nibNameOrNil, NSBundle nibBundleOrNil) { }
     @Mapping("init")
     public SLComposeServiceViewController() { }
-    
+
     
     @Mapping("textView")
     public native UITextView getTextView();
@@ -50,7 +48,7 @@ public class SLComposeServiceViewController
     public native UIViewController getAutoCompletionViewController();
     @Mapping("setAutoCompletionViewController:")
     public native void setAutoCompletionViewController(UIViewController v);
-    
+
     
     
     @Mapping("presentationAnimationDidFinish")
@@ -134,5 +132,5 @@ public class SLComposeServiceViewController
     public native boolean shouldScrollToTop(UIScrollView scrollView);
     @Mapping("scrollViewDidScrollToTop:")
     public native void didScrollToTop(UIScrollView scrollView);
-    
+
 }

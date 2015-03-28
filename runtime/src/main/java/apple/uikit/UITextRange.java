@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 3.2 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UITextRange")
 public class UITextRange 
     extends NSObject 
@@ -33,7 +31,7 @@ public class UITextRange
     
     @Mapping("init")
     public UITextRange() { }
-    
+
     
     @Mapping("isEmpty")
     public native boolean isEmpty();
@@ -41,9 +39,9 @@ public class UITextRange
     public native UITextPosition getStart();
     @Mapping("end")
     public native UITextPosition getEnd();
+
     
     
-    
-    
-    
+
+
 }

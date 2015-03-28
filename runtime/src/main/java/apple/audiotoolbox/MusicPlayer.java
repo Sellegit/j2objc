@@ -16,7 +16,6 @@ import apple.opengles.*;
 import apple.coreaudio.*;
 import apple.coremedia.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("AudioToolbox/AudioToolbox.h")
@@ -99,5 +98,5 @@ public class MusicPlayer
      */
     @GlobalFunction("MusicPlayerGetPlayRateScalar")
     public static native int getPlayRateScalar(OpaqueMusicPlayer inPlayer, Todo outScaleRate);
-    
+
 }

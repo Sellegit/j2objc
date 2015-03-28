@@ -16,7 +16,6 @@ import apple.opengles.*;
 import apple.corevideo.*;
 import apple.imageio.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("CoreImage/CoreImage.h")
@@ -44,5 +43,5 @@ public class CIDetectorType
      */
     @GlobalConstant("CIDetectorTypeQRCode")
     public static native NSString QRCodeValue();
-    
+
 }

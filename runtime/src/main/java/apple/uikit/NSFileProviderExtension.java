@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("NSFileProviderExtension")
 public class NSFileProviderExtension 
     extends NSObject 
@@ -33,10 +31,10 @@ public class NSFileProviderExtension
     
     @Mapping("init")
     public NSFileProviderExtension() { }
+
     
-    
-    
-    
+
+
     
     
     @Mapping("providerIdentifier")
@@ -59,5 +57,5 @@ public class NSFileProviderExtension
     public static native boolean writePlaceholder(NSURL placeholderURL, NSDictionary<?, ?> metadata, Todo error);
     @Mapping("placeholderURLForURL:")
     public static native NSURL getPlaceholderURL(NSURL url);
-    
+
 }

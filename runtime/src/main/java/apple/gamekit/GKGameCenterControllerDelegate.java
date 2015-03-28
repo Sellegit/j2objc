@@ -15,24 +15,21 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
-
-
 @Library("GameKit/GameKit.h") @Mapping("GKGameCenterControllerDelegate")
 public interface GKGameCenterControllerDelegate 
     extends NSObjectProtocol {
 
     
     
-    
-    
+
+
     
     /**
      * @since Available in iOS 6.0 and later.
      */
     @Mapping("gameCenterViewControllerDidFinish:")
     void didFinish(GKGameCenterViewController gameCenterViewController);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

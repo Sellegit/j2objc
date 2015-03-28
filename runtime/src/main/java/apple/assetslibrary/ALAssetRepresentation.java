@@ -15,11 +15,9 @@ import apple.foundation.*;
 import apple.imageio.*;
 
 
-
 /**
  * @since Available in iOS 4.0 and later.
  */
-
 @Library("AssetsLibrary/AssetsLibrary.h") @Mapping("ALAssetRepresentation")
 public class ALAssetRepresentation 
     extends NSObject 
@@ -29,10 +27,10 @@ public class ALAssetRepresentation
     
     @Mapping("init")
     public ALAssetRepresentation() { }
+
     
-    
-    
-    
+
+
     
     
     @Mapping("UTI")
@@ -62,5 +60,5 @@ public class ALAssetRepresentation
      */
     @Mapping("filename")
     public native String getFilename();
-    
+
 }

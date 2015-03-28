@@ -15,11 +15,9 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
 /**
  * @since Available in iOS 5.0 and later.
  */
-
 @Library("GameKit/GameKit.h") @Mapping("GKNotificationBanner")
 public class GKNotificationBanner 
     extends NSObject 
@@ -29,10 +27,10 @@ public class GKNotificationBanner
     
     @Mapping("init")
     public GKNotificationBanner() { }
+
     
-    
-    
-    
+
+
     
     
     /**
@@ -45,5 +43,5 @@ public class GKNotificationBanner
      */
     @Mapping("showBannerWithTitle:message:duration:completionHandler:")
     public static native void showBanner(String title, String message, double duration, @Block Runnable completionHandler);
-    
+
 }

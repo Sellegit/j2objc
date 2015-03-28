@@ -14,9 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
-
-
 @Library("GameController/GameController.h") @Mapping("GCControllerAxisInput")
 public class GCControllerAxisInput 
     extends GCControllerElement 
@@ -26,7 +23,7 @@ public class GCControllerAxisInput
     
     @Mapping("init")
     public GCControllerAxisInput() { }
-    
+
     
     @Mapping("valueChangedHandler")
     public native @Block VoidBlock2<GCControllerAxisInput, Float> getValueChangedHandler();
@@ -34,9 +31,9 @@ public class GCControllerAxisInput
     public native void setValueChangedHandler(@Block VoidBlock2<GCControllerAxisInput, Float> v);
     @Mapping("value")
     public native float getValue();
+
     
     
-    
-    
-    
+
+
 }

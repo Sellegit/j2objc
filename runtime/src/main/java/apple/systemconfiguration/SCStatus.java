@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 import apple.dispatch.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("SystemConfiguration/SystemConfiguration.h")
@@ -42,5 +41,5 @@ public class SCStatus
      */
     @GlobalFunction("SCErrorString")
     public static native Todo getStatusDescription0(int status);
-    
+
 }

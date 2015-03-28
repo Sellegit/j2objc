@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 7.0 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UISnapBehavior")
 public class UISnapBehavior 
     extends UIDynamicBehavior 
@@ -35,15 +33,15 @@ public class UISnapBehavior
     public UISnapBehavior(UIDynamicItem item, CGPoint point) { }
     @Mapping("init")
     public UISnapBehavior() { }
-    
+
     
     @Mapping("damping")
     public native @MachineSizedFloat double getDamping();
     @Mapping("setDamping:")
     public native void setDamping(@MachineSizedFloat double v);
+
     
     
-    
-    
-    
+
+
 }

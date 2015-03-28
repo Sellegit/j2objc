@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 import apple.uikit.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("MediaPlayer/MediaPlayer.h")
@@ -42,5 +41,5 @@ public class MPMoviePlayerThumbnailRequest
      */
     @GlobalConstant("MPMoviePlayerThumbnailErrorKey")
     public static native NSString ErrorKey();
-    
+
 }

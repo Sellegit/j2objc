@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 3.0 and later.
  */
-
 @Library("CoreData/CoreData.h") @Mapping("NSEntityDescription")
 public class NSEntityDescription 
     extends NSObject 
@@ -28,7 +26,7 @@ public class NSEntityDescription
     
     @Mapping("init")
     public NSEntityDescription() { }
-    
+
     
     @Mapping("managedObjectModel")
     public native NSManagedObjectModel getManagedObjectModel();
@@ -101,7 +99,7 @@ public class NSEntityDescription
      */
     @Mapping("setCompoundIndexes:")
     public native void setCompoundIndexes(NSArray<?> v);
-    
+
     
     
     @Mapping("relationshipsWithDestinationEntity:")
@@ -119,5 +117,5 @@ public class NSEntityDescription
     public native void encode(NSCoder aCoder);
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
-    
+
 }

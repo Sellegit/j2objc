@@ -15,11 +15,9 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
 /**
  * @since Available in iOS 7.1 and later.
  */
-
 @Library("MediaPlayer/MediaPlayer.h") @Mapping("MPRatingCommandEvent")
 public class MPRatingCommandEvent 
     extends MPRemoteCommandEvent 
@@ -29,13 +27,13 @@ public class MPRatingCommandEvent
     
     @Mapping("init")
     public MPRatingCommandEvent() { }
-    
+
     
     @Mapping("rating")
     public native float getRating();
+
     
     
-    
-    
-    
+
+
 }

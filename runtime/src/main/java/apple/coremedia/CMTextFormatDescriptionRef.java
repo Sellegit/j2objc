@@ -17,7 +17,6 @@ import apple.coreaudio.*;
 import apple.coreanimation.*;
 import apple.corevideo.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Mapping("CMTextFormatDescriptionRef")
@@ -28,7 +27,7 @@ public class CMTextFormatDescriptionRef
     
     
     protected CMTextFormatDescriptionRef() {}
-    
+
     
     
     

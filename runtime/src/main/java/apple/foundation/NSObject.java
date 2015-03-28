@@ -19,11 +19,9 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 2.0 and later.
  */
-
 @Library("Foundation/Foundation.h") @Mapping("NSObject")
 public class NSObject 
     extends Object 
@@ -33,7 +31,7 @@ public class NSObject
     
     @Mapping("init")
     public NSObject() { }
-    
+
     
     /**
      * @since Available in iOS 4.0 and later.
@@ -44,7 +42,7 @@ public class NSObject
     public native Todo getObservationInfo();
     @Mapping("setObservationInfo:")
     public native void setObservationInfo(Todo v);
-    
+
     
     
     @Mapping("copy")
@@ -93,5 +91,5 @@ public class NSObject
      */
     @Mapping("performSelectorInBackground:withObject:")
     public final native void performSelectorInBackground(Selector aSelector, Object arg);
-    
+
 }

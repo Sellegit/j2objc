@@ -14,9 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
-
-
 @Mapping("CTError") @Library("CoreTelephony/CTCall.h")
 public class CTError 
     extends Struct 
@@ -30,6 +27,6 @@ public class CTError
     public native CTErrorDomain getDomain();
     @DotMapping("error")
     public native int getErrorCode();
-    
+
     
 }

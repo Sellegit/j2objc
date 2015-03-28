@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 4.1 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h") @Mapping("AVAssetReaderAudioMixOutput")
 public class AVAssetReaderAudioMixOutput 
     extends AVAssetReaderOutput 
@@ -36,7 +34,7 @@ public class AVAssetReaderAudioMixOutput
     public AVAssetReaderAudioMixOutput(NSArray<?> audioTracks, NSDictionary<?, ?> audioSettings) { }
     @Mapping("init")
     public AVAssetReaderAudioMixOutput() { }
-    
+
     
     @Mapping("audioTracks")
     public native NSArray<AVAssetTrack> getAudioTracks();
@@ -56,10 +54,10 @@ public class AVAssetReaderAudioMixOutput
      */
     @Mapping("setAudioTimePitchAlgorithm:")
     public native void setAudioTimePitchAlgorithm(AVAudioTimePitchAlgorithm v);
-    
+
     
     
     @Mapping("assetReaderAudioMixOutputWithAudioTracks:audioSettings:")
     public static native AVAssetReaderAudioMixOutput create(NSArray<?> audioTracks, NSDictionary<?, ?> audioSettings);
-    
+
 }

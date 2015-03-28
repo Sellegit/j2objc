@@ -18,9 +18,6 @@ import apple.coreanimation.*;
 import apple.corevideo.*;
 
 
-
-
-
 @Mapping("CMBufferCallbacksStruct") @Library("CoreMedia/CoreMedia.h")
  class CMBufferCallbacksStruct 
     extends Struct 
@@ -34,6 +31,6 @@ import apple.corevideo.*;
     public native int getVersion();
     @DotMapping("dataBecameReadyNotification")
     public native CFString getDataBecameReadyNotification();
-    
+
     
 }

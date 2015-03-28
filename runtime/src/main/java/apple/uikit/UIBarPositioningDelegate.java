@@ -19,21 +19,18 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h") @Mapping("UIBarPositioningDelegate")
 public interface UIBarPositioningDelegate 
     extends NSObjectProtocol {
 
     
     
-    
-    
+
+
     
     @Mapping("positionForBar:")
     @Representing("UIBarPosition") long getPosition(UIBarPositioning bar);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

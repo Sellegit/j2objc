@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 3.0 and later.
  */
-
 @Library("CoreData/CoreData.h") @Mapping("NSFetchRequest")
 public class NSFetchRequest 
     extends NSPersistentStoreRequest 
@@ -33,7 +31,7 @@ public class NSFetchRequest
     public NSFetchRequest(String entityName) { }
     @Mapping("init")
     public NSFetchRequest() { }
-    
+
     
     @Mapping("entity")
     public native NSEntityDescription getEntity();
@@ -190,7 +188,7 @@ public class NSFetchRequest
      */
     @Mapping("setHavingPredicate:")
     public native void setHavingPredicate(NSPredicate v);
-    
+
     
     
     /**
@@ -200,5 +198,5 @@ public class NSFetchRequest
     public static native NSFetchRequest create(String entityName);
     @Mapping("encodeWithCoder:")
     public native void encode(NSCoder aCoder);
-    
+
 }

@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.dispatch.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Mapping("CFNullRef") @Library("CoreFoundation/CoreFoundation.h")
@@ -25,14 +24,14 @@ public class CFNull
     
     
     protected CFNull() {}
-    
+
     
     
     
     @GlobalConstant("kCFNull")
     public static native CFNull getNull();
-    
+
     @GlobalFunction("CFNullGetTypeID")
     public static native @MachineSizedUInt long getClassTypeID();
-    
+
 }

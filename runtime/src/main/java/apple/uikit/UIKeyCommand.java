@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 7.0 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UIKeyCommand")
 public class UIKeyCommand 
     extends NSObject 
@@ -33,13 +31,13 @@ public class UIKeyCommand
     
     @Mapping("init")
     public UIKeyCommand() { }
-    
+
     
     @Mapping("input")
     public native String getInput();
     @Mapping("modifierFlags")
     public native @Representing("UIKeyModifierFlags") long getModifierFlags();
-    
+
     
     
     /**
@@ -67,10 +65,10 @@ public class UIKeyCommand
      */
     @GlobalConstant("UIKeyInputEscape")
     public static native String Escape();
-    
+
     @Mapping("keyCommandWithInput:modifierFlags:action:")
     public static native UIKeyCommand create(String input, @Representing("UIKeyModifierFlags") long modifierFlags, Selector action);
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
-    
+
 }

@@ -19,9 +19,6 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h")
 @Mapping("UICollectionViewScrollPosition")
 public final class UICollectionViewScrollPosition extends ObjCEnum {
@@ -40,6 +37,6 @@ public final class UICollectionViewScrollPosition extends ObjCEnum {
     public static final long CenteredHorizontally = 16L;
     @GlobalConstant("UICollectionViewScrollPositionRight")
     public static final long Right = 32L;
-    
+
 
 }

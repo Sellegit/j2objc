@@ -18,7 +18,6 @@ import apple.coreimage.*;
 import apple.coretext.*;
 import apple.corelocation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("UIKit/UIKit.h")
@@ -29,7 +28,7 @@ public final class UIAccessibilityTraits
     
     
     protected UIAccessibilityTraits() {}
-    
+
     
     
     
@@ -82,5 +81,5 @@ public final class UIAccessibilityTraits
      */
     @GlobalConstant("UIAccessibilityTraitCausesPageTurn")
     public static native long CausesPageTurnValue();
-    
+
 }

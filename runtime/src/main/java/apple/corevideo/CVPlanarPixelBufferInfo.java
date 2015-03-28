@@ -16,9 +16,6 @@ import apple.opengles.*;
 import apple.coremedia.*;
 
 
-
-
-
 @Mapping("CVPlanarPixelBufferInfo") @Library("CoreVideo/CoreVideo.h")
 public class CVPlanarPixelBufferInfo 
     extends Struct 
@@ -30,6 +27,6 @@ public class CVPlanarPixelBufferInfo
     
     @DotMapping("componentInfo")
     public native CVPlanarComponentInfo getComponentInfo();
-    
+
     
 }

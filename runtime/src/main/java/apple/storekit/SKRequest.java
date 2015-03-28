@@ -16,11 +16,9 @@ import apple.uikit.*;
 import apple.accounts.*;
 
 
-
 /**
  * @since Available in iOS 3.0 and later.
  */
-
 @Library("StoreKit/StoreKit.h") @Mapping("SKRequest")
 public class SKRequest 
     extends NSObject 
@@ -30,7 +28,7 @@ public class SKRequest
     
     @Mapping("init")
     public SKRequest() { }
-    
+
     
     /**
      * @since Available in iOS 3.0 and later.
@@ -42,7 +40,7 @@ public class SKRequest
      */
     @Mapping("setDelegate:")
     public native void setDelegate(SKRequestDelegate v);
-    
+
     
     
     /**
@@ -55,5 +53,5 @@ public class SKRequest
      */
     @Mapping("start")
     public native void start();
-    
+
 }

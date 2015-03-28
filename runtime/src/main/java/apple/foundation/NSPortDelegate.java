@@ -19,21 +19,18 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h") @Mapping("NSPortDelegate")
 public interface NSPortDelegate 
     extends NSObjectProtocol {
 
     
     
-    
-    
+
+
     
     @Mapping("handlePortMessage:")
     void handlePortMessage(NSPortMessage message);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

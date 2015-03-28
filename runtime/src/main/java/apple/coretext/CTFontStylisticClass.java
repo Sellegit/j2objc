@@ -14,9 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
-
-
 @Library("CoreText/CoreText.h")
 @Mapping("CTFontStylisticClass")
 public final class CTFontStylisticClass extends ObjCEnum {
@@ -65,6 +62,6 @@ public final class CTFontStylisticClass extends ObjCEnum {
     public static final long ScriptsClass = -1610612736L;
     @GlobalConstant("kCTFontSymbolicClass")
     public static final long SymbolicClass = -1073741824L;
-    
+
 
 }

@@ -17,9 +17,6 @@ import apple.coreaudio.*;
 import apple.coremedia.*;
 
 
-
-
-
 @Library("AudioToolbox/AudioToolbox.h")
 @Mapping("AudioPanningMode")
 public final class AudioPanningMode extends ObjCEnum {
@@ -28,6 +25,6 @@ public final class AudioPanningMode extends ObjCEnum {
     public static final long SoundField = 3L;
     @GlobalConstant("kPanningMode_VectorBasedPanning")
     public static final long VectorBasedPanning = 4L;
-    
+
 
 }

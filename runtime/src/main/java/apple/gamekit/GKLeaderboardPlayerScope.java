@@ -15,9 +15,6 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
-
-
 @Library("GameKit/GameKit.h")
 @Mapping("GKLeaderboardPlayerScope")
 public final class GKLeaderboardPlayerScope extends ObjCEnum {
@@ -26,6 +23,6 @@ public final class GKLeaderboardPlayerScope extends ObjCEnum {
     public static final long Global = 0L;
     @GlobalConstant("GKLeaderboardPlayerScopeFriendsOnly")
     public static final long FriendsOnly = 1L;
-    
+
 
 }

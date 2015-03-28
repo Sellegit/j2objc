@@ -13,7 +13,6 @@ import apple.coregraphics.*;
 import apple.coreservices.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -24,8 +23,8 @@ public abstract class NSFetchedResultsControllerDelegateAdapter
     
     
     
-    
-    
+
+
     
     
     @NotImplemented("controller:didChangeObject:atIndexPath:forChangeType:newIndexPath:")
@@ -41,5 +40,5 @@ public abstract class NSFetchedResultsControllerDelegateAdapter
      */
     @NotImplemented("controller:sectionIndexTitleForSectionName:")
     public String getSectionIndexTitle(NSFetchedResultsController controller, String sectionName) { throw new UnsupportedOperationException(); }
-    
+
 }

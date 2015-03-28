@@ -18,7 +18,6 @@ import apple.coreimage.*;
 import apple.coretext.*;
 import apple.corelocation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("UIKit/UIKit.h")
@@ -41,5 +40,5 @@ public class UITransitionContextViewType
      */
     @GlobalConstant("UITransitionContextToViewKey")
     public static native NSString ToViewKey();
-    
+
 }

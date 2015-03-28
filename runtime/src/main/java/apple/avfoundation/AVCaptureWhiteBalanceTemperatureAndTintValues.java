@@ -20,9 +20,6 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
-
-
 @Mapping("AVCaptureWhiteBalanceTemperatureAndTintValues") @Library("AVFoundation/AVFoundation.h")
 public class AVCaptureWhiteBalanceTemperatureAndTintValues 
     extends Struct 
@@ -36,7 +33,7 @@ public class AVCaptureWhiteBalanceTemperatureAndTintValues
     public native float getTemperature();
     @DotMapping("tint")
     public native float getTint();
-    
+
     public static native AVCaptureWhiteBalanceTemperatureAndTintValues create(float temperature, float tint) /*-[
         AVCaptureWhiteBalanceTemperatureAndTintValues __new = { .temperature = temperature, .tint = tint };
         return __new;
@@ -46,11 +43,27 @@ public class AVCaptureWhiteBalanceTemperatureAndTintValues
         return __new;
     ]-*/;
 
-    
+
     public static native AVCaptureWhiteBalanceTemperatureAndTintValues copyWithtint(AVCaptureWhiteBalanceTemperatureAndTintValues original, float tint) /*-[
         AVCaptureWhiteBalanceTemperatureAndTintValues __new = { .temperature = original.temperature, .tint = tint };
         return __new;
     ]-*/;
 
-    
+
+    public static final class Adapter {
+
+        public float temperature;
+        public float tint;
+        public Adapter(float temperature, float tint) {
+            this.temperature = temperature;
+            this.tint = tint;
+        }
+        public Adapter(AVCaptureWhiteBalanceTemperatureAndTintValues original) {
+            this.temperature = original.getTemperature();
+            this.tint = original.getTint();
+        }
+        public AVCaptureWhiteBalanceTemperatureAndTintValues convert() {
+            return create(temperature, tint);
+        }
+    }
 }

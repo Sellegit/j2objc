@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 3.0 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UILocalizedIndexedCollation")
 public class UILocalizedIndexedCollation 
     extends NSObject 
@@ -33,13 +31,13 @@ public class UILocalizedIndexedCollation
     
     @Mapping("init")
     public UILocalizedIndexedCollation() { }
-    
+
     
     @Mapping("sectionTitles")
     public native List<String> getSectionTitles();
     @Mapping("sectionIndexTitles")
     public native List<String> getSectionIndexTitles();
-    
+
     
     
     @Mapping("sectionForSectionIndexTitleAtIndex:")
@@ -50,5 +48,5 @@ public class UILocalizedIndexedCollation
     public native NSArray<?> sortArray(NSArray<?> array, Selector selector);
     @Mapping("currentCollation")
     public static native UILocalizedIndexedCollation getCurrentCollation();
-    
+
 }

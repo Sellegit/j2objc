@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 import apple.uikit.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("MessageUI/MessageUI.h")
@@ -31,5 +30,5 @@ public class MFMessageComposeViewControllerAttachment
     public static native NSString URLKey();
     @GlobalConstant("MFMessageComposeViewControllerAttachmentAlternateFilename")
     public static native NSString AlternateFilenameKey();
-    
+
 }

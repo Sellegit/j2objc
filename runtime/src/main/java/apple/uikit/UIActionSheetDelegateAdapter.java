@@ -18,7 +18,6 @@ import apple.coreimage.*;
 import apple.coretext.*;
 import apple.corelocation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -29,8 +28,8 @@ public abstract class UIActionSheetDelegateAdapter
     
     
     
-    
-    
+
+
     
     
     @NotImplemented("actionSheet:clickedButtonAtIndex:")
@@ -45,5 +44,5 @@ public abstract class UIActionSheetDelegateAdapter
     public void willDismiss(UIActionSheet actionSheet, @MachineSizedSInt long buttonIndex) { throw new UnsupportedOperationException(); }
     @NotImplemented("actionSheet:didDismissWithButtonIndex:")
     public void didDismiss(UIActionSheet actionSheet, @MachineSizedSInt long buttonIndex) { throw new UnsupportedOperationException(); }
-    
+
 }

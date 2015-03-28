@@ -19,17 +19,14 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h") @Mapping("NSURLProtocolClient")
 public interface NSURLProtocolClient 
     extends NSObjectProtocol {
 
     
     
-    
-    
+
+
     
     @Mapping("URLProtocol:wasRedirectedToRequest:redirectResponse:")
     void wasRedirectedToRequest(NSURLProtocol protocol, NSURLRequest request, NSURLResponse redirectResponse);
@@ -47,7 +44,7 @@ public interface NSURLProtocolClient
     void didReceiveAuthenticationChallenge(NSURLProtocol protocol, NSURLAuthenticationChallenge challenge);
     @Mapping("URLProtocol:didCancelAuthenticationChallenge:")
     void didCancelAuthenticationChallenge(NSURLProtocol protocol, NSURLAuthenticationChallenge challenge);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

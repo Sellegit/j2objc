@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h")
 @Mapping("NSAttributedStringEnumerationOptions")
 public final class NSAttributedStringEnumerationOptions extends ObjCEnum {
@@ -30,6 +27,6 @@ public final class NSAttributedStringEnumerationOptions extends ObjCEnum {
     public static final long Reverse = 2L;
     @GlobalConstant("NSAttributedStringEnumerationLongestEffectiveRangeNotRequired")
     public static final long LongestEffectiveRangeNotRequired = 1048576L;
-    
+
 
 }

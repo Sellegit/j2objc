@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h") @Mapping("NSURL")
 public class NSURL 
     extends NSObject 
@@ -37,7 +34,7 @@ public class NSURL
     public NSURL(String URLString, NSURL baseURL) { }
     @Mapping("init")
     public NSURL() { }
-    
+
     
     @Mapping("absoluteString")
     public native String getAbsoluteString();
@@ -113,7 +110,7 @@ public class NSURL
      */
     @Mapping("URLByResolvingSymlinksInPath")
     public native NSURL getURLByResolvingSymlinksInPath();
-    
+
     
     
     /**
@@ -228,5 +225,5 @@ public class NSURL
     public native NSURL newURLByAppendingPathExtension(String pathExtension);
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
-    
+
 }

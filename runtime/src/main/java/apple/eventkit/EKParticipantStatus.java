@@ -16,9 +16,6 @@ import apple.addressbook.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("EventKit/EventKit.h")
 @Mapping("EKParticipantStatus")
 public final class EKParticipantStatus extends ObjCEnum {
@@ -39,6 +36,6 @@ public final class EKParticipantStatus extends ObjCEnum {
     public static final long Completed = 6L;
     @GlobalConstant("EKParticipantStatusInProcess")
     public static final long InProcess = 7L;
-    
+
 
 }

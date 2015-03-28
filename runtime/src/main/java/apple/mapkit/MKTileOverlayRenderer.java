@@ -17,11 +17,9 @@ import apple.uikit.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 7.0 and later.
  */
-
 @Library("MapKit/MapKit.h") @Mapping("MKTileOverlayRenderer")
 public class MKTileOverlayRenderer 
     extends MKOverlayRenderer 
@@ -35,13 +33,13 @@ public class MKTileOverlayRenderer
     public MKTileOverlayRenderer(MKOverlay overlay) { }
     @Mapping("init")
     public MKTileOverlayRenderer() { }
+
     
-    
-    
-    
+
+
     
     
     @Mapping("reloadData")
     public native void reloadData();
-    
+
 }

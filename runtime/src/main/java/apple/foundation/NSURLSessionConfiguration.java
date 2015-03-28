@@ -19,11 +19,9 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 7.0 and later.
  */
-
 @Library("Foundation/Foundation.h") @Mapping("NSURLSessionConfiguration")
 public class NSURLSessionConfiguration 
     extends NSObject 
@@ -33,7 +31,7 @@ public class NSURLSessionConfiguration
     
     @Mapping("init")
     public NSURLSessionConfiguration() { }
-    
+
     
     @Mapping("identifier")
     public native String getIdentifier();
@@ -135,7 +133,7 @@ public class NSURLSessionConfiguration
     public native List<ObjCClass> getProtocolClasses();
     @Mapping("setProtocolClasses:")
     public native void setProtocolClasses(List<ObjCClass> v);
-    
+
     
     
     @Mapping("defaultSessionConfiguration")
@@ -156,5 +154,5 @@ public class NSURLSessionConfiguration
     public static native NSURLSessionConfiguration getBackgroundSessionConfiguration7(String identifier);
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
-    
+
 }

@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.dispatch.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Mapping("CFCalendarRef") @Library("CoreFoundation/CoreFoundation.h")
@@ -25,7 +24,7 @@ public class CFCalendar
     
     
     protected CFCalendar() {}
-    
+
     
     
     
@@ -66,5 +65,5 @@ public class CFCalendar
      */
     @GlobalFunction("CFCalendarGetTimeRangeOfUnit")
     public static native boolean getTimeRangeOfUnit(CFCalendar calendar, @Representing("CFCalendarUnit") long unit, double at, Todo startp, Todo tip);
-    
+
 }

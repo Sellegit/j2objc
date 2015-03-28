@@ -16,7 +16,6 @@ import apple.opengles.*;
 import apple.uikit.*;
 import apple.dispatch.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Mapping("GLKMatrixStackRef") @Library("GLKit/GLKit.h")
@@ -27,7 +26,7 @@ public class GLKMatrixStack
     
     
     protected GLKMatrixStack() {}
-    
+
     
     
     
@@ -85,5 +84,5 @@ public class GLKMatrixStack
     public static native void rotateY(GLKMatrixStack stack, float radians);
     @GlobalFunction("GLKMatrixStackRotateZ")
     public static native void rotateZ(GLKMatrixStack stack, float radians);
-    
+
 }

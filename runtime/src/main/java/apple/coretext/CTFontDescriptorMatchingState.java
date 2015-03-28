@@ -14,9 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
-
-
 @Library("CoreText/CoreText.h")
 @Mapping("CTFontDescriptorMatchingState")
 public final class CTFontDescriptorMatchingState extends ObjCEnum {
@@ -39,6 +36,6 @@ public final class CTFontDescriptorMatchingState extends ObjCEnum {
     public static final long DidMatch = 7L;
     @GlobalConstant("kCTFontDescriptorMatchingDidFailWithError")
     public static final long DidFailWithError = 8L;
-    
+
 
 }

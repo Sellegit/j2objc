@@ -17,11 +17,9 @@ import apple.uikit.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 5.0 and later.
  */
-
 @Library("GLKit/GLKit.h") @Mapping("GLKEffectPropertyMaterial")
 public class GLKEffectPropertyMaterial 
     extends GLKEffectProperty 
@@ -31,7 +29,7 @@ public class GLKEffectPropertyMaterial
     
     @Mapping("init")
     public GLKEffectPropertyMaterial() { }
-    
+
     
     @Mapping("ambientColor")
     public native GLKVector4 getAmbientColor();
@@ -53,9 +51,9 @@ public class GLKEffectPropertyMaterial
     public native float getShininess();
     @Mapping("setShininess:")
     public native void setShininess(float v);
+
     
     
-    
-    
-    
+
+
 }

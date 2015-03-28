@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 4.2 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UIPrintInfo")
 public class UIPrintInfo 
     extends NSObject 
@@ -33,7 +31,7 @@ public class UIPrintInfo
     
     @Mapping("init")
     public UIPrintInfo() { }
-    
+
     
     @Mapping("printerID")
     public native String getPrinterID();
@@ -55,7 +53,7 @@ public class UIPrintInfo
     public native @Representing("UIPrintInfoDuplex") long getDuplex();
     @Mapping("setDuplex:")
     public native void setDuplex(@Representing("UIPrintInfoDuplex") long v);
-    
+
     
     
     @Mapping("dictionaryRepresentation")
@@ -68,5 +66,5 @@ public class UIPrintInfo
     public native Object copyWithZone$(NSZone zone);
     @Mapping("encodeWithCoder:")
     public native void encode(NSCoder aCoder);
-    
+
 }

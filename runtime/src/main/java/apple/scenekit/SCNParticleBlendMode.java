@@ -20,9 +20,6 @@ import apple.spritekit.*;
 import apple.opengles.*;
 
 
-
-
-
 @Library("SceneKit/SceneKit.h")
 @Mapping("SCNParticleBlendMode")
 public final class SCNParticleBlendMode extends ObjCEnum {
@@ -39,6 +36,6 @@ public final class SCNParticleBlendMode extends ObjCEnum {
     public static final long Alpha = 4L;
     @GlobalConstant("SCNParticleBlendModeReplace")
     public static final long Replace = 5L;
-    
+
 
 }

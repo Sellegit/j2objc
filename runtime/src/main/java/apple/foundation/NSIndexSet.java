@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h") @Mapping("NSIndexSet")
 public class NSIndexSet 
     extends NSObject 
@@ -37,7 +34,7 @@ public class NSIndexSet
     public NSIndexSet(@MachineSizedUInt long value) { }
     @Mapping("init")
     public NSIndexSet() { }
-    
+
     
     @Mapping("count")
     public native @MachineSizedUInt long size();
@@ -45,7 +42,7 @@ public class NSIndexSet
     public native @MachineSizedUInt long first();
     @Mapping("lastIndex")
     public native @MachineSizedUInt long last();
-    
+
     
     
     @Mapping("isEqualToIndexSet:")
@@ -94,5 +91,5 @@ public class NSIndexSet
     public static native NSIndexSet create(NSRange range);
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
-    
+
 }

@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h")
 @Mapping("NSCompoundPredicateType")
 public final class NSCompoundPredicateType extends ObjCEnum {
@@ -32,6 +29,6 @@ public final class NSCompoundPredicateType extends ObjCEnum {
     public static final long And = 1L;
     @GlobalConstant("NSOrPredicateType")
     public static final long Or = 2L;
-    
+
 
 }

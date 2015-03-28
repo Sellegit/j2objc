@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 3.0 and later.
  */
-
 @Library("CoreData/CoreData.h")
 @Mapping("NSFetchedResultsChangeType")
 public final class NSFetchedResultsChangeType extends ObjCEnum {
@@ -31,6 +29,6 @@ public final class NSFetchedResultsChangeType extends ObjCEnum {
     public static final long Move = 3L;
     @GlobalConstant("NSFetchedResultsChangeUpdate")
     public static final long Update = 4L;
-    
+
 
 }

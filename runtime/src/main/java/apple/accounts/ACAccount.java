@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 5.0 and later.
  */
-
 @Library("Accounts/Accounts.h") @Mapping("ACAccount")
 public class ACAccount 
     extends NSObject 
@@ -30,7 +28,7 @@ public class ACAccount
     public ACAccount(ACAccountType type) { }
     @Mapping("init")
     public ACAccount() { }
-    
+
     
     @Mapping("identifier")
     public native String getIdentifier();
@@ -55,9 +53,9 @@ public class ACAccount
     public native ACAccountCredential getCredential();
     @Mapping("setCredential:")
     public native void setCredential(ACAccountCredential v);
+
     
     
-    
-    
-    
+
+
 }

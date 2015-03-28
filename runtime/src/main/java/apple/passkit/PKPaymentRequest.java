@@ -16,11 +16,9 @@ import apple.uikit.*;
 import apple.addressbook.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("PassKit/PassKit.h") @Mapping("PKPaymentRequest")
 public class PKPaymentRequest 
     extends NSObject 
@@ -30,7 +28,7 @@ public class PKPaymentRequest
     
     @Mapping("init")
     public PKPaymentRequest() { }
-    
+
     
     @Mapping("merchantIdentifier")
     public native String getMerchantIdentifier();
@@ -61,17 +59,17 @@ public class PKPaymentRequest
     @Mapping("setRequiredBillingAddressFields:")
     public native void setRequiredBillingAddressFields(@Representing("PKAddressField") long v);
     @Mapping("billingAddress")
-    public native ABRecord getBillingAddress();
+    public native ABRecordRef getBillingAddress();
     @Mapping("setBillingAddress:")
-    public native void setBillingAddress(ABRecord v);
+    public native void setBillingAddress(ABRecordRef v);
     @Mapping("requiredShippingAddressFields")
     public native @Representing("PKAddressField") long getRequiredShippingAddressFields();
     @Mapping("setRequiredShippingAddressFields:")
     public native void setRequiredShippingAddressFields(@Representing("PKAddressField") long v);
     @Mapping("shippingAddress")
-    public native ABRecord getShippingAddress();
+    public native ABRecordRef getShippingAddress();
     @Mapping("setShippingAddress:")
-    public native void setShippingAddress(ABRecord v);
+    public native void setShippingAddress(ABRecordRef v);
     @Mapping("shippingMethods")
     public native NSArray<PKShippingMethod> getShippingMethods();
     @Mapping("setShippingMethods:")
@@ -80,9 +78,9 @@ public class PKPaymentRequest
     public native NSData getApplicationData();
     @Mapping("setApplicationData:")
     public native void setApplicationData(NSData v);
+
     
     
-    
-    
-    
+
+
 }

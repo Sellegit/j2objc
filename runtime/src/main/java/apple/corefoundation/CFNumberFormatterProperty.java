@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.dispatch.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("CoreFoundation/CoreFoundation.h")
@@ -118,5 +117,5 @@ public class CFNumberFormatterProperty
      */
     @GlobalConstant("kCFNumberFormatterMaxSignificantDigits")
     public static native CFString MaxSignificantDigitsValue();
-    
+
 }

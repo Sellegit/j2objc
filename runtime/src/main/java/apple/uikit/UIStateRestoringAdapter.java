@@ -18,7 +18,6 @@ import apple.coreimage.*;
 import apple.coretext.*;
 import apple.corelocation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -31,7 +30,7 @@ public abstract class UIStateRestoringAdapter
     
     @NotImplemented("restorationParent")
     public UIStateRestoring getRestorationParent() { throw new UnsupportedOperationException(); }
-    
+
     
     
     @NotImplemented("encodeRestorableStateWithCoder:")
@@ -40,5 +39,5 @@ public abstract class UIStateRestoringAdapter
     public void decodeRestorableState(NSCoder coder) { throw new UnsupportedOperationException(); }
     @NotImplemented("applicationFinishedRestoringState")
     public void applicationFinishedRestoringState() { throw new UnsupportedOperationException(); }
-    
+
 }

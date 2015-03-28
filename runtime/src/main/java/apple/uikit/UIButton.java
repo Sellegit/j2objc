@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 2.0 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UIButton")
 public class UIButton 
     extends UIControl 
@@ -37,7 +35,7 @@ public class UIButton
     public UIButton(NSCoder aDecoder) { }
     @Mapping("init")
     public UIButton() { }
-    
+
     
     @Mapping("contentEdgeInsets")
     public native UIEdgeInsets getContentEdgeInsets();
@@ -104,7 +102,7 @@ public class UIButton
      */
     @Mapping("imageView")
     public native UIImageView getImageView();
-    
+
     
     
     @Mapping("setTitle:forState:")
@@ -147,5 +145,5 @@ public class UIButton
     public native CGRect getImageRect(CGRect contentRect);
     @Mapping("buttonWithType:")
     public static native UIButton create(@Representing("UIButtonType") long buttonType);
-    
+
 }

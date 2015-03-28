@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 import apple.uikit.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -25,8 +24,8 @@ public abstract class MFMailComposeViewControllerDelegateAdapter
     
     
     
-    
-    
+
+
     
     
     /**
@@ -34,5 +33,5 @@ public abstract class MFMailComposeViewControllerDelegateAdapter
      */
     @NotImplemented("mailComposeController:didFinishWithResult:error:")
     public void didFinish(MFMailComposeViewController controller, @Representing("MFMailComposeResult") long result, NSError error) { throw new UnsupportedOperationException(); }
-    
+
 }

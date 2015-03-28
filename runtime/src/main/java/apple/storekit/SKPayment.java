@@ -16,11 +16,9 @@ import apple.uikit.*;
 import apple.accounts.*;
 
 
-
 /**
  * @since Available in iOS 3.0 and later.
  */
-
 @Library("StoreKit/StoreKit.h") @Mapping("SKPayment")
 public class SKPayment 
     extends NSObject 
@@ -30,7 +28,7 @@ public class SKPayment
     
     @Mapping("init")
     public SKPayment() { }
-    
+
     
     /**
      * @since Available in iOS 3.0 and later.
@@ -52,7 +50,7 @@ public class SKPayment
      */
     @Mapping("applicationUsername")
     public native String getApplicationUsername();
-    
+
     
     
     /**
@@ -62,5 +60,5 @@ public class SKPayment
     public static native SKPayment createFromProduct(SKProduct product);
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
-    
+
 }

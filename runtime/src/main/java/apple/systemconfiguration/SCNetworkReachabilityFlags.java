@@ -15,9 +15,6 @@ import apple.foundation.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("SystemConfiguration/SystemConfiguration.h")
 @Mapping("SCNetworkReachabilityFlags")
 public final class SCNetworkReachabilityFlags extends ObjCEnum {
@@ -42,6 +39,6 @@ public final class SCNetworkReachabilityFlags extends ObjCEnum {
     public static final long IsWWAN = 262144L;
     @GlobalConstant("kSCNetworkReachabilityFlagsConnectionAutomatic")
     public static final long ConnectionAutomatic = 8L;
-    
+
 
 }

@@ -18,7 +18,6 @@ import apple.coreimage.*;
 import apple.coretext.*;
 import apple.corelocation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -39,9 +38,9 @@ public abstract class NSTextLayoutOrientationProviderAdapter
      */
     @Mapping("setLayoutOrientation:")
     public void setLayoutOrientation(@Representing("NSTextLayoutOrientation") long v) { throw new UnsupportedOperationException(); }
+
     
     
-    
-    
-    
+
+
 }

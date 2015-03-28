@@ -18,17 +18,14 @@ import apple.mediaplayer.*;
 import apple.avkit.*;
 
 
-
-
-
 @Library("iAd/iAd.h") @Mapping("ADInterstitialAdDelegate")
 public interface ADInterstitialAdDelegate 
     extends NSObjectProtocol {
 
     
     
-    
-    
+
+
     
     @Mapping("interstitialAdDidUnload:")
     void didUnload(ADInterstitialAd interstitialAd);
@@ -45,7 +42,7 @@ public interface ADInterstitialAdDelegate
     boolean actionShouldBegin(ADInterstitialAd interstitialAd, boolean willLeave);
     @Mapping("interstitialAdActionDidFinish:")
     void actionDidFinish(ADInterstitialAd interstitialAd);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

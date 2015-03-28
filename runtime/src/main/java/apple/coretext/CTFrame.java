@@ -13,7 +13,6 @@ import apple.coregraphics.*;
 import apple.coreservices.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Mapping("CTFrameRef") @Library("CoreText/CoreText.h")
@@ -24,7 +23,7 @@ public class CTFrame
     
     
     protected CTFrame() {}
-    
+
     
     
     
@@ -68,5 +67,5 @@ public class CTFrame
      */
     @GlobalFunction("CTFrameDraw")
     public static native void draw(CTFrame frame, CGContext context);
-    
+
 }

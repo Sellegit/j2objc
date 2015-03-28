@@ -18,7 +18,6 @@ import apple.coreimage.*;
 import apple.coretext.*;
 import apple.corelocation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -29,8 +28,8 @@ public abstract class UIViewControllerInteractiveTransitioningAdapter
     
     
     
-    
-    
+
+
     
     
     @NotImplemented("startInteractiveTransition:")
@@ -39,5 +38,5 @@ public abstract class UIViewControllerInteractiveTransitioningAdapter
     public @MachineSizedFloat double getCompletionSpeed() { throw new UnsupportedOperationException(); }
     @NotImplemented("completionCurve")
     public @Representing("UIViewAnimationCurve") long getCompletionCurve() { throw new UnsupportedOperationException(); }
-    
+
 }

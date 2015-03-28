@@ -16,11 +16,9 @@ import apple.uikit.*;
 import apple.addressbook.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("PassKit/PassKit.h") @Mapping("PKPaymentSummaryItem")
 public class PKPaymentSummaryItem 
     extends NSObject 
@@ -30,7 +28,7 @@ public class PKPaymentSummaryItem
     
     @Mapping("init")
     public PKPaymentSummaryItem() { }
-    
+
     
     @Mapping("label")
     public native String getLabel();
@@ -40,10 +38,10 @@ public class PKPaymentSummaryItem
     public native NSDecimalNumber getAmount();
     @Mapping("setAmount:")
     public native void setAmount(NSDecimalNumber v);
-    
+
     
     
     @Mapping("summaryItemWithLabel:amount:")
     public static native PKPaymentSummaryItem create(String label, NSDecimalNumber amount);
-    
+
 }

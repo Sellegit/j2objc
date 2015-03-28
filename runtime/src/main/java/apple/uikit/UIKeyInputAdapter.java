@@ -18,7 +18,6 @@ import apple.coreimage.*;
 import apple.coretext.*;
 import apple.corelocation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -29,8 +28,8 @@ public abstract class UIKeyInputAdapter
     
     
     
-    
-    
+
+
     
     
     @NotImplemented("hasText")
@@ -39,5 +38,5 @@ public abstract class UIKeyInputAdapter
     public void insertText(String text) { throw new UnsupportedOperationException(); }
     @NotImplemented("deleteBackward")
     public void deleteBackward() { throw new UnsupportedOperationException(); }
-    
+
 }

@@ -15,7 +15,6 @@ import apple.foundation.*;
 import apple.eventkit.*;
 import apple.uikit.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -26,13 +25,13 @@ public abstract class EKEventEditViewDelegateAdapter
     
     
     
-    
-    
+
+
     
     
     @NotImplemented("eventEditViewController:didCompleteWithAction:")
     public void didComplete(EKEventEditViewController controller, EKEventEditViewAction action) { throw new UnsupportedOperationException(); }
     @NotImplemented("eventEditViewControllerDefaultCalendarForNewEvents:")
     public EKCalendar getDefaultCalendarForNewEvents(EKEventEditViewController controller) { throw new UnsupportedOperationException(); }
-    
+
 }

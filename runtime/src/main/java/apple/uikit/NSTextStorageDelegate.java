@@ -19,17 +19,14 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h") @Mapping("NSTextStorageDelegate")
 public interface NSTextStorageDelegate 
     extends NSObjectProtocol {
 
     
     
-    
-    
+
+
     
     /**
      * @since Available in iOS 7.0 and later.
@@ -41,7 +38,7 @@ public interface NSTextStorageDelegate
      */
     @Mapping("textStorage:didProcessEditing:range:changeInLength:")
     void didProcessEditing(NSTextStorage textStorage, @Representing("NSTextStorageEditActions") long editedMask, NSRange editedRange, @MachineSizedSInt long delta);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

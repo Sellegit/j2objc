@@ -15,9 +15,6 @@ import apple.dispatch.*;
 import apple.foundation.*;
 
 
-
-
-
 @Library("CoreFoundation/CoreFoundation.h")
 @Mapping("CFStringEncodings")
 public final class CFStringEncodings extends ObjCEnum {
@@ -289,6 +286,6 @@ public final class CFStringEncodings extends ObjCEnum {
     public static final long UTF7_IMAP = 2576L;
     @GlobalConstant("kCFStringEncodingShiftJIS_X0213_00")
     public static final long ShiftJIS_X0213_00 = 1576L;
-    
+
 
 }

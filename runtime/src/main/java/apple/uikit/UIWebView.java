@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 2.0 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UIWebView")
 public class UIWebView 
     extends UIView 
@@ -37,7 +35,7 @@ public class UIWebView
     public UIWebView(NSCoder aDecoder) { }
     @Mapping("init")
     public UIWebView() { }
-    
+
     
     @Mapping("delegate")
     public native UIWebViewDelegate getDelegate();
@@ -165,7 +163,7 @@ public class UIWebView
      */
     @Mapping("pageCount")
     public native @MachineSizedUInt long getPageCount();
-    
+
     
     
     @Mapping("loadRequest:")
@@ -219,5 +217,5 @@ public class UIWebView
     public native boolean shouldScrollToTop(UIScrollView scrollView);
     @Mapping("scrollViewDidScrollToTop:")
     public native void didScrollToTop(UIScrollView scrollView);
-    
+
 }

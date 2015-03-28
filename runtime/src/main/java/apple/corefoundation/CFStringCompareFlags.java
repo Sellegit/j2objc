@@ -15,9 +15,6 @@ import apple.dispatch.*;
 import apple.foundation.*;
 
 
-
-
-
 @Library("CoreFoundation/CoreFoundation.h")
 @Mapping("CFStringCompareFlags")
 public final class CFStringCompareFlags extends ObjCEnum {
@@ -49,6 +46,6 @@ public final class CFStringCompareFlags extends ObjCEnum {
      */
     @GlobalConstant("kCFCompareForcedOrdering")
     public static final long ForcedOrdering = 512L;
-    
+
 
 }

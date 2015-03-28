@@ -13,7 +13,6 @@ import apple.coregraphics.*;
 import apple.coreservices.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("Accounts/Accounts.h")
@@ -41,5 +40,5 @@ public class ACFacebookAudience
      */
     @GlobalConstant("ACFacebookAudienceOnlyMe")
     public static native NSString OnlyMeValue();
-    
+
 }

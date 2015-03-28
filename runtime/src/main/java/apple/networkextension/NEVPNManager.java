@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("NetworkExtension/NetworkExtension.h") @Mapping("NEVPNManager")
 public class NEVPNManager 
     extends NSObject 
@@ -28,7 +26,7 @@ public class NEVPNManager
     
     @Mapping("init")
     public NEVPNManager() { }
-    
+
     
     /**
      * @since Available in iOS 8.0 and later.
@@ -85,7 +83,7 @@ public class NEVPNManager
      */
     @Mapping("setEnabled:")
     public native void setEnabled(boolean v);
-    
+
     
     
     /**
@@ -93,7 +91,7 @@ public class NEVPNManager
      */
     @GlobalConstant("NEVPNConfigurationChangeNotification")
     public static native NSString ConfigurationChangeNotification();
-    
+
     /**
      * @since Available in iOS 8.0 and later.
      */
@@ -114,5 +112,5 @@ public class NEVPNManager
      */
     @Mapping("sharedManager")
     public static native NEVPNManager getSharedManager();
-    
+
 }

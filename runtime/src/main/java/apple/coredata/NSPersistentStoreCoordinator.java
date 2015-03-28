@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 3.0 and later.
  */
-
 @Library("CoreData/CoreData.h") @Mapping("NSPersistentStoreCoordinator")
 public class NSPersistentStoreCoordinator 
     extends NSObject 
@@ -30,7 +28,7 @@ public class NSPersistentStoreCoordinator
     public NSPersistentStoreCoordinator(NSManagedObjectModel model) { }
     @Mapping("init")
     public NSPersistentStoreCoordinator() { }
-    
+
     
     @Mapping("managedObjectModel")
     public native NSManagedObjectModel getManagedObjectModel();
@@ -46,7 +44,7 @@ public class NSPersistentStoreCoordinator
      */
     @Mapping("setName:")
     public native void setName(String v);
-    
+
     
     
     /**
@@ -69,7 +67,7 @@ public class NSPersistentStoreCoordinator
      */
     @GlobalConstant("NSPersistentStoreDidImportUbiquitousContentChangesNotification")
     public static native NSString DidImportUbiquitousContentChangesNotification();
-    
+
     @Mapping("persistentStoreForURL:")
     public native NSPersistentStore getPersistentStoreForURL(NSURL URL);
     @Mapping("URLForPersistentStore:")
@@ -147,5 +145,5 @@ public class NSPersistentStoreCoordinator
      */
     @Mapping("removeUbiquitousContentAndPersistentStoreAtURL:options:error:")
     public static native boolean removeUbiquitousContentAndPersistentStore(NSURL storeURL, NSDictionary<?, ?> options, Todo error);
-    
+
 }

@@ -19,11 +19,9 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 7.0 and later.
  */
-
 @Library("Foundation/Foundation.h")
 @Mapping("NSActivityOptions")
 public final class NSActivityOptions extends ObjCEnum {
@@ -44,6 +42,6 @@ public final class NSActivityOptions extends ObjCEnum {
     public static final long Background = 255L;
     @GlobalConstant("NSActivityLatencyCritical")
     public static final long LatencyCritical = 1095216660480L;
-    
+
 
 }

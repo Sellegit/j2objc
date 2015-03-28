@@ -14,9 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
-
-
 @Library("CoreText/CoreText.h")
 @Mapping("CTFramePathFillRule")
 public final class CTFramePathFillRule extends ObjCEnum {
@@ -25,6 +22,6 @@ public final class CTFramePathFillRule extends ObjCEnum {
     public static final long EvenOdd = 0L;
     @GlobalConstant("kCTFramePathFillWindingNumber")
     public static final long WindingNumber = 1L;
-    
+
 
 }

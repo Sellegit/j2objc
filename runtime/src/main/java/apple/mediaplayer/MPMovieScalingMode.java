@@ -15,9 +15,6 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
-
-
 @Library("MediaPlayer/MediaPlayer.h")
 @Mapping("MPMovieScalingMode")
 public final class MPMovieScalingMode extends ObjCEnum {
@@ -30,6 +27,6 @@ public final class MPMovieScalingMode extends ObjCEnum {
     public static final long AspectFill = 2L;
     @GlobalConstant("MPMovieScalingModeFill")
     public static final long Fill = 3L;
-    
+
 
 }

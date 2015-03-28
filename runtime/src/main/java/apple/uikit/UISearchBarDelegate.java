@@ -19,17 +19,14 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h") @Mapping("UISearchBarDelegate")
 public interface UISearchBarDelegate 
     extends UIBarPositioningDelegate {
 
     
     
-    
-    
+
+
     
     @Mapping("searchBarShouldBeginEditing:")
     boolean shouldBeginEditing(UISearchBar searchBar);
@@ -62,7 +59,7 @@ public interface UISearchBarDelegate
      */
     @Mapping("searchBar:selectedScopeButtonIndexDidChange:")
     void selectedScopeButtonIndexDidChange(UISearchBar searchBar, @MachineSizedSInt long selectedScope);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

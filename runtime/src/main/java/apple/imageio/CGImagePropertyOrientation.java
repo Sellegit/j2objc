@@ -14,9 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
-
-
 @Library("ImageIO/ImageIO.h")
 @Mapping("CGImagePropertyOrientation")
 public final class CGImagePropertyOrientation extends ObjCEnum {
@@ -37,6 +34,6 @@ public final class CGImagePropertyOrientation extends ObjCEnum {
     public static final long RightMirrored = 7L;
     @GlobalConstant("kCGImagePropertyOrientationLeft")
     public static final long Left = 8L;
-    
+
 
 }

@@ -19,21 +19,18 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h") @Mapping("NSMachPortDelegate")
 public interface NSMachPortDelegate 
     extends NSPortDelegate {
 
     
     
-    
-    
+
+
     
     @Mapping("handleMachMessage:")
     void handleMachMessage(Todo msg);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

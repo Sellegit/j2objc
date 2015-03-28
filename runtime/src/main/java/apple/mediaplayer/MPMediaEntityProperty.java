@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 import apple.uikit.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("MediaPlayer/MediaPlayer.h")
@@ -32,5 +31,5 @@ public class MPMediaEntityProperty
      */
     @GlobalConstant("MPMediaEntityPropertyPersistentID")
     public static native NSString EntityPersistentIDValue();
-    
+
 }

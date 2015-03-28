@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.dispatch.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("CoreFoundation/CoreFoundation.h")
@@ -71,5 +70,5 @@ public class CFCalendarIdentifier
      */
     @GlobalConstant("kCFIslamicUmmAlQuraCalendar")
     public static native CFString IslamicUmmAlQuraValue();
-    
+
 }

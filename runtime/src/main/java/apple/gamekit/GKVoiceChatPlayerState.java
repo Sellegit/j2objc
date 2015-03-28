@@ -15,9 +15,6 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
-
-
 @Library("GameKit/GameKit.h")
 @Mapping("GKVoiceChatPlayerState")
 public final class GKVoiceChatPlayerState extends ObjCEnum {
@@ -32,6 +29,6 @@ public final class GKVoiceChatPlayerState extends ObjCEnum {
     public static final long Silent = 3L;
     @GlobalConstant("GKVoiceChatPlayerConnecting")
     public static final long Connecting = 4L;
-    
+
 
 }

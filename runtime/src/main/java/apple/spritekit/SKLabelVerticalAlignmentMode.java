@@ -21,11 +21,9 @@ import apple.glkit.*;
 import apple.scenekit.*;
 
 
-
 /**
  * @since Available in iOS 7.0 and later.
  */
-
 @Library("SpriteKit/SpriteKit.h")
 @Mapping("SKLabelVerticalAlignmentMode")
 public final class SKLabelVerticalAlignmentMode extends ObjCEnum {
@@ -38,6 +36,6 @@ public final class SKLabelVerticalAlignmentMode extends ObjCEnum {
     public static final long Top = 2L;
     @GlobalConstant("SKLabelVerticalAlignmentModeBottom")
     public static final long Bottom = 3L;
-    
+
 
 }

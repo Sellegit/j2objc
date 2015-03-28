@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 import apple.dispatch.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -25,8 +24,8 @@ public abstract class PKPushRegistryDelegateAdapter
     
     
     
-    
-    
+
+
     
     
     @NotImplemented("pushRegistry:didUpdatePushCredentials:forType:")
@@ -35,5 +34,5 @@ public abstract class PKPushRegistryDelegateAdapter
     public void didReceiveIncomingPush(PKPushRegistry registry, PKPushPayload payload, String type) { throw new UnsupportedOperationException(); }
     @NotImplemented("pushRegistry:didInvalidatePushTokenForType:")
     public void didInvalidatePushToken(PKPushRegistry registry, String type) { throw new UnsupportedOperationException(); }
-    
+
 }

@@ -19,7 +19,6 @@ import apple.coremedia.*;
 import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("AVFoundation/AVFoundation.h")
@@ -67,5 +66,5 @@ public class AVAudioSessionMode
      */
     @GlobalConstant("AVAudioSessionModeVideoChat")
     public static native NSString VideoChatValue();
-    
+
 }

@@ -20,9 +20,6 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
-
-
 @Library("AVFoundation/AVFoundation.h")
 @Mapping("AVAssetExportSessionStatus")
 public final class AVAssetExportSessionStatus extends ObjCEnum {
@@ -39,6 +36,6 @@ public final class AVAssetExportSessionStatus extends ObjCEnum {
     public static final long Failed = 4L;
     @GlobalConstant("AVAssetExportSessionStatusCancelled")
     public static final long Cancelled = 5L;
-    
+
 
 }

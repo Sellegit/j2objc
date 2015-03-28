@@ -18,7 +18,6 @@ import apple.coremedia.*;
 import apple.security.*;
 import apple.dispatch.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -29,11 +28,11 @@ public abstract class NSPortDelegateAdapter
     
     
     
-    
-    
+
+
     
     
     @NotImplemented("handlePortMessage:")
     public void handlePortMessage(NSPortMessage message) { throw new UnsupportedOperationException(); }
-    
+
 }

@@ -18,7 +18,6 @@ import apple.coremedia.*;
 import apple.security.*;
 import apple.dispatch.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -29,8 +28,8 @@ public abstract class NSURLProtocolClientAdapter
     
     
     
-    
-    
+
+
     
     
     @NotImplemented("URLProtocol:wasRedirectedToRequest:redirectResponse:")
@@ -49,5 +48,5 @@ public abstract class NSURLProtocolClientAdapter
     public void didReceiveAuthenticationChallenge(NSURLProtocol protocol, NSURLAuthenticationChallenge challenge) { throw new UnsupportedOperationException(); }
     @NotImplemented("URLProtocol:didCancelAuthenticationChallenge:")
     public void didCancelAuthenticationChallenge(NSURLProtocol protocol, NSURLAuthenticationChallenge challenge) { throw new UnsupportedOperationException(); }
-    
+
 }

@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h") @Mapping("NSDictionary")
 public class NSDictionary <K, V>
     extends NSObject 
@@ -34,7 +31,7 @@ public class NSDictionary <K, V>
     public NSDictionary(NSDictionary<?, ?> otherDictionary) { }
     @Mapping("initWithObjects:forKeys:")
     public NSDictionary(NSArray<?> objects, NSArray<?> keys) { }
-    
+
     
     @Mapping("count")
     public native @MachineSizedUInt long getCount();
@@ -44,7 +41,7 @@ public class NSDictionary <K, V>
     public native NSArray<V> getAllValues();
     @Mapping("descriptionInStringsFileFormat")
     public native String toFileFormatString();
-    
+
     
     
     @Mapping("objectForKey:")
@@ -59,5 +56,5 @@ public class NSDictionary <K, V>
     public static native NSDictionary<?, ?> read(String path);
     @Mapping("dictionaryWithContentsOfURL:")
     public static native NSDictionary<?, ?> read(NSURL url);
-    
+
 }

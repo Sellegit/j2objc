@@ -16,11 +16,9 @@ import apple.uikit.*;
 import apple.accounts.*;
 
 
-
 /**
  * @since Available in iOS 3.0 and later.
  */
-
 @Library("StoreKit/StoreKit.h") @Mapping("SKProduct")
 public class SKProduct 
     extends NSObject 
@@ -30,7 +28,7 @@ public class SKProduct
     
     @Mapping("init")
     public SKProduct() { }
-    
+
     
     /**
      * @since Available in iOS 3.0 and later.
@@ -72,9 +70,9 @@ public class SKProduct
      */
     @Mapping("downloadContentVersion")
     public native String getDownloadContentVersion();
+
     
     
-    
-    
-    
+
+
 }

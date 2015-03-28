@@ -20,17 +20,14 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
-
-
 @Library("AVFoundation/AVFoundation.h") @Mapping("AVAudioSessionDelegate")
 public interface AVAudioSessionDelegate 
     extends NSObjectProtocol {
 
     
     
-    
-    
+
+
     
     @Mapping("beginInterruption")
     void beginInterruption();
@@ -43,7 +40,7 @@ public interface AVAudioSessionDelegate
     void endInterruption();
     @Mapping("inputIsAvailableChanged:")
     void inputAvailabilityChanged(boolean isInputAvailable);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

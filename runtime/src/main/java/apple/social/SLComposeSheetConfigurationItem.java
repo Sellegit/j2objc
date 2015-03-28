@@ -16,11 +16,9 @@ import apple.uikit.*;
 import apple.accounts.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("Social/Social.h") @Mapping("SLComposeSheetConfigurationItem")
 public class SLComposeSheetConfigurationItem 
     extends NSObject 
@@ -29,7 +27,7 @@ public class SLComposeSheetConfigurationItem
     
     
     public SLComposeSheetConfigurationItem() {}
-    
+
     
     @Mapping("title")
     public native String getTitle();
@@ -47,9 +45,9 @@ public class SLComposeSheetConfigurationItem
     public native @Block Runnable getTapHandler();
     @Mapping("setTapHandler:")
     public native void setTapHandler(@Block Runnable v);
+
     
     
-    
-    
-    
+
+
 }

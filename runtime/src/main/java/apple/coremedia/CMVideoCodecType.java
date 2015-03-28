@@ -18,9 +18,6 @@ import apple.coreanimation.*;
 import apple.corevideo.*;
 
 
-
-
-
 @Library("CoreMedia/CoreMedia.h")
 @Mapping("CMVideoCodecType")
 public final class CMVideoCodecType extends ObjCEnum {
@@ -81,6 +78,6 @@ public final class CMVideoCodecType extends ObjCEnum {
     public static final long AppleProRes422LT = 1634755443L;
     @GlobalConstant("kCMVideoCodecType_AppleProRes422Proxy")
     public static final long AppleProRes422Proxy = 1634755439L;
-    
+
 
 }

@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("CoreMotion/CoreMotion.h") @Mapping("CMAltimeter")
 public class CMAltimeter 
     extends NSObject 
@@ -28,15 +26,15 @@ public class CMAltimeter
     
     @Mapping("init")
     public CMAltimeter() { }
+
     
-    
-    
-    
+
+
     
     
     @Mapping("stopRelativeAltitudeUpdates")
     public native void stopRelativeAltitudeUpdates();
     @Mapping("isRelativeAltitudeAvailable")
     public static native boolean isRelativeAltitudeAvailable();
-    
+
 }

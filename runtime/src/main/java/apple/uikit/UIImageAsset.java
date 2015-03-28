@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UIImageAsset")
 public class UIImageAsset 
     extends NSObject 
@@ -33,10 +31,10 @@ public class UIImageAsset
     
     @Mapping("init")
     public UIImageAsset() { }
+
     
-    
-    
-    
+
+
     
     
     @Mapping("imageWithTraitCollection:")
@@ -45,5 +43,5 @@ public class UIImageAsset
     public native void registerImage(UIImage image, UITraitCollection traitCollection);
     @Mapping("unregisterImageWithTraitCollection:")
     public native void unregisterImage(UITraitCollection traitCollection);
-    
+
 }

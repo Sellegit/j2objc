@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("HealthKit/HealthKit.h") @Mapping("HKHealthStore")
 public class HKHealthStore 
     extends NSObject 
@@ -28,10 +26,10 @@ public class HKHealthStore
     
     @Mapping("init")
     public HKHealthStore() { }
+
     
-    
-    
-    
+
+
     
     
     @Mapping("authorizationStatusForType:")
@@ -69,5 +67,5 @@ public class HKHealthStore
      */
     @Mapping("preferredUnitsForQuantityTypes:completion:")
     public native void preferredUnitsForQuantityTypes$completion$(NSSet<?> quantityTypes, Todo completion);
-    
+
 }

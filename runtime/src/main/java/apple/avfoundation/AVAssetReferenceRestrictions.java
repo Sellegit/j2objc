@@ -20,9 +20,6 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
-
-
 @Library("AVFoundation/AVFoundation.h")
 @Mapping("AVAssetReferenceRestrictions")
 public final class AVAssetReferenceRestrictions extends ObjCEnum {
@@ -39,6 +36,6 @@ public final class AVAssetReferenceRestrictions extends ObjCEnum {
     public static final long LocalReferenceToLocal = 8L;
     @GlobalConstant("AVAssetReferenceRestrictionForbidAll")
     public static final long All = 65535L;
-    
+
 
 }

@@ -19,9 +19,6 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h")
 @Mapping("UIControlEvents")
 public final class UIControlEvents extends ObjCEnum {
@@ -64,6 +61,6 @@ public final class UIControlEvents extends ObjCEnum {
     public static final long SystemReserved = -268435456L;
     @GlobalConstant("UIControlEventAllEvents")
     public static final long AllEvents = -1L;
-    
+
 
 }

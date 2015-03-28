@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 import apple.dispatch.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -25,8 +24,8 @@ public abstract class CBCentralManagerDelegateAdapter
     
     
     
-    
-    
+
+
     
     
     @NotImplemented("centralManagerDidUpdateState:")
@@ -45,5 +44,5 @@ public abstract class CBCentralManagerDelegateAdapter
     public void didFailToConnectPeripheral(CBCentralManager central, CBPeripheral peripheral, NSError error) { throw new UnsupportedOperationException(); }
     @NotImplemented("centralManager:didDisconnectPeripheral:error:")
     public void didDisconnectPeripheral(CBCentralManager central, CBPeripheral peripheral, NSError error) { throw new UnsupportedOperationException(); }
-    
+
 }

@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("UIKit/UIKit.h")
 @Mapping("UIAlertControllerStyle")
 public final class UIAlertControllerStyle extends ObjCEnum {
@@ -32,6 +30,6 @@ public final class UIAlertControllerStyle extends ObjCEnum {
     public static final long ActionSheet = 0L;
     @GlobalConstant("UIAlertControllerStyleAlert")
     public static final long Alert = 1L;
-    
+
 
 }

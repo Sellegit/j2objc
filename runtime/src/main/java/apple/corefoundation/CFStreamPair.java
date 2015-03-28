@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.dispatch.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("CoreFoundation/CoreFoundation.h")
@@ -35,5 +34,5 @@ public class CFStreamPair
     public static native void create(CFAllocator alloc, CFString host, int port, Todo readStream, Todo writeStream);
     @GlobalFunction("CFStreamCreatePairWithPeerSocketSignature")
     public static native void create(CFAllocator alloc, CFSocketSignature signature, Todo readStream, Todo writeStream);
-    
+
 }

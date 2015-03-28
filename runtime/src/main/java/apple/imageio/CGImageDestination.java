@@ -13,7 +13,6 @@ import apple.coregraphics.*;
 import apple.coreservices.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Mapping("CGImageDestinationRef") @Library("ImageIO/ImageIO.h")
@@ -24,7 +23,7 @@ public class CGImageDestination
     
     
     protected CGImageDestination() {}
-    
+
     
     
     
@@ -78,5 +77,5 @@ public class CGImageDestination
      */
     @GlobalFunction("CGImageDestinationCopyImageSource")
     public static native boolean copyImageSource(CGImageDestination idst, CGImageSource isrc, CFDictionary options, Todo err);
-    
+
 }

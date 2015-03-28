@@ -15,11 +15,9 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
 /**
  * @since Available in iOS 3.0 and later.
  */
-
 @Library("MediaPlayer/MediaPlayer.h") @Mapping("MPMediaItemCollection")
 public class MPMediaItemCollection 
     extends MPMediaEntity 
@@ -31,7 +29,7 @@ public class MPMediaItemCollection
     public MPMediaItemCollection(NSArray<?> items) { }
     @Mapping("init")
     public MPMediaItemCollection() { }
-    
+
     
     @Mapping("items")
     public native NSArray<MPMediaItem> getItems();
@@ -41,9 +39,9 @@ public class MPMediaItemCollection
     public native @MachineSizedUInt long getCount();
     @Mapping("mediaTypes")
     public native @Representing("MPMediaType") long getMediaTypes();
+
     
     
-    
-    
-    
+
+
 }

@@ -20,9 +20,6 @@ import apple.spritekit.*;
 import apple.opengles.*;
 
 
-
-
-
 @Library("SceneKit/SceneKit.h") @Mapping("SCNMaterialProperty")
 public class SCNMaterialProperty 
     extends NSObject 
@@ -32,7 +29,7 @@ public class SCNMaterialProperty
     
     @Mapping("init")
     public SCNMaterialProperty() { }
-    
+
     
     @Mapping("contents")
     public native Object getContents();
@@ -78,7 +75,7 @@ public class SCNMaterialProperty
     public native @MachineSizedFloat double getMaxAnisotropy();
     @Mapping("setMaxAnisotropy:")
     public native void setMaxAnisotropy(@MachineSizedFloat double v);
-    
+
     
     
     @Mapping("materialPropertyWithContents:")
@@ -101,5 +98,5 @@ public class SCNMaterialProperty
     public native boolean isAnimationPaused(String key);
     @Mapping("removeAnimationForKey:fadeOutDuration:")
     public native void removeAnimation(String key, @MachineSizedFloat double duration);
-    
+
 }

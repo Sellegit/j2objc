@@ -18,7 +18,6 @@ import apple.coremedia.*;
 import apple.security.*;
 import apple.dispatch.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -29,8 +28,8 @@ public abstract class NSURLAuthenticationChallengeSenderAdapter
     
     
     
-    
-    
+
+
     
     
     @NotImplemented("useCredential:forAuthenticationChallenge:")
@@ -43,5 +42,5 @@ public abstract class NSURLAuthenticationChallengeSenderAdapter
     public void performDefaultHandling(NSURLAuthenticationChallenge challenge) { throw new UnsupportedOperationException(); }
     @NotImplemented("rejectProtectionSpaceAndContinueWithChallenge:")
     public void rejectProtectionSpaceAndContinue(NSURLAuthenticationChallenge challenge) { throw new UnsupportedOperationException(); }
-    
+
 }

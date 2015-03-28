@@ -15,9 +15,6 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
-
-
 @Library("MessageUI/MessageUI.h")
 @Mapping("MFMailComposeErrorCode")
 public final class MFMailComposeErrorCode extends ObjCEnum {
@@ -26,6 +23,6 @@ public final class MFMailComposeErrorCode extends ObjCEnum {
     public static final long SaveFailed = 0L;
     @GlobalConstant("MFMailComposeErrorCodeSendFailed")
     public static final long SendFailed = 1L;
-    
+
 
 }

@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 2.0 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UIActivityIndicatorView")
 public class UIActivityIndicatorView 
     extends UIView 
@@ -39,7 +37,7 @@ public class UIActivityIndicatorView
     public UIActivityIndicatorView(NSCoder aDecoder) { }
     @Mapping("init")
     public UIActivityIndicatorView() { }
-    
+
     
     @Mapping("activityIndicatorViewStyle")
     public native @Representing("UIActivityIndicatorViewStyle") long getActivityIndicatorViewStyle();
@@ -59,7 +57,7 @@ public class UIActivityIndicatorView
      */
     @Mapping("setColor:")
     public native void setColor(UIColor v);
-    
+
     
     
     @Mapping("startAnimating")
@@ -68,5 +66,5 @@ public class UIActivityIndicatorView
     public native void stopAnimating();
     @Mapping("isAnimating")
     public native boolean isAnimating();
-    
+
 }

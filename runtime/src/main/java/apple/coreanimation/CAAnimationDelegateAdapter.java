@@ -16,7 +16,6 @@ import apple.coreimage.*;
 import apple.coretext.*;
 import apple.opengles.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -27,13 +26,13 @@ public abstract class CAAnimationDelegateAdapter
     
     
     
-    
-    
+
+
     
     
     @NotImplemented("animationDidStart:")
     public void didStart(CAAnimation anim) { throw new UnsupportedOperationException(); }
     @NotImplemented("animationDidStop:finished:")
     public void didStop(CAAnimation anim, boolean flag) { throw new UnsupportedOperationException(); }
-    
+
 }

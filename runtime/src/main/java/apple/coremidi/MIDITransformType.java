@@ -14,9 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
-
-
 @Library("CoreMIDI/CoreMIDI.h")
 @Mapping("MIDITransformType")
 public final class MIDITransformType extends ObjCEnum {
@@ -37,6 +34,6 @@ public final class MIDITransformType extends ObjCEnum {
     public static final long MaxValue = 11L;
     @GlobalConstant("kMIDITransform_MapValue")
     public static final long MapValue = 12L;
-    
+
 
 }

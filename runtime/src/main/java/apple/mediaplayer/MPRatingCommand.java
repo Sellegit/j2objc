@@ -15,11 +15,9 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
 /**
  * @since Available in iOS 7.1 and later.
  */
-
 @Library("MediaPlayer/MediaPlayer.h") @Mapping("MPRatingCommand")
 public class MPRatingCommand 
     extends MPRemoteCommand 
@@ -29,7 +27,7 @@ public class MPRatingCommand
     
     @Mapping("init")
     public MPRatingCommand() { }
-    
+
     
     @Mapping("minimumRating")
     public native float getMinimumRating();
@@ -39,9 +37,9 @@ public class MPRatingCommand
     public native float getMaximumRating();
     @Mapping("setMaximumRating:")
     public native void setMaximumRating(float v);
+
     
     
-    
-    
-    
+
+
 }

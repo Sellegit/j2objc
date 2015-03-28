@@ -21,9 +21,6 @@ import apple.glkit.*;
 import apple.scenekit.*;
 
 
-
-
-
 @Library("SpriteKit/SpriteKit.h") @Mapping("SKPhysicsJointSliding")
 public class SKPhysicsJointSliding 
     extends SKPhysicsJoint 
@@ -35,7 +32,7 @@ public class SKPhysicsJointSliding
     public SKPhysicsJointSliding(NSCoder aDecoder) { }
     @Mapping("init")
     public SKPhysicsJointSliding() { }
-    
+
     
     @Mapping("shouldEnableLimits")
     public native boolean shouldEnableLimits();
@@ -49,10 +46,10 @@ public class SKPhysicsJointSliding
     public native @MachineSizedFloat double getUpperDistanceLimit();
     @Mapping("setUpperDistanceLimit:")
     public native void setUpperDistanceLimit(@MachineSizedFloat double v);
-    
+
     
     
     @Mapping("jointWithBodyA:bodyB:anchor:axis:")
     public static native SKPhysicsJointSliding create(SKPhysicsBody bodyA, SKPhysicsBody bodyB, CGPoint anchor, CGVector axis);
-    
+
 }

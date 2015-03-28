@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("NetworkExtension/NetworkExtension.h")
 @Mapping("NEVPNStatus")
 public final class NEVPNStatus extends ObjCEnum {
@@ -35,6 +33,6 @@ public final class NEVPNStatus extends ObjCEnum {
     public static final long Reasserting = 4L;
     @GlobalConstant("NEVPNStatusDisconnecting")
     public static final long Disconnecting = 5L;
-    
+
 
 }

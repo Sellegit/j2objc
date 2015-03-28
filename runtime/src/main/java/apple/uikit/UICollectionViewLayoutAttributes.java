@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 6.0 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UICollectionViewLayoutAttributes")
 public class UICollectionViewLayoutAttributes 
     extends NSObject 
@@ -33,7 +31,7 @@ public class UICollectionViewLayoutAttributes
     
     @Mapping("init")
     public UICollectionViewLayoutAttributes() { }
-    
+
     
     @Mapping("frame")
     public native CGRect getFrame();
@@ -91,7 +89,7 @@ public class UICollectionViewLayoutAttributes
     public native @Representing("UICollectionElementCategory") long getRepresentedElementCategory();
     @Mapping("representedElementKind")
     public native String getRepresentedElementKind();
-    
+
     
     
     @Mapping("layoutAttributesForCellWithIndexPath:")
@@ -102,5 +100,5 @@ public class UICollectionViewLayoutAttributes
     public static native UICollectionViewLayoutAttributes createForDecorationView(String decorationViewKind, NSIndexPath indexPath);
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
-    
+
 }

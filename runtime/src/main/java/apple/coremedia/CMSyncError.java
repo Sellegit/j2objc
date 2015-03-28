@@ -18,9 +18,6 @@ import apple.coreanimation.*;
 import apple.corevideo.*;
 
 
-
-
-
 @Library("CoreMedia/CoreMedia.h")
 @Mapping("CMSyncError")
 public final class CMSyncError extends ObjCEnum {
@@ -33,6 +30,6 @@ public final class CMSyncError extends ObjCEnum {
     public static final long AllocationFailed = -12754L;
     @GlobalConstant("kCMSyncError_RateMustBeNonZero")
     public static final long RateMustBeNonZero = -12755L;
-    
+
 
 }

@@ -14,9 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
-
-
 @Mapping("CMCalibratedMagneticField") @Library("CoreMotion/CoreMotion.h")
 public class CMCalibratedMagneticField 
     extends Struct 
@@ -30,7 +27,7 @@ public class CMCalibratedMagneticField
     public native CMMagneticField getField();
     @DotMapping("accuracy")
     public native CMMagneticFieldCalibrationAccuracy getAccuracy();
-    
+
     public static native CMCalibratedMagneticField create(CMMagneticField field, CMMagneticFieldCalibrationAccuracy accuracy) /*-[
         CMCalibratedMagneticField __new = { .field = field, .accuracy = accuracy };
         return __new;
@@ -40,11 +37,27 @@ public class CMCalibratedMagneticField
         return __new;
     ]-*/;
 
-    
+
     public static native CMCalibratedMagneticField copyWithaccuracy(CMCalibratedMagneticField original, CMMagneticFieldCalibrationAccuracy accuracy) /*-[
         CMCalibratedMagneticField __new = { .field = original.field, .accuracy = accuracy };
         return __new;
     ]-*/;
 
-    
+
+    public static final class Adapter {
+
+        public CMMagneticField field;
+        public CMMagneticFieldCalibrationAccuracy accuracy;
+        public Adapter(CMMagneticField field, CMMagneticFieldCalibrationAccuracy accuracy) {
+            this.field = field;
+            this.accuracy = accuracy;
+        }
+        public Adapter(CMCalibratedMagneticField original) {
+            this.field = original.getField();
+            this.accuracy = original.getAccuracy();
+        }
+        public CMCalibratedMagneticField convert() {
+            return create(field, accuracy);
+        }
+    }
 }

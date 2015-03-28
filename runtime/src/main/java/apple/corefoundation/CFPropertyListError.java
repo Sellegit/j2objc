@@ -15,11 +15,9 @@ import apple.dispatch.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 4.0 and later.
  */
-
 @Library("CoreFoundation/CoreFoundation.h")
 @Mapping("CFPropertyListError")
 public final class CFPropertyListError extends ObjCEnum {
@@ -32,6 +30,6 @@ public final class CFPropertyListError extends ObjCEnum {
     public static final long ReadStreamError = 3842L;
     @GlobalConstant("kCFPropertyListWriteStreamError")
     public static final long WriteStreamError = 3851L;
-    
+
 
 }

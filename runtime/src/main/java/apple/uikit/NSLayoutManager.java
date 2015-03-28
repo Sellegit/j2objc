@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 7.0 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("NSLayoutManager")
 public class NSLayoutManager 
     extends NSObject 
@@ -33,7 +31,7 @@ public class NSLayoutManager
     
     @Mapping("init")
     public NSLayoutManager() { }
-    
+
     
     @Mapping("textStorage")
     public native NSTextStorage getTextStorage();
@@ -75,7 +73,7 @@ public class NSLayoutManager
     public native CGRect getExtraLineFragmentUsedRect();
     @Mapping("extraLineFragmentTextContainer")
     public native NSTextContainer getExtraLineFragmentTextContainer();
-    
+
     
     
     @Mapping("addTextContainer:")
@@ -204,5 +202,5 @@ public class NSLayoutManager
     public native void strikethrough(NSRange glyphRange, @Representing("NSUnderlineStyle") long strikethroughVal, CGRect lineRect, NSRange lineGlyphRange, CGPoint containerOrigin);
     @Mapping("encodeWithCoder:")
     public native void encode(NSCoder aCoder);
-    
+
 }

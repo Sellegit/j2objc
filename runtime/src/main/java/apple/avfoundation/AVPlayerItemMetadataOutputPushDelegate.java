@@ -20,24 +20,21 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
-
-
 @Library("AVFoundation/AVFoundation.h") @Mapping("AVPlayerItemMetadataOutputPushDelegate")
 public interface AVPlayerItemMetadataOutputPushDelegate 
     extends AVPlayerItemOutputPushDelegate {
 
     
     
-    
-    
+
+
     
     /**
      * @since Available in iOS 8.0 and later.
      */
     @Mapping("metadataOutput:didOutputTimedMetadataGroups:fromPlayerItemTrack:")
     void didOutputTimedMetadataGroups(AVPlayerItemMetadataOutput output, NSArray<?> groups, AVPlayerItemTrack track);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

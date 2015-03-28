@@ -15,11 +15,9 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
 /**
  * @since Available in iOS 7.1 and later.
  */
-
 @Library("MediaPlayer/MediaPlayer.h") @Mapping("MPSkipIntervalCommandEvent")
 public class MPSkipIntervalCommandEvent 
     extends MPRemoteCommandEvent 
@@ -29,13 +27,13 @@ public class MPSkipIntervalCommandEvent
     
     @Mapping("init")
     public MPSkipIntervalCommandEvent() { }
-    
+
     
     @Mapping("interval")
     public native double getInterval();
+
     
     
-    
-    
-    
+
+
 }

@@ -16,11 +16,9 @@ import apple.addressbook.*;
 import apple.corebluetooth.*;
 
 
-
 /**
  * @since Available in iOS 7.0 and later.
  */
-
 @Library("CoreLocation/CoreLocation.h") @Mapping("CLBeaconRegion")
 public class CLBeaconRegion 
     extends CLRegion 
@@ -43,7 +41,7 @@ public class CLBeaconRegion
     public CLBeaconRegion(CLLocationCoordinate2D center, double radius, String identifier) { }
     @Mapping("init")
     public CLBeaconRegion() { }
-    
+
     
     @Mapping("proximityUUID")
     public native NSUUID getProximityUUID();
@@ -55,10 +53,10 @@ public class CLBeaconRegion
     public native boolean notifiesEntryStateOnDisplay();
     @Mapping("setNotifyEntryStateOnDisplay:")
     public native void setNotifiesEntryStateOnDisplay(boolean v);
-    
+
     
     
     @Mapping("peripheralDataWithMeasuredPower:")
     public native CBAdvertisementData getPeripheralData(NSNumber measuredPower);
-    
+
 }

@@ -21,11 +21,9 @@ import apple.glkit.*;
 import apple.scenekit.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("SpriteKit/SpriteKit.h")
 @Mapping("SKUniformType")
 public final class SKUniformType extends ObjCEnum {
@@ -48,6 +46,6 @@ public final class SKUniformType extends ObjCEnum {
     public static final long FloatMatrix4 = 7L;
     @GlobalConstant("SKUniformTypeTexture")
     public static final long Texture = 8L;
-    
+
 
 }

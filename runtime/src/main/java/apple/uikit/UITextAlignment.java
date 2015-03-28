@@ -19,13 +19,11 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 2.0 and later.
  * @deprecated Deprecated in iOS 6.0.
  */
 @Deprecated
-
 @Library("UIKit/UIKit.h")
 @Mapping("UITextAlignment")
 public final class UITextAlignment extends ObjCEnum {
@@ -36,6 +34,6 @@ public final class UITextAlignment extends ObjCEnum {
     public static final long Center = 1L;
     @GlobalConstant("UITextAlignmentRight")
     public static final long Right = 2L;
-    
+
 
 }

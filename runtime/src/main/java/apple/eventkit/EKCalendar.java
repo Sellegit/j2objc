@@ -16,11 +16,9 @@ import apple.addressbook.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 4.0 and later.
  */
-
 @Library("EventKit/EventKit.h") @Mapping("EKCalendar")
 public class EKCalendar 
     extends EKObject 
@@ -30,7 +28,7 @@ public class EKCalendar
     
     @Mapping("init")
     public EKCalendar() { }
-    
+
     
     @Mapping("source")
     public native EKSource getSource();
@@ -70,7 +68,7 @@ public class EKCalendar
      */
     @Mapping("allowedEntityTypes")
     public native @Representing("EKEntityMask") long getAllowedEntityTypes();
-    
+
     
     
     /**
@@ -85,5 +83,5 @@ public class EKCalendar
      */
     @Mapping("calendarForEntityType:eventStore:")
     public static native EKCalendar create(@Representing("EKEntityType") long entityType, EKEventStore eventStore);
-    
+
 }

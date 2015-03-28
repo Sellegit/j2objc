@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("UIKit/UIKit.h")
 @Mapping("UIUserInterfaceSizeClass")
 public final class UIUserInterfaceSizeClass extends ObjCEnum {
@@ -34,6 +32,6 @@ public final class UIUserInterfaceSizeClass extends ObjCEnum {
     public static final long Compact = 1L;
     @GlobalConstant("UIUserInterfaceSizeClassRegular")
     public static final long Regular = 2L;
-    
+
 
 }

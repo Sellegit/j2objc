@@ -17,9 +17,6 @@ import apple.corevideo.*;
 import apple.imageio.*;
 
 
-
-
-
 @Library("CoreImage/CoreImage.h") @Mapping("CIKernel")
 public class CIKernel 
     extends NSObject 
@@ -29,10 +26,10 @@ public class CIKernel
     
     @Mapping("init")
     public CIKernel() { }
+
     
-    
-    
-    
+
+
     
     
     @Mapping("name")
@@ -44,5 +41,5 @@ public class CIKernel
      */
     @Mapping("kernelWithString:")
     public static native CIKernel create(String string);
-    
+
 }

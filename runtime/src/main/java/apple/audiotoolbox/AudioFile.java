@@ -16,7 +16,6 @@ import apple.opengles.*;
 import apple.coreaudio.*;
 import apple.coremedia.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("AudioToolbox/AudioToolbox.h")
@@ -27,7 +26,7 @@ public class AudioFile
     
     
     protected AudioFile() {}
-    
+
     
     
     
@@ -173,5 +172,5 @@ public class AudioFile
      */
     @GlobalFunction("AudioFileStreamClose")
     public static native AudioFileError streamClose(AudioFileStream inAudioFileStream);
-    
+
 }

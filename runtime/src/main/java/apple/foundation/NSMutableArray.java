@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h") @Mapping("NSMutableArray")
 public class NSMutableArray <T>
     extends NSArray 
@@ -32,10 +29,10 @@ public class NSMutableArray <T>
     public NSMutableArray() {}
     @Mapping("initWithCapacity:")
     public NSMutableArray(@MachineSizedUInt long numItems) { }
+
     
-    
-    
-    
+
+
     
     
     @Mapping("insertObject:atIndex:")
@@ -46,5 +43,5 @@ public class NSMutableArray <T>
     public native void replaceObject(@MachineSizedUInt long index, Object anObject);
     @Mapping("removeAllObjects")
     public native void removeAllObjects();
-    
+
 }

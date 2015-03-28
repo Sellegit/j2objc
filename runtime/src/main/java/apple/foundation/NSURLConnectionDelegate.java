@@ -19,17 +19,14 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h") @Mapping("NSURLConnectionDelegate")
 public interface NSURLConnectionDelegate 
     extends NSObjectProtocol {
 
     
     
-    
-    
+
+
     
     @Mapping("connection:didFailWithError:")
     void didFail(NSURLConnection connection, NSError error);
@@ -58,7 +55,7 @@ public interface NSURLConnectionDelegate
     @Deprecated
     @Mapping("connection:didCancelAuthenticationChallenge:")
     void didCancelAuthenticationChallenge(NSURLConnection connection, NSURLAuthenticationChallenge challenge);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

@@ -15,9 +15,6 @@ import apple.dispatch.*;
 import apple.foundation.*;
 
 
-
-
-
 @Library("CoreFoundation/CoreFoundation.h")
 @Mapping("CFCalendarUnit")
 public final class CFCalendarUnit extends ObjCEnum {
@@ -67,6 +64,6 @@ public final class CFCalendarUnit extends ObjCEnum {
      */
     @GlobalConstant("kCFCalendarUnitYearForWeekOfYear")
     public static final long YearForWeekOfYear = 16384L;
-    
+
 
 }

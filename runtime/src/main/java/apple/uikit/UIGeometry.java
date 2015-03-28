@@ -18,7 +18,6 @@ import apple.coreimage.*;
 import apple.coretext.*;
 import apple.corelocation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("UIKit/UIKit.h")
@@ -51,5 +50,5 @@ public class UIGeometry
     public static native CGRect stringToCGRect(String string);
     @GlobalFunction("CGAffineTransformFromString")
     public static native CGAffineTransform stringToCGAffineTransform(String string);
-    
+
 }

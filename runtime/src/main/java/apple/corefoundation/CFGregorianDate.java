@@ -15,9 +15,6 @@ import apple.dispatch.*;
 import apple.foundation.*;
 
 
-
-
-
 @Mapping("CFGregorianDate") @Library("CoreFoundation/CoreFoundation.h")
 public class CFGregorianDate 
     extends Struct 
@@ -39,7 +36,7 @@ public class CFGregorianDate
     public native byte getMinute();
     @DotMapping("second")
     public native double getSecond();
-    
+
     public static native CFGregorianDate create(int year, byte month, byte day, byte hour, byte minute, double second) /*-[
         CFGregorianDate __new = { .year = year, .month = month, .day = day, .hour = hour, .minute = minute, .second = second };
         return __new;
@@ -49,37 +46,65 @@ public class CFGregorianDate
         return __new;
     ]-*/;
 
-    
+
     public static native CFGregorianDate copyWithmonth(CFGregorianDate original, byte month) /*-[
         CFGregorianDate __new = { .year = original.year, .month = month, .day = original.day, .hour = original.hour, .minute = original.minute, .second = original.second };
         return __new;
     ]-*/;
 
-    
+
     public static native CFGregorianDate copyWithday(CFGregorianDate original, byte day) /*-[
         CFGregorianDate __new = { .year = original.year, .month = original.month, .day = day, .hour = original.hour, .minute = original.minute, .second = original.second };
         return __new;
     ]-*/;
 
-    
+
     public static native CFGregorianDate copyWithhour(CFGregorianDate original, byte hour) /*-[
         CFGregorianDate __new = { .year = original.year, .month = original.month, .day = original.day, .hour = hour, .minute = original.minute, .second = original.second };
         return __new;
     ]-*/;
 
-    
+
     public static native CFGregorianDate copyWithminute(CFGregorianDate original, byte minute) /*-[
         CFGregorianDate __new = { .year = original.year, .month = original.month, .day = original.day, .hour = original.hour, .minute = minute, .second = original.second };
         return __new;
     ]-*/;
 
-    
+
     public static native CFGregorianDate copyWithsecond(CFGregorianDate original, double second) /*-[
         CFGregorianDate __new = { .year = original.year, .month = original.month, .day = original.day, .hour = original.hour, .minute = original.minute, .second = second };
         return __new;
     ]-*/;
 
-    
+
+    public static final class Adapter {
+
+        public int year;
+        public byte month;
+        public byte day;
+        public byte hour;
+        public byte minute;
+        public double second;
+        public Adapter(int year, byte month, byte day, byte hour, byte minute, double second) {
+            this.year = year;
+            this.month = month;
+            this.day = day;
+            this.hour = hour;
+            this.minute = minute;
+            this.second = second;
+        }
+        public Adapter(CFGregorianDate original) {
+            this.year = original.getYear();
+            this.month = original.getMonth();
+            this.day = original.getDay();
+            this.hour = original.getHour();
+            this.minute = original.getMinute();
+            this.second = original.getSecond();
+        }
+        public CFGregorianDate convert() {
+            return create(year, month, day, hour, minute, second);
+        }
+    }
     /**
      * @since Available in iOS 2.0 and later.
      * @deprecated Deprecated in iOS 8.0.
@@ -101,5 +126,5 @@ public class CFGregorianDate
     @Deprecated
     @GlobalFunction("CFAbsoluteTimeGetGregorianDate")
     public static native CFGregorianDate fromAbsoluteTime(double at, CFTimeZone tz);
-    
+
 }

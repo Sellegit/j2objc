@@ -15,17 +15,14 @@ import apple.foundation.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("CoreBluetooth/CoreBluetooth.h") @Mapping("CBPeripheralManagerDelegate")
 public interface CBPeripheralManagerDelegate 
     extends NSObjectProtocol {
 
     
     
-    
-    
+
+
     
     @Mapping("peripheralManagerDidUpdateState:")
     void didUpdateState(CBPeripheralManager peripheral);
@@ -45,7 +42,7 @@ public interface CBPeripheralManagerDelegate
     void didReceiveWriteRequests(CBPeripheralManager peripheral, NSArray<?> requests);
     @Mapping("peripheralManagerIsReadyToUpdateSubscribers:")
     void readyToUpdateSubscribers(CBPeripheralManager peripheral);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

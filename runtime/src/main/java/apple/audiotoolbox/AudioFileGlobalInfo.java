@@ -17,9 +17,6 @@ import apple.coreaudio.*;
 import apple.coremedia.*;
 
 
-
-
-
 @Library("AudioToolbox/AudioToolbox.h")
 @Mapping("AudioFileGlobalInfo")
 public final class AudioFileGlobalInfo extends ObjCEnum {
@@ -58,6 +55,6 @@ public final class AudioFileGlobalInfo extends ObjCEnum {
     public static final long TypesForHFSTypeCode = 1952999027L;
     @GlobalConstant("kAudioFileGlobalInfo_TypesForExtension")
     public static final long TypesForExtension = 1952807028L;
-    
+
 
 }

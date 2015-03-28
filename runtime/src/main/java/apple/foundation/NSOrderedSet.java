@@ -19,11 +19,9 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 5.0 and later.
  */
-
 @Library("Foundation/Foundation.h") @Mapping("NSOrderedSet")
 public class NSOrderedSet <T>
     extends NSObject 
@@ -38,7 +36,7 @@ public class NSOrderedSet <T>
     public NSOrderedSet(NSOrderedSet<?> set) { }
     @Mapping("initWithArray:")
     public NSOrderedSet(NSArray<?> array) { }
-    
+
     
     @Mapping("count")
     public native @MachineSizedUInt long getCount();
@@ -52,7 +50,7 @@ public class NSOrderedSet <T>
     public native NSArray<T> getArray();
     @Mapping("set")
     public native NSSet<T> getSet();
-    
+
     
     
     @Mapping("objectAtIndex:")
@@ -65,5 +63,5 @@ public class NSOrderedSet <T>
     public native boolean containsObject(Object object);
     @Mapping("objectEnumerator")
     public native NSEnumerator<T> objectEnumerator();
-    
+
 }

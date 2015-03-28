@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 3.0 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h") @Mapping("AVAudioSession")
 public class AVAudioSession 
     extends NSObject 
@@ -34,7 +32,7 @@ public class AVAudioSession
     
     @Mapping("init")
     public AVAudioSession() { }
-    
+
     
     @Mapping("category")
     public native AVAudioSessionCategory getCategory();
@@ -212,7 +210,7 @@ public class AVAudioSession
     @Deprecated
     @Mapping("preferredHardwareSampleRate")
     public native double getPreferredHardwareSampleRate();
-    
+
     
     
     /**
@@ -245,7 +243,7 @@ public class AVAudioSession
      */
     @GlobalConstant("AVAudioSessionSilenceSecondaryAudioHintTypeKey")
     public static native NSString SilenceSecondaryAudioHintTypeKey();
-    
+
     @Mapping("setActive:error:")
     public native boolean setActive$error$(boolean active, Todo outError);
     /**
@@ -323,5 +321,5 @@ public class AVAudioSession
     @Deprecated
     @Mapping("setPreferredHardwareSampleRate:error:")
     public native boolean setPreferredHardwareSampleRate(double sampleRate, Todo outError);
-    
+
 }

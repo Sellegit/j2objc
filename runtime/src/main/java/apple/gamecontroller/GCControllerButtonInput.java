@@ -14,9 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
-
-
 @Library("GameController/GameController.h") @Mapping("GCControllerButtonInput")
 public class GCControllerButtonInput 
     extends GCControllerElement 
@@ -26,7 +23,7 @@ public class GCControllerButtonInput
     
     @Mapping("init")
     public GCControllerButtonInput() { }
-    
+
     
     @Mapping("valueChangedHandler")
     public native @Block VoidBlock3<GCControllerButtonInput, Float, Boolean> getValueChangedHandler();
@@ -46,9 +43,9 @@ public class GCControllerButtonInput
     public native float getValue();
     @Mapping("isPressed")
     public native boolean isPressed();
+
     
     
-    
-    
-    
+
+
 }

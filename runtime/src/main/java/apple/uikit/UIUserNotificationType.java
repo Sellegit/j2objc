@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("UIKit/UIKit.h")
 @Mapping("UIUserNotificationType")
 public final class UIUserNotificationType extends ObjCEnum {
@@ -36,6 +34,6 @@ public final class UIUserNotificationType extends ObjCEnum {
     public static final long Sound = 2L;
     @GlobalConstant("UIUserNotificationTypeAlert")
     public static final long Alert = 4L;
-    
+
 
 }

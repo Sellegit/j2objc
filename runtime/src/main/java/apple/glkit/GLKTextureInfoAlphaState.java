@@ -17,11 +17,9 @@ import apple.uikit.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 5.0 and later.
  */
-
 @Library("GLKit/GLKit.h")
 @Mapping("GLKTextureInfoAlphaState")
 public final class GLKTextureInfoAlphaState extends ObjCEnum {
@@ -32,6 +30,6 @@ public final class GLKTextureInfoAlphaState extends ObjCEnum {
     public static final long NonPremultiplied = 1L;
     @GlobalConstant("GLKTextureInfoAlphaStatePremultiplied")
     public static final long Premultiplied = 2L;
-    
+
 
 }

@@ -15,11 +15,9 @@ import apple.foundation.*;
 import apple.imageio.*;
 
 
-
 /**
  * @since Available in iOS 4.0 and later.
  */
-
 @Library("AssetsLibrary/AssetsLibrary.h") @Mapping("ALAssetsLibrary")
 public class ALAssetsLibrary 
     extends NSObject 
@@ -29,10 +27,10 @@ public class ALAssetsLibrary
     
     @Mapping("init")
     public ALAssetsLibrary() { }
+
     
-    
-    
-    
+
+
     
     
     /**
@@ -40,7 +38,7 @@ public class ALAssetsLibrary
      */
     @GlobalConstant("ALAssetsLibraryChangedNotification")
     public static native NSString ChangedNotification();
-    
+
     @Mapping("videoAtPathIsCompatibleWithSavedPhotosAlbum:")
     public native boolean isVideoCompatibleWithSavedPhotosAlbum(NSURL videoPathURL);
     /**
@@ -53,5 +51,5 @@ public class ALAssetsLibrary
      */
     @Mapping("disableSharedPhotoStreamsSupport")
     public static native void disableSharedPhotoStreamsSupport();
-    
+
 }

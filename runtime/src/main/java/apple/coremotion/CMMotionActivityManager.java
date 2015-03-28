@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 7.0 and later.
  */
-
 @Library("CoreMotion/CoreMotion.h") @Mapping("CMMotionActivityManager")
 public class CMMotionActivityManager 
     extends NSObject 
@@ -28,15 +26,15 @@ public class CMMotionActivityManager
     
     @Mapping("init")
     public CMMotionActivityManager() { }
+
     
-    
-    
-    
+
+
     
     
     @Mapping("stopActivityUpdates")
     public native void stopActivityUpdates();
     @Mapping("isActivityAvailable")
     public static native boolean isActivityAvailable();
-    
+
 }

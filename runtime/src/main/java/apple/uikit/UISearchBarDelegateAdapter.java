@@ -18,7 +18,6 @@ import apple.coreimage.*;
 import apple.coretext.*;
 import apple.corelocation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -29,8 +28,8 @@ public abstract class UISearchBarDelegateAdapter
     
     
     
-    
-    
+
+
     
     
     @NotImplemented("searchBarShouldBeginEditing:")
@@ -64,5 +63,5 @@ public abstract class UISearchBarDelegateAdapter
      */
     @NotImplemented("searchBar:selectedScopeButtonIndexDidChange:")
     public void selectedScopeButtonIndexDidChange(UISearchBar searchBar, @MachineSizedSInt long selectedScope) { throw new UnsupportedOperationException(); }
-    
+
 }

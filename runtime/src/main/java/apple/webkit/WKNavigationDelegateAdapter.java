@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 import apple.uikit.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -25,8 +24,8 @@ public abstract class WKNavigationDelegateAdapter
     
     
     
-    
-    
+
+
     
     
     @NotImplemented("webView:decidePolicyForNavigationAction:decisionHandler:")
@@ -47,5 +46,5 @@ public abstract class WKNavigationDelegateAdapter
     public void didFailNavigation(WKWebView webView, WKNavigation navigation, NSError error) { throw new UnsupportedOperationException(); }
     @NotImplemented("webView:didReceiveAuthenticationChallenge:completionHandler:")
     public void didReceiveAuthenticationChallenge(WKWebView webView, NSURLAuthenticationChallenge challenge, @Block VoidBlock2<NSURLSessionAuthChallengeDisposition, NSURLCredential> completionHandler) { throw new UnsupportedOperationException(); }
-    
+
 }

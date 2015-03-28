@@ -19,23 +19,20 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h") @Mapping("UIDocumentMenuDelegate")
 public interface UIDocumentMenuDelegate 
     extends NSObjectProtocol {
 
     
     
-    
-    
+
+
     
     @Mapping("documentMenu:didPickDocumentPicker:")
     void didPickDocumentPicker(UIDocumentMenuViewController documentMenu, UIDocumentPickerViewController documentPicker);
     @Mapping("documentMenuWasCancelled:")
     void wasCancelled(UIDocumentMenuViewController documentMenu);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

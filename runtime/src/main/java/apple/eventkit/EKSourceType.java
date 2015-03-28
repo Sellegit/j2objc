@@ -16,9 +16,6 @@ import apple.addressbook.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("EventKit/EventKit.h")
 @Mapping("EKSourceType")
 public final class EKSourceType extends ObjCEnum {
@@ -35,6 +32,6 @@ public final class EKSourceType extends ObjCEnum {
     public static final long Subscribed = 4L;
     @GlobalConstant("EKSourceTypeBirthdays")
     public static final long Birthdays = 5L;
-    
+
 
 }

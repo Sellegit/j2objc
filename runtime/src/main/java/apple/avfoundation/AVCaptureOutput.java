@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 4.0 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h") @Mapping("AVCaptureOutput")
 public class AVCaptureOutput 
     extends NSObject 
@@ -34,11 +32,11 @@ public class AVCaptureOutput
     
     @Mapping("init")
     public AVCaptureOutput() { }
-    
+
     
     @Mapping("connections")
     public native NSArray<AVCaptureConnection> getConnections();
-    
+
     
     
     /**
@@ -61,5 +59,5 @@ public class AVCaptureOutput
      */
     @Mapping("rectForMetadataOutputRectOfInterest:")
     public native CGRect getRectOfInterestInMetadataOutputCoordinates(CGRect rectInMetadataOutputCoordinates);
-    
+
 }

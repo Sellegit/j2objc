@@ -14,9 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
-
-
 @Library("CoreAudio/CoreAudioTypes.h")
 @Mapping("AudioChannelLayoutTag")
 public final class AudioChannelLayoutTag extends ObjCEnum {
@@ -275,6 +272,6 @@ public final class AudioChannelLayoutTag extends ObjCEnum {
     public static final long DiscreteInOrder = 9633792L;
     @GlobalConstant("kAudioChannelLayoutTag_Unknown")
     public static final long Unknown = -65536L;
-    
+
 
 }

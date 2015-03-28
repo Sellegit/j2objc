@@ -13,7 +13,6 @@ import apple.coregraphics.*;
 import apple.coreservices.*;
 import apple.dispatch.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("Security/Security.h")
@@ -56,11 +55,11 @@ public class SecImportExport
      */
     @GlobalConstant("kSecImportItemIdentity")
     public static native CFString KeyItemIdentity();
-    
+
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalFunction("SecPKCS12Import")
     public static native int importPKCS12(CFData pkcs12_data, CFDictionary options, Todo items);
-    
+
 }

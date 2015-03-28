@@ -20,9 +20,6 @@ import apple.spritekit.*;
 import apple.opengles.*;
 
 
-
-
-
 @Library("SceneKit/SceneKit.h") @Mapping("SCNIKConstraint")
 public class SCNIKConstraint 
     extends SCNConstraint 
@@ -32,7 +29,7 @@ public class SCNIKConstraint
     
     @Mapping("init")
     public SCNIKConstraint() { }
-    
+
     
     @Mapping("chainRootNode")
     public native SCNNode getChainRootNode();
@@ -40,7 +37,7 @@ public class SCNIKConstraint
     public native SCNVector3 getTargetPosition();
     @Mapping("setTargetPosition:")
     public native void setTargetPosition(SCNVector3 v);
-    
+
     
     
     @Mapping("setMaxAllowedRotationAngle:forJoint:")
@@ -49,5 +46,5 @@ public class SCNIKConstraint
     public native @MachineSizedFloat double getMaxAllowedRotationAngleForJoint(SCNNode node);
     @Mapping("inverseKinematicsConstraintWithChainRootNode:")
     public static native SCNIKConstraint create(SCNNode chainRootNode);
-    
+
 }

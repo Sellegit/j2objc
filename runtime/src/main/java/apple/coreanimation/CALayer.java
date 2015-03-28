@@ -17,9 +17,6 @@ import apple.coretext.*;
 import apple.opengles.*;
 
 
-
-
-
 @Library("QuartzCore/QuartzCore.h") @Mapping("CALayer")
 public class CALayer 
     extends NSObject 
@@ -31,7 +28,7 @@ public class CALayer
     public CALayer(Object layer) { }
     @Mapping("init")
     public CALayer() { }
-    
+
     
     @Mapping("bounds")
     public native CGRect getBounds();
@@ -257,7 +254,7 @@ public class CALayer
     public native CAFillMode getFillMode();
     @Mapping("setFillMode:")
     public native void setFillMode(CAFillMode v);
-    
+
     
     
     @Mapping("presentationLayer")
@@ -350,5 +347,5 @@ public class CALayer
     public native void scrollTo(CGRect r);
     @Mapping("encodeWithCoder:")
     public native void encode(NSCoder aCoder);
-    
+
 }

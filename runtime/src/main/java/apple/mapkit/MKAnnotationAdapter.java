@@ -16,7 +16,6 @@ import apple.corelocation.*;
 import apple.uikit.*;
 import apple.dispatch.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -35,9 +34,9 @@ public abstract class MKAnnotationAdapter
     public String getTitle() { throw new UnsupportedOperationException(); }
     @NotImplemented("subtitle")
     public String getSubtitle() { throw new UnsupportedOperationException(); }
+
     
     
-    
-    
-    
+
+
 }

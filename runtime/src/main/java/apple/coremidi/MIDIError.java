@@ -14,9 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
-
-
 @Library("CoreMIDI/CoreMIDI.h")
 @Mapping("MIDIError")
 public final class MIDIError extends ObjCEnum {
@@ -51,6 +48,6 @@ public final class MIDIError extends ObjCEnum {
     public static final long IDNotUnique = -10843L;
     @GlobalConstant("kMIDINotPermitted")
     public static final long NotPermitted = -10844L;
-    
+
 
 }

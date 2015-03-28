@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 6.0 and later.
  */
-
 @Library("UIKit/UIKit.h") @Mapping("UITableViewHeaderFooterView")
 public class UITableViewHeaderFooterView 
     extends UIView 
@@ -39,7 +37,7 @@ public class UITableViewHeaderFooterView
     public UITableViewHeaderFooterView(NSCoder aDecoder) { }
     @Mapping("init")
     public UITableViewHeaderFooterView() { }
-    
+
     
     @Mapping("tintColor")
     public native UIColor getTintColor();
@@ -57,10 +55,10 @@ public class UITableViewHeaderFooterView
     public native void setBackgroundView(UIView v);
     @Mapping("reuseIdentifier")
     public native String getReuseIdentifier();
-    
+
     
     
     @Mapping("prepareForReuse")
     public native void prepareForReuse();
-    
+
 }

@@ -13,7 +13,6 @@ import apple.coregraphics.*;
 import apple.coreservices.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("CoreMIDI/CoreMIDI.h")
@@ -36,5 +35,5 @@ public class MIDIDriver
      */
     @GlobalFunction("MIDIGetDriverDeviceList")
     public static native MIDIDeviceList getDeviceList(MIDIDriver driver);
-    
+
 }

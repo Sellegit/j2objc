@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 7.0 and later.
  */
-
 @Library("UIKit/UIKit.h")
 @Mapping("NSTextWritingDirection")
 public final class NSTextWritingDirection extends ObjCEnum {
@@ -32,6 +30,6 @@ public final class NSTextWritingDirection extends ObjCEnum {
     public static final long Embedding = 0L;
     @GlobalConstant("NSTextWritingDirectionOverride")
     public static final long Override = 2L;
-    
+
 
 }

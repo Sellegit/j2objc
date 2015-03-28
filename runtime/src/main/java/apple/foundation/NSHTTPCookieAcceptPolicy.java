@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h")
 @Mapping("NSHTTPCookieAcceptPolicy")
 public final class NSHTTPCookieAcceptPolicy extends ObjCEnum {
@@ -32,6 +29,6 @@ public final class NSHTTPCookieAcceptPolicy extends ObjCEnum {
     public static final long Never = 1L;
     @GlobalConstant("NSHTTPCookieAcceptPolicyOnlyFromMainDocumentDomain")
     public static final long OnlyFromMainDocumentDomain = 2L;
-    
+
 
 }

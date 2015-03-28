@@ -15,11 +15,9 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
 /**
  * @since Available in iOS 3.0 and later.
  */
-
 @Library("MediaPlayer/MediaPlayer.h")
 @Mapping("MPMediaPlaylistAttribute")
 public final class MPMediaPlaylistAttribute extends ObjCEnum {
@@ -32,6 +30,6 @@ public final class MPMediaPlaylistAttribute extends ObjCEnum {
     public static final long Smart = 2L;
     @GlobalConstant("MPMediaPlaylistAttributeGenius")
     public static final long Genius = 4L;
-    
+
 
 }

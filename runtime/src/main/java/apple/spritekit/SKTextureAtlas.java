@@ -21,9 +21,6 @@ import apple.glkit.*;
 import apple.scenekit.*;
 
 
-
-
-
 @Library("SpriteKit/SpriteKit.h") @Mapping("SKTextureAtlas")
 public class SKTextureAtlas 
     extends NSObject 
@@ -33,11 +30,11 @@ public class SKTextureAtlas
     
     @Mapping("init")
     public SKTextureAtlas() { }
-    
+
     
     @Mapping("textureNames")
     public native List<String> getTextureNames();
-    
+
     
     
     @Mapping("textureNamed:")
@@ -55,5 +52,5 @@ public class SKTextureAtlas
     public static native void preloadTextureAtlases(NSArray<?> textureAtlases, @Block Runnable completionHandler);
     @Mapping("encodeWithCoder:")
     public native void encode(NSCoder aCoder);
-    
+
 }

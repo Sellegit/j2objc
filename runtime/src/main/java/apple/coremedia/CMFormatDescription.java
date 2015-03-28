@@ -17,7 +17,6 @@ import apple.coreaudio.*;
 import apple.coreanimation.*;
 import apple.corevideo.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Mapping("CMFormatDescriptionRef") @Library("CoreMedia/CoreMedia.h")
@@ -28,7 +27,7 @@ public class CMFormatDescription
     
     
     protected CMFormatDescription() {}
-    
+
     
     
     
@@ -72,5 +71,5 @@ public class CMFormatDescription
      */
     @GlobalFunction("CMFormatDescriptionGetExtension")
     public static native CFPropertyListRef getExtension(CMFormatDescription desc, CFString extensionKey);
-    
+
 }

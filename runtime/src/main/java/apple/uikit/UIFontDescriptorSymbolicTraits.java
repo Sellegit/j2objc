@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 7.0 and later.
  */
-
 @Library("UIKit/UIKit.h")
 @Mapping("UIFontDescriptorSymbolicTraits")
 public final class UIFontDescriptorSymbolicTraits extends ObjCEnum {
@@ -70,6 +68,6 @@ public final class UIFontDescriptorSymbolicTraits extends ObjCEnum {
     public static final long ClassScripts = -1610612736L;
     @GlobalConstant("UIFontDescriptorClassSymbolic")
     public static final long ClassSymbolic = -1073741824L;
-    
+
 
 }

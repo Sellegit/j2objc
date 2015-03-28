@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.dispatch.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("CoreFoundation/CoreFoundation.h")
@@ -82,5 +81,5 @@ public class CFLocaleComponent
      */
     @GlobalConstant("kCFLocaleAlternateQuotationEndDelimiterKey")
     public static native NSString AlternateQuotationEndDelimiterKeyValue();
-    
+
 }

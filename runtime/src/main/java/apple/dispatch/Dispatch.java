@@ -12,7 +12,6 @@ import apple.corefoundation.*;
 import apple.coregraphics.*;
 import apple.coreservices.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("dispatch/dispatch.h")
@@ -30,7 +29,7 @@ public class Dispatch
     public static final int BLOCK_NO_QOS_CLASS = 8;
     public static final int BLOCK_INHERIT_QOS_CLASS = 16;
     public static final int BLOCK_ENFORCE_QOS_CLASS = 32;
-    
+
     
     
     
@@ -108,5 +107,5 @@ public class Dispatch
      */
     @GlobalFunction("dispatch_write")
     public static native void write(int fd, DispatchData data, DispatchQueue queue, @Block VoidBlock2<DispatchData, Integer> handler);
-    
+
 }

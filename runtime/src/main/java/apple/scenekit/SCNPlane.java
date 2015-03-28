@@ -20,9 +20,6 @@ import apple.spritekit.*;
 import apple.opengles.*;
 
 
-
-
-
 @Library("SceneKit/SceneKit.h") @Mapping("SCNPlane")
 public class SCNPlane 
     extends SCNGeometry 
@@ -32,7 +29,7 @@ public class SCNPlane
     
     @Mapping("init")
     public SCNPlane() { }
-    
+
     
     @Mapping("width")
     public native @MachineSizedFloat double getWidth();
@@ -58,10 +55,10 @@ public class SCNPlane
     public native @MachineSizedSInt long getCornerSegmentCount();
     @Mapping("setCornerSegmentCount:")
     public native void setCornerSegmentCount(@MachineSizedSInt long v);
-    
+
     
     
     @Mapping("planeWithWidth:height:")
     public static native SCNPlane create(@MachineSizedFloat double width, @MachineSizedFloat double height);
-    
+
 }

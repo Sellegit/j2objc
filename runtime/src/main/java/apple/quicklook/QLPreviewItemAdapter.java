@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 import apple.uikit.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -29,9 +28,9 @@ public abstract class QLPreviewItemAdapter
     public NSURL getURL() { throw new UnsupportedOperationException(); }
     @NotImplemented("previewItemTitle")
     public String getTitle() { throw new UnsupportedOperationException(); }
+
     
     
-    
-    
-    
+
+
 }

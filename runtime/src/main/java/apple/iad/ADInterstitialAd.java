@@ -18,11 +18,9 @@ import apple.mediaplayer.*;
 import apple.avkit.*;
 
 
-
 /**
  * @since Available in iOS 4.3 and later.
  */
-
 @Library("iAd/iAd.h") @Mapping("ADInterstitialAd")
 public final class ADInterstitialAd 
     extends NSObject 
@@ -32,7 +30,7 @@ public final class ADInterstitialAd
     
     @Mapping("init")
     public ADInterstitialAd() { }
-    
+
     
     @Mapping("delegate")
     public native ADInterstitialAdDelegate getDelegate();
@@ -42,12 +40,12 @@ public final class ADInterstitialAd
     public native boolean isLoaded();
     @Mapping("isActionInProgress")
     public native boolean isActionInProgress();
-    
+
     
     
     @Mapping("cancelAction")
     public native void cancelAction();
     @Mapping("presentInView:")
     public native boolean present(UIView containerView);
-    
+
 }

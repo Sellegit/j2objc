@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 import apple.uikit.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("MediaPlayer/MediaPlayer.h")
@@ -62,5 +61,5 @@ public class MPNowPlayingInfo
      */
     @GlobalConstant("MPNowPlayingInfoPropertyChapterCount")
     public static native NSString ChapterCount();
-    
+
 }

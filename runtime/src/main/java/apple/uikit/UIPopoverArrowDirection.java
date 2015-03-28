@@ -19,9 +19,6 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h")
 @Mapping("UIPopoverArrowDirection")
 public final class UIPopoverArrowDirection extends ObjCEnum {
@@ -38,6 +35,6 @@ public final class UIPopoverArrowDirection extends ObjCEnum {
     public static final long Any = 15L;
     @GlobalConstant("UIPopoverArrowDirectionUnknown")
     public static final long Unknown = -1L;
-    
+
 
 }

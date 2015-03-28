@@ -20,9 +20,6 @@ import apple.spritekit.*;
 import apple.opengles.*;
 
 
-
-
-
 @Library("SceneKit/SceneKit.h")
 @Mapping("SCNAntialiasingMode")
 public final class SCNAntialiasingMode extends ObjCEnum {
@@ -33,6 +30,6 @@ public final class SCNAntialiasingMode extends ObjCEnum {
     public static final long Multisampling2X = 1L;
     @GlobalConstant("SCNAntialiasingModeMultisampling4X")
     public static final long Multisampling4X = 2L;
-    
+
 
 }

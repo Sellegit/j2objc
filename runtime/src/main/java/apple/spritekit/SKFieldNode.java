@@ -21,11 +21,9 @@ import apple.glkit.*;
 import apple.scenekit.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("SpriteKit/SpriteKit.h") @Mapping("SKFieldNode")
 public class SKFieldNode 
     extends SKNode 
@@ -37,7 +35,7 @@ public class SKFieldNode
     public SKFieldNode() { }
     @Mapping("initWithCoder:")
     public SKFieldNode(NSCoder aDecoder) { }
-    
+
     
     @Mapping("region")
     public native SKRegion getRegion();
@@ -83,7 +81,7 @@ public class SKFieldNode
     public native SKTexture getTexture();
     @Mapping("setTexture:")
     public native void setTexture(SKTexture v);
-    
+
     
     
     @Mapping("dragField")
@@ -108,5 +106,5 @@ public class SKFieldNode
     public static native SKFieldNode createElectricField();
     @Mapping("magneticField")
     public static native SKFieldNode createMagneticField();
-    
+
 }

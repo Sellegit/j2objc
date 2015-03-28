@@ -19,7 +19,6 @@ import apple.glkit.*;
 import apple.spritekit.*;
 import apple.opengles.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("SceneKit/SceneKit.h")
@@ -38,5 +37,5 @@ public class SCNPhysicsShapeOptions
     public static native NSString KeepAsCompoundKey();
     @GlobalConstant("SCNPhysicsShapeScaleKey")
     public static native NSString ScaleKey();
-    
+
 }

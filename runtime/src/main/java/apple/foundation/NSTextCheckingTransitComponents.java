@@ -18,7 +18,6 @@ import apple.coremedia.*;
 import apple.security.*;
 import apple.dispatch.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("Foundation/Foundation.h")
@@ -41,5 +40,5 @@ public class NSTextCheckingTransitComponents
      */
     @GlobalConstant("NSTextCheckingFlightKey")
     public static native NSString FlightKey();
-    
+
 }

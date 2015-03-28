@@ -15,7 +15,6 @@ import apple.foundation.*;
 import apple.opengles.*;
 import apple.coremedia.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("CoreVideo/CoreVideo.h")
@@ -27,7 +26,7 @@ public class CoreVideo
     public static final int CVTimeIsIndefinite = 1;
     public static final int CVTimeStampVideoHostTimeValid = 3;
     public static final int CVTimeStampIsInterlaced = 196608;
-    
+
     
     
     
@@ -461,5 +460,5 @@ public class CoreVideo
      */
     @GlobalConstant("kCVPixelFormatFillExtendedPixelsCallback")
     public static native CFString CVPixelFormatFillExtendedPixelsCallback();
-    
+
 }

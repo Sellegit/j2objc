@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.dispatch.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Mapping("CFMutableCharacterSetRef") @Library("CoreFoundation/CoreFoundation.h")
@@ -25,7 +24,7 @@ public class CFMutableCharacterSet
     
     
     protected CFMutableCharacterSet() {}
-    
+
     
     
     
@@ -47,5 +46,5 @@ public class CFMutableCharacterSet
     public static native void intersect(CFMutableCharacterSet theSet, CFCharacterSet theOtherSet);
     @GlobalFunction("CFCharacterSetInvert")
     public static native void invert(CFMutableCharacterSet theSet);
-    
+
 }

@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h") @Mapping("NSRecursiveLock")
 public class NSRecursiveLock 
     extends NSObject 
@@ -31,7 +28,7 @@ public class NSRecursiveLock
     
     @Mapping("init")
     public NSRecursiveLock() { }
-    
+
     
     /**
      * @since Available in iOS 2.0 and later.
@@ -43,7 +40,7 @@ public class NSRecursiveLock
      */
     @Mapping("setName:")
     public native void setName(String v);
-    
+
     
     
     @Mapping("tryLock")
@@ -54,5 +51,5 @@ public class NSRecursiveLock
     public native void lock();
     @Mapping("unlock")
     public native void unlock();
-    
+
 }

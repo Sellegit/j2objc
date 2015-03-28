@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 4.0 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h") @Mapping("AVAssetTrackSegment")
 public class AVAssetTrackSegment 
     extends NSObject 
@@ -34,15 +32,15 @@ public class AVAssetTrackSegment
     
     @Mapping("init")
     public AVAssetTrackSegment() { }
-    
+
     
     @Mapping("timeMapping")
     public native CMTimeMapping getTimeMapping();
     @Mapping("isEmpty")
     public native boolean isEmpty();
+
     
     
-    
-    
-    
+
+
 }

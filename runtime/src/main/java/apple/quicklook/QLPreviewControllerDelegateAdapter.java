@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 import apple.uikit.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -25,8 +24,8 @@ public abstract class QLPreviewControllerDelegateAdapter
     
     
     
-    
-    
+
+
     
     
     @NotImplemented("previewControllerWillDismiss:")
@@ -39,5 +38,5 @@ public abstract class QLPreviewControllerDelegateAdapter
     public CGRect getFrame(QLPreviewController controller, QLPreviewItem item, Todo view) { throw new UnsupportedOperationException(); }
     @NotImplemented("previewController:transitionImageForPreviewItem:contentRect:")
     public UIImage getTransitionImage(QLPreviewController controller, QLPreviewItem item, CGRect contentRect) { throw new UnsupportedOperationException(); }
-    
+
 }

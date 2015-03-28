@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 4.0 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h")
 @Mapping("AVCaptureWhiteBalanceMode")
 public final class AVCaptureWhiteBalanceMode extends ObjCEnum {
@@ -35,6 +33,6 @@ public final class AVCaptureWhiteBalanceMode extends ObjCEnum {
     public static final long AutoWhiteBalance = 1L;
     @GlobalConstant("AVCaptureWhiteBalanceModeContinuousAutoWhiteBalance")
     public static final long ContinuousAutoWhiteBalance = 2L;
-    
+
 
 }

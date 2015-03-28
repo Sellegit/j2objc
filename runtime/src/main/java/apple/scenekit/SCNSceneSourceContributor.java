@@ -19,7 +19,6 @@ import apple.glkit.*;
 import apple.spritekit.*;
 import apple.opengles.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("SceneKit/SceneKit.h")
@@ -36,5 +35,5 @@ public class SCNSceneSourceContributor
     public static native NSString AuthoringToolKey();
     @GlobalConstant("SCNSceneSourceAssetAuthorKey")
     public static native NSString AuthorKey();
-    
+
 }

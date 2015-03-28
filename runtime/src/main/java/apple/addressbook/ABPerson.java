@@ -13,7 +13,6 @@ import apple.coregraphics.*;
 import apple.coreservices.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("AddressBook/AddressBook.h")
@@ -61,16 +60,16 @@ public class ABPerson
      * @since Available in iOS 7.0 and later.
      */
     @GlobalFunction("ABPersonCopyCompositeNameDelimiterForRecord")
-    public static native String getCompositeNameDelimiter(ABRecordRef record);
+    public static native CFString getCompositeNameDelimiter(ABRecordRef record);
     @GlobalFunction("ABPersonSetImageData")
-    public static native boolean setImageData(ABRecordRef person, NSData imageData, Todo error);
+    public static native boolean setImageData(ABRecordRef person, CFData imageData, Todo error);
     @GlobalFunction("ABPersonCopyImageData")
-    public static native NSData getImageData(ABRecordRef person);
+    public static native CFData getImageData(ABRecordRef person);
     /**
      * @since Available in iOS 4.1 and later.
      */
     @GlobalFunction("ABPersonCopyImageDataWithFormat")
-    public static native NSData getImageData(ABRecordRef person, ABPersonImageFormat format);
+    public static native CFData getImageData(ABRecordRef person, ABPersonImageFormat format);
     @GlobalFunction("ABPersonHasImageData")
     public static native boolean hasImageData(ABRecordRef person);
     @GlobalFunction("ABPersonRemoveImageData")
@@ -81,11 +80,11 @@ public class ABPerson
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("ABPersonCreatePeopleInSourceWithVCardRepresentation")
-    public static native List<ABPerson> createPeopleInSource(ABRecordRef source, NSData vCardData);
+    public static native List<ABPerson> createPeopleInSource(ABRecordRef source, CFData vCardData);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalFunction("ABPersonCreateVCardRepresentationWithPeople")
-    public static native NSData createVCardRepresentation(NSArray<?> people);
-    
+    public static native CFData createVCardRepresentation(CFArray people);
+
 }

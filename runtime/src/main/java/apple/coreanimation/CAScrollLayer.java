@@ -17,9 +17,6 @@ import apple.coretext.*;
 import apple.opengles.*;
 
 
-
-
-
 @Library("QuartzCore/QuartzCore.h") @Mapping("CAScrollLayer")
 public class CAScrollLayer 
     extends CALayer 
@@ -33,18 +30,18 @@ public class CAScrollLayer
     public CAScrollLayer(Object layer) { }
     @Mapping("initWithCoder:")
     public CAScrollLayer(NSCoder aDecoder) { }
-    
+
     
     @Mapping("scrollMode")
     public native CAScrollMode getScrollMode();
     @Mapping("setScrollMode:")
     public native void setScrollMode(CAScrollMode v);
-    
+
     
     
     @Mapping("scrollToPoint:")
     public native void scrollToPoint(CGPoint p);
     @Mapping("scrollToRect:")
     public native void scrollToRect(CGRect r);
-    
+
 }

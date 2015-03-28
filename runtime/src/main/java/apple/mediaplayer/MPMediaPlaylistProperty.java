@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 import apple.uikit.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("MediaPlayer/MediaPlayer.h")
@@ -35,5 +34,5 @@ public class MPMediaPlaylistProperty
     public static native NSString PlaylistAttributesValue();
     @GlobalConstant("MPMediaPlaylistPropertySeedItems")
     public static native NSString SeedItemsValue();
-    
+
 }

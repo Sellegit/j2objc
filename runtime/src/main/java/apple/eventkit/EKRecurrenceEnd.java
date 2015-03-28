@@ -16,11 +16,9 @@ import apple.addressbook.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 4.0 and later.
  */
-
 @Library("EventKit/EventKit.h") @Mapping("EKRecurrenceEnd")
 public class EKRecurrenceEnd 
     extends NSObject 
@@ -30,13 +28,13 @@ public class EKRecurrenceEnd
     
     @Mapping("init")
     public EKRecurrenceEnd() { }
-    
+
     
     @Mapping("endDate")
     public native NSDate getEndDate();
     @Mapping("occurrenceCount")
     public native @MachineSizedUInt long getOccurrenceCount();
-    
+
     
     
     @Mapping("recurrenceEndWithEndDate:")
@@ -45,5 +43,5 @@ public class EKRecurrenceEnd
     public static native EKRecurrenceEnd create(@MachineSizedUInt long occurrenceCount);
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
-    
+
 }

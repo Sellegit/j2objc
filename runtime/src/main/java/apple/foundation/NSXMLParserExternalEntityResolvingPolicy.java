@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h")
 @Mapping("NSXMLParserExternalEntityResolvingPolicy")
 public final class NSXMLParserExternalEntityResolvingPolicy extends ObjCEnum {
@@ -34,6 +31,6 @@ public final class NSXMLParserExternalEntityResolvingPolicy extends ObjCEnum {
     public static final long SameOriginOnly = 2L;
     @GlobalConstant("NSXMLParserResolveExternalEntitiesAlways")
     public static final long Always = 3L;
-    
+
 
 }

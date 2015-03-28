@@ -17,9 +17,6 @@ import apple.coreaudio.*;
 import apple.coremedia.*;
 
 
-
-
-
 @Library("AudioToolbox/AudioToolbox.h")
 @Mapping("AudioFileProperty")
 public final class AudioFileProperty extends ObjCEnum {
@@ -84,6 +81,6 @@ public final class AudioFileProperty extends ObjCEnum {
     public static final long AudioTrackCount = 1635017588L;
     @GlobalConstant("kAudioFilePropertyUseAudioTrack")
     public static final long UseAudioTrack = 1969321067L;
-    
+
 
 }

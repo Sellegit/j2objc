@@ -16,11 +16,9 @@ import apple.uikit.*;
 import apple.addressbook.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("PassKit/PassKit.h")
 @Mapping("PKMerchantCapability")
 public final class PKMerchantCapability extends ObjCEnum {
@@ -29,6 +27,6 @@ public final class PKMerchantCapability extends ObjCEnum {
     public static final long _3DS = 1L;
     @GlobalConstant("PKMerchantCapabilityEMV")
     public static final long EMV = 2L;
-    
+
 
 }

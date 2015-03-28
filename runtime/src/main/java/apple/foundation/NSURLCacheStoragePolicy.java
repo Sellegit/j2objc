@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h")
 @Mapping("NSURLCacheStoragePolicy")
 public final class NSURLCacheStoragePolicy extends ObjCEnum {
@@ -32,6 +29,6 @@ public final class NSURLCacheStoragePolicy extends ObjCEnum {
     public static final long AllowedInMemoryOnly = 1L;
     @GlobalConstant("NSURLCacheStorageNotAllowed")
     public static final long NotAllowed = 2L;
-    
+
 
 }

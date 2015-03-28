@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("UIKit/UIKit.h")
 @Mapping("UIUserNotificationActionContext")
 public final class UIUserNotificationActionContext extends ObjCEnum {
@@ -32,6 +30,6 @@ public final class UIUserNotificationActionContext extends ObjCEnum {
     public static final long Default = 0L;
     @GlobalConstant("UIUserNotificationActionContextMinimal")
     public static final long Minimal = 1L;
-    
+
 
 }

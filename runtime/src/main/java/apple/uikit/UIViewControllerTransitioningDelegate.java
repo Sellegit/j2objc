@@ -19,17 +19,14 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h") @Mapping("UIViewControllerTransitioningDelegate")
 public interface UIViewControllerTransitioningDelegate 
     extends NSObjectProtocol {
 
     
     
-    
-    
+
+
     
     @Mapping("animationControllerForPresentedController:presentingController:sourceController:")
     UIViewControllerAnimatedTransitioning getAnimationControllerForPresentedController(UIViewController presented, UIViewController presenting, UIViewController source);
@@ -44,7 +41,7 @@ public interface UIViewControllerTransitioningDelegate
      */
     @Mapping("presentationControllerForPresentedViewController:presentingViewController:sourceViewController:")
     UIPresentationController getPresentationControllerForPresentedViewController(UIViewController presented, UIViewController presenting, UIViewController source);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

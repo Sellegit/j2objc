@@ -17,11 +17,9 @@ import apple.uikit.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 7.0 and later.
  */
-
 @Library("MapKit/MapKit.h") @Mapping("MKOverlayRenderer")
 public class MKOverlayRenderer 
     extends NSObject 
@@ -33,7 +31,7 @@ public class MKOverlayRenderer
     public MKOverlayRenderer(MKOverlay overlay) { }
     @Mapping("init")
     public MKOverlayRenderer() { }
-    
+
     
     @Mapping("overlay")
     public native MKOverlay getOverlay();
@@ -43,7 +41,7 @@ public class MKOverlayRenderer
     public native void setAlpha(@MachineSizedFloat double v);
     @Mapping("contentScaleFactor")
     public native @MachineSizedFloat double getContentScaleFactor();
-    
+
     
     
     /**
@@ -51,7 +49,7 @@ public class MKOverlayRenderer
      */
     @GlobalFunction("MKRoadWidthAtZoomScale")
     public static native @MachineSizedFloat double getRoadWidth(@MachineSizedFloat double zoomScale);
-    
+
     @Mapping("pointForMapPoint:")
     public native CGPoint getPoint(MKMapPoint mapPoint);
     @Mapping("mapPointForPoint:")
@@ -70,5 +68,5 @@ public class MKOverlayRenderer
     public native void setNeedsDisplay(MKMapRect mapRect);
     @Mapping("setNeedsDisplayInMapRect:zoomScale:")
     public native void setNeedsDisplay(MKMapRect mapRect, @MachineSizedFloat double zoomScale);
-    
+
 }

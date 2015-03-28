@@ -18,7 +18,6 @@ import apple.coreimage.*;
 import apple.coretext.*;
 import apple.corelocation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -29,8 +28,8 @@ public abstract class UIPrinterPickerControllerDelegateAdapter
     
     
     
-    
-    
+
+
     
     
     @NotImplemented("printerPickerControllerParentViewController:")
@@ -47,5 +46,5 @@ public abstract class UIPrinterPickerControllerDelegateAdapter
     public void didDismiss(UIPrinterPickerController printerPickerController) { throw new UnsupportedOperationException(); }
     @NotImplemented("printerPickerControllerDidSelectPrinter:")
     public void didSelectPrinter(UIPrinterPickerController printerPickerController) { throw new UnsupportedOperationException(); }
-    
+
 }

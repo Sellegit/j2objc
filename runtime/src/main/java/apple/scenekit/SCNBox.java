@@ -20,9 +20,6 @@ import apple.spritekit.*;
 import apple.opengles.*;
 
 
-
-
-
 @Library("SceneKit/SceneKit.h") @Mapping("SCNBox")
 public class SCNBox 
     extends SCNGeometry 
@@ -32,7 +29,7 @@ public class SCNBox
     
     @Mapping("init")
     public SCNBox() { }
-    
+
     
     @Mapping("width")
     public native @MachineSizedFloat double getWidth();
@@ -66,10 +63,10 @@ public class SCNBox
     public native @MachineSizedSInt long getChamferSegmentCount();
     @Mapping("setChamferSegmentCount:")
     public native void setChamferSegmentCount(@MachineSizedSInt long v);
-    
+
     
     
     @Mapping("boxWithWidth:height:length:chamferRadius:")
     public static native SCNBox create(@MachineSizedFloat double width, @MachineSizedFloat double height, @MachineSizedFloat double length, @MachineSizedFloat double chamferRadius);
-    
+
 }

@@ -20,11 +20,9 @@ import apple.corevideo.*;
 import apple.mediatoolbox.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("AVFoundation/AVFoundation.h") @Mapping("AVAudioChannelLayout")
 public class AVAudioChannelLayout 
     extends NSObject 
@@ -38,7 +36,7 @@ public class AVAudioChannelLayout
     public AVAudioChannelLayout(AudioChannelLayout layout) { }
     @Mapping("init")
     public AVAudioChannelLayout() { }
-    
+
     
     @Mapping("layoutTag")
     public native @Representing("AudioChannelLayoutTag") long getLayoutTag();
@@ -46,7 +44,7 @@ public class AVAudioChannelLayout
     public native AudioChannelLayout getLayout();
     @Mapping("channelCount")
     public native int getChannelCount();
-    
+
     
     
     @Mapping("isEqual:")
@@ -55,5 +53,5 @@ public class AVAudioChannelLayout
     public static native AVAudioChannelLayout create(@Representing("AudioChannelLayoutTag") long layoutTag);
     @Mapping("layoutWithLayout:")
     public static native AVAudioChannelLayout create(AudioChannelLayout layout);
-    
+
 }

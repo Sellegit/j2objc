@@ -16,9 +16,6 @@ import apple.addressbook.*;
 import apple.corebluetooth.*;
 
 
-
-
-
 @Library("CoreLocation/CoreLocation.h")
 @Mapping("CLErrorCode")
 public final class CLErrorCode extends ObjCEnum {
@@ -59,6 +56,6 @@ public final class CLErrorCode extends ObjCEnum {
     public static final long RangingUnavailable = 16L;
     @GlobalConstant("kCLErrorRangingFailure")
     public static final long RangingFailure = 17L;
-    
+
 
 }

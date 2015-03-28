@@ -15,7 +15,6 @@ import apple.foundation.*;
 import apple.uikit.*;
 import apple.security.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
@@ -26,8 +25,8 @@ public abstract class MCNearbyServiceBrowserDelegateAdapter
     
     
     
-    
-    
+
+
     
     
     @NotImplemented("browser:foundPeer:withDiscoveryInfo:")
@@ -36,5 +35,5 @@ public abstract class MCNearbyServiceBrowserDelegateAdapter
     public void lostPeer(MCNearbyServiceBrowser browser, MCPeerID peerID) { throw new UnsupportedOperationException(); }
     @NotImplemented("browser:didNotStartBrowsingForPeers:")
     public void didNotStartBrowsing(MCNearbyServiceBrowser browser, NSError error) { throw new UnsupportedOperationException(); }
-    
+
 }

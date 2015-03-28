@@ -13,7 +13,6 @@ import apple.coregraphics.*;
 import apple.coreservices.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("ImageIO/ImageIO.h")
@@ -71,5 +70,5 @@ public class CGImagePropertyExifAux
      */
     @GlobalConstant("kCGImagePropertyExifAuxFirmware")
     public static native CFString FirmwareKey();
-    
+
 }

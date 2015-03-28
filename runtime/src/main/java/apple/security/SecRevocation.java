@@ -14,9 +14,6 @@ import apple.coreservices.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Security/Security.h")
 @Mapping("SecRevocation")
 public final class SecRevocation extends ObjCEnum {
@@ -33,6 +30,6 @@ public final class SecRevocation extends ObjCEnum {
     public static final long NetworkAccessDisabled = 16L;
     @GlobalConstant("kSecRevocationUseAnyAvailableMethod")
     public static final long UseAnyAvailableMethod = 3L;
-    
+
 
 }

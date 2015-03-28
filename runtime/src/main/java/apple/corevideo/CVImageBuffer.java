@@ -15,7 +15,6 @@ import apple.foundation.*;
 import apple.opengles.*;
 import apple.coremedia.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Mapping("CVImageBufferRef") @Library("CoreVideo/CoreVideo.h")
@@ -26,7 +25,7 @@ public class CVImageBuffer
     
     
     protected CVImageBuffer() {}
-    
+
     
     
     
@@ -50,5 +49,5 @@ public class CVImageBuffer
      */
     @GlobalFunction("CVImageBufferIsFlipped")
     public static native boolean isFlipped(CVImageBuffer imageBuffer);
-    
+
 }

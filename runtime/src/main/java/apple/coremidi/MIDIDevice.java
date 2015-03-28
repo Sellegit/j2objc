@@ -13,7 +13,6 @@ import apple.coregraphics.*;
 import apple.coreservices.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("CoreMIDI/CoreMIDI.h")
@@ -24,7 +23,7 @@ public class MIDIDevice
     
     
     protected MIDIDevice() {}
-    
+
     
     
     
@@ -42,7 +41,7 @@ public class MIDIDevice
      * @since Available in iOS 4.2 and later.
      */
     @GlobalFunction("MIDIDeviceAddEntity")
-    public static native MIDIError addEntity(MIDIDevice device, String name, boolean embedded, @MachineSizedUInt long numSourceEndpoints, @MachineSizedUInt long numDestinationEndpoints, Todo newEntity);
+    public static native MIDIError addEntity(MIDIDevice device, CFString name, boolean embedded, @MachineSizedUInt long numSourceEndpoints, @MachineSizedUInt long numDestinationEndpoints, Todo newEntity);
     /**
      * @since Available in iOS 4.2 and later.
      */
@@ -52,16 +51,16 @@ public class MIDIDevice
      * @since Available in iOS 4.2 and later.
      */
     @GlobalFunction("MIDIExternalDeviceCreate")
-    public static native MIDIError createExternal(String name, String manufacturer, String model, Todo outDevice);
+    public static native MIDIError createExternal(CFString name, CFString manufacturer, CFString model, Todo outDevice);
     /**
      * @since Available in iOS 4.2 and later.
      */
     @GlobalFunction("MIDIDeviceCreate")
-    public static native MIDIError create(MIDIDriver owner, String name, String manufacturer, String model, Todo outDevice);
+    public static native MIDIError create(MIDIDriver owner, CFString name, CFString manufacturer, CFString model, Todo outDevice);
     /**
      * @since Available in iOS 4.2 and later.
      */
     @GlobalFunction("MIDIDeviceDispose")
     public static native MIDIError dispose(MIDIDevice device);
-    
+
 }

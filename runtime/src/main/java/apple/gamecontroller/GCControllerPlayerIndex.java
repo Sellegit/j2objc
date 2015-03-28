@@ -14,15 +14,12 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
-
-
 @Library("GameController/GameController.h")
 @Mapping("GCControllerPlayerIndex")
 public final class GCControllerPlayerIndex extends ObjCEnum {
     
     @GlobalConstant("GCControllerPlayerIndexUnset")
     public static final long Unset = -1L;
-    
+
 
 }

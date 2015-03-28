@@ -14,9 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
-
-
 @Library("OpenGLES/EAGL.h") @Mapping("EAGLContext")
 public class EAGLContext 
     extends NSObject 
@@ -30,7 +27,7 @@ public class EAGLContext
     public EAGLContext(@Representing("EAGLRenderingAPI") long api, EAGLSharegroup sharegroup) { }
     @Mapping("init")
     public EAGLContext() { }
-    
+
     
     @Mapping("API")
     public native @Representing("EAGLRenderingAPI") long getAPI();
@@ -56,7 +53,7 @@ public class EAGLContext
      */
     @Mapping("setMultiThreaded:")
     public native void setMultiThreaded(boolean v);
-    
+
     
     
     @Mapping("setCurrentContext:")
@@ -67,5 +64,5 @@ public class EAGLContext
     public native boolean renderbufferStorage(@MachineSizedUInt long target, EAGLDrawable drawable);
     @Mapping("presentRenderbuffer:")
     public native boolean presentRenderbuffer(@MachineSizedUInt long target);
-    
+
 }

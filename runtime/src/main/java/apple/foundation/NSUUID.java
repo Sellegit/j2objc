@@ -19,11 +19,9 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 6.0 and later.
  */
-
 @Library("Foundation/Foundation.h") @Mapping("NSUUID")
 public class NSUUID 
     extends NSObject 
@@ -37,16 +35,16 @@ public class NSUUID
     public NSUUID(Todo bytes) { }
     @Mapping("init")
     public NSUUID() { }
-    
+
     
     @Mapping("UUIDString")
     public native String asString();
-    
+
     
     
     @Mapping("getUUIDBytes:")
     public native void getUUIDBytes(Todo uuid);
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
-    
+
 }

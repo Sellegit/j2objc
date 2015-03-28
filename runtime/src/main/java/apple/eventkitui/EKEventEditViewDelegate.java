@@ -16,23 +16,20 @@ import apple.eventkit.*;
 import apple.uikit.*;
 
 
-
-
-
 @Library("EventKitUI/EventKitUI.h") @Mapping("EKEventEditViewDelegate")
 public interface EKEventEditViewDelegate 
     extends NSObjectProtocol {
 
     
     
-    
-    
+
+
     
     @Mapping("eventEditViewController:didCompleteWithAction:")
     void didComplete(EKEventEditViewController controller, EKEventEditViewAction action);
     @Mapping("eventEditViewControllerDefaultCalendarForNewEvents:")
     EKCalendar getDefaultCalendarForNewEvents(EKEventEditViewController controller);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

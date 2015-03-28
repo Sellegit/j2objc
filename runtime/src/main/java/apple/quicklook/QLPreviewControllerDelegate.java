@@ -15,17 +15,14 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
-
-
 @Library("QuickLook/QuickLook.h") @Mapping("QLPreviewControllerDelegate")
 public interface QLPreviewControllerDelegate 
     extends NSObjectProtocol {
 
     
     
-    
-    
+
+
     
     @Mapping("previewControllerWillDismiss:")
     void willDismiss(QLPreviewController controller);
@@ -37,7 +34,7 @@ public interface QLPreviewControllerDelegate
     CGRect getFrame(QLPreviewController controller, QLPreviewItem item, Todo view);
     @Mapping("previewController:transitionImageForPreviewItem:contentRect:")
     UIImage getTransitionImage(QLPreviewController controller, QLPreviewItem item, CGRect contentRect);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

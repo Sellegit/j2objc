@@ -14,9 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
-
-
 @Library("CFNetwork/CFNetwork.h")
 @Mapping("CFStreamErrorCodeType")
 public final class CFStreamErrorCodeType extends ObjCEnum {
@@ -33,6 +30,6 @@ public final class CFStreamErrorCodeType extends ObjCEnum {
     public static final long _5SubDomainMethod = 4L;
     @GlobalConstant("kCFStreamErrorSOCKS5SubDomainResponse")
     public static final long _5SubDomainResponse = 5L;
-    
+
 
 }

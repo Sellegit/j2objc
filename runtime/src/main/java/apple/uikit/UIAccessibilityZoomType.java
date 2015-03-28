@@ -19,17 +19,15 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 5.0 and later.
  */
-
 @Library("UIKit/UIKit.h")
 @Mapping("UIAccessibilityZoomType")
 public final class UIAccessibilityZoomType extends ObjCEnum {
     
     @GlobalConstant("UIAccessibilityZoomTypeInsertionPoint")
     public static final long InsertionPoint = 0L;
-    
+
 
 }

@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h")
 @Mapping("NSNetServiceErrorCode")
 public final class NSNetServiceErrorCode extends ObjCEnum {
@@ -42,6 +39,6 @@ public final class NSNetServiceErrorCode extends ObjCEnum {
     public static final long Invalid = -72006L;
     @GlobalConstant("NSNetServicesTimeoutError")
     public static final long Timeout = -72007L;
-    
+
 
 }

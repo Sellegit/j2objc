@@ -15,17 +15,14 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
-
-
 @Library("GameKit/GameKit.h") @Mapping("GKTurnBasedMatchmakerViewControllerDelegate")
 public interface GKTurnBasedMatchmakerViewControllerDelegate 
     extends NSObjectProtocol {
 
     
     
-    
-    
+
+
     
     /**
      * @since Available in iOS 5.0 and later.
@@ -47,7 +44,7 @@ public interface GKTurnBasedMatchmakerViewControllerDelegate
      */
     @Mapping("turnBasedMatchmakerViewController:playerQuitForMatch:")
     void playerQuit(GKTurnBasedMatchmakerViewController viewController, GKTurnBasedMatch match);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

@@ -14,11 +14,9 @@ import apple.coreservices.*;
 import apple.foundation.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("NetworkExtension/NetworkExtension.h") @Mapping("NEOnDemandRuleDisconnect")
 public class NEOnDemandRuleDisconnect 
     extends NEOnDemandRule 
@@ -28,12 +26,12 @@ public class NEOnDemandRuleDisconnect
     
     @Mapping("init")
     public NEOnDemandRuleDisconnect() { }
+
+    
+
+
     
     
-    
-    
-    
-    
-    
-    
+
+
 }

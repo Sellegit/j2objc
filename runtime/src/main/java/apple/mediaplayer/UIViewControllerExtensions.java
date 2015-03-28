@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 import apple.uikit.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("MediaPlayer/MediaPlayer.h")
@@ -25,15 +24,15 @@ public final class UIViewControllerExtensions
     
     
     private UIViewControllerExtensions() {}
+
     
-    
-    
-    
+
+
     
     
     @ExtensionMapping("presentMoviePlayerViewControllerAnimated:")
     public static native void presentMoviePlayerViewController(UIViewController thiz, MPMoviePlayerViewController moviePlayerViewController);
     @ExtensionMapping("dismissMoviePlayerViewControllerAnimated")
     public static native void dismissMoviePlayerViewController(UIViewController thiz);
-    
+
 }

@@ -19,9 +19,6 @@ import apple.security.*;
 import apple.dispatch.*;
 
 
-
-
-
 @Library("Foundation/Foundation.h") @Mapping("NSURLConnection")
 public class NSURLConnection 
     extends NSObject 
@@ -38,7 +35,7 @@ public class NSURLConnection
     public NSURLConnection(NSURLRequest request, Object delegate) { }
     @Mapping("init")
     public NSURLConnection() { }
-    
+
     
     /**
      * @since Available in iOS 5.0 and later.
@@ -50,7 +47,7 @@ public class NSURLConnection
      */
     @Mapping("currentRequest")
     public native NSURLRequest getCurrentRequest();
-    
+
     
     
     /**
@@ -86,5 +83,5 @@ public class NSURLConnection
      */
     @Mapping("sendAsynchronousRequest:queue:completionHandler:")
     public static native void sendAsynchronousRequest(NSURLRequest request, NSOperationQueue queue, @Block VoidBlock3<NSURLResponse, NSData, NSError> handler);
-    
+
 }

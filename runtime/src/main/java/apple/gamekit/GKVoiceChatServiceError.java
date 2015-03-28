@@ -14,7 +14,6 @@ import apple.coreservices.*;
 import apple.foundation.*;
 import apple.uikit.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("GameKit/GameKit.h")
@@ -25,11 +24,11 @@ public class GKVoiceChatServiceError
     
     
     protected GKVoiceChatServiceError() {}
-    
+
     
     
     
     @GlobalConstant("GKVoiceChatServiceErrorDomain")
     public static native String getClassDomain();
-    
+
 }

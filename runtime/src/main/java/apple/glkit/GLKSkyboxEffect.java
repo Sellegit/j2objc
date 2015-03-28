@@ -17,11 +17,9 @@ import apple.uikit.*;
 import apple.dispatch.*;
 
 
-
 /**
  * @since Available in iOS 5.0 and later.
  */
-
 @Library("GLKit/GLKit.h") @Mapping("GLKSkyboxEffect")
 public class GLKSkyboxEffect 
     extends NSObject 
@@ -31,7 +29,7 @@ public class GLKSkyboxEffect
     
     @Mapping("init")
     public GLKSkyboxEffect() { }
-    
+
     
     @Mapping("center")
     public native GLKVector3 getCenter();
@@ -57,12 +55,12 @@ public class GLKSkyboxEffect
     public native String getLabel();
     @Mapping("setLabel:")
     public native void setLabel(String v);
-    
+
     
     
     @Mapping("prepareToDraw")
     public native void prepareToDraw();
     @Mapping("draw")
     public native void draw();
-    
+
 }

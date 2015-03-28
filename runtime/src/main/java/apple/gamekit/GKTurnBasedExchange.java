@@ -15,11 +15,9 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
 /**
  * @since Available in iOS 7.0 and later.
  */
-
 @Library("GameKit/GameKit.h") @Mapping("GKTurnBasedExchange")
 public class GKTurnBasedExchange 
     extends NSObject 
@@ -29,7 +27,7 @@ public class GKTurnBasedExchange
     
     @Mapping("init")
     public GKTurnBasedExchange() { }
-    
+
     
     @Mapping("exchangeID")
     public native String getExchangeID();
@@ -51,7 +49,7 @@ public class GKTurnBasedExchange
     public native NSDate getCompletionDate();
     @Mapping("replies")
     public native NSArray<GKTurnBasedExchangeReply> getReplies();
-    
+
     
     
     /**
@@ -64,7 +62,7 @@ public class GKTurnBasedExchange
      */
     @GlobalConstant("GKExchangeTimeoutNone")
     public static native double getNoneTimeout();
-    
+
     /**
      * @since Available in iOS 7.0 and later.
      */
@@ -75,5 +73,5 @@ public class GKTurnBasedExchange
      */
     @Mapping("replyWithLocalizableMessageKey:arguments:data:completionHandler:")
     public native void reply(String key, NSArray<?> arguments, NSData data, @Block VoidBlock1<NSError> completionHandler);
-    
+
 }

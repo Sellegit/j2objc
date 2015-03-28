@@ -19,17 +19,14 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h") @Mapping("UIViewControllerContextTransitioning")
 public interface UIViewControllerContextTransitioning 
     extends NSObjectProtocol {
 
     
     
-    
-    
+
+
     
     @Mapping("containerView")
     UIView getContainerView();
@@ -65,7 +62,7 @@ public interface UIViewControllerContextTransitioning
     CGRect getInitialFrame(UIViewController vc);
     @Mapping("finalFrameForViewController:")
     CGRect getFinalFrame(UIViewController vc);
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }

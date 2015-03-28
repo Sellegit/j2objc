@@ -15,11 +15,9 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
 /**
  * @since Available in iOS 4.0 and later.
  */
-
 @Library("QuickLook/QuickLook.h") @Mapping("QLPreviewController")
 public class QLPreviewController 
     extends UIViewController 
@@ -31,7 +29,7 @@ public class QLPreviewController
     public QLPreviewController(String nibNameOrNil, NSBundle nibBundleOrNil) { }
     @Mapping("init")
     public QLPreviewController() { }
-    
+
     
     @Mapping("dataSource")
     public native QLPreviewControllerDataSource getDataSource();
@@ -47,7 +45,7 @@ public class QLPreviewController
     public native QLPreviewControllerDelegate getDelegate();
     @Mapping("setDelegate:")
     public native void setDelegate(QLPreviewControllerDelegate v);
-    
+
     
     
     @Mapping("reloadData")
@@ -56,5 +54,5 @@ public class QLPreviewController
     public native void refreshCurrentPreviewItem();
     @Mapping("canPreviewItem:")
     public static native boolean canPreviewItem(QLPreviewItem item);
-    
+
 }

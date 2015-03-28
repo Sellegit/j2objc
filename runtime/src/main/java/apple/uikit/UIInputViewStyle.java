@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 7.0 and later.
  */
-
 @Library("UIKit/UIKit.h")
 @Mapping("UIInputViewStyle")
 public final class UIInputViewStyle extends ObjCEnum {
@@ -32,6 +30,6 @@ public final class UIInputViewStyle extends ObjCEnum {
     public static final long Default = 0L;
     @GlobalConstant("UIInputViewStyleKeyboard")
     public static final long Keyboard = 1L;
-    
+
 
 }

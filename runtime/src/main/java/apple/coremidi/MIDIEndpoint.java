@@ -13,7 +13,6 @@ import apple.coregraphics.*;
 import apple.coreservices.*;
 import apple.foundation.*;
 
-
 /*<javadoc>*/
 /*</javadoc>*/
 @Library("CoreMIDI/CoreMIDI.h")
@@ -24,7 +23,7 @@ public class MIDIEndpoint
     
     
     protected MIDIEndpoint() {}
-    
+
     
     
     
@@ -37,12 +36,12 @@ public class MIDIEndpoint
      * @since Available in iOS 4.2 and later.
      */
     @GlobalFunction("MIDIDestinationCreate")
-    public static native MIDIError createDestination(MIDIClient client, String name, FunctionPtr readProc, Todo refCon, Todo outDest);
+    public static native MIDIError createDestination(MIDIClient client, CFString name, FunctionPtr readProc, Todo refCon, Todo outDest);
     /**
      * @since Available in iOS 4.2 and later.
      */
     @GlobalFunction("MIDISourceCreate")
-    public static native MIDIError createSource(MIDIClient client, String name, Todo outSrc);
+    public static native MIDIError createSource(MIDIClient client, CFString name, Todo outSrc);
     /**
      * @since Available in iOS 4.2 and later.
      */
@@ -58,5 +57,5 @@ public class MIDIEndpoint
      */
     @GlobalFunction("MIDIEndpointSetRefCons")
     public static native MIDIError setRefCons(MIDIEndpoint endpt, Todo ref1, Todo ref2);
-    
+
 }

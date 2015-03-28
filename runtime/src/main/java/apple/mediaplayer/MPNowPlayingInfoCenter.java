@@ -15,11 +15,9 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
 /**
  * @since Available in iOS 5.0 and later.
  */
-
 @Library("MediaPlayer/MediaPlayer.h") @Mapping("MPNowPlayingInfoCenter")
 public class MPNowPlayingInfoCenter 
     extends NSObject 
@@ -29,16 +27,16 @@ public class MPNowPlayingInfoCenter
     
     @Mapping("init")
     public MPNowPlayingInfoCenter() { }
-    
+
     
     @Mapping("nowPlayingInfo")
     public native MPNowPlayingInfo getNowPlayingInfo();
     @Mapping("setNowPlayingInfo:")
     public native void setNowPlayingInfo(MPNowPlayingInfo v);
-    
+
     
     
     @Mapping("defaultCenter")
     public static native MPNowPlayingInfoCenter getDefaultCenter();
-    
+
 }

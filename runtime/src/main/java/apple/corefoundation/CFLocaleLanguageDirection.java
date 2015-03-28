@@ -15,9 +15,6 @@ import apple.dispatch.*;
 import apple.foundation.*;
 
 
-
-
-
 @Library("CoreFoundation/CoreFoundation.h")
 @Mapping("CFLocaleLanguageDirection")
 public final class CFLocaleLanguageDirection extends ObjCEnum {
@@ -32,6 +29,6 @@ public final class CFLocaleLanguageDirection extends ObjCEnum {
     public static final long TopToBottom = 3L;
     @GlobalConstant("kCFLocaleLanguageDirectionBottomToTop")
     public static final long BottomToTop = 4L;
-    
+
 
 }

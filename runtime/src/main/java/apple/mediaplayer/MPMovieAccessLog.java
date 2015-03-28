@@ -15,11 +15,9 @@ import apple.foundation.*;
 import apple.uikit.*;
 
 
-
 /**
  * @since Available in iOS 4.3 and later.
  */
-
 @Library("MediaPlayer/MediaPlayer.h") @Mapping("MPMovieAccessLog")
 public class MPMovieAccessLog 
     extends NSObject 
@@ -29,7 +27,7 @@ public class MPMovieAccessLog
     
     @Mapping("init")
     public MPMovieAccessLog() { }
-    
+
     
     @Mapping("extendedLogData")
     public native NSData getExtendedLogData();
@@ -37,10 +35,10 @@ public class MPMovieAccessLog
     public native @Representing("NSStringEncoding") long getExtendedLogDataStringEncoding();
     @Mapping("events")
     public native NSArray<MPMovieAccessLogEvent> getEvents();
-    
+
     
     
     @Mapping("copyWithZone:")
     public native Object copyWithZone$(NSZone zone);
-    
+
 }

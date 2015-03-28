@@ -16,11 +16,9 @@ import apple.uikit.*;
 import apple.addressbook.*;
 
 
-
 /**
  * @since Available in iOS 8.0 and later.
  */
-
 @Library("PassKit/PassKit.h")
 @Mapping("PKPaymentPassActivationState")
 public final class PKPaymentPassActivationState extends ObjCEnum {
@@ -35,6 +33,6 @@ public final class PKPaymentPassActivationState extends ObjCEnum {
     public static final long Suspended = 3L;
     @GlobalConstant("PKPaymentPassActivationStateDeactivated")
     public static final long Deactivated = 4L;
-    
+
 
 }

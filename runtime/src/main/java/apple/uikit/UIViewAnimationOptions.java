@@ -19,11 +19,9 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
 /**
  * @since Available in iOS 4.0 and later.
  */
-
 @Library("UIKit/UIKit.h")
 @Mapping("UIViewAnimationOptions")
 public final class UIViewAnimationOptions extends ObjCEnum {
@@ -72,6 +70,6 @@ public final class UIViewAnimationOptions extends ObjCEnum {
     public static final long TransitionFlipFromTop = 6291456L;
     @GlobalConstant("UIViewAnimationOptionTransitionFlipFromBottom")
     public static final long TransitionFlipFromBottom = 7340032L;
-    
+
 
 }

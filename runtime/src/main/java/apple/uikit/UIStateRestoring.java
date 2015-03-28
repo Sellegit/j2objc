@@ -19,9 +19,6 @@ import apple.coretext.*;
 import apple.corelocation.*;
 
 
-
-
-
 @Library("UIKit/UIKit.h") @Mapping("UIStateRestoring")
 public interface UIStateRestoring 
     extends NSObjectProtocol {
@@ -30,7 +27,7 @@ public interface UIStateRestoring
     
     @Mapping("restorationParent")
     UIStateRestoring getRestorationParent();
-    
+
     
     @Mapping("encodeRestorableStateWithCoder:")
     void encodeRestorableState(NSCoder coder);
@@ -38,7 +35,7 @@ public interface UIStateRestoring
     void decodeRestorableState(NSCoder coder);
     @Mapping("applicationFinishedRestoringState")
     void applicationFinishedRestoringState();
-    
+
     /*<adapter>*/
     /*</adapter>*/
 }
