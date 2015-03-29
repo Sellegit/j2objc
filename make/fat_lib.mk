@@ -29,8 +29,14 @@
 #
 # Author: Keith Stanger
 
+ifdef FAT_LIB_IOS_ONLY
+FAT_LIB_ARCHS = simulator64 simulator $(J2OBJC_ARCHS)
+else
+FAT_LIB_ARCHS = macosx $(J2OBJC_ARCHS)
+endif
+
 FAT_LIB_LIBRARY = $(ARCH_BUILD_DIR)/lib$(FAT_LIB_NAME).a
-FAT_LIB_ARCH_LIBS = $(J2OBJC_ARCHS:%=$(BUILD_DIR)/%-lib$(FAT_LIB_NAME).a)
+FAT_LIB_ARCH_LIBS = $(FAT_LIB_ARCHS:%=$(BUILD_DIR)/%-lib$(FAT_LIB_NAME).a)
 
 FAT_LIB_PLIST_DIR = $(BUILD_DIR)/plists
 FAT_LIB_PLISTS = \
@@ -167,15 +173,9 @@ $(BUILD_DIR)/$(1)-lib$(FAT_LIB_NAME).a: \
 	@$$(call fat_lib_filtered_libtool,$$@,$(BUILD_DIR)/objs-$(1)/fat_lib_objs_list)
 endef
 
-ifdef FAT_LIB_IOS_ONLY
-FAT_LIB_ARCHS = $(J2OBJC_ARCHS)
-else
-FAT_LIB_ARCHS = $(J2OBJC_ARCHS) macosx
-endif
+$(foreach arch,$(FAT_LIB_ARCHS),$(eval $(call arch_lib_rule,$(arch))))
 
-$(foreach arch,$(J2OBJC_ARCHS),$(eval $(call arch_lib_rule,$(arch))))
-
-$(foreach arch,$(J2OBJC_ARCHS),\
+$(foreach arch,$(FAT_LIB_ARCHS),\
   $(call emit_general_compile_rules,$(BUILD_DIR)/objs-$(arch),$(call arch_flags,$(arch))))
 
 endif

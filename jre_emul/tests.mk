@@ -607,7 +607,7 @@ $(TESTS_DIR)/%.o: $(TESTS_DIR)/%.m
 $(TEST_BIN): $(TEST_OBJS) $(SUPPORT_LIB) $(ALL_TESTS_SOURCE:%.java=%.o) \
         ../dist/lib/libjre_emul.a ../dist/lib/libjunit.a
 	@echo Building test executable...
-	@$(TEST_JOCC) -o $@ $(TEST_OBJS) $(ALL_TESTS_SOURCE:%.java=%.o)
+	$(TEST_JOCC) -v -o $@ $(TEST_OBJS) $(ALL_TESTS_SOURCE:%.java=%.o)
 
 $(ALL_TESTS_SOURCE): | $(TESTS_DIR)
 	@xcrun awk -f gen_all_tests.sh $(TESTS_TO_RUN) > $@
