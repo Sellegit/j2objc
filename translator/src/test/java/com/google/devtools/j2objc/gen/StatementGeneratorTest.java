@@ -1755,4 +1755,46 @@ public class StatementGeneratorTest extends GenerationTest {
         "Test", "Test.m");
     assertTranslation(translation, "jint b = o.dot;");
   }
+
+  public void testGlobalConstant() throws IOException {
+    String translation = translateSourceFile("import com.google.j2objc.annotations.*;\n"
+                                             + "\n"
+                                             + "@Mapping(\"Dummy\")\n"
+                                             + "class Mapped {\n"
+                                             + "    @GlobalConstant(\"constant\")\n"
+                                             + "    static public native int method();\n"
+                                             + "\n"
+                                             + "}\n"
+                                             + "\n"
+                                             + "class Test {\n"
+                                             + "    public void runTest() {\n"
+                                             + "        int b = Mapped.method();\n"
+                                             + "    }\n"
+                                             + "}",
+                                             "Test", "Test.m");
+    assertTranslation(translation, "jint b = constant;");
+  }
+
+  public void testGlobalFunction() throws IOException {
+    String translation = translateSourceFile("import com.google.j2objc.annotations.*;\n"
+                                             + "\n"
+                                             + "@Mapping(\"Dummy\")\n"
+                                             + "class Mapped {\n"
+                                             + "    @GlobalFunction(\"fn\")\n"
+                                             + "    static public native int method();\n"
+                                             + "    @GlobalFunction(\"fn1\")\n"
+                                             + "    static public native int method(int a);\n"
+                                             + "\n"
+                                             + "}\n"
+                                             + "\n"
+                                             + "class Test {\n"
+                                             + "    public void runTest() {\n"
+                                             + "        int b = Mapped.method();\n"
+                                             + "        int c = Mapped.method(1);\n"
+                                             + "    }\n"
+                                             + "}",
+                                             "Test", "Test.m");
+    assertTranslation(translation, "jint b = fn();");
+    assertTranslation(translation, "jint c = fn1(1);");
+  }
 }
