@@ -790,4 +790,23 @@ public class ObjectiveCImplementationGeneratorTest extends GenerationTest {
     String translation = translateSourceFile(source, "Test", "Test.m");
     assertNotInTranslation(translation, "ImAdapter");
   }
+
+  public void testBlockInvocationTranslation() throws IOException {
+    String source = "import com.google.j2objc.annotations.*;\n"
+                    + "\ninterface Runner {\n"
+                    + "    public void run();\n"
+                    + "}\n"
+                    + "class Implementer {\n"
+                    + "    public void tester(@Block Runner ok) {\n"
+                    + "    }\n"
+                    + "    public void runTest() {\n"
+                    + "        Runner hehe = null;\n"
+                    + "        tester(hehe);\n"
+                    + "    }\n"
+                    + "}";
+
+    String translation = translateSourceFile(source, "Test", "Test.m");
+    assertTranslation(translation,
+                      "[self testerWithRunner:(^{id<Runner> ___$runner = hehe;return [[^void () { [___$runner run];} copy] autorelease];})()];");
+  }
 }
