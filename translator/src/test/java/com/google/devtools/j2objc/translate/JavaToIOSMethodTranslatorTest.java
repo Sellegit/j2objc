@@ -317,4 +317,28 @@ public class JavaToIOSMethodTranslatorTest extends GenerationTest {
     // should map methods that directly have Mapping binding
     assertTranslation(translation, "- (void)mapme {");
   }
+
+  public void testExtensionMapping() throws IOException {
+    String translation = translateSourceFile(
+        "import com.google.j2objc.annotations.*;\n"
+        + "\n"
+        + "final class SomeExtensions {\n"
+        + "    @ExtensionMapping(\"noParam\")\n"
+        + "    public static native Object noParam(Object thiz);\n"
+        + "\n"
+        + "    @ExtensionMapping(\"hasParam:andOneMore:\")\n"
+        + "    public static native Object hasParam(Object thiz, int a, boolean b);\n"
+        + "}\n"
+        + "\n"
+        + "class Example {\n"
+        + "    public void runTest() {\n"
+        + "        Object o = this;\n"
+        + "        SomeExtensions.noParam(o);\n"
+        + "        SomeExtensions.hasParam(o, 1, false);\n"
+        + "    }\n"
+        + "}",
+        "Example", "Example.m");
+    assertTranslation(translation, "[o noParam];");
+    assertTranslation(translation, "[o hasParam:1 andOneMore:NO];");
+  }
 }
