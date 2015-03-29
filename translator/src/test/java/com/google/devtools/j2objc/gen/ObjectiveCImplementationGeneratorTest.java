@@ -779,4 +779,15 @@ public class ObjectiveCImplementationGeneratorTest extends GenerationTest {
         "@Foo(CharSequence.class) class Test {}", "Test", "Test.m");
     assertTranslation(translation, "[IOSClass classWithProtocol:@protocol(JavaLangCharSequence)]");
   }
+
+  public void testAvoidAdapterClass() throws IOException {
+    String source = "import com.google.j2objc.annotations.*;\n"
+                    + "\n"
+                    + "interface DummyProtocol {}\n"
+                    + "@Adapter\n"
+                    + "class ImAdapter implements DummyProtocol {}\n"
+                    + "class Implementer extends ImAdapter {}";
+    String translation = translateSourceFile(source, "Test", "Test.m");
+    assertNotInTranslation(translation, "ImAdapter");
+  }
 }

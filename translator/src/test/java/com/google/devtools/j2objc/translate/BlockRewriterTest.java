@@ -6,13 +6,13 @@ import java.io.IOException;
 
 /**
  * Unit tests for {@link com.google.devtools.j2objc.translate.BlockRewriter}.
- *
  */
 
 public class BlockRewriterTest extends GenerationTest {
 
-  // rewrite the ObjC block object into an appropriate
-  //   anonymous object
+  /**
+   * rewrite the ObjC block object into an appropriate anonymous objects
+   */
   public void testBlockRewriting() throws IOException {
     String source = "import com.google.j2objc.annotations.*;\n"
                     + "\n"

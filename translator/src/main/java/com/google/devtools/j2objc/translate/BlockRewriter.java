@@ -47,13 +47,6 @@ import javax.naming.Binding;
 public class BlockRewriter extends TreeVisitor {
 
   @Override
-  public boolean visit(TypeDeclaration node) {
-    ITypeBinding binding = node.getTypeBinding();
-    // no need to rewrite blocks in adapters, they are stubs anyways
-    return !BindingUtil.isAdapter(binding);
-  }
-
-  @Override
   public void endVisit(MethodDeclaration node) {
     IMethodBinding binding = node.getMethodBinding();
 

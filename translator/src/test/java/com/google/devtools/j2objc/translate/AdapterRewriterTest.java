@@ -17,10 +17,12 @@ public class AdapterRewriterTest extends GenerationTest {
     String source = "import com.google.j2objc.annotations.*;\n"
                     + "\n"
                     + "interface DummyProtocol {}\n"
+                    + "@Adapter\n"
                     + "class ImAdapter implements DummyProtocol {}\n"
                     + "class Implementer extends ImAdapter {}";
 
     String translation = translateSourceFile(source, "Test", "Test.h");
-    assertTranslation(translation, "@interface ImAdapter : NSObject < DummyProtocol >");
+    assertTranslation(translation, "@interface Implementer : NSObject < DummyProtocol >");
   }
 }
+

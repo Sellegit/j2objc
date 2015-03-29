@@ -646,4 +646,15 @@ public class ObjectiveCHeaderGeneratorTest extends GenerationTest {
         "@param foo Unused.",
         "@return always false.");
   }
+
+  public void testAvoidAdapterClass() throws IOException {
+    String source = "import com.google.j2objc.annotations.*;\n"
+                    + "\n"
+                    + "interface DummyProtocol {}\n"
+                    + "@Adapter\n"
+                    + "class ImAdapter implements DummyProtocol {}\n"
+                    + "class Implementer extends ImAdapter {}";
+    String translation = translateSourceFile(source, "Test", "Test.h");
+    assertNotInTranslation(translation, "ImAdapter");
+  }
 }
