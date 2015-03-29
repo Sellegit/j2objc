@@ -76,7 +76,7 @@ import junit.framework.TestSuite;
 public class SmallTests {
 
   private static final Class<?>[] smallTestClasses = new Class[] {
-      ObjectiveCImplementationGeneratorTest.class
+      StatementGeneratorTest.class
   };
 
   private static final Class<?>[] smallTestClassesPrime = new Class[] {

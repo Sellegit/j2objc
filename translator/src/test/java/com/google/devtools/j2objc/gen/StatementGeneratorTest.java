@@ -1735,4 +1735,24 @@ public class StatementGeneratorTest extends GenerationTest {
     assertTranslation(translation,
                       "[^void (NSString *____a, NSString *____b) { [___$runner run:____a param:____b];} copy]");
   }
+
+  public void testDotMapping() throws IOException {
+    String translation = translateSourceFile("import com.google.j2objc.annotations.*;\n"
+                                             + "\n"
+                                             + "@Mapping(\"Dummy\")\n"
+                                             + "class Mapped {\n"
+                                             + "    @DotMapping(\"dot\")\n"
+                                             + "    public native int method();\n"
+                                             + "\n"
+                                             + "}\n"
+                                             + "\n"
+                                             + "class Implementer {\n"
+                                             + "    public void runTest() {\n"
+                                             + "        Mapped o = (Mapped) new Object();\n"
+                                             + "        int b = o.method();\n"
+                                             + "    }\n"
+                                             + "}",
+        "Test", "Test.m");
+    assertTranslation(translation, "jint b = o.dot;");
+  }
 }
