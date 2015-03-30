@@ -174,19 +174,19 @@ public class ObjectiveCImplementationGenerator extends ObjectiveCSourceFileGener
     imports.addAll(declarationCollector.getSuperTypes());
     imports.addAll(collector.getImports());
 
-    Set<String> importFiles = Sets.newTreeSet();
-    importFiles.add("J2ObjC_source.h");
-    importFiles.add(getGenerationUnit().getOutputPath() + ".h");
+    Set<String> importStmts = Sets.newTreeSet();
+    importStmts.add("#include \"J2ObjC_source.h\"");
+    importStmts.add("#include \"" + getGenerationUnit().getOutputPath() + ".h\"");
     for (Import imp : imports) {
       // Local types are handled by including the current file's header.
       if (!isLocalType(imp.getType())) {
-        importFiles.add(imp.getIncludeStatement());
+        importStmts.add(imp.getIncludeStatement());
       }
     }
 
     newline();
-    for (String header : importFiles) {
-      printf("#include \"%s\"\n", header);
+    for (String header : importStmts) {
+      println(header);
     }
 
     for (CompilationUnit node : getGenerationUnit().getCompilationUnits()) {
