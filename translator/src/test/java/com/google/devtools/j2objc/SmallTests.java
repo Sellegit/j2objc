@@ -140,10 +140,10 @@ public class SmallTests {
     VariableRenamerTest.class
   };
 
-  private static final Class<?>[] smallTestClasses = //smallTestClassesPrime;
-  new Class[]{
-      JavaToIOSMethodTranslatorTest.class
-  };
+  private static final Class<?>[] smallTestClasses = smallTestClassesPrime;
+//  new Class[]{
+//      ObjectiveCHeaderGeneratorTest.class
+//  };
 
   public static Test suite() {
     return new TestSuite(smallTestClasses);

@@ -110,24 +110,24 @@ public class ObjectiveCHeaderGenerator extends ObjectiveCSourceFileGenerator {
     // Order matters for finding forward declarations.
     collector.collect(getOrderedTypes());
 
-    Set<String> includeFiles = Sets.newTreeSet();
-    includeFiles.add("J2ObjC_header.h");
+    Set<String> includeStmts = Sets.newTreeSet();
+    includeStmts.add("#include \"J2ObjC_header.h\"");
     for (Import imp : collector.getSuperTypes()) {
       if (!isLocalType(imp.getType())) {
-        includeFiles.add(imp.getIncludeStatement());
+        includeStmts.add(imp.getIncludeStatement());
       }
     }
 
     // Print collected includes.
     newline();
-    for (String stmt : includeFiles) {
+    for (String stmt : includeStmts) {
       printf("%s\n", stmt);
     }
 
     // Filter out any declarations that are resolved by an include.
     Set<Import> forwardDeclarations = Sets.newHashSet();
     for (Import imp : collector.getForwardDeclarations()) {
-      if (!includeFiles.contains(imp.getImportFileName())) {
+      if (!includeStmts.contains(imp.getIncludeStatement())) {
         forwardDeclarations.add(imp);
       }
     }
