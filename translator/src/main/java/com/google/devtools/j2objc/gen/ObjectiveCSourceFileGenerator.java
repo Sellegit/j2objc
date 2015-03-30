@@ -188,85 +188,6 @@ public abstract class ObjectiveCSourceFileGenerator extends AbstractSourceGenera
     return String.format("@%s %s;", isInterface ? "protocol" : "class", typeName);
   }
 
-<<<<<<< HEAD
-  @Override
-  protected String getOutputFileName(CompilationUnit node) {
-    String result = super.getOutputFileName(node);
-    if (node.getMainTypeName().equals(NameTable.PACKAGE_INFO_MAIN_TYPE)) {
-      return result.replace(NameTable.PACKAGE_INFO_MAIN_TYPE, NameTable.PACKAGE_INFO_FILE_NAME);
-    }
-    return result;
-  }
-
-  /**
-   * Prints the list of instance variables in a type.
-   *
-   * @param node the type to examine
-   * @param privateVars if true, only print private vars, otherwise print all but private vars
-   */
-  protected void printInstanceVariables(AbstractTypeDeclaration node, boolean privateVars) {
-    indent();
-    boolean first = true;
-    boolean printAllVars = !Options.hidePrivateMembers() && !privateVars;
-    for (FieldDeclaration field : TreeUtil.getFieldDeclarations(node)) {
-      int modifiers = field.getModifiers();
-      if (!Modifier.isStatic(field.getModifiers())
-          && (printAllVars || (privateVars == isPrivateOrSynthetic(modifiers)))) {
-        List<VariableDeclarationFragment> vars = field.getFragments();
-        assert !vars.isEmpty();
-        IVariableBinding varBinding = vars.get(0).getVariableBinding();
-        ITypeBinding varType = varBinding.getType();
-        // Need direct access to fields possibly from inner classes that are
-        // promoted to top level classes, so must make all visible fields public.
-        if (first) {
-          println(" @public");
-          first = false;
-        }
-        printDocComment(field.getJavadoc());
-        printIndent();
-        if (varType instanceof IOSBlockTypeBinding) {
-          IOSBlockTypeBinding blockTypeBinding = (IOSBlockTypeBinding) varType;
-          assert field.getFragments().size() == 1 : "TODO: can only suport one fragment for field";
-          VariableDeclarationFragment f = field.getFragments().get(0);
-          String name = NameTable.getName(f.getName().getBinding());
-          String fieldName = (NameTable.javaFieldToObjC(name));
-          if (BindingUtil.isWeakReference(varBinding)) {
-            // We must add this even without -use-arc because the header may be
-            // included by a file compiled with ARC.
-            fieldName = "__weak " + fieldName;
-          }
-          print(blockTypeBinding.getNamedDeclaration(fieldName));
-        } else {
-          if (BindingUtil.isWeakReference(varBinding)) {
-            // We must add this even without -use-arc because the header may be
-            // included by a file compiled with ARC.
-            print("__weak ");
-          }
-          String objcType = NameTable.getSpecificObjCType(varType);
-          boolean needsAsterisk = !varType.isPrimitive() && !objcType.matches("id|id<.*>|Class")
-                                  && !BindingUtil.isValueType(varType);
-          if (needsAsterisk && objcType.endsWith(" *")) {
-            // Strip pointer from type, as it will be added when appending fragment.
-            // This is necessary to create "Foo *one, *two;" declarations.
-            objcType = objcType.substring(0, objcType.length() - 2);
-          }
-          print(objcType);
-          print(' ');
-          for (Iterator<VariableDeclarationFragment> it = field.getFragments().iterator();
-               it.hasNext(); ) {
-            VariableDeclarationFragment f = it.next();
-            if (needsAsterisk) {
-              print('*');
-            }
-            String name = NameTable.getName(f.getName().getBinding());
-            print(NameTable.javaFieldToObjC(name));
-            if (it.hasNext()) {
-              print(", ");
-            }
-          }
-        }
-        println(";");
-=======
   private static List<AbstractTypeDeclaration> getOrderedTypes(GenerationUnit generationUnit) {
     // Ordered map because we iterate over it below.
     // We use binding keys because the binding objects are not guaranteed to be
@@ -279,7 +200,6 @@ public abstract class ObjectiveCSourceFileGenerator extends AbstractSourceGenera
           String key = typeBinding.getKey();
           assert nodeMap.put(key, node) == null;
         }
->>>>>>> 265232a8e65e415f261af90daaa719b8d2d88c3f
       }
     }
 

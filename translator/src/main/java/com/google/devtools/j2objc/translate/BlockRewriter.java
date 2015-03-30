@@ -153,7 +153,7 @@ public class BlockRewriter extends TreeVisitor {
         new AnonymousClassDeclaration(blockTypeBinding, Lists.newArrayList((BodyDeclaration) method));
     ClassInstanceCreation newObj =
         new ClassInstanceCreation(
-            new GeneratedMethodBinding(null, "<init>", 0, Types.instance.ast.resolveWellKnownType("java.lang.Void"), null, blockTypeBinding, true, false, true),
+            new GeneratedMethodBinding(null, "<init>", 0, Types.instance.ast.resolveWellKnownType("java.lang.Void"), null, blockTypeBinding, true, false),
             false /* think about it*/, null,
             new SimpleType(blockInterfaceType), new LinkedList<Expression>(), anon);
 

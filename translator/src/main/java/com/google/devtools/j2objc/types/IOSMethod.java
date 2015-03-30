@@ -87,6 +87,23 @@ public class IOSMethod {
     return varArgs;
   }
 
+  public String getSelector() {
+    StringBuilder sb = new StringBuilder();
+    sb.append(name);
+
+    boolean first = true;
+    for (IOSParameter param : parameters) {
+      if (first) {
+        sb.append(":");
+        first = false;
+      } else {
+        sb.append(param.getParameterName() + ":");
+      }
+    }
+
+    return sb.toString();
+  }
+
   private static String[] splitParameterString(String s) {
     List<String> result = Lists.newArrayList();
     String[] parts = s.split(" ");

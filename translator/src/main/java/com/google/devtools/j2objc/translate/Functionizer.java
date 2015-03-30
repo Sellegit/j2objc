@@ -372,18 +372,14 @@ public class Functionizer extends TreeVisitor {
     function.setBody(body);
     List<Statement> stmts = body.getStatements();
 
-    // if the declaring class is mapped to a native class, no initialization can be performed
-    // nop
-    if (BindingUtil.extractMappingName(method.getDeclaringClass()) == null) {
-      // Add class initialization invocation, since this may be the first use of this class.
-      GeneratedVariableBinding selfVar = new GeneratedVariableBinding(
-          NameTable.SELF_NAME, 0, declaringClass, false, false, declaringClass, null);
-      IOSMethodBinding allocBinding = IOSMethodBinding.newMethod(
-          NameTable.ALLOC_METHOD, Modifier.PUBLIC, Types.resolveIOSType("id"),
-          Types.resolveIOSType("NSObject"));
-      stmts.add(new VariableDeclarationStatement(
-          selfVar, new MethodInvocation(allocBinding, new SimpleName(declaringClass))));
-    }
+    // Add class initialization invocation, since this may be the first use of this class.
+    GeneratedVariableBinding selfVar = new GeneratedVariableBinding(
+        NameTable.SELF_NAME, 0, declaringClass, false, false, declaringClass, null);
+    IOSMethodBinding allocBinding = IOSMethodBinding.newMethod(
+        NameTable.ALLOC_METHOD, Modifier.PUBLIC, Types.resolveIOSType("id"),
+        Types.resolveIOSType("NSObject"));
+    stmts.add(new VariableDeclarationStatement(
+        selfVar, new MethodInvocation(allocBinding, new SimpleName(declaringClass))));
 
     FunctionInvocation invocation = new FunctionInvocation(
         NameTable.getFullFunctionName(binding), voidType, voidType, declaringClass);

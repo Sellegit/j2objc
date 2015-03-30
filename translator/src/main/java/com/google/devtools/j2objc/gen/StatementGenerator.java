@@ -119,7 +119,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.regex.Pattern;
 
-import javax.naming.Binding;
 
 /**
  * Returns an Objective-C equivalent of a Java AST node.
@@ -153,48 +152,6 @@ public class StatementGenerator extends TreeVisitor {
 
   private String getResult() {
     return buffer.toString();
-  }
-
-  private void printArguments(IMethodBinding method, List<Expression> args) {
-    if (IOSMethodBinding.hasVarArgsTarget(method)) {
-      printVarArgs(method, args);
-    } else if (!args.isEmpty()) {
-      int nArgs = args.size();
-      for (int i = 0; i < nArgs; i++) {
-        Expression arg = args.get(i);
-        printArgument(method, arg, i);
-        if (i + 1 < nArgs) {
-          buffer.append(' ');
-        }
-      }
-    }
-  }
-
-  private void printArgument(IMethodBinding method, Expression arg, int index) {
-//    ErrorUtil.warning(method.toString() + ";" + arg.toString() + ";" + index);
-
-    if (method != null) {
-      IOSMethod iosMethod = IOSMethodBinding.getIOSMethod(method);
-      if (iosMethod != null) {
-        // mapped methods already have converted parameters
-        if (index > 0) {
-          buffer.append(iosMethod.getParameters().get(index).getParameterName());
-        }
-      } else {
-        method = BindingUtil.getOriginalMethodBinding(method.getMethodDeclaration());
-        ITypeBinding[] parameterTypes = method.getParameterTypes();
-        assert index < parameterTypes.length : "method called with more parameters than declared";
-        ITypeBinding parameter = parameterTypes[index];
-        String keyword = NameTable.parameterKeyword(parameter);
-        if (index == 0) {
-          keyword = NameTable.capitalize(keyword);
-        }
-        buffer.append(keyword);
-      }
-    }
-    buffer.append(':');
-
-    printArgumentExpression(method, arg, index);
   }
 
   private void printArgumentExpression(IMethodBinding method, Expression arg, int index) {
@@ -258,35 +215,8 @@ public class StatementGenerator extends TreeVisitor {
     arg.accept(this);
   }
 
-  private void printVarArgs(IMethodBinding method, List<Expression> args) {
-    method = method.getMethodDeclaration();
-    ITypeBinding[] parameterTypes = method.getParameterTypes();
-    Iterator<Expression> it = args.iterator();
-    for (int i = 0; i < parameterTypes.length; i++) {
-      if (i < parameterTypes.length - 1) {
-        // Not the last parameter
-        printArgument(method, it.next(), i);
-        if (it.hasNext() || i + 1 < parameterTypes.length) {
-          buffer.append(' ');
-        }
-      } else {
-        if (i == 0) {
-          buffer.append(':');
-          if (it.hasNext()) {
-            it.next().accept(this);
-          }
-        }
-        // Method mapped to Obj-C varargs method call, so just append args.
-        while (it.hasNext()) {
-          buffer.append(", ");
-          it.next().accept(this);
-        }
-        buffer.append(", nil");
-      }
-    }
-  }
-
-  private void printMethodInvocationNameAndArgs(String selector, List<Expression> args) {
+  private void printMethodInvocationNameAndArgs(IMethodBinding binding, List<Expression> args) {
+    String selector = NameTable.getMethodSelector(binding);
     String[] selParts = selector.split(":");
     if (args.isEmpty()) {
       assert selParts.length == 1 && !selector.endsWith(":");
@@ -298,7 +228,7 @@ public class StatementGenerator extends TreeVisitor {
         buffer.append(' ');
         buffer.append(selParts[i]);
         buffer.append(':');
-        args.get(i).accept(this);
+        printArgumentExpression(binding, args.get(i), i);
       }
     }
   }
@@ -809,36 +739,20 @@ public class StatementGenerator extends TreeVisitor {
     if (mapped != null) {
       List<Expression> args = node.getArguments();
       Expression newReceiver = args.remove(0);
-//      node.setExpression(newReceiver);
       receiver = newReceiver;
 
-      IOSMethodBinding newBinding = IOSMethodBinding.newMappedMethod(mapped, binding);
+      IOSMethodBinding newBinding =
+          IOSMethodBinding.newMappedMethod(mapped.getSelector(), binding);
       newBinding.setModifiers(Modifier.PUBLIC); // do away static modifier
-//      node.setMethodBinding(newBinding);
       binding = newBinding;
-
-      methodName = NameTable.getName(binding);
     }
 
-    if (methodName.equals("isAssignableFrom")
-        && binding.getDeclaringClass().equals(Types.getIOSClass())) {
-      printIsAssignableFromExpression(node);
-    } else {
-      boolean castPrinted = false;
-      if (returnValueNeedsIntCast(node)) {
-        buffer.append("((jint) ");
-        castPrinted = true;
-      }
-      printMethodInvocation(binding, methodName, receiver, node.getArguments());
-      if (castPrinted) {
-        buffer.append(')');
-      }
-    }
+    printMethodInvocation(binding, receiver, node.getArguments());
     return false;
   }
 
   private void printMethodInvocation(
-      IMethodBinding binding, String methodName, Expression receiver, List<Expression> args) {
+      IMethodBinding binding, Expression receiver, List<Expression> args) {
     buffer.append('[');
 
     if (BindingUtil.isStatic(binding)) {
@@ -849,10 +763,8 @@ public class StatementGenerator extends TreeVisitor {
       buffer.append("self");
     }
 
-    printMethodInvocationNameAndArgs(NameTable.getMethodSelector(binding), node.getArguments());
+    printMethodInvocationNameAndArgs(binding, args);
     buffer.append(']');
-
-    return false;
   }
 
   @Override
@@ -1162,7 +1074,7 @@ public class StatementGenerator extends TreeVisitor {
         : "Qualifiers expected to be handled by SuperMethodInvocationRewriter.";
     assert !BindingUtil.isStatic(binding) : "Static invocations are rewritten by Functionizer.";
     buffer.append("[super");
-    printMethodInvocationNameAndArgs(NameTable.getMethodSelector(binding), node.getArguments());
+    printMethodInvocationNameAndArgs(binding, node.getArguments());
     buffer.append(']');
     return false;
   }

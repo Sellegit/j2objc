@@ -34,6 +34,7 @@ import com.google.devtools.j2objc.ast.TreeVisitor;
 import com.google.devtools.j2objc.ast.TypeDeclaration;
 import com.google.devtools.j2objc.types.GeneratedMethodBinding;
 import com.google.devtools.j2objc.types.GeneratedVariableBinding;
+import com.google.devtools.j2objc.types.IOSMethod;
 import com.google.devtools.j2objc.types.IOSMethodBinding;
 import com.google.devtools.j2objc.types.Types;
 import com.google.devtools.j2objc.util.BindingUtil;
@@ -105,12 +106,6 @@ public class JavaToIOSMethodTranslator extends TreeVisitor {
             + "): Renamed method overrides a method with a different name.");
       }
     }
-    // Annotation-based logic:
-    IOSMethod mapped = BindingUtil.getMappedMethod(binding);
-    if (mapped != null) {
-      mapMethod(node, binding, mapped);
-      return true;
-    }
     return true;
   }
 
@@ -153,9 +148,9 @@ public class JavaToIOSMethodTranslator extends TreeVisitor {
         //  mapped constructor corresponds to initXX. That's [Class alloc] will still be called
         IOSMethod mapped = BindingUtil.getMappedMethod(binding);
         if (mapped != null) {
-          IOSMethodBinding methodBinding = IOSMethodBinding.newMappedMethod(mapped, binding);
+          IOSMethodBinding newMappedMethod = IOSMethodBinding.newMappedMethod(mapped.getSelector(), binding);
 
-          node.setMethodBinding(methodBinding);
+          node.setMethodBinding(newMappedMethod);
         }
       }
     }

@@ -107,7 +107,6 @@ public class Import implements Comparable<Import> {
     if (isFoundation) {
       this.importFileName = foundationName;
     } else {
-      this.importFileName = getImportFileName(mainType);
       this.importFileName = getImportFileName(mainType) + ".h";
     }
     this.isFoundation = isFoundation;

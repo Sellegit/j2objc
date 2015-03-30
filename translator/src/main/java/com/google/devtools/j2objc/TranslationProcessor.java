@@ -220,12 +220,6 @@ class TranslationProcessor extends FileProcessor {
       CompilationUnit unit, DeadCodeMap deadCodeMap, TimeTracker ticker) {
     ticker.push();
 
-    Map<String, String> methodMappings = Options.getMethodMappings();
-    if (methodMappings.isEmpty()) {
-      // Method maps are loaded here so tests can call translate() directly.
-      loadMappingFiles();
-    }
-
     if (deadCodeMap != null) {
       new DeadCodeEliminator(unit, deadCodeMap).run(unit);
       ticker.tick("DeadCodeEliminator");

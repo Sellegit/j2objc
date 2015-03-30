@@ -66,7 +66,7 @@ public class GeneratedMethodBinding extends AbstractBinding implements IMethodBi
    */
   public GeneratedMethodBinding(IMethodBinding m) {
     this(null, m.getName(), m.getModifiers(), m.getReturnType(), null, m.getDeclaringClass(),
-         m.isConstructor(), m.isVarargs(), m.isSynthetic());
+         m.isConstructor(), m.isVarargs());
     addParameters(m);
     addAnnotations(m);
   }
