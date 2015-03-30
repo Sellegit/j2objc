@@ -47,6 +47,7 @@ import com.google.devtools.j2objc.translate.GwtConverterTest;
 import com.google.devtools.j2objc.translate.InitializationNormalizerTest;
 import com.google.devtools.j2objc.translate.InnerClassExtractorTest;
 import com.google.devtools.j2objc.translate.JavaCloneWriterTest;
+import com.google.devtools.j2objc.translate.JavaToIOSMethodTranslator;
 import com.google.devtools.j2objc.translate.JavaToIOSMethodTranslatorTest;
 import com.google.devtools.j2objc.translate.NilCheckResolverTest;
 import com.google.devtools.j2objc.translate.OcniExtractorTest;
@@ -139,8 +140,9 @@ public class SmallTests {
     VariableRenamerTest.class
   };
 
-  private static final Class<?>[] smallTestClasses = new Class[]{
-      AdapterRewriterTest.class
+  private static final Class<?>[] smallTestClasses = //smallTestClassesPrime;
+  new Class[]{
+      JavaToIOSMethodTranslatorTest.class
   };
 
   public static Test suite() {

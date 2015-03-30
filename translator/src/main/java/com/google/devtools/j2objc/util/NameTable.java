@@ -54,6 +54,8 @@ import java.util.logging.Logger;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import javax.naming.Binding;
+
 /**
  * Singleton service for type/method/variable name support.
  *
@@ -553,6 +555,13 @@ public class NameTable {
     }
     if (BindingUtil.isDestructor(method)) {
       return DEALLOC_METHOD;
+    }
+    // Annotation based logic, TODO(cxi) change to selector based
+    IOSMethod mappedMethod = BindingUtil.getMappedMethod(
+        method, BindingUtil.extractExtensionMappingName(method) != null
+    );
+    if (mappedMethod != null) {
+      return mappedMethod.getSelector();
     }
     if (method.isConstructor() || BindingUtil.isStatic(method)) {
       return selectorForOriginalBinding(method);

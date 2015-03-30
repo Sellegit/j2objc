@@ -143,6 +143,7 @@ public class JavaToIOSMethodTranslator extends TreeVisitor {
 
         node.replaceWith(newInvocation);
       } else {
+        // TODO: fix me
         // Annotation-based logic:
         // Note: the semantic of mapping here differs from that of the other j2objc model in a sense that
         //  mapped constructor corresponds to initXX. That's [Class alloc] will still be called

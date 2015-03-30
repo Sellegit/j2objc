@@ -56,6 +56,7 @@ public class TypeImplementationGenerator extends TypeGenerator {
   protected void generate() {
     if (BindingUtil.extractMappingName(typeBinding) != null) {
       printOcniFunctions();
+      return;
     }
     printInitFlagDefinition();
     printStaticVars();

@@ -21,6 +21,7 @@ import com.google.devtools.j2objc.ast.Expression;
 import com.google.devtools.j2objc.ast.FieldDeclaration;
 import com.google.devtools.j2objc.ast.FunctionDeclaration;
 import com.google.devtools.j2objc.ast.VariableDeclarationFragment;
+import com.google.devtools.j2objc.util.BindingUtil;
 
 import org.eclipse.jdt.core.dom.Modifier;
 
@@ -46,6 +47,9 @@ public class TypePrivateDeclarationGenerator extends TypeDeclarationGenerator {
 
   // TODO(kstanger): Merge this with generate() in the superclass.
   private void generate() {
+    if (BindingUtil.extractMappingName(typeBinding) != null) {
+      return;
+    }
     printConstantDefines();
     printClassExtension();
     printCompanionClassDeclaration();
