@@ -79,7 +79,7 @@ import junit.framework.TestSuite;
  */
 public class SmallTests {
 
-  private static final Class<?>[] smallTestClasses = new Class[] {
+  private static final Class<?>[] smallTestClassesPrime = new Class[] {
     AbstractMethodRewriterTest.class,
     AdapterRewriterTest.class,
     AnonymousClassConverterTest.class,
@@ -137,6 +137,10 @@ public class SmallTests {
     UnsequencedExpressionRewriterTest.class,
     VarargsRewriterTest.class,
     VariableRenamerTest.class
+  };
+
+  private static final Class<?>[] smallTestClasses = new Class[]{
+      AdapterRewriterTest.class
   };
 
   public static Test suite() {

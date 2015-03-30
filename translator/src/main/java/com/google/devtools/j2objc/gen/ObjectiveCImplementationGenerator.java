@@ -186,7 +186,7 @@ public class ObjectiveCImplementationGenerator extends ObjectiveCSourceFileGener
 
     newline();
     for (String header : importFiles) {
-      printf("%s\n", header);
+      printf("#include \"%s\"\n", header);
     }
 
     for (CompilationUnit node : getGenerationUnit().getCompilationUnits()) {
