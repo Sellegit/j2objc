@@ -26,6 +26,9 @@ import org.eclipse.jdt.core.dom.ITypeBinding;
 import org.eclipse.jdt.core.dom.IVariableBinding;
 
 import java.io.File;
+import java.util.AbstractList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.Iterator;
 import java.util.List;
 
@@ -138,7 +141,11 @@ public class TreeUtil {
   }
 
   public static Iterable<VariableDeclarationFragment> getAllFields(AbstractTypeDeclaration node) {
-    final Iterable<FieldDeclaration> fieldDecls = getFieldDeclarations(node);
+    return asFragments(getFieldDeclarations(node));
+  }
+
+  public static Iterable<VariableDeclarationFragment> asFragments(
+      final Iterable<FieldDeclaration> fieldDecls) {
     return new Iterable<VariableDeclarationFragment>() {
       public Iterator<VariableDeclarationFragment> iterator() {
         final Iterator<FieldDeclaration> fieldIter = fieldDecls.iterator();
@@ -261,10 +268,52 @@ public class TreeUtil {
         }
       }
     }
-    Block block = new Block();
-    node.replaceWith(block);
-    block.getStatements().add(node);
-    return block.getStatements();
+    return new LonelyStatementList(node);
+  }
+
+  /**
+   * This list wraps a single statement, and inserts a block node in its place
+   * upon adding additional nodes.
+   */
+  private static class LonelyStatementList extends AbstractList<Statement> {
+
+    private final Statement lonelyStatement;
+    private List<Statement> delegate = null;
+
+    public LonelyStatementList(Statement stmt) {
+      lonelyStatement = stmt;
+    }
+
+    private List<Statement> getDelegate() {
+      if (delegate == null) {
+        Block block = new Block();
+        lonelyStatement.replaceWith(block);
+        delegate = block.getStatements();
+        delegate.add(lonelyStatement);
+      }
+      return delegate;
+    }
+
+    public Statement get(int idx) {
+      if (delegate != null) {
+        return delegate.get(idx);
+      }
+      if (idx != 0) {
+        throw new IndexOutOfBoundsException();
+      }
+      return lonelyStatement;
+    }
+
+    public int size() {
+      if (delegate != null) {
+        return delegate.size();
+      }
+      return 1;
+    }
+
+    public void add(int idx, Statement stmt) {
+      getDelegate().add(idx, stmt);
+    }
   }
 
   public static void insertAfter(Statement node, Statement toInsert) {
@@ -309,21 +358,46 @@ public class TreeUtil {
   }
 
   /**
-   * If possible give this expression an unbalanced extra retain. The caller
-   * must ensure the result is eventually consumed. Used to avoid an autorelease
-   * when creating a new object.
+   * Method sorter, suitable for documentation and
+   * code-completion lists.
+   *
+   * Sort ordering: constructors first, then alphabetical by name. If they have the
+   * same name, then compare the first parameter's simple type name, then the second, etc.
    */
-  public static boolean retainResult(Expression node) {
-    switch (node.getKind()) {
-      case ARRAY_CREATION:
-        ((ArrayCreation) node).setHasRetainedResult(true);
-        return true;
-      case CLASS_INSTANCE_CREATION:
-        ((ClassInstanceCreation) node).setHasRetainedResult(true);
-        return true;
-      default:
-        return false;
-    }
+  public static void sortMethods(List<MethodDeclaration> methods) {
+    Collections.sort(methods, new Comparator<MethodDeclaration>() {
+      @Override
+      public int compare(MethodDeclaration m1, MethodDeclaration m2) {
+        if (m1.isConstructor() && !m2.isConstructor()) {
+          return -1;
+        }
+        if (!m1.isConstructor() && m2.isConstructor()) {
+          return 1;
+        }
+        String m1Name = m1.getName().getIdentifier();
+        String m2Name = m2.getName().getIdentifier();
+        if (!m1Name.equals(m2Name)) {
+          return m1Name.compareToIgnoreCase(m2Name);
+        }
+        int nParams = m1.getParameters().size();
+        int nOtherParams = m2.getParameters().size();
+        int max = Math.min(nParams, nOtherParams);
+        for (int i = 0; i < max; i++) {
+          String paramType = m1.getParameters().get(i).getType().getTypeBinding().getName();
+          String otherParamType = m2.getParameters().get(i).getType().getTypeBinding().getName();
+          if (!paramType.equals(otherParamType)) {
+            return paramType.compareToIgnoreCase(otherParamType);
+          }
+        }
+        return nParams - nOtherParams;
+      }
+    });
+  }
+
+  public static List<AnnotationTypeMemberDeclaration> getAnnotationMembers(
+      AbstractTypeDeclaration node) {
+    return Lists.newArrayList(
+        Iterables.filter(node.getBodyDeclarations(), AnnotationTypeMemberDeclaration.class));
   }
 
 }

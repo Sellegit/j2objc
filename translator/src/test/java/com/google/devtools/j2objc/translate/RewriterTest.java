@@ -165,14 +165,14 @@ public class RewriterTest extends GenerationTest {
     assertTranslation(translation,
         "[IOSObjectArray newArrayWithObjects:(id[]){"
         + " [IOSIntArray arrayWithInts:(jint[]){ 1, 2, 3 } count:3] } count:1"
-        + " type:[IOSIntArray iosClass]]");
+        + " type:IOSClass_intArray(1)]");
   }
 
   public void testArrayCreationInConstructorInvocation() throws IOException {
     String translation = translateSourceFile(
         "class Test { Test(int[] i) {} Test() { this(new int[] {}); } }", "Test", "Test.m");
     assertTranslation(translation,
-        "[self initTestWithIntArray:[IOSIntArray arrayWithInts:(jint[]){  } count:0]]");
+        "Test_initWithIntArray_(self, [IOSIntArray arrayWithInts:(jint[]){  } count:0]);");
   }
 
   public void testInterfaceFieldsAreStaticFinal() throws IOException {
@@ -361,7 +361,7 @@ public class RewriterTest extends GenerationTest {
         "Test", "Test.m");
     assertTranslation(translation, "return a & b;");
     assertTranslation(translation, "return c | d;");
-    assertTranslatedLines(translation, "return ((e & f) | (g & h)) | i;");
+    assertTranslatedLines(translation, "return (e & f) | (g & h) | i;");
     assertTranslatedLines(translation, "return j | k | (l & m & n);");
   }
 
@@ -397,14 +397,14 @@ public class RewriterTest extends GenerationTest {
         "Test", "Test.m");
     assertNotInTranslation(translation, "RetainedLocalRef");
     assertTranslation(translation, "ComGoogleJ2objcUtilScopedLocalRef *c = "
-        + "[[[ComGoogleJ2objcUtilScopedLocalRef alloc] "
-        + "initWithId:NSString_get_CASE_INSENSITIVE_ORDER_()] autorelease];");
+        + "[new_ComGoogleJ2objcUtilScopedLocalRef_initWithId_("
+        + "NSString_get_CASE_INSENSITIVE_ORDER_()) autorelease];");
     assertTranslation(translation,
         "return [((id<JavaUtilComparator>) nil_chk(((id<JavaUtilComparator>) "
         + "check_protocol_cast(c->var_, @protocol(JavaUtilComparator))))) "
         + "compareWithId:s1 withId:s2] == 0;");
     assertTranslation(translation, "ComGoogleJ2objcUtilScopedLocalRef *thing = "
-        + "[[[ComGoogleJ2objcUtilScopedLocalRef alloc] initWithId:t] autorelease];");
+        + "[new_ComGoogleJ2objcUtilScopedLocalRef_initWithId_(t) autorelease];");
     assertTranslation(translation,
         "return [((id<JavaUtilComparator>) nil_chk(((Test_Thing *) nil_chk(t))->comp_)) "
         + "compareWithId:s1 withId:s2] == 0;");

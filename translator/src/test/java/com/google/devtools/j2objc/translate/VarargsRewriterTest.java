@@ -64,7 +64,7 @@ public class VarargsRewriterTest extends GenerationTest {
         "Test", "Test.m");
     assertTranslation(translation, "JavaUtilArrays_asListWithNSObjectArray_("
         + "[IOSObjectArray arrayWithObjects:(id[]){ array } count:1 "
-        + "type:[IOSFloatArray iosClass]]);");
+        + "type:IOSClass_floatArray(1)]);");
   }
 
   public void testMultiDimPrimitiveArrayPassedToTypeVariableVarargs() throws IOException {
@@ -81,5 +81,15 @@ public class VarargsRewriterTest extends GenerationTest {
         "Test", "Test.m");
     // Array should be passed as it is.
     assertTranslation(translation, "[self fooWithNSObjectArray:array];");
+  }
+
+  // Verify cloning a single array argument doesn't cause it to get boxed in another array.
+  public void testArrayCloneArgument() throws IOException {
+    String translation = translateSourceFile(
+        "class A { void varargs(String s, Object... objects) {}"
+        + "void test() { Object[] objs = new Object[] { \"\", \"\" };"
+        + "varargs(\"objects\", objs.clone()); }}", "A", "A.m");
+    assertTranslation(translation,
+        "[self varargsWithNSString:@\"objects\" withNSObjectArray:[objs clone]];");
   }
 }

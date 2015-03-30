@@ -19,16 +19,15 @@
 //  Created by Tom Ball on 1/22/12.
 //
 
+#import "IOSPrimitiveArray.h"
 #import "IOSPrimitiveClass.h"
 #import "IOSObjectArray.h"
-#import "java/lang/AssertionError.h"
 #import "java/lang/Boolean.h"
 #import "java/lang/Byte.h"
 #import "java/lang/Character.h"
 #import "java/lang/Double.h"
 #import "java/lang/Float.h"
 #import "java/lang/Integer.h"
-#import "java/lang/InstantiationException.h"
 #import "java/lang/Long.h"
 #import "java/lang/NoSuchMethodException.h"
 #import "java/lang/Short.h"
@@ -84,8 +83,7 @@
 }
 
 - (IOSObjectArray *)getDeclaredMethods {
-  return [IOSObjectArray arrayWithLength:0
-      type:[IOSClass classWithClass:[JavaLangReflectMethod class]]];
+  return [IOSObjectArray arrayWithLength:0 type:JavaLangReflectMethod_class_()];
 }
 
 - (JavaLangReflectMethod *)getMethod:(NSString *)name, ... {
@@ -137,6 +135,34 @@ getConstructorWithClasses:(IOSClass *)firstClass, ... {
   return type_;
 }
 
+- (Class)objcArrayClass {
+  switch ([type_ characterAtIndex:0]) {
+    case 'B': return [IOSByteArray class];
+    case 'C': return [IOSCharArray class];
+    case 'D': return [IOSDoubleArray class];
+    case 'F': return [IOSFloatArray class];
+    case 'I': return [IOSIntArray class];
+    case 'J': return [IOSLongArray class];
+    case 'S': return [IOSShortArray class];
+    case 'Z': return [IOSBooleanArray class];
+  }
+  return nil;
+}
+
+- (size_t)getSizeof {
+  switch ([type_ characterAtIndex:0]) {
+    case 'B': return sizeof(jbyte);
+    case 'C': return sizeof(jchar);
+    case 'D': return sizeof(jdouble);
+    case 'F': return sizeof(jfloat);
+    case 'I': return sizeof(jint);
+    case 'J': return sizeof(jlong);
+    case 'S': return sizeof(jshort);
+    case 'Z': return sizeof(jboolean);
+  }
+  return 0;
+}
+
 - (id)__boxValue:(J2ObjcRawValue *)rawValue {
   switch ([type_ characterAtIndex:0]) {
     case 'B': return JavaLangByte_valueOfWithByte_(rawValue->asChar);
@@ -153,14 +179,14 @@ getConstructorWithClasses:(IOSClass *)firstClass, ... {
 
 - (id)wrapperClass {
   switch ([type_ characterAtIndex:0]) {
-    case 'B': return [IOSClass classWithClass:[JavaLangByte class]];
-    case 'C': return [IOSClass classWithClass:[JavaLangCharacter class]];
-    case 'D': return [IOSClass classWithClass:[JavaLangDouble class]];
-    case 'F': return [IOSClass classWithClass:[JavaLangFloat class]];
-    case 'I': return [IOSClass classWithClass:[JavaLangInteger class]];
-    case 'J': return [IOSClass classWithClass:[JavaLangLong class]];
-    case 'S': return [IOSClass classWithClass:[JavaLangShort class]];
-    case 'Z': return [IOSClass classWithClass:[JavaLangBoolean class]];
+    case 'B': return JavaLangByte_class_();
+    case 'C': return JavaLangCharacter_class_();
+    case 'D': return JavaLangDouble_class_();
+    case 'F': return JavaLangFloat_class_();
+    case 'I': return JavaLangInteger_class_();
+    case 'J': return JavaLangLong_class_();
+    case 'S': return JavaLangShort_class_();
+    case 'Z': return JavaLangBoolean_class_();
   }
   return nil;
 }

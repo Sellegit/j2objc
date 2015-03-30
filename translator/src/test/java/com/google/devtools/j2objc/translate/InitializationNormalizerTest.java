@@ -17,20 +17,8 @@
 package com.google.devtools.j2objc.translate;
 
 import com.google.devtools.j2objc.GenerationTest;
-import com.google.devtools.j2objc.ast.AbstractTypeDeclaration;
-import com.google.devtools.j2objc.ast.BodyDeclaration;
-import com.google.devtools.j2objc.ast.CompilationUnit;
-import com.google.devtools.j2objc.ast.ExpressionStatement;
-import com.google.devtools.j2objc.ast.MethodDeclaration;
-import com.google.devtools.j2objc.ast.Statement;
-import com.google.devtools.j2objc.ast.SuperConstructorInvocation;
-import com.google.devtools.j2objc.ast.TypeDeclaration;
-
-import org.eclipse.jdt.core.dom.IMethodBinding;
-import org.eclipse.jdt.core.dom.Modifier;
 
 import java.io.IOException;
-import java.util.List;
 
 /**
  * Unit tests for {@link InitializationNormalization} phase.
@@ -49,15 +37,6 @@ public class InitializationNormalizerTest extends GenerationTest {
     instance = new InitializationNormalizer();
   }
 
-  private TypeDeclaration translateClassBody(String testSource) {
-    String source = "public class Test { " + testSource + " }";
-    CompilationUnit unit = translateType("Test", source);
-    List<AbstractTypeDeclaration> types = unit.getTypes();
-    assertEquals(1, types.size());
-    assertTrue(types.get(0) instanceof TypeDeclaration);
-    return (TypeDeclaration) types.get(0);
-  }
-
   /**
    * Verify that for a constructor that calls another constructor and has
    * other statements, the "this-constructor" statement is used to
@@ -69,7 +48,11 @@ public class InitializationNormalizerTest extends GenerationTest {
         + "Test() { this(true); b2 = true; }"
         + "Test(boolean b) { b1 = b; }}";
     String translation = translateSourceFile(source, "Test", "Test.m");
-    assertTranslation(translation, "if (self = [self initTestWithBoolean:YES]) {");
+    assertTranslatedLines(translation,
+        "void Test_init(Test *self) {",
+        "  Test_initWithBoolean_(self, YES);",
+        "  self->b2_ = YES;",
+        "}");
   }
 
   /**
@@ -87,21 +70,21 @@ public class InitializationNormalizerTest extends GenerationTest {
         + "  }; }}";
     String translation = translateSourceFile(source, "Distance", "Distance.m");
     assertTranslation(translation,
-        "[IOSObjectArray newArrayWithObjects:(id[]){ [[[Distance_SimplexVertex alloc] "
-        + "initWithDistance:outer$] autorelease] } "
-        + "count:1 type:[IOSClass classWithClass:[Distance_SimplexVertex class]]]");
+        "[IOSObjectArray newArrayWithObjects:(id[]){ "
+        + "[new_Distance_SimplexVertex_initWithDistance_(outer$) autorelease] } "
+        + "count:1 type:Distance_SimplexVertex_class_()]");
   }
 
   public void testStaticVarInitialization() throws IOException {
     String translation = translateSourceFile(
         "class Test { static java.util.Date date = new java.util.Date(); }", "Test", "Test.m");
     // test that initializer was stripped from the declaration
-    assertTranslation(translation, "JavaUtilDate * Test_date_;");
+    assertTranslation(translation, "JavaUtilDate *Test_date_;");
     // test that initializer was moved to new initialize method
     assertTranslatedLines(translation,
         "+ (void)initialize {",
         "if (self == [Test class]) {",
-        "JreStrongAssignAndConsume(&Test_date_, nil, [[JavaUtilDate alloc] init]);");
+        "JreStrongAssignAndConsume(&Test_date_, nil, new_JavaUtilDate_init());");
   }
 
   public void testFieldInitializer() throws IOException {
@@ -110,12 +93,9 @@ public class InitializationNormalizerTest extends GenerationTest {
     // Test that a default constructor was created and the initializer statement
     // moved to the constructor.
     assertTranslatedLines(translation,
-        "- (instancetype)init {",
-        "if (self = [super init]) {",
-        "Test_setAndConsume_date_(self, [[JavaUtilDate alloc] init]);",
-        "JreMemDebugAdd(self);",
-        "}",
-        "return self;",
+        "void Test_init(Test *self) {",
+        "  NSObject_init(self);",
+        "  Test_setAndConsume_date_(self, new_JavaUtilDate_init());",
         "}");
   }
 
@@ -125,14 +105,11 @@ public class InitializationNormalizerTest extends GenerationTest {
     // Test that a default constructor was created and the initializer statement
     // moved to the constructor.
     assertTranslatedLines(translation,
-        "- (instancetype)init {",
-        "if (self = [super init]) {",
-        "{",
-        "Test_setAndConsume_date_(self, [[JavaUtilDate alloc] init]);",
-        "}",
-        "JreMemDebugAdd(self);",
-        "}",
-        "return self;",
+        "void Test_init(Test *self) {",
+        "  NSObject_init(self);",
+        "  {",
+        "    Test_setAndConsume_date_(self, new_JavaUtilDate_init());",
+        "  }",
         "}");
   }
 
@@ -156,41 +133,29 @@ public class InitializationNormalizerTest extends GenerationTest {
         "Test", "Test.m");
     // test that default constructor was untouched, since it calls self()
     assertTranslatedLines(translation,
-        "- (instancetype)init {", "return JreMemDebugAdd([self initTestWithInt:2]);", "}");
+        "void Test_init(Test *self) {",
+        "  Test_initWithInt_(self, 2);",
+        "}");
     // test that initializer statement was added to second constructor
     assertTranslatedLines(translation,
-        "- (instancetype)initTestWithInt:(jint)i {",
-        "if (self = [super init]) {",
-        "{",
-        "Test_setAndConsume_date_(self, [[JavaUtilDate alloc] init]);",
-        "}",
-        "[((JavaIoPrintStream *) nil_chk(JavaLangSystem_get_out_())) printlnWithInt:i];",
-        "JreMemDebugAdd(self);",
-        "}",
-        "return self;",
+        "void Test_initWithInt_(Test *self, jint i) {",
+        "  NSObject_init(self);",
+        "  {",
+        "    Test_setAndConsume_date_(self, new_JavaUtilDate_init());",
+        "  }",
+        "  [((JavaIoPrintStream *) nil_chk(JavaLangSystem_get_out_())) printlnWithInt:i];",
         "}");
   }
 
-  public void testInitializerMovedToEmptyConstructor() {
-    TypeDeclaration clazz = translateClassBody(
-        "java.util.Date date = new java.util.Date(); public Test() {}");
-    List<BodyDeclaration> classMembers = clazz.getBodyDeclarations();
-    assertEquals(4, classMembers.size());  // dealloc() was also added to release date
-
-    // Test that the constructor had super() and initialization statements added.
-    BodyDeclaration decl = classMembers.get(1);
-    MethodDeclaration method = (MethodDeclaration) decl;
-    IMethodBinding binding = method.getMethodBinding();
-    assertTrue(binding.isConstructor());
-    assertEquals(Modifier.PUBLIC, method.getModifiers());
-    assertTrue(method.getParameters().isEmpty());
-    List<Statement> generatedStatements = method.getBody().getStatements();
-    assertEquals(2, generatedStatements.size());
-    assertTrue(generatedStatements.get(0) instanceof SuperConstructorInvocation);
-    SuperConstructorInvocation superInvoke =
-        (SuperConstructorInvocation) generatedStatements.get(0);
-    assertTrue(superInvoke.getArguments().isEmpty());
-    assertTrue(generatedStatements.get(1) instanceof ExpressionStatement);
+  public void testInitializerMovedToEmptyConstructor() throws IOException {
+    String translation = translateSourceFile(
+        "class Test { java.util.Date date = new java.util.Date(); public Test() {} }",
+        "Test", "Test.m");
+    assertTranslatedLines(translation,
+        "void Test_init(Test *self) {",
+        "  NSObject_init(self);",
+        "  Test_setAndConsume_date_(self, new_JavaUtilDate_init());",
+        "}");
   }
 
   /**
@@ -206,7 +171,7 @@ public class InitializationNormalizerTest extends GenerationTest {
   public void testStringWithInvalidCppCharacters() throws IOException {
     String source = "class Test { static final String foo = \"\\uffff\"; }";
     String translation = translateSourceFile(source, "Test", "Test.m");
-    assertTranslation(translation, "NSString * Test_foo_;");
+    assertTranslation(translation, "NSString *Test_foo_;");
     assertTranslation(translation,
         "JreStrongAssign(&Test_foo_, nil, [NSString stringWithCharacters:(jchar[]) { "
         + "(int) 0xffff } length:1]);");
@@ -215,7 +180,7 @@ public class InitializationNormalizerTest extends GenerationTest {
   public void testStringConcatWithInvalidCppCharacters() throws IOException {
     String source = "class Test { static final String foo = \"hello\" + \"\\uffff\"; }";
     String translation = translateSourceFile(source, "Test", "Test.m");
-    assertTranslation(translation, "NSString * Test_foo_;");
+    assertTranslation(translation, "NSString *Test_foo_;");
     assertTranslation(translation,
         "JreStrongAssign(&Test_foo_, nil, JreStrcat(\"$$\", @\"hello\", "
         + "[NSString stringWithCharacters:(jchar[]) { (int) 0xffff } length:1]));");
@@ -240,7 +205,7 @@ public class InitializationNormalizerTest extends GenerationTest {
         + "  static { iSet.add(I); } "
         + "  public static final int iSetSize = iSet.size(); }";
     String translation = translateSourceFile(source, "Test", "Test.m");
-    String setInit = "JreStrongAssignAndConsume(&Test_iSet_, nil, [[JavaUtilHashSet alloc] init])";
+    String setInit = "JreStrongAssignAndConsume(&Test_iSet_, nil, new_JavaUtilHashSet_init())";
     String setAdd = "[Test_iSet_ addWithId:JavaLangInteger_valueOfWithInt_(Test_I)]";
     String setSize = "Test_iSetSize_ = [Test_iSet_ size]";
     assertTranslation(translation, setInit);
@@ -254,6 +219,6 @@ public class InitializationNormalizerTest extends GenerationTest {
     String translation = translateSourceFile(
         "class Test { static final String FOO = Inner.BAR; "
         + "class Inner { static final String BAR = \"bar\"; } }", "Test", "Test.m");
-    assertTranslation(translation, "NSString * Test_FOO_ = @\"bar\";");
+    assertTranslation(translation, "NSString *Test_FOO_ = @\"bar\";");
   }
 }

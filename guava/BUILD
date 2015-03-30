@@ -6,7 +6,11 @@ package(
 
 package_group(
     name = "j2objc_guava_users",
-    packages = [],
+    packages = [
+        "//java/com/google/api/client/util/...",
+        "//java/com/google/apps/docs/docos/client/mobile/...",
+        "//java/com/google/apps/docs/gwt/math/...",
+    ],
 )
 
 filegroup(

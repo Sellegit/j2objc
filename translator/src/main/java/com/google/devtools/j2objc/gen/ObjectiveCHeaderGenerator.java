@@ -16,39 +16,16 @@
 
 package com.google.devtools.j2objc.gen;
 
-import com.google.common.base.Predicate;
-import com.google.common.collect.ImmutableSet;
-import com.google.common.collect.Iterables;
-import com.google.common.collect.Lists;
 import com.google.common.collect.Sets;
 import com.google.devtools.j2objc.J2ObjC;
 import com.google.devtools.j2objc.Options;
 import com.google.devtools.j2objc.ast.AbstractTypeDeclaration;
-import com.google.devtools.j2objc.ast.AnnotationTypeDeclaration;
-import com.google.devtools.j2objc.ast.AnnotationTypeMemberDeclaration;
-import com.google.devtools.j2objc.ast.BodyDeclaration;
 import com.google.devtools.j2objc.ast.CompilationUnit;
-import com.google.devtools.j2objc.ast.EnumConstantDeclaration;
-import com.google.devtools.j2objc.ast.EnumDeclaration;
-import com.google.devtools.j2objc.ast.FunctionDeclaration;
-import com.google.devtools.j2objc.ast.MethodDeclaration;
-import com.google.devtools.j2objc.ast.NativeDeclaration;
+import com.google.devtools.j2objc.ast.PackageDeclaration;
 import com.google.devtools.j2objc.ast.TreeUtil;
-import com.google.devtools.j2objc.ast.Type;
-import com.google.devtools.j2objc.ast.TypeDeclaration;
 import com.google.devtools.j2objc.types.HeaderImportCollector;
-import com.google.devtools.j2objc.types.IOSMethod;
 import com.google.devtools.j2objc.types.Import;
-import com.google.devtools.j2objc.types.Types;
-import com.google.devtools.j2objc.util.BindingUtil;
-import com.google.devtools.j2objc.util.NameTable;
 
-import org.eclipse.jdt.core.dom.ITypeBinding;
-import org.eclipse.jdt.core.dom.IVariableBinding;
-import org.eclipse.jdt.core.dom.Modifier;
-
-import java.util.Iterator;
-import java.util.List;
 import java.util.Set;
 
 /**
@@ -58,19 +35,15 @@ import java.util.Set;
  */
 public class ObjectiveCHeaderGenerator extends ObjectiveCSourceFileGenerator {
 
-  protected final String mainTypeName;
-
   /**
-   * Generate an Objective-C header file for each type declared in a specified
-   * compilation unit.
+   * Generate an Objective-C header file for each type declared in the given {@link GenerationUnit}.
    */
-  public static void generate(CompilationUnit unit) {
+  public static void generate(GenerationUnit unit) {
     new ObjectiveCHeaderGenerator(unit).generate();
   }
 
-  protected ObjectiveCHeaderGenerator(CompilationUnit unit) {
+  protected ObjectiveCHeaderGenerator(GenerationUnit unit) {
     super(unit, false);
-    mainTypeName = NameTable.getMainTypeFullName(unit);
   }
 
   @Override
@@ -79,469 +52,91 @@ public class ObjectiveCHeaderGenerator extends ObjectiveCSourceFileGenerator {
   }
 
   public void generate() {
-    CompilationUnit unit = getUnit();
-    println(J2ObjC.getFileHeader(unit.getSourceFileFullPath()));
+    println(J2ObjC.getFileHeader(getGenerationUnit().getSourceName()));
+
+    Set<PackageDeclaration> packagesToDoc = Sets.newLinkedHashSet();
+
+    // First, gather everything we need to generate.
+    // We do this first because we'll be reordering it later.
+    for (CompilationUnit unit : getGenerationUnit().getCompilationUnits()) {
+      unit.setGenerationContext();
+
+      // It would be nice if we could put the PackageDeclarations and AbstractTypeDeclarations
+      // in the same list of 'things to generate'.
+      // TODO(mthvedt): Puzzle--figure out a way to do that in Java's type system
+      // that is worth the effort.
+      PackageDeclaration pkg = unit.getPackage();
+      if (pkg.getJavadoc() != null && Options.docCommentsEnabled()) {
+        packagesToDoc.add(pkg);
+      }
+    }
 
     generateFileHeader();
 
-    if (unit.getPackage().getJavadoc() != null && Options.docCommentsEnabled()) {
-      newline();
-      printDocComment(unit.getPackage().getJavadoc());
+    for (AbstractTypeDeclaration decl : getOrderedTypes()) {
+      CompilationUnit unit = TreeUtil.getCompilationUnit(decl);
+      unit.setGenerationContext();
+
+      // Print package docs before the first type in the package. (See above comments and TODO.)
+      if (Options.docCommentsEnabled() && packagesToDoc.contains(unit.getPackage())) {
+        newline();
+        JavadocGenerator.printDocComment(getBuilder(), unit.getPackage().getJavadoc());
+        packagesToDoc.remove(unit.getPackage());
+      }
+
+      generateType(decl);
     }
 
-    for (AbstractTypeDeclaration type : unit.getTypes()) {
-      generate(type);
+    for (PackageDeclaration pkg : packagesToDoc) {
+      newline();
+      JavadocGenerator.printDocComment(getBuilder(), pkg.getJavadoc());
     }
 
     generateFileFooter();
-    save(unit);
+    save(getOutputPath());
   }
 
-  private String getSuperTypeName(TypeDeclaration node) {
-    Type superType = node.getSuperclassType();
-    if (superType == null) {
-      return "NSObject";
-    }
-    return NameTable.getFullName(superType.getTypeBinding());
-  }
-
-  @Override
-  public void generate(TypeDeclaration node) {
-    ITypeBinding binding = node.getTypeBinding();
-    if (BindingUtil.extractMappingName(binding) != null) {
-      // this is a stub type that proxies some native type. don't generate anything
-      //   other than static functions
-      printFunctions(node.getBodyDeclarations());
-      return;
-    } else if (BindingUtil.isAdapter(binding)) {
-      return;
-    }
-
-    String typeName = NameTable.getFullName(binding);
-    String superName = getSuperTypeName(node);
-    boolean isInterface = node.isInterface();
-
-    printConstantDefines(node);
-
-    newline();
-    printDocComment(node.getJavadoc());
-    if (needsDeprecatedAttribute(node.getAnnotations())) {
-      println(DEPRECATED_ATTRIBUTE);
-    }
-
-    if (isInterface) {
-      printf("@protocol %s", typeName);
-    } else {
-      printf("@interface %s : %s", typeName, superName);
-    }
-    List<Type> interfaces = node.getSuperInterfaceTypes();
-    if (!interfaces.isEmpty()) {
-      print(" < ");
-      for (Iterator<Type> iterator = interfaces.iterator(); iterator.hasNext();) {
-        print(NameTable.getFullName(iterator.next().getTypeBinding()));
-        if (iterator.hasNext()) {
-          print(", ");
-        }
-      }
-      print(isInterface ? ", NSObject, JavaObject >" : " >");
-    } else if (isInterface) {
-      println(" < NSObject, JavaObject >");
-    }
-    if (!isInterface) {
-      println(" {");
-      printInstanceVariables(node, false);
-      println("}");
-    }
-    printDeclarations(node.getBodyDeclarations());
-    println("\n@end");
-
-    if (isInterface) {
-      printStaticInterface(node);
-    } else {
-      printStaticInitFunction(node);
-      printFieldSetters(node, false);
-      printFunctions(node.getBodyDeclarations());
-      printStaticFields(node);
-    }
-
-    printIncrementAndDecrementFunctions(binding);
-
-    String pkg = binding.getPackage().getName();
-    if (NameTable.hasPrefix(pkg) && binding.isTopLevel()) {
-      String unprefixedName = NameTable.camelCaseQualifiedName(binding.getQualifiedName());
-      if (!unprefixedName.equals(typeName)) {
-        if (binding.isInterface()) {
-          // Protocols can't be used in typedefs.
-          printf("\n#define %s %s\n", unprefixedName, typeName);
-        } else {
-          printf("\ntypedef %s %s;\n", typeName, unprefixedName);
-        }
-      }
-    }
-    printExternalNativeMethodCategory(node, typeName);
-  }
-
-  private static final Set<String> NEEDS_INC_AND_DEC = ImmutableSet.of(
-      "int", "long", "double", "float", "short", "byte", "char");
-
-  private void printIncrementAndDecrementFunctions(ITypeBinding type) {
-    ITypeBinding primitiveType = Types.getPrimitiveType(type);
-    if (primitiveType == null || !NEEDS_INC_AND_DEC.contains(primitiveType.getName())) {
-      return;
-    }
-    String primitiveName = primitiveType.getName();
-    String valueMethod = primitiveName + "Value";
-    if (primitiveName.equals("long")) {
-      valueMethod = "longLongValue";
-    } else if (primitiveName.equals("byte")) {
-      valueMethod = "charValue";
-    }
-    newline();
-    printf("BOXED_INC_AND_DEC(%s, %s, %s)\n", NameTable.capitalize(primitiveName), valueMethod,
-           NameTable.getFullName(type));
-  }
-
-  @Override
-  protected void generate(AnnotationTypeDeclaration node) {
-    String typeName = NameTable.getFullName(node.getTypeBinding());
-    List<AnnotationTypeMemberDeclaration> members = Lists.newArrayList(
-        Iterables.filter(node.getBodyDeclarations(), AnnotationTypeMemberDeclaration.class));
-
-    printConstantDefines(node);
-
-    boolean isRuntime = BindingUtil.isRuntimeAnnotation(node.getTypeBinding());
-
-    newline();
-    // Print annotation as protocol.
-    printf("@protocol %s < JavaLangAnnotationAnnotation >\n", typeName);
-    if (!members.isEmpty() && isRuntime) {
-      newline();
-      printAnnotationProperties(members);
-    }
-    println("\n@end");
-
-    Iterable<IVariableBinding> staticFields = getStaticFieldsNeedingAccessors(node);
-
-    if (isRuntime || !Iterables.isEmpty(staticFields)) {
-      // Print annotation implementation interface.
-      printf("\n@interface %s : NSObject < %s >", typeName, typeName);
-      if (isRuntime && !members.isEmpty()) {
-        println(" {\n @private");
-        printAnnotationVariables(members);
-        println("}");
-        printAnnotationConstructor(node.getTypeBinding());
-        printAnnotationAccessors(members);
-      } else {
-        newline();
-      }
-      println("\n@end");
-      printStaticInitFunction(node);
-      for (IVariableBinding field : staticFields) {
-        printStaticField(field);
-      }
-    }
-  }
-
-  private static final Predicate<BodyDeclaration> IS_NATIVE_PRED =
-      new Predicate<BodyDeclaration>() {
-    @Override
-    public boolean apply(BodyDeclaration node) {
-      return Modifier.isNative(node.getModifiers());
-    }
-  };
-
-  private void printExternalNativeMethodCategory(TypeDeclaration node, String typeName) {
-    List<MethodDeclaration> externalMethods = Lists.newArrayList(
-        Iterables.filter(TreeUtil.getMethodDeclarations(node), IS_NATIVE_PRED));
-    if (!externalMethods.isEmpty()) {
-      printf("\n@interface %s (NativeMethods)\n", typeName);
-      for (MethodDeclaration m : externalMethods) {
-        print(super.methodDeclaration(m));
-        println(";");
-      }
-      println("@end");
-    }
-  }
-
-  private void printStaticInterface(TypeDeclaration node) {
-    // Print @interface for static constants, if any.
-    if (hasInitializeMethod(node)) {
-      ITypeBinding binding = node.getTypeBinding();
-      String typeName = NameTable.getFullName(binding);
-      printf("\n@interface %s : NSObject\n", typeName);
-      println("\n@end");
-    }
-    printStaticInitFunction(node);
-    for (IVariableBinding field : getStaticFieldsNeedingAccessors(node)) {
-      printStaticField(field);
-    }
-  }
-
-  @Override
-  protected void generate(EnumDeclaration node) {
-    printConstantDefines(node);
-    String typeName = NameTable.getFullName(node.getTypeBinding());
-    List<EnumConstantDeclaration> constants = node.getEnumConstants();
-
-    // Strip enum type suffix.
-    String bareTypeName =
-        typeName.endsWith("Enum") ? typeName.substring(0, typeName.length() - 4) : typeName;
-
-    // C doesn't allow empty enum declarations.  Java does, so we skip the
-    // C enum declaration and generate the type declaration.
-    if (!constants.isEmpty()) {
-      newline();
-      printf("typedef NS_ENUM(NSUInteger, %s) {\n", bareTypeName);
-
-      // Print C enum typedef.
-      indent();
-      int ordinal = 0;
-      for (EnumConstantDeclaration constant : constants) {
-        printIndent();
-        printf("%s_%s = %d,\n", bareTypeName, constant.getName().getIdentifier(), ordinal++);
-      }
-      unindent();
-      print("};\n");
-    }
-
-    newline();
-    if (needsDeprecatedAttribute(node.getAnnotations())) {
-      println(DEPRECATED_ATTRIBUTE);
-    }
-
-    // Print enum type.
-    printf("@interface %s : JavaLangEnum < NSCopying", typeName);
-    ITypeBinding enumType = node.getTypeBinding();
-    for (ITypeBinding intrface : enumType.getInterfaces()) {
-      if (!intrface.getName().equals(("Cloneable"))) { // Cloneable handled below.
-        printf(", %s", NameTable.getFullName(intrface));
-      }
-    }
-    println(" > {");
-    printInstanceVariables(node, false);
-    println("}");
-    printDeclarations(node.getBodyDeclarations());
-    println("\n@end");
-    printStaticInitFunction(node);
-    printFunctions(node.getBodyDeclarations());
-    printf("\nFOUNDATION_EXPORT %s *%s_values_[];\n", typeName, typeName);
-    for (EnumConstantDeclaration constant : constants) {
-      String varName = NameTable.getStaticVarName(constant.getVariableBinding());
-      String valueName = constant.getName().getIdentifier();
-      printf("\n#define %s_%s %s_values_[%s_%s]\n",
-             typeName, varName, typeName, bareTypeName, valueName);
-      printf("J2OBJC_ENUM_CONSTANT_GETTER(%s, %s)\n", typeName, varName);
-    }
-    printStaticFields(node);
-    printFieldSetters(node, false);
-  }
-
-  private void printStaticInitFunction(AbstractTypeDeclaration node) {
-    ITypeBinding binding = node.getTypeBinding();
-    String typeName = NameTable.getFullName(binding);
-    if (hasInitializeMethod(node)) {
-      printf("\nFOUNDATION_EXPORT BOOL %s_initialized;\n", typeName);
-      printf("J2OBJC_STATIC_INIT(%s)\n", typeName);
-    } else {
-      printf("\n__attribute__((always_inline)) inline void %s_init() {}\n", typeName);
-    }
-  }
-
-  private void printStaticFields(AbstractTypeDeclaration node) {
-    for (IVariableBinding var : getStaticFieldsNeedingAccessors(node)) {
-      printStaticField(var);
-    }
-  }
-
-  protected void printStaticField(IVariableBinding var) {
-    if (BindingUtil.extractMappingName(var.getDeclaringClass()) != null) {
-      // mapped class doesn't have usual java static field
-      return;
-    }
-
-    String objcType = NameTable.getObjCType(var.getType());
-    String typeWithSpace = objcType + (objcType.endsWith("*") ? "" : " ");
-    String name = NameTable.getStaticVarName(var);
-    String className = NameTable.getFullName(var.getDeclaringClass());
-    boolean isFinal = Modifier.isFinal(var.getModifiers());
-    boolean isPrimitive = var.getType().isPrimitive();
-    newline();
-    if (BindingUtil.isPrimitiveConstant(var)) {
-      name = var.getName();
-    } else {
-      printf("FOUNDATION_EXPORT %s%s_%s;\n", typeWithSpace, className, name);
-    }
-    printf("J2OBJC_STATIC_FIELD_GETTER(%s, %s, %s)\n", className, name, objcType);
-    if (!isFinal) {
-      if (isPrimitive) {
-        printf("J2OBJC_STATIC_FIELD_REF_GETTER(%s, %s, %s)\n", className, name, objcType);
-      } else {
-        printf("J2OBJC_STATIC_FIELD_SETTER(%s, %s, %s)\n", className, name, objcType);
-      }
-    }
-  }
-
-  @Override
-  protected void printFunction(FunctionDeclaration function) {
-    if (!Modifier.isPrivate(function.getModifiers())) {
-      println("FOUNDATION_EXPORT " + getFunctionSignature(function) + ';');
-    }
-  }
-
-  @Override
-  protected void printNativeDeclaration(NativeDeclaration declaration) {
-    newline();
-    String code = declaration.getHeaderCode();
-    if (code != null) {
-      print(declaration.getHeaderCode());
-    }
-  }
-
-  @Override
-  protected void printNormalMethod(MethodDeclaration m) {
-    if (!Modifier.isNative(m.getModifiers())) {
-      printNormalMethodDeclaration(m);
-    }
-  }
-
-  @Override
-  protected void printMappedMethodDeclaration(MethodDeclaration m, IOSMethod mappedMethod) {
-    newline();
-    printDocComment(m.getJavadoc());
-    println(super.mappedMethodDeclaration(m, mappedMethod) + ";");
-  }
-
-  @Override
-  protected void printConstructor(MethodDeclaration m) {
-    newline();
-    printDocComment(m.getJavadoc());
-    println(super.constructorDeclaration(m) + ";");
-  }
-
-  @Override
-  protected void printMethod(MethodDeclaration m) {
-    if (!Options.hidePrivateMembers() || !isPrivateOrSynthetic(m.getModifiers())) {
-      super.printMethod(m);
-    }
-  }
-
-  protected void printForwardDeclarations(Set<Import> forwardDecls) {
-    Set<String> forwardStmts = Sets.newTreeSet();
-    for (Import imp : forwardDecls) {
-      forwardStmts.add(createForwardDeclaration(imp.getTypeName(), imp.isInterface()));
-    }
-    if (!forwardStmts.isEmpty()) {
-      for (String stmt : forwardStmts) {
-        println(stmt);
-      }
-      newline();
-    }
+  protected void generateType(AbstractTypeDeclaration node) {
+    TypeDeclarationGenerator.generate(getBuilder(), node);
   }
 
   protected void generateFileHeader() {
-    printf("#ifndef _%s_H_\n", mainTypeName);
-    printf("#define _%s_H_\n", mainTypeName);
+    printf("#ifndef _%s_H_\n", getGenerationUnit().getName());
+    printf("#define _%s_H_\n", getGenerationUnit().getName());
     pushIgnoreDeprecatedDeclarationsPragma();
-    newline();
 
-    HeaderImportCollector collector = new HeaderImportCollector();
-    collector.collect(getUnit());
+    HeaderImportCollector collector =
+        new HeaderImportCollector(HeaderImportCollector.Filter.PUBLIC_ONLY);
+    // Order matters for finding forward declarations.
+    collector.collect(getOrderedTypes());
 
-    printForwardDeclarations(collector.getForwardDeclarations());
-
-    println("#import \"JreEmulation.h\"");
+    Set<String> includeFiles = Sets.newTreeSet();
+    includeFiles.add("J2ObjC_header.h");
+    for (Import imp : collector.getSuperTypes()) {
+      if (!isLocalType(imp.getType())) {
+        includeFiles.add(imp.getIncludeStatement());
+      }
+    }
 
     // Print collected includes.
-    Set<Import> superTypes = collector.getSuperTypes();
-    Set<String> includeStmts = Sets.newTreeSet();
-    for (Import imp : superTypes) {
-      includeStmts.add(imp.getIncludeStatement());
+    newline();
+    for (String stmt : includeFiles) {
+      printf("%s\n", stmt);
     }
-    for (String stmt : includeStmts) {
-      println(stmt);
-    }
-  }
 
-  protected String createForwardDeclaration(String typeName, boolean isInterface) {
-    return String.format("@%s %s;", isInterface ? "protocol" : "class", typeName);
+    // Filter out any declarations that are resolved by an include.
+    Set<Import> forwardDeclarations = Sets.newHashSet();
+    for (Import imp : collector.getForwardDeclarations()) {
+      if (!includeFiles.contains(imp.getImportFileName())) {
+        forwardDeclarations.add(imp);
+      }
+    }
+    printForwardDeclarations(forwardDeclarations);
   }
 
   protected void generateFileFooter() {
     newline();
     popIgnoreDeprecatedDeclarationsPragma();
-    printf("#endif // _%s_H_\n", mainTypeName);
-  }
-
-  private void printAnnotationVariables(List<AnnotationTypeMemberDeclaration> members) {
-    indent();
-    for (AnnotationTypeMemberDeclaration member : members) {
-      printIndent();
-      ITypeBinding type = member.getMethodBinding().getReturnType();
-      print(NameTable.getObjCType(type));
-      if (type.isPrimitive() || type.isInterface()) {
-        print(' ');
-      }
-      print(member.getName().getIdentifier());
-      println(";");
-    }
-    unindent();
-  }
-
-  private void printAnnotationConstructor(ITypeBinding annotation) {
-    newline();
-    print(annotationConstructorDeclaration(annotation));
-    println(";");
-  }
-
-  private void printAnnotationProperties(List<AnnotationTypeMemberDeclaration> members) {
-    int nPrinted = 0;
-    for (AnnotationTypeMemberDeclaration member : members) {
-      ITypeBinding type = member.getType().getTypeBinding();
-      print("@property (readonly) ");
-      String typeString = NameTable.getSpecificObjCType(type);
-      String propertyName = NameTable.getName(member.getName().getBinding());
-      println(String.format("%s%s%s;", typeString, typeString.endsWith("*") ? "" : " ",
-          propertyName));
-      if (needsObjcMethodFamilyNoneAttribute(propertyName)) {
-        println(String.format("- (%s)%s OBJC_METHOD_FAMILY_NONE;", typeString, propertyName));
-      }
-      nPrinted++;
-    }
-    if (nPrinted > 0) {
-      newline();
-    }
-  }
-
-  private void printAnnotationAccessors(List<AnnotationTypeMemberDeclaration> members) {
-    boolean printedNewline = false;
-    for (AnnotationTypeMemberDeclaration member : members) {
-      if (member.getDefault() != null) {
-        if (!printedNewline) {
-          newline();
-          printedNewline = true;
-        }
-        ITypeBinding type = member.getType().getTypeBinding();
-        String typeString = NameTable.getSpecificObjCType(type);
-        String propertyName = NameTable.getName(member.getName().getBinding());
-        printf("+ (%s)%sDefault;\n", typeString, propertyName);
-      }
-    }
-  }
-
-  private void printConstantDefines(AbstractTypeDeclaration node) {
-    ITypeBinding type = node.getTypeBinding();
-    boolean needsNewline = true;
-    for (IVariableBinding field : type.getDeclaredFields()) {
-      if (BindingUtil.isPrimitiveConstant(field)) {
-        if (needsNewline) {
-          needsNewline = false;
-          newline();
-        }
-        printf("#define %s ", NameTable.getPrimitiveConstantName(field));
-        Object value = field.getConstantValue();
-        assert value != null;
-        println(LiteralGenerator.generate(value));
-      }
-    }
+    printf("#endif // _%s_H_\n", getGenerationUnit().getName());
   }
 }

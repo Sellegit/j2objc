@@ -17,6 +17,7 @@
 package com.google.devtools.j2objc.types;
 
 import com.google.common.collect.Sets;
+import com.google.devtools.j2objc.ast.AbstractTypeDeclaration;
 import com.google.devtools.j2objc.ast.Annotation;
 import com.google.devtools.j2objc.ast.AnnotationTypeDeclaration;
 import com.google.devtools.j2objc.ast.AnnotationTypeMemberDeclaration;
@@ -25,7 +26,6 @@ import com.google.devtools.j2objc.ast.Assignment.Operator;
 import com.google.devtools.j2objc.ast.CastExpression;
 import com.google.devtools.j2objc.ast.CatchClause;
 import com.google.devtools.j2objc.ast.ClassInstanceCreation;
-import com.google.devtools.j2objc.ast.CompilationUnit;
 import com.google.devtools.j2objc.ast.EnumDeclaration;
 import com.google.devtools.j2objc.ast.Expression;
 import com.google.devtools.j2objc.ast.FieldAccess;
@@ -37,10 +37,12 @@ import com.google.devtools.j2objc.ast.MethodDeclaration;
 import com.google.devtools.j2objc.ast.MethodInvocation;
 import com.google.devtools.j2objc.ast.Name;
 import com.google.devtools.j2objc.ast.NormalAnnotation;
+import com.google.devtools.j2objc.ast.PackageDeclaration;
 import com.google.devtools.j2objc.ast.QualifiedName;
 import com.google.devtools.j2objc.ast.SimpleName;
 import com.google.devtools.j2objc.ast.SingleMemberAnnotation;
 import com.google.devtools.j2objc.ast.SingleVariableDeclaration;
+import com.google.devtools.j2objc.ast.TreeNode;
 import com.google.devtools.j2objc.ast.TreeUtil;
 import com.google.devtools.j2objc.ast.TreeVisitor;
 import com.google.devtools.j2objc.ast.TryStatement;
@@ -51,7 +53,7 @@ import com.google.devtools.j2objc.ast.UnionType;
 import com.google.devtools.j2objc.ast.VariableDeclarationExpression;
 import com.google.devtools.j2objc.ast.VariableDeclarationStatement;
 import com.google.devtools.j2objc.util.BindingUtil;
-import com.google.devtools.j2objc.util.NameTable;
+import com.google.devtools.j2objc.util.TranslationUtil;
 
 import org.eclipse.jdt.core.dom.IAnnotationBinding;
 import org.eclipse.jdt.core.dom.IBinding;
@@ -61,6 +63,7 @@ import org.eclipse.jdt.core.dom.ITypeBinding;
 import org.eclipse.jdt.core.dom.IVariableBinding;
 import org.eclipse.jdt.core.dom.Modifier;
 
+import java.util.Collections;
 import java.util.List;
 import java.util.Set;
 
@@ -72,18 +75,16 @@ import java.util.Set;
  */
 public class ImplementationImportCollector extends TreeVisitor {
 
-  private String mainTypeName;
   private Set<Import> imports = Sets.newLinkedHashSet();
-  private Set<Import> declaredTypes = Sets.newHashSet();
 
-  public void collect(CompilationUnit unit) {
-    mainTypeName = NameTable.getMainTypeFullName(unit);
-    run(unit);
-//    System.err.println("unit:" + unit);
-//    System.err.println("imports:" + imports);
-//    System.err.println("declared:" + declaredTypes);
-    for (Import imp : declaredTypes) {
-      imports.remove(imp);
+  public void collect(TreeNode node) {
+    collect(Collections.singletonList(node));
+  }
+
+  public void collect(Iterable<? extends TreeNode> nodes) {
+    for (TreeNode node : nodes) {
+      TreeUtil.getCompilationUnit(node).setGenerationContext();
+      run(node);
     }
   }
 
@@ -105,24 +106,10 @@ public class ImplementationImportCollector extends TreeVisitor {
     Import.addImports(type, imports);
   }
 
-  // Keep track of any declared types to avoid invalid imports.  The
-  // exception is the main type, as it's needed to import the matching
-  // header file.
-  private void addDeclaredType(ITypeBinding type, boolean isEnum) {
-    if (type != null) {
-      if (BindingUtil.extractLibraryName(type) != null
-          || NameTable.getFullName(type).equals(mainTypeName + (isEnum ? "Enum" : "")) ){
-        return;
-      }
-      Import.addImports(type, declaredTypes);
-    }
-  }
-
   @Override
   public boolean visit(AnnotationTypeDeclaration node) {
     ITypeBinding type = node.getTypeBinding();
     addImports(type);
-    addDeclaredType(type, false);
     addImports(Types.resolveIOSType("IOSClass"));
     return true;
   }
@@ -188,7 +175,6 @@ public class ImplementationImportCollector extends TreeVisitor {
   public boolean visit(EnumDeclaration node) {
     ITypeBinding type = node.getTypeBinding();
     addImports(type);
-    addDeclaredType(type, true);
     addImports(Types.resolveIOSType("IOSClass"));
     addImports(GeneratedTypeBinding.newTypeBinding("java.lang.IllegalArgumentException",
         Types.resolveJavaType("java.lang.RuntimeException"), false));
@@ -241,34 +227,30 @@ public class ImplementationImportCollector extends TreeVisitor {
     IMethodBinding binding = node.getMethodBinding();
     addImports(binding.getReturnType());
     // Check for vararg method
-    if (binding != null) {
-      ITypeBinding[] parameterTypes = binding.getParameterTypes();
-      int nParameters = parameterTypes.length;
-      if (binding.isVarargs()) {
-        // Only check type for varargs parameters, since the actual
-        // number of arguments will vary.
-        addImports(parameterTypes[nParameters - 1]);
-        --nParameters;
-      }
-      List<Expression> arguments = node.getArguments();
-      for (int i = 0; i < nParameters; i++) {
-        ITypeBinding parameterType = parameterTypes[i];
-        ITypeBinding actualType = arguments.get(i).getTypeBinding();
-        if (!parameterType.equals(actualType)
-            && actualType.isAssignmentCompatible(parameterType)) {
-          addImports(actualType);
-        }
+    ITypeBinding[] parameterTypes = binding.getParameterTypes();
+    int nParameters = parameterTypes.length;
+    if (binding.isVarargs()) {
+      // Only check type for varargs parameters, since the actual
+      // number of arguments will vary.
+      addImports(parameterTypes[nParameters - 1]);
+      --nParameters;
+    }
+    List<Expression> arguments = node.getArguments();
+    for (int i = 0; i < nParameters; i++) {
+      ITypeBinding parameterType = parameterTypes[i];
+      ITypeBinding actualType = arguments.get(i).getTypeBinding();
+      if (!parameterType.equals(actualType)
+          && actualType.isAssignmentCompatible(parameterType)) {
+        addImports(actualType);
       }
     }
     // Check for static method references.
     Expression expr = node.getExpression();
     if (expr == null) {
       // check for method that's been statically imported
-      if (binding != null) {
-        ITypeBinding typeBinding = binding.getDeclaringClass();
-        if (typeBinding != null) {
-          addImports(typeBinding);
-        }
+      ITypeBinding typeBinding = binding.getDeclaringClass();
+      if (typeBinding != null) {
+        addImports(typeBinding);
       }
     } else {
       addImports(expr.getTypeBinding());
@@ -349,14 +331,17 @@ public class ImplementationImportCollector extends TreeVisitor {
   public boolean visit(TypeDeclaration node) {
     ITypeBinding type = node.getTypeBinding();
     addImports(type);
-    addDeclaredType(type, false);
     return true;
   }
 
   @Override
   public boolean visit(TypeLiteral node) {
-    addImports(node.getType());
-    addImports(Types.resolveIOSType("IOSClass"));
+    ITypeBinding type = node.getType().getTypeBinding();
+    if (type.isPrimitive()) {
+      addImports(Types.resolveIOSType("IOSClass"));
+    } else {
+      addImports(node.getType());
+    }
     return false;
   }
 
@@ -375,7 +360,15 @@ public class ImplementationImportCollector extends TreeVisitor {
 
   private boolean visitAnnotation(Annotation node) {
     IAnnotationBinding binding = node.getAnnotationBinding();
-    if (!BindingUtil.isRuntimeAnnotation(binding)) {
+    boolean needsReflection = false;
+    AbstractTypeDeclaration owningType = TreeUtil.getOwningType(node);
+    if (owningType != null) {
+      needsReflection = TranslationUtil.needsReflection(owningType);
+    } else {
+      needsReflection = TranslationUtil.needsReflection(
+          TreeUtil.getNearestAncestorWithType(PackageDeclaration.class, node));
+    }
+    if (!BindingUtil.isRuntimeAnnotation(binding) || !needsReflection) {
       return false;
     }
     for (IMemberValuePairBinding memberValuePair : binding.getAllMemberValuePairs()) {

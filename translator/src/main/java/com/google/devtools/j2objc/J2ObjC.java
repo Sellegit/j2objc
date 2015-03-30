@@ -16,24 +16,26 @@
 
 package com.google.devtools.j2objc;
 
+import com.google.common.annotations.VisibleForTesting;
 import com.google.common.io.Files;
+import com.google.devtools.j2objc.types.Types;
 import com.google.devtools.j2objc.util.DeadCodeMap;
 import com.google.devtools.j2objc.util.ErrorUtil;
+import com.google.devtools.j2objc.util.FileUtil;
 import com.google.devtools.j2objc.util.JdtParser;
+import com.google.devtools.j2objc.util.NameTable;
+import com.google.devtools.j2objc.util.PathClassLoader;
 import com.google.devtools.j2objc.util.ProGuardUsageParser;
 
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.lang.reflect.Constructor;
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.net.URLClassLoader;
 import java.nio.charset.Charset;
 import java.util.Arrays;
+import java.util.List;
 import java.util.jar.JarEntry;
 import java.util.jar.JarInputStream;
-import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
@@ -57,36 +59,20 @@ public class J2ObjC {
 
   private static final Logger logger = Logger.getLogger(J2ObjC.class.getName());
 
-  private static void exit() {
-    Options.deleteTemporaryDirectory();
-    System.exit(ErrorUtil.errorCount());
-  }
-
   public static String getFileHeader(String sourceFileName) {
     return String.format(Options.getFileHeader(), sourceFileName);
-  }
-
-  private static class JarFileLoader extends URLClassLoader {
-    public JarFileLoader() {
-      super(new URL[]{});
-    }
-
-    public void addJarFile(String path) throws MalformedURLException {
-      String urlPath = "jar:file://" + path + "!/";
-      addURL(new URL(urlPath));
-    }
   }
 
   private static void initPlugins(String[] pluginPaths, String pluginOptionString)
       throws IOException {
     @SuppressWarnings("resource")
-    JarFileLoader classLoader = new JarFileLoader();
+    PathClassLoader classLoader = new PathClassLoader();
     for (String path : pluginPaths) {
       if (path.endsWith(".jar")) {
         JarInputStream jarStream = null;
         try {
           jarStream = new JarInputStream(new FileInputStream(path));
-          classLoader.addJarFile(new File(path).getAbsolutePath());
+          classLoader.addPath(path);
 
           JarEntry entry;
           while ((entry = jarStream.getNextJarEntry()) != null) {
@@ -121,22 +107,18 @@ public class J2ObjC {
     }
   }
 
-  public static void error(Exception e) {
-    logger.log(Level.SEVERE, "Exiting due to exception", e);
-    System.exit(1);
-  }
-
   private static void checkErrors() {
     int errors = ErrorUtil.errorCount();
     if (Options.treatWarningsAsErrors()) {
       errors += ErrorUtil.warningCount();
     }
     if (errors > 0) {
-      System.exit(1);
+      System.exit(errors);
     }
   }
 
-  private static JdtParser createParser() {
+  @VisibleForTesting
+  static JdtParser createParser() {
     JdtParser parser = new JdtParser();
     parser.addClasspathEntries(Options.getClassPathEntries());
     parser.addClasspathEntries(Options.getBootClasspath());
@@ -160,10 +142,66 @@ public class J2ObjC {
   }
 
   /**
+   * Runs the entire J2ObjC pipeline.
+   * @param fileArgs the files to process, same format as command-line args to {@link #main}.
+   */
+  public static void run(List<String> fileArgs) {
+    File preProcessorTempDir = null;
+    try {
+      JdtParser parser = createParser();
+
+      GenerationBatch batch = new GenerationBatch();
+      batch.processFileArgs(fileArgs);
+      if (ErrorUtil.errorCount() > 0) {
+        return;
+      }
+
+      AnnotationPreProcessor preProcessor = new AnnotationPreProcessor(batch);
+      preProcessor.process(fileArgs);
+      preProcessorTempDir = preProcessor.getTemporaryDirectory();
+      if (ErrorUtil.errorCount() > 0) {
+        return;
+      }
+      if (preProcessorTempDir != null) {
+        parser.addSourcepathEntry(preProcessorTempDir.getAbsolutePath());
+      }
+
+      PackageInfoPreProcessor packageInfoPreProcessor = new PackageInfoPreProcessor(parser);
+      packageInfoPreProcessor.processBatch(batch);
+      if (ErrorUtil.errorCount() > 0) {
+        return;
+      }
+
+      if (Options.shouldPreProcess()) {
+        HeaderMappingPreProcessor headerMappingPreProcessor = new HeaderMappingPreProcessor(parser);
+        headerMappingPreProcessor.processBatch(batch);
+        if (ErrorUtil.errorCount() > 0) {
+          return;
+        }
+      }
+
+      TranslationProcessor translationProcessor
+          = new TranslationProcessor(parser, loadDeadCodeMap());
+      translationProcessor.processBatch(batch);
+      if (ErrorUtil.errorCount() > 0) {
+        return;
+      }
+      translationProcessor.postProcess();
+    } finally {
+      NameTable.cleanup();
+      Types.cleanup();
+      if (preProcessorTempDir != null) {
+        FileUtil.deleteTempDir(preProcessorTempDir);
+      }
+      Options.deleteTemporaryDirectory();
+    }
+  }
+
+  /**
    * Entry point for tool.
+   * Initializes {@link Options}, calls {@link #run}, and exits.
    *
    * @param args command-line arguments: flags and source file names
-   * @throws IOException
    */
   public static void main(String[] args) {
     if (args.length == 0) {
@@ -183,21 +221,12 @@ public class J2ObjC {
     try {
       initPlugins(Options.getPluginPathEntries(), Options.getPluginOptionString());
     } catch (IOException e) {
-      error(e);
+      ErrorUtil.error(e.getMessage());
+      System.exit(1);
     }
 
-    JdtParser parser = createParser();
+    run(Arrays.asList(files));
 
-    if (Options.shouldPreProcess()) {
-      HeaderMappingPreProcessor headerMappingPreProcessor = new HeaderMappingPreProcessor(parser);
-      headerMappingPreProcessor.processFiles(Arrays.asList(files));
-    }
-
-    TranslationProcessor translationProcessor = new TranslationProcessor(parser, loadDeadCodeMap());
-    translationProcessor.processFiles(Arrays.asList(files));
-    translationProcessor.postProcess();
     checkErrors();
-
-    exit();
   }
 }

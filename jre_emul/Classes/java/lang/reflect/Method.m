@@ -19,17 +19,19 @@
 //  Created by Tom Ball on 11/07/11.
 //
 
-#import "IOSClass.h"
-#import "IOSObjectArray.h"
-#import "IOSReflection.h"
+#import "J2ObjC_source.h"
 #import "JavaMetadata.h"
-#import "JreEmulation.h"
 #import "java/lang/AssertionError.h"
+#import "java/lang/ClassLoader.h"
 #import "java/lang/IllegalArgumentException.h"
+#import "java/lang/NoSuchMethodException.h"
 #import "java/lang/NullPointerException.h"
+#import "java/lang/reflect/InvocationTargetException.h"
 #import "java/lang/reflect/Method.h"
 #import "java/lang/reflect/Modifier.h"
 #import "java/lang/reflect/TypeVariable.h"
+#import "libcore/reflect/GenericSignatureParser.h"
+#import "libcore/reflect/Types.h"
 
 @implementation JavaLangReflectMethod
 
@@ -82,10 +84,6 @@
   return [name substringToIndex:range.location];
 }
 
-- (NSString *)internalName {
-  return NSStringFromSelector(selector_);
-}
-
 - (int)getModifiers {
   int mods = [super getModifiers];
   if (isStatic_) {
@@ -98,7 +96,7 @@
   id<JavaLangReflectType> returnType = [metadata_ returnType];
   if (returnType) {
     if (![returnType isKindOfClass:[IOSClass class]]) {
-      return [IOSClass objectClass];
+      return NSObject_class_();
     } else {
       return (IOSClass *) returnType;
     }
@@ -117,6 +115,20 @@
 }
 
 - (id<JavaLangReflectType>)getGenericReturnType {
+  NSString *genericSignature = [metadata_ genericSignature];
+  if (genericSignature) {
+    LibcoreReflectGenericSignatureParser *parser =
+        [[LibcoreReflectGenericSignatureParser alloc]
+         initWithJavaLangClassLoader:JavaLangClassLoader_getSystemClassLoader()];
+    IOSObjectArray *rawExceptions = [self getExceptionTypes];
+    [parser parseForMethodWithJavaLangReflectGenericDeclaration:self
+                                                   withNSString:genericSignature
+                                              withIOSClassArray:rawExceptions];
+    id<JavaLangReflectType> result = [LibcoreReflectTypes getType:parser->returnType_];
+    [parser release];
+    return result;
+  }
+
   id<JavaLangReflectType> returnType = [metadata_ returnType];
   if (returnType) {
     if (returnType && [returnType conformsToProtocol:@protocol(JavaLangReflectTypeVariable)]) {
@@ -158,16 +170,31 @@
   }
 
   IOSClass *declaringClass = [self getDeclaringClass];
+  JavaLangThrowable *exception = nil;
   if (object &&
       ([self getModifiers] & JavaLangReflectModifier_PRIVATE) > 0 &&
       declaringClass != [object getClass]) {
     // A superclass's private instance method is invoked, so temporarily
     // change the object's type to the superclass.
     Class originalClass = object_setClass(object, declaringClass.objcClass);
-    [invocation invoke];
+    @try {
+      [invocation invoke];
+    }
+    @catch (JavaLangThrowable *t) {
+      exception = t;
+    }
     object_setClass(object, originalClass);
   } else {
-    [invocation invoke];
+    @try {
+      [invocation invoke];
+    }
+    @catch (JavaLangThrowable *t) {
+      exception = t;
+    }
+  }
+  if (exception) {
+    @throw AUTORELEASE([[JavaLangReflectInvocationTargetException alloc]
+                        initWithJavaLangThrowable:exception]);
   }
   IOSClass *returnType = [self getReturnType];
   if (returnType == [IOSClass voidClass]) {
@@ -179,29 +206,87 @@
 }
 
 - (NSString *)description {
-  NSString *kind = isStatic_ ? @"+" : @"-";
-  const char *argType = [methodSignature_ methodReturnType];
-  NSString *returnType = [NSString stringWithUTF8String:argType];
-  NSString *result = [NSString stringWithFormat:@"%@ %@ %@(", kind,
-                      describeTypeEncoding(returnType), [self getName]];
-
-  NSUInteger nArgs = [methodSignature_ numberOfArguments] - SKIPPED_ARGUMENTS;
-  for (NSUInteger i = 0; i < nArgs; i++) {
-    const char *argType =
-        [methodSignature_ getArgumentTypeAtIndex:i + SKIPPED_ARGUMENTS];
-    NSString *paramEncoding = [NSString stringWithUTF8String:argType];
-    result = [result stringByAppendingFormat:@"%@",
-                  describeTypeEncoding(paramEncoding)];
-    if (i + 1 < nArgs) {
-      result = [result stringByAppendingString:@", "];
+  NSMutableString *s = [NSMutableString string];
+  NSString *modifiers = JavaLangReflectModifier_toStringWithInt_([self getModifiers]);
+  NSString *returnType = [[self getReturnType] getName];
+  NSString *declaringClass = [[self getDeclaringClass] getName];
+  [s appendFormat:@"%@ %@ %@.%@(", modifiers, returnType, declaringClass, [self getName]];
+  IOSObjectArray *params = [self getParameterTypes];
+  jint n = params->size_;
+  if (n > 0) {
+    [s appendString:[(IOSClass *) params->buffer_[0] getName]];
+    for (jint i = 1; i < n; i++) {
+      [s appendFormat:@",%@", [(IOSClass *) params->buffer_[i] getName]];
     }
   }
-  return [result stringByAppendingString:@")"];
+  [s appendString:@")"];
+  IOSObjectArray *throws = [self getExceptionTypes];
+  n = throws->size_;
+  if (n > 0) {
+    [s appendFormat:@" throws %@", [(IOSClass *) throws->buffer_[0] getName]];
+    for (jint i = 1; i < n; i++) {
+      [s appendFormat:@",%@", [(IOSClass *) throws->buffer_[i] getName]];
+    }
+  }
+  return [s description];
 }
 
 - (id)getDefaultValue {
-  // TODO(tball): implement as part of method metadata.
+  if ([self->class_ isAnnotation]) {
+    // Invoke the class method for this method name plus "Default". For example, if this
+    // method is named "foo", then return the result from "fooDefault()".
+    NSString *defaultName = [[self getName] stringByAppendingString:@"Default"];
+    @try {
+      JavaLangReflectMethod *defaultMethod =
+          [self->class_ getDeclaredMethod:defaultName
+                   parameterTypes:[IOSObjectArray arrayWithLength:0 type:IOSClass_class_()]];
+      if (defaultMethod) {
+        return [defaultMethod invokeWithId:self->class_
+                         withNSObjectArray:[IOSObjectArray arrayWithLength:0
+                                                                      type:NSObject_class_()]];
+      }
+    }
+    @catch (JavaLangNoSuchMethodException *exception) {
+      // Fall-through.
+    }
+  }
   return nil;
 }
 
+// A method's hash is the hash of its declaring class's name XOR its name.
+- (NSUInteger)hash {
+  return [[class_ getName] hash] ^ [[self getName] hash];
+}
+
++ (const J2ObjcClassInfo *)__metadata {
+  static const J2ObjcMethodInfo methods[] = {
+    { "getName", NULL, "Ljava.lang.String;", 0x1, NULL },
+    { "getModifiers", NULL, "I", 0x1, NULL },
+    { "getReturnType", NULL, "Ljava.lang.Class;", 0x1, NULL },
+    { "getGenericReturnType", NULL, "Ljava.lang.reflect.Type;", 0x1, NULL },
+    { "getDeclaringClass", NULL, "Ljava.lang.Class;", 0x1, NULL },
+    { "getParameterTypes", NULL, "[Ljava.lang.Class;", 0x1, NULL },
+    { "getGenericParameterTypes", NULL, "[Ljava.lang.reflect.Type;", 0x1, NULL },
+    { "invokeWithId:withNSObjectArray:", "invoke", "Ljava.lang.Object;", 0x81, "Ljava.lang.IllegalAccessException;Ljava.lang.IllegalArgumentException;Ljava.lang.reflect.InvocationTargetException;" },
+    { "getAnnotationWithIOSClass:", "getAnnotation", "TT;", 0x1, NULL },
+    { "getDeclaredAnnotations", NULL, "[Ljava.lang.annotation.Annotation;", 0x1, NULL },
+    { "getParameterAnnotations", NULL, "[[Ljava.lang.annotation.Annotation;", 0x1, NULL },
+    { "getTypeParameters", NULL, "[Ljava.lang.reflect.TypeVariable;", 0x1, NULL },
+    { "isSynthetic", NULL, "Z", 0x1, NULL },
+    { "getExceptionTypes", NULL, "[Ljava.lang.Class;", 0x1, NULL },
+    { "getGenericExceptionTypes", NULL, "[Ljava.lang.reflect.Type;", 0x1, NULL },
+    { "toGenericString", NULL, "Ljava.lang.String;", 0x1, NULL },
+    { "isBridge", NULL, "Z", 0x1, NULL },
+    { "isVarArgs", NULL, "Z", 0x1, NULL },
+    { "getDefaultValue", NULL, "Ljava.lang.Object;", 0x1, NULL },
+    { "init", NULL, NULL, 0x1, NULL },
+  };
+  static const J2ObjcClassInfo _JavaLangReflectMethod = {
+    1, "Method", "java.lang.reflect", NULL, 0x1, 20, methods, 0, NULL, 0, NULL
+  };
+  return &_JavaLangReflectMethod;
+}
+
 @end
+
+J2OBJC_CLASS_TYPE_LITERAL_SOURCE(JavaLangReflectMethod)

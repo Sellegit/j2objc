@@ -22,6 +22,7 @@
 #ifndef _JavaLangReflectMethod_H_
 #define _JavaLangReflectMethod_H_
 
+#import "J2ObjC_common.h"
 #import "java/lang/reflect/ExecutableMember.h"
 #import "java/lang/reflect/GenericDeclaration.h"
 #import "java/lang/reflect/Member.h"
@@ -33,8 +34,7 @@
 // A native implementation of java.lang.reflect.Method.  Its methods are
 // limited to those that can be derived from an Objective-C Method instance,
 // so instances can be created and released as needed.
-@interface JavaLangReflectMethod : ExecutableMember
-    < JavaLangReflectGenericDeclaration, JavaLangReflectMember > {
+@interface JavaLangReflectMethod : ExecutableMember {
   BOOL isStatic_;
 }
 
@@ -63,5 +63,9 @@
 - (id)getDefaultValue;
 
 @end
+
+J2OBJC_EMPTY_STATIC_INIT(JavaLangReflectMethod)
+
+J2OBJC_TYPE_LITERAL_HEADER(JavaLangReflectMethod)
 
 #endif // _JavaLangReflectMethod_H_

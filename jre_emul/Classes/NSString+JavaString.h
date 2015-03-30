@@ -180,20 +180,17 @@ destinationBegin:(int)dstBegin;
 - (IOSCharArray *)toCharArray;
 
 // java.lang.Comparable implementation methods
-- (int)compareToWithId:(id)another;
+- (jint)compareToWithId:(id)another;
 
 // CharSequence.charAt(int)
 - (unichar)charAtWithInt:(int)index;
-
-// CharSequence.length()
-- (int)sequenceLength;
 
 // CharSequence.subSequence(int, int)
 - (id<JavaLangCharSequence>)subSequenceFrom:(int)start
                                          to:(int)end;
 
 // String.compareToIgnoreCase(String)
-- (int)compareToIgnoreCase:(NSString *)another;
+- (jint)compareToIgnoreCase:(NSString *)another;
 
 // String.replace(char, char)
 - (NSString *)replace:(unichar)oldchar withChar:(unichar)newchar;
@@ -288,32 +285,42 @@ destinationBegin:(int)dstBegin;
 
 @end
 
-FOUNDATION_EXPORT NSString *NSString_copyValueOfWithCharArray_(IOSCharArray *chars);
-FOUNDATION_EXPORT NSString *NSString_copyValueOfWithCharArray_withInt_withInt_(
-    IOSCharArray *chars, jint i, jint j);
+// String.format(Locale, String, Object...)
 FOUNDATION_EXPORT NSString *NSString_formatWithJavaUtilLocale_withNSString_withNSObjectArray_(
     JavaUtilLocale *l, NSString *s, IOSObjectArray *objs);
+// String.format(String, Object...)
 FOUNDATION_EXPORT NSString *NSString_formatWithNSString_withNSObjectArray_(
     NSString *s, IOSObjectArray *objs);
-FOUNDATION_EXPORT NSString *NSString_valueOfWithBoolean_(jboolean b);
-FOUNDATION_EXPORT NSString *NSString_valueOfWithChar_(jchar c);
-FOUNDATION_EXPORT NSString *NSString_valueOfWithCharArray_(IOSCharArray *chars);
-FOUNDATION_EXPORT NSString *NSString_valueOfWithCharArray_withInt_withInt_(
+// String.valueOf(boolean)
+FOUNDATION_EXPORT NSString *NSString_valueOfBool_(jboolean b);
+// String.valueOf(char)
+FOUNDATION_EXPORT NSString *NSString_valueOfChar_(jchar c);
+// String.valueOf(char[])
+// String.copyValueOf(char[])
+FOUNDATION_EXPORT NSString *NSString_valueOfChars_(IOSCharArray *chars);
+// String.valueOf(char[], int, int)
+// String.copyValueOf(char[], int, int)
+FOUNDATION_EXPORT NSString *NSString_valueOfChars_offset_count_(
     IOSCharArray *chars, jint i, jint j);
-FOUNDATION_EXPORT NSString *NSString_valueOfWithDouble_(jdouble d);
-FOUNDATION_EXPORT NSString *NSString_valueOfWithFloat_(jfloat f);
-FOUNDATION_EXPORT NSString *NSString_valueOfWithInt_(jint i);
-FOUNDATION_EXPORT NSString *NSString_valueOfWithLong_(jlong l);
-FOUNDATION_EXPORT NSString *NSString_valueOfWithId_(id o);
+// String.valueOf(double)
+FOUNDATION_EXPORT NSString *NSString_valueOfDouble_(jdouble d);
+// String.valueOf(float)
+FOUNDATION_EXPORT NSString *NSString_valueOfFloat_(jfloat f);
+// String.valueOf(int)
+FOUNDATION_EXPORT NSString *NSString_valueOfInt_(jint i);
+// String.valueOf(long)
+FOUNDATION_EXPORT NSString *NSString_valueOfLong_(jlong l);
+// String.valueOf(Object)
+FOUNDATION_EXPORT NSString *NSString_valueOf_(id o);
 
 // Empty class to force category to be loaded.
 @interface JreStringCategoryDummy : NSObject
 @end
 
 // Use the category dummy to initialize static variables for the String class.
-FOUNDATION_EXPORT BOOL NSString_initialized;
-__attribute__((always_inline)) inline void NSString_init() { \
-  if (!__builtin_expect(NSString_initialized, YES)) { \
+FOUNDATION_EXPORT _Atomic(BOOL) NSString_initialized;
+__attribute__((always_inline)) inline void NSString_initialize() {
+  if (!__builtin_expect(NSString_initialized, YES)) {
     [JreStringCategoryDummy class];
   }
 }
@@ -323,6 +330,8 @@ J2OBJC_STATIC_FIELD_GETTER(NSString, CASE_INSENSITIVE_ORDER_, id<JavaUtilCompara
 
 FOUNDATION_EXPORT IOSObjectArray *NSString_serialPersistentFields_;
 J2OBJC_STATIC_FIELD_GETTER(NSString, serialPersistentFields_, IOSObjectArray *)
+
+J2OBJC_TYPE_LITERAL_HEADER(NSString)
 
 /** Function that returns String hash values as specified by java.lang.String. */
 FOUNDATION_EXPORT jint javaStringHashCode(NSString *string);

@@ -22,9 +22,7 @@
 // Internal-use-only value classes that contain the reflection metadata
 // for an IOSClass.
 
-@interface JavaFieldMetadata : NSObject {
-  const J2ObjcFieldInfo *data_;
-}
+@interface JavaFieldMetadata : NSObject
 
 - (instancetype)initWithMetadata:(const J2ObjcFieldInfo *)metadata;
 - (NSString *)name;
@@ -34,12 +32,11 @@
 - (id<JavaLangReflectType>)type;
 - (const void *)staticRef;
 - (const J2ObjcRawValue * const)getConstantValue;
+- (NSString *)genericSignature;
 
 @end
 
-@interface JavaMethodMetadata : NSObject {
-  const J2ObjcMethodInfo *data_;
-}
+@interface JavaMethodMetadata : NSObject
 
 - (instancetype)initWithMetadata:(const J2ObjcMethodInfo *)metadata;
 - (SEL)selector;
@@ -50,14 +47,22 @@
 - (id<JavaLangReflectType>)returnType;
 - (IOSObjectArray *)exceptionTypes;
 - (BOOL)isConstructor;
+- (NSString *)genericSignature;
 
 @end
 
-@interface JavaClassMetadata : NSObject {
-  J2ObjcClassInfo *data_;
-  J2ObjCAttribute *attributes;
-}
+@interface JavaEnclosingMethodMetadata : NSObject
 
+@property (readonly, retain) NSString *typeName;
+@property (readonly, retain) NSString *selector;
+
+- (instancetype)initWithMetadata:(const J2ObjCEnclosingMethodInfo *)metadata;
+
+@end
+
+@interface JavaClassMetadata : NSObject
+
+@property (readonly, assign) uint16_t version;
 @property (readonly, retain) NSString *typeName;
 @property (readonly, retain) NSString *packageName;
 @property (readonly, retain) NSString *enclosingName;
@@ -75,5 +80,8 @@
 - (JavaFieldMetadata *)findFieldMetadata:(const char *)fieldName;
 - (IOSObjectArray *)allFields;
 - (IOSObjectArray *)getSuperclassTypeArguments;
+- (IOSObjectArray *)getInnerClasses;
+- (JavaEnclosingMethodMetadata *)getEnclosingMethod;
+- (NSString *)genericSignature;
 
 @end

@@ -14,7 +14,6 @@
 
 package com.google.devtools.j2objc.translate;
 
-import com.google.common.collect.ImmutableMap;
 import com.google.devtools.j2objc.Options;
 import com.google.devtools.j2objc.ast.ArrayAccess;
 import com.google.devtools.j2objc.ast.ArrayCreation;
@@ -36,12 +35,12 @@ import com.google.devtools.j2objc.ast.TreeVisitor;
 import com.google.devtools.j2objc.ast.TypeLiteral;
 import com.google.devtools.j2objc.types.GeneratedTypeBinding;
 import com.google.devtools.j2objc.types.GeneratedVariableBinding;
-import com.google.devtools.j2objc.types.IOSMethod;
 import com.google.devtools.j2objc.types.IOSMethodBinding;
 import com.google.devtools.j2objc.types.IOSTypeBinding;
 import com.google.devtools.j2objc.types.Types;
 import com.google.devtools.j2objc.util.BindingUtil;
 import com.google.devtools.j2objc.util.ErrorUtil;
+import com.google.devtools.j2objc.util.TranslationUtil;
 
 import org.eclipse.jdt.core.dom.ITypeBinding;
 import org.eclipse.jdt.core.dom.Modifier;
@@ -50,51 +49,10 @@ import java.util.List;
 
 /**
  * Rewrites array creation into a method invocation on an IOSArray class.
- * Must be run after JavaToIOSMethodTranslator because the varargs conversion
- * needs to know if the method is mapped.
  *
  * @author Keith Stanger
  */
 public class ArrayRewriter extends TreeVisitor {
-
-  private static final ImmutableMap<String, String> INIT_METHODS =
-      ImmutableMap.<String, String>builder()
-      .put("IOSBooleanArray", " arrayWithBooleans:(jboolean *)booleans count:(jint)count")
-      .put("IOSByteArray", " arrayWithBytes:(jbyte *)bytes count:(jint)count")
-      .put("IOSCharArray", " arrayWithChars:(jchar *)chars count:(jint)count")
-      .put("IOSDoubleArray", " arrayWithDoubles:(jdouble *)doubles count:(jint)count")
-      .put("IOSFloatArray", " arrayWithFloats:(jfloat *)floats count:(jint)count")
-      .put("IOSIntArray", " arrayWithInts:(jint *)ints count:(jint)count")
-      .put("IOSLongArray", " arrayWithLongs:(jlong *)longs count:(jint)count")
-      .put("IOSShortArray", " arrayWithShorts:(jshort *)shorts count:(jint)count")
-      .put("IOSObjectArray",
-           " arrayWithObjects:(id *)objects count:(jint)count type:(IOSClass *)type")
-      .build();
-
-  private static final ImmutableMap<String, String> RETAINED_INIT_METHODS =
-      ImmutableMap.<String, String>builder()
-      .put("IOSBooleanArray", " newArrayWithBooleans:(jboolean *)booleans count:(jint)count")
-      .put("IOSByteArray", " newArrayWithBytes:(jbyte *)bytes count:(jint)count")
-      .put("IOSCharArray", " newArrayWithChars:(jchar *)chars count:(jint)count")
-      .put("IOSDoubleArray", " newArrayWithDoubles:(jdouble *)doubles count:(jint)count")
-      .put("IOSFloatArray", " newArrayWithFloats:(jfloat *)floats count:(jint)count")
-      .put("IOSIntArray", " newArrayWithInts:(jint *)ints count:(jint)count")
-      .put("IOSLongArray", " newArrayWithLongs:(jlong *)longs count:(jint)count")
-      .put("IOSShortArray", " newArrayWithShorts:(jshort *)shorts count:(jint)count")
-      .put("IOSObjectArray",
-           " newArrayWithObjects:(id *)objects count:(jint)count type:(IOSClass *)type")
-      .build();
-
-  private static final IOSMethod IOSCLASS_METHOD = IOSMethod.create("IOSArray iosClass");
-  private static final IOSMethod IOSCLASS_METHOD_DIM = IOSMethod.create(
-      "IOSArray iosClassWithDimensions:(NSUInteger)dimensions");
-  private static final IOSMethod IOSCLASS_METHOD_OBJ = IOSMethod.create(
-      "IOSObjectArray iosClassWithType:(IOSClass *)type");
-  private static final IOSMethod IOSCLASS_METHOD_OBJ_DIM = IOSMethod.create(
-      "IOSObjectArray iosClassWithDimensions:(NSUInteger)dimensions type:(IOSClass *)type");
-
-  private static final IOSMethod ISINSTANCE_METHOD = IOSMethod.create(
-      "IOSClass isInstance:(id)object");
 
   @Override
   public void endVisit(ArrayCreation node) {
@@ -127,7 +85,14 @@ public class ArrayRewriter extends TreeVisitor {
     ITypeBinding componentType = arrayType.getComponentType();
     IOSTypeBinding iosArrayBinding = Types.resolveArrayType(componentType);
 
-    IOSMethodBinding methodBinding = getInitializeMethod(iosArrayBinding, retainedResult);
+    IOSMethodBinding methodBinding = IOSMethodBinding.newMethod(
+        getInitializeSelector(componentType, retainedResult), Modifier.PUBLIC | Modifier.STATIC,
+        iosArrayBinding, iosArrayBinding);
+    methodBinding.addParameter(iosArrayBinding);
+    methodBinding.addParameter(Types.resolveJavaType("int"));
+    if (!componentType.isPrimitive()) {
+      methodBinding.addParameter(Types.getIOSClass());
+    }
     MethodInvocation invocation =
         new MethodInvocation(methodBinding, new SimpleName(iosArrayBinding));
 
@@ -149,20 +114,33 @@ public class ArrayRewriter extends TreeVisitor {
     return invocation;
   }
 
-  private IOSMethodBinding getInitializeMethod(IOSTypeBinding arrayType, boolean retainedResult) {
-    String typeName = arrayType.getName();
-    String methodName =
-        retainedResult ? RETAINED_INIT_METHODS.get(typeName) : INIT_METHODS.get(typeName);
-    assert methodName != null;
-    IOSMethod iosMethod = IOSMethod.create(typeName + methodName);
-    IOSMethodBinding binding = IOSMethodBinding.newMethod(
-        iosMethod, Modifier.PUBLIC | Modifier.STATIC, arrayType, arrayType);
-    binding.addParameter(arrayType);
-    binding.addParameter(Types.resolveJavaType("int"));
-    if (arrayType.getName().equals("IOSObjectArray")) {
-      binding.addParameter(Types.getIOSClass());
+  private String paramNameForPrimitive(char binaryName) {
+    switch (binaryName) {
+      case 'B': return "Bytes";
+      case 'C': return "Chars";
+      case 'D': return "Doubles";
+      case 'F': return "Floats";
+      case 'I': return "Ints";
+      case 'J': return "Longs";
+      case 'S': return "Shorts";
+      case 'Z': return "Booleans";
     }
-    return binding;
+    throw new AssertionError("Unknown primitive type: " + binaryName);
+  }
+
+  private String getInitializeSelector(ITypeBinding componentType, boolean retainedResult) {
+    String selectorFmt = "arrayWith%s:count:";
+    if (retainedResult) {
+      selectorFmt = "newArrayWith%s:count:";
+    }
+    String paramName;
+    if (componentType.isPrimitive()) {
+      paramName = paramNameForPrimitive(componentType.getBinaryName().charAt(0));
+    } else {
+      paramName = "Objects";
+      selectorFmt += "type:";
+    }
+    return String.format(selectorFmt, paramName);
   }
 
   private MethodInvocation newSingleDimensionArrayInvocation(
@@ -170,7 +148,14 @@ public class ArrayRewriter extends TreeVisitor {
     ITypeBinding componentType = arrayType.getComponentType();
     IOSTypeBinding iosArrayBinding = Types.resolveArrayType(componentType);
 
-    IOSMethodBinding methodBinding = getSingleDimensionMethod(iosArrayBinding, retainedResult);
+    String selector = (retainedResult ? "newArray" : "array") + "WithLength:"
+        + (componentType.isPrimitive() ? "" : "type:");
+    IOSMethodBinding methodBinding = IOSMethodBinding.newMethod(
+        selector, Modifier.PUBLIC | Modifier.STATIC, iosArrayBinding, iosArrayBinding);
+    methodBinding.addParameter(Types.resolveJavaType("int"));
+    if (!componentType.isPrimitive()) {
+      methodBinding.addParameter(Types.getIOSClass());
+    }
     MethodInvocation invocation =
         new MethodInvocation(methodBinding, new SimpleName(iosArrayBinding));
 
@@ -185,31 +170,16 @@ public class ArrayRewriter extends TreeVisitor {
     return invocation;
   }
 
-  private IOSMethodBinding getSingleDimensionMethod(
-      IOSTypeBinding arrayType, boolean retainedResult) {
-    boolean needsTypeParam = arrayType.getName().equals("IOSObjectArray");
-    IOSMethod iosMethod = IOSMethod.create(
-        arrayType.getName() + (retainedResult ? " newArray" : " array") + "WithLength:(int)length"
-        + (needsTypeParam ? " type:(IOSClass *)type" : ""));
-    IOSMethodBinding binding = IOSMethodBinding.newMethod(
-        iosMethod, Modifier.PUBLIC | Modifier.STATIC, arrayType, arrayType);
-    binding.addParameter(Types.resolveJavaType("int"));
-    if (needsTypeParam) {
-      binding.addParameter(Types.getIOSClass());
-    }
-    return binding;
-  }
-
   private MethodInvocation newMultiDimensionArrayInvocation(
-      ITypeBinding arrayType, List<Expression> dimensions, boolean retainedResult) {
+      ITypeBinding componentType, List<Expression> dimensions, boolean retainedResult) {
     assert dimensions.size() > 1;
-    ITypeBinding componentType = arrayType;
     for (int i = 0; i < dimensions.size(); i++) {
       componentType = componentType.getComponentType();
     }
     IOSTypeBinding iosArrayBinding = Types.resolveArrayType(componentType);
 
-    IOSMethodBinding methodBinding = getMultiDimensionMethod(iosArrayBinding, retainedResult);
+    IOSMethodBinding methodBinding = getMultiDimensionMethod(
+        componentType, iosArrayBinding, retainedResult);
     MethodInvocation invocation =
         new MethodInvocation(methodBinding, new SimpleName(iosArrayBinding));
 
@@ -232,19 +202,16 @@ public class ArrayRewriter extends TreeVisitor {
   }
 
   private IOSMethodBinding getMultiDimensionMethod(
-      IOSTypeBinding arrayType, boolean retainedResult) {
-    boolean needsTypeParam = arrayType.getName().equals("IOSObjectArray");
-    IOSMethod iosMethod = IOSMethod.create(
-        arrayType.getName() + (retainedResult ? " newArray" : " array")
-        + "WithDimensions:(int)dimensionCount lengths:(int *)dimensionLengths"
-        + (needsTypeParam ? " type:(IOSClass *)type" : ""));
+      ITypeBinding componentType, IOSTypeBinding arrayType, boolean retainedResult) {
+    String selector = (retainedResult ? "newArray" : "array") + "WithDimensions:lengths:"
+        + (componentType.isPrimitive() ? "" : "type:");
     IOSMethodBinding binding = IOSMethodBinding.newMethod(
-        iosMethod, Modifier.PUBLIC | Modifier.STATIC, Types.resolveIOSType("IOSObjectArray"),
+        selector, Modifier.PUBLIC | Modifier.STATIC, Types.resolveIOSType("IOSObjectArray"),
         arrayType);
     ITypeBinding intType = Types.resolveJavaType("int");
     binding.addParameter(intType);
     binding.addParameter(GeneratedTypeBinding.newArrayType(intType));
-    if (needsTypeParam) {
+    if (!componentType.isPrimitive()) {
       binding.addParameter(Types.getIOSClass());
     }
     return binding;
@@ -332,8 +299,12 @@ public class ArrayRewriter extends TreeVisitor {
     assert op == Assignment.Operator.ASSIGN;
 
     Expression value = TreeUtil.remove(assignmentNode.getRightHandSide());
-    String funcName =
-        TreeUtil.retainResult(value) ? "IOSObjectArray_SetAndConsume" : "IOSObjectArray_Set";
+    Expression retainedValue = TranslationUtil.retainResult(value);
+    String funcName = "IOSObjectArray_Set";
+    if (retainedValue != null) {
+      funcName = "IOSObjectArray_SetAndConsume";
+      value = retainedValue;
+    }
     FunctionInvocation invocation = new FunctionInvocation(
         funcName, componentType, Types.resolveIOSType("id"),
         Types.resolveIOSType("IOSObjectArray"));
@@ -371,7 +342,7 @@ public class ArrayRewriter extends TreeVisitor {
       return;
     }
     IOSMethodBinding binding = IOSMethodBinding.newMethod(
-        ISINSTANCE_METHOD, Modifier.PUBLIC, Types.resolveJavaType("boolean"), Types.getIOSClass());
+        "isInstance", Modifier.PUBLIC, Types.resolveJavaType("boolean"), Types.getIOSClass());
     binding.addParameter(Types.resolveIOSType("id"));
     MethodInvocation invocation = new MethodInvocation(binding, newTypeLiteralInvocation(type));
     invocation.getArguments().add(TreeUtil.remove(node.getLeftOperand()));
@@ -393,39 +364,18 @@ public class ArrayRewriter extends TreeVisitor {
     return new TypeLiteral(type);
   }
 
-  private static MethodInvocation newTypeLiteralInvocation(ITypeBinding type) {
+  private static FunctionInvocation newTypeLiteralInvocation(ITypeBinding type) {
     assert type.isArray();
     ITypeBinding elementType = type.getElementType();
-    IOSTypeBinding iosArrayType = Types.resolveArrayType(elementType);
-    int dimensions = type.getDimensions();
-    IOSMethodBinding binding = IOSMethodBinding.newMethod(
-        getTypeLiteralMethod(elementType, dimensions), Modifier.PUBLIC | Modifier.STATIC,
-        Types.getIOSClass(), iosArrayType);
-    MethodInvocation invocation = new MethodInvocation(binding, new SimpleName(iosArrayType));
-    if (dimensions > 1) {
-      binding.addParameter(Types.resolveJavaType("int"));
-      invocation.getArguments().add(NumberLiteral.newIntLiteral(dimensions));
-    }
+    ITypeBinding iosClassType = Types.getIOSClass();
+    String funcName = elementType.isPrimitive()
+        ? String.format("IOSClass_%sArray", elementType.getName()) : "IOSClass_arrayType";
+    FunctionInvocation invocation = new FunctionInvocation(
+        funcName, iosClassType, iosClassType, iosClassType);
     if (!elementType.isPrimitive()) {
-      binding.addParameter(Types.getIOSClass());
-      invocation.getArguments().add(newTypeLiteral(elementType));
+      invocation.getArguments().add(new TypeLiteral(elementType));
     }
+    invocation.getArguments().add(NumberLiteral.newIntLiteral(type.getDimensions()));
     return invocation;
-  }
-
-  private static IOSMethod getTypeLiteralMethod(ITypeBinding elementType, int dimensions) {
-    if (elementType.isPrimitive()) {
-      if (dimensions > 1) {
-        return IOSCLASS_METHOD_DIM;
-      } else {
-        return IOSCLASS_METHOD;
-      }
-    } else {
-      if (dimensions > 1) {
-        return IOSCLASS_METHOD_OBJ_DIM;
-      } else {
-        return IOSCLASS_METHOD_OBJ;
-      }
-    }
   }
 }

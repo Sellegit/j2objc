@@ -15,252 +15,211 @@
 package com.google.devtools.j2objc;
 
 import com.google.common.base.Preconditions;
-import com.google.common.collect.Lists;
-import com.google.common.io.CharStreams;
-import com.google.common.io.Files;
+import com.google.devtools.j2objc.ast.PackageDeclaration;
+import com.google.devtools.j2objc.ast.TreeConverter;
+import com.google.devtools.j2objc.file.InputFile;
+import com.google.devtools.j2objc.gen.GenerationUnit;
 import com.google.devtools.j2objc.types.Types;
-import com.google.devtools.j2objc.util.ErrorUtil;
 import com.google.devtools.j2objc.util.FileUtil;
+import com.google.devtools.j2objc.util.ErrorUtil;
 import com.google.devtools.j2objc.util.JdtParser;
 import com.google.devtools.j2objc.util.NameTable;
 import com.google.devtools.j2objc.util.TimeTracker;
 
 import org.eclipse.jdt.core.dom.CompilationUnit;
-import org.eclipse.jdt.core.dom.PackageDeclaration;
 
 import java.io.File;
 import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.Reader;
-import java.util.Enumeration;
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import java.util.zip.ZipEntry;
-import java.util.zip.ZipFile;
 
 /**
- * Abstract base class for processing a list of files. Supports .jar and
- * @manifest files.
+ * Class for processing GenerationUnits in minimum increments of one GenerationUnit.
  *
- * @author Tom Ball, Keith Stanger
+ * @author Tom Ball, Keith Stanger, Mike Thvedt
  */
 abstract class FileProcessor {
 
   private static final Logger logger = Logger.getLogger(FileProcessor.class.getName());
 
   private final JdtParser parser;
-  private final List<String> batchSources = Lists.newArrayList();
+
+  private final List<GenerationUnit> batchUnits = new ArrayList<GenerationUnit>();
+  private int batchSourceCount = 0;
+
   private final boolean doBatching = Options.batchTranslateMaximum() > 0;
 
   public FileProcessor(JdtParser parser) {
     this.parser = Preconditions.checkNotNull(parser);
   }
 
-  public void processFiles(Iterable<String> files) {
-    for (String file : files) {
-      processFile(file);
+  public void processBatch(GenerationBatch batch) {
+    for (GenerationUnit unit : batch.getGenerationUnits()) {
+      processGenerationUnit(unit);
     }
-    processBatchSources();
+
+    processBatch();
   }
 
-  public void processFile(String file) {
-    if (file.startsWith("@")) {
-      processManifestFile(file.substring(1));
-    } else {
-      processSourceFile(file);
+  protected void processGenerationUnit(GenerationUnit unit) {
+    if (unit.hasErrors()) {
+      return;
+    }
+
+    int fileCount = unit.getInputFiles().size();
+    batchUnits.add(unit);
+    batchSourceCount += fileCount;
+    if (batchSourceCount > Options.batchTranslateMaximum()) {
+      processBatch();
     }
   }
 
-  private void processManifestFile(String filename) {
-    if (filename.isEmpty()) {
-      ErrorUtil.error("no @ file specified");
-      return;
-    }
-    File f = new File(filename);
-    if (!f.exists()) {
-      ErrorUtil.error("no such file: " + filename);
-      return;
-    }
+  protected boolean isBatchable(InputFile file) {
+    return doBatching && file.getContainingPath().endsWith(".java");
+  }
+
+  protected void processBatch() {
     try {
-      String fileList = Files.toString(f, Options.getCharset());
-      String[] files = fileList.split("\\s+");  // Split on any whitespace.
-      for (String file : files) {
-        processSourceFile(file);
+      if (batchUnits.isEmpty()) {
+        return;
       }
-    } catch (IOException e) {
-      ErrorUtil.error(e.getMessage());
-    }
-  }
 
-  private void processSourceFile(String filename) {
-    logger.finest("processing " + filename);
-    if (filename.endsWith(".java")) {
-      processJavaFile(filename);
-    } else if (filename.endsWith(".jar")) {
-      processJarFile(filename);
-    } else {
-      ErrorUtil.error("Unknown file type: " + filename);
-    }
-  }
+      // We need to track all this for the parser callback.
+      final Map<InputFile, GenerationUnit> unitMap = new HashMap<InputFile, GenerationUnit>();
+      List<InputFile> batchFiles = new ArrayList<InputFile>();
+      for (GenerationUnit unit : batchUnits) {
+        if (unit.hasErrors()) {
+          continue;
+        }
 
-  protected void processJavaFile(String filename) {
-    File f = getFileOrNull(filename);
-    if (f != null) {
-      if (doBatching) {
-        batchSources.add(filename);
-      } else {
-        processSource(filename);
-      }
-      return;
-    }
-    if (f == null) {
-      for (String pathEntry : Options.getSourcePathEntries()) {
-        if (pathEntry.endsWith(".jar")) {
-          String source = getJarEntryOrNull(pathEntry, filename);
-          if (source != null) {
-            processSource(filename, source);
-            return;
-          }
-        } else {
-          f = getFileOrNull(pathEntry + File.separatorChar + filename);
-          if (f != null) {
-            if (doBatching) {
-              batchSources.add(f.getPath());
-            } else {
-              processSource(f.getPath());
-            }
-            return;
+        for (InputFile file : unit.getInputFiles()) {
+          if (isBatchable(file)) {
+            batchFiles.add(file);
+            unitMap.put(file, unit);
+          } else {
+            processSource(file, unit);
           }
         }
       }
-    }
-    ErrorUtil.error("No such file: " + filename);
-  }
 
-  private String getJarEntryOrNull(String jarFile, String path) {
-    File f = new File(jarFile);
-    if (!f.exists() || !f.isFile()) {
-      return null;
-    }
-    try {
-      ZipFile zfile = new ZipFile(f);
-      try {
-        ZipEntry entry = zfile.getEntry(path);
-        if (entry != null) {
-          Reader in = new InputStreamReader(zfile.getInputStream(entry));
-          return CharStreams.toString(in);
+      logger.finest("Processing batch of size " + batchFiles.size());
+      JdtParser.Handler handler = new JdtParser.Handler() {
+        @Override
+        public void handleParsedUnit(InputFile inputFile, CompilationUnit unit) {
+          ErrorUtil.setCurrentFileName(inputFile.getPath());
+          processCompilationUnit(unitMap.get(inputFile), unit, inputFile);
         }
-      } finally {
-        zfile.close();  // Also closes input stream.
+      };
+
+      if (batchFiles.size() > 0) {
+        parser.parseFiles(batchFiles, handler);
       }
-    } catch (IOException e) {
-      ErrorUtil.warning(e.getMessage());
+    } finally {
+      for (GenerationUnit unit : batchUnits) {
+        // Always clear, and don't leak memory on an exception.
+        unit.clear();
+      }
+      batchUnits.clear();
+      batchSourceCount = 0;
     }
-    return null;
   }
 
-  protected void processJarFile(String filename) {
-    File f = new File(filename);
-    if (!f.exists() || !f.isFile()) {
-      ErrorUtil.error("No such file: " + filename);
+  protected void processSource(InputFile file, GenerationUnit generationUnit) {
+    logger.finest("parsing " + file);
+
+    ErrorUtil.setCurrentFileName(file.getPath());
+
+    String source;
+    try {
+      source = FileUtil.readFile(file);
+    } catch (IOException e) {
+      generationUnit.error(e.getMessage());
       return;
     }
-    try {
-      ZipFile zfile = new ZipFile(f);
-      try {
-        Enumeration<? extends ZipEntry> enumerator = zfile.entries();
-        while (enumerator.hasMoreElements()) {
-          ZipEntry entry = enumerator.nextElement();
-          String path = entry.getName();
-          if (path.endsWith(".java")) {
-            Reader in = new InputStreamReader(zfile.getInputStream(entry));
-            String jarURL = String.format("jar:file:%s!%s", f.getPath(), path);
-            processSource(jarURL, CharStreams.toString(in));
-          }
-        }
-      } finally {
-        zfile.close();  // Also closes input stream.
-      }
-    } catch (IOException e) {
-      ErrorUtil.error(e.getMessage());
-    }
-  }
-
-  protected void processSource(String path) {
-    try {
-      processSource(path, FileUtil.readSource(path));
-    } catch (IOException e) {
-      ErrorUtil.warning(e.getMessage());
-    }
-  }
-
-  protected void processSource(String path, String source) {
-    logger.finest("parsing " + path);
-    TimeTracker ticker = getTicker(path);
-    ticker.push();
 
     int errorCount = ErrorUtil.errorCount();
-    CompilationUnit unit = parser.parse(path, source);
+    CompilationUnit compilationUnit = parser.parse(file.getUnitName(), source);
     if (ErrorUtil.errorCount() > errorCount) {
       return;
     }
 
-    ticker.tick("Parsing file");
-
-    ErrorUtil.setCurrentFileName(path);
-    NameTable.initialize();
-    Types.initialize(unit);
-    processUnit(path, source, unit, ticker);
-    NameTable.cleanup();
-    Types.cleanup();
-
-    ticker.pop();
-    ticker.tick("Total processing time");
-    ticker.printResults(System.out);
+    processCompilationUnit(generationUnit, compilationUnit, file);
   }
 
-  protected void processBatchSources() {
-    if (batchSources.isEmpty()) {
-      return;
-    }
-
-    JdtParser.Handler handler = new JdtParser.Handler() {
-      @Override
-      public void handleParsedUnit(String path, CompilationUnit unit) {
-        if (logger.isLoggable(Level.INFO)) {
-          System.out.println("translating " + path);
-        }
-        TimeTracker ticker = getTicker(path);
-        ticker.push();
-        processUnit(path, unit, ticker);
-      }
-    };
-    final int maxBatchSize = Options.batchTranslateMaximum();
-    for (int from = 0; from < batchSources.size(); from += maxBatchSize) {
-      int to = from + maxBatchSize;
-      if ( to > batchSources.size()) {
-        to = batchSources.size();
-      }
-      parser.parseFiles(batchSources.subList(from, to), handler);
-    }
+  private boolean isFullyParsed(GenerationUnit unit) {
+    return unit.getCompilationUnits().size() == unit.getInputFiles().size();
   }
 
-  private void processUnit(String path, CompilationUnit unit, TimeTracker ticker) {
+  /**
+   * Callback invoked when a file is parsed.
+   */
+  protected void processCompilationUnit(
+      GenerationUnit genUnit, CompilationUnit unit, InputFile file) {
     try {
-      ErrorUtil.setCurrentFileName(path);
-      NameTable.initialize();
       Types.initialize(unit);
-      processUnit(path, FileUtil.readSource(path), unit, ticker);
-      NameTable.cleanup();
-      Types.cleanup();
+      NameTable.initialize();
 
-      ticker.pop();
-      ticker.tick("Total processing time");
-      ticker.printResults(System.out);
+      String source = FileUtil.readFile(file);
+      com.google.devtools.j2objc.ast.CompilationUnit translatedUnit
+          = TreeConverter.convertCompilationUnit(unit, file, source);
+      genUnit.addCompilationUnit(translatedUnit);
+
+      if (isFullyParsed(genUnit)) {
+        ensureOutputPath(genUnit);
+        if (genUnit.getName() == null) {
+          // We infer names from the AST. If size > 1 we shouldn't reach here.
+          assert genUnit.getCompilationUnits().size() == 1;
+          genUnit.setName(
+              NameTable.camelCaseQualifiedName(
+                  NameTable.getMainTypeFullName(translatedUnit)));
+        }
+
+        logger.finest("Processing compiled unit " + genUnit.getName()
+            + " of size " + genUnit.getCompilationUnits().size());
+        processCompiledGenerationUnit(genUnit);
+      }
     } catch (IOException e) {
-      ErrorUtil.error(e.getMessage());
+      genUnit.error(e.getMessage());
+    } finally {
+      Types.cleanup();
+      NameTable.cleanup();
     }
+  }
+
+  protected abstract void processCompiledGenerationUnit(GenerationUnit unit);
+
+  /**
+   * Sets the output path if there isn't one already.
+   * For example, foo/bar/Mumble.java translates to $(OUTPUT_DIR)/foo/bar/Mumble.
+   * If --no-package-directories is specified, though, the output file is $(OUTPUT_DIR)/Mumble.
+   * <p>
+   * Note: class names are still camel-cased to avoid name collisions.
+   */
+  static void ensureOutputPath(GenerationUnit unit) {
+    String result = unit.getOutputPath();
+    if (result == null) {
+      // We can only infer the output path if there's one compilation unit.
+      assert unit.getCompilationUnits().size() == 1;
+      com.google.devtools.j2objc.ast.CompilationUnit node = unit.getCompilationUnits().get(0);
+      PackageDeclaration pkg = node.getPackage();
+      if (Options.usePackageDirectories() && !pkg.isDefaultPackage()) {
+        result = pkg.getName().getFullyQualifiedName().replace('.', File.separatorChar);
+        result += File.separatorChar + node.getMainTypeName();
+      } else {
+        result = node.getMainTypeName();
+      }
+
+      // Make sure the name is legal...
+      if (node.getMainTypeName().equals(NameTable.PACKAGE_INFO_MAIN_TYPE)) {
+        result = result.replace(NameTable.PACKAGE_INFO_MAIN_TYPE, NameTable.PACKAGE_INFO_FILE_NAME);
+      }
+    }
+
+    unit.setOutputPath(result);
   }
 
   protected TimeTracker getTicker(String name) {
@@ -271,24 +230,20 @@ abstract class FileProcessor {
     }
   }
 
-  protected abstract void processUnit(
-      String path, String source, CompilationUnit unit, TimeTracker ticker);
-
+  /**
+   * Returns a path equal to the canonical compilation unit name
+   * for the given file, which is something like path/to/package/Filename.java.
+   */
   protected static String getRelativePath(String path, CompilationUnit unit) {
     int index = path.lastIndexOf(File.separatorChar);
     String name = index >= 0 ? path.substring(index + 1) : path;
-    PackageDeclaration pkg = unit.getPackage();
+    org.eclipse.jdt.core.dom.PackageDeclaration pkg = unit.getPackage();
     if (pkg == null) {
       return name;
     } else {
       return pkg.getName().getFullyQualifiedName().replace('.', File.separatorChar)
           + File.separatorChar + name;
     }
-  }
-
-  private static File getFileOrNull(String fileName) {
-    File f = new File(fileName);
-    return f.exists() ? f : null;
   }
 
   public JdtParser getParser() {

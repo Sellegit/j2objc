@@ -14,74 +14,113 @@
 package com.google.devtools.j2objc.util;
 
 import com.google.common.io.CharStreams;
-import com.google.common.io.Files;
+import com.google.devtools.j2objc.J2ObjC;
 import com.google.devtools.j2objc.Options;
+import com.google.devtools.j2objc.file.JarredInputFile;
+import com.google.devtools.j2objc.file.RegularInputFile;
+import com.google.devtools.j2objc.file.InputFile;
 
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.Reader;
-import java.net.URLDecoder;
-import java.util.jar.JarFile;
-import java.util.zip.ZipEntry;
+import java.io.InputStream;
+import java.util.Properties;
+import java.util.zip.ZipException;
 
+import javax.annotation.Nullable;
+
+/**
+ * Utilities for reading {@link com.google.devtools.j2objc.file.InputFile}s.
+ *
+ * @author Tom Ball, Keith Stanger, Mike Thvedt
+ */
 public class FileUtil {
 
   /**
-   * Returns the file content as a string, either from a file or jar file entry.
-   *
-   * @param url the file path (optionally prefixed with "file:") or jar URL.
+   * Find a {@link com.google.devtools.j2objc.file.InputFile} on the source path,
+   * either in a directory or a jar.
+   * Returns a file guaranteed to exist, or null.
    */
-  public static String readSource(String url) throws IOException {
-    if (url.startsWith("jar:")) {
-      // Use JarURLConnection to parse the jar URL correctly.
-      JarFile jarFile = getJarFile(url);
-      try {
-        ZipEntry entry = jarFile.getEntry(getJarEntryPath(url));
-        Reader in = new InputStreamReader(jarFile.getInputStream(entry));
-        String source = CharStreams.toString(in);
-        in.close();
-        return source;
-      } finally {
-        jarFile.close();
+  @Nullable
+  public static InputFile findOnSourcePath(String filename) throws IOException {
+    for (String pathEntry : Options.getSourcePathEntries()) {
+      File f = new File(pathEntry);
+      if (f.isDirectory()) {
+        RegularInputFile regularFile = new RegularInputFile(
+            pathEntry + File.separatorChar + filename, filename);
+        if (regularFile.exists()) {
+          return regularFile;
+        }
+      } else {
+        // Assume it's a jar file
+        JarredInputFile jarFile = new JarredInputFile(filename, pathEntry, filename);
+        if (jarFile.exists()) {
+          return jarFile;
+        }
       }
+    }
+    return null;
+  }
+
+  public static String readFile(InputFile file) throws IOException {
+    return CharStreams.toString(file.openReader());
+  }
+
+  private static InputStream streamForFile(String filename) throws IOException {
+    File f = new File(filename);
+    if (f.exists()) {
+      return new FileInputStream(f);
     } else {
-      // Skip file URL prefix, if it exists.
-      if (url.startsWith("file:")) {
-        url = url.substring(5);
+      InputStream stream = J2ObjC.class.getResourceAsStream(filename);
+      if (stream == null) {
+        throw new FileNotFoundException(filename);
       }
-      return Files.toString(new File(url), Options.getCharset());
+      return stream;
     }
   }
 
-  private static JarFile getJarFile(String url) throws IOException {
-    int pathStart = url.lastIndexOf(':') + 1;
-    int pathEnd = url.indexOf('!');
-    String jarPath = URLDecoder.decode(url.substring(pathStart, pathEnd), "UTF-8");
-    return new JarFile(jarPath);
+  /**
+   * Reads the given properties file.
+   */
+  public static Properties loadProperties(String resourceName) throws IOException {
+    return loadProperties(streamForFile(resourceName));
   }
 
-  private static String getJarEntryPath(String url) {
-    int iBang = url.indexOf('!');
-    String path = url.substring(iBang + 1);
-    // Strip leading path separator, if present.
-    return path.startsWith("/") ? path.substring(1) : path;
+  public static Properties loadProperties(InputStream in) throws IOException {
+    try {
+      Properties p = new Properties();
+      p.load(in);
+      return p;
+    } finally {
+      in.close();
+    }
+  }
+
+  public static File createTempDir(String dirname) throws IOException {
+    File tmpDirectory = File.createTempFile(dirname, ".tmp");
+    tmpDirectory.delete();
+    if (!tmpDirectory.mkdir()) {
+      throw new IOException("Could not create tmp directory: " + tmpDirectory.getPath());
+    }
+    tmpDirectory.deleteOnExit();
+    return tmpDirectory;
   }
 
   /**
-   * Returns true if the file or jar entry specified exists.
+   * Recursively delete specified directory.
    */
-  public static boolean exists(String url) {
-    if (url.startsWith("jar:")) {
-      try {
-        JarFile jarFile = getJarFile(url);
-        ZipEntry entry = jarFile.getEntry(getJarEntryPath(url));
-        return entry != null;
-      } catch (IOException e) {
-        return false;
+  public static void deleteTempDir(File dir) {
+    // TODO(cpovirk): try Directories.deleteRecursively if a c.g.c.unix dep is OK
+    if (dir.exists()) {
+      for (File f : dir.listFiles()) {
+        if (f.isDirectory()) {
+          deleteTempDir(f);
+        } else {
+          f.delete();
+        }
       }
-    } else {
-      return new File(url).exists();
+      dir.delete();
     }
   }
 

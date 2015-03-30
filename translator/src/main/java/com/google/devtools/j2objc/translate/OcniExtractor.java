@@ -134,7 +134,9 @@ public class OcniExtractor extends TreeVisitor {
 
   @Override
   public void endVisit(TypeDeclaration node) {
-    visitType(node);
+    if (!node.isInterface()) {
+      visitType(node);
+    }
   }
 
   private void visitType(AbstractTypeDeclaration node) {
@@ -225,7 +227,7 @@ public class OcniExtractor extends TreeVisitor {
         end = text.lastIndexOf("}-*/");
         if (start != -1 && end > start) {
           String message = String.format("JSNI comment found: %s:%d",
-              unit.getSourceFileFullPath(), unit.getLineNumber(offset));
+              unit.getInputFile().getPath(), unit.getLineNumber(offset));
           ErrorUtil.warning(message);
         }
       }

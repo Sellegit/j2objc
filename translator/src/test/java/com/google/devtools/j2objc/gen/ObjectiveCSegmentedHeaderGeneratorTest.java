@@ -42,10 +42,14 @@ public class ObjectiveCSegmentedHeaderGeneratorTest extends GenerationTest {
     String translation = translateSourceFile(
         "class Test { static class Inner {} }", "Test", "Test.h");
     assertTranslatedLines(translation,
-        "#if !Test_RESTRICT",
+        "#pragma push_macro(\"Test_INCLUDE_ALL\")",
+        "#if Test_RESTRICT",
+        "#define Test_INCLUDE_ALL 0",
+        "#else",
         "#define Test_INCLUDE_ALL 1",
         "#endif",
         "#undef Test_RESTRICT");
+    assertTranslation(translation, "#pragma pop_macro(\"Test_INCLUDE_ALL\")");
     assertTranslatedLines(translation,
         "#if !defined (_Test_) && (Test_INCLUDE_ALL || Test_INCLUDE)",
         "#define _Test_");
@@ -70,5 +74,47 @@ public class ObjectiveCSegmentedHeaderGeneratorTest extends GenerationTest {
         "#if Test_Inner_INCLUDE",
         "#define Test_INCLUDE 1",
         "#endif");
+  }
+
+  public void testLocalIncludeOfBaseClass() throws IOException {
+    String translation = translateSourceFile(
+        "class Test extends Foo { } class Foo {}", "Test", "Test.h");
+    assertTranslatedLines(translation,
+        "#if Test_INCLUDE",
+        "#define Foo_INCLUDE 1",
+        "#endif");
+  }
+
+  // Verify that when a class is referenced in the same source file, a header
+  // isn't included for it.
+  public void testPackagePrivateBaseClass() throws IOException {
+    String translation = translateSourceFile(
+        "package bar; public class Test extends Foo {} " +
+        "abstract class Foo {}", "Test", "bar/Test.h");
+    assertNotInTranslation(translation, "#include \"Foo.h\"");
+  }
+
+  public void testAddIgnoreDeprecationWarningsPragmaIfDeprecatedDeclarationsIsEnabled()
+      throws IOException {
+    Options.enableDeprecatedDeclarations();
+
+    String translation = translateSourceFile("class Test {}", "Test", "Test.h");
+
+    assertTranslation(translation, "#pragma clang diagnostic push");
+    assertTranslation(translation, "#pragma GCC diagnostic ignored \"-Wdeprecated-declarations\"");
+    assertTranslation(translation, "#pragma clang diagnostic pop");
+  }
+
+  public void testForwardDeclarationForTypeInSameIncludeAsSuperclass() throws IOException {
+    addSourceFile("class Foo { static class Bar { } }", "Foo.java");
+    String translation = translateSourceFile(
+        "class Test extends Foo { Foo.Bar bar; }", "Test", "Test.h");
+    assertTranslatedLines(translation,
+        "#define Foo_RESTRICT 1",
+        "#define Foo_INCLUDE 1",
+        "#include \"Foo.h\"");
+    // Forward declaration for Foo_Bar is needed because the include of Foo.h
+    // is restricted to only the Foo type.
+    assertTranslation(translation, "@class Foo_Bar");
   }
 }

@@ -18,9 +18,13 @@ package com.google.j2objc;
 
 import junit.framework.TestCase;
 
+import javax.annotation.Resource;
+
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
+import java.lang.reflect.AccessibleObject;
 import java.lang.reflect.Constructor;
+import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
@@ -245,6 +249,60 @@ public class ClassTest extends TestCase {
     } catch (Throwable t) {
       fail("wrong exception thrown");
     }
+  }
+
+  // Verify that we can access the class literals for classes that are
+  // hand-coded.
+  public void testCertainClassLiterals() {
+    assertEquals("java.lang.Object", Object.class.getName());
+    assertEquals("java.lang.String", String.class.getName());
+    assertEquals("java.lang.Cloneable", Cloneable.class.getName());
+    assertEquals("java.lang.Number", Number.class.getName());
+    assertEquals("java.lang.Iterable", Iterable.class.getName());
+    assertEquals("java.lang.Throwable", Throwable.class.getName());
+    assertEquals("java.lang.reflect.AccessibleObject", AccessibleObject.class.getName());
+    assertEquals("java.lang.reflect.Constructor", Constructor.class.getName());
+    assertEquals("java.lang.reflect.Field", Field.class.getName());
+    assertEquals("java.lang.reflect.Method", Method.class.getName());
+    assertEquals("javax.annotation.Resource", Resource.class.getName());
+  }
+
+  /**
+   * Verify that a class with a package that has been renamed using an
+   * ObjectiveCName annotation can be reflexively loaded.
+   */
+  public void testPackagePrefixAnnotation() throws Exception {
+    // Lookup class by its Java name.
+    Class<?> cls = Class.forName("java.lang.test.Example");
+    Object instance = cls.newInstance();
+    Method m = cls.getMethod("nativeClassName");
+    String nativeName = (String) m.invoke(instance);
+
+    // Native name should have an OK prefix, instead of a camel-cased package name.
+    assertEquals("OKExample", nativeName);
+  }
+
+  public void testDeclaringClass() throws Exception {
+    Class<?> thisClass = Class.forName("com.google.j2objc.ClassTest");
+    assertNotNull(thisClass);
+    Class<?> innerClass = Class.forName("com.google.j2objc.ClassTest$InnerClass");
+    assertNotNull(innerClass);
+    assertEquals(thisClass, innerClass.getDeclaringClass());
+    Class<?> innerInterface = Class.forName("com.google.j2objc.ClassTest$InnerInterface");
+    assertNotNull(innerInterface);
+    assertEquals(thisClass, innerInterface.getDeclaringClass());
+    Class<?> innerEnum = Class.forName("com.google.j2objc.ClassTest$InnerEnum");
+    assertNotNull(innerEnum);
+    assertEquals(thisClass, innerEnum.getDeclaringClass());
+  }
+
+  public void testClassIsAssignableToItself() throws Exception {
+    Class<?> cls = Class.forName("java.util.HashMap");
+    assertNotNull(cls);
+    assertTrue(cls.isAssignableFrom(cls));
+    Class<?> protocol = Class.forName("java.util.Map");
+    assertNotNull(protocol);
+    assertTrue(protocol.isAssignableFrom(protocol));
   }
 
   static class InnerClass {

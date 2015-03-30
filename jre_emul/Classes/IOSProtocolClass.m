@@ -34,8 +34,25 @@
   return self;
 }
 
-- (BOOL)isInstance:(id)object {
-  return [object conformsToProtocol:protocol_];
+static jboolean ConformsToProtocol(IOSClass *cls, IOSProtocolClass *protocol) {
+  if (!cls) {
+    return NO;
+  }
+  if (cls == protocol) {
+    return YES;
+  }
+  IOSObjectArray *interfaces = [cls getInterfacesInternal];
+  for (int i = 0; i < interfaces->size_; i++) {
+    IOSClass *interface = interfaces->buffer_[i];
+    if (interface == protocol || ConformsToProtocol(interface, protocol)) {
+      return YES;
+    }
+  }
+  return ConformsToProtocol([cls getSuperclass], protocol);
+}
+
+- (jboolean)isInstance:(id)object {
+  return ConformsToProtocol([object getClass], self);
 }
 
 - (NSString *)getName {
@@ -58,19 +75,17 @@
 }
 
 - (int)getModifiers {
+  JavaClassMetadata *metadata = [self getMetadata];
+  if (metadata) {
+    return metadata.modifiers
+        & (JavaLangReflectModifier_INTERFACE | JavaLangReflectModifier_interfaceModifiers());
+  }
   return JavaLangReflectModifier_PUBLIC | JavaLangReflectModifier_INTERFACE |
       JavaLangReflectModifier_ABSTRACT | JavaLangReflectModifier_STATIC;
 }
 
 - (BOOL)isAssignableFrom:(IOSClass *)cls {
-  Protocol *otherProtocol = cls.objcProtocol;
-  if (otherProtocol) {
-    return protocol_conformsToProtocol(otherProtocol, protocol_);
-  }
-  if ([cls isArray] && protocol_ == @protocol(JavaIoSerializable)) {
-    return YES;
-  }
-  return [cls.objcClass conformsToProtocol:protocol_];
+  return ConformsToProtocol(cls, self);
 }
 
 - (BOOL)isInterface {
@@ -109,7 +124,8 @@
   free(descriptions);
 }
 
-- (JavaLangReflectMethod *)findMethodWithTranslatedName:(NSString *)objcName {
+- (JavaLangReflectMethod *)findMethodWithTranslatedName:(NSString *)objcName
+                                        checkSupertypes:(BOOL)checkSupertypes {
   unsigned int count;
   JavaLangReflectMethod *result = nil;
   struct objc_method_description *descriptions =
@@ -132,10 +148,30 @@
   }
   free(descriptions);
   if (!result) {
+    // Search backing class, if any.
+    Class backingClass = objc_getClass(protocol_getName(protocol_));
+    if (backingClass) {
+      const char *name = [objcName UTF8String];
+      Method method = JreFindClassMethod(backingClass, name);
+      if (method) {
+        NSMethodSignature *signature = JreSignatureOrNull(method_getDescription(method));
+        if (signature) {
+          JavaClassMetadata *metadata = [self getMetadata];
+          JavaMethodMetadata *methodData = [metadata findMethodMetadata:objcName];
+          result = [JavaLangReflectMethod methodWithMethodSignature:signature
+                                                           selector:method_getName(method)
+                                                              class:self
+                                                           isStatic:YES
+                                                           metadata:methodData];
+        }
+      }
+    }
+  }
+  if (!result && checkSupertypes) {
     // Search super-interfaces.
-    for (IOSClass *cls in [self getInterfacesWithArrayType:nil]) {
+    for (IOSClass *cls in [self getInterfacesInternal]) {
       if (cls != self) {
-        result = [cls findMethodWithTranslatedName:objcName];
+        result = [cls findMethodWithTranslatedName:objcName checkSupertypes:checkSupertypes];
         if (result) {
           break;
         }
@@ -145,20 +181,23 @@
   return result;
 }
 
-- (IOSObjectArray *)getInterfacesWithArrayType:(IOSClass *)arrayType {
-  unsigned int outCount;
-  Protocol * __unsafe_unretained *interfaces = protocol_copyProtocolList(protocol_, &outCount);
-  NSMutableArray *result = [NSMutableArray arrayWithCapacity:outCount];
-  for (unsigned i = 0; i < outCount; i++) {
-    IOSClass *interface = [IOSClass classWithProtocol:interfaces[i]];
-    NSString *name = [interface getName];
-    // Don't include NSObject and JavaObject interfaces, since java.lang.Object is a class.
-    if (![name isEqualToString:@"JavaObject"] && ![name isEqualToString:@"java.lang.Object"]) {
-      [result addObject:interface];
+- (IOSObjectArray *)getInterfacesInternal {
+  IOSObjectArray *result = interfaces_;
+  OSMemoryBarrier();
+  if (!result) {
+    @synchronized(self) {
+      result = interfaces_;
+      if (!result) {
+        unsigned int count;
+        Protocol **protocolList = protocol_copyProtocolList(protocol_, &count);
+        result = IOSClass_NewInterfacesFromProtocolList(protocolList, count);
+        free(protocolList);
+        OSMemoryBarrier();
+        interfaces_ = result;
+      }
     }
   }
-  free(interfaces);
-  return [IOSObjectArray arrayWithNSArray:result type:[IOSClass getClass]];
+  return result;
 }
 
 #if ! __has_feature(objc_arc)

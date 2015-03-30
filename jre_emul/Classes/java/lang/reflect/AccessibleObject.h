@@ -45,6 +45,9 @@
 
 CF_EXTERN_C_BEGIN
 
+void JavaLangReflectAccessibleObject_init(JavaLangReflectAccessibleObject *self);
+JavaLangReflectAccessibleObject *new_JavaLangReflectAccessibleObject_init();
+
 void JavaLangReflectAccessibleObject_setAccessibleWithJavaLangReflectAccessibleObjectArray_withBoolean_(
     IOSObjectArray *objects, BOOL b);
 
@@ -60,5 +63,9 @@ IOSClass *decodeTypeEncoding(const char *type);
 NSString *describeTypeEncoding(NSString *type);
 
 CF_EXTERN_C_END
+
+J2OBJC_EMPTY_STATIC_INIT(JavaLangReflectAccessibleObject)
+
+J2OBJC_TYPE_LITERAL_HEADER(JavaLangReflectAccessibleObject)
 
 #endif // _AccessibleObject_H_

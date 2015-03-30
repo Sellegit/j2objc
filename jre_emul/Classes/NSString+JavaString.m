@@ -20,8 +20,9 @@
 //
 
 #import "NSString+JavaString.h"
-#import "JreEmulation.h"
+
 #import "IOSClass.h"
+#import "J2ObjC_source.h"
 #import "java/io/ObjectStreamField.h"
 #import "java/io/Serializable.h"
 #import "java/io/UnsupportedEncodingException.h"
@@ -58,43 +59,38 @@ id makeException(Class exceptionClass) {
 
 // TODO(tball): remove static method wrappers when reflection invocation calls functions directly.
 + (NSString *)valueOf:(id<NSObject>)obj {
-  return NSString_valueOfWithId_(obj);
+  return NSString_valueOf_((id)obj);
 }
 
-NSString *NSString_valueOfWithId_(id<NSObject> obj) {
+NSString *NSString_valueOf_(id obj) {
   return obj ? [obj description] : @"null";
 }
 
 + (NSString *)valueOfBool:(BOOL)value {
-  return NSString_valueOfWithBoolean_(value);
+  return NSString_valueOfBool_(value);
 }
 
-NSString *NSString_valueOfWithBoolean_(BOOL value) {
+NSString *NSString_valueOfBool_(BOOL value) {
   return value ? @"true" : @"false";
 }
 
 + (NSString *)valueOfChar:(unichar)value {
-  return NSString_valueOfWithChar_(value);
+  return NSString_valueOfChar_(value);
 }
 
-NSString *NSString_valueOfWithChar_(unichar value) {
+NSString *NSString_valueOfChar_(unichar value) {
   return [NSString stringWithCharacters:&value length:1];
 }
 
-NSString *NSString_valueOfWithCharArray_(IOSCharArray *data) {
-  return NSString_copyValueOfWithCharArray_withInt_withInt_(data, 0, data->size_);
-}
-
-NSString *NSString_copyValueOfWithCharArray_(IOSCharArray *data) {
-  return NSString_valueOfWithCharArray_(data);
+NSString *NSString_valueOfChars_(IOSCharArray *data) {
+  return NSString_valueOfChars_offset_count_(data, 0, data->size_);
 }
 
 + (NSString *)valueOfChars:(IOSCharArray *)data {
-  return NSString_valueOfWithCharArray_(data);
+  return NSString_valueOfChars_(data);
 }
 
-NSString *NSString_valueOfWithCharArray_withInt_withInt_(
-    IOSCharArray *data, jint offset, jint count) {
+NSString *NSString_valueOfChars_offset_count_(IOSCharArray *data, jint offset, jint count) {
   id exception = nil;
   if (offset < 0) {
     exception = [[JavaLangStringIndexOutOfBoundsException alloc]
@@ -125,46 +121,41 @@ NSString *NSString_valueOfWithCharArray_withInt_withInt_(
   return result;
 }
 
-NSString *NSString_copyValueOfWithCharArray_withInt_withInt_(
-    IOSCharArray *data, jint offset, jint count) {
-  return NSString_valueOfWithCharArray_withInt_withInt_(data, offset, count);
-}
-
 + (NSString *)valueOfChars:(IOSCharArray *)data
                     offset:(int)offset
                      count:(int)count {
-  return NSString_valueOfWithCharArray_withInt_withInt_(data, offset, count);
+  return NSString_valueOfChars_offset_count_(data, offset, count);
 }
 
 + (NSString *)valueOfDouble:(double)value {
-  return NSString_valueOfWithDouble_(value);
+  return NSString_valueOfDouble_(value);
 }
 
-NSString *NSString_valueOfWithDouble_(jdouble value) {
+NSString *NSString_valueOfDouble_(jdouble value) {
   return RealToString_doubleToString(value);
 }
 
 + (NSString *)valueOfFloat:(float)value {
-  return NSString_valueOfWithFloat_(value);
+  return NSString_valueOfFloat_(value);
 }
 
-NSString *NSString_valueOfWithFloat_(jfloat value) {
+NSString *NSString_valueOfFloat_(jfloat value) {
   return RealToString_floatToString(value);
 }
 
 + (NSString *)valueOfInt:(int)value {
-  return NSString_valueOfWithInt_(value);
+  return NSString_valueOfInt_(value);
 }
 
-NSString *NSString_valueOfWithInt_(jint value) {
+NSString *NSString_valueOfInt_(jint value) {
   return IntegralToString_convertInt(NULL, value);
 }
 
 + (NSString *)valueOfLong:(long long int)value {
-  return NSString_valueOfWithLong_(value);
+  return NSString_valueOfLong_(value);
 }
 
-NSString *NSString_valueOfWithLong_(jlong value) {
+NSString *NSString_valueOfLong_(jlong value) {
   return IntegralToString_convertLong(NULL, value);
 }
 
@@ -274,21 +265,21 @@ destinationBegin:(int)destinationBegin {
   return [sb description];
 }
 
-- (int)compareToWithId:(id)another {
+- (jint)compareToWithId:(id)another {
   if (!another) {
     @throw makeException([JavaLangNullPointerException class]);
   }
   if (![another isKindOfClass:[NSString class]]) {
     @throw makeException([JavaLangClassCastException class]);
   }
-  return [self compare:(NSString *) another options:NSLiteralSearch];
+  return (jint)[self compare:(NSString *) another options:NSLiteralSearch];
 }
 
-- (int)compareToIgnoreCase:(NSString *)another {
+- (jint)compareToIgnoreCase:(NSString *)another {
   if (!another) {
     @throw makeException([JavaLangNullPointerException class]);
   }
-  return [self caseInsensitiveCompare:another];
+  return (jint)[self caseInsensitiveCompare:another];
 }
 
 - (NSString *)substring:(int)beginIndex {
@@ -420,10 +411,6 @@ destinationBegin:(int)destinationBegin {
   return [self characterAtIndex:(NSUInteger)index];
 }
 
-- (int)sequenceLength {
-  return (int) [self length];
-}
-
 - (id<JavaLangCharSequence>)subSequenceFrom:(int)start
                                          to:(int)end {
   NSUInteger maxLength = [self length];
@@ -433,7 +420,7 @@ destinationBegin:(int)destinationBegin {
   }
   int length = end - start;
   NSRange range = NSMakeRange((NSUInteger) start, (NSUInteger) length);
-  unichar *buffer = calloc(length, sizeof(unichar));
+  unichar *buffer = (unichar *)calloc(length, sizeof(unichar));
   [self getCharacters:buffer range:range];
   NSString *subString = [NSString stringWithCharacters:buffer length:length];
   free(buffer);
@@ -555,7 +542,7 @@ NSStringEncoding parseCharsetName(NSString *charset) {
                        offset:(NSUInteger)offset
                        length:(NSUInteger)length {
   jbyte *bytes = value->buffer_;
-  unichar *chars = calloc(length, sizeof(unichar));
+  unichar *chars = (unichar *)calloc(length, sizeof(unichar));
   for (NSUInteger i = 0; i < length; i++) {
     jbyte b = bytes[i + offset];
     // Expression from String(byte[],int) javadoc.
@@ -596,9 +583,9 @@ NSStringEncoding parseCharsetName(NSString *charset) {
                       offset:(int)offset
                       length:(int)length {
   jint ncps = codePoints->size_;
-  int *ints = malloc(ncps);
+  jint *ints = (jint *)malloc(ncps * sizeof(jint));
   [codePoints getInts:ints length:ncps];
-  unichar *chars = malloc(length);
+  unichar *chars = (unichar *)malloc(length);
   for (int i = 0; i < length; i++) {
     chars[i] = ints[i + offset];
   }
@@ -643,7 +630,7 @@ NSStringEncoding parseCharsetName(NSString *charset) {
     max_length += 2;
     encoding = NSUTF16BigEndianStringEncoding;  // Java uses big-endian.
   }
-  char *buffer = malloc(max_length * sizeof(char));
+  char *buffer = (char *)malloc(max_length * sizeof(char));
   char *p = buffer;
   if (includeBOM) {
     *p++ = (char) 0xFE;
@@ -692,7 +679,7 @@ NSStringEncoding parseCharsetName(NSString *charset) {
   }
   NSUInteger maxBytes =
       [self maximumLengthOfBytesUsingEncoding:NSUTF8StringEncoding];
-  char *bytes = malloc(maxBytes);
+  char *bytes = (char *)malloc(maxBytes);
   NSUInteger bytesUsed;
   NSRange range = NSMakeRange(srcBegin, srcEnd - srcBegin);
   [self getBytes:bytes
@@ -841,7 +828,7 @@ NSString *NSString_formatWithJavaUtilLocale_withNSString_withNSObjectArray_(
   if (!aString) {
     @throw makeException([JavaLangNullPointerException class]);
   }
-  NSString *this = (thisOffset == 0 && count == (int) [self length])
+  NSString *this_ = (thisOffset == 0 && count == (int) [self length])
       ? self : [self substringWithRange:NSMakeRange(thisOffset, count)];
   NSString *other = (otherOffset == 0 && count == (int) [aString length])
       ? aString : [aString substringWithRange:NSMakeRange(otherOffset, count)];
@@ -849,8 +836,8 @@ NSString *NSString_formatWithJavaUtilLocale_withNSString_withNSObjectArray_(
   if (caseInsensitive) {
     options |= NSCaseInsensitiveSearch;
   }
-  return [this compare:other
-               options:options] == NSOrderedSame;
+  return [this_ compare:other
+                options:options] == NSOrderedSame;
 }
 
 - (NSString *)intern {
@@ -871,7 +858,7 @@ NSString *NSString_formatWithJavaUtilLocale_withNSString_withNSObjectArray_(
   if (!sequence) {
     @throw makeException([JavaLangNullPointerException class]);
   }
-  if ([sequence sequenceLength] == 0) {
+  if ([sequence length] == 0) {
     return YES;
   }
   NSRange range = [self rangeOfString:[sequence description]];
@@ -897,29 +884,7 @@ NSString *NSString_formatWithJavaUtilLocale_withNSString_withNSObjectArray_(
 }
 
 - (BOOL)matches:(NSString *)regex {
-  if (!regex) {
-    @throw makeException([JavaLangNullPointerException class]);
-  }
-  NSError *error = nil;
-  NSRegularExpression *nsRegex =
-      [NSRegularExpression regularExpressionWithPattern:regex
-                                                options:0
-                                                  error:&error];
-  if (error) {
-    JavaUtilRegexPatternSyntaxException *exception =
-        [[JavaUtilRegexPatternSyntaxException alloc]
-         initWithNSString:[error localizedDescription]
-             withNSString:regex
-                  withInt:-1];
-#if ! __has_feature(objc_arc)
-    [exception autorelease];
-#endif
-    @throw exception;
-  }
-  id result = [nsRegex firstMatchInString:self
-                                  options:0
-                                    range:NSMakeRange(0, [self length])];
-  return result != nil;
+  return JavaUtilRegexPattern_matchesWithNSString_withJavaLangCharSequence_(regex, self);
 }
 
 - (BOOL)contentEqualsCharSequence:(id<JavaLangCharSequence>)seq {
@@ -928,6 +893,10 @@ NSString *NSString_formatWithJavaUtilLocale_withNSString_withNSObjectArray_(
 
 - (BOOL)contentEqualsStringBuffer:(JavaLangStringBuffer *)sb {
   return [self isEqualToString:[sb description]];
+}
+
+- (IOSClass *)getClass {
+  return NSString_class_();
 }
 
 jint javaStringHashCode(NSString *string) {
@@ -939,7 +908,7 @@ jint javaStringHashCode(NSString *string) {
   jint len = (jint)[string length];
   jint hash = 0;
   if (len > 0) {
-    unichar *chars = malloc(len * sizeof(unichar));
+    unichar *chars = (unichar *)malloc(len * sizeof(unichar));
     [string getCharacters:chars range:NSMakeRange(0, len)];
     for (int i = 0; i < len; i++) {
       hash = 31 * hash + (int)chars[i];
@@ -1008,7 +977,8 @@ jint javaStringHashCode(NSString *string) {
     { "serialPersistentFields_", NULL, 0x1a, "[Ljava/io/ObjectStreamField;", &NSString_serialPersistentFields_ },
     { "serialVersionUID_", NULL, 0x1a, "J", NULL, .constantValue.asLong = JavaLangString_serialVersionUID },
   };
-  static J2ObjcClassInfo _JavaLangString = { "String", "java.lang", NULL, 0x1, 46, methods, 3, fields, 0, NULL};
+  static J2ObjcClassInfo _JavaLangString = {
+      1, "String", "java.lang", NULL, 0x1, 46, methods, 3, fields, 0, NULL };
   return &_JavaLangString;
 }
 
@@ -1036,14 +1006,14 @@ jint javaStringHashCode(NSString *string) {
       .constantValue.asLong = CaseInsensitiveComparator_serialVersionUID },
   };
   static J2ObjcClassInfo _JavaLangString_CaseInsensitiveComparator = {
-    "CaseInsensitiveComparator", "java.lang", "String", 0xa, 0, NULL, 1, fields, 0, NULL
+    1, "CaseInsensitiveComparator", "java.lang", "String", 0xa, 0, NULL, 1, fields, 0, NULL
   };
   return &_JavaLangString_CaseInsensitiveComparator;
 }
 
 @end
 
-BOOL NSString_initialized = NO;
+J2OBJC_INITIALIZED_DEFN(NSString)
 
 id<JavaUtilComparator> NSString_CASE_INSENSITIVE_ORDER_;
 IOSObjectArray *NSString_serialPersistentFields_;
@@ -1055,10 +1025,11 @@ IOSObjectArray *NSString_serialPersistentFields_;
     JreStrongAssignAndConsume(&NSString_CASE_INSENSITIVE_ORDER_, nil,
                               [[JavaLangString_CaseInsensitiveComparator alloc] init]);
     JreStrongAssignAndConsume(&NSString_serialPersistentFields_, nil,
-        [IOSObjectArray newArrayWithLength:0 type:
-            [IOSClass classWithClass:[JavaIoObjectStreamField class]]]);
+        [IOSObjectArray newArrayWithLength:0 type:JavaIoObjectStreamField_class_()]);
     J2OBJC_SET_INITIALIZED(NSString)
   }
 }
 
 @end
+
+J2OBJC_CLASS_TYPE_LITERAL_SOURCE(NSString)

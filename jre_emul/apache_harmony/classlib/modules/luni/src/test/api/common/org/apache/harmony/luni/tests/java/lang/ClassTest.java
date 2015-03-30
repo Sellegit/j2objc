@@ -154,7 +154,7 @@ public class ClassTest extends junit.framework.TestCase {
     /**
      * @tests java.lang.Class#getClasses()
      */
-    /* TODO(tball): enable if Class.getClasses is mapped.
+    /* TODO(tball): enable if SecurityManager is implemented.
     public void test_getClasses_subtest0() {
         final Permission privCheckPermission = new BasicPermission("Privilege check") {
             private static final long serialVersionUID = 1L;
@@ -374,11 +374,9 @@ public class ClassTest extends junit.framework.TestCase {
     /**
      * @tests java.lang.Class#getDeclaredClasses()
      */
-    /* TODO(tball): enable if Class.getDeclaredClasses is mapped.
     public void test_getDeclaredClasses() {
         assertEquals("Incorrect class array returned", 2, ClassTest.class.getClasses().length);
     }
-    */
 
     /**
      * @tests java.lang.Class#getDeclaredConstructor(java.lang.Class[])
@@ -439,11 +437,9 @@ public class ClassTest extends junit.framework.TestCase {
     /**
      * @tests java.lang.Class#getDeclaringClass()
      */
-    /* TODO(tball): enable if Class.getDeclaringClass is mapped.
     public void test_getDeclaringClass() {
         assertEquals(ClassTest.class, TestClass.class.getDeclaringClass());
     }
-    */
 
     /**
      * @tests java.lang.Class#getField(java.lang.String)
@@ -451,8 +447,12 @@ public class ClassTest extends junit.framework.TestCase {
     public void test_getFieldLjava_lang_String() throws Exception {
         Field f = TestClass.class.getField("pubField");
         assertEquals("Returned incorrect field", 2, f.getInt(new TestClass()));
-        f = TestClass.class.getField("privField");
-        assertEquals("Returned incorrect field", 1, f.getInt(new TestClass()));
+        try {
+            f = TestClass.class.getField("privField");
+            fail("Private field access failed to throw exception");
+        } catch (NoSuchFieldException e) {
+            // Correct
+        }
     }
 
     /**
@@ -460,10 +460,10 @@ public class ClassTest extends junit.framework.TestCase {
      */
     public void test_getFields() throws Exception {
         Field[] f = TestClass.class.getFields();
-        assertEquals("Incorrect number of fields", 4, f.length);
+        assertEquals("Incorrect number of fields", 2, f.length);
         f = SubTestClass.class.getFields();
         // Check inheritance of pub fields
-        assertEquals("Incorrect number of fields", 4, f.length);
+        assertEquals("Incorrect number of fields", 2, f.length);
     }
 
     /**
@@ -622,7 +622,7 @@ public class ClassTest extends junit.framework.TestCase {
         Class<?> clazz = null;
         clazz = Class.forName("[I");
         assertEquals("Class toString printed wrong value",
-                     "class int[]", clazz.toString());
+                     "class [I", clazz.toString());
 
         clazz = Class.forName("java.lang.Object");
         assertEquals("Class toString printed wrong value",
@@ -630,6 +630,6 @@ public class ClassTest extends junit.framework.TestCase {
 
         clazz = Class.forName("[Ljava.lang.Object;");
         assertEquals("Class toString printed wrong value",
-                     "class java.lang.Object[]", clazz.toString());
+                     "class [Ljava.lang.Object;", clazz.toString());
     }
 }

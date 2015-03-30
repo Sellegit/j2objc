@@ -17,14 +17,17 @@
 package com.google.devtools.j2objc.types;
 
 import com.google.common.collect.Sets;
+import com.google.devtools.j2objc.ast.AbstractTypeDeclaration;
 import com.google.devtools.j2objc.ast.AnnotationTypeDeclaration;
 import com.google.devtools.j2objc.ast.AnnotationTypeMemberDeclaration;
+import com.google.devtools.j2objc.ast.BodyDeclaration;
 import com.google.devtools.j2objc.ast.EnumDeclaration;
 import com.google.devtools.j2objc.ast.FieldDeclaration;
 import com.google.devtools.j2objc.ast.FunctionDeclaration;
 import com.google.devtools.j2objc.ast.MethodDeclaration;
 import com.google.devtools.j2objc.ast.SingleVariableDeclaration;
 import com.google.devtools.j2objc.ast.TreeNode;
+import com.google.devtools.j2objc.ast.TreeUtil;
 import com.google.devtools.j2objc.ast.TreeVisitor;
 import com.google.devtools.j2objc.ast.Type;
 import com.google.devtools.j2objc.ast.TypeDeclaration;
@@ -33,6 +36,8 @@ import com.google.devtools.j2objc.util.BindingUtil;
 import org.eclipse.jdt.core.dom.IMethodBinding;
 import org.eclipse.jdt.core.dom.ITypeBinding;
 
+import java.util.Collections;
+import java.util.List;
 import java.util.Set;
 
 /**
@@ -42,16 +47,49 @@ import java.util.Set;
  */
 public class HeaderImportCollector extends TreeVisitor {
 
+  /**
+   * Describes which declarations should be visited by the collector.
+   */
+  public enum Filter {
+    INCLUDE_ALL(true, true),
+    PUBLIC_ONLY(true, false),
+    PRIVATE_ONLY(false, true);
+
+    private final boolean includePublic;
+    private final boolean includePrivate;
+
+    private Filter(boolean includePublic, boolean includePrivate) {
+      this.includePublic = includePublic;
+      this.includePrivate = includePrivate;
+    }
+
+    private boolean include(BodyDeclaration node) {
+      return node.hasPrivateDeclaration() ? includePrivate : includePublic;
+    }
+  }
+
+  private final Filter filter;
+
+  // Forward declarations. The order in which imports are collected affect
+  // which imports become forward declarations.
   private Set<Import> forwardDecls = Sets.newLinkedHashSet();
+  // Supertypes of the below declared types that haven't been seen by this collector.
   private Set<Import> superTypes = Sets.newLinkedHashSet();
+  // Declared types seen by this collector.
   private Set<Import> declaredTypes = Sets.newHashSet();
 
+  public HeaderImportCollector(Filter filter) {
+    this.filter = filter;
+  }
+
   public void collect(TreeNode node) {
-    run(node);
-    for (Import imp : superTypes) {
-      if (forwardDecls.contains(imp)) {
-        forwardDecls.remove(imp);
-      }
+    collect(Collections.singletonList(node));
+  }
+
+  public void collect(List<? extends TreeNode> nodes) {
+    for (TreeNode node : nodes) {
+      TreeUtil.getCompilationUnit(node).setGenerationContext();
+      run(node);
     }
   }
 
@@ -81,14 +119,8 @@ public class HeaderImportCollector extends TreeVisitor {
     forwardDecls.addAll(Sets.difference(Import.getImports(type), declaredTypes));
   }
 
-  private void addSuperType(Type type) {
-    if (type != null) {
-      addSuperType(type.getTypeBinding());
-    }
-  }
-
   private void addSuperType(ITypeBinding type) {
-    superTypes.addAll(Sets.difference(Import.getImports(type), declaredTypes));
+    Import.addImports(type, superTypes);
   }
 
   private void addDeclaredType(ITypeBinding type) {
@@ -97,71 +129,67 @@ public class HeaderImportCollector extends TreeVisitor {
 
   @Override
   public boolean visit(AnnotationTypeMemberDeclaration node) {
-    addForwardDecl(node.getType());
-    return true;
+    if (filter.include(node)) {
+      addForwardDecl(node.getType());
+    }
+    return false;
   }
 
   @Override
   public boolean visit(FieldDeclaration node) {
-    addForwardDecl(node.getType());
-    return true;
+    if (filter.include(node)) {
+      addForwardDecl(node.getType());
+    }
+    return false;
   }
 
   @Override
   public boolean visit(FunctionDeclaration node) {
-    addForwardDecl(node.getReturnType());
-    for (SingleVariableDeclaration param : node.getParameters()) {
-      addForwardDecl(param.getType());
+    if (filter.include(node)) {
+      addForwardDecl(node.getReturnType());
+      for (SingleVariableDeclaration param : node.getParameters()) {
+        addForwardDecl(param.getVariableBinding().getType());
+      }
     }
     return false;
   }
 
   @Override
   public boolean visit(MethodDeclaration node) {
-    addForwardDecl(node.getReturnType());
-    IMethodBinding binding = node.getMethodBinding();
-    for (ITypeBinding paramType : binding.getParameterTypes()) {
-      addForwardDecl(paramType);
+    if (filter.include(node)) {
+      addForwardDecl(node.getReturnType());
+      IMethodBinding binding = node.getMethodBinding();
+      for (ITypeBinding paramType : binding.getParameterTypes()) {
+        addForwardDecl(paramType);
+      }
+    }
+    return false;
+  }
+
+  private boolean visitTypeDeclaration(AbstractTypeDeclaration node) {
+    if (filter.include(node)) {
+      ITypeBinding binding = node.getTypeBinding();
+      addDeclaredType(binding);
+      addSuperType(binding.getSuperclass());
+      for (ITypeBinding interfaze : binding.getInterfaces()) {
+        addSuperType(interfaze);
+      }
     }
     return true;
   }
 
   @Override
   public boolean visit(TypeDeclaration node) {
-    ITypeBinding binding = node.getTypeBinding();
-    addDeclaredType(binding);
-    if (binding.isEqualTo(Types.getNSObject())) {
-      return false;
-    }
-    addSuperType(node.getSuperclassType());
-    for (Type interfaze : node.getSuperInterfaceTypes()) {
-      addSuperType(interfaze);
-    }
-    return true;
+    return visitTypeDeclaration(node);
   }
-
-  private static final ITypeBinding JAVA_LANG_ENUM =
-      GeneratedTypeBinding.newTypeBinding("java.lang.Enum", null, false);
 
   @Override
   public boolean visit(EnumDeclaration node) {
-    addSuperType(JAVA_LANG_ENUM);
-    ITypeBinding binding = node.getTypeBinding();
-    addDeclaredType(binding);
-    for (ITypeBinding interfaze : binding.getInterfaces()) {
-      addSuperType(interfaze);
-    }
-    return true;
+    return visitTypeDeclaration(node);
   }
-
-  private static final ITypeBinding JAVA_LANG_ANNOTATION =
-      GeneratedTypeBinding.newTypeBinding("java.lang.annotation.Annotation", null, false);
 
   @Override
   public boolean visit(AnnotationTypeDeclaration node) {
-    addSuperType(JAVA_LANG_ANNOTATION);
-    ITypeBinding binding = node.getTypeBinding();
-    addDeclaredType(binding);
-    return true;
+    return visitTypeDeclaration(node);
   }
 }

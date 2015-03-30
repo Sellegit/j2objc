@@ -48,7 +48,7 @@ public class DebugASTPrinter extends TreeVisitor {
     printModifiers(node.getModifiers());
     sb.print("@interface ");
     node.getName().accept(this);
-    sb.print(" {");
+    sb.println(" {");
     sb.indent();
     for (BodyDeclaration decl : node.getBodyDeclarations()) {
       decl.accept(this);
@@ -125,6 +125,7 @@ public class DebugASTPrinter extends TreeVisitor {
         sb.print(',');
       }
     }
+    sb.print('}');
     return false;
   }
 
@@ -590,6 +591,22 @@ public class DebugASTPrinter extends TreeVisitor {
       }
     }
     sb.print(')');
+    return false;
+  }
+
+  @Override
+  public boolean visit(NativeDeclaration node) {
+    if (node.getImplementationCode() != null) {
+      sb.println(node.getImplementationCode());
+    } else if (node.getHeaderCode() != null) {
+      sb.println(node.getHeaderCode());
+    }
+    return false;
+  }
+
+  @Override
+  public boolean visit(NativeExpression node) {
+    sb.println(node.getCode());
     return false;
   }
 

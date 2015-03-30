@@ -21,14 +21,15 @@
 
 #import "IOSClass.h"
 #import "IOSObjectArray.h"
+#import "J2ObjC_source.h"
 #import "java/io/PrintStream.h"
 #import "java/io/PrintWriter.h"
-#import "java/lang/Throwable.h"
 #import "java/lang/AssertionError.h"
-#import "java/lang/IllegalStateException.h"
 #import "java/lang/IllegalArgumentException.h"
+#import "java/lang/IllegalStateException.h"
 #import "java/lang/StackTraceElement.h"
 #import "java/lang/System.h"
+#import "java/lang/Throwable.h"
 
 #import <TargetConditionals.h>
 #import <execinfo.h>
@@ -42,56 +43,137 @@
 
 @implementation JavaLangThrowable
 
-void FillInStackTraceInternal(JavaLangThrowable *this) {
+void FillInStackTraceInternal(JavaLangThrowable *self) {
   void *callStack[MAX_STACK_FRAMES];
-  this->rawFrameCount = backtrace(callStack, MAX_STACK_FRAMES);
-  unsigned nBytes = this->rawFrameCount * sizeof(void *);
-  this->rawCallStack = malloc(nBytes);
-  memcpy(this->rawCallStack, callStack, nBytes);
-}
-
-// This init message implementation is hand-modified to
-// invoke NSException.initWithName:reason:userInfo:.  This
-// is necessary so that JRE exceptions can be caught by
-// class name.
-- (id)initJavaLangThrowableWithNSString:(NSString *)message
-                  withJavaLangThrowable:(JavaLangThrowable *)causeArg {
-  if ((self = [super initWithName:[[self class] description]
-                           reason:message
-                         userInfo:nil])) {
-    JreMemDebugAdd(self);
-    cause = RETAIN_(causeArg);
-    detailMessage = RETAIN_(message);
-    FillInStackTraceInternal(self);
-    suppressedExceptions = nil;
-  }
-  return self;
+  self->rawFrameCount = backtrace(callStack, MAX_STACK_FRAMES);
+  unsigned nBytes = self->rawFrameCount * sizeof(void *);
+  self->rawCallStack = (void **)malloc(nBytes);
+  memcpy(self->rawCallStack, callStack, nBytes);
 }
 
 - (instancetype)init {
-  return [self initJavaLangThrowableWithNSString:nil withJavaLangThrowable:nil];
+  JavaLangThrowable_init(self);
+  return self;
 }
 
 - (instancetype)initWithNSString:(NSString *)message {
-  return [self initJavaLangThrowableWithNSString:message withJavaLangThrowable:nil];
+  JavaLangThrowable_initWithNSString_(self, message);
+  return self;
 }
 
 - (instancetype)initWithNSString:(NSString *)message
     withJavaLangThrowable:(JavaLangThrowable *)causeArg {
-  return [self initJavaLangThrowableWithNSString:message withJavaLangThrowable:causeArg];
+  JavaLangThrowable_initWithNSString_withJavaLangThrowable_(self, message, causeArg);
+  return self;
 }
 
 - (instancetype)initWithJavaLangThrowable:(JavaLangThrowable *)causeArg {
-  return [self initJavaLangThrowableWithNSString:causeArg ? [causeArg description] : nil
-                           withJavaLangThrowable:causeArg];
+  JavaLangThrowable_initWithJavaLangThrowable_(self, causeArg);
+  return self;
 }
 
 - (instancetype)initWithNSString:(NSString *)message
  withJavaLangThrowable:(JavaLangThrowable *)causeArg
            withBoolean:(BOOL)enableSuppression
            withBoolean:(BOOL)writeableStackTrace {
-  return [self initJavaLangThrowableWithNSString:message
-                           withJavaLangThrowable:causeArg];
+  JavaLangThrowable_initWithNSString_withJavaLangThrowable_withBoolean_withBoolean_(
+      self, message, causeArg, enableSuppression, writeableStackTrace);
+  return self;
+}
+
+void JavaLangThrowable_init(JavaLangThrowable *self) {
+  JavaLangThrowable_initWithNSString_withJavaLangThrowable_(self, nil, nil);
+}
+
+JavaLangThrowable *new_JavaLangThrowable_init() {
+  JavaLangThrowable *self = [JavaLangThrowable alloc];
+  JavaLangThrowable_init(self);
+  return self;
+}
+
+void JavaLangThrowable_initWithNSString_(JavaLangThrowable *self, NSString *message) {
+  JavaLangThrowable_initWithNSString_withJavaLangThrowable_(self, message, nil);
+}
+
+JavaLangThrowable *new_JavaLangThrowable_initWithNSString_(NSString *message) {
+  JavaLangThrowable *self = [JavaLangThrowable alloc];
+  JavaLangThrowable_initWithNSString_(self, message);
+  return self;
+}
+
+// This init message implementation is hand-modified to
+// invoke NSException.initWithName:reason:userInfo:.  This
+// is necessary so that JRE exceptions can be caught by
+// class name.
+void JavaLangThrowable_initWithNSString_withJavaLangThrowable_(
+    JavaLangThrowable *self, NSString *message, JavaLangThrowable *causeArg) {
+  JavaLangThrowable_initWithNSString_withJavaLangThrowable_withBoolean_withBoolean_(
+      self, message, causeArg, YES, YES);
+}
+
+JavaLangThrowable *new_JavaLangThrowable_initWithNSString_withJavaLangThrowable_(
+    NSString *message, JavaLangThrowable *causeArg) {
+  JavaLangThrowable *self = [JavaLangThrowable alloc];
+  JavaLangThrowable_initWithNSString_withJavaLangThrowable_withBoolean_withBoolean_(
+      self, message, causeArg, YES, YES);
+  return self;
+}
+
+void JavaLangThrowable_initWithJavaLangThrowable_(
+    JavaLangThrowable *self, JavaLangThrowable *causeArg) {
+  JavaLangThrowable_initWithNSString_withJavaLangThrowable_withBoolean_withBoolean_(
+      self, causeArg ? [causeArg description] : nil, causeArg, YES, YES);
+}
+
+JavaLangThrowable *new_JavaLangThrowable_initWithJavaLangThrowable_(JavaLangThrowable *causeArg) {
+  JavaLangThrowable *self = [JavaLangThrowable alloc];
+  JavaLangThrowable_initWithJavaLangThrowable_(self, causeArg);
+  return self;
+}
+
+void JavaLangThrowable_initWithNSString_withJavaLangThrowable_withBoolean_withBoolean_(
+    JavaLangThrowable *self, NSString *message, JavaLangThrowable *causeArg, BOOL enableSuppression,
+    BOOL writeableStackTrace) {
+  [self initWithName:[[self class] description] reason:message userInfo:nil];
+  self->cause = RETAIN_(causeArg);
+  self->detailMessage = RETAIN_(message);
+  if (enableSuppression) {
+    self->suppressedExceptions =
+        [IOSObjectArray newArrayWithLength:0
+                                      type:JavaLangThrowable_class_()];
+  } else {
+    // nil indicates that exceptions are suppressed for this throwable.
+    self->suppressedExceptions = nil;
+  }
+  if (writeableStackTrace) {
+    FillInStackTraceInternal(self);
+  }
+}
+
+JavaLangThrowable *
+    new_JavaLangThrowable_initWithNSString_withJavaLangThrowable_withBoolean_withBoolean_(
+    NSString *message, JavaLangThrowable *causeArg, BOOL enableSuppression,
+    BOOL writeableStackTrace) {
+  JavaLangThrowable *self = [JavaLangThrowable alloc];
+  JavaLangThrowable_initWithNSString_withJavaLangThrowable_withBoolean_withBoolean_(
+      self, message, causeArg, enableSuppression, writeableStackTrace);
+  return self;
+}
+
+// Filter out native functions (no class), NSInvocation methods, and internal constructor.
+static BOOL ShouldFilterStackElement(JavaLangStackTraceElement *element) {
+  NSString *className = [element getClassName];
+  if (!className) {
+    return YES;
+  }
+  if ([className isEqualToString:@"NSInvocation"]) {
+    return YES;
+  }
+  if ([className isEqualToString:@"java.lang.Throwable"]
+      && [[element getMethodName] isEqualToString:@"<init>"]) {
+    return YES;
+  }
+  return NO;
 }
 
 - (IOSObjectArray *)filterStackTrace {
@@ -102,10 +184,7 @@ void FillInStackTraceInternal(JavaLangThrowable *this) {
         for (unsigned i = 0; i < rawFrameCount; i++) {
           JavaLangStackTraceElement *element = AUTORELEASE(
               [[JavaLangStackTraceElement alloc] initWithLong:(long long int) rawCallStack[i]]);
-          // Filter out native functions (no class), NSInvocation methods, and internal constructor.
-          NSString *className = [element getClassName];
-          if (className && ![className isEqualToString:@"NSInvocation"] &&
-              ![[element getMethodName] hasPrefix:@"initJavaLangThrowable"]) {
+          if (!ShouldFilterStackElement(element)) {
             [frames addObject:element];
           }
         }
@@ -116,7 +195,7 @@ void FillInStackTraceInternal(JavaLangThrowable *this) {
           [frames removeLastObject];
         }
         stackTrace =  RETAIN_([IOSObjectArray arrayWithNSArray:frames
-                                                          type:[JavaLangStackTraceElement getClass]]);
+                                                          type:JavaLangStackTraceElement_class_()]);
         free(rawCallStack);
         rawCallStack = NULL;
       }
@@ -204,46 +283,47 @@ void FillInStackTraceInternal(JavaLangThrowable *this) {
 
 - (void)setStackTraceWithJavaLangStackTraceElementArray:
     (IOSObjectArray *)stackTraceArg {
+  // Always check args whether or not stack trace is writeable (not nil).
   nil_chk(stackTraceArg);
+  jint count = stackTraceArg->size_;
+  for (jint i = 0; i < count; i++) {
+    nil_chk(stackTraceArg->buffer_[i]);
+  }
   @synchronized (self) {
-    [self maybeFreeRawCallStack];
-    jint count = stackTraceArg->size_;
-    for (jint i = 0; i < count; i++) {
-      nil_chk(stackTraceArg->buffer_[i]);
+    if (self->stackTrace || self->rawCallStack) {
+      [self maybeFreeRawCallStack];
+      [self->stackTrace autorelease];
     }
-#if __has_feature(objc_arc)
-    stackTrace = stackTraceArg;
-#else
-    [stackTrace autorelease];
-    stackTrace = [stackTraceArg retain];
-#endif
+    self->stackTrace = [stackTraceArg retain];
   }
 }
 
 - (void)addSuppressedWithJavaLangThrowable:(JavaLangThrowable *)exception {
+  // Always check arg whether or not stack trace suppression is enabled.
   nil_chk(exception);
   if (exception == self) {
     @throw AUTORELEASE([[JavaLangIllegalArgumentException alloc] init]);
   }
-  @synchronized (self) {
-    jint existingCount = suppressedExceptions ? suppressedExceptions->size_ : 0;
-    IOSObjectArray *newArray = [IOSObjectArray newArrayWithLength:existingCount + 1
-        type:[IOSClass classWithClass:[JavaLangThrowable class]]];
-    for (jint i = 0; i < existingCount; i++) {
-      [newArray replaceObjectAtIndex:i withObject:suppressedExceptions->buffer_[i]];
+  if (suppressedExceptions) {
+    @synchronized (self) {
+      jint existingCount = suppressedExceptions ? suppressedExceptions->size_ : 0;
+      IOSObjectArray *newArray = [IOSObjectArray newArrayWithLength:existingCount + 1
+          type:JavaLangThrowable_class_()];
+      for (jint i = 0; i < existingCount; i++) {
+        [newArray replaceObjectAtIndex:i withObject:suppressedExceptions->buffer_[i]];
+      }
+      [newArray replaceObjectAtIndex:existingCount
+                          withObject:exception];
+      RELEASE_(suppressedExceptions);
+      suppressedExceptions = newArray;
     }
-    [newArray replaceObjectAtIndex:existingCount
-                        withObject:exception];
-    RELEASE_(suppressedExceptions);
-    suppressedExceptions = newArray;
   }
 }
 
 - (IOSObjectArray *)getSuppressed {
   return suppressedExceptions
       ? [IOSObjectArray arrayWithArray:suppressedExceptions]
-      : [IOSObjectArray arrayWithLength:0
-          type:[IOSClass classWithClass:[JavaLangThrowable class]]];
+      : [IOSObjectArray arrayWithLength:0 type:JavaLangThrowable_class_()];
 }
 
 - (NSString *)description {
@@ -265,13 +345,10 @@ void FillInStackTraceInternal(JavaLangThrowable *this) {
 
 - (void)dealloc {
   [self maybeFreeRawCallStack];
-#if ! __has_feature(objc_arc)
-  JreMemDebugRemove(self);
   [cause release];
   [detailMessage release];
   [stackTrace release];
   [super dealloc];
-#endif
 }
 
 // Generated by running the translator over the java.lang.Throwable stub file.
@@ -291,8 +368,12 @@ void FillInStackTraceInternal(JavaLangThrowable *this) {
     { "serialVersionUID_", NULL, 0x1a, "J", NULL,
       .constantValue.asLong = JavaLangThrowable_serialVersionUID },
   };
-  static J2ObjcClassInfo _JavaLangThrowable = { "Throwable", "java.lang", NULL, 0x1, 9, methods, 1, fields, 0, NULL};
+  static J2ObjcClassInfo _JavaLangThrowable = {
+    1, "Throwable", "java.lang", NULL, 0x1, 9, methods, 1, fields, 0, NULL
+  };
   return &_JavaLangThrowable;
 }
 
 @end
+
+J2OBJC_CLASS_TYPE_LITERAL_SOURCE(JavaLangThrowable)

@@ -24,7 +24,6 @@ import com.google.common.collect.SetMultimap;
 import com.google.common.collect.Sets;
 import com.google.devtools.j2objc.translate.OuterReferenceResolver;
 import com.google.devtools.j2objc.util.BindingUtil;
-import com.google.j2objc.annotations.WeakOuter;
 
 import org.eclipse.jdt.core.dom.ITypeBinding;
 import org.eclipse.jdt.core.dom.IVariableBinding;
@@ -154,7 +153,7 @@ public class ReferenceGraph {
   private void addOuterClassEdges() {
     for (ITypeBinding type : allTypes.values()) {
       if (OuterReferenceResolver.needsOuterReference(type.getTypeDeclaration())
-          && !BindingUtil.hasAnnotation(type, WeakOuter.class)) {
+          && !BindingUtil.hasNamedAnnotation(type, "WeakOuter")) {
         ITypeBinding declaringType = type.getDeclaringClass();
         if (declaringType != null && !whitelist.containsType(declaringType)
             && !whitelist.hasOuterForType(type)) {
@@ -252,7 +251,7 @@ public class ReferenceGraph {
     }
     List<Edge> cycle = Lists.newArrayList();
     String curNode = root;
-    while (curNode != root || cycle.size() == 0) {
+    while (!curNode.equals(root) || cycle.size() == 0) {
       Edge nextEdge = backlinks.get(curNode);
       cycle.add(nextEdge);
       curNode = nextEdge.getOrigin().getKey();

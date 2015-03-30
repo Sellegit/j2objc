@@ -108,6 +108,7 @@ public class Import implements Comparable<Import> {
       this.importFileName = foundationName;
     } else {
       this.importFileName = getImportFileName(mainType);
+      this.importFileName = getImportFileName(mainType) + ".h";
     }
     this.isFoundation = isFoundation;
   }
@@ -134,7 +135,7 @@ public class Import implements Comparable<Import> {
       }
     }
 
-    String mappedHeader = Options.getHeaderMappings().inverse().get(javaName);
+    String mappedHeader = Options.getHeaderMappings().get(javaName);
     if (mappedHeader == null) {
       // Use package directories for platform classes if they do not have an entry in the header
       // mapping.
@@ -149,7 +150,7 @@ public class Import implements Comparable<Import> {
       } else {
         ErrorUtil.error("filename \"" + mappedHeader + "\" is not a valid header file name");
       }
-      return mappedHeader.replace('.', '/');
+      return mappedHeader;
     }
   }
 
@@ -217,7 +218,7 @@ public class Import implements Comparable<Import> {
     if (isFoundation) {
      return String.format("#import <%s>", importFileName);
     } else {
-      return String.format("#include \"%s.h\"", getImportFileName());
+      return String.format("#include \"%s\"", getImportFileName());
     }
   }
 

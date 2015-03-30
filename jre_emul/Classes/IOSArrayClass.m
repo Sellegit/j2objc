@@ -22,6 +22,8 @@
 #import "IOSArrayClass.h"
 #import "IOSObjectArray.h"
 #import "IOSPrimitiveClass.h"
+#import "NSCopying+JavaCloneable.h"
+#import "java/io/Serializable.h"
 #import "java/lang/InstantiationException.h"
 
 @implementation IOSArrayClass
@@ -42,7 +44,7 @@
 }
 
 - (IOSClass *)getSuperclass {
-  return [IOSClass objectClass];
+  return NSObject_class_();
 }
 
 - (BOOL)isInstance:(id)object {
@@ -59,7 +61,7 @@
 }
 
 - (NSString *)getSimpleName {
-  return [[[self getComponentType] getName] stringByAppendingString:@"[]"];
+  return [[[self getComponentType] getSimpleName] stringByAppendingString:@"[]"];
 }
 
 - (NSString *)binaryName {
@@ -70,10 +72,19 @@
   return [[[self getComponentType] objcName] stringByAppendingString:@"Array"];
 }
 
-- (IOSObjectArray *)getInterfacesWithArrayType:(IOSClass *)arrayType {
-  return [IOSObjectArray arrayWithObjects:(id[]){
-        [IOSClass classWithProtocol:@protocol(JavaIoSerializable)]
-      } count:1 type:[IOSClass getClass]];
+- (NSString *)getCanonicalName {
+  return [NSString stringWithFormat:@"%@[]", [componentType_ getCanonicalName]];
+}
+
+- (IOSObjectArray *)getInterfacesInternal {
+  static dispatch_once_t onceToken;
+  static IOSObjectArray *arrayInterfaces;
+  dispatch_once(&onceToken, ^{
+    arrayInterfaces = [IOSObjectArray newArrayWithObjects:(id[]){
+        NSCopying_class_(), JavaIoSerializable_class_() }
+        count:2 type:IOSClass_class_()];
+  });
+  return arrayInterfaces;
 }
 
 - (id)newInstance {
@@ -89,7 +100,7 @@
 }
 
 - (NSString *)description {
-  return [NSString stringWithFormat:@"class %@", [self getSimpleName]];
+  return [NSString stringWithFormat:@"class %@", [self getName]];
 }
 
 #if ! __has_feature(objc_arc)

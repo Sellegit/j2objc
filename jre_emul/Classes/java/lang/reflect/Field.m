@@ -19,18 +19,20 @@
 //  Created by Tom Ball on 06/18/2012.
 //
 
-#import "IOSClass.h"
-#import "IOSObjectArray.h"
-#import "IOSPrimitiveClass.h"
+#import "java/lang/reflect/Field.h"
+
+#import "J2ObjC_source.h"
 #import "JavaMetadata.h"
 #import "java/lang/AssertionError.h"
+#import "java/lang/ClassLoader.h"
 #import "java/lang/IllegalAccessException.h"
 #import "java/lang/IllegalArgumentException.h"
 #import "java/lang/NullPointerException.h"
-#import "java/lang/reflect/Field.h"
+#import "java/lang/annotation/Annotation.h"
 #import "java/lang/reflect/Method.h"
 #import "java/lang/reflect/Modifier.h"
 #import "java/lang/reflect/TypeVariable.h"
+#import "libcore/reflect/GenericSignatureParser.h"
 #import "objc/message.h"
 #import "objc/runtime.h"
 
@@ -97,11 +99,15 @@ static void ReadRawValue(
     }
   } else {
     nil_chk(object);
-    [type __readRawValue:rawValue fromAddress:((void *)object) + ivar_getOffset(field->ivar_)];
+    if (![field->declaringClass_ isInstance:object]) {
+      @throw AUTORELEASE([[JavaLangIllegalArgumentException alloc]
+                          initWithNSString:@"field type mismatch"]);
+    }
+    [type __readRawValue:rawValue fromAddress:((char *)object) + ivar_getOffset(field->ivar_)];
   }
   if (![type __convertRawValue:rawValue toType:toType]) {
-    @throw AUTORELEASE([[JavaLangIllegalArgumentException alloc] initWithNSString:
-        @"field type mismatch"]);
+    @throw AUTORELEASE([[JavaLangIllegalArgumentException alloc]
+                        initWithNSString:@"field type mismatch"]);
   }
 }
 
@@ -129,7 +135,7 @@ static void SetWithRawValue(
       @throw AUTORELEASE([[JavaLangIllegalAccessException alloc] initWithNSString:
                           @"Cannot set final field"]);
     }
-    [type __writeRawValue:rawValue toAddress:((void *)object) + ivar_getOffset(field->ivar_)];
+    [type __writeRawValue:rawValue toAddress:((char *)object) + ivar_getOffset(field->ivar_)];
   }
 }
 
@@ -196,7 +202,10 @@ static void SetWithRawValue(
     AUTORELEASE([self getWithId:object]);
   }
   J2ObjcRawValue rawValue;
-  [fieldType __unboxValue:value toRawValue:&rawValue];
+  if (![fieldType __unboxValue:value toRawValue:&rawValue]) {
+    @throw AUTORELEASE([[JavaLangIllegalArgumentException alloc]
+                        initWithNSString:@"field type mismatch"]);
+  }
   SetWithRawValue(&rawValue, self, object, fieldType);
   if (needsRetain) {
     RETAIN_(value);
@@ -260,8 +269,23 @@ static void SetWithRawValue(
 }
 
 - (id<JavaLangReflectType>)getGenericType {
-  // TODO(tball): update when field metadata has a generic type attribute.
-  return [self getType];
+  id<JavaLangReflectType> result = [self getType];
+  if (metadata_) {
+    NSString *genericSignature = [metadata_ genericSignature];
+    if (!genericSignature) {
+      return result;
+    }
+    LibcoreReflectGenericSignatureParser *parser =
+        [[LibcoreReflectGenericSignatureParser alloc]
+         initWithJavaLangClassLoader:JavaLangClassLoader_getSystemClassLoader()];
+    [parser parseForFieldWithJavaLangReflectGenericDeclaration:declaringClass_
+                                                  withNSString:genericSignature];
+    if (parser->fieldType_) {
+      result = [[parser->fieldType_ retain] autorelease];
+    }
+    [parser release];
+  }
+  return result;
 }
 
 - (int)getModifiers {
@@ -314,11 +338,14 @@ static void SetWithRawValue(
 - (NSString *)toGenericString {
   NSString *mods =
       metadata_ ? JavaLangReflectModifier_toStringWithInt_([metadata_ modifiers]) : @"";
+  if ([mods length] > 0) { // Separate test, since Modifer.toString() might return empty string.
+    mods = [mods stringByAppendingString:@" "];
+  }
   id<JavaLangReflectType> type = [self getGenericType];
   NSString *typeString = [type conformsToProtocol:@protocol(JavaLangReflectTypeVariable)] ?
       [(id<JavaLangReflectTypeVariable>) type getName] : [type description];
-  return [NSString stringWithFormat:@"%@ %@ %@.%@", mods, typeString,
-          [self getDeclaringClass], [self propertyName]];
+  return [NSString stringWithFormat:@"%@%@ %@.%@", mods, typeString,
+          [[self getDeclaringClass] getName], [self propertyName]];
 }
 
 - (IOSObjectArray *)getDeclaredAnnotations {
@@ -331,8 +358,7 @@ static void SetWithRawValue(
       return method_invoke(cls, annotationsMethod);
     }
   }
-  IOSClass *annotationType = [IOSClass classWithProtocol:@protocol(JavaLangAnnotationAnnotation)];
-  return [IOSObjectArray arrayWithLength:0 type:annotationType];
+  return [IOSObjectArray arrayWithLength:0 type:JavaLangAnnotationAnnotation_class_()];
 }
 
 - (int)unsafeOffset {
@@ -360,4 +386,44 @@ static void SetWithRawValue(
 }
 #endif
 
++ (const J2ObjcClassInfo *)__metadata {
+  static const J2ObjcMethodInfo methods[] = {
+    { "getName", NULL, "Ljava.lang.String;", 0x1, NULL },
+    { "getModifiers", NULL, "I", 0x1, NULL },
+    { "getType", NULL, "Ljava.lang.Class;", 0x1, NULL },
+    { "getGenericType", NULL, "Ljava.lang.Class;", 0x1, NULL },
+    { "getDeclaringClass", NULL, "Ljava.lang.Class;", 0x1, NULL },
+    { "getWithId:", "get", "Ljava.lang.Object;", 0x1, "Ljava.lang.IllegalArgumentException;Ljava.lang.IllegalAccessException;" },
+    { "getBooleanWithId:", "getBoolean", "Z", 0x1, "Ljava.lang.IllegalArgumentException;Ljava.lang.IllegalAccessException;" },
+    { "getByteWithId:", "getByte", "B", 0x1, "Ljava.lang.IllegalArgumentException;Ljava.lang.IllegalAccessException;" },
+    { "getCharWithId:", "getChar", "C", 0x1, "Ljava.lang.IllegalArgumentException;Ljava.lang.IllegalAccessException;" },
+    { "getDoubleWithId:", "getDouble", "D", 0x1, "Ljava.lang.IllegalArgumentException;Ljava.lang.IllegalAccessException;" },
+    { "getFloatWithId:", "getFloat", "F", 0x1, "Ljava.lang.IllegalArgumentException;Ljava.lang.IllegalAccessException;" },
+    { "getIntWithId:", "getInt", "I", 0x1, "Ljava.lang.IllegalArgumentException;Ljava.lang.IllegalAccessException;" },
+    { "getLongWithId:", "getLong", "J", 0x1, "Ljava.lang.IllegalArgumentException;Ljava.lang.IllegalAccessException;" },
+    { "getShortWithId:", "getShort", "S", 0x1, "Ljava.lang.IllegalArgumentException;Ljava.lang.IllegalAccessException;" },
+    { "setWithId:withId:", "set", "V", 0x1, "Ljava.lang.IllegalArgumentException;Ljava.lang.IllegalAccessException;" },
+    { "setBooleanWithId:withBoolean:", "setBoolean", "V", 0x1, "Ljava.lang.IllegalArgumentException;Ljava.lang.IllegalAccessException;" },
+    { "setByteWithId:withByte:", "setByte", "V", 0x1, "Ljava.lang.IllegalArgumentException;Ljava.lang.IllegalAccessException;" },
+    { "setCharWithId:withChar:", "setChar", "V", 0x1, "Ljava.lang.IllegalArgumentException;Ljava.lang.IllegalAccessException;" },
+    { "setDoubleWithId:withDouble:", "setDouble", "V", 0x1, "Ljava.lang.IllegalArgumentException;Ljava.lang.IllegalAccessException;" },
+    { "setFloatWithId:withFloat:", "setFloat", "V", 0x1, "Ljava.lang.IllegalArgumentException;Ljava.lang.IllegalAccessException;" },
+    { "setIntWithId:withInt:", "setInt", "V", 0x1, "Ljava.lang.IllegalArgumentException;Ljava.lang.IllegalAccessException;" },
+    { "setLongWithId:withLong:", "setLong", "V", 0x1, "Ljava.lang.IllegalArgumentException;Ljava.lang.IllegalAccessException;" },
+    { "setShortWithId:withShort:", "setShort", "V", 0x1, "Ljava.lang.IllegalArgumentException;Ljava.lang.IllegalAccessException;" },
+    { "getAnnotationWithIOSClass:", "getAnnotation", "TT;", 0x1, NULL },
+    { "getDeclaredAnnotations", NULL, "[Ljava.lang.annotation.Annotation;", 0x1, NULL },
+    { "isSynthetic", NULL, "Z", 0x1, NULL },
+    { "isEnumConstant", NULL, "Z", 0x1, NULL },
+    { "toGenericString", NULL, "Ljava.lang.String;", 0x1, NULL },
+    { "init", NULL, NULL, 0x1, NULL },
+  };
+  static const J2ObjcClassInfo _JavaLangReflectField = {
+    1, "Field", "java.lang.reflect", NULL, 0x1, 29, methods, 0, NULL, 0, NULL
+  };
+  return &_JavaLangReflectField;
+}
+
 @end
+
+J2OBJC_CLASS_TYPE_LITERAL_SOURCE(JavaLangReflectField)

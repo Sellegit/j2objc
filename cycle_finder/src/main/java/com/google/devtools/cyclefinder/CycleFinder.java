@@ -17,14 +17,18 @@ package com.google.devtools.cyclefinder;
 import com.google.common.base.Strings;
 import com.google.devtools.j2objc.ast.CompilationUnit;
 import com.google.devtools.j2objc.ast.TreeConverter;
+import com.google.devtools.j2objc.file.InputFile;
+import com.google.devtools.j2objc.file.RegularInputFile;
 import com.google.devtools.j2objc.translate.OuterReferenceResolver;
 import com.google.devtools.j2objc.types.Types;
 import com.google.devtools.j2objc.util.ErrorUtil;
+import com.google.devtools.j2objc.util.FileUtil;
 import com.google.devtools.j2objc.util.JdtParser;
 
 import java.io.File;
 import java.io.IOException;
 import java.io.PrintStream;
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
@@ -93,14 +97,24 @@ public class CycleFinder {
     JdtParser.Handler handler = new JdtParser.Handler() {
       @Override
       public void handleParsedUnit(
-          String filePath, org.eclipse.jdt.core.dom.CompilationUnit jdtUnit) {
+          InputFile file, org.eclipse.jdt.core.dom.CompilationUnit jdtUnit) {
+        String source = "";
+        try {
+          source = FileUtil.readFile(file);
+        } catch (IOException e) {
+          ErrorUtil.error("Error reading file " + file.getPath() + ": " + e.getMessage());
+        }
         Types.initialize(jdtUnit);
-        CompilationUnit unit = TreeConverter.convertCompilationUnit(jdtUnit, filePath, "");
+        CompilationUnit unit = TreeConverter.convertCompilationUnit(jdtUnit, file, source);
         typeCollector.visitAST(unit);
         OuterReferenceResolver.resolve(unit);
       }
     };
-    parser.parseFiles(options.getSourceFiles(), handler);
+    List<InputFile> inputFiles = new ArrayList<InputFile>();
+    for (String f: options.getSourceFiles()) {
+      inputFiles.add(new RegularInputFile(f));
+    }
+    parser.parseFiles(inputFiles, handler);
 
     if (ErrorUtil.errorCount() > 0) {
       return null;

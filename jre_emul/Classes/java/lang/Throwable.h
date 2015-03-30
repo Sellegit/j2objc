@@ -22,8 +22,8 @@
 #ifndef _JavaLangThrowable_H_
 #define _JavaLangThrowable_H_
 
-#import "JavaObject.h"
 #import "java/io/Serializable.h"
+#import "JavaObject.h"
 
 @class JavaIoPrintStream;
 @class JavaIoPrintWriter;
@@ -68,5 +68,36 @@
 - (void)addSuppressedWithJavaLangThrowable:(JavaLangThrowable *)exception;
 - (IOSObjectArray *)getSuppressed;
 @end
+
+CF_EXTERN_C_BEGIN
+
+void JavaLangThrowable_init(JavaLangThrowable *self);
+JavaLangThrowable *new_JavaLangThrowable_init();
+
+void JavaLangThrowable_initWithNSString_(JavaLangThrowable *self, NSString *message);
+JavaLangThrowable *new_JavaLangThrowable_initWithNSString_(NSString *message);
+
+void JavaLangThrowable_initWithNSString_withJavaLangThrowable_(
+    JavaLangThrowable *self, NSString *message, JavaLangThrowable *causeArg);
+JavaLangThrowable *new_JavaLangThrowable_initWithNSString_withJavaLangThrowable_(
+    NSString *message, JavaLangThrowable *causeArg);
+
+void JavaLangThrowable_initWithJavaLangThrowable_(
+    JavaLangThrowable *self, JavaLangThrowable *causeArg);
+JavaLangThrowable *new_JavaLangThrowable_initWithJavaLangThrowable_(JavaLangThrowable *causeArg);
+
+void JavaLangThrowable_initWithNSString_withJavaLangThrowable_withBoolean_withBoolean_(
+    JavaLangThrowable *self, NSString *message, JavaLangThrowable *causeArg, BOOL enableSuppression,
+    BOOL writeableStackTrace);
+JavaLangThrowable *
+    new_JavaLangThrowable_initWithNSString_withJavaLangThrowable_withBoolean_withBoolean_(
+    NSString *message, JavaLangThrowable *causeArg, BOOL enableSuppression,
+    BOOL writeableStackTrace);
+
+CF_EXTERN_C_END
+
+J2OBJC_EMPTY_STATIC_INIT(JavaLangThrowable)
+
+J2OBJC_TYPE_LITERAL_HEADER(JavaLangThrowable)
 
 #endif // _JavaLangThrowable_H_

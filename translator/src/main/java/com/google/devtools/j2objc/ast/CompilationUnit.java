@@ -16,6 +16,8 @@ package com.google.devtools.j2objc.ast;
 
 import com.google.common.base.Preconditions;
 import com.google.common.collect.Lists;
+import com.google.devtools.j2objc.file.InputFile;
+import com.google.devtools.j2objc.types.Types;
 import com.google.devtools.j2objc.util.NameTable;
 
 import org.eclipse.jdt.core.dom.ASTNode;
@@ -27,7 +29,7 @@ import java.util.List;
  */
 public class CompilationUnit extends TreeNode {
 
-  private final String sourceFileFullPath;
+  private final InputFile inputFile;
   private final String mainTypeName;
   private final String source;
   private final int[] newlines;
@@ -40,12 +42,17 @@ public class CompilationUnit extends TreeNode {
       ChildList.create(NativeDeclaration.class, this);
   private final ChildList<AbstractTypeDeclaration> types =
       ChildList.create(AbstractTypeDeclaration.class, this);
+  private final NameTable nameTable;
+  private final Types typesService;
 
   public CompilationUnit(
-      org.eclipse.jdt.core.dom.CompilationUnit jdtNode, String sourceFileFullPath,
+      org.eclipse.jdt.core.dom.CompilationUnit jdtNode, InputFile inputFile,
       String mainTypeName, String source) {
     super(jdtNode);
-    this.sourceFileFullPath = Preconditions.checkNotNull(sourceFileFullPath);
+    this.nameTable = NameTable.newNameTable();
+    this.typesService = Types.newTypes(jdtNode);
+    setGenerationContext();
+    this.inputFile = Preconditions.checkNotNull(inputFile);
     Preconditions.checkNotNull(mainTypeName);
     if (mainTypeName.endsWith(NameTable.PACKAGE_INFO_FILE_NAME)) {
       mainTypeName =
@@ -73,9 +80,24 @@ public class CompilationUnit extends TreeNode {
     }
   }
 
+  /**
+   * Sets the mutable global state that's particular to each CompilationUnit.
+   * Many of the operations in the ast, gen, translate, types, and util
+   * packages require these to be set to a given CompilationUnit before operations are performed
+   * on that unit.
+   * Using this method concurrently with NameTable/Types
+   * is incredibly, unbelievably, astoundingly not thread safe.
+   */
+  public void setGenerationContext() {
+    typesService.setInstance();
+    nameTable.setInstance();
+  }
+
   public CompilationUnit(CompilationUnit other) {
     super(other);
-    sourceFileFullPath = other.getSourceFileFullPath();
+    nameTable = other.nameTable;
+    typesService = other.typesService;
+    inputFile = other.getInputFile();
     mainTypeName = other.getMainTypeName();
     source = other.getSource();
     newlines = new int[other.newlines.length];
@@ -91,8 +113,8 @@ public class CompilationUnit extends TreeNode {
     return Kind.COMPILATION_UNIT;
   }
 
-  public String getSourceFileFullPath() {
-    return sourceFileFullPath;
+  public InputFile getInputFile() {
+    return inputFile;
   }
 
   public String getMainTypeName() {
@@ -194,7 +216,7 @@ public class CompilationUnit extends TreeNode {
   @Override
   public void validateInner() {
     super.validateInner();
-    Preconditions.checkNotNull(sourceFileFullPath);
+    Preconditions.checkNotNull(inputFile);
     Preconditions.checkNotNull(mainTypeName);
     Preconditions.checkNotNull(source);
     Preconditions.checkNotNull(packageDeclaration);

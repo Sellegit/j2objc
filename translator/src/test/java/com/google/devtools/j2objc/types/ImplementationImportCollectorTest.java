@@ -30,7 +30,7 @@ public class ImplementationImportCollectorTest extends GenerationTest {
 
   @Override
   protected void tearDown() throws Exception {
-    Options.setPackageDirectories(Options.DEFAULT_OUTPUT_STYLE_OPTION);
+    Options.setOutputStyle(Options.DEFAULT_OUTPUT_STYLE_OPTION);
     super.tearDown();
   }
 
@@ -119,12 +119,12 @@ public class ImplementationImportCollectorTest extends GenerationTest {
     assertTranslation(translation, "#include \"IOSClass.h\"");
   }
 
-  // Verify that an object array type literal imports IOSObjectArray.
+  // Verify that an object array type literal imports IOSClass.
   public void testArrayTypeLiteralImport() throws IOException {
     String translation = translateSourceFile(
         "class Test { Class arrayType() { return Object[].class; }}",
         "Test", "Test.m");
-    assertTranslation(translation, "#include \"IOSObjectArray.h\"");
+    assertTranslation(translation, "#include \"IOSClass.h\"");
   }
 
   // Verify that a multi-dimensional array declaration imports IOSObjectArray.
@@ -150,7 +150,7 @@ public class ImplementationImportCollectorTest extends GenerationTest {
 
   // Verify that platform class packages aren't truncated with --no-package-directories.
   public void testPlatformImports() throws IOException {
-    Options.setPackageDirectories(Options.OutputStyleOption.NONE);
+    Options.setOutputStyle(Options.OutputStyleOption.NONE);
     String translation = translateSourceFile(
         "package foo.bar; import org.xml.sax.*; import org.xml.sax.helpers.*; " +
         "class Test { XMLReader test() { " +
@@ -169,7 +169,7 @@ public class ImplementationImportCollectorTest extends GenerationTest {
 
   // Verify that platform class packages aren't changed with --preserve-full-paths.
   public void testPlatformImportsSourceDirs() throws IOException {
-    Options.setPackageDirectories(Options.OutputStyleOption.SOURCE);
+    Options.setOutputStyle(Options.OutputStyleOption.SOURCE);
     String translation = translateSourceFile(
         "package foo.bar; import org.xml.sax.*; import org.xml.sax.helpers.*; " +
         "class Test { XMLReader test() { " +
@@ -186,4 +186,10 @@ public class ImplementationImportCollectorTest extends GenerationTest {
     assertTranslation(translation, "#include \"org/xml/sax/helpers/XMLReaderFactory.h\"");
   }
 
+  public void testAddsHeaderForRenamedMainType() throws IOException {
+    String translation = translateSourceFile(
+        "package foo; import com.google.j2objc.annotations.ObjectiveCName;"
+        + " @ObjectiveCName(\"Bar\") class Test {}", "foo/Test", "foo/Test.m");
+    assertTranslation(translation, "#include \"foo/Test.h\"");
+  }
 }

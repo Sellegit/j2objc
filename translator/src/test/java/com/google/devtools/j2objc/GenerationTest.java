@@ -19,16 +19,19 @@ package com.google.devtools.j2objc;
 import com.google.common.base.Joiner;
 import com.google.common.collect.Lists;
 import com.google.common.io.Files;
+import com.google.common.io.Resources;
 import com.google.devtools.j2objc.ast.CompilationUnit;
 import com.google.devtools.j2objc.ast.MethodDeclaration;
 import com.google.devtools.j2objc.ast.Statement;
 import com.google.devtools.j2objc.ast.TreeConverter;
 import com.google.devtools.j2objc.ast.TreeVisitor;
+import com.google.devtools.j2objc.file.InputFile;
+import com.google.devtools.j2objc.file.RegularInputFile;
 import com.google.devtools.j2objc.gen.SourceBuilder;
 import com.google.devtools.j2objc.gen.StatementGenerator;
-import com.google.devtools.j2objc.types.Types;
 import com.google.devtools.j2objc.util.DeadCodeMap;
 import com.google.devtools.j2objc.util.ErrorUtil;
+import com.google.devtools.j2objc.util.FileUtil;
 import com.google.devtools.j2objc.util.JdtParser;
 import com.google.devtools.j2objc.util.NameTable;
 import com.google.devtools.j2objc.util.TimeTracker;
@@ -37,14 +40,18 @@ import junit.framework.TestCase;
 
 import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.OutputStream;
 import java.io.StringReader;
 import java.io.UnsupportedEncodingException;
+import java.net.URISyntaxException;
 import java.net.URL;
 import java.net.URLClassLoader;
 import java.net.URLDecoder;
 import java.nio.charset.Charset;
 import java.util.List;
+import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -68,11 +75,11 @@ public abstract class GenerationTest extends TestCase {
 
   @Override
   protected void setUp() throws IOException {
-    tempDir = createTempDir();
-    Options.load(new String[] {
-      "-d", tempDir.getAbsolutePath(),
-      "--mem-debug", // Run tests with memory debugging by default.
-      "--hide-private-members" // Future default, run tests with it now.
+    tempDir = FileUtil.createTempDir("testout");
+    Options.load(new String[]{
+        "-d", tempDir.getAbsolutePath(),
+        "-q", // Suppress console output.
+        "--hide-private-members" // Future default, run tests with it now.
     });
     parser = initializeParser(tempDir);
   }
@@ -81,8 +88,9 @@ public abstract class GenerationTest extends TestCase {
   protected void tearDown() throws Exception {
     Options.setHeaderMappingFiles(null);
     Options.getHeaderMappings().clear();
-    Options.setPackageDirectories(Options.OutputStyleOption.PACKAGE);
-    deleteTempDir(tempDir);
+    Options.setOutputStyle(Options.OutputStyleOption.PACKAGE);
+    Options.getSourcePathEntries().clear();
+    FileUtil.deleteTempDir(tempDir);
     ErrorUtil.reset();
   }
 
@@ -95,6 +103,10 @@ public abstract class GenerationTest extends TestCase {
 
   protected void setDeadCodeMap(DeadCodeMap deadCodeMap) {
     this.deadCodeMap = deadCodeMap;
+  }
+
+  protected void addSourcesToSourcepaths() throws IOException {
+    Options.getSourcePathEntries().add(tempDir.getCanonicalPath());
   }
 
   /**
@@ -129,12 +141,11 @@ public abstract class GenerationTest extends TestCase {
    */
   protected CompilationUnit translateType(String typeName, String source) {
     String typePath = typeName.replace('.', '/');
-    org.eclipse.jdt.core.dom.CompilationUnit unit = compileType(typePath, source);
-    NameTable.initialize();
-    Types.initialize(unit);
+    org.eclipse.jdt.core.dom.CompilationUnit unit = compileType(typePath + ".java", source);
     String fullSourcePath = Options.useSourceDirectories() ? "" : tempDir.getPath() + '/';
     fullSourcePath += typePath + ".java";
-    CompilationUnit newUnit = TreeConverter.convertCompilationUnit(unit, fullSourcePath, source);
+    CompilationUnit newUnit = TreeConverter.convertCompilationUnit(
+        unit, new RegularInputFile(fullSourcePath, typePath + ".java"), source);
     TranslationProcessor.applyMutations(newUnit, deadCodeMap, TimeTracker.noop());
     return newUnit;
   }
@@ -150,7 +161,12 @@ public abstract class GenerationTest extends TestCase {
     int errors = ErrorUtil.errorCount();
     parser.setEnableDocComments(Options.docCommentsEnabled());
     org.eclipse.jdt.core.dom.CompilationUnit unit = parser.parse(name, source);
-    assertEquals(errors, ErrorUtil.errorCount());
+    if (ErrorUtil.errorCount() > errors) {
+      int newErrorCount = ErrorUtil.errorCount() - errors;
+      String info = String.format(
+          "%d test compilation error%s", newErrorCount, (newErrorCount == 1 ? "" : "s"));
+      failWithMessages(info, ErrorUtil.getErrorMessages().subList(errors, ErrorUtil.errorCount()));
+    }
     return unit;
   }
 
@@ -174,33 +190,6 @@ public abstract class GenerationTest extends TestCase {
 
   protected String generateStatement(Statement statement) {
     return StatementGenerator.generate(statement, false, SourceBuilder.BEGINNING_OF_FILE).trim();
-  }
-
-  /**
-   * Returns a newly-created temporary directory.
-   */
-  protected File createTempDir() throws IOException {
-    File tempDir = File.createTempFile("testout", ".tmp");
-    tempDir.delete();
-    tempDir.mkdir();
-    return tempDir;
-  }
-
-  /**
-   * Recursively delete specified directory.
-   */
-  protected void deleteTempDir(File dir) {
-    // TODO(cpovirk): try Directories.deleteRecursively if a c.g.c.unix dep is OK
-    if (dir.exists()) {
-      for (File f : dir.listFiles()) {
-        if (f.isDirectory()) {
-          deleteTempDir(f);
-        } else {
-          f.delete();
-        }
-      }
-      dir.delete();
-    }
   }
 
   /**
@@ -248,9 +237,6 @@ public abstract class GenerationTest extends TestCase {
         }
         index += nextLine.length() + 1;  // Also skip trailing newline.
         if (!nextLine.trim().equals(lines[i].trim())) {
-          if (i == 0) {
-            return false;
-          }
           // Check if there is a subsequent match.
           return hasRegion(s.substring(index), lines);
         }
@@ -297,6 +283,13 @@ public abstract class GenerationTest extends TestCase {
     return result[0];
   }
 
+  protected void loadPackageInfo(String relativePath) throws IOException {
+    PackageInfoPreProcessor packageInfoPreProcessor = new PackageInfoPreProcessor(parser);
+    InputFile file = new RegularInputFile(tempDir.getCanonicalPath()
+        + File.separatorChar + relativePath);
+    packageInfoPreProcessor.processBatch(GenerationBatch.fromFile(file));
+  }
+
   /**
    * Translate a Java source file contents, returning the contents of either
    * the generated header or implementation file.
@@ -322,8 +315,21 @@ public abstract class GenerationTest extends TestCase {
   protected String translateSourceFile(String source, String typeName, String fileName)
       throws IOException {
     CompilationUnit unit = translateType(typeName, source);
-    TranslationProcessor.generateObjectiveCSource(unit, TimeTracker.noop());
+    TranslationProcessor.generateObjectiveCSource(
+        GenerationBatch.fromUnit(unit, typeName + ".java"), TimeTracker.noop());
     return getTranslatedFile(fileName);
+  }
+
+  protected String translateCombinedFiles(String outputPath, String extension, String... sources)
+      throws IOException {
+    GenerationBatch batch = new GenerationBatch();
+    for (String sourceFile: sources) {
+      batch.addSource(new RegularInputFile(tempDir + "/" + sourceFile, sourceFile), outputPath);
+    }
+    parser.setEnableDocComments(Options.docCommentsEnabled());
+    new HeaderMappingPreProcessor(parser).processBatch(batch);
+    new TranslationProcessor(parser, DeadCodeMap.builder().build()).processBatch(batch);
+    return getTranslatedFile(outputPath + extension);
   }
 
   protected void loadHeaderMappings() {
@@ -332,12 +338,24 @@ public abstract class GenerationTest extends TestCase {
 
   protected void loadSourceFileHeaderMappings(String... fileNames) {
     if (Options.shouldPreProcess()) {
-      List<String> files = Lists.newArrayList();
+      GenerationBatch batch = new GenerationBatch();
       for (String fileName : fileNames) {
-        files.add(tempDir.getPath() + "/" + fileName);
+        batch.addSource(new RegularInputFile(tempDir.getPath() + "/" + fileName, fileName));
       }
-      new HeaderMappingPreProcessor(parser).processFiles(files);
+      new HeaderMappingPreProcessor(parser).processBatch(batch);
     }
+  }
+
+  protected Map<String,String> writeAndReloadHeaderMappings() throws IOException {
+    File outputHeaderMappingFile = new File(tempDir.getPath() + "/mappings.j2objc");
+    outputHeaderMappingFile.deleteOnExit();
+    Options.setOutputHeaderMappingFile(outputHeaderMappingFile);
+    TranslationProcessor.printHeaderMappings();
+    Options.getHeaderMappings().clear();
+    Options.setOutputHeaderMappingFile(null);
+    Options.setHeaderMappingFiles(Lists.newArrayList(outputHeaderMappingFile.getAbsolutePath()));
+    loadHeaderMappings();
+    return Options.getHeaderMappings();
   }
 
   protected void addSourceFile(String source, String fileName) throws IOException {
@@ -357,11 +375,39 @@ public abstract class GenerationTest extends TestCase {
   }
 
   /**
+   * When running Java tests in a build, there is no formal guarantee that these resources
+   * be available as filesystem files. This copies a resource to a file in the temp dir,
+   * and returns the new path.
+   * The given resource name is relative to the class to which this method belongs
+   * (which might be a subclass of GenerationTest, in a different package).
+   */
+  public String getResourceAsFile(String resourceName) throws IOException {
+    URL url;
+    try {
+      url = getClass().getResource(resourceName).toURI().toURL();
+    } catch (URISyntaxException e) {
+      throw new IOException(e);
+    }
+    File file = new File(tempDir + "/resources/"
+        + getClass().getPackage().getName().replace('.', File.separatorChar)
+        + File.separatorChar + resourceName);
+    file.getParentFile().mkdirs();
+    OutputStream ostream = new FileOutputStream(file);
+    Resources.copy(url, ostream);
+    return file.getPath();
+  }
+
+  /**
    * Asserts that the correct number of warnings were reported during the
    * last translation.
    */
   protected void assertWarningCount(int expectedCount) {
-    assertEquals(expectedCount, ErrorUtil.warningCount());
+    if (expectedCount != ErrorUtil.warningCount()) {
+      failWithMessages(
+          String.format("Wrong number of warnings. Expected:%d but was:%d",
+                        expectedCount, ErrorUtil.warningCount()),
+          ErrorUtil.getWarningMessages());
+    }
   }
 
   /**
@@ -369,10 +415,27 @@ public abstract class GenerationTest extends TestCase {
    * last translation.
    */
   protected void assertErrorCount(int expectedCount) {
-    assertEquals(expectedCount, ErrorUtil.errorCount());
+    if (expectedCount != ErrorUtil.errorCount()) {
+      failWithMessages(
+          String.format("Wrong number of errors. Expected:%d but was:%d",
+                        expectedCount, ErrorUtil.errorCount()),
+          ErrorUtil.getErrorMessages());
+    }
+  }
+
+  private void failWithMessages(String info, List<String> messages) {
+    StringBuilder sb = new StringBuilder(info + "\n");
+    for (String msg : messages) {
+      sb.append(msg).append('\n');
+    }
+    fail(sb.toString());
   }
 
   protected String getTempDir() {
-   return tempDir.getPath();
+    return tempDir.getPath();
+  }
+
+  protected File getTempFile(String filename) {
+    return new File(tempDir, filename);
   }
 }

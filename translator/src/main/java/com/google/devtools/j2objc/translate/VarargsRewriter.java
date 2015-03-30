@@ -25,7 +25,6 @@ import com.google.devtools.j2objc.ast.MethodInvocation;
 import com.google.devtools.j2objc.ast.SuperConstructorInvocation;
 import com.google.devtools.j2objc.ast.SuperMethodInvocation;
 import com.google.devtools.j2objc.ast.TreeVisitor;
-import com.google.devtools.j2objc.types.IOSMethodBinding;
 
 import org.eclipse.jdt.core.dom.IMethodBinding;
 import org.eclipse.jdt.core.dom.ITypeBinding;
@@ -41,7 +40,7 @@ import java.util.List;
 public class VarargsRewriter extends TreeVisitor {
 
   private void rewriteVarargs(IMethodBinding method, List<Expression> args) {
-    if (!method.isVarargs() || IOSMethodBinding.hasVarArgsTarget(method)) {
+    if (!method.isVarargs()) {
       return;
     }
     ITypeBinding[] paramTypes = method.getParameterTypes();
@@ -49,10 +48,21 @@ public class VarargsRewriter extends TreeVisitor {
     assert lastParam.isArray();
     int varargsSize = args.size() - paramTypes.length + 1;
     if (varargsSize == 1) {
-      ITypeBinding lastArgType = args.get(args.size() - 1).getTypeBinding();
+      Expression lastArg = args.get(args.size() - 1);
+      ITypeBinding lastArgType = lastArg.getTypeBinding();
       if (lastArgType.isAssignmentCompatible(lastParam)) {
         // Last argument is already an array.
         return;
+      }
+      // Special case: check for a clone method invocation, since clone()'s return
+      // type is declared as Object but it always returns the caller's type.
+      if (lastArg instanceof MethodInvocation) {
+        MethodInvocation invocation = (MethodInvocation) lastArg;
+        if (invocation.getMethodBinding().getName().equals("clone")
+            && invocation.getArguments().isEmpty()
+            && invocation.getExpression().getTypeBinding().isAssignmentCompatible(lastParam)) {
+          return;
+        }
       }
     }
 

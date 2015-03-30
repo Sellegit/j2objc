@@ -98,10 +98,10 @@ public class ObjectiveCSourceFileGeneratorTest extends GenerationTest {
 
   public void testStaticAccessorsAdded() throws IOException {
     String header = translateSourceFile("class Test {"
-        + " private static int foo;"
-        + " private static final int finalFoo = 12;"
-        + " private static String bar;"
-        + " private static final String finalBar = \"test\";"
+        + " static int foo;"
+        + " static final int finalFoo = 12;"
+        + " static String bar;"
+        + " static final String finalBar = \"test\";"
         + " }", "Test", "Test.h");
     assertTranslation(header, "#define Test_finalFoo 12");
     assertTranslation(header, "J2OBJC_STATIC_FIELD_GETTER(Test, foo_, jint)");
@@ -112,9 +112,25 @@ public class ObjectiveCSourceFileGeneratorTest extends GenerationTest {
     assertNotInTranslation(header, "J2OBJC_STATIC_FIELD_SETTER(Test, finalBar_, NSString *)");
   }
 
+  public void testPrivateStaticAccessorsAdded() throws IOException {
+    String translation = translateSourceFile("class Test {"
+        + " private static int foo;"
+        + " private static final int finalFoo = 12;"
+        + " private static String bar;"
+        + " private static final String finalBar = \"test\";"
+        + " }", "Test", "Test.m");
+    assertTranslation(translation, "#define Test_finalFoo 12");
+    assertTranslation(translation, "J2OBJC_STATIC_FIELD_GETTER(Test, foo_, jint)");
+    assertTranslation(translation, "J2OBJC_STATIC_FIELD_REF_GETTER(Test, foo_, jint)");
+    assertTranslation(translation, "J2OBJC_STATIC_FIELD_GETTER(Test, bar_, NSString *)");
+    assertTranslation(translation, "J2OBJC_STATIC_FIELD_SETTER(Test, bar_, NSString *)");
+    assertTranslation(translation, "J2OBJC_STATIC_FIELD_GETTER(Test, finalBar_, NSString *)");
+    assertNotInTranslation(translation, "J2OBJC_STATIC_FIELD_SETTER(Test, finalBar_, NSString *)");
+  }
+
   public void testStaticReaderAddedWhenSameMethodNameExists() throws IOException {
     String translation = translateSourceFile(
-        "class Test { private static int foo; void foo(String s) {}}", "Test", "Test.h");
+        "class Test { static int foo; void foo(String s) {}}", "Test", "Test.h");
     assertTranslation(translation, "J2OBJC_STATIC_FIELD_GETTER(Test, foo__, jint)");
     assertTranslation(translation, "J2OBJC_STATIC_FIELD_REF_GETTER(Test, foo__, jint)");
     assertTranslation(translation, "- (void)fooWithNSString:(NSString *)s;");
@@ -193,5 +209,16 @@ public class ObjectiveCSourceFileGeneratorTest extends GenerationTest {
     translation = getTranslatedFile("Test.m");
     assertNotInTranslation(translation, "id o4_;");
     assertNotInTranslation(translation, "J2OBJC_FIELD_SETTER(Test, o4_, id)");
+  }
+
+  public void testSortingOfGenericTypes() throws IOException {
+    String translation = translateSourceFile(
+        "class Test { static class Inner1 extends Inner2<String> {} static class Inner2<T> {} }",
+        "Test", "Test.h");
+    String inner1 = "@interface Test_Inner1";
+    String inner2 = "@interface Test_Inner2";
+    assertTranslation(translation, inner1);
+    assertTranslation(translation, inner2);
+    assertTrue(translation.indexOf(inner2) < translation.indexOf(inner1));
   }
 }

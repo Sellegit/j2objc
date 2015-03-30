@@ -15,12 +15,12 @@
 #ifndef _JavaxAnnotationResource_H_
 #define _JavaxAnnotationResource_H_
 
-@class IOSClass;
-@class JavaxAnnotationResource_AuthenticationTypeEnum;
-
-#import "JreEmulation.h"
+#include "J2ObjC_common.h"
 #include "java/lang/Enum.h"
 #include "java/lang/annotation/Annotation.h"
+
+@class IOSClass;
+@class JavaxAnnotationResource_AuthenticationTypeEnum;
 
 /**
  * javax.annotation.Resource annotation. No code was referenced,
@@ -37,7 +37,6 @@
 @property (readonly) NSString *name;
 @property (readonly) jboolean shareable;
 @property (readonly) IOSClass *type;
-
 
 @end
 
@@ -68,7 +67,9 @@
 
 @end
 
-__attribute__((always_inline)) inline void JavaxAnnotationResource_init() {}
+J2OBJC_EMPTY_STATIC_INIT(JavaxAnnotationResource)
+
+J2OBJC_TYPE_LITERAL_HEADER(JavaxAnnotationResource)
 
 typedef NS_ENUM(NSUInteger, JavaxAnnotationResource_AuthenticationType) {
   JavaxAnnotationResource_AuthenticationType_APPLICATION = 0,
@@ -93,7 +94,6 @@ FOUNDATION_EXPORT JavaxAnnotationResource_AuthenticationTypeEnum *
 
 @end
 
-FOUNDATION_EXPORT BOOL JavaxAnnotationResource_AuthenticationTypeEnum_initialized;
 J2OBJC_STATIC_INIT(JavaxAnnotationResource_AuthenticationTypeEnum)
 
 FOUNDATION_EXPORT JavaxAnnotationResource_AuthenticationTypeEnum *
@@ -108,5 +108,7 @@ J2OBJC_ENUM_CONSTANT_GETTER(JavaxAnnotationResource_AuthenticationTypeEnum, APPL
     JavaxAnnotationResource_AuthenticationTypeEnum_values_\
     [JavaxAnnotationResource_AuthenticationType_CONTAINER]
 J2OBJC_ENUM_CONSTANT_GETTER(JavaxAnnotationResource_AuthenticationTypeEnum, CONTAINER)
+
+J2OBJC_TYPE_LITERAL_HEADER(JavaxAnnotationResource_AuthenticationTypeEnum)
 
 #endif // _JavaxAnnotationResource_H_
