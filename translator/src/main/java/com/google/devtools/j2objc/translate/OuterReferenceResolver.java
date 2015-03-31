@@ -351,8 +351,8 @@ public class OuterReferenceResolver extends TreeVisitor {
     IVariableBinding var = TreeUtil.getVariableBinding(node);
     if (var != null) {
       if (var.isField() && !Modifier.isStatic(var.getModifiers())) {
-        System.err.println("adding path for: " + var);
-        System.err.println("path: " + getPathForField(var));
+//        System.err.println("adding path for: " + var);
+//        System.err.println("path: " + getPathForField(var));
         addPath(node, getPathForField(var));
       } else if (!var.isField()) {
         addPath(node, getPathForLocalVar(var));

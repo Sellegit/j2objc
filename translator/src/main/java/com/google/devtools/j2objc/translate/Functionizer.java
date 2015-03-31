@@ -459,8 +459,11 @@ public class Functionizer extends TreeVisitor {
     }
 
     ITypeBinding current = binding.getDeclaringClass();
+
     while (current != null) {
-      if (BindingUtil.isMappedToNative(current)) {
+      // HACK if it goes back to an Adapter class, it means the inheritance chain is not
+      //   known in current j2objc binding system, and hence constructor cannot be funcionized
+      if (BindingUtil.isMappedToNative(current) || BindingUtil.isAdapter(current)) {
         return true;
       } else {
         current = current.getSuperclass();
