@@ -25,6 +25,7 @@ import com.google.devtools.j2objc.ast.FieldDeclaration;
 import com.google.devtools.j2objc.ast.FunctionDeclaration;
 import com.google.devtools.j2objc.ast.MethodDeclaration;
 import com.google.devtools.j2objc.ast.NativeDeclaration;
+import com.google.devtools.j2objc.ast.NativeStatement;
 import com.google.devtools.j2objc.ast.Statement;
 import com.google.devtools.j2objc.ast.TreeUtil;
 import com.google.devtools.j2objc.ast.VariableDeclarationFragment;
@@ -132,6 +133,10 @@ public class TypeImplementationGenerator extends TypeGenerator {
     }
     newline();
     syncLineNumbers(m.getName());  // avoid doc-comment
+    if (m.getMethodBinding().isConstructor()) {
+      // TODO: ugly hack for now
+      m.getBody().getStatements().add(new NativeStatement("return self;"));
+    }
     String methodBody = generateStatement(m.getBody(), /* isFunction */ false);
     print(getMethodSignature(m) + " " + reindent(methodBody) + "\n");
   }

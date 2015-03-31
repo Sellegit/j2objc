@@ -75,6 +75,9 @@ public class IOSBlockTypeBinding extends IOSTypeBinding {
       }
       sb.append(arg);
     }
+    if (first) {
+      sb.append("void");
+    }
     sb.append(")");
 
     return sb.toString();

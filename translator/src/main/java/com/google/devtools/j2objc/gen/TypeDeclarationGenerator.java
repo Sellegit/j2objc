@@ -237,7 +237,10 @@ public class TypeDeclarationGenerator extends TypeGenerator {
         print("__weak ");
       }
       String objcType = NameTable.getSpecificObjCType(varType);
-      boolean needsAsterisk = !varType.isPrimitive() && !objcType.matches("id|id<.*>|Class");
+      boolean needsAsterisk = !varType.isPrimitive()
+                              && !objcType.matches("id|id<.*>|Class")
+                              && !BindingUtil.isValueType(varType)
+                              && !(varType instanceof IOSBlockTypeBinding);
       if (needsAsterisk && objcType.endsWith(" *")) {
         // Strip pointer from type, as it will be added when appending fragment.
         // This is necessary to create "Foo *one, *two;" declarations.
@@ -378,11 +381,12 @@ public class TypeDeclarationGenerator extends TypeGenerator {
       return;
     }
 
-    String objcType = NameTable.getObjCType(var.getType());
+    ITypeBinding binding = var.getType();
+    String objcType = NameTable.getObjCType(binding);
     String typeWithSpace = objcType + (objcType.endsWith("*") ? "" : " ");
     String name = NameTable.getStaticVarName(var);
     boolean isFinal = Modifier.isFinal(var.getModifiers());
-    boolean isPrimitive = var.getType().isPrimitive();
+    boolean isPrimitive = binding.isPrimitive();
     newline();
     if (BindingUtil.isPrimitiveConstant(var)) {
       name = var.getName();
@@ -392,7 +396,7 @@ public class TypeDeclarationGenerator extends TypeGenerator {
     }
     printf("J2OBJC_STATIC_FIELD_GETTER(%s, %s, %s)\n", typeName, name, objcType);
     if (!isFinal) {
-      if (isPrimitive) {
+      if (isPrimitive || BindingUtil.isValueType(binding) || binding instanceof IOSBlockTypeBinding) {
         printf("J2OBJC_STATIC_FIELD_REF_GETTER(%s, %s, %s)\n", typeName, name, objcType);
       } else {
         printf("J2OBJC_STATIC_FIELD_SETTER(%s, %s, %s)\n", typeName, name, objcType);

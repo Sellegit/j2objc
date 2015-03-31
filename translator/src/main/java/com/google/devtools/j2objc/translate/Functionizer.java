@@ -233,6 +233,9 @@ public class Functionizer extends TreeVisitor {
     if (BindingUtil.isMappedToNative(binding)) {
       return;
     }
+    if (isConstructorOfMappedClass(binding)) {
+      return;
+    }
 
     ITypeBinding declaringClass = binding.getDeclaringClass();
     FunctionInvocation invocation = new FunctionInvocation(
@@ -259,6 +262,9 @@ public class Functionizer extends TreeVisitor {
     if (BindingUtil.isMappedToNative(binding)) {
       return;
     }
+    if (isConstructorOfMappedClass(binding)) {
+      return;
+    }
 
     FunctionInvocation invocation = new FunctionInvocation(
         NameTable.getAllocatingConstructorName(binding), type, type, type);
@@ -277,6 +283,10 @@ public class Functionizer extends TreeVisitor {
     if (BindingUtil.isMappedToNative(binding)) {
       // mapped method should not be functionized. they will not
       //   be called anyways
+      return;
+    }
+
+    if (isConstructorOfMappedClass(binding)) {
       return;
     }
 
@@ -351,11 +361,14 @@ public class Functionizer extends TreeVisitor {
 
     if (BindingUtil.isStatic(m)) {
       // Add class initialization invocation, since this may be the first use of this class.
-      String initName = String.format("%s_initialize", NameTable.getFullName(declaringClass));
-      ITypeBinding voidType = Types.resolveJavaType("void");
-      FunctionInvocation initCall =
-          new FunctionInvocation(initName, voidType, voidType, declaringClass);
-      function.getBody().getStatements().add(0, new ExpressionStatement(initCall));
+      if (!BindingUtil.isMappedToNative(declaringClass)) {
+        // Note, if the class is mapped to a native class, such initialization is not needed
+        String initName = String.format("%s_initialize", NameTable.getFullName(declaringClass));
+        ITypeBinding voidType = Types.resolveJavaType("void");
+        FunctionInvocation initCall =
+            new FunctionInvocation(initName, voidType, voidType, declaringClass);
+        function.getBody().getStatements().add(0, new ExpressionStatement(initCall));
+      }
     }
 
     if (!BindingUtil.isStatic(m)) {
@@ -433,6 +446,23 @@ public class Functionizer extends TreeVisitor {
     } else {
       stmts.add(new ReturnStatement(invocation));
     }
+  }
+
+  private boolean isConstructorOfMappedClass(IMethodBinding binding) {
+    if (!binding.isConstructor()) {
+      return false;
+    }
+
+    ITypeBinding current = binding.getDeclaringClass();
+    while (current != null) {
+      if (BindingUtil.isMappedToNative(current)) {
+        return true;
+      } else {
+        current = current.getSuperclass();
+      }
+    }
+
+    return false;
   }
 
   /**

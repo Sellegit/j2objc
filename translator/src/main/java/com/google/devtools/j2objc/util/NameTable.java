@@ -738,6 +738,7 @@ public class NameTable {
     if (BindingUtil.isValueType(type)) {
       return getFullName(type);
     } else if (type instanceof IOSBlockTypeBinding){
+      return ((IOSBlockTypeBinding) type).getParameterSignature();
     }
 
     String objCType;

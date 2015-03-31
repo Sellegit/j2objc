@@ -517,7 +517,7 @@ public class StatementGenerator extends TreeVisitor {
     }
 
     if (BindingUtil.isMappedToNative(binding)) {
-      buffer.append("[" + receiver);
+      buffer.append("self = [" + receiver);
       printMethodInvocationNameAndArgs(binding, args);
       buffer.append("];\n");
 

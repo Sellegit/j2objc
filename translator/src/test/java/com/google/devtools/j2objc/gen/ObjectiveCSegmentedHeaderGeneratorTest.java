@@ -117,4 +117,10 @@ public class ObjectiveCSegmentedHeaderGeneratorTest extends GenerationTest {
     // is restricted to only the Foo type.
     assertTranslation(translation, "@class Foo_Bar");
   }
+
+  public void testValueTypeInstanceVariablesShouldNotHaveAsterisk() throws IOException {
+    String translation = translateSourceFile(
+        "class ValueType {} class Test extends ValueType { public Test go; }", "Test", "Test.h");
+    assertTranslatedLines(translation, "Test go_");
+  }
 }

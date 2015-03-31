@@ -49,6 +49,11 @@ public class BlockRewriter extends TreeVisitor {
   public static int blockCounter = 0;
 
   @Override
+  public boolean visit(TypeDeclaration node) {
+    return !BindingUtil.isAdapter(node.getTypeBinding()) && !BindingUtil.isMappedToNative(node.getTypeBinding());
+  }
+
+  @Override
   public void endVisit(MethodDeclaration node) {
     IMethodBinding binding = node.getMethodBinding();
 
