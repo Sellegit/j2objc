@@ -156,10 +156,6 @@ public class OuterReferenceFixer extends TreeVisitor {
 
   @Override
   public boolean visit(SimpleName node) {
-//    if (true) {
-//      return true;
-//    }
-
     List<IVariableBinding> path = OuterReferenceResolver.getPath(node);
     if (path != null) {
       if (path.size() == 1 && path.get(0).getConstantValue() != null) {
@@ -200,7 +196,7 @@ public class OuterReferenceFixer extends TreeVisitor {
 
   private List<IVariableBinding> fixPath(List<IVariableBinding> path) {
     if (path.get(0) == OuterReferenceResolver.OUTER_PARAMETER) {
-      assert outerParam != null;
+      assert outerParam != null : "Trying to fix path: " + path;
       path = Lists.newArrayList(path);
       path.set(0, outerParam);
     }

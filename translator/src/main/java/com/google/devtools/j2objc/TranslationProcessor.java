@@ -229,9 +229,6 @@ class TranslationProcessor extends FileProcessor {
     new BlockRewriter().run(unit);
     ticker.tick("BlockRewriter");
 
-    new AdapterRewriter().run(unit);
-    ticker.tick("AdapterRewriter");
-
     // run before functionizer
     new CFTypeCastResolver().run(unit);
     ticker.tick("CFTypeCastResolver");
@@ -358,6 +355,9 @@ class TranslationProcessor extends FileProcessor {
     //   top-level and functionizing to have occured.
     new PrivateDeclarationResolver().run(unit);
     ticker.tick("PrivateDeclarationResolver");
+
+    new AdapterRewriter().run(unit);
+    ticker.tick("AdapterRewriter");
 
     for (Plugin plugin : Options.getPlugins()) {
       plugin.processUnit(unit);

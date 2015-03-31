@@ -96,6 +96,7 @@ import com.google.devtools.j2objc.ast.VariableDeclarationExpression;
 import com.google.devtools.j2objc.ast.VariableDeclarationFragment;
 import com.google.devtools.j2objc.ast.VariableDeclarationStatement;
 import com.google.devtools.j2objc.ast.WhileStatement;
+import com.google.devtools.j2objc.translate.Functionizer;
 import com.google.devtools.j2objc.types.IOSBlockTypeBinding;
 import com.google.devtools.j2objc.types.IOSMethod;
 import com.google.devtools.j2objc.types.IOSMethodBinding;
@@ -428,7 +429,8 @@ public class StatementGenerator extends TreeVisitor {
 
   @Override
   public boolean visit(ClassInstanceCreation node) {
-    if (BindingUtil.isMappedToNative(node.getMethodBinding())) {
+    IMethodBinding binding = node.getMethodBinding();
+    if (BindingUtil.isMappedToNative(binding) || Functionizer.isConstructorOfMappedClass(binding)) {
       ITypeBinding type = node.getType().getTypeBinding();
       boolean addAutorelease = useReferenceCounting && !node.hasRetainedResult();
       buffer.append(addAutorelease ? "[[[" : "[[");
@@ -516,7 +518,7 @@ public class StatementGenerator extends TreeVisitor {
       throw new AssertionError("Illegal statement type.");
     }
 
-    if (BindingUtil.isMappedToNative(binding)) {
+    if (BindingUtil.isMappedToNative(binding) || Functionizer.isConstructorOfMappedClass(binding)) {
       buffer.append("self = [" + receiver);
       printMethodInvocationNameAndArgs(binding, args);
       buffer.append("];\n");

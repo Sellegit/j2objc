@@ -453,7 +453,7 @@ public class Functionizer extends TreeVisitor {
     }
   }
 
-  private boolean isConstructorOfMappedClass(IMethodBinding binding) {
+  static public boolean isConstructorOfMappedClass(IMethodBinding binding) {
     if (!binding.isConstructor()) {
       return false;
     }
