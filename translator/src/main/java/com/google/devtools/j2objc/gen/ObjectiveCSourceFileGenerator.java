@@ -198,6 +198,11 @@ public abstract class ObjectiveCSourceFileGenerator extends AbstractSourceGenera
         ITypeBinding typeBinding = node.getTypeBinding();
         if (!BindingUtil.isAdapter(typeBinding)) {
           String key = typeBinding.getKey();
+          if (nodeMap.get(key) != null) {
+            System.err.println("same key for two nodes: " + key);
+            System.err.println("node1: " + nodeMap.get(key));
+            System.err.println("node2: " + node);
+          }
           assert nodeMap.put(key, node) == null;
         }
       }

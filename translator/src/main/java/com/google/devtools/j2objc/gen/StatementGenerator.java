@@ -428,25 +428,26 @@ public class StatementGenerator extends TreeVisitor {
 
   @Override
   public boolean visit(ClassInstanceCreation node) {
-    // ITypeBinding type = node.getType().getTypeBinding();
-    // boolean addAutorelease = useReferenceCounting && !node.hasRetainedResult();
-    // buffer.append(addAutorelease ? "[[[" : "[[");
-    // buffer.append(NameTable.getFullName(type));
-    // // if the method binding is a mapped constructor, use that instead
-    // IMethodBinding method = node.getMethodBinding();
-    // if (method instanceof IOSMethodBinding) {
-    //   buffer.append(" alloc] " + method.getName());
-    // } else {
-    //   buffer.append(" alloc] init");
-    // }
-    // List<Expression> arguments = node.getArguments();
-    // printArguments(method, arguments);
-    // buffer.append(']');
-    // if (addAutorelease) {
-    //   buffer.append(" autorelease]");
-    // }
-    // return false;
-    throw new AssertionError("ClassInstanceCreation nodes are rewritten by Functionizer.");
+    if (BindingUtil.isMappedToNative(node.getMethodBinding())) {
+      ITypeBinding type = node.getType().getTypeBinding();
+      boolean addAutorelease = useReferenceCounting && !node.hasRetainedResult();
+      buffer.append(addAutorelease ? "[[[" : "[[");
+      buffer.append(NameTable.getFullName(type));
+      // if the method binding is a mapped constructor, use that instead
+      IMethodBinding method = node.getMethodBinding();
+      buffer.append(" alloc]");
+      List<Expression> arguments = node.getArguments();
+      printMethodInvocationNameAndArgs(method, arguments);
+      buffer.append(']');
+      if (addAutorelease) {
+         buffer.append(" autorelease]");
+      }
+
+      return false;
+    } else {
+      throw new AssertionError(
+          "ClassInstanceCreation nodes are rewritten by Functionizer. node: " + node);
+    }
   }
 
   @Override
@@ -490,7 +491,40 @@ public class StatementGenerator extends TreeVisitor {
 
   @Override
   public boolean visit(ConstructorInvocation node) {
-    throw new AssertionError("ConstructorInvocation nodes are rewritten by Functionizer.");
+    return visitConstructorInvocation(node);
+  }
+
+  @Override
+  public boolean visit(SuperConstructorInvocation node) {
+    return visitConstructorInvocation(node);
+  }
+
+  private boolean visitConstructorInvocation(Statement node) {
+    IMethodBinding binding;
+    List<Expression> args;
+    String receiver;
+
+    if (node instanceof ConstructorInvocation) {
+      binding = ((ConstructorInvocation) node).getMethodBinding();
+      args = ((ConstructorInvocation) node).getArguments();
+      receiver = "self";
+    } else if (node instanceof SuperConstructorInvocation) {
+      binding = ((SuperConstructorInvocation) node).getMethodBinding();
+      args = ((SuperConstructorInvocation) node).getArguments();
+      receiver = "super";
+    } else {
+      throw new AssertionError("Illegal statement type.");
+    }
+
+    if (BindingUtil.isMappedToNative(binding)) {
+      buffer.append("[" + receiver);
+      printMethodInvocationNameAndArgs(binding, args);
+      buffer.append("];\n");
+
+      return false;
+    } else {
+      throw new AssertionError("SuperConstructorInvocation nodes are rewritten by Functionizer.");
+    }
   }
 
   @Override
@@ -1042,23 +1076,6 @@ public class StatementGenerator extends TreeVisitor {
     buffer.append(lengthString);
     buffer.append(']');
     return buffer.toString();
-  }
-
-  @Override
-  public boolean visit(SuperConstructorInvocation node) {
-      // IMethodBinding binding = node.getMethodBinding();
-
-      // buffer.append("[super ");
-      // if (binding instanceof IOSMethodBinding) {
-      //   buffer.append(binding.getName());
-      // } else {
-      //   buffer.append("init");
-      // }
-      // List<Expression> args = node.getArguments();
-      // printArguments(binding, args);
-      // buffer.append(']');
-      // return false;
-    throw new AssertionError("SuperConstructorInvocation nodes are rewritten by Functionizer.");
   }
 
   @Override

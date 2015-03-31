@@ -42,6 +42,7 @@ import com.google.devtools.j2objc.translate.DeadCodeEliminatorTest;
 import com.google.devtools.j2objc.translate.DestructorGeneratorTest;
 import com.google.devtools.j2objc.translate.EnhancedForRewriterTest;
 import com.google.devtools.j2objc.translate.EnumRewriterTest;
+import com.google.devtools.j2objc.translate.Functionizer;
 import com.google.devtools.j2objc.translate.FunctionizerTest;
 import com.google.devtools.j2objc.translate.GwtConverterTest;
 import com.google.devtools.j2objc.translate.InitializationNormalizerTest;
@@ -142,7 +143,7 @@ public class SmallTests {
 
   private static final Class<?>[] smallTestClasses = //smallTestClassesPrime;
   new Class[]{
-      JavaToIOSMethodTranslatorTest.class
+      FunctionizerTest.class
   };
 
   public static Test suite() {

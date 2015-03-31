@@ -45,6 +45,7 @@ import com.google.devtools.j2objc.ast.SuperMethodInvocation;
 import com.google.devtools.j2objc.ast.ThisExpression;
 import com.google.devtools.j2objc.ast.TreeUtil;
 import com.google.devtools.j2objc.ast.TreeVisitor;
+import com.google.devtools.j2objc.ast.TypeDeclaration;
 import com.google.devtools.j2objc.types.AbstractTypeBinding;
 import com.google.devtools.j2objc.ast.VariableDeclarationStatement;
 import com.google.devtools.j2objc.types.GeneratedVariableBinding;
@@ -168,6 +169,7 @@ public class Functionizer extends TreeVisitor {
     return !hasSuperMethodInvocation(node);
   }
 
+
   private static boolean hasSuperMethodInvocation(MethodDeclaration node) {
     final boolean[] result = new boolean[1];
     result[0] = false;
@@ -228,6 +230,10 @@ public class Functionizer extends TreeVisitor {
 
   private void visitConstructorInvocation(
       Statement node, IMethodBinding binding, List<Expression> args) {
+    if (BindingUtil.isMappedToNative(binding)) {
+      return;
+    }
+
     ITypeBinding declaringClass = binding.getDeclaringClass();
     FunctionInvocation invocation = new FunctionInvocation(
         NameTable.getFullFunctionName(binding), declaringClass, declaringClass, declaringClass);
@@ -250,6 +256,10 @@ public class Functionizer extends TreeVisitor {
   public void endVisit(ClassInstanceCreation node) {
     IMethodBinding binding = node.getMethodBinding();
     ITypeBinding type = binding.getDeclaringClass();
+    if (BindingUtil.isMappedToNative(binding)) {
+      return;
+    }
+
     FunctionInvocation invocation = new FunctionInvocation(
         NameTable.getAllocatingConstructorName(binding), type, type, type);
     TreeUtil.moveList(node.getArguments(), invocation.getArguments());
@@ -278,6 +288,7 @@ public class Functionizer extends TreeVisitor {
         || !extraSelectors.isEmpty()) {
       ITypeBinding declaringClass = binding.getDeclaringClass();
       function = makeFunction(node);
+
       for (String selector : extraSelectors) {
         declarationList.add(makeExtraMethodDeclaration(node, selector, function));
       }
@@ -484,5 +495,6 @@ public class Functionizer extends TreeVisitor {
         node.setQualifier(new SimpleName(selfParam));
       }
     }
+
   }
 }

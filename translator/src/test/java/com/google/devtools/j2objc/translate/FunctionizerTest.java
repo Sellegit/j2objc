@@ -88,7 +88,7 @@ public class FunctionizerTest extends GenerationTest {
         "- (NSString *)strWithNSString:(NSString *)msg",
         "withIOSClass:(IOSClass *)cls {");
     assertTranslation(translation,
-        "return [self strWithNSString:msg withIOSClass:[self getClass]];");
+                      "return [self strWithNSString:msg withIOSClass:[self getClass]];");
   }
 
   // Verify instance field access in function.
@@ -201,8 +201,8 @@ public class FunctionizerTest extends GenerationTest {
         + "    private void test(B b) { b.test(); }}}",
         "A", "A.m");
     assertTranslatedLines(translation,
-        "- (void)testWithA_B:(A_B *)b {",
-        "A_B_test(nil_chk(b));");
+                          "- (void)testWithA_B:(A_B *)b {",
+                          "A_B_test(nil_chk(b));");
   }
 
   // Verify annotation parameters are ignored.
@@ -282,7 +282,7 @@ public class FunctionizerTest extends GenerationTest {
     translation = getTranslatedFile("A.m");
     assertTranslation(translation, functionHeader + " {");
     assertTranslation(translation, "return A_strcharsWithCharArray_("
-        + "[IOSCharArray arrayWithChars:(jchar[]){ 'a', 'b', 'c' } count:3]);");
+                                   + "[IOSCharArray arrayWithChars:(jchar[]){ 'a', 'b', 'c' } count:3]);");
   }
 
   public void testAssertInFunction() throws IOException {
@@ -375,7 +375,7 @@ public class FunctionizerTest extends GenerationTest {
     assertTranslation(translation, "static void A_setOWithId_(A *self, id o);");
     assertTranslatedLines(translation, "void A_setOWithId_(A *self, id o) {", "self->o_ = o;", "}");
     assertTranslatedLines(translation,
-        "- (void)setOWithId:(id)o {", "A_setOWithId_(self, o);", "}");
+                          "- (void)setOWithId:(id)o {", "A_setOWithId_(self, o);", "}");
   }
 
   public void testGenericMethod() throws IOException {
@@ -450,9 +450,9 @@ public class FunctionizerTest extends GenerationTest {
         "public class A { static class Base { static void test() {} } "
         + "static class Foo extends Base { void test2() { super.test(); } }}", "A", "A.m");
     assertTranslatedLines(translation,
-        "- (void)test2 {",
-        "  A_Base_test();",
-        "}");
+                          "- (void)test2 {",
+                          "  A_Base_test();",
+                          "}");
   }
 
   public void testSuperInvocationFromConstructor() throws IOException {
@@ -499,6 +499,53 @@ public class FunctionizerTest extends GenerationTest {
         "  Test_initWithNSString_(self, s);",
         "  return self;",
         "}");
+  }
+
+  public void testShouldNotFunctionizeMappedTypeConstructor() throws IOException {
+    String translation = translateSourceFile(
+        "import com.google.j2objc.annotations.*;\n"
+        + "@Mapping(\"Test\")\n"
+        + "class Test { String s; "
+        + "Test() { this(\"foo\"); } "
+        + "private Test(String s) { this.s = s; } }", "Test", "Test.h");
+    assertNotInTranslation(translation, "FOUNDATION_EXPORT void Test_init(Test *self);");
+  }
+
+  public void testShouldNotFunctionizeInvocationOfMappedTypeConstructor() throws IOException {
+    String translation = translateSourceFile(
+        "import java.io.*;\n"
+        + "import java.nio.*;\n"
+        + "import java.util.*;\n"
+        + "import com.google.j2objc.annotations.*;\n"
+        + "\n"
+        + "@Mapping(\"Stuffy\")\n"
+        + "class Test {}\n"
+        + "\n"
+        + "@Mapping(\"Duche\")\n"
+        + "class Hehe {\n"
+        + "  @Mapping(\"hehe:hihi:\")\n"
+        + "  public Hehe(Object okasd, int ok) {\n"
+        + "  }\n"
+        + "}\n"
+        + "\n"
+        + "class Haha extends Hehe {\n"
+        + "  @Mapping(\"inity\")\n"
+        + "  public Haha() {\n"
+        + "    super(null, 0);\n"
+        + "  }\n"
+        + "\n"
+        + "  @Mapping(\"inityyy:\")\n"
+        + "  public Haha(String ok) {\n"
+        + "    this();\n"
+        + "    new Test();\n"
+        + "  }\n"
+        + "}\n", "Haha", "Haha.m");
+    // this constructor call
+    assertTranslation(translation, "[self inity];");
+    // Super constructor call
+    assertTranslation(translation, "[super hehe:nil hihi:0];");
+    // Mapped constructor call
+    assertTranslation(translation, "[[[Stuffy alloc] init] autorelease];");
   }
 
   public void testNoAllocatingConstructorsForAbstractClass() throws IOException {

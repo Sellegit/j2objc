@@ -499,11 +499,17 @@ public final class BindingUtil {
   }
 
   public static boolean isMappedToNative(IBinding binding) {
-    return extractMappingName(binding) != null
-           || extractExtensionMappingName(binding) != null
-           || extractDotMappingName(binding) != null
-           || extractGlobalConstantName(binding) != null
-           || extractGlobalFunctionName(binding) != null;
+    if (binding instanceof IMethodBinding
+        && ((IMethodBinding) binding).isConstructor()) {
+      return extractMappingName(binding) != null
+             || extractMappingName(((IMethodBinding) binding).getDeclaringClass()) != null;
+    } else {
+      return extractMappingName(binding) != null
+             || extractExtensionMappingName(binding) != null
+             || extractDotMappingName(binding) != null
+             || extractGlobalConstantName(binding) != null
+             || extractGlobalFunctionName(binding) != null;
+    }
   }
 
   static final Splitter IOS_METHOD_PART_SPLITTER =

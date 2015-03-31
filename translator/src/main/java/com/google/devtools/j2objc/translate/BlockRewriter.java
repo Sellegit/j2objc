@@ -46,6 +46,8 @@ import javax.naming.Binding;
  */
 public class BlockRewriter extends TreeVisitor {
 
+  public static int blockCounter = 0;
+
   @Override
   public void endVisit(MethodDeclaration node) {
     IMethodBinding binding = node.getMethodBinding();
@@ -143,7 +145,7 @@ public class BlockRewriter extends TreeVisitor {
 
     GeneratedTypeBinding blockTypeBinding =
         new GeneratedTypeBinding(
-            "$block" + i, binding.getDeclaringClass().getPackage(), Types.getNSObject(),
+            "$block" + (BlockRewriter.blockCounter++), binding.getDeclaringClass().getPackage(), Types.getNSObject(),
             false, null, binding.getDeclaringClass()
         );
     blockTypeBinding.addInterface(blockInterfaceType);
