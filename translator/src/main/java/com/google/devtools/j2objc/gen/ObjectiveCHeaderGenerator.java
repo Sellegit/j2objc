@@ -25,6 +25,7 @@ import com.google.devtools.j2objc.ast.PackageDeclaration;
 import com.google.devtools.j2objc.ast.TreeUtil;
 import com.google.devtools.j2objc.types.HeaderImportCollector;
 import com.google.devtools.j2objc.types.Import;
+import com.google.devtools.j2objc.util.BindingUtil;
 
 import java.util.Set;
 
@@ -113,7 +114,8 @@ public class ObjectiveCHeaderGenerator extends ObjectiveCSourceFileGenerator {
     Set<String> includeStmts = Sets.newTreeSet();
     includeStmts.add("#include \"J2ObjC_header.h\"");
       for (Import imp : collector.getSuperTypes()) {
-        if (!isLocalType(imp.getType())) {
+        if (!isLocalType(imp.getType())
+            || BindingUtil.extractLibraryName(imp.getType()) != null) {
           includeStmts.add(imp.getIncludeStatement());
         }
     }

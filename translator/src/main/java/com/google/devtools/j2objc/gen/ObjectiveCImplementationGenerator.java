@@ -27,6 +27,7 @@ import com.google.devtools.j2objc.ast.TreeUtil;
 import com.google.devtools.j2objc.types.HeaderImportCollector;
 import com.google.devtools.j2objc.types.ImplementationImportCollector;
 import com.google.devtools.j2objc.types.Import;
+import com.google.devtools.j2objc.util.BindingUtil;
 import com.google.devtools.j2objc.util.NameTable;
 import com.google.devtools.j2objc.util.TranslationUtil;
 
@@ -179,7 +180,8 @@ public class ObjectiveCImplementationGenerator extends ObjectiveCSourceFileGener
     importStmts.add("#include \"" + getGenerationUnit().getOutputPath() + ".h\"");
     for (Import imp : imports) {
       // Local types are handled by including the current file's header.
-      if (!isLocalType(imp.getType())) {
+      if (!isLocalType(imp.getType())
+          || BindingUtil.extractLibraryName(imp.getType()) != null) {
         importStmts.add(imp.getIncludeStatement());
       }
     }
