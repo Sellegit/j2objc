@@ -508,7 +508,9 @@ public final class BindingUtil {
              || extractExtensionMappingName(binding) != null
              || extractDotMappingName(binding) != null
              || extractGlobalConstantName(binding) != null
-             || extractGlobalFunctionName(binding) != null;
+             || extractGlobalFunctionName(binding) != null
+             || (binding instanceof ITypeBinding
+                 && BindingUtil.isAdapter((ITypeBinding) binding));
     }
   }
 

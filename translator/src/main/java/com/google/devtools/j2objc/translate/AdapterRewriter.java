@@ -27,12 +27,13 @@ public class AdapterRewriter extends TreeVisitor {
             objType.getTypeBinding(), false, oldTypeBinding.getComponentType(),
             oldTypeBinding.getDeclaringClass()
         );
-        node.setSuperclassType(objType);
-
+        newTypeBinding.addAnnotations(oldTypeBinding);
         for (ITypeBinding interfaze : binding.getInterfaces()) {
           node.getSuperInterfaceTypes().add(Type.newType(interfaze));
           newTypeBinding.addInterface(interfaze);
         }
+
+        node.setSuperclassType(objType);
         node.setTypeBinding(newTypeBinding);
       }
     }
