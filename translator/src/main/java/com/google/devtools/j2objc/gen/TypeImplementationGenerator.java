@@ -133,10 +133,6 @@ public class TypeImplementationGenerator extends TypeGenerator {
     }
     newline();
     syncLineNumbers(m.getName());  // avoid doc-comment
-    if (m.getMethodBinding().isConstructor()) {
-      // TODO: ugly hack for now
-      m.getBody().getStatements().add(new NativeStatement("return self;"));
-    }
     String methodBody = generateStatement(m.getBody(), /* isFunction */ false);
     print(getMethodSignature(m) + " " + reindent(methodBody) + "\n");
   }

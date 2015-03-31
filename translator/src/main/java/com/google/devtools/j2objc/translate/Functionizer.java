@@ -280,13 +280,16 @@ public class Functionizer extends TreeVisitor {
   @Override
   public void endVisit(MethodDeclaration node) {
     IMethodBinding binding = node.getMethodBinding();
-    if (BindingUtil.isMappedToNative(binding)) {
+
+    if (BindingUtil.isMappedToNative(binding)
+        || isConstructorOfMappedClass(binding)) {
       // mapped method should not be functionized. they will not
       //   be called anyways
-      return;
-    }
-
-    if (isConstructorOfMappedClass(binding)) {
+      if (binding.isConstructor()) {
+        node.getBody()
+            .getStatements()
+            .add(new ReturnStatement(new ThisExpression(binding.getDeclaringClass())));
+      }
       return;
     }
 
@@ -313,6 +316,11 @@ public class Functionizer extends TreeVisitor {
           // We're only keeping the method for reflection, so we can keep it out
           // of the declaration.
           node.addModifiers(BindingUtil.ACC_SYNTHETIC);
+        }
+        if (binding.isConstructor()) {
+          node.getBody()
+              .getStatements()
+              .add(new ReturnStatement(new ThisExpression(binding.getDeclaringClass())));
         }
       } else {
         node.remove();
@@ -440,9 +448,6 @@ public class Functionizer extends TreeVisitor {
     }
     if (Types.isVoidType(returnType)) {
       stmts.add(new ExpressionStatement(invocation));
-      if (methodBinding.isConstructor()) {
-        stmts.add(new ReturnStatement(new ThisExpression(declaringClass)));
-      }
     } else {
       stmts.add(new ReturnStatement(invocation));
     }
