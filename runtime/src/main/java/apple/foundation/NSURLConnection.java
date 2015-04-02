@@ -82,6 +82,6 @@ public class NSURLConnection
      * @since Available in iOS 5.0 and later.
      */
     @Mapping("sendAsynchronousRequest:queue:completionHandler:")
-    public static native void sendAsynchronousRequest(NSURLRequest request, NSOperationQueue queue, @Block VoidBlock3<NSURLResponse, NSData, NSError> handler);
+    public static native void sendAsynchronousRequest(NSURLRequest request, NSOperationQueue queue, @Block(params={"NSURLResponse *", "NSData *", "NSError *"}) VoidBlock3<NSURLResponse, NSData, NSError> handler);
 
 }
