@@ -17,7 +17,7 @@
 
 package java.util;
 
-import com.google.j2objc.annotations.WeakOuter;
+import com.google.j2objc.annotations.Weak;
 
 import java.io.IOException;
 import java.io.InvalidObjectException;
@@ -116,8 +116,11 @@ public class HashMap<K, V> extends AbstractMap<K, V> implements Cloneable, Seria
     private transient int threshold;
 
     // Views - lazily initialized
+    @Weak
     private transient Set<K> keySet;
+    @Weak
     private transient Set<Entry<K, V>> entrySet;
+    @Weak
     private transient Collection<V> values;
 
     /**
@@ -915,7 +918,6 @@ public class HashMap<K, V> extends AbstractMap<K, V> implements Cloneable, Seria
     Iterator<V> newValueIterator() { return new ValueIterator(); }
     Iterator<Entry<K, V>> newEntryIterator() { return new EntryIterator(); }
 
-    @WeakOuter
     private final class KeySet extends AbstractSet<K> {
         public Iterator<K> iterator() {
             return newKeyIterator();
@@ -938,6 +940,16 @@ public class HashMap<K, V> extends AbstractMap<K, V> implements Cloneable, Seria
             HashMap.this.clear();
         }
 
+        @Override
+        public void finalize() throws Throwable {
+            // clean up the weak reference
+            try {
+                keySet = null;
+            } finally {
+                super.finalize();
+            }
+        }
+
         /*-[
         - (NSUInteger)countByEnumeratingWithState:(NSFastEnumerationState *)state
                                           objects:(__unsafe_unretained id *)stackbuf
@@ -952,7 +964,6 @@ public class HashMap<K, V> extends AbstractMap<K, V> implements Cloneable, Seria
         ]-*/
     }
 
-    @WeakOuter
     private final class Values extends AbstractCollection<V> {
         public Iterator<V> iterator() {
             return newValueIterator();
@@ -970,6 +981,16 @@ public class HashMap<K, V> extends AbstractMap<K, V> implements Cloneable, Seria
             HashMap.this.clear();
         }
 
+        @Override
+        public void finalize() throws Throwable {
+            // clean up the weak reference
+            try {
+                values = null;
+            } finally {
+                super.finalize();
+            }
+        }
+
         /*-[
         - (NSUInteger)countByEnumeratingWithState:(NSFastEnumerationState *)state
                                           objects:(__unsafe_unretained id *)stackbuf
@@ -984,7 +1005,6 @@ public class HashMap<K, V> extends AbstractMap<K, V> implements Cloneable, Seria
         ]-*/
     }
 
-    @WeakOuter
     private final class EntrySet extends AbstractSet<Entry<K, V>> {
         public Iterator<Entry<K, V>> iterator() {
             return newEntryIterator();
@@ -1009,6 +1029,16 @@ public class HashMap<K, V> extends AbstractMap<K, V> implements Cloneable, Seria
         }
         public void clear() {
             HashMap.this.clear();
+        }
+
+        @Override
+        public void finalize() throws Throwable {
+            // clean up the weak reference
+            try {
+                entrySet = null;
+            } finally {
+                super.finalize();
+            }
         }
 
         /*-[

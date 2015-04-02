@@ -1263,7 +1263,7 @@ FAT_LIB_COMPILE = $(CLANG) $(OBJCPPFLAGS) -I$(EMULATION_CLASS_DIR) -I$(GEN_OBJC_
   -I$(ANDROID_NATIVE_DIR)
 # TODO(tball): add support for Obj-C++ precompiled header.
 else
-FAT_LIB_COMPILE = $(CLANG) $(OBJCFLAGS) -I$(EMULATION_CLASS_DIR) -I$(GEN_OBJC_DIR) \
+FAT_LIB_COMPILE = $(CLANG) -g $(OBJCFLAGS) -I$(EMULATION_CLASS_DIR) -I$(GEN_OBJC_DIR) \
   -I$(ANDROID_NATIVE_DIR)
 #FAT_LIB_PRECOMPILED_HEADER = JreEmulation.h
 endif
@@ -1375,4 +1375,3 @@ objc_sources_manifest: $(OBJC_SOURCES_MANIFEST)
 
 find_cycles: cycle_finder_dist $(JAVA_SOURCES_MANIFEST)
 	$(DIST_DIR)/cycle_finder -w cycle_whitelist.txt `cat $(JAVA_SOURCES_MANIFEST)`
-
