@@ -1244,13 +1244,14 @@ public class StatementGenerator extends TreeVisitor {
     for (CatchClause cc : node.getCatchClauses()) {
       if (cc.getException().getType() instanceof UnionType) {
         printMultiCatch(cc, hasResources);
+      } else {
+        buffer.append("@catch (");
+        cc.getException().accept(this);
+        buffer.append(") {\n");
+        printMainExceptionStore(hasResources, cc);
+        printStatements(cc.getBody().getStatements());
+        buffer.append("}\n");
       }
-      buffer.append("@catch (");
-      cc.getException().accept(this);
-      buffer.append(") {\n");
-      printMainExceptionStore(hasResources, cc);
-      printStatements(cc.getBody().getStatements());
-      buffer.append("}\n");
     }
     if (node.getFinally() != null || resources.size() > 0) {
       buffer.append(" @finally {\n");
