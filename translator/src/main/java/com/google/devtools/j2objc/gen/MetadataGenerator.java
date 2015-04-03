@@ -328,6 +328,30 @@ public class MetadataGenerator {
     return "L" + type.getBinaryName() + ";";
   }
 
+  private static String getGenericTypeName(ITypeBinding type) {
+    if (type.isTypeVariable()) {
+      return "T" + type.getName() + ";";
+    }
+    if (type.isPrimitive() || type.isArray()) {
+      return type.getBinaryName();
+    }
+
+    ITypeBinding[] tpeArgs = type.getTypeArguments();
+    StringBuilder sb = new StringBuilder();
+    sb.append("L");
+    sb.append(type.getBinaryName());
+    if (tpeArgs.length > 0) {
+      sb.append("<");
+      for (int i = 0; i < tpeArgs.length; i++) {
+        sb.append(getGenericTypeName(tpeArgs[i]));
+      }
+      sb.append(">");
+    }
+    sb.append(";");
+
+    return sb.toString();
+  }
+
   /**
    * Returns the modifiers for a specified type, including internal ones.
    * All class modifiers are defined in the JVM specification, table 4.1.

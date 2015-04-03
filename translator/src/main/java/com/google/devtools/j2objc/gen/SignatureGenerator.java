@@ -81,7 +81,8 @@ public class SignatureGenerator {
   /**
    * Create a method signature string for a specified method or constructor.
    *
-   * @return the signature if method is generic or use type variables, else null.
+   * @return the signature if method is generic or use type variables or
+   *   involves types that are parametrized types, else null.
    */
   public static String createMethodTypeSignature(IMethodBinding method) {
     if (!hasGenericSignature(method)) {
@@ -93,14 +94,17 @@ public class SignatureGenerator {
   }
 
   private static boolean hasGenericSignature(IMethodBinding method) {
-    if (method.isGenericMethod() || method.getReturnType().isTypeVariable()) {
+    if (method.isGenericMethod()
+        || method.getReturnType().isTypeVariable()
+        || method.getReturnType().isParameterizedType()) {
       return true;
     }
     for (ITypeBinding param : method.getParameterTypes()) {
-      if (param.isTypeVariable()) {
+      if (param.isTypeVariable() || param.isParameterizedType()) {
         return true;
       }
     }
+
     return false;
   }
 
