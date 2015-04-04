@@ -26,9 +26,30 @@ public class NSString
 
     
     
-    public NSString() {}
+    @Mapping("init")
+    public NSString() { }
+    @Mapping("initWithCoder:")
+    public NSString(NSCoder aDecoder) { }
     @Mapping("initWithCharacters:length:")
     public NSString(Todo characters, @MachineSizedUInt long length) { }
+    @Mapping("initWithUTF8String:")
+    public NSString(Todo nullTerminatedCString) { }
+    @Mapping("initWithString:")
+    public NSString(String aString) { }
+    @Mapping("initWithData:encoding:")
+    public NSString(NSData data, @Representing("NSStringEncoding") long encoding) { }
+    @Mapping("initWithBytes:length:encoding:")
+    public NSString(Todo bytes, @MachineSizedUInt long len, @Representing("NSStringEncoding") long encoding) { }
+    @Mapping("initWithCString:encoding:")
+    public NSString(Todo nullTerminatedCString, @Representing("NSStringEncoding") long encoding) { }
+    @Mapping("initWithContentsOfURL:encoding:error:")
+    public NSString(NSURL url, @Representing("NSStringEncoding") long enc, Todo error) { }
+    @Mapping("initWithContentsOfFile:encoding:error:")
+    public NSString(String path, @Representing("NSStringEncoding") long enc, Todo error) { }
+    @Mapping("initWithContentsOfURL:usedEncoding:error:")
+    public NSString(NSURL url, Todo enc, Todo error) { }
+    @Mapping("initWithContentsOfFile:usedEncoding:error:")
+    public NSString(String path, Todo enc, Todo error) { }
 
     
     @Mapping("length")
