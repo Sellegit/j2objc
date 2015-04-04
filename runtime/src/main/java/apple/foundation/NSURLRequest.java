@@ -55,7 +55,7 @@ public class NSURLRequest
     @Mapping("HTTPMethod")
     public native String getHTTPMethod();
     @Mapping("allHTTPHeaderFields")
-    public native Map<String, String> getAllHTTPHeaderFields();
+    public native NSDictionary<?, ?> getAllHTTPHeaderFields();
     @Mapping("HTTPBody")
     public native NSData getHTTPBody();
     @Mapping("HTTPBodyStream")

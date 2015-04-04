@@ -57,12 +57,12 @@ public class NSHTTPCookie
     @Mapping("commentURL")
     public native NSURL getCommentURL();
     @Mapping("portList")
-    public native List<Integer> getPortList();
+    public native NSArray<?> getPortList();
 
     
     
     @Mapping("requestHeaderFieldsWithCookies:")
-    public static native Map<String, String> getRequestHeaderFieldsWithCookies(NSArray<?> cookies);
+    public static native NSDictionary<?, ?> getRequestHeaderFieldsWithCookies(NSArray<?> cookies);
     @Mapping("cookiesWithResponseHeaderFields:forURL:")
     public static native NSArray<NSHTTPCookie> getCookiesWithResponseHeaderFields(NSDictionary<?, ?> headerFields, NSURL URL);
 

@@ -75,9 +75,9 @@ public class NSMutableURLRequest
     @Mapping("setHTTPMethod:")
     public native void setHTTPMethod(String v);
     @Mapping("allHTTPHeaderFields")
-    public native Map<String, String> getAllHTTPHeaderFields();
+    public native NSDictionary<?, ?> getAllHTTPHeaderFields();
     @Mapping("setAllHTTPHeaderFields:")
-    public native void setAllHTTPHeaderFields(Map<String, String> v);
+    public native void setAllHTTPHeaderFields(NSDictionary<?, ?> v);
     @Mapping("HTTPBody")
     public native NSData getHTTPBody();
     @Mapping("setHTTPBody:")

@@ -43,7 +43,7 @@ public class NSOrthography
     @Mapping("dominantScript")
     public native String getDominantScript();
     @Mapping("languageMap")
-    public native Map<String, List<String>> getLanguageMap();
+    public native NSDictionary<?, ?> getLanguageMap();
     /**
      * @since Available in iOS 4.0 and later.
      */

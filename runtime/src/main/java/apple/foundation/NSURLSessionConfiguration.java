@@ -110,9 +110,9 @@ public class NSURLSessionConfiguration
     @Mapping("setHTTPCookieAcceptPolicy:")
     public native void setHTTPCookieAcceptPolicy(@Representing("NSHTTPCookieAcceptPolicy") long v);
     @Mapping("HTTPAdditionalHeaders")
-    public native Map<String, String> getGetAdditionalHTTPHeaders();
+    public native NSDictionary<?, ?> getGetAdditionalHTTPHeaders();
     @Mapping("setHTTPAdditionalHeaders:")
-    public native void setGetAdditionalHTTPHeaders(Map<String, String> v);
+    public native void setGetAdditionalHTTPHeaders(NSDictionary<?, ?> v);
     @Mapping("HTTPMaximumConnectionsPerHost")
     public native @MachineSizedSInt long getMaximumHTTPConnectionsPerHost();
     @Mapping("setHTTPMaximumConnectionsPerHost:")

@@ -70,7 +70,7 @@ public class NSFileWrapper
     @Mapping("serializedRepresentation")
     public native NSData getSerializedRepresentation();
     @Mapping("fileWrappers")
-    public native Map<String, NSFileWrapper> getFileWrappers();
+    public native NSDictionary<?, ?> getFileWrappers();
     @Mapping("regularFileContents")
     public native NSData getRegularFileContents();
     /**

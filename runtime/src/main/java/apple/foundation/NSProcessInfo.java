@@ -31,7 +31,7 @@ public class NSProcessInfo
 
     
     @Mapping("environment")
-    public native Map<String, NSObject> getEnvironment();
+    public native NSDictionary<?, ?> getEnvironment();
     @Mapping("arguments")
     public native List<String> getArguments();
     @Mapping("hostName")

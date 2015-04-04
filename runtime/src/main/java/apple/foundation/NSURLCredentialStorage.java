@@ -31,7 +31,7 @@ public class NSURLCredentialStorage
 
     
     @Mapping("allCredentials")
-    public native Map<String, NSURLCredential> getAllCredentials();
+    public native NSDictionary<?, ?> getAllCredentials();
 
     
     
@@ -39,7 +39,7 @@ public class NSURLCredentialStorage
     public static native NSString ChangedNotification();
 
     @Mapping("credentialsForProtectionSpace:")
-    public native Map<String, NSURLCredential> getCredentials(NSURLProtectionSpace space);
+    public native NSDictionary<?, ?> getCredentials(NSURLProtectionSpace space);
     @Mapping("setCredential:forProtectionSpace:")
     public native void setCredential(NSURLCredential credential, NSURLProtectionSpace space);
     @Mapping("removeCredential:forProtectionSpace:")

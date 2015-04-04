@@ -99,7 +99,7 @@ public class NSTimeZone
     @Mapping("knownTimeZoneNames")
     public static native List<String> getKnownTimeZoneNames();
     @Mapping("abbreviationDictionary")
-    public static native Map<String, String> getAbbreviationDictionary();
+    public static native NSDictionary<?, ?> getAbbreviationDictionary();
     /**
      * @since Available in iOS 4.0 and later.
      */

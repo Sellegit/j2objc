@@ -40,7 +40,7 @@ public class NSHTTPURLResponse
     @Mapping("statusCode")
     public native @MachineSizedSInt long getStatusCode();
     @Mapping("allHeaderFields")
-    public native Map<String, String> getAllHeaderFields();
+    public native NSDictionary<?, ?> getAllHeaderFields();
 
     
     

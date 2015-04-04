@@ -75,7 +75,7 @@ public class NSLocale
     @Mapping("preferredLanguages")
     public static native List<String> getPreferredLanguages();
     @Mapping("componentsFromLocaleIdentifier:")
-    public static native Map<NSLocaleComponent, NSObject> getComponentsFromLocaleIdentifier(String string);
+    public static native NSDictionary<?, ?> getComponentsFromLocaleIdentifier(String string);
     @Mapping("localeIdentifierFromComponents:")
     public static native String getLocaleIdentifierFromComponents(NSDictionary<?, ?> dict);
     @Mapping("canonicalLocaleIdentifierFromString:")
