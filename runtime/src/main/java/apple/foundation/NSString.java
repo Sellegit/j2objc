@@ -40,8 +40,6 @@ public class NSString
     public NSString(NSData data, @Representing("NSStringEncoding") long encoding) { }
     @Mapping("initWithBytes:length:encoding:")
     public NSString(Todo bytes, @MachineSizedUInt long len, @Representing("NSStringEncoding") long encoding) { }
-    @Mapping("initWithCString:encoding:")
-    public NSString(Todo nullTerminatedCString, @Representing("NSStringEncoding") long encoding) { }
     @Mapping("initWithContentsOfURL:encoding:error:")
     public NSString(NSURL url, @Representing("NSStringEncoding") long enc, Todo error) { }
     @Mapping("initWithContentsOfFile:encoding:error:")
