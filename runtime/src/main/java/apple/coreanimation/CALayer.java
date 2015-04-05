@@ -205,9 +205,9 @@ public class CALayer
     @Mapping("setShadowPath:")
     public native void setShadowPath(CGPath v);
     @Mapping("actions")
-    public native Map<String, CAAction> getActions();
+    public native NSDictionary<String, CAAction> getActions();
     @Mapping("setActions:")
-    public native void setActions(Map<String, CAAction> v);
+    public native void setActions(NSDictionary<String, CAAction> v);
     @Mapping("name")
     public native String getName();
     @Mapping("setName:")
@@ -330,7 +330,7 @@ public class CALayer
     @Mapping("removeAnimationForKey:")
     public native void removeAnimation(String key);
     @Mapping("animationKeys")
-    public native List<String> getAnimationKeys();
+    public native NSArray<String> getAnimationKeys();
     @Mapping("animationForKey:")
     public native CAAnimation getAnimation(String key);
     @Mapping("layer")

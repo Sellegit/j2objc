@@ -33,9 +33,9 @@ public class CAGradientLayer
 
     
     @Mapping("colors")
-    public native List<CGColor> getColors();
+    public native NSArray<CGColor> getColors();
     @Mapping("setColors:")
-    public native void setColors(List<CGColor> v);
+    public native void setColors(NSArray<CGColor> v);
     @Mapping("locations")
     public native NSArray<NSNumber> getLocations();
     @Mapping("setLocations:")
