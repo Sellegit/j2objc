@@ -66,8 +66,12 @@ public class UICollectionView
 
     
     
+    @Mapping("registerClass:forCellWithReuseIdentifier:")
+    public native void registerReusableCellClass(ObjCClass<? extends UICollectionViewCell> cellClass, String identifier);
     @Mapping("registerNib:forCellWithReuseIdentifier:")
     public native void registerReusableCellNib(UINib nib, String identifier);
+    @Mapping("registerClass:forSupplementaryViewOfKind:withReuseIdentifier:")
+    public native void registerReusableSupplementaryViewClass(ObjCClass<? extends UICollectionReusableView> viewClass, String elementKind, String identifier);
     @Mapping("registerNib:forSupplementaryViewOfKind:withReuseIdentifier:")
     public native void registerReusableSupplementaryViewNib(UINib nib, String kind, String identifier);
     @Mapping("dequeueReusableCellWithReuseIdentifier:forIndexPath:")
