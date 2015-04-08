@@ -21,7 +21,7 @@ import apple.corelocation.*;
 /*<javadoc>*/
 /*</javadoc>*/
 @Adapter
-public abstract class UICollectionViewDelegateAdapter 
+public abstract class UICollectionViewDelegateFlowLayoutUICollectionViewDelegateAdapter
     extends UIScrollViewDelegateAdapter 
     implements UICollectionViewDelegate {
 

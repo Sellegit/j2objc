@@ -20,7 +20,7 @@ import apple.corelocation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("UIKit/UIKit.h")
+@Library("UIKit/UIKit.h") @Mapping("NSBundle")
 public final class NSBundleExtensions 
     extends NSExtensions 
      {
