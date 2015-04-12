@@ -6,7 +6,7 @@ package com.google.j2objc.annotations;
 public @interface Block {
   String value() default "dummy";
 
-  String ret() default "void";
+  String ret() default "";
 
   String[] params() default {};
 }
