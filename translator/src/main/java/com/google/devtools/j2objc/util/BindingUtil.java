@@ -14,7 +14,9 @@
 
 package com.google.devtools.j2objc.util;
 
+import com.google.common.base.Predicate;
 import com.google.common.base.Splitter;
+import com.google.common.collect.Collections2;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Sets;
@@ -44,6 +46,7 @@ import org.eclipse.jdt.core.dom.Modifier;
 import java.lang.annotation.RetentionPolicy;
 import java.security.cert.Extension;
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.Comparator;
 import java.util.Deque;
 import java.util.List;
@@ -663,7 +666,8 @@ public final class BindingUtil {
         IAnnotationBinding representingAnno = getAnnotation(
             methodBinding.getParameterAnnotations(i), Representing.class);
         IOSBlockTypeBinding nativeBlockType = getBlockType(
-            methodBinding.getParameterAnnotations(i)
+            methodBinding.getParameterAnnotations(i),
+            methodBinding.getParameterTypes()[i]
         );
         String type;
         if (representingAnno != null) {
@@ -683,7 +687,7 @@ public final class BindingUtil {
 
   }
 
-  public static IOSBlockTypeBinding getBlockType(IAnnotationBinding[] annotations) {
+  public static IOSBlockTypeBinding getBlockType(IAnnotationBinding[] annotations, ITypeBinding blockTpe) {
     IAnnotationBinding blockAnno = BindingUtil.getAnnotation(
         annotations,
         com.google.j2objc.annotations.Block.class
@@ -691,14 +695,17 @@ public final class BindingUtil {
     if (blockAnno == null) {
       return null;
     }
+    if (blockTpe instanceof IOSBlockTypeBinding) {
+      return (IOSBlockTypeBinding) blockTpe;
+    }
 
-    Object[] argObjs = (Object[]) BindingUtil.getAnnotationValue(blockAnno, "params");
+    Object[] argObjs = BlockBridge.paramTypes(blockAnno, blockTpe);
     List<String> args = Lists.newArrayList();
     for (Object argObj : argObjs) {
       args.add((String) argObj);
     }
     IOSBlockTypeBinding nativeBlockType = new IOSBlockTypeBinding(
-        (String) BindingUtil.getAnnotationValue(blockAnno, "ret"),
+        BlockBridge.returnType(blockAnno, blockTpe),
         args
     );
 
@@ -734,4 +741,55 @@ public final class BindingUtil {
   public static boolean isCFType(ITypeBinding type) {
     return lookupSuperTypeByName(type, "CFType") != null;
   }
+
+  public static class BlockBridge {
+    public static IMethodBinding runMethod(IAnnotationBinding blockAnnotation, ITypeBinding blockTpe) {
+      Collection<IMethodBinding> runMethodCandidates =
+          Collections2.filter(
+              Lists.newArrayList(blockTpe.getDeclaredMethods()),
+              new Predicate<IMethodBinding>() {
+                @Override
+                public boolean apply(IMethodBinding input) {
+                  return input.getName().equals("run");
+                }
+              }
+          );
+      assert runMethodCandidates.size() == 1
+          : "There should be one and only one run method in a Block type, but got: " + runMethodCandidates;
+
+      return (IMethodBinding) runMethodCandidates.toArray()[0];
+    }
+
+    public static String returnType(IAnnotationBinding blockAnnotation, ITypeBinding blockTpe) {
+      IMethodBinding runMethod = runMethod(blockAnnotation, blockTpe);
+
+      String blockRet = (String) BindingUtil.getAnnotationValue(blockAnnotation, "ret");
+      if ("".equals(blockRet)) {
+        blockRet = NameTable.getSpecificObjCType(runMethod.getReturnType());
+      }
+
+      return blockRet;
+    }
+
+    public static String[] paramTypes(IAnnotationBinding blockAnnotation, ITypeBinding blockTpe) {
+      IMethodBinding runMethod = runMethod(blockAnnotation, blockTpe);
+      Object[] blockParams = (Object[]) BindingUtil.getAnnotationValue(blockAnnotation, "params");
+
+      ITypeBinding[] paramTpes = runMethod.getParameterTypes();
+      List<String> out = Lists.newArrayList();
+
+      if (blockParams.length != paramTpes.length) {
+        for (int i = 0; i < paramTpes.length; i++) {
+          out.add(NameTable.getSpecificObjCType(paramTpes[i]));
+        }
+      } else {
+        for (int i = 0; i < paramTpes.length; i++) {
+          out.add((String) blockParams[i]);
+        }
+      }
+
+      return out.toArray(new String[paramTpes.length]);
+    }
+  }
 }
+

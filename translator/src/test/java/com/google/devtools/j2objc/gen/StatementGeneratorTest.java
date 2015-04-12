@@ -1670,6 +1670,35 @@ public class StatementGeneratorTest extends GenerationTest {
                       "[^void (NSString *____a, NSString *____b) { [___$runner run:____a param:____b];} copy]");
   }
 
+  public void testBlockRewritingWithoutExplicitAnnotation() throws IOException {
+    String source = "import com.google.j2objc.annotations.*;\n"
+                    + "\n"
+                    + "interface VoidBlock1<A> {\n"
+                    + "    @Mapping(\"run:param:\")\n"
+                    + "    void run(A a, String b);\n"
+                    + "}\n"
+                    + "public class BlockTester {\n"
+                    + "    public static void main(final String[] args) {\n"
+                    + "        BlockTester instance = new BlockTester();\n"
+                    + "        instance.go(new VoidBlock1<String>() {\n"
+                    + "            @Override\n"
+                    + "            public void run(String a, String b) {\n"
+                    + "                String[] ok = args;\n"
+                    + "                System.out.println(a);\n"
+                    + "                System.out.println(b);\n"
+                    + "            }\n"
+                    + "        });\n"
+                    + "    }"
+                    + "    @Mapping(\"go:\")\n"
+                    + "    public void go(@Block final VoidBlock1<String> hehe) {\n"
+                    + "        hehe.run(\"hehe\", \"haha\");\n"
+                    + "    }\n"
+                    + "}";
+    String translation = translateSourceFile(source, "BlockTester", "BlockTester.m");
+    assertTranslation(translation,
+                      "[^void (NSString *____a, NSString *____b) { [___$runner run:____a param:____b];} copy]");
+  }
+
   public void testDotMapping() throws IOException {
     String translation = translateSourceFile("import com.google.j2objc.annotations.*;\n"
                                              + "\n"

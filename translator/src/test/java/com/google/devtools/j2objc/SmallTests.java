@@ -27,6 +27,7 @@ import com.google.devtools.j2objc.gen.ObjectiveCSegmentedHeaderGeneratorTest;
 import com.google.devtools.j2objc.gen.ObjectiveCSourceFileGeneratorTest;
 import com.google.devtools.j2objc.gen.PrimitiveArrayTest;
 import com.google.devtools.j2objc.gen.SignatureGeneratorTest;
+import com.google.devtools.j2objc.gen.StatementGenerator;
 import com.google.devtools.j2objc.gen.StatementGeneratorTest;
 import com.google.devtools.j2objc.gen.TypeImplementationGeneratorTest;
 import com.google.devtools.j2objc.translate.AbstractMethodRewriterTest;
@@ -140,6 +141,7 @@ public class SmallTests {
   };
 
   private static final Class<?>[] smallTestClasses = smallTestClassesPrime;
+//  private static final Class<?>[] smallTestClasses = {BlockRewriterTest.class};
 
   public static Test suite() {
     return new TestSuite(smallTestClasses);

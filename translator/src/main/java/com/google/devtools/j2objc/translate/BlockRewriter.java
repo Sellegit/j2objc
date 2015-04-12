@@ -77,13 +77,16 @@ public class BlockRewriter extends TreeVisitor {
         binding.getParameterAnnotations(i),
         com.google.j2objc.annotations.Block.class
     );
-    Object[] argObjs = (Object[]) BindingUtil.getAnnotationValue(blockAnno, "params");
+    ITypeBinding blockTpe = binding.getParameterTypes()[i];
+
+    String[] argObjs = BindingUtil.BlockBridge.paramTypes(blockAnno, blockTpe);
     List<String> args = Lists.newArrayList();
     for (Object argObj : argObjs) {
       args.add((String) argObj);
     }
     IOSBlockTypeBinding nativeBlockType = BindingUtil.getBlockType(
-        binding.getParameterAnnotations(i)
+        binding.getParameterAnnotations(i),
+        blockTpe
     );
     assert nativeBlockType != null;
 
@@ -119,7 +122,7 @@ public class BlockRewriter extends TreeVisitor {
 
     final String blockLocalId = "__$block";
     StringBuilder blockCall = new StringBuilder();
-    String blockRet = (String) BindingUtil.getAnnotationValue(annotation, "ret");
+    String blockRet = BindingUtil.BlockBridge.returnType(blockAnno, blockTpe);
     if (!blockRet.equals("void")) {
       blockCall.append("return ");
     }

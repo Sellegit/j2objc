@@ -18,6 +18,9 @@ package com.google.devtools.j2objc.gen;
 
 import com.google.common.annotations.VisibleForTesting;
 import com.google.common.base.CharMatcher;
+import com.google.common.base.Predicate;
+import com.google.common.collect.Collections2;
+import com.google.common.collect.Iterables;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 import com.google.devtools.j2objc.Options;
@@ -115,6 +118,7 @@ import org.eclipse.jdt.core.dom.ITypeBinding;
 import org.eclipse.jdt.core.dom.IVariableBinding;
 
 import java.lang.reflect.Modifier;
+import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
@@ -161,8 +165,10 @@ public class StatementGenerator extends TreeVisitor {
       IAnnotationBinding blockAnnotation =
           BindingUtil.getAnnotation(method.getParameterAnnotations(index), com.google.j2objc.annotations.Block.class);
       if (blockAnnotation != null) {
-        String blockRet = (String) BindingUtil.getAnnotationValue(blockAnnotation, "ret");
-        Object[] blockParams = (Object[]) BindingUtil.getAnnotationValue(blockAnnotation, "params");
+        ITypeBinding blockTpe = arg.getTypeBinding();
+
+        String blockRet = BindingUtil.BlockBridge.returnType(blockAnnotation, blockTpe);
+        String[] blockParams = BindingUtil.BlockBridge.paramTypes(blockAnnotation, blockTpe);
 
         // TODO: do a proper scope analysis here to prevent accidental name pollution
         buffer.append("(^{");
