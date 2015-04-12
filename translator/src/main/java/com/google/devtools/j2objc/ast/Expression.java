@@ -33,6 +33,11 @@ public abstract class Expression extends TreeNode {
     constantValue = other.getConstantValue();
   }
 
+  protected Expression(Object constantValue) {
+    super();
+    this.constantValue = constantValue;
+  }
+
   protected Expression() {}
 
   public abstract ITypeBinding getTypeBinding();

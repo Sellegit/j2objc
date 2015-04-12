@@ -165,7 +165,7 @@ public class StatementGenerator extends TreeVisitor {
       IAnnotationBinding blockAnnotation =
           BindingUtil.getAnnotation(method.getParameterAnnotations(index), com.google.j2objc.annotations.Block.class);
       if (blockAnnotation != null) {
-        ITypeBinding blockTpe = arg.getTypeBinding();
+        ITypeBinding blockTpe = method.getParameterTypes()[index];
 
         String blockRet = BindingUtil.BlockBridge.returnType(blockAnnotation, blockTpe);
         String[] blockParams = BindingUtil.BlockBridge.paramTypes(blockAnnotation, blockTpe);
@@ -180,7 +180,7 @@ public class StatementGenerator extends TreeVisitor {
         buffer.append(localRunnerId + " = ");
         arg.accept(this);
         buffer.append(";");
-        buffer.append("return ");
+        buffer.append("return " + localRunnerId + " == nil ? nil : ");
         buffer.append(useReferenceCounting ? "[[" : "[");
         buffer.append("^" + blockRet + " (");
         char argId = 'a';

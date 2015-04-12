@@ -755,7 +755,10 @@ public final class BindingUtil {
               }
           );
       assert runMethodCandidates.size() == 1
-          : "There should be one and only one run method in a Block type, but got: " + runMethodCandidates;
+          : "There should be one and only one run method in a Block type, but got: "
+            + runMethodCandidates
+            + " and type is: " + blockTpe
+            + " methods are: " + Arrays.toString(blockTpe.getDeclaredMethods());
 
       return (IMethodBinding) runMethodCandidates.toArray()[0];
     }

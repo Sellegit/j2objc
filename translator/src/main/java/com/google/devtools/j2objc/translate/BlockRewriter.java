@@ -6,9 +6,12 @@ import com.google.devtools.j2objc.ast.Assignment;
 import com.google.devtools.j2objc.ast.Block;
 import com.google.devtools.j2objc.ast.BodyDeclaration;
 import com.google.devtools.j2objc.ast.ClassInstanceCreation;
+import com.google.devtools.j2objc.ast.ConditionalExpression;
 import com.google.devtools.j2objc.ast.Expression;
+import com.google.devtools.j2objc.ast.InfixExpression;
 import com.google.devtools.j2objc.ast.MethodDeclaration;
 import com.google.devtools.j2objc.ast.NativeStatement;
+import com.google.devtools.j2objc.ast.NullLiteral;
 import com.google.devtools.j2objc.ast.SimpleName;
 import com.google.devtools.j2objc.ast.SimpleType;
 import com.google.devtools.j2objc.ast.SingleVariableDeclaration;
@@ -166,12 +169,24 @@ public class BlockRewriter extends TreeVisitor {
             new GeneratedMethodBinding(null, "<init>", 0, Types.instance.ast.resolveWellKnownType("java.lang.Void"), null, blockTypeBinding, true, false),
             false /* think about it*/, null,
             new SimpleType(blockInterfaceType), new LinkedList<Expression>(), anon);
+    ConditionalExpression nullWraper =
+        new ConditionalExpression(
+            blockInterfaceType,
+            new InfixExpression(
+                Types.instance.ast.resolveWellKnownType("boolean"),
+                InfixExpression.Operator.EQUALS,
+                new NullLiteral(),
+                new SimpleName(originalVarBinding)
+            ),
+            new NullLiteral(),
+            newObj
+        );
 
     final String wrappedBlockIdent = "__wrapped_" + node.getParameters().get(i).getName();
     final GeneratedVariableBinding wrappedBlockBinding =
         new GeneratedVariableBinding(wrappedBlockIdent, 0, blockInterfaceType, false, false, null, binding);
     VariableDeclarationFragment varDecl =
-        new VariableDeclarationFragment(wrappedBlockBinding, newObj);
+        new VariableDeclarationFragment(wrappedBlockBinding, nullWraper);
     List<Statement> stmts = body.getStatements();
 
     // rewrite all the references to original parameter

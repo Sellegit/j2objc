@@ -140,8 +140,8 @@ public class SmallTests {
     VariableRenamerTest.class
   };
 
-  private static final Class<?>[] smallTestClasses = smallTestClassesPrime;
-//  private static final Class<?>[] smallTestClasses = {BlockRewriterTest.class};
+//  private static final Class<?>[] smallTestClasses = smallTestClassesPrime;
+  private static final Class<?>[] smallTestClasses = {BlockRewriterTest.class};
 
   public static Test suite() {
     return new TestSuite(smallTestClasses);

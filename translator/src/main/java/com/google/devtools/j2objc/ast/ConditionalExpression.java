@@ -42,6 +42,14 @@ public class ConditionalExpression extends Expression {
     elseExpression.copyFrom(other.getElseExpression());
   }
 
+  public ConditionalExpression(ITypeBinding type, Expression expr, Expression then, Expression elsey) {
+    super();
+    typeBinding = type;
+    expression.set(expr);
+    thenExpression.set(then);
+    elseExpression.set(elsey);
+  }
+
   @Override
   public Kind getKind() {
     return Kind.CONDITIONAL_EXPRESSION;

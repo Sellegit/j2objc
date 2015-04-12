@@ -33,6 +33,8 @@ public class BlockRewriterTest extends GenerationTest {
                       "[__wrapped_hehe run:@\"hehe\" param:@\"haha\"]");
     assertTranslation(translation, "void (^__$block)(NSString *, NSString *) = val$hehe_;");
     assertTranslation(translation, "__$block(string_0, string_1);");
+
+    assertTranslation(translation, "fail");
   }
 
   public void testBlockRewritingWithoutExplicitAnnotation() throws IOException {
