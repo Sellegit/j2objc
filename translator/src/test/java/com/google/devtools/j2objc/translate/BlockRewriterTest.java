@@ -27,14 +27,13 @@ public class BlockRewriterTest extends GenerationTest {
                     + "    }\n"
                     + "}";
     String translation = translateSourceFile(source, "BlockTester", "BlockTester.m");
+    assertTranslation(translation, "id<VoidBlock1> __wrapped_hehe = nil == hehe ? nil :");
     assertTranslation(translation,
                       "(void (^)(NSString *, NSString *))");
     assertTranslation(translation,
                       "[__wrapped_hehe run:@\"hehe\" param:@\"haha\"]");
     assertTranslation(translation, "void (^__$block)(NSString *, NSString *) = val$hehe_;");
     assertTranslation(translation, "__$block(string_0, string_1);");
-
-    assertTranslation(translation, "fail");
   }
 
   public void testBlockRewritingWithoutExplicitAnnotation() throws IOException {
@@ -51,6 +50,7 @@ public class BlockRewriterTest extends GenerationTest {
                     + "    }\n"
                     + "}";
     String translation = translateSourceFile(source, "BlockTester", "BlockTester.m");
+    assertTranslation(translation, "id<VoidBlock1> __wrapped_hehe = nil == hehe ? nil :");
     assertTranslation(translation,
                       "(void (^)(NSString *, NSString *))");
     assertTranslation(translation,

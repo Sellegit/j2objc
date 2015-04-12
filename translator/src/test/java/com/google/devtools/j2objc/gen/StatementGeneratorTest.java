@@ -1668,6 +1668,7 @@ public class StatementGeneratorTest extends GenerationTest {
     String translation = translateSourceFile(source, "BlockTester", "BlockTester.m");
     assertTranslation(translation,
                       "[^void (NSString *____a, NSString *____b) { [___$runner run:____a param:____b];} copy]");
+    assertTranslation(translation, "return ___$runner == nil ? nil :");
   }
 
   public void testBlockRewritingWithoutExplicitAnnotation() throws IOException {
@@ -1675,14 +1676,14 @@ public class StatementGeneratorTest extends GenerationTest {
                     + "\n"
                     + "interface VoidBlock1<A> {\n"
                     + "    @Mapping(\"run:param:\")\n"
-                    + "    void run(A a, String b);\n"
+                    + "    void run(A a, boolean b);\n"
                     + "}\n"
                     + "public class BlockTester {\n"
                     + "    public static void main(final String[] args) {\n"
                     + "        BlockTester instance = new BlockTester();\n"
                     + "        instance.go(new VoidBlock1<String>() {\n"
                     + "            @Override\n"
-                    + "            public void run(String a, String b) {\n"
+                    + "            public void run(String a, boolean b) {\n"
                     + "                String[] ok = args;\n"
                     + "                System.out.println(a);\n"
                     + "                System.out.println(b);\n"
@@ -1691,12 +1692,12 @@ public class StatementGeneratorTest extends GenerationTest {
                     + "    }"
                     + "    @Mapping(\"go:\")\n"
                     + "    public void go(@Block final VoidBlock1<String> hehe) {\n"
-                    + "        hehe.run(\"hehe\", \"haha\");\n"
+                    + "        hehe.run(\"hehe\", false);\n"
                     + "    }\n"
                     + "}";
     String translation = translateSourceFile(source, "BlockTester", "BlockTester.m");
     assertTranslation(translation,
-                      "[^void (NSString *____a, NSString *____b) { [___$runner run:____a param:____b];} copy]");
+                      "[^void (NSString *____a, jboolean ____b) { [___$runner run:____a param:____b];} copy]");
   }
 
   public void testDotMapping() throws IOException {

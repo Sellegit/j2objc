@@ -192,7 +192,7 @@ public class StatementGenerator extends TreeVisitor {
             buffer.append(", ");
           }
           buffer.append(param);
-          if (param.indexOf(param.length() - 1) != '*') {
+          if (!param.endsWith("*")) {
             buffer.append(' ');
           }
           buffer.append("____" + (argId++));
