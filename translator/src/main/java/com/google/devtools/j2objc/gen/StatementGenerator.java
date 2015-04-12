@@ -185,13 +185,16 @@ public class StatementGenerator extends TreeVisitor {
         buffer.append("^" + blockRet + " (");
         char argId = 'a';
         boolean first = true;
-        for (Object param : blockParams) {
+        for (String param : blockParams) {
           if (first) {
             first = false;
           } else {
             buffer.append(", ");
           }
-          buffer.append((String) param);
+          buffer.append(param);
+          if (param.indexOf(param.length() - 1) != '*') {
+            buffer.append(' ');
+          }
           buffer.append("____" + (argId++));
         }
         buffer.append(") { ");
