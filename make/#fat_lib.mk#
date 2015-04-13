@@ -32,7 +32,8 @@
 ifdef FAT_LIB_IOS_ONLY
 FAT_LIB_ARCHS = simulator64 simulator $(J2OBJC_ARCHS)
 else
-FAT_LIB_ARCHS = macosx simulator $(J2OBJC_ARCHS)
+FAT_LIB_ARCHS = macosx $(J2OBJC_ARCHS)
+
 endif
 
 FAT_LIB_LIBRARY = $(ARCH_BUILD_DIR)/lib$(FAT_LIB_NAME).a
