@@ -243,11 +243,11 @@ public class UITextField
     
     
     @GlobalConstant("UITextFieldTextDidBeginEditingNotification")
-    public static native NSString DidBeginEditingNotification();
+    public static native String DidBeginEditingNotification();
     @GlobalConstant("UITextFieldTextDidEndEditingNotification")
-    public static native NSString DidEndEditingNotification();
+    public static native String DidEndEditingNotification();
     @GlobalConstant("UITextFieldTextDidChangeNotification")
-    public static native NSString DidChangeNotification();
+    public static native String DidChangeNotification();
 
     @Mapping("borderRectForBounds:")
     public native CGRect getBorderRect(CGRect bounds);

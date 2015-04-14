@@ -34,66 +34,66 @@ public class NSAttributedStringDocumentAttribute
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("NSDocumentTypeDocumentAttribute")
-    public static native NSString DocumentTypeDocumentAttribute();
+    public static native String DocumentTypeDocumentAttribute();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("NSCharacterEncodingDocumentAttribute")
-    public static native NSString CharacterEncodingDocumentAttribute();
+    public static native String CharacterEncodingDocumentAttribute();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("NSDefaultAttributesDocumentAttribute")
-    public static native NSString DefaultAttributesDocumentAttribute();
+    public static native String DefaultAttributesDocumentAttribute();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("NSPaperSizeDocumentAttribute")
-    public static native NSString PaperSizeDocumentAttribute();
+    public static native String PaperSizeDocumentAttribute();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("NSPaperMarginDocumentAttribute")
-    public static native NSString PaperMarginDocumentAttribute();
+    public static native String PaperMarginDocumentAttribute();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("NSViewSizeDocumentAttribute")
-    public static native NSString ViewSizeDocumentAttribute();
+    public static native String ViewSizeDocumentAttribute();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("NSViewZoomDocumentAttribute")
-    public static native NSString ViewZoomDocumentAttribute();
+    public static native String ViewZoomDocumentAttribute();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("NSViewModeDocumentAttribute")
-    public static native NSString ViewModeDocumentAttribute();
+    public static native String ViewModeDocumentAttribute();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("NSReadOnlyDocumentAttribute")
-    public static native NSString ReadOnlyDocumentAttribute();
+    public static native String ReadOnlyDocumentAttribute();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("NSBackgroundColorDocumentAttribute")
-    public static native NSString BackgroundColorDocumentAttribute();
+    public static native String BackgroundColorDocumentAttribute();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("NSHyphenationFactorDocumentAttribute")
-    public static native NSString HyphenationFactorDocumentAttribute();
+    public static native String HyphenationFactorDocumentAttribute();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("NSDefaultTabIntervalDocumentAttribute")
-    public static native NSString DefaultTabIntervalDocumentAttribute();
+    public static native String DefaultTabIntervalDocumentAttribute();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("NSTextLayoutSectionsAttribute")
-    public static native NSString TextLayoutSectionsAttribute();
+    public static native String TextLayoutSectionsAttribute();
 
 }

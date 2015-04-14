@@ -67,31 +67,31 @@ public class UIWindow
     
     
     @GlobalConstant("UIWindowDidBecomeVisibleNotification")
-    public static native NSString DidBecomeVisibleNotification();
+    public static native String DidBecomeVisibleNotification();
     @GlobalConstant("UIWindowDidBecomeHiddenNotification")
-    public static native NSString DidBecomeHiddenNotification();
+    public static native String DidBecomeHiddenNotification();
     @GlobalConstant("UIWindowDidBecomeKeyNotification")
-    public static native NSString DidBecomeKeyNotification();
+    public static native String DidBecomeKeyNotification();
     @GlobalConstant("UIWindowDidResignKeyNotification")
-    public static native NSString DidResignKeyNotification();
+    public static native String DidResignKeyNotification();
     @GlobalConstant("UIKeyboardWillShowNotification")
-    public static native NSString KeyboardWillShowNotification();
+    public static native String KeyboardWillShowNotification();
     @GlobalConstant("UIKeyboardDidShowNotification")
-    public static native NSString KeyboardDidShowNotification();
+    public static native String KeyboardDidShowNotification();
     @GlobalConstant("UIKeyboardWillHideNotification")
-    public static native NSString KeyboardWillHideNotification();
+    public static native String KeyboardWillHideNotification();
     @GlobalConstant("UIKeyboardDidHideNotification")
-    public static native NSString KeyboardDidHideNotification();
+    public static native String KeyboardDidHideNotification();
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("UIKeyboardWillChangeFrameNotification")
-    public static native NSString KeyboardWillChangeFrameNotification();
+    public static native String KeyboardWillChangeFrameNotification();
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("UIKeyboardDidChangeFrameNotification")
-    public static native NSString KeyboardDidChangeFrameNotification();
+    public static native String KeyboardDidChangeFrameNotification();
 
     @Mapping("becomeKeyWindow")
     public native void becomeKeyWindow();

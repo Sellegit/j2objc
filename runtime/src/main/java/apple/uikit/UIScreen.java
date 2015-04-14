@@ -126,22 +126,22 @@ public class UIScreen
      * @since Available in iOS 3.2 and later.
      */
     @GlobalConstant("UIScreenDidConnectNotification")
-    public static native NSString DidConnectNotification();
+    public static native String DidConnectNotification();
     /**
      * @since Available in iOS 3.2 and later.
      */
     @GlobalConstant("UIScreenDidDisconnectNotification")
-    public static native NSString DidDisconnectNotification();
+    public static native String DidDisconnectNotification();
     /**
      * @since Available in iOS 3.2 and later.
      */
     @GlobalConstant("UIScreenModeDidChangeNotification")
-    public static native NSString ModeDidChangeNotification();
+    public static native String ModeDidChangeNotification();
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("UIScreenBrightnessDidChangeNotification")
-    public static native NSString BrightnessDidChangeNotification();
+    public static native String BrightnessDidChangeNotification();
 
     /**
      * @since Available in iOS 4.0 and later.

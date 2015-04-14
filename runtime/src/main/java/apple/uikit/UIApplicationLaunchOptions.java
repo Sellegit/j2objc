@@ -34,51 +34,51 @@ public class UIApplicationLaunchOptions
      * @since Available in iOS 3.0 and later.
      */
     @GlobalConstant("UIApplicationLaunchOptionsURLKey")
-    public static native NSString URLKey();
+    public static native String URLKey();
     /**
      * @since Available in iOS 3.0 and later.
      */
     @GlobalConstant("UIApplicationLaunchOptionsSourceApplicationKey")
-    public static native NSString SourceApplicationKey();
+    public static native String SourceApplicationKey();
     /**
      * @since Available in iOS 3.0 and later.
      */
     @GlobalConstant("UIApplicationLaunchOptionsRemoteNotificationKey")
-    public static native NSString RemoteNotificationKey();
+    public static native String RemoteNotificationKey();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("UIApplicationLaunchOptionsLocalNotificationKey")
-    public static native NSString LocalNotificationKey();
+    public static native String LocalNotificationKey();
     /**
      * @since Available in iOS 3.2 and later.
      */
     @GlobalConstant("UIApplicationLaunchOptionsAnnotationKey")
-    public static native NSString AnnotationKey();
+    public static native String AnnotationKey();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("UIApplicationLaunchOptionsLocationKey")
-    public static native NSString LocationKey();
+    public static native String LocationKey();
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("UIApplicationLaunchOptionsNewsstandDownloadsKey")
-    public static native NSString NewsstandDownloadsKey();
+    public static native String NewsstandDownloadsKey();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("UIApplicationLaunchOptionsBluetoothCentralsKey")
-    public static native NSString BluetoothCentralsKey();
+    public static native String BluetoothCentralsKey();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("UIApplicationLaunchOptionsBluetoothPeripheralsKey")
-    public static native NSString BluetoothPeripheralsKey();
+    public static native String BluetoothPeripheralsKey();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("UIApplicationLaunchOptionsUserActivityDictionaryKey")
-    public static native NSString UserActivityDictionaryKey();
+    public static native String UserActivityDictionaryKey();
 
 }

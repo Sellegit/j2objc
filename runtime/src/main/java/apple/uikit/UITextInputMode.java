@@ -42,7 +42,7 @@ public class UITextInputMode
      * @since Available in iOS 4.2 and later.
      */
     @GlobalConstant("UITextInputCurrentInputModeDidChangeNotification")
-    public static native NSString CurrentInputModeDidChange();
+    public static native String CurrentInputModeDidChange();
 
     /**
      * @since Available in iOS 4.2 and later.

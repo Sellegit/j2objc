@@ -72,7 +72,7 @@ public class UIDocument
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("UIDocumentStateChangedNotification")
-    public static native NSString StateChangedNotification();
+    public static native String StateChangedNotification();
     /**
      * @since Available in iOS 8.0 and later.
      */

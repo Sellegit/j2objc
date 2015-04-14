@@ -241,11 +241,11 @@ public class UITextView
     
     
     @GlobalConstant("UITextViewTextDidBeginEditingNotification")
-    public static native NSString DidBeginEditingNotification();
+    public static native String DidBeginEditingNotification();
     @GlobalConstant("UITextViewTextDidChangeNotification")
-    public static native NSString DidChangeNotification();
+    public static native String DidChangeNotification();
     @GlobalConstant("UITextViewTextDidEndEditingNotification")
-    public static native NSString DidEndEditingNotification();
+    public static native String DidEndEditingNotification();
 
     @Mapping("scrollRangeToVisible:")
     public native void scrollRangeToVisible(NSRange range);

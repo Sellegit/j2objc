@@ -44,9 +44,9 @@ public class UIPasteboard
     @Mapping("numberOfItems")
     public native @MachineSizedSInt long getNumberOfItems();
     @Mapping("items")
-    public native NSArray<NSDictionary<NSString, NSObject>> getItems0();
+    public native NSArray<NSDictionary<String, NSObject>> getItems0();
     @Mapping("setItems:")
-    public native void setItems0(NSArray<NSDictionary<NSString, NSObject>> v);
+    public native void setItems0(NSArray<NSDictionary<String, NSObject>> v);
     @Mapping("string")
     public native String getString();
     @Mapping("setString:")
@@ -85,9 +85,9 @@ public class UIPasteboard
     @GlobalConstant("UIPasteboardNameFind")
     public static native String PasteboardNameFind();
     @GlobalConstant("UIPasteboardChangedNotification")
-    public static native NSString ChangedNotification();
+    public static native String ChangedNotification();
     @GlobalConstant("UIPasteboardRemovedNotification")
-    public static native NSString RemovedNotification();
+    public static native String RemovedNotification();
     @GlobalConstant("UIPasteboardTypeListString")
     public static native List<String> getStringTypeList();
     @GlobalConstant("UIPasteboardTypeListURL")
@@ -110,7 +110,7 @@ public class UIPasteboard
     @Mapping("setData:forPasteboardType:")
     public native void setData(NSData data, String pasteboardType);
     @Mapping("pasteboardTypesForItemSet:")
-    public native NSArray<NSArray<NSString>> getTypes0(NSIndexSet itemSet);
+    public native NSArray<NSArray<String>> getTypes0(NSIndexSet itemSet);
     @Mapping("containsPasteboardTypes:inItemSet:")
     public native boolean contains(NSArray<?> pasteboardTypes, NSIndexSet itemSet);
     @Mapping("itemSetWithPasteboardTypes:")

@@ -34,21 +34,21 @@ public class UIKeyboardAnimation
      * @since Available in iOS 3.2 and later.
      */
     @GlobalConstant("UIKeyboardFrameBeginUserInfoKey")
-    public static native NSString FrameBeginKey();
+    public static native String FrameBeginKey();
     /**
      * @since Available in iOS 3.2 and later.
      */
     @GlobalConstant("UIKeyboardFrameEndUserInfoKey")
-    public static native NSString FrameEndKey();
+    public static native String FrameEndKey();
     /**
      * @since Available in iOS 3.0 and later.
      */
     @GlobalConstant("UIKeyboardAnimationDurationUserInfoKey")
-    public static native NSString AnimationDurationKey();
+    public static native String AnimationDurationKey();
     /**
      * @since Available in iOS 3.0 and later.
      */
     @GlobalConstant("UIKeyboardAnimationCurveUserInfoKey")
-    public static native NSString AnimationCurveKey();
+    public static native String AnimationCurveKey();
 
 }

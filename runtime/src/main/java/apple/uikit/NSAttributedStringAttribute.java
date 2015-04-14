@@ -36,147 +36,147 @@ public class NSAttributedStringAttribute
      */
     @Deprecated
     @GlobalConstant("UITextAttributeFont")
-    public static native NSString TextFontAttribute();
+    public static native String TextFontAttribute();
     /**
      * @since Available in iOS 5.0 and later.
      * @deprecated Deprecated in iOS 7.0.
      */
     @Deprecated
     @GlobalConstant("UITextAttributeTextColor")
-    public static native NSString TextColorAttribute();
+    public static native String TextColorAttribute();
     /**
      * @since Available in iOS 5.0 and later.
      * @deprecated Deprecated in iOS 7.0.
      */
     @Deprecated
     @GlobalConstant("UITextAttributeTextShadowColor")
-    public static native NSString TextShadowColorAttribute();
+    public static native String TextShadowColorAttribute();
     /**
      * @since Available in iOS 5.0 and later.
      * @deprecated Deprecated in iOS 7.0.
      */
     @Deprecated
     @GlobalConstant("UITextAttributeTextShadowOffset")
-    public static native NSString TextShadowOffsetAttribute();
+    public static native String TextShadowOffsetAttribute();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("UIAccessibilitySpeechAttributePunctuation")
-    public static native NSString SpeechPunctuationAttribute();
+    public static native String SpeechPunctuationAttribute();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("UIAccessibilitySpeechAttributeLanguage")
-    public static native NSString SpeechLanguageAttribute();
+    public static native String SpeechLanguageAttribute();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("UIAccessibilitySpeechAttributePitch")
-    public static native NSString SpeechPitchAttribute();
+    public static native String SpeechPitchAttribute();
     /**
      * @since Available in iOS 6.0 and later.
      */
     @GlobalConstant("NSFontAttributeName")
-    public static native NSString FontAttribute();
+    public static native String FontAttribute();
     /**
      * @since Available in iOS 6.0 and later.
      */
     @GlobalConstant("NSParagraphStyleAttributeName")
-    public static native NSString ParagraphStyleAttribute();
+    public static native String ParagraphStyleAttribute();
     /**
      * @since Available in iOS 6.0 and later.
      */
     @GlobalConstant("NSForegroundColorAttributeName")
-    public static native NSString ForegroundColorAttribute();
+    public static native String ForegroundColorAttribute();
     /**
      * @since Available in iOS 6.0 and later.
      */
     @GlobalConstant("NSBackgroundColorAttributeName")
-    public static native NSString BackgroundColorAttribute();
+    public static native String BackgroundColorAttribute();
     /**
      * @since Available in iOS 6.0 and later.
      */
     @GlobalConstant("NSLigatureAttributeName")
-    public static native NSString LigatureAttribute();
+    public static native String LigatureAttribute();
     /**
      * @since Available in iOS 6.0 and later.
      */
     @GlobalConstant("NSKernAttributeName")
-    public static native NSString KernAttribute();
+    public static native String KernAttribute();
     /**
      * @since Available in iOS 6.0 and later.
      */
     @GlobalConstant("NSStrikethroughStyleAttributeName")
-    public static native NSString StrikethroughStyleAttribute();
+    public static native String StrikethroughStyleAttribute();
     /**
      * @since Available in iOS 6.0 and later.
      */
     @GlobalConstant("NSUnderlineStyleAttributeName")
-    public static native NSString UnderlineStyleAttribute();
+    public static native String UnderlineStyleAttribute();
     /**
      * @since Available in iOS 6.0 and later.
      */
     @GlobalConstant("NSStrokeColorAttributeName")
-    public static native NSString StrokeColorAttribute();
+    public static native String StrokeColorAttribute();
     /**
      * @since Available in iOS 6.0 and later.
      */
     @GlobalConstant("NSStrokeWidthAttributeName")
-    public static native NSString StrokeWidthAttribute();
+    public static native String StrokeWidthAttribute();
     /**
      * @since Available in iOS 6.0 and later.
      */
     @GlobalConstant("NSShadowAttributeName")
-    public static native NSString ShadowAttribute();
+    public static native String ShadowAttribute();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("NSTextEffectAttributeName")
-    public static native NSString TextEffectAttribute();
+    public static native String TextEffectAttribute();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("NSAttachmentAttributeName")
-    public static native NSString AttachmentAttribute();
+    public static native String AttachmentAttribute();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("NSLinkAttributeName")
-    public static native NSString LinkAttribute();
+    public static native String LinkAttribute();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("NSBaselineOffsetAttributeName")
-    public static native NSString BaselineOffsetAttribute();
+    public static native String BaselineOffsetAttribute();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("NSUnderlineColorAttributeName")
-    public static native NSString UnderlineColorAttribute();
+    public static native String UnderlineColorAttribute();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("NSStrikethroughColorAttributeName")
-    public static native NSString StrikethroughColorAttribute();
+    public static native String StrikethroughColorAttribute();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("NSObliquenessAttributeName")
-    public static native NSString ObliquenessAttribute();
+    public static native String ObliquenessAttribute();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("NSExpansionAttributeName")
-    public static native NSString ExpansionAttribute();
+    public static native String ExpansionAttribute();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("NSWritingDirectionAttributeName")
-    public static native NSString WritingDirectionAttribute();
+    public static native String WritingDirectionAttribute();
     /**
      * @since Available in iOS 6.0 and later.
      */
     @GlobalConstant("NSVerticalGlyphFormAttributeName")
-    public static native NSString VerticalGlyphFormAttribute();
+    public static native String VerticalGlyphFormAttribute();
 
 }

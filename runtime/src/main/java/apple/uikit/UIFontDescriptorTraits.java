@@ -34,21 +34,21 @@ public class UIFontDescriptorTraits
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("UIFontSymbolicTrait")
-    public static native NSString SymbolicTrait();
+    public static native String SymbolicTrait();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("UIFontWeightTrait")
-    public static native NSString WeightTrait();
+    public static native String WeightTrait();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("UIFontWidthTrait")
-    public static native NSString WidthTrait();
+    public static native String WidthTrait();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("UIFontSlantTrait")
-    public static native NSString SlantTrait();
+    public static native String SlantTrait();
 
 }

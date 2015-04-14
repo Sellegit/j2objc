@@ -63,15 +63,15 @@ public class UIMenuController
     
     
     @GlobalConstant("UIMenuControllerWillShowMenuNotification")
-    public static native NSString WillShowMenuNotification();
+    public static native String WillShowMenuNotification();
     @GlobalConstant("UIMenuControllerDidShowMenuNotification")
-    public static native NSString DidShowMenuNotification();
+    public static native String DidShowMenuNotification();
     @GlobalConstant("UIMenuControllerWillHideMenuNotification")
-    public static native NSString WillHideMenuNotification();
+    public static native String WillHideMenuNotification();
     @GlobalConstant("UIMenuControllerDidHideMenuNotification")
-    public static native NSString DidHideMenuNotification();
+    public static native String DidHideMenuNotification();
     @GlobalConstant("UIMenuControllerMenuFrameDidChangeNotification")
-    public static native NSString MenuFrameDidChangeNotification();
+    public static native String MenuFrameDidChangeNotification();
 
     @Mapping("setMenuVisible:animated:")
     public native void setMenuVisible(boolean menuVisible, boolean animated);

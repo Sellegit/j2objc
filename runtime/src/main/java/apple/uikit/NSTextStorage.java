@@ -60,12 +60,12 @@ public class NSTextStorage
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("NSTextStorageWillProcessEditingNotification")
-    public static native NSString WillProcessEditingNotification();
+    public static native String WillProcessEditingNotification();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("NSTextStorageDidProcessEditingNotification")
-    public static native NSString DidProcessEditingNotification();
+    public static native String DidProcessEditingNotification();
 
     @Mapping("addLayoutManager:")
     public native void addLayoutManager(NSLayoutManager aLayoutManager);

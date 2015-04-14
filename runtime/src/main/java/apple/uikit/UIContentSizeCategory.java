@@ -34,61 +34,61 @@ public class UIContentSizeCategory
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("UIContentSizeCategoryExtraSmall")
-    public static native NSString ExtraSmallValue();
+    public static native String ExtraSmallValue();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("UIContentSizeCategorySmall")
-    public static native NSString SmallValue();
+    public static native String SmallValue();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("UIContentSizeCategoryMedium")
-    public static native NSString MediumValue();
+    public static native String MediumValue();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("UIContentSizeCategoryLarge")
-    public static native NSString LargeValue();
+    public static native String LargeValue();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("UIContentSizeCategoryExtraLarge")
-    public static native NSString ExtraLargeValue();
+    public static native String ExtraLargeValue();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("UIContentSizeCategoryExtraExtraLarge")
-    public static native NSString ExtraExtraLargeValue();
+    public static native String ExtraExtraLargeValue();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("UIContentSizeCategoryExtraExtraExtraLarge")
-    public static native NSString ExtraExtraExtraLargeValue();
+    public static native String ExtraExtraExtraLargeValue();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("UIContentSizeCategoryAccessibilityMedium")
-    public static native NSString AccessibilityMediumValue();
+    public static native String AccessibilityMediumValue();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("UIContentSizeCategoryAccessibilityLarge")
-    public static native NSString AccessibilityLargeValue();
+    public static native String AccessibilityLargeValue();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("UIContentSizeCategoryAccessibilityExtraLarge")
-    public static native NSString AccessibilityExtraLargeValue();
+    public static native String AccessibilityExtraLargeValue();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("UIContentSizeCategoryAccessibilityExtraExtraLarge")
-    public static native NSString AccessibilityExtraExtraLargeValue();
+    public static native String AccessibilityExtraExtraLargeValue();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("UIContentSizeCategoryAccessibilityExtraExtraExtraLarge")
-    public static native NSString AccessibilityExtraExtraExtraLargeValue();
+    public static native String AccessibilityExtraExtraExtraLargeValue();
 
 }

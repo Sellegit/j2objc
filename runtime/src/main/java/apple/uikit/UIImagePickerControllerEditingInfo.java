@@ -31,24 +31,24 @@ public class UIImagePickerControllerEditingInfo
     
     
     @GlobalConstant("UIImagePickerControllerMediaType")
-    public static native NSString MediaTypeKey();
+    public static native String MediaTypeKey();
     @GlobalConstant("UIImagePickerControllerOriginalImage")
-    public static native NSString OriginalImageKey();
+    public static native String OriginalImageKey();
     @GlobalConstant("UIImagePickerControllerEditedImage")
-    public static native NSString EditedImageKey();
+    public static native String EditedImageKey();
     @GlobalConstant("UIImagePickerControllerCropRect")
-    public static native NSString CropRectKey();
+    public static native String CropRectKey();
     @GlobalConstant("UIImagePickerControllerMediaURL")
-    public static native NSString MediaURLKey();
+    public static native String MediaURLKey();
     /**
      * @since Available in iOS 4.1 and later.
      */
     @GlobalConstant("UIImagePickerControllerReferenceURL")
-    public static native NSString ReferenceURLKey();
+    public static native String ReferenceURLKey();
     /**
      * @since Available in iOS 4.1 and later.
      */
     @GlobalConstant("UIImagePickerControllerMediaMetadata")
-    public static native NSString MediaMetadataKey();
+    public static native String MediaMetadataKey();
 
 }
