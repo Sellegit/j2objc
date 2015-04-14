@@ -32,61 +32,61 @@ public class CAGravity
      * @since Available in iOS 2.0 and later.
      */
     @GlobalConstant("kCAGravityCenter")
-    public static native NSString CenterValue();
+    public static native String CenterValue();
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalConstant("kCAGravityTop")
-    public static native NSString TopValue();
+    public static native String TopValue();
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalConstant("kCAGravityBottom")
-    public static native NSString BottomValue();
+    public static native String BottomValue();
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalConstant("kCAGravityLeft")
-    public static native NSString LeftValue();
+    public static native String LeftValue();
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalConstant("kCAGravityRight")
-    public static native NSString RightValue();
+    public static native String RightValue();
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalConstant("kCAGravityTopLeft")
-    public static native NSString TopLeftValue();
+    public static native String TopLeftValue();
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalConstant("kCAGravityTopRight")
-    public static native NSString TopRightValue();
+    public static native String TopRightValue();
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalConstant("kCAGravityBottomLeft")
-    public static native NSString BottomLeftValue();
+    public static native String BottomLeftValue();
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalConstant("kCAGravityBottomRight")
-    public static native NSString BottomRightValue();
+    public static native String BottomRightValue();
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalConstant("kCAGravityResize")
-    public static native NSString ResizeValue();
+    public static native String ResizeValue();
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalConstant("kCAGravityResizeAspect")
-    public static native NSString ResizeAspectValue();
+    public static native String ResizeAspectValue();
     /**
      * @since Available in iOS 2.0 and later.
      */
     @GlobalConstant("kCAGravityResizeAspectFill")
-    public static native NSString ResizeAspectFillValue();
+    public static native String ResizeAspectFillValue();
 
 }

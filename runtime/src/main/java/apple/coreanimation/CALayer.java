@@ -97,9 +97,9 @@ public class CALayer
     @Mapping("setContentsRect:")
     public native void setContentsRect(CGRect v);
     @Mapping("contentsGravity")
-    public native CAGravity getContentsGravity();
+    public native String getContentsGravity();
     @Mapping("setContentsGravity:")
-    public native void setContentsGravity(CAGravity v);
+    public native void setContentsGravity(String v);
     @Mapping("contentsScale")
     public native @MachineSizedFloat double getContentsScale();
     @Mapping("setContentsScale:")
