@@ -314,7 +314,7 @@ public class UIViewController
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("UIViewControllerShowDetailTargetDidChangeNotification")
-    public static native NSString ShowDetailTargetDidChangeNotification();
+    public static native String ShowDetailTargetDidChangeNotification();
 
     @Mapping("loadView")
     public native void loadView();

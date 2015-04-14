@@ -34,11 +34,11 @@ public class NSTextLayoutSection
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("NSTextLayoutSectionOrientation")
-    public static native NSString OrientationKey();
+    public static native String OrientationKey();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("NSTextLayoutSectionRange")
-    public static native NSString RangeKey();
+    public static native String RangeKey();
 
 }

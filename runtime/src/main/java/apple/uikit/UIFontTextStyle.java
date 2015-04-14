@@ -34,31 +34,31 @@ public class UIFontTextStyle
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("UIFontTextStyleHeadline")
-    public static native NSString HeadlineValue();
+    public static native String HeadlineValue();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("UIFontTextStyleBody")
-    public static native NSString BodyValue();
+    public static native String BodyValue();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("UIFontTextStyleSubheadline")
-    public static native NSString SubheadlineValue();
+    public static native String SubheadlineValue();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("UIFontTextStyleFootnote")
-    public static native NSString FootnoteValue();
+    public static native String FootnoteValue();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("UIFontTextStyleCaption1")
-    public static native NSString Caption1Value();
+    public static native String Caption1Value();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("UIFontTextStyleCaption2")
-    public static native NSString Caption2Value();
+    public static native String Caption2Value();
 
 }

@@ -101,22 +101,22 @@ public class UIDevice
     
     
     @GlobalConstant("UIDeviceOrientationDidChangeNotification")
-    public static native NSString OrientationDidChangeNotification();
+    public static native String OrientationDidChangeNotification();
     /**
      * @since Available in iOS 3.0 and later.
      */
     @GlobalConstant("UIDeviceBatteryStateDidChangeNotification")
-    public static native NSString BatteryStateDidChangeNotification();
+    public static native String BatteryStateDidChangeNotification();
     /**
      * @since Available in iOS 3.0 and later.
      */
     @GlobalConstant("UIDeviceBatteryLevelDidChangeNotification")
-    public static native NSString BatteryLevelDidChangeNotification();
+    public static native String BatteryLevelDidChangeNotification();
     /**
      * @since Available in iOS 3.0 and later.
      */
     @GlobalConstant("UIDeviceProximityStateDidChangeNotification")
-    public static native NSString ProximityStateDidChangeNotification();
+    public static native String ProximityStateDidChangeNotification();
 
     @Mapping("beginGeneratingDeviceOrientationNotifications")
     public native void beginGeneratingDeviceOrientationNotifications();

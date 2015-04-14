@@ -34,6 +34,6 @@ public class NSTextEffect
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("NSTextEffectLetterpressStyle")
-    public static native NSString LetterpressStyleValue();
+    public static native String LetterpressStyleValue();
 
 }

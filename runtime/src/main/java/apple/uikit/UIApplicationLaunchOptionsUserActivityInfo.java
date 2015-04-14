@@ -34,6 +34,6 @@ public class UIApplicationLaunchOptionsUserActivityInfo
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("UIApplicationLaunchOptionsUserActivityTypeKey")
-    public static native NSString TypeKey();
+    public static native String TypeKey();
 
 }

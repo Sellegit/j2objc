@@ -146,51 +146,51 @@ public class UIApplication
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("UIApplicationDidEnterBackgroundNotification")
-    public static native NSString DidEnterBackgroundNotification();
+    public static native String DidEnterBackgroundNotification();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("UIApplicationWillEnterForegroundNotification")
-    public static native NSString WillEnterForegroundNotification();
+    public static native String WillEnterForegroundNotification();
     @GlobalConstant("UIApplicationDidFinishLaunchingNotification")
-    public static native NSString DidFinishLaunchingNotification();
+    public static native String DidFinishLaunchingNotification();
     @GlobalConstant("UIApplicationDidBecomeActiveNotification")
-    public static native NSString DidBecomeActiveNotification();
+    public static native String DidBecomeActiveNotification();
     @GlobalConstant("UIApplicationWillResignActiveNotification")
-    public static native NSString WillResignActiveNotification();
+    public static native String WillResignActiveNotification();
     @GlobalConstant("UIApplicationDidReceiveMemoryWarningNotification")
-    public static native NSString DidReceiveMemoryWarningNotification();
+    public static native String DidReceiveMemoryWarningNotification();
     @GlobalConstant("UIApplicationWillTerminateNotification")
-    public static native NSString WillTerminateNotification();
+    public static native String WillTerminateNotification();
     @GlobalConstant("UIApplicationSignificantTimeChangeNotification")
-    public static native NSString SignificantTimeChangeNotification();
+    public static native String SignificantTimeChangeNotification();
     @GlobalConstant("UIApplicationWillChangeStatusBarOrientationNotification")
-    public static native NSString WillChangeStatusBarOrientationNotification();
+    public static native String WillChangeStatusBarOrientationNotification();
     @GlobalConstant("UIApplicationDidChangeStatusBarOrientationNotification")
-    public static native NSString DidChangeStatusBarOrientationNotification();
+    public static native String DidChangeStatusBarOrientationNotification();
     @GlobalConstant("UIApplicationStatusBarOrientationUserInfoKey")
-    public static native NSString StatusBarOrientationUserInfoKey();
+    public static native String StatusBarOrientationUserInfoKey();
     @GlobalConstant("UIApplicationWillChangeStatusBarFrameNotification")
-    public static native NSString WillChangeStatusBarFrameNotification();
+    public static native String WillChangeStatusBarFrameNotification();
     @GlobalConstant("UIApplicationDidChangeStatusBarFrameNotification")
-    public static native NSString DidChangeStatusBarFrameNotification();
+    public static native String DidChangeStatusBarFrameNotification();
     @GlobalConstant("UIApplicationStatusBarFrameUserInfoKey")
-    public static native NSString StatusBarFrameUserInfoKey();
+    public static native String StatusBarFrameUserInfoKey();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("UIApplicationBackgroundRefreshStatusDidChangeNotification")
-    public static native NSString BackgroundRefreshStatusDidChangeNotification();
+    public static native String BackgroundRefreshStatusDidChangeNotification();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("UIApplicationProtectedDataWillBecomeUnavailable")
-    public static native NSString ProtectedDataWillBecomeUnavailableNotification();
+    public static native String ProtectedDataWillBecomeUnavailableNotification();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("UIApplicationProtectedDataDidBecomeAvailable")
-    public static native NSString ProtectedDataDidBecomeAvailableNotification();
+    public static native String ProtectedDataDidBecomeAvailableNotification();
     /**
      * @since Available in iOS 8.0 and later.
      */
@@ -200,17 +200,17 @@ public class UIApplication
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("UIContentSizeCategoryDidChangeNotification")
-    public static native NSString ContentSizeCategoryDidChangeNotification();
+    public static native String ContentSizeCategoryDidChangeNotification();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("UIContentSizeCategoryNewValueKey")
-    public static native NSString ContentSizeCategoryNewValueKey();
+    public static native String ContentSizeCategoryNewValueKey();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("UIApplicationUserDidTakeScreenshotNotification")
-    public static native NSString UserDidTakeScreenshotNotification();
+    public static native String UserDidTakeScreenshotNotification();
 
     @GlobalFunction("UIApplicationMain")
     public static native int main(int argc, Todo argv, String principalClassName, String delegateClassName);

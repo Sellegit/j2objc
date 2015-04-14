@@ -34,17 +34,17 @@ public class UIAccessibilityGlobals
      * @since Available in iOS 6.0 and later.
      */
     @GlobalConstant("UIAccessibilityAnnouncementDidFinishNotification")
-    public static native NSString AnnouncementDidFinishNotification();
+    public static native String AnnouncementDidFinishNotification();
     /**
      * @since Available in iOS 6.0 and later.
      */
     @GlobalConstant("UIAccessibilityAnnouncementKeyStringValue")
-    public static native NSString AnnouncementKeyStringValue();
+    public static native String AnnouncementKeyStringValue();
     /**
      * @since Available in iOS 6.0 and later.
      */
     @GlobalConstant("UIAccessibilityAnnouncementKeyWasSuccessful")
-    public static native NSString AnnouncementKeyWasSuccessful();
+    public static native String AnnouncementKeyWasSuccessful();
     /**
      * @since Available in iOS 8.0 and later.
      */
@@ -54,67 +54,67 @@ public class UIAccessibilityGlobals
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("UIAccessibilityVoiceOverStatusChanged")
-    public static native NSString VoiceOverStatusChangedNotification();
+    public static native String VoiceOverStatusChangedNotification();
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("UIAccessibilityMonoAudioStatusDidChangeNotification")
-    public static native NSString MonoAudioStatusDidChangeNotification();
+    public static native String MonoAudioStatusDidChangeNotification();
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("UIAccessibilityClosedCaptioningStatusDidChangeNotification")
-    public static native NSString ClosedCaptioningStatusDidChangeNotification();
+    public static native String ClosedCaptioningStatusDidChangeNotification();
     /**
      * @since Available in iOS 6.0 and later.
      */
     @GlobalConstant("UIAccessibilityInvertColorsStatusDidChangeNotification")
-    public static native NSString InvertColorsStatusDidChangeNotification();
+    public static native String InvertColorsStatusDidChangeNotification();
     /**
      * @since Available in iOS 6.0 and later.
      */
     @GlobalConstant("UIAccessibilityGuidedAccessStatusDidChangeNotification")
-    public static native NSString GuidedAccessStatusDidChangeNotification();
+    public static native String GuidedAccessStatusDidChangeNotification();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("UIAccessibilityBoldTextStatusDidChangeNotification")
-    public static native NSString BoldTextStatusDidChangeNotification();
+    public static native String BoldTextStatusDidChangeNotification();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("UIAccessibilityGrayscaleStatusDidChangeNotification")
-    public static native NSString GrayscaleStatusDidChangeNotification();
+    public static native String GrayscaleStatusDidChangeNotification();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("UIAccessibilityReduceTransparencyStatusDidChangeNotification")
-    public static native NSString ReduceTransparencyStatusDidChangeNotification();
+    public static native String ReduceTransparencyStatusDidChangeNotification();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("UIAccessibilityReduceMotionStatusDidChangeNotification")
-    public static native NSString ReduceMotionStatusDidChangeNotification();
+    public static native String ReduceMotionStatusDidChangeNotification();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("UIAccessibilityDarkerSystemColorsStatusDidChangeNotification")
-    public static native NSString DarkerSystemColorsStatusDidChangeNotification();
+    public static native String DarkerSystemColorsStatusDidChangeNotification();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("UIAccessibilitySwitchControlStatusDidChangeNotification")
-    public static native NSString SwitchControlStatusDidChangeNotification();
+    public static native String SwitchControlStatusDidChangeNotification();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("UIAccessibilitySpeakSelectionStatusDidChangeNotification")
-    public static native NSString SpeakSelectionStatusDidChangeNotification();
+    public static native String SpeakSelectionStatusDidChangeNotification();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("UIAccessibilitySpeakScreenStatusDidChangeNotification")
-    public static native NSString SpeakScreenStatusDidChangeNotification();
+    public static native String SpeakScreenStatusDidChangeNotification();
 
     /**
      * @since Available in iOS 5.0 and later.

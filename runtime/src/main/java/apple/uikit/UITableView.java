@@ -223,7 +223,7 @@ public class UITableView
     @GlobalConstant("UITableViewAutomaticDimension")
     public static native @MachineSizedFloat double getAutomaticDimension();
     @GlobalConstant("UITableViewSelectionDidChangeNotification")
-    public static native NSString SelectionDidChangeNotification();
+    public static native String SelectionDidChangeNotification();
 
     @Mapping("reloadData")
     public native void reloadData();
