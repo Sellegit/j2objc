@@ -25,6 +25,8 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.ObjectStreamField;
 import java.io.Serializable;
+import java.lang.ref.WeakReference;
+
 import libcore.util.Objects;
 
 /**
@@ -116,12 +118,9 @@ public class HashMap<K, V> extends AbstractMap<K, V> implements Cloneable, Seria
     private transient int threshold;
 
     // Views - lazily initialized
-    @Weak
-    private transient Set<K> keySet;
-    @Weak
-    private transient Set<Entry<K, V>> entrySet;
-    @Weak
-    private transient Collection<V> values;
+    private volatile transient WeakReference<Set<K>> keySet = new WeakReference<Set<K>>(null);
+    private volatile transient WeakReference<Set<Entry<K, V>>> entrySet = new WeakReference<Set<Entry<K, V>>>(null);
+    private volatile transient WeakReference<Collection<V>> values = new WeakReference<Collection<V>>(null);
 
     /**
      * Constructs a new empty {@code HashMap} instance.
@@ -699,8 +698,13 @@ public class HashMap<K, V> extends AbstractMap<K, V> implements Cloneable, Seria
      * @return a set of the keys.
      */
     @Override public Set<K> keySet() {
-        Set<K> ks = keySet;
-        return (ks != null) ? ks : (keySet = new KeySet());
+        Set<K> ks = keySet.get();
+        if (ks == null) {
+            ks = new KeySet();
+            keySet = new WeakReference<Set<K>>(ks);
+        }
+
+        return ks;
     }
 
     /**
@@ -725,8 +729,13 @@ public class HashMap<K, V> extends AbstractMap<K, V> implements Cloneable, Seria
      * @return a collection of the values contained in this map.
      */
     @Override public Collection<V> values() {
-        Collection<V> vs = values;
-        return (vs != null) ? vs : (values = new Values());
+        Collection<V> vs = values.get();
+        if (vs == null) {
+            vs = new Values();
+            values = new WeakReference<Collection<V>>(vs);
+        }
+
+        return vs;
     }
 
     /**
@@ -737,8 +746,13 @@ public class HashMap<K, V> extends AbstractMap<K, V> implements Cloneable, Seria
      * @return a set of the mappings.
      */
     public Set<Entry<K, V>> entrySet() {
-        Set<Entry<K, V>> es = entrySet;
-        return (es != null) ? es : (entrySet = new EntrySet());
+        Set<Entry<K, V>> es = entrySet.get();
+        if (es == null) {
+            es = new EntrySet();
+            entrySet = new WeakReference<Set<Entry<K, V>>>(es);
+        }
+
+        return es;
     }
 
     static class HashMapEntry<K, V> implements Entry<K, V> {
@@ -940,16 +954,6 @@ public class HashMap<K, V> extends AbstractMap<K, V> implements Cloneable, Seria
             HashMap.this.clear();
         }
 
-        @Override
-        public void finalize() throws Throwable {
-            // clean up the weak reference
-            try {
-                keySet = null;
-            } finally {
-                super.finalize();
-            }
-        }
-
         /*-[
         - (NSUInteger)countByEnumeratingWithState:(NSFastEnumerationState *)state
                                           objects:(__unsafe_unretained id *)stackbuf
@@ -979,16 +983,6 @@ public class HashMap<K, V> extends AbstractMap<K, V> implements Cloneable, Seria
         }
         public void clear() {
             HashMap.this.clear();
-        }
-
-        @Override
-        public void finalize() throws Throwable {
-            // clean up the weak reference
-            try {
-                values = null;
-            } finally {
-                super.finalize();
-            }
         }
 
         /*-[
@@ -1029,16 +1023,6 @@ public class HashMap<K, V> extends AbstractMap<K, V> implements Cloneable, Seria
         }
         public void clear() {
             HashMap.this.clear();
-        }
-
-        @Override
-        public void finalize() throws Throwable {
-            // clean up the weak reference
-            try {
-                entrySet = null;
-            } finally {
-                super.finalize();
-            }
         }
 
         /*-[

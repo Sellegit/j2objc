@@ -6,8 +6,10 @@
 
 package java.util.concurrent;
 
+import com.google.j2objc.annotations.Weak;
 import com.google.j2objc.annotations.WeakOuter;
 
+import java.lang.ref.WeakReference;
 import java.util.concurrent.locks.*;
 import java.util.*;
 import java.io.Serializable;
@@ -164,9 +166,11 @@ public class ConcurrentHashMap<K, V> extends AbstractMap<K, V>
      */
     final Segment<K,V>[] segments;
 
-    transient Set<K> keySet;
-    transient Set<Map.Entry<K,V>> entrySet;
-    transient Collection<V> values;
+    // Due to the fact that this map might be accessed concurrently
+    //   we need to ensure these weak references are thread-safe as well
+    volatile transient WeakReference<Set<K>> keySet = new WeakReference<Set<K>>(null);
+    volatile transient WeakReference<Set<Entry<K,V>>> entrySet = new WeakReference<Set<Entry<K, V>>>(null);
+    volatile transient WeakReference<Collection<V>> values = new WeakReference<Collection<V>>(null);
 
     /**
      * ConcurrentHashMap list entry. Note that this is never exported
@@ -1140,8 +1144,12 @@ public class ConcurrentHashMap<K, V> extends AbstractMap<K, V>
      * reflect any modifications subsequent to construction.
      */
     public Set<K> keySet() {
-        Set<K> ks = keySet;
-        return (ks != null) ? ks : (keySet = new KeySet());
+        Set<K> ks = keySet.get();
+        if (ks == null) {
+            ks = new KeySet();
+            keySet = new WeakReference<Set<K>>(ks);
+        }
+        return ks;
     }
 
     /**
@@ -1161,8 +1169,12 @@ public class ConcurrentHashMap<K, V> extends AbstractMap<K, V>
      * reflect any modifications subsequent to construction.
      */
     public Collection<V> values() {
-        Collection<V> vs = values;
-        return (vs != null) ? vs : (values = new Values());
+        Collection<V> vs = values.get();
+        if (vs == null) {
+            vs = new Values();
+            values = new WeakReference<Collection<V>>(vs);
+        }
+        return vs;
     }
 
     /**
@@ -1182,8 +1194,13 @@ public class ConcurrentHashMap<K, V> extends AbstractMap<K, V>
      * reflect any modifications subsequent to construction.
      */
     public Set<Map.Entry<K,V>> entrySet() {
-        Set<Map.Entry<K,V>> es = entrySet;
-        return (es != null) ? es : (entrySet = new EntrySet());
+        Set<Map.Entry<K,V>> es = entrySet.get();
+        if (es == null) {
+            es = new EntrySet();
+            entrySet = new WeakReference<Set<Entry<K, V>>>(es);
+        }
+
+        return es;
     }
 
     /**
@@ -1317,7 +1334,6 @@ public class ConcurrentHashMap<K, V> extends AbstractMap<K, V>
         }
     }
 
-    @WeakOuter
     final class KeySet extends AbstractSet<K> {
         public Iterator<K> iterator() {
             return new KeyIterator();
@@ -1339,7 +1355,6 @@ public class ConcurrentHashMap<K, V> extends AbstractMap<K, V>
         }
     }
 
-    @WeakOuter
     final class Values extends AbstractCollection<V> {
         public Iterator<V> iterator() {
             return new ValueIterator();
@@ -1358,7 +1373,6 @@ public class ConcurrentHashMap<K, V> extends AbstractMap<K, V>
         }
     }
 
-    @WeakOuter
     final class EntrySet extends AbstractSet<Map.Entry<K,V>> {
         public Iterator<Map.Entry<K,V>> iterator() {
             return new EntryIterator();
