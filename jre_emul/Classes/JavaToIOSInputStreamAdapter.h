@@ -24,7 +24,13 @@
 
 @class JavaIoInputStream;
 
-@interface JavaToIOSInputStreamAdapter : NSInputStream {
+@interface JavaToIOSInputStreamAdapter : NSInputStream <NSStreamDelegate> {
+  NSStreamStatus streamStatus;
+  id<NSStreamDelegate> delegate;
+    // NSMapTable *runLoopEventsDict;
+    // NSMapTable *runLoopEventsDictDummy;
+    // NSMapTable *runLoopModesDict;
+    // NSStreamEvent _pendingEvents;
  @private
   JavaIoInputStream *delegate_;
 }
