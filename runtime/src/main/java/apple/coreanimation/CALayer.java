@@ -217,9 +217,9 @@ public class CALayer
     @Mapping("setDelegate:")
     public native void setDelegate(CALayerDelegate v);
     @Mapping("style")
-    public native NSDictionary<NSString, NSObject> getStyle();
+    public native NSDictionary<String, NSObject> getStyle();
     @Mapping("setStyle:")
-    public native void setStyle(NSDictionary<NSString, NSObject> v);
+    public native void setStyle(NSDictionary<String, NSObject> v);
     @Mapping("visibleRect")
     public native CGRect getVisibleRect();
     @Mapping("beginTime")
