@@ -26,12 +26,6 @@ public class UIKit
      {
 
     
-    public static final long Constant__UIRemoteNotificationTypeNone = 0L;
-    public static final long Constant__UIRemoteNotificationTypeBadge = 1L;
-    public static final long Constant__UIRemoteNotificationTypeSound = 2L;
-    public static final long Constant__UIRemoteNotificationTypeAlert = 4L;
-    public static final long Constant__UIRemoteNotificationTypeNewsstandContentAvailability = 8L;
-
     
     
     

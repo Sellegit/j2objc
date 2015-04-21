@@ -3,6 +3,7 @@ package com.google.j2objc.runtime;
 import apple.foundation.NSException;
 import apple.foundation.NSNumber;
 import apple.foundation.NSObject;
+import apple.foundation.NSString;
 
 /**
  * Created by xichen on 4/17/15.
@@ -12,7 +13,7 @@ public class ObjCBridge {
     return x;
   ]-*/;
 
-  public static native NSObject toNSString(String x) /*-[
+  public static native NSString toNSString(String x) /*-[
     return x;
   ]-*/;
 
