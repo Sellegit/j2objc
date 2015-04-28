@@ -47,4 +47,27 @@ public class TypeImplementationGeneratorTest extends GenerationTest {
           + "type:JavaLangAnnotationAnnotation_class_()];",
         "}");
   }
+
+  public void testRepresentingAnnotation() throws IOException {
+    String translation = translateSourceFile(
+        "import com.google.j2objc.annotations.*;"
+        + "class Test {"
+        + "public @Representing(\"RetType\") long test (@Representing(\"ArgType\") Object arg)"
+        + "  { return 0; }"
+        + " }", "Test", "Test.m");
+    assertTranslation(translation, "(RetType)testWithId:(ArgType)arg");
+  }
+
+  public void testMachineSizedAnnotation() throws IOException {
+    String translation = translateSourceFile(
+        "import com.google.j2objc.annotations.*;"
+        + "class Test {"
+        + " public @MachineSizedSInt long test (@MachineSizedUInt int k0, @MachineSizedFloat float k1)"
+        + "  { return 0; }"
+        + " }", "Test", "Test.m");
+    assertTranslation(translation, "MachineSizedSInt");
+    assertTranslation(translation, "MachineSizedUInt");
+    assertTranslation(translation, "MachineSizedFloat");
+  }
 }
+

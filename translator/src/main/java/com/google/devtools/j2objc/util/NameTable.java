@@ -31,8 +31,12 @@ import com.google.devtools.j2objc.types.IOSMethod;
 import com.google.devtools.j2objc.types.IOSMethodBinding;
 import com.google.devtools.j2objc.types.PointerTypeBinding;
 import com.google.devtools.j2objc.types.Types;
+import com.google.j2objc.annotations.MachineSizedFloat;
+import com.google.j2objc.annotations.MachineSizedSInt;
+import com.google.j2objc.annotations.MachineSizedUInt;
 import com.google.j2objc.annotations.Mapping;
 import com.google.j2objc.annotations.ObjectiveCName;
+import com.google.j2objc.annotations.Representing;
 
 import org.eclipse.jdt.core.dom.IAnnotationBinding;
 import org.eclipse.jdt.core.dom.IBinding;
@@ -1003,5 +1007,20 @@ public class NameTable {
 
   public static boolean hasPrefix(String packageName) {
     return instance.prefixMap.containsKey(packageName);
+  }
+
+  public static String getOverridingTypeFromAnnotations(IAnnotationBinding... annotations) {
+    IAnnotationBinding representing = BindingUtil.getAnnotation(annotations, Representing.class);
+    if (representing != null) {
+      return (String) BindingUtil.getAnnotationValue(representing, "value");
+    } else if (BindingUtil.getAnnotation(annotations, MachineSizedFloat.class) != null) {
+      return "MachineSizedFloat";
+    } else if (BindingUtil.getAnnotation(annotations, MachineSizedSInt.class) != null) {
+      return "MachineSizedSInt";
+    } else if (BindingUtil.getAnnotation(annotations, MachineSizedUInt.class) != null) {
+      return "MachineSizedUInt";
+    } else {
+      return null;
+    }
   }
 }
