@@ -219,7 +219,10 @@ public abstract class TypeGenerator extends AbstractSourceGenerator {
       // Explicitly test hashCode() because of NSObject's hash return value.
       returnType = "NSUInteger";
     }
-    String overridingRetType = NameTable.getOverridingTypeFromAnnotations(binding.getAnnotations());
+    String overridingRetType =
+        NameTable.getOverridingTypeFromAnnotations(
+          BindingUtil.flattenMethodAnnotations(binding)
+        );
     if (overridingRetType != null) {
       returnType = overridingRetType;
     }
@@ -243,7 +246,9 @@ public abstract class TypeGenerator extends AbstractSourceGenerator {
         IVariableBinding var = params.get(i).getVariableBinding();
         String typeName = NameTable.getSpecificObjCType(var.getType());
         String overridingParamTpe =
-            NameTable.getOverridingTypeFromAnnotations(binding.getParameterAnnotations(i));
+            NameTable.getOverridingTypeFromAnnotations(
+                BindingUtil.flattenParameterAnnotations(binding, i)
+            );
         if (overridingParamTpe != null) {
           typeName = overridingParamTpe;
         }

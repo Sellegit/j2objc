@@ -74,6 +74,22 @@ typedef int64_t         jlong;          /* signed 64 bits */
 typedef float           jfloat;         /* 32-bit IEEE 754 */
 typedef double          jdouble;        /* 64-bit IEEE 754 */
 
+// Copied from CGBase.h
+#if defined(__LP64__) && __LP64__
+typedef double          MachineSizedFloat;
+#else
+typedef float           MachineSizedFloat;
+#endif
+
+// Copied from NSObjcRuntime.h
+#if __LP64__ || (TARGET_OS_EMBEDDED && !TARGET_OS_IPHONE) || TARGET_OS_WIN32 || NS_BUILD_32_LIKE_64
+typedef long MachineSizedSInt;
+typedef unsigned long MachineSizedUInt;
+#else
+typedef int MachineSizedSInt;
+typedef unsigned int MachineSizedUInt;
+#endif
+
 CF_EXTERN_C_BEGIN
 
 void JreThrowNullPointerException() __attribute__((noreturn));

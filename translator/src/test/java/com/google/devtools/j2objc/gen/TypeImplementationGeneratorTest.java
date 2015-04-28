@@ -51,8 +51,12 @@ public class TypeImplementationGeneratorTest extends GenerationTest {
   public void testRepresentingAnnotation() throws IOException {
     String translation = translateSourceFile(
         "import com.google.j2objc.annotations.*;"
-        + "class Test {"
+        + "@Mapping(\"ok\") class Mapped {"
         + "public @Representing(\"RetType\") long test (@Representing(\"ArgType\") Object arg)"
+        + "  { return 0; }"
+        + "}\n"
+        + "class Test extends Mapped {"
+        + "public long test (Object arg)"
         + "  { return 0; }"
         + " }", "Test", "Test.m");
     assertTranslation(translation, "(RetType)testWithId:(ArgType)arg");

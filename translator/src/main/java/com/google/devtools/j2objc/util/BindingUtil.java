@@ -45,6 +45,7 @@ import org.eclipse.jdt.core.dom.Modifier;
 
 import java.lang.annotation.RetentionPolicy;
 import java.security.cert.Extension;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.Comparator;
@@ -517,6 +518,35 @@ public final class BindingUtil {
     }
   }
 
+  public static List<IMethodBinding> getOverridingMethodsAndSelf(IMethodBinding method) {
+    List<IMethodBinding> out = Lists.newArrayList();
+
+    ITypeBinding currentCls = method.getDeclaringClass();
+
+    while (currentCls != null) { // jdt's system has been messed up, so one cant do it in usual way
+      for (IMethodBinding binding : currentCls.getDeclaredMethods()) {
+        if (binding.isEqualTo(method) || method.overrides(binding)) {
+          out.add(binding);
+        }
+      }
+
+      for (ITypeBinding directInterface : currentCls.getInterfaces()) {
+        for (ITypeBinding interfaze : flattenInterface(directInterface)) {
+          for (IMethodBinding binding : interfaze.getDeclaredMethods()) {
+            // TODO: check if this is the way jdt handles interface implementation
+            if (method.isSubsignature(binding)) {
+              out.add(binding);
+            }
+          }
+        }
+      }
+
+      currentCls = currentCls.getSuperclass();
+    }
+
+    return out;
+  }
+
   static final Splitter IOS_METHOD_PART_SPLITTER =
       Splitter.on(Pattern.compile(":"));
   /**
@@ -540,39 +570,16 @@ public final class BindingUtil {
 
     List<String> candidates = Lists.newArrayList();
     List<IMethodBinding> methodCandidates = Lists.newArrayList();
-    ITypeBinding currentCls = method.getDeclaringClass();
 
     // this is a hack to work around binding info being inconsistent
     String mappingName = null;
     if (!isExtension) {
-      mappingName = extractMappingName(method);
-      while (currentCls != null) { // jdt's system has been messed up, so one cant do it in usual way
-        for (IMethodBinding binding : currentCls.getDeclaredMethods()) {
-          if (binding.isEqualTo(method) || method.overrides(binding)) {
-            mappingName = extractMappingName(binding);
-            if (mappingName != null) {
-              candidates.add(mappingName);
-              methodCandidates.add(binding);
-            }
-          }
+      for (IMethodBinding binding : getOverridingMethodsAndSelf(method)) {
+        mappingName = extractMappingName(binding);
+        if (mappingName != null) {
+          candidates.add(mappingName);
+          methodCandidates.add(binding);
         }
-
-        for (ITypeBinding directInterface : currentCls.getInterfaces()) {
-          for (ITypeBinding interfaze : flattenInterface(directInterface)) {
-            for (IMethodBinding binding : interfaze.getDeclaredMethods()) {
-              // TODO: check if this is the way jdt handles interface implementation
-              if (method.isSubsignature(binding)) {
-                mappingName = extractMappingName(binding);
-                if (mappingName != null) {
-                  candidates.add(mappingName);
-                  methodCandidates.add(binding);
-                }
-              }
-            }
-          }
-        }
-
-        currentCls = currentCls.getSuperclass();
       }
     } else {
       mappingName = extractExtensionMappingName(method);
@@ -793,6 +800,28 @@ public final class BindingUtil {
 
       return out.toArray(new String[paramTpes.length]);
     }
+  }
+
+  public static IAnnotationBinding[] flattenMethodAnnotations(IMethodBinding binding) {
+    ArrayList<IAnnotationBinding> out = new ArrayList<IAnnotationBinding>();
+    for (IMethodBinding method : getOverridingMethodsAndSelf(binding)) {
+      for (IAnnotationBinding anno : method.getAnnotations()) {
+        out.add(anno);
+      }
+    }
+
+    return out.toArray(new IAnnotationBinding[out.size()]);
+  }
+
+  public static IAnnotationBinding[] flattenParameterAnnotations(IMethodBinding binding, int index) {
+    ArrayList<IAnnotationBinding> out = new ArrayList<IAnnotationBinding>();
+    for (IMethodBinding method : getOverridingMethodsAndSelf(binding)) {
+      for (IAnnotationBinding anno : method.getParameterAnnotations(index)) {
+        out.add(anno);
+      }
+    }
+
+    return out.toArray(new IAnnotationBinding[out.size()]);
   }
 }
 
