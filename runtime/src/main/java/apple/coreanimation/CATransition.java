@@ -31,13 +31,13 @@ public class CATransition
 
     
     @Mapping("type")
-    public native CATransitionType getType();
+    public native String getType();
     @Mapping("setType:")
-    public native void setType(CATransitionType v);
+    public native void setType(String v);
     @Mapping("subtype")
-    public native CATransitionSubType getSubtype();
+    public native String getSubtype();
     @Mapping("setSubtype:")
-    public native void setSubtype(CATransitionSubType v);
+    public native void setSubtype(String v);
     @Mapping("startProgress")
     public native float getStartProgress();
     @Mapping("setStartProgress:")

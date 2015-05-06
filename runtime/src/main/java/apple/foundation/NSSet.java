@@ -48,5 +48,7 @@ public class NSSet <T>
     public native NSEnumerator<T> objectEnumerator();
     @Mapping("anyObject")
     public native T any();
+    @Mapping("containsObject:")
+    public native boolean containsObject(Object anObject);
 
 }
