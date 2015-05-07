@@ -141,7 +141,7 @@ public class SmallTests {
   };
 
   private static final Class<?>[] smallTestClasses = smallTestClassesPrime;
-//  private static final Class<?>[] smallTestClasses = {StatementGeneratorTest.class};
+//  private static final Class<?>[] smallTestClasses = {TypeImplementationGeneratorTest.class};
 
   public static Test suite() {
     return new TestSuite(smallTestClasses);

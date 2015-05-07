@@ -34,6 +34,7 @@ import com.google.devtools.j2objc.ast.TreeVisitor;
 import com.google.devtools.j2objc.util.BindingUtil;
 import com.google.devtools.j2objc.util.NameTable;
 import com.google.devtools.j2objc.util.TranslationUtil;
+import com.google.j2objc.annotations.Mapping;
 
 import org.eclipse.jdt.core.dom.IMethodBinding;
 import org.eclipse.jdt.core.dom.ITypeBinding;
@@ -43,6 +44,8 @@ import org.eclipse.jdt.core.dom.Modifier;
 import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
+
+import javax.naming.Binding;
 
 /**
  * The base class for TypeDeclarationGenerator and TypeImplementationGenerator,
@@ -216,6 +219,11 @@ public abstract class TypeGenerator extends AbstractSourceGenerator {
       // Explicitly test hashCode() because of NSObject's hash return value.
       returnType = "NSUInteger";
     }
+    String overridingRetType = NameTable.getOverridingTypeFromAnnotations(binding.getAnnotations());
+    if (overridingRetType != null) {
+      returnType = overridingRetType;
+    }
+
     sb.append(String.format("%c (%s)", prefix, returnType));
 
     List<SingleVariableDeclaration> params = m.getParameters();
@@ -234,6 +242,11 @@ public abstract class TypeGenerator extends AbstractSourceGenerator {
         }
         IVariableBinding var = params.get(i).getVariableBinding();
         String typeName = NameTable.getSpecificObjCType(var.getType());
+        String overridingParamTpe =
+            NameTable.getOverridingTypeFromAnnotations(binding.getParameterAnnotations(i));
+        if (overridingParamTpe != null) {
+          typeName = overridingParamTpe;
+        }
         sb.append(String.format("%s:(%s)%s", selParts[i], typeName, NameTable.getName(var)));
       }
     }
