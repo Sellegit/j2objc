@@ -91,6 +91,7 @@ static NSMutableSet *referent_subclasses;
 // the runtime is notified of a low memory condition.
 static NSMutableSet *soft_references;
 
+// TODO: volatile or make sure it's used in a single thread
 static BOOL in_low_memory_cleanup;
 
 + (void)initReferent:(JavaLangRefReference *)reference {
@@ -115,6 +116,7 @@ static BOOL in_low_memory_cleanup;
 }
 
 + (void)handleMemoryWarning:(NSNotification *)notification {
+  NSLog(@"SoftReference handle memory warning");
   WhileLocked(^{
     in_low_memory_cleanup = YES;
     for (JavaLangRefSoftReference *reference in soft_references) {
@@ -299,10 +301,12 @@ static void MaybeQueueReferences(id referent) {
             softRef->queued_ = YES;
           } else if (!softRef->queued_) {
             // Add to soft_references list.
+            // TODO: possible to retain a weak object twice?
             [referent retain];
             [soft_references addObject:reference];
           }
         } else {
+          // TODO: look into
           [reference enqueueInternal];
         }
       }
@@ -314,6 +318,7 @@ static void MaybeQueueReferences(id referent) {
 // Queues any phantom references to this referent when its retainCount
 // is low. Phantom references are queued after the release message is sent,
 // just like in Java they are queued after being finalized.
+// TODO: is release == finalized?
 static void MaybeQueuePhantomReferences(id referent) {
   // Add any associated phantom references to their respective queues.
   CFMutableSetRef set = (CFMutableSetRef)CFDictionaryGetValue(weak_refs_map, referent);
@@ -322,6 +327,7 @@ static void MaybeQueuePhantomReferences(id referent) {
     for (JavaLangRefReference *reference in setCopy) {
       if ([reference isKindOfClass:[JavaLangRefPhantomReference class]]) {
         // Enqueue PhantomReference, now that it's been "finalized".
+        // TODO: check
         [reference enqueueInternal];
       }
     }
@@ -333,9 +339,9 @@ static void MaybeQueuePhantomReferences(id referent) {
 static void RealReferentRelease(id referent) {
   Class superclass = GetRealSuperclass(referent);
   IMP superRelease = class_getMethodImplementation(superclass, @selector(release));
-  WhileLocked(^{
+//  WhileLocked(^{
     ((void (*)(id, SEL))superRelease)(referent, @selector(release));
-  });
+//  });
 }
 
 
@@ -344,12 +350,15 @@ static void RealReferentRelease(id referent) {
 // deallocated when this function returns, it is added to its
 // associated reference queue, if any.
 static void ReferentSubclassRelease(id self, SEL _cmd) {
-  MaybeQueueReferences(self);
-  NSUInteger retainCount = [self retainCount];
-  RealReferentRelease(self);
-  if (retainCount == 1) {
-    MaybeQueuePhantomReferences(self);
-  }
+//    TODO: queue manipulation and conditioning on count ok without locking?
+  WhileLocked(^{
+    MaybeQueueReferences(self);
+    NSUInteger retainCount = [self retainCount];
+    RealReferentRelease(self);
+    if (retainCount == 1) {
+      MaybeQueuePhantomReferences(self);
+    }
+  });
 }
 
 // Override getClass in the subclass so that it returns the IOSClass for the
