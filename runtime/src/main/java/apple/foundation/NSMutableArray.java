@@ -21,7 +21,7 @@ import apple.dispatch.*;
 
 @Library("Foundation/Foundation.h") @Mapping("NSMutableArray")
 public class NSMutableArray <T>
-    extends NSArray 
+    extends NSArray<T> 
      {
 
     
