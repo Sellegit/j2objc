@@ -21,7 +21,7 @@ import apple.dispatch.*;
 
 @Library("Foundation/Foundation.h") @Mapping("NSMutableDictionary")
 public class NSMutableDictionary <K, V>
-    extends NSDictionary 
+    extends NSDictionary<K, V> 
      {
 
     
