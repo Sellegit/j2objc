@@ -19,7 +19,7 @@ import apple.avkit.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("iAd/iAd.h")
+@Library("iAd/iAd.h") @Mapping("UIViewController")
 public final class UIViewControllerExtensions 
     extends NSExtensions 
      {

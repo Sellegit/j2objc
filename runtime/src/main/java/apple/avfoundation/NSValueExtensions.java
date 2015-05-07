@@ -21,7 +21,7 @@ import apple.mediatoolbox.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("AVFoundation/AVFoundation.h")
+@Library("AVFoundation/AVFoundation.h") @Mapping("NSValue")
 public final class NSValueExtensions 
     extends NSExtensions 
      {

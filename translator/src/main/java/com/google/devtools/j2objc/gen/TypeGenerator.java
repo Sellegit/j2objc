@@ -36,6 +36,7 @@ import com.google.devtools.j2objc.util.NameTable;
 import com.google.devtools.j2objc.util.TranslationUtil;
 import com.google.j2objc.annotations.Mapping;
 
+import org.eclipse.jdt.core.dom.IAnnotationBinding;
 import org.eclipse.jdt.core.dom.IMethodBinding;
 import org.eclipse.jdt.core.dom.ITypeBinding;
 import org.eclipse.jdt.core.dom.IVariableBinding;
@@ -262,15 +263,41 @@ public abstract class TypeGenerator extends AbstractSourceGenerator {
   protected String getFunctionSignature(FunctionDeclaration function) {
     StringBuilder sb = new StringBuilder();
     String returnType = NameTable.getObjCType(function.getReturnType().getTypeBinding());
+    IAnnotationBinding[] annotations = BindingUtil.extractAnnotationBindings(function.getAnnotations());
+    if (annotations.length > 0) {
+      String overridingRetType =
+          NameTable.getOverridingTypeFromAnnotations(
+              annotations
+          );
+      if (overridingRetType != null) {
+        returnType = overridingRetType;
+      }
+    }
+
     returnType += returnType.endsWith("*") ? "" : " ";
+
     sb.append(returnType).append(function.getName()).append('(');
-    for (Iterator<SingleVariableDeclaration> iter = function.getParameters().iterator();
-         iter.hasNext(); ) {
-      IVariableBinding var = iter.next().getVariableBinding();
+
+    int paramSize = function.getParameters().size();
+    for (int i = 0; i < paramSize; i++) {
+      SingleVariableDeclaration varDecl = function.getParameters().get(i);
+      IVariableBinding var = varDecl.getVariableBinding();
       String paramType = NameTable.getSpecificObjCType(var.getType());
+      IAnnotationBinding[] paramAnnotations = BindingUtil.extractAnnotationBindings(varDecl.getAnnotations());
+      if (paramAnnotations.length > 0) {
+        String overridingParamType =
+            NameTable.getOverridingTypeFromAnnotations(
+                paramAnnotations
+            );
+        if (overridingParamType != null) {
+          paramType= overridingParamType;
+        }
+      }
+
       paramType += (paramType.endsWith("*") ? "" : " ");
+
       sb.append(paramType + NameTable.getName(var));
-      if (iter.hasNext()) {
+      if (i + 1 < paramSize) {
         sb.append(", ");
       }
     }

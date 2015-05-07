@@ -18,7 +18,7 @@ import apple.dispatch.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("MapKit/MapKit.h")
+@Library("MapKit/MapKit.h") @Mapping("NSValue")
 public final class NSValueExtensions 
     extends NSExtensions 
      {

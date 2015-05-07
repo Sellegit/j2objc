@@ -21,7 +21,7 @@ import apple.opengles.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("SceneKit/SceneKit.h")
+@Library("SceneKit/SceneKit.h") @Mapping("CAAnimation")
 public final class CAAnimationExtensions 
     extends NSExtensions 
      {

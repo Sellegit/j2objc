@@ -237,6 +237,12 @@ public class TypeDeclarationGenerator extends TypeGenerator {
         print("__weak ");
       }
       String objcType = NameTable.getSpecificObjCType(varType);
+      String overridingType = NameTable.getOverridingTypeFromAnnotations(
+          varBinding.getAnnotations()
+      );
+      if (overridingType != null) {
+        objcType = overridingType;
+      }
       boolean needsAsterisk = !varType.isPrimitive()
                               && !objcType.matches("id|id<.*>|Class")
                               && !BindingUtil.isValueType(varType)

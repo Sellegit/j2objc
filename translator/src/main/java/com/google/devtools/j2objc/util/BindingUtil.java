@@ -20,6 +20,7 @@ import com.google.common.collect.Collections2;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Sets;
+import com.google.devtools.j2objc.ast.Annotation;
 import com.google.devtools.j2objc.types.IOSBlockTypeBinding;
 import com.google.devtools.j2objc.types.IOSMethod;
 import com.google.devtools.j2objc.types.IOSParameter;
@@ -822,6 +823,15 @@ public final class BindingUtil {
     }
 
     return out.toArray(new IAnnotationBinding[out.size()]);
+  }
+
+  public static IAnnotationBinding[] extractAnnotationBindings(List<Annotation> list) {
+    IAnnotationBinding[] annotations = new IAnnotationBinding[list.size()];
+    for (int i = 0; i < annotations.length; i++) {
+      annotations[i] = list.get(i).getAnnotationBinding();
+    }
+
+    return annotations;
   }
 }
 

@@ -15,7 +15,7 @@ import apple.foundation.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("NewsstandKit/NewsstandKit.h")
+@Library("NewsstandKit/NewsstandKit.h") @Mapping("NSURLConnection")
 public final class NSURLConnectionExtensions 
     extends NSExtensions 
      {

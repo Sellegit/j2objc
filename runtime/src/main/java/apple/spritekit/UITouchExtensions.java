@@ -22,7 +22,7 @@ import apple.scenekit.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("SpriteKit/SpriteKit.h")
+@Library("SpriteKit/SpriteKit.h") @Mapping("UITouch")
 public final class UITouchExtensions 
     extends NSExtensions 
      {

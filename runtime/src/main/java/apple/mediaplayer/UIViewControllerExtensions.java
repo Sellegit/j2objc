@@ -16,7 +16,7 @@ import apple.uikit.*;
 
 /*<javadoc>*/
 /*</javadoc>*/
-@Library("MediaPlayer/MediaPlayer.h")
+@Library("MediaPlayer/MediaPlayer.h") @Mapping("UIViewController")
 public final class UIViewControllerExtensions 
     extends NSExtensions 
      {
