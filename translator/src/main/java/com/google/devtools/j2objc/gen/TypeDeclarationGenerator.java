@@ -236,37 +236,48 @@ public class TypeDeclarationGenerator extends TypeGenerator {
         // included by a file compiled with ARC.
         print("__weak ");
       }
-      String objcType = NameTable.getSpecificObjCType(varType);
-      String overridingType = NameTable.getOverridingTypeFromAnnotations(
-          varBinding.getAnnotations()
-      );
-      if (overridingType != null) {
-        objcType = overridingType;
-      }
-      boolean needsAsterisk = !varType.isPrimitive()
-                              && !objcType.matches("id|id<.*>|Class")
-                              && !BindingUtil.isValueType(varType)
-                              && !(varType instanceof IOSBlockTypeBinding);
-      if (needsAsterisk && objcType.endsWith(" *")) {
-        // Strip pointer from type, as it will be added when appending fragment.
-        // This is necessary to create "Foo *one, *two;" declarations.
-        objcType = objcType.substring(0, objcType.length() - 2);
-      }
-      print(objcType);
-      print(' ');
-      for (Iterator<VariableDeclarationFragment> it = field.getFragments().iterator();
-           it.hasNext(); ) {
-        VariableDeclarationFragment f = it.next();
-        if (needsAsterisk) {
-          print('*');
+      if (varType instanceof IOSBlockTypeBinding) {
+        for (Iterator<VariableDeclarationFragment> it = field.getFragments().iterator();
+             it.hasNext(); ) {
+          VariableDeclarationFragment f = it.next();
+          String name = NameTable.getName(f.getName().getBinding());
+          String fieldName = NameTable.javaFieldToObjC(name);
+          print(((IOSBlockTypeBinding) varType).getNamedDeclaration(fieldName));
+          println(";");
         }
-        String name = NameTable.getName(f.getName().getBinding());
-        print(NameTable.javaFieldToObjC(name));
-        if (it.hasNext()) {
-          print(", ");
+      } else {
+        String objcType = NameTable.getSpecificObjCType(varType);
+        String overridingType = NameTable.getOverridingTypeFromAnnotations(
+            varBinding.getAnnotations()
+        );
+        if (overridingType != null) {
+          objcType = overridingType;
         }
+        boolean needsAsterisk = !varType.isPrimitive()
+                                && !objcType.matches("id|id<.*>|Class")
+                                && !BindingUtil.isValueType(varType)
+                                && !(varType instanceof IOSBlockTypeBinding);
+        if (needsAsterisk && objcType.endsWith(" *")) {
+          // Strip pointer from type, as it will be added when appending fragment.
+          // This is necessary to create "Foo *one, *two;" declarations.
+          objcType = objcType.substring(0, objcType.length() - 2);
+        }
+        print(objcType);
+        print(' ');
+        for (Iterator<VariableDeclarationFragment> it = field.getFragments().iterator();
+             it.hasNext(); ) {
+          VariableDeclarationFragment f = it.next();
+          if (needsAsterisk) {
+            print('*');
+          }
+          String name = NameTable.getName(f.getName().getBinding());
+          print(NameTable.javaFieldToObjC(name));
+          if (it.hasNext()) {
+            print(", ");
+          }
+        }
+        println(";");
       }
-      println(";");
     }
     unindent();
     println("}");
@@ -349,7 +360,7 @@ public class TypeDeclarationGenerator extends TypeGenerator {
           newline();
         }
 
-        if (typeBinding instanceof IOSBlockTypeBinding) {
+        if (type instanceof IOSBlockTypeBinding) {
           IOSBlockTypeBinding block = (IOSBlockTypeBinding) type;
           typeStr = "TempBlock" + block.hashCode();
           print("typedef ");
