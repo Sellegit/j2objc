@@ -173,8 +173,7 @@ public class StatementGenerator extends TreeVisitor {
 
         // TODO: do a proper scope analysis here to prevent accidental name pollution
         buffer.append("(^{");
-//        buffer.append(NameTable.getSpecificObjCType(method.getParameterTypes()[index]));
-        buffer.append(NameTable.getSpecificObjCType(arg.getTypeBinding()));
+        buffer.append(NameTable.getSpecificObjCType(method.getParameterTypes()[index]));
         if (buffer.charAt(buffer.length() - 1) != '*') {
           buffer.append(" ");
         }
