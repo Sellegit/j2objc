@@ -243,6 +243,13 @@ public class ImplementationImportCollector extends TreeVisitor {
           && actualType.isAssignmentCompatible(parameterType)) {
         addImports(actualType);
       }
+      // special care should be taken for block type since it might be null be the type
+      //  is still referenced in generated code
+      IAnnotationBinding blockAnnotation =
+          BindingUtil.getAnnotation(binding.getParameterAnnotations(i), com.google.j2objc.annotations.Block.class);
+      if (blockAnnotation != null) {
+        addImports(parameterType);
+      }
     }
     // Check for static method references.
     Expression expr = node.getExpression();
