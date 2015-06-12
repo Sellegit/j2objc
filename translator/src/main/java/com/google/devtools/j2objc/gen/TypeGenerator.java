@@ -31,6 +31,7 @@ import com.google.devtools.j2objc.ast.SingleVariableDeclaration;
 import com.google.devtools.j2objc.ast.Statement;
 import com.google.devtools.j2objc.ast.TreeNode;
 import com.google.devtools.j2objc.ast.TreeVisitor;
+import com.google.devtools.j2objc.types.IOSBlockTypeBinding;
 import com.google.devtools.j2objc.util.BindingUtil;
 import com.google.devtools.j2objc.util.NameTable;
 import com.google.devtools.j2objc.util.TranslationUtil;
@@ -282,21 +283,25 @@ public abstract class TypeGenerator extends AbstractSourceGenerator {
     for (int i = 0; i < paramSize; i++) {
       SingleVariableDeclaration varDecl = function.getParameters().get(i);
       IVariableBinding var = varDecl.getVariableBinding();
-      String paramType = NameTable.getSpecificObjCType(var.getType());
-      IAnnotationBinding[] paramAnnotations = BindingUtil.extractAnnotationBindings(varDecl.getAnnotations());
-      if (paramAnnotations.length > 0) {
-        String overridingParamType =
-            NameTable.getOverridingTypeFromAnnotations(
-                paramAnnotations
-            );
-        if (overridingParamType != null) {
-          paramType= overridingParamType;
+      if (var.getType() instanceof IOSBlockTypeBinding) {
+        IOSBlockTypeBinding type = (IOSBlockTypeBinding) var.getType();
+        sb.append(type.getNamedDeclaration(NameTable.getName(var)));
+      } else {
+        String paramType = NameTable.getSpecificObjCType(var.getType());
+        IAnnotationBinding[] paramAnnotations = BindingUtil.extractAnnotationBindings(varDecl.getAnnotations());
+        if (paramAnnotations.length > 0) {
+          String overridingParamType =
+              NameTable.getOverridingTypeFromAnnotations(
+                  paramAnnotations
+              );
+          if (overridingParamType != null) {
+            paramType= overridingParamType;
+          }
         }
+        paramType += (paramType.endsWith("*") ? "" : " ");
+
+        sb.append(paramType + NameTable.getName(var));
       }
-
-      paramType += (paramType.endsWith("*") ? "" : " ");
-
-      sb.append(paramType + NameTable.getName(var));
       if (i + 1 < paramSize) {
         sb.append(", ");
       }
