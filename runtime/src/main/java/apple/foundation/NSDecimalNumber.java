@@ -62,6 +62,14 @@ public class NSDecimalNumber
     public native NSDecimalNumber multiplyByPowerOf10(short power, NSDecimalNumberBehaviors behavior);
     @Mapping("decimalNumberByRoundingAccordingToBehavior:")
     public native NSDecimalNumber round(NSDecimalNumberBehaviors behavior);
+    @Mapping("decimalNumberWithMantissa:exponent:isNegative:")
+    public static native NSDecimalNumber decimalNumberWithMantissa$exponent$isNegative$(long mantissa, short exponent, boolean flag);
+    @Mapping("decimalNumberWithDecimal:")
+    public static native NSDecimalNumber decimalNumberWithDecimal$(NSDecimal dcm);
+    @Mapping("decimalNumberWithString:")
+    public static native NSDecimalNumber decimalNumberWithString$(String numberValue);
+    @Mapping("decimalNumberWithString:locale:")
+    public static native NSDecimalNumber decimalNumberWithString$locale$(String numberValue, Object locale);
     @Mapping("zero")
     public static native NSDecimalNumber zero();
     @Mapping("one")

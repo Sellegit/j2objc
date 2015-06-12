@@ -39,8 +39,8 @@ public class GeneratedMethodBinding extends AbstractBinding implements IMethodBi
   private final IMethodBinding delegate;
   private final String name;
   private int modifiers;
-  private final List<ITypeBinding> parameters = Lists.newArrayList();
-  private List<IAnnotationBinding[]> parameterAnnotations = Lists.newArrayList();
+  final List<ITypeBinding> parameters = Lists.newArrayList();
+  final List<IAnnotationBinding[]> parameterAnnotations = Lists.newArrayList();
   private final ITypeBinding returnType;
   private final IMethodBinding methodDeclaration;
   private ITypeBinding declaringClass;

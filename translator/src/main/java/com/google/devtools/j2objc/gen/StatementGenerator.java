@@ -118,6 +118,7 @@ import org.eclipse.jdt.core.dom.ITypeBinding;
 import org.eclipse.jdt.core.dom.IVariableBinding;
 
 import java.lang.reflect.Modifier;
+import java.util.Arrays;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
@@ -172,7 +173,8 @@ public class StatementGenerator extends TreeVisitor {
 
         // TODO: do a proper scope analysis here to prevent accidental name pollution
         buffer.append("(^{");
-        buffer.append(NameTable.getSpecificObjCType(method.getParameterTypes()[index]));
+//        buffer.append(NameTable.getSpecificObjCType(method.getParameterTypes()[index]));
+        buffer.append(NameTable.getSpecificObjCType(arg.getTypeBinding()));
         if (buffer.charAt(buffer.length() - 1) != '*') {
           buffer.append(" ");
         }
@@ -787,7 +789,7 @@ public class StatementGenerator extends TreeVisitor {
       receiver = newReceiver;
 
       IOSMethodBinding newBinding =
-          IOSMethodBinding.newMappedMethod(mapped.getSelector(), binding);
+          IOSMethodBinding.newMappedExtensionMethod(mapped.getSelector(), binding);
       newBinding.setModifiers(Modifier.PUBLIC); // do away static modifier
       binding = newBinding;
     }

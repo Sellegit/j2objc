@@ -18,8 +18,12 @@ package com.google.devtools.j2objc.types;
 
 import com.google.devtools.j2objc.util.BindingUtil;
 
+import org.eclipse.jdt.core.dom.IAnnotationBinding;
 import org.eclipse.jdt.core.dom.IMethodBinding;
 import org.eclipse.jdt.core.dom.ITypeBinding;
+
+import java.util.Arrays;
+import java.util.List;
 
 /**
  * IOSMethodBinding: synthetic binding for an iOS method.
@@ -49,9 +53,34 @@ public class IOSMethodBinding extends GeneratedMethodBinding {
     return binding;
   }
 
+  public static IOSMethodBinding newMappedExtensionMethod(String selector, IMethodBinding original) {
+    ITypeBinding returnType =
+        original.isConstructor() ? original.getDeclaringClass() : original.getReturnType();
+    IOSMethodBinding binding = new IOSMethodBinding(
+        selector, original, original.getModifiers(), returnType, null, original.getDeclaringClass(),
+        original.isVarargs());
+
+    for (int i = 1; i < original.getParameterTypes().length; i++) {
+      binding.parameters.add(original.getParameterTypes()[i]);
+      binding.parameterAnnotations.add(original.getParameterAnnotations(i));
+    }
+    binding.addAnnotations(original);
+    return binding;
+  }
+
   public static IOSMethodBinding newMethod(
       String selector, int modifiers, ITypeBinding returnType, ITypeBinding declaringClass) {
     return new IOSMethodBinding(selector, null, modifiers, returnType, null, declaringClass, false);
+  }
+
+  @Override
+  public IAnnotationBinding[] getParameterAnnotations(int paramIndex) {
+    return parameterAnnotations.get(paramIndex);
+  }
+
+  @Override
+  public ITypeBinding[] getParameterTypes() {
+    return parameters.toArray(new ITypeBinding[parameters.size()]);
   }
 
   public static IOSMethodBinding newTypedInvocation(IOSMethodBinding m, ITypeBinding returnType) {
