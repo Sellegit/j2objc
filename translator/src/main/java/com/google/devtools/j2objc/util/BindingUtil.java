@@ -31,6 +31,7 @@ import com.google.j2objc.annotations.GlobalConstant;
 import com.google.j2objc.annotations.GlobalFunction;
 import com.google.j2objc.annotations.Library;
 import com.google.j2objc.annotations.Mapping;
+import com.google.j2objc.annotations.NotImplemented;
 import com.google.j2objc.annotations.Representing;
 import com.google.j2objc.annotations.Weak;
 import com.google.j2objc.annotations.WeakOuter;
@@ -43,6 +44,7 @@ import org.eclipse.jdt.core.dom.IMethodBinding;
 import org.eclipse.jdt.core.dom.ITypeBinding;
 import org.eclipse.jdt.core.dom.IVariableBinding;
 import org.eclipse.jdt.core.dom.Modifier;
+import org.eclipse.jdt.internal.compiler.lookup.Binding;
 
 import java.lang.annotation.RetentionPolicy;
 import java.security.cert.Extension;

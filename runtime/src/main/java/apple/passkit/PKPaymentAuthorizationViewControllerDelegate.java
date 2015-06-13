@@ -30,9 +30,9 @@ public interface PKPaymentAuthorizationViewControllerDelegate
     @Mapping("paymentAuthorizationViewControllerDidFinish:")
     void didFinish(PKPaymentAuthorizationViewController controller);
     @Mapping("paymentAuthorizationViewController:didSelectShippingMethod:completion:")
-    void didSelectShippingMethod(PKPaymentAuthorizationViewController controller, PKShippingMethod shippingMethod, Todo completion);
+    void didSelectShippingMethod(PKPaymentAuthorizationViewController controller, PKShippingMethod shippingMethod, @Block VoidBlock2<PKPaymentAuthorizationStatus, NSArray<PKPaymentSummaryItem>> completion);
     @Mapping("paymentAuthorizationViewController:didSelectShippingAddress:completion:")
-    void didSelectShippingAddress(PKPaymentAuthorizationViewController controller, ABRecordRef address, Todo completion);
+    void didSelectShippingAddress(PKPaymentAuthorizationViewController controller, ABRecordRef address, @Block VoidBlock3<PKPaymentAuthorizationStatus, NSArray<PKShippingMethod>, NSArray<PKPaymentSummaryItem>> completion);
 
     /*<adapter>*/
     /*</adapter>*/
