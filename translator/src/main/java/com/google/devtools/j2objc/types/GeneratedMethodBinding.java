@@ -64,11 +64,14 @@ public class GeneratedMethodBinding extends AbstractBinding implements IMethodBi
   /**
    * Clone a method binding, so parameters can be added to it.
    */
-  public GeneratedMethodBinding(IMethodBinding m) {
-    this(null, m.getName(), m.getModifiers(), m.getReturnType(), null, m.getDeclaringClass(),
+  public GeneratedMethodBinding(IMethodBinding m, boolean useAsDelegate) {
+    this(useAsDelegate ? m : null, m.getName(), m.getModifiers(), m.getReturnType(), null, m.getDeclaringClass(),
          m.isConstructor(), m.isVarargs());
     addParameters(m);
     addAnnotations(m);
+  }
+  public GeneratedMethodBinding(IMethodBinding m) {
+    this(m, false);
   }
 
   public static GeneratedMethodBinding newMethod(

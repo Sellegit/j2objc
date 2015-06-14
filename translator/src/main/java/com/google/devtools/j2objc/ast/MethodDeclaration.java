@@ -71,7 +71,12 @@ public class MethodDeclaration extends BodyDeclaration {
       for (int i = 0; i < methodBinding.getParameterTypes().length; i++) {
         ITypeBinding paramTpe = methodBinding.getParameterTypes()[i];
         GeneratedVariableBinding var = new GeneratedVariableBinding(
-            paramTpe.getName().toLowerCase() + "_" + i, Modifier.Public, paramTpe,
+            paramTpe
+                .getName()
+                .toLowerCase()
+                .replace('<', '_') // handle generic param
+                .replace('>', '_')
+                + "_" + i, Modifier.Public, paramTpe,
             false, true, null, methodBinding);
         SingleVariableDeclaration param = new SingleVariableDeclaration(var);
         parameters.add(param);

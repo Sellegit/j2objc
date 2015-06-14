@@ -101,7 +101,7 @@ public class BlockRewriter extends TreeVisitor {
     // rewrite the parameter's type to be the native block type
     // TODO: this approach here has a problem, it messes up the binding info, the new method's
     //  declaring class doesn't contain this new method
-    GeneratedMethodBinding newMethodBinding = new GeneratedMethodBinding(binding);
+    GeneratedMethodBinding newMethodBinding = new GeneratedMethodBinding(binding, true);
     newMethodBinding.setParameter(i, nativeBlockType);
     node.setMethodBinding(newMethodBinding);
     SingleVariableDeclaration oldVarDecl = node.getParameters().get(i);
@@ -118,7 +118,7 @@ public class BlockRewriter extends TreeVisitor {
 
     // ignore generic version for now
 
-    GeneratedMethodBinding methodBinding = new GeneratedMethodBinding(runMethod);
+    GeneratedMethodBinding methodBinding = new GeneratedMethodBinding(runMethod, true);
 
     methodBinding.setModifiers(0);
     MethodDeclaration method = new MethodDeclaration(methodBinding, /*copyParam*/ true);

@@ -33,9 +33,9 @@ public class PKPayment
     @Mapping("token")
     public native PKPaymentToken getToken();
     @Mapping("billingAddress")
-    public native ABPerson getBillingAddress();
+    public native ABRecordRef getBillingAddress();
     @Mapping("shippingAddress")
-    public native ABPerson getShippingAddress();
+    public native ABRecordRef getShippingAddress();
     @Mapping("shippingMethod")
     public native PKShippingMethod getShippingMethod();
 

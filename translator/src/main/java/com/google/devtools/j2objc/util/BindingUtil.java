@@ -623,6 +623,14 @@ public final class BindingUtil {
 
       IMethodBinding methodBinding = methodCandidates.get(0);
       for (IMethodBinding curMethod : methodCandidates) {
+//        ITypeBinding[] curMethodParamTypes = curMethod.getParameterTypes();
+//        ITypeBinding[] methodParamTypes = methodBinding.getParameterTypes();
+//        boolean isMismatche = false;
+//        for (int i = 0; i < curMethodParamTypes.length; i++) {
+//          if (!curMethodParamTypes[i].equals(methodParamTypes[i])) {
+//            if ()
+//          }
+//        }
         if (!Arrays.equals(curMethod.getParameterTypes(), methodBinding.getParameterTypes())) {
           ErrorUtil.error(
               "Ambiguous parameters: " + methodBinding.toString() + ", " + curMethod.toString());
@@ -716,7 +724,8 @@ public final class BindingUtil {
     }
     IOSBlockTypeBinding nativeBlockType = new IOSBlockTypeBinding(
         BlockBridge.returnType(blockAnno, blockTpe),
-        args
+        args,
+        blockTpe
     );
 
     return nativeBlockType;

@@ -3,13 +3,17 @@ package com.google.devtools.j2objc.types;
 import com.google.common.collect.Iterables;
 import com.google.common.collect.Lists;
 
+import org.eclipse.jdt.core.dom.IBinding;
+import org.eclipse.jdt.core.dom.ITypeBinding;
+
 import java.util.List;
 
 public class IOSBlockTypeBinding extends IOSTypeBinding {
+  private ITypeBinding mDelegate;
   private String returnType = null;
   private List<String> argumentTypes = null;
 
-  public IOSBlockTypeBinding(String retType, Iterable<String> argTypes) {
+  public IOSBlockTypeBinding(String retType, Iterable<String> argTypes, ITypeBinding delegate) {
     // same as IOSTypeBinding.newUnmappedClass
     super(getBlockSignature(retType, argTypes), null, null, false);
 
@@ -18,6 +22,7 @@ public class IOSBlockTypeBinding extends IOSTypeBinding {
 
     returnType = retType;
     argumentTypes = Lists.newArrayList(argTypes);
+    mDelegate = delegate;
   }
 
   public String getReturnType() {
@@ -94,5 +99,15 @@ public class IOSBlockTypeBinding extends IOSTypeBinding {
 
   public String getParametersWithParen() {
     return getParameterList(argumentTypes);
+  }
+
+  @Override
+  public boolean isEqualTo(IBinding binding) {
+    return mDelegate.isEqualTo(binding);
+  }
+
+  @Override
+  public boolean equals(Object obj) {
+    return mDelegate.equals(obj);
   }
 }
