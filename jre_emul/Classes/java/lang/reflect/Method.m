@@ -92,7 +92,7 @@
   return mods;
 }
 
-- (IOSClass *)getReturnType {
+- (IOSClass *)computeReturnType {
   id<JavaLangReflectType> returnType = [metadata_ returnType];
   if (returnType) {
     if (![returnType isKindOfClass:[IOSClass class]]) {
@@ -112,6 +112,17 @@
     @throw exception;
   }
   return decodeTypeEncoding(argType);
+}
+
+- (IOSClass *)getReturnType {
+  if (!returnType_) {
+    returnType_ = [self computeReturnType];
+#if ! __has_feature(objc_arc)
+    [returnType_ retain];
+#endif
+  }
+
+  return returnType_;
 }
 
 - (id<JavaLangReflectType>)getGenericReturnType {
@@ -142,7 +153,7 @@
        withNSObjectArray:(IOSObjectArray *)arguments {
   if (!isStatic_ && object == nil) {
     @throw AUTORELEASE([[JavaLangNullPointerException alloc] initWithNSString:
-      @"null object specified for non-final method"]);
+      @"null object specified for instance method"]);
   }
 
   IOSObjectArray *paramTypes = [self getParameterTypes];
@@ -152,21 +163,26 @@
         @"wrong number of arguments"]);
   }
 
-  NSInvocation *invocation =
-      [NSInvocation invocationWithMethodSignature:methodSignature_];
-  [invocation setSelector:selector_];
+  if (!invocation_) {
+    invocation_ =
+            [NSInvocation invocationWithMethodSignature:methodSignature_];
+#if ! __has_feature(objc_arc)
+    [invocation_ retain];
+#endif
+    [invocation_ setSelector:selector_];
+  }
   for (jint i = 0; i < nArgs; i++) {
     J2ObjcRawValue arg;
     if (![paramTypes->buffer_[i] __unboxValue:arguments->buffer_[i] toRawValue:&arg]) {
       @throw AUTORELEASE([[JavaLangIllegalArgumentException alloc] initWithNSString:
           @"argument type mismatch"]);
     }
-    [invocation setArgument:&arg atIndex:i + SKIPPED_ARGUMENTS];
+    [invocation_ setArgument:&arg atIndex:i + SKIPPED_ARGUMENTS];
   }
   if (object == nil || [object isKindOfClass:[IOSClass class]]) {
-    [invocation setTarget:class_.objcClass];
+    [invocation_ setTarget:class_.objcClass];
   } else {
-    [invocation setTarget:object];
+    [invocation_ setTarget:object];
   }
 
   IOSClass *declaringClass = [self getDeclaringClass];
@@ -178,7 +194,7 @@
     // change the object's type to the superclass.
     Class originalClass = object_setClass(object, declaringClass.objcClass);
     @try {
-      [invocation invoke];
+      [invocation_ invoke];
     }
     @catch (JavaLangThrowable *t) {
       exception = t;
@@ -186,7 +202,7 @@
     object_setClass(object, originalClass);
   } else {
     @try {
-      [invocation invoke];
+      [invocation_ invoke];
     }
     @catch (JavaLangThrowable *t) {
       exception = t;
@@ -196,12 +212,13 @@
     @throw AUTORELEASE([[JavaLangReflectInvocationTargetException alloc]
                         initWithJavaLangThrowable:exception]);
   }
+
   IOSClass *returnType = [self getReturnType];
   if (returnType == [IOSClass voidClass]) {
     return nil;
   }
   J2ObjcRawValue returnValue;
-  [invocation getReturnValue:&returnValue];
+  [invocation_ getReturnValue:&returnValue];
   return [returnType __boxValue:&returnValue];
 }
 
@@ -257,6 +274,14 @@
 - (NSUInteger)hash {
   return [[class_ getName] hash] ^ [[self getName] hash];
 }
+
+#if ! __has_feature(objc_arc)
+- (void)dealloc {
+  [invocation_ release];
+  [returnType_ release];
+  [super dealloc];
+}
+#endif
 
 + (const J2ObjcClassInfo *)__metadata {
   static const J2ObjcMethodInfo methods[] = {

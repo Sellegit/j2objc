@@ -36,6 +36,8 @@
 // so instances can be created and released as needed.
 @interface JavaLangReflectMethod : ExecutableMember {
   BOOL isStatic_;
+  IOSClass *returnType_;
+  NSInvocation *invocation_;
 }
 
 + (instancetype)methodWithMethodSignature:(NSMethodSignature *)methodSignature
