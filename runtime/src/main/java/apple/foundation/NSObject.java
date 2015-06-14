@@ -92,4 +92,8 @@ public class NSObject
     @Mapping("performSelectorInBackground:withObject:")
     public final native void performSelectorInBackground(Selector aSelector, Object arg);
 
+    @Mapping("cancelPreviousPerformRequestsWithTarget:selector:object:")
+    public static native void cancelPreviousPerformRequests(NSObject target, Selector selector,
+                                                            NSObject object);
+
 }
