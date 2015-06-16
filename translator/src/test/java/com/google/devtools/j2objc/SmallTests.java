@@ -49,6 +49,8 @@ import com.google.devtools.j2objc.translate.InitializationNormalizerTest;
 import com.google.devtools.j2objc.translate.InnerClassExtractorTest;
 import com.google.devtools.j2objc.translate.JavaCloneWriterTest;
 import com.google.devtools.j2objc.translate.JavaToIOSMethodTranslatorTest;
+import com.google.devtools.j2objc.translate.MappedNativeMethodRemover;
+import com.google.devtools.j2objc.translate.MappedNativeMethodRemoverTest;
 import com.google.devtools.j2objc.translate.NilCheckResolverTest;
 import com.google.devtools.j2objc.translate.OcniExtractorTest;
 import com.google.devtools.j2objc.translate.OperatorRewriterTest;
@@ -137,11 +139,12 @@ public class SmallTests {
     UnicodeUtilsTest.class,
     UnsequencedExpressionRewriterTest.class,
     VarargsRewriterTest.class,
-    VariableRenamerTest.class
+    VariableRenamerTest.class,
+    MappedNativeMethodRemoverTest.class,
   };
 
   private static final Class<?>[] smallTestClasses = smallTestClassesPrime;
-//  private static final Class<?>[] smallTestClasses = {TypeImplementationGeneratorTest.class};
+//  private static final Class<?>[] smallTestClasses = {MappedNativeMethodRemoverTest.class};
 
   public static Test suite() {
     return new TestSuite(smallTestClasses);

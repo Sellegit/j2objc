@@ -78,3 +78,4 @@ public class BlockRewriterTest extends GenerationTest {
                            "[__wrapped_hehe run:@\"hehe\" param:@\"haha\"]");
   }
 }
+
