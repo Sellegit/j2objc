@@ -1,49 +1,44 @@
-# J2ObjC: Java to Objective-C Translator and Runtime #
+# AvantX's J2ObjC: better interop primitives with ObjC world & access to Apple's APIs #
 
-[![Build Status](https://travis-ci.org/google/j2objc.svg)](https://travis-ci.org/google/j2objc)
+**Original Project site:** <http://j2objc.org><br>
 
-**Project site:** <http://j2objc.org><br>
-**J2ObjC blog:** <http://j2objc.blogspot.com><br>
-**Questions and discussion:** <http://groups.google.com/group/j2objc-discuss>
+### Overview ###
+This is a fork of Google's J2Objc project that has has extentions that make it possible to write Java code that interacts with ObjC constructs including value types, C functions and blocks etc. Moreover, it comes with a relatively complete binding of the iOS system APIs so one can use this fork to write fully native iOS apps just in Java.
 
-### What J2ObjC Is ###
-J2ObjC is an open-source command-line tool from Google that translates
-Java source code to Objective-C for the iOS (iPhone/iPad) platform. This tool
-enables Java source to be part of an iOS application's build, as no editing
-of the generated files is necessary. The goal is to write an app's non-UI
-code (such as application logic and data models) in Java, which is then
-shared by web apps (using [GWT](http://www.gwtproject.org/)), Android apps,
-and iOS apps.
+### Interop Primitives ###
+Interoperation with ObjC world is provided mostly in the form of unintrusive Java Annotations. Here we introduce some of the most commonly used ones:
 
-J2ObjC supports most Java language and runtime features required by
-client-side application developers, including exceptions, inner and
-anonymous classes, generic types, threads and reflection. JUnit test
-translation and execution is also supported.
+* `@Mapping("selector")`
 
-J2ObjC is currently beta quality. Several Google projects rely on it, but
-when new projects first start working with it, they usually find new bugs
-to be fixed. If you run into issues with your project, please report them!
+`@Mapping` annotation can be applied on instance method and class method, that modifies the output selectors of annotated methods. For instance, if we have the following annotated method declaration:
 
-### What J2ObjC isn't ###
-J2ObjC does not provide any sort of platform-independent UI toolkit, nor are
-there any plans to do so in the future. We believe that iOS UI code needs to
-be written in Objective-C, Objective-C++ or Swift using Apple's iOS SDK (Android
-UIs using Android's API, web app UIs using GWT, etc.).
+```java
+class Test {
+	@Mapping("go")
+	public static void test() {}
+}
+```
 
-J2ObjC cannot convert Android binary applications. Developers must have source
-code for their Android app, which they either own or are licensed to use.
+Then a method invocation like `Test.test()` will be translated into `[Test go]`.
 
-## Requirements ##
+* `@DotMapping("abc")`, `@GlobalConstant("abc")`, `@GlobalFunction("abc")`
 
-* JDK 1.7 or higher
-* Mac workstation or laptop
-* Mac OS X 10.9 or higher
-* Xcode 5 or higher
+These annotations all modify the translation of a method call just like the `@Mapping` annotation. They will result in respectively: dot-style access for structs, referencing a global constant, and invoking global functions. A good place to get a grasp of all of them is [CGRect.java](https://github.com/Sellegit/j2objc/blob/master/runtime/src/main/java/apple/coregraphics/CGRect.java)
 
-## License ##
+* `@ExtensionMapping("abc")`
 
-This library is distributed under the Apache 2.0 license found in the
-[LICENSE](./LICENSE) file with the following exceptions.
-The protocol buffers library is distributed under the same BSD license as
-Google's protocol buffers. See [README](protobuf/README.md) and
-[LICENSE](protobuf/LICENSE).
+ObjC's extension has no counterpart in Java so we use an extension syntax that's kind of like C#'s, where the first argument will be translated as the receiver. Example: [NSCoderExtensions.java](https://github.com/Sellegit/j2objc/blob/master/runtime/src/main/java/apple/uikit/NSCoderExtensions.java)
+
+* `@Mapping("UITableView")` for Class
+
+`@Mapping` annotation can also be applied on a class declaration, which means the said class is mapped to some native class. This has two effects: 1. any class that has this annotation would not generate corresponding ObjC class headers or implementations as they should be provided elsewhere; 2. any method call(incl. instance instantiations etc) would resolve to the native class. For example,
+
+```java
+@Mapping("UITableView")
+class Hehe {
+	@Mapping("goWithInt:")
+	public static void test(Int x) {}
+}
+```
+
+would not generate any implementation/header for class Hehe. And a call like `Hehe.test(123)` would be translated into `[UITableView goWithInt:123]`.
