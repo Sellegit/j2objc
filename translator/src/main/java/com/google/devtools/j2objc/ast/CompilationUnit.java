@@ -98,7 +98,7 @@ public class CompilationUnit extends TreeNode {
     nameTable = other.nameTable;
     typesService = other.typesService;
     inputFile = other.getInputFile();
-    mainTypeName = other.getMainTypeName();
+    mainTypeName = other.getMainTypeName().replace(' ', '_').replace('*', '_');
     source = other.getSource();
     newlines = new int[other.newlines.length];
     System.arraycopy(other.newlines, 0, newlines, 0, newlines.length);

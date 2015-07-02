@@ -74,6 +74,9 @@ typedef int64_t         jlong;          /* signed 64 bits */
 typedef float           jfloat;         /* 32-bit IEEE 754 */
 typedef double          jdouble;        /* 64-bit IEEE 754 */
 
+// For ptr interop
+typedef void            *VoidPtr;
+
 // Copied from CGBase.h
 #if defined(__LP64__) && __LP64__
 typedef double          MachineSizedFloat;
