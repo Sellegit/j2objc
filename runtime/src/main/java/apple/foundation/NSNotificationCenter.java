@@ -34,7 +34,7 @@ public class NSNotificationCenter
     
     
     @Mapping("addObserver:selector:name:object:")
-    public native void addObserver(Object observer, Selector aSelector, String aName, Object anObject);
+    public native void addNotificationObserver(Object observer, Selector aSelector, String aName, Object anObject);
     @Mapping("postNotification:")
     public native void postNotification(NSNotification notification);
     @Mapping("postNotificationName:object:")
@@ -42,14 +42,14 @@ public class NSNotificationCenter
     @Mapping("postNotificationName:object:userInfo:")
     public native void postNotification(String aName, Object anObject, NSDictionary<?, ?> aUserInfo);
     @Mapping("removeObserver:")
-    public native void removeObserver(Object observer);
+    public native void removeNotificationObserver(Object observer);
     @Mapping("removeObserver:name:object:")
-    public native void removeObserver(Object observer, String aName, Object anObject);
+    public native void removeNotificationObserver(Object observer, String aName, Object anObject);
     /**
      * @since Available in iOS 4.0 and later.
      */
     @Mapping("addObserverForName:object:queue:usingBlock:")
-    public native NSObject addObserver(String name, Object obj, NSOperationQueue queue, @Block VoidBlock1<NSNotification> block);
+    public native NSObject addNotificationObserver(String name, Object obj, NSOperationQueue queue, @Block VoidBlock1<NSNotification> block);
     @Mapping("defaultCenter")
     public static native NSNotificationCenter getDefaultCenter();
 
