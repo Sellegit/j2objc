@@ -35,21 +35,21 @@ public class AVAudioBitRateStrategy
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("AVAudioBitRateStrategy_Constant")
-    public static native NSString ConstantValue();
+    public static native String ConstantValue();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("AVAudioBitRateStrategy_LongTermAverage")
-    public static native NSString LongTermAverageValue();
+    public static native String LongTermAverageValue();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("AVAudioBitRateStrategy_VariableConstrained")
-    public static native NSString VariableConstrainedValue();
+    public static native String VariableConstrainedValue();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("AVAudioBitRateStrategy_Variable")
-    public static native NSString VariableValue();
+    public static native String VariableValue();
 
 }

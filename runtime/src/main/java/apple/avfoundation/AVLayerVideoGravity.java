@@ -35,16 +35,16 @@ public class AVLayerVideoGravity
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVLayerVideoGravityResizeAspect")
-    public static native NSString ResizeAspectValue();
+    public static native String ResizeAspectValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVLayerVideoGravityResizeAspectFill")
-    public static native NSString ResizeAspectFillValue();
+    public static native String ResizeAspectFillValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVLayerVideoGravityResize")
-    public static native NSString ResizeValue();
+    public static native String ResizeValue();
 
 }

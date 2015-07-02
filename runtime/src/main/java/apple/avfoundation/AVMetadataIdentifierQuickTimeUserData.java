@@ -35,191 +35,191 @@ public class AVMetadataIdentifierQuickTimeUserData
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVMetadataIdentifierQuickTimeUserDataAlbum")
-    public static native NSString AlbumValue();
+    public static native String AlbumValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVMetadataIdentifierQuickTimeUserDataArranger")
-    public static native NSString ArrangerValue();
+    public static native String ArrangerValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVMetadataIdentifierQuickTimeUserDataArtist")
-    public static native NSString ArtistValue();
+    public static native String ArtistValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVMetadataIdentifierQuickTimeUserDataAuthor")
-    public static native NSString AuthorValue();
+    public static native String AuthorValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVMetadataIdentifierQuickTimeUserDataChapter")
-    public static native NSString ChapterValue();
+    public static native String ChapterValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVMetadataIdentifierQuickTimeUserDataComment")
-    public static native NSString CommentValue();
+    public static native String CommentValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVMetadataIdentifierQuickTimeUserDataComposer")
-    public static native NSString ComposerValue();
+    public static native String ComposerValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVMetadataIdentifierQuickTimeUserDataCopyright")
-    public static native NSString CopyrightValue();
+    public static native String CopyrightValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVMetadataIdentifierQuickTimeUserDataCreationDate")
-    public static native NSString CreationDateValue();
+    public static native String CreationDateValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVMetadataIdentifierQuickTimeUserDataDescription")
-    public static native NSString DescriptionValue();
+    public static native String DescriptionValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVMetadataIdentifierQuickTimeUserDataDirector")
-    public static native NSString DirectorValue();
+    public static native String DirectorValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVMetadataIdentifierQuickTimeUserDataDisclaimer")
-    public static native NSString DisclaimerValue();
+    public static native String DisclaimerValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVMetadataIdentifierQuickTimeUserDataEncodedBy")
-    public static native NSString EncodedByValue();
+    public static native String EncodedByValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVMetadataIdentifierQuickTimeUserDataFullName")
-    public static native NSString FullNameValue();
+    public static native String FullNameValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVMetadataIdentifierQuickTimeUserDataGenre")
-    public static native NSString GenreValue();
+    public static native String GenreValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVMetadataIdentifierQuickTimeUserDataHostComputer")
-    public static native NSString HostComputerValue();
+    public static native String HostComputerValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVMetadataIdentifierQuickTimeUserDataInformation")
-    public static native NSString InformationValue();
+    public static native String InformationValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVMetadataIdentifierQuickTimeUserDataKeywords")
-    public static native NSString KeywordsValue();
+    public static native String KeywordsValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVMetadataIdentifierQuickTimeUserDataMake")
-    public static native NSString MakeValue();
+    public static native String MakeValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVMetadataIdentifierQuickTimeUserDataModel")
-    public static native NSString ModelValue();
+    public static native String ModelValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVMetadataIdentifierQuickTimeUserDataOriginalArtist")
-    public static native NSString OriginalArtistValue();
+    public static native String OriginalArtistValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVMetadataIdentifierQuickTimeUserDataOriginalFormat")
-    public static native NSString OriginalFormatValue();
+    public static native String OriginalFormatValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVMetadataIdentifierQuickTimeUserDataOriginalSource")
-    public static native NSString OriginalSourceValue();
+    public static native String OriginalSourceValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVMetadataIdentifierQuickTimeUserDataPerformers")
-    public static native NSString PerformersValue();
+    public static native String PerformersValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVMetadataIdentifierQuickTimeUserDataProducer")
-    public static native NSString ProducerValue();
+    public static native String ProducerValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVMetadataIdentifierQuickTimeUserDataPublisher")
-    public static native NSString PublisherValue();
+    public static native String PublisherValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVMetadataIdentifierQuickTimeUserDataProduct")
-    public static native NSString ProductValue();
+    public static native String ProductValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVMetadataIdentifierQuickTimeUserDataSoftware")
-    public static native NSString SoftwareValue();
+    public static native String SoftwareValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVMetadataIdentifierQuickTimeUserDataSpecialPlaybackRequirements")
-    public static native NSString SpecialPlaybackRequirementsValue();
+    public static native String SpecialPlaybackRequirementsValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVMetadataIdentifierQuickTimeUserDataTrack")
-    public static native NSString TrackValue();
+    public static native String TrackValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVMetadataIdentifierQuickTimeUserDataWarning")
-    public static native NSString WarningValue();
+    public static native String WarningValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVMetadataIdentifierQuickTimeUserDataWriter")
-    public static native NSString WriterValue();
+    public static native String WriterValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVMetadataIdentifierQuickTimeUserDataURLLink")
-    public static native NSString URLLinkValue();
+    public static native String URLLinkValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVMetadataIdentifierQuickTimeUserDataLocationISO6709")
-    public static native NSString LocationISO6709Value();
+    public static native String LocationISO6709Value();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVMetadataIdentifierQuickTimeUserDataTrackName")
-    public static native NSString TrackNameValue();
+    public static native String TrackNameValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVMetadataIdentifierQuickTimeUserDataCredits")
-    public static native NSString CreditsValue();
+    public static native String CreditsValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVMetadataIdentifierQuickTimeUserDataPhonogramRights")
-    public static native NSString PhonogramRightsValue();
+    public static native String PhonogramRightsValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVMetadataIdentifierQuickTimeUserDataTaggedCharacteristic")
-    public static native NSString TaggedCharacteristicValue();
+    public static native String TaggedCharacteristicValue();
 
 }

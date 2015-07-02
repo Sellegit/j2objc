@@ -217,32 +217,32 @@ public class AVAudioSession
      * @since Available in iOS 6.0 and later.
      */
     @GlobalConstant("AVAudioSessionInterruptionNotification")
-    public static native NSString InterruptionNotification();
+    public static native String InterruptionNotification();
     /**
      * @since Available in iOS 6.0 and later.
      */
     @GlobalConstant("AVAudioSessionRouteChangeNotification")
-    public static native NSString RouteChangeNotification();
+    public static native String RouteChangeNotification();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("AVAudioSessionMediaServicesWereLostNotification")
-    public static native NSString MediaServicesWereLostNotification();
+    public static native String MediaServicesWereLostNotification();
     /**
      * @since Available in iOS 6.0 and later.
      */
     @GlobalConstant("AVAudioSessionMediaServicesWereResetNotification")
-    public static native NSString MediaServicesWereResetNotification();
+    public static native String MediaServicesWereResetNotification();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVAudioSessionSilenceSecondaryAudioHintNotification")
-    public static native NSString SilenceSecondaryAudioHintNotification();
+    public static native String SilenceSecondaryAudioHintNotification();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVAudioSessionSilenceSecondaryAudioHintTypeKey")
-    public static native NSString SilenceSecondaryAudioHintTypeKey();
+    public static native String SilenceSecondaryAudioHintTypeKey();
 
     @Mapping("setActive:error:")
     public native boolean setActive$error$(boolean active, Todo outError);

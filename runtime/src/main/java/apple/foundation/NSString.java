@@ -39,7 +39,9 @@ public class NSString
     @Mapping("initWithData:encoding:")
     public NSString(NSData data, @Representing("NSStringEncoding") long encoding) { }
     @Mapping("initWithBytes:length:encoding:")
-    public NSString(Todo bytes, @MachineSizedUInt long len, @Representing("NSStringEncoding") long encoding) { }
+    public NSString(VoidPtr bytes, @MachineSizedUInt long len, @Representing("NSStringEncoding") long encoding) { }
+    @Mapping("initWithBytesNoCopy:length:encoding:freeWhenDone:")
+    public NSString(VoidPtr bytes, @MachineSizedUInt long len, @Representing("NSStringEncoding") long encoding, boolean freeBuffer) { }
     @Mapping("initWithContentsOfURL:encoding:error:")
     public NSString(NSURL url, @Representing("NSStringEncoding") long enc, Todo error) { }
     @Mapping("initWithContentsOfFile:encoding:error:")

@@ -48,13 +48,13 @@ public class NSInvocation
     @Mapping("retainArguments")
     public native void retainArguments();
     @Mapping("getReturnValue:")
-    public native void getReturnValue(Todo retLoc);
+    public native void getReturnValue(VoidPtr retLoc);
     @Mapping("setReturnValue:")
-    public native void setReturnValue(Todo retLoc);
+    public native void setReturnValue(VoidPtr retLoc);
     @Mapping("getArgument:atIndex:")
-    public native void getArgument(Todo argumentLocation, @MachineSizedSInt long idx);
+    public native void getArgument(VoidPtr argumentLocation, @MachineSizedSInt long idx);
     @Mapping("setArgument:atIndex:")
-    public native void setArgument(Todo argumentLocation, @MachineSizedSInt long idx);
+    public native void setArgument(VoidPtr argumentLocation, @MachineSizedSInt long idx);
     @Mapping("invoke")
     public native void invoke();
     @Mapping("invokeWithTarget:")

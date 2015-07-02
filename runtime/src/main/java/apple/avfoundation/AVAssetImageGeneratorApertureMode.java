@@ -35,16 +35,16 @@ public class AVAssetImageGeneratorApertureMode
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVAssetImageGeneratorApertureModeCleanAperture")
-    public static native NSString CleanApertureValue();
+    public static native String CleanApertureValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVAssetImageGeneratorApertureModeProductionAperture")
-    public static native NSString ProductionApertureValue();
+    public static native String ProductionApertureValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVAssetImageGeneratorApertureModeEncodedPixels")
-    public static native NSString EncodedPixelsValue();
+    public static native String EncodedPixelsValue();
 
 }

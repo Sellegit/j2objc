@@ -110,7 +110,7 @@ public class NSFileManager
      * @since Available in iOS 2.0 and later.
      */
     @Mapping("contentsOfDirectoryAtPath:error:")
-    public native NSArray<NSURL> getContentsOfDirectoryAtPath(String path, Todo error);
+    public native NSArray<String> getContentsOfDirectoryAtPath(String path, Todo error);
     /**
      * @since Available in iOS 2.0 and later.
      */

@@ -35,21 +35,21 @@ public class AVAudioTimePitchAlgorithm
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("AVAudioTimePitchAlgorithmLowQualityZeroLatency")
-    public static native NSString LowQualityZeroLatencyValue();
+    public static native String LowQualityZeroLatencyValue();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("AVAudioTimePitchAlgorithmTimeDomain")
-    public static native NSString TimeDomainValue();
+    public static native String TimeDomainValue();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("AVAudioTimePitchAlgorithmSpectral")
-    public static native NSString SpectralValue();
+    public static native String SpectralValue();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("AVAudioTimePitchAlgorithmVarispeed")
-    public static native NSString VarispeedValue();
+    public static native String VarispeedValue();
 
 }

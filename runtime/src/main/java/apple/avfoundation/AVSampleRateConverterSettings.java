@@ -35,8 +35,8 @@ public class AVSampleRateConverterSettings
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("AVSampleRateConverterAlgorithmKey")
-    public static native NSString AlgorithmKey();
+    public static native String AlgorithmKey();
     @GlobalConstant("AVSampleRateConverterAudioQualityKey")
-    public static native NSString AudioQualityKey();
+    public static native String AudioQualityKey();
 
 }

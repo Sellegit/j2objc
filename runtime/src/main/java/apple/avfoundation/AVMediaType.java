@@ -35,41 +35,41 @@ public class AVMediaType
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVMediaTypeVideo")
-    public static native NSString VideoValue();
+    public static native String VideoValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVMediaTypeAudio")
-    public static native NSString AudioValue();
+    public static native String AudioValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVMediaTypeText")
-    public static native NSString TextValue();
+    public static native String TextValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVMediaTypeClosedCaption")
-    public static native NSString ClosedCaptionValue();
+    public static native String ClosedCaptionValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVMediaTypeSubtitle")
-    public static native NSString SubtitleValue();
+    public static native String SubtitleValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVMediaTypeTimecode")
-    public static native NSString TimecodeValue();
+    public static native String TimecodeValue();
     /**
      * @since Available in iOS 6.0 and later.
      */
     @GlobalConstant("AVMediaTypeMetadata")
-    public static native NSString MetadataValue();
+    public static native String MetadataValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVMediaTypeMuxed")
-    public static native NSString MuxedValue();
+    public static native String MuxedValue();
 
 }

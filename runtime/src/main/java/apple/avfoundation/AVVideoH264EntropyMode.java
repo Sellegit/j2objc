@@ -35,11 +35,11 @@ public class AVVideoH264EntropyMode
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("AVVideoH264EntropyModeCAVLC")
-    public static native NSString CAVLCValue();
+    public static native String CAVLCValue();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("AVVideoH264EntropyModeCABAC")
-    public static native NSString CABACValue();
+    public static native String CABACValue();
 
 }

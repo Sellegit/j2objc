@@ -33,6 +33,6 @@ public abstract class NSMachPortDelegateAdapter
     
     
     @NotImplemented("handleMachMessage:")
-    public void handleMachMessage(Todo msg) { throw new UnsupportedOperationException(); }
+    public void handleMachMessage(VoidPtr msg) { throw new UnsupportedOperationException(); }
 
 }

@@ -35,11 +35,11 @@ public class AVAudioSessionLocation
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("AVAudioSessionLocationUpper")
-    public static native NSString UpperValue();
+    public static native String UpperValue();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("AVAudioSessionLocationLower")
-    public static native NSString LowerValue();
+    public static native String LowerValue();
 
 }

@@ -35,31 +35,31 @@ public class AVMetadataFormat
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVMetadataFormatQuickTimeUserData")
-    public static native NSString QuickTimeUserDataValue();
+    public static native String QuickTimeUserDataValue();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("AVMetadataFormatISOUserData")
-    public static native NSString ISOUserDataValue();
+    public static native String ISOUserDataValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVMetadataFormatQuickTimeMetadata")
-    public static native NSString QuickTimeMetadataValue();
+    public static native String QuickTimeMetadataValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVMetadataFormatiTunesMetadata")
-    public static native NSString iTunesMetadataValue();
+    public static native String iTunesMetadataValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVMetadataFormatID3Metadata")
-    public static native NSString ID3MetadataValue();
+    public static native String ID3MetadataValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVMetadataFormatHLSMetadata")
-    public static native NSString HLSMetadataValue();
+    public static native String HLSMetadataValue();
 
 }

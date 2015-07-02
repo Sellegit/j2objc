@@ -35,21 +35,21 @@ public class AVVideoCompressionSettings
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVVideoAverageBitRateKey")
-    public static native NSString AverageBitRateKey();
+    public static native String AverageBitRateKey();
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("AVVideoQualityKey")
-    public static native NSString QualityKey();
+    public static native String QualityKey();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVVideoMaxKeyFrameIntervalKey")
-    public static native NSString MaxKeyFrameIntervalKey();
+    public static native String MaxKeyFrameIntervalKey();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("AVVideoMaxKeyFrameIntervalDurationKey")
-    public static native NSString MaxKeyFrameIntervalDurationKey();
+    public static native String MaxKeyFrameIntervalDurationKey();
 
 }

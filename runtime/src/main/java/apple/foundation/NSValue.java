@@ -42,15 +42,17 @@ public class NSValue
     
     
     @Mapping("getValue:")
-    public native void getValue(Todo value);
+    public native void getValue(VoidPtr value);
     @Mapping("valueWithBytes:objCType:")
-    public static native NSValue valueOf(Todo value, Todo type);
+    public static native NSValue valueOf(VoidPtr value, Todo type);
     @Mapping("pointerValue")
-    public native Todo pointerValue();
+    public native VoidPtr pointerValue();
     @Mapping("isEqualToValue:")
     public native boolean isEqualTo(NSValue value);
     @Mapping("valueWithNonretainedObject:")
     public static native NSValue valueOf(Object anObject);
+    @Mapping("valueWithPointer:")
+    public static native NSValue valueOf(VoidPtr pointer);
     @Mapping("valueWithRange:")
     public static native NSValue valueOf(NSRange range);
     @Mapping("copyWithZone:")

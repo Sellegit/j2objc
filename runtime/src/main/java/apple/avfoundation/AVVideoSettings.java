@@ -35,71 +35,71 @@ public class AVVideoSettings
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVVideoCodecKey")
-    public static native NSString CodecKey();
+    public static native String CodecKey();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVVideoWidthKey")
-    public static native NSString WidthKey();
+    public static native String WidthKey();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVVideoHeightKey")
-    public static native NSString HeightKey();
+    public static native String HeightKey();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVVideoPixelAspectRatioKey")
-    public static native NSString PixelAspectRatioKey();
+    public static native String PixelAspectRatioKey();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVVideoPixelAspectRatioHorizontalSpacingKey")
-    public static native NSString PixelAspectRatioHorizontalSpacingKey();
+    public static native String PixelAspectRatioHorizontalSpacingKey();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVVideoPixelAspectRatioVerticalSpacingKey")
-    public static native NSString PixelAspectRatioVerticalSpacingKey();
+    public static native String PixelAspectRatioVerticalSpacingKey();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVVideoCleanApertureKey")
-    public static native NSString CleanApertureKey();
+    public static native String CleanApertureKey();
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("AVVideoScalingModeKey")
-    public static native NSString ScalingModeKey();
+    public static native String ScalingModeKey();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVVideoCompressionPropertiesKey")
-    public static native NSString CompressionPropertiesKey();
+    public static native String CompressionPropertiesKey();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("AVVideoAllowFrameReorderingKey")
-    public static native NSString AllowFrameReorderingKey();
+    public static native String AllowFrameReorderingKey();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVVideoProfileLevelKey")
-    public static native NSString ProfileLevelKey();
+    public static native String ProfileLevelKey();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("AVVideoH264EntropyModeKey")
-    public static native NSString H264EntropyModeKey();
+    public static native String H264EntropyModeKey();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("AVVideoExpectedSourceFrameRateKey")
-    public static native NSString ExpectedSourceFrameRateKey();
+    public static native String ExpectedSourceFrameRateKey();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("AVVideoAverageNonDroppableFrameRateKey")
-    public static native NSString AverageNonDroppableFrameRateKey();
+    public static native String AverageNonDroppableFrameRateKey();
 
 }

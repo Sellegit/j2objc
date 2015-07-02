@@ -35,461 +35,461 @@ public class AVMetadataIdentifierID3Metadata
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVMetadataIdentifierID3MetadataAudioEncryption")
-    public static native NSString AudioEncryptionValue();
+    public static native String AudioEncryptionValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVMetadataIdentifierID3MetadataAttachedPicture")
-    public static native NSString AttachedPictureValue();
+    public static native String AttachedPictureValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVMetadataIdentifierID3MetadataAudioSeekPointIndex")
-    public static native NSString AudioSeekPointIndexValue();
+    public static native String AudioSeekPointIndexValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVMetadataIdentifierID3MetadataComments")
-    public static native NSString CommentsValue();
+    public static native String CommentsValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVMetadataIdentifierID3MetadataCommerical")
-    public static native NSString CommericalValue();
+    public static native String CommericalValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVMetadataIdentifierID3MetadataEncryption")
-    public static native NSString EncryptionValue();
+    public static native String EncryptionValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVMetadataIdentifierID3MetadataEqualization")
-    public static native NSString EqualizationValue();
+    public static native String EqualizationValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVMetadataIdentifierID3MetadataEqualization2")
-    public static native NSString Equalization2Value();
+    public static native String Equalization2Value();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVMetadataIdentifierID3MetadataEventTimingCodes")
-    public static native NSString EventTimingCodesValue();
+    public static native String EventTimingCodesValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVMetadataIdentifierID3MetadataGeneralEncapsulatedObject")
-    public static native NSString GeneralEncapsulatedObjectValue();
+    public static native String GeneralEncapsulatedObjectValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVMetadataIdentifierID3MetadataGroupIdentifier")
-    public static native NSString GroupIdentifierValue();
+    public static native String GroupIdentifierValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVMetadataIdentifierID3MetadataInvolvedPeopleList_v23")
-    public static native NSString InvolvedPeopleList_v23Value();
+    public static native String InvolvedPeopleList_v23Value();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVMetadataIdentifierID3MetadataLink")
-    public static native NSString LinkValue();
+    public static native String LinkValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVMetadataIdentifierID3MetadataMusicCDIdentifier")
-    public static native NSString MusicCDIdentifierValue();
+    public static native String MusicCDIdentifierValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVMetadataIdentifierID3MetadataMPEGLocationLookupTable")
-    public static native NSString MPEGLocationLookupTableValue();
+    public static native String MPEGLocationLookupTableValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVMetadataIdentifierID3MetadataOwnership")
-    public static native NSString OwnershipValue();
+    public static native String OwnershipValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVMetadataIdentifierID3MetadataPrivate")
-    public static native NSString PrivateValue();
+    public static native String PrivateValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVMetadataIdentifierID3MetadataPlayCounter")
-    public static native NSString PlayCounterValue();
+    public static native String PlayCounterValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVMetadataIdentifierID3MetadataPopularimeter")
-    public static native NSString PopularimeterValue();
+    public static native String PopularimeterValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVMetadataIdentifierID3MetadataPositionSynchronization")
-    public static native NSString PositionSynchronizationValue();
+    public static native String PositionSynchronizationValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVMetadataIdentifierID3MetadataRecommendedBufferSize")
-    public static native NSString RecommendedBufferSizeValue();
+    public static native String RecommendedBufferSizeValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVMetadataIdentifierID3MetadataRelativeVolumeAdjustment")
-    public static native NSString RelativeVolumeAdjustmentValue();
+    public static native String RelativeVolumeAdjustmentValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVMetadataIdentifierID3MetadataRelativeVolumeAdjustment2")
-    public static native NSString RelativeVolumeAdjustment2Value();
+    public static native String RelativeVolumeAdjustment2Value();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVMetadataIdentifierID3MetadataReverb")
-    public static native NSString ReverbValue();
+    public static native String ReverbValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVMetadataIdentifierID3MetadataSeek")
-    public static native NSString SeekValue();
+    public static native String SeekValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVMetadataIdentifierID3MetadataSignature")
-    public static native NSString SignatureValue();
+    public static native String SignatureValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVMetadataIdentifierID3MetadataSynchronizedLyric")
-    public static native NSString SynchronizedLyricValue();
+    public static native String SynchronizedLyricValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVMetadataIdentifierID3MetadataSynchronizedTempoCodes")
-    public static native NSString SynchronizedTempoCodesValue();
+    public static native String SynchronizedTempoCodesValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVMetadataIdentifierID3MetadataAlbumTitle")
-    public static native NSString AlbumTitleValue();
+    public static native String AlbumTitleValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVMetadataIdentifierID3MetadataBeatsPerMinute")
-    public static native NSString BeatsPerMinuteValue();
+    public static native String BeatsPerMinuteValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVMetadataIdentifierID3MetadataComposer")
-    public static native NSString ComposerValue();
+    public static native String ComposerValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVMetadataIdentifierID3MetadataContentType")
-    public static native NSString ContentTypeValue();
+    public static native String ContentTypeValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVMetadataIdentifierID3MetadataCopyright")
-    public static native NSString CopyrightValue();
+    public static native String CopyrightValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVMetadataIdentifierID3MetadataDate")
-    public static native NSString DateValue();
+    public static native String DateValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVMetadataIdentifierID3MetadataEncodingTime")
-    public static native NSString EncodingTimeValue();
+    public static native String EncodingTimeValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVMetadataIdentifierID3MetadataPlaylistDelay")
-    public static native NSString PlaylistDelayValue();
+    public static native String PlaylistDelayValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVMetadataIdentifierID3MetadataOriginalReleaseTime")
-    public static native NSString OriginalReleaseTimeValue();
+    public static native String OriginalReleaseTimeValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVMetadataIdentifierID3MetadataRecordingTime")
-    public static native NSString RecordingTimeValue();
+    public static native String RecordingTimeValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVMetadataIdentifierID3MetadataReleaseTime")
-    public static native NSString ReleaseTimeValue();
+    public static native String ReleaseTimeValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVMetadataIdentifierID3MetadataTaggingTime")
-    public static native NSString TaggingTimeValue();
+    public static native String TaggingTimeValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVMetadataIdentifierID3MetadataEncodedBy")
-    public static native NSString EncodedByValue();
+    public static native String EncodedByValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVMetadataIdentifierID3MetadataLyricist")
-    public static native NSString LyricistValue();
+    public static native String LyricistValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVMetadataIdentifierID3MetadataFileType")
-    public static native NSString FileTypeValue();
+    public static native String FileTypeValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVMetadataIdentifierID3MetadataTime")
-    public static native NSString TimeValue();
+    public static native String TimeValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVMetadataIdentifierID3MetadataInvolvedPeopleList_v24")
-    public static native NSString InvolvedPeopleList_v24Value();
+    public static native String InvolvedPeopleList_v24Value();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVMetadataIdentifierID3MetadataContentGroupDescription")
-    public static native NSString ContentGroupDescriptionValue();
+    public static native String ContentGroupDescriptionValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVMetadataIdentifierID3MetadataTitleDescription")
-    public static native NSString TitleDescriptionValue();
+    public static native String TitleDescriptionValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVMetadataIdentifierID3MetadataSubTitle")
-    public static native NSString SubTitleValue();
+    public static native String SubTitleValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVMetadataIdentifierID3MetadataInitialKey")
-    public static native NSString InitialKeyValue();
+    public static native String InitialKeyValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVMetadataIdentifierID3MetadataLanguage")
-    public static native NSString LanguageValue();
+    public static native String LanguageValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVMetadataIdentifierID3MetadataLength")
-    public static native NSString LengthValue();
+    public static native String LengthValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVMetadataIdentifierID3MetadataMusicianCreditsList")
-    public static native NSString MusicianCreditsListValue();
+    public static native String MusicianCreditsListValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVMetadataIdentifierID3MetadataMediaType")
-    public static native NSString MediaTypeValue();
+    public static native String MediaTypeValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVMetadataIdentifierID3MetadataMood")
-    public static native NSString MoodValue();
+    public static native String MoodValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVMetadataIdentifierID3MetadataOriginalAlbumTitle")
-    public static native NSString OriginalAlbumTitleValue();
+    public static native String OriginalAlbumTitleValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVMetadataIdentifierID3MetadataOriginalFilename")
-    public static native NSString OriginalFilenameValue();
+    public static native String OriginalFilenameValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVMetadataIdentifierID3MetadataOriginalLyricist")
-    public static native NSString OriginalLyricistValue();
+    public static native String OriginalLyricistValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVMetadataIdentifierID3MetadataOriginalArtist")
-    public static native NSString OriginalArtistValue();
+    public static native String OriginalArtistValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVMetadataIdentifierID3MetadataOriginalReleaseYear")
-    public static native NSString OriginalReleaseYearValue();
+    public static native String OriginalReleaseYearValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVMetadataIdentifierID3MetadataFileOwner")
-    public static native NSString FileOwnerValue();
+    public static native String FileOwnerValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVMetadataIdentifierID3MetadataLeadPerformer")
-    public static native NSString LeadPerformerValue();
+    public static native String LeadPerformerValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVMetadataIdentifierID3MetadataBand")
-    public static native NSString BandValue();
+    public static native String BandValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVMetadataIdentifierID3MetadataConductor")
-    public static native NSString ConductorValue();
+    public static native String ConductorValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVMetadataIdentifierID3MetadataModifiedBy")
-    public static native NSString ModifiedByValue();
+    public static native String ModifiedByValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVMetadataIdentifierID3MetadataPartOfASet")
-    public static native NSString PartOfASetValue();
+    public static native String PartOfASetValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVMetadataIdentifierID3MetadataProducedNotice")
-    public static native NSString ProducedNoticeValue();
+    public static native String ProducedNoticeValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVMetadataIdentifierID3MetadataPublisher")
-    public static native NSString PublisherValue();
+    public static native String PublisherValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVMetadataIdentifierID3MetadataTrackNumber")
-    public static native NSString TrackNumberValue();
+    public static native String TrackNumberValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVMetadataIdentifierID3MetadataRecordingDates")
-    public static native NSString RecordingDatesValue();
+    public static native String RecordingDatesValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVMetadataIdentifierID3MetadataInternetRadioStationName")
-    public static native NSString InternetRadioStationNameValue();
+    public static native String InternetRadioStationNameValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVMetadataIdentifierID3MetadataInternetRadioStationOwner")
-    public static native NSString InternetRadioStationOwnerValue();
+    public static native String InternetRadioStationOwnerValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVMetadataIdentifierID3MetadataSize")
-    public static native NSString SizeValue();
+    public static native String SizeValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVMetadataIdentifierID3MetadataAlbumSortOrder")
-    public static native NSString AlbumSortOrderValue();
+    public static native String AlbumSortOrderValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVMetadataIdentifierID3MetadataPerformerSortOrder")
-    public static native NSString PerformerSortOrderValue();
+    public static native String PerformerSortOrderValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVMetadataIdentifierID3MetadataTitleSortOrder")
-    public static native NSString TitleSortOrderValue();
+    public static native String TitleSortOrderValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVMetadataIdentifierID3MetadataInternationalStandardRecordingCode")
-    public static native NSString InternationalStandardRecordingCodeValue();
+    public static native String InternationalStandardRecordingCodeValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVMetadataIdentifierID3MetadataEncodedWith")
-    public static native NSString EncodedWithValue();
+    public static native String EncodedWithValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVMetadataIdentifierID3MetadataSetSubtitle")
-    public static native NSString SetSubtitleValue();
+    public static native String SetSubtitleValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVMetadataIdentifierID3MetadataYear")
-    public static native NSString YearValue();
+    public static native String YearValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVMetadataIdentifierID3MetadataUserText")
-    public static native NSString UserTextValue();
+    public static native String UserTextValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVMetadataIdentifierID3MetadataUniqueFileIdentifier")
-    public static native NSString UniqueFileIdentifierValue();
+    public static native String UniqueFileIdentifierValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVMetadataIdentifierID3MetadataTermsOfUse")
-    public static native NSString TermsOfUseValue();
+    public static native String TermsOfUseValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVMetadataIdentifierID3MetadataUnsynchronizedLyric")
-    public static native NSString UnsynchronizedLyricValue();
+    public static native String UnsynchronizedLyricValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVMetadataIdentifierID3MetadataCommercialInformation")
-    public static native NSString CommercialInformationValue();
+    public static native String CommercialInformationValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVMetadataIdentifierID3MetadataCopyrightInformation")
-    public static native NSString CopyrightInformationValue();
+    public static native String CopyrightInformationValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVMetadataIdentifierID3MetadataOfficialAudioFileWebpage")
-    public static native NSString OfficialAudioFileWebpageValue();
+    public static native String OfficialAudioFileWebpageValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVMetadataIdentifierID3MetadataOfficialArtistWebpage")
-    public static native NSString OfficialArtistWebpageValue();
+    public static native String OfficialArtistWebpageValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVMetadataIdentifierID3MetadataOfficialAudioSourceWebpage")
-    public static native NSString OfficialAudioSourceWebpageValue();
+    public static native String OfficialAudioSourceWebpageValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVMetadataIdentifierID3MetadataOfficialInternetRadioStationHomepage")
-    public static native NSString OfficialInternetRadioStationHomepageValue();
+    public static native String OfficialInternetRadioStationHomepageValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVMetadataIdentifierID3MetadataPayment")
-    public static native NSString PaymentValue();
+    public static native String PaymentValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVMetadataIdentifierID3MetadataOfficialPublisherWebpage")
-    public static native NSString OfficialPublisherWebpageValue();
+    public static native String OfficialPublisherWebpageValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVMetadataIdentifierID3MetadataUserURL")
-    public static native NSString UserURLValue();
+    public static native String UserURLValue();
 
 }

@@ -35,71 +35,71 @@ public class AVMetadataObjectType
      * @since Available in iOS 6.0 and later.
      */
     @GlobalConstant("AVMetadataObjectTypeFace")
-    public static native NSString FaceValue();
+    public static native String FaceValue();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("AVMetadataObjectTypeUPCECode")
-    public static native NSString UPCECodeValue();
+    public static native String UPCECodeValue();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("AVMetadataObjectTypeCode39Code")
-    public static native NSString Code39CodeValue();
+    public static native String Code39CodeValue();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("AVMetadataObjectTypeCode39Mod43Code")
-    public static native NSString Code39Mod43CodeValue();
+    public static native String Code39Mod43CodeValue();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("AVMetadataObjectTypeEAN13Code")
-    public static native NSString EAN13CodeValue();
+    public static native String EAN13CodeValue();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("AVMetadataObjectTypeEAN8Code")
-    public static native NSString EAN8CodeValue();
+    public static native String EAN8CodeValue();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("AVMetadataObjectTypeCode93Code")
-    public static native NSString Code93CodeValue();
+    public static native String Code93CodeValue();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("AVMetadataObjectTypeCode128Code")
-    public static native NSString Code128CodeValue();
+    public static native String Code128CodeValue();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("AVMetadataObjectTypePDF417Code")
-    public static native NSString PDF417CodeValue();
+    public static native String PDF417CodeValue();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("AVMetadataObjectTypeQRCode")
-    public static native NSString QRCodeValue();
+    public static native String QRCodeValue();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("AVMetadataObjectTypeAztecCode")
-    public static native NSString AztecCodeValue();
+    public static native String AztecCodeValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVMetadataObjectTypeInterleaved2of5Code")
-    public static native NSString Interleaved2of5CodeValue();
+    public static native String Interleaved2of5CodeValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVMetadataObjectTypeITF14Code")
-    public static native NSString ITF14CodeValue();
+    public static native String ITF14CodeValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVMetadataObjectTypeDataMatrixCode")
-    public static native NSString DataMatrixCodeValue();
+    public static native String DataMatrixCodeValue();
 
 }

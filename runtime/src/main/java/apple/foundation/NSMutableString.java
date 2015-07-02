@@ -39,7 +39,9 @@ public class NSMutableString
     @Mapping("initWithData:encoding:")
     public NSMutableString(NSData data, @Representing("NSStringEncoding") long encoding) { }
     @Mapping("initWithBytes:length:encoding:")
-    public NSMutableString(Todo bytes, @MachineSizedUInt long len, @Representing("NSStringEncoding") long encoding) { }
+    public NSMutableString(VoidPtr bytes, @MachineSizedUInt long len, @Representing("NSStringEncoding") long encoding) { }
+    @Mapping("initWithBytesNoCopy:length:encoding:freeWhenDone:")
+    public NSMutableString(VoidPtr bytes, @MachineSizedUInt long len, @Representing("NSStringEncoding") long encoding, boolean freeBuffer) { }
     @Mapping("initWithContentsOfURL:encoding:error:")
     public NSMutableString(NSURL url, @Representing("NSStringEncoding") long enc, Todo error) { }
     @Mapping("initWithContentsOfFile:encoding:error:")

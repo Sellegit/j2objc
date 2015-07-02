@@ -303,17 +303,17 @@ public class AVCaptureDevice
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVCaptureDeviceWasConnectedNotification")
-    public static native NSString WasConnectedNotification();
+    public static native String WasConnectedNotification();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVCaptureDeviceWasDisconnectedNotification")
-    public static native NSString WasDisconnectedNotification();
+    public static native String WasDisconnectedNotification();
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("AVCaptureDeviceSubjectAreaDidChangeNotification")
-    public static native NSString SubjectAreaDidChangeNotification();
+    public static native String SubjectAreaDidChangeNotification();
     @GlobalConstant("AVCaptureMaxAvailableTorchLevel")
     public static native float getMaxAvailableTorchLevel();
     /**

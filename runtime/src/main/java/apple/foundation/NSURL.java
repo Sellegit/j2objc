@@ -178,6 +178,8 @@ public class NSURL
      */
     @Mapping("stopAccessingSecurityScopedResource")
     public native void stopAccessingSecurityScopedResource();
+    @Mapping("fileURLWithPath:")
+    public static native NSURL createFileURL(String path);
     /**
      * @since Available in iOS 4.0 and later.
      */

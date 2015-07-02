@@ -56,7 +56,7 @@ public class AVCaptureInputPort
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVCaptureInputPortFormatDescriptionDidChangeNotification")
-    public static native NSString FormatDescriptionDidChangeNotification();
+    public static native String FormatDescriptionDidChangeNotification();
 
 
 

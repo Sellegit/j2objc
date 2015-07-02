@@ -35,16 +35,16 @@ public class AVURLAssetOptions
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVURLAssetPreferPreciseDurationAndTimingKey")
-    public static native NSString PreferPreciseDurationAndTimingKey();
+    public static native String PreferPreciseDurationAndTimingKey();
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("AVURLAssetReferenceRestrictionsKey")
-    public static native NSString ReferenceRestrictionsKey();
+    public static native String ReferenceRestrictionsKey();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVURLAssetHTTPCookiesKey")
-    public static native NSString HTTPCookiesKey();
+    public static native String HTTPCookiesKey();
 
 }

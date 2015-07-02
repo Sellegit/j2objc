@@ -35,61 +35,61 @@ public class AVVideoProfileLevel
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVVideoProfileLevelH264Baseline30")
-    public static native NSString H264Baseline30Value();
+    public static native String H264Baseline30Value();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVVideoProfileLevelH264Baseline31")
-    public static native NSString H264Baseline31Value();
+    public static native String H264Baseline31Value();
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("AVVideoProfileLevelH264Baseline41")
-    public static native NSString H264Baseline41Value();
+    public static native String H264Baseline41Value();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("AVVideoProfileLevelH264BaselineAutoLevel")
-    public static native NSString H264BaselineAutoLevelValue();
+    public static native String H264BaselineAutoLevelValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVVideoProfileLevelH264Main30")
-    public static native NSString H264Main30Value();
+    public static native String H264Main30Value();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVVideoProfileLevelH264Main31")
-    public static native NSString H264Main31Value();
+    public static native String H264Main31Value();
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("AVVideoProfileLevelH264Main32")
-    public static native NSString H264Main32Value();
+    public static native String H264Main32Value();
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("AVVideoProfileLevelH264Main41")
-    public static native NSString H264Main41Value();
+    public static native String H264Main41Value();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("AVVideoProfileLevelH264MainAutoLevel")
-    public static native NSString H264MainAutoLevelValue();
+    public static native String H264MainAutoLevelValue();
     /**
      * @since Available in iOS 6.0 and later.
      */
     @GlobalConstant("AVVideoProfileLevelH264High40")
-    public static native NSString H264High40Value();
+    public static native String H264High40Value();
     /**
      * @since Available in iOS 6.0 and later.
      */
     @GlobalConstant("AVVideoProfileLevelH264High41")
-    public static native NSString H264High41Value();
+    public static native String H264High41Value();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("AVVideoProfileLevelH264HighAutoLevel")
-    public static native NSString H264HighAutoLevelValue();
+    public static native String H264HighAutoLevelValue();
 
 }

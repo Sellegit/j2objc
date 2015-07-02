@@ -36,18 +36,18 @@ public class NSMutableData
     
     
     @Mapping("appendBytes:length:")
-    public native void appendBytes(Todo bytes, @MachineSizedUInt long length);
+    public native void appendBytes(VoidPtr bytes, @MachineSizedUInt long length);
     @Mapping("appendData:")
     public native void append(NSData other);
     @Mapping("increaseLengthBy:")
     public native void increaseLength(@MachineSizedUInt long extraLength);
     @Mapping("replaceBytesInRange:withBytes:")
-    public native void replaceBytes(NSRange range, Todo bytes);
+    public native void replaceBytes(NSRange range, VoidPtr bytes);
     @Mapping("resetBytesInRange:")
     public native void reset(NSRange range);
     @Mapping("setData:")
     public native void setData(NSData data);
     @Mapping("replaceBytesInRange:withBytes:length:")
-    public native void replaceBytes(NSRange range, Todo replacementBytes, @MachineSizedUInt long replacementLength);
+    public native void replaceBytes(NSRange range, VoidPtr replacementBytes, @MachineSizedUInt long replacementLength);
 
 }

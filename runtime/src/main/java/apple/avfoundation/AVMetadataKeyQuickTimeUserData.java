@@ -35,191 +35,191 @@ public class AVMetadataKeyQuickTimeUserData
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVMetadataQuickTimeUserDataKeyAlbum")
-    public static native NSString AlbumValue();
+    public static native String AlbumValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVMetadataQuickTimeUserDataKeyArranger")
-    public static native NSString ArrangerValue();
+    public static native String ArrangerValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVMetadataQuickTimeUserDataKeyArtist")
-    public static native NSString ArtistValue();
+    public static native String ArtistValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVMetadataQuickTimeUserDataKeyAuthor")
-    public static native NSString AuthorValue();
+    public static native String AuthorValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVMetadataQuickTimeUserDataKeyChapter")
-    public static native NSString ChapterValue();
+    public static native String ChapterValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVMetadataQuickTimeUserDataKeyComment")
-    public static native NSString CommentValue();
+    public static native String CommentValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVMetadataQuickTimeUserDataKeyComposer")
-    public static native NSString ComposerValue();
+    public static native String ComposerValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVMetadataQuickTimeUserDataKeyCopyright")
-    public static native NSString CopyrightValue();
+    public static native String CopyrightValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVMetadataQuickTimeUserDataKeyCreationDate")
-    public static native NSString CreationDateValue();
+    public static native String CreationDateValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVMetadataQuickTimeUserDataKeyDescription")
-    public static native NSString DescriptionValue();
+    public static native String DescriptionValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVMetadataQuickTimeUserDataKeyDirector")
-    public static native NSString DirectorValue();
+    public static native String DirectorValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVMetadataQuickTimeUserDataKeyDisclaimer")
-    public static native NSString DisclaimerValue();
+    public static native String DisclaimerValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVMetadataQuickTimeUserDataKeyEncodedBy")
-    public static native NSString EncodedByValue();
+    public static native String EncodedByValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVMetadataQuickTimeUserDataKeyFullName")
-    public static native NSString FullNameValue();
+    public static native String FullNameValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVMetadataQuickTimeUserDataKeyGenre")
-    public static native NSString GenreValue();
+    public static native String GenreValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVMetadataQuickTimeUserDataKeyHostComputer")
-    public static native NSString HostComputerValue();
+    public static native String HostComputerValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVMetadataQuickTimeUserDataKeyInformation")
-    public static native NSString InformationValue();
+    public static native String InformationValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVMetadataQuickTimeUserDataKeyKeywords")
-    public static native NSString KeywordsValue();
+    public static native String KeywordsValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVMetadataQuickTimeUserDataKeyMake")
-    public static native NSString MakeValue();
+    public static native String MakeValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVMetadataQuickTimeUserDataKeyModel")
-    public static native NSString ModelValue();
+    public static native String ModelValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVMetadataQuickTimeUserDataKeyOriginalArtist")
-    public static native NSString OriginalArtistValue();
+    public static native String OriginalArtistValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVMetadataQuickTimeUserDataKeyOriginalFormat")
-    public static native NSString OriginalFormatValue();
+    public static native String OriginalFormatValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVMetadataQuickTimeUserDataKeyOriginalSource")
-    public static native NSString OriginalSourceValue();
+    public static native String OriginalSourceValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVMetadataQuickTimeUserDataKeyPerformers")
-    public static native NSString PerformersValue();
+    public static native String PerformersValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVMetadataQuickTimeUserDataKeyProducer")
-    public static native NSString ProducerValue();
+    public static native String ProducerValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVMetadataQuickTimeUserDataKeyPublisher")
-    public static native NSString PublisherValue();
+    public static native String PublisherValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVMetadataQuickTimeUserDataKeyProduct")
-    public static native NSString ProductValue();
+    public static native String ProductValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVMetadataQuickTimeUserDataKeySoftware")
-    public static native NSString SoftwareValue();
+    public static native String SoftwareValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVMetadataQuickTimeUserDataKeySpecialPlaybackRequirements")
-    public static native NSString SpecialPlaybackRequirementsValue();
+    public static native String SpecialPlaybackRequirementsValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVMetadataQuickTimeUserDataKeyTrack")
-    public static native NSString TrackValue();
+    public static native String TrackValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVMetadataQuickTimeUserDataKeyWarning")
-    public static native NSString WarningValue();
+    public static native String WarningValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVMetadataQuickTimeUserDataKeyWriter")
-    public static native NSString WriterValue();
+    public static native String WriterValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVMetadataQuickTimeUserDataKeyURLLink")
-    public static native NSString URLLinkValue();
+    public static native String URLLinkValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVMetadataQuickTimeUserDataKeyLocationISO6709")
-    public static native NSString LocationISO6709Value();
+    public static native String LocationISO6709Value();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVMetadataQuickTimeUserDataKeyTrackName")
-    public static native NSString TrackNameValue();
+    public static native String TrackNameValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVMetadataQuickTimeUserDataKeyCredits")
-    public static native NSString CreditsValue();
+    public static native String CreditsValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVMetadataQuickTimeUserDataKeyPhonogramRights")
-    public static native NSString PhonogramRightsValue();
+    public static native String PhonogramRightsValue();
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("AVMetadataQuickTimeUserDataKeyTaggedCharacteristic")
-    public static native NSString TaggedCharacteristicValue();
+    public static native String TaggedCharacteristicValue();
 
 }

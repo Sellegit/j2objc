@@ -35,11 +35,11 @@ public class AVSampleRateConverterAlgorithm
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("AVSampleRateConverterAlgorithm_Normal")
-    public static native NSString NormalValue();
+    public static native String NormalValue();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("AVSampleRateConverterAlgorithm_Mastering")
-    public static native NSString MasteringValue();
+    public static native String MasteringValue();
 
 }

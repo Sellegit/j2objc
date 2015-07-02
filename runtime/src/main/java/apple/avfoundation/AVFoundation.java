@@ -40,117 +40,117 @@ public class AVFoundation
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVMetadataCommonKeyTitle")
-    public static native NSString TitleValue();
+    public static native String TitleValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVMetadataCommonKeyCreator")
-    public static native NSString CreatorValue();
+    public static native String CreatorValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVMetadataCommonKeySubject")
-    public static native NSString SubjectValue();
+    public static native String SubjectValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVMetadataCommonKeyDescription")
-    public static native NSString DescriptionValue();
+    public static native String DescriptionValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVMetadataCommonKeyPublisher")
-    public static native NSString PublisherValue();
+    public static native String PublisherValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVMetadataCommonKeyContributor")
-    public static native NSString ContributorValue();
+    public static native String ContributorValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVMetadataCommonKeyCreationDate")
-    public static native NSString CreationDateValue();
+    public static native String CreationDateValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVMetadataCommonKeyLastModifiedDate")
-    public static native NSString LastModifiedDateValue();
+    public static native String LastModifiedDateValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVMetadataCommonKeyType")
-    public static native NSString TypeValue();
+    public static native String TypeValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVMetadataCommonKeyFormat")
-    public static native NSString FormatValue();
+    public static native String FormatValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVMetadataCommonKeyIdentifier")
-    public static native NSString IdentifierValue();
+    public static native String IdentifierValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVMetadataCommonKeySource")
-    public static native NSString SourceValue();
+    public static native String SourceValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVMetadataCommonKeyLanguage")
-    public static native NSString LanguageValue();
+    public static native String LanguageValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVMetadataCommonKeyRelation")
-    public static native NSString RelationValue();
+    public static native String RelationValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVMetadataCommonKeyLocation")
-    public static native NSString LocationValue();
+    public static native String LocationValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVMetadataCommonKeyCopyrights")
-    public static native NSString CopyrightsValue();
+    public static native String CopyrightsValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVMetadataCommonKeyAlbumName")
-    public static native NSString AlbumNameValue();
+    public static native String AlbumNameValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVMetadataCommonKeyAuthor")
-    public static native NSString AuthorValue();
+    public static native String AuthorValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVMetadataCommonKeyArtist")
-    public static native NSString ArtistValue();
+    public static native String ArtistValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVMetadataCommonKeyArtwork")
-    public static native NSString ArtworkValue();
+    public static native String ArtworkValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVMetadataCommonKeyMake")
-    public static native NSString MakeValue();
+    public static native String MakeValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVMetadataCommonKeyModel")
-    public static native NSString ModelValue();
+    public static native String ModelValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVMetadataCommonKeySoftware")
-    public static native NSString SoftwareValue();
+    public static native String SoftwareValue();
 
     /**
      * @since Available in iOS 4.0 and later.

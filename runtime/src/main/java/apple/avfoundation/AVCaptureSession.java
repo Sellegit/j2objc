@@ -81,32 +81,32 @@ public class AVCaptureSession
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVCaptureSessionRuntimeErrorNotification")
-    public static native NSString RuntimeErrorNotification();
+    public static native String RuntimeErrorNotification();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVCaptureSessionErrorKey")
-    public static native NSString NotificationErrorKey();
+    public static native String NotificationErrorKey();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVCaptureSessionDidStartRunningNotification")
-    public static native NSString DidStartRunningNotification();
+    public static native String DidStartRunningNotification();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVCaptureSessionDidStopRunningNotification")
-    public static native NSString DidStopRunningNotification();
+    public static native String DidStopRunningNotification();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVCaptureSessionWasInterruptedNotification")
-    public static native NSString WasInterruptedNotification();
+    public static native String WasInterruptedNotification();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVCaptureSessionInterruptionEndedNotification")
-    public static native NSString InterruptionEndedNotification();
+    public static native String InterruptionEndedNotification();
 
     @Mapping("canSetSessionPreset:")
     public native boolean canSetSessionPreset(String preset);

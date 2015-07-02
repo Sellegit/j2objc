@@ -109,7 +109,7 @@ public class AVPlayerItem
     @Mapping("setReversePlaybackEndTime:")
     public native void setReversePlaybackEndTime(CMTime v);
     @Mapping("seekableTimeRanges")
-    public native List<CMTimeRange> getSeekableTimeRanges();
+    public native NSArray<NSValue> getSeekableTimeRanges();
     /**
      * @since Available in iOS 6.0 and later.
      */
@@ -159,7 +159,7 @@ public class AVPlayerItem
     @Mapping("setAudioMix:")
     public native void setAudioMix(AVAudioMix v);
     @Mapping("loadedTimeRanges")
-    public native List<CMTimeRange> getLoadedTimeRanges();
+    public native NSArray<NSValue> getLoadedTimeRanges();
     @Mapping("isPlaybackLikelyToKeepUp")
     public native boolean isPlaybackLikelyToKeepUp();
     @Mapping("isPlaybackBufferFull")
@@ -188,37 +188,37 @@ public class AVPlayerItem
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("AVPlayerItemTimeJumpedNotification")
-    public static native NSString TimeJumpedNotification();
+    public static native String TimeJumpedNotification();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVPlayerItemDidPlayToEndTimeNotification")
-    public static native NSString DidPlayToEndTimeNotification();
+    public static native String DidPlayToEndTimeNotification();
     /**
      * @since Available in iOS 4.3 and later.
      */
     @GlobalConstant("AVPlayerItemFailedToPlayToEndTimeNotification")
-    public static native NSString FailedToPlayToEndTimeNotification();
+    public static native String FailedToPlayToEndTimeNotification();
     /**
      * @since Available in iOS 6.0 and later.
      */
     @GlobalConstant("AVPlayerItemPlaybackStalledNotification")
-    public static native NSString PlaybackStalledNotification();
+    public static native String PlaybackStalledNotification();
     /**
      * @since Available in iOS 6.0 and later.
      */
     @GlobalConstant("AVPlayerItemNewAccessLogEntryNotification")
-    public static native NSString NewAccessLogEntryNotification();
+    public static native String NewAccessLogEntryNotification();
     /**
      * @since Available in iOS 6.0 and later.
      */
     @GlobalConstant("AVPlayerItemNewErrorLogEntryNotification")
-    public static native NSString NewErrorLogEntryNotification();
+    public static native String NewErrorLogEntryNotification();
     /**
      * @since Available in iOS 4.3 and later.
      */
     @GlobalConstant("AVPlayerItemFailedToPlayToEndTimeErrorKey")
-    public static native NSString FailedToPlayToEndTimeErrorKey();
+    public static native String FailedToPlayToEndTimeErrorKey();
 
     @Mapping("playerItemWithURL:")
     public static native AVPlayerItem create(NSURL URL);

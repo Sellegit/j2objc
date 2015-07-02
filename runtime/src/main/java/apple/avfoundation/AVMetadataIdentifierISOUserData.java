@@ -35,11 +35,11 @@ public class AVMetadataIdentifierISOUserData
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVMetadataIdentifierISOUserDataCopyright")
-    public static native NSString CopyrightValue();
+    public static native String CopyrightValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVMetadataIdentifierISOUserDataTaggedCharacteristic")
-    public static native NSString TaggedCharacteristicValue();
+    public static native String TaggedCharacteristicValue();
 
 }

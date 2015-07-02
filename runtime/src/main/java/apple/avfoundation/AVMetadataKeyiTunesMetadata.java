@@ -35,241 +35,241 @@ public class AVMetadataKeyiTunesMetadata
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVMetadataiTunesMetadataKeyAlbum")
-    public static native NSString AlbumValue();
+    public static native String AlbumValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVMetadataiTunesMetadataKeyArtist")
-    public static native NSString ArtistValue();
+    public static native String ArtistValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVMetadataiTunesMetadataKeyUserComment")
-    public static native NSString UserCommentValue();
+    public static native String UserCommentValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVMetadataiTunesMetadataKeyCoverArt")
-    public static native NSString CoverArtValue();
+    public static native String CoverArtValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVMetadataiTunesMetadataKeyCopyright")
-    public static native NSString CopyrightValue();
+    public static native String CopyrightValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVMetadataiTunesMetadataKeyReleaseDate")
-    public static native NSString ReleaseDateValue();
+    public static native String ReleaseDateValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVMetadataiTunesMetadataKeyEncodedBy")
-    public static native NSString EncodedByValue();
+    public static native String EncodedByValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVMetadataiTunesMetadataKeyPredefinedGenre")
-    public static native NSString PredefinedGenreValue();
+    public static native String PredefinedGenreValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVMetadataiTunesMetadataKeyUserGenre")
-    public static native NSString UserGenreValue();
+    public static native String UserGenreValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVMetadataiTunesMetadataKeySongName")
-    public static native NSString SongNameValue();
+    public static native String SongNameValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVMetadataiTunesMetadataKeyTrackSubTitle")
-    public static native NSString TrackSubTitleValue();
+    public static native String TrackSubTitleValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVMetadataiTunesMetadataKeyEncodingTool")
-    public static native NSString EncodingToolValue();
+    public static native String EncodingToolValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVMetadataiTunesMetadataKeyComposer")
-    public static native NSString ComposerValue();
+    public static native String ComposerValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVMetadataiTunesMetadataKeyAlbumArtist")
-    public static native NSString AlbumArtistValue();
+    public static native String AlbumArtistValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVMetadataiTunesMetadataKeyAccountKind")
-    public static native NSString AccountKindValue();
+    public static native String AccountKindValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVMetadataiTunesMetadataKeyAppleID")
-    public static native NSString AppleIDValue();
+    public static native String AppleIDValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVMetadataiTunesMetadataKeyArtistID")
-    public static native NSString ArtistIDValue();
+    public static native String ArtistIDValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVMetadataiTunesMetadataKeySongID")
-    public static native NSString SongIDValue();
+    public static native String SongIDValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVMetadataiTunesMetadataKeyDiscCompilation")
-    public static native NSString DiscCompilationValue();
+    public static native String DiscCompilationValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVMetadataiTunesMetadataKeyDiscNumber")
-    public static native NSString DiscNumberValue();
+    public static native String DiscNumberValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVMetadataiTunesMetadataKeyGenreID")
-    public static native NSString GenreIDValue();
+    public static native String GenreIDValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVMetadataiTunesMetadataKeyGrouping")
-    public static native NSString GroupingValue();
+    public static native String GroupingValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVMetadataiTunesMetadataKeyPlaylistID")
-    public static native NSString PlaylistIDValue();
+    public static native String PlaylistIDValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVMetadataiTunesMetadataKeyContentRating")
-    public static native NSString ContentRatingValue();
+    public static native String ContentRatingValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVMetadataiTunesMetadataKeyBeatsPerMin")
-    public static native NSString BeatsPerMinValue();
+    public static native String BeatsPerMinValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVMetadataiTunesMetadataKeyTrackNumber")
-    public static native NSString TrackNumberValue();
+    public static native String TrackNumberValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVMetadataiTunesMetadataKeyArtDirector")
-    public static native NSString ArtDirectorValue();
+    public static native String ArtDirectorValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVMetadataiTunesMetadataKeyArranger")
-    public static native NSString ArrangerValue();
+    public static native String ArrangerValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVMetadataiTunesMetadataKeyAuthor")
-    public static native NSString AuthorValue();
+    public static native String AuthorValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVMetadataiTunesMetadataKeyLyrics")
-    public static native NSString LyricsValue();
+    public static native String LyricsValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVMetadataiTunesMetadataKeyAcknowledgement")
-    public static native NSString AcknowledgementValue();
+    public static native String AcknowledgementValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVMetadataiTunesMetadataKeyConductor")
-    public static native NSString ConductorValue();
+    public static native String ConductorValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVMetadataiTunesMetadataKeyDescription")
-    public static native NSString DescriptionValue();
+    public static native String DescriptionValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVMetadataiTunesMetadataKeyDirector")
-    public static native NSString DirectorValue();
+    public static native String DirectorValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVMetadataiTunesMetadataKeyEQ")
-    public static native NSString EQValue();
+    public static native String EQValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVMetadataiTunesMetadataKeyLinerNotes")
-    public static native NSString LinerNotesValue();
+    public static native String LinerNotesValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVMetadataiTunesMetadataKeyRecordCompany")
-    public static native NSString RecordCompanyValue();
+    public static native String RecordCompanyValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVMetadataiTunesMetadataKeyOriginalArtist")
-    public static native NSString OriginalArtistValue();
+    public static native String OriginalArtistValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVMetadataiTunesMetadataKeyPhonogramRights")
-    public static native NSString PhonogramRightsValue();
+    public static native String PhonogramRightsValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVMetadataiTunesMetadataKeyProducer")
-    public static native NSString ProducerValue();
+    public static native String ProducerValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVMetadataiTunesMetadataKeyPerformer")
-    public static native NSString PerformerValue();
+    public static native String PerformerValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVMetadataiTunesMetadataKeyPublisher")
-    public static native NSString PublisherValue();
+    public static native String PublisherValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVMetadataiTunesMetadataKeySoundEngineer")
-    public static native NSString SoundEngineerValue();
+    public static native String SoundEngineerValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVMetadataiTunesMetadataKeySoloist")
-    public static native NSString SoloistValue();
+    public static native String SoloistValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVMetadataiTunesMetadataKeyCredits")
-    public static native NSString CreditsValue();
+    public static native String CreditsValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVMetadataiTunesMetadataKeyThanks")
-    public static native NSString ThanksValue();
+    public static native String ThanksValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVMetadataiTunesMetadataKeyOnlineExtras")
-    public static native NSString OnlineExtrasValue();
+    public static native String OnlineExtrasValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVMetadataiTunesMetadataKeyExecProducer")
-    public static native NSString ExecProducerValue();
+    public static native String ExecProducerValue();
 
 }

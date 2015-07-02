@@ -35,46 +35,46 @@ public class AVAssetExportPreset
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVAssetExportPresetLowQuality")
-    public static native NSString LowQualityValue();
+    public static native String LowQualityValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVAssetExportPresetMediumQuality")
-    public static native NSString MediumQualityValue();
+    public static native String MediumQualityValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVAssetExportPresetHighestQuality")
-    public static native NSString HighestQualityValue();
+    public static native String HighestQualityValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVAssetExportPreset640x480")
-    public static native NSString Size640x480Value();
+    public static native String Size640x480Value();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVAssetExportPreset960x540")
-    public static native NSString Size960x540Value();
+    public static native String Size960x540Value();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVAssetExportPreset1280x720")
-    public static native NSString Size1280x720Value();
+    public static native String Size1280x720Value();
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("AVAssetExportPreset1920x1080")
-    public static native NSString Size1920x1080Value();
+    public static native String Size1920x1080Value();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVAssetExportPresetAppleM4A")
-    public static native NSString AppleM4AValue();
+    public static native String AppleM4AValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVAssetExportPresetPassthrough")
-    public static native NSString PassthroughValue();
+    public static native String PassthroughValue();
 
 }

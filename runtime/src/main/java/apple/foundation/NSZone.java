@@ -43,15 +43,15 @@ public class NSZone
     @GlobalFunction("NSZoneName")
     public static native String getName(NSZone zone);
     @GlobalFunction("NSZoneFromPointer")
-    public static native NSZone fromPointer(Todo ptr);
+    public static native NSZone fromPointer(VoidPtr ptr);
     @GlobalFunction("NSZoneMalloc")
-    public static native Todo malloc(NSZone zone, @MachineSizedUInt long size);
+    public static native VoidPtr malloc(NSZone zone, @MachineSizedUInt long size);
     @GlobalFunction("NSZoneCalloc")
-    public static native Todo calloc(NSZone zone, @MachineSizedUInt long numElems, @MachineSizedUInt long byteSize);
+    public static native VoidPtr calloc(NSZone zone, @MachineSizedUInt long numElems, @MachineSizedUInt long byteSize);
     @GlobalFunction("NSZoneRealloc")
-    public static native Todo realloc(NSZone zone, Todo ptr, @MachineSizedUInt long size);
+    public static native VoidPtr realloc(NSZone zone, VoidPtr ptr, @MachineSizedUInt long size);
     @GlobalFunction("NSZoneFree")
-    public static native void free(NSZone zone, Todo ptr);
+    public static native void free(NSZone zone, VoidPtr ptr);
     @GlobalFunction("NSPageSize")
     public static native @MachineSizedUInt long getPageSize();
     @GlobalFunction("NSLogPageSize")
@@ -61,11 +61,11 @@ public class NSZone
     @GlobalFunction("NSRoundDownToMultipleOfPageSize")
     public static native @MachineSizedUInt long roundDownToMultipleOfPageSize(@MachineSizedUInt long bytes);
     @GlobalFunction("NSAllocateMemoryPages")
-    public static native Todo allocateMemoryPages(@MachineSizedUInt long bytes);
+    public static native VoidPtr allocateMemoryPages(@MachineSizedUInt long bytes);
     @GlobalFunction("NSDeallocateMemoryPages")
-    public static native void deallocateMemoryPages(Todo ptr, @MachineSizedUInt long bytes);
+    public static native void deallocateMemoryPages(VoidPtr ptr, @MachineSizedUInt long bytes);
     @GlobalFunction("NSCopyMemoryPages")
-    public static native void copyMemoryPages(Todo source, Todo dest, @MachineSizedUInt long bytes);
+    public static native void copyMemoryPages(VoidPtr source, VoidPtr dest, @MachineSizedUInt long bytes);
     /**
      * @since Available in iOS 2.0 and later.
      * @deprecated Deprecated in iOS 6.0.

@@ -35,31 +35,31 @@ public class AVTrackAssociationType
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("AVTrackAssociationTypeAudioFallback")
-    public static native NSString AudioFallbackValue();
+    public static native String AudioFallbackValue();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("AVTrackAssociationTypeChapterList")
-    public static native NSString ChapterListValue();
+    public static native String ChapterListValue();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("AVTrackAssociationTypeForcedSubtitlesOnly")
-    public static native NSString ForcedSubtitlesOnlyValue();
+    public static native String ForcedSubtitlesOnlyValue();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("AVTrackAssociationTypeSelectionFollower")
-    public static native NSString SelectionFollowerValue();
+    public static native String SelectionFollowerValue();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("AVTrackAssociationTypeTimecode")
-    public static native NSString TimecodeValue();
+    public static native String TimecodeValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVTrackAssociationTypeMetadataReferent")
-    public static native NSString MetadataReferentValue();
+    public static native String MetadataReferentValue();
 
 }

@@ -35,56 +35,56 @@ public class AVMediaCharacteristic
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVMediaCharacteristicVisual")
-    public static native NSString VisualValue();
+    public static native String VisualValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVMediaCharacteristicAudible")
-    public static native NSString AudibleValue();
+    public static native String AudibleValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVMediaCharacteristicLegible")
-    public static native NSString LegibleValue();
+    public static native String LegibleValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVMediaCharacteristicFrameBased")
-    public static native NSString FrameBasedValue();
+    public static native String FrameBasedValue();
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("AVMediaCharacteristicIsMainProgramContent")
-    public static native NSString IsMainProgramContentValue();
+    public static native String IsMainProgramContentValue();
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("AVMediaCharacteristicIsAuxiliaryContent")
-    public static native NSString IsAuxiliaryContentValue();
+    public static native String IsAuxiliaryContentValue();
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("AVMediaCharacteristicContainsOnlyForcedSubtitles")
-    public static native NSString ContainsOnlyForcedSubtitlesValue();
+    public static native String ContainsOnlyForcedSubtitlesValue();
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("AVMediaCharacteristicTranscribesSpokenDialogForAccessibility")
-    public static native NSString TranscribesSpokenDialogForAccessibilityValue();
+    public static native String TranscribesSpokenDialogForAccessibilityValue();
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("AVMediaCharacteristicDescribesMusicAndSoundForAccessibility")
-    public static native NSString DescribesMusicAndSoundForAccessibilityValue();
+    public static native String DescribesMusicAndSoundForAccessibilityValue();
     /**
      * @since Available in iOS 6.0 and later.
      */
     @GlobalConstant("AVMediaCharacteristicEasyToRead")
-    public static native NSString EasyToReadValue();
+    public static native String EasyToReadValue();
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("AVMediaCharacteristicDescribesVideoForAccessibility")
-    public static native NSString DescribesVideoForAccessibilityValue();
+    public static native String DescribesVideoForAccessibilityValue();
 
 }

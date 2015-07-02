@@ -35,11 +35,11 @@ public class AVPlayerItemLegibleOutputTextStylingResolution
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("AVPlayerItemLegibleOutputTextStylingResolutionDefault")
-    public static native NSString DefaultValue();
+    public static native String DefaultValue();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("AVPlayerItemLegibleOutputTextStylingResolutionSourceAndRulesOnly")
-    public static native NSString SourceAndRulesOnlyValue();
+    public static native String SourceAndRulesOnlyValue();
 
 }

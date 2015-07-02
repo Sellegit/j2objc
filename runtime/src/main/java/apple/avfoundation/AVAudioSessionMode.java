@@ -35,36 +35,36 @@ public class AVAudioSessionMode
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("AVAudioSessionModeDefault")
-    public static native NSString DefaultValue();
+    public static native String DefaultValue();
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("AVAudioSessionModeVoiceChat")
-    public static native NSString VoiceChatValue();
+    public static native String VoiceChatValue();
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("AVAudioSessionModeGameChat")
-    public static native NSString GameChatValue();
+    public static native String GameChatValue();
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("AVAudioSessionModeVideoRecording")
-    public static native NSString VideoRecordingValue();
+    public static native String VideoRecordingValue();
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("AVAudioSessionModeMeasurement")
-    public static native NSString MeasurementValue();
+    public static native String MeasurementValue();
     /**
      * @since Available in iOS 6.0 and later.
      */
     @GlobalConstant("AVAudioSessionModeMoviePlayback")
-    public static native NSString MoviePlaybackValue();
+    public static native String MoviePlaybackValue();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("AVAudioSessionModeVideoChat")
-    public static native NSString VideoChatValue();
+    public static native String VideoChatValue();
 
 }

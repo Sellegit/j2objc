@@ -35,11 +35,11 @@ public class AVMetadataIdentifierIcyMetadata
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVMetadataIdentifierIcyMetadataStreamTitle")
-    public static native NSString StreamTitleValue();
+    public static native String StreamTitleValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVMetadataIdentifierIcyMetadataStreamURL")
-    public static native NSString StreamURLValue();
+    public static native String StreamURLValue();
 
 }

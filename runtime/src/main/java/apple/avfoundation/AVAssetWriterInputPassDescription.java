@@ -35,7 +35,7 @@ public class AVAssetWriterInputPassDescription
 
     
     @Mapping("sourceTimeRanges")
-    public native List<CMTimeRange> getSourceTimeRanges();
+    public native NSArray<NSValue> getSourceTimeRanges();
 
     
     

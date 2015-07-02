@@ -32,21 +32,21 @@ public class AVAudioSessionCategory
     
     
     @GlobalConstant("AVAudioSessionCategoryAmbient")
-    public static native NSString AmbientValue();
+    public static native String AmbientValue();
     @GlobalConstant("AVAudioSessionCategorySoloAmbient")
-    public static native NSString SoloAmbientValue();
+    public static native String SoloAmbientValue();
     @GlobalConstant("AVAudioSessionCategoryPlayback")
-    public static native NSString PlaybackValue();
+    public static native String PlaybackValue();
     @GlobalConstant("AVAudioSessionCategoryRecord")
-    public static native NSString RecordValue();
+    public static native String RecordValue();
     @GlobalConstant("AVAudioSessionCategoryPlayAndRecord")
-    public static native NSString PlayAndRecordValue();
+    public static native String PlayAndRecordValue();
     @GlobalConstant("AVAudioSessionCategoryAudioProcessing")
-    public static native NSString AudioProcessingValue();
+    public static native String AudioProcessingValue();
     /**
      * @since Available in iOS 6.0 and later.
      */
     @GlobalConstant("AVAudioSessionCategoryMultiRoute")
-    public static native NSString MultiRouteValue();
+    public static native String MultiRouteValue();
 
 }

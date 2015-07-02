@@ -33,7 +33,7 @@ public abstract class NSErrorRecoveryAttemptingAdapter
     
     
     @NotImplemented("attemptRecoveryFromError:optionIndex:delegate:didRecoverSelector:contextInfo:")
-    public void attemptRecoveryFromError(NSError error, @MachineSizedUInt long recoveryOptionIndex, Object delegate, Selector didRecoverSelector, Todo contextInfo) { throw new UnsupportedOperationException(); }
+    public void attemptRecoveryFromError(NSError error, @MachineSizedUInt long recoveryOptionIndex, Object delegate, Selector didRecoverSelector, VoidPtr contextInfo) { throw new UnsupportedOperationException(); }
     @NotImplemented("attemptRecoveryFromError:optionIndex:")
     public boolean attemptRecoveryFromError(NSError error, @MachineSizedUInt long recoveryOptionIndex) { throw new UnsupportedOperationException(); }
 

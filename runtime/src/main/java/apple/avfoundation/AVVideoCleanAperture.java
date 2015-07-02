@@ -35,21 +35,21 @@ public class AVVideoCleanAperture
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVVideoCleanApertureWidthKey")
-    public static native NSString WidthKey();
+    public static native String WidthKey();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVVideoCleanApertureHeightKey")
-    public static native NSString HeightKey();
+    public static native String HeightKey();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVVideoCleanApertureHorizontalOffsetKey")
-    public static native NSString HorizontalOffsetKey();
+    public static native String HorizontalOffsetKey();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVVideoCleanApertureVerticalOffsetKey")
-    public static native NSString VerticalOffsetKey();
+    public static native String VerticalOffsetKey();
 
 }

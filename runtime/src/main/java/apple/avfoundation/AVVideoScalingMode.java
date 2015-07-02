@@ -35,21 +35,21 @@ public class AVVideoScalingMode
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("AVVideoScalingModeFit")
-    public static native NSString FitValue();
+    public static native String FitValue();
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("AVVideoScalingModeResize")
-    public static native NSString ResizeValue();
+    public static native String ResizeValue();
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("AVVideoScalingModeResizeAspect")
-    public static native NSString ResizeAspectValue();
+    public static native String ResizeAspectValue();
     /**
      * @since Available in iOS 5.0 and later.
      */
     @GlobalConstant("AVVideoScalingModeResizeAspectFill")
-    public static native NSString ResizeAspectFillValue();
+    public static native String ResizeAspectFillValue();
 
 }

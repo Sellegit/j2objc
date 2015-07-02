@@ -29,7 +29,7 @@ public interface NSMachPortDelegate
 
     
     @Mapping("handleMachMessage:")
-    void handleMachMessage(Todo msg);
+    void handleMachMessage(VoidPtr msg);
 
     /*<adapter>*/
     /*</adapter>*/

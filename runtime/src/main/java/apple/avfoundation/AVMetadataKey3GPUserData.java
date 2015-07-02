@@ -35,76 +35,76 @@ public class AVMetadataKey3GPUserData
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVMetadata3GPUserDataKeyCopyright")
-    public static native NSString CopyrightValue();
+    public static native String CopyrightValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVMetadata3GPUserDataKeyAuthor")
-    public static native NSString AuthorValue();
+    public static native String AuthorValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVMetadata3GPUserDataKeyPerformer")
-    public static native NSString PerformerValue();
+    public static native String PerformerValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVMetadata3GPUserDataKeyGenre")
-    public static native NSString GenreValue();
+    public static native String GenreValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVMetadata3GPUserDataKeyRecordingYear")
-    public static native NSString RecordingYearValue();
+    public static native String RecordingYearValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVMetadata3GPUserDataKeyLocation")
-    public static native NSString LocationValue();
+    public static native String LocationValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVMetadata3GPUserDataKeyTitle")
-    public static native NSString TitleValue();
+    public static native String TitleValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVMetadata3GPUserDataKeyDescription")
-    public static native NSString DescriptionValue();
+    public static native String DescriptionValue();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("AVMetadata3GPUserDataKeyCollection")
-    public static native NSString CollectionValue();
+    public static native String CollectionValue();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("AVMetadata3GPUserDataKeyUserRating")
-    public static native NSString UserRatingValue();
+    public static native String UserRatingValue();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("AVMetadata3GPUserDataKeyThumbnail")
-    public static native NSString ThumbnailValue();
+    public static native String ThumbnailValue();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("AVMetadata3GPUserDataKeyAlbumAndTrack")
-    public static native NSString AlbumAndTrackValue();
+    public static native String AlbumAndTrackValue();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("AVMetadata3GPUserDataKeyKeywordList")
-    public static native NSString KeywordListValue();
+    public static native String KeywordListValue();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("AVMetadata3GPUserDataKeyMediaClassification")
-    public static native NSString MediaClassificationValue();
+    public static native String MediaClassificationValue();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("AVMetadata3GPUserDataKeyMediaRating")
-    public static native NSString MediaRatingValue();
+    public static native String MediaRatingValue();
 
 }

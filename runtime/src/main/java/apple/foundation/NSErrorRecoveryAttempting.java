@@ -29,7 +29,7 @@ public interface NSErrorRecoveryAttempting
 
     
     @Mapping("attemptRecoveryFromError:optionIndex:delegate:didRecoverSelector:contextInfo:")
-    void attemptRecoveryFromError(NSError error, @MachineSizedUInt long recoveryOptionIndex, Object delegate, Selector didRecoverSelector, Todo contextInfo);
+    void attemptRecoveryFromError(NSError error, @MachineSizedUInt long recoveryOptionIndex, Object delegate, Selector didRecoverSelector, VoidPtr contextInfo);
     @Mapping("attemptRecoveryFromError:optionIndex:")
     boolean attemptRecoveryFromError(NSError error, @MachineSizedUInt long recoveryOptionIndex);
 

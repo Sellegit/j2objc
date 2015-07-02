@@ -39,9 +39,9 @@ public class NSObject
     @Mapping("autoContentAccessingProxy")
     public native Object getAutoContentAccessingProxy();
     @Mapping("observationInfo")
-    public native Todo getObservationInfo();
+    public native VoidPtr getObservationInfo();
     @Mapping("setObservationInfo:")
-    public native void setObservationInfo(Todo v);
+    public native void setObservationInfo(VoidPtr v);
 
     
     
@@ -49,13 +49,15 @@ public class NSObject
     public native Object copy();
     @Mapping("mutableCopy")
     public native Object mutableCopy();
+    @Mapping("observeValueForKeyPath:ofObject:change:context:")
+    public native void observeValueForKeyPath(String keyPath, Object object, NSDictionary<?, ?> change, VoidPtr context);
     @Mapping("addObserver:forKeyPath:options:context:")
-    public native void addObserver(NSObject observer, String keyPath, @Representing("NSKeyValueObservingOptions") long options, Todo context);
+    public native void addObserver(NSObject observer, String keyPath, @Representing("NSKeyValueObservingOptions") long options, VoidPtr context);
     /**
      * @since Available in iOS 5.0 and later.
      */
     @Mapping("removeObserver:forKeyPath:context:")
-    public native void removeObserver(NSObject observer, String keyPath, Todo context);
+    public native void removeObserver(NSObject observer, String keyPath, VoidPtr context);
     @Mapping("willChangeValueForKey:")
     public native void willChangeValue(String key);
     @Mapping("didChangeValueForKey:")
@@ -72,6 +74,10 @@ public class NSObject
     public final native void performSelector(Selector aSelector, Object anArgument, double delay, NSArray<?> modes);
     @Mapping("performSelector:withObject:afterDelay:")
     public final native void performSelector(Selector aSelector, Object anArgument, double delay);
+    @Mapping("cancelPreviousPerformRequestsWithTarget:selector:object:")
+    public static native void cancelPreviousPerformRequests(Object aTarget, Selector aSelector, Object anArgument);
+    @Mapping("cancelPreviousPerformRequestsWithTarget:")
+    public static native void cancelPreviousPerformRequests(Object aTarget);
     @Mapping("performSelectorOnMainThread:withObject:waitUntilDone:modes:")
     public final native void performSelectorOnMainThread(Selector aSelector, Object arg, boolean wait, NSArray<?> array);
     @Mapping("performSelectorOnMainThread:withObject:waitUntilDone:")
@@ -91,9 +97,5 @@ public class NSObject
      */
     @Mapping("performSelectorInBackground:withObject:")
     public final native void performSelectorInBackground(Selector aSelector, Object arg);
-
-    @Mapping("cancelPreviousPerformRequestsWithTarget:selector:object:")
-    public static native void cancelPreviousPerformRequests(NSObject target, Selector selector,
-                                                            NSObject object);
 
 }

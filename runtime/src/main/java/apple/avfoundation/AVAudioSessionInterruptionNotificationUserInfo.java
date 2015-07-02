@@ -35,11 +35,11 @@ public class AVAudioSessionInterruptionNotificationUserInfo
      * @since Available in iOS 6.0 and later.
      */
     @GlobalConstant("AVAudioSessionInterruptionTypeKey")
-    public static native NSString TypeKey();
+    public static native String TypeKey();
     /**
      * @since Available in iOS 6.0 and later.
      */
     @GlobalConstant("AVAudioSessionInterruptionOptionKey")
-    public static native NSString OptionKey();
+    public static native String OptionKey();
 
 }

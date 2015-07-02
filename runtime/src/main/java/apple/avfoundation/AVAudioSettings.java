@@ -32,26 +32,26 @@ public class AVAudioSettings
     
     
     @GlobalConstant("AVFormatIDKey")
-    public static native NSString FormatIDKey();
+    public static native String FormatIDKey();
     @GlobalConstant("AVSampleRateKey")
-    public static native NSString SampleRateKey();
+    public static native String SampleRateKey();
     @GlobalConstant("AVNumberOfChannelsKey")
-    public static native NSString NumberOfChannelsKey();
+    public static native String NumberOfChannelsKey();
     @GlobalConstant("AVLinearPCMBitDepthKey")
-    public static native NSString BitDepthKey();
+    public static native String BitDepthKey();
     @GlobalConstant("AVLinearPCMIsBigEndianKey")
-    public static native NSString IsBigEndianKey();
+    public static native String IsBigEndianKey();
     @GlobalConstant("AVLinearPCMIsFloatKey")
-    public static native NSString IsFloatKey();
+    public static native String IsFloatKey();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVLinearPCMIsNonInterleaved")
-    public static native NSString IsNonInterleaved();
+    public static native String IsNonInterleaved();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVChannelLayoutKey")
-    public static native NSString ChannelLayoutKey();
+    public static native String ChannelLayoutKey();
 
 }

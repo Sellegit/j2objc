@@ -35,11 +35,11 @@ public class AVMetadataExtraAttributes
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVMetadataExtraAttributeValueURIKey")
-    public static native NSString ValueURIKey();
+    public static native String ValueURIKey();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVMetadataExtraAttributeBaseURIKey")
-    public static native NSString BaseURIKey();
+    public static native String BaseURIKey();
 
 }

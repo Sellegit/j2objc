@@ -23,7 +23,7 @@ import apple.mediatoolbox.*;
 /*</javadoc>*/
 @Library("AVFoundation/AVFoundation.h")
 public class AVErrorUserInfoKey 
-    extends GlobalValueEnumeration<NSString>
+    extends GlobalValueEnumeration<String>
      {
     // TODO: REMOVE ME
 }

@@ -64,11 +64,11 @@ public class NSCoder
     @Mapping("encodeConditionalObject:")
     public native void encodeConditionalObject(Object object);
     @Mapping("encodeBytes:length:")
-    public native void encodeBytes(Todo byteaddr, @MachineSizedUInt long length);
+    public native void encodeBytes(VoidPtr byteaddr, @MachineSizedUInt long length);
     @Mapping("decodeObject")
     public native Object decodeObject();
     @Mapping("decodeBytesWithReturnedLength:")
-    public native Todo decodeBytes(Todo lengthp);
+    public native VoidPtr decodeBytes(Todo lengthp);
     @Mapping("setObjectZone:")
     public native void setObjectZone(NSZone zone);
     @Mapping("objectZone")

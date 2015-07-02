@@ -32,25 +32,25 @@ public class AVAudioEncoderSettings
     
     
     @GlobalConstant("AVEncoderAudioQualityKey")
-    public static native NSString AudioQualityKey();
+    public static native String AudioQualityKey();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("AVEncoderAudioQualityForVBRKey")
-    public static native NSString AudioQualityForVBRKey();
+    public static native String AudioQualityForVBRKey();
     @GlobalConstant("AVEncoderBitRateKey")
-    public static native NSString BitRateKey();
+    public static native String BitRateKey();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVEncoderBitRatePerChannelKey")
-    public static native NSString BitRatePerChannelKey();
+    public static native String BitRatePerChannelKey();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("AVEncoderBitRateStrategyKey")
-    public static native NSString BitRateStrategyKey();
+    public static native String BitRateStrategyKey();
     @GlobalConstant("AVEncoderBitDepthHintKey")
-    public static native NSString BitDepthHintKey();
+    public static native String BitDepthHintKey();
 
 }

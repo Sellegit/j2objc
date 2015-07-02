@@ -35,11 +35,11 @@ public class AVAudioSessionRouteChangeNotificationUserInfo
      * @since Available in iOS 6.0 and later.
      */
     @GlobalConstant("AVAudioSessionRouteChangeReasonKey")
-    public static native NSString ReasonKey();
+    public static native String ReasonKey();
     /**
      * @since Available in iOS 6.0 and later.
      */
     @GlobalConstant("AVAudioSessionRouteChangePreviousRouteKey")
-    public static native NSString PreviousRouteKey();
+    public static native String PreviousRouteKey();
 
 }

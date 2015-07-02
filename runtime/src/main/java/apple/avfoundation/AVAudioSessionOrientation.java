@@ -35,31 +35,31 @@ public class AVAudioSessionOrientation
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("AVAudioSessionOrientationTop")
-    public static native NSString TopValue();
+    public static native String TopValue();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("AVAudioSessionOrientationBottom")
-    public static native NSString BottomValue();
+    public static native String BottomValue();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("AVAudioSessionOrientationFront")
-    public static native NSString FrontValue();
+    public static native String FrontValue();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("AVAudioSessionOrientationBack")
-    public static native NSString BackValue();
+    public static native String BackValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVAudioSessionOrientationLeft")
-    public static native NSString LeftValue();
+    public static native String LeftValue();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVAudioSessionOrientationRight")
-    public static native NSString RightValue();
+    public static native String RightValue();
 
 }

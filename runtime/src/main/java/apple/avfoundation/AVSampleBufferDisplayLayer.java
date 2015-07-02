@@ -55,12 +55,12 @@ public class AVSampleBufferDisplayLayer
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVSampleBufferDisplayLayerFailedToDecodeNotification")
-    public static native NSString FailedToDecodeNotification();
+    public static native String FailedToDecodeNotification();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVSampleBufferDisplayLayerFailedToDecodeNotificationErrorKey")
-    public static native NSString FailedToDecodeNotificationErrorKey();
+    public static native String FailedToDecodeNotificationErrorKey();
 
     @Mapping("flush")
     public native void flush();

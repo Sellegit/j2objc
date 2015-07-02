@@ -52,7 +52,7 @@ public class AVAudioEngine
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVAudioEngineConfigurationChangeNotification")
-    public static native NSString ConfigurationChangeNotification();
+    public static native String ConfigurationChangeNotification();
 
     @Mapping("attachNode:")
     public native void attachNode(AVAudioNode node);

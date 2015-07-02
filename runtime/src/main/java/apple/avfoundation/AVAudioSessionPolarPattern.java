@@ -35,16 +35,16 @@ public class AVAudioSessionPolarPattern
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("AVAudioSessionPolarPatternOmnidirectional")
-    public static native NSString OmnidirectionalValue();
+    public static native String OmnidirectionalValue();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("AVAudioSessionPolarPatternCardioid")
-    public static native NSString CardioidValue();
+    public static native String CardioidValue();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("AVAudioSessionPolarPatternSubcardioid")
-    public static native NSString SubcardioidValue();
+    public static native String SubcardioidValue();
 
 }

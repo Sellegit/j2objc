@@ -35,36 +35,36 @@ public class AVMetadataKeySpace
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVMetadataKeySpaceCommon")
-    public static native NSString CommonValue();
+    public static native String CommonValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVMetadataKeySpaceQuickTimeUserData")
-    public static native NSString QuickTimeUserDataValue();
+    public static native String QuickTimeUserDataValue();
     /**
      * @since Available in iOS 7.0 and later.
      */
     @GlobalConstant("AVMetadataKeySpaceISOUserData")
-    public static native NSString ISOUserDataValue();
+    public static native String ISOUserDataValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVMetadataKeySpaceQuickTimeMetadata")
-    public static native NSString QuickTimeMetadataValue();
+    public static native String QuickTimeMetadataValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVMetadataKeySpaceiTunes")
-    public static native NSString iTunesValue();
+    public static native String iTunesValue();
     /**
      * @since Available in iOS 4.0 and later.
      */
     @GlobalConstant("AVMetadataKeySpaceID3")
-    public static native NSString ID3Value();
+    public static native String ID3Value();
     /**
      * @since Available in iOS 8.0 and later.
      */
     @GlobalConstant("AVMetadataKeySpaceIcy")
-    public static native NSString IcyValue();
+    public static native String IcyValue();
 
 }
