@@ -497,6 +497,19 @@ public final class BindingUtil {
     }
   }
 
+  public static boolean extractLibraryUseQuotes(ITypeBinding binding) {
+    if (binding == null) {
+      return false;
+    } else {
+      IAnnotationBinding annotation = BindingUtil.getAnnotation(binding, Library.class);
+      if (annotation != null) {
+        return (Boolean) BindingUtil.getAnnotationValue(annotation, "useQuotes");
+      } else {
+        return false;
+      }
+    }
+  }
+
   public static boolean isAdapter(ITypeBinding binding) {
     if (binding == null) {
       return false;

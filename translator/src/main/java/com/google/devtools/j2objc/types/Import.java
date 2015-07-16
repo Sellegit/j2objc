@@ -91,12 +91,13 @@ public class Import implements Comparable<Import> {
       "org.xmlpull",
       "sun.misc",
   });
+  private final boolean useQuotes;
 
   private Import(ITypeBinding type) {
-    this(type, false, null);
+    this(type, false, null, false);
   }
 
-  private Import(ITypeBinding type, boolean isFoundation, String foundationName) {
+  private Import(ITypeBinding type, boolean isFoundation, String foundationName, boolean useQuotes) {
     this.type = type;
     this.typeName = NameTable.getFullName(type);
     ITypeBinding mainType = type;
@@ -110,6 +111,7 @@ public class Import implements Comparable<Import> {
       this.importFileName = getImportFileName(mainType) + ".h";
     }
     this.isFoundation = isFoundation;
+    this.useQuotes = useQuotes;
   }
 
   public ITypeBinding getType() {
@@ -215,7 +217,11 @@ public class Import implements Comparable<Import> {
 
   public String getIncludeStatement() {
     if (isFoundation) {
-     return String.format("#import <%s>", importFileName);
+      if (useQuotes) {
+        return String.format("#import \"%s\"", importFileName);
+      } else {
+        return String.format("#import <%s>", importFileName);
+      }
     } else {
       return String.format("#include \"%s\"", getImportFileName());
     }
@@ -243,7 +249,7 @@ public class Import implements Comparable<Import> {
       // this is to include the original header file
       imports.add(new Import(binding));
       // this is to include the framework header
-      imports.add(new Import(binding, true, libName));
+      imports.add(new Import(binding, true, libName, BindingUtil.extractLibraryUseQuotes(binding)));
     }
     if (BindingUtil.isAdapter(binding)) {
       return;

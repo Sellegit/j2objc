@@ -8,5 +8,7 @@ public @interface Library {
   /**
    * The Library to which the annotated class belongs to
    */
-  public String value();
+  String value();
+
+  boolean useQuotes() default false;
 }

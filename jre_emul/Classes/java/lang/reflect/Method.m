@@ -163,26 +163,26 @@
         @"wrong number of arguments"]);
   }
 
-  if (!invocation_) {
-    invocation_ =
-            [NSInvocation invocationWithMethodSignature:methodSignature_];
+  NSInvocation *invocation;
+  invocation =
+      [NSInvocation invocationWithMethodSignature:methodSignature_];
 #if ! __has_feature(objc_arc)
-    [invocation_ retain];
+  [invocation retain];
 #endif
-    [invocation_ setSelector:selector_];
-  }
+  [invocation setSelector:selector_];
+
   for (jint i = 0; i < nArgs; i++) {
     J2ObjcRawValue arg;
     if (![paramTypes->buffer_[i] __unboxValue:arguments->buffer_[i] toRawValue:&arg]) {
       @throw AUTORELEASE([[JavaLangIllegalArgumentException alloc] initWithNSString:
           @"argument type mismatch"]);
     }
-    [invocation_ setArgument:&arg atIndex:i + SKIPPED_ARGUMENTS];
+    [invocation setArgument:&arg atIndex:i + SKIPPED_ARGUMENTS];
   }
   if (object == nil || [object isKindOfClass:[IOSClass class]]) {
-    [invocation_ setTarget:class_.objcClass];
+    [invocation setTarget:class_.objcClass];
   } else {
-    [invocation_ setTarget:object];
+    [invocation setTarget:object];
   }
 
   IOSClass *declaringClass = [self getDeclaringClass];
@@ -194,7 +194,7 @@
     // change the object's type to the superclass.
     Class originalClass = object_setClass(object, declaringClass.objcClass);
     @try {
-      [invocation_ invoke];
+      [invocation invoke];
     }
     @catch (JavaLangThrowable *t) {
       exception = t;
@@ -202,7 +202,7 @@
     object_setClass(object, originalClass);
   } else {
     @try {
-      [invocation_ invoke];
+      [invocation invoke];
     }
     @catch (JavaLangThrowable *t) {
       exception = t;
@@ -218,7 +218,7 @@
     return nil;
   }
   J2ObjcRawValue returnValue;
-  [invocation_ getReturnValue:&returnValue];
+  [invocation getReturnValue:&returnValue];
   return [returnType __boxValue:&returnValue];
 }
 
@@ -277,7 +277,6 @@
 
 #if ! __has_feature(objc_arc)
 - (void)dealloc {
-  [invocation_ release];
   [returnType_ release];
   [super dealloc];
 }

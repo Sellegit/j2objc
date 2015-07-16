@@ -143,8 +143,8 @@ public class SmallTests {
     MappedNativeMethodRemoverTest.class,
   };
 
-  private static final Class<?>[] smallTestClasses = smallTestClassesPrime;
-//  private static final Class<?>[] smallTestClasses = {MappedNativeMethodRemoverTest.class};
+//  private static final Class<?>[] smallTestClasses = smallTestClassesPrime;
+  private static final Class<?>[] smallTestClasses = {J2ObjCTest.class};
 
   public static Test suite() {
     return new TestSuite(smallTestClasses);
