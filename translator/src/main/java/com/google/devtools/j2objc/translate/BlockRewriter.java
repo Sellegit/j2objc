@@ -94,9 +94,7 @@ public class BlockRewriter extends TreeVisitor {
     assert nativeBlockType != null;
 
     ITypeBinding blockInterfaceType = binding.getParameterTypes()[i];
-    assert blockInterfaceType.getDeclaredMethods().length == 1 : "Block interface should only has one method";
-    IMethodBinding runMethod = blockInterfaceType.getDeclaredMethods()[0];
-    assert runMethod.getName().equals("run") : "Block interface's invoke method should be named run";
+    IMethodBinding runMethod = BindingUtil.BlockBridge.runMethod(blockAnno, blockInterfaceType);
 
     // rewrite the parameter's type to be the native block type
     // TODO: this approach here has a problem, it messes up the binding info, the new method's

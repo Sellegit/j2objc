@@ -10,10 +10,9 @@ public interface VoidBlock2<A, B> {
 
     /**
      * Invokes this block.
-     * 
-     * @param a block argument number 1.
+     *  @param a block argument number 1.
      * @param b block argument number 2.
      */
     @Mapping("run:param:")
-    void run(A a, B b);
+    void run(A a, @Block B b);
 }

@@ -327,9 +327,9 @@ public final class BindingUtil {
   }
 
   public static boolean isWeakReference(IVariableBinding var) {
-    return hasNamedAnnotation(var, "Weak")
+    return hasNamedAnnotation(var, Weak.class.getSimpleName())
         || var.getName().startsWith("this$")
-        && hasNamedAnnotation(var.getDeclaringClass(), "WeakOuter");
+        && hasNamedAnnotation(var.getDeclaringClass(), WeakOuter.class.getSimpleName());
   }
 
   /**
@@ -776,7 +776,8 @@ public final class BindingUtil {
 
   public static class BlockBridge {
     public static IMethodBinding runMethod(IAnnotationBinding blockAnnotation, ITypeBinding blockTpe) {
-      Collection<IMethodBinding> runMethodCandidates =
+      List<IMethodBinding> runMethodCandidates = new ArrayList<IMethodBinding>();
+      runMethodCandidates.addAll(
           Collections2.filter(
               Lists.newArrayList(blockTpe.getDeclaredMethods()),
               new Predicate<IMethodBinding>() {
@@ -785,7 +786,22 @@ public final class BindingUtil {
                   return input.getName().equals("run");
                 }
               }
-          );
+          )
+      );
+      for (ITypeBinding superTpe : getAllInheritedTypes(blockTpe)) {
+        runMethodCandidates.addAll(
+            Collections2.filter(
+                Lists.newArrayList(superTpe.getDeclaredMethods()),
+                new Predicate<IMethodBinding>() {
+                  @Override
+                  public boolean apply(IMethodBinding input) {
+                    return input.getName().equals("run");
+                  }
+                }
+            )
+        );
+      }
+
       assert runMethodCandidates.size() == 1
           : "There should be one and only one run method in a Block type, but got: "
             + runMethodCandidates
