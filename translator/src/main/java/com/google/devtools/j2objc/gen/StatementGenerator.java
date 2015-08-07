@@ -1204,6 +1204,11 @@ public class StatementGenerator extends TreeVisitor {
         stmt.accept(this);
       }
     }
+    if (!stmts.isEmpty() && stmts.get(stmts.size() - 1) instanceof SwitchCase) {
+      // Last switch case doesn't have an associated statement, so add
+      // an empty one.
+      buffer.append(";\n");
+    }
     buffer.append("}\n}\n");
   }
 
