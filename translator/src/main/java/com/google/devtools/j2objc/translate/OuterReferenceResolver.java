@@ -39,6 +39,7 @@ import com.google.devtools.j2objc.ast.TreeVisitor;
 import com.google.devtools.j2objc.ast.TypeDeclaration;
 import com.google.devtools.j2objc.ast.VariableDeclaration;
 import com.google.devtools.j2objc.ast.VariableDeclarationFragment;
+import com.google.devtools.j2objc.types.GeneratedTypeBinding;
 import com.google.devtools.j2objc.types.GeneratedVariableBinding;
 import com.google.devtools.j2objc.util.BindingUtil;
 
@@ -51,6 +52,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Iterator;
 
 /**
  * Visits a compilation unit and creates variable bindings for outer references
@@ -169,6 +171,17 @@ public class OuterReferenceResolver extends TreeVisitor {
     return scopeStack.get(scopeStack.size() - 1);
   }
 
+  private Scope preScope(Scope scope) {
+    assert scopeStack.size() > 0;
+    int scopeIndex = scopeStack.indexOf(scope);
+    assert scopeIndex >= 0;
+    if (scopeIndex > 0) {
+      return scopeStack.get(scopeIndex-1);
+    } else {
+      return null;
+    }
+  }
+
   private String getOuterFieldName(ITypeBinding type) {
     // Ensure that the new outer field does not conflict with a field in a superclass.
     type = type.getSuperclass();
@@ -190,11 +203,35 @@ public class OuterReferenceResolver extends TreeVisitor {
     ITypeBinding type = scope.type;
     IVariableBinding outerField = outerVars.get(type);
     if (outerField == null) {
-      outerField = new GeneratedVariableBinding(
-        getOuterFieldName(type), Modifier.PRIVATE | Modifier.FINAL, type.getDeclaringClass(),
-        true, false, type, null);
-      outerVars.put(type, outerField);
+      GeneratedTypeBinding newType = new GeneratedTypeBinding(
+              type.getName(), type.getPackage(),
+              type.getComponentType(), false, type.getComponentType(),
+              type.getDeclaringClass()
+      );
+
+      if (scope.type.isAnonymous()) {
+        Scope preScope = preScope(scope);
+        Iterator<IVariableBinding> it = preScope.declaredVars.iterator();
+        while (it.hasNext()) {
+          IVariableBinding theVariableBinding = it.next();
+          String declaredVarName = theVariableBinding.getName();
+          IVariableBinding[] declaredFields = scope.type.getDeclaringClass().getDeclaredFields();
+          for (int index=0; index<declaredFields.length; ++index) {
+            if (declaredVarName.equals(declaredFields[index].getName())) {
+              newType.addAnnotationsOfName(theVariableBinding, "WeakOuter");
+            }
+          }
+        }
+        outerField = new GeneratedVariableBinding(
+                getOuterFieldName(newType), Modifier.PRIVATE | Modifier.FINAL, newType.getDeclaringClass(),
+                true, false, newType, null);
+      } else {
+        outerField = new GeneratedVariableBinding(
+                getOuterFieldName(type), Modifier.PRIVATE | Modifier.FINAL, newType.getDeclaringClass(),
+                true, false, newType, null);
+      }
     }
+    outerVars.put(type, outerField);
     return outerField;
   }
 
