@@ -154,6 +154,7 @@ public class OuterReferenceResolver extends TreeVisitor {
     private final Set<ITypeBinding> inheritedScope;
     private boolean initializingContext = true;
     private Set<IVariableBinding> declaredVars = Sets.newHashSet();
+    private TreeNode node = null;
 
     private Scope(ITypeBinding type) {
       this.type = type;
@@ -163,6 +164,11 @@ public class OuterReferenceResolver extends TreeVisitor {
         inheritedScopeBuilder.add(inheritedType.getTypeDeclaration());
       }
       this.inheritedScope = inheritedScopeBuilder.build();
+    }
+
+    private Scope(ITypeBinding type, TreeNode node) {
+      this(type);
+      this.node = node;
     }
   }
 
@@ -209,16 +215,29 @@ public class OuterReferenceResolver extends TreeVisitor {
               type.getDeclaringClass()
       );
 
-      if (scope.type.isAnonymous()) {
+      if (type.isAnonymous()) {
         Scope preScope = preScope(scope);
         Iterator<IVariableBinding> it = preScope.declaredVars.iterator();
+
+        boolean isField = false;
+        if (type.getDeclaringMethod() == null) {
+          isField = true;
+        } else {
+          isField = false;
+        }
+
         while (it.hasNext()) {
           IVariableBinding theVariableBinding = it.next();
-          String declaredVarName = theVariableBinding.getName();
-          IVariableBinding[] declaredFields = scope.type.getDeclaringClass().getDeclaredFields();
-          for (int index=0; index<declaredFields.length; ++index) {
-            if (declaredVarName.equals(declaredFields[index].getName())) {
-              newType.addAnnotationsOfName(theVariableBinding, "WeakOuter");
+          if (!(theVariableBinding.isField() ^ isField)) {
+            if (scope.node != null) {
+              TreeNode parent = scope.node.getParent().getParent();
+              if (parent instanceof VariableDeclarationFragment) {
+                VariableDeclarationFragment newParent = (VariableDeclarationFragment) parent;
+                if (theVariableBinding.getName().equals(newParent.getVariableBinding().getName())) {
+                  newType.addAnnotationsOfName(theVariableBinding, "WeakOuter");
+                  break;
+                }
+              }
             }
           }
         }
@@ -320,7 +339,7 @@ public class OuterReferenceResolver extends TreeVisitor {
   }
 
   private void pushType(TreeNode node, ITypeBinding type) {
-    scopeStack.add(new Scope(type));
+    scopeStack.add(new Scope(type, node));
 
     ITypeBinding superclass = type.getSuperclass();
     if (superclass != null && BindingUtil.hasOuterContext(superclass)) {
