@@ -451,6 +451,17 @@ public class OuterReferenceResolver extends TreeVisitor {
   }
 
   private boolean visitVariableDeclaration(VariableDeclaration node) {
+    String className = "";
+    if (node.getVariableBinding().getDeclaringClass() != null) {
+      className = node.getVariableBinding().getDeclaringClass().getName();
+    }
+    else if (node.getVariableBinding().getDeclaringMethod() != null) {
+      className = node.getVariableBinding().getDeclaringMethod().getDeclaringClass().getName();
+    }
+    if ((node.getInitializer() == null) && (BindingUtil.hasNamedAnnotation(node.getVariableBinding(), "WeakOuter")))
+    {
+      System.out.println("error: " + className + ".class" + ":" + node.getLineNumber() + ": WeakOuter must init");
+    }
     assert scopeStack.size() > 0;
     Scope currentScope = scopeStack.get(scopeStack.size() - 1);
     currentScope.declaredVars.add(node.getVariableBinding());
