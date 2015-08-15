@@ -43,6 +43,7 @@ import com.google.devtools.j2objc.types.GeneratedTypeBinding;
 import com.google.devtools.j2objc.types.GeneratedVariableBinding;
 import com.google.devtools.j2objc.util.BindingUtil;
 
+import com.google.devtools.j2objc.util.ErrorUtil;
 import org.eclipse.jdt.core.dom.IMethodBinding;
 import org.eclipse.jdt.core.dom.ITypeBinding;
 import org.eclipse.jdt.core.dom.IVariableBinding;
@@ -52,7 +53,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import java.util.Iterator;
 
 /**
  * Visits a compilation unit and creates variable bindings for outer references
@@ -217,7 +217,6 @@ public class OuterReferenceResolver extends TreeVisitor {
 
       if (type.isAnonymous()) {
         Scope preScope = preScope(scope);
-        Iterator<IVariableBinding> it = preScope.declaredVars.iterator();
 
         boolean isField = false;
         if (type.getDeclaringMethod() == null) {
@@ -226,15 +225,14 @@ public class OuterReferenceResolver extends TreeVisitor {
           isField = false;
         }
 
-        while (it.hasNext()) {
-          IVariableBinding theVariableBinding = it.next();
+        for (IVariableBinding theVariableBinding : preScope.declaredVars) {
           if (!(theVariableBinding.isField() ^ isField)) {
             if (scope.node != null) {
               TreeNode parent = scope.node.getParent().getParent();
               if (parent instanceof VariableDeclarationFragment) {
                 VariableDeclarationFragment newParent = (VariableDeclarationFragment) parent;
                 if (theVariableBinding.getName().equals(newParent.getVariableBinding().getName())) {
-                  newType.addAnnotationsOfName(theVariableBinding, "WeakOuter");
+                  newType.addAnnotation(BindingUtil.getAnnotation(theVariableBinding, com.google.j2objc.annotations.WeakOuter.class));
                   break;
                 }
               }
@@ -460,7 +458,7 @@ public class OuterReferenceResolver extends TreeVisitor {
     }
     if ((node.getInitializer() == null) && (BindingUtil.hasNamedAnnotation(node.getVariableBinding(), "WeakOuter")))
     {
-      System.out.println("error: " + className + ".class" + ":" + node.getLineNumber() + ": WeakOuter must init");
+      ErrorUtil.error(node, "WeakOuter must init");
     }
     assert scopeStack.size() > 0;
     Scope currentScope = scopeStack.get(scopeStack.size() - 1);
