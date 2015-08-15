@@ -139,6 +139,30 @@ public class OuterReferenceResolverTest extends GenerationTest {
     assertFalse(OuterReferenceResolver.needsOuterParam(type));
   }
 
+  public void testAnonymouseClassCapturedWeakOuterField() {
+    resolveSource("Test",
+            "import com.google.j2objc.annotations.*; public class Test {"
+                + "@WeakOuter private Runnable Delegate = new Runnable() {"
+                + "@Override public void run() { System.out.println(\"asd\" + Test.this); } };}");
+    AnonymousClassDeclaration runnableNode =
+            (AnonymousClassDeclaration) nodesByType.get(Kind.ANONYMOUS_CLASS_DECLARATION).get(0);
+    ITypeBinding runnableBinding = runnableNode.getTypeBinding();
+    IVariableBinding outerField = OuterReferenceResolver.getOuterField(runnableBinding);
+    assertTrue(BindingUtil.isWeakReference(outerField));
+  }
+
+  public void testAnonymouseClassCapturedWeakOuterLocalVariable() {
+    resolveSource("Test",
+            "import com.google.j2objc.annotations.*; public class Test {"
+                    + "public void someMethod() { @WeakOuter Runnable var = new Runnable() {"
+                    + "@Override public void run() { System.out.println(\"asd\" + Test.this); } }; }}");
+    AnonymousClassDeclaration runnableNode =
+            (AnonymousClassDeclaration) nodesByType.get(Kind.ANONYMOUS_CLASS_DECLARATION).get(0);
+    ITypeBinding runnableBinding = runnableNode.getTypeBinding();
+    IVariableBinding outerField = OuterReferenceResolver.getOuterField(runnableBinding);
+    assertTrue(BindingUtil.isWeakReference(outerField));
+  }
+
   private void resolveSource(String name, String source) {
     org.eclipse.jdt.core.dom.CompilationUnit jdtUnit = compileType(name + ".java", source);
     Types.initialize(jdtUnit);
