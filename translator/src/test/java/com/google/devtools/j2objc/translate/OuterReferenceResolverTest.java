@@ -143,24 +143,40 @@ public class OuterReferenceResolverTest extends GenerationTest {
     resolveSource("Test",
             "import com.google.j2objc.annotations.*; public class Test {"
                 + "@WeakOuter private Runnable Delegate = new Runnable() {"
+                + "@Override public void run() { System.out.println(\"asd\" + Test.this); } };"
+                + "private Runnable Delegate2 = new Runnable() {"
                 + "@Override public void run() { System.out.println(\"asd\" + Test.this); } };}");
     AnonymousClassDeclaration runnableNode =
             (AnonymousClassDeclaration) nodesByType.get(Kind.ANONYMOUS_CLASS_DECLARATION).get(0);
     ITypeBinding runnableBinding = runnableNode.getTypeBinding();
     IVariableBinding outerField = OuterReferenceResolver.getOuterField(runnableBinding);
     assertTrue(BindingUtil.isWeakReference(outerField));
+
+    AnonymousClassDeclaration runnableNode2 =
+            (AnonymousClassDeclaration) nodesByType.get(Kind.ANONYMOUS_CLASS_DECLARATION).get(1);
+    ITypeBinding runnableBinding2 = runnableNode2.getTypeBinding();
+    IVariableBinding outerField2 = OuterReferenceResolver.getOuterField(runnableBinding2);
+    assertTrue(!BindingUtil.isWeakReference(outerField2));
   }
 
   public void testAnonymouseClassCapturedWeakOuterLocalVariable() {
     resolveSource("Test",
             "import com.google.j2objc.annotations.*; public class Test {"
                     + "public void someMethod() { @WeakOuter Runnable var = new Runnable() {"
+                    + "@Override public void run() { System.out.println(\"asd\" + Test.this); } }; }"
+                    + "public void someMethod2() { Runnable var2 = new Runnable() {"
                     + "@Override public void run() { System.out.println(\"asd\" + Test.this); } }; }}");
     AnonymousClassDeclaration runnableNode =
             (AnonymousClassDeclaration) nodesByType.get(Kind.ANONYMOUS_CLASS_DECLARATION).get(0);
     ITypeBinding runnableBinding = runnableNode.getTypeBinding();
     IVariableBinding outerField = OuterReferenceResolver.getOuterField(runnableBinding);
     assertTrue(BindingUtil.isWeakReference(outerField));
+
+    AnonymousClassDeclaration runnableNode2 =
+            (AnonymousClassDeclaration) nodesByType.get(Kind.ANONYMOUS_CLASS_DECLARATION).get(1);
+    ITypeBinding runnableBinding2 = runnableNode2.getTypeBinding();
+    IVariableBinding outerField2 = OuterReferenceResolver.getOuterField(runnableBinding2);
+    assertTrue(!BindingUtil.isWeakReference(outerField2));
   }
 
   private void resolveSource(String name, String source) {
