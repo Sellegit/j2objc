@@ -29,7 +29,7 @@ import static java.lang.annotation.RetentionPolicy.*;
  *
  * @author Tom Ball
  */
-@Target({FIELD, LOCAL_VARIABLE, TYPE})
+@Target({TYPE, FIELD, LOCAL_VARIABLE})
 @Retention(SOURCE)
 public @interface WeakOuter {
 }

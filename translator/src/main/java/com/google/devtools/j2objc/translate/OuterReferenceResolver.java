@@ -39,9 +39,11 @@ import com.google.devtools.j2objc.ast.TreeVisitor;
 import com.google.devtools.j2objc.ast.TypeDeclaration;
 import com.google.devtools.j2objc.ast.VariableDeclaration;
 import com.google.devtools.j2objc.ast.VariableDeclarationFragment;
+import com.google.devtools.j2objc.types.GeneratedTypeBinding;
 import com.google.devtools.j2objc.types.GeneratedVariableBinding;
 import com.google.devtools.j2objc.util.BindingUtil;
 
+import com.google.devtools.j2objc.util.ErrorUtil;
 import org.eclipse.jdt.core.dom.IMethodBinding;
 import org.eclipse.jdt.core.dom.ITypeBinding;
 import org.eclipse.jdt.core.dom.IVariableBinding;
@@ -152,6 +154,7 @@ public class OuterReferenceResolver extends TreeVisitor {
     private final Set<ITypeBinding> inheritedScope;
     private boolean initializingContext = true;
     private Set<IVariableBinding> declaredVars = Sets.newHashSet();
+    private TreeNode node = null;
 
     private Scope(ITypeBinding type) {
       this.type = type;
@@ -162,11 +165,27 @@ public class OuterReferenceResolver extends TreeVisitor {
       }
       this.inheritedScope = inheritedScopeBuilder.build();
     }
+
+    private Scope(ITypeBinding type, TreeNode node) {
+      this(type);
+      this.node = node;
+    }
   }
 
   private Scope peekScope() {
     assert scopeStack.size() > 0;
     return scopeStack.get(scopeStack.size() - 1);
+  }
+
+  private Scope preScope(Scope scope) {
+    assert scopeStack.size() > 0;
+    int scopeIndex = scopeStack.indexOf(scope);
+    assert scopeIndex >= 0;
+    if (scopeIndex > 0) {
+      return scopeStack.get(scopeIndex-1);
+    } else {
+      return null;
+    }
   }
 
   private String getOuterFieldName(ITypeBinding type) {
@@ -190,11 +209,46 @@ public class OuterReferenceResolver extends TreeVisitor {
     ITypeBinding type = scope.type;
     IVariableBinding outerField = outerVars.get(type);
     if (outerField == null) {
-      outerField = new GeneratedVariableBinding(
-        getOuterFieldName(type), Modifier.PRIVATE | Modifier.FINAL, type.getDeclaringClass(),
-        true, false, type, null);
-      outerVars.put(type, outerField);
+      GeneratedTypeBinding newType = new GeneratedTypeBinding(
+              type.getName(), type.getPackage(),
+              type.getComponentType(), false, type.getComponentType(),
+              type.getDeclaringClass()
+      );
+
+      if (type.isAnonymous()) {
+        Scope preScope = preScope(scope);
+
+        boolean isField = false;
+        if (type.getDeclaringMethod() == null) {
+          isField = true;
+        } else {
+          isField = false;
+        }
+
+        for (IVariableBinding theVariableBinding : preScope.declaredVars) {
+          if (!(theVariableBinding.isField() ^ isField)) {
+            if (scope.node != null) {
+              TreeNode parent = scope.node.getParent().getParent();
+              if (parent instanceof VariableDeclarationFragment) {
+                VariableDeclarationFragment newParent = (VariableDeclarationFragment) parent;
+                if (theVariableBinding.getName().equals(newParent.getVariableBinding().getName())) {
+                  newType.addAnnotation(BindingUtil.getAnnotation(theVariableBinding, com.google.j2objc.annotations.WeakOuter.class));
+                  break;
+                }
+              }
+            }
+          }
+        }
+        outerField = new GeneratedVariableBinding(
+                getOuterFieldName(newType), Modifier.PRIVATE | Modifier.FINAL, newType.getDeclaringClass(),
+                true, false, newType, null);
+      } else {
+        outerField = new GeneratedVariableBinding(
+                getOuterFieldName(type), Modifier.PRIVATE | Modifier.FINAL, newType.getDeclaringClass(),
+                true, false, newType, null);
+      }
     }
+    outerVars.put(type, outerField);
     return outerField;
   }
 
@@ -283,7 +337,7 @@ public class OuterReferenceResolver extends TreeVisitor {
   }
 
   private void pushType(TreeNode node, ITypeBinding type) {
-    scopeStack.add(new Scope(type));
+    scopeStack.add(new Scope(type, node));
 
     ITypeBinding superclass = type.getSuperclass();
     if (superclass != null && BindingUtil.hasOuterContext(superclass)) {
@@ -395,6 +449,17 @@ public class OuterReferenceResolver extends TreeVisitor {
   }
 
   private boolean visitVariableDeclaration(VariableDeclaration node) {
+    String className = "";
+    if (node.getVariableBinding().getDeclaringClass() != null) {
+      className = node.getVariableBinding().getDeclaringClass().getName();
+    }
+    else if (node.getVariableBinding().getDeclaringMethod() != null) {
+      className = node.getVariableBinding().getDeclaringMethod().getDeclaringClass().getName();
+    }
+    if ((node.getInitializer() == null) && (BindingUtil.hasNamedAnnotation(node.getVariableBinding(), "WeakOuter")))
+    {
+      ErrorUtil.error(node, "WeakOuter must init");
+    }
     assert scopeStack.size() > 0;
     Scope currentScope = scopeStack.get(scopeStack.size() - 1);
     currentScope.declaredVars.add(node.getVariableBinding());

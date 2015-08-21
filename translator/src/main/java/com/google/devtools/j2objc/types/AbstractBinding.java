@@ -42,6 +42,14 @@ public abstract class AbstractBinding implements IBinding {
     annotations.addAll(Arrays.asList(binding.getAnnotations()));
   }
 
+  public void addAnnotation(IAnnotationBinding binding) {
+    if (binding != null) {
+      if (!annotations.contains(binding)) {
+        annotations.add(binding);
+      }
+    }
+  }
+
   @Override
   public IJavaElement getJavaElement() {
     throw new AssertionError("not implemented");
