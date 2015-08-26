@@ -14,5 +14,5 @@ public interface VoidBlock2<A, B> {
      * @param b block argument number 2.
      */
     @Mapping("run:param:")
-    void run(A a, @Block B b);
+    void run(A a, B b);
 }
