@@ -24,6 +24,7 @@ import com.google.common.collect.Sets;
 import com.google.devtools.j2objc.Options;
 import com.google.devtools.j2objc.ast.CompilationUnit;
 import com.google.devtools.j2objc.ast.PackageDeclaration;
+import com.google.devtools.j2objc.ast.SingleVariableDeclaration;
 import com.google.devtools.j2objc.file.InputFile;
 import com.google.devtools.j2objc.types.GeneratedVariableBinding;
 import com.google.devtools.j2objc.types.IOSBlockTypeBinding;
@@ -486,6 +487,10 @@ public class NameTable {
     return "with" + capitalize(getParameterTypeKeyword(type));
   }
 
+  public static String parameterName(SingleVariableDeclaration varDeclaration) {
+    return varDeclaration.getName().getFullyQualifiedName();
+  }
+
   // Matches the class name prefix or a parameter declarations of a method
   // signature. After removing these parts, the selector remains.
   private static final Pattern SIGNATURE_STRIPPER =
@@ -571,6 +576,46 @@ public class NameTable {
       return selectorForOriginalBinding(method);
     }
     return selectorForOriginalBinding(getOriginalMethodBindings(method).get(0));
+  }
+
+  /**
+   * NOTE: this helper only analyzes the @AutoMapping annotation
+   */
+  public static String getAutoMappedMethodSelector(IMethodBinding method, String param) {
+    String selectorWithType = getMethodSelector(method);
+    if (param.isEmpty()) {
+      return selectorWithType;
+    }
+    String[] selectors = selectorWithType.split(":");
+    String[] params = param.split(":");
+    StringBuilder sb = new StringBuilder("");
+    if (selectors.length != params.length) {
+      return "";
+    } else {
+      sb.append(selectors[0].substring(0, selectors[0].indexOf("With")));
+      sb.append(params[0]);
+      sb.append(":");
+      for (int i = 1; i < params.length; i++) {
+        sb.append(params[i]);
+        sb.append(":");
+      }
+    }
+    return sb.toString();
+  }
+
+  public static String getMethodParametersName(List<SingleVariableDeclaration> params) {
+    if (params == null) {
+      return "";
+    }
+    StringBuilder sb = new StringBuilder("");
+    for (int i = 0; i < params.size(); i++) {
+      String keyword = parameterName(params.get(i));
+      if (i == 0) {
+        keyword = "With" + capitalize(keyword);
+      }
+      sb.append(keyword).append(":");
+    }
+    return sb.toString();
   }
 
   private static String getRenamedMethodName(IMethodBinding method) {

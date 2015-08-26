@@ -35,6 +35,7 @@ import com.google.devtools.j2objc.types.IOSBlockTypeBinding;
 import com.google.devtools.j2objc.util.BindingUtil;
 import com.google.devtools.j2objc.util.NameTable;
 import com.google.devtools.j2objc.util.TranslationUtil;
+import com.google.j2objc.annotations.AutoMapping;
 import com.google.j2objc.annotations.Mapping;
 
 import org.eclipse.jdt.core.dom.IAnnotationBinding;
@@ -214,7 +215,13 @@ public abstract class TypeGenerator extends AbstractSourceGenerator {
     IMethodBinding binding = m.getMethodBinding();
     char prefix = Modifier.isStatic(m.getModifiers()) ? '+' : '-';
     String returnType = NameTable.getObjCType(binding.getReturnType());
-    String selector = NameTable.getMethodSelector(binding);
+    String selector = null;
+    if (BindingUtil.hasAnnotation(binding, AutoMapping.class)) {
+      selector = NameTable.getAutoMappedMethodSelector(binding, NameTable.getMethodParametersName(m.getParameters()));
+    } else {
+      selector = NameTable.getMethodSelector(binding);
+    }
+
     if (m.isConstructor()) {
       returnType = "instancetype";
     } else if (selector.equals("hash")) {

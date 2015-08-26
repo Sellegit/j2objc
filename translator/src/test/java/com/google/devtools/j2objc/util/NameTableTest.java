@@ -320,4 +320,45 @@ public class NameTableTest extends GenerationTest {
     assertTranslation(translation, "@implementation FooBarpackage_info");
     assertNotInTranslation(translation, "FBpackage_info");
   }
+
+  public void testGetSelectorWithAutoMapping() throws IOException {
+    addSourceFile("import com.google.j2objc.annotations.*;class Hello{"
+            + "@AutoMapping Hello() {};"
+            + "@AutoMapping Hello(int p1) {};"
+            + "@AutoMapping Hello(int p2, int p3) {};"
+            + "@AutoMapping void func1() {};"
+            + "@AutoMapping void func2(int p7) {};"
+            + "@AutoMapping void func3(int p8, int p9) {};"
+            + "Hello(float p4) {};"
+            + "Hello(float p5, float p6) {};"
+            + "void func4() {};"
+            + "void func5(int p10) {};"
+            + "void func6(int p11, int p12) {};}", "Hello.java");
+
+    String translation = translateSourceFile("Hello", "Hello.h");
+    assertTranslatedLines(translation, "- (instancetype)init;");
+    assertTranslatedLines(translation, "- (instancetype)initWithP1:(jint)p1;");
+    assertTranslatedLines(translation, "- (instancetype)initWithP2:(jint)p2", "p3:(jint)p3;");
+    assertTranslatedLines(translation, "- (instancetype)initWithFloat:(jfloat)p4;");
+    assertTranslatedLines(translation, "- (instancetype)initWithFloat:(jfloat)p5", "withFloat:(jfloat)p6;");
+    assertTranslatedLines(translation, "- (void)func1;");
+    assertTranslatedLines(translation, "- (void)func2WithP7:(jint)p7;");
+    assertTranslatedLines(translation, "- (void)func3WithP8:(jint)p8", "p9:(jint)p9;");
+    assertTranslatedLines(translation, "- (void)func4;");
+    assertTranslatedLines(translation, "- (void)func5WithInt:(jint)p10;");
+    assertTranslatedLines(translation, "- (void)func6WithInt:(jint)p11", "withInt:(jint)p12;");
+
+    translation = getTranslatedFile("Hello.m");
+    assertTranslatedLines(translation, "- (instancetype)init {");
+    assertTranslatedLines(translation, "- (instancetype)initWithP1:(jint)p1 {");
+    assertTranslatedLines(translation, "- (instancetype)initWithP2:(jint)p2", "p3:(jint)p3 {");
+    assertTranslatedLines(translation, "- (instancetype)initWithFloat:(jfloat)p4 {");
+    assertTranslatedLines(translation, "- (instancetype)initWithFloat:(jfloat)p5", "withFloat:(jfloat)p6 {");
+    assertTranslatedLines(translation, "- (void)func1 {");
+    assertTranslatedLines(translation, "- (void)func2WithP7:(jint)p7 {");
+    assertTranslatedLines(translation, "- (void)func3WithP8:(jint)p8", "p9:(jint)p9 {");
+    assertTranslatedLines(translation, "- (void)func4 {");
+    assertTranslatedLines(translation, "- (void)func5WithInt:(jint)p10 {");
+    assertTranslatedLines(translation, "- (void)func6WithInt:(jint)p11", "withInt:(jint)p12 {");
+  }
 }
