@@ -44,10 +44,7 @@ import com.google.devtools.j2objc.types.GeneratedVariableBinding;
 import com.google.devtools.j2objc.util.BindingUtil;
 
 import com.google.devtools.j2objc.util.ErrorUtil;
-import org.eclipse.jdt.core.dom.IMethodBinding;
-import org.eclipse.jdt.core.dom.ITypeBinding;
-import org.eclipse.jdt.core.dom.IVariableBinding;
-import org.eclipse.jdt.core.dom.Modifier;
+import org.eclipse.jdt.core.dom.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -209,47 +206,54 @@ public class OuterReferenceResolver extends TreeVisitor {
     ITypeBinding type = scope.type;
     IVariableBinding outerField = outerVars.get(type);
     if (outerField == null) {
-      GeneratedTypeBinding newType = new GeneratedTypeBinding(
-              type.getName(), type.getPackage(),
-              type.getComponentType(), false, type.getComponentType(),
-              type.getDeclaringClass()
-      );
-
-      if (type.isAnonymous()) {
-        Scope preScope = preScope(scope);
-
-        boolean isField = false;
-        if (type.getDeclaringMethod() == null) {
-          isField = true;
-        } else {
-          isField = false;
-        }
-
-        for (IVariableBinding theVariableBinding : preScope.declaredVars) {
-          if (!(theVariableBinding.isField() ^ isField)) {
-            if (scope.node != null) {
-              TreeNode parent = scope.node.getParent().getParent();
-              if (parent instanceof VariableDeclarationFragment) {
-                VariableDeclarationFragment newParent = (VariableDeclarationFragment) parent;
-                if (theVariableBinding.getName().equals(newParent.getVariableBinding().getName())) {
-                  newType.addAnnotation(BindingUtil.getAnnotation(theVariableBinding, com.google.j2objc.annotations.WeakOuter.class));
-                  break;
-                }
-              }
-            }
-          }
-        }
-        outerField = new GeneratedVariableBinding(
-                getOuterFieldName(newType), Modifier.PRIVATE | Modifier.FINAL, newType.getDeclaringClass(),
-                true, false, newType, null);
+      if (type.isAnonymous() && (getOrCreateWeakOuterOuterField(scope) != null)) {
+        outerField = getOrCreateWeakOuterOuterField(scope);
       } else {
         outerField = new GeneratedVariableBinding(
-                getOuterFieldName(type), Modifier.PRIVATE | Modifier.FINAL, newType.getDeclaringClass(),
-                true, false, newType, null);
+                getOuterFieldName(type), Modifier.PRIVATE | Modifier.FINAL, type.getDeclaringClass(),
+                true, false, type, null);
       }
     }
     outerVars.put(type, outerField);
     return outerField;
+  }
+
+  private IVariableBinding getOrCreateWeakOuterOuterField(Scope scope) {
+    Scope preScope = preScope(scope);
+    ITypeBinding type = scope.type;
+    GeneratedTypeBinding newType = new GeneratedTypeBinding(
+            type.getName(), type.getPackage(),
+            type.getComponentType(), false, type.getComponentType(),
+            type.getDeclaringClass()
+    );
+
+    boolean isField = false;
+    if (type.getDeclaringMethod() == null) {
+      isField = true;
+    } else {
+      isField = false;
+    }
+
+    for (IVariableBinding theVariableBinding : preScope.declaredVars) {
+      if (!(theVariableBinding.isField() ^ isField)) {
+        if (scope.node != null) {
+          TreeNode parent = scope.node.getParent().getParent();
+          if (parent instanceof VariableDeclarationFragment) {
+            VariableDeclarationFragment newParent = (VariableDeclarationFragment) parent;
+            if (theVariableBinding.getName().equals(newParent.getVariableBinding().getName())) {
+              IAnnotationBinding weakOuterAnnotation = BindingUtil.getAnnotation(theVariableBinding, com.google.j2objc.annotations.WeakOuter.class);
+              if (weakOuterAnnotation != null) {
+                newType.addAnnotation(BindingUtil.getAnnotation(theVariableBinding, com.google.j2objc.annotations.WeakOuter.class));
+                return new GeneratedVariableBinding(
+                        getOuterFieldName(newType), Modifier.PRIVATE | Modifier.FINAL, newType.getDeclaringClass(),
+                        true, false, newType, null);
+              }
+            }
+          }
+        }
+      }
+    }
+    return null;
   }
 
   private IVariableBinding getOrCreateInnerField(IVariableBinding var, ITypeBinding declaringType) {
