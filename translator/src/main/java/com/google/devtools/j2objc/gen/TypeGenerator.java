@@ -36,6 +36,7 @@ import com.google.devtools.j2objc.util.BindingUtil;
 import com.google.devtools.j2objc.util.NameTable;
 import com.google.devtools.j2objc.util.TranslationUtil;
 import com.google.j2objc.annotations.AutoMapping;
+import com.google.j2objc.annotations.CategoryOn;
 import com.google.j2objc.annotations.Mapping;
 
 import org.eclipse.jdt.core.dom.IAnnotationBinding;
@@ -210,62 +211,33 @@ public abstract class TypeGenerator extends AbstractSourceGenerator {
   /**
    * Create an Objective-C method signature string.
    */
-  protected String getMethodSignature(MethodDeclaration m) {
-    StringBuilder sb = new StringBuilder();
-    IMethodBinding binding = m.getMethodBinding();
-    char prefix = Modifier.isStatic(m.getModifiers()) ? '+' : '-';
-    String returnType = NameTable.getObjCType(binding.getReturnType());
-    String selector = null;
-    if (BindingUtil.hasAnnotation(binding, AutoMapping.class)) {
-      selector = NameTable.getAutoMappedMethodSelector(binding, NameTable.getMethodParametersName(m.getParameters()));
-    } else {
-      selector = NameTable.getMethodSelector(binding);
-    }
-
-    if (m.isConstructor()) {
-      returnType = "instancetype";
-    } else if (selector.equals("hash")) {
-      // Explicitly test hashCode() because of NSObject's hash return value.
-      returnType = "NSUInteger";
-    }
-    String overridingRetType =
-        NameTable.getOverridingTypeFromAnnotations(
-          BindingUtil.flattenMethodAnnotations(binding)
-        );
-    if (overridingRetType != null) {
-      returnType = overridingRetType;
-    }
-
-    sb.append(String.format("%c (%s)", prefix, returnType));
-
-    List<SingleVariableDeclaration> params = m.getParameters();
-    String[] selParts = selector.split(":");
-
-    if (params.isEmpty()) {
-      assert selParts.length == 1 && !selector.endsWith(":");
-      sb.append(selParts[0]);
-    } else {
-      assert params.size() == selParts.length;
-      int baseLength = sb.length() + selParts[0].length();
-      for (int i = 0; i < params.size(); i++) {
-        if (i != 0) {
-          sb.append('\n');
-          sb.append(pad(baseLength - selParts[i].length()));
-        }
-        IVariableBinding var = params.get(i).getVariableBinding();
-        String typeName = NameTable.getSpecificObjCType(var.getType());
-        String overridingParamTpe =
-            NameTable.getOverridingTypeFromAnnotations(
-                BindingUtil.flattenParameterAnnotations(binding, i)
-            );
-        if (overridingParamTpe != null) {
-          typeName = overridingParamTpe;
-        }
-        sb.append(String.format("%s:(%s)%s", selParts[i], typeName, NameTable.getName(var)));
+  public String getMethodSignature(MethodDeclaration m) {
+    return getMethodSignatureWithTweak(m, new TweakForGetMethodSignature() {
+      @Override
+      public boolean doTweak(StringBuilder sb, IVariableBinding var, int i, String selPart, String typeName, boolean isNotNeedReturn) {
+        sb.append(String.format("%s:(%s)%s", selPart, typeName, NameTable.getName(var)));
+        return isNotNeedReturn;
       }
-    }
+    });
+  }
 
-    return sb.toString();
+  protected String getMethodSignatureWithCategoryOn(MethodDeclaration m) {
+    return getMethodSignatureWithTweak(m, new TweakForGetMethodSignature() {
+      @Override
+      public boolean doTweak(StringBuilder sb, IVariableBinding var, int i, String selPart, String typeName, boolean isNotNeedReturn) {
+        IAnnotationBinding categoryOnAnnotation = BindingUtil.getAnnotation(typeBinding, CategoryOn.class);
+        ITypeBinding categoryOnValue = (ITypeBinding) BindingUtil.getAnnotationValue(categoryOnAnnotation, "value");
+        if (categoryOnValue.equals(var.getType())) {
+          if (i == 0) {
+            sb.append(String.format("%s", selPart.substring(0, selPart.indexOf("With"))));
+          }
+          return true;
+        } else {
+          sb.append(String.format("%s:(%s)%s", selPart, typeName, NameTable.getName(var)));
+          return false;
+        }
+      }
+    });
   }
 
   protected String getFunctionSignature(FunctionDeclaration function) {
@@ -345,5 +317,72 @@ public abstract class TypeGenerator extends AbstractSourceGenerator {
 
   protected String generateExpression(Expression expr) {
     return StatementGenerator.generate(expr, false, getBuilder().getCurrentLine());
+  }
+
+  protected interface TweakForGetMethodSignature {
+    public boolean doTweak(StringBuilder sb, IVariableBinding var, int i, String selPart, String typeName, boolean isNotNeedReturn);
+  }
+
+  protected String getMethodSignatureWithTweak(MethodDeclaration m, TweakForGetMethodSignature tweak) {
+    StringBuilder sb = new StringBuilder();
+    IMethodBinding binding = m.getMethodBinding();
+    char prefix = Modifier.isStatic(m.getModifiers()) ? '+' : '-';
+    String returnType = NameTable.getObjCType(binding.getReturnType());
+    String selector = null;
+    if (BindingUtil.hasAnnotation(binding, AutoMapping.class)) {
+      selector = NameTable.getAutoMappedMethodSelector(binding, NameTable.getMethodParametersName(m.getParameters()));
+    } else {
+      selector = NameTable.getMethodSelector(binding);
+    }
+
+    if (m.isConstructor()) {
+      returnType = "instancetype";
+    } else if (selector.equals("hash")) {
+      // Explicitly test hashCode() because of NSObject's hash return value.
+      returnType = "NSUInteger";
+    }
+    String overridingRetType =
+            NameTable.getOverridingTypeFromAnnotations(
+                    BindingUtil.flattenMethodAnnotations(binding)
+            );
+    if (overridingRetType != null) {
+      returnType = overridingRetType;
+    }
+
+    sb.append(String.format("%c (%s)", prefix, returnType));
+
+    List<SingleVariableDeclaration> params = m.getParameters();
+    String[] selParts = selector.split(":");
+
+    if (params.isEmpty()) {
+      assert selParts.length == 1 && !selector.endsWith(":");
+      sb.append(selParts[0]);
+    } else {
+      assert params.size() == selParts.length;
+      int baseLength = sb.length() + selParts[0].length();
+      boolean isNotNeedReturn = true;
+      for (int i = 0; i < params.size(); i++) {
+        if (isNotNeedReturn && (i != 0)) {
+          selParts[i] = NameTable.capitalize(selParts[i]);
+        }
+        if (isNotNeedReturn) {
+          isNotNeedReturn = false;
+        } else {
+          sb.append('\n');
+          sb.append(pad(baseLength - selParts[i].length()));
+        }
+        IVariableBinding var = params.get(i).getVariableBinding();
+        String typeName = NameTable.getSpecificObjCType(var.getType());
+        String overridingParamTpe =
+                NameTable.getOverridingTypeFromAnnotations(
+                        BindingUtil.flattenParameterAnnotations(binding, i)
+                );
+        if (overridingParamTpe != null) {
+          typeName = overridingParamTpe;
+        }
+        isNotNeedReturn = tweak.doTweak(sb, var, i, selParts[i], typeName, isNotNeedReturn);
+      }
+    }
+    return sb.toString();
   }
 }
