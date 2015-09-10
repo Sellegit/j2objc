@@ -34,11 +34,11 @@ import com.google.devtools.j2objc.ast.VariableDeclarationFragment;
 import com.google.devtools.j2objc.types.IOSBlockTypeBinding;
 import com.google.devtools.j2objc.types.Types;
 import com.google.devtools.j2objc.util.BindingUtil;
+import com.google.devtools.j2objc.util.ErrorUtil;
 import com.google.devtools.j2objc.util.NameTable;
 
-import org.eclipse.jdt.core.dom.ITypeBinding;
-import org.eclipse.jdt.core.dom.IVariableBinding;
-import org.eclipse.jdt.core.dom.Modifier;
+import com.google.j2objc.annotations.CategoryOn;
+import org.eclipse.jdt.core.dom.*;
 
 import java.util.Iterator;
 import java.util.List;
@@ -91,6 +91,10 @@ public class TypeDeclarationGenerator extends TypeGenerator {
     printTypeDocumentation();
     if (isInterfaceType()) {
       printf("@protocol %s", typeName);
+    } else if (BindingUtil.hasAnnotation(typeBinding, CategoryOn.class)) {
+      IAnnotationBinding categoryOnAnnotation = BindingUtil.getAnnotation(typeBinding, CategoryOn.class);
+      ITypeBinding categoryOnValue = (ITypeBinding) BindingUtil.getAnnotationValue(categoryOnAnnotation, "value");
+      printf("@interface %s (%s)", NameTable.getFullName(categoryOnValue), typeName);
     } else {
       printf("@interface %s : %s", typeName, getSuperTypeName());
     }
@@ -217,6 +221,9 @@ public class TypeDeclarationGenerator extends TypeGenerator {
     Iterable<FieldDeclaration> fields = getInstanceFields();
     if (Iterables.isEmpty(fields)) {
       newline();
+      return;
+    } else if (BindingUtil.hasAnnotation(typeBinding, CategoryOn.class)) {
+      ErrorUtil.error(typeNode, "Named category can't have instance");
       return;
     }
     // Need direct access to fields possibly from inner classes that are
@@ -527,7 +534,11 @@ public class TypeDeclarationGenerator extends TypeGenerator {
   protected void printMethodDeclaration(MethodDeclaration m) {
     newline();
     JavadocGenerator.printDocComment(getBuilder(), m.getJavadoc());
-    print(getMethodSignature(m));
+    if (BindingUtil.hasAnnotation(typeBinding, CategoryOn.class)) {
+      print(getMethodSignatureWithCategoryOn(m));
+    }else {
+      print(getMethodSignature(m));
+    }
     String methodName = NameTable.getMethodSelector(m.getMethodBinding());
     if (!m.isConstructor() && !BindingUtil.isSynthetic(m.getModifiers())
         && needsObjcMethodFamilyNoneAttribute(methodName)) {

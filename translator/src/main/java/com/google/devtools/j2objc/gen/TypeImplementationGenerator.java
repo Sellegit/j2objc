@@ -32,10 +32,8 @@ import com.google.devtools.j2objc.ast.VariableDeclarationFragment;
 import com.google.devtools.j2objc.util.BindingUtil;
 import com.google.devtools.j2objc.util.NameTable;
 
-import org.eclipse.jdt.core.dom.IMethodBinding;
-import org.eclipse.jdt.core.dom.ITypeBinding;
-import org.eclipse.jdt.core.dom.IVariableBinding;
-import org.eclipse.jdt.core.dom.Modifier;
+import com.google.j2objc.annotations.CategoryOn;
+import org.eclipse.jdt.core.dom.*;
 
 import java.util.List;
 
@@ -66,7 +64,13 @@ public class TypeImplementationGenerator extends TypeGenerator {
     if (needsImplementation()) {
       newline();
       syncLineNumbers(typeNode.getName()); // avoid doc-comment
-      printf("@implementation %s\n", typeName);
+      if (BindingUtil.hasAnnotation(typeBinding, CategoryOn.class)) {
+        IAnnotationBinding categoryOnAnnotation = BindingUtil.getAnnotation(typeBinding, CategoryOn.class);
+        ITypeBinding categoryOnValue = (ITypeBinding) BindingUtil.getAnnotationValue(categoryOnAnnotation, "value");
+        printf("@implementation %s (%s)", NameTable.getFullName(categoryOnValue), typeName);
+      } else {
+        printf("@implementation %s\n", typeName);
+      }
       printInnerDeclarations();
       printAnnotationImplementation();
       printInitializeMethod();
@@ -135,6 +139,11 @@ public class TypeImplementationGenerator extends TypeGenerator {
     syncLineNumbers(m.getName());  // avoid doc-comment
     String methodBody = generateStatement(m.getBody(), /* isFunction */ false);
     print(getMethodSignature(m) + " " + reindent(methodBody) + "\n");
+
+    if (BindingUtil.hasAnnotation(typeBinding, CategoryOn.class) && !m.isConstructor()) {
+      newline();
+      print(getMethodSignatureWithCategoryOn(m) + " " + "{" + "\n" + genMethodBodyWithCategoryOn(m) + "\n}\n");
+    }
   }
 
   @Override
@@ -251,5 +260,35 @@ public class TypeImplementationGenerator extends TypeGenerator {
 
   protected String generateStatement(Statement stmt, boolean asFunction) {
     return StatementGenerator.generate(stmt, asFunction, getBuilder().getCurrentLine());
+  }
+
+  protected String genMethodBodyWithCategoryOn(MethodDeclaration m) {
+    String methodSignature = getMethodSignatureWithTweak(m, new TweakForGetMethodSignature() {
+      @Override
+      public boolean doTweak(StringBuilder sb, IVariableBinding var, int i, String selPart, String typeName, boolean isNotNeedReturn) {
+        IAnnotationBinding categoryOnAnnotation = BindingUtil.getAnnotation(typeBinding, CategoryOn.class);
+        ITypeBinding categoryOnValue = (ITypeBinding) BindingUtil.getAnnotationValue(categoryOnAnnotation, "value");
+        if (categoryOnValue.equals(var.getType())) {
+          sb.append(String.format("%s:(%s)%s", selPart, typeName, "self"));
+        } else {
+          sb.append(String.format("%s:(%s)%s", selPart, typeName, NameTable.getName(var)));
+        }
+        return false;
+      }
+    });
+
+    if ((methodSignature != null) && (!methodSignature.isEmpty())) {
+      if (methodSignature.substring(0, 1).equals("-")) {
+        methodSignature = methodSignature.substring(methodSignature.indexOf(')')+1);
+        methodSignature = "\treturn [self " + methodSignature;
+      } else if (methodSignature.substring(0, 1).equals("+")) {
+        methodSignature = methodSignature.substring(methodSignature.indexOf(')')+1);
+        methodSignature = "\treturn [" + typeName + " " + methodSignature;
+      }
+      methodSignature = methodSignature.replaceAll("\\([^\\)]*\\)", " ");
+      methodSignature = methodSignature + "];";
+    }
+
+    return methodSignature;
   }
 }
