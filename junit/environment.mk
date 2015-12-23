@@ -37,7 +37,7 @@ RUNNER_LIB = $(ARCH_BUILD_DIR)/libjunit_runner.a
 RUNNER_LIB_DIST = $(ARCH_LIB_DIR)/libjunit_runner.a
 
 # Compiler settings, based on Xcode log output
-WARNINGS = -Wno-trigraphs -Wunused-variable -Werror -Wincompatible-pointer-types
+WARNINGS = -Wno-trigraphs -Wunused-variable -Werror -Wincompatible-pointer-types -Wno-objc-designated-initializers
 
 # The -fobjc flags match XCode (a link fails without them because of
 # missing symbols of the form OBJC_CLASS_$_[classname]).

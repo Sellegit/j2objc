@@ -32,7 +32,7 @@ JSR305_JAR_FULL = $(JAVA_DEPS_JAR_DIR)/$(JSR305_JAR)
 
 JSR305_LIB_DIST = $(ARCH_LIB_DIR)/libjsr305.a
 
-WARNINGS = -Wall -Werror
+WARNINGS = -Wall -Werror -Wno-objc-designated-initializers
 
 C_FLAGS = $(DEBUGFLAGS) -Werror $(ARCH_FLAGS) $(SDK_FLAGS) \
   -fobjc-abi-version=2 -fobjc-legacy-dispatch

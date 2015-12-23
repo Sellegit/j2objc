@@ -39,7 +39,7 @@ MOCKITO_CLASSPATH = $(MOCKITO_JAR_PATH):$(JUNIT_JAR_PATH):$(HAMCREST_JAR_PATH)
 
 MOCKITO_LIB_DIST = $(ARCH_LIB_DIR)/libmockito.a
 
-WARNINGS = -Wall -Werror
+WARNINGS = -Wall -Werror -Wno-objc-designated-initializers
 
 OBJCFLAGS := -ObjC $(WARNINGS) $(DEBUGFLAGS)
 
