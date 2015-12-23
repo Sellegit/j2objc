@@ -32,7 +32,7 @@ INJECT_JAR_FULL = $(JAVA_DEPS_JAR_DIR)/$(JAVAX_INJECT_JAR)
 
 INJECT_LIB_DIST = $(ARCH_LIB_DIR)/libjavax_inject.a
 
-WARNINGS = -Wall -Werror
+WARNINGS = -Wall -Werror -Wno-objc-designated-initializers
 
 C_FLAGS = $(DEBUGFLAGS) -Werror $(ARCH_FLAGS) $(SDK_FLAGS) \
   -fobjc-abi-version=2 -fobjc-legacy-dispatch
